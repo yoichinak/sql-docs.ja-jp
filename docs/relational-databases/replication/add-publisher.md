@@ -1,4 +1,5 @@
 ---
+description: '[パブリッシャーの追加]'
 title: パブリッシャーの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,18 +16,18 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ce82548d63c88565a48d3930c3a7b9a40884413
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726092"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127828"
 ---
 # <a name="add-publisher"></a>[パブリッシャーの追加]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[パブリッシャーの追加]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに 1 つまたは複数のパブリッシャーを追加できます。 パブリッシャーを追加した後、左ペインでパブリッシャーを選択すると、そのパブリッシャーに関する情報が右ペインに表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **追加**  
  クリックすると、追加するパブリッシャーの種類を選択するための **[サーバーへの接続]** ダイアログ ボックスが表示されます。 オプションは次のとおりです。  
   
@@ -65,10 +66,10 @@ ms.locfileid: "85726092"
  **[このパブリッシャーを次のグループに表示する]**  
  一覧からパブリッシャー グループを選択します。 パブリッシャーは、左ペインでこのグループの下に表示されます。 グループはパブリッシャーを整理するもので、レプリケーションの動作には影響を与えません。 グループが定義されていない場合または新しいグループを作成する場合は、 **[新しいグループ]** をクリックします。  
   
- **[新しいグループ]**  
+ **新しいグループ**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

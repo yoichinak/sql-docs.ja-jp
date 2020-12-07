@@ -1,4 +1,5 @@
 ---
+description: テーブルの削除 (データベース エンジン)
 title: テーブルの削除 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de4c69e4c84631df200dce00cd3f4e7a02b99971
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae9949c8a116d4e9a952b02f6f5ff17ef75fb599
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395357"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128698"
 ---
 # <a name="delete-tables-database-engine"></a>テーブルの削除 (データベース エンジン)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87395357"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **テーブルを削除する方法:**  
   
@@ -81,7 +82,7 @@ ms.locfileid: "87395357"
   
 #### <a name="to-delete-a-table-in-query-editor"></a>クエリ エディターでテーブルを削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

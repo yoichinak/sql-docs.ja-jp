@@ -1,4 +1,5 @@
 ---
+description: プログラムによるローカル パッケージの読み込みと実行
 title: プログラムによるローカル パッケージの読み込みと実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90910f6ac7f5deb30b7f9c1b3f901d27f97ea51e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b8138be9f9f643bae9f66611492e4ed7f703382
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919786"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457063"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>プログラムによるローカル パッケージの読み込みと実行
 
@@ -227,7 +228,7 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [プログラムによるリモート パッケージの読み込みと実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [ローカル パッケージの出力の読み込み](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

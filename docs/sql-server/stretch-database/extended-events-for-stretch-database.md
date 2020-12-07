@@ -1,4 +1,5 @@
 ---
+description: Stretch Database の拡張イベント
 title: Stretch Database の拡張イベント
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -8,20 +9,20 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7940de563ab3b5dbee0fe59fb93f1dfe2d02ce3b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844577"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988258"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database の拡張イベント
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Stretch Database では、トラブルシューティングのための一連の拡張イベントを提供しています。  
   
-詳細については、「 [拡張イベント](../../relational-databases/extended-events/extended-events.md)」を参照してください。 トラブルシューティングのために拡張イベント セッションを開始する方法の詳細については、「 [拡張イベント セッションの作成](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)」を参照してください。  
+詳細については、「 [拡張イベント](../../relational-databases/extended-events/extended-events.md)」を参照してください。 トラブルシューティングのために拡張イベント セッションを開始する方法の詳細については、「 [拡張イベント セッションの作成](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))」を参照してください。  
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>Stretch Database の拡張イベントの一覧  
   
@@ -81,5 +82,4 @@ stretch_table_validation_error|ユーザーが拡張を有効にした際のテ�
 stretch_unprovision_table_start|拡張テーブル プロビジョニング解除の開始を報告します  
   
 ## <a name="see-also"></a>参照  
-[Stretch Database の管理とトラブルシューティング](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[Stretch Database の管理とトラブルシューティング](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)

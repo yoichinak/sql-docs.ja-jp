@@ -1,26 +1,28 @@
 ---
-title: SQL トレース | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2018
+title: SQL トレース (SQL Trace)
+description: SQL トレース (SQL Trace)
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/27/2018
+ms.openlocfilehash: 4ea8d31c58758c7513a3d958ee02f0e5d9f4c5d4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "94585006"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
-  
+
 > [!IMPORTANT]
 > SQL トレースと [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
@@ -75,20 +77,20 @@ SQL トレースでは、トレース出力のデータ列を使用して、ト�
   
 |データ列|列番号|説明|  
 |-----------------|-------------------|-----------------|  
-|**ApplicationName**|10|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラム名ではなくアプリケーションによって渡された値が格納されます。|  
+|\* **ApplicationName**|10|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラム名ではなくアプリケーションによって渡された値が格納されます。|  
 |**BigintData1**|52|トレースで指定されているイベント クラスに依存する値 (**bigint** データ型)。|  
 |**BigintData2**|53|トレースで指定されているイベント クラスに依存する値 (**bigint** データ型)。|  
-|**Binary Data**|2|トレースにキャプチャされるイベント クラスに依存するバイナリ値。|  
-|**ClientProcessID**|9|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|  
+|\* **Binary Data**|2|トレースにキャプチャされるイベント クラスに依存するバイナリ値。|  
+|\* **ClientProcessID**|9|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|  
 |**ColumnPermissions**|44|列権限が設定されていたかどうかを示します。 ステートメントのテキストを解析して、どの権限がどの列に適用されていたかを判断できます。|  
-|**CPU**|18|イベントで使用された CPU 時間 (ミリ秒)。|  
-|**データベース ID**|3|USE *database_name* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database_name*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|  
+|\* **CPU**|18|イベントで使用された CPU 時間 (ミリ秒)。|  
+|**データベース ID**|3|USE *database_name* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database_name* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|  
 |**DatabaseName**|35|ユーザーのステートメントが実行されているデータベースの名前。|  
 |**DBUserName**|40|クライアントの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名。|  
-|**Duration**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  
-|**EndTime**|15|イベントが終了した時刻。 **SQL:BatchStarting** や **SP:Starting**などのイベントの開始を示すイベント クラスには、このデータ列は作成されません。|  
-|**Error**|31|特定のイベントのエラー番号。 これは多くの場合、 **sysmessages**に格納されたエラー番号です。|  
-|**EventClass**|27|キャプチャされるイベント クラスの種類。|  
+|\* **Duration**|13|イベントの期間 (ミリ秒)。<br /><br /> サーバーはマイクロ秒 (100 万分の 1 (10<sup>-6</sup>) 秒) 単位でのイベント期間、およびイベントにより使用されるミリ秒 (10<sup>-3</sup>秒) 単位での CPU 時間をレポートします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のグラフィカル ユーザー インターフェイスに、既定ではミリ秒単位で **Duration** 列が表示されますが、トレースがファイルまたはデータベース テーブルに保存されると、 **Duration** 列の値はマイクロ秒単位で記述されます。|  
+|\* **EndTime**|15|イベントが終了した時刻。 **SQL:BatchStarting** や **SP:Starting** などのイベントの開始を示すイベント クラスには、このデータ列は作成されません。|  
+|**Error**|31|特定のイベントのエラー番号。 これは多くの場合、 **sysmessages** に格納されたエラー番号です。|  
+|\* **EventClass**|27|キャプチャされるイベント クラスの種類。|  
 |**EventSequence**|51|このイベントのシーケンス番号。|  
 |**EventSubClass**|21|イベント サブクラスの種類。各イベント クラスに関するより詳細な情報を提供します。 たとえば、 **Execution Warning** イベント クラスのイベント サブクラス値は、以下のような実行の警告の種類を表します。<br /><br /> **1** = クエリの待機。 クエリを実行するには、メモリなど、そのためのリソースが確保されるまで待機しなければなりません。<br /><br /> **2** = クエリのタイムアウト。クエリの実行に必要なリソースが確保されるのを待機していて時間切れになりました。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
 |**GUID**|54|トレースで指定されているイベント クラスに依存する GUID 値。|  
@@ -99,52 +101,52 @@ SQL トレースでは、トレース出力のデータ列を使用して、ト�
 |**IntegerData**|25|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**IntegerData2**|55|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**IsSystem**|60|システム プロセスまたはユーザー プロセスのどちらでイベントが発生したのかを示します。<br /><br /> **1** = システム<br /><br /> **0** = ユーザー|  
-|**LineNumber**|5|エラーを含む行の番号が格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP:StmtStarting **のような**ステートメントを含むイベントの場合、 **LineNumber** にはストアド プロシージャまたはバッチでのステートメントの行番号が格納されます。|  
+|**LineNumber**|5|エラーを含む行の番号が格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP:StmtStarting **のような** ステートメントを含むイベントの場合、 **LineNumber** にはストアド プロシージャまたはバッチでのステートメントの行番号が格納されます。|  
 |**LinkedServerName**|45|リンク サーバーの名前|  
-|**LoginName**|11|ユーザーのログイン名 (SQL Server セキュリティ ログインまたは DOMAIN\Username の形式の Windows ログイン資格情報)。|  
+|\* **LoginName**|11|ユーザーのログイン名 (SQL Server セキュリティ ログインまたは DOMAIN\Username の形式の Windows ログイン資格情報)。|  
 |**LoginSid**|41|ログイン ユーザーのセキュリティ ID (SID)。 この情報は、 **master** データベースの **sys.server_principals** ビューで参照できます。 サーバーへの各ログインには一意の ID が付けられています。|  
 |**MethodName**|47|OLEDB メソッドの名前。|  
 |**モード**|32|各種のイベントで要求している状態、または受け取った状態を説明するときに使用される整数。|  
 |**NestLevel**|29|@@NESTLEVEL から返されるデータを表す整数。|  
 |**NTDomainName**|7|ユーザーが所属する Microsoft Windows ドメイン。|  
-|**NTUserName**|6|Windows のユーザー名。|  
+|\* **NTUserName**|6|Windows のユーザー名。|  
 |**Exchange Spill**|22|オブジェクトに対してシステムが割り当てた ID。|  
 |**ObjectID2**|56|関連するオブジェクトまたはエンティティの ID (使用可能な場合)。|  
 |**ObjectName**|34|参照されているオブジェクトの名前。|  
-|**ObjectType**|28|イベントに関係するオブジェクトの種類を表す値。 この値は **sysobjects** の **type**列に対応します。|  
+|\*\***ObjectType**|28|イベントに関係するオブジェクトの種類を表す値。 この値は **sysobjects** の **type** 列に対応します。|  
 |**Offset**|61|ストアド プロシージャまたはバッチ内のステートメントの開始オフセット。|  
 |**OwnerID**|58|ロック イベントの場合にのみ該当します。 ロックを所有するオブジェクトの種類。|  
 |**OwnerName**|37|オブジェクト所有者のデータベース ユーザー名。|  
 |**ParentName**|59|オブジェクトが存在するスキーマ名。|  
 |**アクセス許可**|19|チェックされた権限の種類を表す整数値。 値は次のとおりです。<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (プロシージャのみ)<br /><br /> **4096** = SELECT ANY (1 列以上)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLEDB プロバイダーの名前。|  
-|**Reads**|16|論理ディスク上の読み取り操作の回数。この操作は、イベントの代わりにサーバーによって実行されます。 これらの読み取り操作には、ステートメントの実行中に行われるテーブルやバッファーからのすべての読み取り操作が含まれます。|  
+|\* **Reads**|16|論理ディスク上の読み取り操作の回数。この操作は、イベントの代わりにサーバーによって実行されます。 これらの読み取り操作には、ステートメントの実行中に行われるテーブルやバッファーからのすべての読み取り操作が含まれます。|  
 |**RequestID**|49|ステートメントを含んでいる要求の ID。|  
 |**RoleName**|38|有効になっているアプリケーション ロールの名前。|  
 |**RowCounts**|48|バッチ内の行数。|  
 |**ServerName**|26|トレースしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
-|**SessionLoginName**|64|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に **Login1** を使用して接続し、 **Login2**としてステートメントを実行した場合、 **SessionLoginName** には **Login1**が表示され、 **LoginName** には **Login2**が表示されます。 このデータ列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|  
+|**SessionLoginName**|64|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に **Login1** を使用して接続し、 **Login2** としてステートメントを実行した場合、 **SessionLoginName** には **Login1** が表示され、 **LoginName** には **Login2** が表示されます。 このデータ列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|  
 |**Severity**|20|例外イベントの重大度レベル。|  
 |**SourceDatabaseID**|62|オブジェクトのソースが存在するデータベースの ID。|  
-|**SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID (SPID)。この ID はクライアントに関連付けられています。|  
+|\* **SPID**|12|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID (SPID)。この ID はクライアントに関連付けられています。|  
 |**SqlHandle**|63|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値を **sys.dm_exec_sql_text()** に渡して、関連付けられている SQL テキストを取得できます。|  
-|**StartTime**|14|イベントの開始時刻 (取得できた場合)。|  
+|\* **StartTime**|14|イベントの開始時刻 (取得できた場合)。|  
 |**State**|30|エラー状態コード。|  
-|**Success**|23|イベントが正常に終了したかどうかを表します。 値は次のとおりです。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗。<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
+|**Success**|23|イベントが正常に終了したかどうかを表します。 次の値が含まれます。<br /><br /> **1** = 成功。<br /><br /> **0** = 失敗。<br /><br /> たとえば、 **1** は、権限チェックの成功を表し、 **0** は失敗を表します。|  
 |**TargetLoginName**|42|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの名前。|  
 |**TargetLoginSid**|43|ログインを対象とする操作 (新規ログインの追加など) の場合の対象ログインの SID。|  
 |**TargetUserName**|39|データベース ユーザーを対象とした操作 (ユーザーへの権限の許可など) を行う場合の対象となるユーザーの名前。|  
-|**TextData**|1|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
+|\* **TextData**|1|トレースにキャプチャされるイベント クラスに依存するテキスト値。 ただし、パラメーター化クエリをトレースする場合は、変数は **TextData** 列のデータ値と共には表示されません。|  
 |**Transaction ID**|4|トランザクションに対してシステムが割り当てた ID。|  
 |**Type**|57|トレースにキャプチャされるイベント クラスに依存する整数値。|  
-|**Writes**|17|イベントの代わりにサーバーによって実行される物理ディスクの書き込み操作回数。|  
+|\* **Writes**|17|イベントの代わりにサーバーによって実行される物理ディスクの書き込み操作回数。|  
 |**XactSequence**|50|現在のトランザクションを記述するトークン。|  
-  
- *これらのデータ列は、既定ですべてのイベントについて作成されます。  
-  
- \*\***ObjectType** データ列の詳細については、「[ObjectType トレース イベント列](../../relational-databases/event-classes/objecttype-trace-event-column.md)」を参照してください。  
-  
-## <a name="sql-trace-tasks"></a>SQL トレースのタスク  
+
+\* これらのデータ列は、既定ですべてのイベントについて作成されます。
+
+\*\* **ObjectType** データ列の詳細については、「[ObjectType トレース イベント列](../../relational-databases/event-classes/objecttype-trace-event-column.md)」を参照してください。
+
+## <a name="sql-trace-tasks"></a>SQL トレースのタスク
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

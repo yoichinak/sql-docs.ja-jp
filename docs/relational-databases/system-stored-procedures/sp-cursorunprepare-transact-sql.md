@@ -1,4 +1,5 @@
 ---
+description: sp_cursorunprepare (Transact-sql)
 title: sp_cursorunprepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorunprepare
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8c7db4e004f3a350454e25ceefb6c195839e2f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a34376a8c7c6f88c89ffc2934abc3324141b2405
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868426"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549932"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_cursorunprepare handle
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- ステートメントが準備されたときに sp_cursorprepare によって返される*ハンドル*値を指定します。  
+ ステートメントが準備されたときに sp_cursorprepare によって返される *ハンドル* 値を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cursorprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

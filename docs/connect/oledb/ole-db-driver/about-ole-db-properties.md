@@ -1,6 +1,6 @@
 ---
 title: OLE DB 接続プロパティについて | Microsoft Docs
-description: OLE DB プロパティについて
+description: OLE DB Driver for SQL Server では、コンシューマーがプロパティ値を設定して特定のオブジェクトの動作を要求します。 プロパティの設定について説明します。
 ms.custom: ''
 ms.date: 05/20/2020
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, properties
 - properties [OLE DB]
 - property values [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fa2fbb56d9d8926c45970ecddfabd226c87d26e2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af733c202d9413cde25abf98974b7bce0ed8284a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004455"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727230"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,6 +73,5 @@ PR 15068:  This HTML comment is being added by PR...
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のアプリケーションの作成](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
- [プロパティ [OLE DB]](https://go.microsoft.com/fwlink/?LinkId=112207)  
-  
+ [プロパティ [OLE DB]](/previous-versions/windows/desktop/ms722734(v=vs.85))  
   

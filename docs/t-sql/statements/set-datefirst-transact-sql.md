@@ -1,4 +1,5 @@
 ---
+description: SET DATEFIRST (Transact-SQL)
 title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,15 +23,15 @@ helpviewer_keywords:
 - weekdays [SQL Server]
 - options [SQL Server], date
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa66a7d6d30c355e1643ec4fce75f3cdb26465ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ce904ef96ce7aeee41ec8925d98966db013402d6
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483780"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227070"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ SET DATEFIRST { number | @number_var }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
 ```  
@@ -71,7 +72,7 @@ SET DATEFIRST 7 ;
 |**6**|土曜日|  
 |**7** (米国英語、既定値)|土曜日|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SET DATEFIRST の現在の設定を確認するには、[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 関数を使います。  
   
  SET DATEFIRST の設定は、解析時ではなく実行時に設定されます。  
@@ -104,7 +105,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

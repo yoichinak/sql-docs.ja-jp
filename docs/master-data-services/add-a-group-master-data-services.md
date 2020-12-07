@@ -1,4 +1,5 @@
 ---
+description: グループを追加する (マスター データ サービス)
 title: グループを追加する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5c9bbcdca2cdbab0d3d92e90e5b343fda196a027
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 2a5693bfcc62beaad8f5423d6e5d3dbee5cd7fb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491514"
 ---
 # <a name="add-a-group-master-data-services"></a>グループを追加する (マスター データ サービス)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812847"
 
   **で** [グループ] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ボックスの一覧にグループを追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 グループ内のユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスできるようにするには、グループの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -52,7 +53,7 @@ ms.locfileid: "85812847"
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

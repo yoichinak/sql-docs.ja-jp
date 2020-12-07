@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8d602417a7423655ef5800d081432499d2761aa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254582"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891692"
 ---
 # <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
@@ -222,7 +222,7 @@ GO
 [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [自動実行アカウントの構成](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [rsconfig ユーティリティ](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
 [暗号化キーの構成と管理](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [レポート サーバー データベース](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  

@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912828"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129635"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -48,8 +49,8 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。 *sensitive* 引数は **bit** です。  
   
-## <a name="remarks"></a>解説  
- このプロシージャは、 **[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションと同じ機能を実行します。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
+## <a name="remarks"></a>注釈  
+ このプロシージャは、**[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションと同じ機能を実行します。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

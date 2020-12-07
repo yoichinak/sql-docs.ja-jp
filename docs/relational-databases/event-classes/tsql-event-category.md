@@ -1,4 +1,5 @@
 ---
+description: TSQL イベント カテゴリ
 title: TSQL イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca72015d0d10ff33b250a96c539f36c85f1a5cef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e3e5584fbb893543a0f0c1652a215d3bd4f363d1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789530"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867262"
 ---
 # <a name="tsql-event-category"></a>TSQL イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,6 +41,5 @@ ms.locfileid: "85789530"
 |[XQuery Static Type イベント クラス](../../relational-databases/event-classes/xquery-static-type-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって XQuery 式が実行された場合に発生します。|  
   
 ## <a name="see-also"></a>参照  
- [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
-  
+ [TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/language-reference.md)  
   

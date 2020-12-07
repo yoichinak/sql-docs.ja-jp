@@ -1,4 +1,5 @@
 ---
+description: パッケージをプログラムで保存
 title: パッケージをプログラムで保存 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3630bbebf5c86b0e839fe51735cba4fb71763b8a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ce0606f8d63015be37b5230a47cb66c82cf1a20
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88352108"
 ---
 # <a name="saving-a-package-programmatically"></a>パッケージをプログラムで保存
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922712"
 > [!IMPORTANT]  
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドは、"." またはローカル サーバーのサーバー名のみをサポートします。 "(local)" や "localhost" は使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージを保存する](../../integration-services/save-packages.md)  
   
   

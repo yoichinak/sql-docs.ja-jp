@@ -1,4 +1,5 @@
 ---
+description: fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
 title: fn_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427764"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,14 +51,14 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="arguments"></a>引数  
  *start_time*  
- 結果セットに含める変更テーブルエントリの範囲の下端を表す**datetime**値です。  
+ 結果セットに含める変更テーブルエントリの範囲の下端を表す **datetime** 値です。  
   
- 結果セットに含まれるのは、関連付けられたコミット時間が*start_time*よりも大きい変更テーブル>_CT capture_instance <の行だけです。  
+ 結果セットに含まれるのは、関連付けられたコミット時間が *start_time* よりも大きい変更テーブル>_CT capture_instance <の行だけです。  
   
  この引数に NULL 値を指定した場合、クエリ範囲の下限は、キャプチャ インスタンスの有効な範囲の下限に対応します。  
   
  *end_time*  
- 結果セットに含める変更テーブルエントリの範囲の上限を表す**datetime**値です。  
+ 結果セットに含める変更テーブルエントリの範囲の上限を表す **datetime** 値です。  
   
  このパラメーターには、次の2つの意味のいずれかを指定できます @closed_high_end_point 。 sp_cdc_generate_wrapper_function を呼び出して、ラッパー関数を作成するスクリプトを生成します。  
   
@@ -93,13 +94,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|列の型|Description|  
+|列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**状況に応じて異なる**|ラッパーを作成するスクリプトを生成するために呼び出されたときに、 **column_list**引数で指定された sp_cdc_generate_wrapper_function の列。 *Column_list*が NULL の場合、すべての追跡対象のソース列が結果セットに表示されます。|  
-|__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 操作は、次の呼び出しで指定された引数*row_filter_option*の値によって異なります。<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> ' D '-削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
+|\<columns from @column_list>|**状況に応じて異なる**|ラッパーを作成するスクリプトを生成するために呼び出されたときに、 **column_list** 引数で指定された sp_cdc_generate_wrapper_function の列。 *Column_list*が NULL の場合、すべての追跡対象のソース列が結果セットに表示されます。|  
+|__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 操作は、次の呼び出しで指定された引数 *row_filter_option* の値によって異なります。<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> ' D '-削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
 |\<columns from @update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値を使用するのは、 *row_filter_option* **= ' all with mask '** および \_ _CDC_OPERATION **= ' UN '** の場合のみです。 対応する列がクエリウィンドウ内で変更された場合は、1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  Fn_net_changes_<capture_instance> 関数は、cdc. fn_cdc_get_net_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーのスクリプトを作成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  
@@ -108,7 +109,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 2.  スクリプトを実行して、実際にラッパー関数を作成します。  
   
- ラッパー関数を使用すると、LSN 値ではなく**datetime**値によって制限された間隔内で発生した変更を体系的にクエリできます。 ラッパー関数は、指定された**datetime**値と、クエリ関数の引数として内部的に必要な LSN 値の間に必要なすべての変換を実行します。 ラッパー関数を順番に使用して変更データのストリームを処理する場合、次の規則に従うと、データが失われたり、繰り返されたりすることはありません。 @end_time 1 回の呼び出しに関連付けられている間隔の値は、 @start_time 後続の呼び出しに関連付けられた期間の値として指定されます。  
+ ラッパー関数を使用すると、LSN 値ではなく **datetime** 値によって制限された間隔内で発生した変更を体系的にクエリできます。 ラッパー関数は、指定された **datetime** 値と、クエリ関数の引数として内部的に必要な LSN 値の間に必要なすべての変換を実行します。 ラッパー関数を順番に使用して変更データのストリームを処理する場合、次の規則に従うと、データが失われたり、繰り返されたりすることはありません。 @end_time 1 回の呼び出しに関連付けられている間隔の値は、 @start_time 後続の呼び出しに関連付けられた期間の値として指定されます。  
   
  パラメーターを使用してスクリプトを作成すると @closed_high_end_point 、指定されたクエリウィンドウで閉じた上限または開いた上限をサポートするラッパーを生成できます。 つまり、コミット時間が抽出範囲の上限と等しくなるエントリを間隔に含めるかどうかを決定できます。 既定では、上限が含まれます。  
   
@@ -116,9 +117,9 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  次に、パラメーターで識別された各列の結果セットに、ビットフラグが追加され @update_flag_list ます。 **Net changes**ラッパーの場合、 @row_filter_option ラッパー関数の呼び出しで使用されるが ' all ' または ' all with merge ' である場合、ビットフラグは常に NULL になります。 @row_filter_optionが "all with mask" に設定されていて、__CDC_OPERATION が "d" または "I" の場合、フラグの値も NULL になります。 \__CDC_OPERATION が ' UN ' の場合、 **net**更新操作によって列が変更されたかどうかに応じて、フラグが1または0に設定されます。  
   
- 変更データキャプチャの構成テンプレート ' インスタンス化 CDC Wrapper Tvf for Schema ' では、sp_cdc_generate_wrapper_function ストアドプロシージャを使用して、スキーマの定義済みクエリ関数に対するすべてのラッパー関数の作成スクリプトを取得する方法を示しています。 その後、テンプレートによってこれらのスクリプトが作成されます。 テンプレートの詳細については、「[テンプレートエクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
+ 変更データキャプチャの構成テンプレート ' インスタンス化 CDC Wrapper Tvf for Schema ' では、sp_cdc_generate_wrapper_function ストアドプロシージャを使用して、スキーマの定義済みクエリ関数に対するすべてのラッパー関数の作成スクリプトを取得する方法を示しています。 その後、テンプレートによってこれらのスクリプトが作成されます。 テンプレートの詳細については、「 [テンプレートエクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   

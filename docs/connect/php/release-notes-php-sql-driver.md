@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP のリリース ノート
 description: このページでは、Microsoft Drivers for PHP for SQL Server の各バージョンで変更された内容について説明します。
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 09/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633864"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005725"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 
@@ -51,7 +51,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.8.1
 - リリース日:2020 年 4 月 15 日
 
-## <a name="whats-new-in-581"></a>5\.8.1 の新機能
+### <a name="whats-new-in-581"></a>5\.8.1 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -70,7 +70,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.8.0
 - リリース日:2020 年 1 月 31 日
 
-## <a name="whats-new-in-58"></a>5\.8 の新機能
+### <a name="whats-new-in-58"></a>5\.8 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -102,7 +102,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.6.1
 - リリース日:2019 年 3 月 19 日
 
-## <a name="whats-new-in-561"></a>5\.6.1 の新機能
+### <a name="whats-new-in-561"></a>5\.6.1 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -121,7 +121,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.6.0
 - リリース日:2019 年 2 月 21 日
 
-## <a name="whats-new-in-56"></a>5\.6 の新機能
+### <a name="whats-new-in-56"></a>5\.6 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -148,7 +148,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.3.0
 - リリース日:2018 年 7 月 20 日
 
-## <a name="whats-new-in-53"></a>5\.3 の新機能
+### <a name="whats-new-in-53"></a>5\.3 の新機能
 
 - すべてのプラットフォーム上で Microsoft ODBC Driver 17.2 がサポートされます
 - macOS High Sierra のサポート (ODBC Driver 17 以降が必要になります)
@@ -166,7 +166,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:5.2.0
 - リリース日:2018 年 3 月 23 日
 
-## <a name="whats-new-in-52"></a>5\.2 の新機能
+### <a name="whats-new-in-52"></a>5\.2 の新機能
 
 - Windows 上では PHP 7.2.1 以降、他のプラットフォーム上では 7.2.0 以降がサポートされます
 - Microsoft ODBC Driver 17 のサポート
@@ -178,7 +178,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Always Encrypted は、Microsoft ODBC Driver 17 以降のみでサポートされます
 - Linux および macOS 上で UTF8 以外のロケールがサポートされます
   - Linux および macOS 上での UTF8 以外のロケールは、Microsoft ODBC Driver 17 以降のみでサポートされます
-- Azure SQL Data Warehouse のサポート
+- Azure Synapse Analytics のサポート
 - Azure SQL Managed Instance のサポート
 
 ## <a name="43"></a>4.3
@@ -191,7 +191,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - リリース番号:4.3.0
 - リリース日:2017 年 7 月 6 日
 
-## <a name="whats-new-in-43"></a>4\.3 の新機能
+### <a name="whats-new-in-43"></a>4\.3 の新機能
 
 - PHP 7.1 のサポート
 - macOS Sierra および macOS El Capitan のサポート
@@ -206,14 +206,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="40"></a>4.0
 
 ![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120448)  
-[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+[GitHub リリース タグ](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### <a name="version-information"></a>バージョン情報
 
 - リリース番号:4.0
 - リリース日:2016 年 7 月 1 日
 
-## <a name="whats-new-in-40"></a>4\.0 の新機能
+### <a name="whats-new-in-40"></a>4\.0 の新機能
 
 - PHP 7.0 のサポート  
 - 完全な 64 ビットのサポート
@@ -222,14 +222,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="32"></a>3.2
 
 ![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120449)  
-[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+[GitHub リリース タグ](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### <a name="version-information"></a>バージョン情報
 
 - リリース番号:3.2
 - リリース日:2015 年 3 月 9 日
 
-## <a name="whats-new-in-32"></a>3\.2 の新機能
+### <a name="whats-new-in-32"></a>3\.2 の新機能
 
 - PHP 5.6 のサポート  
 - 旧バージョンの PHP 5.5 および 5.4 最新の更新プログラムが含まれています  
@@ -237,19 +237,24 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="31"></a>3.1
 
-[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2143027)  
+[GitHub リリース タグ](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### <a name="version-information"></a>バージョン情報
 
 - リリース番号:3.1
 - リリース日:2014 年 12 月 12 日
 
-## <a name="whats-new-in-31"></a>3\.1 の新機能
+### <a name="whats-new-in-31"></a>3\.1 の新機能
 
 - PHP 5.5 のサポート  
 - Microsoft SQL Server 用 ODBC Driver 11 が必要です。 以前のバージョンでは、SQL Native Client が必要でした。  
 
-## <a name="whats-new-in-30"></a>3\.0 の新機能  
+## <a name="30"></a>3.0
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2143026)  
+
+### <a name="whats-new-in-30"></a>3\.0 の新機能  
 
 - PHP 5.4 のサポート  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3 では、PHP 5.2 はサポートされていません。  
 - AttachDBFileName 接続オプションが追加されています。 詳細については、「 [Connection Options](connection-options.md)」を参照してください。  
@@ -259,7 +264,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - クライアント側のカーソル (結果セットのメモリ内キャッシュ) のサポート。 詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](cursor-types-sqlsrv-driver.md)」および「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](cursor-types-pdo-sqlsrv-driver.md)」を参照してください。
 - PDO::ATTR_EMULATE_PREPARES 属性が追加されました。 詳細については、「[PDO::prepare](pdo-prepare.md)」をご覧ください。  
 
-## <a name="whats-new-in-20"></a>2\.0 の新機能
+## <a name="20"></a>2.0
+
+### <a name="whats-new-in-20"></a>2\.0 の新機能
 
 バージョン 2.0 では、PDO_SQLSRV ドライバーのサポートが追加されました。 詳細については、「 [PDO_SQLSRV ドライバー リファレンス](pdo-sqlsrv-driver-reference.md)」を参照してください。  
 

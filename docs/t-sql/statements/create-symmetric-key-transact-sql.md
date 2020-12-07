@@ -1,4 +1,5 @@
 ---
+description: CREATE SYMMETRIC KEY (Transact-SQL)
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/11/2019
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 48e25e4a2bc22d56503b3f0cc1819bb10b856e9d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483308"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688729"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -160,7 +161,7 @@ CREATE SYMMETRIC KEY key_name
 ### <a name="a-creating-a-symmetric-key"></a>A. 対称キーを作成する  
  次の例では、`AES 256` アルゴリズムを使用して対称キー `JanainaKey09` を作成し、新しいキーを証明書 `Shipping04` を使用して暗号化します。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -170,8 +171,7 @@ GO
 ### <a name="b-creating-a-temporary-symmetric-key"></a>B. 一時対称キーを作成する  
  次の例では、パス フレーズ `#MarketingXXV` から、一時対称キー `The square of the hypotenuse is equal to the sum of the squares of the sides` を作成します。 このキーには文字列 `Pythagoras` から生成された GUID が与えられ、証明書 `Marketing25` を使用して暗号化されます。  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -184,7 +184,7 @@ GO
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. 拡張キー管理 (EKM) デバイスを使用して対称キーを作成する  
  次の例では、`MyEKMProvider` というプロバイダーとキー名 `KeyForSensitiveData` を使用して、`MySymKey` という対称キーを作成します。 `User1` に承認を割り当てています。また、システム管理者が `MyEKMProvider` というプロバイダーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に既に登録していることを前提としています。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

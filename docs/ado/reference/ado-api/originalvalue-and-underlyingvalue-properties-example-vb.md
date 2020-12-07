@@ -1,8 +1,9 @@
 ---
+description: OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)
 title: OriginalValue プロパティと UnderlyingValue プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 46fa4935e7a7aba6c9b50fef368a6f266f93abb4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762065"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990243"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)
-この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  
+この例では、レコードの基になるデータがレコード[セット](./recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](./originalvalue-property-ado.md)プロパティと[UnderlyingValue](./underlyingvalue-property.md)プロパティを示します。  
   
 ```  
 'BeginOriginalValueVB  
@@ -120,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue プロパティ (ADO)](./originalvalue-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [UnderlyingValue プロパティ](./underlyingvalue-property.md)

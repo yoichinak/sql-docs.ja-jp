@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC 表示スクリプト用の SQL Server の準備
 title: Oracle CDC 表示スクリプト用の SQL Server の準備 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a1b97eab4f09e83cfb21523bfc7c9c432b442e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 034f66219a715064d06ed47192846f7a2775124a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496198"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC 表示スクリプト用の SQL Server の準備
 
@@ -29,7 +30,7 @@ ms.locfileid: "86920051"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にスクリプトを貼り付けることによって、後でスクリプトを実行することができます。  
   
- **Copy** に設定する必要があります  
+ **コピー**  
  スクリプトをクリップボードにコピーします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にスクリプトを貼り付けて実行し、MSXDBCDC データベースを作成することができます。  
   
 ## <a name="see-also"></a>参照  

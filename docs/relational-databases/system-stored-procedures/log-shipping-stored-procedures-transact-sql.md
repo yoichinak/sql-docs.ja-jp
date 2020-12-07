@@ -1,4 +1,5 @@
 ---
+description: ログ配布ストアドプロシージャ (Transact-sql)
 title: ログ配布ストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - system stored procedures [SQL Server], log shipping
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0dfcabddc59948e524168095666dfb6ce041b1fc
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: db7dd9e77fe73fa666634d2050b0820a9dc843f6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977562"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536809"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>ログ配布ストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

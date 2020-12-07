@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;OPTIONS (Transact-SQL)'
 title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6bfbf40042b47d4c6773b0887348e5f1f7075526
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112664"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128397"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87112664"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
@@ -45,20 +46,20 @@ ms.locfileid: "87112664"
  **integer**  
   
 ## <a name="remarks"></a>解説  
- オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション**値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションをオーバーライドします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
+ オプションは、**SET** コマンドの使用または **sp_configure ユーザー オプション** 値からのものです。 **SET** コマンドで構成されているセッション値は、**sp_configure** オプションをオーバーライドします。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] などの多数のツールによって SET オプションは自動的に構成されます。 各ユーザーには、構成を表す @@OPTIONS 関数が用意されます。  
   
  SET ステートメントを使用することにより、特定のユーザー セッションの言語とクエリ処理オプションを変更できます。 **\@\@OPTIONS** では、ON または OFF に設定されたオプションのみを検出できます。  
   
  **\@\@OPTIONS** 関数によって、10 進数の整数に変換された、オプションのビットマップが返されます。 ビット設定は、「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」トピックで説明されている場所に格納されます。  
   
- **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (**位置の**ANSI_WARNINGS`1000`) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
+ **\@\@OPTIONS** 値をデコードするには、 **\@\@OPTIONS** によって返された整数をバイナリに変換し、その値を「[user options サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)」の表で検索します。 たとえば、`SELECT @@OPTIONS;` によって値 `5496` が返された場合、Windows のプログラマ電卓 (**calc.exe**) を使用して、10 進数の `5496` をバイナリに変換します。 結果は `1010101111000`です。 右端の文字 (バイナリ 1、2、および 4) は 0 で、テーブル内の最初の 3 つの項目がオフであることを示します。 表を見ると、これらは **DISABLE_DEF_CNST_CHK**、**IMPLICIT_TRANSACTIONS**、**CURSOR_CLOSE_ON_COMMIT** であることがわかります。 次の項目 (`1000` 位置の **ANSI_WARNINGS**) はオンです。 ビットマップを左へ、オプションの一覧を下へ見ていきます。 左端のオプションが 0 の場合、これらは型変換によって切り捨てられています。 ビットマップ `1010101111000` は実際は `001010101111000` であり、全部で 15 個のオプションを表しています。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. 変更が動作に与える影響の例  
  次の例では、**CONCAT_NULL_YIELDS_NULL** オプションの 2 つの異なる設定による連結動作の違いを示します。  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -70,7 +71,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### <a name="b-testing-a-client-nocount-setting"></a>B. クライアントの NOCOUNT 設定のテスト  
  次の例では、`NOCOUNT``ON` を設定し、`@@OPTIONS` の値を調べます。 `NOCOUNT``ON` オプションは、セッションで実行するすべてのステートメントごとに、要求するクライアントに対して影響を受ける行数に関するメッセージを戻さないようにします。 `@@OPTIONS` の値は、`512` (0x0200) に設定されます。 これは NOCOUNT オプションを表します。 この例では、クライアントで NOCOUNT オプションが有効になっているかどうかを調べます。 たとえば、これはクライアントにおけるパフォーマンスの違いを調べるのに役立ちます。  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

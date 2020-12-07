@@ -1,4 +1,5 @@
 ---
+description: CRYPT_GEN_RANDOM (Transact-SQL)
 title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110495"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118617"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +68,7 @@ SELECT CRYPT_GEN_RANDOM(50) ;
 SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -1,4 +1,5 @@
 ---
+description: 位置指定更新と Delete ステートメントの実行
 title: 位置指定更新と Delete ステートメントの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96a1aa891ef8ba26c6c239cf35e62a8f36018e65
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e11843085f28ceeec965e079bb2942968d15b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466199"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの実行
 > [!IMPORTANT]  
@@ -36,13 +37,13 @@ ms.locfileid: "81307003"
   
      **SET** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
   
-     [**,** *列識別子* **=** {*式*&#124; **NULL**}]  
+     [**,** *列識別子* **=** {*式* &#124; **NULL**}]  
   
      *カーソル名***の現在の場所**  
   
      テーブル**からの削除** *-名前***の現在の***カーソル名*  
   
-     位置指定の update ステートメントで**SET**句を構築する最も簡単な方法は、更新する各列に対してパラメーターマーカーを使用し、 **SQLBindParameter**を使用して更新する行の行セットバッファーにバインドすることです。 この場合、パラメーターの C データ型は、行セットバッファーの C データ型と同じになります。  
+     位置指定の update ステートメントで **SET** 句を構築する最も簡単な方法は、更新する各列に対してパラメーターマーカーを使用し、 **SQLBindParameter** を使用して更新する行の行セットバッファーにバインドすることです。 この場合、パラメーターの C データ型は、行セットバッファーの C データ型と同じになります。  
   
 3.  位置指定の update ステートメントを実行する場合は、現在の行の行セットバッファーを更新します。 位置指定更新ステートメントが正常に実行されると、カーソルライブラリによって、現在の行の各列の値がキャッシュにコピーされます。  
   
@@ -52,9 +53,9 @@ ms.locfileid: "81307003"
 4.  カーソルに関連付けられているステートメントとは異なるステートメントを使用して、位置指定の update または delete ステートメントを実行します。  
   
     > [!CAUTION]  
-    >  現在の行を識別するためにカーソルライブラリによって構築された**where**句は、行の識別、別の行の識別、または複数の行の識別に失敗することがあります。 詳細については、「[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)」を参照してください。  
+    >  現在の行を識別するためにカーソルライブラリによって構築された **where** 句は、行の識別、別の行の識別、または複数の行の識別に失敗することがあります。 詳細については、「 [検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)」を参照してください。  
   
- すべての位置指定の update および delete ステートメントには、カーソル名が必要です。 カーソル名を指定するために、アプリケーションはカーソルが開かれる前に**SQLSetCursorName**を呼び出します。 ドライバーによって生成されたカーソル名を使用するために、アプリケーションはカーソルを開いた後に**Sqlgetcursor name**を呼び出します。  
+ すべての位置指定の update および delete ステートメントには、カーソル名が必要です。 カーソル名を指定するために、アプリケーションはカーソルが開かれる前に **SQLSetCursorName** を呼び出します。 ドライバーによって生成されたカーソル名を使用するために、アプリケーションはカーソルを開いた後に **Sqlgetcursor name** を呼び出します。  
   
  カーソルライブラリが位置指定の update または delete ステートメントを実行すると、カーソルライブラリによって保持されている状態配列、行セットバッファー、およびキャッシュには、次の表に示す値が含まれます。  
   

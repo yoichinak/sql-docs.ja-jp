@@ -1,5 +1,6 @@
 ---
-title: 定数 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: 定数 (Microsoft Drivers for PHP for SQL Server)
+description: SQL Server 用の Microsoft SQLSRV Driver for PHP と Microsoft PDO_SQLSRV Driver for PHP で定義されている定数について説明します。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928076"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435254"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +57,7 @@ PDO::SQLSRV_ATTR_ENCODING に渡すために使用できる値は次のとおり
 |PDO::SQLSRV_ENCODING_UTF8|データは UTF-8 エンコードです。 これが既定のエンコードです。|  
 |PDO::SQLSRV_ENCODING_DEFAULT|接続時に指定した場合は、PDO::SQLSRV_ENCODING_SYSTEM を使用します。<br /><br />準備ステートメントで指定した場合は、接続のエンコードを使用します。|  
   
-### <a name="query-timeout"></a>[クエリ タイムアウト]  
+### <a name="query-timeout"></a>クエリのタイムアウト  
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性は、タイムアウト時間を秒単位で表す任意の負以外の整数です。 既定値はゼロ (0) で、タイムアウトがないことを意味します。  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT 属性と共に、[PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)、[PDO::setAttribute](../../connect/php/pdo-setattribute.md)、および [PDO::prepare](../../connect/php/pdo-prepare.md) を指定できます。  
@@ -71,7 +72,7 @@ PDO::SQLSRV_ATTR_FORMAT_DECIMALS 属性と PDO::SQLSRV_ATTR_DECIMAL_PLACES 属�
 
 ### <a name="handling-date-and-time-fetches"></a>日付と時刻のフェッチの処理
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトとして取得するかどうかを指定します。 false のままにすると、文字列として返すことが既定の動作となります。 この属性は、接続レベルまたはステートメント レベルで [PDO::setAttribute](../../connect/php/pdo-setattribute.md) または [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) を使用して設定できますが、ステートメント属性を使用すると、対応する接続属性はオーバーライドされます。 詳細については、「[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください。
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトとして取得するかどうかを指定します。 false のままにすると、文字列として返すことが既定の動作となります。 この属性は、接続レベルまたはステートメント レベルで [PDO::setAttribute](../../connect/php/pdo-setattribute.md) または [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) を使用して設定できますが、ステートメント属性を使用すると、対応する接続属性はオーバーライドされます。 詳細については、「[PDO_SQLSRV ドライバーを使用して日付と時刻の型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV ドライバーの定数  
 次のセクションでは、SQLSRV ドライバーが使用する定数を一覧表示します。  
@@ -79,7 +80,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP Da
 ### <a name="err-constants"></a>ERR 定数  
 次の表に、[sqlsrv_errors](../../connect/php/sqlsrv-errors.md) がエラー、警告、または両方を返す場合に、指定するために使用される定数を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。 これが既定値です。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -140,7 +141,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP Da
   
 |SQLSRV 定数|PHP データ型|  
 |-------------------|-----------------|  
-|SQLSRV_PHPTYPE_INT|整数|  
+|SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|ストリーム|  
@@ -223,7 +224,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP Da
 |SQLSRV_SQLTYPE_CHAR,<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|精度|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|scale|1 - 有効桁数|  
   
 ### <a name="transaction-isolation-level-constants"></a>トランザクション分離レベルの定数  

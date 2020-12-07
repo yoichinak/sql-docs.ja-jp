@@ -1,6 +1,6 @@
 ---
 title: SQL Server Integration Services on Linux をインストールする
-description: この記事では、SQL Server Integration Services (SSIS) on Linux をインストール方法について説明します。
+description: この記事では、SQL Server Integration Services (SSIS) on Linux をインストール方法について説明します。 SSIS は、Ubuntu 16.04 および Red Hat Enterprise Linux にインストールできます。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882517"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088772"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>SQL Server Integration Services (SSIS) on Linux をインストールする
 
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 環境変数 | 説明 |
 |---|---|
 | ACCEPT_EULA | "Y" のような値に設定すると、SQL Server ライセンス条項に同意します。|
-| SSIS_PID | SQL Server のエディションまたはプロダクト キーを設定します。 可能な値を次に示します。<ul><li>評価</li><li>Developer</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>プロダクト キー</li></ul>プロダクト キーを指定する場合は、 *#####* - *#####* - *#####* - *#####* - *#####* という形式にします。この *#* は文字または数字です。  |
+| SSIS_PID | SQL Server のエディションまたはプロダクト キーを設定します。 可能な値を次に示します。<ul><li>評価</li><li>開発者</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>プロダクト キー</li></ul>プロダクト キーを指定する場合は、 *#####* - *#####* - *#####* - *#####* - *#####* という形式にします。この *#* は文字または数字です。  |
 | | |
 
 ## <a name="next-steps"></a>次のステップ
@@ -230,5 +230,5 @@ Linux 上で SSIS 設定を追加で構成するには、「[ssis-conf を使用
 
 - [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 - [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)
-- [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+- [Linux での SSIS に関する制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
 - [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

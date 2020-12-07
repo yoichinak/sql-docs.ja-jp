@@ -1,4 +1,5 @@
 ---
+description: STR (Transact-SQL)
 title: STR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f918f7fa212c9342726d61cc04ac08d65771821a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d34379bacee3a8d01f8f28c11930aefc5c00ab5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379837"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  小数点付きの概数型 (**float**) の式を指定します。  
   
  *length*  
- 全体の長さを指定します。 これには小数点、負号、数字、空白文字も含まれます。 既定値は 10 です。  
+ 全体の長さを指定します。 これには小数点、符号、数字、空白文字も含まれます。 既定値は 10 です。  
   
  *decimal*  
  小数点以下の桁数を指定します。 *decimal* は 16 以下である必要があります。 *decimal* に 16 を超える値を指定した場合、結果は小数点以下 16 桁に切り捨てられます。  
@@ -65,7 +66,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="examples"></a>例  
  次の例では、5 つの数字と小数点で構成される式を、6 桁の文字列に変換します。 値の小数部は、小数点以下 1 桁になるように丸められます。  
   
-```  
+```sql
 SELECT STR(123.45, 6, 1);  
 GO  
 ```  
@@ -81,7 +82,7 @@ GO
   
  式が指定した長さを超えた場合、STR では `**` が指定の長さだけ返されます。  
   
-```  
+```sql
 SELECT STR(123.45, 2, 2);  
 GO  
 ```  
@@ -97,7 +98,7 @@ GO
   
  `STR` の中で数値データが入れ子にされていても、結果は指定した形式の文字データになります。  
   
-```  
+```sql
 SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  

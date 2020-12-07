@@ -1,4 +1,5 @@
 ---
+description: '[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ'
 title: '[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bbed5b2a290c5820417086e1a6de7dd6b3116ec8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce7e281dd46b8c130ecc0a0cd8dfe833b0ed6cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423686"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
   
-## <a name="options"></a>オプション  
- **Name**  
+## <a name="options"></a>Options  
+ **名前**  
  現在のファセットを参照している各条件の名前を一覧表示します。  
   
 ## <a name="see-also"></a>参照  

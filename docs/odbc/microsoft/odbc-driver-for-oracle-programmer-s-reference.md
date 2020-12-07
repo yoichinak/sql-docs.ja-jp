@@ -1,4 +1,5 @@
 ---
+description: ODBC Driver for Oracle プログラマー&#39;s リファレンス
 title: ODBC Driver for Oracle プログラマー&#39;s リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b409446da085e0d35b9f3580ba7da8df22ef6f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449344"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle プログラマー&#39;s リファレンス
 > [!IMPORTANT]  
 >  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- このセクションには、次のトピックが含まれます。  
+ ここでは、次のトピックについて説明します。  
   
 -   [接続文字列の形式と属性](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   

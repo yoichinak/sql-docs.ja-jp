@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_disable_collector (Transact-SQL)
 title: sp_syscollector_disable_collector (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_disable_collector
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14eabed691aafe177de9674e985bd9c7f78cdc25
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3453a78c8d5edde0db4e087af4bc2501e3b4232a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892903"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549527"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,26 +41,26 @@ dbo.sp_syscollector_disable_collector
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定値は、サーバー上のデータコレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データコレクターを無効にします。  
   
 ```  
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

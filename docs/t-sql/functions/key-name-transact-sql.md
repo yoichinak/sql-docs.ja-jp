@@ -1,4 +1,5 @@
 ---
+description: KEY_NAME (Transact-SQL)
 title: KEY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d705bec832e5a0f131c242c41a29bc179c4732d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9ccc9a860218a6fa39596faaee78908eedf6907a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111933"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115987"
 ---
 # <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "87111933"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
@@ -42,10 +42,10 @@ KEY_NAME ( ciphertext | key_guid )
 
 ## <a name="arguments"></a>引数
  *ciphertext*  
- 対称キーによって暗号化されたテキストを指定します。 *暗号化テキスト* は型です。 **varbinary (8000)** です。  
+ 対称キーによって暗号化されたテキストを指定します。 *暗号化テキスト* は型です。**varbinary (8000)** です。  
   
  *key_guid*  
- 対称キーの GUID を指定します。 *key_guid* は型です。 **uniqueidentifier**です。  
+ 対称キーの GUID を指定します。 *key_guid* は型です。**uniqueidentifier** です。  
   
 ## <a name="returned-types"></a>返される型  
  **varchar(128)**  
@@ -58,7 +58,7 @@ KEY_NAME ( ciphertext | key_guid )
 ### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. key_guid を使用して対称キーの名前を表示する  
  **master** データベースには、##MS_ServiceMasterKey## という名前の対称キーがあります。 次の例では、sys.symmetric_keys 動的管理ビューからそのキーの GUID を取得し、変数に割り当ててからその変数を KEY_NAME 関数に渡して、GUID に対応する名前を返す方法を示します。  
   
-```  
+```sql  
 USE master;  
 GO  
 DECLARE @guid uniqueidentifier ;  
@@ -71,7 +71,7 @@ SELECT KEY_NAME(@guid) AS [Name of Key];
 ### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>B. 暗号化テキストを使用して対称キーの名前を表示する  
  次の例では、対称キーを作成してテーブルにデータを入力するプロセス全体を示します。 次に、この例では、暗号化テキストが渡されたときに KEY_NAME によってキーの名前がどのように返されるかを示します。  
   
-```  
+```sql 
 -- Create a symmetric key  
 CREATE SYMMETRIC KEY TestSymKey   
    WITH ALGORITHM = AES_128,  
@@ -81,8 +81,8 @@ CREATE SYMMETRIC KEY TestSymKey
 GO  
 -- Create a table for the demonstration  
 CREATE TABLE DemoKey  
-(IDCol int IDENTITY PRIMARY KEY,  
-SecretCol varbinary(256) NOT NULL)  
+(IDCol INT IDENTITY PRIMARY KEY,  
+SecretCol VARBINARY(256) NOT NULL)  
 GO  
 -- Open the symmetric key if not already open  
 OPEN SYMMETRIC KEY TestSymKey   
@@ -99,15 +99,14 @@ GO
 SELECT * FROM DemoKey;  
 GO  
 -- Decrypt the data  
-DECLARE @ciphertext varbinary(256);  
+DECLARE @ciphertext VARBINARY(256);  
 SELECT @ciphertext = SecretCol  
 FROM DemoKey WHERE IDCol = 1 ;  
 SELECT CAST (  
 DECRYPTBYKEY( @ciphertext)  
-AS varchar(100) ) AS SecretText ;  
+AS VARCHAR(100) ) AS SecretText ;  
 -- Use KEY_NAME to view the name of the key  
 SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;  
-  
 ```  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,6 @@
 ---
-title: dm_exec_compute_node_errors (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_compute_node_errors (Transact-sql)
+title: sys.dm_exec_compute_node_errors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,28 +20,29 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68f260aa547550d08c853b69cc6fb6e3e46d9a72
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830694"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833563"
 ---
-# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>dm_exec_compute_node_errors (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-sql)
+
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   PolyBase 計算ノードで発生したエラーを返します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|エラーに関連付けられている一意の数値 id。|システム内のすべてのクエリエラー間で一意|  
-|ソース|`nvarchar(255)`|ソーススレッドまたはプロセスの説明||  
-|型|`nvarchar(255)`|エラーの種類。||  
+|source|`nvarchar(255)`|ソーススレッドまたはプロセスの説明||  
+|type|`nvarchar(255)`|エラーの種類。||  
 |create_time|`datetime`|エラーが発生した時刻||  
-|compute_node_id|`int`|特定の計算ノードの識別子|[Dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)の compute_node_id を参照してください。|  
+|compute_node_id|`int`|特定の計算ノードの識別子|[Transact-sql&#41;&#40;の sys.dm_exec_compute_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)の compute_node_id を参照してください。|  
 |rexecution_id|`nvarchar(36)`|PolyBase クエリの識別子 (存在する場合)。||  
 |調べる|`int`|SQL Server セッションの識別子||  
 |thread_id|`int`|エラーが発生したスレッドの数値識別子。||  
@@ -49,8 +51,7 @@ ms.locfileid: "82830694"
 
   
 ## <a name="see-also"></a>参照  
- [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-sql)
 title: sp_syspolicy_rename_policy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481022"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`名前を変更するポリシーの名前を指定します。 *名前*は**sysname**であり、 *policy_id*が NULL の場合に指定する必要があります。  
+`[ @name = ] 'name'` 名前を変更するポリシーの名前を指定します。 *名前* は **sysname**であり、 *policy_id* が NULL の場合に指定する必要があります。  
   
-`[ @policy_id = ] policy_id`名前を変更するポリシーの識別子を指定します。 *policy_id*は**int**です。 *name*が NULL の場合は、を指定する必要があります。  
+`[ @policy_id = ] policy_id` 名前を変更するポリシーの識別子を指定します。 *policy_id* は **int**です。 *name* が NULL の場合は、を指定する必要があります。  
   
-`[ @new_name = ] 'new_name'`ポリシーの新しい名前を指定します。 *new_name*は**sysname**であり、必須です。 NULL または空の文字列を指定することはできません。  
+`[ @new_name = ] 'new_name'` ポリシーの新しい名前を指定します。 *new_name* は **sysname**であり、必須です。 NULL または空の文字列を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_syspolicy_rename_policy は msdb システム データベースのコンテキストで実行する必要があります。  
   
  *名前*または*policy_id*のいずれかの値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policies システムビューに対してクエリを実行します。  
@@ -61,7 +62,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、の構成の制御によって信頼されているユーザーのみに付与する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、'Test Policy 1' という名前のポリシーの名前を 'Test Policy 2' に変更します。  
   
 ```  
@@ -71,7 +72,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy @name = N'Test Policy 1'
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

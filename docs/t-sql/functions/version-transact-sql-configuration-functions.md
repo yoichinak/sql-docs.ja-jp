@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;バージョン - Transact SQL 構成関数'
 title: '@@VERSION (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,12 +22,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: be326dceca1d3a7c1a56a6ada123e1cc3a6767ad
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863418"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380567"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;バージョン - Transact SQL 構成関数
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87863418"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@VERSION  
 ```  
 
@@ -88,7 +89,7 @@ ms.locfileid: "87863418"
 ### <a name="a-return-the-current-version-of-ssnoversion"></a>A: 現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返す  
  次の例では、現在のインストールに関するバージョン情報を返します。  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server Version';  
 ```  
   
@@ -96,7 +97,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ### <a name="b-return-the-current-version-of-ssdw"></a>B. 現在のバージョンの [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を返す  
   
-```  
+```sql
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   

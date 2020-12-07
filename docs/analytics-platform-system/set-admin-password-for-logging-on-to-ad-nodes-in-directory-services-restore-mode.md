@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400331"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>ディレクトリサービス復元モード (DSRM) で AD ノードにログオンするための管理者パスワードを設定する-Analytics Platform System
@@ -25,9 +25,9 @@ ms.locfileid: "74400331"
   
 2.  コマンド プロンプトで、「`ntdsutil`」と入力します。  
   
-3.  **Ntdsutil**プロンプトで、「」 `set dsrm password`と入力します。  
+3.  **Ntdsutil**プロンプトで、「」と入力 `set dsrm password` します。  
   
-4.  [**管理者パスワードのリセット:** ] プロンプト`reset password on server null`で、「」と入力します。  
+4.  [ **管理者パスワードのリセット:** ] プロンプトで、「」と入力 `reset password on server null` します。  
   
 5.  プロンプトで、新しいパスワードを入力します。  
   
@@ -37,8 +37,8 @@ ms.locfileid: "74400331"
     > Analytics Platform System では、ドメイン管理者またはローカル管理者のパスワードのドル記号 ($) はサポートされていません。 ドル記号を含むパスワードが検証され、使用できるようになりますが、アップグレードとメンテナンスのアクティビティをブロックできます。  
   
 > [!NOTE]  
-> 特定の AD 仮想マシンで Active Directory Domain Services または仮想マシンが破損した場合は、影響を受けた AD 仮想マシンの交換**evm**を実行することをお勧めします。 CSS に問い合わせてください。  
+> 特定の AD 仮想マシンで Active Directory Domain Services または仮想マシンが破損した場合は、影響を受けた AD 仮想マシンの交換 **evm** を実行することをお勧めします。 CSS に問い合わせてください。  
   
 ## <a name="see-also"></a>参照  
-[&#40;Analytics Platform System&#41;のパスワードリセット](password-reset.md)  
+[&#40;Analytics Platform System&#41;のパスワードリセット ](password-reset.md)  
   

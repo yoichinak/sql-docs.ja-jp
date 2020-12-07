@@ -1,4 +1,5 @@
 ---
+description: sysarticleupdates (Transact-sql)
 title: sysarticleupdates (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 929a2322b9f3299a3f191515eace7cfdef7bc4d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ca984460c74628f919e16c77c3a3a97fa732b52
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881383"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518226"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "85881383"
 |**autogen**|**bit**|ストアドプロシージャが自動的に生成されることを示します。<br /><br /> **0** = False、自動ではありません。<br /><br /> **1** = True、自動。|  
 |**sync_upd_trig**|**int**|アーティクルテーブルの自動バージョン管理トリガーの ID です。|  
 |**conflict_tableid**|**int**|競合テーブルの ID。|  
-|**ins_conflict_proc**|**int**|競合を**conflict_table**に書き込むために使用されるプロシージャの ID。|  
-|**identity_support**|**bit**|キュー更新を使用するときに、自動 id 範囲処理を有効にするかどうかを指定します。 **0**は、id 範囲がサポートされていないことを示します。|  
+|**ins_conflict_proc**|**int**|競合を **conflict_table**に書き込むために使用されるプロシージャの ID。|  
+|**identity_support**|**bit**|キュー更新を使用するときに、自動 id 範囲処理を有効にするかどうかを指定します。 **0** は、id 範囲がサポートされていないことを示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

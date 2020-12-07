@@ -1,4 +1,5 @@
 ---
+description: '[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)'
 title: データ型マッピングの確認 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347048"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -66,13 +67,13 @@ ms.locfileid: "86920162"
 |列|説明|  
 |------------|-----------------|  
 |(変換アイコン)|データ型変換が成功する確率を示します。<br /> - **緑色** のチェック マーク アイコンは、この列に対するデータ型変換が成功するとウィザードが予測していることを示します。<br />- **黄色** の警告アイコンは、ウィザードが実行する変換をユーザーが確認する必要があることを示します。 変換を確認するには、列をダブルクリックして **[列変換の詳細]** ダイアログ ボックスを表示します。 詳細については、 [[列変換の詳細]](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)ダイアログ ボックスを参照してください。<br />- **赤色** のエラー アイコンは、ウィザードが変換を確実に実行することができないことを示します。|  
-|**変換元列**|変換元列の名前です。|  
+|**[変換元列]**|変換元列の名前です。|  
 |**変換元の型**|変換元列のデータ型です。|  
 |**変換先列**|変換先列の名前です。|  
 |**変換先の型**|変換先列のデータ型です。|  
 |**CONVERT**|計画した変換を続行するかどうかを指定します。<br /> -   計画した変換をウィザードで続行するには、このチェック ボックスをオンにします。<br />-   データ型の変換を取り消すには、このチェック ボックスをオフにします。|  
 |**エラー時**|ウィザードでエラーを処理する方法を指定します。<br /> - **[エラー時 (グローバル)]** 設定。これはこのページの下部で指定できます。<br />-   エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。<br />-   エラーを無視します。|  
-|**切り捨て時**|ウィザードで切り捨てを処理する方法を指定します。<br /> - **[切り捨て時 (グローバル)]** 設定。これはこのページの下部で指定できます。<br />-   エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。<br />-   切り捨てを無視します。|  
+|**[切り捨て時]**|ウィザードで切り捨てを処理する方法を指定します。<br /> - **[切り捨て時 (グローバル)]** 設定。これはこのページの下部で指定できます。<br />-   エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。<br />-   切り捨てを無視します。|  
 
 > [!TIP]
 > データの特定の列の変換に関する詳細情報を表示するには、一覧内の任意の行をダブルクリックします。 **[列変換の詳細]** ダイアログ ボックスが開き、列の詳細な変換情報が表示されます。 詳細については、 [[列変換の詳細]](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)ダイアログ ボックスを参照してください。
@@ -84,19 +85,19 @@ ms.locfileid: "86920162"
 
 ![マッピングの確認 - エラー](../../integration-services/import-export-data/media/review-mapping-errors.png)
 
- **エラー時 (グローバル)**  
+ **[エラー時 (グローバル)]**  
  ウィザードでエラーを処理する方法を指定します。  
  -   エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。 これが既定値です。
  -   エラーを無視し、インポート処理またはエクスポート処理を続行します。  
   
- **切り捨て時 (グローバル)**  
+ **[切り捨て時 (グローバル)]**  
  ウィザードでデータ切り捨てを処理する方法を指定します。  
  -   エラーが発生して失敗し、インポート処理またはエクスポート処理を停止します。 これが既定値です。
  -   切り捨てを無視し、インポート処理またはエクスポート処理を続行します。  
    
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  警告を確認し、変換オプションを指定し、エラーの処理方法を指定すると、 **[データ型マッピングの確認]** ページから **[列マッピング]** ダイアログ ボックスに戻ります。 詳細については、「 [列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。  
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
 [SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

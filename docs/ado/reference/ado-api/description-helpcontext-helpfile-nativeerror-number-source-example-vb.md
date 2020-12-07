@@ -1,8 +1,9 @@
 ---
+description: Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)
 title: Error オブジェクトプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f12456e8331739d665eb14ba3553e4f4f1d36ce3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9cfb607ba02125856b07b447dd20378d93ed1f11
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757278"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973993"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description、HelpContext、HelpFile、のエラー、Number、Source、および SQLState プロパティの例 (VB)
 この例では、エラーをトリガーし、トラップして、結果として生成される[error](../../../ado/reference/ado-api/error-object.md)オブジェクトの[Description](../../../ado/reference/ado-api/description-property.md)、 [helpcontext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、 [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)、の[エラー](../../../ado/reference/ado-api/nativeerror-property-ado.md)、 [Number](../../../ado/reference/ado-api/number-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-error.md)、および[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)の各プロパティを表示します。  

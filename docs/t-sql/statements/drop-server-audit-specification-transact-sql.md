@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - DROP SERVER AUDIT SPECIFICATION statement
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: efc601ad16aecab902cc44f7d91be6f528b0e5cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1664f2a9263db649dc9e840b915cd25d2610e956
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485476"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131129"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "86485476"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -56,14 +56,14 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を削除します。  
   
-```  
+```sql  
 DROP SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification;  
 GO  
 ```  
   
  監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

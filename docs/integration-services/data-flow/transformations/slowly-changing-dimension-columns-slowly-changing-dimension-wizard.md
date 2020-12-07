@@ -1,4 +1,5 @@
 ---
+description: '[緩やかに変化するディメンションの列] (緩やかに変化するディメンション ウィザード)'
 title: '[緩やかに変化するディメンションの列] (緩やかに変化するディメンション ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92ae77d412ad318a01b437382b6d4557811c2b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919486"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425724"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンションの列] (緩やかに変化するディメンション ウィザード)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919486"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[ディメンション列]**  
  ディメンション列を一覧から選択します。  
   

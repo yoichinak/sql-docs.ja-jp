@@ -1,4 +1,5 @@
 ---
+description: セキュリティ関数 (Transact-SQL)
 title: セキュリティ関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a97e7cde856f9f1cf6f7892a9f6cac9c03e338a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 776f3bfbefbafa3f2e7e116db40d893cacd425f5
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248492"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419853"
 ---
 # <a name="security-functions-transact-sql"></a>セキュリティ関数 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,10 +121,17 @@ ms.locfileid: "87248492"
 :::row-end:::
 :::row:::
     :::column:::
-        [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)
+        [LOGINPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/loginproperty-transact-sql.md)
     :::column-end:::
     :::column:::
         [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)
+    :::column-end:::
+    :::column:::
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -138,10 +146,9 @@ ms.locfileid: "87248492"
   
  Windowsグループのメンバーシップについては、[xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md) および [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [暗号化関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [セキュリティ ステートメント](https://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
-  
+ [セキュリティ ステートメント](../statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)  
   

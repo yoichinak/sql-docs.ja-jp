@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: acc73e861b0c27b4a1fa46e7c4c2efa0e23cb55d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112303"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91378885"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +40,7 @@ ms.locfileid: "87112303"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
@@ -59,14 +59,14 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、証明書 `@SensitiveData` を使用して `ABerglundCert07` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+ 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
-```  
-DECLARE @SensitiveData nvarchar(max);  
+```sql  
+DECLARE @SensitiveData NVARCHAR(max);  
 SET @SensitiveData = N'Saddle Price Points are   
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29';  
 INSERT INTO [SignedData04]  

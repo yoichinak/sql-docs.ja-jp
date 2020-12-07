@@ -1,4 +1,5 @@
 ---
+description: レッスン 4-2:破損したファイルを作成する
 title: 手順 2:破損ファイルの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae6a1109ce6c2631f4adabd6d828794a1a21869
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88449640"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>レッスン 4-2:破損したファイルを作成する
 
@@ -31,7 +32,7 @@ ms.locfileid: "86922207"
   
 1.  メモ帳などのテキスト エディターで **Currency_VEB.txt** ファイルを開きます。  
   
-2.  テキスト エディターの検索置換機能を使用し、 **VEB** と表示されているすべての箇所を **BAD**に置換します。  
+2.  テキスト エディターの検索置換機能を使用し、 **VEB** と表示されているすべての箇所を **BAD** に置換します。  
   
 3.  他のサンプル データ ファイルと同じフォルダーに、修正したファイルを保存します。このファイルには「 **Currency_BAD.txt**」という名前を付けてください。  
   
@@ -42,13 +43,13 @@ ms.locfileid: "86922207"
   
 ## <a name="verify-that-an-error-occurs-during-run-time"></a>実行時にエラーが発生することを確認する  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
     データ フローの 3 つ目の反復処理で、Lookup Currency Key 変換が **Currency_BAD.txt** ファイルを処理しようとし、変換が失敗します。 この変換エラーにより、パッケージ全体が失敗します。  
   
 2.  **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
-3.  デザイン画面で、 **[実行結果]** タブを選択します。  
+3.  デザイン画面で、**[実行結果]** タブを選択します。  
   
 4.  ログの内容を参照し、次の処理不能エラーが発生していることを確認します。  
   

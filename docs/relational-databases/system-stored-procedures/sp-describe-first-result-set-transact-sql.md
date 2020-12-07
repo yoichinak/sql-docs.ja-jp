@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
@@ -15,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394381"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548125"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  バッチの最初の使用可能な結果セットのメタデータを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが結果を返さない場合は、空の結果セットを返します。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 静的分析を実行することによって実行される最初のクエリのメタデータをが判別できない場合に、エラーが発生します。 動的管理ビューの[dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)は同じ情報を返します。  
+  バッチの最初の使用可能な結果セットのメタデータを返し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが結果を返さない場合は、空の結果セットを返します。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 静的分析を実行することによって実行される最初のクエリのメタデータをが判別できない場合に、エラーが発生します。 動的管理ビューの [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) は同じ情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ \@tsql = ] 'Transact-SQL_batch'`1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 *Transact-sql SQL_batch*は**nvarchar (***n***)** または**nvarchar (max)** です。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 1つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント。 *Transact-sql SQL_batch* は **nvarchar (***n***)** または **nvarchar (max)** です。  
   
-`[ \@params = ] N'parameters'`\@params は、バッチのパラメーターの宣言文字列を提供し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。これは sp_executesql に似ています。 パラメーターには、 **nvarchar (n)** または**nvarchar (max)** を指定できます。  
+`[ \@params = ] N'parameters'`\@params は、バッチのパラメーターの宣言文字列を提供し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。これは sp_executesql に似ています。 パラメーターには、 **nvarchar (n)** または **nvarchar (max)** を指定できます。  
   
- _Batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは、params で定義する必要があり \@ ます。 ステートメント [!INCLUDE[tsql](../../includes/tsql-md.md)] 内のステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
+ _Batch に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n* は、追加のパラメーター定義を示すプレースホルダーです。 ステートメントで指定するすべてのパラメーターは、params で定義する必要があり \@ ます。 ステートメント [!INCLUDE[tsql](../../includes/tsql-md.md)] 内のステートメントまたはバッチにパラメーターが含まれていない場合、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
-`[ \@browse_information_mode = ] tinyint`追加のキー列とソーステーブル情報を返すかどうかを指定します。 1に設定すると、各クエリはクエリに FOR BROWSE オプションが含まれているかのように分析されます。 追加のキー列とソース テーブル情報が返されます。  
+`[ \@browse_information_mode = ] tinyint` 追加のキー列とソーステーブル情報を返すかどうかを指定します。 1に設定すると、各クエリはクエリに FOR BROWSE オプションが含まれているかのように分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
 -   0に設定すると、情報は返されません。  
   
@@ -57,7 +58,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2に設定すると、各クエリは、カーソルの準備または実行時に使用されるかのように分析されます。 ビュー名がソース列情報として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_describe_first_result_set**は、成功した場合に常に0の状態を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類によって設定されます。 プロシージャがから呼び出された場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、エラーが発生した場合でも、戻り値は常に0になります。  
+ **sp_describe_first_result_set** は、成功した場合に常に0の状態を返します。 プロシージャがエラーをスローし、プロシージャが RPC として呼び出された場合、返される状態は、dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類によって設定されます。 プロシージャがから呼び出された場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、エラーが発生した場合でも、戻り値は常に0になります。  
   
 ## <a name="result-sets"></a>結果セット  
  この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 各コントロールのパスに最初のステートメントが存在しない場合は、0 行の結果セットが返されます。  
@@ -70,7 +71,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**bit NOT NULL**|列で Null が許容される場合は値1が格納され、列が null を許容しない場合は0、null を許容するかどうかを判断できない場合は1が格納されます。|  
 |**system_type_id**|**int NOT NULL**|に指定されている列のデータ型の system_type_id が含まれています。型です。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar (256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
-|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または**xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16か**sp_tableoption ' text in row '** によって設定された値になります。|  
+|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は **varchar (max)**,、 **nvarchar (max)**,、 **varbinary (max)**,、または **xml**です。<br /><br /> **テキスト**列の場合、 **max_length**値は16か**sp_tableoption ' text in row '** によって設定された値になります。|  
 |**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合は 0 を返します。|  
 |**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合は 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合は NULL を返します。|  
@@ -97,7 +98,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_computed_column**|**ビット NULL**|この列が計算列の場合は 1、それ以外の場合は 0 を返します。 計算列であることを確認できない場合は NULL を返します。|  
 |**is_sparse_column_set**|**ビット NULL**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 列がスパース列セットの一部であることを判断できない場合は NULL を返します。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY リストにおけるこの列の位置。 列が ORDER BY リストに表示されない場合、または ORDER BY リストを一意に特定できない場合は、NULL を返します。|  
-|**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さを返します。 ORDER BY リストがない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。 この値は sp_describe_first_result_set によって返されるすべての行で同じであることに注意して**ください。**|  
+|**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さを返します。 ORDER BY リストがない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。 この値は sp_describe_first_result_set によって返されるすべての行で同じであることに注意して **ください。**|  
 |**order_by_is_descending**|**smallint NULL**|ordinal_in_order_by_list が NULL でない場合、**order_by_is_descending** 列には、この列の ORDER BY 句の方向がレポートされます。 それ以外の場合は、NULL が報告されます。|  
 |**tds_type_id**|**int NOT NULL**|内部使用です。|  
 |**tds_length**|**int NOT NULL**|内部使用です。|  
@@ -105,13 +106,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_sort_id**|**tinyint NULL**|内部使用です。|  
   
 ## <a name="remarks"></a>解説  
- **sp_describe_first_result_set**は、プロシージャが (仮定の) バッチ a に対して最初の結果セットのメタデータを返す場合に、そのバッチ (a) が後で実行されると、バッチによって (1) 最適化時のエラーが発生することを保証します。 (2) 実行時エラーが発生します。 (3) は結果セットを返しません。または、(4) **sp_describe_first_result_set**によって記述されたものと同じメタデータを持つ最初の結果セットを返します。  
+ **sp_describe_first_result_set** は、プロシージャが (仮定の) バッチ a に対して最初の結果セットのメタデータを返す場合に、そのバッチ (a) が後で実行されると、バッチによって (1) 最適化時のエラーが発生することを保証します。 (2) 実行時エラーが発生します。 (3) は結果セットを返しません。または、(4) **sp_describe_first_result_set**によって記述されたものと同じメタデータを持つ最初の結果セットを返します。  
   
  名前、NULL 値の許容属性、およびデータ型が異なる可能性があります。 **Sp_describe_first_result_set**が空の結果セットを返す場合、バッチ実行で結果セットが返されないという保証があります。  
   
- この保証は、サーバーに関連するスキーマの変更がないことを前提としています。 サーバー上での関連するスキーマ変更には、 **sp_describe_first_result_set**が呼び出されてから、バッチ B によって行われたスキーマの変更を含め、実行時に結果セットが返されるまでの間のバッチ a に一時テーブルまたはテーブル変数を作成することは含まれません。  
+ この保証は、サーバーに関連するスキーマの変更がないことを前提としています。 サーバー上での関連するスキーマ変更には、 **sp_describe_first_result_set** が呼び出されてから、バッチ B によって行われたスキーマの変更を含め、実行時に結果セットが返されるまでの間のバッチ a に一時テーブルまたはテーブル変数を作成することは含まれません。  
   
- **sp_describe_first_result_set**は、次のいずれかの場合にエラーを返します。  
+ **sp_describe_first_result_set** は、次のいずれかの場合にエラーを返します。  
   
 -   入力 \@ tsql が有効なバッチではない場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 有効性は、バッチの解析と分析によって決まり [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 バッチが有効であるかどうかを判断するときに、クエリの最適化中または実行中のバッチによって発生したエラーは考慮されません [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
@@ -125,7 +126,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  他のすべてのチェックが成功した場合は、入力バッチ内のすべての制御フローパスが考慮されます。 この操作では、すべての制御フローステートメントが考慮される必要があります (GOTO、IF/ELSE、WHILE、および [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH ブロック) に加えて、 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXEC ステートメントによって入力バッチから呼び出されたプロシージャ、動的バッチ、またはトリガー、ddl トリガーを起動する ddl ステートメント、または外部キー制約の連鎖アクションによって変更された対象テーブルまたはテーブルでトリガーが起動される DML ステートメント。 制御パスの多くが考えられる場合、ある時点でアルゴリズムは停止します。  
   
- 制御フローパスごとに、結果セットを返す最初のステートメント (存在する場合) が**sp_describe_first_result_set**によって決定されます。  
+ 制御フローパスごとに、結果セットを返す最初のステートメント (存在する場合) が **sp_describe_first_result_set**によって決定されます。  
   
  バッチ内で使用可能な最初のステートメントが複数見つかった場合、その結果は、列数、列名、null 値の許容属性、およびデータ型によって異なる場合があります。 これらの違いを処理する方法の詳細について、ここに記載します。  
   
@@ -141,15 +142,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   varchar **(a)** から**varchar (max)**  
   
-    -   **nvarchar (a)** から**nvarchar (a ')** への ' >。  
+    -   **nvarchar (a)** から **nvarchar (a ')** への ' >。  
   
     -   nvarchar **(a)** から**nvarchar (max)**  
   
-    -   **varbinary (a)** から**varbinary (a ')** の場合、' > a です。  
+    -   **varbinary (a)** から **varbinary (a ')** の場合、' > a です。  
   
     -   varbinary **(a)** から**varbinary (max)**  
   
- **sp_describe_first_result_set**は間接再帰をサポートしていません。  
+ **sp_describe_first_result_set** は間接再帰をサポートしていません。  
   
 ## <a name="permissions"></a>アクセス許可  
  Tsql 引数を実行する権限が必要です \@ 。  
@@ -255,7 +256,7 @@ ELSE
     SELECT a FROM t2;  
 ```  
   
- 結果: エラー、型の不一致 (**int**と**smallint**)。  
+ 結果: エラー、型の不一致 (**int** と **smallint**)。  
   
 #### <a name="column-name-cannot-be-determined"></a>列名を特定できません  
  最初の結果セットの列は、同じ可変長型、null 値の許容属性、および列名の長さによって異なります。  
@@ -297,7 +298,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果: エラー、型の不一致 (**varchar (10)** 、および**nvarchar (10)**)。  
+ 結果: エラー、型の不一致 (**varchar (10)** 、および **nvarchar (10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果セットがエラーを返す可能性があります  
  最初の結果セットは、エラーまたは結果セットです。  

@@ -1,4 +1,5 @@
 ---
+description: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/20/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf3324633d8c30af7a8174438efddbd0bb78d146
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 95c7f778abe9417a108e4df6982b73d3037f5ae9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301989"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124283"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86301989"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -82,21 +83,21 @@ EKM プロバイダーの dll の作成に使用されたヘッダー ファイ�
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の `SecurityProvider` という暗号化サービス プロバイダーを新しいバージョンの .dll ファイルに変更します。 この新しいバージョンの .dll ファイルは、`c:\SecurityProvider\SecurityProvider_v2.dll` という名前でサーバーにインストールされています。 プロバイダーの証明書をサーバーにインストールする必要があります。  
   
 1. アップグレードを実行するプロバイダーを無効にします。 これにより、開いているすべての暗号化セッションが終了します。  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. プロバイダーの .dll ファイルをアップグレードします。 GUID では必ず以前のバージョンと同じになりますが、バージョンは異なってもかまいません。  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. アップグレード済みのプロバイダーを有効にします。   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

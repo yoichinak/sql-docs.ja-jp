@@ -1,4 +1,5 @@
 ---
+description: FILEGROUP_NAME (Transact-SQL)
 title: FILEGROUP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5da7bd5ba3424699d2cf523a60a1cff855ccdd6e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 68d147d687b094ee579a904b23910da2ea93bd2b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111550"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124709"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87111550"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
@@ -54,13 +55,13 @@ FILEGROUP_NAME ( filegroup_id )
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 *filegroup_id* は、**sys.filegroups** カタログ ビューの **data_space_id** 列に対応します。  
   
 ## <a name="examples"></a>例  
-この例では、`1` データベース内のファイル グループ ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] に対するファイル グループの名前を取得します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のファイル グループ ID `1` に対するファイル グループの名前を取得します。  
   
-```  
+```sql  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

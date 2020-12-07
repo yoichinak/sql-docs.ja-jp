@@ -1,8 +1,9 @@
 ---
+description: Clustered プロパティの例 (VB)
 title: Clustered プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c8e0d1b03b4aa56d0db19d1d692f459bc7d9f613
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759408"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985183"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered プロパティの例 (VB)
-この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[クラスター化](../../../ado/reference/adox-api/clustered-property-adox.md)されたプロパティを示します。 Microsoft Jet データベースではクラスター化インデックスがサポートされていないため、この例では**Northwind**データベースのすべてのインデックスの**クラスター化**されたプロパティに対して**False**が返されます。  
+この例では、[インデックス](./index-object-adox.md)の[クラスター化](./clustered-property-adox.md)されたプロパティを示します。 Microsoft Jet データベースではクラスター化インデックスがサポートされていないため、この例では**Northwind**データベースのすべてのインデックスの**クラスター化**されたプロパティに対して**False**が返されます。  
   
 ```  
 ' BeginClusteredVB  
@@ -73,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Clustered プロパティ (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Clustered プロパティ (ADOX)](./clustered-property-adox.md)   
+ [Index オブジェクト (ADOX)](./index-object-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)

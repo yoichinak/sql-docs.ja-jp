@@ -1,7 +1,7 @@
 ---
 title: データ プールとは
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスターのデータ プールについて説明します。
+description: SQL Server ビッグ データ クラスター内の SQL Server データ プールの役割、および SQL データ プールのアーキテクチャと機能について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 547f3e14d0e73b944cc7bde31f657dbf4ad49d41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73fe5c5b7be90d8c351aa08b3d5fe0247ecfceb0
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773658"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914339"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのデータ プールとは
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]での *SQL Server データ プール*の役割について説明します。 以下のセクションでは、SQL データ プールのアーキテクチャと機能について説明します。
+この記事では、SQL Server ビッグ データ クラスターでの " *SQL Server データ プール* " の役割について説明します。 以下のセクションでは、データ プールのアーキテクチャ、機能、使用シナリオについて説明します。
 
 この 5 分間のビデオでは、データ プールについて説明し、データ プールからデータのクエリを実行する方法について説明します。
 
@@ -28,13 +28,15 @@ ms.locfileid: "85773658"
 
 ## <a name="data-pool-architecture"></a>データ プールのアーキテクチャ
 
-データ プールは、1 つまたは複数の SQL Server データ プール インスタンスで構成されます。 SQL データ プール インスタンスにより、クラスターに対して永続的な SQL Server ストレージが提供されます。 データ プールは、SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 大規模なデータセット全体でパフォーマンスを向上させるために、データ プール内のデータは、メンバーである SQL データ プール インスタンス全体のシャードに分散されます。
-
-## <a name="scale-out-data-marts"></a>スケールアウト データ マート
-
-データ プールを使用すると、複数のソースからの外部データがデータ プールに取り込まれるスケールアウト データ マートを作成できます。 データがデータ プール インスタンス間に分散されるため、まとめられたデータに対する並列クエリがより効率的になります。
+データ プールは、クラスターに永続的な SQL Server ストレージを提供する 1 つ以上の SQL Server データ プール インスタンスで構成されます。 これにより、外部データ ソースおよび作業のオフロードに対してキャッシュ データをクエリするパフォーマンスを向上させることができます。 データは、T-SQL クエリまたは Spark ジョブのいずれかを使用してデータ プールに取り込まれます。 大きなデータセット全体のパフォーマンスを向上させるために、取り込まれたデータはシャードに分散され、プール内のすべての SQL Server インスタンスに格納されます。 サポートされているディストリビューション方法はラウンド ロビン方式であり、レプリケートされます。 読み取りアクセスの最適化では、各データ プール インスタンスの各テーブルにクラスター化列ストア インデックスが作成されます。 データ プールは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のスケールアウト データ マートとして機能します。
 
 ![スケールアウト データ マート](media/concept-data-pool/data-virtualization-improvements.png)
+
+データ プール内の SQL Server インスタンスへのアクセスは、SQL Server マスター インスタンスから管理されます。 データ プールに対する外部データ ソースが、データ キャッシュを格納する PolyBase 外部テーブルと共に作成されます。 バックグラウンドでは、コントローラーによって、外部テーブルに一致するテーブルを含むデータベースがデータ プールに作成されます。 SQL Server マスター インスタンスからは、ワークフローは透過的になります。コントローラーにより、特定の外部テーブル要求が、コンピューティング プールを介してデータ プール内の SQL Server インスタンスにリダイレクトされ、クエリを実行して結果セットが返されます。 データ プール内のデータは、取り込みまたはクエリのみが可能であり、変更することはできません。 そのため、データを更新するには、テーブルを削除してから、テーブルを再作成し、その後データを再設定する必要があります。
+
+## <a name="data-pool-scenarios"></a>データ プールのシナリオ
+
+ レポートを作成する目的は、データ プールの一般的なシナリオです。 たとえば、複数の PolyBase データ ソースを結合する複雑なクエリは、週次レポートで使用され、データ プールにオフロードできます。 キャッシュ データにより、ローカルの高速コンピューティングが提供され、元のデータセットに戻る必要がなくなります。 同様に、定期的に更新する必要があるダッシュボード データも、最適化されたレポート作成のためにデータ プールにキャッシュすることができます。 また、Machine Learning の繰り返し探索も、データ プール内のデータセットをキャッシュすることからメリットが得られます。
 
 ## <a name="next-steps"></a>次のステップ
 

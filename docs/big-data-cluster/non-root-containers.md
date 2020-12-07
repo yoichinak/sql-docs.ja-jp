@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218183"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257122"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>非ルート ビッグ データ クラスター コンテナー
 
@@ -47,7 +47,7 @@ BDC 内のサービスが非ルート ユーザーとして実行されるよう
 
 Azure Data Studio を使用すると、ゲートウェイを介して確立した接続の資格情報の変更を透過的に処理し、オブジェクト エクスプローラーで HDFS のブラウズ エクスペリエンスを有効にしたり、ノートブックを使用して Spark ジョブを送信したりできます。 [Azure Data Studio Insiders ビルド](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio)をインストールします。 このビルドには、このユース ケースに必要な変更が含まれています。
 
-ゲートウェイ経由でサービスにアクセスするための資格情報を提供する必要があるその他のシナリオ (`azdata` でのログイン、Spark の Web ダッシュボードへのアクセスなど) では、確実に正しい資格情報が使用されるようにしてください。 CU5 より前に展開された既存のクラスターを対象とする場合は、クラスターを CU5 にアップグレードした後も、ゲートウェイへの接続には引き続きユーザー名 `root` を使用することになります。 CU5 ビルドを使用して新しいクラスターを展開する場合は、`AZDATA_USERNAME` 環境変数に対応するユーザー名を指定してログインします。
+ゲートウェイ経由でサービスにアクセスするための資格情報を提供する必要があるその他のシナリオ ([!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] でのログイン、Spark の Web ダッシュボードへのアクセスなど) では、確実に正しい資格情報が使用されるようにしてください。 CU5 より前に展開された既存のクラスターを対象とする場合は、クラスターを CU5 にアップグレードした後も、ゲートウェイへの接続には引き続きユーザー名 `root` を使用することになります。 CU5 ビルドを使用して新しいクラスターを展開する場合は、`AZDATA_USERNAME` 環境変数に対応するユーザー名を指定してログインします。
 
 ## <a name="configuration-file-switches"></a>構成ファイルのスイッチ
 

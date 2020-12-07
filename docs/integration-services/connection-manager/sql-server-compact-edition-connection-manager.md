@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition 接続マネージャー
 title: SQL Server Compact Edition 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425944"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャー
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーを使用すると、パッケージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 変換先では、この接続マネージャーの使用により、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース内のテーブルに読み込まれます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーを使用すると、パッケージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先では、この接続マネージャーの使用により、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース内のテーブルに読み込まれます。  
   
 > [!NOTE]  
 >  64 ビット コンピューターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データ ソースに接続するパッケージを 32 ビット モードで実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact データ ソースへの接続に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Provider は、32 ビット版でのみ使用できます。  
@@ -37,7 +38,7 @@ ms.locfileid: "86917208"
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャーの構成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **接続** コレクションに追加します。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **SQLMOBILE**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **SQLMOBILE** に設定されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーは、次の方法で構成できます。  
   
@@ -102,9 +103,9 @@ ms.locfileid: "86917208"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[読み取り専用]**|データベースに対する読み取り専用アクセスを指定します。|  
+|**読み取り専用**|データベースに対する読み取り専用アクセスを指定します。|  
 |**[Read Write]**|データベースに対する読み取り/書き込み権限を指定します。|  
-|**[Exclusive]**|データベースに対する排他アクセスを指定します。|  
+|**[排他]**|データベースに対する排他アクセスを指定します。|  
 |**[Shared Read]**|他のユーザーがデータベースからの読み取りを同時に行うことができることを指定します。|  
   
  **Persist Security Info**  

@@ -1,4 +1,5 @@
 ---
+description: 特定の種類のスクリプト コンポーネントの開発
 title: 特定の種類のスクリプト コンポーネントの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 860a629af6962614c19b77ffaea277ee02fc3b04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc1942c156469def05a8cf9aaa12ac3e09a8167c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430444"
 ---
 # <a name="developing-specific-types-of-script-components"></a>特定の種類のスクリプト コンポーネントの開発
 
@@ -49,7 +50,7 @@ ms.locfileid: "86923838"
  [スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
  スクリプト コンポーネントを使用してデータ フローの変換先を作成する方法を、説明および例示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプティング ソリューションとカスタム オブジェクトとの比較](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [特定の種類のデータ フロー コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
   

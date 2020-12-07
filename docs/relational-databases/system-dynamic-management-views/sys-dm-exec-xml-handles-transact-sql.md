@@ -1,4 +1,5 @@
 ---
+description: dm_exec_xml_handles (Transact-sql)
 title: dm_exec_xml_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57347d66ba5bf0438b40696433a4eb5c0d6124bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489873"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>dm_exec_xml_handles (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,22 +54,22 @@ dm_exec_xml_handles (session_id | 0 )
 |**document_id**|**int**|**Sp_xml_preparedocument**によって返される XML ドキュメントハンドル ID。|  
 |**namespace_document_id**|**int**|**Sp_xml_preparedocument**に3番目のパラメーターとして渡された、関連付けられた名前空間ドキュメントに使用される内部ハンドル ID。 名前空間ドキュメントがない場合は NULL になります。|  
 |**sql_handle**|**varbinary(64)**|ハンドルが定義されている SQL コードのテキストへのハンドル。|  
-|**statement_start_offset**|**int**|現在実行中のバッチまたはストアドプロシージャに含まれる、 **sp_xml_preparedocument**の呼び出しが発生するまでの文字数。 **Sql_handle**、 **statement_end_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
-|**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャに含まれる、 **sp_xml_preparedocument**の呼び出しが発生するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
+|**statement_start_offset**|**int**|現在実行中のバッチまたはストアドプロシージャに含まれる、 **sp_xml_preparedocument** の呼び出しが発生するまでの文字数。 **Sql_handle**、 **statement_end_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
+|**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャに含まれる、 **sp_xml_preparedocument** の呼び出しが発生するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**creation_time**|**datetime**|**Sp_xml_preparedocument**が呼び出されたときのタイムスタンプ。|  
 |**original_document_size_bytes**|**bigint**|未解析の XML ドキュメントのサイズ (バイト単位)。|  
 |**original_namespace_document_size_bytes**|**bigint**|未解析の XML 名前空間ドキュメントのサイズ (バイト単位)。 名前空間ドキュメントがない場合は NULL になります。|  
 |**num_openxml_calls**|**bigint**|このドキュメントハンドルを持つ OPENXML 呼び出しの数。|  
 |**row_count**|**bigint**|このドキュメントハンドルに対する以前のすべての OPENXML 呼び出しによって返された行の数。|  
-|**dormant_duration_ms**|**bigint**|最後の OPENXML 呼び出しからのミリ秒。 OPENXML が呼び出されていない場合、は**sp_xml_preparedocumen**t 呼び出しからのミリ秒を返します。|  
+|**dormant_duration_ms**|**bigint**|最後の OPENXML 呼び出しからのミリ秒。 OPENXML が呼び出されていない場合、は **sp_xml_preparedocumen**t 呼び出しからのミリ秒を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Sp_xml_preparedocument**の呼び出しを実行した sql テキストを取得するために使用される**sql_handles**の有効期間は、クエリの実行に使用されるキャッシュされたプランになります。 クエリ テキストがキャッシュ内で使用できない場合は、関数の結果に示された情報を使用してデータを取得することはできません。 これは、多数の大きなバッチを実行している場合に発生する可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元が所有していないすべてのセッションまたはセッション Id を表示するには、サーバーに対する VIEW SERVER STATE 権限が必要です。 呼び出し元は、自分の現在のセッション ID のデータを常に表示できます。      
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、アクティブ ハンドルをすべて選択します。  
   
 ```  

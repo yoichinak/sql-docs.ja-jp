@@ -1,5 +1,5 @@
 ---
-title: CASE (Transact-SQL) | Microsoft Docs
+title: CASE (Transact-SQL)
 description: CASE 関数の Transact-SQL リファレンス。 CASE では、条件の一覧が評価され、特定の結果が返されます。
 ms.date: 06/28/2017
 ms.prod: sql
@@ -21,14 +21,15 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04000e046e229c36c159d80e1541c69139ba41d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915675"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187647"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 一連の条件を評価して、考えられる結果式のうちの 1 つを返します。  
@@ -50,12 +51,13 @@ ms.locfileid: "86915675"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-Simple CASE expression:   
+--Simple CASE expression:   
 CASE input_expression   
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
 END   
-Searched CASE expression:  
+
+--Searched CASE expression:  
 CASE  
      WHEN Boolean_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
@@ -63,14 +65,16 @@ END
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数  
  *input_expression*  
  単純 CASE 形式を使用した場合に評価される式です。 *input_expression* は任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
@@ -142,7 +146,7 @@ FROM Data ;
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT ステートメントを単純 CASE 式と共に使用する  
  `SELECT` ステートメント内では、単純 `CASE` 式は等しいかどうかのチェックだけを実行できます。これ以外の比較操作は実行できません。 `CASE` 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Category =  
@@ -157,13 +161,12 @@ SELECT   ProductNumber, Category =
 FROM Production.Product  
 ORDER BY ProductNumber;  
 GO  
-  
 ```  
   
 ### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>B. SELECT ステートメントを検索 CASE 式と共に使用する  
  `SELECT` ステートメント内では、検索 `CASE` 式は比較値に基づいて結果セット内で値を置換できます。 次の例では、表示価格を、製品の価格範囲に基づいたテキスト コメントとして表示しています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   ProductNumber, Name, "Price Range" =   
@@ -177,34 +180,31 @@ SELECT   ProductNumber, Name, "Price Range" =
 FROM Production.Product  
 ORDER BY ProductNumber ;  
 GO  
-  
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. ORDER BY 句で CASE を使用する  
  次の例では、ORDER BY 句で CASE 式を使用して、指定された列の値に基づいて行の並べ替え順序を決定しています。 最初の例では、`SalariedFlag` テーブルの `HumanResources.Employee` 列の値を評価します。 `SalariedFlag` が 1 に設定されている従業員は `BusinessEntityID` の降順で、 `SalariedFlag` が 0 に設定されている従業員は `BusinessEntityID` の昇順で返されます。 2 番目の例では、`TerritoryName` 列が 'United States' と等しい場合は結果セットが `CountryRegionName` 列の順序に従って並べ替えられ、他のすべての列は `CountryRegionName` の順序に従って並べ替えられます。  
   
-```  
+```sql  
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
         ,CASE WHEN SalariedFlag = 0 THEN BusinessEntityID END;  
-GO  
-  
+GO    
 ```  
   
-```  
+```sql  
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
          ELSE CountryRegionName END;  
-  
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. UPDATE ステートメントで CASE を使用する  
  次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。 OUTPUT 句は、この処理の前後の休暇の値を表示するために使用されています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.Employee  
@@ -216,33 +216,31 @@ SET VacationHours =
     )  
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
-WHERE SalariedFlag = 0;  
-  
+WHERE SalariedFlag = 0;   
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. SET ステートメントで CASE を使用する  
  次の例では、テーブル値関数 `dbo.GetContactInfo` の SET ステートメントで CASE 式を使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでは、人に関連するデータはすべて `Person.Person` テーブルに格納されています。 たとえば、従業員、仕入先の代表者、消費者などはすべて人に関連するデータとして扱われます。 この関数は、指定された `BusinessEntityID` の氏名と連絡先タイプを返します。`ContactType` 列に表示される値は、SET ステートメント内の CASE 式により、`Employee`、`Vendor`、または `Customer` のどのテーブルに `BusinessEntityID` 列が含まれているかに基づいて決定されます。  
   
-```  
-  
+```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID int)  
+CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
     RETURNS @retContactInformation TABLE   
 (  
-BusinessEntityID int NOT NULL,  
-FirstName nvarchar(50) NULL,  
-LastName nvarchar(50) NULL,  
-ContactType nvarchar(50) NULL,  
+BusinessEntityID INT NOT NULL,  
+FirstName NVARCHAR(50) NULL,  
+LastName NVARCHAR(50) NULL,  
+ContactType NVARCHAR(50) NULL,  
     PRIMARY KEY CLUSTERED (BusinessEntityID ASC)  
 )   
 AS   
 -- Returns the first name, last name and contact type for the specified contact.  
 BEGIN  
     DECLARE   
-        @FirstName nvarchar(50),   
-        @LastName nvarchar(50),   
-        @ContactType nvarchar(50);  
+        @FirstName NVARCHAR(50),   
+        @LastName NVARCHAR(50),   
+        @ContactType NVARCHAR(50);  
   
     -- Get common contact information  
     SELECT   
@@ -291,13 +289,12 @@ FROM dbo.GetContactInformation(2200);
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
 FROM dbo.GetContactInformation(5);  
-  
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. HAVING 句で CASE を使用する  
  次の例では、HAVING 句で CASE 式を使用して、SELECT ステートメントで返される行を制限しています。 このステートメントは、`HumanResources.Employee` テーブル内の各役職の最も高い時給を返します。 HAVING 句では、最も高い時給が男性の場合には 40 ドル、女性の場合には 42 ドルを超えている役職のみが返されるように制限しています。  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -311,7 +308,6 @@ HAVING (MAX(CASE WHEN Gender = 'M'
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
 ORDER BY MaximumRate DESC;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -319,7 +315,7 @@ ORDER BY MaximumRate DESC;
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. SELECT ステートメントを単純 CASE 式と共に使用する  
  SELECT ステートメント内では、CASE 式は比較値に基づいて結果セット内で値を置換できます。 CASE 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。 値が存在しない場合は、テキスト "Not for sale" が表示されます。  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT   ProductAlternateKey, Category =  
@@ -338,7 +334,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. UPDATE ステートメントで CASE を使用する  
  次の例では、UPDATE ステートメントで CASE 式を使用して、`SalariedFlag` が 0 に設定されている従業員の `VacationHours` 列の値を決定しています。 `VacationHours` の値を 10 時間差し引くと値がマイナスになる場合は `VacationHours` の値を 40 時間増やします。それ以外の場合は、`VacationHours` の値を 20 時間増やします。  
   
-```  
+```sql 
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  
@@ -349,7 +345,6 @@ SET VacationHours =
        END  
     )   
 WHERE SalariedFlag = 0;  
-  
 ```  
   
 ## <a name="see-also"></a>参照  

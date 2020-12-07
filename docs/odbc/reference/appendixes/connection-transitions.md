@@ -1,4 +1,5 @@
 ---
+description: 接続の遷移
 title: 接続の移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339448"
 ---
 # <a name="connection-transitions"></a>接続の遷移
 ODBC 接続の状態は次のとおりです。  
   
-|State|説明|  
+|州|説明|  
 |-----------|-----------------|  
 |C0|未割り当ての環境、未割り当ての接続|  
 |C1|割り当て済みの環境、未割り当ての接続|  
@@ -45,15 +46,15 @@ ODBC 接続の状態は次のとおりです。
 |(IH)番|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
 |(IH)4/4|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は、 *Handletype*が SQL_HANDLE_STMT されたときの遷移を示しています。  
+ [3] この行は、 *Handletype* が SQL_HANDLE_STMT されたときの遷移を示しています。  
   
- [4] この行は、 *Handletype*が SQL_HANDLE_DESC されたときの遷移を示しています。  
+ [4] この行は、 *Handletype* が SQL_HANDLE_DESC されたときの遷移を示しています。  
   
- [5] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルの前の内容に関係なく、そのハンドルが上書きされ、ODBC ドライバーで問題が発生する可能性があります。 ODBC アプリケーションプログラミングでは、 * \*OutputHandlePtr*に対して定義されているものと同じアプリケーション変数を使用して**SQLAllocHandle**を2回呼び出すことはできません。これを再割り当てする前に、 **sqlfreehandle**を呼び出してハンドルを解放します。 このような方法で ODBC ハンドルを上書きすると、ODBC ドライバーの一部で動作が不安定になったりエラーが発生したりする可能性があります。  
+ [5] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルの前の内容に関係なく、そのハンドルが上書きされ、ODBC ドライバーで問題が発生する可能性があります。 ODBC アプリケーションプログラミングでは、 * \* OutputHandlePtr*に対して定義されているものと同じアプリケーション変数を使用して**SQLAllocHandle**を2回呼び出すことはできません。これを再割り当てする前に、 **sqlfreehandle**を呼び出してハンドルを解放します。 このような方法で ODBC ハンドルを上書きすると、ODBC ドライバーの一部で動作が不安定になったりエラーが発生したりする可能性があります。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
@@ -120,9 +121,9 @@ ODBC 接続の状態は次のとおりです。
 |(IH)1|--[3]|--[3]|--[3]|--|--|--[4] または ([5]、[6]、[8]) C4 [5] および [7] C5 [5]、[6]、および [9]|  
 |(IH)3|(IH)|(08003)|(08003)|--|--|C5|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
  [3] 接続が接続状態ではないため、トランザクションの影響を受けません。  
   
@@ -134,7 +135,7 @@ ODBC 接続の状態は次のとおりです。
   
  [7] 接続に割り当てられたステートメントがありませんでした。  
   
- [8] 接続には、開いているカーソルを持つステートメントが少なくとも1つ存在します。トランザクションがコミットまたはロールバックされると、データソースはカーソルを保持します (入力候補の*種類*が SQL_COMMIT であるか SQL_ROLLBACK であるかによって異なります)。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)の SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 属性」を参照してください。  
+ [8] 接続には、開いているカーソルを持つステートメントが少なくとも1つ存在します。トランザクションがコミットまたはロールバックされると、データソースはカーソルを保持します (入力候補の *種類* が SQL_COMMIT であるか SQL_ROLLBACK であるかによって異なります)。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)の SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR 属性」を参照してください。  
   
  [9] 接続に、開いているカーソルを持つステートメントがある場合、トランザクションのコミットまたはロールバック時にカーソルが保持されませんでした。  
   
@@ -146,7 +147,7 @@ ODBC 接続の状態は次のとおりです。
   
  [1] 接続が自動コミットモードであり、実行されたステートメントがカーソルの*cursor* *指定*(SELECT ステートメントなど) ではありませんでした。または、接続が手動コミットモードであり、実行されたステートメントはトランザクションを開始しませんでした。  
   
- [2] 接続が自動コミットモードになりました。実行されたステートメントは、*カーソル*の*指定*(select ステートメントなど) でした。  
+ [2] 接続が自動コミットモードになりました。実行されたステートメントは、 *カーソル*の *指定* (select ステートメントなど) でした。  
   
  [3] 接続が手動コミットモードであり、データソースがトランザクションを開始しました。  
   
@@ -159,13 +160,13 @@ ODBC 接続の状態は次のとおりです。
 |(IH)番|(IH)|(IH)|(IH)|(IH)|C4 [5]--[6]|--[7] C4 [5] および [8] C5 [6] および [8]|  
 |(IH)4/4|(IH)|(IH)|(IH)|--|--|--|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は、 *Handletype*が SQL_HANDLE_STMT されたときの遷移を示しています。  
+ [3] この行は、 *Handletype* が SQL_HANDLE_STMT されたときの遷移を示しています。  
   
- [4] この行は、 *Handletype*が SQL_HANDLE_DESC されたときの遷移を示しています。  
+ [4] この行は、 *Handletype* が SQL_HANDLE_DESC されたときの遷移を示しています。  
   
  [5] 接続に1つのステートメントしか割り当てられませんでした。  
   
@@ -182,9 +183,9 @@ ODBC 接続の状態は次のとおりです。
 |(IH)1|(IH)|(IH)|(IH)|(IH)|--|C5 [3]--[4]|  
 |(IH)3|(IH)|(IH)|(IH)|(IH)|--|--|  
   
- [1] この行は、*オプション*の引数が SQL_CLOSE 場合にトランザクションを示します。  
+ [1] この行は、 *オプション* の引数が SQL_CLOSE 場合にトランザクションを示します。  
   
- [2] この行には、*オプション*の引数が SQL_UNBIND または SQL_RESET_PARAMS ときのトランザクションが表示されます。  
+ [2] この行には、 *オプション* の引数が SQL_UNBIND または SQL_RESET_PARAMS ときのトランザクションが表示されます。  
   
  [3] 接続が自動コミットモードになりましたが、この例外を除くステートメントでカーソルが開いていませんでした。  
   
@@ -196,9 +197,9 @@ ODBC 接続の状態は次のとおりです。
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|--[1] 08003 [2]|HY010|--|--|--|  
   
- [1]*属性*引数が SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE、または SQL_ATTR_TRACEFILE であったか、または接続属性に値が設定されています。  
+ [1] *属性* 引数が SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE、または SQL_ATTR_TRACEFILE であったか、または接続属性に値が設定されています。  
   
- [2]*属性*引数が SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE、または SQL_ATTR_TRACEFILE ではなく、接続属性に値が設定されていませんでした。  
+ [2] *属性* 引数が SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE、または SQL_ATTR_TRACEFILE ではなく、接続属性に値が設定されていませんでした。  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField と SQLGetDiagRec  
   
@@ -209,13 +210,13 @@ ODBC 接続の状態は次のとおりです。
 |(IH)番|(IH)|(IH)|(IH)|(IH)|--|--|  
 |(IH)4/4|(IH)|(IH)|(IH)|--|--|--|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は、 *Handletype*が SQL_HANDLE_STMT されたときの遷移を示しています。  
+ [3] この行は、 *Handletype* が SQL_HANDLE_STMT されたときの遷移を示しています。  
   
- [4] この行は、 *Handletype*が SQL_HANDLE_DESC されたときの遷移を示しています。  
+ [4] この行は、 *Handletype* が SQL_HANDLE_DESC されたときの遷移を示しています。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -235,9 +236,9 @@ ODBC 接続の状態は次のとおりです。
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|--[1] 08003 [2]|08003|--|--|--|  
   
- [1] *InfoType*引数が SQL_ODBC_VER でした。  
+ [1] *InfoType* 引数が SQL_ODBC_VER でした。  
   
- [2] *InfoType*引数が SQL_ODBC_VER ませんでした。  
+ [2] *InfoType* 引数が SQL_ODBC_VER ませんでした。  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
@@ -245,9 +246,9 @@ ODBC 接続の状態は次のとおりです。
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6 [2]|--[3] C5 [1]|  
   
- [1] 接続が自動コミットモードであり、 **Sqlmoreresults**への呼び出しによって、カーソル指定の結果セットの処理が初期化されていません。  
+ [1] 接続が自動コミットモードであり、 **Sqlmoreresults** への呼び出しによって、カーソル指定の結果セットの処理が初期化されていません。  
   
- [2] 接続が自動コミットモードになりました。 **Sqlmoreresults**への呼び出しにより、カーソル指定の結果セットの処理が初期化されました。  
+ [2] 接続が自動コミットモードになりました。 **Sqlmoreresults** への呼び出しにより、カーソル指定の結果セットの処理が初期化されました。  
   
  [3] 接続は手動コミットモードです。  
   
@@ -273,21 +274,21 @@ ODBC 接続の状態は次のとおりです。
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] と [6] C5 [8] 08002 [4] HY011 [5] または [7]|  
   
- [1]*属性*引数が SQL_ATTR_TRANSLATE_LIB または SQL_ATTR_TRANSLATE_OPTION ませんでした。  
+ [1] *属性* 引数が SQL_ATTR_TRANSLATE_LIB または SQL_ATTR_TRANSLATE_OPTION ませんでした。  
   
- [2]*属性*引数が SQL_ATTR_TRANSLATE_LIB または SQL_ATTR_TRANSLATE_OPTION でした。  
+ [2] *属性* 引数が SQL_ATTR_TRANSLATE_LIB または SQL_ATTR_TRANSLATE_OPTION でした。  
   
- [3]*属性*引数が SQL_ATTR_ODBC_CURSORS または SQL_ATTR_PACKET_SIZE ませんでした。  
+ [3] *属性* 引数が SQL_ATTR_ODBC_CURSORS または SQL_ATTR_PACKET_SIZE ませんでした。  
   
- [4]*属性*引数が SQL_ATTR_ODBC_CURSORS でした。  
+ [4] *属性* 引数が SQL_ATTR_ODBC_CURSORS でした。  
   
- [5]*属性*引数が SQL_ATTR_PACKET_SIZE でした。  
+ [5] *属性* 引数が SQL_ATTR_PACKET_SIZE でした。  
   
- [6]*属性*引数が SQL_ATTR_AUTOCOMMIT なかったか、*属性*引数が SQL_ATTR_AUTOCOMMIT ました。この属性を設定しても、トランザクションはコミットされませんでした。  
+ [6] *属性* 引数が SQL_ATTR_AUTOCOMMIT なかったか、 *属性* 引数が SQL_ATTR_AUTOCOMMIT ました。この属性を設定しても、トランザクションはコミットされませんでした。  
   
- [7]*属性*引数が SQL_ATTR_TXN_ISOLATION でした。  
+ [7] *属性* 引数が SQL_ATTR_TXN_ISOLATION でした。  
   
- [8]*属性*引数が SQL_ATTR_AUTOCOMMIT ました。この属性を設定すると、トランザクションがコミットされました。  
+ [8] *属性* 引数が SQL_ATTR_AUTOCOMMIT ました。この属性を設定すると、トランザクションがコミットされました。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   

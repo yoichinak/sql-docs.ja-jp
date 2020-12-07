@@ -1,4 +1,5 @@
 ---
+description: Audit Server Principal Management イベント クラス
 title: Audit Server Principal Management イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 7894850c-91fe-47c0-a03c-baacbc10d29c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d8aa24365c721937e6dfa7e99e99ee4dced5ea5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17ca0e44c6320a91c50005c7ed382224f5723559
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756083"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126769"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Audit Server Principal Management イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85756083"
 |**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = 作成<br /><br /> 2 = 変更<br /><br /> 3 = 削除<br /><br /> 4 = ダンプ<br /><br /> 5 = 無効<br /><br /> 6 = 有効<br /><br /> 11 = 読み込み|21|はい|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、 **sys.server_principals** カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**ObjectName**|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  

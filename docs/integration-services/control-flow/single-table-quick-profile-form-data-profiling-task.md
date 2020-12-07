@@ -1,4 +1,5 @@
 ---
+description: '[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)'
 title: '[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495962"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
 
@@ -30,8 +31,8 @@ ms.locfileid: "86920988"
   
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
- **Connection**  
+## <a name="options"></a>Options  
+ **接続**  
  プロファイル対象のテーブルまたはビューを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
  **[テーブルまたはビュー]**  
@@ -53,7 +54,7 @@ ms.locfileid: "86920988"
 |**[決定列として最大 N 個の列]**|決定列として考えられる組み合わせをテストする列の最大数を選択します。 既定値は 1 です。 最大値は 1000 です。 たとえば、2 を選択すると、単一の列または 2 つの列の組み合わせが別の (依存) 列の決定列である組み合わせがテストされます。|  
   
 > [!NOTE]  
->  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
+>   値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

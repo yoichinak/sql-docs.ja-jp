@@ -1,4 +1,5 @@
 ---
+description: catalog.restore_project (SSISDB データベース)
 title: catalog.restore_project (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3996b376ef456502dff95836008e81e6c9ef1a88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ad50f86bc3c4f6f52262df591c1504139590cab
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912952"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129745"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB データベース)
 

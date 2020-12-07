@@ -1,4 +1,5 @@
 ---
+description: ISDATE (Transact-SQL)
 title: ISDATE (Transact-SQL)
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -31,12 +32,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ffa2d5ef3a24829bd55d86a156b5f5b3c9525b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112979"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115458"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 
@@ -88,7 +89,7 @@ ISDATE ( expression )
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. ISDATE を使用して datetime 式が有効かどうかをテストする  
  次の例は、`ISDATE` を使用して、文字列が有効な **datetime** かどうかをテストする方法を示しています。  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -98,7 +99,7 @@ ELSE
 ### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>B. SET DATEFORMAT と SET LANGUAGE 設定が戻り値に与える影響を確認する  
  次のステートメントでは、`SET DATEFORMAT` および `SET LANGUAGE` の各種設定と、その結果として返される値の関係を示しています。  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -148,7 +149,7 @@ SET DATEFORMAT mdy;
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. ISDATE を使用して datetime 式が有効かどうかをテストする  
  次の例は、`ISDATE` を使用して、文字列が有効な **datetime** かどうかをテストする方法を示しています。  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  

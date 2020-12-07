@@ -1,4 +1,5 @@
 ---
+description: DROP SEQUENCE (Transact-SQL)
 title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - DROP SEQUENCE statement
 - sequence number object, dropping
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab35c07f176e3ae25303eb7693b8c2292b793559
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a3f9e498ea8d3f81d05be782d7c15ecdfb87e38
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483635"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379737"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
   
  データベース内のすべてのシーケンス オブジェクトを一覧表示するには、次のステートメントを実行します。  
   
-```  
+```sql  
 SELECT sch.name + '.' + seq.name AS [Sequence schema and name]   
     FROM sys.sequences AS seq  
     JOIN sys.schemas AS sch  
@@ -71,7 +72,7 @@ SELECT sch.name + '.' + seq.name AS [Sequence schema and name]
 GO  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER または CONTROL 権限が必要です。  
@@ -82,7 +83,7 @@ GO
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースから `CountBy1` という名前のシーケンス オブジェクトを削除します。  
   
-```  
+```sql  
 DROP SEQUENCE CountBy1 ;  
 GO  
 ```  

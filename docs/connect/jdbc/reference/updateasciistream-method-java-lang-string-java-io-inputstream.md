@@ -1,5 +1,6 @@
 ---
-title: updateAsciiStream メソッド (java.io.InputStream) | Microsoft Docs
+description: updateAsciiStream (java.lang.String, java.io.InputStream) メソッド
+title: updateAsciiStream (java.lang.String, java.io.InputStream) メソッド
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e7386586aec57e379ae66abe48ddcda09aef0bcb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5f42bda7c4938d1dc0a4ed3fad9bf446c63bad2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478514"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>updateAsciiStream (java.lang.String, java.io.InputStream) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

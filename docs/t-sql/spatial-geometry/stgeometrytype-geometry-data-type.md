@@ -1,4 +1,5 @@
 ---
+description: STGeometryType (geometry データ型)
 title: STGeometryType (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a842e3ee2dcfb86f293e8ae3feba1a30665ffbe0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b297708cbd8820967463f395d765474c9881189b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554643"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88454315"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86554643"
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `STGeometryType()` によって返される OGC の型名は、**Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString** および **MultiPolygon** です。  
   
 ## <a name="examples"></a>例  

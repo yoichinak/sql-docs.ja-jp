@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-sql)
 title: sp_update_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891357"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543001"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'`更新するカテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
+`[ @class = ] 'class'` 更新するカテゴリのクラス。 *クラス*は **varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -50,20 +51,20 @@ sp_update_category
 |**補足**|ジョブ カテゴリを更新します。|  
 |**OPERATOR**|オペレーターカテゴリを更新します。|  
   
-`[ @name = ] 'old_name'`カテゴリの現在の名前。 *old_name*は**sysname**であり、既定値はありません。  
+`[ @name = ] 'old_name'` カテゴリの現在の名前。 *old_name*は **sysname**であり、既定値はありません。  
   
-`[ @new_name = ] 'new_name'`カテゴリの新しい名前。 *new_name*は**sysname**であり、既定値はありません。  
+`[ @new_name = ] 'new_name'` カテゴリの新しい名前。 *new_name*は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_update_category**は、 **msdb**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_update_category** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
+ このストアドプロシージャを実行するには、 **sysadmin** 固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ジョブ カテゴリの名前を `AdminJobs` から `Administrative Jobs` に変更します。  
   
 ```  
@@ -77,7 +78,7 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   

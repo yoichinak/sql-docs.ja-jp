@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT (Transact-SQL)
 title: ALTER SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -20,15 +21,15 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 34a467f81612e88e15b45c055650c961493357dd
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: a044f2d876df2682631bf4df9015290d9b2fc3a1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823508"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688185"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
 
@@ -156,7 +157,7 @@ SHUTDOWN
 ### <a name="a-changing-a-server-audit-name"></a>A. サーバー監査の名前を変更する  
  次の例では、サーバー監査 `HIPAA_Audit` の名前を `HIPAA_Audit_Old` に変更します。  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  
@@ -173,7 +174,7 @@ GO
 ### <a name="b-changing-a-server-audit-target"></a>B. サーバー監査のターゲットを変更する  
  次の例では、`HIPAA_Audit` というサーバー監査を、ファイル ターゲットに変更します。  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER SERVER AUDIT HIPAA_Audit  

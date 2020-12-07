@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_profiles (Transact-SQL)
 title: dm_exec_query_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 2b761064191f26a05d565e673428221afb4805b1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865370"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548605"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -79,14 +80,14 @@ ms.locfileid: "87865370"
   
  この DMV によって報告される i/o 関連のカウンターは、次の2つの方法でによって報告されるものよりも細かく `SET STATISTICS IO` なります。  
   
--   `SET STATISTICS IO`指定されたテーブルに対するすべての i/o のカウンターをグループ化します。 この DMV では、テーブルに対して i/o を実行するクエリプラン内のすべてのノードに対して個別のカウンターを取得します。  
+-   `SET STATISTICS IO` 指定されたテーブルに対するすべての i/o のカウンターをグループ化します。 この DMV では、テーブルに対して i/o を実行するクエリプラン内のすべてのノードに対して個別のカウンターを取得します。  
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、*標準のクエリ実行統計プロファイルインフラストラクチャ*は、*軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON`と `SET STATISTICS PROFILE ON` は、常に*標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ*とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ*を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
-> 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ**た後**に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「[クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
+> 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ **た後** に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「 [クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可  
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]および AZURE SQL Managed Instance では、 `VIEW DATABASE STATE` データベースロールの権限とメンバーシップが必要です `db_owner` 。   

@@ -1,4 +1,5 @@
 ---
+description: ErrorControl プロパティ (SqlService クラス)
 title: ErrorControl プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ErrorControl property
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85d6031a98359cf83d0c161efd22f31a2bbe6dc7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c0c802c236495a5de48c2617a76f4422e608fca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880610"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545247"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,16 +52,16 @@ object.ErrorControl [= value]
  Severe  
  システムは最後の正しい構成で再起動されます。  
   
- 重要  
+ Critical  
  正しい構成でシステムの再起動が試行されます。  
   
- 不明  
+ Unknown  
  重大度が不明です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

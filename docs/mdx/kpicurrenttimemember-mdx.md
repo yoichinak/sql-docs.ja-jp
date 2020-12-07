@@ -1,4 +1,5 @@
 ---
+description: KPICurrentTimeMember (MDX)
 title: KPICurrentTimeMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eadcaab9e18fbe14262f250f48984ec94a85c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483945"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
 
@@ -31,7 +32,7 @@ KPICurrentTimeMember(KPI_Name)
  *KPI_Nam*e  
  KPI の名前を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  KPI は、時間ディメンションの既定のメンバーとは異なる時間メンバーを持つことができます。  
   
 ## <a name="see-also"></a>参照  

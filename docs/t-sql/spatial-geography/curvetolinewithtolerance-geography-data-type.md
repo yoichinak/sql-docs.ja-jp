@@ -1,4 +1,5 @@
 ---
+description: CurveToLineWithTolerance (geography データ型)
 title: CurveToLineWithTolerance (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3de1674efb17e3826cb1e999922016a0ed55c924
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d4852ff1e43bb561cffa7d001df33793e5f00e81
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555462"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124345"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0f5235969a2289220e7a70b035296e1ba0092714
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ca036a22497f05141a7777ddb00ac6ca53dab84
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883366"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987778"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする
 
@@ -33,11 +33,11 @@ Visual Studio には、データベース プロジェクトのビルド操作�
 ### <a name="supported-extensibility-scenarios"></a>サポートされている機能拡張シナリオ  
 ビルド コントリビューターまたは配置コントリビューターを実装することで、次のサンプル シナリオを実現できます。  
   
--   **プロジェクトのビルド中にスキーマ ドキュメントを生成する** - このシナリオをサポートするには、[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) を実装し、OnExecute メソッドをオーバーライドしてスキーマ ドキュメントを生成します。 拡張機能を実行するかどうかを制御する既定の引数を定義するターゲット ファイルを作成し、出力ファイルの名前を指定できます。  
+-   **プロジェクトのビルド中にスキーマ ドキュメントを生成する** - このシナリオをサポートするには、[BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor) を実装し、OnExecute メソッドをオーバーライドしてスキーマ ドキュメントを生成します。 拡張機能を実行するかどうかを制御する既定の引数を定義するターゲット ファイルを作成し、出力ファイルの名前を指定できます。  
   
--   **SQL プロジェクトの配置時に差分レポートを生成する** - このシナリオをサポートするには、SQL プロジェクトを配置するときに XML ファイルを生成する [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) を実装します。  
+-   **SQL プロジェクトの配置時に差分レポートを生成する** - このシナリオをサポートするには、SQL プロジェクトを配置するときに XML ファイルを生成する [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) を実装します。  
   
--   **配置計画を変更してデータの移動タイミングを変更する** - このシナリオをサポートするには、[DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を実装し、配置計画を繰り返します。 その計画に含まれる SqlTableMigrationStep ごとに、比較結果を調べ、そのステップを実行するかスキップするかを決定します。  
+-   **配置計画を変更してデータの移動タイミングを変更する** - このシナリオをサポートするには、[DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) を実装し、配置計画を繰り返します。 その計画に含まれる SqlTableMigrationStep ごとに、比較結果を調べ、そのステップを実行するかスキップするかを決定します。  
   
 -   **SQL プロジェクトを配置するときにファイルを生成された dacpac にコピーする** - このシナリオをサポートするには、配置コントリビューターを実装し、OnEstablishDeploymentConfiguration メソッドをオーバーライドして、プロジェクト システムによって DeploymentExtensionConfiguration とマークされているファイルを指定します。 これらのファイルは、出力フォルダーにコピーし、生成された dacpac に追加する必要があります。 また、複数のファイルを 1 つの新しいファイルにマージし、それを出力フォルダーにコピーして配置マニフェストに追加するように、コントリビューターを変更することもできます。 配置時に、OnApplyDeploymentConfiguration メソッドを実装し、それらのファイルを dacpac から抽出して OnExecute メソッドで使用できるように準備することができます。  
   
@@ -47,9 +47,8 @@ Visual Studio には、データベース プロジェクトのビルド操作�
   
 |**一般的なタスク**|**関連する参照先**|  
 |--------------------|--------------------------|  
-|**拡張ポイントの詳細を理解する:** ビルド コントリビューターおよび配置コントリビューターの実装に使用する基本クラスについて確認できます。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**拡張ポイントの詳細を理解する:** ビルド コントリビューターおよび配置コントリビューターの実装に使用する基本クラスについて確認できます。|[BuildContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.buildcontributor)<br /><br />[DeploymentContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentcontributor)|  
 |**サンプル コントリビューターを作成する:** ビルド コントリビューターまたは配置コントリビューターの作成に必要な手順について説明します。 これらのチュートリアルを実行する場合は、次のタスクを実行します。<br /><br />-   モデル内のすべての要素が表示されるレポートを生成するビルド コントリビューターを作成する。<br />-   配置計画を実行前に変更する配置コントリビューターを作成する。<br />-   SQL プロジェクトの配置時に配置レポートを生成する配置コントリビューターを作成する。<br /><br />コントリビューターをチームに配布する方法に応じて、すべてのコントリビューターを単一のアセンブリ内に作成することも、複数のアセンブリに分けて作成することもできます。|[チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>参照  
-[SQL Server の単体テストのカスタム テスト条件](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
-  
+[SQL Server の単体テストのカスタム テスト条件](/previous-versions/sql/sql-server-data-tools/jj860449(v=vs.103))  

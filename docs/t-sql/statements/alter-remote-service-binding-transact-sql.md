@@ -1,4 +1,5 @@
 ---
+description: ALTER REMOTE SERVICE BINDING (Transact-SQL)
 title: ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 50d11dd143e4cb90a48100e6275aa0c3d8eb02ab
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47c4e18c28a5377fa487e0d4d4e8b9be4cf58acc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381166"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128065"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,6 @@ ms.locfileid: "86381166"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER REMOTE SERVICE BINDING binding_name   
    WITH [ USER = <user_name> ] [ , ANONYMOUS = { ON | OFF } ]   
 [ ; ]  
@@ -68,7 +68,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="examples"></a>例  
  次の例では、リモート サービス バインド `APBinding` を変更し、アカウント `SecurityAccount` からの証明を使用してメッセージを暗号化します。  
   
-```  
+```sql  
 ALTER REMOTE SERVICE BINDING APBinding  
     WITH USER = SecurityAccount ;  
 ```  

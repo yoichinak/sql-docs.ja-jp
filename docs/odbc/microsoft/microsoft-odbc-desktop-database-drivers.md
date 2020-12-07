@@ -1,4 +1,5 @@
 ---
+description: デスクトップのデータベースの Microsoft ODBC ドライバー
 title: Microsoft ODBC Desktop Database Drivers |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e60052bda67b792cbba81447d6ae20ebdeb565bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449434"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>デスクトップのデータベースの Microsoft ODBC ドライバー
 ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語として使用する API です。 アプリケーションのソースコードに直接組み込まれているのと同じ ODBC ソースコードを使用して、さまざまなデータベース管理システム (Dbms) にアクセスできます。 Microsoft ODBC Desktop データベースドライバーを使用すると、ODBC 対応のアプリケーションのユーザーは、ODBC インターフェイスを使用してデスクトップデータベースを開いたり、クエリを実行したり、更新したりできます。  
@@ -37,7 +38,7 @@ ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語�
   
 -   dBASE  
   
--   テキスト  
+-   Text  
   
  Microsoft Visual FoxPro® ODBC ドライバーに関する詳細なドキュメントについては、「 [Visual FOXPRO Odbc ドライバー](../../odbc/microsoft/visual-foxpro-odbc-driver.md) 」を参照してください。  
   
@@ -50,7 +51,7 @@ ODBC は、構造化照会言語 (SQL) をデータベースアクセス言語�
   
 -   [デスクトップ データベース ドライバーの履歴](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
--   [製品のサポート](../../odbc/microsoft/product-support.md)  
+-   [製品サポート](../../odbc/microsoft/product-support.md)  
   
 -   [デスクトップ データベース ドライバーの実装](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   

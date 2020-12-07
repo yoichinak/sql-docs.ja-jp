@@ -1,4 +1,5 @@
 ---
+description: 適合性レベル
 title: 準拠レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c986cb6ce407a44798869c722b9b62dc8b1052d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aa164a0814f063af8d6e0ed8adafc3f2307916fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461534"
 ---
 # <a name="conformance-levels"></a>適合性レベル
 ODBC ドライバーは、さまざまなデータソースへのアクセスをアプリケーションに提供します。 各ドライバーを使用すると、アプリケーションは実行時に ODBC の機能や、ドライバーと各データソースでサポートされる SQL の文法を決定できます。 これは、1つのドライバーまたは少数の既知のドライバーのセットを使用するように設計されたアプリケーションの要件ではありません。これらのアプリケーションは、そのドライバーまたはドライバーの機能に単に書き込むことができるためです。 アプリケーションがドライバーとデータソースの機能を検出できるように、互換性の2つの領域 (ODBC インターフェイスと SQL 文法) を使用できます。  

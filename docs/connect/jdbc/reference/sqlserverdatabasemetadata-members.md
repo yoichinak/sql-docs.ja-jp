@@ -1,4 +1,5 @@
 ---
+description: SQLServerDatabaseMetaData のメンバー
 title: SQLServerDatabaseMetaData のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a250cac94cdba3c4f71ce359b964ed5ef50e895f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0530af64efd7d43391df2efec3eaac63294ecea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467104"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "67971551"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls、attributeNullable、attributeNullableUnknown、bestRowNotPseudo、bestRowPseudo、bestRowSession、bestRowTemporary、bestRowTransaction、bestRowUnknown、columnNoNulls、columnNullable、columnNullableUnknown、importedKeyCascade、importedKeyInitiallyDeferred、importedKeyInitiallyImmediate、importedKeyNoAction、importedKeyNotDeferrable、importedKeyRestrict、importedKeySetDefault、importedKeySetNull、procedureColumnIn、procedureColumnInOut、procedureColumnOut、procedureColumnResult、procedureColumnReturn、procedureColumnUnknown、procedureNoNulls、procedureNoResult、procedureNullable、procedureNullableUnknown、procedureResultUnknown、procedureReturnsResult、sqlStateSQL、sqlStateSQL99、sqlStateXOpen、tableIndexClustered、tableIndexHashed、tableIndexOther、tableIndexStatistic、typeNoNulls、typeNullable、typeNullableUnknown、typePredBasic、typePredChar、typePredNone、typeSearchable、versionColumnNotPseudo、versionColumnPseudo、versionColumnUnknown|  
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|現在のユーザーが、[getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md) メソッドによって返されたすべてのプロシージャを呼び出すアクセス許可を持っているかどうかを取得します。|  
 |[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|現在のユーザーが、[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) メソッドで返されたすべてのテーブルを SELECT ステートメントで使用するアクセス許可を持っているかどうかを取得します。|  

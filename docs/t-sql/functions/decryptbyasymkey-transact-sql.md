@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYASYMKEY (Transact-SQL)
 title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b15b04368ad5b44d1c1adb91cc29367f9e344fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110475"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124754"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "87110475"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -68,8 +68,8 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
 ## <a name="examples"></a>例  
 この例では、非対称キー `JanainaAsymKey02` で最初に暗号化された暗号化テキストが復号されます。 `AdventureWorks2012.ProtectedData04` によって、この非対称キーが格納されました。 返されたデータが非対称キー `JanainaAsymKey02` で復号されました。 パスワード `pGFD4bb925DGvbd2439587y` を使用し、この非対称キーが復号されました。 返されたプレーンテキストが型 **nvarchar** に変換されました。  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

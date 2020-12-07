@@ -1,4 +1,5 @@
 ---
+description: プログラムによるリモート パッケージの読み込みと実行
 title: プログラムによるリモート パッケージの読み込みと実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64a9702fd642f40e96f0ac0d017b3ddc132502c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3b5f944c2fb6b0a2029ed7b8481a8b7f71485a41
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192480"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
 
@@ -29,7 +30,7 @@ ms.locfileid: "86913339"
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていないローカル コンピューターからリモート パッケージを実行するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているリモート コンピューター上でパッケージが実行されるように、パッケージを起動します。 この操作を行うには、ローカル コンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、Web サービス、またはリモート コンポーネントを使用して、リモート コンピューターでパッケージを起動します。 ローカル コンピューターから直接リモート パッケージを起動しようとすると、パッケージがローカル コンピューターに読み込まれ、ローカル コンピューターから実行されます。 ローカル コンピューターに [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされていない場合、パッケージは実行されません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされていないクライアント コンピューターでは、パッケージを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の外部で実行することはできません。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ライセンスの条項により、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を他のコンピューターにインストールできない場合があります ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はサーバー コンポーネントであるため、クライアント コンピューターに再配布できません)。  
+>  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされていないクライアント コンピューターでは、パッケージを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の外部で実行することはできません。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ライセンスの条項により、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を他のコンピューターにインストールできない場合があります  ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はサーバー コンポーネントであるため、クライアント コンピューターに再配布できません)。  
   
  また、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] がインストールされているローカル コンピューターからリモート パッケージを実行することもできます。 詳細については、「[プログラムによるローカル パッケージの読み込みと実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)」を参照してください。  
   
@@ -168,7 +169,7 @@ namespace LaunchSSISPackageAgent_CS
   
 2.  **Microsoft.SqlServer.ManagedDTS** への参照を追加し、**Microsoft.SqlServer.Dts.Runtime** 名前空間のためにコード ファイルに **Imports** または **using** ステートメントを追加します。  
   
-3.  LaunchPackage Web サービス メソッドのサンプル コードをクラスに貼り付けます (このサンプルはコード ウィンドウの内容全体を表しています)。  
+3.  LaunchPackage Web サービス メソッドのサンプル コードをクラスに貼り付けます  (このサンプルはコード ウィンドウの内容全体を表しています)。  
   
 4.  LaunchPackage メソッドの入力引数に既存のパッケージを指し示す一連の有効な値を指定することにより、Web サービスをビルドしてテストします。 たとえば、package1.dtsx がサーバーの C:\My Packages に格納されている場合、sourceType の値として "file"、sourceLocation の値として "C:\My Packages"、packageName の値として "package1" (拡張子なし) を渡します。  
   
@@ -343,7 +344,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 3.  Web サービス プロジェクトの Web 参照を追加します。 必要に応じて、Web サービス プロキシ オブジェクトに割り当てた名前に合わせて、サンプル コードの変数宣言を調整します。  
   
-4.  Main ルーチンとプライベート列挙のサンプル コードをコードに貼り付けます (このサンプルはコード ウィンドウの内容全体を表しています)。  
+4.  Main ルーチンとプライベート列挙のサンプル コードをコードに貼り付けます  (このサンプルはコード ウィンドウの内容全体を表しています)。  
   
 5.  LaunchPackage メソッドを呼び出すコード行を編集し、入力引数に既存のパッケージを指し示す一連の有効な値を指定します。 たとえば、package1.dtsx がサーバーの C:\My Packages に格納されている場合、`sourceType` の値として "file"、`sourceLocation` の値として "C:\My Packages"、`packageName` の値として "package1" (拡張子なし) を渡します。  
   
@@ -420,11 +421,10 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部リソース  
   
--   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
+-   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](/previous-versions/dn912438(v=msdn.10))」  
   
 ## <a name="see-also"></a>参照  
  [ローカル実行とリモート実行の相違点について](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [プログラムによるローカル パッケージの読み込みと実行](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [ローカル パッケージの出力の読み込み](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
-  
   

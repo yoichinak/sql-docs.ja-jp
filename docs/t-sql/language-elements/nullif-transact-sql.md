@@ -1,4 +1,5 @@
 ---
+description: NULLIF (Transact-SQL)
 title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5db97fd036dfa614a5a9c6c399a3100d5128d73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8bf1b3c571806aaaca17894c52c4673709074261
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92188015"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86922341"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 NULLIF ( expression , expression )  
 ```  
   
@@ -48,11 +49,11 @@ NULLIF ( expression , expression )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型
- 最初の*式*と同じ型を返します。  
+ 最初の *式* と同じ型を返します。  
   
- NULLIF は、2 つの式が等しくない場合、最初の*式*を返します。 式が等しい場合、NULLIF は最初の*式*のデータ型の NULL 値を返します。  
+ NULLIF は、2 つの式が等しくない場合、最初の *式* を返します。 式が等しい場合、NULLIF は最初の *式* のデータ型の NULL 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  NULLIF は、2 つの式を比較し、その 2 つが等価な場合に NULL を返す検索 CASE 式と同じです。  
   
  NULLIF 関数の中では、RAND() など時間に依存する関数は使用しないことをお勧めします。 関数が 2 回呼び出されて評価され、それぞれ異なる結果が返されることがあります。  

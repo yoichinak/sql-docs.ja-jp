@@ -1,4 +1,5 @@
 ---
+description: sp_prepexec (Transact-sql)
 title: sp_prepexec (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bc3e9a74a29564ad8c531223be371f47fd09662
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5df94e84c602e03d5ead3e2ce36a29d5d314791
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891533"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535037"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +42,18 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成された*ハンドル*識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成された*ハンドル*識別子です。 *handle* は、 **int** 戻り値を持つ必須パラメーターです。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 変数の*params*定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params*は、 **ntext**、 **nchar**、または**nvarchar**の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
+ パラメーター化されたステートメントを指定します。 変数の *params* 定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params* は、 **ntext**、 **nchar**、または **nvarchar** の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
  *stmt*  
  カーソル結果セットを定義します。 *Stmt*パラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
  *bound_param*  
- 追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
+ 追加パラメーターをオプションで使用することを示します。 *bound_param* は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、単純なステートメントを準備して実行します。  
   
 ```  

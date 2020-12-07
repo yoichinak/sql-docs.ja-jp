@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 39f1f79701a0a3fd871b2b273a48197b8b42187b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279002"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005889"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**SQL Server Data Tools (SSDT)** は、SQL Server リレーショナル データベース、Azure SQL データベース、Analysis Services (AS) データ モデル、Integration Services (IS) パッケージ、Reporting Services (RS) レポートをビルドするための、最新の開発ツールです。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。
+**SQL Server Data Tools (SSDT)** は、SQL Server リレーショナル データベース、Azure SQL のデータベース、Analysis Services (AS) データ モデル、Integration Services (IS) パッケージ、Reporting Services (RS) レポートをビルドするための、最新の開発ツールです。 SSDT では、Visual Studio でアプリケーションを開発する場合と同じくらい簡単に、SQL Server のコンテンツの種類を設計および展開できます。
 
 ## <a name="ssdt-for-visual-studio-2019"></a>SSDT for Visual Studio 2019
 
@@ -39,18 +39,24 @@ Visual Studio 2019 では、Analysis Services、Integration Services、Reporting
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019 で SSDT をインストールする
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。 Visual Studio 2019 をインストールしていない場合は、[Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をダウンロードしてインストールできます。
+[Visual Studio 2019](/visualstudio/install/install-visual-studio?preserve-view=true&view=vs-2019) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。 Visual Studio 2019 をインストールしていない場合は、[Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をダウンロードしてインストールできます。
 
-* SQL データベース プロジェクトの場合、ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+インストール済みの Visual Studio ワークロードを SSDT を含めるように変更するには、Visual Studio インストーラーを使用します。
 
-   ![[データの保存と処理] ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+1. Visual Studio インストーラーを起動します。 Windows の [スタート] メニューで "installer" を検索できます。
 
-* Analysis Services、Integration Services、または Reporting Services プロジェクトの場合は、 *[ツール] > [拡張機能と更新プログラム]* または [[Marketplace]](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) から適切な[拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールできます。
+   ![Windows の [スタート] メニューの Visual Studio インストーラー (2019)](../ssdt/media/visual-studio-installer.png)
+
+2. インストーラーで SSDT を追加するエディションの Visual Studio を選択し、 **[変更]** を選択します。
+
+3. ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+
+   ![[データの保存と処理] ワークロード (2019)](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
+
+Analysis Services、Integration Services、または Reporting Services プロジェクトの場合は、Visual Studio 内から ( **[拡張機能]** 、 **[拡張機能を管理する]** の順に選択する) または [[Marketplace]](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) から適切な[拡張機能](/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールできます。
 
 * [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
-
 * [統合サービス](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
-
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017
@@ -63,11 +69,19 @@ Analysis Services、Integration Services または Reporting Services のプロ�
 
 ### <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017 で SSDT をインストールする
 
-[Visual Studio インストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、 **[データの保存と処理]** ワークロードを選択し、 **[SQL Server Data Tools]** を選択します。
+[Visual Studio インストール](/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、 **[データの保存と処理]** ワークロードを選択し、 **[SQL Server Data Tools]** を選択します。
 
-[Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。
+Visual Studio が既にインストールされている場合、Visual Studio を使用し、インストール済みのワークロードを SSDT を含めるように変更します。
 
-![[データの保存と処理] ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
+1. Visual Studio インストーラーを起動します。 Windows の [スタート] メニューで "installer" を検索できます。
+
+   ![Windows の [スタート] メニューの Visual Studio インストーラー (2017)](../ssdt/media/visual-studio-installer.png)
+
+2. インストーラーで SSDT を追加するエディションの Visual Studio を選択し、 **[変更]** を選択します。
+
+3. ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+
+   ![[データの保存と処理] ワークロード (2017)](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2017.png)
 
 ### <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Analysis Services、Integration Services、Reporting Services ツールをインストールする
 
@@ -79,10 +93,10 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-:::image type="icon" source="media/download.png" border="false"::: **[SSDT for Visual Studio 2017 (15.9.5) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[SSDT for Visual Studio 2017 (15.9.6) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * SSDT for Visual Studio 2017 (15.9.5) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。 
+> * SSDT for Visual Studio 2017 (15.9.6) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。 
 > * SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードできます。
 > * Oracle および Teradata コネクタを使用し、SQL 2019 より前の以前のバージョンの SQL Server をターゲットとするパッケージを設計するには、[SQL 2019 用の Microsoft Oracle Connector](https://www.microsoft.com/download/details.aspx?id=58228) および [SQL 2019 用の Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599) に加えて、対応するバージョンの Microsoft Connector for Oracle and Teradata by Attunity もインストールする必要があります。
 >    * [SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -96,23 +110,23 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 
 ### <a name="system-requirements"></a>システム要件
 
-SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs)は Visual Studio と同じです。
+SSDT for Visual Studio 2017 の[システム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)は Visual Studio と同じです。
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>使用できる言語 - SSDT for VS 2017
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-* [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [フランス語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [イタリア語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [日本語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [韓国語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [ロシア語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [スペイン語](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [フランス語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [イタリア語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [日本語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [韓国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [ロシア語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [スペイン語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
@@ -122,7 +136,7 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 ## <a name="offline-install"></a>オフライン インストール
 
-インターネットに接続されていない状態で SSDT をインストールするには、このセクションの手順に従います。 詳細については、「[Visual Studio 2017 のネットワーク インストールを作成する](https://docs.microsoft.com/visualstudio/install/create-a-network-installation-of-visual-studio)」を参照してください。
+インターネットに接続されていない状態で SSDT をインストールするには、このセクションの手順に従います。 詳細については、「[Visual Studio 2017 のネットワーク インストールを作成する](/visualstudio/install/create-a-network-installation-of-visual-studio)」を参照してください。
 
 まず、**オンライン**のときに次の手順を完了します。
 
@@ -150,7 +164,7 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 |プロジェクト テンプレート|サポートされている SQL プラットフォーム|
 |-------------------|--------------------|
-|リレーショナル データベース| SQL Server 2005\* - SQL Server 2017<br> (SSDT 17.x または SSDT for Visual Studio 2017 を使って、[SQL Server on Linux](../linux/sql-server-linux-overview.md) に接続します)<br /><br />Azure SQL データベース<br /><br />Azure SQL Data Warehouse (クエリのみサポートします。データベース プロジェクトはまだサポートされていません)<br /><br /> \* SQL Server 2005 のサポートは非推奨とされます。<br /><br /> 正式にサポートされている SQL バージョンに移行します|
+|リレーショナル データベース| SQL Server 2005\* - SQL Server 2017<br> (SSDT 17.x または SSDT for Visual Studio 2017 を使って、[SQL Server on Linux](../linux/sql-server-linux-overview.md) に接続します)<br /><br />Azure SQL データベース<br /><br />Azure Synapse Analytics (クエリのみサポートします。データベース プロジェクトは、まだサポートされていません)<br /><br /> \* SQL Server 2005 のサポートは非推奨とされます。<br /><br /> 正式にサポートされている SQL バージョンに移行します|
 |Analysis Services モデル<br /><br />Reporting Services レポート | SQL Server 2008 - SQL Server 2017|
 |Integration Services パッケージ| SQL Server 2012 - SQL Server 2019 |
 
@@ -166,9 +180,9 @@ Visual Studio 2015 の SSDT、または古いバージョンの SSDT をダウ�
 
 * [SSDT MSDN フォーラム](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT チーム ブログ](https://blogs.msdn.com/b/ssdt/)
+* [SSDT チーム ブログ](/archive/blogs/ssdt/)
 
-* [DACFx API リファレンス](https://msdn.microsoft.com/library/dn645454.aspx)
+* [DACFx API リファレンス](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))
 
 * [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -180,7 +194,7 @@ SSDT をインストールした後、次のチュートリアルを参照して
 
 * [SSIS チュートリアル:シンプルな ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)
 
-* [Analysis Services チュートリアル](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)
+* [Analysis Services チュートリアル](/analysis-services/analysis-services-tutorials-ssas)
 
 * [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 

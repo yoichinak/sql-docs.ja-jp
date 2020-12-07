@@ -1,4 +1,5 @@
 ---
+description: Azure BLOB Source
 title: Azure BLOB Source | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253f08e1d9a06c5aaba41c9612c2f537a2e109d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce39fed32923ae46bd499c32d5b58660db5dcd8b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922786"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127363"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
 
@@ -37,16 +38,16 @@ ms.locfileid: "86922786"
   
 3.  **[Blob name]** (BLOB 名) フィールドに、BLOB のパスを指定します。  
   
-4.  **[BLOB ファイル形式]** フィールドで、使用する BLOB 形式 ( **[テキスト]** または **[Avro]** ) を選択します。  
+4.  **[BLOB ファイル形式]** フィールドで、使用する BLOB 形式 (**[テキスト]** または **[Avro]**) を選択します。  
   
 5.  ファイル形式が **[テキスト]** の場合は、 **[列の区切り文字]** に値を指定する必要があります。 (複数の文字による区切り記号はサポートされません)。
 
     さらに、ファイルの 1 行目に列名が含まれている場合は、 **[先頭データ行を列名として使用する]** も指定する必要があります。
 
-6.  ファイルが圧縮されている場合は、 **[Decompress the file]** (ファイルの圧縮解除) を選択します。
+6.  ファイルが圧縮されている場合は、**[Decompress the file]** (ファイルの圧縮解除) を選択します。
 
-7.  ファイルが圧縮されている場合は、 **[圧縮の種類]** として **[GZIP]** 、 **[DEFLATE]** 、または **[BZIP2]** を選択します。 Zip 形式はサポートされていません。
+7.  ファイルが圧縮されている場合は、**[圧縮の種類]** として **[GZIP]**、**[DEFLATE]**、または **[BZIP2]** を選択します。 Zip 形式はサポートされていません。
   
-8.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
+8.  接続情報を指定した後、**[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
   
   

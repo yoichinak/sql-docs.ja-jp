@@ -1,4 +1,5 @@
 ---
+description: Data Cleansing
 title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d54722c2a8cf6e5364cc25d35621957164d3b9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487842"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -67,7 +68,7 @@ ms.locfileid: "85899130"
   
 -   **[提案]**: 信頼レベルが *自動提案しきい値* より高く *自動修正しきい値* より低い提案が検出された値。 これらの値は、確認して、必要に応じ承認または拒否する必要があります。  
   
--   **新規**: DQS に十分な情報 (提案) がないため、他のタブにマップできない有効な値。さらに、このタブには、信頼レベルが*自動提案しきい*値よりも低いが、有効としてマークするのに十分な値が含まれています。  
+-   **新規**: DQS に十分な情報 (提案) がないため、他のタブにマップできない有効な値。さらに、このタブには、信頼レベルが *自動提案しきい* 値よりも低いが、有効としてマークするのに十分な値が含まれています。  
   
 -   **[無効]**: ナレッジ ベースのドメインでは無効と見なされた値や、ドメイン ルールまたは参照データが失敗した値。 このタブには、対話型クレンジング プロセスの間にユーザーが他の 4 つのタブで拒否した値も表示されます。  
   
@@ -105,8 +106,8 @@ ms.locfileid: "85899130"
 |参照データ サービスのナレッジを使用してデータをクレンジングする方法について説明します。|[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |複合ドメインをクレンジングする方法について説明します。|[複合ドメインでのデータのクレンジング](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>関連項目  
- [DQS&#41;&#40;データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)   
+## <a name="see-also"></a>参照  
+ [DQS&#41;&#40;データ品質プロジェクト ](../data-quality-services/data-quality-projects-dqs.md)   
  [データ照合](../data-quality-services/data-matching.md)  
   
   

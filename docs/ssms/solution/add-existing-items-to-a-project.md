@@ -1,4 +1,5 @@
 ---
+description: 既存の項目をプロジェクトに追加する
 title: 既存の項目をプロジェクトに追加する
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4231ae6339e40f40ef1626748553c6fd68f6f6b7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003309"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036065"
 ---
 # <a name="add-existing-items-to-a-project"></a>既存の項目をプロジェクトに追加する
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子を関連付ける場合は、「 [ファイル拡張子をコード エディターに関連付ける方法](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)」を参照してください。  
+プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトという 2 種類のプロジェクトがあります。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子を関連付ける場合は、「 [ファイル拡張子をコード エディターに関連付ける方法](../scripting/associate-file-extensions-to-a-code-editor.md)」を参照してください。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>既存のクエリまたはその他のファイルをプロジェクトに追加するには  
   
@@ -33,10 +34,10 @@ ms.locfileid: "86003309"
     **Look in**  
     プロジェクトに追加するファイルまたはフォルダーをこの一覧から指定します。 XML Web サービスや ASP.NET Web アプリケーションの場合、ファイルは Web サーバーに置かれています。  
   
-    **[デスクトップ]**  
+    **デスクトップ**  
     デスクトップに存在するファイルおよびフォルダーを表示します。  
   
-    **[マイ プロジェクト]**  
+    **マイ プロジェクト**  
     既定の **[マイ プロジェクト]** の場所にあるファイルとフォルダーを表示します。  
   
     **[マイ コンピューター]**  
@@ -48,7 +49,7 @@ ms.locfileid: "86003309"
     > [!NOTE]  
     > Web およびネットワークの場所に移動するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「 **`https://mywebsite`** 」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「 **\\\myserver\myshare**」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
   
-    **ファイルの種類**  
+    [**ファイルの種類**]  
     ファイルの拡張子に基づいてファイルをフィルター選択するときに、このオプションを使用します。 各製品について、最も一般的なファイルの種類を対象とする既定のフィルターが一覧表示されます。  
   
     **追加**  
@@ -70,4 +71,3 @@ ms.locfileid: "86003309"
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
 [プロジェクトへの新規項目の追加](../../ssms/solution/add-new-items-to-a-project.md)  
 [アイテムやプロジェクトのクリアまたは削除](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

@@ -1,8 +1,9 @@
 ---
+description: MaxRecords プロパティの例 (VC++)
 title: MaxRecords プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 612ec3cd9e2fbdfba40fd554d52558c8c14baba6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762523"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990613"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords プロパティの例 (VC++)
-この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。  
+この例では、 [MaxRecords](./maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](./recordset-object-ado.md)を開きます。  
   
 ## <a name="example"></a>例  
   
@@ -177,5 +178,5 @@ void PrintComError(_com_error &e) {
 **すし、だれでも---14.99**  
 **Buckingham Palace Kitchens---11.95 の50年**   
 ## <a name="see-also"></a>参照  
- [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords プロパティ (ADO)](./maxrecords-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

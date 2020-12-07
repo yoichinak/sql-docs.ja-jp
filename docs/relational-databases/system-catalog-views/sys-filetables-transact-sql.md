@@ -1,4 +1,5 @@
 ---
+description: sys.filetables (Transact-SQL)
 title: sys. filetables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetables catalog view
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d83b58f8ff153583775e2e321c5524b43b205745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be56d53636a4916a402df709c5a7f7a0b3725dc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738772"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542542"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85738772"
 |**filename_collation_id**||FileTable に対して定義されている照合順序識別子を指定します。|  
 |**filename_collation_name**||FileTable に対して定義されている照合順序名を指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Filetable の管理](../../relational-databases/blob/manage-filetables.md)   
  [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
   

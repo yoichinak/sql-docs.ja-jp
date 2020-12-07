@@ -1,4 +1,5 @@
 ---
+description: MSmerge_history (Transact-SQL)
 title: MSmerge_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_history system table
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 348df963920d35aeb874a83cad83701995d563cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889797"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540883"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,12 +34,12 @@ ms.locfileid: "85889797"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|マージエージェントジョブの ID。|  
 |**agent_id**|**int**|マージエージェントの ID。|  
-|**コメント**|**nvarchar(255)**|メッセージ テキストです。|  
+|**コメント**|**nvarchar (255)**|メッセージ テキスト。|  
 |**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)システムテーブル内のエラーの ID。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
-|**updatable_row**|**bit**|履歴行を上書きできる場合は、 **1**に設定します。|  
+|**updatable_row**|**bit**|履歴行を上書きできる場合は、 **1** に設定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

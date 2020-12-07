@@ -1,4 +1,5 @@
 ---
+description: fulltext_index_fragments (Transact-sql)
 title: fulltext_index_fragments (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,17 +24,17 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03b6557d2d17e0a2c9b9ad651ca71d903c8ea19a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 953bf5145712d81acf0ed193719d290cc2397e43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401368"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>fulltext_index_fragments (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  フルテキストインデックスでは、*フルテキストインデックスフラグメント*と呼ばれる内部テーブルを使用して、逆インデックスデータを格納します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。  
+  フルテキストインデックスでは、 *フルテキストインデックスフラグメント* と呼ばれる内部テーブルを使用して、逆インデックスデータを格納します。 このビューを使用すると、これらのフラグメントに関するメタデータをクエリできます。 このビューは、フルテキスト インデックスが含まれているすべてのテーブルのフルテキスト インデックス フラグメントごとに 1 行のデータを格納しています。  
  
   
 |列名|データ型|説明|  
@@ -44,9 +45,9 @@ ms.locfileid: "85764748"
 |timestamp|**timestamp**|フラグメントの作成に関連付けられているタイムスタンプ。 新しいフラグメントのタイムスタンプが、古いフラグメントのタイムスタンプよりも大きくなっています。|  
 |data_size|**int**|フラグメントの論理サイズ (バイト単位)。|  
 |row_count|**int**|フラグメント内の個々の行の数。|  
-|status|**int**|フラグメントの状態。次のいずれかになります。<br /><br /> 0 = 新たに作成され、まだ使用されていません。<br /><br /> 1 = フルテキストインデックスの作成時またはマージ時に挿入に使用される<br /><br /> 4 = 閉じています。 クエリの準備完了<br /><br /> 6 = マージ入力のために使用されています。クエリを実行できます。<br /><br /> 8 = 削除用にマークされています。 クエリおよびマージソースには使用されません。<br /><br /> 状態が4または6の場合、フラグメントは論理フルテキストインデックスの一部であるため、クエリを実行できます。つまり、*クエリ*可能なフラグメントです。|  
+|status|**int**|フラグメントの状態。次のいずれかになります。<br /><br /> 0 = 新たに作成され、まだ使用されていません。<br /><br /> 1 = フルテキストインデックスの作成時またはマージ時に挿入に使用される<br /><br /> 4 = 閉じています。 クエリの準備完了<br /><br /> 6 = マージ入力のために使用されています。クエリを実行できます。<br /><br /> 8 = 削除用にマークされています。 クエリおよびマージソースには使用されません。<br /><br /> 状態が4または6の場合、フラグメントは論理フルテキストインデックスの一部であるため、クエリを実行できます。つまり、 *クエリ* 可能なフラグメントです。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sys.fulltext_index_fragments カタログ ビューを使用すると、フルテキスト インデックスを構成するフラグメントの数を照会できます。 フルテキスト クエリのパフォーマンスに問題がある場合は、次のように、sys.fulltext_index_fragments を使用してフルテキスト インデックス内のクエリ可能なフラグメント (状態が 4 または 6 のフラグメント) の数を照会します。  
   
 ```  
@@ -66,8 +67,8 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)  
   
   

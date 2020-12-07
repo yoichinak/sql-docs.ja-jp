@@ -1,4 +1,5 @@
 ---
+description: updateString (java.lang.String, java.lang.String) メソッド
 title: updateString (java.lang.String, java.lang.String) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 13e866bf65c0a6fd93c913344837a6f066fc9e64
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3fc3d138284b88b1b1fd52554d739848255d7b50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457974"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>updateString (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public void updateString(java.lang.String columnName,
   
  *x*  
   
- **String** オブジェクト。  
+ **String** オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

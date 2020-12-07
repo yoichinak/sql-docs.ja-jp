@@ -1,4 +1,5 @@
 ---
+description: SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
 title: SSIS パッケージ アップグレード ウィザードの F1 ヘルプ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495543"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
 
@@ -38,7 +39,7 @@ ms.locfileid: "86921980"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS アップグレード ウィザード
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
  
@@ -67,11 +68,11 @@ ms.locfileid: "86921980"
 ### <a name="package-source-dynamic-options"></a>パッケージ ソース動的オプション  
   
 #### <a name="package-source--ssis-package-store"></a>[パッケージ ソース] = [SSIS パッケージ ストア]  
- **[サーバー]**  
+ **サーバー**  
  アップグレードするパッケージが存在するサーバーの名前を入力するか、一覧からこのサーバーを選択します。  
   
 #### <a name="package-source--microsoft-sql-server"></a>[パッケージ ソース] = [Microsoft SQL Server]  
- **[サーバー]**  
+ **サーバー**  
  アップグレードするパッケージが存在するサーバーの名前を入力するか、一覧からこのサーバーを選択します。  
   
  **[Windows 認証を使用する]**  
@@ -107,7 +108,7 @@ ms.locfileid: "86921980"
 |値|説明|  
 |-----------|-----------------|  
 |**ファイル システム**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
-|**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
+|**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
 |**Microsoft SQL Server**|アップグレードされたパッケージを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既存のインスタンスに保存することを示します。<br /><br /> この値を選択すると、対応する **パッケージ ソース** 動的オプションが表示されます。|  
   
  **フォルダー**  
@@ -119,11 +120,11 @@ ms.locfileid: "86921980"
 ### <a name="package-source-dynamic-options"></a>パッケージ ソース動的オプション  
   
 #### <a name="package-source--ssis-package-store"></a>[パッケージ ソース] = [SSIS パッケージ ストア]  
- **[サーバー]**  
+ **サーバー**  
  アップグレード パッケージを保存するサーバーの名前を入力するか、一覧からサーバーを選択します。  
   
 #### <a name="package-source--microsoft-sql-server"></a>[パッケージ ソース] = [Microsoft SQL Server]  
- **[サーバー]**  
+ **サーバー**  
  アップグレード パッケージを保存するサーバーの名前を入力するか、一覧からこのサーバーを選択します。  
   
  **[Windows 認証を使用する]**  
@@ -145,7 +146,7 @@ ms.locfileid: "86921980"
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[接続文字列を更新して新しいプロバイダー名を使用する]**  
  現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
   
@@ -194,7 +195,7 @@ ms.locfileid: "86921980"
 ## <a name="select-packages-page"></a>[パッケージの選択] ページ
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[既存のパッケージ名]**  
  アップグレードする 1 つ以上のパッケージを選択します。  
   
@@ -213,14 +214,14 @@ ms.locfileid: "86921980"
 ## <a name="complete-the-wizard-page"></a>[ウィザードの完了] ページ
   **[ウィザードの完了]** ページでは、選択したパッケージ アップグレード オプションを確認できます。 このページは、このセッションのウィザードのオプションを前に戻って変更できる、最後のウィザード ページです。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **オプションの概要**  
  ウィザードで選択したアップグレード オプションを確認します。 いずれかのオプションを変更するには、 **[戻る]** をクリックして前のウィザード ページに戻ります。
  
 ## <a name="upgrading-the-packages-page"></a>[パッケージをアップグレードしています] ページ
   **[パッケージをアップグレードしています]** ページでは、パッケージのアップグレードの進行状況を表示したり、アップグレード プロセスを中断したりできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードでは、選択したパッケージが 1 つずつアップグレードされます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[メッセージ] ペイン**  
  アップグレード プロセス中に、進行状況メッセージと概要情報が表示されます。  
   

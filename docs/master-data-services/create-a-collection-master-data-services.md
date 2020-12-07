@@ -1,4 +1,5 @@
 ---
+description: コレクションを作成する (Master Data Services)
 title: コレクションを作成する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112adceba92c705cf545f6f4a67771c3d31292cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495070"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812421"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -57,7 +58,7 @@ ms.locfileid: "85812421"
   
 -   [コレクションにメンバーを追加する (マスター データ サービス)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)   
  [マスターデータサービス &#40;のメンバーまたはコレクションを削除&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  

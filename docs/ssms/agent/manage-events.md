@@ -1,4 +1,5 @@
 ---
+description: イベントの管理
 title: イベントの管理
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c9f3e94252e955b5191ecdaef0188861f503aa77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41519f278ae684c58fabb693d677ad79373a726a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749000"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037335"
 ---
 # <a name="manage-events"></a>イベントの管理
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85749000"
   
 -   **スケーラビリティ**。 多くの物理サーバーを 1 台の論理サーバーとして管理できます。 必要に応じて、この物理サーバー グループに対してサーバーを追加または削除できます。  
   
--   **効率**。 警告とオペレーターは一度だけ定義すればよいので、構成にかかる時間を節約できます。  
+-   **効率性**。 警告とオペレーターは一度だけ定義すればよいので、構成にかかる時間を節約できます。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>警告管理サーバーを使用する欠点  
 警告管理サーバーのセットアップには、次のような欠点があります。  
@@ -85,7 +86,7 @@ ms.locfileid: "85749000"
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
   
 ## <a name="running-event-triggered-jobs"></a>イベント トリガーのジョブの実行  
 警告に応答して実行されるジョブを定義できます。 たとえば、警告によって検出された問題を修正したり、さらに診断したりするジョブを実行できます。  
@@ -94,5 +95,4 @@ ms.locfileid: "85749000"
 > ジョブがイベントを発生させることもありえるので、再帰的な警告ジョブ ループを作成しないように注意してください。  
   
 ## <a name="see-also"></a>参照  
-[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
-  
+[sp_add_notification (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-sysmessages-transact-sql.md)  

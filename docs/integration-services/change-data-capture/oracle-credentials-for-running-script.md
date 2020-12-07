@@ -1,4 +1,5 @@
 ---
+description: Oracle Credentials for Running Script
 title: スクリプトを実行するための Oracle 資格情報 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d6e7cd34cbbccded9d8b92a9013e988980d8622f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5959cec249da89655d1edb4df8ef8ca225a416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426014"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917174"
   
 -   **[Windows 認証]** : 現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
   
--   **[Oracle 認証]** : このオプションを選択する場合、接続先のソース Oracle データベースでのユーザーの **[ユーザー名]** と **[パスワード]** を入力する必要があります。  
+-   **[Oracle 認証]**: このオプションを選択する場合、接続先のソース Oracle データベースでのユーザーの **[ユーザー名]** と **[パスワード]** を入力する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   

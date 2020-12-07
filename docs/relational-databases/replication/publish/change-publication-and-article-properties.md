@@ -1,4 +1,5 @@
 ---
+description: パブリケーションおよびアーティクルのプロパティの変更
 title: パブリケーションおよびアーティクルのプロパティの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8d2da3afadaf9dc56a7003b007be28cf6c3f1c63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470173"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86914444"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changepublication**|**sync_method**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -44,7 +45,7 @@ ms.locfileid: "86914444"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルを削除します。|**sp_droparticle**|すべてのパラメーター。|アーティクルは、サブスクリプションを作成する前に削除できます。 ストアド プロシージャを使用して、アーティクルに対するサブスクリプションを削除できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、サブスクリプション全体を削除、再作成、および同期する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。|  
 |列フィルターを変更します。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -62,7 +63,7 @@ ms.locfileid: "86914444"
   
 ## <a name="publication-properties-for-merge-replication"></a>マージ レプリケーションのパブリケーションのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changemergepublication**|**sync_mode**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -81,7 +82,7 @@ ms.locfileid: "86914444"
   
 ## <a name="article-properties-for-merge-replication"></a>マージ レプリケーションのアーティクルのプロパティ  
   
-|説明|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|プロパティ|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルがパブリケーション内に最新のパラメーター化されたフィルターを持つ場合に、そのアーティクルを削除します。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |アーティクルが結合フィルターまたは論理レコード内で親である場合に、そのアーティクルを削除します (この操作の副作用として、結合が削除されます)。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  

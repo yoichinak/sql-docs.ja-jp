@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401490"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767161"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>並列データウェアハウスのバックアップサーバーを取得して構成する
 この記事では、Analytics Platform System (APS) と Parallel Data Warehouse (PDW) のバックアップおよび復元機能で使用するために、非アプライアンス Windows システムをバックアップサーバーとして構成する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "74401490"
 ## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>手順 1: 容量の要件を決定する  
 バックアップサーバーのシステム要件は、実際のワークロードにほぼ完全に依存します。 バックアップサーバーを購入またはプロビジョニングする前に、容量の要件を把握しておく必要があります。 バックアップサーバーは、ワークロードのパフォーマンスとストレージの要件を処理できる限り、バックアップ専用である必要はありません。 また、複数のバックアップサーバーを使用して、各データベースを複数のサーバーのいずれかにバックアップおよび復元することもできます。  
   
-容量の要件を決定するには、[バックアップサーバーの容量計画ワークシート](backup-capacity-planning-worksheet.md)を使用します。  
+容量の要件を決定するには、 [バックアップサーバーの容量計画ワークシート](backup-capacity-planning-worksheet.md) を使用します。  
   
 ## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>手順 2: バックアップサーバーを取得する  
 容量の要件を十分に理解できるようになったので、購入またはプロビジョニングする必要があるサーバーとネットワークコンポーネントを計画することができます。 次の要件の一覧を購入計画に組み込み、サーバーを購入するか、既存のサーバーをプロビジョニングします。  
@@ -50,7 +50,7 @@ Windows ファイル共有 (SMB) プロトコルを使用する任意のファ�
   
 -   SMB 経由でのファイルの事前割り当てのパフォーマンス上の利点を得ます。  
   
--   バックアップ操作には、ファイルの瞬時初期化 (IFI) を使用します。 IT チームは、この設定をバックアップサーバーで管理します。 PDW Configuration Manager (dwconfig .exe) では、バックアップサーバーでの IFI の設定または制御は行われません。 以前のバージョンの Windows には IFI はありませんが、バックアップサーバーとして使用することはできます。  
+-   バックアップ操作には、ファイルの瞬時初期化 (IFI) を使用します。 IT チームは、この設定をバックアップサーバーで管理します。 PDW Configuration Manager (dwconfig.exe) では、バックアップサーバーでの IFI の設定または制御は行われません。 以前のバージョンの Windows には IFI はありませんが、バックアップサーバーとして使用することはできます。  
   
 ### <a name="networking-requirements"></a>ネットワーク要件  
 必須ではありませんが、InfiniBand は、バックアップサーバーに推奨される接続の種類です。 ロードサーバーをアプライアンス InfiniBand ネットワークに接続する準備をするには、次のようにします。  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-詳細については次を参照してください: 
+詳細については、次を参照してください。 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [データベースの復元](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>セキュリティに関する通知  
 バックアップサーバーがアプライアンスのプライベートドメインに参加していません。 独自のネットワーク内にあり、独自のドメインとプライベートのアプライアンスドメインとの間に信頼関係がありません。  
@@ -136,11 +136,11 @@ PDW のバックアップはアプライアンスに格納されていないた�
 > [!IMPORTANT]  
 > データのセキュリティ リスクを緩和するために、バックアップ操作と復元操作を実行する目的のためだけに Windows アカウントを 1 つ用意することをお勧めします。 そのアカウントのアクセス許可をバックアップの場所に限定します。  
   
-PDW にユーザー名とパスワードを格納するには、 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)ストアドプロシージャを使用します。 PDW は、Windows 資格情報マネージャーを使用して、コントロールノードとコンピューティングノードにユーザー名とパスワードを格納および暗号化します。 資格情報は BACKUP DATABASE コマンドでバックアップされません。  
+PDW にユーザー名とパスワードを格納するには、 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) ストアドプロシージャを使用します。 PDW は、Windows 資格情報マネージャーを使用して、コントロールノードとコンピューティングノードにユーザー名とパスワードを格納および暗号化します。 資格情報は BACKUP DATABASE コマンドでバックアップされません。  
   
-PDW からネットワーク資格情報を削除するには、 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)ストアドプロシージャを使用します。  
+PDW からネットワーク資格情報を削除するには、 [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) ストアドプロシージャを使用します。  
   
-SQL Server PDW に格納されているすべてのネットワーク資格情報を一覧表示するには、 [dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)動的管理ビューを使用します。  
+SQL Server PDW に格納されているすべてのネットワーク資格情報を一覧表示するには、 [dm_pdw_network_credentials](../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) 動的管理ビューを使用します。  
   
 ### <a name="secure-communications"></a>セキュリティで保護された通信  
   
@@ -151,4 +151,3 @@ SQL Server PDW に格納されているすべてのネットワーク資格情�
   
 ## <a name="see-also"></a>参照  
 [バックアップと復元](backup-and-restore-overview.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: == (等しい) (SSIS 式)
 title: == (等しい) (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910851"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127131"
 ---
 # <a name="-equal-ssis-expression"></a>== (等しい) (SSIS 式)
 
@@ -44,10 +45,10 @@ expression1 == expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
- 設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
+ 設定する式の *expression1* と *expression2* は、次のいずれかのルールに従う必要があります。  
   
 -   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
@@ -100,13 +101,13 @@ expression1 == expression2
 ListPrice == 500  
 ```  
   
- この例では、変数 **LPrice**を使用しています。 **LPrice** の値が 500 の場合、この例の結果は TRUE に評価されます。 式を正しく解析するには、この変数のデータ型が数値型である必要があります。  
+ この例では、変数 **LPrice** を使用しています。 **LPrice** の値が 500 の場合、この例の結果は TRUE に評価されます。 式を正しく解析するには、この変数のデータ型が数値型である必要があります。  
   
 ```  
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [\!= (等しくない) (SSIS 式)](../../integration-services/expressions/unequal-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

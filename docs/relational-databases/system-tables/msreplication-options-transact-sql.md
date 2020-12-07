@@ -1,4 +1,5 @@
 ---
+description: MSreplication_options (Transact-sql)
 title: MSreplication_options (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98d25db72c7067147a34fa21b0bfa8da16ae1d3e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 096eb8379363e3a193ecea12593638e033c3b1ec
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889447"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538239"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSreplication_options**テーブルには、レプリケーションによって内部的に使用されるメタデータが格納されます。 このテーブルは、 **master**データベースに格納されます。  
+  **MSreplication_options**テーブルには、レプリケーションによって内部的に使用されるメタデータが格納されます。 このテーブルは、 **master** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +39,7 @@ ms.locfileid: "85889447"
 |**改定**|**int**|内部使用のみです。|  
 |**install_failures**|**int**|内部使用のみです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

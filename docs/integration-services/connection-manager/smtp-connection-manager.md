@@ -1,4 +1,5 @@
 ---
+description: SMTP 接続マネージャー
 title: SMTP 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed7c148645dc8788e2e089b3f7f7f74d480fafe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0609ea0b10cd5f656c78cbda8c3f2b7ad5be382f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923316"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719288"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 接続マネージャー
 
@@ -50,7 +51,7 @@ ms.locfileid: "86923316"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMTP 接続マネージャー エディター](../../integration-services/connection-manager/smtp-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMTP 接続マネージャー エディター]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -80,4 +81,3 @@ ms.locfileid: "86923316"
   
  **[SSL (Secure Sockets Layer) を有効にする]**  
  選択すると、電子メール メッセージの送信時に TLS/SSL を使用して通信が暗号化されます。  
-  

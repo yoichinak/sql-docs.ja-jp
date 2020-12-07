@@ -1,4 +1,5 @@
 ---
+description: MSdynamicsnapshotviews (Transact-SQL)
 title: MSdynamicsnapshotviews (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cc0668cb67308110cfde23390c809c8867fb959a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a89b139970822482e8b0745d9ceeefe8bba3f94
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889915"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538273"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85889915"
 |-----------------|---------------|-----------------|  
 |**dynamic_snapshot_view_name**|**sysname**|一時的なフィルター選択されたデータ スナップショット ビューの名前です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

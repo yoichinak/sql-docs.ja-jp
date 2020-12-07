@@ -1,6 +1,6 @@
 ---
 title: スパース列のサポート (OLE DB) | Microsoft Docs
-description: スパース列のサポート (OLE DB)
+description: null 値を格納するために最適化された列であるスパース列に対する OLE DB Driver for SQL Server サポートについて説明します。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a86428f169ae2cfa0c5de2235ba93c1fd62e04bb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f4d96c2d28df216097bb6abe77bcea1982b65e6
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012763"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860036"
 ---
 # <a name="sparse-columns-support-ole-db"></a>スパース列のサポート (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

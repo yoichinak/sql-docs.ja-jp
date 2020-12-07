@@ -1,4 +1,5 @@
 ---
+description: MSSQLSERVER_3168
 title: MSSQLSERVER_3168 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4812a171f8693294d7e9d9665e744b21a6284c55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5c3daa848ced9eb6ca784e68d14a66a9bea53aa
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723699"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618105"
 ---
 # <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,5 +52,5 @@ ms.locfileid: "85723699"
 この状況での復元プロセスはかなり複雑になるため、最後の手段としてのみ使用します。 詳細については、「[SQL Server の別のビルドにデータベースのシステム バックアップを復元することができません。](https://support.microsoft.com/kb/264474)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[システム データベースのバックアップと復元 &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
+[システム データベースの復元に関する制限 &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md#limitations-on-restoring-system-databases)  
   

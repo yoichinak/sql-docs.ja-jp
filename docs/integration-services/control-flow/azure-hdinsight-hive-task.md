@@ -1,4 +1,5 @@
 ---
+description: Azure HDInsight Pig Task
 title: Azure HDInsight Hive Task| Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69fd7d3245ea6c166890c4fbe49040b12fbc97e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0c327451deeb763605dc9e66862fe275046cddb9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913856"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123617"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Pig Task
 
@@ -27,7 +28,7 @@ ms.locfileid: "86913856"
 
 Azure HDInsight クラスターで Hive スクリプトを実行するには、 **Azure HDInsight Hive Task** を使用します。
      
-**Azure HDInsight Hive Task**を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。 **[Azure HDInsight Hive Task エディター]** ダイアログ ボックスが表示されます。  
+**Azure HDInsight Hive Task** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックします。 **[Azure HDInsight Hive Task エディター]** ダイアログ ボックスが表示されます。  
   
 **Azure HDInsight Hive Task** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   
@@ -43,8 +44,8 @@ Azure HDInsight クラスターで Hive スクリプトを実行するには、 
   
 5.  実行する Hive スクリプトを指定するには、次の 2 つの方法があります。
   
-    1.  **インライン スクリプト**: **[スクリプトの入力]** ダイアログ ボックスに実行するスクリプトをインラインで入力して、 **[Script]** フィールドを指定します。
+    1.  **インライン スクリプト**: **[スクリプトの入力]** ダイアログ ボックスに実行するスクリプトをインラインで入力して、**[Script]** フィールドを指定します。
   
-    2.  **スクリプト ファイル**: Azure Blob Storage にスクリプト ファイルをアップロードして、 **[BlobName]** フィールドを指定します。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、 **[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
+    2.  **スクリプト ファイル**: Azure Blob Storage にスクリプト ファイルをアップロードして、**[BlobName]** フィールドを指定します。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、**[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
   
      両方が指定されている場合、スクリプト ファイルが使用され、インライン スクリプトは無視されます。

@@ -1,4 +1,5 @@
 ---
+description: プログラミング特有のタスク
 title: プログラミング特有のタスク
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3c7296ee1eb0401fce59094750471139a46967
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68b952ed0497f9c5c94b9ef71b8e06e495900616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455484"
 ---
 # <a name="programming-specific-tasks"></a>プログラミング特有のタスク
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -53,6 +55,6 @@ ms.locfileid: "85998313"
 |[フルテキスト検索の実装](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|SMO でフルテキスト検索カタログおよびインデックスを実装する方法について説明します。|  
 |[エンドポイントの実装](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|データベース ミラーリング、SOAP 要求、および Service Broker のペイロードを処理するためのエンドポイントを作成する方法について説明します。|  
 |[統計の作成と更新](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|SMO でデータベース上の統計を設定および監視する方法について説明します。|  
-|[イベントのトレースおよび再生](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|SMO で**trace**オブジェクトと**replay**オブジェクトを使用してイベントをトレースおよび再生する方法について説明します。|  
+|[イベントのトレースおよび再生](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|SMO で **trace** オブジェクトと **replay** オブジェクトを使用してイベントをトレースおよび再生する方法について説明します。|  
   
   

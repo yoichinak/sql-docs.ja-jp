@@ -1,4 +1,5 @@
 ---
+description: SET NOCOUNT (Transact-SQL)
 title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - counting rows
 - SET NOCOUNT statement
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f55c6db01dac215649960298470d4b5aaea8c731
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f2bf7552728d35ea8c25bed9d1231f66903da968
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395091"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541320"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -45,7 +46,9 @@ ms.locfileid: "87395091"
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET NOCOUNT が ON の場合、カウントは返されません。 SET NOCOUNT が OFF の場合、行数が返されます。  
   
  SET NOCOUNT が ON の場合でも、@@ROWCOUNT 関数は更新されます。  

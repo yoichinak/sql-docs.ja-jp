@@ -1,4 +1,5 @@
 ---
+description: 全体結合変換
 title: 全体結合変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 59756c7690301d35a1ad53b9db5bde441ce74c24
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920343"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194615"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
 
@@ -32,7 +33,7 @@ ms.locfileid: "86920343"
 
   全体結合変換は、複数の入力を 1 つの出力に結合します。 たとえば、5 つの異なるフラット ファイル ソースからの出力を全体結合変換への入力とし、1 つの出力に結合できます。  
   
-## <a name="inputs-and-outputs"></a>入力および出力  
+## <a name="inputs-and-outputs"></a>入力と出力  
  変換入力は、変換出力に 1 つずつ追加されます。行の並べ替えは発生しません。 パッケージで並べ替え出力が必要な場合は、全体結合変換ではなくマージ変換を使用する必要があります。  
   
  全体結合変換に連結した最初の入力が変換出力のソースとなり、これから変換出力が作成されます。 全体結合変換に次に連結した入力の列は、変換出力の列にマップされます。  
@@ -46,7 +47,7 @@ ms.locfileid: "86920343"
 ## <a name="configuration-of-the-union-all-transformation"></a>全体結合変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
+ プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
  プロパティの設定方法の詳細については、次のトピックのいずれかを参照してください。  
   
@@ -67,5 +68,4 @@ ms.locfileid: "86920343"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [全体結合変換を使用してデータをマージする](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
-  
   

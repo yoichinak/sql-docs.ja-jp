@@ -1,4 +1,5 @@
 ---
+description: チュートリアル:hierarchyid データ型の使用
 title: 'チュートリアル: hierarchyid データ型の使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,21 +15,21 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bda10e885959504bdac67902db2ae1726656b92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eece1dc9ea612e37c466d57e074ae105ea0608c4
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727141"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809653"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル : hierarchyid データ型の使用
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル:hierarchyid データ型の使用
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 このチュートリアルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]については理解しているが、 **hierarchyid** データ型は初めて使用するユーザーを対象としています。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 このチュートリアルは、次の 2 つのレッスンで構成されています。  
   
-[レッスン 1: テーブルの階層構造への変換](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[レッスン 1:テーブルの階層構造への変換](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 このレッスンでは、親子階層として構成されている既存の従業員テーブルを使用し、 **hierarchyid** データ型を使用して階層を表す新しいテーブルにデータを移動します。 このレッスンを学習するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースが必要です。  
   
 [レッスン 2: 階層テーブルでのデータの作成と管理](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
@@ -44,11 +45,10 @@ ms.locfileid: "85727141"
 -   Internet Explorer 6 以降。  
   
 ## <a name="see-also"></a>参照  
-[チュートリアル : データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
-[チュートリアル: Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[チュートリアル:データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[チュートリアル:Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+[hierarchyid データ型メソッド リファレンス](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
-  
   
   

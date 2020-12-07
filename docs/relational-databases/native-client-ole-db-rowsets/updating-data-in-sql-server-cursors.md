@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client 内の SQL Server カーソルのデータの更新
 title: カーソルのデータを更新する (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d5c51d8956f2eea8f6be955c9daf1e6ed323f7d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7e00bf48c991d496e4425e665206b22a0ac3d32a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448324"
 ---
 # <a name="updating-data-in-sql-server-cursors-in-sql-server-native-client"></a>SQL Server Native Client 内の SQL Server カーソルのデータの更新
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395816"
   
  どちらのモードでも、行セットに対してトランザクション オブジェクトが開いていないときは、1 つのラウンドトリップが個別のトランザクションを表します。  
   
- **IRowsetUpdate:: Update**を使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、指定された各行を処理しようとします。 行に対して無効なデータ、長さ、または状態の値が原因でエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの処理は停止されません。 更新に関係する他のすべての行が変更されることも、そのような行がまったく変更されないこともあります。 コンシューマーは、返された*Prgrowstatus*配列を調べて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが DB_S_ERRORSOCCURRED を返したときに特定の行のエラーを特定する必要があります。  
+ **IRowsetUpdate:: Update**を使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、指定された各行を処理しようとします。 行に対して無効なデータ、長さ、または状態の値が原因でエラーが発生しても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの処理は停止されません。 更新に関係する他のすべての行が変更されることも、そのような行がまったく変更されないこともあります。 コンシューマーは、返された *Prgrowstatus* 配列を調べて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが DB_S_ERRORSOCCURRED を返したときに特定の行のエラーを特定する必要があります。  
   
  コンシューマーでは、特定の順序で行が処理されることを想定しないでください。 1 行以上の行に対してデータ変更を順序付けて処理することが必要な場合、アプリケーション ロジックで順序を確立し、トランザクションを開いてそのロジックをトランザクション内に含める必要があります。  
   

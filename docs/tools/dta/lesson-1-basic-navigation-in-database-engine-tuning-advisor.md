@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726920"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713830"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>レッスン 1:データベース エンジン チューニング アドバイザー (DTA) での基本操作
 
@@ -30,12 +30,12 @@ ms.locfileid: "85726920"
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールします。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)をダウンロードします。
+- [AdventureWorks2017 サンプル データベース](../../samples/adventureworks-install-configure.md?view=sql-server-2017)をダウンロードします。
 
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)に関するページをご覧ください。
+SSMS でデータベースを復元する手順については、[データベースの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)に関するページをご覧ください。
 
   >[!NOTE]
   > このチュートリアルは、SQL Server Management Studio の使用と基本的なデータベース管理タスクに慣れているユーザーを対象としています。 
@@ -89,6 +89,5 @@ SSMS でデータベースを復元する手順については、[データベ�
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 2:データベース エンジン チューニング アドバイザーの使用](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

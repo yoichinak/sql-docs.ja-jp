@@ -1,8 +1,9 @@
 ---
+description: Field (Visual C++ 構文用の ADO)
 title: Field (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 732181ecdeb50d8201e1b6d07e3b1c6d8116408b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae296d7bf6b42b5a978110b8626086528dc24d89
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757098"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973283"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  

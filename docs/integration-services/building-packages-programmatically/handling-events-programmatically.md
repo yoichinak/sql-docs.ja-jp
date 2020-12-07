@@ -1,4 +1,5 @@
 ---
+description: プログラムによるイベントの処理
 title: プログラムによるイベントの処理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08012fc9ac717476be0bc9e592b96d7391aa7a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2b2198303d8eda4e6215ad241e7484d7dbef2636
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922708"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725333"
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
 
@@ -253,6 +254,5 @@ End Module
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [パッケージにイベント ハンドラーを追加する](../integration-services-ssis-event-handlers.md)  
   

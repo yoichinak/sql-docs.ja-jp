@@ -1,4 +1,5 @@
 ---
+description: MSpeer_topologyresponse (Transact-sql)
 title: MSpeer_topologyresponse (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_topologyresponse
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d485e2942d9f941c3ea064f531f83d6314c6bc8e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c80cfd8657671f725637a8d1c667c733bc1f1d1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002698"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538342"
 ---
 # <a name="mspeer_topologyresponse-transact-sql"></a>MSpeer_topologyresponse (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

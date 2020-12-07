@@ -1,4 +1,5 @@
 ---
+description: 'C から SQL へ: 年月の間隔'
 title: 'C から SQL: 年月間隔 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ec7bfda0015883c8470dd453c7ae5de9bfd6cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd9a3f7f14ff6af93f15521738bebdbc63a8f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449024"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C から SQL へ: 年月の間隔
 Month interval ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  
   
- 次の表は、データ型が年の月を表す ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
+ 次の表は、データ型が年の月を表す ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「 [データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

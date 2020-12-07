@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting メンバー
 title: MSReportServer_ConfigurationSetting メンバー | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7643435954c74285992c6a21ebd1df5d8998164b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423096"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
   MSReportServer_ConfigurationSetting クラスには、次のプロパティとメソッドが含まれています。  
   
 ## <a name="public-properties"></a>パブリック プロパティ  
   
-|||  
+|プロパティ|説明|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスとの通信にレポート サーバーが使用する接続プール サイズを返します。 読み取り専用です。|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するためにレポート サーバーが使用するログイン アカウントを指定します。 読み取り専用です。|  
@@ -58,7 +59,7 @@ ms.locfileid: "81632540"
   
 ## <a name="public-methods"></a>パブリック メソッド  
   
-|||  
+|メソッド|説明|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|インスタンスの暗号化キーをバックアップします。 暗号化キーは、パスワードを使用して暗号化されて格納されます。|  
 |[CreateSSLCertificateBinding メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|TLS/SSL 証明書のバインドを作成します。|  

@@ -1,4 +1,5 @@
 ---
+description: テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
 title: テーブル値オブジェクト (列) のプロパティ
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,31 +13,31 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d64ccb277d9016cd94b5613529e2d1c322162a73
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f33c6df2e1acfa5c014b6739acd61c4d0153631c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312708"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
+ クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
   
 > [!NOTE]  
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
   
 > [!NOTE]  
-> 使用中の設定やエディションに応じて、表示されるダイアログ ボックスとメニュー コマンドがヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** を選択してください。  
+> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。  
   
 **[IDENTITY] カテゴリ**  
 展開すると、 **[名前]** プロパティが表示されます。  
   
-**Name**  
+**名前**  
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  
-展開すると、 **[NULL を許容]** 、 **[照合順序]** 、 **[長さ]** 、 **[データ型]** 、 **[精度]** 、 **[スケール]** 、 **[サイズ]** のプロパティが表示されます。  
+展開すると、 **[NULL を許容]**、 **[照合順序]**、 **[長さ]**、 **[データ型]**、 **[精度]**、 **[スケール]**、 **[サイズ]** のプロパティが表示されます。  
   
 **[NULL を許容]**  
 列のデータ型で NULL が許容されるかどうかが表示されます。  

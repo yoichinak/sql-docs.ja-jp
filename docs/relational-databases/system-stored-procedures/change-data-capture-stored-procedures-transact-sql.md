@@ -1,4 +1,5 @@
 ---
+description: 変更データキャプチャのストアドプロシージャ (Transact-sql)
 title: 変更データキャプチャのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], change data capture
 - change data capture [SQL Server], stored procedures
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a0d5f3f10f20fb5489760a1e415309dcfd01482e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 017e6f6ff7dd9c5e257050619cbf744c2acd80d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977632"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550112"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>変更データキャプチャのストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

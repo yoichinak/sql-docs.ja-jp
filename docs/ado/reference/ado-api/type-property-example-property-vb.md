@@ -1,8 +1,9 @@
 ---
+description: Type プロパティの例 (プロパティ) (VB)
 title: Type プロパティの例 (プロパティ) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e826903c37ca436f73bd82abc93afdd0568fc9e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755595"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988243"
 ---
 # <a name="type-property-example-property-vb"></a>Type プロパティの例 (プロパティ) (VB)
-この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 これは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
+この例では、 [Type](./type-property-ado.md) プロパティを示します。 これは、 [プロパティ](./properties-collection-ado.md)、 [フィールド](./fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
   
- **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティを**adUseClient**に設定すると、**レコードセット**オブジェクトの**properties**コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトにアクセスします。  
+ **プロパティ**コレクションにアクセスするために[レコードセット](./recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[ [カーソルの場所](./cursorlocation-property-ado.md) ] プロパティを **adUseClient** に設定すると、 **レコードセット** オブジェクトの **properties** コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](./item-property-ado.md) プロパティを使用して各 [プロパティ](./property-object-ado.md) オブジェクトにアクセスします。  
   
 ```  
 'BeginTypePropertyVB  
@@ -148,5 +149,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property オブジェクト (ADO)](./property-object-ado.md)   
+ [Type プロパティ (ADO)](./type-property-ado.md)

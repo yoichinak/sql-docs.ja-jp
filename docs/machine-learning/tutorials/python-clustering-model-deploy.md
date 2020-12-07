@@ -9,18 +9,17 @@ ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c9d971efb90f51562bfa59c73802e577dd8d511
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730524"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870395"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習を使用して顧客を分類するモデルをデプロイする
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、Python で開発されたクラスタリング モデルをデータベースにデプロイします。
@@ -51,7 +50,7 @@ ms.locfileid: "85730524"
 
 ## <a name="prerequisites"></a>前提条件
 
-* このチュートリアルシリーズの第 4 部は、[**第 1 部**](python-clustering-model.md)の前提条件を満たし、[**第 2 部**](python-clustering-model-prepare-data.md)および[**第 3 部**](python-clustering-model-build.md)の手順を完了していることを前提としています。
+* このチュートリアルシリーズの第 4 部は、[**第 1 部**](python-clustering-model.md)の前提条件を満たし、[**第 2 部**](python-clustering-model-prepare-data.md)および [**第 3 部**](python-clustering-model-build.md)の手順を完了していることを前提としています。
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>モデルを生成するストアド プロシージャの作成
 

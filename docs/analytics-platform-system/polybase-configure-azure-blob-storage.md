@@ -1,6 +1,6 @@
 ---
 title: PolyBase を使用して Azure Blob ストレージ内の外部データにアクセスする
-description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
+description: 並列データウェアハウス (APS) で PolyBase を使用して、Azure Blob ストレージ内の外部データに対してクエリを実行する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400727"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520976"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データにアクセスするように PolyBase を構成する
 
@@ -32,7 +32,7 @@ ms.locfileid: "74400727"
 
 まず、Azure Blob storage を使用するように APS を構成します。
 
-1. ' Hadoop connectivity ' を Azure Blob storage プロバイダーに設定して[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。
+1. ' Hadoop connectivity ' を Azure Blob storage プロバイダーに設定して [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。
 
    ```sql  
    -- Values map to various external data sources.  
@@ -66,7 +66,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
+1. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)を使用して外部データソースを作成します。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -173,7 +173,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>SSDT で PolyBase オブジェクトを表示する  
 
-SQL Server Data Tools では、外部テーブルが別のフォルダー**外部テーブル**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
+SQL Server Data Tools では、外部テーブルが別のフォルダー **外部テーブル** に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
   
 ![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (Azure SQL データベース)
 title: dm_db_wait_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 555bdfd47a44fa2d8be2e59be3a18f0b55a6fdd5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677583"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542295"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85677583"
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 -   この動的管理ビューには、現在のデータベースのデータのみが表示されます。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85677583"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>待機の種類  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 待機の種類  
  リソース待機  
  リソース待機は、ワーカーがリソースへのアクセスを要求したときに、そのリソースが他のワーカーによって使用されているか、まだ準備ができておらず、使用できない場合に発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロック待機およびラッチ待機は、同期オブジェクトで発生する待機です。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85677583"
   
  スレッドは、待機中でなくなってもすぐに実行を開始する必要はありません。 このようなスレッドは、最初に実行可能なワーカーのキューに配置された後、スケジューラに従って実行するために、クォンタムの間待機する必要があります。  
   
- では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、待機時間カウンターは**bigint**値であるため、以前のバージョンのの同等のカウンターとしてカウンターロールオーバーが発生する可能性は低く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。  
+ では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、待機時間カウンターは **bigint** 値であるため、以前のバージョンのの同等のカウンターとしてカウンターロールオーバーが発生する可能性は低く [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。  
   
  次の表は、タスクで発生する待機の種類の一覧です。  
   
@@ -255,7 +256,7 @@ ms.locfileid: "85677583"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS |ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|PRINT_ROLLBACK_PROGRESS |ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を (ポーリング経由で) 受信するバックグラウンド タスクの終了を待機しているときに発生します。  内部使用のみです。|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|追加、置換、削除のいずれかの操作が、Always On 内部リスト (ネットワーク、ネットワークアドレス、または可用性グループリスナーの一覧など) での書き込みロックの取得を待機しています。  内部使用のみです。|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On drop availability group 操作は、Windows Server フェールオーバークラスタリングオブジェクトを破棄する前に、対象の可用性グループがオフラインになるのを待機しています。|  

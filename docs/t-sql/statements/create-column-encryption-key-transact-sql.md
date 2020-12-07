@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,15 +29,16 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 62e2338159e845f206d4dbc119414a6bc35b7e1b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110692"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645037"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) に対する列暗号化キーのメタデータ オブジェクトを作成します。 列暗号化キーのメタデータ オブジェクトには、列のデータを暗号化するために使用される列暗号化キーの 1 つまたは 2 つの暗号化された値が含まれます。 各値は、列マスター キーを使って暗号化されています。 
   
@@ -74,8 +76,8 @@ _varbinary\_literal_
   
 > [!WARNING]  
 >  このステートメントでは、プレーンテキストで列暗号化キーの値を渡さないでください。 そうすれば、この機能の利点が得られます。  
-  
-## <a name="remarks"></a>解説  
+
+## <a name="remarks"></a>注釈
 `CREATE COLUMN ENCRYPTION KEY` ステートメントには、少なくとも 1 つまたは 2 つの値が含まれる必要があります。 後で [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) を使用して 2 番目の値を追加できます。 `ALTER COLUMN ENCRYPTION KEY` ステートメントを使用して値を削除することもできます。  
   
 通常、列暗号化キーは、暗号化された値を 1 つだけ使用して作成されます。 列マスター キーをローテーションして、現在の列マスター キーを新しい列マスター キーに置き換えることが必要な場合があります。 キーをローテーションする必要がある場合は、新しい列マスター キーを使用して暗号化された列暗号化キーの値を追加します。 このローテーションにより、クライアント アプリケーションでは、列暗号化キーを使用して暗号化されたデータへのアクセスを維持しながら、新しい列マスター キーを使用できます。 新しいマスター キーにアクセスできないクライアント アプリケーションの、Always Encrypted が有効なドライバーでは、古い列マスター キーで暗号化された列暗号化キーの値が、機密データへのアクセスに使用されます。  
@@ -128,7 +130,7 @@ WITH VALUES
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: ユーザー定義関数の作成 (データベース エンジン)
 title: ユーザー定義関数の作成 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722884"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130831"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85722884"
   
 -   ユーザー定義関数は入れ子にすることができます。つまり、1 つのユーザー定義関数で、別のユーザー定義関数を呼び出すことができます。 呼び出された関数が実行を開始すると入れ子レベルが 1 つ上がり、呼び出された関数が実行を終了するとレベルが 1 つ下がります。 ユーザー定義関数は、32 レベルまで入れ子にすることができます。 入れ子レベルが最大値を超えると、関数チェーン全体の呼び出しが失敗します。 Transact-SQL ユーザー定義関数からマネージド コードへの参照は、32 レベルの入れ子制限のうちの 1 レベルとカウントします。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
--   以下の Service Broker ステートメントは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義に**含めることができません**。  
+-   以下の Service Broker ステートメントは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義に **含めることができません**。  
   
     -   `BEGIN DIALOG CONVERSATION`  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85722884"
 データベースの `CREATE FUNCTION` 権限と、関数を作成するスキーマの `ALTER` 権限が必要です。 関数でユーザー定義型が指定されている場合は、その型に対する `EXECUTE` 権限が必要です。  
   
 ##  <a name="scalar-functions"></a><a name="Scalar"></a> スカラー関数  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに複数ステートメントの**スカラー関数 (スカラー UDF)** を作成します。 この関数は、1 つの入力値 `ProductID`を受け取り、単一のデータ値 (在庫品目中の指定された製品に関する集計量) を返します。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに複数ステートメントの **スカラー関数 (スカラー UDF)** を作成します。 この関数は、1 つの入力値 `ProductID`を受け取り、単一のデータ値 (在庫品目中の指定された製品に関する集計量) を返します。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -105,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > スカラー関数の詳細および例については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」を参照してください。 
 
 ##  <a name="table-valued-functions"></a><a name="TVF"></a> テーブル値関数  
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに**インライン テーブル値関数 (TVF)** を作成します。 この関数は、入力パラメーターとして 1 つの顧客 (商店) ID を受け取り、 `ProductID`列と `Name`列、および過去 1 年間の集計である `YTD Total` を商店に販売した製品ごとに返します。  
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに **インライン テーブル値関数 (TVF)** を作成します。 この関数は、入力パラメーターとして 1 つの顧客 (商店) ID を受け取り、 `ProductID`列と `Name`列、および過去 1 年間の集計である `YTD Total` を商店に販売した製品ごとに返します。  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +133,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに**複数ステートメント テーブル値関数 (MSTVF)** を作成します。 この関数は、単一の入力パラメーター `EmployeeID` を受け取り、指定された従業員の直接または間接の部下であるすべての従業員の一覧を返します。 関数が呼び出され、従業員 ID 109 を指定します。  
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースに **複数ステートメント テーブル値関数 (MSTVF)** を作成します。 この関数は、単一の入力パラメーター `EmployeeID` を受け取り、指定された従業員の直接または間接の部下であるすべての従業員の一覧を返します。 関数が呼び出され、従業員 ID 109 を指定します。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  

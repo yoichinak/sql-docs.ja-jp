@@ -1,4 +1,5 @@
 ---
+description: '[緩やかに変化するディメンション ウィザードへようこそ]'
 title: '[緩やかに変化するディメンション ウィザードへようこそ] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08748714d12da9866821bf39f1a10c3614f24daa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83ae4b3a7f8e820aabff9548352b134676b39105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425664"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードへようこそ]
 
@@ -28,11 +29,11 @@ ms.locfileid: "86916678"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、ようこそページをスキップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [緩やかに変化するディメンション ウィザードを使用して出力を構成する](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: AVG (Transact-SQL)
 title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d0825b40f469e31f12c0fd9d3ebca91fd4d4c69
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5e3fbe43f03e202e87ce951042091190f48a4b8c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111133"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119308"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87111133"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 AVG ( [ ALL | DISTINCT ] expression )  
    [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
@@ -53,7 +54,7 @@ DISTINCT
 値の出現回数にかかわらず、各値の一意の 1 つのインスタンスだけに AVG を適用することを指定します。
   
 *式 (expression)*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。 集計関数とサブクエリは使用できません。
+**bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
 OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
@@ -71,7 +72,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 *expression* のデータ型が別名データ型の場合、戻り値の型も別名データ型になります。 ただし、**tinyint** から **int** への変換など、別名データ型の基本データ型が昇格する場合、戻り値は別名データ型ではなく昇格したデータ型を取ります。
   
 AVG () は、値セットの合計を NULL 以外の値の数で除算することによって、これらの値の平均を計算します。 合計が戻り値のデータ型の最大値を超えた場合、AVG() はエラーを返します。
@@ -112,7 +113,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 TerritoryID Average Bonus         YTD Sales  
 ----------- --------------------- ---------------------  
 NULL        0.00                  1252127.9471  
@@ -148,7 +149,7 @@ FROM Production.Product;
 ```
   
 ### <a name="d-using-avg-without-distinct"></a>D. DISTINCT を伴わない AVG を使用する  
-DISTINCT がない場合、`AVG` 関数は重複する値を含め、`Product` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブル内のすべての製品の平均表示価格を返します。
+DISTINCT がない場合、`AVG` 関数は重複する値を含め、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Product` テーブル内のすべての製品の平均表示価格を返します。
   
 ```sql
 SELECT AVG(ListPrice)  
@@ -165,16 +166,16 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. OVER 句を使用する  
-次の例では、OVER 句を指定した AVG 関数を使用して、`Sales.SalesPerson` データベースの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルに各区域の年間売上の移動平均を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年の売上については、その年の 2 人の営業担当者の売上を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
+次の例では、OVER 句を指定した AVG 関数を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Sales.SalesPerson` テーブルに各区域の年間売上の移動平均を入力します。 データは `TerritoryID` によってパーティションに分割され、`SalesYTD` によって論理的に順序付けされます。 つまり、AVG 関数は年を基にして区域ごとに計算されます。 `TerritoryID` 1 の 2005 年の売上については、その年の 2 人の営業担当者の売上を表す 2 行があります。 これら 2 行の平均売上が計算された後、2006 年の売上を表す 3 番目の行が計算に組み込まれます。
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -184,7 +185,7 @@ ORDER BY TerritoryID,SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           559,697.56           559,697.56  
@@ -207,10 +208,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -219,7 +220,7 @@ ORDER BY SalesYear;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg            CumulativeTotal  
 ---------------- ----------- ----------- -------------------- -------------------- --------------------  
 274              NULL        2005        559,697.56           2,449,684.05         17,147,788.35  
@@ -235,7 +236,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   

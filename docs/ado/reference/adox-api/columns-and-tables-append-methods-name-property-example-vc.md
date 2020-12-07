@@ -1,8 +1,9 @@
 ---
+description: Columns および Tables Append メソッド、Name プロパティの例 (VC++)
 title: Columns および Tables Append メソッド、Name プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25b7ee7aa9b206cec5fc144dd024d3b1fa0847d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759348"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985013"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns および Tables Append メソッド、Name プロパティの例 (VC++)
 次のコードは、新しいテーブルを作成する方法を示しています。  
@@ -82,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [Append メソッド (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append メソッド (ADOX Tables)](./append-method-adox-tables.md)   
+ [Name プロパティ (ADOX)](./name-property-adox.md)

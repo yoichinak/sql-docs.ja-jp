@@ -1,4 +1,5 @@
 ---
+description: 複数フラット ファイル接続マネージャー
 title: 複数フラット ファイル接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc4c1b81917e07ec23b543f64cb81942104ad31d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bac3edc5c3be2a54a999a4b68c7bb0e15f686651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484705"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
 
@@ -58,7 +59,7 @@ ms.locfileid: "86923111"
   
  \<*path*>|\<*path*>  
   
- 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ内のすべてのテキスト ファイルを参照するには、 **ConnectionString** プロパティの値を「C:\\\*.txt」に設定します。  
+ 複数のファイルを指定する場合、ワイルドカード文字を使用することもできます。 たとえば、C ドライブ内のすべてのテキスト ファイルを参照するには、 **ConnectionString** プロパティの値を「C:\\*.txt」に設定します。  
   
  複数フラット ファイル接続マネージャーが複数のファイルを参照する場合、ファイルの形式はすべて同じである必要があります。  
   

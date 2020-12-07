@@ -1,4 +1,5 @@
 ---
+description: Excel ソース
 title: Excel ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90d9d2a7607d61b6eb777dce37950408f3376cf4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e00a786dfb9d9ffe55274822b276a2d2497efd82
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913254"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127181"
 ---
 # <a name="excel-source"></a>Excel ソース
 
@@ -55,7 +56,7 @@ ms.locfileid: "86913254"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Excel のカスタム プロパティ](../../integration-services/data-flow/excel-custom-properties.md)  
   
@@ -80,7 +81,7 @@ ms.locfileid: "86913254"
 |値|説明|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel ファイルからデータを取得します。 |  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -120,7 +121,7 @@ ms.locfileid: "86913254"
 ## <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   

@@ -1,4 +1,5 @@
 ---
+description: 旧バージョンとの互換性と標準準拠
 title: 旧バージョンとの互換性および標準への準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b46b9f5b72117fd978a78b765d09aafd5dc84b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bab7e7777cd5750c86ffbfc3cc87a97ea31ebca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476864"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>旧バージョンとの互換性と標準準拠
-旧バージョンとの互換性は、古い ODBC コンポーネントで動作する新しい ODBC コンポーネントの機能です。 以降のセクションでは、これらのコンポーネントが ODBC 3.x の変更にどのように影響するかについて説明*します。* これらの情報は、主に ODBC 3.x アプリケーションの記述と *、odbc ドライバー*によって下位互換性の問題がどのように処理されるかに対応しています。 旧バージョンとの互換性の問題*が ODBC 3.x*ドライバーの書き込みに与える影響に関する具体的なガイドラインについては、「[付録 G: 旧バージョンとの互換性のためのドライバーガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)」を参照してください。  
+旧バージョンとの互換性は、古い ODBC コンポーネントで動作する新しい ODBC コンポーネントの機能です。 以降のセクションでは、これらのコンポーネントが ODBC 3.x の変更にどのように影響するかについて説明*します。* これらの情報は、主に ODBC 3.x アプリケーションの記述と *、odbc ドライバー* によって下位互換性の問題がどのように処理されるかに対応しています。 旧バージョンとの互換性の問題 *が ODBC 3.x* ドライバーの書き込みに与える影響に関する具体的なガイドラインについては、「 [付録 G: 旧バージョンとの互換性のためのドライバーガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

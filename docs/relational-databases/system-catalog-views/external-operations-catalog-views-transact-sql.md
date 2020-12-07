@@ -1,4 +1,5 @@
 ---
+description: 外部の操作のカタログビュー (Transact-sql)
 title: 外部の操作のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9abc595c-346d-42dc-a227-a73cd0a356eb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cacca0d6558670f48ba0d8458c28d0213e57373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14383dc1a4f3deb0f53cb2ed63f7d8ecb6776225
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882980"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545088"
 ---
 # <a name="external-operations-catalog-views-transact-sql"></a>外部の操作のカタログビュー (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

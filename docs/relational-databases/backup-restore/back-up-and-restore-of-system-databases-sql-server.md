@@ -15,20 +15,20 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c37eb7eb796e4ce8caed41dcdc55cd147f5916ea
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754584"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130552"
 ---
-# <a name="backuprestoresystemdatabases-sql-server"></a>バックアップと復元: システム データベース (SQL Server)
+# <a name="backup--restore-system-databases-sql-server"></a>バックアップと復元: システム データベース (SQL Server)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムレベルのデータベースのセットである*システム データベース*が管理されています。これらのデータベースは、サーバー インスタンスの運用に不可欠です。 いくつかのシステム データベースは、重大な更新が行われるたびにバックアップする必要があります。 常にバックアップする必要があるシステム データベースには、 **msdb**、 **master**、および **model**があります。 サーバー インスタンス上のいずれかのデータベースでレプリケーションが使用されている場合は、 **distribution** システム データベースもバックアップする必要があります。 これらのシステム データベースをバックアップすることで、ハード ディスク障害などのシステム障害時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムの復元と復旧を行うことができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、システムレベルのデータベースのセットである *システム データベース* が管理されています。これらのデータベースは、サーバー インスタンスの運用に不可欠です。 いくつかのシステム データベースは、重大な更新が行われるたびにバックアップする必要があります。 常にバックアップする必要があるシステム データベースには、 **msdb**、 **master**、および **model** があります。 サーバー インスタンス上のいずれかのデータベースでレプリケーションが使用されている場合は、 **distribution** システム データベースもバックアップする必要があります。 これらのシステム データベースをバックアップすることで、ハード ディスク障害などのシステム障害時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムの復元と復旧を行うことができます。  
   
  次の表に、すべてのシステム データベースの概要を示します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85754584"
   
     -   **master** を完全に再構築します。  
   
-         **master** に深刻な破損があり、それが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を起動できない場合、 **master**を再構築する必要があります。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。  
+         **master** に深刻な破損があり、それが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を起動できない場合、 **master** を再構築する必要があります。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。  
   
         > [!IMPORTANT]  
         >  **master** を再構築すると、すべてのシステム データベースが再構築されます。  

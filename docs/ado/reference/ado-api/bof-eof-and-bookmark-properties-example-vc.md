@@ -1,8 +1,9 @@
 ---
+description: BOF、EOF、および Bookmark プロパティの例 (VC + +)
 title: BOF、EOF、および Bookmark プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6be40e03723a3335578112c6038ce53789242876
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762663"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975843"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (VC + +)
-この例の最初の関数は、ユーザーが[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティと[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
+この例の最初の関数は、ユーザーが[レコードセット](./recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](./bof-eof-properties-ado.md)プロパティと[EOF](./bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](./bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
   
  2番目の関数は、Bookmark プロパティを使用して、**レコードセット**の他のすべてのレコードの**ブックマーク**を配列に配置し、配列を使用してレコードセットをフィルター処理します。  
   
@@ -197,7 +198,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Authors with 25 percent royalty  
@@ -206,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>参照  
- [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF、EOF プロパティ (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark プロパティ (ADO)](./bookmark-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

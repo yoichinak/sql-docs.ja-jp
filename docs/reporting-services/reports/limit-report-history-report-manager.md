@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 809d11c82a9b09a23590592ec3f7b433e3c9ca43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510123"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986658"
 ---
 # <a name="limit-report-history---reporting-services"></a>レポート履歴を制限する - Reporting Services
   レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート履歴は必要時に作成できるほか、どの程度の頻度でスナップショットを作成し、レポート履歴に追加するかをスケジュールで設定することもできます。  
@@ -45,11 +45,11 @@ ms.locfileid: "79510123"
   
 3.  **[履歴]** タブをクリックします。  
   
-4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
+4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ &#40;レポート マネージャー&#41;](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md)  
 
 ::: moniker-end
 
@@ -71,10 +71,9 @@ ms.locfileid: "79510123"
   
 3.  **[履歴]** タブをクリックします。  
   
-4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)」を参照してください。  
+4.  レポートのオプションを選択し、 **[適用]** をクリックします。 各オプションに関する詳細については、「[[スナップショット オプション] プロパティ ページ](/previous-versions/sql/sql-server-2016/ms189952(v=sql.130))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート履歴にスナップショットを追加するレポート履歴にスナップショットを追加する](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
-  

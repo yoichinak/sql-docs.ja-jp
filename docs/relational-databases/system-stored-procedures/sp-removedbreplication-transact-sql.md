@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b8b8918bf659e6965fed1f9af0342f8295947509
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751669"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364855"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +42,9 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname* のデータ型は **sysname**で、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
+`[ @dbname = ] 'dbname'` データベースの名前を指定します。 *dbname* のデータ型は **sysname** で、既定値は NULL です。 NULL の場合は、現在のデータベースが使用されます。  
   
-`[ @type = ] type`データベースオブジェクトを削除するレプリケーションの種類を指定します。 *種類*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
+`[ @type = ] type` データベースオブジェクトを削除するレプリケーションの種類を指定します。 *種類* は **nvarchar (5)** で、次のいずれかの値を指定できます。  
   
 |||  
 |-|-|  
@@ -53,24 +53,26 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |**both** (既定値)|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_removedbreplication**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>注釈  
+ **sp_removedbreplication** は、すべての種類のレプリケーションで使用されます。  
   
- **sp_removedbreplication**は、復元する必要のあるレプリケーションオブジェクトを持たないレプリケートされたデータベースを復元する場合に便利です。  
+ **sp_removedbreplication** は、復元する必要のあるレプリケーションオブジェクトを持たないレプリケートされたデータベースを復元する場合に便利です。  
   
- **sp_removedbreplication**は、読み取り専用としてマークされているデータベースに対しては使用できません。  
-  
-## <a name="example"></a>例  
- [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
+ **sp_removedbreplication** は、読み取り専用としてマークされているデータベースに対しては使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_removedbreplication**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_removedbreplication** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例
+
+### <a name="a-remove-replication-objects-adventureworks2012replica-subscription-database"></a>A. レプリケーションオブジェクトの削除、AdventureWorks2012Replica subscription database
+ [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-```  
+### <a name="b-remove-replication-objects-adventureworksreplica-subscription-database"></a>B. レプリケーションオブジェクトの削除、AdventureWorksReplica subscription database
+  
+```sql
 -- Remove replication objects from the subscription database on MYSUB.  
 DECLARE @subscriptionDB AS sysname  
 SET @subscriptionDB = N'AdventureWorksReplica'  
@@ -83,7 +85,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

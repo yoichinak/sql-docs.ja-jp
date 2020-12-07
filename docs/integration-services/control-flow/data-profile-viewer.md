@@ -1,4 +1,5 @@
 ---
+description: Data Profile Viewer (Data Profile Viewer)
 title: Data Profile Viewer | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919815"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724963"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
 
@@ -68,7 +69,7 @@ ms.locfileid: "86919815"
 >   
 >  最近作成されたものではない出力ファイルからドリル ダウンした場合、ドリルダウン クエリは、元の出力の計算に使用された行セットとは異なる行セットを返す場合があります。  
   
- Data Profile Viewer のユーザー インターフェイスの詳細については、「 [Data Profile Viewer の F1 ヘルプ](../../integration-services/control-flow/data-profile-viewer-f1-help.md)」をご覧ください。  
+ Data Profile Viewer のユーザー インターフェイスの詳細については、「 [Data Profile Viewer の F1 ヘルプ]()」をご覧ください。  
   
 ## <a name="data-profile-viewer-f1-help"></a>Data Profile Viewer の F1 ヘルプ
   Data Profile Viewer を使用すると、データ プロファイル タスクの出力を表示できます。  
@@ -245,4 +246,3 @@ ms.locfileid: "86919815"
   
  **Count**  
  指定された列の値が最初の列に表示された値である行の数が表示されます。  
-  

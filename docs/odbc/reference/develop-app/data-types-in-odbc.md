@@ -1,4 +1,5 @@
 ---
+description: ODBC のデータ型
 title: ODBC のデータ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb063050a79ff11ce40d066bb749434699f6801d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424764"
 ---
 # <a name="data-types-in-odbc"></a>ODBC のデータ型
 ODBC では、SQL データ型と C データ型の2セットのデータ型を使用します。 データソースでは SQL データ型が使用され、C データ型はアプリケーションの C コードで使用されます。  

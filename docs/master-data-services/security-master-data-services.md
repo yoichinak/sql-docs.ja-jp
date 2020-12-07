@@ -1,5 +1,6 @@
 ---
-title: セキュリティ (マスター データ サービス) | Microsoft Docs
+title: Security
+description: ユーザーの種類、セキュリティの設定方法、Excel 用アドインのセキュリティ、関連するタスクなど、マスターデータサービスのセキュリティについて説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257829"
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、セキュリティを使用して、仕事を行うのに必要な特定のマスター データにユーザーがアクセスできるようにすると同時に、利用を許可しないデータにはアクセスできないようにします。  
   
  また、セキュリティを使用して、任意のユーザーを特定のモデルおよび機能領域の管理者にすることも可能です (任意のユーザーに Customer モデルのバージョンの作成を許可したり、セキュリティ権限の設定資格を与えたりするなど)。  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] セキュリティは、ローカルまたは Active Directory のドメイン ユーザーおよびグループを基にしています。 MDS セキュリティを使用すると、ユーザーがアクセス可能なデータを判断するときに、細かいレベルの詳細を使用できます。 このレベルの細かさが原因で、セキュリティがすぐに複雑になることがあり、重複するユーザーやグループを使用する場合は注意が必要がです。 詳細については、「[ユーザー権限とグループ権限の重複 (マスター データ サービス)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)」を参照してください。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] セキュリティは、ローカルまたは Active Directory のドメイン ユーザーおよびグループを基にしています。 MDS セキュリティを使用すると、ユーザーがアクセス可能なデータを判断するときに、細かいレベルの詳細を使用できます。 このレベルの細かさが原因で、セキュリティがすぐに複雑になることがあり、重複するユーザーやグループを使用する場合は注意が必要がです。 詳細については、「 [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)」を参照してください。  
   
  アクセスのセキュリティは、 **Web アプリケーションの** [ユーザー/グループの権限] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 機能領域、または Web サービスを使用して割り当てることができます。  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68085671"
   
 -   **[エクスプローラー]** 機能領域でデータにアクセスするユーザー。  
   
--   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md) と呼ばれます。  
+-   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ## <a name="how-to-set-security"></a>セキュリティの設定方法  
  MDS のデータまたは機能にアクセスする権限をユーザーまたはグループに付与するには、次の設定を割り当てる必要があります。  
@@ -63,11 +64,11 @@ ms.locfileid: "68085671"
 |階層ノードに権限を割り当てることで、メンバー値に権限を割り当てる。|[階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>参照  
- [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)   
- [ユーザーおよびグループ (マスター データ サービス)](../master-data-services/users-and-groups-master-data-services.md)   
- [機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)   
- [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
- [階層メンバーの権限 (マスター データ サービス)](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)   
+ [ユーザーとグループ &#40;マスターデータサービス&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [階層メンバーの権限 &#40;マスターデータサービス&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

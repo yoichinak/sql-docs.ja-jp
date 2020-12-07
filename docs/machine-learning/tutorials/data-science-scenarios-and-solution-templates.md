@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 82c949647cf670c0e335b2c4446c248fea86581d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728645"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196327"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、さまざまな SQL Server 機械学習ソリューション テンプレートについて説明します。 これらのテンプレートにはベスト プラクティスが示されており、機械学習ソリューションを短時間で実装する際に役立つ構成要素が提供されます。 各テンプレートは、特定の業種または業界に固有のデータ サイエンスに関する問題を解決するように設計されています。
 各テンプレートのタスクは、データ準備や機能エンジニアリングから、モデルのトレーニングとスコアリングまで、多岐にわたります。 
@@ -110,5 +110,5 @@ ms.locfileid: "85728645"
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [Python のチュートリアル](sql-server-python-tutorials.md)
-+ [R のチュートリアル](sql-server-r-tutorials.md)
++ [Python のチュートリアル](./python-tutorials.md)
++ [R のチュートリアル](./r-tutorials.md)

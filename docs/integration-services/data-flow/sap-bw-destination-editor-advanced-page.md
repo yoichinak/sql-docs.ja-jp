@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW 変換先エディター] ([詳細設定] ページ)'
 title: '[SAP BW 変換先エディター] ([詳細設定] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34af54db2bca8f4876507b827725b3d0831490f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d137eef410a3b406ea2b18a9893a5f4ca4a061b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920669"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484539"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>[SAP BW 変換先エディター] ([詳細設定] ページ)
 

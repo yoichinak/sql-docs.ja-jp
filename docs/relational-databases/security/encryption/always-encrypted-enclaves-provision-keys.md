@@ -1,4 +1,5 @@
 ---
+description: エンクレーブ対応キーをプロビジョニングする
 title: エンクレーブ対応キーをプロビジョニングする | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ac3a5c0f7f1752fe26581db1f14f25e2d157508
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 77a438ee4f495429bbe0eb9c1e98728ecb324009
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411518"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91867664"
 ---
 # <a name="provision-enclave-enabled-keys"></a>エンクレーブ対応キーをプロビジョニングする
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -46,7 +47,7 @@ SQL Server Management Studio 18.3 以降では、以下のプロビジョニン�
 > 現在、[Always Encrypted ウィザード](always-encrypted-wizard.md)では、エンクレーブ対応キーの生成はサポートされていません。 ただし、最初に上記のダイアログを使用してエンクレーブ対応キーを作成した後、ウィザードを実行するときに、暗号化する列に対して既存のエンクレーブ対応の列暗号化を選択することができます。
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>[新しい列マスター キー] ダイアログを使用してエンクレーブ対応の列マスター キーをプロビジョニングする
-エンクレーブ対応の列マスター キーをプロビジョニングするには、「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」の手順に従います。 必ず、 **[エンクレーブ計算を許可する]** を選択します。 次のスクリーンショットをご覧ください。
+エンクレーブ対応の列マスター キーをプロビジョニングするには、「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」の手順に従います。 必ず、**[エンクレーブ計算を許可する]** を選択します。 次のスクリーンショットをご覧ください。
 
 ![エンクレーブ計算を許可する](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
@@ -54,20 +55,20 @@ SQL Server Management Studio 18.3 以降では、以下のプロビジョニン�
 > **[エンクレーブ計算を許可する]** チェック ボックスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに正しく初期化されたセキュリティで保護されたエンクレーブが含まれている場合にのみ表示されます。 詳しくは、[Always Encrypted のエンクレーブの種類の構成](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)に関する記事をご覧ください。
 
 > [!TIP]
-> 列マスター キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、 **[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。 または、[sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) ビューを使用することもできます。
+> 列マスター キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、**[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。 または、[sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) ビューを使用することもできます。
 
 ### <a name="provision-enclave-enabled-column-encryption-keys-with-the-new-column-encryption-key-dialog"></a>[新しい列の暗号化キー] ダイアログを使用してエンクレーブ対応の列暗号化キーをプロビジョニングする
 エンクレーブ対応の列暗号化キーをプロビジョニングするには、「[[新しい列の暗号化キー] ダイアログを使用して列の暗号化キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)」の手順に従います。 列マスター キーを選択するときは、エンクレーブ対応であることを確認します。
 
 > [!TIP]
-> 列暗号化キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、 **[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。
+> 列暗号化キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、**[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。
 
 ## <a name="provision-enclave-enabled-keys-using-powershell"></a>PowerShell を使用してエンクレーブ対応キーをプロビジョニングする
 PowerShell を使用してエンクレーブ対応キーをプロビジョニングするには、SqlServer PowerShell モジュール バージョン 21.1.18179 以降が必要です。
 
 一般に、「[PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)」で説明されている、Always Encrypted に対する PowerShell でのキー プロビジョニング ワークフロー (役割の分離の有無に関係なく) が、エンクレーブ対応キーにも適用されます。 このセクションでは、エンクレーブ対応キーに固有の詳細について説明します。
 
-SqlServer PowerShell モジュールは、[**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) および [**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) コマンドレットが `-AllowEnclaveComputations` パラメーターで拡張され、プロビジョニング処理中にエンクレーブ対応の列マスター キーを指定できるようになっています。 どちらのコマンドレットでも、(Azure Key Vault または Windows 証明書ストアに格納されている) 列マスター キーのプロパティを含むローカル オブジェクトが作成されます。 `-AllowEnclaveComputations` プロパティを指定すると、キーがローカル オブジェクトでエンクレーブ対応としてマークされます。 また、コマンドレットでは、参照されている列マスター キー (Azure Key Vault または Windows 証明書ストア内) にアクセスして、キーのプロパティへのデジタル署名が行われます。 新しいエンクレーブ対応列マスター キーの設定オブジェクトを作成すると、以降の [**SqlColumnMasterKey**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcolumnmasterkey) コマンドレットの呼び出しでそれを使用して、新しいキーを記述するメタデータ オブジェクトをデータベースに作成できます。
+SqlServer PowerShell モジュールは、[**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) および [**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) コマンドレットが `-AllowEnclaveComputations` パラメーターで拡張され、プロビジョニング処理中にエンクレーブ対応の列マスター キーを指定できるようになっています。 どちらのコマンドレットでも、(Azure Key Vault または Windows 証明書ストアに格納されている) 列マスター キーのプロパティを含むローカル オブジェクトが作成されます。 `-AllowEnclaveComputations` プロパティを指定すると、キーがローカル オブジェクトでエンクレーブ対応としてマークされます。 また、コマンドレットでは、参照されている列マスター キー (Azure Key Vault または Windows 証明書ストア内) にアクセスして、キーのプロパティへのデジタル署名が行われます。 新しいエンクレーブ対応列マスター キーの設定オブジェクトを作成すると、以降の [**SqlColumnMasterKey**](/powershell/module/sqlserver/new-sqlcolumnmasterkey) コマンドレットの呼び出しでそれを使用して、新しいキーを記述するメタデータ オブジェクトをデータベースに作成できます。
 
 エンクレーブ対応の列暗号化キーのプロビジョニングは、エンクレーブ対応ではない列暗号化キーのプロビジョニングと同じです。 新しい列暗号化キーの暗号化に使用される列マスター キーがエンクレーブ対応であることを確認する必要があるだけです。
 
@@ -75,7 +76,7 @@ SqlServer PowerShell モジュールは、[**New-SqlCertificateStoreColumnMaster
 > 現在、SqlServer PowerShell モジュールでは、(CNG または CAPI を使用する) ハードウェア セキュリティ モジュールに格納されているエンクレーブ対応キーのプロビジョニングはサポートされていません。
 
 ### <a name="example---provision-enclave-enabled-keys-using-windows-certificate-store"></a>例 - Windows 証明書ストアを使用してエンクレーブ対応キーをプロビジョニングする
-次のエンドツーエンドの例では、Windows 証明書ストアに格納されている列マスター キーを格納して、エンクレーブ対応キーをプロビジョニングする方法を示します。 スクリプトは、「[Windows 証明書ストアの例 (役割の分離なし)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example)」の例が基になっています。 重要な点は、[**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) コマンドレットでは `-AllowEnclaveComputations` パラメーターを使用することです。これが、2 つの例のワークフローの唯一の違いです。
+次のエンドツーエンドの例では、Windows 証明書ストアに格納されている列マスター キーを格納して、エンクレーブ対応キーをプロビジョニングする方法を示します。 スクリプトは、「[Windows 証明書ストアの例 (役割の分離なし)](configure-always-encrypted-keys-using-powershell.md#windows-certificate-store-without-role-separation-example)」の例が基になっています。 重要な点は、[**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) コマンドレットでは `-AllowEnclaveComputations` パラメーターを使用することです。これが、2 つの例のワークフローの唯一の違いです。
 
 ```powershell
 # Create a column master key in Windows Certificate Store.
@@ -106,8 +107,8 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ### <a name="example---provision-enclave-enabled-keys-using-azure-key-vault"></a>例 - Azure Key Vault を使用してエンクレーブ対応キーをプロビジョニングする
 次のエンドツーエンドの例では、Azure Key Vault に列マスター キーを格納して、エンクレーブ対応キーをプロビジョニングする方法を示します。 スクリプトは、「[Azure Key Vault 例 (役割の分離なし)](configure-always-encrypted-keys-using-powershell.md#azure-key-vault-without-role-separation-example)」の例が基になっています。 エンクレーブ対応のキーとエンクレーブ対応ではないキーのワークフローでの 2 つの違いに注意することが重要です。 
-- 次のスクリプトの [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) では、`-AllowEnclaveComputations` パラメーターを使用して、新しい列マスター キーがエンクレーブ対応にされています。 
-- 次のスクリプトでは、[**New-SqlAzureKeyVaultColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) コマンドレットを呼び出す前に、[**Add-SqlAzureAuthenticationContext**](https://docs.microsoft.com/powershell/module/sqlserver/add-sqlazureauthenticationcontext) コマンドレットを呼び出して、Azure にサインインします。 `-AllowEnclaveComputations` パラメーターを指定すると、**New-SqlAzureKeyVaultColumnMasterKeySettings** によって Azure Key Vault が呼び出され、列マスター キーのプロパティへの署名が行われるため、最初に Azure にサインインする必要があります。
+- 次のスクリプトの [**New-SqlCertificateStoreColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) では、`-AllowEnclaveComputations` パラメーターを使用して、新しい列マスター キーがエンクレーブ対応にされています。 
+- 次のスクリプトでは、[**New-SqlAzureKeyVaultColumnMasterKeySettings**](/powershell/module/sqlserver/new-sqlazurekeyvaultcolumnmasterkeysettings) コマンドレットを呼び出す前に、[**Add-SqlAzureAuthenticationContext**](/powershell/module/sqlserver/add-sqlazureauthenticationcontext) コマンドレットを呼び出して、Azure にサインインします。 `-AllowEnclaveComputations` パラメーターを指定すると、**New-SqlAzureKeyVaultColumnMasterKeySettings** によって Azure Key Vault が呼び出され、列マスター キーのプロパティへの署名が行われるため、最初に Azure にサインインする必要があります。
 
 ```powershell
 # Create a column master key in Azure Key Vault.
@@ -155,4 +156,4 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ## <a name="see-also"></a>参照  
 - [チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](always-encrypted-enclaves-manage-keys.md)
-- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 
+- [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

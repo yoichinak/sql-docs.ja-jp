@@ -1,4 +1,5 @@
 ---
+description: PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 title: PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495595"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -54,9 +55,9 @@ PostgreSQL ODBC ドライバーを使用して PostgreSQL に接続するには�
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
 **[ドライバー]**  
-ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]** 。
+ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]**。
 
-**[サーバー]**  
+**サーバー**  
 PostgreSQL サーバーの名前。 
 
 **[ポート]**  
@@ -65,7 +66,7 @@ PostgreSQL サーバーに接続するためのポート。
 **[データベース]**  
 PostgreSQL データベースの名前。
 
-**[Uid]** と **[Pwd]**    
+**[Uid]** と **[Pwd]**   
 接続する **Uid** (ユーザー id) と **Pwd** (パスワード)。
 
 ### <a name="connection-string-format"></a>接続文字列の形式

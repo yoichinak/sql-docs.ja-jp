@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_semantic_unregister_language_statistics_db (Transact-sql)
 title: sp_fulltext_semantic_unregister_language_statistics_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b3c3626bb567c99b6e43708962bfadd39cdb0f43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6db576de824f098911229409498527e1aaf9d3ad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881682"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543391"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +41,19 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  このプロシージャは、引数を必要としません。 のインスタンスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はセマンティック言語統計データベースが1つしかないため、データベースを識別する必要はありません。  
   
 ## <a name="return-code-value"></a>リターン コード値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-set"></a>結果セット  
- [なし] :  
+ なし。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セマンティック言語統計データベースの登録が解除されると、それに関連付けられているすべてのメタデータも削除されます。  
   
- **sp_fulltext_semantic_unregister_language_statistics_db**では、次の手順を実行します。  
+ **sp_fulltext_semantic_unregister_language_statistics_db** では、次の手順を実行します。  
   
 1.  の現在のインスタンスに対して、実行中のセマンティック作成がないことを確認 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
@@ -61,14 +62,14 @@ GO
  詳細については、「 [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)」を参照してください。  
   
 ## <a name="metadata"></a>Metadata  
- のインスタンスにインストールされているセマンティック言語統計データベースの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログビューの[Fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)に対してクエリを実行します。  
+ のインスタンスにインストールされているセマンティック言語統計データベースの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログビューの [Fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)に対してクエリを実行します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 **sp_fulltext_semantic_unregister_language_statistics_db**を呼び出して、セマンティック言語統計データベースの登録を解除する方法を示します。  
   
 ```sql  
@@ -76,7 +77,7 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セマンティック検索のインストールと構成](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -17,20 +17,20 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a294cbfbb165e6cc37f931cdd5d3a40406713f86
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363306"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447121"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、SQL Server の **max degree of parallelism (MAXDOP)** サーバー構成オプションを構成する方法について説明します。 複数のマイクロプロセッサまたは CPU が搭載されているコンピューター上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するときは、並列処理の次数、つまり各並列プラン実行で 1 つのステートメントを実行するために使用するプロセッサの数が検出されます。 **max degree of parallelism** オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランが検討されます。
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、SQL Server の **max degree of parallelism (MAXDOP)** サーバー構成オプションを構成する方法について説明します。 複数のマイクロプロセッサまたは CPU が搭載されたコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行されている場合、並列処理を使用できるかどうかが[!INCLUDE[ssde_md](../../includes/ssde_md.md)]によって検出されます。 並列処理の次数に基づいて、並列プランの実行ごとに、1 つのステートメントを実行するために使用されるプロセッサの数が設定されます。 **max degree of parallelism** オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 **並列処理の最大限度 (MAXDOP)** によって設定される制限の詳細については、このページの「[制限事項と制約事項](#Restrictions)」セクションを参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランが検討されます。
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] では、インストール プロセス中に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
+> [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] では、利用できるプロセッサの数に基づいてインストール プロセスの間に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
@@ -38,7 +38,7 @@ ms.locfileid: "87363306"
   
 -   affinity mask オプションを既定値に設定していないと、対称型多重処理 (SMP) システムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるプロセッサの数が制限されることがあります。  
 
--   **並列処理の最大限度 (MAXDOP)** の制限は[タスク](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリの実行の間に、1 つの要求で MAXDOP の上限まで複数のタスクが生成されます。各タスクでは 1 つのワーカーと 1 つのスケジューラを使用します。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」の*並列タスクのスケジュール*に関するセクションを参照してください。 
+-   **並列処理の最大限度 (MAXDOP)** の制限は [タスク](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリの実行の間に、1 つの要求で MAXDOP の上限まで複数のタスクが生成されます。各タスクでは 1 つのワーカーと 1 つのスケジューラを使用します。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」の *並列タスクのスケジュール* に関するセクションを参照してください。 
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
@@ -91,7 +91,7 @@ ms.locfileid: "87363306"
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>max degree of parallelism オプションを構成するには  
   
-1.  **オブジェクト エクスプローラー**で、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[詳細設定]** ノードをクリックします。  
   

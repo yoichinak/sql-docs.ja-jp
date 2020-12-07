@@ -1,4 +1,5 @@
 ---
+description: プロジェクト オプションの設定 (MySQLToSQL)
 title: プロジェクトオプションの設定 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df2a29b2d411c2502573ede95feefe9c1e061c5b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935130"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987898"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションでは、オブジェクトの変換方法、データの移行方法、およびソースデータ型とターゲットデータ型のマッピング方法を指定します。  オブジェクトを SQL Server に変換したり、SQL Server または SQL Azure にデータを SQL Azure または移行したりする前に、構成オプションがプロジェクトに適していることを確認してください。  
@@ -38,7 +39,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 プロジェクト設定は、次の4つの方法で構成できます。  
   
--   既定  
+-   Default  
   
 -   Optimistic  
   
@@ -54,7 +55,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 -   [プロジェクト設定 &#40;移行&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [プロジェクトの設定 (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [プロジェクトの設定 (GUI) (SSMA Common)](../sybase/project-settings-gui-sybasetosql.md)  
   
 -   [プロジェクト設定 &#40;型マッピング&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
@@ -67,11 +68,11 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **既定のプロジェクトオプションを設定するには**  
   
-1.  [**ツール**] メニューの [**既定のプロジェクト設定**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **既定のプロジェクト設定**] をクリックします。  
   
-2.  [**既定のプロジェクト設定**] ダイアログボックスで、次のいずれかの手順を実行します。  
+2.  [ **既定のプロジェクト設定** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
-    1.  [移行**先のバージョン**] ドロップダウンから表示/変更する設定が必要な移行プロジェクトの種類を選択し、左側のウィンドウの下部にある [**全般**] をクリックして、[変換] または [**移行] または [SQL Azure** ] オプションを選択します。  
+    1.  [移行 **先のバージョン** ] ドロップダウンから表示/変更する設定が必要な移行プロジェクトの種類を選択し、左側のウィンドウの下部にある [ **全般** ] をクリックして、[変換] または [ **移行] または [SQL Azure** ] オプションを選択します。  
   
     2.  定義済みのモードを選択するには、[**モード**] ボックスの一覧から [**既定**]、[**オプティミスティック**]、または [**完全**] を選択します。  
   
@@ -83,7 +84,7 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **現在のプロジェクトの設定をカスタマイズするには**  
   
-1.  [**ツール**] メニューの [ **projectsettings**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **projectsettings**] をクリックします。  
   
 2.  [ **Projectsettings** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
@@ -102,4 +103,3 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 ## <a name="see-also"></a>参照  
 [MySQL と SQL Server のデータ型のマッピング &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: ダイアグラム ペインでの列名の表示 (Visual Database Tools)
 title: ダイアグラム ペインでの列名の表示
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,16 +12,17 @@ helpviewer_keywords:
 - queries [SQL Server], columns
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
+- sql13.SWB.SELECTCOLUMNS.F1
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 408ffc2183f6e8b79329cc08abb98275f4c7fb65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 64fab261a34cb1473aec8fd64323272822819cfa
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999423"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300813"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>ダイアグラム ペインでの列名の表示 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

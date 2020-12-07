@@ -1,4 +1,5 @@
 ---
+description: パーティション関数のカタログビュー (Transact-sql)
 title: パーティション関数のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], partition function
 - partition function catalog views [SQL Server]
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dc35d5cf881880a6fdee18b80c50ffa7b7ce6933
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c87ea238a3f3972d84d75ffc933c0a28f8818130
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442425"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810766"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>パーティション関数のカタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,6 +41,5 @@ ms.locfileid: "87442425"
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

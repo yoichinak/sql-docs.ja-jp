@@ -1,4 +1,5 @@
 ---
+description: IIf (MDX)
 title: IIf (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8a9a8da3ec20a34ba1dea30b1285d6a9c147e55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387468"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,19 +35,19 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  **True** (1) または**false** (0) に評価される条件。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
   
  *Expression1 ヒント [一括 |Strict |Lazy]]*  
- 論理式が**true**と評価されるときに使用されます。 Expression1 有効な多次元式 (MDX) 式を指定する必要があります。  
+ 論理式が **true**と評価されるときに使用されます。 Expression1 有効な多次元式 (MDX) 式を指定する必要があります。  
   
  *Expression2 ヒント [一括 |Strict |Lazy]]*  
- 論理式が**false**に評価されるときに使用されます。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
+ 論理式が **false**に評価されるときに使用されます。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
 ## <a name="remarks"></a>解説  
- 論理式で指定された条件は、この式の値が0の場合は**false**に評価されます。 その他の値は**true**に評価されます。  
+ 論理式で指定された条件は、この式の値が0の場合は **false** に評価されます。 その他の値は **true**に評価されます。  
   
- 条件が**true**の場合、 **IIf**関数は最初の式を返します。 それ以外の場合、関数は2番目の式を返します。  
+ 条件が **true**の場合、 **IIf** 関数は最初の式を返します。 それ以外の場合、関数は2番目の式を返します。  
   
  指定された式は、値または MDX オブジェクトを返すことができます。 また、1 番目と 2 番目の式の型は一致しなくてもかまいません。  
   
- **IIf**関数は、検索条件に基づいてメンバーのセットを作成する場合は推奨されません。 代わりに、 [Filter](../mdx/filter-mdx.md)関数を使用して、指定されたセット内の各メンバーを論理式に対して評価し、メンバーのサブセットを返します。  
+ **IIf**関数は、検索条件に基づいてメンバーのセットを作成する場合は推奨されません。 代わりに、 [Filter](../mdx/filter-mdx.md) 関数を使用して、指定されたセット内の各メンバーを論理式に対して評価し、メンバーのサブセットを返します。  
   
 > [!NOTE]  
 >  いずれかの式が NULL に評価された場合、その条件が満たされると結果セットは NULL になります。  
@@ -63,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  集中と厳密はヒントで相互に排他的です。これらは、異なる式で同じ IIF (,,) で使用できます。  
   
- 詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008)」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
+ 詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) 」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
   
 ## <a name="examples"></a>例  
- 次のクエリは、計算されるメジャー内の**IIF**を使用して、Internet Sales Amount メジャーが $1万より大きいか、または未満の場合に、2つの異なる文字列値のいずれかを返す簡単な方法を示しています。  
+ 次のクエリは、計算されるメジャー内の **IIF** を使用して、Internet Sales Amount メジャーが $1万より大きいか、または未満の場合に、2つの異なる文字列値のいずれかを返す簡単な方法を示しています。  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -130,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 次の例では、Generate 関数内の2つのセットのいずれか**を返して**、行に組の複雑なセットを作成しています。  
+ 次の例では、Generate 関数内の2つのセットのいずれか **を返して** 、行に組の複雑なセットを作成しています。  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   

@@ -1,4 +1,5 @@
 ---
+description: INSERT ステートメントの制限事項
 title: INSERT ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f903f15ec13baa28a789891c1527dc742daa68ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71364b7972fa9d6a0ae6a48909f7c840830ff3eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449484"
 ---
 # <a name="insert-statement-limitations"></a>INSERT ステートメントの制限事項
 挿入されたデータは、列に収まりきらない場合、警告なしで右側に切り捨てられます。  

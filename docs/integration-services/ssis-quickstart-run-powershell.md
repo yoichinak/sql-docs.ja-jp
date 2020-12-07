@@ -1,6 +1,7 @@
 ---
+description: PowerShell を使用して SSIS パッケージを実行する
 title: PowerShell を使用して SSIS パッケージを実行する | Microsoft Docs
-ms.date: 05/21/2018
+ms.date: 09/17/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a876164579679802c5dc0335d01dd5ec8839e95b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921880"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "90989925"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell を使用して SSIS パッケージを実行する
 
@@ -32,7 +33,7 @@ Azure SQL Database サーバーは、ポート 1433 でリッスンします。 
 
 -   SQL Server on Windows。
 
--   Azure SQL Database。 Azure でパッケージをデプロイし、実行する方法については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
+-   Azure Data Factory (ADF) の SSIS 統合ランタイム (IR)。SSIS カタログ (SSISDB) は Azure SQL Managed Instance (MI) によってホストされます。 Azure でパッケージをデプロイし、実行する方法については、「[SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
 Linux で SSIS パッケージを実行する場合は、このクイックスタートの情報を使用することはできません。 Linux でパッケージを実行する方法については、[SSIS を使用し、Linux でデータの抽出、変換、読み込みを行う](../linux/sql-server-linux-migrate-ssis.md)方法に関するページを参照してください。
 
@@ -40,8 +41,8 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure portal](https://portal.azure.com/) にサインインする
-2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
+1. [Azure portal](https://portal.azure.com/) にサインインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。

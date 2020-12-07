@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - binding rules [SQL Server]
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0b6c3ae3d269b8617d3d032c8aa2d947c211834
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392880"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124012"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,6 @@ ms.locfileid: "86392880"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
@@ -74,10 +74,10 @@ AS condition_expression
 > [!NOTE]  
 >  別名データ型を使用する式にルールを作成することは避けてください。 別名データ型を使用する式にルールを作成することはできますが、ルールを列または別名データ型にバインドすると、参照時にこの式のコンパイルに失敗します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  CREATE RULE は、単一のバッチ内で他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと組み合わせて使用することはできません。 ルールを作成した時点では、データベース内の既存のデータにルールは適用されません。また、ルールをシステム データ型にバインドすることはできません。  
   
- ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
+ ルールは、現在のデータベース内でのみ作成できます。 ルールを作成したら、**sp_bindrule** を実行してルールを列または別名データ型にバインドします。 ルールと列のデータ型の間には互換性がとれている必要があります。 たとえば、数値型列のルールとして "\@value LIKE A%" は使用できません。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは計算列にバインドできません。  
   
  文字および日付定数は、必ず単一引用符 (') で囲み、バイナリ定数は 0x で始めてください。 ルールとバインド先の列の間に互換性がとれていない場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、ルールがバインドされたときではなく値が挿入されたときにエラー メッセージが返されます。  
   
@@ -104,7 +104,7 @@ AS condition_expression
 ### <a name="a-creating-a-rule-with-a-range"></a>A. 範囲を指定してルールを作成する  
  次の例で作成するルールは、ルールのバインド先となる列に挿入できる整数の範囲を制限します。  
   
-```  
+```sql  
 CREATE RULE range_rule  
 AS   
 @range>= $1000 AND @range <$20000;  
@@ -113,7 +113,7 @@ AS
 ### <a name="b-creating-a-rule-with-a-list"></a>B. リストを指定してルールを作成する  
  次の例で作成するルールは、ルールのバインド先となる列に挿入できる値を、指定したリストの値に制限します。  
   
-```  
+```sql  
 CREATE RULE list_rule  
 AS   
 @list IN ('1389', '0736', '0877');  
@@ -122,7 +122,7 @@ AS
 ### <a name="c-creating-a-rule-with-a-pattern"></a>C. パターンを指定してルールを作成する  
  次の例では、任意の文字 2 つの後にハイフン (`-`)、その後に任意の数の文字 (または文字なし)、最後に `0` ～ `9` の整数 1 文字というパターンを指定するルールを作成します。  
   
-```  
+```sql  
 CREATE RULE pattern_rule   
 AS  
 @value LIKE '__-%[0-9]'  

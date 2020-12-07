@@ -1,4 +1,5 @@
 ---
+description: '[テーブルのプロパティ] \(Visual Database Tools)'
 title: テーブルのプロパティ
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312818"
 ---
 # <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86000747"
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
   
 **[IDENTITY] カテゴリ**  
-展開して **[名前]** 、 **[説明]** 、および **[スキーマ]** の各プロパティを表示します。  
+展開して **[名前]**、 **[説明]**、および **[スキーマ]** の各プロパティを表示します。  
   
-**Name**  
+**名前**  
 テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
   
 > [!CAUTION]  
@@ -54,7 +55,7 @@ ms.locfileid: "86000747"
 データ ソースのサーバーの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  
-展開して **[IDENTITY 列]** 、 **[Indexable]** 、および **[Replicated]** の各プロパティを表示します。  
+展開して **[IDENTITY 列]**、 **[Indexable]**、および **[Replicated]** の各プロパティを表示します。  
   
 **[IDENTITY 列]**  
 テーブルの ID 列として使用されている列を表示します。 ID 列を変更するには、ドロップダウン リストから列を選択します。 数値データ型の列だけが一覧に表示されます。  
@@ -66,7 +67,7 @@ ms.locfileid: "86000747"
 テーブルが別の場所でレプリケートされているかどうかを表示します。  
   
 **[標準データ スペースの指定] カテゴリ**  
-展開して **[(データ スペースの種類)]** 、 **[ファイル グループまたはパーティション スキーム名]** 、および **[パーティション列の一覧]** の各プロパティを表示します。  
+展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の各プロパティを表示します。  
   
 **[(データ スペースの種類)]**  
 テーブルがファイル グループまたはパーティション スキームを使用して保存されるかどうかを表示します。  
@@ -84,5 +85,5 @@ Microsoft SQL Server がテーブルの ROWGUID 列として使用する列を�
 text データ型、または image データ型の列について、ファイル グループを選択できるドロップダウン リストを表示します。 パーティション スキームを使用してテーブルを保存する場合は、このフィールドを空白のままにします。  
   
 ## <a name="see-also"></a>参照  
-[テーブルを設計する](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[テーブルの設計](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

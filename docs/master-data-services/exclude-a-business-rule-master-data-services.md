@@ -1,4 +1,5 @@
 ---
+description: ビジネス ルールを除外する (マスター データ サービス)
 title: ビジネス ルールを除外する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bad539d25afec6da4a706e0986bfd9f4770c899
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bc69a5cfcd36e96ed6bc0778c72e6a3a09e6fb23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388958"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
 
@@ -25,12 +26,12 @@ ms.locfileid: "85811923"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールを完全に削除せずにそのルールに対するデータの検証が行われないようにする場合は、ビジネス ルールを除外します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-exclude-a-business-rule"></a>ビジネス ルールを除外するには  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85811923"
   
 10. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列が **[除外]** になり、 **[除外]** 列が **[はい]** になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [ビジネスルール &#40;マスターデータサービスを作成して発行&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  

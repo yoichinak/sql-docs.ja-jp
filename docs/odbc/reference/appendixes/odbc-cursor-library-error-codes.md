@@ -1,4 +1,5 @@
 ---
+description: ODBC カーソル ライブラリのエラー コード
 title: ODBC カーソルライブラリのエラーコード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c263ce53c41546e63dc2a830d3db3b903e2e3515
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 414de02eb7145006af4faa543735888082a3d6ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466137"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC カーソル ライブラリのエラー コード
 > [!IMPORTANT]  
@@ -28,7 +29,7 @@ ms.locfileid: "81301433"
  Odbc カーソルライブラリは、 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)に記載されているものに加えて、次の sqlstates を返します。  
   
 > [!NOTE]  
->  カーソルライブラリでは、状態レコードが順序付けされません。ドライバーマネージャーおよび ODBC 3.*x*ドライバーは、ステータスレコードの順序付けを行います。  
+>  カーソルライブラリでは、状態レコードが順序付けされません。ドライバーマネージャーおよび ODBC 3.*x* ドライバーは、ステータスレコードの順序付けを行います。  
   
 |SQLSTATE|説明|から返される可能性があります。|  
 |--------------|-----------------|--------------------------|  
@@ -45,12 +46,12 @@ ms.locfileid: "81301433"
 |SL002|結果セットが結合条件によって作成されたため、位置指定要求を実行できませんでした。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|バインドされたバッファーがセグメントの最大サイズを超えています。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |SL004|**SELECT**ステートメントによって結果セットが生成されませんでした。|**SQLGetData**|  
-|SL005|**Select**ステートメントに GROUP by 句が含まれています。|**SQLGetData**|  
+|SL005|**Select** ステートメントに GROUP by 句が含まれています。|**SQLGetData**|  
 |SL006|パラメーター配列は、位置指定要求ではサポートされていません。|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
-|SL008|**SQLGetData**は、順方向専用 (バッファリングされていない) カーソルでは許可されていません。|**SQLGetData**|  
+|SL008|**SQLGetData** は、順方向専用 (バッファリングされていない) カーソルでは許可されていません。|**SQLGetData**|  
 |SL009|**Sqlfetch**または**sqlfetchscroll**を呼び出す前に、列がバインドされていませんでした。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL010|**SQLBindCol**は、内部バッファーにバインドしようとしたときに SQL_ERROR を返しました。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|SL011|ステートメントオプションは、 **Sqlfetch**または**sqlfetchscroll**を呼び出した後にのみ有効です。|**SQLGetStmtAttr**|  
+|SL010|**SQLBindCol** は、内部バッファーにバインドしようとしたときに SQL_ERROR を返しました。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|SL011|ステートメントオプションは、 **Sqlfetch** または **sqlfetchscroll**を呼び出した後にのみ有効です。|**SQLGetStmtAttr**|  
 |SL012|カーソルが開いている間は、ステートメントのバインドを変更できません。|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|位置指定要求が発行されましたが、一部の列カウントフィールドがバッファーされませんでした。|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
-|SL015|**Sqlfetch**と**sqlfetchscroll**を混在させることはできません。|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+|SL015|**Sqlfetch** と **sqlfetchscroll** を混在させることはできません。|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

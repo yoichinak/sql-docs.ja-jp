@@ -1,4 +1,5 @@
 ---
+description: 文字データと C 文字列
 title: 文字データと C 文字列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bb25022d4e0c0559f2a8f77b89a4ba26aeba33a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e412976cb297af9a9e38bbc6991647eeab48483b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465924"
 ---
 # <a name="character-data-and-c-strings"></a>文字データと C 文字列
 可変長文字データ (列名、動的パラメーター、文字列属性値など) を参照する入力パラメーターには、関連付けられた長さパラメーターがあります。 C での一般的なように、アプリケーションが null 文字で文字列を終了する場合は、文字列の長さ (null 終端文字を除く) または SQL_NTS (Null で終わる文字列) のいずれかを引数として提供します。 負でない長さの引数は、関連付けられている文字列の実際の長さを指定します。 長さの引数を0に設定すると、長さが0の文字列を指定できます。これは、NULL 値とは異なります。 負の値 SQL_NTS は、null 終了文字を検索して文字列の長さを判断するようドライバーに指示します。  

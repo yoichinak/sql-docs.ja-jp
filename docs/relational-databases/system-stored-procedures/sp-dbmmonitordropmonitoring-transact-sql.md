@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitordropmonitoring (Transact-sql)
 title: sp_dbmmonitordropmonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitordropmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0382c4aba6e71cace73ec74febae0fa654a09a30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7ef235d29ea317a4e6e1b7967808d4ac135f801
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536586"
 ---
 # <a name="sp_dbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_dbmmonitordropmonitoring
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -51,15 +52,15 @@ sp_dbmmonitordropmonitoring
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、サーバーインスタンス上のすべてのミラー化されたデータベースについて、データベースミラーリングの監視を削除します。  
   
 ```  
 EXEC sp_dbmmonitordropmonitoring ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   

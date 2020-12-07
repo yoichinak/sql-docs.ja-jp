@@ -1,4 +1,5 @@
 ---
+description: dm_tran_current_transaction (Transact-sql)
 title: dm_tran_current_transaction (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,14 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65a6f193d54df2959503270f2e57fbf26bbd07bb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9f1cd2e84b1bc08feba92d1428696afa13945ba4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004230"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550201"
 ---
 # <a name="sysdm_tran_current_transaction-transact-sql"></a>dm_tran_current_transaction (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86004230"
 > [!NOTE]  
 >  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_tran_current_transaction**という名前を使用します。  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>構文  
   
 ```  
   
@@ -51,7 +53,7 @@ sys.dm_tran_current_transaction
 |**first_snapshot_sequence_num**|**bigint**|スナップショット取得時にアクティブだったトランザクションの最小トランザクションシーケンス番号。 実行時には、スナップショットトランザクションは、その時点でアクティブなすべてのトランザクションのスナップショットを取得します。 スナップショット以外のトランザクションの場合、この列には0が表示されます。|  
 |**last_transaction_sequence_num**|**bigint**|グローバルシーケンス番号。 この値は、システムにより生成された最後のトランザクション シーケンス番号を表します。|  
 |**first_useful_sequence_num**|**bigint**|グローバルシーケンス番号。 この値は、行バージョンをバージョン ストアに保持する必要があるトランザクションの、最も古いトランザクション シーケンス番号を表します。 以前のトランザクションで作成された行バージョンは削除できます。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -119,7 +121,7 @@ first_useful_sequence_num
  XSN-57 はスナップショットトランザクションではないため、 `first_snapshot_sequence_num` は `NULL` です。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

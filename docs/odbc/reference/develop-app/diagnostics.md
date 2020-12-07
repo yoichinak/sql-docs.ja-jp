@@ -1,4 +1,5 @@
 ---
+description: 診断
 title: 診断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 918dce41ca1c7e7b43c1a6d25de2c75a83312715
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476714"
 ---
 # <a name="diagnostics"></a>診断
 ODBC の関数は、次の2つの方法で診断情報を返します。 リターンコードは、関数の全体的な成功または失敗を示し、診断レコードは関数に関する詳細情報を提供します。 少なくとも1つの診断レコード-ヘッダーレコード-関数が成功した場合でも返されます。  

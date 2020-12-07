@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487221"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396839"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
 ## <a name="details"></a>詳細  
   
-|||  
+|カテゴリ|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487221"
   
 -   レポート サーバーでレポートを表示していて、さらにレポート サーバーをローカル管理者として実行している場合は、ページを右クリックして **[ソースの表示]** をクリックすると、呼び出し履歴を表示できます。 呼び出し履歴には追加情報が記載されています。  
   
--   レポート サーバーでローカル管理者として処理を実行している場合は、ログ ファイル内で `ReportProcessingException`を検索します。 ログ エントリには詳細情報が含まれています。 通常、レポート サーバーのログ ファイルは \<*ドライブ*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log にあります。 詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
+-   レポート サーバーでローカル管理者として処理を実行している場合は、ログ ファイル内で `ReportProcessingException`を検索します。 ログ エントリには詳細情報が含まれています。 通常、レポート サーバーのログ ファイルは \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*.log にあります。 詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>式のホスト アセンブリの読み込みに失敗した  
  カスタム アセンブリには、厳密な名前の署名と、属性 AllowPartiallyTrustedCallers の設定が必要です。 詳細については、「 [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) 」と「 [セキュリティ ポリシーの概要](../../reporting-services/extensions/secure-development/understanding-security-policies.md)」を参照してください。  
@@ -97,11 +97,11 @@ ms.locfileid: "81487221"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>フィルターのデータ型を比較できない  
  フィルターの演算式では、フィルターの対象を定義するフィルター式とフィルター値は、比較できるように同じデータ型にする必要があります。 次のいずれかのエラーが表示された場合は、データ型が一致するようにフィールド式またはフィルター値を変更します。  
   
--   *\<report item name>* の *\<report item type>* の処理は実行できません。 データ型 *\<type>* と *\<type>* を比較できません。 *\<report item name>* によって返されたデータ型を確認してください。  
+-   *\<report item name>* の *\<report item type>* は処理できません。 データ型 *\<type>* と *\<type>* は比較できません。 *\<report item name>* によって返されたデータ型を確認してください。  
   
 -   *\<property name>* を評価できませんでした。  
   
--   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。 *\<error string>* 。  
+-   *\<property name>* を評価できませんでした。 エラー *\<error string>* を含んでいるデータセット フィールドを参照しています。  
   
  詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "81487221"
   
 -   *\<report item type>* ' *\<report item name>* ' のスコープ " *\<scope name>* " が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
--   *\<report item type>* ' *\<report item name>* ' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' の *\<property name>* 式には、集計関数で無効なスコープのパラメーターが含まれています。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
  累計を計算する集計関数 (**Previous**、 **RunningValue**、または **RowNumber**) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   *\<report item type>* ' *\<report item name>* ' のデータ セルに使用されている **Previous**、**RunningValue**、または **RowNumber** 集計関数では、 *\<report item type>* の列と行両方のグループ化スコープが参照されています。 *\<report item type>* 内のすべての **Previous**、**RunningValue**、および **RowNumber** 集計関数のスコープのパラメーターでは、行のグループまたはデータ列のグループを参照できますが、両方を参照することはできません。  
+-   *\<report item type>* ' *\<report item name>* ' のデータ セルで使用されている **Previous** 集計関数、**RunningValue** 集計関数、および **RowNumber** 集計関数では、 *\<report item type>* の列および行の両方のグループ化スコープが参照されています。 *\<report item type>* 内のすべての **Previous**、**RunningValue**、および **RowNumber** 集計関数のスコープのパラメーターでは、行のグループまたはデータ列のグループを参照できますが、両方を参照することはできません。  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

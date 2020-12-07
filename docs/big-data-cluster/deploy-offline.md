@@ -1,7 +1,7 @@
 ---
 title: オフラインで展開する
 titleSuffix: SQL Server big data clusters
-description: SQL Server ビッグ データ クラスターのオフライン展開を実行する方法について説明します。
+description: SQL Server 2019 ビッグ データ クラスターのオフライン デプロイを実行する方法と、プライベート リポジトリにコンテナー イメージを読み込む方法について説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423161"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257182"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
 
@@ -77,10 +77,8 @@ ms.locfileid: "84423161"
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**
@@ -122,7 +120,7 @@ ms.locfileid: "84423161"
 
 ## <a name="install-tools-offline"></a>ツールをオフラインでインストールする
 
-ビッグ データ クラスターの展開には、**Python**、`azdata`、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
+ビッグ データ クラスターの展開には、**Python**、[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]、および **kubectl** など、いくつかのツールが必要です。 これらのツールをオフライン サーバーにインストールするには、次の手順に従います。
 
 ### <a name="install-python-offline"></a><a id="python"></a> Python をオフラインでインストールする
 
@@ -144,7 +142,7 @@ ms.locfileid: "84423161"
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> azdata をオフラインでインストールする
 
-1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての `azdata` パッケージを現在のフォルダーにダウンロードします。
+1. インターネットにアクセスでき、[Python](https://wiki.python.org/moin/BeginnersGuide/Download) があるコンピューターで、次のコマンドを実行し、すべての [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] パッケージを現在のフォルダーにダウンロードします。
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -168,7 +166,7 @@ ms.locfileid: "84423161"
 
 ## <a name="deploy-from-private-repository"></a>プライベート リポジトリから展開する
 
-プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次の `azdata` コマンドは、`control.json` という名前のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
+プライベート リポジトリから展開するには、[展開ガイド](deployment-guidance.md)に記載されている手順を使用しますが、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次の [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] コマンドは、`control.json` という名前のカスタム展開構成ファイルの Docker 設定を変更する方法を示しています。
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

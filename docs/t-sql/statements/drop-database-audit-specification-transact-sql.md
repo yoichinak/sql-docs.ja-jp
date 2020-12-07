@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebf969293f515a38c1721abb4f08c94c8ac7eb32
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 864a3af986cd4b88df30ebc587c67e395bed9b10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484143"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131313"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "86484143"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP DATABASE AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
 ```  
@@ -57,14 +57,14 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-dropping-a-database-audit-specification"></a>A. データベース監査仕様を削除する  
  次の例では、`HIPAA_Audit_DB_Specification` という監査を削除します。  
   
-```  
+```sql  
 DROP DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification;  
 GO  
 ```  
   
  監査作成の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: RECONFIGURE (Transact-SQL)
 title: RECONFIGURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26c8d6f53ef87fa2d9e6ab5dcfee6b39be01834f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915620"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92196802"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "86915620"
     
 ## <a name="syntax"></a>構文    
     
-```    
-    
+```syntaxsql
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
@@ -67,7 +67,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## <a name="examples"></a>例    
  次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`75`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
     
-```    
+```sql    
 EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    

@@ -1,4 +1,5 @@
 ---
+description: '[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス'
 title: '[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffc3d2786ff20ec500fed130dcf6058c9f3f627d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e64a5d03e7f5e8998e2273f6dcf5b695b08b14b9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918618"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130125"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
 

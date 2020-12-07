@@ -1,4 +1,5 @@
 ---
+description: データ型のマッピング (ODBC Driver for Oracle)
 title: データ型のマッピング (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 432c21b70efcdd63ef36bfe3d26f8488ddb11d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ea39a8277508422028d5794ccbcb7a62dacdb08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483515"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>データ型のマッピング (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -27,7 +28,7 @@ ms.locfileid: "81302673"
   
  Oracle サーバーは、一連のデータ型をサポートしています。 ODBC Driver for Oracle は、これらのデータ型を適切な ODBC SQL データ型にマップします。 次の表に、Oracle 7.3 Server のデータ型とそれに対応する ODBC SQL データ型を示します。  
   
- ODBC Driver for Oracle は、Oracle 7.3 およびいくつかの Oracle8 データ型をサポートしています。 サポートされている Oracle8 データ型の詳細については、「[サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)」を参照してください。  
+ ODBC Driver for Oracle は、Oracle 7.3 およびいくつかの Oracle8 データ型をサポートしています。 サポートされている Oracle8 データ型の詳細については、「 [サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)」を参照してください。  
   
 |Oracle Server データ型|ODBC SQL データ型|  
 |-----------------------------|------------------------|  
@@ -42,4 +43,4 @@ ms.locfileid: "81302673"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  許容される VARCHAR 列のサイズの詳細については、このガイドの「 [Varchar 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)」を参照してください。
+>  許容される VARCHAR 列のサイズの詳細については、このガイドの「 [Varchar 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 」を参照してください。

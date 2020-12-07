@@ -1,4 +1,5 @@
 ---
+description: SSMA For Sybase の新しい GUI 機能 (SybaseToSQL)
 title: SSMA For Sybase の新しい GUI 機能 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 70074acc0f3d3d1a586303cc6f9fd39afb2a7ef0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3573e93126679b3d675ece84f216875c54dd5c1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418298"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase の新しい GUI 機能 (SybaseToSQL)
 この章では、SSMA ユーザーインターフェイスの新機能について説明します。  
   
-## <a name="layouts"></a>Layouts  
+## <a name="layouts"></a>レイアウト  
 この機能を使用すると、定義済みの2つのウィンドウのレイアウトを選択することも、独自のレイアウトを作成することもできます。 レイアウトサブメニューにアクセスするには、[表示] メニューの [レイアウト] をポイントします。 ここでは、既存のレイアウトの1つを選択し、新しいレイアウトを追加したり、レイアウトを管理したりすることができます。  
   
 ### <a name="add-current-layout"></a>現在のレイアウトの追加  

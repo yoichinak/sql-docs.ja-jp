@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT STOPLIST (Transact-SQL)
 title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f35cfbff80fcec67f4448ae6dab55688f5c8ae28
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392920"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124075"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  ストップリストの所有者となるデータベース プリンシパルの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているプリンシパルの名前を指定するか、または *owner_name* に対する IMPERSONATE 権限を現在のユーザーが持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ストップリストの作成者はその所有者になります。  
   
 ## <a name="permissions"></a>アクセス許可  

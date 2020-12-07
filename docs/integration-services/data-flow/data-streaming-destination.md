@@ -1,4 +1,5 @@
 ---
+description: Data Streaming Destination
 title: Data Streaming Destination | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3dd1ae26ab126e87a8f239597a573d24dbc8b3e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916773"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127223"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
 
@@ -34,9 +35,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>データ フィード パブリッシング コンポーネント  
- データ フィード パブリッシング コンポーネントにはコンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
+ データ フィード パブリッシング コンポーネントには、コンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
   
- SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]** 、 **[リンク サーバー]** 、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
+ SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>SQL ビューとして SSIS パッケージを公開する  
  以下では、SQL ビューとして SSIS パッケージを公開する手順について説明します。  
@@ -50,12 +51,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  SQL Server Management Studio で SQL ビューを実行し、SSIS パッケージからの結果を確認します。 このビューにより、作成したリンク サーバーを経由して OLE DB Provider for SSIS にクエリが送信されます。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  
   
 > [!IMPORTANT]  
->  詳細な手順については、「[チュートリアル: SQL ビューとして SSIS パッケージを公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)」を参照してください。  
+>  詳細な手順については、「 [チュートリアル: SSIS パッケージを SQL ビューとして公開する](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)」を参照してください。  
 
 ## <a name="configure-data-streaming-destination"></a>Data Streaming Destination を構成する
   **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]** をクリックします。  
   
- このダイアログ ボックスには、 **[コンポーネントのプロパティ]** 、 **[入力列]** 、 **[入力プロパティと出力プロパティ]** という 3 つのタブがあります。  
+ このダイアログ ボックスには、 **[コンポーネントのプロパティ]**、 **[入力列]**、 **[入力プロパティと出力プロパティ]** の 3 つのタブがあります。  
   
 ## <a name="component-properties-tab"></a>[コンポーネントのプロパティ] タブ  
  このタブには、次の編集可能なフィールドがあります。  

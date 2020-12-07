@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable (Transact-SQL)
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49ddfeda6b720d774e2b1d7c089fb295d185e40a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918825"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "93067394"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,9 +61,9 @@ SET
     }  
 }   
 ```  
-Azure SQL Data Warehouse と Parallel Data Warehouse の構文:  
+Azure Synapse Analytics と Parallel Data Warehouse の構文:  
 ```syntaxsql
-SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
+SET @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -81,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 共通言語ランタイム (CLR) ユーザー定義型の名前。  
   
 `{ . | :: }`  
-CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド ( **.** ) を使用します。 静的メソッドでは、2 つのコロン ( **::** ) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 ユーザー定義型のメソッド。このメソッドでは、ある型のインスタンスの状態を変更するために、1 つ以上の引数を受け取ります。 静的メソッドはパブリックであることが必要です。  
@@ -168,7 +169,7 @@ READ ONLY
 このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-カーソル内で更新できる列を定義します。 OF *column_name* [ **,** ...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
+カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>解説  
 変数は宣言後、NULL に初期化されます。 宣言された変数に NULL 以外の値を代入するには、SET ステートメントを使用します。 変数に値を代入する SET ステートメントでは、1 つの値が返されます。 複数の変数を初期化する場合は、各ローカル変数に対して 1 つずつ、SET ステートメントを使用してください。  
@@ -193,8 +194,8 @@ public ロールのメンバーシップが必要です。 すべてのユーザ
 ### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>A. SET によって初期化された変数の値を出力する  
 次の例では、`@myvar` 変数を作成し、文字列値を代入して、`@myvar` 変数の値を出力します。  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
 SELECT @myvar;  
 GO  
@@ -203,10 +204,10 @@ GO
 ### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. SET によって値が代入されたローカル変数を、SELECT ステートメントで使用する  
 次の例では、`@state` という名前のローカル変数を作成し、そのローカル変数を `SELECT` ステートメントで使用して、`Oregon` 州に住む全従業員の姓名を検索します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @state char(25);  
+DECLARE @state CHAR(25);  
 SET @state = N'Oregon';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name, City  
 FROM HumanResources.vEmployee  
@@ -216,15 +217,15 @@ WHERE StateProvinceName = @state;
 ### <a name="c-using-a-compound-assignment-for-a-local-variable"></a>C. ローカル変数に対して複合代入を使用する  
 次の 2 つの例では、同じ結果が生成されます。 どちらも `@NewBalance` というローカル変数を作成し、その値に 10 を乗算して、`SELECT` ステートメントでローカル変数の新しい値を表示します。 2 番目の例では、複合代入演算子を使用します。  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance  INT ;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
 SELECT  @NewBalance;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT @NewBalance;  
 ```  
@@ -232,7 +233,7 @@ SELECT @NewBalance;
 ### <a name="d-using-set-with-a-global-cursor"></a>D. グローバル カーソルに対して SET を使用する  
 次の例では、ローカル変数を作成した後、カーソル変数をグローバル カーソル名に設定します。  
   
-```  
+```sql  
 DECLARE my_cursor CURSOR GLOBAL   
 FOR SELECT * FROM Purchasing.ShipMethod  
 DECLARE @my_variable CURSOR ;  
@@ -247,7 +248,7 @@ DEALLOCATE my_cursor;
 ### <a name="e-defining-a-cursor-by-using-set"></a>E. SET を使用してカーソルを定義する  
 次の例では、`SET` ステートメントを使用してカーソルを定義します。  
   
-```  
+```sql  
 DECLARE @CursorVar CURSOR;  
   
 SET @CursorVar = CURSOR SCROLL DYNAMIC  
@@ -271,10 +272,10 @@ DEALLOCATE @CursorVar;
 ### <a name="f-assigning-a-value-from-a-query"></a>F. クエリから値を代入する  
 次の例では、クエリを使用して変数に値を代入します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM Sales.Customer);  
 SELECT @rows;  
 ```  
@@ -282,7 +283,7 @@ SELECT @rows;
 ### <a name="g-assigning-a-value-to-a-user-defined-type-variable-by-modifying-a-property-of-the-type"></a>G. ユーザー定義型のプロパティを変更してユーザー定義型変数に値を代入する  
 次の例では、ユーザー定義型の `Point` に対して `X` プロパティの値を変更し、値を設定します。  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p.X = @p.X + 1.1;  
 SELECT @p;  
@@ -292,7 +293,7 @@ GO
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. ユーザー定義型のメソッドを起動してユーザー定義型変数に値を代入する  
 次の例では、ユーザー定義型の **point** に対して `SetXY` メソッドを起動し、値を設定します。  
   
-```  
+```sql  
 DECLARE @p Point;  
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
@@ -300,8 +301,8 @@ SET @p=point.SetXY(23.5, 23.5);
 ### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>I. CLR 型の変数を作成してミューテーター メソッドを呼び出す  
 次の例では、`Point` 型の変数を作成し、`Point` のミューテーター メソッドを実行します。  
   
-```  
-CREATE ASSEMBLY mytest from 'c:\test.dll' WITH PERMISSION_SET = SAFE  
+```sql  
+CREATE ASSEMBLY mytest FROM 'c:\test.dll' WITH PERMISSION_SET = SAFE  
 CREATE TYPE Point EXTERNAL NAME mytest.Point  
 GO  
 DECLARE @p Point = CONVERT(Point, '')  
@@ -313,20 +314,19 @@ SET @p.SetXY(22, 23);
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. SET によって初期化された変数の値を出力する  
 次の例では、`@myvar` 変数を作成し、文字列値を代入して、`@myvar` 変数の値を出力します。  
   
-```  
-DECLARE @myvar char(20);  
+```sql  
+DECLARE @myvar CHAR(20);  
 SET @myvar = 'This is a test';  
-SELECT top 1 @myvar FROM sys.databases;  
-  
+SELECT TOP 1 @myvar FROM sys.databases;
 ```  
   
 ### <a name="k-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>K. SET によって値が代入されたローカル変数を、SELECT ステートメントで使用する  
 次の例では、`@dept` という名前のローカル変数を作成し、このローカル変数を `SELECT` ステートメントで使用して、`Marketing` 部門で働く全従業員の姓名を検索します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @dept char(25);  
+DECLARE @dept CHAR(25);  
 SET @dept = N'Marketing';  
 SELECT RTRIM(FirstName) + ' ' + RTRIM(LastName) AS Name  
 FROM DimEmployee   
@@ -336,15 +336,15 @@ WHERE DepartmentName = @dept;
 ### <a name="l-using-a-compound-assignment-for-a-local-variable"></a>L. ローカル変数に対して複合代入を使用する  
 次の 2 つの例では、同じ結果が生成されます。 どちらも `@NewBalance` というローカル変数を作成し、その値に `10` を乗算して、`SELECT` ステートメントでローカル変数の新しい値を表示します。 2 番目の例では、複合代入演算子を使用します。  
   
-```  
+```sql  
 /* Example one */  
-DECLARE  @NewBalance  int ;  
+DECLARE  @NewBalance INT;  
 SET  @NewBalance  =  10;  
 SET  @NewBalance  =  @NewBalance  *  10;  
-SELECT  TOP 1 @NewBalance FROM sys.tables;  
+SELECT TOP 1 @NewBalance FROM sys.tables;  
   
 /* Example Two */  
-DECLARE @NewBalance int = 10;  
+DECLARE @NewBalance INT = 10;  
 SET @NewBalance *= 10;  
 SELECT TOP 1 @NewBalance FROM sys.tables;  
 ```  
@@ -352,10 +352,10 @@ SELECT TOP 1 @NewBalance FROM sys.tables;
 ### <a name="m-assigning-a-value-from-a-query"></a>M. クエリから値を代入する  
 次の例では、クエリを使用して変数に値を代入します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @rows int;  
+DECLARE @rows INT;  
 SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);  
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  

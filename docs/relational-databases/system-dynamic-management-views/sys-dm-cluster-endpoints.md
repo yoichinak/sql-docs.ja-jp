@@ -1,4 +1,5 @@
 ---
+description: dm_cluster_endpoints (Transact-sql)
 title: dm_cluster_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -16,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cluster_endpoints dynamic management view
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe06d6b7c00fe60c44b19468f9ef0cc814d25e5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7df88a6be24e5378a8bd588514c9806e8258eb0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913240"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542340"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>dm_cluster_endpoints (Transact-sql)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

@@ -1,4 +1,5 @@
 ---
+description: '[検証] ダイアログ ボックス'
 title: '[検証] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d261c049ab59459d81a26d8f9cf23c7268ce53e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a65f5d8114907472eb03aa06e428927aa1408b7b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484924"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
 
@@ -50,7 +51,7 @@ ms.locfileid: "86922559"
 5.  プロジェクトまたはパッケージを右クリックし、 **[検証]** をクリックします。  
   
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
- **Environment**  
+ **環境**  
  プロジェクトまたはパッケージの検証に使用する環境を選択します。  
   
  **32 ビット ランタイム**  

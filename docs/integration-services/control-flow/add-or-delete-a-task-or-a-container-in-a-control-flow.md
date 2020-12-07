@@ -1,4 +1,5 @@
 ---
+description: 制御フローのタスクまたはコンテナーを追加または削除する
 title: 制御フローのタスクまたはコンテナーを追加または削除する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a269b4c221696f1b152e50d8fe749fc55eead05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912385"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123687"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>制御フローのタスクまたはコンテナーを追加または削除する
 
@@ -61,7 +62,7 @@ ms.locfileid: "86912385"
   
     -   **[制御フロー]** タブをクリックし、削除するタスクまたはコンテナーを右クリックして **[削除]** をクリックします。  
   
-    -   **パッケージ エクスプローラー**を開きます。 **[実行可能ファイル]** フォルダーで削除するタスクまたはコンテナーを右クリックし、 **[削除]** をクリックします。  
+    -   **パッケージ エクスプローラー** を開きます。 **[実行可能ファイル]** フォルダーで削除するタスクまたはコンテナーを右クリックし、 **[削除]** をクリックします。  
   
 3.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
@@ -99,9 +100,9 @@ ms.locfileid: "86912385"
   
 4.  **[制御フロー]** タブのデザイン画面でタスクまたはコンテナーを右クリックし、ショートカット メニューの **[編集]** をクリックして、対応するタスク エディターまたはコンテナー エディターを開きます。  
   
-     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)」(For ループ コンテナーを構成する) を参照してください。  
+     For ループ コンテナーの構成方法については、「 [Configure a For Loop Container](./for-loop-container.md)」(For ループ コンテナーを構成する) を参照してください。  
   
-     Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
+     Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](./foreach-loop-container.md)」を参照してください。  
   
     > [!NOTE]  
     >  シーケンス コンテナーには、カスタム エディターはありません。  
@@ -118,5 +119,4 @@ ms.locfileid: "86912385"
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: 個人用レポートをセキュリティで保護する
 title: 個人用レポートをセキュリティで保護する | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498045"
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
   個人用レポート機能により、ユーザーが管理するレポート処理用のワークスペースが提供されます。 [個人用レポート] フォルダーは、その性質上、他の汎用的な用途のフォルダーよりも権限の制限を緩める必要があります。 他のフォルダーのレポートを表示および実行する権限しか持たないユーザーが、[個人用レポート] フォルダーおよび自らが所有するコンテンツを管理するためには、より強い権限が必要となります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのための特別なロールの割り当てとロールの定義が用意されています。  
@@ -32,7 +33,7 @@ ms.locfileid: "65570698"
   
  **個人用レポート** ロールの割り当ては、次の要素で構成されています。  
   
--   Users フォルダー\\ *\<ユーザー名>* \個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
+-   Users フォルダー\\ *\<username>* \個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
   
 -   [個人用レポート] フォルダーをアクティブ化するときに判別されたユーザー アカウント。 フォルダーがアクティブ化されるのは、ユーザーがレポート マネージャーの [個人用レポート] フォルダーをクリックするか、レポート デザイナーから [個人用レポート] フォルダーにレポートをパブリッシュしたときです。 ユーザーが [個人用レポート] リンクでプロパティを要求する場合も、このフォルダーはアクティブ化されます。  
   

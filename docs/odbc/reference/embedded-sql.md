@@ -1,4 +1,5 @@
 ---
+description: 埋め込み SQL
 title: Embedded SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487415"
 ---
 # <a name="embedded-sql"></a>埋め込み SQL
 SQL ステートメントを DBMS に送信するための最初の方法は、embedded SQL です。 SQL は変数およびフロー制御ステートメントを使用しないため、多くの場合、C や COBOL などの従来のプログラミング言語で記述されたプログラムに追加できるデータベースサブ言語として使用されます。 ここでは、埋め込み SQL: ホストプログラミング言語で記述されたプログラムに SQL ステートメントを配置する方法について説明します。 簡単に言うと、次の方法を使用して、SQL ステートメントをホスト言語で埋め込みます。  

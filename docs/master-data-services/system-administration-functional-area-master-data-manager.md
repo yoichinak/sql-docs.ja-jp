@@ -1,4 +1,5 @@
 ---
+description: '[システム管理] 機能領域 (マスター データ マネージャー)'
 title: '[システム管理] 機能領域'
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a43fa563892d1c48941c016e661f52e899989daf
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a9061ad704647aeb94282ab18e0fcb18377a4cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456726"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
 
@@ -61,7 +62,7 @@ ms.locfileid: "85813218"
   
  [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

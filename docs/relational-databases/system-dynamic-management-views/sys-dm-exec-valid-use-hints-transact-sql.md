@@ -1,4 +1,5 @@
 ---
+description: dm_exec_valid_use_hints (Transact-sql)
 title: dm_exec_valid_use_hints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5bcc9db1f2ff0b4395a68025e54b719dc25c31cd
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: f05b4e01f06c354d461b1455e499c83a13d2d76c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489912"
 ---
 # <a name="sysdm_exec_valid_use_hints-transact-sql"></a>dm_exec_valid_use_hints (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,12 +37,12 @@ ms.locfileid: "86053464"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|ヒントの名前。|
 
-各ヒントの説明については、「[クエリヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)」を参照してください。
+各ヒントの説明については、「 [クエリヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 」を参照してください。
 
 SP1 で導入されました [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。
   
 ## <a name="see-also"></a>参照  
     
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

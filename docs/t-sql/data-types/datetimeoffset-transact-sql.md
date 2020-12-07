@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008045"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124949"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -209,7 +210,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |TIME のみ|DATE 部分は既定で 1900-1-1 に設定されます。 TIMEZONE は既定値の +00:00 に設定される。|  
 |タイム ゾーンのみ|既定値が設定される|  
 |DATE + TIME|TIMEZONE は既定値の +00:00 に設定される。|  
-|DATE + TIMEZONE|禁止|  
+|DATE + TIMEZONE|使用できません|  
 |TIME + TIMEZONE|DATE 部分は既定で 1900-1-1 に設定されます。|  
 |DATE + TIME + TIMEZONE|単純変換|  
   
@@ -233,16 +234,16 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|Output|  
+|データ型|出力|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Date**|2007-05-08|  
+|**日付**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

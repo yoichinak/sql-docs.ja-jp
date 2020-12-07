@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_configure (Transact-sql)
 title: sp_syspolicy_configure (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473588"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`構成する設定の名前を指定します。 *名前*は**sysname**であり、必須であり、NULL または空の文字列にすることはできません。  
+`[ @name = ] 'name'` 構成する設定の名前を指定します。 *名前* は **sysname**であり、必須であり、NULL または空の文字列にすることはできません。  
   
- *名前*には、次のいずれかの値を指定できます。  
+ *名前* には、次のいずれかの値を指定できます。  
   
 -   'Enabled' : ポリシー ベースの管理を有効にするかどうかを指定します。  
   
@@ -50,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   ' LogOnSuccess '-ポリシーベースの管理ログが成功したポリシー評価をログに記録するかどうかを指定します。  
   
-`[ @value = ] value`*Name*に指定された値に関連付けられている値を指定します。 *値*が**sql_variant**であり、が必要です。  
+`[ @value = ] value`*Name*に指定された値に関連付けられている値を指定します。 *値* が **sql_variant**であり、が必要です。  
   
 -   *名前*に ' Enabled ' を指定した場合は、次のいずれかの値を使用できます。  
   
@@ -67,9 +68,9 @@ sp_syspolicy_configure [ @name = ] 'name'
     -   1 = 成功したポリシー評価と失敗したポリシー評価の両方をログに記録します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  msdb システム データベースのコンテキストで sp_syspolicy_configure を実行する必要があります。  
   
  これらの設定の現在の値を表示するには、msdb.dbo.syspolicy_configuration システムビューに対してクエリを実行します。  
@@ -80,7 +81,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、の構成の制御によって信頼されているユーザーのみに付与する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ポリシーベースの管理を有効にします。  
   
 ```  
@@ -108,8 +109,8 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  

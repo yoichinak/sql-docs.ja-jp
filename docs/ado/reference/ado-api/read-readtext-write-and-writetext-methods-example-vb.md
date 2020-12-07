@@ -1,8 +1,9 @@
 ---
+description: Read、ReadText、Write、WriteText の各メソッドの例 (VB)
 title: Read、ReadText、Write、WriteText の各メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2a35d2f8e584843aa4395e63112de0211a70a7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 83d15c287946bbd952a8ea37438e6862296901e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754246"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989893"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、ReadText、Write、WriteText の各メソッドの例 (VB)
-この例では、テキストボックスの内容をテキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)とバイナリ**ストリーム**の両方に読み取る方法を示します。 表示されるその他のプロパティとメソッドには、 [Position](../../../ado/reference/ado-api/position-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)、および[SetEOS](../../../ado/reference/ado-api/seteos-method.md)があります。  
+この例では、テキストボックスの内容をテキスト [ストリーム](./stream-object-ado.md) とバイナリ **ストリーム**の両方に読み取る方法を示します。 表示されるその他のプロパティとメソッドには、 [Position](./position-property-ado.md)、 [Size](./size-property-ado-parameter.md)、 [Charset](./charset-property-ado.md)、および [SetEOS](./seteos-method.md)があります。  
   
 ```  
 'BeginReadVB  
@@ -111,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Charset プロパティ (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Position プロパティ (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read メソッド](../../../ado/reference/ado-api/read-method.md)   
- [ReadText メソッド](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEOS メソッド](../../../ado/reference/ado-api/seteos-method.md)   
- [Size プロパティ (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write メソッド](../../../ado/reference/ado-api/write-method.md)   
- [WriteText メソッド](../../../ado/reference/ado-api/writetext-method.md)
+ [Charset プロパティ (ADO)](./charset-property-ado.md)   
+ [Position プロパティ (ADO)](./position-property-ado.md)   
+ [Read メソッド](./read-method.md)   
+ [ReadText メソッド](./readtext-method.md)   
+ [SetEOS メソッド](./seteos-method.md)   
+ [Size プロパティ (ADO Stream)](./size-property-ado-stream.md)   
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)   
+ [Write メソッド](./write-method.md)   
+ [WriteText メソッド](./writetext-method.md)

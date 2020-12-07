@@ -1,4 +1,5 @@
 ---
+description: 'レッスン 2: SSIS での配置バンドルの作成'
 title: 'レッスン 2: SSIS での配置バンドルの作成 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f2117822d951d2a01ace369c61b32c630d74363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390397"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>レッスン 2: SSIS での配置バンドルの作成
 
@@ -33,12 +34,12 @@ ms.locfileid: "86916881"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [手順 1: 配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [手順 1:配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [手順 2:配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[手順 1: 配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[手順 1:配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

@@ -1,4 +1,5 @@
 ---
+description: Azure Blob Destination
 title: Azure Blob Destination | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3463ccc985330dedb399ccf3a9071681d2f4f302
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f7db713ef6aa1c18c3506a842624bfd514c4807
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918877"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127338"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob Destination
 

@@ -1,8 +1,9 @@
 ---
+description: XactAttributeEnum
 title: XactAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d645c648b6e1410f96beb567d7fb496e5fdae2d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb2a1391e813fd80c394bd685eff07e06015dd5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764423"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987693"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのトランザクション属性を指定します。  
+[接続](./connection-object-ado.md)オブジェクトのトランザクション属性を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262144|[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)を呼び出して新しいトランザクションを自動的に開始することによって、中断を保持します。 すべてのプロバイダーがこの動作をサポートするわけではありません。|  
-|**adXactCommitRetaining**|131072|[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)を呼び出して、新しいトランザクションを自動的に開始することによって、コミットの保持を実行します。 すべてのプロバイダーがこの動作をサポートするわけではありません。|  
+|**adXactAbortRetaining**|262144|[RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)を呼び出して新しいトランザクションを自動的に開始することによって、中断を保持します。 すべてのプロバイダーがこの動作をサポートするわけではありません。|  
+|**adXactCommitRetaining**|131072|[CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)を呼び出して、新しいトランザクションを自動的に開始することによって、コミットの保持を実行します。 すべてのプロバイダーがこの動作をサポートするわけではありません。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
  パッケージ: **com. ms. wfc. データ**  
@@ -39,4 +40,4 @@ ms.locfileid: "82764423"
 |AdoEnums.XactAttribute.COMMITRETAINING|  
   
 ## <a name="applies-to"></a>適用対象  
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)

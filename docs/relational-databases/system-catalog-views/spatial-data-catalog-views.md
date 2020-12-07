@@ -1,4 +1,5 @@
 ---
+description: 空間データのカタログ ビュー
 title: 空間 Data Catalog ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0254566d2d388bdad78ed92b84f9e7f2d63865a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720400"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550549"
 ---
 # <a name="spatial-data-catalog-views"></a>空間データのカタログ ビュー
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

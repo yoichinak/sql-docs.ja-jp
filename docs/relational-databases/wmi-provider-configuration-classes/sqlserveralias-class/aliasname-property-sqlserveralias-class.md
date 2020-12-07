@@ -1,4 +1,5 @@
 ---
+description: AliasName プロパティ (SqlServerAlias クラス)
 title: AliasName プロパティ (SqlServerAlias)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 74fdba44ae1b4457b092f9b3439526552ec780a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48fd72017866881be21fa3e066f5012c0155f7e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888485"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545237"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName プロパティ (SqlServerAlias クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ object.AliasName [= value]
  [の別名を表す](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- サーバー接続別名の名前を示す**文字列**値です。  
+ サーバー接続別名の名前を示す **文字列** 値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   

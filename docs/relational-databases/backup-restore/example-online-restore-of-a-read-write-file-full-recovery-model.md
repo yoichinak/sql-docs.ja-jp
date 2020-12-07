@@ -13,14 +13,14 @@ helpviewer_keywords:
 - online restores [SQL Server], full recovery model
 - restore sequences [SQL Server], online
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 75c16bab2ed7f8f46ee05af3dedf533530f07f08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ce68e817070765a6f84a12c518e71de221734b34
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737791"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126990"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85737791"
   
 3.  ログ バックアップをオンライン復元します。  
   
-     復元したファイル バックアップ以降、最新のログ バックアップ (手順 2. で作成した*log_backup3*) までのすべてのログ バックアップを、管理者が復元します。 最後のバックアップを復元した後、データベースを復旧します。  
+     復元したファイル バックアップ以降、最新のログ バックアップ (手順 2. で作成した *log_backup3*) までのすべてのログ バックアップを、管理者が復元します。 最後のバックアップを復元した後、データベースを復旧します。  
   
     ```  
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  

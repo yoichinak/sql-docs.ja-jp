@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 16255027d2fa0617066fcff0d2a208e70c96a9f9
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718028"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126907"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "85718028"
   
     -   テーブルに空き容量がある場合は、エラーの発生を示す 824 エラーをすべて記録し、エラー カウンターの値を増やします。 修復、復元、または割り当て解除による修正の後に、ページにエラーがある場合は、 **number_of_errors** カウントの値を増やし、 **last_update** 列を更新します。  
   
-    -   リストされているページが復元や修復操作によって修正された場合は、そのページが修復 ( **event_type** = 5) または復元 (**event_type** = 4) されたことを示すために**suspect_pages** の行を更新します。  
+    -   リストされているページが復元や修復操作によって修正された場合は、そのページが修復 ( **event_type** = 5) または復元 (**event_type** = 4) されたことを示すために **suspect_pages** の行を更新します。  
   
     -   DBCC チェックを実行すると、エラーのないページは修復済み (**event_type** = 5) または割り当て解除済み (**event_type** = 7) としてマークされます。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "85718028"
   
 #### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
 2.  **[システム データベース]** 、 **[msdb]** 、 **[テーブル]** 、 **[システム テーブル]** の順に展開します。  
   

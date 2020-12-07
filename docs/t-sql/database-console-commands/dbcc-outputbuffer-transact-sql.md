@@ -1,4 +1,5 @@
 ---
+description: DBCC OUTPUTBUFFER (Transact-SQL)
 title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d89ceb8e32310ab732c4dc87bebda9011593ab5d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: dfc426af5cc72e072cab1908930d265dc1cf91c6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484830"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119621"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ DBCC OUTPUTBUFFER で表示される結果を返したステートメントを�
 ## <a name="result-sets"></a>結果セット  
 DBCC OUTPUTBUFFER では次の結果セットが返されます (値は変わることがあります)。
   
-```sql
+```
 Output Buffer                                                              
 ------------------------------------------------------------------------   
 01fb8028:  04 00 01 5f 00 00 00 00 e3 1b 00 01 06 6d 00 61  ..._.........m.a  

@@ -1,4 +1,5 @@
 ---
+description: データマイニング拡張機能 (DMX) 構文要素
 title: データマイニング拡張機能 (DMX) 構文要素 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c0e61dfab45640f9f06362405c4c37dbb9b95181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422276"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>データマイニング拡張機能 (DMX) 構文要素
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -21,25 +22,25 @@ ms.locfileid: "86971741"
   では [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、さまざまな構文要素を使用して、データマイニングモデルの構築、管理、および操作に使用できるデータマイニング拡張機能 (DMX) ステートメントを定義できます。 次のセクションでは、これらの構文要素について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DMX&#41;&#40;識別子](../dmx/identifiers-dmx.md)  
+ [DMX&#41;&#40;識別子 ](../dmx/identifiers-dmx.md)  
  マイニング モデル、マイニング構造、および列などのオブジェクトの名前を識別します。  
   
  [データ型 (DMX)](../dmx/data-types-dmx.md)  
  マイニング モデル列に含まれるデータ型を定義します。  
   
- [DMX&#41;&#40;式](../dmx/expressions-dmx.md)  
+ [DMX&#41;&#40;式 ](../dmx/expressions-dmx.md)  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が単一値やスカラー値、オブジェクト、またはテーブル値を導くことができる構文の単位です。  
   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)  
  より複雑な DMX 式を作るために、1 つ以上の簡単な DMX 式と共に使用されます。  
   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)  
  0個または1個以上の入力値を受け取り、スカラー値またはテーブルを返す式。  
   
- [DMX&#41;&#40;コメント](../dmx/comments-dmx.md)  
- ステートメントの目的を説明するために、DMX ステートメントやスクリプトに挿入できるテキスト要素。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、コメントは実行されません。  
+ [DMX&#41;&#40;コメント ](../dmx/comments-dmx.md)  
+ ステートメントの目的を説明するために、DMX ステートメントやスクリプトに挿入できるテキスト要素。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、コメントは実行されません。  
   
- [DMX&#41;&#40;の予約済みキーワード](../dmx/reserved-keywords-dmx.md)  
+ [DMX&#41;&#40;の予約済みキーワード ](../dmx/reserved-keywords-dmx.md)  
  DMX での使用に予約されており、データベース内のオブジェクトの名前付けに使用できない単語です。  
   
  [コンテンツの種類 (DMX)](../dmx/content-types-dmx.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86971741"
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

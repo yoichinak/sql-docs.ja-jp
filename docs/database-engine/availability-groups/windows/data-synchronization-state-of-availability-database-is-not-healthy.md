@@ -6,21 +6,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.arp3datasynchealthy.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 59cf0c406f969a097ead2e782f89dc28e95de80e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6431e8940039e242059e73ca81dffe8012925872
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899875"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584352"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性データベースのデータ同期状態が正常でない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

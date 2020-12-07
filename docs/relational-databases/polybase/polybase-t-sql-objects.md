@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a282ceacba0c767ce2130cd3e7f8708e244bf473
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f52e71caddf2c2c7800e094ba3e40905a8d8833
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914458"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005703"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL リファレンス
 
@@ -121,7 +121,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
-適用対象:SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
+適用対象:SQL Server (2016 以降)、Azure Synapse Analytics、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**  
 
@@ -196,9 +196,9 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
-適用対象:Azure SQL Data Warehouse
+適用対象:Azure Synapse Analytics
 
-詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
+詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
 
 **1.データベース スコープ ベースの資格情報を作成する**   
 
@@ -221,19 +221,32 @@ WITH
 ;
 ```  
 
-**2.外部データ ソースを作成する**  
+**2. Azure Data Lake Store Gen 1 または 2 を参照する外部データ ソースを作成する **  
 
 ```sql  
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
--- LOCATION: Provide Azure storage account name and blob container name.
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step.
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+  -- Please note the abfss endpoint when your account has secure transfer enabled
+  ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
+    CREDENTIAL = ADLS_credential ,
+    TYPE = HADOOP
+  ) ;
 ```  
 
 **3.外部のファイル形式を作成する**  
@@ -553,6 +566,6 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ## <a name="next-steps"></a>次のステップ  
 クエリの例については、「 [PolyBase Queries (PolyBase のクエリ)](../../relational-databases/polybase/polybase-queries.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
-[PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md)   
+## <a name="see-also"></a>関連項目  
+[PolyBase の概要](./polybase-guide.md)   
 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)

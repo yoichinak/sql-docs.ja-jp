@@ -4,43 +4,39 @@ description: ビッグ データ クラスターへのアクセスを管理す�
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/06/2019
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2df0bec343d73de90a43e411da92530c3c50c8
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730621"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790270"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Active Directory モードでビッグ データ クラスター アクセスを管理する
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、clusterAdmins と clusterUsers の展開時に提供される Active Directory グループを更新する方法について説明します。
+この記事では、*clusterUsers* 構成設定を介して展開中に提供されるグループに加え、*bdcUser* ロールを持つ新しい Active Directory グループを追加する方法について説明します。
+
+>[!IMPORTANT]
+>*bdcAdmin* ロールを持つ新しい Active Directory グループはこの手順で追加しないでください。 HDFS や Spark などの Hadoop コンポーネントによって、BDC の *bdcAdmin* ロールに相当するスーパーユーザー グループとして Active Directory グループが 1 つだけ許可されます。 展開後にビッグ データ クラスターに、*bdcAdmin* アクセス許可を持つ追加の Active Directory グループを与えるには、展開時に登録済みのグループにユーザーとグループを追加する必要があります。 *bdcUsers* ロールを持つグループ メンバーシップを同じ手順で更新できます。
 
 ## <a name="two-overarching-roles-in-the-big-data-cluster"></a>ビッグ データ クラスターの 2 つの主要なロール
 
 ビッグ データ クラスター内の承認に使用する 2 つの主要なロールの一部として、展開プロファイルのセキュリティ セクションで Active Directory グループを指定することができます。
 
-* `clusterAdmins`:このパラメーターは、1 つの Active Directory グループを受け取ります。 このグループのメンバーには、クラスター全体の管理者アクセス許可が付与されます。 SQL Server に *sysadmin* アクセス許可、Hadoop 分散ファイル システム (HDFS) および Spark には *superuser* アクセス許可、コントローラーには *administrator* 権限が付与されます。
+* `clusterAdmins`:このパラメーターは、1 つの Active Directory グループを受け取ります。 このグループのメンバーには *bdcAdmin* ロールが与えられます。つまり、クラスター全体の管理者アクセス許可が与えられます。 SQL Server に *sysadmin* アクセス許可、Hadoop 分散ファイル システム (HDFS) および Spark には *superuser* アクセス許可、コントローラーには *administrator* 権限が付与されます。
 
-* `clusterUsers`:これらの Active Directory グループは、クラスターに管理者アクセス許可のない通常のユーザーです。 SQL Server マスター インスタンスにログインするアクセス許可が付与されますが、既定では、オブジェクトまたはデータに対するアクセス許可はありません。
+* `clusterUsers`:これらの Active Directory グループは BDC で *bdcUsers* ロールにマッピングされます。 これらは、クラスターに管理者アクセス許可のない通常のユーザーです。 SQL Server マスター インスタンスにログインするアクセス許可が付与されますが、既定では、オブジェクトまたはデータに対するアクセス許可はありません。 これらは、*superuser* アクセス許可のない、HDFS と Spark の通常のユーザーです。 コントローラー エンドポイントに接続するとき、これらのユーザーはエンドポイントにのみクエリを実行できます (*azdata bdc endpoints list* を使用します)。
 
-展開後にビッグ データ クラスターに追加の Active Directory グループのアクセス許可を付与するには、展開時にユーザーとグループを登録済みのグループに追加する方法があります。 
+Active Directory 内のグループ メンバーシップを変更せずに追加の Active Directory グループの *bdcUser* アクセス許可を付与するには、次のセクションの手順を完了します。
 
-ただし、管理者が Active Directory 内のグループ メンバーシップを常に変更できるとは限りません。 Active Directory 内のグループ メンバーシップを変更せずに追加の Active Directory グループのアクセス許可を付与するには、次のセクションの手順を完了します。
+## <a name="grant-bdcuser-permissions-to-additional-active-directory-groups"></a>追加の Active Directory グループに *bdcUser* アクセス許可を付与する
 
-## <a name="grant-administrator-permissions-to-additional-active-directory-groups"></a>追加の Active Directory グループに管理者アクセス許可を付与する
-
->[!IMPORTANT]
->この手順を実行しても、追加の Active Directory グループに対して、ビッグ データ クラスター内の HDFS や Spark などの Hadoop コンポーネントへの管理者アクセス権は付与されません。 これらのコンポーネントでは、スーパーユーザー グループとして 1 つの Active Directory グループのみが許可されます。 この制限は、展開時に `clusterAdmins` で指定したグループは、この手順を実行した後もスーパーユーザー グループのままになることを意味します。
-
-このセクションの手順を実行すると、コントローラーと SQL Server マスター インスタンスの両方への管理者アクセス権を付与できます。
-
-### <a name="create-a-login-for-the-active-directory-user-or-group-in-the-sql-server-master-instance"></a>SQL Server マスター インスタンスで Active Directory ユーザーまたはグループのログインを作成する 
+### <a name="create-a-login-for-the-active-directory-user-or-group-in-the-sql-server-master-instance"></a>SQL Server マスター インスタンスで Active Directory ユーザーまたはグループのログインを作成する
 
 1. 好みの SQL クライアントを使用して、マスター SQL エンドポイントに接続します。 任意の管理者のログイン (たとえば、展開時に提供された `AZDATA_USERNAME`) を使用します。 または、セキュリティ構成で `clusterAdmins` として提供された Active Directory グループに属する任意の Active Directory アカウントを使用できます。
 
@@ -50,14 +46,16 @@ ms.locfileid: "85730621"
    CREATE LOGIN [<domain>\<principal>] FROM WINDOWS;
    ```
 
-   SQL Server インスタンスで管理者アクセス許可を付与する場合は、次のアクセス許可も付与します。
+   SQL Server インスタンスで目的のアクセス許可を付与する:
 
    ```sql
-   ALTER SERVER ROLE sysadmin ADD MEMBER [<domain>\<principal>];
+   ALTER SERVER ROLE <server role> ADD MEMBER [<domain>\<principal>];
    GO
    ```
 
-### <a name="add-the-active-directory-user-or-group-to-the-roles-table-in-the-controller-database"></a>コントローラー データベースの roles テーブルに Active Directory ユーザーまたはグループを追加します。 
+サーバー ロールの完全一覧が必要であれば、[こちら](../relational-databases/security/authentication-access/server-level-roles.md)でそれに対応する SQL Server セキュリティ トピックをご覧ください。
+
+### <a name="add-the-active-directory-user-or-group-to-the-roles-table-in-the-controller-database"></a>コントローラー データベースの roles テーブルに Active Directory ユーザーまたはグループを追加します。
 
 1. 次のコマンドを実行して、コントローラーの SQL server 資格情報を取得します。
 
@@ -79,25 +77,27 @@ ms.locfileid: "85730621"
    kubectl port-forward controldb-0 1433:1433 --address 0.0.0.0 -n <cluster name>
    ```
 
-1. 前の接続を使用して、roles テーブルに行を挿入します。 大文字で「*REALM*」という値を入力します。
-
-   管理者のアクセス許可を付与する場合は、 *\<role name>* に *bdcAdmin* ロールを使用します。 管理者以外のユーザーの場合は、*bdcUser* ロールを使用します。
+1. 前の接続を使用し、*roles* テーブルと *active_directory_principals* テーブルに新しい行を挿入します。 大文字で「*REALM*」という値を入力します。
 
    ```sql
    USE controller;
    GO
 
-   INSERT INTO [controller].[auth].[roles] VALUES (N'<user or group name>@<REALM>', N'<role name>')
+   INSERT INTO [controller].[auth].[roles] VALUES (N'<user or group name>@<REALM>', 'bdcUser')
+   GO
+
+   INSERT INTO [controller].[auth].[active_directory_principals] VALUES (N'<user or group name>@<REALM>', N'<SID>')
    GO
    ```
 
-1. コントローラー エンドポイントにログインし、次のコマンドを実行して、追加したグループのメンバーにビッグ データ クラスター管理者アクセス許可が付与されていることを確認します。
+   追加されるユーザーまたはグループの SID を見つけるには、[Get-ADUser](/powershell/module/addsadministration/get-aduser/) または [Get-ADGroup](/powershell/module/addsadministration/get-adgroup/) PowerShell コマンドを使用できます。
+
+2. コントローラー エンドポイントにログインするか、SQL Server マスター インスタンスに認証することで、追加したグループのメンバーに、想定どおりの *bdcUser* アクセス許可が与えられていることを確認します。 次に例を示します。
 
    ```bash
-   azdata bdc config show
+   azdata login
+   azdata bdc endpoints list
    ```
-
-1. 管理者以外のユーザーの場合、`azdata login` を使用して SQL マスター インスタンスまたはコントローラーへの認証を受けることで、アクセスを確認できます。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,4 +1,5 @@
 ---
+description: SESSION_ID (Transact-SQL)
 title: SESSION_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/23/2018
@@ -12,12 +13,12 @@ dev_langs:
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ce5ba2ef3b5bcb3849a710744bfb8de701b418c3
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c2d0e0e8e49cc190931295e2b00fbb2486e39f1d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196830"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379077"
 ---
 # <a name="session_id-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,8 +29,8 @@ ms.locfileid: "86196830"
   
 ## <a name="syntax"></a>構文  
   
-```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 SESSION_ID ( )  
 ```  
   
@@ -46,12 +47,12 @@ SESSION_ID ( )
 ## <a name="examples"></a>例  
  次の例では、現在のセッション ID を返します。  
   
-```  
+```sql  
 SELECT SESSION_ID();  
 ```  
   
 ## <a name="see-also"></a>参照  
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [VERSION &#40;SQL Data Warehouse&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+ [VERSION &#40;Azure Synapse Analytics&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
   
   

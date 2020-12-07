@@ -1,4 +1,5 @@
 ---
+description: 照合順序関数 - TERTIARY_WEIGHTS (Transact-SQL)
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445897"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,13 +45,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 
 ## <a name="arguments"></a>引数
 *non_Unicode_character_string_expression*  
-第 3 の SQL 照合順序で定義される [char](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、または **varchar(max)** 型の文字列**式** です。 これらの照合順序の一覧については、「解説」を参照してください。
+第 3 の SQL 照合順序で定義される **char**、**varchar**、または **varchar(max)** 型の文字列 [式](../../t-sql/language-elements/expressions-transact-sql.md) です。 これらの照合順序の一覧については、「解説」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-`TERTIARY_WEIGHTS` は、**non_Unicode_character_string_expression** が *char* または **varchar** であるときに **varbinary** を返し、**non_Unicode_character_string_expression** に *varchar(max)* データ型が含まれるときには **varbinary(max)** を返します。
+`TERTIARY_WEIGHTS` は、*non_Unicode_character_string_expression* が **char** または **varchar** であるときに **varbinary** を返し、*non_Unicode_character_string_expression* に **varchar(max)** データ型が含まれるときには **varbinary(max)** を返します。
   
 ## <a name="remarks"></a>解説  
-第 3 の SQL 照合順序で `TERTIARY_WEIGHTS`non_Unicode_character_string_expression *が定義されていない場合、* は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
+第 3 の SQL 照合順序で *non_Unicode_character_string_expression* が定義されていない場合、`TERTIARY_WEIGHTS` は NULL を返します。 次の表に、第 3 の SQL 照合順序を示します。
   
 |並べ替え順 ID|SQL 照合順序|  
 |---|---|
@@ -87,7 +88,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-`TERTIARY_WEIGHTS`char **、** varchar **、または** varchar (max)**列の値で定義されている計算列の定義に対して** を使用します。 クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列を指定する場合は、計算列と、**char**、**varchar**、または **varchar(max)** 列の両方に対するインデックス定義によって、パフォーマンスを向上させることができます。
+**char**、**varchar**、または **varchar (max)** 列の値で定義されている計算列の定義に対して `TERTIARY_WEIGHTS` を使用します。 クエリの ORDER BY 句で **char**、**varchar**、または **varchar(max)** 列を指定する場合は、計算列と、**char**、**varchar**、または **varchar(max)** 列の両方に対するインデックス定義によって、パフォーマンスを向上させることができます。
   
 ## <a name="examples"></a>例  
 この例では、`TERTIARY_WEIGHTS` 関数を `char` 列の値に適用するテーブルに計算列を作成します。
@@ -99,7 +100,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

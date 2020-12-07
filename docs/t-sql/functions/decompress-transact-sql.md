@@ -1,4 +1,5 @@
 ---
+description: DECOMPRESS (Transact-SQL)
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4c4309a12f3db14af0d38f9e98e73b7e8c4e6b1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9d6851056673a896e1b07a26ee5d50142272a31a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396701"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96116256"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,12 +32,10 @@ ms.locfileid: "87396701"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引数
  *式 (expression)*  
 **varbinary(** _n_ **)** 、**varbinary(max)** 、または **binary(** _n_ **)** 値。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
@@ -51,7 +50,7 @@ DECOMPRESS ( expression )
 ### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータの圧縮を解除する  
 この例では、圧縮されたテーブル データを返す方法を示します。  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -60,13 +59,13 @@ FROM player;
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. 計算列を使用して圧縮されたデータを表示する  
 この例では、圧縮解除されたデータを格納するテーブルの作成方法を示しています。  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

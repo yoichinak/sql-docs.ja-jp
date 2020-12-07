@@ -1,4 +1,5 @@
 ---
+description: DATABASEPROPERTYEX (Transact-SQL)
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2018
@@ -20,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cf74871f113453f32143145886a297a6b23e21f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d282a1dca21d2b76925c12dddf3002d159aaec64
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113108"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116525"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87113108"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
@@ -126,7 +127,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]この結果セットは、AUTO_SHRINK がオフであることを示しています。
   
-```sql
+```
 ------------------  
 0  
 ```  
@@ -144,7 +145,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Collation                     Edition        ServiceObjective  MaxSizeInBytes  
 ----------------------------  -------------  ----------------  --------------  
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  

@@ -1,4 +1,5 @@
 ---
+description: fn_virtualfilestats (Transact-sql)
 title: fn_virtualfilestats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
@@ -21,17 +22,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481815"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>fn_virtualfilestats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  ログファイルを含む、データベースファイルの i/o 統計を返します。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この情報は、 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動的管理ビューからも利用できます。  
+  ログファイルを含む、データベースファイルの i/o 統計を返します。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この情報は、 [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 動的管理ビューからも利用できます。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,11 +48,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  データベースの ID を示します。 *database_id* は** int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
   
  *file_id* | NULL  
- ファイルの ID を指定します。 *file_id*は**int**,、既定値はありません。 NULL を指定すると、データベース内のすべてのファイルに関する情報が返されます。  
+ ファイルの ID を指定します。 *file_id* は **int**,、既定値はありません。 NULL を指定すると、データベース内のすべてのファイルに関する情報が返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データの種類|説明|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|データベース ID。|  
 |**FileId**|**smallint**|ファイル ID。|  
@@ -66,8 +67,8 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|ファイルハンドルの値。|  
 |**BytesOnDisk**|**bigint**|ディスク上の物理ファイルサイズ (バイト数)。<br /><br /> データベースファイルの場合、この値は、 **database_files**の**サイズ**と同じですが、ページではなくバイト単位で表現されます。<br /><br /> データベーススナップショットのスパースファイルの場合、これはオペレーティングシステムがファイルに対して使用している領域です。|  
   
-## <a name="remarks"></a>Remarks  
- **fn_virtualfilestats**は、ファイルで実行された i/o の合計数などの統計情報を提供するシステムテーブル値関数です。 この関数を使用すると、ユーザーがファイルの読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、関数は、大量の i/o アクティビティが発生しているファイルを特定するのにも役立ちます。  
+## <a name="remarks"></a>解説  
+ **fn_virtualfilestats** は、ファイルで実行された i/o の合計数などの統計情報を提供するシステムテーブル値関数です。 この関数を使用すると、ユーザーがファイルの読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、関数は、大量の i/o アクティビティが発生しているファイルを特定するのにも役立ちます。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -83,8 +84,8 @@ FROM fn_virtualfilestats(1, 1);
 GO  
 ```  
   
-### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B: 名前付きデータベースとファイルの統計情報を表示する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数 `DB_ID` は、 *database_id*パラメーターを指定するために使用されます。  
+### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 名前付きデータベースとファイルの統計情報を表示する  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数 `DB_ID` は、 *database_id* パラメーターを指定するために使用されます。  
   
 ```sql  
 SELECT *  
@@ -92,7 +93,7 @@ FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C: すべてのデータベースおよびファイルの統計情報を表示する  
+### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. すべてのデータベースおよびファイルの統計情報を表示する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースにあるすべてのファイルの統計情報を表示します。  
   
 ```sql  
@@ -101,10 +102,10 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DB_ID &#40;Transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-sql&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

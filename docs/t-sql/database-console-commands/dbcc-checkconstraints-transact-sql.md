@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKCONSTRAINTS (Transact-SQL)
 title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c9599042d8cab079c155496be1fb4e0194bc66fe
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485073"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111146"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 
@@ -125,7 +126,7 @@ DBCC CHECKCONSTRAINTS では、次の列を含む行セットが返されます�
 ```sql  
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE Table1 (Col1 int, Col2 char (30));  
+CREATE TABLE Table1 (Col1 INT, Col2 CHAR(30));  
 GO  
 INSERT INTO Table1 VALUES (100, 'Hello');  
 GO  

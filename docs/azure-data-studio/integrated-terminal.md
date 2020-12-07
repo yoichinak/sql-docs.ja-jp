@@ -1,20 +1,20 @@
 ---
 title: 統合ターミナル
 description: Azure Data Studio に統合されているターミナルを開く方法について説明します。 統合ターミナルは個別のターミナルより便利な場合があります。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
-ms.technology: ''
-ms.reviewer: alayu, maghan, sstein
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 127ea216dccab32a17199b2b5b9e0f3f8d577c24
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 09876b320e4761e6d73756d9cf7db5fc6c66a0b6
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411088"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363999"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 

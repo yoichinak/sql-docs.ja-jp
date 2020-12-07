@@ -1,4 +1,5 @@
 ---
+description: 登録済みサーバー情報のエクスポート (SQL Server Management Studio)
 title: 登録済みサーバーの情報のエクスポート
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6137cc5760caec8017f2aeecc1cbb5dffb19e8a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977929"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037585"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
 
@@ -45,13 +46,13 @@ ms.locfileid: "85977929"
   
 2.  **[登録済みサーバーのエクスポート]** ダイアログ ボックスで、次のオプションを設定します。  
   
-     **[サーバー グループ]**  
+     **サーバー グループ**  
      エクスポートするサーバー グループを指定します。 すべての登録済みサーバー、特定のサーバー グループ内の登録済みサーバー、または 1 つの登録済みサーバーをエクスポート ファイルにエクスポートします。 エクスポート機能は再帰的です。たとえば、サーバー グループ A にはサーバー グループ B が含まれ、サーバー グループ B にはサーバー グループ C および D が含まれます。サーバー グループ A をエクスポートすると、A、B、C、および D のすべてのエントリがエクスポートされます。  
   
      サーバー グループには、現在の登録済みサーバー ツリーのサーバー グループだけが表示されます。  
   
      **[エクスポート ファイル]**  
-     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン ( **[...]** ) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
+     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン (**[...]**) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
   
      **[エクスポート ファイルにユーザー名とパスワードを含めない]**  
      ファイルをエクスポートするときにユーザー名を除外します。  
@@ -60,7 +61,6 @@ ms.locfileid: "85977929"
     >  エクスポート ファイルは暗号化されますが、ユーザー名および SQL&#xA0;Server 認証パスワードがファイルに含まれている場合は、ファイルへのアクセスを慎重に管理する必要があります。 したがって、既定では、ユーザー名およびパスワードはエクスポート ファイルから除外されます。  
   
 ## <a name="see-also"></a>参照  
- [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)   
- [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [登録済みサーバー情報のインポート &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)   
+ [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 135dfc2463b853c182275246b82b9f24c46ba88c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 42b22919b2aeea33ba1ad0ce3229a7507f0c4ded
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894040"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584150"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性グループの PowerShell コマンドレットの概要
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -107,6 +107,5 @@ ms.locfileid: "85894040"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+ [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   

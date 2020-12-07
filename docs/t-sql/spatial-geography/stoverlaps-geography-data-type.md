@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (geography データ型)
 title: STOverlaps (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 94dfdbf56290a38b99fd031771777970597536de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0a4df3ac3d6ac6b3c4d8cf212d83cc0f71582b86
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556057"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88459028"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86556057"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>例  

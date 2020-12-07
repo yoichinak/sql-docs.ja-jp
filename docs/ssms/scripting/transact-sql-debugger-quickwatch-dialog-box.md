@@ -3,7 +3,7 @@ title: '[クイック ウォッチ] ダイアログ ボックス'
 description: コードのデバッグ時に [クイック ウォッチ] ダイアログ ボックスを使用して、変数など、1 つの Transact-SQL 式のデータ型や値をすばやく表示する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab9e15deb9c1f46750d15e2a05e632e4f3f5b0f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 54e2bb30bb2527d8b932b64b037a5809587173b4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247321"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036121"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL デバッガー - [クイック ウォッチ] ダイアログ ボックス
 
@@ -82,11 +82,10 @@ ms.locfileid: "87247321"
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [[ウォッチ] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [[ローカル] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [[呼び出し履歴] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)   
+ [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)   
+ [[ウォッチ] ウィンドウ](./transact-sql-debugger-watch-window.md)   
+ [[ローカル] ウィンドウ](./transact-sql-debugger-locals-window.md)   
+ [[呼び出し履歴] ウィンドウ](./transact-sql-debugger-call-stack-window.md)   
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-  
   

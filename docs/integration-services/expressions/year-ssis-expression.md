@@ -1,4 +1,5 @@
 ---
+description: YEAR (SSIS 式)
 title: YEAR (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 091e739b3c7c367db3f44222cc65c61dfc11c1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7a00ac48568a07663d374eb317b0b680642ef075
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477366"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 式)
 
@@ -41,7 +42,7 @@ YEAR(date)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  引数が NULL の場合、YEAR は NULL を返します。  
   
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
@@ -70,7 +71,7 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

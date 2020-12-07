@@ -1,4 +1,5 @@
 ---
+description: STGeomFromText (geometry データ型)
 title: STGeomFromText (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6d8a79e1bc9ddbbfc86243df0be1caf4f8d8b1c8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0917ef0900d317eeaeb916604cd8e1dc53387b03
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552830"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479377"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

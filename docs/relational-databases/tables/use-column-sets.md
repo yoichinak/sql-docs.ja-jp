@@ -1,4 +1,5 @@
 ---
+description: 列セットの使用
 title: 列セットの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2015
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396173"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125083"
 ---
 # <a name="use-column-sets"></a>列セットの使用
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  
   
@@ -110,9 +111,9 @@ GO
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
- **sql_variant** データ型には、 **int**、 **char**、 **date**などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
+ **sql_variant** データ型には、 **int**、 **char**、 **date** などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
-|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|Precision|スケール|  
+|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大長|有効桁数|スケール|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**、 **varchar**、 **binary**|-1|'Default'|0|0|8000|なし**|適用なし|  
 |**nvarchar**|-1|'Default'|0|0|4000|適用なし|適用なし|  
@@ -128,7 +129,7 @@ GO
   
  **  なし = 列セットでの選択操作時に、対象の属性に対して値が出力されません。 挿入または更新操作で列セットに対して指定された XML 表記で呼び出し元がこの属性に値を指定すると、エラーが発生します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  列セットのセキュリティ モデルは、テーブルと列の間に介在するセキュリティ モデルと同じように機能します。 列セットはミニテーブルとして視覚化できます。選択操作は、このミニテーブルに対する SELECT * 操作と同様です。 ただし、列セットとスパース列は、厳密なコンテナーではなくグループ化の関係にあります。 セキュリティ モデルでは、列セットの列に対してセキュリティがチェックされ、基になるスパース列で DENY 操作が適用されます。 セキュリティ モデルには、これ以外に次のような特性があります。  
   
 -   列セットの列に対し、テーブル内の他の列と同様に、セキュリティ権限を与えたり取り消したりすることができます。  

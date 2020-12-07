@@ -1,4 +1,5 @@
 ---
+description: snapshots.fn_trace_getdata (Transact-SQL)
 title: スナップショット。 fn_trace_getdata (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96120924b3362ec14df84d5043f7b7741a0f2b8f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f022a27c8a8e47cd12994d0d03ddb5af9a2f920c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464782"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,13 +40,13 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="arguments"></a>引数  
  *trace_info_id*  
- スナップショット内の主キーの一意の識別子。管理データウェアハウスデータベースの trace_info テーブルです。 *trace_info_id*は**int**です。  
+ スナップショット内の主キーの一意の識別子。管理データウェアハウスデータベースの trace_info テーブルです。 *trace_info_id* は **int**です。  
   
  *start_time*  
- トレースが開始された時刻。 *start_time*は**datetime**です。  
+ トレースが開始された時刻。 *start_time* は **datetime**です。  
   
  *end_time*  
- トレースが終了した時刻。 *end_time*は**datetime**です。  
+ トレースが終了した時刻。 *end_time* は **datetime**です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -56,7 +57,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
 ## <a name="permissions"></a>アクセス許可  
  mdw_reader に対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

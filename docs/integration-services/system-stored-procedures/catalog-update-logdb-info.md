@@ -1,4 +1,5 @@
 ---
+description: catalog.update_logdb_info (SSISDB データベース)
 title: catalog.update_logdb_info (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887660fae681eb7cdceeb674a6762a1060688be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78a720f0ac29337dd7752fc72fe93ea3a3f91018
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912766"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129648"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info (SSISDB データベース)
 

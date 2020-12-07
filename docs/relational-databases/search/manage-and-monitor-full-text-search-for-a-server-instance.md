@@ -1,4 +1,5 @@
 ---
+description: サーバー インスタンスでのフルテキスト検索の管理と監視
 title: SQL Server インスタンスでのフルテキスト検索の管理と監視
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4ad414772e61a0100b52e9e665255922e5b908e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470121"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "85629458"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー インスタンスのフルテキスト プロパティと各プロパティに関連する [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の一覧を次の表に示します。  
   
-|プロパティ|説明|Function|  
+|プロパティ|説明|機能|  
 |--------------|-----------------|--------------|  
 |**IsFullTextInstalled**|フルテキスト コンポーネントが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のインスタンスと共にインストールされているかどうかを示します。|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  

@@ -1,4 +1,5 @@
 ---
+description: 照合順序と Unicode のサポート
 title: 照合順序と Unicode のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 12/05/2019
@@ -32,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091923"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193512"
 ---
 # <a name="collation-and-unicode-support"></a>照合順序と Unicode のサポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -371,9 +372,6 @@ Windows 照合順序では、関連する Windows システム ロケールに�
 |ヨルバ語 (ナイジェリア)|0x046a|0x0409|Latin1_General_CI_AS|
 |ズールー語 (南アフリカ)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode 専用の照合順序はサーバーレベルの照合順序としてサポートされないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時に選択することはできません。    
-    
 サーバーに照合順序を割り当てた後は、照合順序を簡単には変更できません。変更するには、すべてのデータベース オブジェクトとデータをエクスポートし、*master* データベースを再構築してから、すべてのデータベース オブジェクトとデータをインポートする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定の照合順序を変更する代わりに、新しいデータベースまたはデータベース列の作成時に、目的の照合順序を指定することができます。    
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー照合順序を問い合わせるには、`SERVERPROPERTY` 関数を使用します。
@@ -430,7 +428,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="locale"></a><a name="Locale_Defn"></a> ロケール    
-ロケールは、場所またはカルチャに関連付けられる一連の情報です。 その情報には、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などが含まれる場合があります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「 [Microsoft によって割り当てられているロケール ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)」を参照してください。    
+ロケールは、場所またはカルチャに関連付けられる一連の情報です。 その情報には、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などが含まれる場合があります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「 [Microsoft によって割り当てられているロケール ID](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)」を参照してください。    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> コード ページ    
 コード ページは、特定の文字表記の順序付けられた文字のセットです。コード ページでは、数値インデックス (コード ポイント値) が各文字に関連付けられます。 Windows コード ページは、通常は "*文字セット*" または *charset* と呼ばれています。 コード ページは、各種の Windows システム ロケールで使用される文字セットおよびキーボード レイアウトをサポートするために使用されます。     
@@ -649,10 +647,12 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 * [OLE DB Driver for SQL Server の UTF-8 のサポート](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
 * [SQL Server 照合順序名 (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)  
 * [Windows 照合順序名 (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
-* [SQL Server 用の UTF-8 サポートの概要](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
+* [SQL Server 用の UTF-8 サポートの概要](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)      
+* [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)      
+* [照合順序の優先順位](../../t-sql/statements/collation-precedence-transact-sql.md)    
     
 ## <a name="see-also"></a>関連項目    
 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)     
 [フルテキスト インデックス作成時の言語の選択](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
+[1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

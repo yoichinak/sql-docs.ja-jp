@@ -1,4 +1,5 @@
 ---
+description: '[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7854a8121c16d263da900ffc3f8475a4fe4dddff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484138"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -39,7 +40,7 @@ ms.locfileid: "86922398"
  **SQL ステートメント**  
 自動生成された SQL ステートメントが表示され、編集できます。
  
-既定の CREATE TABLE コマンドを変更する場合は、 **[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
+既定の CREATE TABLE コマンドを変更する場合は、**[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
   
 SQL ステートメントのテキストにキャリッジ リターンを含めるには、Ctrl キーを押しながら Enter キーを押します。 Enter キーだけを押すと、ダイアログ ボックスが閉じます。  
   
@@ -55,10 +56,10 @@ CREATE TABLE ステートメントと構文の詳細については、「[CREATE
 
 構文の詳細については、「[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)」を参照してください。 FILESTREAM の詳細については、「[バイナリ ラージ オブジェクト (Blob) データ (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)」を参照してください。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  CREATE TABLE コマンドを確認し、カスタマイズしてから **[OK]** をクリックすると、 **[テーブル作成 SQL ステートメント]** ダイアログ ボックスから **[列マッピング]** ダイアログ ボックスに戻ります。 詳細については、「 [列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

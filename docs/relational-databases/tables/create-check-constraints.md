@@ -1,4 +1,5 @@
 ---
+description: CHECK 制約の作成
 title: CHECK 制約の作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753835"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128765"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85753835"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **新しい CHECK 制約を作成する方法:**  
   
@@ -52,9 +53,9 @@ ms.locfileid: "85753835"
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、CHECK 制約を追加するテーブルを展開し、 **[制約]** を右クリックして、 **[新しい制約]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、CHECK 制約を追加するテーブルを展開し、 **[制約]** を右クリックして、 **[新しい制約]** をクリックします。  
   
-2.  **[CHECK 制約]** ダイアログ ボックスで、 **[式]** フィールドをクリックして、省略記号 **[...]** をクリックします。  
+2.  **[CHECK 制約]** ダイアログ ボックスで、**[式]** フィールドをクリックして、省略記号 **[...]** をクリックします。  
   
 3.  **[CHECK 制約式]** ダイアログ ボックスで、CHECK 制約の SQL 式を入力します。 たとえば、 `SellEndDate` テーブルの `Product` 列への入力を `SellStartDate` 列の日付と同じか、それよりも後の日付の値または NULL 値に限定するには、次のように入力します。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85753835"
   
 6.  **テーブル デザイナー** のカテゴリでは、制約が適用されるタイミングを設定できます。  
   
-    |**To:**|**[はい] を選択するフィールド:**|  
+    |**次のように** 変更します。|**[はい] を選択するフィールド:**|  
     |-------------|---------------------------------------------|  
     |制約を作成する前に既に存在していたデータで制約をテストする|**[作成または有効化するときに既存データを確認]**|  
     |このテーブルでレプリケーション操作が発生するたびに制約を適用する|**[レプリケーションに対して適用]**|  
@@ -89,7 +90,7 @@ ms.locfileid: "85753835"
   
 #### <a name="to-create-a-new-check-constraint"></a>新しい CHECK 制約を作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

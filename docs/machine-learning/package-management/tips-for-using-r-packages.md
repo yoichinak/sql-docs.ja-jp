@@ -1,5 +1,6 @@
 ---
 title: R パッケージを使用するためのヒント
+titleSuffix: SQL machine learning
 description: R または SQL Server を初めて使用するユーザー向けに、SQL Server で R パッケージを使用する際に役立つヒントについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,18 +8,17 @@ ms.date: 08/06/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c43c5e252c016d8d2094dc2b26d6e87fe3f05749
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730538"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869961"
 ---
 # <a name="tips-for-using-r-packages"></a>R パッケージを使用するためのヒント
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 この記事では、SQL Server で R パッケージを使用する際に役立つヒントについて説明します。 これらのヒントは、R に不慣れな DBA と、SQL Server インスタンスでのパッケージ アクセスには不慣れで R の経験は豊富な開発者向けです。
 

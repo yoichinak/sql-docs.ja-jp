@@ -1,4 +1,5 @@
 ---
+description: dm_resource_governor_configuration (Transact-sql)
 title: dm_resource_governor_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_configuration dynamic management view
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4b2a8e13035e04b67fb510570914bcb5fddfcac6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10afeea81e957b4a87eaa5466c6211adff40775e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898658"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546515"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>dm_resource_governor_configuration (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85898658"
 |is_reconfiguration_pending|**bit**|グループまたはプールに対する変更が ALTER RESOURCE GOVERNOR 再構成ステートメントで行われたが、メモリ内の構成に適用されていないかどうかを示します。 返される値は次のいずれかです。<br /><br /> 0-再構成ステートメントは必要ありません。<br /><br /> 1: 保留中の構成変更を適用するため、再構成ステートメントまたはサーバーの再起動が必要です。<br /><br /> **注:** Resource Governor が無効になっている場合、返される値は常に0です。<br /><br /> NULL 値は許可されません。|  
 |max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、対応するカタログビューを使用します。  
   
  次の例では、格納されているメタデータ値と Resource Governor 構成のメモリ内の値を取得して比較する方法を示します。  
@@ -64,8 +65,8 @@ go
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: システム バージョン管理のテンポラル テーブルのデータの変更
 title: システム バージョン管理のテンポラル テーブルのデータの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0860b822341fb3c974fbdd80726082cd3b1abbf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f6c431669d89f87c49cfd96d48e6b3c53c8d866e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555279"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548877"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理のテンポラル テーブルのデータの変更
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 システム バージョン管理のテンポラル テーブル内のデータは、通常の DML ステートメントを使用して変更しますが、1 つの重要な違いがあり、期間の列のデータは直接変更できません。 データが更新されると、バージョンが更新されて、更新された各行の以前のバージョンが、履歴テーブルに挿入されます。 データが削除された場合、削除は論理的で、行が現在のテーブルから履歴テーブルに移動され、完全に削除されるわけではありません。
 
@@ -36,7 +39,7 @@ ms.locfileid: "86555279"
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

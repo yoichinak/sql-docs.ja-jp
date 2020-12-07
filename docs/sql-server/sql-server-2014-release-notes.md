@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f2b94f4458e29090559e2fdf7d5819cddb30842f
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111125"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384852"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ SQL Server 2014 SP2 には、SQL Server 2014 SP1 CU7 以降にリリースされ
 
 |機能|説明|詳細情報|
 |---|---|---|
-|ソフト NUMA の自動パーティション分割|NUMA ノードあたり 8 個以上の CPU をレポートするシステムでは、ソフト NUMA を自動的に構成できます。|[ソフト NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
-|バッファー プール拡張|SQL Server のバッファー プールを 8 TB より大きく拡張できます。|[バッファー プール拡張](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
-|メモリ オブジェクトの動的スケーリング| ノードとコアの数に基づいて、メモリ オブジェクトを動的にパーティション分割します。 この機能強化により、SQL 2014 SP2 以降ではトレース フラグ 8048 が必要なくなります。|[メモリ オブジェクトの動的スケーリング](https://blogs.msdn.microsoft.com/sql_server_team/dynamic-memory-object-scaling/)|
-|DBCC CHECK * コマンドに対する MAXDOP ヒント|この機能強化は、MAXDOP を sp_configure 以外の値に設定して DBCC CHECKDB を実行する場合に役に立ちます。|[ヒント (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)|
-|SOS_RWLock スピンロックの向上|SOS_RWLock に対するスピンロックの必要性をなくし、代わりにインメモリ OLTP に似たロック制御不要の手法を使います。 |[SOS_RWLock の再設計](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)|
+|ソフト NUMA の自動パーティション分割|NUMA ノードあたり 8 個以上の CPU をレポートするシステムでは、ソフト NUMA を自動的に構成できます。|[ソフト NUMA (SQL Server)](../database-engine/configure-windows/soft-numa-sql-server.md)|
+|バッファー プール拡張|SQL Server のバッファー プールを 8 TB より大きく拡張できます。|[バッファー プール拡張](../database-engine/configure-windows/buffer-pool-extension.md)|
+|メモリ オブジェクトの動的スケーリング| ノードとコアの数に基づいて、メモリ オブジェクトを動的にパーティション分割します。 この機能強化により、SQL 2014 SP2 以降ではトレース フラグ 8048 が必要なくなります。|[メモリ オブジェクトの動的スケーリング](/archive/blogs/sql_server_team/dynamic-memory-object-scaling)|
+|DBCC CHECK * コマンドに対する MAXDOP ヒント|この機能強化は、MAXDOP を sp_configure 以外の値に設定して DBCC CHECKDB を実行する場合に役に立ちます。|[ヒント (Transact-SQL) - Query](../t-sql/queries/hints-transact-sql-query.md)|
+|SOS_RWLock スピンロックの向上|SOS_RWLock に対するスピンロックの必要性をなくし、代わりにインメモリ OLTP に似たロック制御不要の手法を使います。 |[SOS_RWLock の再設計](/archive/blogs/psssql/sql-2016-it-just-runs-faster-sos_rwlock-redesign)|
 |空間のネイティブ実装|空間クエリのパフォーマンスが大幅に向上します。|[SQL Server 2012 および 2014 での空間パフォーマンスの向上](https://support.microsoft.com/help/3107399/spatial-performance-improvements-in-sql-server-2012-and-2014)
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 でのサポート性と診断の向上
 
 |機能|説明|詳細情報|
 |---|---|---|
-|AlwaysON のタイムアウト ログ|リース タイムアウト メッセージに対する新しいログ機能が追加され、現在の時刻と予想される更新時刻がログに記録されるようになります。 |[AlwaysOn 可用性グループのリース タイムアウトの診断の向上](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
+|AlwaysON のタイムアウト ログ|リース タイムアウト メッセージに対する新しいログ機能が追加され、現在の時刻と予想される更新時刻がログに記録されるようになります。 |[AlwaysOn 可用性グループのリース タイムアウトの診断の向上](/archive/blogs/alwaysonpro/improved-alwayson-availability-group-lease-timeout-diagnostics)
 |AlwaysON XEvent とパフォーマンス カウンター|AlwaysON での待機時間の問題をトラブルシューティングするときの診断が向上する、新しい AlwaysON XEvent とパフォーマンス カウンター。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) および [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
 |変更の追跡のクリーンアップ|新しいストアド プロシージャ sp_flush_CT_internal_table_on_demand は、要求があると変更の追跡の内部テーブルをクリーンアップします。|[KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)
 |データベースの複製|新しい DBCC コマンドを使って、データを除いてスキーマ、メタデータ、統計情報を複製することにより、既存の運用データベースのトラブルシューティングを行います。 複製されたデータベースは、運用環境で使うためのものではありません。|[KB 3177838](https://support.microsoft.com/help/3177838/how-to-use-dbcc-clonedatabase-to-generate-a-schema-and-statistics-only)
 |DMF の追加|DMF の新しい sys.dm_db_incremental_stats_properties は、増分統計の情報をパーティションごとに公開します。|[KB 3170114](https://support.microsoft.com/help/3170114/update-to-add-dmf-sys-dm-db-incremental-stats-properties-in-sql-server)
-|SQL Server の入力バッファーを取得するための DMF|セッション/要求の入力バッファーを取得するための新しい DMF (sys.dm_exec_input_buffer) を使用できるようになりました。 これは DBCC INPUTBUFFER と同等の機能です。|[sys.dm_exec_input_buffer](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql)
+|SQL Server の入力バッファーを取得するための DMF|セッション/要求の入力バッファーを取得するための新しい DMF (sys.dm_exec_input_buffer) を使用できるようになりました。 これは DBCC INPUTBUFFER と同等の機能です。|[sys.dm_exec_input_buffer](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
 |DROP DDL によるレプリケーションのサポート|トランザクション レプリケーション パブリケーションにアーティクルとして含まれるテーブルを、データベースとパブリケーションから削除できます。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
-|SQL サービス アカウントに対する IFI 特権|SQL Server サービスの起動時にファイルの瞬時初期化 (IFI) が有効かどうかを判断します。|[データベース ファイルの初期化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
+|SQL サービス アカウントに対する IFI 特権|SQL Server サービスの起動時にファイルの瞬時初期化 (IFI) が有効かどうかを判断します。|[データベース ファイルの初期化](../relational-databases/databases/database-instant-file-initialization.md)
 |メモリ許可 - 問題の処理|メモリ許可を制限してメモリの競合を防ぐことにより、クエリ実行中に診断ヒントを利用できます。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|演算子ごとのクエリ実行軽量プロファイリング |実際の行数など、演算子ごとのクエリ実行統計の収集を最適化します。|[開発者の選択:クエリの進行状況 - いつでも、どこでも](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|演算子ごとのクエリ実行軽量プロファイリング |実際の行数など、演算子ごとのクエリ実行統計の収集を最適化します。|[開発者の選択:クエリの進行状況 - いつでも、どこでも](/archive/blogs/sql_server_team/query-progress-anytime-anywhere)
 |クエリ実行の診断|クエリ パフォーマンスのトラブルシューティング向上のため、読み取られた実際の行がクエリ実行プランで報告されるようになりました。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |tempdb の書き込みに対するクエリ実行の診断|Hash Warning および Sort Warnings に、物理 I/O 統計、メモリ使用、および行への影響を追跡するための列が追加されました。 |[temptdb 書き込み診断の向上](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |tempdb のサポート性 |サーバーの起動時に、tempdb ファイルの数および tempdb データ ファイルの変更に対して新しいエラー ログ メッセージを使います。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -82,9 +82,9 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 ### <a name="download-pages-and-more-information-for-sp1"></a>SP1 のダウンロード ページと詳細情報
 
 - [Microsoft SQL Server 2014 用 Service Pack 1 のダウンロード](https://www.microsoft.com/download/details.aspx?id=46694)
-- [SQL Server 2014 Service Pack 1 がリリースされました – 更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
+- [SQL Server 2014 Service Pack 1 がリリースされました – 更新](/archive/blogs/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated)
 - [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
-- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
+- [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
 ## <a name="before-you-install-sql-server-2014-rtm"></a>SQL Server 2014 RTM をインストールする前に
@@ -103,7 +103,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 1.  SQL Server 2014 RTM インスタンスに SQL Server 2014 CTP 2 データベースをアタッチ。    
 2.  SQL Server 2014 CTP 2 で作成したデータベース バックアップを SQL Server 2014 RTM インスタンスに復元。    
 3.  SQL Server 2014 RTM へのインプレース アップグレード。
-4.  SQL Server 2014 RTM へのローリング アップグレード。 ローリング アップグレードを開始する前に、手動フェールオーバー モードに切り替える必要があります。 詳細については、「[ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新](https://msdn.microsoft.com/library/dn178483.aspx)」を参照してください。    
+4.  SQL Server 2014 RTM へのローリング アップグレード。 ローリング アップグレードを開始する前に、手動フェールオーバー モードに切り替える必要があります。 詳細については、「[ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。    
 5.  SQL Server 2014 CTP 2 にインストールされたトランザクション パフォーマンス コレクション セットによって収集されたデータを、SQL Server 2014 RTM の SQL Server Management Studio で表示することはできません。その逆も同じです。
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>SQL Server 2014 RTM から SQL Server 2014 CTP 2 へのダウングレード  
@@ -114,7 +114,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 メディア/ISO/CAB 上の不正なバージョンの StreamInsight クライアント  
 SQL Server の media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>) 上に間違ったバージョンの StreamInsight.msi および StreamInsightClient.msi があります。  
   
-**対処法:** [SQL Server 2014 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールします。  
+**対処法:** [SQL Server 2014 Feature Pack のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=57474)から正しいバージョンをダウンロードしてインストールします。  
   
 ### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>製品ドキュメント RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard では、次の点が変更されています。
 -   最大メモリは 64 GB から 128 GB に拡大されました。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>メモリ最適化アドバイザーは既定の制約に対して互換性なしのフラグを設定  
-**問題:** SQL Server Management Studio のメモリ最適化アドバイザーは、すべての既定の制約に対して、互換性なしというフラグを設定します。 既定の制約すべてが、メモリ最適化テーブルでサポートされているわけではありません。アドバイザーは、既定の制約のうち、サポートされている種類とサポートされていない種類を区別しません。 サポートされている既定の制約として、すべての定数や、ネイティブ コンパイル ストアド プロシージャ内でサポートされている式と組み込み関数を挙げることができます。 ネイティブ コンパイル ストアド プロシージャでサポートされる関数の一覧については、「 [ネイティブ コンパイル ストアド プロシージャでサポートされる構造](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)」を参照してください。  
+**問題:** SQL Server Management Studio のメモリ最適化アドバイザーは、すべての既定の制約に対して、互換性なしというフラグを設定します。 既定の制約すべてが、メモリ最適化テーブルでサポートされているわけではありません。アドバイザーは、既定の制約のうち、サポートされている種類とサポートされていない種類を区別しません。 サポートされている既定の制約として、すべての定数や、ネイティブ コンパイル ストアド プロシージャ内でサポートされている式と組み込み関数を挙げることができます。 ネイティブ コンパイル ストアド プロシージャでサポートされる関数の一覧については、「 [ネイティブ コンパイル ストアド プロシージャでサポートされる構造](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md?viewFallbackFrom=sql-server-2014)」を参照してください。  
   
 **対処法:** 障害となる問題を識別する目的でアドバイザーを使用する場合は、互換性のある既定の制約に関する表示を無視してください。 メモリ最適化アドバイザーを使用して、互換性のある既定の制約を含み、障害となる他の問題が存在しないテーブルを移行する場合は、次の手順を実行します:  
   
@@ -270,7 +270,7 @@ DATEPART(weekday, @d)
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>SSMS を使用して登録を行うと、不一致のインスタンス ID を持つ DAC メタデータが追加される  
 **問題:** SQL Server Management Studio を使用してデータ層アプリケーション パッケージ (.dacpac) を登録または削除すると、sysdac* テーブルが正しく更新されず、データベースに対して dacpac 履歴のクエリを実行できません。  sysdac_history_internal と sysdac_instances_internal の instance_id が一致せず、結合が許可されません。  
   
-**対処法:** この問題は、[データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=42295)の Feature Pack の再配布で修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
+**対処法:** この問題は、 [データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=100297)の Feature Pack の再配布で修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
   
 instance_id の値の不一致という問題が既に発生している場合は、不一致の値を修正する唯一の方法は、MSDB データベースへ書き込む特権を持つユーザーとしてサーバーに接続し、instance_id の値を更新して一致させることです。  同じデータベースから複数の登録イベントと登録解除イベントが発生する場合は、時刻と日付を参照し、どのレコードが現在の instance_id の値と一致しているかを確認する必要があります。  
   
@@ -348,7 +348,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
     この回避策により、ウィザードは Azure 内でレプリカの追加を完了することができます。  
   
-2.  ウィザードが完了した後、「[Azure での AlwaysOn 可用性グループに対するリスナーの構成](https://msdn.microsoft.com/library/dn376546.aspx)」で説明されているように、Azure でリスナーの構成を完了する必要があります  
+2.  ウィザードが完了した後、「[Azure での AlwaysOn 可用性グループに対するリスナーの構成](/previous-versions/azure/dn376546(v=azure.100))」で説明されているように、Azure でリスナーの構成を完了する必要があります  
   
 ### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **対処法:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
-2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
+2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)」を参照してください。  
   
 **詳細情報:**  
   
@@ -374,9 +374,9 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **対処法:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。 Excel Services を実行しているアプリケーション サーバーにプロバイダーをインストールします。 詳細については、「[Microsoft SQL Server 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35575)」の「Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1」を参照してください。  
   
-2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](https://technet.microsoft.com/library/hh758436.aspx)」を参照してください。  
+2.  MSOLAP.5 を信頼できるプロバイダーとして SharePoint Excel Services に登録します。 詳細については、「 [Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加](/analysis-services/power-pivot-for-sharepoint-ssas?viewFallbackFrom=sql-server-ver15)」を参照してください。  
   
 **詳細情報:**  
   
@@ -411,7 +411,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 アップグレード アドバイザーが SQL Server Reporting Services に関係のないアップグレードの問題点を報告する  
 **問題:** SQL Server 2014 メディアに収録されている SQL Server アップグレード アドバイザー (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  
   
-**対処法:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
+**対処法:** この問題は、 [SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 アップグレード アドバイザーで SQL Server Integration Services サーバーを分析するときにエラーが報告される  
 **問題:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) により、SQL Server Integration Services サーバーを分析するときにエラーが報告されます。  ユーザーに対して表示されるエラーは、次のようなものです。  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**対処法:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
+**対処法:** この問題は、 [SSUA 用の SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=57474) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

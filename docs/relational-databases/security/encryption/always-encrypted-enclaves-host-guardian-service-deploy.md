@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410988"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868205"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] のホスト ガーディアン サービスを展開する
 
@@ -53,7 +53,7 @@ ms.locfileid: "87410988"
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    HGS コンピューターが再起動され、Active Directory フォレストの構成が完了します。 次回のログイン時に、お使いの管理者アカウントがドメイン管理者アカウントになります。 新しいフォレストの管理とセキュリティ保護の詳細については、[Active Directory Domain Services 操作に関するドキュメント](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)を参照することをお勧めします。
+    HGS コンピューターが再起動され、Active Directory フォレストの構成が完了します。 次回のログイン時に、お使いの管理者アカウントがドメイン管理者アカウントになります。 新しいフォレストの管理とセキュリティ保護の詳細については、[Active Directory Domain Services 操作に関するドキュメント](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations)を参照することをお勧めします。
 
 3. 次に、管理者特権の Windows PowerShell コンソールで次のコマンドを実行して、HGS クラスターを設定し、構成証明サービスをインストールします。
 
@@ -218,7 +218,7 @@ HGS のすべての実稼働インスタンスで HTTPS バインドを使用す
 
 1. 手順 1.3 の完全修飾 HGS サービス名をサブジェクト名として使用して、証明機関から TLS 証明書を取得します。 サービス名がわからない場合は、任意の HGS コンピューターで `Get-HgsServer` を実行して確認できます。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターが別の DNS 名を使用して HGS クラスターに接続している場合 (たとえば、HGS が異なるアドレスを持つネットワーク ロード バランサーの後ろにある場合)、代替 DNS 名をサブジェクト代替名の一覧に追加できます。
 
-2. HGS コンピューターで [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) を使用して HTTPS バインドを有効にし、前の手順で取得した TLS 証明書を指定します。 ローカル証明書ストアのコンピューターに証明書が既にインストールされている場合は、次のコマンドを使用して HGS に登録します。
+2. HGS コンピューターで [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) を使用して HTTPS バインドを有効にし、前の手順で取得した TLS 証明書を指定します。 ローカル証明書ストアのコンピューターに証明書が既にインストールされている場合は、次のコマンドを使用して HGS に登録します。
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

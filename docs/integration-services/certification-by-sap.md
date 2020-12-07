@@ -1,4 +1,5 @@
 ---
+description: SAP による認定
 title: SAP による認定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 634088a2d6eec7c9a435e530d3837f46f9252470
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c6da38ed30cef94a51f5e8028358232a6179069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484874"
 ---
 # <a name="certification-by-sap"></a>SAP による認定
 
@@ -31,6 +32,6 @@ ms.locfileid: "86922572"
 |SAP インターフェイス|SAP リリース レベル|認定日|関連するコンポーネント|  
 |-------------------|------------------------|------------------------|-----------------------|  
 |BW-OHS 7.0 - SAP NetWeaver Business Intelligence - オープン ハブ サービス 7.0|Business Intelligence 7.0|2012 年 12 月|source|  
-|BW-STA 3.5 - SAP BW 3.5 用ステージング BAPI|Business Intelligence 3.5、7.0|2012 年 12 月|宛先|  
+|BW-STA 3.5 - SAP BW 3.5 用ステージング BAPI|Business Intelligence 3.5、7.0|2012 年 12 月|到着地|  
   
   

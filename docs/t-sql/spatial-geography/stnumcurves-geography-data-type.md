@@ -1,4 +1,5 @@
 ---
+description: STNumCurves (geography データ型)
 title: STNumCurves (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 07626f3ded35ee9c4075e08765b76974d1c1b209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3f2d2eead1803745d58cc827b85acd612f925a0e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556060"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88306038"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

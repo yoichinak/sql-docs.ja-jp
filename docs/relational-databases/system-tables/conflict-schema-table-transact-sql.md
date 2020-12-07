@@ -1,4 +1,5 @@
 ---
+description: conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql)
 title: conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 126474b4efe2eafb5c235d1ba4a31e433d71500c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890582"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544668"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85890582"
 |__$change_id|**binary (8)**|ローカル行の場合、この値はローカル行と競合している挿入行の __$row_id に等しくなります。 この値は、受信行の場合は NULL です。|  
 |\<base table column names>|\<base table column types>|競合テーブルには、ベーステーブルの列ごとに1つの列が含まれています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

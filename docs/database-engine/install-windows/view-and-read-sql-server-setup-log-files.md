@@ -16,15 +16,15 @@ helpviewer_keywords:
 - errors [SQL Server], Setup
 - logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4cf535ee95b91a0e9b6ed3ba2b8745478736a142
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900169"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125667"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 
@@ -44,7 +44,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
    | **無人インストールの場合** | %temp%\sqlsetup*.log |
 
 
- ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
+ ![Setup Bootstrap フォルダーの ConfigurationFiles.ini ファイルの検索場所を示すスクリーンショット。](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
  >[!NOTE]
  > パス *nnn* の数字は、インストールされる SQL のバージョンに相当します。 上記の画像では、SQL 2017 がインストールされ、フォルダーは 140 です。 SQL 2016 の場合、フォルダーは 130 になり、SQL 2014 の場合、フォルダーは 120 になります。
@@ -128,7 +128,7 @@ SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsof
 ## <a name="configurationfileini-file"></a>ConfigurationFile.ini ファイル
   
 ### <a name="overview"></a>概要  
- 構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。  
+ 構成ファイルにはインストール時に使用される入力の設定が含まれています。 手動で設定を入力しなくてもインストールを再起動できるようにするときに使用できます。 ただし、パスワード、PID、およびパラメーターの一部は構成ファイルには保存されません。 設定はファイルに追加できますが、コマンドラインまたはセットアップのインターフェイスを使って供給することもできます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](./install-sql-server-using-a-configuration-file.md)」を参照してください。  
   
 ### <a name="location"></a>場所  
  ConfigurationFile.ini は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。  

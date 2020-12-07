@@ -1,4 +1,5 @@
 ---
+description: service_contract_usages (Transact-sql)
 title: service_contract_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_usages catalog view
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fbf34e4247feb3911201f27518be57375971b40d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b44ee215023a33cb27c73e16933bfafd9839703
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894918"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539547"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>service_contract_usages (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

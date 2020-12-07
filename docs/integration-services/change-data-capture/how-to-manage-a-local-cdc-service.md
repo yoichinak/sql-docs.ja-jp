@@ -1,4 +1,5 @@
 ---
+description: ローカルの CDC Service を管理する方法
 title: ローカルの CDC Service を管理する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 488ff9dc4cbe33881e7c7c9bf80d4a5d347507d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496185"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>ローカルの CDC Service を管理する方法
 
@@ -61,6 +62,6 @@ ms.locfileid: "86916559"
          または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]** を選択します。  
   
 ## <a name="see-also"></a>参照  
- [Oracle CDC Service の管理](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

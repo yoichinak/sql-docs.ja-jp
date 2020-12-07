@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_memory_grants (Transact-SQL)
 title: dm_exec_query_memory_grants (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -17,22 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da496a91a9ed3fa6a391d0862de7eb7fde391480
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734761"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546607"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  メモリ許可を待機しているか、メモリ許可が与えられている、要求されたすべてのクエリに関する情報を返します。 メモリ許可を必要としないクエリは、このビューに表示されません。 たとえば、並べ替えとハッシュ結合の操作には、クエリの実行にメモリ許可がありますが、 **ORDER by**句を使用しないクエリにはメモリ許可がありません。  
+  メモリ許可を待機しているか、メモリ許可が与えられている、要求されたすべてのクエリに関する情報を返します。 メモリ許可を必要としないクエリは、このビューに表示されません。 たとえば、並べ替えとハッシュ結合の操作には、クエリの実行にメモリ許可がありますが、 **ORDER by** 句を使用しないクエリにはメモリ許可がありません。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。また、列**scheduler_id**、 **wait_order**、 **pool_id**、 **group_id**の値がフィルター処理されます。列の値が NULL に設定されています。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。また、列 **scheduler_id**、 **wait_order**、 **pool_id**、 **group_id** の値がフィルター処理されます。列の値が NULL に設定されています。  
   
 > [!NOTE]  
 > またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_exec_query_memory_grants**という名前を使用します。  
@@ -47,7 +48,7 @@ ms.locfileid: "85734761"
 |**grant_time**|**datetime**|このクエリにメモリが許可された日付と時刻。 メモリがまだ許可されていない場合は NULL です。|  
 |**requested_memory_kb**|**bigint**|メモリの要求量の合計 (KB 単位)。|  
 |**granted_memory_kb**|**bigint**|実際に許可されたメモリの総量 (KB 単位)。 メモリがまだ許可されていない場合、NULL になることがあります。 一般的な状況では、この値は **requested_memory_kb** と同じになります。 インデックス作成では、最初に許可されたメモリ量を超えて、追加のオンデマンド メモリが許可される場合があります。|  
-|**required_memory_kb**|**bigint**|このクエリを実行するために必要な最小メモリ (kb 単位)。 **requested_memory_kb**がこの値と同じか、それより大きいです。|  
+|**required_memory_kb**|**bigint**|このクエリを実行するために必要な最小メモリ (kb 単位)。 **requested_memory_kb** がこの値と同じか、それより大きいです。|  
 |**used_memory_kb**|**bigint**|この時点で使用されている物理メモリ (KB 単位)。|  
 |**max_used_memory_kb**|**bigint**|この時点までに使用された最大物理メモリ (KB 単位)。|  
 |**query_cost**|**float**|推定クエリ コスト。|  
@@ -63,10 +64,10 @@ ms.locfileid: "85734761"
 |**pool_id**|**int**|このワークロード グループが属するリソース プールの ID。|  
 |**is_small**|**tinyint**|1 に設定すると、この許可で小さなリソース セマフォが使用されます。 0 に設定すると、通常のセマフォが使用されます。|  
 |**ideal_memory_kb**|**bigint**|物理メモリ内にすべてを収めるために必要なメモリ許可のサイズ (KB 単位)。 これはカーディナリティの推定値に基づいています。|  
-|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
-|**reserved_worker_count**|**bigint**|予約済み[ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)の数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
-|**used_worker_count**|**bigint**|現時点で使用されている[ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)の数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**max_used_worker_count**|**bigint**|この時点までに使用された[ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)の最大数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**reserved_worker_count**|**bigint**|予約済み [ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)の数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|**used_worker_count**|**bigint**|現時点で使用されている [ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) の数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**max_used_worker_count**|**bigint**|この時点までに使用された [ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) の最大数。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**reserved_node_bitmap**|**bigint**|[ワーカースレッド](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)が予約されている NUMA ノードのビットマップ。<br /><br />**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -74,7 +75,7 @@ ms.locfileid: "85734761"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  クエリ タイムアウトの一般的なデバッグ方法は、次のようになります。  
   
 -   [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)、[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)、およびさまざまなパフォーマンス カウンターを使用して、全体的なシステム メモリ状態を調べます。  
@@ -90,7 +91,7 @@ ms.locfileid: "85734761"
     
     <sup>1</sup> このシナリオの場合、待機の種類は一般的に RESOURCE_SEMAPHORE になります。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 
   
--   Dm_exec_cached_plans を使用してメモリ許可を持つクエリのキャッシュを検索し[ます。 transact-sql dm_exec_query_plan&#41;&#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) [&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Dm_exec_cached_plans を使用してメモリ許可を持つクエリのキャッシュを検索し [ます。 transact-sql dm_exec_query_plan&#41;&#40;transact-sql ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) [&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -118,9 +119,9 @@ ms.locfileid: "85734761"
   
  データベース管理者は、リソース ガバナー機能を使用することで、サーバー リソースを最大 64 個までのリソース プールに分散できます。 以降 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、各プールは小規模の独立したサーバーインスタンスのように動作し、2つのセマフォが必要です。 **Dm_exec_query_resource_semaphores**から返される行の数は、で返された行より最大で20倍になることがあります [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [実行関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)   
   

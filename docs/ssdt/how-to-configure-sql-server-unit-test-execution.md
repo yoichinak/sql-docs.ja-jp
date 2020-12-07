@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519032"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987968"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>方法:SQL Server の単体テストの実行を構成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "85519032"
 -   **スキーマ配置**。 データベース プロジェクトは、データベースのオフライン表現です。 データベース プロジェクトはデータベース オブジェクトの構造を表しますが、データは含まれません。 データベース プロジェクトでスキーマを変更した後、実際のデータベースでテストできます。 スキーマ配置の手順では、テストするデータベース オブジェクトがデータベース プロジェクトからテストを実行するデータベースにコピーされます。 スキーマの配置について詳しくは、「[データベース スキーマの配置](#DeployingDBSchema)」をご覧ください。  
   
     > [!NOTE]  
-    > テストは、ソリューション フォルダーではなく、ローカル ハード ディスク上の別のフォルダーで実行されます。 テスト配置の特性を構成できますが、通常、単体テスト用に構成する必要はありません。 テスト配置について詳しくは、「[テストの実行](https://msdn.microsoft.com/library/dd286680(VS.100).aspx)」をご覧ください。  
+    > テストは、ソリューション フォルダーではなく、ローカル ハード ディスク上の別のフォルダーで実行されます。 テスト配置の特性を構成できますが、通常、単体テスト用に構成する必要はありません。 テスト配置について詳しくは、「[テストの実行](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100))」をご覧ください。  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>接続文字列の指定  
   
@@ -85,4 +85,3 @@ ms.locfileid: "85519032"
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

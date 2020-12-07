@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0febaf92d4bdc58ce4e714391c8d4789158a986f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392790"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688098"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "86392790"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -99,7 +98,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 任意のデータベース プリンシパルについてテーブルで SELECT と INSERT を監査する 
  次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`Payrole_Security_Audit` データベースの `SELECT` テーブルで `INSERT` ユーザーによる `dbo` ステートメントと `HumanResources.EmployeePayHistory` ステートメントを監査する、`AdventureWorks2012` というデータベース監査仕様を作成します。  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -126,7 +125,7 @@ GO
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 特定のデータベース ロールについて _sales_ スキーマの_すべて_のオブジェクトで任意の DML (INSERT、UPDATE、または DELETE) を監査する  
  次の例では、`DataModification_Security_Audit` というサーバー監査を作成した後、`Audit_Data_Modification_On_All_Sales_Tables` データベースでの `INSERT` スキーマのすべてのオブジェクトについて、新しいデータベース ロール `UPDATE` のユーザーによる `DELETE`、`SalesUK` および `Sales` ステートメントを監査する、`AdventureWorks2012` というデータベース監査仕様を作成します。  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

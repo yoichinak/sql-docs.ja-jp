@@ -1,4 +1,5 @@
 ---
+description: データベース メール ストアド プロシージャ (Transact-SQL)
 title: データベースメールストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e4b4b54bbe70ab1f1362b574722fc77c6fea1bc2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddff9d691d25902a677e5079a625a753da64eb62
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977594"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542053"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>データベース メール ストアド プロシージャ (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

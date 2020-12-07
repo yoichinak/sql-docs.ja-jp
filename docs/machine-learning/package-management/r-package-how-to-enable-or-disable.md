@@ -7,17 +7,16 @@ ms.date: 06/13/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c857d5ba86fa1cb10097cf91ee5d591b67f94
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757141"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869910"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server のパッケージのリモート管理を有効または無効にする
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 この記事では、クライアント ワークステーションまたは別の Machine Learning Server から R パッケージのリモート管理を有効にする方法について説明します。 SQL Server でパッケージ管理機能が有効になったら、クライアントで RevoScaleR コマンドを使用して SQL Server にパッケージをインストールできます。
 

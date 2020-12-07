@@ -1,4 +1,5 @@
 ---
+description: 高可用性のサポート
 title: 高可用性のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7eea36aa4600cdc2b9d44ebecf60671a31de2e2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2189f7aeb37901b176de4afbec28dd29090e4118
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88426084"
 ---
 # <a name="high-availability-support"></a>高可用性のサポート
 

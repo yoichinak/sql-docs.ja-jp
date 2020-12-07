@@ -1,4 +1,5 @@
 ---
+description: POWER (Transact-SQL)
 title: POWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -18,12 +19,12 @@ ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11afa07f04e01919b51daf92025ed5d82902ee7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3fbed016f7c4126f937fd2c376126ebd9f8e5f7b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380738"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87111893"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 POWER ( float_expression , y )  
 ```  
   
@@ -42,7 +43,7 @@ POWER ( float_expression , y )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *y*  
  *float_expression* の乗数を指定します。 *y* を除く、真数または概数数値の正確なデータ型に分類される式を指定できます、 **ビット** データ型。  
@@ -50,7 +51,7 @@ POWER ( float_expression , y )
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は、*float_expression* の入力型によって異なります。
  
-|入力型|の戻り値の型 :|  
+|入力の種類|の戻り値の型 :|  
 |----------|-----------|  
 |**float**、**real**|**float**|
 |**decimal(*p*, *s*)**|**decimal(38, *s*)**|
@@ -66,7 +67,7 @@ POWER ( float_expression , y )
 ### <a name="a-using-power-to-return-the-cube-of-a-number"></a>A. POWER を使用して数値の 3 乗を返す  
  次の例は、数値を 3 乗する方法を示しています。  
   
-```  
+```sql  
 DECLARE @input1 FLOAT;  
 DECLARE @input2 FLOAT;  
 SET @input1= 2;  
@@ -87,7 +88,7 @@ Result1                Result2
 ### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>B. POWER を使用してデータ型変換の結果を示す  
  例を次に、どのように *float_expression* 予期しない結果を返すことができるデータ型を保持します。  
   
-```  
+```sql 
 SELECT   
 POWER(CAST(2.0 AS FLOAT), -100.0) AS FloatResult,  
 POWER(2, -100.0) AS IntegerResult,  
@@ -109,7 +110,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 ### <a name="c-using-power"></a>C. POWER を使用する  
  次の例では、`POWER` に対する `2` の結果を返します。  
   
-```  
+```sql  
 DECLARE @value INT, @counter INT;  
 SET @value = 2;  
 SET @counter = 1;  
@@ -151,9 +152,9 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
- 次の例は、`POWER` の 3 乗の `2.0` 結果を示しています。  
+ 次の例は、`2.0` の 3 乗の `POWER` 結果を示しています。  
   
-```  
+```sql  
 SELECT POWER(2.0, 3);  
 ```  
   

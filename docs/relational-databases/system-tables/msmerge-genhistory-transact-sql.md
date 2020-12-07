@@ -1,4 +1,5 @@
 ---
+description: MSmerge_genhistory (Transact-SQL)
 title: MSmerge_genhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_genhistory system table
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4c0c516062e05fe71250f8f309c12a5a3d3c89a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4031540d14a0af583fa544d51fc43eddf589a9f1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889810"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544498"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85889810"
 |**genstatus**|**tinyint**|世代の状態を次に示します。<br /><br /> **0** = 開く。<br /><br /> **1** = Closed。<br /><br /> **2** = 閉じられ、別のサブスクライバーで発生しました。|  
 |**changecount**|**int**|特定のジェネレーションに反映された変更の数|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: テーブル値パラメーターの使用 (データベース エンジン)
 title: テーブル値パラメーターの使用 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6f2827a6defa8cc98f73660bc46eb0da23a42a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72796643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427414"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
 
@@ -69,7 +70,7 @@ ms.locfileid: "72796643"
 - テーブル値パラメーターは、READONLY 入力パラメーターとして [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンに渡す必要があります。 ルーチン本体でテーブル値パラメーターに対して UPDATE、DELETE、INSERT などの DML 操作を実行することはできません。
 - SELECT INTO または INSERT EXEC ステートメントの対象としてテーブル値パラメーターを使用することはできません。 テーブル値パラメーターは、SELECT INTO の FROM 句か、INSERT EXEC 文字列またはストアド プロシージャに含めることができます。
 
-## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> テーブル値パラメーターと BULK INSERT 操作
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a>テーブル値パラメーターと BULK INSERT 操作
 
 テーブル値パラメーターの使用はセットベースの変数を使用するその他の方法に似ていますが、多くの場合、大規模なデータセットを処理するときは、テーブル値パラメーターを使用する方が短時間で済みます。 テーブル値パラメーターよりもスタートアップ コストがかかる一括操作と比較すると、1,000 行未満の行を挿入する場合は、テーブル値パラメーターの方がパフォーマンスが高くなります。
 
@@ -114,7 +115,7 @@ INSERT INTO @LocationTVP (LocationName, CostRate)
 EXEC usp_InsertProductionLocation @LocationTVP;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

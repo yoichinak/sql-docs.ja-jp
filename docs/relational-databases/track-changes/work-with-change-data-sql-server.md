@@ -1,4 +1,5 @@
 ---
+description: 変更データの処理 (SQL Server)
 title: 変更データの処理
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427374"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889094"
  これらの既知の TVF エラーを受け取り、そのエラーに関する有益情報を返す例については、"TRY CATCH を使用した差分変更の列挙" テンプレートを参照してください。  
   
 > [!NOTE]  
->  SQL Server Management Studio で変更データ キャプチャ テンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を展開し、 **[変更データ キャプチャ]** フォルダーを展開します。  
+>   SQL Server Management Studio で変更データ キャプチャ テンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を展開し、 **[変更データ キャプチャ]** フォルダーを展開します。  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> クエリ関数  
  追跡されているソース テーブルの特性とそのキャプチャ インスタンスの構成方法に応じて、変更データのクエリのための TVF が 1 つまたは 2 つ生成されます。  

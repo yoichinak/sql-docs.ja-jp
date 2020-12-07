@@ -1,4 +1,5 @@
 ---
+description: シーケンス (Transact-sql)
 title: シーケンス (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
@@ -14,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SEQUENCES view
 - INFORMATION_SCHEMA.SEQUENCES view
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716616"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546336"
 ---
 # <a name="sequences-transact-sql"></a>シーケンス (Transact-sql)
 
@@ -50,13 +51,13 @@ ms.locfileid: "85716616"
 |**DECLARED_DATA_PRECISION**|**int**|ユーザー定義データ型の有効桁数です。|
 |**DECLARED_NUJMERIC_SCALE**|**int**|ユーザー定義データ型の数値の小数点以下桁数です。|
 
-**例**次の例では、テストデータベースのスキーマに関する情報を返します。
+**例** 次の例では、テストデータベースのスキーマに関する情報を返します。
 
 ```sql
 SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

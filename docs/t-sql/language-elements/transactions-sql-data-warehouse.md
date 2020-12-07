@@ -1,5 +1,6 @@
 ---
-title: トランザクション (SQL データ ウェアハウス) | Microsoft Docs
+title: トランザクション (Azure Synapse Analytics)
+description: トランザクションは、完全にコミットされた、または完全にロールバックされた 1 つ以上のデータベース ステートメントのグループです。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197409"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92038896"
 ---
-# <a name="transactions-sql-data-warehouse"></a>トランザクション (SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>トランザクション (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   トランザクションは、完全にコミットされた、または完全にロールバックされた 1 つ以上のデータベース ステートメントのグループです。 各トランザクションには、原子性、一貫性、分離性、持続性 (ACID) があります。 トランザクションが成功すると、その中のすべてのステートメントがコミットされます。 トランザクションが失敗した場合、つまりグループ内の少なくとも 1 つのステートメントが失敗した場合は、グループ全体がロールバックされます。  
@@ -78,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  ステートメントの実行時エラー以外のエラーによりトランザクションを正常に完了できない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] によってトランザクションが自動的にロールバックされ、そのトランザクションで保持されていたすべてのリソースが解放されます。 たとえば、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のインスタンスへのクライアントのネットワーク接続が切断された場合、またはクライアントがアプリケーションからログオフした場合、ネットワークからインスタンスにこの切断が通知されると、その接続に対する未処理のトランザクションがすべてロールバックされます。  
   
- バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**に設定された** **XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)」を参照してください。  
+ バッチでステートメントの実行時エラーが発生した場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は **ON** に設定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** と一致する動作をし、トランザクション全体がロールバックされます。 **XACT_ABORT** 設定の詳細については、「[SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  セッションで実行できるトランザクション数は一度に 1 つのみです。セーブ ポイントと入れ子になったトランザクションはサポートされません。  
@@ -92,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  COMMIT ステートメントを発行した後は、データの変更がデータベースの永続的な部分になるので、トランザクションをロールバックできなくなります。  
   
- [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) コマンドと [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) コマンドは、明示的なトランザクション内で使用することはできません。  
+ [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) と [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) のコマンドは、明示的なトランザクション内で使用することができません。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にはトランザクションの共有メカニズムはありません。 これは、ある時点で、システム内のどのトランザクションでも、作業を実行できるのは 1 つのセッションのみであることを示します。  
   
@@ -103,7 +105,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 明示的なトランザクションを使用します。  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -113,8 +115,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. トランザクションのロールバック  
  次の例では、トランザクションのロールバックの効果を示します。  この例で ROLLBACK ステートメントがロールバックされます、INSERT ステートメントでは、作成されたテーブルはそのまま残ります。  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -124,21 +126,21 @@ ROLLBACK;
 ### <a name="c-setting-autocommit"></a>C. AUTOCOMMIT の設定  
  次の例では、自動コミット設定を `ON` に設定します。  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  次の例では、自動コミット設定を `OFF` に設定します。  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. 複数ステートメントの暗黙のトランザクションの使用  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  
@@ -148,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

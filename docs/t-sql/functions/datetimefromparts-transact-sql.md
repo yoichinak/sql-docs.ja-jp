@@ -1,4 +1,5 @@
 ---
+description: DATETIMEFROMPARTS (Transact-SQL)
 title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fcbfe6f61d2414a6cd51f2ac43e3380c2411dd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5a702a75737ef5db635605bcc8522438017e8134
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396967"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118677"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87396967"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )  
 ```  
   
@@ -78,7 +79,7 @@ SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ---------------------------  
 2010-12-31 23:59:59.000  
@@ -86,7 +87,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   

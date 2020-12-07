@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_sql_text (Transact-SQL)
 title: dm_exec_sql_text (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -17,20 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 95db0c9386b8c3f1befda89c68635e37f32a1eb5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943105"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539428"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  指定された*sql_handle*によって識別される SQL バッチのテキストを返します。 このテーブル値関数は、システム関数 **fn_get_sql** に代わるものです。  
+  指定された *sql_handle*によって識別される SQL バッチのテキストを返します。 このテーブル値関数は、システム関数 **fn_get_sql** に代わるものです。  
   
  
 ## <a name="syntax"></a>構文  
@@ -41,7 +42,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>引数  
 *sql_handle*  
-は、実行済みまたは現在実行中のバッチを一意に識別するトークンです。 *sql_handle*は**varbinary (64)** です。 
+は、実行済みまたは現在実行中のバッチを一意に識別するトークンです。 *sql_handle* は **varbinary (64)** です。 
 
 *Sql_handle*は、次の動的管理オブジェクトから取得できます。  
   
@@ -58,7 +59,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 *plan_handle*は**varbinary (64)** です。   
+は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 *plan_handle* は **varbinary (64)** です。   
 
 *Plan_handle*は、次の動的管理オブジェクトから取得できます。    
   
@@ -85,7 +86,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 アドホッククエリの場合、SQL ハンドルは、サーバーに送信される SQL テキストに基づくハッシュ値であり、任意のデータベースからのものである可能性があります。 
 
 ストアドプロシージャ、トリガー、関数などのデータベースオブジェクトでは、SQL ハンドルはデータベース ID、オブジェクト ID、およびオブジェクト番号から取得されます。 
@@ -93,12 +94,12 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 プランハンドルは、バッチ全体のコンパイル済みプランから派生したハッシュ値です。 
 
 > [!NOTE]
-> **dbid**は、アドホッククエリの*sql_handle*からは判断できません。 アドホッククエリの**dbid**を確認するには、代わりに*plan_handle*を使用します。
+> **dbid** は、アドホッククエリの *sql_handle* からは判断できません。 アドホッククエリの **dbid** を確認するには、代わりに *plan_handle* を使用します。
   
 ## <a name="examples"></a>例 
 
 ### <a name="a-conceptual-example"></a>A. 概念例
-次に、 **sql_handle**を直接または**クロス適用**を使用して渡す方法を示す基本的な例を示します。
+次に、 **sql_handle** を直接または **クロス適用**を使用して渡す方法を示す基本的な例を示します。
   1.  アクティビティを作成します。  
 の新しいクエリウィンドウで、次の T-sql を実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。   
       ```sql
@@ -121,7 +122,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
   2.  **Sql_handle**を直接渡しています。  
-**Dm_exec_requests**から**sql_handle**を取得します。 次に、 **sql_handle**を直接**dm_exec_sql_text**に渡します。 新しいクエリウィンドウを開き、手順 1. で識別した spid を**dm_exec_requests**に渡します。 この例では、spid はとなり `59` ます。 次に、返された**sql_handle**を引数として**sys. dm_exec_sql_text**に渡します。
+**Dm_exec_requests**から**sql_handle**を取得します。 次に、 **sql_handle** を直接 **dm_exec_sql_text**に渡します。 新しいクエリウィンドウを開き、手順 1. で識別した spid を **dm_exec_requests**に渡します。 この例では、spid はとなり `59` ます。 次に、返された **sql_handle** を引数として **sys. dm_exec_sql_text**に渡します。
 
         ```sql
         -- acquire sql_handle

@@ -1,4 +1,5 @@
 ---
+description: デスクトップ データベース ドライバーの履歴
 title: デスクトップデータベースドライバーの履歴 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89434b397c07fdee751ca4272b65ac2eada94cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80e8f1b52abac92ba09b97d35d45dfe0506963ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500325"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーの履歴
 次の表は、デスクトップデータベースドライバーのバージョン履歴を示しています。  
@@ -33,4 +34,4 @@ ms.locfileid: "81304983"
 |4.0|遅延1998|では、以前のバージョンの ANSI 形式との互換性に加えて、Microsoft Jet Engine Unicode 形式がサポートされています。|  
   
 > [!NOTE]  
->  バージョン3.5 のドライバーは、ODBC2 で動作するように設計されています。*x*。 ODBC 3.0 でも使用できますが、ODBC 3.0 のすべての機能をサポートしているわけではありません。 これらのドライバーが ODBC 3.0 で動作する方法の詳細については、「[旧バージョンとの互換性と標準の準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。
+>  バージョン3.5 のドライバーは、ODBC2 で動作するように設計されています。*x*。 ODBC 3.0 でも使用できますが、ODBC 3.0 のすべての機能をサポートしているわけではありません。 これらのドライバーが ODBC 3.0 で動作する方法の詳細については、「 [旧バージョンとの互換性と標準の準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。

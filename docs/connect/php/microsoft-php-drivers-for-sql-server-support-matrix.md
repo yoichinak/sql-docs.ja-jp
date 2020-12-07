@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP のサポート マトリックス
 description: このページには、Microsoft SQL Server 用 PHP Driver のサポート表とサポート ライフサイクル ポリシーがあります。
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793152"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942161"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server 用 Microsoft PHP Drivers のサポート マトリックス
 
@@ -53,26 +53,29 @@ ms.locfileid: "85793152"
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server バージョンの認定済み互換性
- 次のマトリックスは、対応するドライバー バージョンと互換性があることをテストおよび認定済みの SQL Server バージョンを示しています。 Microsoft は、以前のバージョンのドライバーとの下位互換性を維持することに努めていますが、サポートされている最新のドライバーのみが、SQL Server のリリース時に新しい SQL Server バージョンでテストおよび認定されます。
+ 次のマトリックスは、対応するドライバー バージョンと互換性があることをテストおよび認定済みのデータベース バージョンを示しています。 Microsoft は、以前のバージョンのドライバーとの下位互換性を維持することに努めていますが、サポートされている最新のドライバーのみが、SQL Server のリリース時に新しい SQL Server バージョンでテストおよび認定されます。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; SQL Server のバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|ドライバー バージョン&nbsp;&#8594;<br />&#8595; データベース バージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Managed Instance|Y|Y|Y|Y|Y| | |
-|Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
-|SQL Server 2019         |Y| | | | | | |
-|SQL Server 2017         |Y|Y|Y|Y|Y| | |
-|SQL Server 2016         |Y|Y|Y|Y|Y|Y| |
-|SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2      | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008         | | | | | |Y|Y|
+|Azure SQL データベース        |はい|はい|はい|はい|[はい]|   |   |
+|Azure SQL Managed Instance|○|はい|はい|はい|はい|   |   |
+|Azure Synapse Analytics   |はい|はい|はい|はい|はい|   |   |
+|SQL Server 2019           |はい|   |   |   |   |   |   |
+|SQL Server 2017           |はい|はい|はい|はい|はい|   |   |
+|SQL Server 2016           |はい|はい|はい|はい|はい|はい|   |
+|SQL Server 2014           |はい|はい|はい|はい|はい|はい|はい|
+|SQL Server 2012           |はい|はい|はい|はい|はい|はい|はい|
+|SQL Server 2008 R2        |   |はい|はい|はい|はい|はい|はい|
+|SQL Server 2008           |   |   |   |   |   |はい|はい|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Azure SQL Database での PHP の使用の詳細については、「[Microsoft Azure SQL Database への接続](connecting-to-microsoft-azure-sql-database.md)」を参照してください。
 
 ## <a name="php-version-support"></a>PHP バージョンのサポート
 
 次のバージョンの PHP は、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; PHP バージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|ドライバー バージョン&nbsp;&#8594;<br />&#8595; PHP バージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ ms.locfileid: "85793152"
 
 次のバージョンの Windows オペレーティング システムは、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|SQL Server 用 PHP ドライバー バージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|ドライバー バージョン&nbsp;&#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
-|Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |Y  |Y  |
+|Windows Server 2019                 |はい|はい|   |   |   |   |   |
+|Windows Server 2016                 |はい|はい|はい|はい|はい|   |   |
+|Windows Server 2012 R2              |はい|はい|はい|はい|はい|はい|はい|
+|Windows Server 2012                 |はい|はい|はい|はい|はい|はい|はい|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |はい|はい|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |Y  |Y  |
-|Windows 10                          |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows 8                           |   |   |   |   |Y  |Y  |Y  |
-|Windows 7 SP1                       |   |   |   |   |   |Y  |Y  |
-|Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
+|Windows Server 2008 SP2             |   |   |   |   |   |はい|はい|
+|Windows 10                          |はい|はい|はい|はい|はい|はい|   |
+|Windows 8.1                         |はい|はい|はい|はい|はい|はい|はい|
+|Windows 8                           |   |   |   |   |はい|はい|はい|
+|Windows 7 SP1                       |   |   |   |   |   |はい|はい|
+|Windows Vista SP2                   |   |   |   |   |   |はい|はい|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 次のバージョンの Linux および macOS オペレーティング システム (64 ビットのみ) は、Microsoft PHP ドライバーの一覧に示したバージョンでサポートされています。
 
-|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|ドライバー バージョン&nbsp;&#8594;<br />&#8595; オペレーティング システム|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10 (64 ビット)               |Y  |   |   |   |   |   |   |
-|Ubuntu 18.10 (64 ビット)               |   |Y  |   |   |   |   |   |
-|Ubuntu 18.04 (64 ビット)               |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 17.10 (64 ビット)               |   |   |Y  |Y  |   |   |   |
-|Ubuntu 16.04 (64 ビット)               |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Ubuntu 15.10 (64 ビット)               |   |   |   |   |Y  |   |   |
-|Ubuntu 15.04 (64 ビット)               |   |   |   |   |   |Y  |   |
-|Debian 10 (64 ビット)                  |Y  |   |   |   |   |   |   |
-|Debian 9 (64 ビット)                   |Y  |Y  |Y  |Y  |   |   |   |
-|Debian 8 (64 ビット)                   |Y  |Y  |Y  |Y  |Y  |   |   |
-|Red Hat Enterprise Linux 8 (64 ビット) |Y  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64 ビット) |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Suse Enterprise Linux 15 (64 ビット)   |Y  |Y  |   |   |   |   |   |
-|Suse Enterprise Linux 12 (64 ビット)   |Y  |Y  |Y  |Y  |   |   |   |
-|Alpine Linux 3.11 (64 ビット)<sup>1</sup>|Y  |   |   |   |   |   |   |
-|macOS Catalina (64 ビット)             |Y  |   |   |   |   |   |   |
-|macOS Mojave (64 ビット)               |Y  |Y  |   |   |   |   |   |
-|macOS High Sierra (64 ビット)          |Y  |Y  |Y  |   |   |   |   |
-|macOS Sierra (64 ビット)               |   |Y  |Y  |Y  |Y  |   |   |
-|macOS El Capitan (64 ビット)           |   |   |Y  |Y  |Y  |   |   |
+|Ubuntu 20.04 (64 ビット)               |はい|   |   |   |   |   |   |
+|Ubuntu 19.10 (64 ビット)               |はい|   |   |   |   |   |   |
+|Ubuntu 18.10 (64 ビット)               |   |はい|   |   |   |   |   |
+|Ubuntu 18.04 (64 ビット)               |はい|はい|はい|   |   |   |   |
+|Ubuntu 17.10 (64 ビット)               |   |   |はい|はい|   |   |   |
+|Ubuntu 16.04 (64 ビット)               |はい|はい|はい|はい|はい|はい|   |
+|Ubuntu 15.10 (64 ビット)               |   |   |   |   |はい|   |   |
+|Ubuntu 15.04 (64 ビット)               |   |   |   |   |   |はい|   |
+|Debian 10 (64 ビット)                  |はい|   |   |   |   |   |   |
+|Debian 9 (64 ビット)                   |はい|はい|はい|はい|   |   |   |
+|Debian 8 (64 ビット)                   |はい|はい|はい|はい|はい|   |   |
+|Red Hat Enterprise Linux 8 (64 ビット) |はい|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64 ビット) |はい|はい|はい|はい|はい|はい|   |
+|Suse Enterprise Linux 15 (64 ビット)   |はい|はい|   |   |   |   |   |
+|Suse Enterprise Linux 12 (64 ビット)   |はい|はい|はい|はい|   |   |   |
+|Alpine Linux 3.11 (64 ビット)<sup>1</sup>|はい|   |   |   |   |   |   |
+|macOS Catalina (64 ビット)             |はい|   |   |   |   |   |   |
+|macOS Mojave (64 ビット)               |はい|はい|   |   |   |   |   |
+|macOS High Sierra (64 ビット)          |はい|はい|はい|   |   |   |   |
+|macOS Sierra (64 ビット)               |   |はい|はい|はい|はい|   |   |
+|macOS El Capitan (64 ビット)           |   |   |はい|はい|はい|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Alpine Linux サポートは、バージョン 5.8.0 では試験段階です。 バージョン 5.8.1 では、実稼働サポートが導入されます。

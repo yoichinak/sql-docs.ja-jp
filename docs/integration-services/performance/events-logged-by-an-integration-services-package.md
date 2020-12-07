@@ -1,4 +1,5 @@
 ---
+description: Integration Services パッケージによってログに記録されるイベント
 title: Integration Services パッケージによってログに記録されるイベント | Microsoft Docs
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd247b193540076a1d0f922e94e752b1ea0456bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919145"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130036"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services パッケージによってログに記録されるイベント
 
@@ -39,7 +40,7 @@ ms.locfileid: "86919145"
 > [!NOTE]  
 >  パッケージのログ記録が有効になっていない場合でも、次の表に示すメッセージはログに記録されます。  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|パッケージ "" が起動されました。|パッケージの実行が開始されました。|  
 |12289|DTS_MSG_PACKAGESUCCESS|パッケージ "" が正常に完了しました。|パッケージが正常に実行され、現在は実行されていません。|  
@@ -59,7 +60,7 @@ ms.locfileid: "86919145"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>パッケージ実行の段階に関するメッセージ  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|アプリケーション イベント ログへのログ記録を構成すると、さまざまなメッセージがこの一般的な形式で記録されます。|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|パッケージが開始されました。|  
@@ -72,7 +73,7 @@ ms.locfileid: "86919145"
 ### <a name="messages-about-events-that-occur"></a>発生したイベントに関するメッセージ  
  次の表に、イベントの結果として出力されるメッセージの一部を示します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるエラー メッセージ、警告メッセージ、および情報メッセージの詳細な一覧については、「 [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)」をご覧ください。  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|タスクは失敗しました。|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|イベント名: %1%r メッセージ: %9%r 演算子: %2%r ソース名: %3%r ソース ID: %4%r 実行 ID: %5%r 開始時刻: %6%r 終了時刻: %7%r データ コード: %8|このメッセージは発生したエラーを報告します。|  

@@ -1,4 +1,5 @@
 ---
+description: STATS_DATE (Transact-SQL)
 title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -22,12 +23,12 @@ ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69f5b2a658ab40f180c4a1aafbc71f4dc7a264bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4657f96d1fe67435d547696361b8593d022fb559
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379867"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87112645"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 STATS_DATE ( object_id , stats_id )  
 ```  
   
@@ -61,14 +62,14 @@ STATS_DATE ( object_id , stats_id )
  
  統計の更新日付は、メタデータではなく[統計 BLOB オブジェクト](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)に[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram)および[密度ベクトル](../../relational-databases/statistics/statistics.md#density)と共に格納されます。 統計データを生成するためのデータが読み取られていない場合、統計 BLOB は作成されず、日付は使用できません。 これは、述語が行を返さないフィルター選択された統計情報や、新しい空のテーブルの場合です。
  
- 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。
+ 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップか、テーブルまたはインデックス付きビューのメタデータを表示する権限が必要です。  
   
 ## <a name="examples"></a>例  
   
-### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A. テーブルの統計の最終更新日を返す  
+### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>A.  テーブルの統計の最終更新日を返す  
  次の例では、`Person.Address` テーブルの各統計オブジェクトの最終更新日を返します。  
   
 ```sql  
@@ -81,7 +82,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -142,7 +143,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 統計がインデックスに対応する場合、*sys.stats* カタログ ビューの [stats_id](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) の値は、*sys.indexes* カタログ ビューの [index_id](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
+ 統計がインデックスに対応する場合、[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) カタログ ビューの *stats_id* の値は、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューの *index_id* の値と同一になります。このため、次に示すクエリは上のクエリと同じ結果を返します。 統計がインデックスに対応しない場合、統計は sys.stats の結果には含まれますが、sys.indexes の結果には含まれません。  
   
 ```sql  
 USE AdventureWorksPDW2012;  

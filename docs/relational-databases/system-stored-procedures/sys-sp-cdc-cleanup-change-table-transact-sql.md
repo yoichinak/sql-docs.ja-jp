@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_cleanup_change_table (Transact-sql)
 title: sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ac10ff9accd4cac39caef8139406319701026e79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891173"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541106"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定された*low_water_mark*値に基づいて、現在のデータベースの変更テーブルから行を削除します。 このストアドプロシージャは、変更テーブルのクリーンアッププロセスを直接管理する必要があるユーザー向けに用意されています。 ただし、このプロシージャは、変更テーブルに含まれるデータのすべてのコンシューマーに影響を及ぼすため、使用する際は注意が必要です。  
+  指定された *low_water_mark* 値に基づいて、現在のデータベースの変更テーブルから行を削除します。 このストアドプロシージャは、変更テーブルのクリーンアッププロセスを直接管理する必要があるユーザー向けに用意されています。 ただし、このプロシージャは、変更テーブルに含まれるデータのすべてのコンシューマーに影響を及ぼすため、使用する際は注意が必要です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +47,22 @@ sys.sp_cdc_cleanup_change_table
   
 ## <a name="arguments"></a>引数  
  [ @capture_instance =] '*capture_instance*'  
- 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
+ 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- *capture_instance*は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
+ *capture_instance* は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
   
  [ @low_water_mark =] *low_water_mark*  
- *キャプチャインスタンス*の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark*は**binary (10)**,、既定値はありません。  
+ *キャプチャインスタンス*の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark* は **binary (10)**,、既定値はありません。  
   
- 値が null 以外の場合は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
+ 値が null 以外の場合は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
   
  値が明示的に NULL に設定されている場合、*キャプチャインスタンス*の現在の*低レベルのウォーターマーク*は、クリーンアップ操作の上限を定義するために使用されます。  
   
  [ @threshold =] '*削除のしきい値*'  
- クリーンアップで1つのステートメントを使用して削除できる削除エントリの最大数を指定します。 *delete_threshold*は**bigint**,、既定値は5000です。  
+ クリーンアップで1つのステートメントを使用して削除できる削除エントリの最大数を指定します。 *delete_threshold* は **bigint**,、既定値は5000です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -89,7 +90,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  

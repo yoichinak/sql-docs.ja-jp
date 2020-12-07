@@ -1,4 +1,5 @@
 ---
+description: データベース メールの一般的なエラー
 title: データベース メールの一般的なエラー | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4693990f7dc2a32f1d1a4c1462d35af9830de530
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737416"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125240"
 ---
 # <a name="common-errors-with-database-mail"></a>データベース メールの一般的なエラー 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

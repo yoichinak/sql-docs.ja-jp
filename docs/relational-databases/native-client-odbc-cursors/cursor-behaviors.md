@@ -1,4 +1,5 @@
 ---
+description: カーソル動作
 title: カーソルの動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -21,11 +22,12 @@ ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65ee29f4bab4994f3d96bd4cacdbab65c46ab305
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95a2a323e3bdd772077bbd801a9f929774325cbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423954"
 ---
 # <a name="cursor-behaviors"></a>カーソル動作
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,10 +43,10 @@ ms.locfileid: "86000645"
 |SQL_NONSCROLLABLE と SQL_INSENSITIVE|既定の結果セット (順方向専用、読み取り専用)|  
 |SQL_NONSCROLLABLE と SQL_UNSPECIFIED|既定の結果セット (順方向専用、読み取り専用)|  
   
- バージョンベースのオプティミスティック同時実行制御には、基になるテーブルに**timestamp**列が必要です。 **Timestamp**列のないテーブルに対してバージョンベースのオプティミスティック同時実行制御が要求された場合、サーバーは値に基づくオプティミスティック同時実行制御を使用します。  
+ バージョンベースのオプティミスティック同時実行制御には、基になるテーブルに **timestamp** 列が必要です。 **Timestamp**列のないテーブルに対してバージョンベースのオプティミスティック同時実行制御が要求された場合、サーバーは値に基づくオプティミスティック同時実行制御を使用します。  
   
 ## <a name="scrollability"></a>スクロール可能  
- SQL_ATTR_CURSOR_SCROLLABLE が SQL_SCROLLABLE に設定されている場合、カーソルは[Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)の*fetchorientation*パラメーターのさまざまな値をすべてサポートします。 SQL_ATTR_CURSOR_SCROLLABLE が SQL_NONSCROLLABLE に設定されている場合、カーソルは SQL_FETCH_NEXT の*Fetchorientation*値のみをサポートします。  
+ SQL_ATTR_CURSOR_SCROLLABLE が SQL_SCROLLABLE に設定されている場合、カーソルは[Sqlfetchscroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)の*fetchorientation*パラメーターのさまざまな値をすべてサポートします。 SQL_ATTR_CURSOR_SCROLLABLE が SQL_NONSCROLLABLE に設定されている場合、カーソルは SQL_FETCH_NEXT の *Fetchorientation* 値のみをサポートします。  
   
 ## <a name="sensitivity"></a>感度  
  SQL_ATTR_CURSOR_SENSITIVITY が SQL_SENSITIVE に設定されているとき、現在のユーザーが行ったデータ変更または他のユーザーがコミットしたデータ変更がカーソルに反映されます。 SQL_ATTR_CURSOR_SENSITIVITY が SQL_INSENSITIVE に設定されているときは、データ変更がカーソルに反映されません。  

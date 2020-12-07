@@ -1,4 +1,5 @@
 ---
+description: dbo.syscategories (Transact-SQL)
 title: dbo.sysのカテゴリ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - syscategories system table
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 92d4883df378521af717266c31a0decfaa403c5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 84d72b2ec08573b7c7aa72903eab1bc828d6f774
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890538"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525326"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ジョブ、警告、オペレーターの分類に使用されるカテゴリを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、ジョブ、警告、オペレーターの分類に使用されるカテゴリを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_waiting_tasks (Transact-SQL)
 title: dm_os_waiting_tasks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -17,19 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1336e65374bace69e0b929d2571a62276bed45b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d02a397ab5f76682ba29d72bf873f581ee2fe091
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010970"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532489"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+  あるリソースで待機しているタスクの待機キューに関する情報を返します。 タスクの詳細については、「 [スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 > [!NOTE]  
 > またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_waiting_tasks**という名前を使用します。  
@@ -39,14 +41,14 @@ ms.locfileid: "86010970"
 |**waiting_task_address**|**varbinary (8)**|待機中のタスクのアドレス。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
-|**wait_duration_ms**|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**が含まれます。|  
+|**wait_duration_ms**|**bigint**|この待機の種類の合計待機時間 (ミリ秒単位)。 この時間には **signal_wait_time**が含まれます。|  
 |**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary (8)**|タスクが待機しているリソースのアドレス。|  
 |**blocking_task_address**|**varbinary (8)**|このリソースを現在保持しているタスク|  
 |**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を特定できませんでした。|  
 |**blocking_exec_context_id**|**int**|ブロックしているタスクの実行コンテキストの ID。|  
 |**resource_description**|**nvarchar (3072)**|消費されているリソースの説明。 詳細については、以下の説明を参照してください。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="resource_description-column"></a>resource_description 列  
  resource_description 列に返される値は次のとおりです。  
@@ -77,9 +79,9 @@ ms.locfileid: "86010970"
   
  **ロック リソース所有者:**  
   
--   \<type-specific-description>id = ロック \<lock-hex-address> モード = \<mode> associatedObjectId =\<associated-obj-id>  
+-   \<type-specific-description> id = ロック \<lock-hex-address> モード = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<type-specific-description>次のように指定できます。**  
+     **\<type-specific-description> 次のように指定できます。**  
   
     -   データベースの場合: databaselock subresource = \<databaselock-subresource> dbid =\<db-id>  
   
@@ -103,7 +105,7 @@ ms.locfileid: "86010970"
   
     -   ALLOCATION_UNIT の場合: allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<mode>次のように指定できます。**  
+     **\<mode> 次のように指定できます。**  
   
      Sch-m-S、Sch-m、S、U、X、IS、IU、IX、SIU、6、UIX、BU、範囲-S、範囲-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
   

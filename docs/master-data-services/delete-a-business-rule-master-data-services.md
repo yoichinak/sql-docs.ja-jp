@@ -1,4 +1,5 @@
 ---
+description: ビジネス ルールを削除する (マスター データ サービス)
 title: ビジネス ルールを削除する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1a649c1d04d1d52fee2864991bbe051b04814ee6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461772"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>ビジネス ルールを削除する (マスター データ サービス)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85812777"
 > [!NOTE]  
 >  ビジネス ルールに対するデータの検証が行われないようにするには、ビジネス ルールを削除する代わりに除外することができます。 詳細については、「 [ビジネス ルールを除外する (マスター データ サービス)](../master-data-services/exclude-a-business-rule-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-a-business-rule"></a>ビジネス ルールを削除するには  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85812777"
   
 10. 確認のダイアログ ボックスで **[OK]** をクリックします。 削除されたビジネス ルールはグリッドに表示されなくなります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービスを除外する&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [ビジネスルール &#40;マスターデータサービスを作成して発行&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  

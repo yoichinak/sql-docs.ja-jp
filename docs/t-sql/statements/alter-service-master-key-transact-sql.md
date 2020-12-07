@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 0c75769df4c504f71dfdd3a724648aea19b66460
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381116"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124209"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,6 @@ ms.locfileid: "86381116"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER SERVICE MASTER KEY   
     [ { <regenerate_option> | <recover_option> } ] [;]  
   
@@ -64,31 +64,31 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  サービス マスター キーを再生成することを示します。  
   
- OLD_ACCOUNT **='***account_name***'**  
+ OLD_ACCOUNT **='** _account_name_*_'_*  
  古い Windows サービス アカウントの名前を指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- OLD_PASSWORD **='***password***'**  
+ OLD_PASSWORD **='** _password_*_'_*  
  古い Windows サービス アカウントのパスワードを指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- NEW_ACCOUNT **='***account_name***'**  
+ NEW_ACCOUNT **='** _account_name_*_'_*  
  新しい Windows サービス アカウントの名前を指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
- NEW_PASSWORD **='***password***'**  
+ NEW_PASSWORD **='** _password_*_'_*  
  新しい Windows サービス アカウントのパスワードを指定します。  
   
 > [!WARNING]  
 >  このオプションは、互換性のために残されています。 使用しないでください。 代わりに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager を使用してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サービス マスター キーは、リンク サーバーのパスワード、資格情報、またはデータベースのマスター キーの暗号化が最初に必要になったときに、自動的に生成されます。 サービス マスター キーは、ローカル コンピューターのキーまたは Windows Data Protection API を使用して暗号化されます。 この API では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントの Windows 資格情報から派生するキーが使用されます。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] AES 暗号化アルゴリズムを使用してサービス マスター キー (SMK) とデータベース マスター キー (DMK) を保護します。 AES は、以前のバージョンで使用されていた 3DES よりも新しい暗号化アルゴリズムです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] にアップグレードした後で、マスター キーを AES にアップグレードするために SMK と DMK を再度生成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
@@ -111,7 +111,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="examples"></a>例  
  次の例では、サービス マスター キーを再生成します。  
   
-```  
+```sql  
 ALTER SERVICE MASTER KEY REGENERATE;  
 GO  
 ```  

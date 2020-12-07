@@ -1,4 +1,5 @@
 ---
+description: 暗号化キーの列 (TRANSACT-SQL) を削除します。
 title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7c8f4ffe7bc861fece68c37ae734a0d659bebb56
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110658"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380157"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>暗号化キーの列 (TRANSACT-SQL) を削除します。
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   列の暗号化キーをデータベースから削除します。  
   
@@ -37,7 +39,6 @@ ms.locfileid: "87110658"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
 
@@ -45,7 +46,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  データベースから削除する列の暗号化キーの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
  データベース内のすべての列の暗号化に使用されている場合は、列の暗号化キーを削除することはできません。 まず、列の暗号化キーを使用してすべての列を削除する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -56,7 +57,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 列の暗号化キーを削除する  
  次の例では、列の暗号化キー `MyCEK` を削除します。  
   
-```  
+```sql  
 DROP COLUMN ENCRYPTION KEY MyCEK;  
 GO  
 ```  

@@ -1,6 +1,6 @@
 ---
 title: サブスクリプション設定とファイル共有アカウント (Configuration Manager) | Microsoft Docs
-description: Reporting Services Configuration Manager の [サブスクリプションの設定] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。
+description: レポート サーバーの構成マネージャーの [サブスクリプションの設定] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866275"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935552"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (SSRS Configuration Manager)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (レポート サーバーの構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、2 つのワークフローがあります。  

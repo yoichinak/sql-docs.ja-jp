@@ -1,4 +1,5 @@
 ---
+description: クエリへの派生テーブルの追加 (Visual Database Tools)
 title: クエリへの派生テーブルの追加
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a234da70206c87387b38f55b64304f6ed8e31dc9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ec4389810e09af78f61e99762dbb30862919f1d1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009337"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037192"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>クエリへの派生テーブルの追加 (Visual Database Tools)
 
@@ -39,5 +40,4 @@ ms.locfileid: "86009337"
 [クエリに関する基本操作の実行 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [クエリの作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [クエリを開く (Visual Database Tools)](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
-[SELECT (Transact-SQL)](https://msdn.microsoft.com/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
-  
+[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

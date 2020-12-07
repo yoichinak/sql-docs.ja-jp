@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -11,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d1a1a72fbe5ef1b8382901a62adfd95a907b765
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1015c03705aa65d347e2b11bd400312f866ea321
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484263"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722365"
 ---
 # <a name="dbcc-pdw_showpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 
@@ -29,10 +30,12 @@ ms.locfileid: "86484263"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-Show the partition stats for a table  
+--Show the partition stats for a table  
 DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema_name.] table_name  ")  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数  
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  

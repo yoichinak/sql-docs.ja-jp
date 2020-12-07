@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485628"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @policy_id = ] policy_id`実行履歴を削除するポリシーの識別子を指定します。 *policy_id*は**int**であり、が必要です。 NULL にすることができます。  
+`[ @policy_id = ] policy_id` 実行履歴を削除するポリシーの識別子を指定します。 *policy_id* は **int**であり、が必要です。 NULL にすることができます。  
   
-`[ @oldest_date = ] 'oldest_date'`ポリシーの実行履歴を保持する最も古い日付を指定します。 この日付より前の実行履歴は削除されます。 *oldest_date*は**datetime**であり、必須です。 NULL にすることができます。  
+`[ @oldest_date = ] 'oldest_date'` ポリシーの実行履歴を保持する最も古い日付を指定します。 この日付より前の実行履歴は削除されます。 *oldest_date* は **datetime**であり、必須です。 NULL にすることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sp_syspolicy_delete_policy_execution_history は msdb システム データベースのコンテキストで実行する必要があります。  
   
  *Policy_id*の値を取得し、実行履歴の日付を表示するには、次のクエリを使用できます。  
@@ -61,13 +62,13 @@ ON a.policy_id = b.policy_id
   
  次の動作は、1つまたは両方の値に NULL を指定した場合に適用されます。  
   
--   すべてのポリシー実行履歴を削除するには、 *policy_id*と*oldest_date*の両方に NULL を指定します。  
+-   すべてのポリシー実行履歴を削除するには、 *policy_id* と *oldest_date*の両方に NULL を指定します。  
   
 -   特定のポリシーのポリシー実行履歴をすべて削除するには、 *policy_id*のポリシー識別子を指定し、 *oldest_date*として NULL を指定します。  
   
 -   特定の日付より前のすべてのポリシーのポリシー実行履歴を削除するには、 *policy_id*に NULL を指定し、 *oldest_date*の日付を指定します。  
   
- ポリシーの実行履歴をアーカイブするには、オブジェクト エクスプローラーでポリシー履歴ログを開いて、実行履歴をファイルにエクスポートします。 ポリシー履歴ログにアクセスするには、[**管理**] を展開し、[**ポリシー管理**] を右クリックして、[**履歴の表示**] をクリックします。  
+ ポリシーの実行履歴をアーカイブするには、オブジェクト エクスプローラーでポリシー履歴ログを開いて、実行履歴をファイルにエクスポートします。 ポリシー履歴ログにアクセスするには、[ **管理**] を展開し、[ **ポリシー管理**] を右クリックして、[ **履歴の表示**] をクリックします。  
   
 ## <a name="permissions"></a>アクセス許可  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
@@ -86,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   

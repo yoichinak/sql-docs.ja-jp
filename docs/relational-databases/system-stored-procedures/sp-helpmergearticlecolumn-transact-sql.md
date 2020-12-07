@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticlecolumn (Transact-sql)
 title: sp_helpmergearticlecolumn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce3aa58526b458619b9875a19118fd4575aca3bf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891647"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546071"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。*publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。*publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`情報を取得するアーティクルであるテーブルまたはビューの名前を指定します。*アーティクル*は**sysname**で、既定値はありません。  
+`[ @article = ] 'article'` 情報を取得するアーティクルであるテーブルまたはビューの名前を指定します。*アーティクル* は **sysname**で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -48,18 +49,18 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|列を識別します。|  
 |**column_name**|**sysname**|テーブルまたはビューの列の名前を指定します。|  
-|**投稿**|**bit**|列名がパブリッシュされているかどうかを指定します。<br /><br /> **1**は、列がパブリッシュされることを示します。<br /><br /> **0**は、パブリッシュされていないことを示します。|  
+|**投稿**|**bit**|列名がパブリッシュされているかどうかを指定します。<br /><br /> **1** は、列がパブリッシュされることを示します。<br /><br /> **0** は、パブリッシュされていないことを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpmergearticlecolumn**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpmergearticlecolumn** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergearticlecolumn**を実行できるのは、ディストリビューションデータベースの**replmonitor**固定データベースロールのメンバー、またはパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 検索で使用するワード ブレーカーを以前のバージョン (SQL Server Search) に戻す
 title: 検索で使用するワード ブレーカーを以前のバージョンに戻す
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4ea742a7dfd4db224e55765ff74bb67c4616f9bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6d2ab12917fe043cd65d035cc1f133a24c04460
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934328"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868971"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>検索で使用するワード ブレーカーを以前のバージョン (SQL Server Search) に戻す
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -380,5 +381,4 @@ ms.locfileid: "87934328"
   
 ## <a name="see-also"></a>参照  
  [米国英語と英国英語に使用されるワード ブレーカーの変更](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [フルテキスト検索の動作の変更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
- 
+ [フルテキスト検索の動作の変更](./full-text-search.md?view=sql-server-ver15)

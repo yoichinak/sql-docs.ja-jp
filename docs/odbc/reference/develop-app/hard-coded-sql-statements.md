@@ -1,4 +1,5 @@
 ---
+description: ハードコーディングされた SQL ステートメント
 title: ハードコーディングされた SQL ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476664"
 ---
 # <a name="hard-coded-sql-statements"></a>ハードコーディングされた SQL ステートメント
 通常、固定タスクを実行するアプリケーションには、ハードコーディングされた SQL ステートメントが含まれます。 たとえば、注文入力システムでは、次の呼び出しを使用して open sales orders を一覧表示できます。  
@@ -30,7 +31,7 @@ SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS
   
  ハードコーディングされた SQL ステートメントには、アプリケーションの作成時にテストできるという、いくつかの利点があります。実行時に構築されたステートメントよりも実装が簡単です。また、アプリケーションを簡略化します。  
   
- ステートメントパラメーターを使用してステートメントを準備すると、ハードコーディングされた SQL ステートメントをより適切に使用できるようになります。 たとえば、Parts テーブルに、PartID、Description、および Price の各列が含まれているとします。 このテーブルに新しい行を挿入する方法の1つとして、 **insert**ステートメントを構築して実行する方法があります。  
+ ステートメントパラメーターを使用してステートメントを準備すると、ハードコーディングされた SQL ステートメントをより適切に使用できるようになります。 たとえば、Parts テーブルに、PartID、Description、および Price の各列が含まれているとします。 このテーブルに新しい行を挿入する方法の1つとして、 **insert** ステートメントを構築して実行する方法があります。  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- パラメーター、準備されたステートメント、およびプロシージャの詳細については、「[ステートメントの実行](../../../odbc/reference/develop-app/executing-a-statement.md)」を参照してください。
+ パラメーター、準備されたステートメント、およびプロシージャの詳細については、「 [ステートメントの実行](../../../odbc/reference/develop-app/executing-a-statement.md)」を参照してください。

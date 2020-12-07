@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages (SSISDB データベース)
 title: catalog.operation_messages (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422026"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
 
@@ -54,7 +55,7 @@ ms.locfileid: "86912493"
 |20|検証後|  
 |30|実行前|  
 |40|実行後|  
-|60|進行状況|  
+|60|進捗状況|  
 |50|StatusChange|  
 |100|QueryCancel|  
 |130|TaskFailed|  

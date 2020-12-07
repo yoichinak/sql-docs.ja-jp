@@ -1,4 +1,5 @@
 ---
+description: NameToSet (MDX)
 title: NameToSet (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 77731495eb058da05f6c61be391591a40725e579
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd1de5e8c126d9457fda2c7c9545dedea26fd1f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483755"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 
@@ -31,8 +32,8 @@ NameToSet(Member_Name)
  *Member_Name*  
  メンバーの名前を表す有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
- 指定されたメンバー名が存在する場合、 **NameToSet**関数はそのメンバーを含むセットを返します。 それ以外の場合、関数は空のセットを返します。  
+## <a name="remarks"></a>解説  
+ 指定されたメンバー名が存在する場合、 **NameToSet** 関数はそのメンバーを含むセットを返します。 それ以外の場合、関数は空のセットを返します。  
   
 > [!NOTE]  
 >  メンバーの名前には、メンバー名のみを指定する必要があります。メンバー式を指定することはできません。 メンバー式を使用するには、「 [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)」を参照してください。  
@@ -45,7 +46,7 @@ SELECT NameToSet('[Date].[Calendar].[July 2001]') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

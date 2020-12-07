@@ -1,8 +1,9 @@
 ---
+description: '更新プログラムの送信: UpdateBatch メソッド'
 title: '更新プログラムを送信しています: UpdateBatch メソッド |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f4e6a94282687ed70f10552e2dedf9c9312433e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760888"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979713"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>更新プログラムの送信: UpdateBatch メソッド
 次のコードでは、LockType プロパティを adLockBatchOptimistic に設定し、カーソル位置を adUseClient に設定することによって、レコードセットをバッチモードで開きます。 2つの新しいレコードを追加し、既存のレコードのフィールドの値を変更して元の値を保存した後、UpdateBatch を呼び出して変更内容をデータソースに送り返します。  

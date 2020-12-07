@@ -1,4 +1,5 @@
 ---
+description: xp_msver (Transact-SQL)
 title: xp_msver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890757"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544713"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ xp_msver [ optname ]
   
 |オプション/列名|説明|  
 |-------------------------|-----------------|  
-|**同様**|製品名;たとえば、のように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
+|**ProductName**|製品名;たとえば、のように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] なります。|  
 |**ProductVersion**|製品のバージョン。|  
-|**言語**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
+|**Language**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語バージョン。|  
 |**プラットフォーム**|を実行しているコンピューターのオペレーティングシステム名、製造元名、およびチップファミリ名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**コメント**|に関するその他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の情報。|  
 |**CompanyName**|によって生成される会社名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。たとえば、「Corporation」と指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] します。|  
 |**FileDescription**|オペレーティング システム。|  
 |**FileVersion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルのバージョン。|  
-|**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]の内部名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (例: sqlservr.exe)。|  
+|**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] の内部名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (例: sqlservr.exe)。|  
 |**LegalCopyright**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要な著作権に関する法的情報。Copyright&#xA9; [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005 などです。|  
 |**LegalTrademarks**|に必要な法律商標情報 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] は Corporation の登録商標です [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。|  
 |**OriginalFilename**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に実行されるファイル名。Sqlservr.exe などです。|  
@@ -74,10 +75,10 @@ xp_msver [ optname ]
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: XML ストアドプロシージャ (Transact-sql)
 title: XML ストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], XML
 - XML [SQL Server], system stored procedures
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d6d893afca1dc39dc98dc3dc212b79474ae81890
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab3fcca8f710bd04a805f0783901cb106d62f75d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122987"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545833"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>XML ストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

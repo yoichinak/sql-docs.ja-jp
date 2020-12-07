@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893856"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988685"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>方法:CLR データベース オブジェクトを使用する
 
-Transact\-SQL プログラミング言語の他にも、.NET Framework 言語を使用して、データの取得と更新を行うデータベース オブジェクトを作成できます。 マネージド コードで記述したデータベース オブジェクトは、SQL Server 共通言語ランタイム (CLR: Common Language Run) データベース オブジェクトと呼ばれます。 SQL Server でホストされる CLR データベース オブジェクトを使用する利点と、Transact\-SQL と CLR の間での選択方法については、「[CLR 統合の利点](../relational-databases/clr-integration/clr-integration-overview.md)」および「[マネージド コードを使用したデータベース オブジェクトの作成の利点](https://msdn.microsoft.com/library/k2e1fb36.aspx)」をご覧ください。  
+Transact\-SQL プログラミング言語の他にも、.NET Framework 言語を使用して、データの取得と更新を行うデータベース オブジェクトを作成できます。 マネージド コードで記述したデータベース オブジェクトは、SQL Server 共通言語ランタイム (CLR: Common Language Run) データベース オブジェクトと呼ばれます。 SQL Server でホストされる CLR データベース オブジェクトを使用する利点と、Transact\-SQL と CLR の間での選択方法については、「[CLR 統合の利点](../relational-databases/clr-integration/clr-integration-overview.md)」および「[マネージド コードを使用したデータベース オブジェクトの作成の利点](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))」をご覧ください。  
   
 SQL Server Data Tools で CLR データベース オブジェクトを作成するには、データベース プロジェクトを作成し、これに CLR データベース オブジェクトを追加します。 以前のバージョンの Visual Studio とは異なり、CLR プロジェクトを別に作成したうえで、データベース プロジェクトからこのプロジェクトへの参照を追加する必要がありません。 データベース プロジェクトをビルドして公開すると、自動的にプロジェクト内の CLR オブジェクトも同時に公開されます。 このように公開された CLR オブジェクトは、他のデータベース オブジェクトと同じように呼び出して実行できます。  
   
@@ -29,7 +29,7 @@ CLR および CLR ビルドのプロパティ ページには、CLR オブジェ
   
 CLR データベース オブジェクトのデバッグを有効にするには、**SQL Server オブジェクト エクスプローラー**を開きます。 デバッグする CLR データベースの成果物を含むサーバーを右クリックし、 **[SQL または CLR のデバッグの許可]** をクリックします。 メッセージ ボックスに、警告が表示されます。"デバッグ中は、サーバー上のすべてのマネージ スレッドが停止されます。 このサーバーで SQL/CLR デバッグを有効にしますか?" という警告がメッセージ ボックスに表示されます。 CLR データベース オブジェクトをデバッグすると、実行の中断によりサーバー上のすべてのスレッドが停止され、他のユーザーに影響します。 このため、CLR データベース オブジェクト用アプリケーションのデバッグは運用サーバーでは行わないようにしてください。 また、デバッグを開始すると、**SQL Server オブジェクト エクスプローラー**の設定を変更できないことにも注意してください。 **SQL Server オブジェクト エクスプローラー**で行われた変更が反映されるのは、次回デバッグ セッションを開始するときです。  
   
-CLR データベース オブジェクトをビルドするための要件について詳しくは、「[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](https://msdn.microsoft.com/library/ms131046.aspx)」の関連トピックをご覧ください。  
+CLR データベース オブジェクトをビルドするための要件について詳しくは、「[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)」の関連トピックをご覧ください。  
   
 > [!WARNING]  
 > 以下に示す手順では、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」および「[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)」に示されているこれまでの手順で作成したエンティティを使用します。  
@@ -103,6 +103,5 @@ CLR データベース オブジェクトをビルドするための要件につ
   
 ## <a name="see-also"></a>参照  
 [CLR 統合機能の利点](../relational-databases/clr-integration/clr-integration-overview.md)  
-[マネージド コードを使用してデータベース オブジェクトを作成する利点](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
-[共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築](https://msdn.microsoft.com/library/ms131046.aspx)  
-  
+[マネージド コードを使用してデータベース オブジェクトを作成する利点](/previous-versions/visualstudio/visual-studio-2010/k2e1fb36(v=vs.100))  
+[共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築](../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  

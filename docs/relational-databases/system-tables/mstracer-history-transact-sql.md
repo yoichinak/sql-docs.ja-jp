@@ -1,4 +1,5 @@
 ---
+description: MStracer_history (Transact-SQL)
 title: MStracer_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8c9f554d57935921c068ad25cb51991c47cdbd2a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3a8c4c03359209108ff839e2a5708ef2da248de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881481"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545475"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85881481"
 |**agent_id**|**int**|トレーサートークンレコードを処理したエージェントを識別します。|  
 |**subscriber_commit**|**datetime**|トレーサー トークン レコードがサブスクライバーでコミットされた日付と時刻です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

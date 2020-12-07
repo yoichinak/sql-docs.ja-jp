@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472678"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810008"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,13 +163,12 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 - `IDENTITY` プロパティを持つ列。  
 - `ROWGUIDCOL` プロパティを持つ列。  
 - 非 BIN2 照合順序を持つ文字列 (`varchar`、`char` など) 列。  
-- ランダム化された暗号化によって暗号化された列をキー列として使用する、非クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)。  
-- ランダム化された暗号化によって暗号化された列をキー列として使用する、クラスター化インデックスのキーとなる列 (明確な暗号化によって暗号化された列は問題ありません)。  
-- ランダム化および明確な暗号化により暗号化された列の両方を含む、フルテキスト インデックスのキーとなる列。  
+- ランダム化された暗号化を使用するときのクラスター化インデックスおよび非クラスター化インデックスのキーである列 (決定論的な暗号化がサポートされています)。
+- フルテキスト インデックスに含まれる列 (Always Encrypted で[フルテキスト検索](../../../relational-databases/search/full-text-search.md)はサポートされていません)。  
 - 計算列。
 - 計算列によって参照される列 (式が Always Encrypted でサポート外の演算を実行するとき)。  
 - スパース列セット。  
-- 統計情報によって参照される列。  
+- ランダム化された暗号化を使用するときに統計情報によって参照される列 (決定論的な暗号化がサポートされています)。  
 - 別名型を使用する列。  
 - パーティション分割列。  
 - 既定の制約を含む列。  
@@ -177,7 +176,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 - ランダムな暗号化を使用するときの主キー列 (明確な暗号化はサポートされます)。  
 - ランダム化された暗号化または明確な暗号化を使用する際の、外部キー制約での列の参照 (参照元および参照先の列が異なるキーまたはアルゴリズムを使用する場合)。  
 - CHECK 制約によって参照される列。  
-- 変更データ キャプチャを使用するテーブル内の列。  
+- 変更データ キャプチャを使用してキャプチャまたは追跡される列。  
 - 変更の追跡を持つテーブル上の主キー列。  
 - マスキングされている列 (動的データ マスクを使用)。  
 - Stretch Database テーブル内の列。 (Always Encrypted で暗号化された列を持つテーブルは Stretch で有効にできます)。  

@@ -1,4 +1,5 @@
 ---
+description: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 ms.custom: seo-dt-2019
 ms.date: 08/10/2017
@@ -10,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a45d59e3891e08f2ae5c5b5d64258b5ebcc371a8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395247"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688322"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -29,7 +30,6 @@ ms.locfileid: "87395247"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
@@ -137,7 +137,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ### <a name="a-creating-a-remote-table"></a>A. リモート テーブルの作成  
  この例では、`MyOrdersTable` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP のリモート テーブルをデータベース `OrderReporting` およびスキーマ `Orders` に作成します。 `OrderReporting` データベースは、既定のポート 1433 でリッスンする `SQLA` というサーバー上にあります。 サーバーへの接続では、ユーザー `David` の資格情報を使用します。ユーザーのパスワードは `e4n8@3` です。  
   
-```  
+```sql  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  
 AS SELECT <select_criteria>;  
@@ -146,7 +146,7 @@ AS SELECT <select_criteria>;
 ### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. リモート テーブルのコピーのステータスの sys.dm_pdw_dms_workers DMV のクエリを実行します。  
  このクエリは、リモート テーブルのコピーのコピー状態を表示する方法を示します。  
   
-```  
+```sql  
 SELECT * FROM sys.dm_pdw_dms_workers   
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
@@ -154,7 +154,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. CREATE REMOTE TABLE とクエリの結合ヒントを使用する  
  このクエリは、CREATE REMOTE TABLE を使用してクエリの結合ヒントを使用するための基本構文を示しています。 クエリが、コントロール ノードに送信された後で、コンピューティング ノード上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プランを生成するときにハッシュ結合の方法を適用します。 結合ヒントと OPTION 句の使用方法の詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
-```  
+```sql  
 USE ssawPDW;  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  
 AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )  

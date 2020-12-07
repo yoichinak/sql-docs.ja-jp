@@ -2,19 +2,19 @@
 title: 拡張性によるさらなる機能の追加
 description: Azure Data Studio の機能を拡張するための拡張性モデルと主要な拡張性の領域について説明します
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483860"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778441"
 ---
 # <a name="azure-data-studio-extensibility"></a>Azure Data Studio の拡張性
 
@@ -111,7 +111,7 @@ Dashboard.tabs では、ダッシュボード ページ内にタブ セクショ
 
 `dashboard.insights`
 
-dashboard.insights を使用すれば、分析情報を登録できます。 これは、[チュートリアル: カスタム分析情報ウィジェットのビルド](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)によく似ています
+dashboard.insights を使用すれば、分析情報を登録できます。 これは、[チュートリアル: カスタム分析情報ウィジェットのビルド](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)によく似ています
 
 ```json
 "dashboard.insights": {

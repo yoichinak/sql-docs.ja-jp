@@ -1,4 +1,5 @@
 ---
+description: KILL STATS JOB (Transact-SQL)
 title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97992969506b030047089a973e412cdadc703416
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a3d76f64539df36751f87cf3a9c3586b138ddbbb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919598"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193359"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "86919598"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 KILL STATS JOB job_id   
 ```  
   
@@ -60,7 +60,7 @@ KILL STATS JOB job_id
 ## <a name="examples"></a>例  
  次の例は、*job_id* = `53` のジョブに関連付けられた統計情報の更新を終了する方法を示しています。  
   
-```  
+```sql  
 KILL STATS JOB 53;  
 GO  
 ```  

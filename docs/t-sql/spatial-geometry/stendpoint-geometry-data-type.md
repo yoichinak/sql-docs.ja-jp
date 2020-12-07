@@ -1,4 +1,5 @@
 ---
+description: STEndpoint (geometry データ型)
 title: STEndpoint (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca874a25d97359e4d61beac101f3b4d88cdefae
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1ec856db5c9f528135393bdb968ac35de4e94f2e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88497025"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

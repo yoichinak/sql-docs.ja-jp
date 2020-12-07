@@ -16,14 +16,14 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4a9f6aea0fe042752c5443d1de9b200494f57828
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 69311c69270a45880d6802c8b3b3a9f350eab37a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895422"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584915"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>可用性グループのセカンダリ レプリカにサポートされているバックアップをオフロードする
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85895422"
   
      可用性モード (同期コミットまたは非同期コミット) に関係なく、任意のレプリカ (プライマリまたはセカンダリ) で取得されたログ バックアップ全体にわたって一貫性のあるログ チェーンが保証されます。  
   
--   セカンダリ データベースをバックアップするには、セカンダリ レプリカがプライマリ レプリカと通信可能で、 **同期済み** または **同期中**であることが必要です。  
+-   セカンダリ データベースをバックアップするには、セカンダリ レプリカがプライマリ レプリカと通信可能で、 **同期済み** または **同期中** であることが必要です。  
 
 分散型可用性グループでは、アクティブ プライマリ レプリカと同じ可用性グループのセカンダリ レプリカ、またはセカンダリ可用性グループのいずれかのプライマリ レプリカでバックアップを実行できます。 セカンダリ レプリカは自身の可用性グループ内のプライマリ レプリカのみと通信するため、セカンダリ可用性グループ内のセカンダリ レプリカでバックアップを実行することはできません。 グローバル プライマリ レプリカと直接通信するレプリカのみがバックアップ操作を実行できます。
 

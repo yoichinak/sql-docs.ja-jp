@@ -1,5 +1,6 @@
 ---
-title: PDO::query | Microsoft Docs
+title: PDO::query
+description: SQL Server 用 Microsoft PDO_SQLSRV Driver for PHP の PDO::query 関数の API リファレンス。
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 851452d2fa7df6cab7771da294e01fea926b7af3
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919163"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081851"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,7 +62,7 @@ PDOStatement オブジェクトを閉じるには、オブジェクトを null �
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
   
-## <a name="example"></a>例  
+## <a name="query-example"></a>クエリの例  
 この例では、いくつかのクエリを使用します。  
   
 ```  
@@ -117,8 +118,8 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a>例
-このコード例では、[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
+## <a name="sql_variant-example"></a>sql_variant の例
+このコード例では、[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
 
 ```
 <?php
@@ -169,4 +170,3 @@ Array
 [PDO クラス](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

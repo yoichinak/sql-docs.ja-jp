@@ -1,4 +1,5 @@
 ---
+description: DATABASE_PRINCIPAL_ID (Transact-SQL)
 title: DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: edb269b7d27f76ea380533bc90af6831611adde1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 95d7bf7ac61ed2b79829a5aeb9d41c7f06485c8d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395108"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117954"
 ---
 # <a name="database_principal_id-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87395108"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DATABASE_PRINCIPAL_ID ( 'principal_name' )  
 ```  
   
@@ -50,7 +51,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 **int**  
 データベース プリンシパルが存在しない場合は NULL。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `DATABASE_PRINCIPAL_ID` は、選択リスト、WHERE 句、式が使えるあらゆる場所で使用します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
 ## <a name="examples"></a>例  
@@ -71,7 +72,7 @@ SELECT DATABASE_PRINCIPAL_ID('db_owner');
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
 [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: updateBigDecimal (int, java.math.BigDecimal) メソッド
 title: updateBigDecimal (int, java.math.BigDecimal) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f3b05d564b857f5e9d096e4ad3fec7593965986
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 111b892a260078161be77c5e0c1069dd96dd103e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478494"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>updateBigDecimal (int, java.math.BigDecimal) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public void updateBigDecimal(int index,
   
  *x*  
   
- BigDecimal オブジェクトです。  
+ BigDecimal オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

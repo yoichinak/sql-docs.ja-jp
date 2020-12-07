@@ -1,4 +1,5 @@
 ---
+description: AT TIME ZONE (Transact-SQL)
 title: AT TIME ZONE (Transact-SQL)
 ms.date: 06/11/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e1175043f0367a4553c15dce6e627a64e3a5e195
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395085"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115925"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
@@ -35,11 +36,9 @@ ms.locfileid: "87395085"
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 inputdate AT TIME ZONE timezone  
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -71,7 +70,7 @@ inputdate AT TIME ZONE timezone
     */  
 
     --Time before DST change has standard time offset (+01:00)
-    SELECT CONVERT(datetime2(0), '2015-03-29T01:01:00', 126)     
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T01:01:00', 126)     
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 01:01:00 +01:00   
   
@@ -80,12 +79,12 @@ inputdate AT TIME ZONE timezone
       is moved 1 hour ahead and presented with the summer time offset
       (after the DST change) 
     */
-    SELECT CONVERT(datetime2(0), '2015-03-29T02:01:00', 126)   
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T02:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00
 
     --Time after 03:00 is presented with the summer time offset (+02:00)
-    SELECT CONVERT(datetime2(0), '2015-03-29T03:01:00', 126)   
+    SELECT CONVERT(DATETIME2(0), '2015-03-29T03:01:00', 126)   
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-03-29 03:01:00 +02:00  
   
@@ -103,7 +102,7 @@ inputdate AT TIME ZONE timezone
     */  
 
     --Time before the change has DST offset (+02:00)
-    SELECT CONVERT(datetime2(0), '2015-10-25T01:01:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T01:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 01:01:00 +02:00  
 
@@ -111,13 +110,13 @@ inputdate AT TIME ZONE timezone
       Time from the "overlapped interval" is presented with standard time 
       offset (before the change)
     */
-    SELECT CONVERT(datetime2(0), '2015-10-25T02:00:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T02:00:00', 126)
     AT TIME ZONE 'Central European Standard Time';  
     --Result: 2015-10-25 02:00:00 +02:00  
 
 
     --Time after 03:00 is regularly presented with the standard time offset (+01:00)
-    SELECT CONVERT(datetime2(0), '2015-10-25T03:01:00', 126)
+    SELECT CONVERT(DATETIME2(0), '2015-10-25T03:01:00', 126)
     AT TIME ZONE 'Central European Standard Time';
     --Result: 2015-10-25 03:01:00 +01:00
   

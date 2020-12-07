@@ -1,4 +1,5 @@
 ---
+description: SCHEMA_NAME (Transact-SQL)
 title: SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dce9f9332562ca0e03be710f25336786f0a95d19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ef311e220c23fdc8b8bb3b779426418559ee83a7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112653"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379949"
 ---
 # <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87112653"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SCHEMA_NAME ( [ schema_id ] )  
 ```  
   
@@ -45,27 +46,27 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |期間|定義|  
 |----------|----------------|  
-|*schema_id*|スキーマの ID です。 *schema_id* は、 **int**です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
+|*schema_id*|スキーマの ID です。 *schema_id* は、 **int** です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
   
- ときに、NULL を返します*schema_id* 、有効な ID ではありません  
+ ときに、NULL を返します *schema_id* 、有効な ID ではありません  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SCHEMA_NAME は、システム スキーマとユーザー定義スキーマの名前を返します。 SCHEMA_NAME は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>A. 呼び出し元の既定のスキーマ名を返す  
   
-```  
+```sql
 SELECT SCHEMA_NAME();  
 ```  
   
 ### <a name="b-returning-the-name-of-a-schema-by-using-an-id"></a>B. ID を使用してスキーマの名前を返す  
   
-```  
+```sql
 SELECT SCHEMA_NAME(1);  
 ```  
   

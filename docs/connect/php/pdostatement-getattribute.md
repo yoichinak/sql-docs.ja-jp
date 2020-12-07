@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::getAttribute | Microsoft Docs
+title: PDOStatement::getAttribute
+description: SQL Server 用 Microsoft PDO_SQLSRV Driver for PHP の PDOStatement::getAttribute 関数の API リファレンス。
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a401cded16dc139e5efc70129ceb0d66fd68dcd6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 07cc46717dafe973dee05647f1d08134d858c58e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923453"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646752"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

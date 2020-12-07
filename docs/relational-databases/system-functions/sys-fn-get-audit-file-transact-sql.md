@@ -1,6 +1,6 @@
 ---
-description: fn_get_audit_file (Transact-sql)
-title: fn_get_audit_file (Transact-sql) |Microsoft Docs
+description: sys.fn_get_audit_file (Transact-sql)
+title: sys.fn_get_audit_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b631c6a8139304bd716e4eb1f3969de706f31d6
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321798"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753765"
 ---
-# <a name="sysfn_get_audit_file-transact-sql"></a>fn_get_audit_file (Transact-sql)
+# <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバー監査で作成された監査ファイルからの情報を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表に、この関数から返される監査ファイルの内容を示します。  
   
-| 列名 | Type | 説明 |  
+| 列名 | 種類 | 説明 |  
 |-------------|------|-------------|  
 | action_id | **varchar (4)** | アクションの ID。 NULL 値は許可されません。 |  
 | additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name と object_name) で表されます。  モジュール名は、、、、などの無効な xml 文字をエスケープするために解析され `'\<'` `'>'` `'/'` `'_x'` ます。 これらは、としてエスケープされ `_xHHHH\_` ます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
@@ -95,7 +95,7 @@ fn_get_audit_file ( file_pattern,
 | class_type | **varchar(2)** | 監査が発生する監査可能なエンティティの種類。 NULL 値は許可されません。 |  
 | client_ip | **nvarchar(128)** | **適用対象**: Azure SQL Database + SQL Server (2017 以降)<br /><br />  クライアント アプリケーションのソース IP |  
 | connection_id | GUID | **適用対象**: AZURE SQL DATABASE と SQL Managed Instance<br /><br /> サーバーの接続の ID |
-| data_sensitivity_information | nvarchar(4000) | **適用対象**: Azure SQL Database のみ<br /><br /> データベースにある分類済みの列に基づく、監査済みクエリが返す情報の種類と機密ラベル。 [Azure SQL Database のデータ検出と分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification)の詳細を参照してください。 |
+| data_sensitivity_information | nvarchar(4000) | **適用対象**: Azure SQL Database のみ<br /><br /> データベースにある分類済みの列に基づく、監査済みクエリが返す情報の種類と機密ラベル。 [Azure SQL Database のデータ検出と分類](/azure/sql-database/sql-database-data-discovery-and-classification)の詳細を参照してください。 |
 | database_name | **sysname** | アクションが発生したデータベース コンテキスト。 NULL 値が許可されます。 サーバーレベルで発生する監査の場合は NULL を返します。 |  
 | database_principal_id | **int** |アクションが実行されるデータベース ユーザー コンテキストの ID。 NULL 値は許可されません。 この値が適用されない場合は0を返します。 たとえば、サーバー操作などの場合です。|
 | database_principal_name | **sysname** | 現在のユーザー。 NULL 値が許可されます。 使用できない場合は NULL を返します。 |  
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 監査可能なアクションが発生した日時。 NULL 値は許可されません。 |  
 | file_name | **varchar(260)** | レコードの送信元の監査ログファイルのパスと名前。 NULL 値は許可されません。 |
 | is_column_permission | **bit** | 列レベルのアクセス許可であるかどうかを示すフラグ。 NULL 値は許可されません。 Permission_bitmask が0の場合は0を返します。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 監査が発生したエンティティの ID。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
-| object_name | **sysname** | 監査が発生したエンティティの名前。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
+| object_id | **int** | 監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
+| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
 | permission_bitmask | **varbinary(16)** | 一部のアクションでは、権限の許可、拒否、または取り消しを示します。 |
 | response_rows | **bigint** | **適用対象**: AZURE SQL DATABASE と SQL Managed Instance<br /><br /> 結果セットで返される行の数。 |  
 | schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 スキーマの外部で発生する監査の場合は NULL を返します。 |  
@@ -177,10 +177,10 @@ fn_get_audit_file ( file_pattern,
 
 監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。
 
-Azure SQL Database 監査の設定の詳細については、「 [SQL Database 監査の概要](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)」を参照してください。
+Azure SQL Database 監査の設定の詳細については、「 [SQL Database 監査の概要](/azure/sql-database/sql-database-auditing)」を参照してください。
   
-## <a name="see-also"></a>参照  
- [CREATE SERVER AUDIT &#40;Transact-sql&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
@@ -200,5 +200,4 @@ Azure SQL Database 監査の設定の詳細については、「 [SQL Database �
  [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
  [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [サーバー監査およびサーバー監査の仕様を作成する](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
-  
   

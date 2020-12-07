@@ -1,4 +1,5 @@
 ---
+description: .dqs ファイルへのドメインのエクスポート
 title: .dqs ファイルへのドメインのエクスポート
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484888"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs ファイルへのドメインのエクスポート
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895357"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ドメインを .dqs データ ファイルにエクスポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Dqs ファイルにドメインをエクスポートする  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> Dqs ファイルにドメインをエクスポートする  
  [ドメイン管理] の任意のページからエクスポートできます。 エクスポート コマンドは、ユーザー インターフェイスのコントロールから実行することも、[ドメイン リスト] ペインのショートカット メニューのコマンドから実行することもできます。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  

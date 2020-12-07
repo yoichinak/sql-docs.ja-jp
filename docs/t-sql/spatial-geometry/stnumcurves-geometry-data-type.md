@@ -1,4 +1,5 @@
 ---
+description: STNumCurves (geometry データ型)
 title: STNumCurves (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95e43dfb8bad1dfc505fb65a28674f813418f5d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fe3418284131577051e48f8300bd89df2abc0ec1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555970"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88444966"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

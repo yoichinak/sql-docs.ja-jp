@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Visual FoxPro ODBC ドライバー)
 title: SQLGetInfo (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421676"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -27,7 +28,7 @@ ms.locfileid: "81295192"
   
  ODBC API の準拠: レベル1  
   
- Visual FoxPro ODBC ドライバーと、接続ハンドル*hdbc*に関連付けられたデータソースに関する一般的な情報を返します。 次の一覧は、各*Fintype*引数と、返された値に関するコメントについて、VISUAL FoxPro ODBC ドライバーによって返される値を示しています。  
+ Visual FoxPro ODBC ドライバーと、接続ハンドル *hdbc*に関連付けられたデータソースに関する一般的な情報を返します。 次の一覧は、各 *Fintype* 引数と、返された値に関するコメントについて、VISUAL FoxPro ODBC ドライバーによって返される値を示しています。  
   
  詳細については、 *ODBC プログラマーリファレンス*の「 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 」を参照してください。  
   
@@ -97,11 +98,11 @@ ms.locfileid: "81295192"
  SQL_CURSOR_ROLLBACK_BEHAVIOR は SQL_CB_PRESERVE を返します。  
   
 ## <a name="d"></a>D  
- SQL_DATA_SOURCE_NAME は、DSN として[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)または[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)に渡された値を返します。DSN が指定されていない場合は、空の文字列を返します。  
+ SQL_DATA_SOURCE_NAME は、DSN として [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)または [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)に渡された値を返します。DSN が指定されていない場合は、空の文字列を返します。  
   
  SQL_DATA_SOURCE_READ_ONLY は ' N ' を返します。  
   
- データソースが[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)の場合、SQL_DATABASE_NAME は、現在のデータベースへの完全な UNC パスを返します。 データソースが[テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続する場合、関数はディレクトリへのパスを返します。  
+ データソースが [データベース](../../odbc/microsoft/visual-foxpro-terminology.md)の場合、SQL_DATABASE_NAME は、現在のデータベースへの完全な UNC パスを返します。 データソースが [テーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリに接続する場合、関数はディレクトリへのパスを返します。  
   
  SQL_DBMS_NAME は "Visual FoxPro" を返します。  
   
@@ -117,7 +118,7 @@ ms.locfileid: "81295192"
   
  SQL_DRIVER_HSTMT は、ドライバーマネージャーによって実装されます。  
   
- SQL_DRIVER_NAME は "vfpodbc" を返します。  
+ SQL_DRIVER_NAME は "vfpodbc.dll" を返します。  
   
  SQL_DRIVER_ODBC_VER によって "02.50" (SQL_SPEC_MAJOR、SQL_SPEC_MINOR) が返されます。  
   
@@ -298,9 +299,9 @@ ms.locfileid: "81295192"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION は SQL_QL_START を返します。  
   
- SQL_QUALIFIER_NAME_SEPARATOR は '! ' または\\' ' を返します。 データベースとテーブルの間の区切り記号は、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)に接続されているデータソース\\の場合は '! '、[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリであるデータソースの場合は ' ' です。  
+ SQL_QUALIFIER_NAME_SEPARATOR は '! ' または ' ' を返し \\ ます。 データベースとテーブルの間の区切り記号は、 [データベース](../../odbc/microsoft/visual-foxpro-terminology.md)に接続されているデータソースの場合は '! '、 \\ [フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリであるデータソースの場合は ' ' です。  
   
- SQL_QUALIFIER_TERM は "database" または "directory" を返します。 修飾子は、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)に接続されているデータソースの場合は "database"、[フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリであるデータソースの場合は "directory" です。  
+ SQL_QUALIFIER_TERM は "database" または "directory" を返します。 修飾子は、 [データベース](../../odbc/microsoft/visual-foxpro-terminology.md)に接続されているデータソースの場合は "database"、 [フリーテーブル](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリであるデータソースの場合は "directory" です。  
   
  SQL_QUALIFIER_USAGE は SQL_QU_PRIVILEGE_DEFINITION をサポートしていません。SQL_QU_DML_STATEMENT または SQL_QU_TABLE_DEFINITION のいずれかが返されます。  
   
@@ -314,7 +315,7 @@ ms.locfileid: "81295192"
   
  SQL_SCROLL_OPTIONS は SQL_SO_STATIC または SQL_SO_READONLY のいずれかを返します。  
   
- SQL_SEARCH_PATTERN_ESCAPE は "\\" を返します。  
+ SQL_SEARCH_PATTERN_ESCAPE は " \\ " を返します。  
   
  SQL_SERVER_NAME は "" を返します。  
   
@@ -454,4 +455,4 @@ ms.locfileid: "81295192"
 ## <a name="u-z"></a>U-Z  
  SQL_UNION は SQL_U_UNION または SQL_U_UNION_ALL のいずれかを返します。  
   
- SQL_USER_NAME は\<空白の> を返します。
+ SQL_USER_NAME はを返し \<blank> ます。

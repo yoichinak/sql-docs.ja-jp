@@ -1,4 +1,5 @@
 ---
+description: RESTORE ステートメント - LABELONLY (Transact-SQL)
 title: RESTORE LABELONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -21,12 +22,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4bb66a3711bcb2a5a309c4b712470c4fb3b16bb9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625825"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88478715"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE ステートメント - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -100,7 +101,7 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>全般的な解説  
  RESTORE LABELONLY を実行すると、バックアップ メディアに含まれている内容をすばやく確認できます。 RESTORE LABELONLY ステートメントはメディア ヘッダーだけを読み取っているので、大容量のテープ デバイスを使用しているときでも処理が短時間で終了します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  バックアップ操作では、メディア セットのパスワードを指定することもできます。 メディア セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 パスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  

@@ -1,8 +1,9 @@
 ---
+description: ParameterAttributesEnum
 title: ParameterAttributesEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 174cbfc9ded88e4c5465ef640a23d17c9edb5ac6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4c070dcc9d10b55033152a66851db0b68f459ae7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763413"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990143"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの属性を指定します。  
+[パラメーター](./parameter-object.md)オブジェクトの属性を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|パラメーターが符号付きの値を受け入れることを示します。|  
 |**adParamNullable**|64|パラメーターが null 値を受け入れることを示します。|  
@@ -41,4 +42,4 @@ ms.locfileid: "82763413"
 |AdoEnums ParameterAttributes|  
   
 ## <a name="applies-to"></a>適用対象  
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)

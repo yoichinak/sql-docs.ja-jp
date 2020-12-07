@@ -2,7 +2,7 @@
 title: JDBC ドライバーの展開
 description: 使用するアプリケーションと共に Microsoft JDBC Driver for SQL Server を再配布して展開する方法と、必要なファイルについて説明します。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728360"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565432"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
 
@@ -51,7 +51,7 @@ tar ファイルをアンパックするには、ドライバーをインスト�
 
 ## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の合法性
 
-JDBC Driver バージョン 6.0、6.2、6.4、7.0、7.2、7.4、および 8.2 は再頒布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
+JDBC Driver ドライバー 6.0、6.2、6.4、7.0、7.2、7.4、8.2、8.4 は再配布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
 
 JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポートは 2018 までに有効期限が切れています。
 

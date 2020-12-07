@@ -1,4 +1,5 @@
 ---
+description: Excel 接続マネージャー
 title: Excel 接続マネージャー | Microsoft Docs
 ms.date: 04/02/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fdac3f09fa3b92d7babd9c43f5a71adc4191ac7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa3a520812d2b28e67b5b863d4480d7d01afaa57
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923722"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130094"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
 
@@ -36,7 +37,7 @@ ms.locfileid: "86923722"
 
  Excel 接続マネージャーをパッケージに追加するときに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に Excel 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **EXCEL**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **EXCEL** に設定されます。  
   
 ## <a name="configure-the-excel-connection-manager"></a>Excel 接続マネージャーの構成  
  Excel 接続マネージャーは、次の方法で構成できます。  
@@ -49,7 +50,7 @@ ms.locfileid: "86923722"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [Excel 接続マネージャー](../../integration-services/connection-manager/excel-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [Excel 接続マネージャー]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   

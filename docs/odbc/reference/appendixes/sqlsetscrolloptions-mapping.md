@@ -1,4 +1,5 @@
 ---
+description: SQLSetScrollOptions のマッピング
 title: SQLSetScrollOptions Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111fb84cd584e23b18d889634893556de86311a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476924"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions のマッピング
 アプリケーションが ODBC *3. x*ドライバーを介して**SQLSetScrollOptions**を呼び出し、ドライバーが**SQLSetScrollOptions**をサポートしていない場合、  
@@ -49,7 +50,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
   
      次に、ドライバーマネージャーは、 **SQLSetScrollOptions**の*Concurrency*引数の値に従って、 **SQLGetInfo**への呼び出しによって返される **infovalueptr*値に適切なビットが設定されているかどうかを確認します。  
   
-    |*Concurrency*引数|*InfoType*の設定|  
+    |*Concurrency* 引数|*InfoType* の設定|  
     |----------------------------|------------------------|  
     |SQL_CONCUR_READ_ONLY|SQL_CA2_READ_ONLY_CONCURRENCY|  
     |SQL_CONCUR_LOCK|SQL_CA2_LOCK_CONCURRENCY|  
@@ -64,9 +65,9 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     **SQLSetScrollOptions**の*keysetsize*引数の値に従って、 * \*valueptr*を次の表のいずれかの値に設定します。  
+     **SQLSetScrollOptions**の*keysetsize*引数の値に従って、 * \* valueptr*を次の表のいずれかの値に設定します。  
   
-    |*Keysetsize*引数|*\*ValuePtr*|  
+    |*Keysetsize* 引数|*\*ValuePtr*|  
     |---------------------------|------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_CURSOR_FORWARD_ONLY|  
     |SQL_SCROLL_STATIC|SQL_CURSOR_STATIC|  
@@ -80,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     valueptr を**SQLSetScrollOptions**の*Concurrency*引数に設定します。 * \**  
+     * \* Valueptr*を**SQLSetScrollOptions**の*Concurrency*引数に設定します。  
   
 -   **SQLSetScrollOptions**への呼び出しの*keysetsize*引数が正の場合は、を呼び出します。  
   
@@ -88,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     valueptr を**SQLSetScrollOptions**の*keysetsize*引数に設定します。 * \**  
+     * \* Valueptr*を**SQLSetScrollOptions**の*keysetsize*引数に設定します。  
   
 -   の呼び出し  
   
@@ -96,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     valueptr を**SQLSetScrollOptions**の*RowsetSize*引数に設定します。 * \**  
+     * \* Valueptr*を**SQLSetScrollOptions**の*RowsetSize*引数に設定します。  
   
     > [!NOTE]  
     >  ドライバーマネージャーが、 **SQLSetScrollOptions**をサポートしていない ODBC 3.x ドライバーを使用しているアプリケーションの**SQLSetScrollOptions**をマップする場合、ドライバーマネージャーは、 **SQLSetScrollOption**の*RowsetSize*引数に、ステートメントの SQL_ATTR_ROW_ARRAY_SIZE の属性ではなく SQL_ROWSET_SIZE ステートメントオプションを設定*します。* 結果として、 **Sqlfetch**または**sqlfetchscroll**の呼び出しによって複数の行をフェッチするときに、アプリケーションで**SQLSetScrollOptions**を使用することはできません。 **SQLExtendedFetch**の呼び出しによって複数の行をフェッチする場合にのみ使用できます。

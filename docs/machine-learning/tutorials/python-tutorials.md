@@ -9,15 +9,15 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: f93fc25139a69f80afa15840d254c33d2195b335
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f417a92a00b290f06326433b24b73137a0a424fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730449"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178549"
 ---
 # <a name="python-tutorials-for-sql-machine-learning"></a>SQL 機械学習用の Python チュートリアル
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この記事では、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および [ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)用の Python のチュートリアルおよびクイックスタートについて説明します。
@@ -39,7 +39,7 @@ ms.locfileid: "85730449"
 | [線形回帰によるスキー レンタルの予測](python-ski-rental-linear-regression.md) | Python と線形回帰を使用して、スキー レンタル数を予測します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
 | [K-Means クラスタリングを使用した顧客の分類](python-clustering-model.md) | Python を使用して、顧客を分類するための K-Means クラスタリング モデルを開発および展開します。 Azure Data Studio のノートブックを使用してデータの準備とモデルのトレーニングを行い、T-SQL を使用してモデルを展開します。 |
 | [revoscalepy を使用したモデルの作成](use-python-revoscalepy-to-create-model.md) | SQL Server を計算コンテキストとして使用してリモートの Python クライアントからコードを実行する方法を示します。 このチュートリアルでは、**revoscalepy** ライブラリの **rxLinMod** を使用してモデルを作成します。 |
-| [SQL 開発者向けの Python データ分析](sqldev-in-database-python-for-sql-developers.md) | このエンドツーエンド チュートリアルでは、T-SQL を使用して完全な Python ソリューションを構築するプロセスについて説明します。 |
+| [SQL 開発者向けの Python データ分析](python-taxi-classification-introduction.md) | このエンドツーエンド チュートリアルでは、T-SQL を使用して完全な Python ソリューションを構築するプロセスについて説明します。 |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | チュートリアル | 説明 |

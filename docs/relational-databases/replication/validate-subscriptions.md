@@ -1,4 +1,5 @@
 ---
+description: '[サブスクリプションの検証]'
 title: サブスクリプションの検証 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79079774fe3b13e61a9bbdb32c767c2f40576b66
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cf4b901c4d830bf333e3078b836eb775ceac6d3a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110528"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470127"
 ---
 # <a name="validate-subscriptions"></a>[サブスクリプションの検証]
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql)
 title: SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0ca96f4134e58a129ed14129431f5d8caceae31d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6ca14e58a777603fc0bbfed73834597641fddf08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243803"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548922"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

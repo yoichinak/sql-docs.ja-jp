@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクによる Active Directory へのクエリの実行
 title: スクリプト タスクによる Active Directory へのクエリの実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d4e16509342b56d88d9347460a246718bc132db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 98f71295a8df150b7430806c35aae47cca0bc613
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923785"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430394"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
 
@@ -47,7 +48,7 @@ ms.locfileid: "86923785"
   
 4.  このスクリプト プロジェクトでは、参照を **System.DirectoryServices** 名前空間に追加します。  
   
-5.  。 コードで **Imports** ステートメントを使用し、**DirectoryServices** 名前空間をインポートします。  
+5.  . コードで **Imports** ステートメントを使用し、**DirectoryServices** 名前空間をインポートします。  
   
 > [!NOTE]  
 >  このスクリプトを正しく実行するには、組織のネットワーク上で Active Directory が使用され、この例で使用される従業員の情報が格納されている必要があります。  

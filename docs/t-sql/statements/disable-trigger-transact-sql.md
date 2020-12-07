@@ -1,4 +1,5 @@
 ---
+description: DISABLE TRIGGER (Transact-SQL)
 title: DISABLE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - triggers [SQL Server], disabling
 - disabling triggers
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7293b5420985321325d4afcccfd260f65b38ad39
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bfd3e379dc6be57c5d56abb7ae1a7a662d151cf1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484939"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380251"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +88,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 次の例は、AdventureWorks2012 データベースで記述されています。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
- 次の例では、テーブル `uAddress` に作成されたトリガー `Person` を無効にします。  
+ 次の例では、テーブル `Person` に作成されたトリガー `uAddress` を無効にします。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
@@ -112,7 +113,7 @@ GO
 ### <a name="c-disabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 同じスコープに定義されたすべてのトリガーを無効にする  
  次の例では、サーバー スコープで作成された DDL トリガーをすべて無効にします。  
   
-```  
+```sql  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

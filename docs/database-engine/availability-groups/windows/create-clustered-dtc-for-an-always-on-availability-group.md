@@ -6,17 +6,17 @@ ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 956cedfe3fd637b170f560863bf12eb79a9973b8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 306d77b9bf980179ff69514e0e609fc109c78632
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522924"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584383"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "87522924"
 
 このチュートリアルでは、クラスター化された DTC リソースと SQL Server 可用性グループを「[Cluster MSDTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)」(SQL Server 可用性グループの DTC をクラスター化する) の要件に基づいて作成します。
 
-このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、[PowerShell モジュールのインポート](/powershell/scripting/developer/module/importing-a-powershell-module)に関する記事を参照してください。  このチュートリアルは以下を前提条件とします。
+このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード** に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、[PowerShell モジュールのインポート](/powershell/scripting/developer/module/importing-a-powershell-module)に関する記事を参照してください。  このチュートリアルは以下を前提条件とします。
 - 「[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の要件をすべて満たしています。  
 - ドメインが `contoso.lab`です。
 - DTC ネットワーク名リソースが作成される OU でコンピューター オブジェクトを作成する権限がユーザーに与えられています。
@@ -116,7 +116,7 @@ foreach ($node in $nodes) {
     };
 ```  
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.**in-doubt xact resolution** を構成する 
-このスクリプトは、不明なトランザクションに対して "コミットを推測する" ように **in-doubt xact resolution** サーバー構成オプションを構成します。  **SQLCMD モード**で `SQLNODE1` に対して SQL Server Management Studio (SSMS) の次の T-SQL スクリプトを実行します。
+このスクリプトは、不明なトランザクションに対して "コミットを推測する" ように **in-doubt xact resolution** サーバー構成オプションを構成します。  **SQLCMD モード** で `SQLNODE1` に対して SQL Server Management Studio (SSMS) の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -157,7 +157,7 @@ GO
 ```
 
 ## <a name="4-create-test-databases"></a>4.テスト データベースを作成する
-このスクリプトは、`SQLNODE1` で `AG1` という名前のデータベースを作成し、`SQLNODE2` で `dtcDemoAG1` という名前のデータベースを作成します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
+このスクリプトは、`SQLNODE1` で `AG1` という名前のデータベースを作成し、`SQLNODE2` で `dtcDemoAG1` という名前のデータベースを作成します。  **SQLCMD モード** で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -215,7 +215,7 @@ GO
 ----------------------------------------------------------------
 ```
 ## <a name="5---create-endpoints"></a>5. エンドポイントを作成する
-このスクリプトは、TCP ポート `5022` で待機する `AG1_endpoint` という名前のエンドポイントを作成します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
+このスクリプトは、TCP ポート `5022` で待機する `AG1_endpoint` という名前のエンドポイントを作成します。  **SQLCMD モード** で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /**********************************************
@@ -248,7 +248,7 @@ GO
 ```
 
 ## <a name="6---prepare-databases-for-availability-group"></a>6. 可用性グループに使用するデータベースを準備する
-このスクリプトは `SQLNODE1` で `AG1` をバックアップし、`SQLNODE2` に復元します。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
+このスクリプトは `SQLNODE1` で `AG1` をバックアップし、`SQLNODE2` に復元します。  **SQLCMD モード** で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 可用性グループを作成する
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  **SQLCMD モード** で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************
@@ -561,7 +561,7 @@ END
  ```
 
 ### <a name="execute-a-distributed-transaction"></a>分散トランザクションを実行する
-このスクリプトは最初に、現在の DTC トランザクションの統計を返します。  次に、 `SQLNODE1` と `SQLNODE2`でデータベースを活用して分散トランザクションを実行します。  次に、DTC トランザクションの統計をもう一度返します。このとき、数が増えているはずです。  `SQLNODE1` に物理的に接続し、 `SQLNODE1` SQLCMD モード **で**に対して SSMS の次の T-SQL スクリプトを実行します。
+このスクリプトは最初に、現在の DTC トランザクションの統計を返します。  次に、 `SQLNODE1` と `SQLNODE2`でデータベースを活用して分散トランザクションを実行します。  次に、DTC トランザクションの統計をもう一度返します。このとき、数が増えているはずです。  `SQLNODE1` に物理的に接続し、 `SQLNODE1` SQLCMD モード **で** に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************

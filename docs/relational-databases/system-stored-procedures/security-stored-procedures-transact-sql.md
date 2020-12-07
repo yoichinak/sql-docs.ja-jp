@@ -1,4 +1,5 @@
 ---
+description: セキュリティストアドプロシージャ (Transact-sql)
 title: セキュリティストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,22 +18,22 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ded4d62aa64ad6c45657924e187a859bfa91b61
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a36470835da89f54fdfa9e474ed8b5e993ef0377
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245589"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753970"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>セキュリティストアドプロシージャ (Transact-sql)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、セキュリティの管理に使用される次のシステムストアドプロシージャがサポートされています。 これらのストアドプロシージャの一部は非推奨とされますが、旧バージョンとの互換性をサポートするために引き続き使用できます。 非推奨のプロシージャに関するトピックでは、それらの置換の一覧が表示されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、セキュリティの管理に使用される次のシステムストアドプロシージャがサポートされています。 これらのストアドプロシージャの一部は非推奨とされますが、旧バージョンとの互換性をサポートするために引き続き使用できます。 非推奨のプロシージャに関するトピックでは、それらの置換の一覧が表示されます。  
 
 :::row:::
     :::column:::
-        [sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) 
+        [sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) 
     :::column-end:::
     :::column:::
         [sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (非推奨)
@@ -126,10 +127,10 @@ ms.locfileid: "87245589"
 :::row-end:::
 :::row:::
     :::column:::
-        [sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (非推奨) 
+        [sp_dropalias](./system-stored-procedures-transact-sql.md) (非推奨) 
     :::column-end:::
     :::column:::
-        [sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
+        [sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) 
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -277,7 +278,6 @@ ms.locfileid: "87245589"
 :::row-end:::
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
   

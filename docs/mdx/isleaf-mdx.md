@@ -1,4 +1,5 @@
 ---
+description: IsLeaf (MDX)
 title: IsLeaf (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 400c55cdfcea35ae60859fb66489384870172744
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b7dd1d76b417633ff50a77b3f2822e6f7cfd462
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471824"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
 
@@ -31,8 +32,8 @@ IsLeaf(Member_Expression)
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- **Isleaf**関数は、指定されたメンバーがリーフメンバーである場合に**true**を返します。 それ以外の場合、関数は**false**を返します。  
+## <a name="remarks"></a>解説  
+ **Isleaf**関数は、指定されたメンバーがリーフメンバーである場合に**true**を返します。 それ以外の場合、関数は **false**を返します。  
   
 ## <a name="example"></a>例  
  次の例では、[Date] の場合に TRUE を返します。[会計]。CurrentMember はリーフメンバーです。  

@@ -1,8 +1,9 @@
 ---
+description: カタログ ActiveConnection プロパティの例 (VB)
 title: Catalog ActiveConnection プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 582c558222bec95914e73902b69fe9c7ce46161e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763963"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985242"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>カタログ ActiveConnection プロパティの例 (VB)
-[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを有効な開いている接続に設定すると、カタログが開きます。 開いているカタログから、そのカタログ内に含まれているスキーマオブジェクトにアクセスできます。  
+[ActiveConnection](./activeconnection-property-adox.md)プロパティを有効な開いている接続に設定すると、カタログが開きます。 開いているカタログから、そのカタログ内に含まれているスキーマオブジェクトにアクセスできます。  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -66,8 +67,8 @@ Attribute VB_Name = "Catalog"
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)   
+ [Tables コレクション (ADOX)](./tables-collection-adox.md)   
+ [Type プロパティ (テーブル) (ADOX)](./type-property-table-adox.md)

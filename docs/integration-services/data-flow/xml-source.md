@@ -1,4 +1,5 @@
 ---
+description: XML ソース
 title: XML ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920299"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194559"
 ---
 # <a name="xml-source"></a>XML ソース
 
@@ -82,7 +83,7 @@ ms.locfileid: "86920299"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -100,7 +101,7 @@ ms.locfileid: "86920299"
 |値|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
-|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[変数からの XML データ]|変数から XML データを取得します。|  
   
  **[インライン スキーマを使用する]**  
@@ -135,7 +136,7 @@ ms.locfileid: "86920299"
 ## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -148,7 +149,7 @@ ms.locfileid: "86920299"
 ## <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -173,4 +174,4 @@ ms.locfileid: "86920299"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML ソースを使用してデータを抽出する](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

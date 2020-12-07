@@ -1,4 +1,5 @@
 ---
+description: インデックス操作用のトランザクション ログのディスク領域
 title: インデックス操作用のトランザクション ログのディスク領域 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84c81b849ced12ffaf799c84511ff67649664775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499331"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>インデックス操作用のトランザクション ログのディスク領域
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   大規模なインデックス操作では、大量のデータが読み込まれるためにトランザクション ログがすぐにいっぱいになることがあります。 インデックス操作を確実にロールバックできるようにするには、インデックス操作が完了するまでトランザクション ログを切り捨てることができません。ただし、インデックス操作中にログをバックアップすることはできます。 このため、トランザクション ログには、インデックス操作中のインデックス操作によるトランザクションと同時実行ユーザーによるトランザクションの両方を格納できるだけの十分な空き領域が必要です。 これは、インデックス操作がオフラインでもオンラインでも同じです。 オフライン インデックス操作中は基になるテーブルにアクセスできないので、ユーザー トランザクションはそれほど多くなく、ログの増大もそれほど速くない可能性があります。 オンライン インデックス操作では同時実行ユーザーによる操作を防ぐことができないので、大規模なオンライン インデックス操作で同時実行ユーザーによる膨大なトランザクションが発生すると、ログの切り捨てオプションが使用されずに、トランザクション ログが増大し続けることがあります。  
   
-## <a name="recommendations"></a>Recommendations  
+## <a name="recommendations"></a>推奨事項  
  大規模なインデックス操作を実行する場合は、次の推奨事項を考慮してください。  
   
 1.  大規模なインデックス操作をオンラインで実行する前に、トランザクション ログを必ずバックアップし切り捨てを行います。また、予定しているインデックス トランザクションとユーザー トランザクションを格納できるだけの十分な領域をログのために用意しておきます。  
@@ -42,7 +43,7 @@ ms.locfileid: "85722322"
 4.  明示的なトランザクションではオンライン インデックス操作を実行しないでください。 ログの切り捨ては、明示的なトランザクションが終了するまで行われません。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [インデックス DDL 操作に必要なディスク領域](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [インデックスのディスク領域の例](../../relational-databases/indexes/index-disk-space-example.md)  
   

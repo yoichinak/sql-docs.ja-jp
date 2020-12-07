@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e38e126274b03a53c693f9cdd904ee8301b0069b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882910"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987706"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する
 
-配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) または [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) を作成できます。 計画の実行前に計画を変更する場合は [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を使用し、計画の実行中に操作を実行する場合は [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) を使用します。 このチュートリアルでは、SqlRestartableScriptContributor という名前の [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) を作成して、配置スクリプトのバッチに IF ステートメントを追加し、実行中にエラーが発生した場合は完了するまでスクリプトを再実行できるようにします。  
+配置コントリビューターを作成して、SQL プロジェクトの配置時にカスタム アクションを実行できます。 [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) または [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) を作成できます。 計画の実行前に計画を変更する場合は [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) を使用し、計画の実行中に操作を実行する場合は [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) を使用します。 このチュートリアルでは、SqlRestartableScriptContributor という名前の [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) を作成して、配置スクリプトのバッチに IF ステートメントを追加し、実行中にエラーが発生した場合は完了するまでスクリプトを再実行できるようにします。  
   
 このチュートリアルでは、次の主なタスクを行います。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "85882910"
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) から継承する SqlRestartableScriptContributor という名前のクラスを定義する。  
+-   [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) から継承する SqlRestartableScriptContributor という名前のクラスを定義する。  
   
--   [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) メソッドをオーバーライドする。  
+-   [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) メソッドをオーバーライドする。  
   
 -   プライベート ヘルパー メソッドを追加する。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    これで、[DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) から継承する配置コントリビューターの定義が完了しました。 ビルドおよび配置プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 配置計画を変更するコントリビューターは、[ExportDeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute.aspx) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
+    これで、[DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) から継承する配置コントリビューターの定義が完了しました。 ビルドおよび配置プロセス中に、カスタム コントリビューターは標準の拡張機能ディレクトリから読み込まれます。 配置計画を変更するコントリビューターは、[ExportDeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.exportdeploymentplanmodifierattribute) 属性によって識別されます。 コントリビューターを検出できるようにするためにこの属性は必須です。 この属性は次のようになります。  
   
     ```csharp  
     [ExportDeploymentPlanModifier("MyOtherDeploymentContributor.RestartableScriptContributor", "1.0.0.0")]  
@@ -149,7 +149,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) と [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 両方の基本クラスである [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) から [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) メソッドをオーバーライドします。 この OnExecute メソッドに、[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) オブジェクトが渡され、指定されたすべての引数、ソースとターゲットのデータベース モデル、配置計画、および配置オプションにアクセスできるようになります。 この例では、配置計画とターゲット データベース名を取得します。  
+    [DeploymentPlanModifier](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanmodifier) と [DeploymentPlanExecutor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplanexecutor) 両方の基本クラスである [DeploymentPlanContributor](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor) から [OnExecute](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute) メソッドをオーバーライドします。 この OnExecute メソッドに、[DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext) オブジェクトが渡され、指定されたすべての引数、ソースとターゲットのデータベース モデル、配置計画、および配置オプションにアクセスできるようになります。 この例では、配置計画とターゲット データベース名を取得します。  
   
 2.  次に、OnExecute メソッドに本体の最初の部分を追加します。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    このコードでは、いくつかのローカル変数を定義し、配置計画のすべてのステップの処理を実行するループを設定します。 ループの完了後、後処理を実行する必要があります。その後、計画実行の進行状況を追跡するために配置中に作成した一時テーブルを削除します。 ここで重要な型は、[DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) と [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx) です。 重要なメソッドは AddAfter です。  
+    このコードでは、いくつかのローカル変数を定義し、配置計画のすべてのステップの処理を実行するループを設定します。 ループの完了後、後処理を実行する必要があります。その後、計画実行の進行状況を追跡するために配置中に作成した一時テーブルを削除します。 ここで重要な型は、[DeploymentStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentstep) と [DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep) です。 重要なメソッドは AddAfter です。  
   
 3.  次に、"Add additional step processing here" というコメントを次のコードで置き換えて、ステップ処理を追加します。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    コードのコメントは処理の説明です。 簡単に説明すると、このコードは、目的のステップを検索するため、他のステップをスキップして、配置後のステップの先頭に到達すると停止します。 条件付きで囲む必要があるステートメントがステップに含まれている場合は、追加の処理を実行します。 重要な型、メソッド、およびプロパティは、[BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx)、[BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx)、[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx)、Script、[DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、および [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx) です。  
+    コードのコメントは処理の説明です。 簡単に説明すると、このコードは、目的のステップを検索するため、他のステップをスキップして、配置後のステップの先頭に到達すると停止します。 条件付きで囲む必要があるステートメントがステップに含まれている場合は、追加の処理を実行します。 重要な型、メソッド、およびプロパティは、[BeginPreDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep)、[BeginPostDeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep)、[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)、[TSqlScript](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlscript)、Script、[DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep)、および [SqlPrintStep](/dotnet/api/microsoft.sqlserver.dac.deployment.sqlprintstep) です。  
   
 4.  次に、"Add batch processing here" というコメントを次のように置き換えて、バッチ処理コードを追加します。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    このコードによって、IF ステートメントが BEGIN/END ブロックと共に作成されます。 次に、バッチ内のステートメントに対して追加の処理を実行します。 この処理が終わったら、INSERT ステートメントを追加して、スクリプト実行の進行状況を追跡する一時テーブルに情報を追加します。 最後に、バッチを更新し、バッチ内のステートメントを、そのステートメントを含む新しい IF ステートメントに置き換えます。重要な型、メソッド、およびプロパティは、[IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx)、[BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx)、[StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx)、[TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx)、[PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx)、[SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx)、および [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx) です。  
+    このコードによって、IF ステートメントが BEGIN/END ブロックと共に作成されます。 次に、バッチ内のステートメントに対して追加の処理を実行します。 この処理が終わったら、INSERT ステートメントを追加して、スクリプト実行の進行状況を追跡する一時テーブルに情報を追加します。 最後に、バッチを更新し、バッチ内のステートメントを、そのステートメントを含む新しい IF ステートメントに置き換えます。重要な型、メソッド、およびプロパティは、[IfStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.ifstatement)、[BeginEndBlockStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement)、[StatementList](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.statementlist)、[TSqlBatch](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch)、[PredicateSetStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement)、[SetOptions](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.setoptions)、および [InsertStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.insertstatement) です。  
   
 5.  ステートメント処理ループの本体を追加します。 "Add additional statement processing here" というコメントを次のコードで置き換えます。  
   
@@ -318,7 +318,7 @@ ms.locfileid: "85882910"
   
     ```  
   
-    バッチ内の各ステートメントについて、そのステートメントの型を sp_executesql ステートメントでラップする必要がある場合は、ステートメントを適宜変更します。 その後、コードによって、作成した BEGIN/END ブロックのステートメント リストにそのステートメントが追加されます。 重要な型、メソッド、およびプロパティは、[TSqlStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement.aspx) および [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx) です。  
+    バッチ内の各ステートメントについて、そのステートメントの型を sp_executesql ステートメントでラップする必要がある場合は、ステートメントを適宜変更します。 その後、コードによって、作成した BEGIN/END ブロックのステートメント リストにそのステートメントが追加されます。 重要な型、メソッド、およびプロパティは、[TSqlStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlstatement) および [ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement) です。  
   
 6.  最後に、"Add additional post-processing here" というコメントを次のコードで置き換えて、後処理セクションを追加します。  
   
@@ -353,7 +353,7 @@ ms.locfileid: "85882910"
   
     その他の重要な型、プロパティ、およびメソッドは次のとおりです。  
   
-    StringBuilder、[DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)、AddBefore。  
+    StringBuilder、[DeploymentScriptStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptstep)、AddBefore。  
   
     次に、このメソッドによって呼び出されるヘルパー メソッドを定義します。  
   
@@ -363,12 +363,12 @@ ms.locfileid: "85882910"
   
     |**方法**|**説明**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|提供されたステートメントを EXEC sp_executesql ステートメントで囲むように CreateExecuteSQL メソッドを定義します。 重要な型、メソッド、およびプロパティは、[ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx)、[ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx)、[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)、[ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx)、および [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx) です。|  
-    |CreateCompletedBatchesName|CreateCompletedBatchesName メソッドを定義します。 このメソッドによって、バッチの一時テーブルに挿入される名前が作成されます。重要な型、メソッド、およびプロパティは、[SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx) です。|  
+    |CreateExecuteSQL|提供されたステートメントを EXEC sp_executesql ステートメントで囲むように CreateExecuteSQL メソッドを定義します。 重要な型、メソッド、およびプロパティは、[ExecuteStatement](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executestatement)、[ExecutableProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference)、[SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname)、[ProcedureReference](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.procedurereference)、および [ExecuteParameter](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.executeparameter) です。|  
+    |CreateCompletedBatchesName|CreateCompletedBatchesName メソッドを定義します。 このメソッドによって、バッチの一時テーブルに挿入される名前が作成されます。重要な型、メソッド、およびプロパティは、[SchemaObjectName](/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname) です。|  
     |IsStatementEscaped|IsStatementEscaped メソッドを定義します。 このメソッドは、モデル要素の型のステートメントを IF ステートメントで囲む前に EXEC sp_executesql ステートメントでラップする必要があるかどうかを判断します。 重要な型、メソッド、およびプロパティは、モデルの種類が Schema、Procedure、View、TableValuedFunction、ScalarFunction、DatabaseDdlTrigger、DmlTrigger の ServerDdlTrigger の TSqlObject.ObjectType、ModelTypeClass、および TypeClass プロパティです。|  
     |CreateBatchCompleteInsert|CreateBatchCompleteInsert メソッドを定義します。 このメソッドは、スクリプト実行の進行状況を追跡するために配置スクリプトに追加される INSERT ステートメントを作成します。 重要な型、メソッド、プロパティには次のようなものがあります。InsertStatement、NamedTableReference、ColumnReferenceExpression、ValuesInsertSource、RowValue。|  
     |CreateIfNotExecutedStatement|CreateIfNotExecutedStatement メソッドを定義します。 このメソッドは、現在のバッチが既に実行されているかどうかを調べるために一時的なバッチ実行テーブルを確認する IF ステートメントを生成します。 重要な型、メソッド、およびプロパティは、IfStatement、ExistsPredicate、ScalarSubquery、NamedTableReference、WhereClause、ColumnReferenceExpression、IntegerLiteral、BooleanComparisonExpression、および BooleanNotExpression です。|  
-    |GetStepInfo|GetStepInfo メソッドを定義します。 このメソッドは、ステップ名に加え、ステップのスクリプトを作成するために使用されたモデル要素に関する情報を抽出します。 重要な型およびメソッドは、[DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx)、[DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx)、[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)、[CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx)、[AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx)、および [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx) です。|  
+    |GetStepInfo|GetStepInfo メソッドを定義します。 このメソッドは、ステップ名に加え、ステップのスクリプトを作成するために使用されたモデル要素に関する情報を抽出します。 重要な型およびメソッドは、[DeploymentPlanContributorContext](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext)、[DeploymentScriptDomStep](/dotnet/api/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep)、[TSqlObject](/dotnet/api/microsoft.sqlserver.dac.model.tsqlobject)、[CreateElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.createelementstep)、[AlterElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.alterelementstep)、および [DropElementStep](/dotnet/api/microsoft.sqlserver.dac.deployment.dropelementstep) です。|  
     |GetElementName|TSqlObject の書式設定された名前を作成します。|  
   
 1.  次のコードを追加して、ヘルパー メソッドを定義します。  
@@ -775,7 +775,7 @@ ms.locfileid: "85882910"
         > ターゲット データベースと同一のデータベース プロジェクトを配置した場合、生成されるレポートにはあまり意味がありません。 意味のある結果を得るには、データベースに対する変更を配置するか、新しいデータベースを配置します。  
   
 ## <a name="command-line-deployment-using-generated-dacpac-file"></a>生成された dacpac ファイルを使用したコマンド ライン配置  
-SQL プロジェクトのビルドが完了すると、コマンド ラインからスキーマを配置するために使用できる dacpac ファイルが作成されます。これにより、ビルド コンピューターなどの別のコンピューターから配置することができます。 SqlPackage は、さまざまなオプションを使用して dacpacs を配置できるコマンド ライン ユーティリティです。これらのオプションにより、ユーザーは、特に dacpac の配置や配置スクリプトの生成を実行できます。 詳しくは、「[SqlPackage.exe](https://msdn.microsoft.com/library/hh550080(v=VS.103).aspx)」をご覧ください。  
+SQL プロジェクトのビルドが完了すると、コマンド ラインからスキーマを配置するために使用できる dacpac ファイルが作成されます。これにより、ビルド コンピューターなどの別のコンピューターから配置することができます。 SqlPackage は、さまざまなオプションを使用して dacpacs を配置できるコマンド ライン ユーティリティです。これらのオプションにより、ユーザーは、特に dacpac の配置や配置スクリプトの生成を実行できます。 詳しくは、「[SqlPackage.exe](../tools/sqlpackage.md)」をご覧ください。  
   
 > [!NOTE]  
 > DeploymentContributors プロパティが定義されているプロジェクトからビルドされた dacpacs を正常に配置するには、配置コントリビューターを含む DLL を、使用中のコンピューターにインストールする必要があります。 これは、配置を正常に完了するためにこれらの DLL が必須とマークされているためです。  
@@ -793,4 +793,3 @@ SQL プロジェクトのビルドが完了すると、コマンド ラインか
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
-  

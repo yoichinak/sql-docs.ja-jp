@@ -1,4 +1,5 @@
 ---
+description: パーティション関数の変更
 title: パーティション関数の変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2717bf5791cd5f057a57da6693e05700c9045e3c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787532"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88326908"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85787532"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次を使用してパーティション関数を変更するには:**  
   
@@ -89,7 +90,7 @@ ms.locfileid: "85787532"
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>1 つのパーティションを 2 つのパーティションに分割するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "85787532"
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>2 つのパーティションを 1 つのパーティションにマージするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_config_history_retention (Transact-sql)
 title: sp_syspolicy_set_config_history_retention (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e718d545e6aeba709578f1857be81e8603a11b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b33adfbe57765cf52b3b3572bf30b263999e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485624"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @value = ] value`ポリシーベースの管理履歴を保持する日数を指定します。 *値*は**sqlvariant**です。  
+`[ @value = ] value` ポリシーベースの管理履歴を保持する日数を指定します。 *値* は **sqlvariant**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  msdb システム データベースのコンテキストで sp_syspolicy_set_config_history_retention を実行する必要があります。  
   
  *値*が0に設定されている場合、履歴は自動的には削除されません。  
@@ -62,7 +63,7 @@ WHERE name = 'HistoryRetentionInDays'
 > [!IMPORTANT]  
 >  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 このような資格情報が昇格される可能性があるため、Policy管理者ロールロールは、の構成の制御によって信頼されているユーザーのみに付与する必要があり [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ポリシーの評価履歴の保有期間を 28 日に設定します。  
   
 ```  
@@ -72,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

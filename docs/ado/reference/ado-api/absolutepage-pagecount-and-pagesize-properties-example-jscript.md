@@ -1,8 +1,9 @@
 ---
+description: AbsolutePage、PageCount、および PageSize プロパティの例 (JScript)
 title: AbsolutePage、PageCount、および PageSize プロパティの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f07855b0c99e92c18a2d54ff632fad24e1fb03ae
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c6f2d273b696f19286646525768bfa06a8fe6d55
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747619"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977302"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount、および PageSize プロパティの例 (JScript)
 この例では、AbsolutePage、PageCount、および PageSize プロパティを示します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **AbsolutePageJS**として保存します。  
@@ -158,7 +159,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>参照  
- [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage プロパティ (ADO)](./absolutepage-property-ado.md)   
+ [PageCount プロパティ (ADO)](./pagecount-property-ado.md)   
+ [PageSize プロパティ (ADO)](./pagesize-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

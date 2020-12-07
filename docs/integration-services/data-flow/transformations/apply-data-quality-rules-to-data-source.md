@@ -1,4 +1,5 @@
 ---
+description: データ ソースにデータ品質ルールを適用する
 title: データ ソースにデータ品質ルールを適用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a965e8f2-004d-4ccc-8523-a185b35b26e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 883ed4efb2a6dc35a77e54a9a366cb020961c312
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afccf7296d27331d7b76ba5e4978faca2126060f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915755"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194674"
 ---
 # <a name="apply-data-quality-rules-to-data-source"></a>データ ソースにデータ品質ルールを適用する
 
@@ -30,8 +31,7 @@ ms.locfileid: "86915755"
   
 1.  パッケージを作成します。  
   
-2.  DQS クレンジング変換を追加し、構成します。 詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」を参照してください。  
+2.  DQS クレンジング変換を追加し、構成します。 詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](./dqs-cleansing-transformation.md)」を参照してください。  
   
 3.  データ ソースに DQS クレンジング変換を接続します。  
-  
   

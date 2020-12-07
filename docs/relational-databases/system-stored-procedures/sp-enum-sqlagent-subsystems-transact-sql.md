@@ -1,4 +1,5 @@
 ---
+description: sp_enum_sqlagent_subsystems (Transact-sql)
 title: sp_enum_sqlagent_subsystems (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_sqlagent_subsystems
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ee9bf6fbb0b0567ca06635ca5d98ba9a3b98f6b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549783"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引数  
- None  
+ なし  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -58,15 +59,15 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このサブシステムに対してエージェントが開始するスレッドの最大数。|  
 |**subsystem_id**|**int**|サブシステムの識別子|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  この手順では、インスタンスで使用可能なサブシステムの一覧を示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 それ以外のユーザーには、 **msdb** データベースの **SQLAgentOperatorRole** 固定サーバー ロールを与える必要があります。  
   
  **Sqlagentoperatorrole**の詳細については、「 [SQL Server エージェント固定データベースロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   

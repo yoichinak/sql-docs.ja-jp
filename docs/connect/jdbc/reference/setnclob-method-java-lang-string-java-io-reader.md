@@ -1,4 +1,5 @@
 ---
+description: setNClob (java.lang.String, java.io.Reader) メソッド
 title: setNClob メソッド (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a595679a-89b7-4b18-9ad2-d9cb13af2a28
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12b09f0a1f4847897397509e4c7cb985c1af7a2b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9577478f7429bec4ecc7ee4eac33a10501e23a6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458704"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader"></a>setNClob (java.lang.String, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

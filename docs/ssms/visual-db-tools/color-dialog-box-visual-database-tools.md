@@ -1,4 +1,5 @@
 ---
+description: '[色の設定] ダイアログ ボックス (Visual Database Tools)'
 title: '[色] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98ac865345b0d5e71f1823fcb49d48c729dcb160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468499"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>[色の設定] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-**[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]** 、 **[鮮やかさ]** 、 **[明るさ]** 、 **[赤]** 、 **[緑]** 、 **[青]** の各テキスト ボックスに入力して、色を定義します。  
+**[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]**、 **[鮮やかさ]**、 **[明るさ]**、 **[赤]**、 **[緑]**、 **[青]** の各テキスト ボックスに入力して、色を定義します。  
   
 ## <a name="options"></a>オプション  
 **[基本色]**  
@@ -39,7 +40,7 @@ ms.locfileid: "86003841"
 光度バー  
 スライダーをドラッグして光度 (色の相対的な明るさや暗さ) を変更します。 対応する数値が **[明るさ]** ボックスに表示されます。  
   
-**Color**  
+**色**  
 現在選択されている色を表示します。  
   
 **Hue**  
@@ -51,13 +52,13 @@ ms.locfileid: "86003841"
 **[明るさ]**  
 選択された色の光度 (明るさや暗さ) 値。  
   
-**[赤]**  
+**赤**  
 赤の成分を数値で示します。有効値は 0 ～ 255 です。  
   
-**[緑]**  
+**緑**  
 緑の成分を数値で示します。有効値は 0 ～ 255 です。  
   
-**[青]**  
+**青**  
 青の成分を数値で示します。有効値は 0 ～ 255 です。  
   
 **[色の追加]**  

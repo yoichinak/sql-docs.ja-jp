@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;NESTLEVEL (Transact-SQL)'
 title: '@@NESTLEVEL (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b161917c13cba013b06a292493b58dca23e35b97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ace461eeba0207eccf95ba29ff278f72ddd72074
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110908"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115133"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87110908"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@NESTLEVEL  
 ```  
   
@@ -47,14 +48,14 @@ ms.locfileid: "87110908"
 ## <a name="remarks"></a>解説  
  ストアド プロシージャが、別のストアド プロシージャを呼び出すか、または共通言語ランタイム (CLR) ルーチン、型、集計を参照してマネージド コードを実行するたびに、入れ子のレベルがインクリメントされます。 最大の 32 を超えると、トランザクションが終了します。  
   
- @NESTLEVEL 文字列内で @[!INCLUDE[tsql](../../includes/tsql-md.md)] が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列内で @@NESTLEVEL が実行されると、返される値は、現在の入れ子レベルに 1 を加えた値になります。 sp_executesql を使用して @@NESTLEVEL が動的に実行されると、返される値は、現在の入れ子レベルに 2 を加えた値になります。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-nestlevel-in-a-procedure"></a>A. プロシージャで @@NESTLEVEL を使用する  
  次の例では、別のプロシージャを呼び出すプロシージャと、それぞれの `@@NESTLEVEL` 設定を表示するプロシージャの、2 つのプロシージャを作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'usp_OuterProc', N'P')IS NOT NULL  
@@ -89,7 +90,7 @@ Inner Level
 ### <a name="b-calling-nestlevel"></a>B. @NESTLEVEL を呼び出す  
  次の例では、`SELECT`、`EXEC`、および `sp_executesql` のそれぞれが `@@NESTLEVEL` を呼び出すときに、それらが返す値の違いを示します。  
   
-```  
+```sql  
 CREATE PROC usp_NestLevelValues AS  
     SELECT @@NESTLEVEL AS 'Current Nest Level';  
 EXEC ('SELECT @@NESTLEVEL AS OneGreater');   

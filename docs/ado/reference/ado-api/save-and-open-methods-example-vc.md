@@ -1,8 +1,9 @@
 ---
+description: Save および Open メソッドの例 (VC + +)
 title: Save および Open メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90360589fb15e9b71bdd8776a709d1464db428ff
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755908"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989353"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save および Open メソッドの例 (VC + +)
-次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドと**Open**メソッドを一緒に使用する方法を示しています。  
+次の3つの例は、 [Save](./save-method.md) メソッドと **Open** メソッドを一緒に使用する方法を示しています。  
   
- データベースからテーブルを使用して、ビジネストリップを行うことを想定しています。 前に、データを[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、**レコードセット**にローカルの切断された**レコードセット**としてアクセスします。 **レコードセット**に変更を加えた後、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
+ データベースからテーブルを使用して、ビジネストリップを行うことを想定しています。 前に、データを [レコードセット](./recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット**としてアクセスします。 **レコードセット**に変更を加えた後、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -261,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Save メソッド](./save-method.md)

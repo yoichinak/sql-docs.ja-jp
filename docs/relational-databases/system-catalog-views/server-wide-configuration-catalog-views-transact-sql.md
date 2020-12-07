@@ -1,4 +1,5 @@
 ---
+description: サーバー全体の構成のカタログビュー (Transact-sql)
 title: サーバー全体の構成のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2015
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], server-wide configuration
 - server-wide configuration catalog views [SQL Server]
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4340e6368f3865b26c9d8fb6e18c049ca71ba263
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be3767ed7423f6601a0796f120064d96feec78b7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442771"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807422"
 ---
 # <a name="server-wide-configuration-catalog-views-transact-sql"></a>サーバー全体の構成のカタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -50,6 +51,5 @@ ms.locfileid: "87442771"
 
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

@@ -1,8 +1,9 @@
 ---
+description: Stream (Visual C++ 構文用の ADO)
 title: Stream (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6141102121a921be0579bc6a9c9857db05094d8e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759648"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988683"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -60,4 +61,4 @@ put_Type(StreamTypeEnum Type)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)

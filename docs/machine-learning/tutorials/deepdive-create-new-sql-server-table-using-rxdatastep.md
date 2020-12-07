@@ -1,6 +1,6 @@
 ---
 title: rxDataStep を使用したテーブルの作成
-description: RevoScaleR チュートリアル 11:SQL Server で R 言語を使用してSQL Server テーブルを作成する方法。
+description: インメモリ データ フレーム、SQL Server コンテキスト、ローカル ファイルの間で rxDataStep を使用してデータを移動する方法を学習します。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0550c90807328cf89d8d533ac583c8410c79f5c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31aafedd59bc94d5b80359c8335421569dd510bf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728586"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196296"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用して新しい SQL Server テーブルを作成する (SQL Server と RevoScaleR のチュートリアル)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 11 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 11 です。
 
 このチュートリアルでは、インメモリ データ フレーム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンテキスト、およびローカル ファイルの間でデータを移動する方法を学習します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "85728586"
 
 **XDF とは**
 
-XDF 形式は、高次元データ用に開発された XML 標準であり、[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) によって使用されるネイティブ ファイル形式です。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
+XDF 形式は、高次元データ用に開発された XML 標準であり、[Machine Learning Server](/machine-learning-server/r/concept-what-is-xdf) によって使用されるネイティブ ファイル形式です。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
 
 1. 計算コンテキストをローカル ワークステーションに設定します。 **この手順には、DDL の権限が必要です。**
 
@@ -50,7 +50,7 @@ XDF 形式は、高次元データ用に開発された XML 標準であり、[M
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. インメモリ データに対して [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出して、データセットの概要を表示します。
+3. インメモリ データに対して [rxGetVarInfo](/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出して、データセットの概要を表示します。
   
     ```R
     rxGetVarInfo(xdfAirDemo)

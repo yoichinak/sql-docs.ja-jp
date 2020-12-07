@@ -1,4 +1,5 @@
 ---
+description: sp_helpdbfixedrole (Transact-SQL)
 title: sp_helpdbfixedrole (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899546"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538803"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'`固定データベースロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *Role*を指定すると、そのロールに関する情報のみが返されます。それ以外の場合は、すべての固定データベースロールの一覧と説明が返されます。  
+`[ @rolename = ] 'role'` 固定データベースロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。 *Role*を指定すると、そのロールに関する情報のみが返されます。それ以外の場合は、すべての固定データベースロールの一覧と説明が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,7 +52,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|固定データベースロールの名前。|  
 |**説明**|**nvarchar (70)**|**Dbfixedrole の説明です。**|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  次の表に示すように、固定データベースロールはデータベースレベルで定義され、特定のデータベースレベルの管理アクティビティを実行する権限を持っています。 固定データベース ロールは、追加または削除できません。 固定データベースロールに付与された権限は変更できません。  
   
 |固定データベースロール|説明|  
@@ -88,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   

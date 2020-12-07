@@ -1,4 +1,5 @@
 ---
+description: updateFloat メソッド (SQLServerResultSet)
 title: updateFloat メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebd23e009eda9a3273f6572ac020b2a587499a51
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a0f9fe6fee6fe493def11252e77d307b66df6f63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431354"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>updateFloat メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927850"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|渡された列インデックスを使用して、指定された列を **float** 値で更新します。|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|渡された列名を使用して、指定された列を **float** 値で更新します。|  

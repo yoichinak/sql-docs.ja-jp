@@ -1,4 +1,5 @@
 ---
+description: delete (XML DML)
 title: delete (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b6a553173716dae8a689c0731c568d43c6dec115
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393100"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116588"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,8 +31,7 @@ ms.locfileid: "86393100"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 delete Expression  
 ```  
   
@@ -46,8 +46,8 @@ delete Expression
 ### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>A. 型指定されていない XML 変数に格納されているドキュメントからノードを削除する  
  次の例では、ドキュメントのさまざまなノードを削除する方法を示します。 まず、XML インスタンスが **xml** 型の変数に代入されます。 その後、これに続く delete XML DML ステートメントにより、ドキュメントの各種ノードを削除しています。  
   
-```  
-DECLARE @myDoc xml  
+```sql
+DECLARE @myDoc XML  
 SET @myDoc = '<?Instructions for=TheWC.exe ?>   
 <Root>  
  <!-- instructions for the 1st work center -->  
@@ -88,9 +88,9 @@ SELECT @myDoc
 ### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. 型指定されていない XML 列に格納されているドキュメントからノードを削除する  
  次の例では、**delete** XML DML ステートメントにより、列に格納されているドキュメントから <`Features`> の 2 番目の子要素を削除します。  
   
-```  
-CREATE TABLE T (i int, x xml)  
-go  
+```sql
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -99,7 +99,7 @@ INSERT INTO T VALUES(1,'<Root>
 </Features>  
 </ProductDescription>  
 </Root>')  
-go  
+GO
 -- verify the contents before delete  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T  
@@ -122,68 +122,69 @@ FROM T
   
  この例では、まず、型指定された **xml** 列を含むテーブル (T) を AdventureWorks データベースに作成します。 続いて、ProductModel テーブルの Instructions 列から製造手順の XML インスタンスをテーブル T にコピーし、このコピーされたドキュメントから 1 つ以上のノードを削除します。  
   
-```  
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
-select Instructions  
-from T  
+```sql
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+    ProductModelID INT PRIMARY KEY,   
+    Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID = 7  
+GO  
+SELECT Instructions  
+FROM T  
 --1) insert <Location 1000/>. Note: <Root> must be singleton in the query  
-update T  
-set Instructions.modify('  
-  declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-  insert <MI:Location LocationID="1000"  LaborHours="1000" >  
+UPDATE T  
+SET Instructions.modify('  
+  DECLARE namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  INSERT <MI:Location LocationID="1000"  LaborHours="1000" >  
            These are manu steps at location 1000.   
            <MI:step>New step1 instructions</MI:step>  
            Instructions for step 2 are here  
            <MI:step>New step 2 instructions</MI:step>  
          </MI:Location>  
-  as first  
-  into   (/MI:root)[1]  
+  AS first  
+  INTO   (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
+GO 
+SELECT Instructions  
+FROM T  
   
 -- delete an attribute  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/@LaborHours)   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- delete text in <location>  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/text())   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SET Instructions  
+FROM T  
 -- delete 2nd manu step at location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   delete(/MI:root/MI:Location[@LocationID=1000]/MI:step[2])   
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- cleanup  
-drop table T  
-go  
+DROP TABLE T  
+GO 
 ```  
   
 ## <a name="see-also"></a>参照  

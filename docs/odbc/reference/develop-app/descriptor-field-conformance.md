@@ -1,4 +1,5 @@
 ---
+description: 記述子フィールドの適合性
 title: 記述子フィールドの準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cce33adfdbfceef56936b22c549b6762521b4798
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36687cf456f4fcbbaa3f4b029e51098815dec3f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476744"
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドの適合性
 次の表は、各 ODBC 記述子ヘッダーフィールドの準拠レベルを示しています。これは適切に定義されています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|コア|  
 |SQL_DESC_ARRAY_SIZE|コア|  
@@ -37,7 +38,7 @@ ms.locfileid: "81305933"
   
  次の表は、各 ODBC 記述子レコードフィールドの準拠レベルを示しています。これは適切に定義されています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|[レベル 2]|  
 |SQL_DESC_BASE_COLUMN_NAME|コア|  

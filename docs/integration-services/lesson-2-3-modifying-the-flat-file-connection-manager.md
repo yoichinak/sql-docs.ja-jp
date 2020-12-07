@@ -1,4 +1,5 @@
 ---
+description: レッスン 2-3:フラット ファイル接続マネージャーの変更
 title: 手順 3:フラット ファイル接続マネージャーの変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484110"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
 
@@ -29,21 +30,21 @@ ms.locfileid: "86921517"
   
 1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]** を右クリックして **[プロパティ]** をクリックします。  
 
-2.  **[プロパティ]** ウィンドウで、**PackagePath** が **\Package.Connections** で始まっていることを確認します。 該当しない場合は、 **[接続マネージャー]** ウィンドウで、 **[Sample Flat File Source Data]\(サンプル フラット ファイル ソース データ\)** を右クリックし、 **[プロパティ]** をクリックします。
+2.  **[プロパティ]** ウィンドウで、**PackagePath** が **\Package.Connections** で始まっていることを確認します。 該当しない場合は、**[接続マネージャー]** ウィンドウで、**[Sample Flat File Source Data]\(サンプル フラット ファイル ソース データ\)** を右クリックし、**[プロパティ]** をクリックします。
   
 3.  **[プロパティ]** ウィンドウの **[式]** で、空のセルを選択し、参照ボタン **[...]** を選択します。  
   
 4.  **[プロパティ式エディター]** ダイアログの **[プロパティ]** 列で **ConnectionString** を選択します。  
   
-5.  **[式]** 列の参照ボタン **[...]** を選択し、 **[式ビルダー]** ダイアログ ボックスを開きます。  
+5.  **[式]** 列の参照ボタン **[...]** を選択し、**[式ビルダー]** ダイアログ ボックスを開きます。  
   
 6.  **[式ビルダー]** ダイアログで **[変数]** ノードを展開します。  
   
 7.  **User::varFileName** 変数を **[式]** ボックスにドラッグします。  
   
-8.  **[OK]** を選択し、 **[式ビルダー]** ダイアログを閉じます。  
+8.  **[OK]** を選択し、**[式ビルダー]** ダイアログを閉じます。  
   
-9.  再度 **[OK]** を選択し、 **[プロパティ式エディター]** ダイアログを閉じます。  
+9.  再度 **[OK]** を選択し、**[プロパティ式エディター]** ダイアログを閉じます。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む  
 [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

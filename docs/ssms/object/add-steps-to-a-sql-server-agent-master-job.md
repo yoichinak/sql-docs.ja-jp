@@ -1,4 +1,5 @@
 ---
+description: Add Steps to a SQL Server Agent Master Job
 title: Add Steps to a SQL Server Agent Master Job
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cba58d8b4068ebe40729d8262f24661711129c03
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d1f3dcbb4e1f8cc39cb67ee78ba81a06d8596eab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002015"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037669"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86002015"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [セキュリティ](#Security)  
+    [Security](#Security)  
   
 -   **以下を使用して SQL Server エージェントのマスター ジョブにステップを追加するには:**  
   
@@ -87,5 +88,4 @@ ms.locfileid: "86002015"
     GO  
     ```  
   
-詳細については、「 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)」を参照してください。  
-  
+詳細については、「 [sp_add_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)」を参照してください。  

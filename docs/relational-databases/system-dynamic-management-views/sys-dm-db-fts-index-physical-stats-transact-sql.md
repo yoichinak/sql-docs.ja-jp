@@ -1,4 +1,5 @@
 ---
+description: dm_db_fts_index_physical_stats (Transact-sql)
 title: dm_db_fts_index_physical_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_fts_index_physical_stats dynamic management view
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a87b00ea2308cbf21d3d8f57670e2c0c996bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a10ebff9ba050ab63479b8819d60498c6a71af0a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663188"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534349"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>dm_db_fts_index_physical_stats (Transact-sql)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85663188"
 |**similarity_index_page_count**|**bigint**|インデックスページ数における抽出の論理サイズ。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、「[セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
+ 詳細については、「 [セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
   
 ## <a name="metadata"></a>Metadata  
  セマンティックインデックス作成の状態の詳細については、次の動的管理ビューに対してクエリを実行します。  
@@ -55,7 +56,7 @@ ms.locfileid: "85663188"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、フルテキストインデックスまたはセマンティックインデックスが関連付けられているすべてのテーブル内の各フルテキストインデックスまたはセマンティックインデックスの論理サイズを照会する方法を示します。  
   
 ```  

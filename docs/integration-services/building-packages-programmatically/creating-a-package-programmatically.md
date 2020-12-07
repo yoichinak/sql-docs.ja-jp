@@ -1,4 +1,5 @@
 ---
+description: プログラムを使用したパッケージ作成
 title: プログラムを使用したパッケージ作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42d7d3dd3c4e8ee86da1a9fd8de8b725ba1579e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9173bfca78a0fcb872e2eac408ca6992738d7dbb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919418"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480754"
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
 
@@ -154,9 +155,9 @@ End Module
   
 ## <a name="external-resources"></a>外部リソース  
   
--   blogs.msdn.com のブログ「[API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824)」(API サンプル – OleDB ソースと OleDB 変換先)  
+-   blogs.msdn.com のブログ「[API Sample - OleDB source and OleDB destination](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)」(API サンプル – OleDB ソースと OleDB 変換先)  
   
--   blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
+-   blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)」(EzAPI - SQL Server 2012 用の更新)  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるタスクの追加](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

@@ -1,4 +1,5 @@
 ---
+description: RIGHT (SSIS 式)
 title: RIGHT (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46614c3875226936b9fa555351dcd6da2dcb26e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913518"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477434"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
 
@@ -44,7 +45,7 @@ RIGHT(character_expression,integer_expression)
  DT_WSTR  
   
 ## <a name="remarks"></a>解説  
- *integer_expression* が *character_expression*より長い場合、関数は *character_expression*を返します。  
+ *integer_expression* が *character_expression* より長い場合、関数は *character_expression* を返します。  
   
  *integer_expression* が 0 の場合、関数は長さが 0 の文字列を返します。  
   

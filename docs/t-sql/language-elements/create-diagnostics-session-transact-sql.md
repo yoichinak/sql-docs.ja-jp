@@ -1,4 +1,5 @@
 ---
+description: CREATE DIAGNOSTICS SESSION (Transact-SQL)
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12a6e49e477ce3e61560438a6db141bfb5aab721
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 731c7b77fca5ae7c2cc4f85e3387d3daf93b4bce
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395771"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124430"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87395771"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-Creating a new diagnostics session:  
+-- Creating a new diagnostics session:  
 CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
 <session_xml>::  
@@ -48,10 +49,10 @@ CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';
    </Capture>  
 <Session>  
   
-Retrieving results for a diagnostics session:  
+-- Retrieving results for a diagnostics session:  
 SELECT * FROM master.sysdiag.diagnostics_name ;  
   
-Removing results for a diagnostics session:  
+-- Removing results for a diagnostics session:  
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
@@ -65,7 +66,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  ビューに保存されるイベントの数。 たとえば、100 を指定した場合は、フィルター条件に一致する最新の 100 イベントが診断セッションに保存されます。 見つかった一致するイベントが 100 より少ない場合は、診断セッションに含まれるイベントは 100 未満になります。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
   
  *event_name*  
- 診断セッションで収集する実際のイベントを定義します。  *event_name* は、[ の場合に ](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)sys.pdw_diag_events`sys.pdw_diag_events.is_enabled='True'` に列挙されるイベントの 1 つです。  
+ 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) に列挙されるイベントの 1 つです。  
   
  *filter_property_name*  
  結果を制限するプロパティの名前です。 たとえば、セッション ID に基づいて制限する場合は、*filter_property_name* を *SessionId* にする必要があります。 *filter_property_name* に使用できる値の一覧については、以下の *property_name* を参照してください。  
@@ -106,7 +107,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### <a name="a-creating-a-diagnostics-session"></a>A. 診断セッションを作成する  
  この例では、データベース エンジンのパフォーマンスのメトリックを記録する診断セッションを作成します。 この例では、エンジン クエリ実行/終了イベントと DMS ブロック   イベントをリッスンする診断セッションを作成します。 返される結果は、コマンド テキスト、コンピューター名、要求 ID (クエリ ID)、イベントが作成されたセッションです。  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -130,13 +131,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  診断セッションの作成後に、クエリを実行します。  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  その後、sysdiag スキーマから選択して、診断セッションの結果を表示します。  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -146,14 +147,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  診断セッションが完了したら、**DROP DIAGNOSTICS** コマンドを使用して削除します。  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>B. 別の診断セッション  
  わずかに異なるプロパティを持つ 2 番目の例です。  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -184,7 +185,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  次のような、クエリを実行します。  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -192,7 +193,7 @@ SELECT * FROM dbo.FactFinance;
   
  次のクエリでは、承認のタイミングが返されます。  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -200,7 +201,7 @@ ORDER BY DateTimePublished;
   
  診断セッションが完了したら、**DROP DIAGNOSTICS** コマンドを使用して削除します。  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

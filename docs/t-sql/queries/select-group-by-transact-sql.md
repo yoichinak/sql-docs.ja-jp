@@ -1,4 +1,5 @@
 ---
+description: SELECT - GROUP BY- Transact-SQL
 title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2019
@@ -32,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c248d5381429b3bf53ee483c5200096601e08e2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9368fcb80240ddf1520ef1ac0f4d145d20d10ab2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552960"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226947"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +86,7 @@ GROUP BY
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -147,7 +148,7 @@ SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;
 たとえば、このクエリは、Country (国)、Region (地域)、および Sales (売上) の列を持つ Sales テーブルを作成します。 4 つの行を挿入し、そのうちの 2 行は Country と Region の一致する値を持ちます。  
 
 ```sql
-CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
+CREATE TABLE Sales ( Country VARCHAR(50), Region VARCHAR(50), Sales INT );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);
@@ -160,7 +161,7 @@ Sales テーブルには、次の行が含まれています。
 |---------|--------|-------|
 | Canada | Alberta | 100 |
 | Canada | British Columbia | 200 |
-| Canada | British Columbia | 該当なし |
+| Canada | British Columbia | 300 |
 | United States | モンタナ | 100 |
 
 次のクエリでは、Country と Region をグループ化し、値の組み合わせごとの合計を返します。  
@@ -287,11 +288,11 @@ GROUP BY ALL:
 - FILESTREAM 属性を持つ列では失敗します。
   
 ### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
-適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 DISTRIBUTED_AGG クエリ ヒントは、超並列処理 (MPP) システムで、特定の列に対し、集計を実行する前にテーブルを強制的に再配布します。 DISTRIBUTED_AGG クエリ ヒントを持つことができるのは、GROUP BY 句内で 1 つの列だけです。 クエリが完了したら、再配布されたテーブルは破棄されます。 元のテーブルは変更されません。  
 
-注:DISTRIBUTED_AGG クエリ ヒントは、Parallel Data Warehouse の旧バージョンとの下位互換性を保つために提供されており、ほとんどのクエリでパフォーマンスが向上することはありません。 既定では、MPP は集計のパフォーマンスを向上させるために必要なデータを既に再分配しています。 
+注:DISTRIBUTED_AGG クエリ ヒントは、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の旧バージョンとの下位互換性を保つために提供されており、ほとんどのクエリでパフォーマンスが向上することはありません。 既定では、MPP は集計のパフォーマンスを向上させるために必要なデータを既に再分配しています。 
   
 ## <a name="general-remarks"></a>全般的な解説
 
@@ -314,7 +315,7 @@ NULL 値:
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-適用対象:SQL Server (2008 以降) および Azure SQL Data Warehouse
+適用対象:SQL Server (2008 以降) および [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### <a name="maximum-capacity"></a>最大容量
 
@@ -415,7 +416,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>例 :SQL Data Warehouse と Parallel Data Warehouse  
+## <a name="examples-azure-synapse-analytics-and-parallel-data-warehouse"></a>例 :Azure Synapse Analytics と Parallel Data Warehouse  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 句の基本的な使用方法  
  次の例では、各日のすべての売上の合計金額を検索します。 各日に、すべての売上の合計を含む 1 つの行が返されます。  

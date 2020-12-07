@@ -1,4 +1,5 @@
 ---
+description: ODBC の作成の目的
 title: ODBC の作成の目的 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22173b0ad3dd8abf2d168b41a16a03bc414022ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce24a4856c3bae6d271712a948e1ae5e2ceecbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428794"
 ---
 # <a name="why-was-odbc-created"></a>ODBC の作成の目的
 従来、企業は1つの DBMS を使用していました。 すべてのデータベースアクセスは、そのシステムのフロントエンドか、そのシステムでのみ動作するように記述されたアプリケーションによって行われました。 ただし、コンピューターの使用率が高くなり、コンピューターのハードウェアとソフトウェアが使用可能になったときに、企業はさまざまな Dbms の取得を開始しました。 理由は多数ありました。最もコストが安いもの、最速のもの、既に知っていたもの、市場で最新のものは何か、1つのアプリケーションにとって最も効果的なものは何かということです。 それ以外の理由として、以前に1つの DBMS を持つ部門では、複数の再編成と合併が必要でした。  

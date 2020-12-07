@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206046"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257078"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>`pyspark` ノートブックのトラブルシューティング
 
@@ -30,7 +30,7 @@ PySpark セッションを効率的にトラブルシューティングするに
 
 このトラブルシューティング手順では、以下が必要です。
 
-1. `azdata` がインストールされ、構成がクラスターに正しく設定されていること。
+1. [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] がインストールされ、構成がクラスターに正しく設定されていること。
 2. Linux コマンドの実行に関する知識とログのトラブルシューティング スキル。
 
 ## <a name="troubleshooting-steps"></a>トラブルシューティングの手順
@@ -127,7 +127,7 @@ PySpark セッションを効率的にトラブルシューティングするに
 
 1. アプリケーション ID と、個々の application_master とコンテナーのログを確認します。
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="アプリケーション ID を確認する":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="失敗したセル":::
 
 1. YARN アプリケーション ログを確認します。
 
@@ -165,7 +165,7 @@ PySpark セッションを効率的にトラブルシューティングするに
 
 1. SPARK UI を確認します。
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark UI":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="失敗したセル":::
 
    ステージ タスクまでドリルダウンしてエラーを探します。
 

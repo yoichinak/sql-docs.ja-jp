@@ -1,4 +1,5 @@
 ---
+description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411458"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863696"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87411458"
 SQL Server Management Studio またはカスタム アプリケーションから [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) を使用することによってのみ、インプレース暗号化をトリガーできます。 「[Transact-SQL を使用してインプレースでの列の暗号化を構成する](always-encrypted-enclaves-configure-encryption-tsql.md)」をご覧ください。
 
 > [!NOTE]
-> 現時点では、[Always Encrypted ウィザード](always-encrypted-wizard.md)および [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) コマンドレットではインプレース暗号化はサポートされておらず、構成が上記の要件を満たしている場合でも、データは暗号化操作のために常にダウンロードされます。 
+> 現時点では、[Always Encrypted ウィザード](always-encrypted-wizard.md)および [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) コマンドレットではインプレース暗号化はサポートされておらず、構成が上記の要件を満たしている場合でも、データは暗号化操作のために常にダウンロードされます。 
 
 ## <a name="next-steps"></a>次の手順
 - [Transact-SQL を使用してインプレースでの列の暗号化を構成する](always-encrypted-enclaves-configure-encryption-tsql.md)

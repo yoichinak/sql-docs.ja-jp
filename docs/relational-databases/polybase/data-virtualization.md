@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 1cfc3dc5fa707a10f6adcf6e12122698ff4f9428
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943010"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92524019"
 ---
 # <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>ODBC データ ソースで外部テーブル ウィザードを使用する
 
-SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
+SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを *仮想化* して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
 
 このビデオでは、データの仮想化の概要を説明します。
 
@@ -45,7 +45,7 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 ## <a name="create-a-database-master-key"></a>データベースのマスター キーを作成する
 
-このステップでは、データベースのマスター キーを作成します。 マスター キーの作成は必須です。 マスター キーにより、外部データ ソースによって使用される資格情報がセキュリティ保護されます。 マスター キーには強力なパスワードを選択してください。 また、**BACKUP MASTER KEY** を使用して、マスター キーをバックアップします。 バックアップを安全な場所に保存します。
+このステップでは、データベースのマスター キーを作成します。 マスター キーの作成は必須です。 マスター キーにより、外部データ ソースによって使用される資格情報がセキュリティ保護されます。 マスター キーには強力なパスワードを選択してください。 また、 **BACKUP MASTER KEY** を使用して、マスター キーをバックアップします。 バックアップを安全な場所に保存します。
 
 ![データベースのマスター キーを作成する](media/data-virtualization/virtualize-data-master-key.png)
 
@@ -54,17 +54,17 @@ SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する�
 
 ## <a name="enter-external-data-source-credentials"></a>外部データ ソースの資格情報を入力する
 
-このステップでは、外部データ ソースのオブジェクトを作成するための外部データ ソースと資格情報の詳細を入力します。 資格情報は、データ ソースに接続するためにデータベース オブジェクトによって使用されます。 外部データ ソースの名前を入力します。 例では Test になっています。 外部データ ソースの SQL Server 接続の詳細を提供します。 外部データ ソースを作成する**サーバー名**と**データベース名**を入力します。
+このステップでは、外部データ ソースのオブジェクトを作成するための外部データ ソースと資格情報の詳細を入力します。 資格情報は、データ ソースに接続するためにデータベース オブジェクトによって使用されます。 外部データ ソースの名前を入力します。 例では Test になっています。 外部データ ソースの SQL Server 接続の詳細を提供します。 外部データ ソースを作成する **サーバー名** と **データベース名** を入力します。
 
 次のステップで資格情報を構成します。 資格情報の名前を入力します。 この名前は、作成する外部データ ソースのサインイン情報を安全に格納するために使用されるデータベース スコープ資格情報です。 たとえば `TestCred` です。 ユーザー名とパスワードを入力して、データ ソースに接続します。
 
-![外部データ ソースの資格情報](media/data-virtualization/data-source-credentials.png)
+!["ステップ 3 - データ ソースへの接続を作成する" を示すスクリーンショット。](media/data-virtualization/data-source-credentials.png)
 
 ## <a name="external-data-table-mapping"></a>外部データ テーブルのマッピング
 
 次のページで、外部ビューを作成するテーブルを選択します。 親データベースを選択すると、子テーブルも含まれます。 テーブルを選択すると、右側にマッピング テーブルが表示されます。 ここで、型を変更することができます。 また、選択した外部テーブル自体の名前を変更することもできます。
 
-![外部データ ソースの資格情報](media/data-virtualization/data-table-map.png)
+!["ステップ 4 - データ ソース オブジェクトを外部テーブルにマップする" を示すスクリーンショット。](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >マッピング ビューを変更するには、別の選択したテーブルをダブルクリックします。

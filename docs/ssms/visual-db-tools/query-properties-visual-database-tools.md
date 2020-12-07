@@ -1,4 +1,5 @@
 ---
+description: クエリのプロパティ (Visual Database Tools)
 title: クエリのプロパティ
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d9d284d99b6dfddaf8936c36cf06e373a673e46a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca80e60a35b9eccff0ada18854d4f8a33ddaa9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445986"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86003185"
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティを表示します。  
   
-**Name**  
+**名前**  
 現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
 **データベース名**  
@@ -43,7 +44,7 @@ ms.locfileid: "86003185"
 **[クエリ デザイナー] カテゴリ**  
 展開すると、その他のプロパティが表示されます。  
   
-**ターゲット テーブル**  
+**[ターゲット テーブル]**  
 データを挿入するテーブルの名前を指定します。 この一覧は、INSERT クエリまたは MAKE TABLE クエリを作成する場合に表示されます。 INSERT クエリの場合は、一覧でテーブル名を選択します。  
   
 MAKE TABLE クエリの場合は、新しいテーブルの名前を入力します。 テーブルを別のデータ ソースに作成する場合は、データ ソースの名前、所有者 (必要な場合)、テーブルの名前を含めた、完全修飾テーブル名を指定します。  
@@ -67,7 +68,7 @@ MAKE TABLE クエリの場合は、新しいテーブルの名前を入力しま
 SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 クエリの使用者やクエリをいつ使用するかなどの情報をコメントに含めることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のデータベースだけに適用されます。  
   
 **[Top の指定] カテゴリ**  
-展開すると、 **[Top]** 、 **[パーセント]** 、 **[式]** 、および **[With Ties]** の各プロパティが表示されます。  
+展開すると、 **[Top]**、 **[パーセント]**、 **[式]**、および **[With Ties]** の各プロパティが表示されます。  
   
 **[(Top)]**  
 クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  
@@ -77,7 +78,7 @@ SQL ステートメントの説明を表示します。 説明全体を表示し
 **[式]**  
 クエリが返す行の数または割合を指定します。 **[パーセント]** を [はい] に設定すると、この数値はクエリが返す行の割合を表し、 **[パーセント]** を [いいえ] に設定すると、この数値はクエリが返す行の数を表します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
-**[パーセント]**  
+**Percent**  
 クエリが最初の *n* % の行だけを結果セットに返すように指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降だけに適用されます。  
   
 **[With Ties]**  

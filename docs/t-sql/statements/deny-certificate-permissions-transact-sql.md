@@ -1,4 +1,5 @@
 ---
+description: DENY (証明書の権限の拒否) (Transact-SQL)
 title: DENY (証明書の権限の拒否) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bbf8f2aa031b7f8a33993d6054d27137011814c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: feec699a67378db5a7cdd1c169e507c72859b639
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484996"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123997"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (証明書の権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ DENY permission  [ ,...n ]
  権限を拒否する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれか:  
+ 権限を拒否するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -75,7 +76,7 @@ DENY permission  [ ,...n ]
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -93,7 +94,7 @@ DENY permission  [ ,...n ]
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  証明書は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、証明書で拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
 |証明書の権限|権限が含まれる証明書権限|権限が含まれるデータベース権限|  

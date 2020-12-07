@@ -1,4 +1,5 @@
 ---
+description: sys.asymmetric_keys (Transact-SQL)
 title: asymmetric_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdd5636a3b3cf700dccc855e26bb64f85f0c1207
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652368"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539707"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85652368"
 |**アルゴリズム**|**char(2)**|キーと一緒に使用されるアルゴリズム。<br /><br /> 1R = 512 ビット RSA<br /><br /> 2R = 1024 ビット RSA<br /><br /> 3R = 2048 ビット RSA|  
 |**algorithm_desc**|**nvarchar(60)**|キーで使用されるアルゴリズムの説明。<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|キーのビット長。|  
-|**sid**|**varbinary (85)**|このキーのログイン SID。 拡張キー管理キーの場合、この値は NULL になります。|  
+|**sid**|**varbinary(85)**|このキーのログイン SID。 拡張キー管理キーの場合、この値は NULL になります。|  
 |**string_sid**|**nvarchar(128)**|キーのログイン SID の文字列形式。 拡張キー管理キーの場合、この値は NULL になります。|  
 |**public_key**|**varbinary(max)**|公開キー。|  
 |**attested_by**|**nvarchar(260)**|システムでのみ使用されます。|  
@@ -54,10 +55,10 @@ ms.locfileid: "85652368"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
   

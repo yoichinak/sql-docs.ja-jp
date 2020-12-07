@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1ee7e4446b67c60a8bb0b7a3d43453a5e7498d6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4dc776e09639a67ef93e1778dd152761ed5a0bfc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87940483"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891582"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部では、UTF-16 エンコードを使用した効率のよいバイナリ表記で XML が表現されます。 ユーザーが指定したエンコードは保持されませんが、解析処理時に考慮されます。  
   
 ### <a name="type-casting-clr-user-defined-types"></a>CLR ユーザー定義型の型キャスト  
- CLR ユーザー定義型で XML シリアル化を指定している場合は、その型のインスタンスを XML データ型に明示的にキャストすることができます。 CLR ユーザー定義型の XML シリアル化の詳細については、「 [XML Serialization from CLR Database Objects](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)」を参照してください。  
+ CLR ユーザー定義型で XML シリアル化を指定している場合は、その型のインスタンスを XML データ型に明示的にキャストすることができます。 CLR ユーザー定義型の XML シリアル化の詳細については、「 [XML Serialization from CLR Database Objects](/dotnet/standard/serialization/introducing-xml-serialization)」を参照してください。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>型指定された XML の空白文字の処理  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で、要素の内容に含まれる空白文字は、開始タグや終了タグなどのマークアップで区切られた空白文字だけのシーケンス内に出現し、エンティティに変換されていない場合、重要でないと見なされます (CDATA セクションは無視されます)。この空白文字の処理は、W3C (World Wide Web Consortium) から公開されている XML 1.0 仕様の空白文字に関する記述とは異なります。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーが XML 1.0 の定義に従って、限定された数の DTD サブセットしか認識しないためです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる限定された DTD サブセット数の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
@@ -220,5 +220,4 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
  [xml データ型メソッド](../../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [XML データ &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
-  
   

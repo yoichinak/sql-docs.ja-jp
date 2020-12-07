@@ -22,14 +22,14 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f0405ddad68df7c4e34d0af17d2e9da81adfe535
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670111"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130336"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "85670111"
   
 2.  ページ チェックサムが存在するかどうかに関係なく、BACKUP によってバックアップ ストリームに個別のバックアップ チェックサムが生成されます。 復元操作でバックアップ チェックサムを使用し、バックアップが破損していないかどうかを検証することもできます。 バックアップ チェックサムは、データベース ページにではなくバックアップ メディアに格納されます。 バックアップ チェックサムは、復元時に使用することもできます。  
   
-3.  バックアップ セットは ( **msdb..backupset** の **has_backup_checksums**列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
+3.  バックアップ セットは ( **msdb..backupset** の **has_backup_checksums** 列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
 
  復元操作中、バックアップ メディアにバックアップ チェックサムがある場合、既定では RESTORE ステートメントと RESTORE VERIFYONLY ステートメントの両方でバックアップ チェックサムとページ チェックサムが検証されます。 バックアップ チェックサムがない場合、いずれの復元操作も検証が行われずに続行されます。これは、バックアップ チェックサムがないと、ページ チェックサムの検証を確実に実行できないためです。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85670111"
   
 2.  SQL Server エラー ログにエラーを記録します。  
   
-3.  バックアップ セットに対し、この種類のエラーが存在するというマークを ( **msdb.backupset** の **is_damaged**列に) 付けます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
+3.  バックアップ セットに対し、この種類のエラーが存在するというマークを ( **msdb.backupset** の **is_damaged** 列に) 付けます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
   
 4.  正常にバックアップが生成されたがページ エラーが含まれていることを示すメッセージを表示します。  
   

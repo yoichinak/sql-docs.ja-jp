@@ -1,4 +1,5 @@
 ---
+description: DROP MASTER KEY (Transact-SQL)
 title: DROP MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: 5ccef797-408f-4964-80da-965d8e1ccba7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6722becf2b18b1c81576b6f3173be2474e94cc73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e930f02d02c45732f4617d0a91ddac44531e90c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68044130"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380370"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68044130"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DROP MASTER KEY  
 ```  
   
@@ -56,7 +57,7 @@ DROP MASTER KEY
 ## <a name="examples"></a>例  
  次の例では、データベース `AdventureWorks2012` のマスター キーを削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP MASTER KEY;  
 GO  
@@ -65,7 +66,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、マスター キーを削除します。  
   
-```  
+```sql  
 USE master;  
 DROP MASTER KEY;  
 GO  

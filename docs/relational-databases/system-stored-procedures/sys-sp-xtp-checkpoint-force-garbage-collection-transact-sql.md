@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 title: sp_xtp_checkpoint_force_garbage_collection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: df25b33677d4494d32bd60bb55b5c60791bcad30
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ca922c0f2cfe2036107509026d97cd0db1ee54a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442414"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551129"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

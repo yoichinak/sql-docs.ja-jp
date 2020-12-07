@@ -1,4 +1,5 @@
 ---
+description: 除算 (MDX)
 title: 除算 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0999df34ff817131e890afade89fc5daad85796b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484015"
 ---
 # <a name="divide-mdx"></a>除算 (MDX)
 
@@ -37,7 +38,7 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  *alternateresult*  
  (省略可能) 0 による除算でエラーが発生したときに返される値です。 指定しない場合、既定値は BLANK() です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  0 による除算の別の結果は定数である必要があります。  
   
 ## <a name="see-also"></a>参照  

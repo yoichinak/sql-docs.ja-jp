@@ -1,4 +1,5 @@
 ---
+description: MSrepl_backup_lsns (Transact-SQL)
 title: MSrepl_backup_lsns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_backup_Isns system table
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3c1870e9fba39995f7f8634076c658d8ef044999
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 743657bad9cf4c0bd1611e7f00f1d410753583ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889535"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540259"
 ---
 # <a name="msrepl_backup_lsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889535"
 |**next_xact_id**|**varbinary(16)**|バックアップ操作で使用する一時的なログ シーケンス番号。|  
 |**nextx_xact_seqno**|**varbinary(16)**|バックアップ操作で使用する一時的なログ シーケンス番号。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

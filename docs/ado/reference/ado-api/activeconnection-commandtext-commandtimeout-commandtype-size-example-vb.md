@@ -1,8 +1,9 @@
 ---
+description: ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)
 title: ストアドプロシージャプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a90ae6ceca85a314de5112f02b2389e26bfa5bdc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 083fd32899da68fb377bc2781211299960ea4851
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760748"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977063"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VB)
-この例では、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[Direction](../../../ado/reference/ado-api/direction-property.md)プロパティを使用してストアドプロシージャを実行します。  
+この例では、 [ActiveConnection](./activeconnection-property-ado.md)、 [CommandText](./commandtext-property-ado.md)、 [CommandTimeout](./commandtimeout-property-ado.md)、 [CommandType](./commandtype-property-ado.md)、 [Size](./size-property-ado-parameter.md)、および [Direction](./direction-property.md) プロパティを使用してストアドプロシージャを実行します。  
   
 ```  
 'BeginActiveConnectionVB  
@@ -134,14 +135,14 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout プロパティ (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Size プロパティ (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [ActiveCommand プロパティ (ADO)](./activecommand-property-ado.md)   
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [CommandText プロパティ (ADO)](./commandtext-property-ado.md)   
+ [CommandTimeout プロパティ (ADO)](./commandtimeout-property-ado.md)   
+ [CommandType プロパティ (ADO)](./commandtype-property-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Direction プロパティ](./direction-property.md)   
+ [Parameter オブジェクト](./parameter-object.md)   
+ [Record オブジェクト (ADO)](./record-object-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Size プロパティ (ADO Parameter)](./size-property-ado-parameter.md)

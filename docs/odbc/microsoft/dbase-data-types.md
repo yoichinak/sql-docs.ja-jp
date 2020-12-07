@@ -1,4 +1,5 @@
 ---
+description: dBASE データ型
 title: dBASE データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eca7d603a136bd1921ee93656d38f59efcda5f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412768"
 ---
 # <a name="dbase-data-types"></a>dBASE データ型
 次の表に、dBASE データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型がサポートされているわけではないことに注意してください。  
@@ -46,7 +47,7 @@ ms.locfileid: "81307693"
  ODBC dBASE ドライバーを使用して Numeric データ型で作成された列は、SQL_DOUBLE ODBC データ型にマップされます。 したがって、この列のデータは丸められます。 この動作は dBASE (型 N) の数値データ型と同じではありません。これは、バイナリでコード化された10進数 (BCD) です。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo**は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は、ODBC SQL データ型を返します。 *Odbc プログラマーズリファレンス*の付録 D のすべての変換は、このトピックで前述した odbc SQL データ型に対してサポートされています。  
   
  次の表は、dBASE データ型に関する制限を示しています。  
   

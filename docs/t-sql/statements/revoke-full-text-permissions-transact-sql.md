@@ -1,4 +1,5 @@
 ---
+description: REVOKE (フルテキストの権限の取り消し) (Transact-SQL)
 title: REVOKE (フルテキストの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c127761678432295e1e41bb84581df52f7252d5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a4f331b478aeb81ef7ceed5777928b4f82898b0f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483779"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496597"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE (フルテキストの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  権限を取り消すフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -90,7 +91,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="fulltext-catalog-permissions"></a>FULLTEXT CATALOG アクセス許可  
  フルテキスト カタログは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、フルテキスト カタログで取り消すことのできる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

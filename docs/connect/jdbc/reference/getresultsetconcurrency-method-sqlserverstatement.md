@@ -1,4 +1,5 @@
 ---
+description: getResultSetConcurrency メソッド (SQLServerStatement)
 title: getResultSetConcurrency メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c8cdec4c233f2a7d9241d63e3c1e6e29265157fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67980382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434774"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

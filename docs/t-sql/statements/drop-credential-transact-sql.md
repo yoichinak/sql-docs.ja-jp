@@ -1,4 +1,5 @@
 ---
+description: DROP CREDENTIAL (Transact-SQL)
 title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c86550e6854cbfcb547a8734f05e910e25df2b5a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9f50d075b23df010e1a79a6b83283e8a6bcdb9b0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485501"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380109"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "86485501"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP CREDENTIAL credential_name  
 ```  
   
@@ -63,7 +63,7 @@ DROP CREDENTIAL credential_name
 ## <a name="examples"></a>例  
  次の例では、資格情報 `Saddles` を削除します。  
   
-```  
+```sql  
 DROP CREDENTIAL Saddles;  
 GO  
 ```  

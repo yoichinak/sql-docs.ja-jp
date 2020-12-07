@@ -1,4 +1,5 @@
 ---
+description: Cluster (DMX)
 title: クラスター (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e0722e53752cfa01ffee086cb8cf1f6a84f82fd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457853"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,11 +36,11 @@ Cluster()
   
  **クラスター**関数は、クラスター名のスカラー値を返します。 ただし、この関数を別の関数の引数として使用する場合は、として扱う必要があり \<cluster column reference> ます。  
   
-## <a name="remarks"></a>注釈  
- **クラスター**は `<` `>` 、 **PredictHistogram**関数のクラスター列参照として使用することもできます。  
+## <a name="remarks"></a>解説  
+ **クラスター** は `<` `>` 、 **PredictHistogram** 関数のクラスター列参照として使用することもできます。  
   
 ## <a name="examples"></a>例  
- 次の例では、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)およびクラスター関数と共に単一クエリを使用して、TM クラスターマイニングモデルの各クラスターから個々のケースの距離と、各クラスターに個別のケースが存在する確率を返します。  
+ 次の例では、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) およびクラスター関数と共に単一クエリを使用して、TM クラスターマイニングモデルの各クラスターから個々のケースの距離と、各クラスターに個別のケースが存在する確率を返します。  
   
 ```  
 SELECT  
@@ -57,7 +58,7 @@ FROM
 ## <a name="see-also"></a>参照  
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

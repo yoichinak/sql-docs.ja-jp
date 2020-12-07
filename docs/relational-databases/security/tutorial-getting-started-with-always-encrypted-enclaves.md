@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 75d9993cb91ff153075aa1feae19dd5a43499b0d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279368"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868165"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "86279368"
   - Extended Page Tables を備えた Intel VT-x。
   - Rapid Virtualization Indexing を備えた AMD-V。
   - VM で [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] を実行する場合、ハイパーバイザーおよび物理 CPU には入れ子になった仮想化機能が用意されている必要があります。 
-    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
-    - Azure では、入れ子になった仮想化をサポートする VM サイズを選択します。 これには、Dv3 や Ev3 など、すべての v3 シリーズの VM が含まれます。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
+    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
+    - Azure では、入れ子になった仮想化をサポートする VM サイズを選択します。 これには、Dv3 や Ev3 など、すべての v3 シリーズの VM が含まれます。 [入れ子対応の Azure VM の作成](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
     - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
     - 他のハイパーバイザーおよびパブリック クラウドでは、VBS エンクレーブが設定された Always Encrypted を有効にする入れ子になった仮想化機能がサポートされている場合もあります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
 - [SQL Server Management Studio (SSMS) 18.3 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
@@ -264,7 +264,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     2. 列マスター キー名**CMK1** を選択します。
     3. **[Windows 証明書ストア -現在のユーザー] または [Windows 証明書ストア - ローカル コンピューター]** か、 **[Azure Key Vault]** を選択します。
     4. **[エンクレーブ計算を許可する]** を選択します。
-    5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)」(Azure portal からキー コンテナーを管理する) を参照してください。
+    5. [Azure Key Vault] を選択した場合は、Azure にサインインし、キー コンテナーを選択します。 Always Encrypted のキー コンテナーを作成する方法について詳しくは、「[Manage your key vaults from Azure portal](/archive/blogs/kv/manage-your-key-vaults-from-new-azure-portal)」(Azure portal からキー コンテナーを管理する) を参照してください。
     6. 証明書または Azure Key Value キーが既に存在する場合はそれを選択します。または、 **[証明書の生成]** ボタンをクリックして新しい証明書を作成します。
     7. **[OK]** を選択します。
 

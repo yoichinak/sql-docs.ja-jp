@@ -12,14 +12,14 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 336822b6ad2ff420c987e42c033e2efae20c2536
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894898"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127546"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -68,13 +68,13 @@ ms.locfileid: "85894898"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-ssnoversion"></a>使用される IP アドレスおよびポートを特定するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー** をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**のコンソール ペインで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネットワーク構成]** 、 **[\<instance name> のプロトコル]** の順に展開して、 **[TCP/IP]** をダブルクリックします。  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー** のコンソール ペインで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネットワーク構成]** 、 **[\<instance name> のプロトコル]** の順に展開して、 **[TCP/IP]** をダブルクリックします。  
   
-3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
+3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2** という形式で **IPAll** まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   
-4.  IP アドレスについて、 **[TCP 動的ポート]** ダイアログ ボックスに **0**が表示されている場合、これは [!INCLUDE[ssDE](../../includes/ssde-md.md)] が動的ポートでリッスンしていることを示しています。 この例では、再起動時に変わる可能性のある動的ポートではなく、固定ポートを使用します。 したがって、 **[TCP 動的ポート]** ダイアログ ボックスに **0**が表示されている場合は、0 を削除します。  
+4.  IP アドレスについて、 **[TCP 動的ポート]** ダイアログ ボックスに **0** が表示されている場合、これは [!INCLUDE[ssDE](../../includes/ssde-md.md)] が動的ポートでリッスンしていることを示しています。 この例では、再起動時に変わる可能性のある動的ポートではなく、固定ポートを使用します。 したがって、 **[TCP 動的ポート]** ダイアログ ボックスに **0** が表示されている場合は、0 を削除します。  
   
 5.  構成する各 IP アドレスについて TCP ポートが一覧表示されます。 この例では、両方の IP アドレスが既定のポート 1433 でリッスンしているとします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "85894898"
   
 5.  左側のペインで、 **[受信の規則]** をクリックします。  
   
-6.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックして、 **新規の受信の規則ウィザード**を開きます。  
+6.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックして、 **新規の受信の規則ウィザード** を開きます。  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラムのルールを作成できます。 ただし、この例では固定ポートを使用しているので、 **[ポート]** を選択して **[次へ]** をクリックします。  
   

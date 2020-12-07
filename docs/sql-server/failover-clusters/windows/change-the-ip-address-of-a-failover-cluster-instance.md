@@ -6,21 +6,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - modifying IP addresses
 - failover clustering [SQL Server], IP addresses
 - IP addresses [SQL Server]
 - clusters [SQL Server], IP addresses
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 415a669546fcd91a7b504d419874dc539ed5c0ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: fce7ec31d8cc3ff8e3c9b0cbbd4a25039c998419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895874"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127705"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの IP アドレスの変更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,8 +1,9 @@
 ---
+description: ConnectionString プロパティ (ADO)
 title: ConnectionString プロパティ (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762633"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974773"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データソースへの接続を確立するために使用される情報を示します。  
@@ -31,7 +32,7 @@ ms.locfileid: "82762633"
 ## <a name="remarks"></a>解説  
  **ConnectionString**プロパティを使用して、セミコロンで区切られた一連の*引数* *= value*ステートメントを含む詳細な接続文字列を渡して、データソースを指定します。  
   
- ADO は**ConnectionString**プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  
+ ADO は **ConnectionString** プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -41,9 +42,9 @@ ms.locfileid: "82762633"
 |*リモートサーバー =*|クライアント側接続を開くときに使用するサーバーのパス名を指定します。 (リモートデータサービスのみ)。|  
 |*URL =*|ファイルやディレクトリなど、リソースを識別する絶対 URL として接続文字列を指定します。|  
   
- **ConnectionString**プロパティを設定し、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
+ **ConnectionString**プロパティを設定し、[接続](./connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
   
- **Connectionstring**プロパティは、 [Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの*connectionstring*引数に使用される値を自動的に継承するため、 **open**メソッド呼び出し中に current **connectionstring**プロパティをオーバーライドできます。  
+ **Connectionstring**プロパティは、 [Open](./open-method-ado-connection.md)メソッドの*connectionstring*引数に使用される値を自動的に継承するため、 **open**メソッド呼び出し中に current **connectionstring**プロパティをオーバーライドできます。  
   
  *ファイル名*引数によって ADO によって関連付けられたプロバイダーが読み込まれるため、*プロバイダー*と*ファイル名*の両方の引数を渡すことはできません。  
   
@@ -62,9 +63,9 @@ ms.locfileid: "82762633"
 |既定値はありません。<br /><br /> ADO アプリケーションが次のオペレーティングシステムで実行され、プロバイダーが明示的に指定されていない場合、ADO は "ADODB" というエラーを返します。接続: プロバイダーが指定されていないため、指定された既定のプロバイダーがありません "|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
   
 ## <a name="applies-to"></a>適用対象  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [付録 A: プロバイダー](../../guide/appendixes/appendix-a-providers.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d8df18bf9487d1d8797eff4e60f5ec5eefb87c4f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487244"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394723"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services エラー
     
 ## <a name="details"></a>詳細  
   
-|||  
+|カテゴリ|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|rsInternalError|  

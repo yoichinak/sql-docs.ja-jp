@@ -1,7 +1,8 @@
 ---
+description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 02/24/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -43,15 +44,16 @@ helpviewer_keywords:
 - CREATE TABLE statement
 - number of columns per table
 - maximum number of bytes per row
+- data retention policy
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7c57cfe67bc8407cd02f970ebcf9ddbc92187071
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a6b0e958439025019e51bac7edb103febfe6409a
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863066"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521170"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -60,13 +62,13 @@ ms.locfileid: "87863066"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しいテーブルを作成します。
 
 > [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 構文については、「[CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)」をご覧ください。
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 構文については、「[CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)」を参照してください。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="simple-syntax"></a>簡単な構文
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -76,7 +78,7 @@ CREATE TABLE
 
 ## <a name="full-syntax"></a>完全な構文
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -106,7 +108,7 @@ column_name <data_type>
     [ COLLATE collation_name ]
     [ SPARSE ]
     [ MASKED WITH ( FUNCTION = ' mask_function ') ]
-    [ CONSTRAINT constraint_name [ DEFAULT constant_expression ] ]
+    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression ]
     [ IDENTITY [ ( seed,increment ) ]
     [ NOT FOR REPLICATION ]
     [ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] ]
@@ -236,14 +238,21 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
           ON [ ( <table_stretch_options> [,...n] ) ]
         | OFF ( MIGRATION_STATE = PAUSED )
       }
-    ]
+    ]   
+    [ DATA_DELETION = ON  
+          {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
+     ]
 }
   
 <table_stretch_options> ::=
 {  
     [ FILTER_PREDICATE = { null | table_predicate_function } , ]
       MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
- }
+ }   
   
 <index_option> ::=
 {
@@ -459,7 +468,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ] **適用対象**
 
 指定した `datetime2` 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録するために使用されることを指定します。 列を `NOT NULL` として定義する必要があります。 それらを `NULL` として指定しようとすると、システムによりエラーがスローされます。 期間列に対して明示的に NOT NULL を指定しない場合、システムにより既定で列が `NOT NULL` として定義されます。 `PERIOD FOR SYSTEM_TIME` および `WITH SYSTEM_VERSIONING = ON` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM** _`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
+1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM** _`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の **期間** 列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] ) **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
@@ -515,7 +524,7 @@ ENCRYPTED WITH: [Always Encrypted](../../relational-databases/security/encryptio
 
 COLUMN_ENCRYPTION_KEY = *key_name*: 列の暗号化キーを指定します。 詳細については、[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) に関するページをご覧ください。
 
-ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }: **決定論的な暗号化**では、指定した任意のプレーンテキストに対して、常に同じ暗号化された値が生成されるような方法を使用します。 決定論的な暗号化を使うことにより、等価比較を使った検索や、グループ化、暗号化された値に基づく等価結合を使ったテーブルの結合が可能になりますが、承認されていないユーザーが、暗号化された列のパターンを調べることで暗号化された値に関する情報を推測することも可能になります。 決定論的に暗号化された列で 2 つのテーブルを結合することができるのは、両方の列が同じ列暗号化キーを使って暗号化されている場合のみです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }: **決定論的な暗号化** では、指定した任意のプレーンテキストに対して、常に同じ暗号化された値が生成されるような方法を使用します。 決定論的な暗号化を使うことにより、等価比較を使った検索や、グループ化、暗号化された値に基づく等価結合を使ったテーブルの結合が可能になりますが、承認されていないユーザーが、暗号化された列のパターンを調べることで暗号化された値に関する情報を推測することも可能になります。 決定論的に暗号化された列で 2 つのテーブルを結合することができるのは、両方の列が同じ列暗号化キーを使って暗号化されている場合のみです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
 
 **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は、より安全ですが、SQL Server インスタンスでセキュア エンクレーブを使用する Always Encrypted がサポートされる場合を除き、暗号化された列に対する計算とインデックス作成はすべて阻止されます。 詳しくは、「[Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」(セキュア エンクレーブを使用する Always Encrypted) をご覧ください。
 
@@ -761,7 +770,8 @@ SYSTEM_VERSIONING **=** ON [ ( HISTORY_TABLE **=** *schema_name* .*history_table
 
 データ型、NULL 値の許容制約、および主キー制約の要件が満たされている場合は、テーブルのシステムのバージョン管理を有効にします。 `HISTORY_TABLE` 引数を使用しない場合、システムは現在のテーブルと同じファイル グループ内の現在のテーブルのスキーマに一致する新しい履歴テーブルを生成し、これによって 2 つのテーブルの間にリンクが作成され、履歴テーブルに現在のテーブル内の各レコードの履歴が記録されるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 履歴テーブルには既定では、 **PAGE** 圧縮します。 `HISTORY_TABLE` 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、現在のテーブルと指定したテーブルの間のリンクが作成されます。 現在のテーブルがパーティション分割する場合、履歴テーブルは、パーティション分割構成がレプリケートされていないために自動的に現在のテーブルから履歴テーブルに既定のファイル グループに作成されます。 履歴テーブルの作成時に履歴テーブルの名前を指定すると場合、は、スキーマとテーブルの名前を指定する必要があります。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの整合性チェックでは、既存のレコードが重複しないことを確認します。 データを実行する一貫性チェックが、既定値です。 `PERIOD FOR SYSTEM_TIME` および `GENERATED ALWAYS AS ROW { START | END }` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
+REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
 
 Stretch Database が有効または無効になっている新しいテーブルを作成します。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。
 
@@ -793,9 +803,26 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **適用対象**: [!INCLUDE[ss
 
 - データの移行を一時停止または延期するには `PAUSED` を指定します。 詳細については、[データ移行の一時停止と再開 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md) に関するページをご覧ください。
 
+[DATA_DELETION = ON  
+    {( FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **Applies to:** Azure SQL Edge "*のみ*"
+
+データベース内のテーブルの古いデータまたは期限切れのデータに対し、アイテム保持ポリシーを使用したクリーンアップを有効にします。 詳細については、[データ保持の有効化と無効化](/azure/azure-sql-edge/data-retention-enable-disable)に関するページを参照してください。 データ保持を有効にするには、次のパラメーターを指定します。 
+
+- FILTER_COLUMN = { column_name }  
+列を指定します。これは、テーブル内の行が廃止されているかどうかを判断するために使用します。 フィルター列に使用できるデータ型は次のとおりです。
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE \| number {DAY \| DAYS \| WEEK \| WEEKS \| MONTH \| MONTHS \| YEAR \| YEARS }}       
+  テーブルの保持期間のポリシーを指定します。 保有期間は、正の整数値と日付部分の単位を組み合わせて指定します。   
+
 MEMORY_OPTIMIZED **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 Azure SQL Managed Instance では、メモリ最適化テーブルはサポートされません。
 
-値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)」をご覧ください。
+値が ON の場合は、テーブルがメモリ最適化されていることを示します。 メモリ最適化テーブルは、トランザクション処理のパフォーマンスの最適化に使用されるインメモリ OLTP 機能の一部です。 インメモリ OLTP の使用を開始するには、「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。 メモリ最適化テーブルについて詳しくは、「[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)」をご覧ください。
 
 既定値の OFF は、テーブルがディスク ベースであることを示します。
 
@@ -920,7 +947,7 @@ Test1Col
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-database"></a>Azure SQL Database のグローバル一時テーブルのトラブルシューティング
 
-tempdb のトラブルシューティングについては、「[tempdb の使用状況を監視する方法](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use)」を参照してください。
+tempdb のトラブルシューティングについては、「[tempdb の使用状況を監視する方法](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use)」を参照してください。
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の DMV のトラブルシューティングにアクセスできるのは、サーバー管理者のみです。
@@ -1572,6 +1599,20 @@ Invalid object name '##test'
 SELECT * FROM tempdb.sys.objects;
 SELECT * FROM tempdb.sys.columns;
 SELECT * FROM tempdb.sys.database_files;
+```   
+
+### <a name="w-enable-data-retention-policy-on-a-table"></a>西 テーブルでデータ保持ポリシーを有効にする
+
+次の例では、テーブルを作成してデータ保持を有効にし、保持期間を 1 週間に設定します。 この例は **Azure SQL Edge** にのみ適用されます。
+
+```sql
+CREATE TABLE [dbo].[data_retention_table] 
+(
+  [dbdatetime2] datetime2(7), 
+  [product_code] int, 
+  [value] char(10)
+) 
+WITH (DATA_DELETION = ON ( FILTER_COLUMN = [dbdatetime2], RETENTION_PERIOD = 1 WEEKS ))
 ```
 
 ## <a name="next-steps"></a>次のステップ

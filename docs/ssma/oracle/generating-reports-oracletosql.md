@@ -1,4 +1,5 @@
 ---
+description: レポートの生成 (OracleToSQL)
 title: レポートの生成 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,19 +15,19 @@ ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 76197097f2e0fc6961c06d7413a8d4f3acb88780
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934849"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038035"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
   
 レポートを生成するには、次の手順に従います。  
   
-1.  [**書き込みの概要-レポート先**] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+1.  [ **書き込みの概要-レポート先** ] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
     Reports vis vis コマンドは次のとおりです。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "87934849"
     > [!IMPORTANT]  
     > 出力レポートは、評価レポートとは異なります。 前者は、実行中のコマンドのパフォーマンスに関するレポートです。後者は、プログラムで使用するための XML レポートです。  
   
-    出力レポートのコマンドオプション (Sl から)。 いいえ。 2-4) 「 [SSMA コンソール &#40;OracleToSQL&#41;の実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)」を参照してください。  
+    出力レポートのコマンドオプション (Sl から)。 いいえ。 2-4) 「 [SSMA コンソール &#40;OracleToSQL&#41;の実行 ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md) 」を参照してください。  
   
 2.  レポートの詳細設定を使用して、出力レポートに必要な詳細の範囲を指定します。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "87934849"
 ```  
   
 ### <a name="synchronize-target"></a>同期-ターゲット:  
-コマンド**synchronize-target**には、同期操作のエラーレポートの場所を指定する "**レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+コマンド **synchronize-target** には、同期操作のエラーレポートの場所を指定する " **レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "87934849"
 -   失敗-スクリプト  
   
 ### <a name="refresh-from-database"></a>データベースからの更新:  
-[**データベースからの更新**] コマンドには、[**レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+[ **データベースからの更新** ] コマンドには、[ **レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -139,5 +140,4 @@ ms.locfileid: "87934849"
 -   失敗-スクリプト  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[SSMA コンソールの実行 (Oracle)](./executing-the-ssma-console-oracletosql.md)  

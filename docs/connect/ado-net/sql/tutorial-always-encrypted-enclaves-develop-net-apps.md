@@ -1,4 +1,5 @@
 ---
+description: チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する
 title: チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する | Microsoft Docs
 ms.custom: ''
 ms.date: 07/09/2020
@@ -10,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: a7a2170c14502be9ffcae478839657abc39974ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438674"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 

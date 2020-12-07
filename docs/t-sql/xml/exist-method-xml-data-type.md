@@ -1,4 +1,5 @@
 ---
+description: exist() メソッド (xml データ型)
 title: exist() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f8643b9c76f2abf8a6ffb49620b85f9b150891
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1788db3b0baec4f9ab7279f13ff792e6d7764ea6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392710"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117216"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +35,7 @@ ms.locfileid: "86392710"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 exist (XQuery)   
 ```  
   
@@ -50,10 +50,10 @@ exist (XQuery)
 > [!NOTE]  
 >  **exist()** メソッドは、空でない結果を返す XQuery 式に対して 1 を返します。 **exist()** メソッド内に **true()** 関数または **false()** 関数を指定した場合、**exist()** メソッドは 1 を返します。これは、**true()** 関数および **false()** 関数がブール値の True および False をそれぞれ返すためです (つまり、空でない結果が返されます)。 したがって、次の例に示すように **exist()** は 1 (True) を返します。  
   
-```  
-declare @x xml;  
-set @x='';  
-select @x.exist('true()');   
+```sql
+DECLARE @x XML;  
+SET @x='';  
+SELECT @x.exist('true()');   
 ```  
   
 ## <a name="examples"></a>例  
@@ -62,12 +62,12 @@ select @x.exist('true()');
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>例:xml 型の変数に対する exist() メソッドの指定  
  次の例の @x は **xml** 型の変数 (型指定されていない xml) です。また、@f は **exist()** メソッドにより返された値を格納する整数型の変数です。 **Exist()** メソッドは、XML インスタンスに格納されている日付の値が `2002-01-01` である場合に True (1) を返します。  
   
-```  
-declare @x xml;  
-declare @f bit;  
-set @x = '<root Somedate = "2002-01-01Z"/>';  
-set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
-select @f;  
+```sql  
+DECLARE @x XML;  
+DECLARE @f BIT;  
+SET @x = '<root Somedate = "2002-01-01Z"/>';  
+SET @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
+SELECT @f;  
 ```  
   
  **exist()** メソッドで日付を比較する際は、次のことに注意してください。  
@@ -80,9 +80,9 @@ select @f;
   
  次の例は、1 つ前の例と似ていますが、<`Somedate`> 要素が含まれている点が異なります。  
   
-```  
-DECLARE @x xml;  
-DECLARE @f bit;  
+```sql
+DECLARE @x XML;  
+DECLARE @f BIT;  
 SET @x = '<Somedate>2002-01-01Z</Somedate>';  
 SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01Z") ]')  
 SELECT @f;  
@@ -99,13 +99,13 @@ SELECT @f;
   
  @x 変数に対して指定された **exist()** メソッドは、製造手順書ドキュメントに `LocationID=50` の <`Location`> 要素が含まれている場合、1 (True) を返します。 それ以外の場合は 0 (False) を返します。  
   
-```  
-DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
+```sql
+DECLARE @x XML (Production.ManuInstructionsSchemaCollection);  
 SELECT @x=Instructions  
 FROM Production.ProductModel  
 WHERE ProductModelID=67;  
 --SELECT @x  
-DECLARE @f int;  
+DECLARE @f INT;  
 SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
@@ -115,7 +115,7 @@ SELECT @f;
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>例:xml 型の列に対する exist() メソッドの指定  
  次のクエリでは、仕様書である <`Specifications`> 要素がカタログの説明に含まれていない製品モデル ID を取得します。  
   
-```  
+```sql
 SELECT ProductModelID, CatalogDescription.query('  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
@@ -141,7 +141,7 @@ WHERE CatalogDescription.exist('
   
  上のクエリでは、xml データ型の **query()** メソッドと **exist()** メソッドが指定されています。また、これら両方のメソッドのクエリのプロローグで、同じ名前空間が宣言されています。 この場合、WITH XMLNAMESPACES を使用してプレフィックスを宣言し、そのプレフィックスをこのクエリに使用できます。  
   
-```  
+```sql
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   

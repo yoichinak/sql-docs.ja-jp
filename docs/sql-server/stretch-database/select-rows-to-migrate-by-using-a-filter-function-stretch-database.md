@@ -1,4 +1,5 @@
 ---
+description: フィルター関数を使用して移行する行を選択する (Stretch Database)
 title: フィルター関数を使用して移行する行を選択する
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492615"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   コールド データを別のテーブルに保存している場合、そのテーブル全体を移行するように Stretch Database を構成できます。 一方、テーブルにホット データとコールド データの両方が含まれている場合は、移行する行を選択するフィルター述語を指定できます。 フィルター述語はインライン テーブル値関数です。 この記事では、移行する行を選択するインライン テーブル値関数を作成する方法について説明します。  
@@ -152,7 +153,7 @@ RETURN  SELECT 1 AS is_eligible
  サブクエリや非決定論的関数 (RAND() や GETDATE() など) は使用できません。  
   
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
- **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 次に例を示します。  
+ **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 たとえば、次のように入力します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +485,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
- Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 次に例を示します。  
+ Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 たとえば、次のように入力します。  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +494,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
 ## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>既存のフィルター関数の置き換え  
- 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 次に例を示します。  
+ 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 たとえば、次のように入力します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -589,7 +590,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
- 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 次に例を示します。  
+ 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 たとえば、次のように入力します。  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b2fbef46606f182e2c9833d2ce421c61fc421105
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26b8a363de2faf9e39bc88e3dd1e0a26bd016e16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243334"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540452"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sp_rda_set_query_mode (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,11 +43,11 @@ sp_rda_set_query_mode [ @mode = ] @mode
  [ @mode =] * \@ モード*  
  次のいずれかの値を指定します。  
   
--   **無効**Stretch が有効なテーブルに対するすべてのクエリが失敗します。  
+-   **無効** Stretch が有効なテーブルに対するすべてのクエリが失敗します。  
   
--   **LOCAL_ONLY**Stretch が有効なテーブルに対するクエリでは、ローカルデータのみが返されます。  
+-   **LOCAL_ONLY** Stretch が有効なテーブルに対するクエリでは、ローカルデータのみが返されます。  
   
--   **LOCAL_AND_REMOTE**Stretch が有効なテーブルに対するクエリでは、ローカルデータとリモートデータの両方が返されます。 これは既定の動作です。  
+-   **LOCAL_AND_REMOTE** Stretch が有効なテーブルに対するクエリでは、ローカルデータとリモートデータの両方が返されます。 これは既定の動作です。  
   
  [ @force =] * \@ force*  
  検証せずにクエリモードを変更する場合は、1に設定できるビット値を指定します。  
@@ -67,7 +67,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
     -   [Transact-sql&#41;&#40;sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行して、リモートの Azure データベースに再接続します。 この操作により、クエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
-    -   ローカルデータに対してのみクエリを実行できるようにするには、LOCAL_ONLY 引数を指定して sp_rda_set_query_mode を実行し[ます](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)。  
+    -   ローカルデータに対してのみクエリを実行できるようにするには、LOCAL_ONLY 引数を指定して sp_rda_set_query_mode を実行し [ます](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 。  
   
 -   **sp_rda_reauthorize_db**  
   

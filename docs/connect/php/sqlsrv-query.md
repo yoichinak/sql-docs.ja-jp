@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 5c2b60fa120863c5ca33fb21ae158649b1d1adcf
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728407"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081101"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 詳細については、「[SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1  
 次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルに 1 つの行を挿入します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2  
 次の例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドを更新します。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -157,9 +157,9 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値を [10 進数列または数値列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
+> 値を [10 進数列または数値列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
-## <a name="example"></a>例  
+## <a name="example-3"></a>例 3  
 このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```
@@ -183,8 +183,8 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a>例
-このコード例では、[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
+## <a name="example-4"></a>例 4
+このコード例では、[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
 
 ```
 <?php
@@ -252,4 +252,3 @@ Second field:  test_data
 
 [方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)  
 
-  

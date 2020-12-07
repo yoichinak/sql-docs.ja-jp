@@ -1,4 +1,5 @@
 ---
+description: レプリケーションの全般的パフォーマンスの向上
 title: レプリケーションの全般的パフォーマンスの向上 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902226"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121392"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,9 +83,9 @@ ms.locfileid: "86902226"
   
 -   Large Object (LOB) データ型の使用を制限する。  
   
-     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の各データ型を使用することをお勧めします。  
+     列の他のデータ型と比較して、LOB はより大きな記憶域とより多くの処理を必要とします。 アプリケーションで必要でない限り、LOB 型の列をアーティクルに含めないようにしてください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** の各データ型を使用することをお勧めします。  
   
-     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル**と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
+     トランザクション レプリケーションの場合は、 **OLEDB ストリームのディストリビューション プロファイル** と呼ばれるディストリビューション エージェント プロファイルの使用を検討してください。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   

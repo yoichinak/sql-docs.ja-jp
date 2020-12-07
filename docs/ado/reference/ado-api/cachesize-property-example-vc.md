@@ -1,8 +1,9 @@
 ---
+description: CacheSize プロパティの例 (VC++)
 title: CacheSize プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2fb692aa0f4b6703b20ba019832ad01cc90865b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762839"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975683"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize プロパティの例 (VC++)
-この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。  
+この例では、 [CacheSize](./cachesize-property-ado.md) プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -161,5 +162,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize プロパティ (ADO)](./cachesize-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

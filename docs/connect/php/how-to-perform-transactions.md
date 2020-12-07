@@ -1,7 +1,8 @@
 ---
-title: 方法:トランザクションを実行する | Microsoft Docs
+title: '方法: トランザクションを実行する'
+description: このトピックでは、Microsoft Drivers for PHP for SQL Server を使用する場合のトランザクションの実行方法を、説明および例示します
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3945b20d7aaf3b6de778aaa3dee83f028be06a23
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 13eae20e5a8e51a7a46473ef62e98c03c195e382
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916134"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726831"
 ---
 # <a name="how-to-perform-transactions"></a>方法:トランザクションを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -149,13 +150,12 @@ function perform_trans_ops($conn, $orderId)
 ?>  
 ```  
   
-### <a name="comments"></a>説明  
+### <a name="comments"></a>コメント  
 トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、**sqlsrv** 関数のすべての呼び出しについてエラーを確認し、それに応じて処理することをお勧めします。
   
 ## <a name="see-also"></a>参照  
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[トランザクション (データベース エンジン)](https://msdn.microsoft.com/library/ms190612.aspx)
+[トランザクション (データベース エンジン)](/previous-versions/sql/sql-server-2008-r2/ms190612(v=sql.105))
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

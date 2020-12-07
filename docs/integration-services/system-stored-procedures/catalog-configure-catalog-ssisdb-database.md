@@ -1,4 +1,5 @@
 ---
+description: catalog.configure_catalog (SSISDB データベース)
 title: catalog.configure_catalog (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2fedf409343225343bb03f61a8345a27eb68b0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506270730f8681315501e76ad1a338ff65b18c0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904318"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129911"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
 

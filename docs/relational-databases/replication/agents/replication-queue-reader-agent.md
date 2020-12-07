@@ -1,4 +1,5 @@
 ---
+description: Replication Queue Reader Agent
 title: レプリケーション キュー リーダー エージェント | Microsoft Docs
 ms.custom: ''
 ms.date: 10/29/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d1a577a9a73b8c68ae1cc2206c0a7dd7018e4c16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428054"
 ---
 # <a name="replication-queue-reader-agent"></a>Replication Queue Reader Agent
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -83,9 +84,9 @@ qrdrsvc [-?]
   
 |EncryptionLevel の値|説明|  
 |---------------------------|-----------------|  
-|**0**|TLS は使用されません。|  
+|**0**|TLS を使用しないことを指定します。|  
 |**1**|TLS を使用しますが、信頼できる発行者によって TLS/SSL サーバー証明書が署名されているかどうかをエージェントでは検証しないことを指定します。|  
-|**2**|TLS が使用され、証明書の確認が行われます。|  
+|**2**|TLS を使用し、証明書を検証することを指定します。|  
 
  > [!NOTE]  
  >  有効な TLS/SSL 証明書は、SQL Server の完全修飾ドメイン名を使用して定義されます。 -EncryptionLevel を 2 に設定したときにエージェントが正しく接続されるようにするには、ローカルの SQL Server 上に別名を作成します。 'Alias Name' パラメーターはサーバー名にし、'Server' パラメーターは SQL Server の完全修飾名に設定する必要があります。

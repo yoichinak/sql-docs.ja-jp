@@ -1,4 +1,5 @@
 ---
+description: UseFmtOnly を使用した ParameterMetaData の取得
 title: UseFmtOnly を使用した ParameterMetaData の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -14,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 509c88230b8a09933291e5c09d528370cf06caca
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025503"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081531"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>UseFmtOnly を使用した ParameterMetaData の取得
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,7 +54,7 @@ SET FMTONLY OFF;
 ```
  
 ## <a name="turning-the-feature-onoff"></a>機能のオン/オフの切り替え 
- **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
+ **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます  (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
  
  または、`SQLServerDataSource` から機能を使用することができます。
  ```java
@@ -90,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  この機能では、`SELECT/INSERT/UPDATE/DELETE` クエリのみサポートされます。 クエリは、サポートされている 4 つのキーワードのいずれか、または[共通テーブル式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)で始まり、サポートされているいずれかのクエリがその後ろに続く必要があります。 共通テーブル式内のパラメーターはサポートされていません。
+>  この機能では、`SELECT/INSERT/UPDATE/DELETE` クエリのみサポートされます。 クエリは、サポートされている 4 つのキーワードのいずれか、または[共通テーブル式](../../t-sql/queries/with-common-table-expression-transact-sql.md)で始まり、サポートされているいずれかのクエリがその後ろに続く必要があります。 共通テーブル式内のパラメーターはサポートされていません。
 
 ## <a name="known-issues"></a>既知の問題
   現在、機能には、SQL の解析ロジックの欠陥が原因である問題がいくつかあります。 これらの問題は、機能の今後の更新プログラムで解決される可能性があります。回避策と合わせて以下に説明します。
@@ -138,7 +139,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)  
-  
   

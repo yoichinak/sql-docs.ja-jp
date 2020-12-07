@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.drp1notsuspended.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d3c5ce2a441183fe4a9e68be44a16d4641ac617c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5eb1863ae65e41f1f496333e5daa78a66b311bae
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900856"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584725"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>可用性グループの可用性データベースの中断
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

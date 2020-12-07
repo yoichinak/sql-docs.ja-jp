@@ -1,4 +1,5 @@
 ---
+description: Parse (データベース エンジン)
 title: Parse (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8ebfca7738f8310108aab9ba988e658e7a5c1e17
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548627"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92038365"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ hierarchyid::Parse ( input )
 CAST ( input AS hierarchyid )  
 ```  
   
-```sql
+```csharp
 -- CLR syntax  
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
@@ -58,7 +59,7 @@ CLR : 評価される String 値。
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>解説  
-場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
+場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha** r データ型には、末尾のスペースが含まれている、例外が発生します。
   
 ## <a name="examples"></a>例  
   
@@ -66,7 +67,7 @@ CLR : 評価される String 値。
 次のコード例では、`ToString` を使用して **hierarchyid** 値を文字列に変換し、`Parse` を使用して文字列値を **hierarchyid** に変換します。
   
 ```sql
-DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
+DECLARE @StringValue AS NVARCHAR(4000), @hierarchyidValue AS hierarchyid  
 SET @StringValue = '/1/1/3/'  
 SET @hierarchyidValue = 0x5ADE  
   
@@ -86,14 +87,13 @@ hierarchyidRepresentation    StringRepresentation
 ### <a name="b-clr-example"></a>B. CLR の例  
 次のコード スニペットの呼び出し、 Parse() メソッド。
   
-```sql
+```csharp
 string input = "/1/2/";  
 SqlHierarchyId.Parse(input);  
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

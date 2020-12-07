@@ -1,4 +1,5 @@
 ---
+description: リーフ権限 (Master Data Services)
 title: リーフ権限
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461759"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85813299"
 |----------------|-----------------|  
 |**読み取り**|ユーザーはリーフ メンバーと属性を読み取ることができます。|  
 |**作成**|ユーザーはリーフ メンバーを作成し、作成時に属性値を割り当てることができます。|  
-|**Update**|ユーザーはリーフ メンバーと属性を更新できます。|  
+|**アップデート**|ユーザーはリーフ メンバーと属性を更新できます。|  
 |**削除**|ユーザーはリーフ メンバーを削除できます。|  
 |**Deny**|リーフ メンバーに対するすべてのアクセスを拒否します。|  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85813299"
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
-|**Update**|ユーザーは属性を更新できます。|  
+|**アップデート**|ユーザーは属性を更新できます。|  
 |**削除**|影響しません。|  
 |**Deny**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
@@ -63,15 +64,15 @@ ms.locfileid: "85813299"
   
 |名前|コード|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}マウンテンバイク|  
-|Mountain-100|BK-M201|{5}マウンテンバイク|  
+|Mountain-100|BK-M101|{5} マウンテンバイク|  
+|Mountain-100|BK-M201|{5} マウンテンバイク|  
   
  **[エクスプローラー]** では、Subcategory 列の属性値を更新できます。 属性に対する権限がない場合、その属性は表示されません。  
   
 > [!NOTE]  
 >  この例では、Subcategory は、SubcategoryList エンティティに基づくドメイン ベースの属性です。 Mountain-100 に対して別のサブカテゴリを選択することはできますが、SubcategoryList エンティティへのメンバーの追加または SubcategoryList エンティティからのメンバーの削除を行うことはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

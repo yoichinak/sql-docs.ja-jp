@@ -1,4 +1,5 @@
 ---
+description: MSagent_profiles (Transact-sql)
 title: MSagent_profiles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bde828bdb5d99b132373b847daeb9f8126a85f7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2f9b44e872ef5175d07a679c330b7662ff9e5bf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890074"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540916"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSagent_profiles**テーブルには、定義されているレプリケーションエージェントプロファイルごとに1つの行が含まれています。 このテーブルは、 **msdb**データベースに格納されます。  
+  **MSagent_profiles**テーブルには、定義されているレプリケーションエージェントプロファイルごとに1つの行が含まれています。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +39,7 @@ ms.locfileid: "85890074"
 |**description**|**nvarchar (3000)**|プロファイルの説明。|  
 |**def_profile**|**bit**|このプロファイルがこの種類のエージェントの既定のプロファイルかどうかを指定します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

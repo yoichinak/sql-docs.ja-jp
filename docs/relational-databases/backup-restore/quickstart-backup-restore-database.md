@@ -2,8 +2,8 @@
 title: クイック スタート:データベースのバックアップと復元
 titleSuffix: SQL Server
 description: この記事では、SQL Server で新しいデータベースの作成、データベースのバックアップの作成、およびバックアップの復元を行う方法について説明します。
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d658358fa8e09b967b921d162b8f443032a16ddc
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669960"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129207"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>クイック スタート:SQL Server データベースのオンプレミスでのバックアップと復元
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85669960"
 
 1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
 1. **[新しいクエリ]** ウィンドウを開きます。 
-1. 次の Transact-SQL (T-SQL) コードを実行して、テスト データベースを作成します。 新しいデータベースを表示するには、**オブジェクト エクスプローラー**の **[データベース]** ノードを最新の情報に更新します。 
+1. 次の Transact-SQL (T-SQL) コードを実行して、テスト データベースを作成します。 新しいデータベースを表示するには、**オブジェクト エクスプローラー** の **[データベース]** ノードを最新の情報に更新します。 
 
 ```sql
 USE [master]
@@ -72,7 +72,7 @@ GO
 データベースのバックアップを取得するには、次の操作を行います。 
 
 1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
-1. **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開します。  
+1. **オブジェクト エクスプローラー** で、 **[データベース]** ノードを展開します。  
 1. データベースを右クリックし、 **[タスク]** にポインターを合わせ、 **[バックアップ]** を選択します。 
 1. **[同期先]** の下の、バックアップのパスが正しいことを確認します。 これを変更する必要がある場合は、 **[削除]** を選択して既存のパスを削除してから、 **[追加]** で新しいパスを入力します。 省略記号を使用すると、特定のファイルに移動できます。 
 1. **[OK]** を選択すると、データベースのバックアップが取得されます。 
@@ -94,7 +94,7 @@ GO
 データベースを復元するには、次の操作を行います。 
 
 1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
-1. **オブジェクト エクスプローラー**の **[データベース]** ノードを右クリックして、 **[データベースの復元]** をクリックします。
+1. **オブジェクト エクスプローラー** の **[データベース]** ノードを右クリックして、 **[データベースの復元]** をクリックします。
 
     ![データベースを復元する](media/quickstart-backup-restore-database/restore-db-ssms1.png)
 

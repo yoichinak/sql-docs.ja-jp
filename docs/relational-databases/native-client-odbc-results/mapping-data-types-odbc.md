@@ -1,4 +1,5 @@
 ---
+description: データ型のマッピング (ODBC)
 title: データ型のマッピング (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c68381c68a70ef72cf10481f05584aa25098773
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2cd0786cac3976bcb280422f177d19d8f86a3c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465308"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,22 +37,22 @@ ms.locfileid: "86004663"
 >  Timestamp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の値は**datetime**値ではなく、行のアクティビティのシーケンスを**timestamp**示す**BINARY (8)** または**VARBINARY (8)** 値であるため、 **timestamp**データ型は SQL_BINARY または SQL_VARBINARY ODBC データ型にマップされます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、奇数バイトの SQL_C_WCHAR (Unicode) 型の値を処理する場合、末尾の奇数バイトが切り捨てられます。  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>ODBC での sql_variant データ型の処理  
- **Sql_variant**データ型の列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text**、 **ntext**、 **image**などのラージオブジェクト (lob) を除く、の任意のデータ型を含めることができます。 たとえば、列には、一部の行に対して**smallint**値、他の行の場合は**float**値、残りの場合は**char/nchar**値を含めることができます。  
+ **Sql_variant**データ型の列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text**、 **ntext**、 **image**などのラージオブジェクト (lob) を除く、の任意のデータ型を含めることができます。 たとえば、列には、一部の行に対して **smallint** 値、他の行の場合は **float** 値、残りの場合は **char/nchar** 値を含めることができます。  
   
  **Sql_variant**のデータ型は、Microsoft Visual Basic®の**variant**データ型に似ています。  
   
 ### <a name="retrieving-data-from-the-server"></a>サーバーからのデータの取得  
- ODBC には、バリアント型の概念がないため、 **sql_variant**データ型の使用をの odbc ドライバーで制限し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バインドを指定する場合、 **sql_variant**のデータ型は、ドキュメント化されているいずれかの ODBC データ型にバインドする必要があります。 **SQL_CA_SS_VARIANT_TYPE**は、NATIVE Client ODBC ドライバーに固有の新しい属性で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sql_variant**列にあるインスタンスのデータ型をユーザーに返します。  
+ ODBC には、バリアント型の概念がないため、 **sql_variant** データ型の使用をの odbc ドライバーで制限し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バインドを指定する場合、 **sql_variant** のデータ型は、ドキュメント化されているいずれかの ODBC データ型にバインドする必要があります。 **SQL_CA_SS_VARIANT_TYPE**は、NATIVE Client ODBC ドライバーに固有の新しい属性で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sql_variant** 列にあるインスタンスのデータ型をユーザーに返します。  
   
- バインドが指定されていない場合は、 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)関数を使用して、 **sql_variant**列のインスタンスのデータ型を特定できます。  
+ バインドが指定されていない場合は、 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 関数を使用して、 **sql_variant** 列のインスタンスのデータ型を特定できます。  
   
  **Sql_variant**データを取得するには、次の手順に従います。  
   
 1.  **Sqlfetch**を呼び出して、取得した行に移動します。  
   
-2.  型に SQL_C_BINARY を指定し、データ長に0を指定して、 **SQLGetData**を呼び出します。 これにより、ドライバーは**sql_variant**ヘッダーを強制的に読み取ります。 ヘッダーは、そのインスタンスのデータ型を**sql_variant**列に提供します。 **SQLGetData**は、値のサイズ (バイト単位) を返します。  
+2.  型に SQL_C_BINARY を指定し、データ長に0を指定して、 **SQLGetData**を呼び出します。 これにより、ドライバーは **sql_variant** ヘッダーを強制的に読み取ります。 ヘッダーは、そのインスタンスのデータ型を **sql_variant** 列に提供します。 **SQLGetData** は、値のサイズ (バイト単位) を返します。  
   
-3.  属性値として**SQL_CA_SS_VARIANT_TYPE**を指定して[sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を呼び出します。 この関数は、 **sql_variant**列にあるインスタンスの C データ型をクライアントに返します。  
+3.  属性値として**SQL_CA_SS_VARIANT_TYPE**を指定して[sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を呼び出します。 この関数は、 **sql_variant** 列にあるインスタンスの C データ型をクライアントに返します。  
   
  上記の手順を行うコードを次に示します。  
   
@@ -85,12 +87,12 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- ユーザーが[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を使用してバインドを作成すると、ドライバーはメタデータとデータを読み取ります。 次に、そのデータをバインドに指定されている適切な ODBC 型に変換します。  
+ ユーザーが [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)を使用してバインドを作成すると、ドライバーはメタデータとデータを読み取ります。 次に、そのデータをバインドに指定されている適切な ODBC 型に変換します。  
   
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
- **SQL_SS_VARIANT**は、NATIVE Client ODBC ドライバーに固有の新しいデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant**列に送信されるデータに使用されます。 パラメーターを使用してサーバーにデータを送信する場合 (たとえば、INSERT INTO TableName VALUES (?,?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を使用して、C 型や対応する型などのパラメーター情報を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、C データ型を適切な**sql_variant**のサブタイプのいずれかに変換します。  
+ **SQL_SS_VARIANT**は、NATIVE Client ODBC ドライバーに固有の新しいデータ型で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant** 列に送信されるデータに使用されます。 パラメーターを使用してサーバーにデータを送信する場合 (たとえば、INSERT INTO TableName VALUES (?,?))、 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用して、C 型や対応する型などのパラメーター情報を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、C データ型を適切な**sql_variant**のサブタイプのいずれかに変換します。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;結果の処理 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

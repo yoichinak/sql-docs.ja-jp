@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885943"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956811"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server セットアップを使用して Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールする
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 SQL Server セットアップには、SQL Server の外部で実行されるスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 これは **Machine Learning Server (スタンドアロン)** と呼ばれ、Python と R が含まれています。 
@@ -26,7 +26,7 @@ SQL Server セットアップには、SQL Server の外部で実行されるス�
 SQL Server セットアップには、SQL Server の外部で実行されるスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれます。  
 ::: moniker-end
 
-SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
+SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
 
 + リモート実行、同じコンソールでのローカル セッションとリモート セッションの切り替え
 + Web ノードとコンピューティング ノードを使用した運用可能化
@@ -192,7 +192,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 
 3. Web サービスの配置用の Web ノードとコンピューティング ノードとして実行するために運用可能化を有効にした場合は、**AppSettings.json** ファイルを念のためにバックアップします。 SQL Server 2017 CU13 以降を適用すると、このファイルが改訂されるため、元のバージョンを保持するためにバックアップ コピーが必要になる場合があります。
 
-4. 「[Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)」から、お使いのバージョンに適した最新の累積的な更新プログラムをインターネットに接続されたマシンにダウンロードします。
+4. 「[Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)」から、お使いのバージョンに適した最新の累積的な更新プログラムをインターネットに接続されたマシンにダウンロードします。
 
 5. 最新の累積的な更新プログラムをダウンロードします。 それは実行可能ファイルです。
 
@@ -215,7 +215,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
     }
     ```
 
-9. [管理 CLI ユーティリティを実行](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)して、Web ノードとコンピューティング ノードを再起動します。 手順と構文については、「[Web ノードとコンピューティング ノードの監視、開始、停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)」を参照してください。
+9. [管理 CLI ユーティリティを実行](/machine-learning-server/operationalize/configure-admin-cli-launch)して、Web ノードとコンピューティング ノードを再起動します。 手順と構文については、「[Web ノードとコンピューティング ノードの監視、開始、停止](/machine-learning-server/operationalize/configure-admin-cli-stop-start)」を参照してください。
 
 ## <a name="development-tools"></a>開発ツール
 
@@ -226,7 +226,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
 + [クイック スタート: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。

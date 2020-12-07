@@ -1,4 +1,5 @@
 ---
+description: 末尾 (MDX)
 title: Tail (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f9cd5c397ac87826db20509e665b2215bd8db91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466484"
 ---
 # <a name="tail-mdx"></a>末尾 (MDX)
 
@@ -34,7 +35,7 @@ Tail(Set_Expression [ ,Count ] )
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Tail**関数は、指定されたセットの末尾から、指定された数の組を返します。 要素の順序は保持されます。 既定*値は1です。* 指定された組数が1未満の場合、関数は空のセットを返します。 指定された組数がセット内の組数を超える場合は、元のセットを返します。  
   
 ## <a name="example"></a>例  

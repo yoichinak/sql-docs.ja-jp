@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863406"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670775"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) でのメッセージングとキューのネイティブ サポートが提供されています。 開発者は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントを使用して異種データベース間の通信を行う高度なアプリケーションを簡単に作成し、分散型で信頼できるアプリケーションをビルドすることができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](/azure/sql-database/sql-database-managed-instance-index) でのメッセージングとキューのネイティブ サポートが提供されています。 開発者は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントを使用して異種データベース間の通信を行う高度なアプリケーションを簡単に作成し、分散型で信頼できるアプリケーションをビルドすることができます。  
   
 ## <a name="when-to-use-service-broker"></a>Service Broker を使用する場合
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   CREATE、ALTER、および DROP ステートメントの[データ定義言語 &#40;DDL&#41; ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md)  
   
--   [Service Broker のステートメント](../../t-sql/statements/service-broker-statements.md)  
+-   [Service Broker のステートメント](../../t-sql/statements/statements.md)  
   
 -   [Service Broker カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [ssbdiagnose ユーティリティ &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- [の概念、開発作業、および管理作業については、](https://go.microsoft.com/fwlink/?LinkId=231312) 以前に公開されたドキュメント [!INCLUDE[ssSB](../../includes/sssb-md.md)] を参照してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は [!INCLUDE[ssSB](../../includes/sssb-md.md)] においてわずかな変更しか加えられていないため、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]用のドキュメントは作成されていません。  
+ [の概念、開発作業、および管理作業については、](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) 以前に公開されたドキュメント [!INCLUDE[ssSB](../../includes/sssb-md.md)] を参照してください。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は [!INCLUDE[ssSB](../../includes/sssb-md.md)] においてわずかな変更しか加えられていないため、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]用のドキュメントは作成されていません。  
   
 ## <a name="whats-new-in-service-broker"></a>Service Broker の新機能  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で導入された大きな変更はありません。  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]では、以下の変更が導入されました。  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - インスタンス間の Service Broker はサポートされていません 
  - `sys.routes` - 前提条件: sys.routes からアドレスを選択してください。 すべてのルートでアドレスをローカルにする必要があります。 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md) をご覧ください。
- - `CREATE ROUTE` - `LOCAL` 以外の `ADDRESS` で `CREATE ROUTE` を使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
+ - `CREATE ROUTE` - `LOCAL` 以外の `ADDRESS` で `CREATE ROUTE` を使用することはできません。 [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md) をご覧ください。
  - `ALTER ROUTE` では、`LOCAL` 以外の `ADDRESS` と共に `ALTER ROUTE` を使用することはできません。 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md) をご覧ください。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>メッセージを複数の対象サービスに送信可能 (マルチキャスト)  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>次のステップ
 
-Service Broker の最も一般的な用途は、[イベント通知](../../relational-databases/service-broker/event-notifications.md)に使用することです。 [イベント通知を実装する](../../relational-databases/service-broker/implement-event-notifications.md)方法、[ダイアログ セキュリティを構成する](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)方法、[詳細情報](../../relational-databases/service-broker/get-information-about-event-notifications.md)を確認してください。 
-
-
+Service Broker の最も一般的な用途は、[イベント通知](../../relational-databases/service-broker/event-notifications.md)に使用することです。 [イベント通知を実装する](../../relational-databases/service-broker/implement-event-notifications.md)方法、[ダイアログ セキュリティを構成する](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)方法、[詳細情報](../../relational-databases/service-broker/get-information-about-event-notifications.md)を確認してください。

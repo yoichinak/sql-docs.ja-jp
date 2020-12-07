@@ -28,20 +28,20 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729975"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126318"
 ---
 # <a name="examples-using-openxml"></a>例 :OPENXML の使用
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
- データを取得する際に、 *rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、 *rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、 *rowpattern*で選択される要素や属性のノードごとに行が作成されます。  
+ データを取得する際に、 *rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、 *rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、 *rowpattern* で選択される要素や属性のノードごとに行が作成されます。  
   
- *flags* 値は、既定のマッピングを指定します。 *SchemaDeclaration* で *ColPattern*が指定されていない場合、 *flags* で指定されたマッピングが想定されます。 *SchemaDeclaration* で *ColPattern* が指定されている場合、 *flags*の値は無視されます。 指定された *ColPattern* により、マッピング、属性中心か要素中心か、さらにオーバーフロー データと未使用データを処理するときの動作が決まります。  
+ *flags* 値は、既定のマッピングを指定します。 *SchemaDeclaration* で *ColPattern* が指定されていない場合、 *flags* で指定されたマッピングが想定されます。 *SchemaDeclaration* で *ColPattern* が指定されている場合、 *flags* の値は無視されます。 指定された *ColPattern* により、マッピング、属性中心か要素中心か、さらにオーバーフロー データと未使用データを処理するときの動作が決まります。  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. OPENXML を使用した単純な SELECT ステートメントの実行  
  この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから顧客情報が 2 列の行セット ( **CustomerID** と **ContactName**) で取得されます。  
@@ -52,9 +52,9 @@ ms.locfileid: "85729975"
   
 -   *rowpattern* (/ROOT/Customer) により、処理する <`Customer`> ノードが識別されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration*で定義される行セットの列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration* で定義される行セットの列にマップされます。  
   
--   WITH 句の *SchemaDeclaration*では、指定された *ColName* 値は対応する XML 属性の名前と一致します。 したがって、 *SchemaDeclaration* では *ColPattern*パラメーターが指定されていません。  
+-   WITH 句の *SchemaDeclaration* では、指定された *ColName* 値は対応する XML 属性の名前と一致します。 したがって、 *SchemaDeclaration* では *ColPattern* パラメーターが指定されていません。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -155,11 +155,11 @@ LILAS      Carlos Gonzlez
   
  ここでは説明のために、 *flags* パラメーター値を **2** に設定して、要素中心のマッピングを示しています。 ただし、このマッピングは *ColPattern* に指定したマッピングによって上書きされます。 つまり、 *ColPattern* に指定した XPath パターンにより、行セットの列が属性にマップされます。 この結果、属性中心のマッピングになります。  
   
- WITH 句の *SchemaDeclaration*では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
+ WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
   
 -   行セットの **OrderID** 列、**CustomerID** 列、および **OrderDate** 列は *rowpattern* によって識別されたノードの親の属性にマップされ、*rowpattern* によって <`OrderDetail`> ノードが識別されます。 したがって、**CustomerID** 列と **OrderDate** 列は <`Order`> 要素の **CustomerID** 属性と **OrderDate** 属性にマップされます。  
   
--   行セットの **ProdID** 列と **Qty** 列は、 **rowpattern** で識別されたノードの **ProductID** 属性と *Quantity*属性にマップされます。  
+-   行セットの **ProdID** 列と **Qty** 列は、 **rowpattern** で識別されたノードの **ProductID** 属性と *Quantity* 属性にマップされます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -283,7 +283,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- **CustomerID**に属性中心のマッピングが適用されます。 <`Customer`> 要素には **ConzｘtactName** 属性がありません。 そのため、要素中心のマッピングが適用されます。  
+ **CustomerID** に属性中心のマッピングが適用されます。 <`Customer`> 要素には **ConzｘtactName** 属性がありません。 そのため、要素中心のマッピングが適用されます。  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. ColPattern としての text() XPath 関数の指定  
  この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントにより、<`Order`> 要素の **oid** 属性、*rowpattern* で識別されるノードの親の ID、および要素のコンテンツのリーフ値の文字列で構成される行セットが取得されます。  
@@ -294,9 +294,9 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/root/Customer/Order) により、処理する <`Order`> ノードが識別されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration*で定義される行セットの列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 その結果、XML 属性は *SchemaDeclaration* で定義される行セットの列にマップされます。  
   
--   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、 *ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()** が *ColPattern*に指定されています。 これにより、 *flags*に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
+-   WITH 句の *SchemaDeclaration* では、行セットの列名である **oid** と **amount** が対応する XML 属性の名前と一致します。 したがって、 *ColPattern* パラメーターは指定されません。 行セット内の **comment** 列では、XPath 関数 **text()** が *ColPattern* に指定されています。 これにより、 *flags* に指定された属性中心のマッピングが上書きされ、列には要素コンテンツのリーフ値の文字列が含まれます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -343,7 +343,7 @@ O4    10000.0       NULL
 ```  
   
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. WITH 句での TableName の指定  
- この例では、WITH 句に *SchemaDeclaration* ではなく *TableName*を指定します。 この指定は、目的の構造のテーブルがあり、列パターンの *ColPattern* パラメーターが必要ない場合に役立ちます。  
+ この例では、WITH 句に *SchemaDeclaration* ではなく *TableName* を指定します。 この指定は、目的の構造のテーブルがあり、列パターンの *ColPattern* パラメーターが必要ない場合に役立ちます。  
   
  この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから注文情報が 3 列の行セット (**oid**、 **date**、および **amount**) に取得されます。  
   
@@ -355,7 +355,7 @@ O4    10000.0       NULL
   
 -   WITH 句には *SchemaDeclaration* がありません。 代わりに、テーブル名が指定されています。 そのため、行セット スキーマとしてテーブル スキーマが使用されます。  
   
--   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 したがって、 *rowpattern*で識別される要素の属性は、同じ名前の行セット列にマップされます。  
+-   *flags* パラメーター値を **1** に設定し、属性中心のマッピングを示します。 したがって、 *rowpattern* で識別される要素の属性は、同じ名前の行セット列にマップされます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -476,7 +476,7 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
--   行セット内の**ProdID**列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
+-   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
 -   行セット内の **Qty** 列に指定された *ColPattern* である **../\@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
   
@@ -525,7 +525,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 次に例を示します。  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern* である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 次に例を示します。  
   
 ```  
 DECLARE @h int  
@@ -542,7 +542,7 @@ SELECT * FROM openxml(@h, '/root/b:Elem')
 EXEC sp_xml_removedocument @h  
 ```  
   
- SELECT ステートメントでは、結果として **TaU** ではなく **T**が返されます。  
+ SELECT ステートメントでは、結果として **TaU** ではなく **T** が返されます。  
   
 ### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>I. WITH 句での xml データ型の指定  
  WITH 句では、 **xml** データ型の列にマップされる列パターンが型指定されているかどうかにかかわらず、この列パターンから、空のシーケンスまたは要素のシーケンス、処理命令、テキスト ノード、およびコメントが返されます。 データは **xml** データ型にキャストされます。  
@@ -612,11 +612,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     **id** (学生 ID) 属性、 **name**属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
+     **id** (学生 ID) 属性、 **name** 属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
   
 -   \<Class>  
   
-     **id** (クラス ID) 属性、 **name**属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
+     **id** (クラス ID) 属性、 **name** 属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
   
  \<Student> の **attends** 属性と \<Class> の **attendedBy** 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
   

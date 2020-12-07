@@ -1,6 +1,6 @@
 ---
-title: SQL Server のメッセージ結果 | Microsoft Docs
-description: SQL Server のメッセージ結果
+title: SQL Server のメッセージ結果 (OLE DB ドライバー)
+description: OLE DB Driver for SQL Server の行セットやカウント、および期待される戻り値を生成しない Transact-SQL ステートメントについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dfebd7443b24d09e6bf7696caba5449c1890e0d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc3701313f920eead650435ca40538ad8a4b6ef0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862507"
 ---
 # <a name="sql-server-message-results"></a>SQL Server のメッセージ結果
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントでは、OLE DB Driver for SQL Server の行セットや、ステートメント実行時に処理された行カウントは生成されません。  
+次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントでは、OLE DB Driver for SQL Server の行セットや、ステートメント実行時に処理された行カウントは生成されません。  
   
 -   PRINT  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85998282"
   
  多くの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの実行後、またはコンシューマーでの OLE DB Driver for SQL Server のメンバー関数の実行後、OLE DB Driver for SQL Server は S_OK を返し、1 つまたは複数の情報メッセージが利用できるようになります。  
   
- OLE DB Driver for SQL Server のコンシューマーがクエリ テキストの動的な指定を許可する場合、メンバー関数を実行するたびにエラー インターフェイスをチェックする必要があります。このチェックは、リターン コードの値、返される **IRowset** インターフェイス参照や **IMultipleResults** インターフェイス参照の有無、および処理された行数に関係なく行う必要があります。  
+OLE DB Driver for SQL Server のコンシューマーは、クエリ テキストを動的に指定できます。 コンシューマーは、メンバー関数を実行する_たびに_エラー インターフェイスをチェックする必要があります。 これらのチェックは、リターン コードの値、`IRowset` または `IMultipleResults` へのインターフェイス参照が返されたかどうか、および処理された行数に関係なく、常に行う必要があります。
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  

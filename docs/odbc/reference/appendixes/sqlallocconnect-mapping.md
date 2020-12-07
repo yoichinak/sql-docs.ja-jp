@@ -1,4 +1,5 @@
 ---
+description: SQLAllocConnect のマッピング
 title: SQLAllocConnect マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f89ae59ca171fbcfbb9f6b75fdad639e31ea8fe0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429524"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect のマッピング
-アプリケーションが ODBC 3 を介して**Sqlallocconnect**を呼び出すとき。*x*ドライバー: **sqlallocconnect**(*henv*, *phdbc*) の呼び出しは、次のように**SQLAllocHandle**にマップされます。  
+アプリケーションが ODBC 3 を介して **Sqlallocconnect** を呼び出すとき。*x* ドライバー: **sqlallocconnect**(*henv*, *phdbc*) の呼び出しは、次のように **SQLAllocHandle** にマップされます。  
   
 1.  ドライバーマネージャーによって接続が割り当てられ、アプリケーションに返されます。  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER TRIGGER (Transact-SQL)
 title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/08/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a038026afd2e15ffda6f5f78a63704fa1d6bcad4
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e1fce1957dce037d33f1906ecea59b24292b813b
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380945"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688577"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -249,7 +250,7 @@ AS { sql_statement
 ## <a name="examples"></a>例  
  次の例では、ユーザーが `SalesPersonQuotaHistory` テーブルにデータを追加したり、データを変更したりしようとすると、クライアントに対してユーザー定義のメッセージを出力する、AdventureWorks 2012 データベースの DML トリガーを作成します。 次に `ALTER TRIGGER` を使用してトリガーを変更し、トリガーを `INSERT` 操作だけに適用します。 このトリガーは、テーブルの更新や行の挿入を行うユーザーに対して、 `Compensation` 部門にも変更を知らせる必要があることを連絡できるので有用です。  
   
-```  
+```sql  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  

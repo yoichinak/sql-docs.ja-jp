@@ -1,4 +1,5 @@
 ---
+description: 集合関数の使用
 title: Set Functions | を使用するMicrosoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476984"
 ---
 # <a name="using-set-functions"></a>集合関数の使用
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038054"
   
  メンバー関数や組関数などのセット関数は、Analysis Services で見つかった多次元構造をネゴシエートするために不可欠です。 セット式は MDX クエリの軸を定義するため、多次元式 (MDX) クエリから結果を取得するには、set 関数も不可欠です。  
   
- 最も一般的なセット関数の1つは、ディメンション、階層、またはレベルのすべてのメンバーを含むセットを取得する[MDX&#41;関数&#41; &#40;設定 &#40;メンバー](../mdx/members-set-mdx.md)です。 クエリ内でのこの関数の使用例を次に示します。  
+ 最も一般的なセット関数の1つは、ディメンション、階層、またはレベルのすべてのメンバーを含むセットを取得する [MDX&#41;関数&#41; &#40;設定 &#40;メンバー ](../mdx/members-set-mdx.md) です。 クエリ内でのこの関数の使用例を次に示します。  
   
  `SELECT`  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- もう1つの一般的に使用される関数は、 [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)関数です。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 実際には、この関数を使用すると、クエリに ' nested ' または ' crosstabbed ' の軸を作成できます。  
+ もう1つの一般的に使用される関数は、 [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md) 関数です。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 実際には、この関数を使用すると、クエリに ' nested ' または ' crosstabbed ' の軸を作成できます。  
   
  `SELECT`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68038054"
   
  また、このクエリは、1つの set 関数 (子孫) から返されたセットを別の set 関数にパラメーターとして渡す方法も示しています。  
   
- 特定の条件に従ってセットをフィルター処理することは、クエリを記述するときに非常に便利です。このためには、次の例に示すように、 [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)関数を使用できます。  
+ 特定の条件に従ってセットをフィルター処理することは、クエリを記述するときに非常に便利です。このためには、次の例に示すように、 [Filter &#40;MDX&#41;](../mdx/filter-mdx.md) 関数を使用できます。  
   
  `SELECT`  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリは、 [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)関数が set 内の上位 n 個の項目を返すことを示しています。  
+ また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリは、 [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md) 関数が set 内の上位 n 個の項目を返すことを示しています。  
   
  `SELECT`  
   
@@ -176,7 +177,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- 最後に、複数の論理セット操作を実行することもできます。たとえば、 [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [Union &#40;mdx&#41;](../mdx/union-mdx.md)などの関数を使用し、 [mdx &#40;](../mdx/except-mdx-function.md)関数を除きます。 次のクエリは、後者の2つの関数の例を示しています。  
+ 最後に、複数の論理セット操作を実行することもできます。たとえば、 [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [Union &#40;mdx&#41;](../mdx/union-mdx.md) などの関数を使用し、 [mdx &#40;](../mdx/except-mdx-function.md) 関数を除きます。 次のクエリは、後者の2つの関数の例を示しています。  
   
  `SELECT`  
   

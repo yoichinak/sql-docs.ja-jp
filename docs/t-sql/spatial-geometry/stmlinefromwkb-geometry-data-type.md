@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB (geometry データ型)
 title: STMLineFromWKB (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b0d9da3d43d82cce37ce12b60c84572af7541f2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 675a76c43e34367586c1042aaa830679940223a1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555007"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445025"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

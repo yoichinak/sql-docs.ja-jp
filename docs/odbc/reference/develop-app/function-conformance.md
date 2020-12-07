@@ -1,4 +1,5 @@
 ---
+description: 関数の適合性
 title: 関数の準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ff61c62b18f531eaad7cc822f99c7065fcba129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465794"
 ---
 # <a name="function-conformance"></a>関数の適合性
 次の表は、各 ODBC 関数が適切に定義されている場合の準拠レベルを示しています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|コア|  
 |**SQLBindCol**|コア|  
@@ -90,4 +91,4 @@ ms.locfileid: "81305593"
   
  [1] この関数の重要な機能は、より高い準拠レベルでのみ使用できます。  
   
- [2] 特定の属性を既定値以外の値に設定することは、準拠レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。
+ [2] 特定の属性を既定値以外の値に設定することは、準拠レベルによって異なります。 詳細については、次のセクション「 [属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。

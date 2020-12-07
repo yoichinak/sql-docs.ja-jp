@@ -21,12 +21,12 @@ ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c7e5deac23eaed47a1426c51bdb0aee087f10d0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c1ebbb0fc376d4c3995218c499816725dbe12932
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110626"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114943"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "87110626"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
@@ -78,7 +78,7 @@ SC の照合順序を使用する場合、*start_location* と戻り値では、
 この例では、検索された文字列値の変数 `@document` で `bicycle` を検索します。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
 SELECT CHARINDEX('bicycle', @document);  
@@ -87,7 +87,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 48            
 ```  
@@ -96,7 +96,7 @@ GO
 この例では、オプションの *start_location* パラメーターを使用して、検索された文字列値の変数 `@document` の 5 文字目で `vital` の検索を開始します。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -106,7 +106,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 -----------   
 16            
   
@@ -117,7 +117,7 @@ GO
 この例では、CHARINDEX が *expressionToSearch* で *expressionToFind* を検出できない場合の結果セットを示します。
   
 ```sql
-DECLARE @document varchar(64);  
+DECLARE @document VARCHAR(64);  
   
 SELECT @document = 'Reflectors are vital safety' +  
                    ' components of your bicycle.';  
@@ -175,7 +175,6 @@ SELECT CHARINDEX ( 'Test',
 この例では、大文字と小文字を区別せずに、`'This is a Test'` に含まれる文字列 `'TEST'` を検索します。
   
 ```sql
-  
 USE tempdb;  
 GO  
 SELECT CHARINDEX ( 'TEST',  

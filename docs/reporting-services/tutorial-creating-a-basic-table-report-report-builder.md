@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc7e78fb2b4101df84c2d54162d62ec8b95f6aab
+ms.sourcegitcommit: 863420525a1f5d5b56b311b84a6fb14e79404860
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247471"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94418009"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>チュートリアル:基本的な表レポートの作成 (レポート ビルダー)
 このチュートリアルでは、サンプルの売上データに基づいて基本的な表レポートを作成する方法を説明します。 次の図に、ここで作成するレポートを示します。  
@@ -175,7 +175,7 @@ ms.locfileid: "87247471"
   
     2.  2 行目は販売注文の行アイテムごとに 1 回表示され、製品名、注文数量、および行の合計を示します。  
   
-    3.  3 行目は販売注文ごとに 1 回表示され、注文あたりの小計を示します。  
+    3.  3 行目は販売注文カテゴリごとに 1 回表示され、カテゴリあたりの小計を示します。  
   
     4.  4 行目は注文日ごとに 1 回表示され、1 日あたりの小計を示します。  
   
@@ -296,7 +296,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** の **[無題]** を **Product_Sales**に置き換えます。  
+4.  **[名前]** の **[無題]** を **Product_Sales** に置き換えます。  
   
 5.  **[保存]** をクリックします。  
   
@@ -308,7 +308,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  **[名前]** の **[無題]** を **Product Sales**に置き換えます。  
+3.  **[名前]** の **[無題]** を **Product Sales** に置き換えます。  
   
 4.  **[保存]** をクリックします。  
   
@@ -347,7 +347,7 @@ SalesDate の値が、月の数字ではなく月の名前で表示されます�
   
 ### <a name="to-view-the-report-in-excel"></a>Excel でレポートを表示するには  
   
-1.  ブックを保存するフォルダーを開き、 **Product_Sales_Excel.xlsx**をダブルクリックします。  
+1.  ブックを保存するフォルダーを開き、 **Product_Sales_Excel.xlsx** をダブルクリックします。  
   
 2.  ブック見出しの名前が「 **Product Sales Excel**」であることを確認します。  
   

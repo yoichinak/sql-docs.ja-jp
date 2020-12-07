@@ -1,4 +1,5 @@
 ---
+description: Integration Services のアップグレード
 title: Integration Services のアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919988"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193914"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
 
@@ -50,14 +51,14 @@ ms.locfileid: "86919988"
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
 > 
->  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7)」をご覧ください。  
+>  廃止されたその他の機能については、「 [SQL Server 2016 で提供が中止された Integration Services の機能](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130))」をご覧ください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、 **[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
   
--   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
+-   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   
@@ -149,6 +150,5 @@ ms.locfileid: "86919988"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージを実行する [!INCLUDE[ssDE](../../includes/ssde-md.md)]コンピューターでは使用できません。  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](https://go.microsoft.com/fwlink/?LinkId=238157)」  
-  
+ blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951)」  
   

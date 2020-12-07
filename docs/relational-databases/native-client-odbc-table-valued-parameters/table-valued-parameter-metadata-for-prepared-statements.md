@@ -1,4 +1,5 @@
 ---
+description: 準備されたステートメント用のテーブル値パラメーターのメタデータ
 title: 準備されたステートメントの TVP メタデータ
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,16 +14,17 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e50f025aa2524a3b6fee1a92ca2fecbca214bc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c93614fa84a1758586deb72382dde042d40dd827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455880"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>準備されたステートメント用のテーブル値パラメーターのメタデータ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  アプリケーションでは、SQLNumParams と SQLDescribeParam を使用して、準備されたプロシージャ呼び出しのメタデータを取得できます。 テーブル値パラメーターの場合、 *DataTypePtr*は SQL_SS_TABLE に設定されます。 追加のメタデータは、SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME、および SQL_CA_SS_SCHEMA_NAME の SQLGetDescField を通じて入手できます。  
+  アプリケーションでは、SQLNumParams と SQLDescribeParam を使用して、準備されたプロシージャ呼び出しのメタデータを取得できます。 テーブル値パラメーターの場合、 *DataTypePtr* は SQL_SS_TABLE に設定されます。 追加のメタデータは、SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME、および SQL_CA_SS_SCHEMA_NAME の SQLGetDescField を通じて入手できます。  
   
  SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME、および SQL_CA_SS_SCHEMA_NAME を SQLColumns と共に使用すると、テーブル値パラメーターに関連付けられているテーブル型の列のメタデータを取得できます。 この場合、SQLColumns が呼び出される前に、SQL_SOPT_SS_NAME_SCOPE を SQL_SS_NAME_SCOPE_TABLE_TYPE に設定する必要があります。 その後、アプリケーションでテーブル値パラメーターの列のメタデータの取得が完了したら、SQL_SOPT_SS_NAME_SCOPE を既定値の SQL_SS_NAME_SCOPE_TABLE に戻す必要があります。  
   

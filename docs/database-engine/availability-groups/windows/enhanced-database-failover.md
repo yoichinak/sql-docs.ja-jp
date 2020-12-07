@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], enhanced database failover
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
-author: MashaMSFT
+author: cawrites
 ms.reviewer: mikeray
-ms.author: mathoma
-ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.author: chadam
+ms.openlocfilehash: 8a0e98398868676c6b7e5c3cdcaae1172a7a785a
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894434"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584285"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Always On 可用性グループのデータベースの拡張データベース フェールオーバーの有効化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2012 および 2014 で、プライマリ レプリカ上の可用性グループに参加しているデータベースがトランザクションを記述できなくなった場合、レプリカが同期され、自動的にフェールオーバーされるよう構成されている場合でも、フェールオーバーはトリガーされません。
 
-SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して設定することができる、*拡張データベース フェールオーバー*という新しいオプションの動作が導入されています。 このオプションが有効になっており、自動フェールオーバーが構成されている場合、可用性グループに参加している 1 つのデータベースがトランザクションを書き込むことができなくなった場合、同期されているセカンダリ レプリカへのフェールオーバーがトリガーされます。
+SQL Server 2016 には、ウィザードまたは TRANSACT-SQL を使用して設定することができる、*拡張データベース フェールオーバー* という新しいオプションの動作が導入されています。 このオプションが有効になっており、自動フェールオーバーが構成されている場合、可用性グループに参加している 1 つのデータベースがトランザクションを書き込むことができなくなった場合、同期されているセカンダリ レプリカへのフェールオーバーがトリガーされます。
 
 **シナリオ 1**
 

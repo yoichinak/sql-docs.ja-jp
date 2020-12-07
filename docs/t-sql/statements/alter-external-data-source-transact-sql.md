@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2019
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - polybase, alter external data source statement
 - ALTER EXTERNAL DATA SOURCE statement
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b66c95d7818144abd41b7a5b9fbedb93ba81aded
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669946"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300458"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  外部テーブルを作成するために使用する外部データ ソースを変更します。 外部データ ソースとして使用できるのは、SQL SERVER の場合は Hadoop または Azure Blob Storage (WASBS)、Azure SQL Data Warehouse の場合は Azure Blob Storage (WASBS) または Azure Data Lake storage (ABFSS/ADL) です。 
+  外部テーブルを作成するために使用する外部データ ソースを変更します。 外部データ ソースとして使用できるのは、SQL SERVER の場合は Hadoop または Azure Blob Storage (WASBS)、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の場合は Azure Blob Storage (WASBS) または Azure Data Lake storage (ABFSS/ADL) です。 
 
 ## <a name="syntax"></a>構文  
 
@@ -51,7 +52,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure SQL Data Warehouse
+-- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -63,14 +64,14 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]': 外部データ ソースへの接続プロトコル、パス、ポートを指定します。 有効な場所のオプションについては、「[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport)」を参照してください。
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>': (Azure SQL Data Warehouse には適用されません) Hadoop リソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理こともできます。 これは、コストベースの判断です。 述語のプッシュダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量が大幅に減少し、クエリのパフォーマンスが向上します。
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] には適用されない) Hadoop リソース マネージャーの場所を指定します。 指定した場合、クエリ オプティマイザーは Hadoop の計算の機能を使用して、PolyBase クエリのデータを事前処理こともできます。 これは、コストベースの判断です。 述語のプッシュダウンが呼び出されると、この Hadoop と SQL の間で転送されるデータ量が大幅に減少し、クエリのパフォーマンスが向上します。
 
  CREDENTIAL = Credential_Name: 名前付きの資格情報を指定します。 「[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+**適用対象** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
 一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 `LOCATION` URL の末尾に、 **/** 、ファイル名、または Shared Access Signature パラメーターを配置しないでください。
-使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
+使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
 
   
 
@@ -86,25 +87,23 @@ TYPE = [HADOOP | BLOB_STORAGE]
 ## <a name="examples"></a>例  
  次の例では、既存のデータソースの場所とリソース マネージャーの場所を変更します。
 
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
-  
 ```
 
  次の例では、既存のデータ ソースに接続できるように資格情報を変更します。
 
-```  
+```sql 
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
 ```
+ 次の例では、資格情報を新しい LOCATION に変更します。 この例は、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に対して作成される外部データ ソースです。 
 
- 次の例では、資格情報を新しい LOCATION に変更します。 この例は、Azure SQL Data Warehouse に対して作成される外部データ ソースです。 
-
-```  
+```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
    LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential

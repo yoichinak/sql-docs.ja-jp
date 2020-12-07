@@ -1,8 +1,9 @@
 ---
+description: MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VBScript)
 title: レコードセットのレコードポインターの移動の例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a1abb3ffd43a18df869385ddbbd374992a3f715
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7d6d1fdb55ca18fcbb06fb3cbb9e32f603af4d26
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990533"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VBScript)
-この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用して、指定されたコマンドに基づいてレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のレコードポインターを移動します。  
+この例では、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドを使用して、指定されたコマンドに基づいてレコード [セット](./recordset-object-ado.md) のレコードポインターを移動します。  
   
  次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **Movefirstvbs. asp**として保存します。 結果は任意のブラウザーで表示できます。  
   
@@ -184,5 +185,5 @@ ms.locfileid: "82762463"
 ```  
   
 ## <a name="see-also"></a>参照  
- [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

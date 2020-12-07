@@ -1,6 +1,6 @@
 ---
 title: IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL Server への BLOB データの送信 | Microsoft Docs
-description: IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL Server への BLOB データの送信
+description: IRowsetFastLoad を使用して可変長の BLOB データを SQL Server に向けて行ごとにストリーミングする方法について説明します。 この例では、ISequentialStream も示しています。
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2add5bbc762709122a6cf7c7292fd139c42cd39f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a01e79c34caeae849c103c2f8f9cbf967e078016
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001480"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727061"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86001480"
  <b id="conversion_note">[1]:</b>変換はできませんが、サーバーで UTF-8 がサポートされていない場合でも、UTF-8 とデータベースの照合順序のコード ページの間での変換は発生する可能性があります。 詳細については、「[OLE DB Driver for SQL Server の UTF-8 のサポート](../features/utf-8-support-in-oledb-driver-for-sql-server.md)」を参照してください。
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
@@ -485,5 +485,4 @@ void wmain() {
 use master  
 drop table fltest  
 ```  
-  
   

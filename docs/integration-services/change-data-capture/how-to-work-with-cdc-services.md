@@ -1,4 +1,5 @@
 ---
+description: CDC Service の操作方法
 title: CDC Service の操作方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 435aa5014d19c51704a5a93a7b35c365e095b9c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b98acd138794028dcecce9d121295154358799b2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496147"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
 

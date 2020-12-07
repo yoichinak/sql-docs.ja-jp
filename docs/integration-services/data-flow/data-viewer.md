@@ -1,4 +1,5 @@
 ---
+description: '[データ ビューアー]'
 title: '[データ ビューアー] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52565494c572fdb6a0eb24ccc0c591bf00005a79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8e3f659ec65cece6dd36f4fc0bc09ecae70a46c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430944"
 ---
 # <a name="data-viewer"></a>[データ ビューアー]
 
@@ -45,7 +46,7 @@ ms.locfileid: "86916770"
  **[データのコピー]**  
  現在のバッファーのデータをクリップボードにコピーします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

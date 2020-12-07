@@ -1,4 +1,5 @@
 ---
+description: DBCC SHOWCONTIG (Transact-SQL)
 title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: baa64e35a39d1f61f2e5b5cda6ce64e2fc72c455
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485242"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114968"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 
@@ -207,7 +208,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @id int, @indid int  
+DECLARE @id INT, @indid INT  
 SET @id = OBJECT_ID('Production.Product')  
 SELECT @indid = index_id   
 FROM sys.indexes  
@@ -244,12 +245,12 @@ GO
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+DECLARE @tablename VARCHAR(255);  
+DECLARE @execstr   VARCHAR(400);  
+DECLARE @objectid  INT;  
+DECLARE @indexid   INT;  
+DECLARE @frag      DECIMAL;  
+DECLARE @maxfrag   DECIMAL;  
   
 -- Decide on the maximum fragmentation to allow for.  
 SELECT @maxfrag = 30.0;  
@@ -262,26 +263,26 @@ DECLARE tables CURSOR FOR
   
 -- Create the table.  
 CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+   ObjectName CHAR(255),  
+   ObjectId INT,  
+   IndexName CHAR(255),  
+   IndexId INT,  
+   Lvl INT,  
+   CountPages INT,  
+   CountRows INT,  
+   MinRecSize INT,  
+   MaxRecSize INT,  
+   AvgRecSize INT,  
+   ForRecCount INT,  
+   Extents INT,  
+   ExtentSwitches INT,  
+   AvgFreeBytes INT,  
+   AvgPageDensity INT,  
+   ScanDensity DECIMAL,  
+   BestCount INT,  
+   ActualCount INT,  
+   LogicalFrag DECIMAL,  
+   ExtentFrag DECIMAL);  
   
 -- Open the cursor.  
 OPEN tables;  

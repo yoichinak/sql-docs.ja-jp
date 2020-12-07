@@ -1,4 +1,5 @@
 ---
+description: WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 title: WITH CHANGE_TRACKING_CONTEXT (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -19,12 +20,12 @@ ms.assetid: 885e33a1-602a-4b94-8380-a63ac935a683
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa900fcf6bd142c5f3d5eddde85df0a41419efa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 850a20210b503cb3e6c05ab4c1ff69ee178cbbd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464752"
 ---
 # <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,19 +43,19 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>パラメーター  
  *context*  
- 呼び出し元アプリケーションによって提供され、変更追跡情報と共に格納されるコンテキスト情報です。 *コンテキスト*は**varbinary (128)** です。  
+ 呼び出し元アプリケーションによって提供され、変更追跡情報と共に格納されるコンテキスト情報です。 *コンテキスト* は **varbinary (128)** です。  
   
  値には定数または変数を指定できますが、NULL にすることはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データ変更の変更追跡コンテキストを設定します。  
   
 ```  
 WITH CHANGE_TRACKING_CONTEXT ( context )  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Change Tracking 関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [変更追跡関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

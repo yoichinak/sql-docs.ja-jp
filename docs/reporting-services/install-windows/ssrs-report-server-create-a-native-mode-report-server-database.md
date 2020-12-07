@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866335"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934751"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>ネイティブ モードのレポート サーバー データベースを作成する (SSRS Configuration Manager)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>ネイティブ モードのレポート サーバー データベースの作成 (レポート サーバー構成マネージャー)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "74866335"
  レポート サーバー データベースの作成または構成は、複数の手順から成るプロセスです。 レポート サーバー データベースを作成する前に、次の項目をどのように指定するかを検討してください。  
   
  **データベース サーバーの選択**  
- サポートされている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンとサポートされているエディションを「[レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」で確認します。  
+ サポートされている [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SQL Server データベース エンジンのバージョンとサポートされているエディションを、トピック「[ネイティブ モードのレポート サーバー データベースの作成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」で確認します。  
   
  **TCP/IP 接続の有効化**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の TCP/IP 接続を有効にします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションの中には、既定で TCP/IP が有効になっていないものもあります。 手順はこのトピックで説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "74866335"
  **レポート サーバーの資格情報の決定**  
  レポート サーバーがレポート サーバー データベースに接続する方法を決定します。 資格情報の種類には、ドメイン ユーザー アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウント、およびレポート サーバー サービス アカウントがあります。  
   
- これらの資格情報は暗号化され、RSReportServer.config ファイルに格納されます。 レポート サーバーは、これらの資格情報を使用してレポート サーバー データベースに継続的に接続します。 Windows ユーザー アカウントまたはデータベース ユーザー アカウントを使用する場合は、既に存在するアカウントを指定してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ログインの作成と必要な権限の設定は実行されますが、アカウントは自動的に作成されません。 詳細については、「 [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」で確認します。  
+ これらの資格情報は暗号化され、RSReportServer.config ファイルに格納されます。 レポート サーバーは、これらの資格情報を使用してレポート サーバー データベースに継続的に接続します。 Windows ユーザー アカウントまたはデータベース ユーザー アカウントを使用する場合は、既に存在するアカウントを指定してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ログインの作成と必要な権限の設定は実行されますが、アカウントは自動的に作成されません。 詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。  
   
  **レポート サーバーの言語の決定**  
  レポート サーバーに対して指定する言語を選択します。 ユーザーが他言語バージョンのブラウザーを使用してサーバーに接続する場合でも、定義済みロールの名前、説明、および個人用レポート フォルダーは他の言語では表示されません。  
@@ -73,7 +73,7 @@ ms.locfileid: "74866335"
   
 ### <a name="to-create-a-local-report-server-database"></a>ローカルのレポート サーバー データベースを作成するには  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [データベース] ページの **[データベースの変更]** を選択します。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "74866335"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー ツールの資格情報の変更ウィザードを使用して、レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを再構成することができます。 資格情報を変更すると、構成マネージャーによって、レポート サーバーで使用中のレポート サーバー データベースのデータベース サーバー上のすべての権限とデータベース ログイン情報が更新されます。 
 
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動し、データベースを作成するレポート サーバー インスタンスに接続します。 詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 2.  [データベース] ページの **[資格情報の変更]** を選択します。 
 
@@ -151,6 +151,6 @@ ms.locfileid: "74866335"
 
 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

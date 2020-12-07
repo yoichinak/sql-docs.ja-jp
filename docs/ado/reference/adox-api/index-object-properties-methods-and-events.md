@@ -1,8 +1,9 @@
 ---
+description: Index オブジェクトのプロパティ、メソッド、およびイベント
 title: Index オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: af473fcd6b4f9ca138bd0d1c6a22f57a75fe7e0b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762733"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984253"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Index オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Clustered プロパティ](../../../ado/reference/adox-api/clustered-property-adox.md)  
+ [Clustered プロパティ](./clustered-property-adox.md)  
   
- [Columns コレクション](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns コレクション](./columns-collection-adox.md)  
   
- [IndexNulls プロパティ](../../../ado/reference/adox-api/indexnulls-property-adox.md)  
+ [IndexNulls プロパティ](./indexnulls-property-adox.md)  
   
- [Name プロパティ](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name プロパティ](./name-property-adox.md)  
   
- [PrimaryKey プロパティ](../../../ado/reference/adox-api/primarykey-property-adox.md)  
+ [PrimaryKey プロパティ](./primarykey-property-adox.md)  
   
- [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [プロパティのコレクション](../ado-api/properties-collection-ado.md)  
   
- [Unique プロパティ](../../../ado/reference/adox-api/unique-property-adox.md)  
+ [Unique プロパティ](./unique-property-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index オブジェクト (ADOX)](./index-object-adox.md)

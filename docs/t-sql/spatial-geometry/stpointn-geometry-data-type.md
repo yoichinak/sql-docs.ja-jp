@@ -1,4 +1,5 @@
 ---
+description: STPointN (geometry データ型)
 title: STPointN (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: eced8c5e3c7d42abf8974af1efc9202bd30bed27
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 751fc973188d7fe12ea0034a14c4620808912545
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88444925"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Integration Services サービス (SSIS サービス)
 title: Integration Services サービス (SSIS サービス) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "90990410"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86922032"
 
   このセクションのトピックでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスである [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスについて説明します。 Integration Service パッケージの作成、保存、および実行には、このサービスは不要です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] との互換性を維持するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスをサポートしています。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの**  SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services (SSIS) のプロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、プロジェクト配置モデルを使用して **サーバーに配置したプロジェクトの** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベースにオブジェクト、設定、業務データを格納します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データベース エンジンのインスタンスである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバーは、データベースをホストします。 データベースの詳細については、「 [SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーへのプロジェクトの配置の詳細については、「[Integration Services (SSIS) のプロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
 ## <a name="management-capabilities"></a>管理機能  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを管理するための Windows サービスです。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でのみ使用できます。  
@@ -77,7 +78,7 @@ ms.locfileid: "86922032"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスは 1 台のコンピューターに 1 つだけインストールできます。 このサービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の特定のインスタンスに固有ではありません。 サービスに接続するには、サービスが実行されているコンピューターの名前を使用します。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、次の Microsoft 管理コンソール (MMC) スナップインのいずれかを使用して管理できます: SQL Server 構成マネージャーまたはサービス。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理するには、事前にサービスを起動しておく必要があります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、SQL Server 構成マネージャーまたはサービスのいずれかの Microsoft 管理コンソール (MMC) スナップインを使用して管理できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理するには、事前にサービスを起動しておく必要があります。  
   
  既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と同時にインストールされる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカルの既定インスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスに格納されているパッケージを管理するには、サービスの構成ファイルを変更する必要があります。
   
@@ -118,9 +119,9 @@ ms.locfileid: "86922032"
   
 ### <a name="to-set-properties-of-the-integration-services-service-by-using-services"></a>[サービス] を使用して Integration Services サービスのプロパティを設定するには  
   
-1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** 、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
-2.  **[サービス]** をクリックします。  
+2.  [**サービス**] をクリックします。  
   
 3.  **[サービス]** スナップインで、サービスの一覧から **[SQL Server Integration Services]** を探します。 **[SQL Server Integration Services]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -228,7 +229,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file"></a>構成ファイルを変更します  
- 構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder**型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
+ 構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder** 型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
   
 > [!NOTE]  
 >  一部の文字は、フォルダー名には無効です。 フォルダー名として有効な文字は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの **System.IO.Path** および **GetInvalidFilenameChars** フィールドによって決まります。 **GetInvalidFilenameChars** フィールドでは、 **Path** クラスのメンバーに渡されるパス文字列引数に指定できない、プラットフォーム固有の文字配列が指定されます。 無効な文字のセットは、ファイル システムによって異なる場合があります。 通常、無効な文字は、引用符 (")、小なり (<) 文字、およびパイプ (|) 文字です。  
@@ -363,21 +364,19 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  2 つのダイアログ ボックスを使用して、 **[アクセスの許可]** と **[起動の許可]** を構成します。 リモートとローカルのアクセスは区別できません。アクセスの許可にはローカルとリモートのアクセス権が含まれており、起動の権限にはローカルとリモートの起動権限が含まれています。  
   
-5.  ダイアログ ボックスを閉じ、 **dcomcnfg.exe**を閉じます。  
+5.  ダイアログ ボックスを閉じ、 **dcomcnfg.exe** を閉じます。  
   
 6.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを再開します。  
   
-### <a name="connecting-by-using-a-local-account"></a>ローカル アカウントを使用した接続  
- クライアント コンピューターのローカル Windows アカウントで作業している場合、リモート コンピューターの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに接続できるのは、同じ名前、同じパスワード、および十分な権限が設定されたローカル アカウントがリモート コンピューター上に存在する場合だけです。  
+### <a name="connecting-by-using-a-local-account"></a>ローカル アカウントを使用した接続
+
+クライアント コンピューターのローカル Windows アカウントで作業している場合、リモート コンピューターの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに接続できるのは、同じ名前、同じパスワード、および十分な権限が設定されたローカル アカウントがリモート コンピューター上に存在する場合だけです。  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>既定では SSIS サービスは委任をサポートしない  
-既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでは資格情報の委任 (ダブル ホップと呼ばれることもあります) はサポートされていません。 たとえば、ユーザーがクライアント コンピューターで作業しており、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が別のコンピューターで実行されているとします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はさらに別のコンピューターで実行されています。 まず、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] がクライアント コンピューターから [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されている 2 番目のコンピューターに資格情報を渡します。 ただし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは 2 番目のコンピューターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている 3 番目のコンピューターに資格情報を委任できません。
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>SSIS Windows サービスでは委任がサポートされていません
 
-資格情報の委任は、 **[任意のサービスへの委任でこのユーザーを信頼する (Kerberos のみ)]** の権限を SQL Server のサービス アカウントで有効にできます。これにより、子プロセスとして Integration Services サービス (ISServerExec.exe) が起動します。 この権限を付与する前に、組織のセキュリティ要件を満たしているかどうかを検討してください。
+SSIS では資格情報を委任できません。資格情報の委任はダブル ホップとも呼ばれます。 たとえば、ユーザーがクライアント コンピューターで作業しており、SSIS は別のコンピューターにインストールされているとします。SQL Server はさらに別のコンピューターにインストールされています。 SSMS では、クライアント コンピューターから (SSIS が実行されている) 2 番目のコンピューターに資格情報を正常に渡されますが、SSIS では、2 番目のコンピューターから (SQL Server が実行されている) 3 番目のコンピューターに資格情報を委任できません。
 
-詳細については、「 [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)」(SSIS パッケージで機能するクロス ドメイン Kerberos の取得) を参照してください。
- 
-## <a name="configure-the-firewall"></a>ファイアウォールの構成
+## <a name="configure-the-firewall"></a>ファイアウォールを構成する
   
  Windows ファイアウォール システムは、ネットワーク接続経由でコンピューター リソースに不正なアクセスが行われるのを防ぐのに役立ちます。 このファイアウォールを経由して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアクセスするには、アクセスを有効にするようにファイアウォールを構成する必要があります。  
   
@@ -428,7 +427,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
-5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)** 」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
+5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは常にポート 135 を使用します。 別のポートを指定することはできません。  

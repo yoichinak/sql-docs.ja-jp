@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741768"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834046"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
@@ -49,6 +49,10 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > PolyBase 用の MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。    
+    
 1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
     ```sql
@@ -72,7 +76,9 @@ MongoDB データ ソースのデータに対してクエリを実行するに�
     ```
 
 >[!IMPORTANT] 
->外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。 
+>外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。
+>
+>例については、[MongoDB の外部テーブルの作成](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb)に関する記述を参照してください。
 
 ## <a name="flattening"></a>フラット化
 フラット化は、MongoDB ドキュメント コレクションの入れ子になったデータと繰り返しデータに対して有効になります。 ユーザーは、入れ子になったデータや繰り返しデータを含む可能性のある MongoDB ドキュメント コレクションに対して `create an external table` を有効にし、リレーショナル スキーマを明示的に指定する必要があります。 JSON の入れ子になったデータ型/繰り返しデータ型は次のようにフラット化されます

@@ -1,4 +1,5 @@
 ---
+description: データベース メールから送信された電子メール メッセージの状態の確認
 title: データベース メールから送信された電子メール メッセージの状態
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 72111583066aa73d94ccf70905f26cc35a359344
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 245a50951896f923165e011fc51c09abd00f96e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421246"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>データベース メールから送信された電子メール メッセージの状態の確認
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85737634"
   
 -   **作業を開始する準備:**  
   
--   **データベース メールを使用して送信された電子メールの状態を表示するには、** を使用[Transact-SQL](#TsqlProcedure)  
+-   **データベース メールを使用して送信された電子メールの状態を表示する方法:**  [Transact-SQL の使用](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  データベース メールは、送信する電子メール メッセージのコピーを保持し、 **msdb**データベースの **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、および **sysmail_faileditems** の各ビューに表示します。 データベース メール外部プログラムは、利用状況をログに記録し、Windows アプリケーション イベント ログや **msdb** データベースの **sysmail_event_log** ビューでそのログを表示します。 電子メール メッセージの状態を確認するには、このビューに対してクエリを実行します。 電子メール メッセージの状態は、 **sent**、 **unsent**、 **retrying**、および **failed**のいずれかになります。  

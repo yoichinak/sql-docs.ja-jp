@@ -1,4 +1,5 @@
 ---
+description: メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 title: メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2016
@@ -8,21 +9,23 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd143092a666a9e1fd661651d0bfe9620db7cc8c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554537"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810462"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](https://msdn.microsoft.com/library/mt631669.aspx) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。
+
+[Memory-Optimized Tables](../in-memory-oltp/sample-database-for-in-memory-oltp.md) のシステム バージョン管理されたテンポラル テーブルは、インメモリ OLTP ワークロードで収集されたデータに対して [データ監査および特定時点分析](./temporal-table-usage-scenarios.md) が必要な場合にコスト効果の高いソリューションを提供するように設計されています。 高いトランザクション スループット、ロックを必要としないコンカレンシー、簡単にクエリできる大量の履歴データを格納する機能を提供します。
 
 ## <a name="overview"></a>概要
 
@@ -40,7 +43,7 @@ ms.locfileid: "86554537"
 
 - システム バージョン管理できるのは、持続性のあるメモリ最適化テーブルだけです (**DURABILITY = SCHEMA_AND_DATA**)。
 - メモリ最適化されてシステム バージョン管理されたテーブルの履歴テーブルは、エンド ユーザーまたはシステムのどちらによって作成される場合でも、ディスク ベースでなければなりません。
-- 現在のテーブル (インメモリ) のみに影響するクエリは、 [ネイティブ コンパイル T-SQL モジュール](https://msdn.microsoft.com/library/dn133184.aspx)で使用できます。 FOR SYSTEM TIME 句を使用したテンポラル クエリは、ネイティブ コンパイル モジュールではサポートされません。 アドホック クエリおよび非ネイティブ モジュールでの FOR SYSTEM TIME 句とメモリ最適化テーブルの使用はサポートされています。
+- 現在のテーブル (インメモリ) のみに影響するクエリは、 [ネイティブ コンパイル T-SQL モジュール](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)で使用できます。 FOR SYSTEM TIME 句を使用したテンポラル クエリは、ネイティブ コンパイル モジュールではサポートされません。 アドホック クエリおよび非ネイティブ モジュールでの FOR SYSTEM TIME 句とメモリ最適化テーブルの使用はサポートされています。
 - **SYSTEM_VERSIONING = ON**のときは、現在のメモリ最適化テーブルでの更新および削除操作の結果である最新のシステム バージョン管理された変更を受け入れるため、内部的なメモリ最適化ステージング テーブルが自動的に作成されます。
 - 内部のメモリ最適化ステージング テーブルからのデータは、非同期のデータ フラッシュ タスクによって、ディスク ベースの履歴テーブルに定期的に移動されます。 このデータ フラッシュ メカニズムの目的は、親オブジェクトによる内部メモリ バッファーのメモリ使用量を 10% 未満に維持することです。 [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) をクエリし、内部メモリ最適化ステージング テーブルと現在のテンポラル テーブルのデータを集計することにより、システム バージョン管理されたメモリ最適化テンポラル テーブルの総メモリ消費量を要約できます。
 - データ フラッシュを適用するには、 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)を呼び出します。

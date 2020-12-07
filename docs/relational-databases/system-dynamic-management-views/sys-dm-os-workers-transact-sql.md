@@ -1,4 +1,5 @@
 ---
+description: dm_os_workers (Transact-sql)
 title: dm_os_workers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -17,19 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38fcf821327fb0f7e95734f5d9a3ac47e41ac93c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2039e39c68735358d6bcf88c739d9008897567d3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010949"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532354"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>dm_os_workers (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  システム内のすべてのワーカーに対して1行の値を返します。 ワーカーの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。 
+  システム内のすべてのワーカーに対して1行の値を返します。 ワーカーの詳細については、「 [スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。 
   
 > [!NOTE]  
 >  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_workers**という名前を使用します。  
@@ -37,7 +39,7 @@ ms.locfileid: "86010949"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary (8)**|ワーカーのメモリアドレス。|  
-|状態|**int**|内部使用のみです。|  
+|status|**int**|内部使用のみです。|  
 |is_preemptive|**bit**|1 = ワーカーは、プリエンプティブなスケジュール設定で実行中です。 外部コードを実行しているワーカーは、プリエンプティブスケジューリングの下で実行されます。|  
 |is_fiber|**bit**|1 = ワーカーは、簡易プーリングを使用して実行されています。 詳細については、「 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)」を参照してください。|  
 |is_sick|**bit**|1 = ワーカーは、スピン ロックを取得しようとして停止しています。 このビットが設定されている場合は、頻繁にアクセスされるオブジェクトの競合に問題がある可能性があります。|  
@@ -57,7 +59,7 @@ ms.locfileid: "86010949"
 |exception_severity|**int**|ワーカーで前回発生した例外の重大度。|  
 |exception_address|**varbinary (8)**|例外をスローしたコード アドレス。|  
 |affinity|**bigint**|ワーカーのスレッド関係。 [Dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)のスレッドの関係と一致します。|  
-|state|**nvarchar(60)**|ワーカーの状態。 次の値のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
+|状態|**nvarchar(60)**|ワーカーの状態。 次の値のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
 |start_quantum|**bigint**|ワーカーの現在の実行が開始された時間 (ミリ秒単位)。|  
 |end_quantum|**bigint**|このワーカーの現在の実行が終了するまでの時間 (ミリ秒単位)。|  
 |last_wait_type|**nvarchar(60)**|最後の待機の種類。 待機の種類の一覧については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
@@ -73,9 +75,9 @@ ms.locfileid: "86010949"
 |signal_worker_address|**varbinary (8)**|このオブジェクトを最後に通知したワーカーのメモリアドレス。 詳細については、「 [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)」を参照してください。|  
 |scheduler_address|**varbinary (8)**|スケジューラのメモリアドレス。 詳細については、「 [sys. dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」を参照してください。|  
 |processor_group|**smallint**|このスレッドに割り当てられているプロセッサ グループ ID が格納されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ワーカーの状態が RUNNING で、非プリエンプティブに実行されている場合、そのワーカーのアドレスは、sys.dm_os_schedulers 内の active_worker_address と一致します。  
   
  イベントで待機中のワーカーがシグナルを受け取ると、そのワーカーは実行可能キューの先頭に置かれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれが 1,000 回続けて発生すると、ワーカーはキューの末尾に置かれます。 ワーカーがキューの末尾に移動すると、パフォーマンスに影響が生じる場合があります。  

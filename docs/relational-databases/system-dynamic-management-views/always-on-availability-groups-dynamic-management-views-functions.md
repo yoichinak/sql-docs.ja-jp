@@ -1,4 +1,5 @@
 ---
+description: Always On 可用性グループの動的管理ビュー-関数
 title: Always On 可用性グループの動的管理ビュー-Functions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - dynamic management views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 090e7bb80e3e72ceb2a1d0a622097a89c4da7fe4
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 844ccfb7ee96f5d4d869162aa64f3ededb0cd792
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942603"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551345"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 可用性グループの動的管理ビュー-関数
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "86942603"
 
         [sys.dm_hadr_availability_group_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)
 
-        [可用性レプリカの監視](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)
+        [sys.dm_hadr_availability_replica_cluster_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)
 
-        [sys.dm_hadr_availability_replica_cluster_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)
+        [sys.dm_hadr_availability_replica_cluster_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)
 
         [sys.dm_hadr_availability_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)
 

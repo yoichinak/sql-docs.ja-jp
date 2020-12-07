@@ -1,6 +1,6 @@
 ---
 title: OLE DB Driver for SQL Server のインストール | Microsoft Docs
-description: OLE DB Driver for SQL Server のインストールとアンインストール。 OLE DB Driver for SQL Server をインストールするには、msoledbsql.msi インストーラーが必要です
+description: OLE DB Driver for SQL Server のインストールとアンインストール。 OLE DB Driver for SQL Server をインストールするには、msoledbsql.msi インストーラーが必要です。
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, installing
 - data access [OLE DB Driver for SQL Server], installing OLE DB Driver for SQL Server
 - removing OLE DB Driver for SQL Server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1edd1c6e7a118e152fc1f8e85203434347061da5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 43b91e08726ed548d24ba3461f45164eb97bb6b7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007062"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727373"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のインストール
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ OLE DB Driver for SQL Server のファイル (msoledbsql.dll、msoledbsqlr.rll) 
 
 OLE DB Driver for SQL Server のヘッダー ファイルとライブラリ ファイル (msoledbsql.h と msoledbsql.lib) は `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK` にインストールされます。 また、x64 msoledbsql.msi では同じファイルが `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK` にインストールされます。  
 
-msoledbsql.msi を使用して OLE DB Driver for SQL Server を配布できます。 アプリケーションを配置する際には、OLE DB Driver for SQL Server のインストールが必要になる場合があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](https://go.microsoft.com/fwlink/?LinkId=115667)」および「[カスタムの必須コンポーネントの追加](https://go.microsoft.com/fwlink/?LinkId=115668)」をご覧ください。  
+msoledbsql.msi を使用して OLE DB Driver for SQL Server を配布できます。 アプリケーションを配置する際には、OLE DB Driver for SQL Server のインストールが必要になる場合があります。 チェイナーとブートストラップのテクノロジを使用すると、ユーザーが 1 回のインストール手順に従うだけで複数のパッケージをまとめてインストールできるようになります。 詳細については、「[Visual Studio 2005 用のカスタム ブートストラップ パッケージの作成](/previous-versions/aa730839(v=vs.80))」および「[カスタムの必須コンポーネントの追加](/visualstudio/deployment/creating-bootstrapper-packages)」をご覧ください。  
   
 x64 msoledbsql.msi では、32 ビット バージョンの OLE DB Driver for SQL Server もインストールされます。 アプリケーションが、開発時に使用したものとは異なるプラットフォームを対象としている場合、x64 および x86 用のバージョンの msoledbsql.msi をダウンロードできます。
 
@@ -63,4 +63,4 @@ APPGUID に渡す値は、特定の製品コードです。 Microsoft インス�
 APPGUID オプションでは、管理者特権でのコマンド プロンプトからインストーラーを実行する必要があります。
 
 ## <a name="see-also"></a>参照  
- [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)

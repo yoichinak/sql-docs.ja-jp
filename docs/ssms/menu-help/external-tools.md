@@ -1,4 +1,5 @@
 ---
+description: '[外部ツール]'
 title: '[外部ツール]'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 280180cda65f72bc2ea3fd4515e12ee46b3879cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491957"
 ---
 # <a name="external-tools"></a>[外部ツール]
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86001645"
 **削除**  
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
-**Title**  
+**タイトル**  
 **[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前です。 ツールの名前の中でツールのアクセス キーとして使用する文字の前にアンパサンドを配置します。 たとえば、 `&Spy++` は **[ツール]** メニューの **[Spy++]** を表示します。  
   
 **コマンド**  
@@ -73,7 +74,7 @@ ms.locfileid: "86001645"
   
 3.  **[コマンド]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 管理コンソールの実行可能ファイルへのパスを「 **C:\WINNT\system32\mmc.exe**」のように入力します。  
   
-4.  **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"** 」のように入力します。  
+4.  **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"**」のように入力します。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  

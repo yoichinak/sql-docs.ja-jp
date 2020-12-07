@@ -1,4 +1,5 @@
 ---
+description: RESTORE ステートメント (Transact-SQL)
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -40,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: b2e568e5fc2bc170101b47a436b8af24a22b0137
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864335"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496879"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -64,10 +65,10 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -325,17 +326,17 @@ RESTORE LOG にファイル リストを含めて、ロールフォワード中�
 
 - RECOVERY (規定値) では、現在のバックアップのロールフォワードが完了した後にロールバックを実行するように指定します。
 
-  データベースを復旧するには、復元されるデータセット全体 ("*ロールフォワード セット*") とデータベースの間で一貫性が保たれている必要があります。 ロールフォワード セットがデータベースと一貫性を保つことができる時点まで十分にロールフォワードされていない場合は、RECOVERY を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってエラーが生成されます。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
+  データベースを復旧するには、復元されるデータセット全体 (" *ロールフォワード セット* ") とデータベースの間で一貫性が保たれている必要があります。 ロールフォワード セットがデータベースと一貫性を保つことができる時点まで十分にロールフォワードされていない場合は、RECOVERY を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってエラーが生成されます。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
 
 ## <a name="compatibility-support"></a>互換性サポート
-以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して作成された **master**、**model**、および **msdb** のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で復元することはできません。
+以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して作成された **master** 、 **model** 、および **msdb** のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で復元することはできません。
 
 > [!NOTE]
 > バックアップが作成されたバージョンより前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを復元することはできません。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンでは、以前のバージョンとは異なる既定のパスが使用されます。 そのため、以前のバージョンのバックアップが既定で保存されていた場所に作成されたデータベースを復元するには、MOVE オプションを使用する必要があります。 新しい既定のパスについては、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。
 
-以前のバージョンのデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、データベースが自動的にアップグレードされます。 通常、データベースは直ちに使用可能になります。 ただし、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、**upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。
+以前のバージョンのデータベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元すると、データベースが自動的にアップグレードされます。 通常、データベースは直ちに使用可能になります。 ただし、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート ( **upgrade_option** = 2) または再構築 ( **upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。
 
 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法の詳細については、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) に関するページを参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。
 
@@ -368,7 +369,7 @@ WITH RESTRICTED_USER オプションを使用すると、ユーザー アクセ�
 
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>vardecimal ストレージに対応したデータベースの復元
 
-バックアップと復元は **vardecimal** ストレージ形式で正常に機能します。 **vardecimal** ストレージ形式の詳細については、[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md) に関するページを参照してください。
+バックアップと復元は **vardecimal** ストレージ形式で正常に機能します。 **vardecimal** ストレージ形式の詳細については、 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md) に関するページを参照してください。
 
 ### <a name="restore-full-text-data"></a>フルテキスト データの復元
 
@@ -736,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_**
+        **_\* SQL Managed Instance \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -785,7 +786,7 @@ FROM URL
 > [!IMPORTANT]
 > URL からの復元時に複数のデバイスから復元するには、Shared Access Signature (SAS) トークンを使用する必要があります。 Shared Access Signature の作成例については、「[SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」と「[Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (Powershell を使用する Azure ストレージにおける Shared Access Signature (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。
 
-*n*: 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
+*n* : 最大 64 個のバックアップ デバイスをコンマ区切りリストに指定できることを示すプレースホルダーです。
 
 ## <a name="general-remarks"></a>全般的な解説
 
@@ -886,7 +887,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**
@@ -900,7 +901,7 @@ WHERE r.command = 'RESTORE DATABASE'
 データベース バックアップから [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンスに、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ユーザー データベースを復元します。 データベースは、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md) コマンドによって以前に作成されたバックアップから復元されます。 バックアップ操作および復元操作を使用してディザスター リカバリー計画を作成したり、アプライアンス間でデータベースを移動したりします。
 
 > [!NOTE]
-> master データベースの復元には、アプライアンスのログイン情報の復元が含まれます。 マスターを復元するには、**Configuration Manager** ツールの [[Restore the master Database]\(master データベースの復元\)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) ページを使用します。 制御ノードへのアクセス許可を持つ管理者は、この操作を実行することができます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベース バックアップの詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の 「バックアップと復元」に関するセクションをご覧ください。
+> master データベースの復元には、アプライアンスのログイン情報の復元が含まれます。 マスターを復元するには、 **Configuration Manager** ツールの [[Restore the master Database]\(master データベースの復元\)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) ページを使用します。 制御ノードへのアクセス許可を持つ管理者は、この操作を実行することができます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] データベース バックアップの詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] の 「バックアップと復元」に関するセクションをご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -928,17 +929,17 @@ RESTORE HEADERONLY
 
 ## <a name="arguments"></a>引数
 
-RESTORE DATABASE *database_name*: ユーザー データベースを *database_name* と呼ばれるデータベースに復元するように指定します。 復元するデータベースには、バックアップされているソース データベースと異なる名前を付けることができます。 *database_name* は、復元先のアプライアンス上にデータベースとしてまだ存在することができません。 使用可能なデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「オブジェクトの名前付け規則」を参照してください。
+RESTORE DATABASE *database_name* : ユーザー データベースを *database_name* と呼ばれるデータベースに復元するように指定します。 復元するデータベースには、バックアップされているソース データベースと異なる名前を付けることができます。 *database_name* は、復元先のアプライアンス上にデータベースとしてまだ存在することができません。 使用可能なデータベース名の詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「オブジェクトの名前付け規則」を参照してください。
 
 ユーザー データベースを復元すると、アプライアンスに対して、データベースの完全バックアップが復元され、その後、必要応じて差分バックアップが復元されます。 ユーザー データベースの復元には、データベース ユーザーとデータベース ロールの復元が含まれます。
 
-FROM DISK = '\\\\*UNC_path*\\*backup_directory*': [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] によってバックアップ ファイルが復元されるネットワーク パスとディレクトリ。 たとえば、FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
+FROM DISK = '\\\\*UNC_path*\\*backup_directory* ': [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] によってバックアップ ファイルが復元されるネットワーク パスとディレクトリ。 たとえば、FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'。
 
-*backup_directory*: 完全バックアップまたは差分バックアップが格納されているディレクトリの名前を指定します。 たとえば、完全バックアップまたは差分バックアップに対して RESTORE HEADERONLY 操作を実行することができます。
+*backup_directory* : 完全バックアップまたは差分バックアップが格納されているディレクトリの名前を指定します。 たとえば、完全バックアップまたは差分バックアップに対して RESTORE HEADERONLY 操作を実行することができます。
 
-*full_backup_directory*: 完全バックアップが格納されているディレクトリの名前を指定します。
+*full_backup_directory* : 完全バックアップが格納されているディレクトリの名前を指定します。
 
-*differential_backup_directory*: 差分バックアップが格納されているディレクトリの名前を指定します。
+*differential_backup_directory* : 差分バックアップが格納されているディレクトリの名前を指定します。
 
 - パスとバックアップ ディレクトリが既に存在し、これらが完全に修飾された汎用名前付け規則 (UNC) パスとして指定されている必要があります。
 - バックアップ ディレクトリのパスにはローカル パスを指定できません。[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] アプライアンス ノード上の場所とすることもできません。
@@ -955,8 +956,8 @@ RESTORE HEADERONLY の結果は、[!INCLUDE[ssNoVersion](../../includes/ssnovers
 バックアップ ディレクトリにアクセスし、そこから読み取るための権限を有する Windows アカウントが必要です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に Windows アカウント名とパスワードを保存する必要もあります。
 
 - 資格情報が既にあることを確認するには、[sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) を使用します。
-- 資格情報を追加または更新するには、[sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) を使用します。
-- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] から資格情報を削除するには、[sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) を使用します。
+- 資格情報を追加または更新するには、[sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) を使用します。
+- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] から資格情報を削除するには、[sp_pdw_remove_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) を使用します。
 
 ## <a name="error-handling"></a>エラー処理
 
@@ -979,13 +980,13 @@ RESTORE DATABASE を実行すると、次の条件下でエラーが発生しま
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>より多くの計算ノードを備えたアプライアンスへの復元
 
-小型のアプライアンスから大型のアプライアンスにデータベースを復元すると、再割り当てによってトランザクション ログが増えるため、[DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) を実行します。
+小型のアプライアンスから大型のアプライアンスにデータベースを復元すると、再割り当てによってトランザクション ログが増えるため、[DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) を実行します。
 
 より多くの計算ノードを備えたアプライアンスにバックアップを復元すると、計算ノードの数に比例して、割り当てられるデータベースのサイズが大きくなります。
 
 たとえば、2 つのノードを備えたアプライアンス (ノードあたり 30 GB) から 6 つのノードを備えたアプライアンスに 60 GB のデータベースを復元する場合、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] は、6 つのノードを備えたアプライアンス上に 180 GB のデータベース (6 ノード、ノードあたり 30 GB) を作成します。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] はまず 2 つのノードに復元することでソースの構成と一致させ、次に 6 つのノードすべてにデータを再割り当てします。
 
-再割り当て後の各計算ノードでは、小さい方のソース アプライアンス上の各計算ノードと比べて、含まれる実際のデータが少なくなり、空き領域が大きくなります。 追加の領域を使用して、データベースにデータを追加します。 復元されたデータベースのサイズが必要以上に大きい場合は、[ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7) を使用してデータベース ファイルのサイズを縮小することができます。
+再割り当て後の各計算ノードでは、小さい方のソース アプライアンス上の各計算ノードと比べて、含まれる実際のデータが少なくなり、空き領域が大きくなります。 追加の領域を使用して、データベースにデータを追加します。 復元されたデータベースのサイズが必要以上に大きい場合は、[ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) を使用してデータベース ファイルのサイズを縮小することができます。
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
@@ -1037,6 +1038,6 @@ RESTORE HEADERONLY
 ヘッダー情報を使用すれば、バックアップの内容を確認したり、バックアップの復元を試みる前にターゲット復元アプライアンスが、ソース バックアップ アプライアンスと互換性があるかどうかを確認したりすることができます。
 
 ## <a name="see-also"></a>参照
-[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

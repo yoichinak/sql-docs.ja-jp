@@ -1,4 +1,5 @@
 ---
+description: '[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)'
 title: '[列の値分布プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eacd467eed8a9c0a80be5e94f8495176ac134633
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 608dbbb804c8e7a2dbfdf5673b0070ef77b6ce60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457584"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>[列の値分布プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86922494"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列の値分布プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "86922494"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -105,7 +106,7 @@ ms.locfileid: "86922494"
  **[FrequentValueThreshold]**  
  0 ～ 1 の値を使用して、列の値が報告されるしきい値を指定します。 **[ValueDistributionOption]** で **[AllValues]** を選択した場合、このオプションは無効になります。 このオプションの既定値は 0.001 です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

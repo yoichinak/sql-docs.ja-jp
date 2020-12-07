@@ -1,4 +1,5 @@
 ---
+description: SqlServiceType プロパティ (SqlService クラス)
 title: SqlServiceType プロパティ (Sqlservicetype)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServiceType property
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6818c721d6f555ea2cf8e03aa7ed664fe10c04cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 685fb402647c7a757f7a894705cf7754d696b24d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888337"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542817"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.SqlServiceType [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスの種類を指定する uint32 値 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  戻り値は次のいずれかです。  
   
 |Type|定義|  
@@ -60,7 +61,7 @@ object.SqlServiceType [= value]
 |*11*|SQLPBDMS は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase データ移動サービスです。|  
 |*12*|MSSQLLaunchpad は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スタートパッドサービスです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

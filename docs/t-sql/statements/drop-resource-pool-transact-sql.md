@@ -1,4 +1,5 @@
 ---
+description: DROP RESOURCE POOL (Transact-SQL)
 title: DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - DROP RESOURCE POOL
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c3251d0b979c64ef28ef827408f7118b51e2bf98
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6545e1b06f2bcfac792868ec8c18bfde0da56f8
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483983"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380312"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86483983"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP RESOURCE POOL pool_name  
 [ ; ]  
 ```  
@@ -58,7 +58,7 @@ DROP RESOURCE POOL pool_name
 ## <a name="examples"></a>例  
  次の例では、`big_pool` というリソース プールを削除します。  
   
-```  
+```sql  
 DROP RESOURCE POOL big_pool;  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  

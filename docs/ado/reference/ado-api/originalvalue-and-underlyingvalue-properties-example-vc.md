@@ -1,8 +1,9 @@
 ---
+description: OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +)
 title: OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8a9a9a7296ac87f733d8626f0c425071c5d8671
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762045"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990233"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +)
-この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  
+この例では、レコードの基になるデータがレコード[セット](./recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](./originalvalue-property-ado.md)プロパティと[UnderlyingValue](./underlyingvalue-property.md)プロパティを示します。  
   
 ## <a name="example"></a>例  
   
@@ -220,6 +221,6 @@ void PrintComError(_com_error &e) {
 **元の値: 心理学**   
 **基になる値: 経済学**    
 ## <a name="see-also"></a>参照  
- [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue プロパティ (ADO)](./originalvalue-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [UnderlyingValue プロパティ](./underlyingvalue-property.md)

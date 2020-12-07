@@ -1,4 +1,5 @@
 ---
+description: 変更の種類に応じた CDC ストリームのダイレクト
 title: 変更の種類に応じた CDC ストリームのダイレクト | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a8a8f712f25f452bbe5bcdd24470998e995ad0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4d6f406aa50176e60cabd72e348f1daeb0c56d3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915928"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197136"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じた CDC ストリームのダイレクト
 
@@ -24,7 +25,7 @@ ms.locfileid: "86915928"
 
   CDC スプリッター変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC ソースが含まれている必要があります。  
   
- パッケージに追加する CDC ソースでは、NetCDC 処理モードが選択されている必要があります。 処理モードの選択の詳細については、[「CDC ソース エディター ([接続マネージャー] ページ)」](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md) を参照してください。  
+ パッケージに追加する CDC ソースでは、NetCDC 処理モードが選択されている必要があります。 処理モードの選択の詳細については、[「CDC ソース エディター ([接続マネージャー] ページ)」](./cdc-source.md) を参照してください。  
   
 ### <a name="to-direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じて CDC ストリームをダイレクトするには  
   
@@ -58,5 +59,4 @@ ms.locfileid: "86915928"
   
 ## <a name="see-also"></a>参照  
  [CDC スプリッター](../../integration-services/data-flow/cdc-splitter.md)  
-  
   

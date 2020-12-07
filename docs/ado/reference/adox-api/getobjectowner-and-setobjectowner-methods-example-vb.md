@@ -1,8 +1,9 @@
 ---
+description: GetObjectOwner および SetObjectOwner メソッドの例 (VB)
 title: GetObjectOwner メソッドと SetObjectOwner メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cc708ed86c9fd06997ce21c2be8f6ab836c1725
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b3033c06d7853768069b20493494e128991abff
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764933"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984573"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VB)
-この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)メソッドと[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ[とユーザー Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)を参照して、システムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、Accounting に設定されています。  
+この例では、 [GetObjectOwner](./getobjectowner-method-adox.md) メソッドと [SetObjectOwner](./setobjectowner-method.md) メソッドを示します。 このコードは、グループアカウンティングが存在することを前提としています (グループ [とユーザー Append、ChangePassword メソッドの例 (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) を参照して、システムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、Accounting に設定されています。  
   
 ```  
 ' BeginOwnersVB  
@@ -62,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetObjectOwner メソッド (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
- [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [GetObjectOwner メソッド (ADOX)](./getobjectowner-method-adox.md)   
+ [SetObjectOwner メソッド](./setobjectowner-method.md)

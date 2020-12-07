@@ -1,7 +1,8 @@
 ---
+description: ADO Dynamic プロパティ インデックス
 title: ADO 動的プロパティインデックス |Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749226"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976493"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
-データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](../../../ado/reference/ado-api/connection-object-ado.md)および[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
+データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](./connection-object-ado.md)および[レコードセット](./recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](./ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
   
  次の表は、各標準 OLE DB プロバイダーの動的プロパティの ADO と OLE DB 名のクロスインデックスです。 プロバイダーは、ここに記載されているよりも多くのプロパティを追加できます。 プロバイダー固有の動的プロパティに関する具体的な情報については、プロバイダーのドキュメントを参照してください。  
   
- OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらの標準プロパティの詳細については、 [OLE DB のドキュメント](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)で、OLE DB プロパティの名前でインデックスを検索または参照してください。  
+ OLE DB プログラマーリファレンスでは、ADO プロパティ名を "Description" という用語で参照しています。 これらの標準プロパティの詳細については、 [OLE DB のドキュメント](/previous-versions/windows/desktop/ms722784(v=vs.85))で、OLE DB プロパティの名前でインデックスを検索または参照してください。  
   
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ  
   
@@ -51,7 +52,7 @@ ms.locfileid: "82749226"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
-|Location|DBPROP_INIT_LOCATION|  
+|場所|DBPROP_INIT_LOCATION|  
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
 |行の最大サイズ|DBPROP_MAXROWSIZE|  
 |行の最大サイズに BLOB が含まれる|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -70,7 +71,7 @@ ms.locfileid: "82749226"
 |Select リスト内の列の並べ替え|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |出力パラメーターの可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref アクセサーで渡す|DBPROP_BYREFACCESSORS|  
-|パスワード|DBPROP_AUTH_PASSWORD|  
+|Password|DBPROP_AUTH_PASSWORD|  
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|  
 |中止動作の準備|DBPROP_PREPAREABORTBEHAVIOR|  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TEXTSIZE (Transact-SQL)'
 title: '@@TEXTSIZE (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d216563a1e4e666ba7b9a15bdf412de0a7d91d5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ac628c06693b46aec49654541723937ff317b18c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110291"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380487"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87110291"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@TEXTSIZE  
 ```  
   
@@ -47,9 +48,9 @@ ms.locfileid: "87110291"
  **integer**  
   
 ## <a name="examples"></a>例  
- 次の例では使用 `SELECT` を表示する、 `@@TEXTSIZE` 値を変更した後と前に、 `SET``TEXTSIZE` ステートメントです。  
+ 次の例では使用 `SELECT` を表示する、 `@@TEXTSIZE` 値を変更した後と前に、 `SET``TEXTSIZE` ステートメントです。   
   
-```  
+```sql
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  
 SET TEXTSIZE 0  
 SELECT @@TEXTSIZE AS 'Text Size'  

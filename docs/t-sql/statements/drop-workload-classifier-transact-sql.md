@@ -1,4 +1,5 @@
 ---
+description: DROP WORKLOAD CLASSIFIER (Transact-SQL)
 title: DROP WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 244166a9aefb08c5fe037776d47cf5a578c50481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 89fca3ce657b036578eb5f1b90e9b307799f4a95
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394467"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067407"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -36,9 +37,12 @@ ms.locfileid: "87394467"
   
 ## <a name="syntax"></a>構文  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -63,4 +67,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## <a name="see-also"></a>参照
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse のワークロード分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] ワークロード分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

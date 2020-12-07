@@ -1,4 +1,5 @@
 ---
+description: REVERSE (SSIS 式)
 title: REVERSE (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ccbd27bd16770c7e68f19ca8c5d2a5fcf44e7d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 250f4a865ac488614459350ee42698d8dbb003fd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913212"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477456"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
 

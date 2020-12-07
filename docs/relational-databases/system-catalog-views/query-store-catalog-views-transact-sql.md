@@ -1,4 +1,5 @@
 ---
+description: クエリストアカタログビュー (Transact-sql)
 title: クエリストアカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2019
@@ -13,15 +14,15 @@ helpviewer_keywords:
 - query store [SQL Server], catalog views
 - catalog views [SQL Server], query store
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c3435f9480e7337e9c10b824b650b85ed498a42
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5537e3a8d773f0222fdc431979b3d6f54ac2decd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394611"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539748"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>クエリストアカタログビュー (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

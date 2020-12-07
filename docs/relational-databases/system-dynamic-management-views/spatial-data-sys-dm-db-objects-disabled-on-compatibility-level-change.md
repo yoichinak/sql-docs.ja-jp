@@ -1,4 +1,5 @@
 ---
+description: dm_db_objects_disabled_on_compatibility_level_change (Transact-sql)
 title: dm_db_objects_disabled_on_compatibility_level_change (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76dc2cd3bf7d1cc250948286b2bfc69efea2485e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634993"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519205"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間データ-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85634993"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *compatibility_level*  
  設定を計画している互換性レベルを識別する**int** 。  
   
@@ -113,11 +114,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>無効なオブジェクトの動作  
  **インデックス**  
   
- クラスター化インデックスが無効になっている場合、または非クラスター化インデックスが強制されている場合は、"インデックス '% \* が原因で、クエリプロセッサはプランを作成できません。ls ' テーブルまたはビュー '%。 \*ls ' は無効になっています。 " これらのオブジェクトを再度有効にするには、アップグレード後**に ALTER INDEX ON...リビルド**。  
+ クラスター化インデックスが無効になっている場合、または非クラスター化インデックスが強制されている場合は、"インデックス '% \* が原因で、クエリプロセッサはプランを作成できません。ls ' テーブルまたはビュー '%。 \*ls ' は無効になっています。 " これらのオブジェクトを再度有効にするには、アップグレード後 **に ALTER INDEX ON...リビルド**。  
   
  **ヒープ**  
   
- 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 これらのオブジェクトを再度有効にするには、アップグレード後**に ALTER INDEX ALL を呼び出すことによって再構築します...リビルド**。  
+ 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 これらのオブジェクトを再度有効にするには、アップグレード後 **に ALTER INDEX ALL を呼び出すことによって再構築します...リビルド**。  
   
 ```  
 // ErrorNumber: 8674  
@@ -134,13 +135,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **CHECK 制約と外部キー**  
   
- 無効になっている check 制約と外部キーでは、エラーは発生しません。 ただし、行が変更された場合、制約は適用されません。 これらのオブジェクトを再度有効にするには、アップグレード後に**ALTER TABLE... を呼び出して、制約を確認します。CHECK 制約**。  
+ 無効になっている check 制約と外部キーでは、エラーは発生しません。 ただし、行が変更された場合、制約は適用されません。 これらのオブジェクトを再度有効にするには、アップグレード後に **ALTER TABLE... を呼び出して、制約を確認します。CHECK 制約**。  
   
  **保存される計算列**  
   
  1 つの列を無効にすることはできないので、クラスター化インデックスまたはヒープを無効にすると、テーブル全体が無効になります。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  VIEW DATABASE STATE 権限が必要です。  

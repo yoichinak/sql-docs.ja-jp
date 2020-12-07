@@ -1,4 +1,5 @@
 ---
+description: 空間インデックスの作成、変更、および削除
 title: 空間インデックスの作成、変更、および削除 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb02f98fbfad4dbad81983afd09daf04ed1e0176
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751109"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006360"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   空間インデックスは、 **geometry** データ型や **geography** データ型の列 ( *空間列*) に対する一部の操作をより効率的に実行できます。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
   
  空間インデックスの作成にはいくつかの制限があります。 詳細については、このトピックの「 [空間インデックスに関する制限](#restrictions) 」を参照してください。  
@@ -91,7 +92,7 @@ ms.locfileid: "85751109"
   
 4.  **[空間インデックス]** ダイアログ ボックスの **[追加]** をクリックします。  
   
-5.  **[選択された空間インデックス]** ボックスの一覧で新しいインデックスを選択し、右側のグリッドで空間インデックスのプロパティを設定します。 プロパティの詳細については、「[[空間インデックス] ダイアログ ボックス &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f)」をご覧ください。  
+5.  **[選択された空間インデックス]** ボックスの一覧で新しいインデックスを選択し、右側のグリッドで空間インデックスのプロパティを設定します。 プロパティの詳細については、「[[空間インデックス] ダイアログ ボックス &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/spatial-indexes-dialog-box-visual-database-tools.md)」をご覧ください。  
   
   
 ###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> 空間インデックスを変更するには  
@@ -156,5 +157,4 @@ ms.locfileid: "85751109"
   
 ## <a name="see-also"></a>参照  
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
   

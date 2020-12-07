@@ -1,4 +1,5 @@
 ---
+description: あいまいグループ化変換を使用して類似のデータ行を識別する
 title: あいまいグループ化変換を使用して類似のデータ行を識別する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c01b87168a4567c5f511d9f26f9b968873ac74
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09ef796494f084fda4cbe27d5fc0ac33b2cfb402
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430664"
 ---
 # <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
 

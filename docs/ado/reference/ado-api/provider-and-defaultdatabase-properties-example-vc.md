@@ -1,8 +1,9 @@
 ---
+description: Provider および DefaultDatabase プロパティの例 (VC++)
 title: Provider および DefaultDatabase プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc0f81b24eba92e3962c14e42774a139e420b080
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5842bbdfc43a76797dd48aa75db133b9942a368e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759918"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989923"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider および DefaultDatabase プロパティの例 (VC++)
-この例では、異なるプロバイダーを使用する3つの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
+この例では、異なるプロバイダーを使用する3つの[接続](./connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](./provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](./defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -134,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase プロパティ](./defaultdatabase-property.md)   
+ [Provider プロパティ (ADO)](./provider-property-ado.md)

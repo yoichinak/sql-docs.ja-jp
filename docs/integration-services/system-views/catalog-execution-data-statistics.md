@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_data_statistics
 title: catalog.execution_data_statistics | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50eef5fd9e9f5d48960329c6a747ac0997d9c256
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24452ceffc1660e57b087395ded3923e47802314
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912598"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129479"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 

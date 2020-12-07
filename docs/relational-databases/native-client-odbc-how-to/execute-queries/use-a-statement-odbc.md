@@ -1,4 +1,5 @@
 ---
+description: ステートメントの使用 (ODBC)
 title: ステートメントを使用する (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009423"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867701"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,21 +27,21 @@ ms.locfileid: "86009423"
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  *HandleType* を SQL_HANDLE_STMT として [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md) を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
      サーバー カーソルを使用するには、カーソルの属性を既定値以外の値に設定する必要があります。  
   
-3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)を使用して実行するステートメントを準備します。  
+3.  また、ステートメントを複数回実行する場合は、[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)を使用して実行するステートメントを準備します。  
   
-4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) および [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
+4.  ステートメントにバインドされたパラメーター マーカーが含まれている場合は、必要に応じて、[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用してパラメーター マーカーをプログラム変数にバインドします。 ステートメントが準備されている場合は、[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) および [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) を呼び出して、パラメーターの数と特性を検索できます。  
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
      \- または  
   
-     ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
+     ステートメントが準備されている場合は、[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) を使用してそのステートメントを複数回実行します。  
   
      \- または  
   
@@ -73,5 +75,4 @@ ms.locfileid: "86009423"
   
 ## <a name="see-also"></a>参照  
  [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

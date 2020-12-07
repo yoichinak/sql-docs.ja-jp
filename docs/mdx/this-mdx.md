@@ -1,4 +1,5 @@
 ---
+description: This (MDX)
 title: This (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b55a416a14d0b837d134e7f9d8520d77cc13e375
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893558"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192332"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -27,10 +28,10 @@ ms.locfileid: "68893558"
 This   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **この**関数は、MDX 計算スクリプト内の現在のスコープ内で現在のサブキューブを指定するために、任意のサブキューブ式の代わりに使用できます。 **この**関数は、代入の左側で使用する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の MDX スクリプトでは、This キーワードを SCOPE ステートメントと共に使用してサブキューブに代入する方法を示します。  
   
  `Scope`  
@@ -75,6 +76,5 @@ This
   
 ## <a name="see-also"></a>参照  
  [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [[新しい名前付きセット]](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
-  
+ [計算](/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   

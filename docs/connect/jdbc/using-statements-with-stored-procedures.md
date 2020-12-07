@@ -1,5 +1,6 @@
 ---
-title: ストアド プロシージャでのステートメントの使用 | Microsoft Docs
+title: ストアド プロシージャでのステートメントの使用
+description: SQL Server 用 Microsoft JDBC Driver を使用してストアド プロシージャを実行する方法と、入力パラメーターと出力パラメーターを使用してストアド プロシージャとの間でデータをやりとりする方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4848a2b3ecf11699894cb7a8acdcbde39786e53
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025864"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411008"
 ---
 # <a name="using-statements-with-stored-procedures"></a>ストアド プロシージャでのステートメントの使用
 
@@ -56,6 +57,6 @@ JDBC ドライバーを使用してパラメーターがあるストアド プ�
 |[状態の戻り値があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|JDBC ドライバーを使用して、状態の戻り値があるストアド プロシージャを実行する方法を説明します。|  
 |[更新数があるストアド プロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|JDBC ドライバーを使用して、更新数を返すストアド プロシージャを実行する方法を説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーでのステートメントの使用](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

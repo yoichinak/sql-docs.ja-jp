@@ -1,4 +1,5 @@
 ---
+description: '[メンテナンス プラン] ([サーバー])'
 title: '[メンテナンス プラン] ([サーバー]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a991404f0acaba448958773f54a4836032ecd07
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754519"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88420856"
 ---
 # <a name="maintenance-plan-servers"></a>[メンテナンス プラン] ([サーバー])
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

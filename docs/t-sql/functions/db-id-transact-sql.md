@@ -1,4 +1,5 @@
 ---
+description: DB_ID (Transact-SQL)
 title: DB_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/13/2019
@@ -23,12 +24,12 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35b2dd7756d50d2f69fece370330c35e614e33ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4322d70fe60182116a47b35d005f2dae3a449e8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112480"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124809"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87112480"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DB_ID ( [ 'database_name' ] )   
 ```  
   
@@ -59,7 +60,7 @@ DB_ID ( [ 'database_name' ] )
 > Azure SQL Database と共に使用する場合、`DB_ID` では、**sys.databases** からの `database_id` のクエリと同じ結果が返されないことがあります。 `DB_ID` の呼び出し元で結果が他の **sys** ビューと比較されている場合は、代わりに **sys.databases** のクエリを実行する必要があります。
   
 ## <a name="permissions"></a>アクセス許可  
-`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
+`DB_ID` の呼び出し元が、**マスター** 以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
   
 > [!IMPORTANT]  
 >  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `VIEW ANY DATABASE` を `REVOKE` するか、または、個別のログインに対する `VIEW ANY DATABASE` を `DENY` します。  
@@ -86,8 +87,8 @@ GO
 この例では、`DB_ID` を使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのデータベース ID をシステム関数 `sys.dm_db_index_operational_stats` で返します。 この関数はデータベース ID を最初のパラメーターとしてとります。
   
 ```sql
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   
@@ -121,7 +122,7 @@ SELECT DB_ID();
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
 [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

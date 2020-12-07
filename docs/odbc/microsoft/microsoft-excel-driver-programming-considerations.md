@@ -1,4 +1,5 @@
 ---
+description: Excel ドライバーのプログラミングに関する考慮事項
 title: Microsoft Excel ドライバーのプログラミングに関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e0eec3f6cfc8b4c0e761ec0eea9b1dfd42005df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df304058ad48364663df94e74f8ba50bce24697b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412468"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Excel ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

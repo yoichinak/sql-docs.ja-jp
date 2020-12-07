@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 03568666367bf6273f197994f572bbbbd62bb42e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399940"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Analytics Platform System でアプライアンスアラートを追跡する
@@ -25,13 +25,13 @@ SQL Server PDW は、注意が必要なハードウェアおよびソフトウ�
 SQL Server PDW は、 [sys. dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV で警告をログに記録します。 システムでは、1万のアラートの上限が保持され、上限を超えた場合に最も古いアラートが最初に削除されます。  
   
 ### <a name="view-alerts-by-using-the-admin-console"></a>管理コンソールを使用してアラートを表示する  
-PDW 領域の [**アラート**] タブとアプライアンスのファブリックリージョンがあります。 フェールオーバーが発生した後、フェールオーバーイベントはページ上のアラートの数に含まれます。 PDW リージョン用のページとアプライアンスのファブリックリージョン用のページがあります。 各正常性ページにはタブがあります。アラートの詳細を確認するには、[**正常性**] ページの [**アラート**] タブをクリックし、アラートをクリックします。  
+PDW 領域の [ **アラート** ] タブとアプライアンスのファブリックリージョンがあります。 フェールオーバーが発生した後、フェールオーバーイベントはページ上のアラートの数に含まれます。 PDW リージョン用のページとアプライアンスのファブリックリージョン用のページがあります。 各正常性ページにはタブがあります。アラートの詳細を確認するには、[ **正常性** ] ページの [ **アラート** ] タブをクリックし、アラートをクリックします。  
   
 ![PDW 管理コンソールの警告](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
-[**アラート**] ページで、次のようにします。  
+[ **アラート** ] ページで、次のようにします。  
   
--   アラートの履歴を表示するには、[**アラート履歴の確認**] リンクをクリックします。  
+-   アラートの履歴を表示するには、[ **アラート履歴の確認** ] リンクをクリックします。  
   
 -   警告コンポーネントとその現在のプロパティ値を表示するには、[アラート] 行をクリックします。  
   

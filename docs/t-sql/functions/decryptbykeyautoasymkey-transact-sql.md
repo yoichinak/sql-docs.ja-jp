@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48e2f2c50c06c429b07bb67380b3c43509b82ccc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4ac2905d7466b8a2aa3e8a823ab25f89d98ae96f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111636"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128514"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "87111636"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -88,7 +88,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 ## <a name="examples"></a>例
 この例では、`DECRYPTBYKEYAUTOASYMKEY` が復号コードを簡略化するしくみを確認できます。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
 
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  

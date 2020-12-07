@@ -1,4 +1,5 @@
 ---
+description: ログ リーダー エージェント (Log Reader Agent)
 title: ログ リーダー エージェント (Log Reader Agent) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,18 +16,18 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493945"
 ---
 # <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[ログ リーダー エージェント]** ダイアログ ボックスには、ログ リーダー エージェントの状態、履歴、情報メッセージ、エラー メッセージなどの詳細情報が表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[表示]** メニューから表示するログ リーダー エージェントのセッションを選択し、 **[ログ リーダー エージェントのセッション]** というラベルのグリッド内で特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
  **表示**  
@@ -46,7 +47,7 @@ ms.locfileid: "85727245"
  **Start Time**  
  セッションの開始時刻です。  
   
- **[終了時刻]**  
+ **終了時刻**  
  セッションの終了時刻です。 エージェントが停止していない場合は、このフィールドは空になっています。  
   
  **Duration**  
@@ -64,7 +65,7 @@ ms.locfileid: "85727245"
  **[選択されたセッションのエラーの詳細またはメッセージ]**  
  選択したセッションの **[状態]** 列に **[エラー]** の値が表示されている場合にのみ表示されます。 このテキスト領域では、エラーの詳細情報とエラーの発生時に試行されたコマンドが表示されます。 エラーに関連する追加コンテンツへのリンクも含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [パブリケーションに関連付けられているエージェントの情報を表示し、タスクを実行する &#40;レプリケーション モニター&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)   

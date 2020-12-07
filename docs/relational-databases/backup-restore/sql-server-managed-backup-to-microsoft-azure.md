@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bb479998c739a5d9bd62a5f7d6c517a3ec4b52d1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 32a48093f40d048532ff58a1f91f450e52d6019b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246301"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129010"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "87246301"
 |前提条件|説明|  
 |------------------|-----------------|  
 |**Microsoft Azure アカウント**|[購入オプション](https://azure.microsoft.com/pricing/free-trial/) を調べる前に、 [無料評価版](https://azure.microsoft.com/pricing/purchase-options/)で Azure を使用することができます。|  
-|**Azure Storage アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。|  
-|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) コマンドを使用します。|  
-|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「[Shared Access Signature、第 1 部:SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
+|**Azure Storage アカウント**|バックアップは、Azure ストレージ アカウントに関連付けられている Azure BLOB ストレージに格納されます。 ストレージ アカウントの詳しい作成手順については、「 [Azure ストレージ アカウントについて](/azure/storage/common/storage-account-create)」を参照してください。|  
+|**BLOB コンテナー**|BLOB はコンテナーで構成されます。 バックアップ ファイルに対してターゲット コンテナーを指定します。 [Azure 管理ポータル](https://manage.windowsazure.com/)でコンテナーを作成することができます。または、 **New-AzureStorageContainer**[Azure PowerShell](/powershell/azure/) コマンドを使用します。|  
+|**Shared Access Signature (SAS)**|ターゲット コンテナーへのアクセスは Shared Access Signature (SAS) で制御されます。 SAS の概要については、「[Shared Access Signature、第 1 部:SAS モデル](/azure/storage/common/storage-sas-overview)に関するページを参照してください。 SAS トークンは、コードで、または **New-AzureStorageContainerSASToken** PowerShell  コマンドを使用して作成することができます。 このプロセスを簡素化する PowerShell スクリプトについては、「 [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with PowerShell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)」 (PowerShell を使用する Azure ストレージにおける共有アクセス署名 (SAS) トークンでの SQL 資格情報の作成の簡素化) を参照してください。 **で使用するために SAS トークンを** SQL Credential [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に格納することができます。|  
 |**SQL Server エージェント**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を機能させるには、SQL Server エージェントを実行する必要があります。 スタートアップ オプションを自動に設定することを検討してください。|  
   
 ## <a name="components"></a>Components  
@@ -133,5 +133,4 @@ ms.locfileid: "87246301"
 - [Microsoft Azure への SQL Server マネージド バックアップを無効にする](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [システム データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
-  
   

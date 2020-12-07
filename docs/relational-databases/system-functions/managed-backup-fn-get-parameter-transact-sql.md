@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 fn_get_parameter (Transact-sql)
 title: managed_backup。 fn_get_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419516"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup。 fn_get_parameter (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,9 +45,9 @@ ms.locfileid: "86053429"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  parameter_name  
- パラメーターの名前。 parameter_name は**NVARCHAR (128)** です。 関数に NULL または空の文字列が引数として指定されている場合は、構成されているすべてのスマート管理パラメーターの名前と値のペアが返されます。  
+ パラメーターの名前。 parameter_name は **NVARCHAR (128)** です。 関数に NULL または空の文字列が引数として指定されている場合は、構成されているすべてのスマート管理パラメーターの名前と値のペアが返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   

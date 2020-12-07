@@ -1,5 +1,6 @@
 ---
-title: カーソルの種類 (SQLSRV ドライバー) | Microsoft Docs
+title: カーソルの種類 (SQLSRV ドライバー)
+description: SQL Server 用 Microsoft Drivers for PHP を利用し、順序に関係なくアクセスできる結果セットをカーソルの種類を使用して作成する方法について説明します。
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763795618eb90fe24db313b801bc01af3cd6737b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e72381eed4aa89ccd9656d3eabadb22bccd357d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928039"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411468"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>カーソルの種類 (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

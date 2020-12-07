@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (geography データ型)
 title: STIsClosed (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 06190fa6cc6a0377e49f423c50369a7ceb4b51d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8c6643b37d421a5283cd8d44e3fadaf73ae69eab
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445220"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555784"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geography** インスタンスの任意の図形が地点の場合、またはインスタンスが空の場合、このメソッドは 0 を返します。  
   
  **FullGlobe** インスタンスが **Polygon** などの別の型のインスタンスの場合、このメソッドは true を返します。  

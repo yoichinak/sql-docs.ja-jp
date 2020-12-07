@@ -1,4 +1,5 @@
 ---
+description: クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
 title: クエリおよびビュー デザイナーで各種言語データを使用する
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312658"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は、あらゆる言語のデータ、および Windows オペレーティング システムのすべてのバージョンのデータに対応しています。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
+[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は、あらゆる言語のデータ、および Windows オペレーティング システムのすべてのバージョンのデータに対応しています。 次のガイドラインでは、各種言語のアプリケーションの相違点を示し、そのデータを管理する方法について説明します。  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>抽出条件ペインおよび SQL ペインのローカライズされた情報  
 抽出条件ペインを使用してクエリを作成する場合は、使用しているコンピューターの Windows 地域設定に対応する形式で情報を入力できます。 たとえば、データを検索する場合は、使い慣れている形式でデータを [抽出条件] 列に入力できます。ただし、次に示す場合を除きます。  

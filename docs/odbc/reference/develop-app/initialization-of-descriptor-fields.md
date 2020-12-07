@@ -1,4 +1,5 @@
 ---
+description: 記述子フィールドの初期化
 title: 記述子フィールドの初期化 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2537e5e74c600c72368e46bda7640b881d9a34df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424654"
 ---
 # <a name="initialization-of-descriptor-fields"></a>記述子フィールドの初期化
-アプリケーションの行記述子が割り当てられると、そのフィールドには[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)に示されている初期値が与えられます。 SQL_DESC_TYPE フィールドの初期値は SQL_DEFAULT です。 これにより、アプリケーションに表示するためのデータベースデータの標準的な処理が提供されます。 アプリケーションでは、記述子レコードのフィールドを設定することによって、異なるデータ処理を指定できます。  
+アプリケーションの行記述子が割り当てられると、そのフィールドには [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)に示されている初期値が与えられます。 SQL_DESC_TYPE フィールドの初期値は SQL_DEFAULT です。 これにより、アプリケーションに表示するためのデータベースデータの標準的な処理が提供されます。 アプリケーションでは、記述子レコードのフィールドを設定することによって、異なるデータ処理を指定できます。  
   
  記述子ヘッダー内の SQL_DESC_ARRAY_SIZE の初期値は1です。 アプリケーションでこのフィールドを変更して、複数行のフェッチを有効にすることができます。  
   

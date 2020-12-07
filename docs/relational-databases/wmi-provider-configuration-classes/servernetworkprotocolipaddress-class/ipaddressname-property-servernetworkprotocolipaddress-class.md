@@ -1,4 +1,5 @@
 ---
+description: IpAddressName プロパティ (ServerNetworkProtocolIPAddress クラス)
 title: IpAddressName プロパティ (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IpAddressName property
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 60eb83750d42da4aea3e486c6bdc2884e782e3e9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03ab2e7cf94aeeca68cc88762222b187539eca4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888683"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538199"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName プロパティ (ServerNetworkProtocolIPAddress クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ object.IpAddressName [= value]
   
 ## <a name="parts"></a>指定項目  
  *object*  
- のインスタンス上のネットワークプロトコルの IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ のインスタンス上のネットワークプロトコルの IP アドレスを表す [ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) オブジェクト [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスの名前を指定する文字列値。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

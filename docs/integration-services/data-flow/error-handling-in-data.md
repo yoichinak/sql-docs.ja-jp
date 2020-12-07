@@ -1,4 +1,5 @@
 ---
+description: データのエラー処理
 title: データのエラー処理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8bd6f67f9fc0095701ad81f41e5e5d5d2c4f7d59
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cb8926a8f9cb79c215674063c3f732ea7cb5cd7e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194851"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
 
@@ -151,8 +152,7 @@ ms.locfileid: "86922768"
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
  [変換を使用してデータを変換する](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [パスを使用してコンポーネントを連結する](./connect-components-in-a-data-flow.md)   
  [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

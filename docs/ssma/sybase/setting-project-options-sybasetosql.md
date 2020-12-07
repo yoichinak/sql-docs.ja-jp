@@ -1,4 +1,5 @@
 ---
+description: プロジェクト オプションの設定 (SybaseToSQL)
 title: プロジェクトオプションの設定 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468727"
 ---
 # <a name="setting-project-options-sybasetosql"></a>プロジェクト オプションの設定 (SybaseToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、SQL azure、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換したり、データを SQL Azure または SQL Azure に移行したりする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
@@ -38,7 +39,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 また、これらの設定を構成するための4つのモードもあります。  
   
-1.  既定  
+1.  Default  
   
 2.  Optimistic  
   
@@ -67,13 +68,13 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **既定のプロジェクトオプションを設定するには**  
   
-1.  [**ツール**] メニューの [**既定のプロジェクト設定**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **既定のプロジェクト設定**] をクリックします。  
   
-2.  [**既定のプロジェクト設定**] ダイアログボックスで、次のいずれかの手順を実行します。  
+2.  [ **既定のプロジェクト設定** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
-    -   [移行**先のバージョン**] ドロップダウンから [設定の表示または変更が必要な移行プロジェクトの種類] を選択し、左側のウィンドウの下部にある [全般] をクリックしてから、[変換] または [移行] または [SQL Azure] を選択します。  
+    -   [移行 **先のバージョン** ] ドロップダウンから [設定の表示または変更が必要な移行プロジェクトの種類] を選択し、左側のウィンドウの下部にある [全般] をクリックしてから、[変換] または [移行] または [SQL Azure] を選択します。  
   
-    -   定義済みのモードを選択するには、[**モード**] ボックスの一覧で [**既定**]、[**オプティミスティック**]、または [**完全**] を選択します。  
+    -   定義済みのモードを選択するには、[ **モード** ] ボックスの一覧で [ **既定**]、[ **オプティミスティック**]、または [ **完全**] を選択します。  
   
     -   カスタム設定を指定するには、単に新しい設定または値を選択または入力します。  
   
@@ -83,23 +84,23 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **現在のプロジェクトの設定をカスタマイズするには**  
   
-1.  [**ツール**] メニューの [**プロジェクトの設定**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **プロジェクトの設定**] をクリックします。  
   
-2.  [**プロジェクトの設定**] ダイアログボックスで、次のいずれかの手順を実行します。  
+2.  [ **プロジェクトの設定** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
-    -   定義済みのモードを選択するには、[**モード**] ボックスの一覧で [**既定**]、[**オプティミスティック**]、または [**完全**] を選択します。  
+    -   定義済みのモードを選択するには、[ **モード** ] ボックスの一覧で [ **既定**]、[ **オプティミスティック**]、または [ **完全**] を選択します。  
   
-    -   カスタムモードを指定するには、[**モード**] ボックスの一覧で [**カスタム**] を選択し、左ペインでオプションを選択します。次に、右ペインで設定または値をクリックし、新しい設定または値を選択または入力します。  
+    -   カスタムモードを指定するには、[ **モード** ] ボックスの一覧で [ **カスタム**] を選択し、左ペインでオプションを選択します。次に、右ペインで設定または値をクリックし、新しい設定または値を選択または入力します。  
   
 3.  **[OK]** をクリックして設定を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズする場合は、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)する」を参照してください。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズする場合は、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL&#41;にマップ ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)する」を参照してください。  
   
--   それ以外の場合は、Sybase データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
+-   それ以外の場合は、Sybase データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または SQL Azure オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換 ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[Sybase ASE データベースを SQL Server Azure SQL Database &#40;SybaseToSQL&#41;に移行する](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE データベースを SQL Server Azure SQL Database &#40;SybaseToSQL&#41;に移行する ](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

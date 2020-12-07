@@ -1,4 +1,5 @@
 ---
+description: geography インスタンスの OGC メソッド
 title: geography インスタンスの OGC メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2019
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5ef4fb2ed952a1c991e0fc7d8ab614d80838ad86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68a3d52312124783fdda1813fb153ab3f6a84369
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88459064"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography インスタンスの OGC メソッド
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

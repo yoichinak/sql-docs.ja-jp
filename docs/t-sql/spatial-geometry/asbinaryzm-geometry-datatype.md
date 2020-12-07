@@ -1,4 +1,5 @@
 ---
+description: AsBinaryZM (geometry データ型)
 title: AsBinaryZM (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c4ed01d89bbb56fd48d0c29a54cf8c248fba439c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 83f6f173213f81f9633d9593f73d115851789cce
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555728"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128202"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

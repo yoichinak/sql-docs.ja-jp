@@ -1,6 +1,6 @@
 ---
-title: 出力パラメーターの BLOB のストリーミング サポート | Microsoft Docs
-description: 出力パラメーターの BLOB のストリーミング サポート
+title: BLOB 出力パラメーターのストリーミング サポート (OLE DB ドライバー)
+description: OLE DB Driver for SQL Server での BLOB 出力パラメーターのストリーミング サポートについて説明します。 この例では、BLOB パラメーターを ISequentialStreams としてバインドします。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 00651e62fbd70c97c783473bfc41421a76cb5e8f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf788cfe2e9d8917f0bbc3ad0295230c881724ca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006794"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862269"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

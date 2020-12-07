@@ -1,4 +1,5 @@
 ---
+description: query() メソッド (xml データ型)
 title: query() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 04/16/2020
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa686b8cac90a783fa8286b739a6e88195fa8ba4
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: af8a312db85630c9f7e527b47ad876daf9520eef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393040"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116603"
 ---
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,6 @@ ms.locfileid: "86393040"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 query ('XQuery')  
 ```  
   
@@ -48,8 +48,8 @@ XML インスタンス内の XML ノード (要素や属性など) をクエリ�
 次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   
 ```sql
-declare @myDoc xml  
-set @myDoc = '<Root>  
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -112,7 +112,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## <a name="see-also"></a>参照  

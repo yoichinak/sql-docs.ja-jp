@@ -1,4 +1,5 @@
 ---
+description: 明示的階層を作成する (マスター データ サービス)
 title: 明示的階層を作成する
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461814"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
 
@@ -28,12 +29,12 @@ ms.locfileid: "85813066"
   
  明示的階層を作成したら、 **[エクスプローラー]** 機能領域で明示的階層にメンバーを追加できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   エンティティは、明示的階層およびコレクションに対して有効化されている必要があります。  
   
@@ -41,11 +42,11 @@ ms.locfileid: "85813066"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
+2.  [ **モデルの管理** ] ページで、グリッドからモデルを選択し、[ **エンティティ**] をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、明示的階層を作成するエンティティの行をグリッドから選択します。  
   
-4.  [**明示的階層**] をクリックします。  
+4.  [ **明示的階層**] をクリックします。  
   
 5.  **[Manage Explicit Hierarchy]** (明示的階層の管理) ページで、 **[追加]** をクリックします。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85813066"
   
   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [明示的階層名を変更する (マスター データ サービス)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  

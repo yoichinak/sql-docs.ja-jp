@@ -1,4 +1,5 @@
 ---
+description: 'レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する'
 title: 'レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する| Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 770cd336ff96cdc4d3833e48845ba4954bf9c866
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c50bdc080ca6437cdb2291f901c429526976ab88
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914861"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88466614"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する
 

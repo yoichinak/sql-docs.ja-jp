@@ -1,4 +1,5 @@
 ---
+description: MSpeer_response (Transact-SQL)
 title: MSpeer_response (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 371ee711cbae4c97dc95e9d31d51739c29e85d14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e6133bee999ad828516f908aaf770321a59ec3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889629"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545581"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889629"
 |**peer_db**|**sysname**|応答を生成したピアのサブスクリプションデータベース。|  
 |**received_date**|**datetime**|ピア要求を受信した日付と時刻。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

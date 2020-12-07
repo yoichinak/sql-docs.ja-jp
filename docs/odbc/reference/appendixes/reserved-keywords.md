@@ -1,4 +1,5 @@
 ---
+description: 予約済みキーワード
 title: 予約済みキーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424984"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define**値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
+次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define** 値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
 
 :::row:::
     :::column:::
@@ -56,7 +57,7 @@ ms.locfileid: "87362987"
         CHAR_LENGTH  
         CHARACTER  
         CHARACTER_LENGTH  
-        CHECK  
+        チェック  
         CLOSE  
         COALESCE  
         COLLATE  
@@ -70,7 +71,7 @@ ms.locfileid: "87362987"
         CONTINUE  
         CONVERT  
         CORRESPONDING  
-        [COUNT]  
+        COUNT  
         CREATE  
     :::column-end:::
     :::column:::
@@ -90,7 +91,7 @@ ms.locfileid: "87362987"
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        DELETE  
+        Del  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -111,7 +112,7 @@ ms.locfileid: "87362987"
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSE  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -143,7 +144,7 @@ ms.locfileid: "87362987"
         INSENSITIVE  
         INSERT  
         INT  
-        整数  
+        INTEGER  
         INTERSECT  
         INTERVAL  
         INTO  
@@ -202,7 +203,7 @@ ms.locfileid: "87362987"
         PROCEDURE  
         PUBLIC  
         READ  
-        実数  
+        real  
         REFERENCES  
         RELATIVE  
         RESTRICT  
@@ -231,7 +232,7 @@ ms.locfileid: "87362987"
         SQLSTATE  
         SQLWARNING  
         SUBSTRING  
-        [SUM]  
+        SUM  
         SYSTEM_USER  
         TABLE  
         TEMPORARY  
@@ -246,7 +247,7 @@ ms.locfileid: "87362987"
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  

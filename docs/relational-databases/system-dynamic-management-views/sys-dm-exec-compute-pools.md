@@ -1,4 +1,5 @@
 ---
+description: dm_exec_compute_pools (Transact-sql)
 title: dm_exec_compute_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -16,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_compute_pools dynamic management view
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 068495c78aada8e62add19c849b2d1dba4e9c36b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e0e4cfda23c90807436b6f7b8b4179d2cb22620
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914819"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89533709"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>dm_exec_compute_pools (Transact-sql)
 [!INCLUDE[sqlserver2019](../../includes/applies-to-version/sqlserver2019.md)]

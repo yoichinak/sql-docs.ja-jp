@@ -1,4 +1,5 @@
 ---
+description: dm_db_xtp_memory_consumers (Transact-sql)
 title: dm_db_xtp_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 321297a2590a18ed7e51364b3f532076f90ce740
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542238"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>dm_db_xtp_memory_consumers (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -46,14 +47,14 @@ ms.locfileid: "87442677"
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
 |used_bytes|**bigint**|このコンシューマーによって使用されているバイト数。 VARHEAP のみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
-|partition_count|**int**|内部使用のみ。|  
-|sizeclass_count|**int**|内部使用のみ。|  
-|min_sizeclass|**int**|内部使用のみ。|  
-|max_sizeclass|**int**|内部使用のみ。|  
-|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用専用です。|  
+|partition_count|**int**|内部使用のみです。|  
+|sizeclass_count|**int**|内部使用のみです。|  
+|min_sizeclass|**int**|内部使用のみです。|  
+|max_sizeclass|**int**|内部使用のみです。|  
+|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用のみ。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  出力では、データベース レベルのアロケーターは、ユーザー テーブル、インデックス、およびシステム テーブルを参照します。 object_id = NULL の VARHEAP は、可変長列を含むテーブルに割り当てられたメモリを参照します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,7 +68,7 @@ ms.locfileid: "87442677"
  メモリ最適化テーブルに列ストアインデックスがある場合、システムでは、一部のメモリを消費する内部テーブルを使用して、列ストアインデックスのデータを追跡します。 これらの内部テーブルと、メモリ使用量を示すサンプルクエリの詳細については、「 [memory_optimized_tables_internal_attributes (transact-sql)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)」を参照してください。
  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ```  
 -- memory consumers (database level)  

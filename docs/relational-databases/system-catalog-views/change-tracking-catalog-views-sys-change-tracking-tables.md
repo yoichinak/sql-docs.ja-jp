@@ -1,5 +1,6 @@
 ---
-title: change_tracking_tables (Transact-sql) |Microsoft Docs
+description: カタログビューの Change Tracking-sys.change_tracking_tables
+title: sys.change_tracking_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - change tracking [SQL Server], sys.change_tracking_tables
 - sys.change_tracking_tables
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56eafcd6edf4dbce67e86ad0a799b409e5e82868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f0fb1b5ad1c004f1f4aba688c29138282b71f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733592"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809618"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>Change Tracking カタログビュー-sys. change_tracking_tables
+# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>カタログビューの Change Tracking-sys.change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡が有効な現在のデータベース内のテーブルごとに 1 行のデータを返します。  
@@ -44,9 +45,8 @@ ms.locfileid: "85733592"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Change Tracking カタログビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+## <a name="see-also"></a>参照  
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [Change Tracking カタログビュー &#40;Transact-sql&#41;](./catalog-views-transact-sql.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

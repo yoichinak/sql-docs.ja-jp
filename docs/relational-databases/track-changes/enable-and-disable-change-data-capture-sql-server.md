@@ -1,4 +1,5 @@
 ---
+description: 変更データ キャプチャの有効化と無効化 (SQL Server)
 title: 変更データ キャプチャの有効化と無効化
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aefc7bb8f812951d7b8fcdac7b28549984faa7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 83e4d748032d4744480d90a977432c70b418ce8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463743"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>変更データ キャプチャの有効化と無効化 (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +57,7 @@ GO
  データベースの無効化の例については、データベースでの変更データ キャプチャの無効化のテンプレートを参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** 、 **[テンプレート エクスプローラー]** 、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]**、 **[テンプレート エクスプローラー]**、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
 ```sql  
 -- =======  

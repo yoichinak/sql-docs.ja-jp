@@ -1,4 +1,5 @@
 ---
+description: STStartPoint (geometry データ型)
 title: STStartPoint (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 059c9a471bcce4e724cb19eaf74542b2c24f30a1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3fd64405d2e08038701262105675557893cdf96f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555959"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416858"
 ---
 # <a name="ststartpoint-geometry-data-type"></a>STStartPoint (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

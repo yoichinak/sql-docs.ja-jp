@@ -1,4 +1,5 @@
 ---
+description: カスタム オブジェクトの永続化
 title: カスタム オブジェクトの永続化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f4f8558a766c7fa41adb3f2ec3cb769d0ee0db62
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a8e86b0cee816bae92656da9de24648c24de1abc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430474"
 ---
 # <a name="persisting-custom-objects"></a>カスタム オブジェクトの永続化
 
@@ -156,7 +157,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services 用のカスタム オブジェクトの開発](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [カスタム オブジェクトのビルド、配置、デバッグ](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

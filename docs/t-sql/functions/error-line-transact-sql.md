@@ -1,5 +1,6 @@
 ---
-title: ERROR_LINE (Transact-SQL) | Microsoft Docs
+description: ERROR_LINE (Transact-SQL)
+title: ERROR_LINE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,29 +23,32 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682028"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116732"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数では、TRY...CATCH 構文の CATCH ブロックが実行される原因となったエラーが発生した行番号が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
-  
-```  
-ERROR_LINE ( )  
-```  
-  
-## <a name="return-type"></a>戻り値の型  
-**int**  
-  
+## <a name="syntax"></a>構文
+
+```syntaxsql
+ERROR_LINE ( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-type"></a>戻り値の型
+**int**
+
 ## <a name="return-value"></a>戻り値  
 CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返します。  
   
@@ -64,7 +68,7 @@ CATCH ブロック内で呼び出されると、`ERROR_LINE` は次の値を返�
 ### <a name="a-using-error_line-in-a-catch-block"></a>A. CATCH ブロックで ERROR_LINE を使用する  
 このコード例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `ERROR_LINE` は、エラーが発生した行番号を返します。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -75,10 +79,10 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
+### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B.  CATCH ブロックで ERROR_LINE をストアド プロシージャと一緒に使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_LINE` は、エラーが発生した行番号を返します。  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -105,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH ブロックで ERROR_LINE を他のエラー処理ツールと一緒に使用する  
 このコード例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `ERROR_LINE` は、エラーが発生した行番号と、そのエラー自体に関する情報を返します。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

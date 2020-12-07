@@ -1,4 +1,5 @@
 ---
+description: セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02d919934b8e918bf142dbcf4af8278a54608dfc
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8b70fba2edc9a3ba948afa653acbe79607b8eb51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420316"
 ---
 # <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

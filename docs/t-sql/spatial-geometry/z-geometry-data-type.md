@@ -1,4 +1,5 @@
 ---
+description: Z (geometry データ型)
 title: Z (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 854a5afed2e6764cf9c5224a6c52a6f1284b9ba1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2e90df19c6d6946c17b554c9195c03bce3f55ca8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472377"
 ---
 # <a name="z-geometry-data-type"></a>Z (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86554899"
 ## <a name="return-types"></a>戻り値の型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>解説  
  geometry インスタンスが Point ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
@@ -62,7 +63,7 @@ SELECT @g.Z;
 ## <a name="see-also"></a>参照  
  [M &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [AsTextZM &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

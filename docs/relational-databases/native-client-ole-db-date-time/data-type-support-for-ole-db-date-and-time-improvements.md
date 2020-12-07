@@ -1,4 +1,5 @@
 ---
+description: 日付と時刻の機能強化に対するデータ型のサポート (Native Client OLE DB プロバイダー)
 title: 日付と時刻の機能強化に対するデータ型のサポート (Native Client OLE DB プロバイダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 741906e1673d5ac8fe5b88e4d546ee1807667063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486748"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付と時刻の機能強化のためのデータ型のサポート SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "87245835"
   
  次の既存の OLE DB 構造体の実装は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しい日付と時刻のデータ型をサポートするように変更されました。 ただし、定義は変更されていません。  
   
--   DBTYPE_DATE (オートメーション DATE 型です。 これは、内部的に**double**として表現されます。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は 1 日の端数になります。 この型の精度は 1 秒なので、有効な小数点以下桁数は 0 です。)  
+-   DBTYPE_DATE (オートメーション DATE 型です。 内部では **double** として表されます。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は 1 日の端数になります。 この型の精度は 1 秒なので、有効な小数点以下桁数は 0 です。)  
   
 -   DBTYPE_DBDATE  
   
@@ -173,7 +174,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  次の型マッピングは、ITableDefinition::CreateTable で使用される DBCOLUMNDESC 構造体で使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|Notes|  
+|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|メモ|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *DBBFILE Desc bscale*メンバーを検査します。|  

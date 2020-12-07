@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 256d40ab25244f1efa03fb4cebf1cd798879efe2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac5f8d848e2bc6591b0065e21c7588e4977c0d73
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899729"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987738"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>SQL Server の単体テストを使用したデータベース コードの検証
 
@@ -47,9 +47,9 @@ Visual Studio 2010 および Visual Studio 2012 の SQL Server Data Tools 統合
 |**実践的な経験を得る**: 入門編のチュートリアルに従い、シンプルな SQL Server 単体テストを作成および実行する方法を理解することができます。 このチュートリアルには、ネガティブ SQL Server 単体テストの例が含まれています。|[チュートリアル:SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
 |**SQL Server 単体テストを定義する:** SQL Server 単体テストを独自のプロジェクトに作成する必要があります。 そのプロジェクトの設定を構成し、テストごとに 1 つ以上のテスト条件を定義します。|[SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
 |**SQL Server 単体テストを実行する:** 1 つ以上の単体テストを定義したら、単体テストを実行し、問題をデバッグして、テスト結果を調査します。|[SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)|  
-|**テストのグループを管理する (Visual Studio 2010):** 通常同時に実行する必要があるテストの場合は、テストをグループ化することもできます。 テスト リストは引き続きサポートされますが、新しいテスト グループの場合は、代わりにテスト カテゴリを検討する必要があります。 たとえば、特定の*スキーマ*のトリガーまたはすべてのオブジェクトについて、テスト カテゴリを作成することもできます。|[テスト カテゴリの定義によるテストのグループ化](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[テスト リストの定義によるテストのグループ化](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
-|**テスト プロジェクトとテストをバージョン管理にチェックインする:** テストを実行し、正常に動作するかどうかを検証したら、テスト プロジェクトと関連するすべてのファイルをバージョン管理にチェックインして、チームのすべてのメンバーがテストを実行できるようにする必要があります。 SQL Server データベース プロジェクトと一緒にテスト プロジェクトをバージョン管理にチェックインすることで、データベースとデータベース テストの両方の互換性のあるバージョンを簡単に復元できます。|[バージョン管理へのファイルの追加](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[[チェックイン] ウィンドウと [保留中の変更] ウィンドウの使用](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
-|**カスタムのテスト条件を定義する:** 既定のテスト条件のセットでは対応できない動作をテストする必要がある場合は、カスタムのテスト条件を作成できます。 カスタムのテスト条件は、その新しい条件を使用するテストを実行するチーム メンバー全員に配布する必要があります。|[シナリオ: SQL Server の単体テストのカスタム テスト条件の定義](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
+|**テストのグループを管理する (Visual Studio 2010):** 通常同時に実行する必要があるテストの場合は、テストをグループ化することもできます。 テスト リストは引き続きサポートされますが、新しいテスト グループの場合は、代わりにテスト カテゴリを検討する必要があります。 たとえば、特定の*スキーマ*のトリガーまたはすべてのオブジェクトについて、テスト カテゴリを作成することもできます。|[テスト カテゴリの定義によるテストのグループ化](/previous-versions/visualstudio/visual-studio-2010/dd286595(v=vs.100))<br /><br />[テスト リストの定義によるテストのグループ化](/previous-versions/visualstudio/visual-studio-2010/dd286584(v=vs.100))|  
+|**テスト プロジェクトとテストをバージョン管理にチェックインする:** テストを実行し、正常に動作するかどうかを検証したら、テスト プロジェクトと関連するすべてのファイルをバージョン管理にチェックインして、チームのすべてのメンバーがテストを実行できるようにする必要があります。 SQL Server データベース プロジェクトと一緒にテスト プロジェクトをバージョン管理にチェックインすることで、データベースとデータベース テストの両方の互換性のあるバージョンを簡単に復元できます。|[バージョン管理へのファイルの追加](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))<br /><br />[[チェックイン] ウィンドウと [保留中の変更] ウィンドウの使用](/previous-versions/visualstudio/visual-studio-2010/ms245462(v=vs.100))|  
+|**カスタムのテスト条件を定義する:** 既定のテスト条件のセットでは対応できない動作をテストする必要がある場合は、カスタムのテスト条件を作成できます。 カスタムのテスト条件は、その新しい条件を使用するテストを実行するチーム メンバー全員に配布する必要があります。|[シナリオ: SQL Server の単体テストのカスタム テスト条件の定義](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))|  
 |**既存の単体テストを更新する:** 以前のバージョンの Visual Studio で作成されたデータベース単体テストがある場合は、今回のリリースで正常にビルドおよび実行されるように、アップグレードする必要があります。<br /><br />**注:** 以前のバージョンの Visual Studio のデータベース プロジェクトとデータベース単体テスト プロジェクトの両方を含むソリューションを開くと、データベース プロジェクトをアップグレードするように求めるメッセージが表示されます。 手動でアップグレードする必要のあるデータベース単体テスト プロジェクトについては、アップグレードするように求められることはありません。|[データベース単体テストを含む以前のテスト プロジェクトをアップグレードする](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**機能拡張:** 機能拡張を作成することで SQL Server Data Tools の機能を拡張できます。|[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
 |**問題のトラブルシューティングを行う:** SQL Server 単体テストに関する一般的な問題のトラブルシューティング方法についてさらに詳しく知ることができます。|[SQL Server のデータベース単体テストに関する問題のトラブルシューティング](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
@@ -60,4 +60,3 @@ Visual Studio 2010 および Visual Studio 2012 の SQL Server Data Tools 統合
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: SESSION_CONTEXT (Transact-SQL)
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: eb971143c7de2bdbf683b24f81162e088ffd2a8e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394767"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91378825"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,12 +34,10 @@ ms.locfileid: "87394767"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引数
  'key'  
  取得される値のキー (sysname 型)。  
@@ -58,7 +57,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="examples"></a>例  
  次のような単純な例は、キーのセッション コンテキスト値を設定 `user_id` 4、および、使用する、 **SESSION_CONTEXT** 値を取得する関数。  
   
-```  
+```sql  
 EXEC sp_set_session_context 'user_id', 4;  
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: '[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools)'
 title: '[フルテキスト インデックス列] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,18 +13,18 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0f52e63938317eff7f47e56300decc874997272d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4670e9b18ede820b703d824f87878de24e576fc3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012158"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034885"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>[フルテキスト インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 このダイアログ ボックスには、テーブル デザイナーで開いたテーブルのテキスト インデックスに含まれる列が一覧表示されます。 このダイアログ ボックスにアクセスするには、テーブル デザイナーのテーブルを右クリックして **[フルテキスト インデックス]** を選択すると表示される **[フルテキスト インデックス]** ダイアログ ボックスで、表示または編集する列のインデックスをクリックし、右のグリッドの **[列]** フィールドをクリックして、省略記号 ( **[...]** ) をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **列**  
 フルテキスト インデックスに指定されている列の名前を表示します。 列を追加するには、最初の空のセルの中をクリックし、ドロップダウン リストから列を選択します。 テキスト ベースのデータ型の列または画像データ型の列だけが選択できます。  
   
@@ -39,10 +40,9 @@ ms.locfileid: "86012158"
 使用できる言語を一覧表示します。 列データに適した言語をドロップダウン リストから選択してください。 たとえば、英語のオペレーティング システムを使用している場合に、ドイツ語のテキストを含む列にインデックスを設定するときは、ドロップダウン リストからドイツ語を選択することによりインデックスのパフォーマンスが向上します。  
   
 **[統計的セマンティクス]**  
-選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)に関する記述を参照してください。  
+選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、 [セマンティック検索のプレースホルダー](../../relational-databases/search/semantic-search-sql-server.md)に関する記述を参照してください。  
   
 **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
   
 ## <a name="see-also"></a>参照  
 [[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
-  

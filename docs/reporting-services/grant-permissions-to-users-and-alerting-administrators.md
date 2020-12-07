@@ -10,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247233"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891502"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>ユーザーおよび警告管理者に権限を付与する
 
@@ -30,7 +30,7 @@ ms.locfileid: "87247233"
 
 **警告管理者**: SharePoint の "通知の管理" 権限が必要です。 既定では、"チーム サイト" サイト テンプレートを使用して作成されたサイトに対するこの権限は、フル コントロール権限レベルにのみ含まれます。 他のサイト テンプレートを使用した場合は、既定の SharePoint グループの、異なる一覧が表示されます。 "通知の管理" 権限を組み込みの権限レベルのいずれかに追加したり、データ警告を表示および削除する警告管理者をサポートするために必要な権限を持つカスタム権限レベルを作成したりできます。
 
-SharePoint 権限の詳細については、「 [ユーザー権限とアクセス許可レベル (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx)」を参照してください。
+SharePoint 権限の詳細については、「 [ユーザー権限とアクセス許可レベル (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels)」を参照してください。
 
 ## <a name="grant-permissions"></a>[アクセス許可の付与]
   

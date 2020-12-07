@@ -1,4 +1,5 @@
 ---
+description: SET OFFSETS (Transact-SQL)
 title: SET OFFSETS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - offsets [SQL Server]
 - SET OFFSETS statement
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd9375a6ac4aefe0d0e63996d68c2d291040bd66
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8accd5a69be5182b0828eefcf8ac7f41e1ce0caf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484468"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544127"
 ---
 # <a name="set-offsets-transact-sql"></a>SET OFFSETS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

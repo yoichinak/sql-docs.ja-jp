@@ -1,8 +1,9 @@
 ---
+description: EventStatusEnum
 title: EventStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1174538ec14eab150d5874b7d6b5b51bcd554ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 853dd54afbb8753b05ce95f17b20aa600fea493c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242722"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973563"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  

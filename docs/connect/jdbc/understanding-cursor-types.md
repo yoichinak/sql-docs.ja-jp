@@ -1,4 +1,5 @@
 ---
+description: カーソルの種類について
 title: カーソルの種類について | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b47569f0580b8e39ce84b9093dc38718845617c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395908"
 ---
 # <a name="understanding-cursor-types"></a>カーソルの種類について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "69027490"
 ## <a name="remarks"></a>解説  
  JDBC ドライバーでは、次の種類のカーソルがサポートされています。  
   
-|結果セット<br /><br /> (カーソル) の種類|SQL Server のカーソルの種類|特性|select<br /><br /> 方法|応答<br /><br /> Buffering|説明|  
+|結果セット<br /><br /> (カーソル) の種類|SQL Server のカーソルの種類|特性|select<br /><br /> メソッド|応答<br /><br /> Buffering|説明|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|該当なし|順方向専用、読み取り専用|直接|フル|アプリケーションで結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。 これは既定の動作です。TYPE_SS_DIRECT_FORWARD_ONLY カーソルと同じように動作します。 ステートメントの実行時には、サーバーからメモリに結果セット全体が読み込まれます。|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|該当なし|順方向専用、読み取り専用|直接|adaptive|アプリケーションで結果セットに対して 1 回の (順方向の) パススルーを行う必要があります。 TYPE_SS_DIRECT_FORWARD_ONLY カーソルと同じように動作します。 アプリケーションの要求に応じてサーバーから行が読み取られるため、クライアント側のメモリの使用が最小限に抑えられます。|  
@@ -67,7 +68,7 @@ ms.locfileid: "69027490"
 > [!NOTE]  
 >  アプリケーションでサポートされていない、カーソルの行を指定する呼び出しを行った場合、または getRow メソッドに対してサポートされていない呼び出しを行った場合は、"要求された操作は、このカーソルの種類ではサポートされていません" という意味のメッセージで例外がスローされます。  
   
- 削除された行を参照できるのは、TYPE_SS_SCROLL_KEYSET および等価である TYPE_SCROLL_SENSITIVE カーソルの場合のみです。 削除された行にカーソルが置かれている場合、列の値を得ることはできず、[rowDeleted](../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドによって "true" が返されます。 get\<Type> メソッドを呼び出すと、"削除された行から値は取得できません" という意味のメッセージで例外がスローされます。 削除された行を更新することはできません。 削除された行に対して update\<Type> メソッドの呼び出しを試みると、"削除された行を更新することはできません" という意味のメッセージで例外がスローされます。 TYPE_SS_SCROLL_DYNAMIC カーソルも、現在のフェッチ バッファーからカーソルが移動するまでは同じ動作です。  
+ 削除された行を参照できるのは、TYPE_SS_SCROLL_KEYSET および等価である TYPE_SCROLL_SENSITIVE カーソルの場合のみです。 削除された行にカーソルが置かれている場合、列の値を得ることはできず、[rowDeleted](../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) メソッドによって "true" が返されます。 get\<Type> メソッドを呼び出すと、"削除された行から値を取得することができません" というメッセージで例外がスローされます。 削除された行を更新することはできません。 削除された行に対して update\<Type> メソッドの呼び出しを試みると、"削除された行を更新することはできません" というメッセージで例外がスローされます。 TYPE_SS_SCROLL_DYNAMIC カーソルも、現在のフェッチ バッファーからカーソルが移動するまでは同じ動作です。  
   
  順方向カーソルと動的カーソルでは、フェッチ バッファー内でカーソルにアクセスできる間だけ、削除された行を同様の方法で参照することができます。 順方向カーソルの場合は単純です。 動的カーソルの場合は、フェッチ サイズが 1 より大きい場合に複雑になります。 アプリケーションでは、フェッチ バッファーによって定義された範囲内でカーソルを前後に移動できますが、更新が行われた元のフェッチ バッファーが移動した場合には、削除された行が参照できなくなります。 アプリケーションで、一時的に削除された行を動的カーソルを使用して参照しない場合は、FETCH RELATIVE (0) を使用する必要があります。  
   
@@ -87,14 +88,14 @@ ms.locfileid: "69027490"
 -   ステートメントを作成する際に、ResultSet.TYPE_SCROLL_SENSITIVE の代わりに [SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC](../../connect/jdbc/reference/type-ss-scroll-dynamic-field-sqlserverresultset.md) を使用する。  
   
 ## <a name="cursor-updating"></a>カーソルの更新  
- 直接の更新は、カーソルの種類およびコンカレンシーで更新が可能なカーソルについてサポートされています。 カーソルの位置が結果セットの更新可能な行でない場合 (get\<Type> メソッドの呼び出しが成功していない場合) は、update\<Type> メソッドを呼び出すと "結果セットに現在の行がありません" という意味のメッセージで例外がスローされます。 JDBC の仕様には、CONCUR_READ_ONLY であるカーソルの列に対して更新メソッドが呼び出されると、例外が発生すると記載されています。 更新または削除の競合のようなオプティミスティック同時実行制御の競合があった場合など、行が更新可能でない場合は、[insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)、[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)、または [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) が呼び出されるまで、例外は発生しません。  
+ 直接の更新は、カーソルの種類およびコンカレンシーで更新が可能なカーソルについてサポートされています。 カーソルの位置が結果セットの更新可能な行でない場合 (get\<Type> メソッドの呼び出しが成功していない場合) は、update\<Type> メソッドを呼び出すと "ResultSet に現在の行がありません" というメッセージで例外がスローされます。 JDBC の仕様には、CONCUR_READ_ONLY であるカーソルの列に対して更新メソッドが呼び出されると、例外が発生すると記載されています。 更新または削除の競合のようなオプティミスティック同時実行制御の競合があった場合など、行が更新可能でない場合は、[insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md)、[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)、または [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) が呼び出されるまで、例外は発生しません。  
   
- update\<Type> の呼び出し後は、updateRow または [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) が呼び出されるまで、影響を受けた列に get\<Type> でアクセスすることはできません。 これにより、サーバーによって返された型とは異なる型を使用して列が更新されるという問題と、その後の getter 呼び出しでクライアント側の型変換が生じ不正確な結果になるという問題が回避されます。 get\<Type> を呼び出すと、"更新された列には updateRow() または cancelRowUpdates() が呼び出されるまでアクセスできません" という意味のメッセージで例外がスローされます。  
+ update\<Type> の呼び出し後は、updateRow または [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) が呼び出されるまで、影響を受けた列に get\<Type> でアクセスすることはできません。 これにより、サーバーによって返された型とは異なる型を使用して列が更新されるという問題と、その後の getter 呼び出しでクライアント側の型変換が生じ不正確な結果になるという問題が回避されます。 get\<Type> を呼び出すと、"updateRow() または cancelRowUpdates() が呼び出されるまで、更新された列にアクセスすることはできません" というメッセージで例外がスローされます。  
   
 > [!NOTE]  
 >  更新された列がない場合に updateRow メソッドが呼び出されると、JDBC ドライバーでは "updateRow() が呼び出されましたが、列が更新されていません" という意味のメッセージで例外がスローされます。  
   
- [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) が呼び出された後で、get\<Type>、update\<Type>、insertRow、およびカーソルの行を指定するメソッド ([moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md) を含む) 以外のメソッドが結果セットに対して呼び出された場合は、例外がスローされます。 moveToInsertRow メソッドによって結果セットが挿入モードになり、カーソルの行を指定するメソッドによって挿入モードが終了します。 相対的なカーソル行を指定する呼び出しでは、moveToInsertRow が呼び出される前の位置を基準にカーソルが移動します。 カーソルの行を指定する呼び出しの後は、その結果得られたカーソルの位置が新しいカーソル位置になります。  
+ [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) が呼び出された後で、get\<Type>、update\<Type>、insertRow、カーソルの行を指定するメソッド ([moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md) を含む) 以外のメソッドが結果セットに対して呼び出された場合は、例外がスローされます。 moveToInsertRow メソッドによって結果セットが挿入モードになり、カーソルの行を指定するメソッドによって挿入モードが終了します。 相対的なカーソル行を指定する呼び出しでは、moveToInsertRow が呼び出される前の位置を基準にカーソルが移動します。 カーソルの行を指定する呼び出しの後は、その結果得られたカーソルの位置が新しいカーソル位置になります。  
   
  挿入モードで実行されたカーソルの行を指定する呼び出しが失敗した場合、その呼び出し後のカーソル位置は、moveToInsetRow が呼び出される前の元のカーソル位置になります。 insertRow が失敗すると、カーソルは挿入行に残り、カーソルは挿入モードのままになります。  
   
@@ -111,7 +112,7 @@ ms.locfileid: "69027490"
 >   
 >  SQL Server では、サーバー カーソルの使用が 1 つの結果セットに制限されています。 バッチまたはストアド プロシージャに複数のステートメントが含まれる場合は、順方向専用かつ読み取り専用のクライアント カーソルを使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーによる結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

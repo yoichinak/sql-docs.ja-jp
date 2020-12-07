@@ -1,4 +1,5 @@
 ---
+description: GRANT (非対称キーの権限の許可) (Transact-SQL)
 title: GRANT (非対称キーの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 147a709a91a0bc42eeedbe0ad89f09643ac10b17
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bbd9e5decd649668924ab314c720fa7ece945b80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426504"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (非対称キーの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ GRANT { permission  [ ,...n ] }
  権限を許可する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -66,7 +67,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -77,7 +78,7 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  非対称キーは、データベース レベルの保護可能なアイテムで、権限の階層で親となっているデータベースに含まれています。 次に、非対称キーで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |非対称キーの権限|権限が含まれる非対称キー権限|権限が含まれるデータベース権限|  

@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a0b49b2cf9ac1e131e74ba39c1430492823e39e5
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247451"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043786"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
 
 また、隣接する列グループの作成、列の書式設定、およびテキストの回転も行います。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
-![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
+![レポート ビルダー マトリックス レポートのスクリーンショット。](../reporting-services/media/report-builder-matrix-tutorial.png)
    
 このチュートリアルの推定所要時間:20 分  
   
@@ -120,7 +120,7 @@ ms.locfileid: "87247451"
   
     手順 5. および 6. で、マトリックスのデータ セルに表示するデータが指定されます。
     
-    ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
+    ![レポート ビルダーの [フィールドの配置] レポート ウィザードのスクリーンショット。](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
 7.  **[次へ]** をクリックします。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "87247451"
   
     マトリックスがデザイン画面に追加されます。 [行グループ] ペインには 2 つの行グループが表示されます。Territory と SalesDate です。 [列グループ] ペインには 2 つの列グループが表示されます。Subcategory と Product です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
-    ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
+    ![レポート ビルダーの [行グループ] と [列グループ] を示すスクリーンショット。](../reporting-services/media/report-builder-row-and-column-groups.png)
   
 14. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "87247451"
 
 14. サブカテゴリを展開します。 すばやくレポートの幅が広くなります。
 
-![report-builder-expand-matrix](../reporting-services/media/report-builder-expand-matrix.png)
+![展開されているレポート ビルダー マトリックス レポートを示すスクリーンショット。](../reporting-services/media/report-builder-expand-matrix.png)
   
 ## <a name="3-format-data"></a><a name="FormatData"></a>3.データの書式を設定する  
 既定では Sales フィールドの概要データでは通常の数値が、SalesDate フィールドには日付と時刻の両方の情報が表示されます。 このセクションでは、書式を設定して Sales フィールドでは数値が通貨として表示されるようにし、SalesDate フィールドでは日付のみが表示されるようにします。 書式設定したテキスト ボックスおよびプレースホルダー テキストのサンプル値を表示するには、 **[プレースホルダーのスタイル]** の設定を切り替えます。  
@@ -159,7 +159,7 @@ ms.locfileid: "87247451"
   
     地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。  
     
-    ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
+    ![レポート ビルダーの [サンプルの値] オプションのスクリーンショット。](../reporting-services/media/report-builder-placeholder-value.png)
   
 4.  `[SalesDate]`が格納されたセルをクリックします。  
   
@@ -212,10 +212,10 @@ ms.locfileid: "87247451"
   
 レポートには、月曜日と火曜日という名前の列が表示されます。 データセットには、この 2 つの曜日のデータのみが含まれています。  
 
-![report-builder-matrix-weekdays](../reporting-services/media/report-builder-matrix-weekdays.png)
+![レポート ビルダー マトリックス レポートに表示されている平日を示すスクリーンショット。](../reporting-services/media/report-builder-matrix-weekdays.png)
   
 > [!NOTE]  
-> 他の曜日のデータが含まれている場合は、レポートにそれらの曜日の列も表示されます。 各列には **Sales**という列ヘッダーと、販売区域ごとの売上合計が表示されます。  
+> 他の曜日のデータが含まれている場合は、レポートにそれらの曜日の列も表示されます。 各列には **Sales** という列ヘッダーと、販売区域ごとの売上合計が表示されます。  
   
 ## <a name="5-change-column-widths"></a><a name="Width"></a>5.列幅を変更する  
 通常、マトリックスを含むレポートは、実行すると、水平方向と垂直方向に拡張されます。 水平方向の拡張の制御は、印刷レポートに使用される Microsoft Word や Adobe PDF などの形式にレポートをエクスポートする場合、特に重要です。 レポートが複数のページにまたがって水平方向に拡張される場合、印刷レポートは理解しにくくなります。 水平方向の拡張を最小限に抑えるには、列のサイズを変更して、折り返しをしないでデータを表示できるだけの幅にします。 また、列の名前を変更して、タイトルがデータの表示に必要な幅に収まるようにすることもできます。  
@@ -224,7 +224,7 @@ ms.locfileid: "87247451"
   
 1.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-2.  一番左にある Quantity 列のテキストを選択して、「 **QTY**」と入力します。  
+2.  一番左にある Quantity 列のテキストを選択して、「 **QTY** 」と入力します。  
   
     列のタイトルが、QTY になります。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "87247451"
   
     テーブルの上と横のグレーのバーは、列および行ハンドルです。  
     
-    ![report-builder-column-handles](../reporting-services/media/report-builder-column-handles.png)
+    ![レポート ビルダー マトリックス レポートの列ハンドルと行ハンドルのスクリーンショット。](../reporting-services/media/report-builder-column-handles.png)
   
 5.  一番左にある QTY 列のサイズを変更するには、列ハンドルの間の罫線をポイントします。カーソルが 2 方向の矢印の形状に変化します。 列を左にドラッグして、幅を 1/2 インチにします。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "87247451"
   
 4.  **[挿入]** タブの **[テキスト ボックス]** をクリックし、テキスト ボックスをレポート ヘッダーの内側にドラッグします。 テキスト ボックスのサイズをおおよそ横 6 インチ、縦 3/4 インチにして、レポート ヘッダーの左側に配置します。  
   
-5.  テキスト ボックスに「 **Territory、Subcategory、および Day ごとの売上**」と入力します。  
+5.  テキスト ボックスに「 **Territory、Subcategory、および Day ごとの売上** 」と入力します。  
   
 6.  入力したテキストを選択し、 **[ホーム]** タブで次のように **[フォント]** を選択します。
     * **サイズ: 24 pt**
@@ -309,7 +309,7 @@ ms.locfileid: "87247451"
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory**」に変更します。  
+4.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory** 」に変更します。  
   
 5.  **[保存]** をクリックします。  
   
@@ -321,7 +321,7 @@ ms.locfileid: "87247451"
   
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory**」に変更します。  
+3.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory** 」に変更します。  
   
 4.  **[保存]** をクリックします。  
   
@@ -336,17 +336,17 @@ ms.locfileid: "87247451"
   
 2.  次が格納されたセルを選択します。 `[Territory].` 
 
-    >**注**:テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
+    >**注** :テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
     
-     ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+     ![レポート ビルダー マトリックス レポート内の [Territory] セルを示すスクリーンショット。](../reporting-services/media/report-builder-select-territory-cell.png)
   
 3.  [プロパティ] ペインで [WritingMode] プロパティを探し、 **[既定値]** から **[Rotate270]** に変更します。  
   
     [プロパティ] ペインが表示されていない場合は、リボンの **[表示]** タブの **[プロパティ]** チェック ボックスをオンにします。  
   
-4.  CanGrow プロパティが **True**に設定されていることを確認します。  
+4.  CanGrow プロパティが **True** に設定されていることを確認します。  
   
-5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]** をクリックして、テキストをセルの**中央**に配置します。  
+5.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]** をクリックして、テキストをセルの **中央** に配置します。  
  
 6. Territory 列の幅を 1/2 インチに変更して、列タイトルを削除します。  
 6.  **[実行]** をクリックして、レポートをプレビューします。  

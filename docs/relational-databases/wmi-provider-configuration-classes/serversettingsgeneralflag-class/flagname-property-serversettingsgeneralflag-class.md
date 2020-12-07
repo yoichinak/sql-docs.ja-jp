@@ -1,4 +1,5 @@
 ---
+description: FlagName プロパティ (ServerSettingsGeneralFlag クラス)
 title: FlagName プロパティ (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 664fab52399faf7cedb70374a41527148b9b6175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2813a3c676610825672d9ea64f86d81904f7c820
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880716"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546960"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName プロパティ (ServerSettingsGeneralFlag クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.FlagName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  フラグの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

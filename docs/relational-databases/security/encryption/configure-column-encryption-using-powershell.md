@@ -1,4 +1,5 @@
 ---
+description: PowerShell での Always Encrypted を使用した列暗号化の構成
 title: PowerShell での Always Encrypted を使用した列暗号化の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -11,17 +12,17 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d89ff5d6ef855cce31e4cbde02f5a45a2131d2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765085"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127719"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell での Always Encrypted を使用した列暗号化の構成
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-この記事では、( [SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell モジュールで) *Set-SqlColumnEncryption* コマンドレットを使用して、データベース列にターゲット Always Encrypted 構成を設定する手順を説明します。 **Set-SqlColumnEncryption** コマンドレットは、ターゲット データベースと選択した列に格納されたデータの両方のスキーマを変更します。 列に格納されたデータは、その列に指定されたターゲットの暗号化設定と現在の暗号化の構成に応じて、暗号化、再暗号化、または復号化できます。
+この記事では、( [SqlServer](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) PowerShell モジュールで) *Set-SqlColumnEncryption* コマンドレットを使用して、データベース列にターゲット Always Encrypted 構成を設定する手順を説明します。 **Set-SqlColumnEncryption** コマンドレットは、ターゲット データベースと選択した列に格納されたデータの両方のスキーマを変更します。 列に格納されたデータは、その列に指定されたターゲットの暗号化設定と現在の暗号化の構成に応じて、暗号化、再暗号化、または復号化できます。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -65,9 +66,9 @@ SqlServer PowerShell モジュールでの Always Encrypted のサポートの�
 ---|---|---|---
 手順 1. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 手順 2. サーバーとデータベースに接続します。 | [データベースに接続する](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
-手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
-手順 4. 暗号化、再暗号化または復号化するデータベースの各列に 1 つずつ SqlColumnEncryptionSettings オブジェクトの配列を構築します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | いいえ | いいえ
-手順 5. 前の手順で作成した SqlColumnMasterKeySettings オブジェクトの配列で指定された、目的の暗号化構成を設定します。 指定したターゲットの設定と列の現在の暗号化の構成に応じて、列が暗号化、再暗号化、または復号化されます。| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションでは、選択されたアプローチ (オンラインまたはオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
+手順 3. (列暗号化キーを保護する、交換される) 列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
+手順 4. 暗号化、再暗号化または復号化するデータベースの各列に 1 つずつ SqlColumnEncryptionSettings オブジェクトの配列を構築します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 列のターゲット暗号化方式を指定します。 | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | いいえ | いいえ
+手順 5. 前の手順で作成した SqlColumnMasterKeySettings オブジェクトの配列で指定された、目的の暗号化構成を設定します。 指定したターゲットの設定と列の現在の暗号化の構成に応じて、列が暗号化、再暗号化、または復号化されます。| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注:** この手順の実行には時間がかかる場合があります。 アプリケーションでは、選択されたアプローチ (オンラインまたはオフライン) に応じて、操作全体または一部の操作でテーブルにアクセスできなくなります。 | はい | はい
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>オフライン アプローチを使用した列の暗号化 - 例
 
@@ -155,5 +156,3 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)
  - [DAC パッケージでの Always Encrypted を使用した列暗号化の構成](configure-always-encrypted-using-dacpac.md)
-
-

@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate (geography データ型)
 title: EnvelopeAggregate (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5e90ae8b7716c3ede90a2a80f5c904f0d02216a5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9b14db5a616f41049b5cabc845cd822356e34522
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555461"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96114992"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

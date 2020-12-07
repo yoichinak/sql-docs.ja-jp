@@ -1,6 +1,6 @@
 ---
 title: IRow を使用した 1 行のフェッチ (OLE DB ドライバー) | Microsoft Docs
-description: OLE DB Driver for SQL Server の IRow インターフェイスを使用し、1 行をフェッチする
+description: IRow では、1 つの行オブジェクトの列に直接アクセスできます。 OLE DB Driver for SQL Server の IRow インターフェイスは、パフォーマンスを向上するために簡素化されています。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fba517134c69914914da95daacafdf634de7b15c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a305692bb544d9a9bbb0572cbd93449781aaabe9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244274"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862472"
 ---
 # <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>IRow を使用した 1 行のフェッチ (OLE DB ドライバー)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

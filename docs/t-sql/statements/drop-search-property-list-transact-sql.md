@@ -1,4 +1,5 @@
 ---
+description: DROP SEARCH PROPERTY LIST (Transact-SQL)
 title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - search property lists [SQL Server], dropping
 - search property lists [SQL Server], deleting
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 72baa445ceca98fdf66877ae64340dc1fb94f0ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: de8f55242f3727eb1491b9a89e9bf7d349cef860
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485472"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131110"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +35,7 @@ ms.locfileid: "86485472"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP SEARCH PROPERTY LIST property_list_name  
 ;  
 ```  
@@ -48,11 +48,11 @@ DROP SEARCH PROPERTY LIST property_list_name
   
  既存のプロパティ リストの名前を表示するには、次のように [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) カタログ ビューを使用します。  
   
-```  
+```sql  
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  リストがいずれかのフルテキスト インデックスに関連付けられている場合は、データベースから検索プロパティ リストを削除できません。削除しようとすると失敗します。 特定のフルテキスト インデックスから検索プロパティ リストを削除するには、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使い、SET SEARCH PROPERTY LIST 句に OFF または別の検索プロパティ リストの名前を指定します。  
   
  **サーバー インスタンス上のプロパティ リストを表示するには**  
@@ -76,12 +76,12 @@ SELECT name FROM sys.registered_search_property_lists;
 ## <a name="examples"></a>例  
  次の例では、`JobCandidateProperties` プロパティ リストを `AdventureWorks2012` データベースから削除します。  
   
-```  
+```sql  
 DROP SEARCH PROPERTY LIST JobCandidateProperties;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   

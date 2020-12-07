@@ -1,4 +1,5 @@
 ---
+description: QUOTENAME (Transact-SQL)
 title: QUOTENAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f3e3ee374403b92c984f3914a76e5ecf95a4ca
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 820694607e2a4a4828ea720f2292bfc8ab94ab0a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111389"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380697"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87111389"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   

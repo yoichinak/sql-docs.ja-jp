@@ -1,4 +1,5 @@
 ---
+description: スナップショット エージェント
 title: スナップショット エージェント | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,18 +16,18 @@ ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532917bc211dcc281dd65ebb6229febc953d5805
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88420386"
 ---
 # <a name="snapshot-agent"></a>スナップショット エージェント
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   **[スナップショット エージェント]** ダイアログ ボックスには、状態、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、スナップショット エージェントの詳細情報が表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  表示するスナップショット エージェントのセッションを **[表示]** メニューで選択した後、 **[スナップショット エージェントのセッション]** というラベルのグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
  **表示**  
@@ -41,12 +42,12 @@ ms.locfileid: "85767635"
   
 -   [実行されていません]  
   
--   [完了]  
+-   完了  
   
  **Start Time**  
  セッションの開始時刻です。  
   
- **[終了時刻]**  
+ **終了時刻**  
  セッションの終了時刻です。 エージェントが停止していない場合は、このフィールドは空になっています。  
   
  **Duration**  

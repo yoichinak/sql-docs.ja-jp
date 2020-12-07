@@ -1,4 +1,5 @@
 ---
+description: データの更新 (Microsoft Drivers for PHP for SQL Server)
 title: データの更新 (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466677"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>データの更新 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "80926845"
   
 |トピック|説明|  
 |---------|---------------|  
-|[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)|パラメーター化クエリを実行する方法を説明します。|  
+|[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)」を参照してください。|パラメーター化クエリを実行する方法を説明します。|  
 |[方法: ストリームとしてデータを送信する](../../connect/php/how-to-send-data-as-a-stream.md)|サーバーにデータをストリーミングする方法について説明します。|  
-|[方法: トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)|**sqlsrv** 関数を使用してトランザクションを実行する方法について説明します。|  
+|[方法:トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)|**sqlsrv** 関数を使用してトランザクションを実行する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)

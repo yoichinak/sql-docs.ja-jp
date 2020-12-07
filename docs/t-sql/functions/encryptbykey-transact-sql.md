@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY (Transact-SQL)
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112974"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128489"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  キーを使用して暗号化するデータです。  
   
  @cleartext  
- キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar** **binary**、**varbinary**、または **nchar** 型の変数です。  
+ キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar****binary**、**varbinary**、または **nchar** 型の変数です。  
   
  *add_authenticator*  
  *cleartext* と共に認証子を暗号化するかどうかを指定します。 認証子を使用する場合は 1 にする必要があります。 **int**.  
@@ -74,7 +75,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  *cleartext* 値が NULL の場合は、NULL を返します。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  EncryptByKey では対称キーが使用されます。 このキーは開いている必要があります。 対称キーが現在のセッションで既に開いている場合、クエリのコンテキストで再度開く必要はありません。  
   
  認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 たとえば、次の給与データのテーブルについて考えてみます。  
@@ -146,7 +147,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

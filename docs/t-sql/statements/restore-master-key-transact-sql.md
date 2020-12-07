@@ -1,4 +1,5 @@
 ---
+description: RESTORE MASTER KEY (Transact-SQL)
 title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 101b4a941f355891a7e7e6aa9578998f2d8efc4c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f5a15c5ac7a401e4f5359cff34693a6131ce1391
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483578"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497804"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "86483578"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 RESTORE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password'  
     ENCRYPTION BY PASSWORD = 'password'  
@@ -64,7 +64,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  現在のデータベース マスター キーが開いていない場合や、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でマスター キーを使用して暗号化された秘密キーの一部を暗号化解除できない場合でも、RESTORE の処理を継続します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在アクティブなマスター キーによって暗号化されたすべてのキーの暗号化が解除された後、復元されたマスター キーを使用してこれらのキーが暗号化されます。 この操作はリソースを大量に消費するため、リソース要求が少ないときに実行するように考慮してください。 現在のデータベースのマスター キーが開いていないか、開けない場合、またはマスター キーで暗号化されたキーを 1 つでも暗号化解除できない場合、復元操作は失敗します。  
   
  FORCE オプションは、マスター キーを取得できないか、暗号化解除が失敗する場合にのみ使用してください。 取得できないキーによってのみ暗号化されている情報は失われます。  
@@ -79,7 +79,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="examples"></a>例  
  次の例では、データベース `AdventureWorks2012` のマスター キーを復元します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 RESTORE MASTER KEY   
     FROM FILE = 'c:\backups\keys\AdventureWorks2012_master_key'   

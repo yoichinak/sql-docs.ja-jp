@@ -1,4 +1,5 @@
 ---
+description: DBCC INDEXDEFRAG (Transact-SQL)
 title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 88fe0cd4deb4bc73683e6dbff46f35d1d61da348
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484295"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116858"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 
@@ -101,7 +102,7 @@ DBCC INDEXDEFRAG は、システム テーブルに対して使用できませ�
 ## <a name="result-sets"></a>結果セット  
 DBCC INDEXDEFRAG は、(WITH NO_INFOMSGS が指定されている場合を除き) インデックスがステートメント内で指定されている場合に、次の結果セットを返します (値は異なることがあります)。
   
-```sql
+```
 Pages Scanned Pages Moved Pages Removed  
 ------------- ----------- -------------  
 359           346         8  
@@ -130,12 +131,12 @@ GO
 /*Perform a 'USE <database name>' to select the database in which to run the script.*/  
 -- Declare variables  
 SET NOCOUNT ON;  
-DECLARE @tablename varchar(255);  
-DECLARE @execstr   varchar(400);  
-DECLARE @objectid  int;  
-DECLARE @indexid   int;  
-DECLARE @frag      decimal;  
-DECLARE @maxfrag   decimal;  
+DECLARE @tablename VARCHAR(255);  
+DECLARE @execstr   VARCHAR(400);  
+DECLARE @objectid  INT;  
+DECLARE @indexid   INT;  
+DECLARE @frag      DECIMAL;  
+DECLARE @maxfrag   DECIMAL;  
   
 -- Decide on the maximum fragmentation to allow for.  
 SELECT @maxfrag = 30.0;  
@@ -148,26 +149,26 @@ DECLARE tables CURSOR FOR
   
 -- Create the table.  
 CREATE TABLE #fraglist (  
-   ObjectName char(255),  
-   ObjectId int,  
-   IndexName char(255),  
-   IndexId int,  
-   Lvl int,  
-   CountPages int,  
-   CountRows int,  
-   MinRecSize int,  
-   MaxRecSize int,  
-   AvgRecSize int,  
-   ForRecCount int,  
-   Extents int,  
-   ExtentSwitches int,  
-   AvgFreeBytes int,  
-   AvgPageDensity int,  
-   ScanDensity decimal,  
-   BestCount int,  
-   ActualCount int,  
-   LogicalFrag decimal,  
-   ExtentFrag decimal);  
+   ObjectName CHAR(255),  
+   ObjectId INT,  
+   IndexName CHAR(255),  
+   IndexId INT,  
+   Lvl INT,  
+   CountPages INT,  
+   CountRows INT,  
+   MinRecSize INT,  
+   MaxRecSize INT,  
+   AvgRecSize INT,  
+   ForRecCount INT,  
+   Extents INT,  
+   ExtentSwitches INT,  
+   AvgFreeBytes INT,  
+   AvgPageDensity INT,  
+   ScanDensity DECIMAL,  
+   BestCount INT,  
+   ActualCount INT,  
+   LogicalFrag DECIMAL,  
+   ExtentFrag DECIMAL);  
   
 -- Open the cursor.  
 OPEN tables;  

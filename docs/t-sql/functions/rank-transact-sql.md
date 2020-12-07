@@ -1,4 +1,5 @@
 ---
+description: RANK (Transact-SQL)
 title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2016
@@ -21,12 +22,12 @@ ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02992a05dbfc58cb6fd186960c294d353c403c57
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 63d514000002db29a8e33e43bcbea54ae4850b06
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110859"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380665"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,8 +84,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```sql  
-  
+```  
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
 494         Paint - Silver         3            49       1  
@@ -116,7 +116,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```sql  
+```
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -150,7 +150,7 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```sql
+```
 LastName          TotalSales     SalesTerritoryRegion  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1

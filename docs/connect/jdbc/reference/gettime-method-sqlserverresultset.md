@@ -1,4 +1,5 @@
 ---
+description: getTime メソッド (SQLServerResultSet)
 title: getTime メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1db346ba-a3bd-4387-a423-72e227346318
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65b89b00873f2b2ad232b52625e7e96269674351
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9dbe3dac818721d3dc129b93a0e77e45a3f4a583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434164"
 ---
 # <a name="gettime-method-sqlserverresultset"></a>getTime メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927366"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の java.sql.Time オブジェクトとして取得されます。|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、渡された Calendar オブジェクトを使用し、Java プログラミング言語の java.sql.Time オブジェクトとして取得します。|  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 03dc120975d50edb743911b3c9973b94a15b3ceb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1e2b53af6fd42d77e2169862074ac61c63dc5042
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485353"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498004"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "86485353"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -119,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を取り消す  
  次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。  
   
-```  
+```sql  
 USE master;  
 REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];  
 GO  
@@ -128,7 +127,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. CASCADE を指定して VIEW DEFINITION 権限を取り消す  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `EricKurjan` の `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `RMeyyappan` から取り消します。 ここでは `CASCADE` オプションを使用して、`VIEW DEFINITION` がこの権限を許可したプリンシパルに対しても、`EricKurjan` の `RMeyyappan` 権限を取り消すことを指定します。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan   
     CASCADE;  
@@ -138,7 +137,7 @@ GO
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. サーバー ロールの VIEW DEFINITION 権限を取り消す  
  次の例では、`Auditors` サーバー ロールに対する `Sales` サーバー ロールの `VIEW DEFINITION`` を取り消します。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

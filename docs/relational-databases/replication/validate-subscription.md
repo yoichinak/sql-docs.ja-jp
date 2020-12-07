@@ -1,4 +1,5 @@
 ---
+description: '[サブスクリプションを検証する]'
 title: サブスクリプションを検証する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,18 +16,18 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e95a160e405adb8cdc77a763840489b436c9bf96
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2e80697f75a6234b913e0784b0110873b3c848ac
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470145"
 ---
 # <a name="validate-subscription"></a>[サブスクリプションを検証する]
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
   **[サブスクリプションを検証する]** ダイアログ ボックスを使用すると、サブスクリプションのマージ エージェントを次に実行するときに、マージ パブリケーションへのサブスクリプションを検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳しくは、「 [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)」をご覧ください。  
   
- また、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でパブリケーションを右クリックし、 **[すべてのサブスクリプションの検証]** をクリックすると、マージ パブリケーションへのすべてのサブスクリプションを検証できます。  
+ また、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でパブリケーションを右クリックし、**[すべてのサブスクリプションの検証]** をクリックすると、マージ パブリケーションへのすべてのサブスクリプションを検証できます。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
@@ -40,7 +41,7 @@ ms.locfileid: "87110538"
  **[このサブスクリプションを検証する]**  
  選択すると、サブスクリプションを検証できます。  
   
- **[オプション]**  
+ **Options**  
  クリックすると、 **[サブスクリプションの検証オプション]** ダイアログ ボックスが開き、行数の検証とバイナリ チェックサムの検証のどちらを使用するかを指定できます。  
   
 ## <a name="see-also"></a>参照  

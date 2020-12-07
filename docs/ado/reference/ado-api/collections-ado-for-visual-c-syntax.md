@@ -1,8 +1,9 @@
 ---
+description: Collections (Visual C++ 構文用の ADO)
 title: Collections (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4bc59facd753bf6d36c3a79d06a4efe29e7c235
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748877"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975383"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -37,11 +38,11 @@ Refresh(void);
   
  詳細については、「  
   
--   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append メソッド (ADO)](./append-method-ado.md)  
   
--   [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete メソッド (ADO Parameters コレクション)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh メソッド (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -52,9 +53,9 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
  詳細については、「  
   
--   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count プロパティ (ADO)](./count-property-ado.md)  
   
--   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item プロパティ (ADO)](./item-property-ado.md)  
   
 ## <a name="fields"></a>フィールド  
   
@@ -68,11 +69,11 @@ Refresh(void);
   
  詳細については、「  
   
--   [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Append メソッド (ADO)](./append-method-ado.md)  
   
--   [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Delete メソッド (ADO Parameters コレクション)](./delete-method-ado-parameters-collection.md)  
   
--   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh メソッド (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -83,9 +84,9 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
  詳細については、「  
   
--   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count プロパティ (ADO)](./count-property-ado.md)  
   
--   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item プロパティ (ADO)](./item-property-ado.md)  
   
 ## <a name="errors"></a>エラー  
   
@@ -98,9 +99,9 @@ Refresh(void);
   
  詳細については、「  
   
--   [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
+-   [Clear メソッド (ADO)](./clear-method-ado.md)  
   
--   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh メソッド (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -111,11 +112,11 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
  詳細については、「  
   
--   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count プロパティ (ADO)](./count-property-ado.md)  
   
--   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item プロパティ (ADO)](./item-property-ado.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 ### <a name="methods"></a>メソッド  
   
@@ -125,7 +126,7 @@ Refresh(void);
   
  詳細については、「  
   
--   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Refresh メソッド (ADO)](./refresh-method-ado.md)  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -136,12 +137,12 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
  詳細については、「  
   
--   [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
+-   [Count プロパティ (ADO)](./count-property-ado.md)  
   
--   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
+-   [Item プロパティ (ADO)](./item-property-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Errors コレクション (ADO)](./errors-collection-ado.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Properties コレクション (ADO)](./properties-collection-ado.md)

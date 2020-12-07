@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], creating
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 3a20f798a107c6afb1d26a9f0707c35913a44d7b
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0d61f96ada7382c32f3998230cbeba5606dba6d9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565115"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584415"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Always On 可用性グループの作成と構成の参照
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -90,11 +90,11 @@ ms.locfileid: "87565115"
   
 -   **ブログ:**  
   
-     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -104,9 +104,9 @@ ms.locfileid: "87565115"
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -116,5 +116,4 @@ ms.locfileid: "87565115"
  [AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Always On 可用性グループ: 相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

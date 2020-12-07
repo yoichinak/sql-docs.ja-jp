@@ -1,6 +1,6 @@
 ---
 title: PolyBase Hadoop のセキュリティを構成する
-description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
+description: Hadoop への APS PolyBase 接続に影響するさまざまな構成設定のリファレンスを提供します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,12 +9,12 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3c0db3807b45d28f99ef1a3da571675bd6d8ac48
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243498"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94520959"
 ---
 # <a name="configure-polybase-hadoop-security"></a>PolyBase Hadoop のセキュリティを構成する
 
@@ -42,7 +42,7 @@ Hadoop クラスターで通信を保護する一般的な方法は、hadoop.rpc
    </property> 
 ```
 
-## <a name="kerberos-configuration"></a><a id="kerberossettings"></a>Kerberos の構成  
+## <a name="kerberos-configuration"></a><a id="kerberossettings"></a> Kerberos の構成  
 
 PolyBase が Kerberos でセキュリティが強化されているクラスターに対して認証を行う場合、hadoop.rpc.protection が既定で "Authenticate" に設定されている必要があることに注意してください。 これにより、Hadoop ノード間のデータ通信が暗号化されなくなります。 hadoop.rpc.protection の "Privacy" または "Integrity" 設定を使用するには、PolyBase サーバーで core-site.xml ファイルを更新します。 詳細については、前のセクションの「[Hadoop.RPC.Protection 設定での Hadoop クラスターへの接続](#rpcprotection)」を参照してください。
 
@@ -114,7 +114,7 @@ MIT KDC を使用して Kerberos で保護された Hadoop クラスターに接
 
 4. 各 Hadoop ユーザーの認証情報を指定するデータベース スコープ資格情報オブジェクトを作成します。 「 [PolyBase T-SQL オブジェクト](../relational-databases/polybase/polybase-t-sql-objects.md)」を参照してください。
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 暗号化ゾーンのセットアップ
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a> Hadoop 暗号化ゾーンのセットアップ
 Hadoop 暗号化ゾーンを使用している場合は、core-site.xml を変更し、次のように hdfs-site.xml します。 KMS サービスが実行されている ip アドレスを、対応するポート番号を使用して指定します。 CDH の KMS の既定のポートは16000です。
 
 **core-site.xml**

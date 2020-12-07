@@ -6,20 +6,20 @@ ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26571c01db073aa2567ebbee19ff2183c47a552
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900509"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127675"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -147,7 +147,7 @@ ms.locfileid: "85900509"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で Kerberos 認証を有効にするには、 [サポート技術情報の「](https://support.microsoft.com/kb/319723) SQL Server で Kerberos 認証を使用する方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 」を参照してください。  
 
--   SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は**サポートされていません**。 
+-   SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は **サポートされていません**。 
     *   ワークグループ クラスター上の SQL FCI。 
     *   マルチドメイン クラスター上の SQL FCI。   
     *   ドメイン + ワークグループ クラスター上の SQL FCI。 

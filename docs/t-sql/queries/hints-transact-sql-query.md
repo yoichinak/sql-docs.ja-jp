@@ -1,7 +1,8 @@
 ---
+description: ヒント (Transact-SQL) - Query
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/02/2019
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,17 +56,17 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552954"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035856"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-クエリ ヒントは、指定されたヒントをクエリ全体で使用する必要があることを指定します。 クエリ ヒントは、ステートメント内のすべての演算子に影響を与えます。 メイン クエリで UNION を使用する場合、UNION 操作を含む最後のクエリだけに OPTION 句を指定できます。 クエリ ヒントは、[OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)の一部として指定します。 複数のクエリ ヒントが原因でクエリ オプティマイザーが有効なプランを生成できない場合は、エラー 8622 が発生します。  
+クエリ ヒントには、示されたヒントをクエリのスコープで使用することを指定します。 クエリ ヒントは、ステートメント内のすべての演算子に影響を与えます。 メイン クエリで UNION を使用する場合、UNION 操作を含む最後のクエリだけに OPTION 句を指定できます。 クエリ ヒントは、[OPTION 句](../../t-sql/queries/option-clause-transact-sql.md)の一部として指定します。 複数のクエリ ヒントが原因でクエリ オプティマイザーが有効なプランを生成できない場合は、エラー 8622 が発生します。  
   
 > [!CAUTION]  
 > 通常、クエリにとって最適な実行プランが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーによって選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。  
@@ -85,38 +86,38 @@ ms.locfileid: "86552954"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
   | EXPAND VIEWS   
-  | FAST number_rows   
+  | FAST <integer_value>   
   | FORCE ORDER   
   | { FORCE | DISABLE } EXTERNALPUSHDOWN
   | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
-  | MAX_GRANT_PERCENT = percent  
-  | MIN_GRANT_PERCENT = percent  
-  | MAXDOP number_of_processors   
-  | MAXRECURSION number   
+  | MAX_GRANT_PERCENT = <numeric_value>  
+  | MIN_GRANT_PERCENT = <numeric_value>  
+  | MAXDOP <integer_value>   
+  | MAXRECURSION <integer_value>   
   | NO_PERFORMANCE_SPOOL   
-  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
+  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = <literal_constant> } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
-  | QUERYTRACEON trace_flag   
+  | QUERYTRACEON <integer_value>   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  
-  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE HINT ( <use_hint_name> [ , ...n ] )
+  | USE PLAN N'<xml_plan>'  
+  | TABLE HINT ( <exposed_object_name> [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
-[ NOEXPAND ] {   
-    INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value )  
-  | FORCESEEK [( index_value ( index_column_name [,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ]  
   | FORCESCAN  
   | HOLDLOCK   
   | NOLOCK   
@@ -130,12 +131,33 @@ ms.locfileid: "86552954"
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT  
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
   | XLOCK  
 }  
+
+<use_hint_name> ::=
+{ 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
+  | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
+  | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_DEFERRED_COMPILATION_TV'
+  | 'DISABLE_INTERLEAVED_EXECUTION_TVF'
+  | 'DISABLE_OPTIMIZED_NESTED_LOOP'
+  | 'DISABLE_OPTIMIZER_ROWGOAL'
+  | 'DISABLE_PARAMETER_SNIFFING'
+  | 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_TSQL_SCALAR_UDF_INLINING'
+  | 'DISALLOW_BATCH_MODE'
+  | 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'
+  | 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'
+  | 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'
+  | 'FORCE_LEGACY_CARDINALITY_ESTIMATION'
+  | 'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'
+  | 'QUERY_PLAN_PROFILE' 
+}
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -157,12 +179,13 @@ EXPAND VIEWS
   
 このクエリ ヒントは、インデックス付きビューを直接使用することを実質的に禁止し、クエリ プラン内のインデックス付きビューにインデックスを指定します。  
   
-クエリの SELECT 部分にビューへの直接参照がある場合、インデックス付きビューは縮小されたままです。 WITH (NOEXPAND) or WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ) を指定した場合も、ビューは縮小されたままです。 クエリ ヒント NOEXPAND の詳細については、「[NOEXPAND の使用](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)」を参照してください。  
+> [!NOTE]
+> クエリの SELECT 部分にビューへの直接参照がある場合、インデックス付きビューは縮小されたままです。 WITH (NOEXPAND) または WITH (NOEXPAND, INDEX( _<index\_value>_ [ **,** _...n_ ] ) ) を指定した場合も、ビューは縮小されたままです。 クエリ ヒント NOEXPAND の詳細については、「[NOEXPAND の使用](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)」を参照してください。  
   
 ヒントは、INSERT、UPDATE、MERGE、および DELETE ステートメントのビューを含め、ステートメントの SELECT 部分のビューにのみ影響します。  
   
-FAST _number\_rows_  
-最初の _number\_rows_ を高速検索するためにクエリの最適化を行うことを指定します。 この結果は負以外の整数です。 最初の _number\_rows_ を返した後、クエリは実行を続け、完全な結果セットを作成します。  
+FAST _<integer\_value>_  
+最初の _<integer\_value>_ 行を高速検索するためにクエリの最適化を行うことを指定します。 この結果は負以外の整数です。 最初の _<integer\_value>_ 行を返した後、クエリの実行を続け、完全な結果セットを作成します。  
   
 FORCE ORDER  
 クエリの構文に示されている結合順序が、クエリの最適化中、保持されることを指定します。 FORCE ORDER を使用しても、クエリ オプティマイザーのロールの逆引き動作に影響はありません。  
@@ -193,17 +216,17 @@ IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
   
 クエリで非クラスター化メモリ最適化列ストア インデックスが使用されないようにします。 クエリに、列ストア インデックスの使用を回避するクエリ ヒントと、列ストア インデックスを使用するインデックス ヒントがある場合、ヒントが競合してクエリはエラーを返します。  
   
-MAX_GRANT_PERCENT = _percent_     
+MAX_GRANT_PERCENT = <numeric_value>     
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 
-最大メモリ サイズ (% 単位) を付与します。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこのヒントで指定されている値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
+構成されているメモリ制限の最大メモリ許可サイズ (%)。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこのヒントで指定されている値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
   
-MIN_GRANT_PERCENT = _percent_        
+MIN_GRANT_PERCENT = <numeric_value>        
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 
-最低限のメモリ サイズ (% 単位) を付与する = 既定の制限の % です。 クエリは、少なくとも、クエリの開始に必要なメモリが必要となるために、(必要なメモリ、最小の許可) の最大値を取得することが保証します。 有効な値では、0.0 ～ 100.0 します。  
+構成されているメモリ制限の最小メモリ許可サイズ (%)。 クエリを開始するために最小限必要なメモリがあるため、クエリには確実に `MAX(required memory, min grant)` が割り当てられます。 有効な値では、0.0 ～ 100.0 します。  
  
-MAXDOP _number_      
+MAXDOP <integer_value>      
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 また、このオプションを指定してクエリの Resource Governor もオーバーライドします。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、**max degree of parallelism** 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
@@ -211,7 +234,7 @@ MAXDOP _number_
 > [!WARNING]     
 > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
   
-MAXRECURSION _number_     
+MAXRECURSION <integer_value>     
 このクエリで許可される最大再帰数を指定します。 _number_ は、0 ～ 32,767 の負ではない整数です。 0 を指定した場合、制限は適用されません。 このオプションが指定されない場合、サーバーの既定の上限値である 100 が使用されます。  
   
 クエリの実行中に MAXRECURSION の指定した上限値または既定上限値に達した場合、クエリは終了し、エラーが返されます。  
@@ -225,7 +248,7 @@ NO_PERFORMANCE_SPOOL
   
 Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、スプールで tempdb が使用され、スプール操作が実行されている多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
   
-OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = <literal_constant> }_ [ **,** ..._n_ ] )     
 クエリをコンパイルおよび最適化するときにローカル変数に対して特定の値を使用するように、クエリ オプティマイザーに指示します。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
   
 _\@variable\_name_  
@@ -253,10 +276,14 @@ PARAMETERIZATION { SIMPLE | FORCED }
   
 SIMPLE は、クエリ オプティマイザーに対して簡易パラメーター化を試行するように指示します。 FORCED は、クエリ オプティマイザーに対して強制パラメーター化を試行するように指示します。 詳細については、「クエリ処理アーキテクチャ ガイド」の「[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)」および「クエリ処理アーキテクチャ ガイド」の「[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」を参照してください。  
 
-QUERYTRACEON trace_flag    
-このオプションを使用すると、単一クエリのコンパイル中にのみ、プランに影響するトレース フラグを有効にすることができます。 他のクエリ レベル オプションと同様に、これをプラン ガイドと共に使用して、任意のセッションから実行されているクエリのテキストを照合し、このクエリのコンパイル時に、プランに影響するトレース フラグを自動的に適用することができます。 QUERYTRACEON オプションは、"詳細" セクションの表および[トレース フラグ](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)に関するページに記載されているクエリ オプティマイザー トレース フラグに対してのみサポートされています。 しかし、サポートされていないトレース フラグ番号が使用された場合、このオプションによりエラーや警告が返されることはありません。 指定されたトレース フラグがクエリ実行プランに影響を与えるものではない場合、このオプションは自動的に無視されます。
+QUERYTRACEON <integer_value>    
+このオプションを使用すると、単一クエリのコンパイル中にのみ、プランに影響するトレース フラグを有効にすることができます。 他のクエリ レベル オプションと同様に、これをプラン ガイドと共に使用して、任意のセッションから実行されているクエリのテキストを照合し、このクエリのコンパイル時に、プランに影響するトレース フラグを自動的に適用することができます。 QUERYTRACEON オプションは、クエリ オプティマイザーのトレース フラグでのみサポートされています。 詳しくは、「[トレース フラグ](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」をご覧ください。 
 
-QUERYTRACEON trace_flag_number が異なるトレース フラグ番号と重複している場合は、OPTION 句で複数のトレース フラグを指定できます。
+> [!NOTE]  
+> サポートされていないトレース フラグ番号が使用された場合、このオプションを使用してエラーや警告が返されることはありません。 指定されたトレース フラグがクエリ実行プランに影響を与えるものではない場合、このオプションは自動的に無視されます。
+
+> [!NOTE]  
+> 1 つのクエリで複数のトレース フラグを使用するには、異なるトレース フラグ番号ごとに 1 つの QUERYTRACEON ヒントを指定します。
 
 RECOMPILE  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に、クエリの新しい一時的なプランを生成し、クエリ実行完了直後にそのプランを破棄するよう指示します。 生成されたクエリ プランは、RECOMPILE ヒントを指定しないで同じクエリを実行したときにキャッシュに格納されるプランを置き換えません。 RECOMPILE を指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はクエリ プランをキャッシュして再利用します。 クエリ プランをコンパイルする場合、RECOMPILE クエリ ヒントは、クエリ内のローカル変数の現在値を使用します。 クエリがストアド プロシージャ内にある場合は、任意のパラメーターに渡された現在値を使用します。  
@@ -328,7 +355,7 @@ ROBUST PLAN
    > [!NOTE]
    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
    > このヒントは、クエリ オプティマイザーの動作にのみ影響します。 特定のデータベース機能の可用性など、[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に依存する可能性のある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他の機能には影響しません。  
-   > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
+   > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](/archive/blogs/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
     
 *  'QUERY_PLAN_PROFILE'      
  クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。    
@@ -348,12 +375,12 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 
 
-<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N' _<xml\_plan>_ '  
  **'** _xml\_plan_ **'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ ] ] **)** では、_exposed\_object\_name_ に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
+TABLE HINT **(** _<exposed\_object\_name>_ [ **,** \<table_hint> [ **[,]** ..._n_ ] ] **)** では、_exposed\_object\_name_ に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
   
- _exposed\_object\_name_ には、次のいずれかの参照を指定できます。  
+ _<exposed\_object\_name>_ には、次のいずれかの参照を指定できます。  
   
 -   クエリの [FROM](../../t-sql/queries/from-transact-sql.md) 句内でテーブルまたはビューに対して別名を使用する場合、_exposed\_object\_name_ は別名です。  
   
@@ -361,17 +388,18 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ 
   
  テーブル ヒントも指定せずに _exposed\_object\_name_ を指定した場合、オブジェクトのテーブル ヒントの一部としてクエリに指定された任意のインデックスは無視されます。 次に、クエリ オプティマイザーによってインデックスの使用が決まります。 この手法を使用すると、元のクエリに変更を加えることができない場合に INDEX テーブル ヒントの効果を除去できます。 例 J を参照してください。  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } は、*exposed_object_name* に対応するテーブルまたはビューにクエリ ヒントとして適用するテーブル ヒントです。 これらのヒントの説明については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
+**\<table_hint> ::=** { NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS = _<integer\_value>_ \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
+クエリ ヒントとして *exposed_object_name* に対応するテーブルまたはビューに適用するテーブル ヒントです。 これらのヒントの説明については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
- INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 詳細については、「解説」を参照してください。  
+ INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 詳細については、「[解説](#remarks)」を参照してください。  
   
 > [!CAUTION]
-> パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、"プランを生成できない" というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
+> パラメーターを使用して FORCESEEK を指定すると、クエリ オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、"プランを生成できない" というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、クエリ オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
   
 ## <a name="remarks"></a>解説  
  ステートメント内部で SELECT 句が使用されている場合を除き、クエリ ヒントは INSERT ステートメントでは指定できません。  
   
- クエリ ヒントはサブクエリではなく、最上位レベルのクエリでのみ指定できます。 テーブル ヒントがクエリ ヒントとして指定されている場合、ヒントは最上位レベルのクエリまたはサブクエリで指定できます。 ただし、TABLE HINT 句の _exposed\_object\_name_ に指定された値は、クエリまたはサブクエリの公開名と完全に一致する必要があります。  
+ クエリ ヒントはサブクエリではなく、最上位レベルのクエリでのみ指定できます。 テーブル ヒントがクエリ ヒントとして指定されている場合、ヒントは最上位レベルのクエリまたはサブクエリで指定できます。 ただし、TABLE HINT 句の _<exposed\_object\_name>_ に指定された値は、クエリまたはサブクエリの公開名と完全に一致する必要があります。  
   
 ## <a name="specifying-table-hints-as-query-hints"></a>クエリ ヒントとしてのテーブル ヒントの指定  
  [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、INDEX、FORCESCAN、または FORCESEEK テーブル ヒントをクエリ ヒントとして使用することをお勧めします。 プラン ガイドは、たとえばクエリがサードパーティ アプリケーションである場合のように、元のクエリに変更を加えることができない場合に便利です。 プラン ガイドに指定されたクエリ ヒントは、コンパイルおよび最適化される前にクエリに追加されます。 アドホック クエリの場合は、プラン ガイド ステートメントをテストするときだけ TABLE HINT 句を使用します。 その他のアドホック クエリに対しては、テーブル ヒント内でのみこれらのヒントを指定することをお勧めします。  
@@ -382,14 +410,12 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ 
 -   ビュー  
 -   インデックス付きビュー  
 -   共通テーブル式 (ヒントは、結果セットが共通テーブル式に入力される SELECT ステートメントに指定する必要があります)  
--   動的管理ビュー  
+-   動的管理ビュー (DMV)
 -   名前付きサブクエリ  
   
 既存のテーブル ヒントがないクエリのクエリ ヒントとして、INDEX、FORCESCAN、および FORCESEEK のテーブル ヒントを指定できます。 また、それらを使用して、クエリ内の既存の INDEX、FORCESCAN、または FORCESEEK ヒントをそれぞれ置き換えることもできます。 
 
 INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 この場合、一致するヒントもクエリ ヒントとして指定する必要があります。 OPTION 句で TABLE HINT を使用して、一致するヒントをクエリ ヒントとして指定します。 この指定はクエリのセマンティクスを保持します。 たとえば、クエリにテーブル ヒント NOLOCK が含まれている場合、プラン ガイドの **\@hints** パラメーターの OPTION 句にも NOLOCK ヒントが含まれている必要があります。 例 K を参照してください。 
-
-エラー 8072 はいくつかのシナリオで発生します。 1 つ目は、一致するクエリ ヒントがない OPTION 句で、TABLE HINT を使用して INDEX、FORCESCAN、または FORCESEEK 以外のテーブル ヒントを指定した場合です。 2 つ目のシナリオはその逆です。 このエラーは、OPTION 句によってクエリのセマンティクスが変更され、クエリが失敗した可能性があることを示しています。  
   
 ## <a name="examples"></a>例  
   
@@ -410,8 +436,8 @@ GO
   
 ```sql  
 CREATE PROCEDURE dbo.RetrievePersonAddress
-@city_name nvarchar(30),  
- @postal_code nvarchar(15)
+@city_name NVARCHAR(30),  
+ @postal_code NVARCHAR(15)
 AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
@@ -598,6 +624,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (TABLE HINT (e, NOLOCK))';  
 GO  
 ```  
+
 ### <a name="l-using-use-hint"></a>L. USE HINT の使用  
  次の例では、RECOMPILE および USE HINT のクエリ ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
   
@@ -607,6 +634,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
+
 ### <a name="m-using-querytraceon-hint"></a>M. QUERYTRACEON HINT の使用  
  次の例では、QUERYTRACEON クエリ ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。 次のクエリを使用して、特定のクエリに対し、トレース フラグ 4199 によって制御される、プランに影響するすべての修正プログラムを有効にすることができます。
   
@@ -624,11 +652,9 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
 
-
 ## <a name="see-also"></a>参照  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
 [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
 [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
-  

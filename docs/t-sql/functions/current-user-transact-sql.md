@@ -1,4 +1,5 @@
 ---
+description: CURRENT_USER (Transact-SQL)
 title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3d5c0b94e7b4154498f39dd7f2a2f247cf94f4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2e2aaa6e609f2fb5a8e92ef7305f7c112b839811
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112734"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115299"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87112734"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CURRENT_USER  
 ```  
 
@@ -48,7 +49,7 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>解説  
-`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `CURRENT_USER` を呼び出してコンテキストを切り替えた後に `EXECUTE AS` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
+`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `EXECUTE AS` を呼び出してコンテキストを切り替えた後に `CURRENT_USER` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
   
 現在のユーザーのログインを返す方法については、「[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)」と「[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)」を参照してください。
   
@@ -63,7 +64,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
-この例では、sales 行の `CURRENT_USER` 列に対する `DEFAULT` 制約として `order_person` を使用するテーブルを作成します。
+この例では、sales 行の `order_person` 列に対する `DEFAULT` 制約として `CURRENT_USER` を使用するテーブルを作成します。
   
 ```sql
 USE AdventureWorks2012;  
@@ -135,7 +136,7 @@ Arnalfo
 Wanida
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  

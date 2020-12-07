@@ -1,4 +1,5 @@
 ---
+description: メンテナンス プラン ([レポートとログ記録] ページ)
 title: メンテナンス プラン ([レポートとログ記録] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,23 +13,23 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db045eeb48bc04abb415bb5ac14a7872fc805b09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05db1c0f8c2eacd2a30e1e1e50b08e090ca6e9c4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88420866"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>メンテナンス プラン ([レポートとログ記録] ページ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[レポートとログ記録]** ダイアログ ボックスを使用して、メンテナンス プランを実行したときに生成されるレポートとログを構成できます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[テキスト ファイルのレポートを生成する]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテキスト ファイル レポートを記述するかどうかを指定します。  
   
- **[新しいファイルの作成]**  
- メンテナンス プランの各実行に対して新しいレポート ファイルを作成します。 既定では、このメンテナンス プランが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをホストするコンピューターにおいて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に既定のログ フォルダーとして確立されたフォルダー内にレポート ファイルが記述されます。 別のフォルダーを指定するには、フォルダーの完全なパスを **[フォルダー]** テキスト ボックスに入力するか、参照ボタン ( **[...]** ) をクリックして目的のフォルダーを指定します。  
+ **新しいファイルを作成する**  
+ メンテナンス プランの各実行に対して新しいレポート ファイルを作成します。 既定では、このメンテナンス プランが含まれている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをホストするコンピューターにおいて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中に既定のログ フォルダーとして確立されたフォルダー内にレポート ファイルが記述されます。 別のフォルダーを指定するには、フォルダーの完全なパスを **[フォルダー]** テキスト ボックスに入力するか、参照ボタン (**[...]**) をクリックして目的のフォルダーを指定します。  
   
  **[ファイルに追加]**  
  各プラン実行から、 **[ファイル名]** ボックスで指定したファイルにレポートを追加します。 参照ボタンをクリックし、ダイアログ ボックスの一覧からファイルを選択することもできます。  
@@ -45,7 +46,7 @@ ms.locfileid: "85754530"
  **[リモート サーバーにログを記録する]**  
  メンテナンス プランの履歴をリモート サーバーに記録します。  
   
- **Connection**  
+ **接続**  
  リモート サーバーにログを記録するときの接続情報を指定します。  
   
  **[新規作成]**  

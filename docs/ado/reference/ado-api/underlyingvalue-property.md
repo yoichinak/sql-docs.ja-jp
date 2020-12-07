@@ -1,8 +1,9 @@
 ---
+description: UnderlyingValue プロパティ
 title: UnderlyingValue Property |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,34 +18,34 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67dd3f7a6892d4fa139ffd14b3dc33e4231a6cb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a96924a682a0c916da8c6834ea7b290b88b6f690
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759528"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988173"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue プロパティ
-データベース内の[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの現在の値を示します。  
+データベース内の [フィールド](./field-object.md) オブジェクトの現在の値を示します。  
   
 ## <a name="return-value"></a>戻り値  
  **フィールド**の値を示す**バリアント**値を返します。  
   
 ## <a name="remarks"></a>解説  
- **UnderlyingValue**プロパティを使用して、現在のフィールド値をデータベースから取得します。 **UnderlyingValue**プロパティのフィールド値は、トランザクションに表示される値であり、別のトランザクションによる最近の更新の結果である可能性があります。 これは、もともと[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に返された値を反映する[originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティとは異なる場合があります。  
+ **UnderlyingValue**プロパティを使用して、現在のフィールド値をデータベースから取得します。 **UnderlyingValue**プロパティのフィールド値は、トランザクションに表示される値であり、別のトランザクションによる最近の更新の結果である可能性があります。 これは、もともと[レコードセット](./recordset-object-ado.md)に返された値を反映する[originalvalue](./originalvalue-property-ado.md)プロパティとは異なる場合があります。  
   
- これは、 [Resync](../../../ado/reference/ado-api/resync-method.md)メソッドを使用する場合と似ていますが、 **UnderlyingValue**プロパティは、現在のレコードから特定のフィールドの値のみを返します。 これは、再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドが[value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを置き換えるために使用するのと同じ値です。  
+ これは、 [Resync](./resync-method.md) メソッドを使用する場合と似ていますが、 **UnderlyingValue** プロパティは、現在のレコードから特定のフィールドの値のみを返します。 これは、再 [同期](./resync-method.md) メソッドが [value](./value-property-ado.md) プロパティを置き換えるために使用するのと同じ値です。  
   
- このプロパティを**Originalvalue**プロパティと共に使用すると、バッチ更新で発生した競合を解決できます。  
+ このプロパティを **Originalvalue** プロパティと共に使用すると、バッチ更新で発生した競合を解決できます。  
   
 ## <a name="record"></a>Record  
- [レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの場合、 [Update](../../../ado/reference/ado-api/update-method.md)が呼び出される前に追加されたフィールドのこのプロパティは空になります。  
+ [レコード](./record-object-ado.md)オブジェクトの場合、 [Update](./update-method.md)が呼び出される前に追加されたフィールドのこのプロパティは空になります。  
   
 ## <a name="applies-to"></a>適用対象  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
+ [Field オブジェクト](./field-object.md)  
   
 ## <a name="see-also"></a>参照  
- [OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)
+ [OriginalValue プロパティと UnderlyingValue プロパティの例 (VB)](./originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +)](./originalvalue-and-underlyingvalue-properties-example-vc.md)   
+ [OriginalValue プロパティ (ADO)](./originalvalue-property-ado.md)   
+ [Resync メソッド](./resync-method.md)

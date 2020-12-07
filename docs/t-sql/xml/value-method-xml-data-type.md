@@ -1,4 +1,5 @@
 ---
+description: value() メソッド (xml データ型)
 title: value() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 316b7fda88a274812f376a511ca5f26638f0cea6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: ce7382722999e7120cafc3fcc7aeff496d1b97c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393010"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116550"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,8 +31,7 @@ ms.locfileid: "86393010"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 value (XQuery, SQLType)  
 ```  
   
@@ -54,9 +54,9 @@ value (XQuery, SQLType)
 ### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>A. xml 型の変数に対する value() メソッドの使用  
  次の例では、XML インスタンスが `xml` 型の変数に格納されています。 `value()` メソッドは、XML から `ProductID` 属性の値を取得します。 その後、この値は `int` 変数に代入されます。  
   
-```  
-DECLARE @myDoc xml  
-DECLARE @ProdID int  
+```sql
+DECLARE @myDoc XML  
+DECLARE @ProdID INT  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -77,13 +77,13 @@ SELECT @ProdID
 ### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. value() メソッドを使用した xml 型列の値の取得  
  次のクエリは、`AdventureWorks` データベースの **xml** 型の列 (`CatalogDescription`) に対して指定されています。 このクエリは、この列に格納されている各 XML インスタンスから `ProductModelID` 属性の値を取得します。  
   
-```  
+```sql
 SELECT CatalogDescription.value('             
     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";             
        (/PD:ProductDescription/@ProductModelID)[1]', 'int') AS Result             
 FROM Production.ProductModel             
 WHERE CatalogDescription IS NOT NULL             
-ORDER BY Result desc             
+ORDER BY Result DESC             
 ```  
   
  上のクエリに関して、次の点に注意してください。  
@@ -106,10 +106,10 @@ ORDER BY Result desc
   
  このクエリは、要素の 1 つとして保証内容 (<`Warranty`> 要素) を含む XML インスタンスから製品モデル ID を取得します。 `WHERE` 句の条件では、`exist()` メソッドを使用して、この条件を満たす行のみを取得しています。  
   
-```  
+```sql
 SELECT CatalogDescription.value('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') as Result  
+           (/PD:ProductDescription/@ProductModelID)[1] ', 'int') AS Result  
 FROM  Production.ProductModel  
 WHERE CatalogDescription.exist('  
      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -139,8 +139,8 @@ Result
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() メソッドの代替としての exist() メソッドの使用  
  パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では `value()` メソッドではなく、`exist()` と `sql:column()` を使用してください。 次に例を示します。  
   
-```  
-CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
+```sql
+CREATE TABLE T (c1 INT, c2 VARCHAR(10), c3 XML)  
 GO  
   
 SELECT c1, c2, c3   
@@ -151,7 +151,7 @@ GO
   
  上記のクエリは、次のように記述することもできます。  
   
-```  
+```sql
 SELECT c1, c2, c3   
 FROM T  
 WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1  

@@ -1,4 +1,5 @@
 ---
+description: CHECKPOINT (Transact-SQL)
 title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f2d5761829c38aba06f36b4d473c8ea9dc36214
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923375"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124490"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,8 +46,7 @@ ms.locfileid: "86923375"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
@@ -64,7 +64,7 @@ CHECKPOINT [ checkpoint_duration ]
 ##  <a name="security"></a><a name="Security"></a> セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- CHECKPOINT 権限は、既定では、**sysadmin** 固定サーバー ロールと、**db_owner** および **db_backupoperator** 固定データベース ロールのメンバーに与えられており、この権限は譲渡できません。  
+ CHECKPOINT のアクセス許可は、**sysadmin** 固定サーバー ロールのメンバと、**db_owner** および **db_backupoperator** 固定データベース ロールのメンバに既定で割り当てられ、転送できません。  
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

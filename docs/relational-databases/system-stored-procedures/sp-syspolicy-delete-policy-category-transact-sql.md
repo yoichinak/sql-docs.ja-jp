@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_category (Transact-sql)
 title: sp_syspolicy_delete_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83d08b5261d6657a2bddbf494eb6f5e9ade3b065
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463991"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`ポリシーカテゴリの名前を指定します。 *名前*は**sysname**であり、 *policy_category_id*が NULL の場合に指定する必要があります。  
+`[ @name = ] 'name'` ポリシーカテゴリの名前を指定します。 *名前* は **sysname**であり、 *policy_category_id* が NULL の場合に指定する必要があります。  
   
-`[ @policy_category_id = ] policy_category_id`ポリシーカテゴリの識別子を示します。 *policy_category_id*は**int**です。 *name*が NULL の場合は、を指定する必要があります。  
+`[ @policy_category_id = ] policy_category_id` ポリシーカテゴリの識別子を示します。 *policy_category_id* は **int**です。 *name* が NULL の場合は、を指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sp_syspolicy_delete_policy_category は msdb システム データベースのコンテキストで実行する必要があります。  
   
  *名前*または*policy_category_id*の値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policy_categories システム ビューに対してクエリを実行します。  
@@ -68,8 +69,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category @name = N'Finance';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
  [sp_syspolicy_update_policy_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)  
   

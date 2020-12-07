@@ -1,4 +1,5 @@
 ---
+description: モデルから &lt; 選択 &gt; (DMX)
 title: モデルから &lt; 選択 &gt; (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472002"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>モデルから &lt; 選択 &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,8 +46,8 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>注釈  
- [*式] ボックスの一覧*の列は、予測または予測のみとして定義するか、予測可能列に関連付けられている必要があります。  
+## <a name="remarks"></a>解説  
+ [ *式] ボックスの一覧* の列は、予測または予測のみとして定義するか、予測可能列に関連付けられている必要があります。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
  次の例は、Bike Buyer 列で空の予測結合を実行し、TM Naive Bayes マイニング モデルの最も可能性の高い状態を返します。  
@@ -56,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>時系列の例  
- 次の例は、Forecasting モデルの Amount 列で予測を実行し、次の 4 回のステップを返します。 Model Region 列は、自転車のモデルと地域を単一の識別子に結合します。 このクエリでは、 [PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md)関数を使用して予測を実行します。  
+ 次の例は、Forecasting モデルの Amount 列で予測を実行し、次の 4 回のステップを返します。 Model Region 列は、自転車のモデルと地域を単一の識別子に結合します。 このクエリでは、 [PredictTimeSeries &#40;DMX&#41;](../dmx/predicttimeseries-dmx.md) 関数を使用して予測を実行します。  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

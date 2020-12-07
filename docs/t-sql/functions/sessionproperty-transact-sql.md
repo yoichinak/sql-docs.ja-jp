@@ -1,4 +1,5 @@
 ---
+description: SESSIONPROPERTY (Transact-SQL)
 title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 59136d840df4bedb56f9b68f19bca28f2508ff1e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6c7c3133c15e10425af767d56d90a8d3a5b8277f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112310"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379347"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "87112310"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SESSIONPROPERTY (option)  
 ```  
   
@@ -66,7 +66,7 @@ SESSIONPROPERTY (option)
 ## <a name="examples"></a>例  
  次の例では、`CONCAT_NULL_YIELDS_NULL` オプションの設定を返します。  
   
-```  
+```sql  
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   

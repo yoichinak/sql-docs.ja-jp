@@ -1,4 +1,5 @@
 ---
+description: 属性グループを作成する (マスター データ サービス)
 title: 属性グループを作成する
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2075a9b9faddf7028f0b0b27b52cf34db20a17ba
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461839"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
 
@@ -26,12 +27,12 @@ ms.locfileid: "85813443"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   少なくとも 1 つの属性が必要です。 詳細については、「 [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)」を参照してください。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "85813443"
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
+2.  [ **モデルの管理** ] ページで、グリッドからモデルを選択し、[ **エンティティ**] をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、属性グループを作成するエンティティの行をグリッドから選択します。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85813443"
   
 -   [属性グループのユーザーへの表示 (マスター データ サービス)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性グループ &#40;マスターデータサービス&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [属性 &#40;マスターデータサービス&#41;](../master-data-services/attributes-master-data-services.md)   
  [属性グループ名を変更する &#40;マスターデータサービス&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

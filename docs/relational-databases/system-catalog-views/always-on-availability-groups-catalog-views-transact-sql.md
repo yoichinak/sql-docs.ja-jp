@@ -1,4 +1,5 @@
 ---
+description: Always On 可用性グループのカタログビュー (Transact-sql)
 title: Always On 可用性グループのカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], AlwaysOn Availability Groups
 - YY
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b0291829a7524ad681cb3937b31cb8ff05f11a01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea913109a9d981d0f59a7143746bda022edccf97
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918058"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551543"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性グループのカタログビュー (Transact-sql)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86918058"
 :::row-end:::
   
 > [!NOTE]  
-> 参加している可用性データベースの詳細については、「 **replica_id** 」および「 **Group_database_id**列[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。  
+> 参加している可用性データベースの詳細については、「 **replica_id** 」および「 **Group_database_id** 列 [(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [sys. databases (Transact-sql)](sys-databases-transact-sql.md)   

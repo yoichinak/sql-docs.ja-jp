@@ -27,13 +27,13 @@
       items:
         - name: 算術演算子
           href: ../mdx/arithmetic-operators.md
-        - name: ビット演算子
+        - name: ビット処理演算子
           href: ../mdx/bitwise-operators.md
         - name: 比較演算子
           href: ../mdx/comparison-operators.md
         - name: 連結演算子
           href: ../mdx/concatenation-operators.md
-        - name: セット演算子
+        - name: 集合演算子
           href: ../mdx/set-operators.md
         - name: 単項演算子
           href: ../mdx/unary-operators.md
@@ -137,7 +137,7 @@
           href: ../mdx/comment-mdx-operator-reference.md
         - name: '- (を除く)'
           href: ../mdx/except-mdx-operator.md
-        - name: '- (負号)'
+        - name: '- (負)'
           href: ../mdx/negative-mdx.md
         - name: '- (減算)'
           href: ../mdx/subtract-mdx.md
@@ -169,11 +169,11 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (等しくない)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (等しい)
+        - name: '= (等しい)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (より大きい)'
           href: ../mdx/greater-than-mdx.md
-        - name: '>= (以上)'
+        - name: '>= (次の値以上)'
           href: ../mdx/greater-than-or-equal-to-mdx.md
         - name: AND
           href: ../mdx/and-mdx.md
@@ -222,7 +222,7 @@
           href: ../mdx/closingperiod-mdx.md
         - name: CoalesceEmpty
           href: ../mdx/coalesceempty-mdx.md
-        - name: Correlation
+        - name: 相関関係
           href: ../mdx/correlation-mdx.md
         - name: Count (ディメンション)
           href: ../mdx/count-dimension-mdx.md
@@ -262,7 +262,7 @@
           href: ../mdx/distinct-mdx.md
         - name: DistinctCount
           href: ../mdx/distinctcount-mdx.md
-        - name: Divide
+        - name: 除算
           href: ../mdx/divide-mdx.md
         - name: DrilldownLevel
           href: ../mdx/drilldownlevel-mdx.md
@@ -282,7 +282,7 @@
           href: ../mdx/drillupmember-mdx.md
         - name: エラー
           href: ../mdx/error-mdx.md
-        - name: Except
+        - name: 除く
           href: ../mdx/except-mdx-function.md
         - name: Exists
           href: ../mdx/exists-mdx.md
@@ -306,7 +306,7 @@
           href: ../mdx/iif-mdx.md
         - name: Instr
           href: ../mdx/instr-mdx.md
-        - name: Intersect
+        - name: 交差
           href: ../mdx/intersect-mdx.md
         - name: IsAncestor
           href: ../mdx/isancestor-mdx.md
@@ -348,7 +348,7 @@
           href: ../mdx/leaves-mdx.md
         - name: Level
           href: ../mdx/level-mdx.md
-        - name: Levels
+        - name: レベル
           href: ../mdx/levels-mdx.md
         - name: LinkMember
           href: ../mdx/linkmember-mdx.md
@@ -368,7 +368,7 @@
           href: ../mdx/max-mdx.md
         - name: MeasureGroupMeasures
           href: ../mdx/measuregroupmeasures-mdx.md
-        - name: Median
+        - name: 中央値
           href: ../mdx/median-mdx.md
         - name: Members (セット)
           href: ../mdx/members-set-mdx.md
@@ -382,7 +382,7 @@
           href: ../mdx/min-mdx.md
         - name: Mtd
           href: ../mdx/mtd-mdx.md
-        - name: Name
+        - name: 名前
           href: ../mdx/name-mdx.md
         - name: NameToSet
           href: ../mdx/nametoset-mdx.md
@@ -412,7 +412,7 @@
           href: ../mdx/properties-mdx.md
         - name: Qtd
           href: ../mdx/qtd-mdx.md
-        - name: Rank
+        - name: 順位
           href: ../mdx/rank-mdx.md
         - name: RollupChildren
           href: ../mdx/rollupchildren-mdx.md

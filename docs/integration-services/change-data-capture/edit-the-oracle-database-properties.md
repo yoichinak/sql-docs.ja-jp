@@ -1,4 +1,5 @@
 ---
+description: Oracle データベースのプロパティの編集
 title: Oracle データベースのプロパティの編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 071d8dd634af79bcb041cbf7336fa4cc20555dc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921652"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130665"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle データベースのプロパティの編集
 
@@ -28,7 +29,7 @@ ms.locfileid: "86921652"
   
  **[Oracle]** タブの情報について、次に説明します。  
   
- **Name**  
+ **名前**  
  新しいインスタンス ウィザードの [CDC データベースの作成] ページで入力した CDC インスタンスの名前です。 このフィールドは読み取り専用であり、この情報を編集することはできません。  
   
  **説明**  
@@ -46,7 +47,7 @@ ms.locfileid: "86921652"
   
  Oracle データベースのプロパティは、ビューアーで表示できます。 ビューアーを使用する場合、情報は読み取り専用です。 ビューアーには、テーブルのキャプチャ対象列の一覧も含まれています。 ビューアーへのアクセス方法については、「 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC デザイナー コンソールから CDC サービスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Oracle ソース データベースへの接続](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Oracle への接続](../../integration-services/change-data-capture/connect-to-oracle.md)  

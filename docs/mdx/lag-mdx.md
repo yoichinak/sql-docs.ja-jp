@@ -1,4 +1,5 @@
 ---
+description: Lag (MDX)
 title: Lag (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc9beb8215d8d690f2d4ccdf43c3aaf03096b9d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477044"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -31,19 +32,19 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
- *インデックス*  
+ *Index*  
  遅延するメンバーの位置の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  レベル内のメンバーの位置は、属性階層の自然な順序によって決まります。 メンバーの位置の基点は 0 です。  
   
- 指定された lag が0の場合、 **lag**関数は、指定されたメンバー自体を返します。  
+ 指定された lag が0の場合、 **lag** 関数は、指定されたメンバー自体を返します。  
   
- 指定された lag が負の場合、 **lag**関数は後続のメンバーを返します。  
+ 指定された lag が負の場合、 **lag** 関数は後続のメンバーを返します。  
   
- `Lag(1)`は、 [Prevmember](../mdx/prevmember-mdx.md)関数に相当します。 `Lag(-1)`は、 [Nextmember](../mdx/nextmember-mdx.md)関数と同じです。  
+ `Lag(1)` は、 [Prevmember](../mdx/prevmember-mdx.md) 関数に相当します。 `Lag(-1)` は、 [Nextmember](../mdx/nextmember-mdx.md) 関数と同じです。  
   
- **Lag**関数は[、lead 関数](../mdx/lead-mdx.md)に似ています。ただし、 **lead**関数は、 **lag**関数と逆方向に見えます。 つまり、 `Lag(n)`はと同じです`Lead(-n)`。  
+ **Lag**関数は[、lead 関数](../mdx/lead-mdx.md)に似ています。ただし、 **lead**関数は、 **lag**関数と逆方向に見えます。 つまり、 `Lag(n)` はと同じです `Lead(-n)` 。  
   
 ## <a name="example"></a>例  
  次の例では、2001年12月の値が返されます。  

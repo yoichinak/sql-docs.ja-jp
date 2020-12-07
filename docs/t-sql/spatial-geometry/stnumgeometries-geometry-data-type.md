@@ -1,4 +1,5 @@
 ---
+description: STNumGeometries (geometry データ型)
 title: STNumGeometries (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3911bb969378088a18aa635bb42e2f40f9686b1e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8ef4aa6a47bdb974803d111a023b473c0c49cf0b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555356"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88444948"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

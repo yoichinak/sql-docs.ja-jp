@@ -1,4 +1,5 @@
 ---
+description: GetLevel (データベース エンジン)
 title: GetLevel (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f0aa604a88902dc8bfba522556f11b267fa1e184
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554479"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037165"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (データベース エンジン)
 
@@ -32,12 +33,12 @@ ms.locfileid: "86554479"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 node.GetLevel ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  
@@ -93,7 +94,6 @@ this.GetLevel()
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  

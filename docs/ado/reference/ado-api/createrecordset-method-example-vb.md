@@ -1,8 +1,9 @@
 ---
+description: CreateRecordset メソッドの例 (VB)
 title: CreateRecordset メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5abd786b445df3afe6cbaf8ab76e132ea912b42f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760198"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974493"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset メソッドの例 (VB)
-[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを作成し、列情報を指定できます。 その後、**レコードセット**オブジェクトにデータを挿入できます。基になる行セットは、挿入をバッファーします。  
+[レコードセット](./recordset-object-ado.md)オブジェクトを作成し、列情報を指定できます。 その後、 **レコードセット** オブジェクトにデータを挿入できます。基になる行セットは、挿入をバッファーします。  
   
- 次のコード例は、 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して**レコードセット**を定義する方法を示しています。 これは、RDS でも行うことができ[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ 次のコード例は、 [DataFactory](../rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して**レコードセット**を定義する方法を示しています。 これは、RDS でも行うことができ [ます。DataControl](../rds-api/datacontrol-object-rds.md) オブジェクト。  
   
 ```  
 'BeginRsDefineShapeVB  

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_commit
 title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_commit
 - sqlsrv_commit
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67992851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413968"
 ---
 # <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +127,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[方法: トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)
+[方法:トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)
 
 [Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
   

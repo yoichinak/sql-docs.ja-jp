@@ -1,4 +1,5 @@
 ---
+description: ClientNetworkProtocolProperty クラス
 title: ClientNetworkProtocolProperty クラス
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7a1abedd3b0cbd11e94387694c5535bffc2fa7ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a892928fc669730fb48e86f09908111c772a8087
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881040"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888898"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,6 @@ ms.locfileid: "85881040"
   
 -   現在のプロパティに対するフラグの設定  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

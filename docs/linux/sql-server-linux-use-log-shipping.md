@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7d32d85ef52ac5e6dc687ed32e7283540240ce2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fdabd19b81a880c0969cc6359c703cd156a03fab
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897202"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521108"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux でのログ配布の概要
 
@@ -20,8 +20,7 @@ ms.locfileid: "85897202"
 
 SQL Server のログ配布は、プライマリ サーバーのデータベースが 1 つ以上のセカンダリ サーバーにレプリケートされる HA 構成です。 簡単に言うと、ソース データベースのバックアップがセカンダリ サーバーに復元されます。 その後、プライマリ サーバーではトランザクション ログのバックアップが定期的に作成され、セカンダリ サーバーでそれらが復元されて、データベースのセカンダリ コピーが更新されます。 
 
-  ![ログ配布](https://preview.ibb.co/hr5Ri5/logshipping.png)
-
+  ![ログ配布のワークフローを示す図。](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 この図で説明されているように、ログ配布セッションには次のステップが含まれます。
 
@@ -30,7 +29,7 @@ SQL Server のログ配布は、プライマリ サーバーのデータベー�
 - セカンダリ SQL Server インスタンスでのトランザクション ログ バックアップ ファイルの復元
 
 ## <a name="prerequisites"></a>前提条件
-- [Linux 上に SQL Server エージェントをインストールします](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Linux 上に SQL Server エージェントをインストールします](./sql-server-linux-setup-sql-agent.md)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>CIFS を使用したログ配布用にネットワーク共有をセットアップする 
 
@@ -319,5 +318,3 @@ SQL Server のログ配布は、プライマリ サーバーのデータベー�
     ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
-

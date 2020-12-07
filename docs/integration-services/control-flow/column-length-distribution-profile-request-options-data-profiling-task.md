@@ -1,4 +1,5 @@
 ---
+description: '[列長分布プロファイル要求] のオプション (データ プロファイル タスク)'
 title: '[列長分布プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f3833327f518b935874b79747ef9cd6b129143a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8eea376c7dc204b326f7ad4bb5ac41d0a76e4ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496036"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>[列長分布プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86921428"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列長分布プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86921428"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[IgnoreLeadingSpaces]**  
  プロファイルが文字列値を比較する際に、先頭の空白を無視するかどうかを指定します。 このオプションの既定値は **[False]** です。  
   

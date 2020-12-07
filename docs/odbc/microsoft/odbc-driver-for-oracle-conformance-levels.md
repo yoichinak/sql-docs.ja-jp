@@ -1,4 +1,5 @@
 ---
+description: ODBC Driver for Oracle 準拠のレベル
 title: ODBC Driver for Oracle の準拠レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ad2ef7a-a86f-4a77-b12c-bbd5a3499dac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41b696dfcdd57d07ec58e59040499bc11543f1e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a800d2f11bebd550bbe83f2d9257cad0018289a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298142"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449354"
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>ODBC Driver for Oracle 準拠のレベル
 > [!IMPORTANT]  

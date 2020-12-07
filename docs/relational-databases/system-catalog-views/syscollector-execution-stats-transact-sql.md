@@ -1,4 +1,5 @@
 ---
+description: syscollector_execution_stats (Transact-SQL)
 title: syscollector_execution_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e545beb3969387ba642dff6dec1657120c6e885
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d0819aba312ddfaceaff092815b1c78297308dd6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896737"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550356"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "85896737"
 ## <a name="permissions"></a>アクセス許可  
  **Dc_operator**に対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

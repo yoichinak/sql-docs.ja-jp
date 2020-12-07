@@ -1,4 +1,5 @@
 ---
+description: カスタム変換先コンポーネントの開発
 title: カスタム変換先コンポーネントの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d819dc54c992c20d8558860420d27e4b54b09760
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f681c33f7921f57d42f9078a768f8f8eafec1f7c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923739"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123229"
 ---
 # <a name="developing-a-custom-destination-component"></a>カスタム変換先コンポーネントの開発
 
@@ -42,7 +43,7 @@ ms.locfileid: "86923739"
  変換先コンポーネントのデザイン時の機能を実装する作業には、外部データ ソースへの接続の指定、およびコンポーネントが正しく設定されているかどうかの検証が含まれます。 定義上、変換先コンポーネントには 1 つの入力と、場合によって 1 つのエラー出力があります。  
   
 ### <a name="creating-the-component"></a>コンポーネントの作成  
- 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。  
+ 変換先コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換先コンポーネントは、接続マネージャーに関する要求を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーやコンポーネントのユーザーに示すため、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。1 つは、接続マネージャーの必要性を [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに通知することで、もう 1 つは、ユーザーが接続マネージャーを選択または作成した後に、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、**[詳細エディター]** は **[接続プロパティ]** タブを表示します。このタブでは、コンポーネントが使用する接続をパッケージ内で選択したり、新しく作成したりすることができます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> に入力を追加し、次に <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> オブジェクトを追加する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の実装を示します。  
   
@@ -485,7 +486,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム変換元コンポーネントの開発](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [スクリプト コンポーネントによる変換先の作成](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   

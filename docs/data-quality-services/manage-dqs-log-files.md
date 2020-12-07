@@ -1,4 +1,5 @@
 ---
+description: DQS ログ ファイルの管理
 title: DQS ログ ファイルの管理
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e4b5864129d25754fb2177376e011be1972078e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46ff924c7dcbd2d11b2b54721d11945a74026e33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462100"
 ---
 # <a name="manage-dqs-log-files"></a>DQS ログ ファイルの管理
 
@@ -28,7 +29,7 @@ ms.locfileid: "85898119"
   
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] の機能とモジュールのログの重大度設定を構成できます。 また、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターで DQS_MAIN データベースと XML ファイルの DQS ログ構成設定を手動で変更して、DQS ログ ファイルのその他の (詳細) 設定の一部を構成することもできます。  
   
-##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a>Data Quality Server のログファイル  
+##  <a name="data-quality-server-log-file"></a><a name="DQSServer"></a> Data Quality Server のログファイル  
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ ファイルである DQServerLog.DQS_MAIN.log には、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されるアクティビティのログが含まれます。 SQL Server の既定のインスタンスをインストールした場合、DQServerLog.DQS_MAIN.log ファイルは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log に格納されます。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] のログ ファイルには、それぞれパイプ (|) で区切られた次の種類の情報が含まれています。  
   
 -   日付と時刻  
@@ -48,7 +49,7 @@ ms.locfileid: "85898119"
   
 -   クラスとメソッド  
   
--   Message  
+-   メッセージ  
   
  これらに加えて、ログ ファイルには、アプリケーションのバージョン、コンピューター名、ユーザー名、およびオペレーティング システムに関する情報も表示されます。  
   
@@ -60,12 +61,12 @@ ms.locfileid: "85898119"
   
  DQServerLog.DQS_MAIN.log ファイルはローリング ファイルです。既存のログ ファイルが、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ構成設定で指定されたローリング ファイルのサイズを超えると、新しいログ ファイルが作成されます。 詳細については、「 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)」を参照してください。  
   
-##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a>ログファイルの Data Quality Client  
+##  <a name="data-quality-client-log-file"></a><a name="DQSClient"></a> ログファイルの Data Quality Client  
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ ファイルである DQClientLog.log には、クライアント側のログが含まれます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のログ ファイルは %APPDATA%\SSDQS\Log に格納されます。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルには、サーバー ログ ファイルと同様の情報が含まれますが、内容はクライアント側に関するものになります。  
   
  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] ログ ファイルと同様に、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ ファイルもローリング ファイルです。既存のログ ファイルが、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ログ構成設定で指定されたローリング ファイルのサイズを超えると、新しいログ ファイルが作成されます。 詳細については、「 [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)」を参照してください。  
   
-##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a>DQS クレンジングコンポーネントのログファイル  
+##  <a name="dqs-cleansing-component-log-file"></a><a name="DQSCleansing"></a> DQS クレンジングコンポーネントのログファイル  
  [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] のログ ファイルである DQSSSISLog.log には、 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]を使用して実行されたアクティビティのログが含まれます。 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] コンポーネントのログ ファイルは %APPDATA%\SSDQS\Log に格納されます。 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] ログ ファイルには、サーバー ログ ファイルと同様の情報が含まれますが、内容は [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]に関するものになります。  
   
 ##  <a name="related-tasks"></a><a name="RT"></a> 関連タスク  
@@ -75,7 +76,7 @@ ms.locfileid: "85898119"
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用して DQS ログ ファイルのログの重大度設定を構成する方法を説明します。|[DQS ログ ファイルの重大度レベルの構成](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |DQS ログ ファイルの詳細設定を手動で構成する方法を説明します。|[DQS ログ ファイルの詳細設定の構成](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (SSISDB データベース)
 title: catalog.validations (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421976"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB データベース)
 
@@ -38,11 +39,11 @@ ms.locfileid: "86912468"
 |reference_id|**bigint**|環境を参照するためプロジェクトによって使用されるプロジェクト環境参照の ID。|  
 |operation_type|**smallint**|操作の種類。 このビューに表示される操作には、プロジェクト検証 (`300`) とパッケージ検証 (`301`) が含まれます。|  
 |object_name|**nvarhcar(260)**|オブジェクトの名前。|  
-|object_type|**smallint**|オブジェクトの種類。 オブジェクトは、プロジェクト (`20`) またはパッケージ (`30`) です。|  
+|object_type|**smallint**|オブジェクトの型。 オブジェクトは、プロジェクト (`20`) またはパッケージ (`30`) です。|  
 |object_id|**bigint**|操作の影響を受けるオブジェクトの ID。|  
 |start_time|**datetimeoffset(7)**|操作が開始したときの日時。|  
 |end_time|**datetimeoffsset(7)**|操作が終了したときの日時。|  
-|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作のステータス。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
 |caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  

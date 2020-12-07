@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400622"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>分析プラットフォームシステムでアプライアンスの電源をオンまたはオフにする
@@ -27,12 +27,12 @@ SQL Server PDW ノードへの接続は、ノードに割り当てられた IP �
   
 ## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>アプライアンスの電源をオフにする  
   
-### <a name="before-you-begin"></a>始める前に  
+### <a name="before-you-begin"></a>開始する前に  
 アプライアンスの電源をオフにする前に、アプライアンスのすべてのアクティビティを終了する必要があります。 すべてのアクティビティを終了するには:  
   
--   管理コンソールの [**セッション**] ページを使用して、現在のユーザーを識別します。 それらのユーザーに連絡し、ログオフするように依頼してください。  
+-   管理コンソールの [ **セッション** ] ページを使用して、現在のユーザーを識別します。 それらのユーザーに連絡し、ログオフするように依頼してください。  
   
--   必要に応じて、 **KILL**ステートメントを使用してクライアント接続を強制的に終了できます。 接続を終了するときは注意が必要です。 中断された場合、実行時間の長い更新プログラムなどの一部のトランザクションプロセスは、SQL Server がデータベースの復旧を完了する前に、アクティビティをロールバックする必要があります。 部分的に完了した更新または削除をロールバックすると、時間がかかることがあります。  
+-   必要に応じて、 **KILL** ステートメントを使用してクライアント接続を強制的に終了できます。 接続を終了するときは注意が必要です。 中断された場合、実行時間の長い更新プログラムなどの一部のトランザクションプロセスは、SQL Server がデータベースの復旧を完了する前に、アクティビティをロールバックする必要があります。 部分的に完了した更新または削除をロールバックすると、時間がかかることがあります。  
   
 ### <a name="to-power-off-the-appliance"></a>アプライアンスの電源をオフにするには  
   
@@ -41,15 +41,15 @@ SQL Server PDW ノードへの接続は、ノードに割り当てられた IP �
   
 1.  PDW コントロールノード (**_PDW_region_CTL01** ) に接続し、Analytics Platform System appliance domain administrator アカウントでログインします。  
   
-2.  を`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`実行して**Configuration Manager**を開きます。  
+2.  を実行し `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` て **Configuration Manager**を開きます。  
   
-3.  Configuration Manager の [**並列データウェアハウストポロジ**] メニューで、[サービスの**状態**] タブをクリックし、[**リージョンの停止**] をクリックして、PDW サービスを停止します。   
+3.  Configuration Manager の [ **並列データウェアハウストポロジ** ] メニューで、[サービスの **状態** ] タブをクリックし、[ **リージョンの停止** ] をクリックして、PDW サービスを停止します。   
   
 4.  ** _Appliance_domain_-HST01**に接続し、アプライアンスドメイン管理者アカウントでログインします。  
   
-5.  を使用し**フェールオーバークラスターマネージャー**て、 ** _appliance_domain_WFOHST01**クラスターに接続します (自動的に接続されていない場合)。その後、ナビゲーションウィンドウで [**役割**] をクリックします。 [**ロール**] ウィンドウで、次のようにします。  
+5.  を使用し**フェールオーバークラスターマネージャー**て、 ** _appliance_domain_WFOHST01**クラスターに接続します (自動的に接続されていない場合)。その後、ナビゲーションウィンドウで [**役割**] をクリックします。 [ **ロール** ] ウィンドウで、次のようにします。  
   
-    1.  すべての仮想マシンを複数選択します。 それらを右クリックし、[**シャットダウン**] を選択します。  
+    1.  すべての仮想マシンを複数選択します。 それらを右クリックし、[ **シャットダウン**] を選択します。  
   
     2.  選択したすべての Vm のシャットダウンが終了するまで待ちます。  
   
@@ -82,30 +82,30 @@ SQL Server PDW ノードへの接続は、ノードに割り当てられた IP �
   
 5.  アプライアンス内の残りのサーバーの電源をオンにします。  
   
-6.  アプライアンスドメイン管理者として**HST01**にログオンしているときに、 **hyper-v マネージャー**から次のようになります。  
+6.  アプライアンスドメイン管理者として **HST01** にログオンしているときに、 **hyper-v マネージャー**から次のようになります。  
   
     1.  ** _Appliance_domain_-HST02**に接続します。  
   
     2.  [ **Virtual Machines** ] ウィンドウで、[ ** _PDW_region_** ] を見つけ、それが実行されていることを確認します。  そうでない場合は、この VM を起動して、完全に開始されるのを待ちます。  
   
-7.  を使用し**フェールオーバークラスターマネージャー**て、 ** _appliance_domain_WFOHST01**クラスターに接続します (自動的に接続されていない場合)。その後、**ナビゲーション**ウィンドウで [**役割**] をクリックします。 [**ロール**] ウィンドウで、次のようにします。  
+7.  を使用し**フェールオーバークラスターマネージャー**て、 ** _appliance_domain_WFOHST01**クラスターに接続します (自動的に接続されていない場合)。その後、**ナビゲーション**ウィンドウで [**役割**] をクリックします。 [ **ロール** ] ウィンドウで、次のようにします。  
   
-    1.  すべての仮想マシンを複数選択し、右クリックして、[**開始**] をクリックします。  
+    1.  すべての仮想マシンを複数選択し、右クリックして、[ **開始**] をクリックします。  
   
     2.  選択したすべての Vm が終了するのを待ってから、次の手順に進みます。  
   
     3.  フェールオーバーした Vm に必要な場合は、それらをシャットダウンして移動し、適切なプライマリホストで再起動します。  
   
-8. 必要に応じて、 **HST01**から切断します。  
+8. 必要に応じて、 **HST01** から切断します。  
   
 9. アプライアンスのドメイン管理者アカウントを使用して、 ** _PDW_region_CTL01**に接続します。  
   
-10. を`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`実行して**Configuration Manager**を起動します。  
+10. を実行し `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` て **Configuration Manager**を起動します。  
   
 11. **Configuration Manager**の [**並列データウェアハウストポロジ**] メニューで、[サービスの**状態**] タブをクリックし、[**リージョンの開始**] をクリックして PDW サービスを開始します。  
   
 ### <a name="to-verify-the-appliance-health"></a>アプライアンスの正常性を確認するには  
-アプライアンスが開始されたら、**管理コンソール**を開き、エラー状態を示す可能性があるアラートの [ヘルス] ページを確認します。 詳細については、「[管理コンソールを使用したアプライアンスの監視 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)」を参照してください。  
+アプライアンスが開始されたら、 **管理コンソール** を開き、エラー状態を示す可能性があるアラートの [ヘルス] ページを確認します。 詳細については、「 [管理コンソールを使用したアプライアンスの監視 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [アプライアンス管理タスク &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  

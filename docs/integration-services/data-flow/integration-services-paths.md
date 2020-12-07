@@ -1,4 +1,5 @@
 ---
+description: Integration Services のパス
 title: Integration Services のパス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4443598b2fa59e51a9c8ec6b5161b913f2890056
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a69d70b9e58458303dbba3444b6a8c38fb40ccc0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495860"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
 
@@ -41,7 +42,7 @@ ms.locfileid: "86918886"
   
  構成可能なパスのプロパティは、パスの名前、説明、および注釈です。 パスはプログラムによって構成することもできます。 詳細については、「 [プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
   
- パスの注釈を設定すると、 **デザイナーの** [データ フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブにあるデザイン画面に、パスの連結元の名前またはパスの名前が表示されます。 パスの注釈は、データ フロー、制御フロー、およびイベント ハンドラーに追加できる注釈と同様です。 唯一の違いは、パスの注釈はパスにアタッチされるのに対し、他の注釈は、 **デザイナーの**[データ フロー] **、** [制御フロー] **、および**[イベント ハンドラー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブに表示される点です。  
+ パスの注釈を設定すると、 **デザイナーの** [データ フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブにあるデザイン画面に、パスの連結元の名前またはパスの名前が表示されます。 パスの注釈は、データ フロー、制御フロー、およびイベント ハンドラーに追加できる注釈と同様です。 唯一の違いは、パスの注釈はパスにアタッチされるのに対し、他の注釈は、 **デザイナーの**[データ フロー] **、**[制御フロー] **、および**[イベント ハンドラー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブに表示される点です。  
   
  パスの注釈のメタデータは、各列の名前、データ型、有効桁数、小数点以下桁数、長さ、コード ページ、およびソース コンポーネントを、直前のコンポーネントの出力内で表示します。 ソース コンポーネントとは、列を作成したデータ フロー コンポーネントのことです。 このコンポーネントは、データ フロー内で最初のコンポーネントである場合もあれば、そうでない場合もあります。 たとえば、全体結合変換と並べ替え変換では独自の列が作成され、その列が出力列のソースになります。 対照的に、列コピー変換では、列を変更しないまま渡したり、入力列をコピーして新しい列を作成できます。 列コピー変換は、新しい列に対してのみ変換元コンポーネントとなります。  
 
@@ -65,7 +66,7 @@ ms.locfileid: "86918886"
   
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **Name**  
  パスの一意な名前を指定します。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86918886"
 ## <a name="metadata-page---data-flow-path-editor"></a>[メタデータ] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
@@ -130,7 +131,7 @@ ms.locfileid: "86918886"
 ## <a name="data-viewers-page---data-flow-path-editor"></a>[データ ビューアー] ページ - [データ フロー パス エディター]
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **Name**  
  データ ビューアーが一覧表示されます。  
   
@@ -158,6 +159,6 @@ ms.locfileid: "86918886"
   
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
-|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never**です。 既定値は **AsNeeded**です。|  
+|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は、 **AsNeeded**、 **SourceName**、 **PathName**、 **Never** です。 既定値は **AsNeeded** です。|  
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  

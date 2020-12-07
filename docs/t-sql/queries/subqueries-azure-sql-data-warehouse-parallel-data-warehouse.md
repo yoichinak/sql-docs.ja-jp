@@ -1,8 +1,8 @@
 ---
 title: サブクエリ
-description: SQL Data Warehouse と Parallel Data Warehouse でのサブクエリ
+description: Azure Synapse Analytics と Parallel Data Warehouse のサブクエリ
 ms.custom: seo-lt-2019
-titleSuffix: Azure SQL Data Warehouse
+titleSuffix: Azure Synapse Analytics
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +12,14 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 3b60dc6b14b6161849a0e50b3de149946427568f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196455"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227437"
 ---
-# <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse)
+# <a name="subqueries-azure-synapse-analytics-parallel-data-warehouse"></a>サブクエリ (Azure Synapse Analytics、Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   このトピックでは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] でサブクエリを使用する例を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "86196455"
   
 -   [基本操作](#Basics)  
   
--   [例: SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
+-   [例:Azure Synapse Analytics と Parallel Data Warehouse](#Examples)  
   
 ##  <a name="basics"></a><a name="Basics"></a> 基本操作  
  サブクエリ  
@@ -47,16 +47,15 @@ ms.locfileid: "86196455"
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. サブクエリの TOP および ORDER BY  
   
-```  
+```sql
 SELECT * FROM tblA  
 WHERE col1 IN  
-    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);  
-  
+    (SELECT TOP 100 col1 FROM tblB ORDER BY col1);
 ```  
   
 ### <a name="b-having-clause-with-a-correlated-subquery"></a>B. HAVING 句と相関サブクエリ  
   
-```  
+```sql
 SELECT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 GROUP BY dm.EmployeeKey, dm.FirstName, dm.LastName  
@@ -64,13 +63,12 @@ HAVING 5000 <=
 (SELECT sum(OrderQuantity)  
 FROM FactResellerSales AS frs  
 WHERE dm.EmployeeKey = frs.EmployeeKey)  
-ORDER BY EmployeeKey;  
-  
+ORDER BY EmployeeKey;
 ```  
   
 ### <a name="c-correlated-subqueries-with-analytics"></a>C. 相関サブクエリと分析  
   
-```  
+```sql
 SELECT * FROM ReplA AS A   
 WHERE A.ID IN   
     (SELECT sum(B.ID2) OVER() FROM ReplB AS B WHERE A.ID2 = B.ID);  
@@ -78,7 +76,7 @@ WHERE A.ID IN
   
 ### <a name="d-correlated-union-statements-in-a-subquery"></a>D. サブクエリ内の相関 UNION ステートメント  
   
-```  
+```sql
 SELECT * FROM RA   
 WHERE EXISTS   
     (SELECT 1 FROM RB WHERE RB.b1 = RA.a1   
@@ -87,14 +85,14 @@ WHERE EXISTS
   
 ### <a name="e-join-predicates-in-a-subquery"></a>E. サブクエリ内の結合述語  
   
-```  
+```sql
 SELECT * FROM RA INNER JOIN RB   
     ON RA.a1 = (SELECT COUNT(*) FROM RC);  
 ```  
   
 ### <a name="f-correlated-join-predicates-in-a-subquery"></a>F. サブクエリ内の相関する結合述語  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE RA.a2 IN   
     (SELECT 1 FROM RB INNER JOIN RC ON RA.a1=RB.b1+RC.c1);  
@@ -102,7 +100,7 @@ SELECT * FROM RA
   
 ### <a name="g-correlated-subselects-as-data-sources"></a>G. データ ソースとして相関するサブ選択  
   
-```  
+```sql
 SELECT * FROM RA   
     WHERE 3 = (SELECT COUNT(*)   
         FROM (SELECT b1 FROM RB WHERE RB.b1 = RA.a1) X);  
@@ -110,14 +108,14 @@ SELECT * FROM RA
   
 ### <a name="h-correlated-subqueries-in-the-data-values--used-with-aggregates"></a>H. 集計で使用されるデータ値の相関サブクエリ  
   
-```  
+```sql
 SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;  
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 相関サブクエリで IN を使用する  
  次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 内側のクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`FactResellerSales` テーブルの `OrderQuantity` が `5` で、従業員の ID 番号が `DimEmployee` テーブルと `FactResellerSales` テーブルで一致する各従業員の `EmployeeKey` と姓名のインスタンスを 1 つ取得します。  
   
-```  
+```sql
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   
 FROM DimEmployee AS dm   
 WHERE 5 IN   
@@ -130,7 +128,7 @@ ORDER BY EmployeeKey;
 ### <a name="j-using-exists-versus-in-with-a-subquery"></a>J. サブクエリで EXISTS を使用する場合と IN を使用する場合  
  次の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 両方とも、製品のサブカテゴリが `Road Bikes` である各製品名の 1 つのインスタンスを取得するサブクエリの例です。 `ProductSubcategoryKey` は `DimProduct` テーブルと `DimProductSubcategory` テーブルの間で一致します。  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE EXISTS  
@@ -143,7 +141,7 @@ ORDER BY EnglishProductName;
   
  または  
   
-```  
+```sql
 SELECT DISTINCT EnglishProductName  
 FROM DimProduct AS dp   
 WHERE dp.ProductSubcategoryKey IN  
@@ -156,16 +154,14 @@ ORDER BY EnglishProductName;
 ### <a name="k-using-multiple-correlated-subqueries"></a>K. 複数の相関サブクエリを使用する  
  この例では、2 つの相関サブクエリを使って、特定の製品を販売した従業員の名前を検索します。  
   
-```  
+```sql
 SELECT DISTINCT LastName, FirstName, e.EmployeeKey  
 FROM DimEmployee e JOIN FactResellerSales s ON e.EmployeeKey = s.EmployeeKey  
 WHERE ProductKey IN  
 (SELECT ProductKey FROM DimProduct WHERE ProductSubcategoryKey IN  
 (SELECT ProductSubcategoryKey FROM DimProductSubcategory   
  WHERE EnglishProductSubcategoryName LIKE '%Bikes'))  
-ORDER BY LastName  
-;  
-  
+ORDER BY LastName;  
 ```  
   
   

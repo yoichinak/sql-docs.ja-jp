@@ -1,4 +1,5 @@
 ---
+description: PERMISSIONS (Transact-SQL)
 title: PERMISSIONS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1bbd07982bc45b3fbd32b140f74a9a0f32fa3c3a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380748"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,6 @@ ms.locfileid: "87111916"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
@@ -51,7 +51,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 
 ## <a name="arguments"></a>引数
  *objectid*  
- セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 [objectid](../../t-sql/functions/object-id-transact-sql.md) 値を確認するには、*OBJECT_ID* 関数を使用します。  
+ セキュリティ保護可能なリソースの ID を指定します。 *objectid* を指定しない場合、ビットマップ値には現在のユーザーのステートメント権限が含まれます。それ以外の場合、ビットマップ値には現在のユーザーのセキュリティ保護可能なリソースについての権限が含まれます。 指定したセキュリティ保護可能なリソースは、現在のデータベースに存在する必要があります。 *objectid* 値を確認するには、[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) 関数を使用します。  
   
  **'** *column* **'**  
  権限情報を返す列の名前を指定します (省略可能)。 *objectid* で指定したテーブル内の有効な列名を指定する必要があります。  
@@ -117,7 +117,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. PERMISSIONS 関数をステートメント権限に対して使用する  
  次の例では、現在のユーザーが `CREATE TABLE` ステートメントを実行できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS()&2=2  
    CREATE TABLE test_table (col1 INT)  
 ELSE  
@@ -127,7 +127,7 @@ ELSE
 ### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. PERMISSIONS 関数をオブジェクト権限に対して使用する  
  次の例では、現在のユーザーが `Address` データベース内の `AdventureWorks2012` テーブルにデータ行を挿入できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&8=8   
    PRINT 'The current user can insert data into Person.Address.'  
 ELSE  
@@ -137,7 +137,7 @@ ELSE
 ### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. PERMISSIONS 関数を、付与できる権限に対して使用する  
  次の例では、現在のユーザーが別のユーザーに `Address` データベース内の `AdventureWorks2012` テーブルに対する INSERT 権限を許可できるかどうかを判定します。  
   
-```  
+```sql  
 IF PERMISSIONS(OBJECT_ID('AdventureWorks2012.Person.Address','U'))&0x80000=0x80000  
    PRINT 'INSERT on Person.Address is grantable.'  
 ELSE  

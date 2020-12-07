@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915848"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726013"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インメモリの並べ替えとハッシュ結合テクノロジを使用して、並べ替え、積集合、和集合、および差集合の各演算が実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この種のクエリ プランを使用することで、テーブルの列分割がサポートされます。列分割は、列記憶と呼ばれることもあります。   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インメモリの並べ替えとハッシュ結合テクノロジを使用して、並べ替え、積集合、和集合、および差集合の各演算が実行されます。 この種のクエリ プランを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってテーブルの列分割がサポートされます。   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 4 種類の結合演算が採用されています。    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文によって決定される論理結合操作が実装されます。
+-   内部結合
+-   左外部結合
+-   右外部結合
+-   完全外部結合
+-   クロス結合
+
+> [!NOTE]
+> 結合構文の詳細については、「[FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)」を参照してください。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、論理結合操作を実行するために、次の 4 種類の物理結合操作が採用されています。    
 -   ネステッド ループ結合     
 -   マージ結合   
 -   ハッシュ結合   
@@ -41,50 +51,57 @@ ms.locfileid: "86915848"
 
 結合条件は、クエリ内の 2 つのテーブルの関係を定義します。    
 -   テーブルごとに結合に使用する列を指定します。 一般的な結合条件では、1 つのテーブルから外部キーを指定し、他のテーブルでそれに対応したキーを指定します。    
--   列値を比較する論理演算子 (=、<> など) を指定します。    
+-   列値を比較する論理演算子 (=、<> など) を指定します。   
 
-内部結合は、`FROM` 句または `WHERE` 句のどちらを使用しても指定できます。 外部結合の指定には、`FROM` 句しか使用できません。 結合条件は、検索条件 `WHERE` と `HAVING` を使用して、`FROM` 句で参照されたベース テーブルからどの行を選択するかを指定します。    
+結合は、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用して論理的に表現されます。
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-`FROM` 句で結合条件を指定すると、`WHERE` 句で他の検索条件が指定された場合に区別しやすくなります。結合を指定する場合、FROM 句で指定することをお勧めします。 次に、簡潔な ISO FROM 句による結合の構文を示します。
+**内部結合**は、`FROM` 句または `WHERE` 句のどちらを使用しても指定できます。 **外部結合**と**クロス結合**は、`FROM` 句でのみ指定できます。 結合条件は、検索条件 `WHERE` と `HAVING` を使用して、`FROM` 句で参照されたベース テーブルからどの行を選択するかを指定します。    
+
+`FROM` 句で結合条件を指定すると、`WHERE` 句で他の検索条件が指定された場合に区別しやすくなります。結合を指定する場合、FROM 句で指定することをお勧めします。 簡略化された ISO `FROM` 句の結合構文は次のとおりです。
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* は、実行する結合の種類 (内部、外部、クロス) を指定します。 *join_condition* は、結合された各行を評価するための述語を定義します。 以下に FROM 句での結合指定の例を示します。
+*join_type* は、実行する結合の種類 (内部、外部、クロス) を指定します。 *join_condition* は、結合された各行を評価するための述語を定義します。 以下に `FROM` 句での結合指定の例を示します。
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-次の例は、この結合を使用した簡潔な SELECT ステートメントを示します。
+次の例は、この結合を使用したシンプルな `SELECT` ステートメントを示します。
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-この選択により、企業名が F で始まる企業が提供する製品のうち価格が 10 ドルを超えている部品について、製品と納入業者の情報が返されます。   
+この `SELECT` ステートメントからは、企業名が F で始まる企業が提供する製品のうち価格が 10 ドルを超えている部品について、製品と納入業者の情報が返されます。   
 
-1 つのクエリで複数のテーブルを参照する場合、どの列参照も明確である必要があります。 上記の例では、ProductVendor テーブルと Vendor テーブルの両方に、BusinessEntityID という名前の列があります。 複数のテーブル間で重複している列名をクエリで参照する場合は、列名をテーブル名で修飾する必要があります。 この例では Vendor 列への参照はすべて修飾されています。   
+1 つのクエリで複数のテーブルを参照する場合、どの列参照も明確である必要があります。 上記の例では、`ProductVendor` および `Vendor` テーブルの両方に、`BusinessEntityID` という名前の列があります。 複数のテーブル間で重複している列名をクエリで参照する場合は、列名をテーブル名で修飾する必要があります。 この例では `Vendor` 列への参照はすべて修飾されています。   
 
-クエリで使用する複数のテーブルで列名が重複していない場合、参照する列名にテーブル名を付けて修飾する必要はありません。 上記の例を参照してください。 このような SELECT ステートメントは、どのテーブルの列か示されていないので、わかりにくいことがあります。 すべての列をテーブル名で修飾すれば、クエリは読みやすくなります。 テーブル別名を使用すればもっと読みやすくなります。特にテーブル名をデータベース名または所有者名で修飾する必要がある場合は、別名を使用すると読みやすくなります。 次の例は、上記の例と同じですが、テーブル別名が割り当てられており、列はテーブル別名で修飾されているので読みやすくなっています。
+クエリで使用する複数のテーブルで列名が重複していない場合、参照する列名にテーブル名を付けて修飾する必要はありません。 上記の例を参照してください。 このような `SELECT` 句は、どのテーブルの列か示されていないので、わかりにくいことがあります。 すべての列をテーブル名で修飾すれば、クエリは読みやすくなります。 テーブル別名を使用すればもっと読みやすくなります。特にテーブル名をデータベース名または所有者名で修飾する必要がある場合は、別名を使用すると読みやすくなります。 次の例は、上記の例と同じですが、テーブル別名が割り当てられており、列はテーブル別名で修飾されているので読みやすくなっています。
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-上記の例では、FROM 句 (推奨の方法) で結合条件を指定していました。 次の例に示すように、これと同じ結合条件を持つクエリを WHERE 句でも指定できます。
+上記の例では、`FROM` 句 (推奨の方法) で結合条件を指定していました。 次の例に示すように、これと同じ結合条件を持つクエリを `WHERE` 句でも指定できます。
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-結合の選択リストは、結合されたテーブル内のすべての列を参照することも、一部の列だけを参照することもできます。 選択リストには、結合したすべてのテーブルの列を含める必要はありません。 たとえば、3 つのテーブルを結合した場合、1 つのテーブルだけを使用して残りの 2 つのテーブルの一方から 3 番目のテーブルにブリッジできます。中央のテーブルの列を選択リストで参照する必要はありません。   
+結合の `SELECT` リストは、結合されたテーブル内のすべての列を参照することも、一部の列だけを参照することもできます。 `SELECT` リストには、結合したすべてのテーブルの列を含める必要はありません。 たとえば、3 つのテーブルを結合した場合、1 つのテーブルだけを使用して残りの 2 つのテーブルの一方から 3 番目のテーブルにブリッジできます。中央のテーブルの列を選択リストで参照する必要はありません。 これは、**反準結合**とも呼ばれます。  
 
 結合条件では、通常は等値比較演算子 (=) を使用します。ただし、他の述語と同様に他の比較演算子や関係演算子も指定できます。 詳しくは、「[比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)」および「[WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で結合を処理する場合、クエリ エンジンは、複数の候補の中から最も効率的な結合の処理方法を選択します。 各結合の物理的実行には何種類もの最適化を使用できるので、その実行を確実に予測することはできません。   
+つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で結合を処理する場合、クエリ オプティマイザーによって、複数の候補の中から最も効率的な結合の処理方法が選択されます。 これには、最も効率的な物理結合の種類、テーブルが結合される順序をそれぞれ選択することや、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文で直接表現できない論理結合操作の種類 (**準結合**や**反準結合**など) を使用することも含まれます。 各結合の物理的実行には何種類もの最適化を使用できるので、その実行を確実に予測することはできません。 準結合と反準結合の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。  
 
-結合条件で使用する複数の列間で名前やデータ型が同じである必要はありません。 ただし、データ型が同じでない場合、互換性があるか SQL Server が暗黙的に変換できるデータ型である必要があります。 データ型を暗黙的に変換できない場合、結合条件は `CAST` 関数を使用してデータ型を明示的に変換する必要があります。 明示的な変換と暗黙的な変換について詳しくは、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」をご覧ください。    
+結合条件で使用する複数の列間で名前やデータ型が同じである必要はありません。 ただし、データ型が同じでない場合、それらは互換性があるもの、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が暗黙的に変換できるものである必要があります。 データ型を暗黙的に変換できない場合、結合条件は `CAST` 関数を使用してデータ型を明示的に変換する必要があります。 明示的な変換と暗黙的な変換について詳しくは、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」をご覧ください。    
 
 結合を使用するクエリは、ほとんどの場合サブクエリ、つまりクエリ内で入れ子になった別のクエリを使用して書き換えることができます。またほとんどのサブクエリは結合として書き換えることができます。 サブクエリについて詳しくは、「[サブクエリ](../../relational-databases/performance/subqueries.md)」をご覧ください。   
 
@@ -246,7 +263,7 @@ WHERE [fo].[Quantity] = 361;
 - データベース互換性レベルが 140 以上である。
 - クエリが `SELECT` ステートメントである (現在、データ変更ステートメントは使えません)。
 - 結合が、インデックス付きのネステッド ループ結合またはハッシュ結合の両方の物理アルゴリズムで実行できる。
-- クエリ全体に列ストア インデックスが存在すること、列ストア インデックス テーブルを結合で直接参照すること、または[行ストア機能でバッチ モード](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)を使用することにより、有効化されたバッチ モードをハッシュ結合が使っている。
+- クエリ全体に列ストア インデックスが存在すること、列ストア インデックス テーブルを結合で直接参照すること、または[行ストアでバッチ モード](./intelligent-query-processing.md#batch-mode-on-rowstore)を使用することにより、有効化されたバッチ モードをハッシュ結合が使っている。
 - ネステッド ループ結合とハッシュ結合の生成された代替ソリューションが、同じ最初の子 (外部参照) を持っている。
 
 ### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行
@@ -356,3 +373,4 @@ NULL        three  NULL        NULL
 [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [サブクエリ](../../relational-databases/performance/subqueries.md)      
 [適応型結合](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

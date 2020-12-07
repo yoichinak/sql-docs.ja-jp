@@ -2,7 +2,7 @@
 title: ODBC を使用した接続
 description: Microsoft ODBC Driver for SQL Server を使用して、Linux または macOS からデータベースへの接続を作成する方法について説明します。
 ms.custom: ''
-ms.date: 05/11/2020
+ms.date: 09/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152045"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727441"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 
@@ -66,6 +66,8 @@ Server = tcp:localhost,1433
 または、DSN 情報をテンプレート ファイルに追加し、次のコマンドを実行して `~/.odbc.ini` に追加することもできます。
  - **odbcinst -i -s -f** <_テンプレート ファイル_>  
 
+ini ファイルと `odbcinst` に関する詳細については、[unixODBC ドキュメント](http://www.unixodbc.org/odbcinst.html)をご覧ください。 ODBC Driver for SQL Server に固有の `odbc.ini` ファイルでのエントリで、Linux および macOS でサポートされているものについては、「[DSN と接続文字列のキーワードと属性](../dsn-connection-string-attribute.md)」をご覧ください。
+
 `isql` を使用して接続をテストすることで、ドライバーが機能していることを確認できます。または、次のコマンドを使用できます。
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
@@ -75,7 +77,7 @@ TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets 
 
 暗号化を有効にすると、セキュリティは向上しますが、パフォーマンスは低下します。
 
-詳しくは、「[SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=220900)」および「[検証を伴わない暗号化の使用](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)」をご覧ください。
+詳しくは、「[SQL Server への接続の暗号化](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))」および「[検証を伴わない暗号化の使用](../../../relational-databases/native-client/features/using-encryption-without-validation.md)」をご覧ください。
 
 **Encrypt** と **TrustServerCertificate**の設定に関係なく、サーバー ログインの資格情報 (ユーザー名とパスワード) は常に暗号化されます。 次の表は、 **Encrypt** 設定と **TrustServerCertificate** 設定の効果の一覧です。  
 
@@ -87,7 +89,7 @@ TLS (トランスポート層セキュリティ) (以前の SSL (Secure Sockets 
 既定では、暗号化された接続はサーバーの証明書を必ず検証します。 ただし、自己署名証明書があるサーバーに接続する場合は、`TrustServerCertificate` オプションも追加して、信頼された証明機関の一覧に対する証明書の確認をバイパスします。  
 
 ```
-Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
+Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
 TLS は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL の最低限のサポートされるバージョンと、各プラットフォームの既定の証明書信頼ストアを示します。
@@ -97,13 +99,13 @@ TLS は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL �
 |Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
 |Debian 8.71|1.0.1|/etc/ssl/certs|
-|OS X 10.11、macOS 10.12、10.13、10.14|1.0.2|/usr/local/etc/openssl/certs|
+|OS X 10.11、macOS 10.12-10.15|1.0.2|/usr/local/etc/openssl/certs|
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
 |SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
 |SUSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
-|Ubuntu 18.10、19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.10、19.04、19.10、20.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04、16.10、17.10|1.0.2|/etc/ssl/certs|
 |Ubuntu 14.04|1.0.1|/etc/ssl/certs|

@@ -1,4 +1,5 @@
 ---
+description: '[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ ソース'
 title: データ ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 08/27/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20bd12bf7d7fd516bfa660252c34964a4cf9bec7
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523324"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728067"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ ソース
 
@@ -30,7 +31,7 @@ ms.locfileid: "87523324"
   
 > **注:** データ ソースは、パッケージ配置モデルを使用するように構成されているプロジェクトにのみ追加できます。 プロジェクト配置モデルを使用するようにプロジェクトが構成されている場合は、データ ソースを使用する代わりに、プロジェクト レベルで作成された接続マネージャーを使用して接続を共有します。  
 >   
->  配置モデルの詳細については、「 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 プロジェクト配置モデルへのプロジェクトの変換の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](https://msdn.microsoft.com/library/hh231102.aspx)」を参照してください。  
+>  配置モデルの詳細については、「 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。 プロジェクト配置モデルへのプロジェクトの変換の詳細については、「 [Integration Services サーバーへのプロジェクトの配置](../packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでデータ ソースを使用する場合、次の利点があります。  
   
@@ -46,5 +47,4 @@ ms.locfileid: "87523324"
  データ ソース オブジェクトはデータ ソースへの単純な接続を表し、参照するデータ ストア内のオブジェクトへのアクセスを提供します。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の AdventureWorks サンプル データベースに接続するデータ ソース オブジェクトには、データベースにある 60 のテーブルすべてが含まれます。  
   
  データ ソースと、そのデータ ソースを参照する接続マネージャーとの間に、依存関係はありません。 データ ソースがプロジェクトの一部ではなくなった場合でも、パッケージは引き続き有効です。接続の種類や接続文字列などのデータ ソースに関する情報は、パッケージ定義に含まれているためです。  
-  
   

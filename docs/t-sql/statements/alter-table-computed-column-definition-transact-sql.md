@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE computed_column_definition (Transact-SQL)
 title: computed_column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ffb26c669a819c3599c36cea15d47724def5bd87
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 06ce56d0e4a25f4e28c1ded6c0dc246a0ee3b730
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381286"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549442"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

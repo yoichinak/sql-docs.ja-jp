@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0dd256b071ce3621f02e6c4a6a152670e2fd5c0f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458616"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892222"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "86458616"
   
  同じ種類の複数のリソースがコンピューター上に存在する場合、オブジェクトによっては複数のインスタンスがある場合があります。 たとえば、システムに複数のプロセッサが搭載されている場合、オブジェクトの種類 **Processor** には複数のインスタンスがあります。 オブジェクトの種類 **Databases** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベースごとに 1 つのインスタンスがあります。 **Memory Manager** オブジェクトなど一部のオブジェクトの種類には、1 しかインスタンスのないものもあります。 あるオブジェクトの種類に複数のインスタンスがある場合には、インスタンスごとに、または多くの場合は一度にすべてのインスタンスに、統計を追跡するためのカウンターを追加できます。 既定のインスタンスのカウンターは、**SQLServer:** _\<object name>_ の形式で表示されます。 名前付きインスタンスのカウンターは、**MSSQL$** _\<instance name>_ **:** _\<counter name>_ または **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ の形式で表示されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス カウンター値は、Windows パフォーマンス カウンター (WPC) エンジンを使用して生成されます。 一部のカウンター値は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって直接計算されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が WPC エンジンに基準値を提供し、これによって、必要な計算 (パーセントなど) が実行されます。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動的管理ビューでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成されるすべてのカウンターと元の値が表示されます。 `cntr_type` 列は、カウンターの種類を示します。 WPC エンジンが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターをどのように処理するかは、この種類によって異なります。 パフォーマンス カウンターの種類の詳細については、[WMI のドキュメント](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パフォーマンス カウンター値は、Windows パフォーマンス カウンター (WPC) エンジンを使用して生成されます。 一部のカウンター値は、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって直接計算されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が WPC エンジンに基準値を提供し、これによって、必要な計算 (パーセントなど) が実行されます。 [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 動的管理ビューでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で生成されるすべてのカウンターと元の値が表示されます。 `cntr_type` 列は、カウンターの種類を示します。 WPC エンジンが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターをどのように処理するかは、この種類によって異なります。 パフォーマンス カウンターの種類の詳細については、[WMI のドキュメント](/windows/win32/wmisdk/wmi-performance-counter-types)を参照してください。
   
  グラフでカウンターを追加または削除し、グラフ設定を保存して、システム モニターを起動したときに監視する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトとカウンターを指定できます。  
   
@@ -144,5 +144,4 @@ ms.locfileid: "86458616"
 ## <a name="see-also"></a>参照  
  [パフォーマンス オブジェクトの使用](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
-  
   

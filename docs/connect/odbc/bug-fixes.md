@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091806"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544305"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
 このページには [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の各リリースで修正されたバグの一覧が記載されています。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグを修正しました
+
+- フェデレーション アカウントで認証するときの ADAL エラーを修正しました (Windows)
+- 非同期通知操作中にタイムアウトが発生するとき、ドライバーが応答しなくなる問題を修正しました
+- Alpine Linux のアップグレード時のドライバー参照カウントを修正しました
+- Ubuntu の libc6 依存関係バージョンを修正しました
+- Linux/Mac msodbcsql.h に足りない定義を追加しました
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正 (Alpine Linux のみ)
 

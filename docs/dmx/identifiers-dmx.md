@@ -1,4 +1,5 @@
 ---
+description: 識別子 (DMX)
 title: 識別子 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352888"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969814"
   
  オブジェクト識別子は、オブジェクトを定義するときに作成されます。 次に、識別子を使用してオブジェクトを参照します。 識別子は100文字以下でなければなりません。  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>標準識別子  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> 標準識別子  
  DMX の標準識別子は、識別子の形式に関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の規則に準拠しています。 DMX の標準識別子には区切り記号は必要ありません。 次に、通常の非区切られた識別子を使用する DMX ステートメントの例を示します。  
   
 ```  
@@ -52,13 +53,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   アンダースコア (_)。  
   
-3.  DMX 予約語を識別子として使用することはできません。 予約語は、DMX では大文字と小文字が区別されません。 詳細については、「 [DMX&#41;&#40;の予約済みキーワード](../dmx/reserved-keywords-dmx.md)」を参照してください。  
+3.  DMX 予約語を識別子として使用することはできません。 予約語は、DMX では大文字と小文字が区別されません。 詳細については、「 [DMX&#41;&#40;の予約済みキーワード ](../dmx/reserved-keywords-dmx.md)」を参照してください。  
   
 4.  識別子には、空白や特殊文字を埋め込むことはできません。  
   
  これらの規則に準拠していない識別子は、DMX ステートメントで使用するときに、角かっこで区切る必要があります。  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>区切られた識別子  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> 区切られた識別子  
  区切られた識別子は、角かっこ ([]) で囲みます。  これらの規則に準拠した区切られた識別子を使用した DMX ステートメントの例は、次のとおりです。  
   
 ```  
@@ -102,7 +103,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

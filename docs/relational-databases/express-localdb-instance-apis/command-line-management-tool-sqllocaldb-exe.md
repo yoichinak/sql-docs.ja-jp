@@ -1,4 +1,5 @@
 ---
+description: 'コマンド ライン管理ツール: SqlLocalDB.exe'
 title: 'コマンドライン管理ツール: SqlLocalDB.exe |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,14 +11,14 @@ ms.topic: reference
 apilocation:
 - sqluserinstance.dll
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c39272a1f8af7fce092f7aa31ac3a4f7ebd2263
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b2140dc74bd9e30bb4c707681aa9b491f8ea272
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765251"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548898"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>コマンド ライン管理ツール: SqlLocalDB.exe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e43b37dd96a931d98555f05fe6e70b9f8a4f99e3
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669814"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129173"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85669814"
   
 -   トランザクション マークはログ領域を使用するので、データベース復旧ストラテジにおいて重要な役割を果たすトランザクションだけに使用する必要があります。  
   
--   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory**テーブルに 1 行が挿入されます。  
+-   マークされたトランザクションのコミットが完了したら、 [msdb](../../relational-databases/system-tables/logmarkhistory-transact-sql.md) の **logmarkhistory** テーブルに 1 行が挿入されます。  
   
 -   マークされたトランザクションが同じデータベース サーバーまたは異なるサーバー上の複数のデータベースと関係している場合は、影響を受けたすべてのデータベースのログにそのマークが記録される必要があります。 詳細については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "85669814"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>名前付きマークをトランザクション ログに挿入するための Transact-SQL 構文  
  トランザクション ログにマークを挿入するには、 [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) ステートメントと WITH MARK [*description*] 句を使用します。 マークの名前はトランザクションの名前と同じです。 省略可能な *description* は、マークの名前ではなく、マークの説明テキストです。 たとえば、次の `BEGIN TRANSACTION` ステートメントで作成されるトランザクションとマークは、いずれも名前が `Tx1`になります。  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
@@ -73,7 +73,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
  STOPATMARK オプションと STOPBEFOREMARK オプションは両方とも、省略可能な AFTER *datetime* 句をサポートしています。 *datetime* を使用する場合、マーク名を一意にする必要はありません。  
   
- AFTER *datetime* の指定を省略すると、指定した名前を持つ最初のマークでロールフォワードが停止します。 AFTER *datetime* を指定すると、 *datetime*以降の指定した名前を持つ最初のマークでロールフォワードが停止します。  
+ AFTER *datetime* の指定を省略すると、指定した名前を持つ最初のマークでロールフォワードが停止します。 AFTER *datetime* を指定すると、 *datetime* 以降の指定した名前を持つ最初のマークでロールフォワードが停止します。  
   
 > [!NOTE]  
 >  時間を指定したすべての復元操作と同様に、一括ログ記録の対象となる操作がデータベースで実行されている場合は、マーク時点に復旧できません。  

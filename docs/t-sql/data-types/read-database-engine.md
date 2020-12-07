@@ -1,4 +1,5 @@
 ---
+description: CSharp を使用した Read (データベース エンジン)
 title: Read (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 89739f7e53ddccfc95cb9e84311f1ed18e147de6
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b4cdfda50c648eaf5afbc97a22c3764cb2070c88
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552587"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037142"
 ---
 # <a name="read-database-engine-by-using-csharp"></a>CSharp を使用した Read (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,6 +71,5 @@ hid.Read(br);
 [Write &#40;データベース エンジン&#41;](../../t-sql/data-types/write-database-engine.md)  
 [ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)
   

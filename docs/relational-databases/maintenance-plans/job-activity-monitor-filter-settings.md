@@ -1,4 +1,5 @@
 ---
+description: '[ジョブの利用状況モニター] ([フィルターの設定])'
 title: '[ジョブの利用状況モニター] ([フィルターの設定]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88424054"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85666934"
 ## <a name="all-jobs"></a>すべてのジョブ  
  このフィルター基準のグループは、ジョブの利用状況モニターをフィルタリングする場合に使用できます。  
   
- **Name**  
+ **名前**  
  ジョブを名前でフィルタリングします。  
   
  **[次の実行]**  
@@ -49,7 +50,7 @@ ms.locfileid: "85666934"
  **カテゴリ**  
  ジョブ カテゴリでジョブをフィルタリングします。  
   
- **[スケジュール]**  
+ **スケジュール**  
  スケジュールを使用するジョブ、またはスケジュールを使用しないジョブをすべて表示します。  
   
  **状態**  

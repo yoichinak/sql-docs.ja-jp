@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor_tables (Transact-SQL)
 title: sp_describe_cursor_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 68c8cd21de793dc34c2f601a9918db2224d3df03
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861359"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539002"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,22 +50,22 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>引数  
  [ @cursor_return =] *output_cursor_variable*出力  
- カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable*は**カーソル**であり、既定値はありません。 sp_describe_cursor_tables が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
+ カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable* は **カーソル**であり、既定値はありません。 sp_describe_cursor_tables が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
- ローカルカーソル、グローバルカーソル、またはカーソル変数の名前を使用して、レポートされるカーソルが指定されているかどうかを指定します。 パラメーターは**nvarchar (30)** です。  
+ ローカルカーソル、グローバルカーソル、またはカーソル変数の名前を使用して、レポートされるカーソルが指定されているかどうかを指定します。 パラメーターは **nvarchar (30)** です。  
   
  [ @cursor_identity =] N '*local_cursor_name*'  
- DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 DECLARE CURSOR ステートメントは、LOCAL キーワードを持つか、既定値は LOCAL になります。 *local_cursor_name*は**nvarchar (128)** です。  
+ DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 DECLARE CURSOR ステートメントは、LOCAL キーワードを持つか、既定値は LOCAL になります。 *local_cursor_name* は **nvarchar (128)** です。  
   
  [ @cursor_identity =] N '*global_cursor_name*'  
- DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 GLOBAL キーワードを持つか、またはグローバルに既定値が指定されています。 *global_cursor_name*には、ODBC アプリケーションによって開かれた API サーバーカーソルの名前を指定することもできます。その後、SQLSetCursorName を呼び出してカーソルに名前を付けます。*global_cursor_name*は**nvarchar (128)** です。  
+ DECLARE CURSOR ステートメントによって作成されたカーソルの名前を指定します。 GLOBAL キーワードを持つか、またはグローバルに既定値が指定されています。 *global_cursor_name* には、ODBC アプリケーションによって開かれた API サーバーカーソルの名前を指定することもできます。その後、SQLSetCursorName を呼び出してカーソルに名前を付けます。*global_cursor_name* は **nvarchar (128)** です。  
   
  [ @cursor_identity =] N '*input_cursor_variable*'  
- 開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable*は**nvarchar (128)** です。  
+ 開いているカーソルに関連付けられたカーソル変数の名前です。 *input_cursor_variable* は **nvarchar (128)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
  sp_describe_cursor_tables は、そのレポートを、カーソル出力パラメーターとしてカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これは、このプロシージャを API 関数から直接呼び出すことができないことも意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、api では**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
@@ -82,13 +83,13 @@ sp_describe_cursor_tables
 |dbid|**int**|テーブルが存在するデータベースの ID。 OPENQUERY または OPENROWSET が使用されている場合は0です。|  
 |dbname|**sysname**、 **nullable**|テーブルが存在するデータベースの名前。 OPENQUERY または OPENROWSET が使用されている場合は NULL です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_describe_cursor_tables は、サーバー カーソルが参照するベース テーブルを説明します。 カーソルから返された結果セットの属性の説明が必要な場合は、sp_describe_cursor_columns を使用します。 スクロール可能かどうか、更新可能かどうかなど、カーソルの総体的な特性の説明が必要な場合は、sp_describe_cursor を使用します。 接続時に可視である [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルに関するレポートが必要な場合は、sp_cursor_list を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、グローバルカーソルを開き、を使用し `sp_describe_cursor_tables` て、カーソルによって参照されているテーブルに関するレポートを作成します。  
   
 ```  
@@ -129,10 +130,10 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [求](../../relational-databases/cursors.md)   
+## <a name="see-also"></a>参照  
+ [カーソル](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [Transact-sql&#41;&#40;カーソルの宣言](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784013"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867605"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Always Encrypted キーを管理するユーザーには、セキュリティ管
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Always Encrypted キーを管理するためのツール
 
-Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) と [PowerShell](../../scripting/sql-server-powershell.md)を使用して管理できます。
+Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) と [PowerShell](../../../powershell/sql-server-powershell.md)を使用して管理できます。
 
 - **SQL Server Management Studio (SSMS)** は、キー ストアのアクセスとデータベース のアクセスに関するタスクを組み合わせるダイアログとウィザードを提供しています。そのため、SSMS では役割の分離をサポートしていませんが、キーの構成を容易にします。 SSMS を使用したキー管理の詳細については、以下を参照してください。
     - [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ Always Encrypted の主な目的は、データベース システムまたは�
 
 ## <a name="see-also"></a>参照
 - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted ウィザード チュートリアル (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [Always Encrypted ウィザード チュートリアル (Windows 証明書ストア)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [Always Encrypted ウィザード チュートリアル (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [Always Encrypted ウィザード チュートリアル (Windows 証明書ストア)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

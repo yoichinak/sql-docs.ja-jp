@@ -1,4 +1,5 @@
 ---
+description: sp_xml_preparedocument (Transact-sql)
 title: sp_xml_preparedocument (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,35 +16,35 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45aac298eea19f37fafdca1feb86a0b7f032c0e0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767488"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543022"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   入力として指定された XML テキストを読み取り、MSXML パーサー (Msxmlsql.dll) を使用してテキストを解析し、解析されたドキュメントを使用できる状態で提供します。 この解析済みドキュメントは、XML ドキュメント内のさまざまなノード (要素、属性、テキスト、コメントなど) のツリー表現です。  
   
- **sp_xml_preparedocument**は、新しく作成された xml ドキュメントの内部表現にアクセスするために使用できるハンドルを返します。 このハンドルは、セッションの間、または**sp_xml_removedocument**を実行してハンドルが無効になるまで有効です。  
+ **sp_xml_preparedocument** は、新しく作成された xml ドキュメントの内部表現にアクセスするために使用できるハンドルを返します。 このハンドルは、セッションの間、または **sp_xml_removedocument**を実行してハンドルが無効になるまで有効です。  
   
 > [!NOTE]  
->  解析されたドキュメントは、の内部キャッシュに格納され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 MSXML パーサーでは、で使用可能な合計メモリの8分の1を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 メモリが不足しないようにするには、 **sp_xml_removedocument**を実行してメモリを解放します。  
+>  解析されたドキュメントは、の内部キャッシュに格納され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 MSXML パーサーでは、で使用可能な合計メモリの8分の1を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 メモリが不足しないようにするには、 **sp_xml_removedocument** を実行してメモリを解放します。  
   
 > [!NOTE]  
->  旧バージョンとの互換性のために、 **sp_xml_preparedocument**では、これらの文字がエンティティされている場合でも、属性の CR (char (13)) と LF (char (10)) の文字が折りたたまれます。  
+>  旧バージョンとの互換性のために、 **sp_xml_preparedocument** では、これらの文字がエンティティされている場合でも、属性の CR (char (13)) と LF (char (10)) の文字が折りたたまれます。  
   
 > [!NOTE]  
->  **Sp_xml_preparedocument**によって呼び出された XML パーサーは、内部 dtd およびエンティティ宣言を解析できます。 悪意を持って構築された Dtd およびエンティティ宣言を使用してサービス拒否攻撃を行うことができるため、信頼されていないソースからの XML ドキュメントを**sp_xml_preparedocument**に直接渡すことは避けてください。  
+>  **Sp_xml_preparedocument**によって呼び出された XML パーサーは、内部 dtd およびエンティティ宣言を解析できます。 悪意を持って構築された Dtd およびエンティティ宣言を使用してサービス拒否攻撃を行うことができるため、信頼されていないソースからの XML ドキュメントを **sp_xml_preparedocument**に直接渡すことは避けてください。  
 >   
->  再帰的なエンティティ拡張攻撃を軽減するために、 **sp_xml_preparedocument**制限は、ドキュメントの最上位にある1つのエンティティの下に展開できるエンティティの数を1万に制限します。 制限は、文字または数値エンティティには適用されません。 この制限により、多数のエンティティ参照を含むドキュメントを格納できますが、1つのエンティティが1万を超えるチェーンで再帰的に展開されるのを防ぐことができます。  
+>  再帰的なエンティティ拡張攻撃を軽減するために、 **sp_xml_preparedocument** 制限は、ドキュメントの最上位にある1つのエンティティの下に展開できるエンティティの数を1万に制限します。 制限は、文字または数値エンティティには適用されません。 この制限により、多数のエンティティ参照を含むドキュメントを格納できますが、1つのエンティティが1万を超えるチェーンで再帰的に展開されるのを防ぐことができます。  
   
 > [!NOTE]  
->  **sp_xml_preparedocument**は、一度に開くことができる要素の数を256に制限します。  
+>  **sp_xml_preparedocument** は、一度に開くことができる要素の数を256に制限します。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,18 +61,18 @@ OUTPUT
   
 ## <a name="arguments"></a>引数  
  *hdoc*  
- 新しく作成されたドキュメントへのハンドルを指定します。 *hdoc*は整数です。  
+ 新しく作成されたドキュメントへのハンドルを指定します。 *hdoc* は整数です。  
   
  [ *xmltext* ]  
- 元の XML ドキュメントを指定します。 MSXML パーサーは、この XML ドキュメントを解析します。 *xmltext*は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または**xml**のテキストパラメーターです。 既定値は NULL です。この場合、空の XML ドキュメントの内部表現が作成されます。  
+ 元の XML ドキュメントを指定します。 MSXML パーサーは、この XML ドキュメントを解析します。 *xmltext* は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または **xml**のテキストパラメーターです。 既定値は NULL です。この場合、空の XML ドキュメントの内部表現が作成されます。  
   
 > [!NOTE]  
->  **sp_xml_preparedocument**は、テキストまたは型指定されていない xml のみを処理できます。 入力値として使用するインスタンス値が既に型指定された XML である場合は、まずその値を、型指定されない新しい XML インスタンスまたは文字列にキャストし、その後入力値として渡します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+>  **sp_xml_preparedocument** は、テキストまたは型指定されていない xml のみを処理できます。 入力値として使用するインスタンス値が既に型指定された XML である場合は、まずその値を、型指定されない新しい XML インスタンスまたは文字列にキャストし、その後入力値として渡します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  [ *xpath_namespaces* ]  
- OPENXML の行と列の XPath 式で使用される名前空間宣言を指定します。 *xpath_namespaces*は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または**xml**のテキストパラメーターです。  
+ OPENXML の行と列の XPath 式で使用される名前空間宣言を指定します。 *xpath_namespaces* は、 **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext** 、または **xml**のテキストパラメーターです。  
   
- 既定値は **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** です。 *xpath_namespaces*は、適切な形式の XML ドキュメントを使用して、OPENXML の xpath 式で使用されるプレフィックスの名前空間 uri を提供します。 名前空間**urn: schema**を参照するために使用する必要があるプレフィックスを宣言する*xpath_namespaces* 。これにより、解析された XML 要素に関するメタデータが提供されます。 この手法を使用してメタプロパティ名前空間の名前空間プレフィックスを再定義することはできますが、この名前空間は失われません。 このような宣言が含まれていない*xpath_namespaces*場合でも、 **urn: schema-microsoft-com: xml メタ prop**ではプレフィックス**mp**は引き続き有効です。  
+ 既定値は **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** です。 *xpath_namespaces* は、適切な形式の XML ドキュメントを使用して、OPENXML の xpath 式で使用されるプレフィックスの名前空間 uri を提供します。 名前空間**urn: schema**を参照するために使用する必要があるプレフィックスを宣言する*xpath_namespaces* 。これにより、解析された XML 要素に関するメタデータが提供されます。 この手法を使用してメタプロパティ名前空間の名前空間プレフィックスを再定義することはできますが、この名前空間は失われません。 このような宣言が含まれていない*xpath_namespaces*場合でも、 **urn: schema-microsoft-com: xml メタ prop**ではプレフィックス**mp**は引き続き有効です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または >0 (失敗)  
@@ -107,7 +108,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B: ウェルフォームド XML ドキュメントの内部表現を DTD を使用して準備する  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. ウェルフォームド XML ドキュメントの内部表現を DTD を使用して準備する  
  次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 このストアドプロシージャは、ドキュメントに含まれている DTD に対して読み込まれたドキュメントを検証します。 `sp_xml_preparedocument` の呼び出しでは、既定の名前空間プレフィックス マッピングを使用します。  
   
 ```  
@@ -126,7 +127,7 @@ SET @doc = '
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;  
 ```  
   
-### <a name="c-specifying-a-namespace-uri"></a>C: 名前空間 URI を指定する  
+### <a name="c-specifying-a-namespace-uri"></a>C. 名前空間 URI を指定する  
  次の例では、入力として指定された XML ドキュメントの、新しく作成された内部表現へのハンドルを返します。 を呼び出す `sp_xml_preparedocument` と、 `mp` メタプロパティ名前空間マッピングのプレフィックスが保持され、その `xyz` 名前空間にマッピングプレフィックスが追加され `urn:MyNamespace` ます。  
   
 ```  
@@ -152,7 +153,7 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <br>[XML ストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[システムストアドプロシージャ (Transact-sql)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML (Transact-sql)](../../t-sql/functions/openxml-transact-sql.md)

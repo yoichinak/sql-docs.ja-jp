@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project (SSISDB データベース)
 title: catalog.move_project (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430064"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - SSISDB データベース
 
@@ -70,7 +71,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  プロジェクトを元のフォルダーから目的のフォルダーに移動すると、ソース フォルダーのプロジェクトと、対応する環境参照が削除されます 移動先のフォルダーには、同じプロジェクトと環境参照が作成されます。 相対環境参照は、移動後、別のフォルダーに解決されます。 絶対参照は、移動後、同じフォルダーに解決されます。  
   
 > [!NOTE]  

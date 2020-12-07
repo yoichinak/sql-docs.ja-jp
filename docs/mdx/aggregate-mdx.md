@@ -1,4 +1,5 @@
 ---
+description: Aggregate (MDX)
 title: Aggregate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461695"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -34,10 +35,10 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  空の組のセットまたは空のセットを指定した場合、この関数は空の値を返します。  
   
- 次の表では、**集計**関数がさまざまな集計関数でどのように動作するかを説明します。  
+ 次の表では、 **集計** 関数がさまざまな集計関数でどのように動作するかを説明します。  
   
 |集計演算子|結果|  
 |--------------------------|------------|  
@@ -54,8 +55,8 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |計算されるメンバー|通常の規則が適用されます。つまり、最後の解決順序が優先されます。|  
 |代入|割り当ては、メジャー集計関数に従って集計されます。 メジャー集計関数が個別カウントの場合、代入の合計が算出されます。|  
   
-## <a name="examples"></a>使用例  
- 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
+## <a name="examples"></a>例  
+ 次の例では、 `Measures.[Order Quantity]` `Date` **Adventure works** キューブから、ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +94,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 次の例では、 Aggregate 関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションの製品カテゴリに対して、減少した売上の値を返すには、 **Hierarchize**および**ドリルダウンレベル**関数を使用します。  
+ 次の例では、 Aggregate 関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションの製品カテゴリに対して、減少した売上の値を返すには、 **Hierarchize** および **ドリルダウンレベル** 関数を使用します。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -125,11 +126,11 @@ WHERE ([Geography].[State-Province].x,
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
  [子 &#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [MDX&#41;&#41; &#40;設定 &#40;数](../mdx/count-set-mdx.md)   
+ [MDX&#41;&#41; &#40;設定 &#40;数 ](../mdx/count-set-mdx.md)   
  [MDX&#41;のフィルター処理 &#40;](../mdx/filter-mdx.md)   
- [MDX&#41;&#40;の Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)   
- [MDX&#41;&#40;ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)   
- [MDX&#41;&#40;プロパティ](../mdx/properties-mdx.md)   
+ [MDX&#41;&#40;の Add演算メンバー ](../mdx/addcalculatedmembers-mdx.md)   
+ [MDX&#41;&#40;ドリルダウンレベル ](../mdx/drilldownlevel-mdx.md)   
+ [MDX&#41;&#40;プロパティ ](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

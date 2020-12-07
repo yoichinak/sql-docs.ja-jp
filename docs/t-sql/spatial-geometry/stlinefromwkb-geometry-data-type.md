@@ -1,4 +1,5 @@
 ---
+description: STLineFromWKB (geometry データ型)
 title: STLineFromWKB (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -18,12 +19,12 @@ ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe1d58d14e6cb4e3ee5c8136cc8e71fb504fe3c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 19f43ada9987079725ab80528d823003cb1636ce
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88305428"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

@@ -1,4 +1,5 @@
 ---
+description: 製品サイクルの長さ
 title: 製品サイクルの長さ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476584"
 ---
 # <a name="length-of-the-product-cycle"></a>製品サイクルの長さ
 相互運用性に関する最後の質問は時間です。 相互運用可能なアプリケーションの開発は、通常、相互運用不可能なアプリケーションを開発するよりも時間がかかります。 その理由は、アプリケーションは DBMS の機能を確認し、さまざまな Dbms に対して同じタスクを異なる方法で実行する必要があるため、一部の Dbms ではサポートされている機能を回避できます。  

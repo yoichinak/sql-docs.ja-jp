@@ -1,4 +1,5 @@
 ---
+description: log_shipping_primary_secondaries (Transact-sql)
 title: log_shipping_primary_secondaries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_secondaries system table
 ms.assetid: 4b315c70-7265-4acd-b35b-a4dbb7881d98
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57c7ec652ff3a4c2643aa1a6cdf1dba2b7845ad2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6749e16a5678b580d3d78036c551f3c3295a0a48
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890145"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545743"
 ---
 # <a name="log_shipping_primary_secondaries-transact-sql"></a>log_shipping_primary_secondaries (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  各プライマリデータベースをセカンダリデータベースにマップします。 このテーブルは、 **msdb**データベースに格納されます。  
+  各プライマリデータベースをセカンダリデータベースにマップします。 このテーブルは、 **msdb** データベースに格納されます。  
 
   
 |列名|データ型|説明|  

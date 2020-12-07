@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943759"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193422"
 ---
 # <a name="data-collection"></a>データ収集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943759"
   
  データ コレクターでは、テスト環境や実稼働環境に合わせてデータ収集の範囲を調整できます。 また、データ コレクターはデータ ウェアハウスも使用します。データ ウェアハウスは、データにさまざまな保有期間を設定して収集したデータを管理できるようにするリレーショナル データベースです。  
   
- データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql)」を参照してください。  
+ データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](../system-functions/data-collector-functions-transact-sql.md)」を参照してください。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943759"
   
 -   プロキシ アカウント  
   
- 詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)」を参照してください。  
+ 詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)」を参照してください。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943759"
 |管理データ ウェアハウスを使用し、データ コレクションの対象であるサーバーからデータを収集します。|[管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |SQL Server Profiler のサーバー側のトレース機能を利用し、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。| [SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

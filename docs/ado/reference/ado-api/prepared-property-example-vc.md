@@ -1,8 +1,9 @@
 ---
+description: Prepared プロパティの例 (VC++)
 title: Prepared プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fb8f0b2b269e872f8a40cbdce11388895ec5f927
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761931"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990023"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
-次の例では、2つの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)を示しています。1つは準備されています。  
+次の例では、2つの[コマンド](./command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](./prepared-property-ado.md)を示しています。1つは準備されています。  
   
 ## <a name="example"></a>例  
   
@@ -144,5 +145,5 @@ void PrintComError(_com_error &e) {
 **未準備: 0.016 秒**  
 **準備完了: 0.016 秒**   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Prepared プロパティ (ADO)](./prepared-property-ado.md)

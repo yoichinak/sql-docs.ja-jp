@@ -1,4 +1,5 @@
 ---
+description: RESTORE SERVICE MASTER KEY (Transact-SQL)
 title: RESTORE SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8565124ea527b5c9de885a5b342d6368b99149d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 38193c05ecfa6c030954c6cbcbfcc50a1927d913
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92300500"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,7 @@ ms.locfileid: "86483130"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'   
     DECRYPTION BY PASSWORD = 'password' [FORCE]  
 ```  
@@ -57,7 +57,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  データが失われる可能性があっても、強制的にサービス マスター キーを置換します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
  暗号化解除が 1 つでも失敗した場合、復元は失敗します。 FORCE オプションを使用するとエラーを無視できますが、暗号化を解除できないデータが失われる可能性があります。  
@@ -73,7 +73,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ## <a name="examples"></a>例  
  次の例では、バックアップ ファイルからサービス マスター キーを復元します。  
   
-```  
+```sql  
 RESTORE SERVICE MASTER KEY   
     FROM FILE = 'c:\temp_backups\keys\service_master_key'   
     DECRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [サービス マスター キー](../../relational-databases/security/encryption/service-master-key.md)   
+ [サービス マスター キー](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)

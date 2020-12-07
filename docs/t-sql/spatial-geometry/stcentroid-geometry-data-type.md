@@ -1,4 +1,5 @@
 ---
+description: STCentroid (geometry データ型)
 title: STCentroid (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 716f26e14e5d97701965cc57e8d304eb25b89b6f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5bcdb5f682ebd279af1d5314917f61290a88b07e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555077"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479270"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

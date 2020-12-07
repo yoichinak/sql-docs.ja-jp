@@ -1,4 +1,5 @@
 ---
+description: Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 title: Azure BLOB ストレージを使用したバックアップと復元
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019
@@ -9,25 +10,25 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d28d41c85b267d3920e62773f3694cabb252c64b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786468"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125458"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
+  ![Azre BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
  SQL Server では、次の方法で Microsoft Azure Blob ストレージ サービスにバックアップを格納できます。  
   
--   **Microsoft Azure へのバックアップを管理する方法:** ディスクまたはテープにバックアップする場合と同じ方法を使用して、バックアップ先として URL を指定することにより、Microsoft Azure ストレージにバックアップできます。 この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL**とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で強化され、ブロック BLOB、Shared Access Signature、ストライピングを使用してパフォーマンスと機能が向上しました。  
+-   **Microsoft Azure へのバックアップを管理する方法:** ディスクまたはテープにバックアップする場合と同じ方法を使用して、バックアップ先として URL を指定することにより、Microsoft Azure ストレージにバックアップできます。 この機能を使用すると、手動でバックアップすることも、ローカル ストレージまたはその他のオフサイト オプションの場合と同じように独自のバックアップ方法を構成することもできます。 この機能は、 **SQL Server Backup to URL** とも呼ばれます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。 この機能は、SQL Server 2012 SP1 CU2 以降で使用できます。 この機能は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で強化され、ブロック BLOB、Shared Access Signature、ストライピングを使用してパフォーマンスと機能が向上しました。  
   
     > [!NOTE]  
     >  SQL Server 2012 SP1 CU2 より前の SQL Server バージョンでは、Microsoft Azure への SQL Server バックアップ ツール アドインを使用して、Microsoft Azure Storage へのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
@@ -62,13 +63,13 @@ ms.locfileid: "85786468"
   
  **データ転送:** Microsoft Azure への受信データ転送は無料です。 送信転送は、帯域幅の使用量に対して課金され、段階的な地域固有の区分に基づいて計算されます。 詳細については、「 [料金の詳細](https://go.microsoft.com/fwlink/?LinkId=277061) 」の「データ転送」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[チュートリアル: Windows Azure ストレージ サービス内の SQL Server データ ファイル](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: レベル (MDX)
 title: レベル (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3b0a7eaea166fdefbfd947faf95b58f74bdb8be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429874"
 ---
 # <a name="levels-mdx"></a>レベル (MDX)
 
@@ -41,16 +42,16 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  レベル名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
- レベル番号が指定されている場合、 **Levels**関数は、指定された0から始まる位置に関連付けられているレベルを返します。  
+## <a name="remarks"></a>解説  
+ レベル番号が指定されている場合、 **Levels** 関数は、指定された0から始まる位置に関連付けられているレベルを返します。  
   
- レベル名が指定されている場合、 **Levels**関数は指定されたレベルを返します。  
+ レベル名が指定されている場合、 **Levels** 関数は指定されたレベルを返します。  
   
 > [!NOTE]  
 >  ユーザー定義関数については、文字列式の構文を使用してください。  
   
-## <a name="examples"></a>使用例  
- 次の例では、各**レベル**の関数の構文について説明します。  
+## <a name="examples"></a>例  
+ 次の例では、各 **レベル** の関数の構文について説明します。  
   
 ### <a name="numeric"></a>数値  
  次の例では、国のレベルが返されます。  
@@ -60,7 +61,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>文字列型  
  次の例では、国のレベルが返されます。  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: '[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e37b76232b76590593c384da8e83bc099ce6c11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d3499b501a27c878aa6633cc667a8bd9d588a83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484172"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -38,9 +39,9 @@ ms.locfileid: "86913355"
 -   パッケージを保存するかどうか。
 -   パッケージをすぐに実行するかどうか。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  ウィザードで選択した内容を確認して **[完了]** をクリックすると、次に **[操作を実行しています]** ページが表示されます。 このページでは、前のページで構成した操作の進行状況と結果を確認できます。 詳細については、「 [[操作を実行しています]](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)」を参照してください。
  
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

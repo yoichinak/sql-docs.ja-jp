@@ -1,4 +1,5 @@
 ---
+description: データベース メール ビュー (Transact-SQL)
 title: データベースメールビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], Database Mail
 - status information [SQL Server], Database Mail
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a4100246d27370a420706d65718ea765d8e11f13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 124b427bea6fc2a83140168328f0eea8837648c1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920042"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537526"
 ---
 # <a name="database-mail-views-transact-sql"></a>データベース メール ビュー (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールには、次に示すビューがあります。これらのビューでは、データベース メールの電子メールの内容や、電子メールの状態を表示できます。また、データベース メールでログに記録されたエラーなど、その他の受信メッセージも表示できます。 これらのビューは**msdb**データベースにあります。  
+  データベース メールには、次に示すビューがあります。これらのビューでは、データベース メールの電子メールの内容や、電子メールの状態を表示できます。また、データベース メールでログに記録されたエラーなど、その他の受信メッセージも表示できます。 これらのビューは **msdb** データベースにあります。  
 
 :::row:::
     :::column:::
@@ -51,6 +52,6 @@ ms.locfileid: "86920042"
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

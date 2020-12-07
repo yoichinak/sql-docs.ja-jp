@@ -1,5 +1,6 @@
 ---
-title: モデルの構築 (Excel 用 MDS アドイン) | Microsoft Docs
+description: モデルの構築 (Excel 用 MDS アドイン)
+title: モデルの構築
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84dd1d79dc049baf5d1f993b6bd50a837ba56a87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258068"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>モデルの構築 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションで利用可能な管理機能のサブセットを実行できます。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68092493"
   
 -   [ビジネス ルール (マスター データ サービス)](../../master-data-services/business-rules-master-data-services.md)  
   
--   [概要:データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [階層 (マスター データ サービス)](../../master-data-services/hierarchies-master-data-services.md)  
   

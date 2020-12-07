@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3b615a45df3d9e45338514423700a706980eee0
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c02d85c3230502f3360039b132e8328e40d06d28
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84535500"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987158"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>アイテムの移動または削除 (レポート マネージャー)
   レポート サーバーにパブリッシュしたレポートやレポート関連アイテムは、フォルダーに格納されます。 アイテムは異なるフォルダーに移動でき、それらのアイテムへの参照はレポート サーバーによって自動的に保持されます。 アイテムを削除する前に、そのアイテムに依存しているアイテムが他に存在しないか確認してください。  
@@ -40,7 +40,7 @@ ms.locfileid: "84535500"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>[コンテンツ] ページでアイテムを移動するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md) を開始します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、移動するアイテムを探します。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "84535500"
  または、移動するオブジェクトに移動して **[プロパティ]** をクリックし、ページの上部にある **[移動]** をクリックします。  
   
 ## <a name="delete-an-item"></a>項目を削除する  
- アイテムを削除する前に、そのアイテムが他のアイテムによって使用されていないかどうかを確認してください。 たとえば、共有データ ソースを削除した場合、そのデータ ソースを使用するレポートおよびモデルは実行できなくなります。 レポートを削除すると、そのレポートに関連付けられているサブスクリプションおよびレポート履歴も削除されます。 あるアイテムに依存しているアイテムを検索するには、「[[依存アイテム] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e)」を参照してください。  
+ アイテムを削除する前に、そのアイテムが他のアイテムによって使用されていないかどうかを確認してください。 たとえば、共有データ ソースを削除した場合、そのデータ ソースを使用するレポートおよびモデルは実行できなくなります。 レポートを削除すると、そのレポートに関連付けられているサブスクリプションおよびレポート履歴も削除されます。 あるアイテムに依存しているアイテムを検索するには、「[[依存アイテム] ページ &#40;レポート マネージャー&#41;](../web-portal-ssrs-native-mode.md)」を参照してください。  
   
 #### <a name="to-delete-a-report-or-item"></a>レポートまたはアイテムを削除するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md) を開始します。  
   
 2.  レポート マネージャーで、 **[コンテンツ]** ページに移動し、削除するアイテムを探します。  
   
@@ -72,7 +72,6 @@ ms.locfileid: "84535500"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [[コンテンツ] ページ (レポート マネージャー)](/previous-versions/sql/sql-server-2016/ms186470(v=sql.130))   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
-  
   

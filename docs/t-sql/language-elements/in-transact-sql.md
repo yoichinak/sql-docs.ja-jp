@@ -1,4 +1,5 @@
 ---
+description: IN (Transact-SQL)
 title: IN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -23,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207043037a5f75e71f4d385abec42dd296ea4528
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920658"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193382"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,16 +55,16 @@ test_expression [ NOT ] IN
  *subquery*  
  1 列の結果セットを返すサブクエリです。 この列のデータ型は、*test_expression* と同じデータ型である必要があります。  
   
- *expression*[ **,** ... *n* ]  
+ *expression*[ **,**... *n* ]  
  一致するかどうかのテストに使用する式のリストです。 すべての式は、*test_expression* と同じ型である必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
  **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の*式*と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
+ *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の *式* と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
   
- NOT IN を使用すると、*サブクエリ*値または*式*が否定されます。  
+ NOT IN を使用すると、*サブクエリ* 値または *式* が否定されます。  
   
 > [!CAUTION]  
 >  IN または NOT IN を使用して *test_expression* と比較される *subquery* または *expression* で NULL 値が返された場合は、すべて UNKNOWN が返されます。 IN または NOT IN と共に NULL 値を使用すると、予期しない結果が生じる可能性があります。  
@@ -84,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>A. OR と IN を比較する  
  次の例では、デザイン エンジニア、ツール デザイナー、またはマーケティング アシスタントのいずれかである従業員の名前の一覧を選択します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -99,7 +100,7 @@ GO
   
  IN を使用しても同じ結果が得られます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -128,9 +129,9 @@ Mary        Dempsey     Marketing Assistant
 ```  
   
 ### <a name="b-using-in-with-a-subquery"></a>B. IN とサブクエリを使用する  
- 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`EmployeeID` サブクエリの結果に一致する `SELECT` の従業員の名前がすべて選択されます。  
+ 次の例では、年間の販売ノルマが 250,000 ドルを超えるすべての販売員の ID が `SalesPerson` テーブルから検索され、次に、`Employee` テーブルから、`SELECT` サブクエリの結果に一致する `EmployeeID` の従業員の名前がすべて選択されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -159,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>C. NOT IN とサブクエリを使用する  
  次の例では、販売ノルマが 250,000 ドル以下の販売員が検索されます。 `NOT IN` は、値の一覧に一致する項目がない販売員を検索します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -176,9 +177,9 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN と NOT IN の使用  
- 次の例では、`FactInternetSales` テーブルの `SalesReasonKey` 値と一致する `DimSalesReason` テーブルのすべてのエントリを検出します。  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致する `FactInternetSales` テーブルのすべてのエントリを検出します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -186,9 +187,9 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 次の例では、`FactInternetSalesReason` テーブルの `SalesReasonKey` 値と一致しない `DimSalesReason` テーブルのすべてのエントリを検出します。  
+ 次の例では、`DimSalesReason` テーブルの `SalesReasonKey` 値と一致しない `FactInternetSalesReason` テーブルのすべてのエントリを検出します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -199,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>E. 式リストで IN を使用する  
  次の例は、`DimEmployee` テーブルで、名が `Mike` または `Michael` の従業員について、営業担当者の ID をすべて検出します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

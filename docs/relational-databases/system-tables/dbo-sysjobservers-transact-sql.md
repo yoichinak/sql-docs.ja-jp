@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobservers (Transact-SQL)
 title: dbo.sysjobservers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe4779593ac9197ef399120ffa99ea2af4582ba5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890454"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541012"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "85890454"
 |last_run_duration|**int**|ジョブが実行された期間 (時間、分、秒)。 次の式を使用して計算されます: (*時間* \* 1万) + (*分* \* 100) +*秒*です。|  
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*4*を超える値は、SQL エージェントがそのジョブの状態を認識していないことを意味します。 ジョブを作成すると、 *last_run_outcome*は最初に*5*に設定されます。
+*4*を超える値は、SQL エージェントがそのジョブの状態を認識していないことを意味します。 ジョブを作成すると、 *last_run_outcome* は最初に *5* に設定されます。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

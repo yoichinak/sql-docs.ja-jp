@@ -1,4 +1,5 @@
 ---
+description: STLength (geography データ型)
 title: STLength (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a2f1fa88c2e0e6243e471c88ee7c0158d28eb797
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5fe53017aa78bd4025a251611fd6f50c67d4401a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445178"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86556109"
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geography** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **GeometryCollection** の長さは、コレクションに含まれるすべての **geography** インスタンスの合計長として計算されます。  
   
  STLength() は、LineString が有効でも無効でも動作します。 通常、LineString が無効になるのは、線分の重複のためです。これは、不正確な GPS のトレースなどの異常によって起きる場合があります。 STLength() は、重複する線分や無効な線分を削除しません。 返される長さの値には、重複する線分や無効な線分が含まれています。 MakeValid() メソッドは、LineString から重複する線分を削除できます。  

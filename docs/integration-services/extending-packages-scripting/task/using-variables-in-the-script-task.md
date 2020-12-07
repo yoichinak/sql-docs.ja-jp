@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクでの変数の使用
 title: スクリプト タスクでの変数の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168216359a112fe98168164fde16f406508f0eff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b68f0dc3ac5b5591dc556c81bc083a62aa8d4606
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195238"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
 
@@ -120,6 +121,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [パッケージで変数を使用する](../../integration-services-ssis-variables.md)  
   

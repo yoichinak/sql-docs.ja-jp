@@ -1,4 +1,5 @@
 ---
+description: 変換先に変更を適用する
 title: 変換先に変更を適用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8886f2f5b40b9a3a2032323be935d8df126c381
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0176dcc68e8c7f72c4bd9b78b1f3d926e52ad215
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919708"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123734"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
 

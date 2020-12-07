@@ -1,4 +1,5 @@
 ---
+description: DQS データベースのデタッチとアタッチ
 title: DQS データベースのデタッチとアタッチ
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462130"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS データベースのデタッチとアタッチ
 
@@ -27,7 +28,7 @@ ms.locfileid: "85882824"
 ###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> 制限事項と制約事項  
  制限事項と制約事項の一覧については、「 [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md)のデータベースをデタッチする方法について説明します。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 必要条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   DQS で実行中のアクティビティまたはプロセスがないことを確認します。 これは **[アクティビティ監視]** 画面を使用して確認できます。 この画面の操作の詳細については、「 [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md)」を参照してください。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85882824"
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="detach-dqs-databases"></a><a name="Detach"></a>DQS データベースのデタッチ  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a> DQS データベースのデタッチ  
  SQL Server Management Studio を使用して DQS データベースをデタッチすると、デタッチされたファイルはコンピューターに残り、同じ SQL Server インスタンスに再アタッチすることも、別のサーバーに移動して、そこにアタッチすることもできます。 DQS データベース ファイルは通常、Data Quality Services コンピューターの C:\Program Files\Microsoft SQL Server\MSSQL13.*<インスタンス名>* \MSSQL\DATA にあります。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
@@ -58,7 +59,7 @@ ms.locfileid: "85882824"
   
  Transact-SQL ステートメントで sp_detach_db ストアド プロシージャを使用して、DQS データベースをデタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのデタッチに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) 」の「 [Detach a Database](../relational-databases/databases/detach-a-database.md)」を参照してください。  
   
-##  <a name="attach-dqs-databases"></a><a name="Attach"></a>DQS データベースをアタッチする  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a> DQS データベースをアタッチする  
  次の手順を使用して、DQS データベースを (デタッチした場所から) 同じ SQL Server インスタンスまたは [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] がインストールされている別の SQL Server インスタンスにアタッチします。  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
@@ -85,14 +86,13 @@ ms.locfileid: "85882824"
   
 9. クエリ エディター ウィンドウで、SQL ステートメントをコピーします。  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. F5 キーを押してステートメントを実行します。 [結果] ペインを確認してステートメントが正常に実行されたことを確認します。 " `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`" というメッセージが表示されます。  
@@ -101,7 +101,7 @@ ms.locfileid: "85882824"
   
  また、Transact-SQL ステートメントを使用して DQS データベースをアタッチすることもできます。 Transact-SQL ステートメントを使用したデータベースのインポートに関する詳細については、「 [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) 」の「 [Attach a Database](../relational-databases/databases/attach-a-database.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

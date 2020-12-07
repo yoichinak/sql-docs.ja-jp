@@ -1,4 +1,5 @@
 ---
+description: GetFileNamespacePath (Transact-SQL)
 title: GetFileNamespacePath (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419576"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ ms.locfileid: "85760267"
   
 ## <a name="arguments"></a>引数  
  *列名*  
- FileTable 内の VARBINARY (MAX) **file_stream**列の列名。  
+ FileTable 内の VARBINARY (MAX) **file_stream** 列の列名。  
   
  *列名*の値は、有効な列名である必要があります。 式、または別のデータ型の列から変換またはキャストされた値を指定することはできません。  
   
  *is_full_path*  
- 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*には、次のいずれかの値を指定できます。  
+ 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path* には、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -64,7 +65,7 @@ ms.locfileid: "85760267"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスがフェールオーバークラスターでクラスター化されている場合、このパスの一部として返されるコンピューター名は、クラスター化されたインスタンスの仮想ホスト名になります。  
   
- データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名ではなく仮想ネットワーク名 (vnn) を返します。  
+ データベースが Always On 可用性グループに属している場合、 **FileTableRootPath** 関数は、コンピューター名ではなく仮想ネットワーク名 (vnn) を返します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  **GetFileNamespacePath**関数が返すパスは、次の形式の論理ディレクトリまたはファイルパスです。  
@@ -73,8 +74,8 @@ ms.locfileid: "85760267"
   
  この論理パスは、物理的な NTFS パスに直接対応していません。 FILESTREAM のファイルシステムフィルタードライバーと FILESTREAM エージェントによって物理パスに変換されます。 論理パスと物理パスを分離することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、パスの有効性に影響を与えることなく内部的にデータを再構成できます。  
   
-## <a name="best-practices"></a>ベスト プラクティス  
- コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、次の例に示すように、 **FileTableRootPath**関数と**GetFileNamespacePath**関数を一緒に使用して、実行時にファイルの完全なパスを取得します。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
+## <a name="best-practices"></a>推奨する運用方法  
+ コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、次の例に示すように、 **FileTableRootPath** 関数と **GetFileNamespacePath** 関数を一緒に使用して、実行時にファイルの完全なパスを取得します。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -86,10 +87,10 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
- 次の例は、 **GetFileNamespacePath**関数を呼び出して、FileTable 内のファイルまたはディレクトリの UNC パスを取得する方法を示しています。  
+## <a name="examples"></a>例  
+ 次の例は、 **GetFileNamespacePath** 関数を呼び出して、FileTable 内のファイルまたはディレクトリの UNC パスを取得する方法を示しています。  
   
 ```  
 -- returns the relative path of the form "\MyFileTable\MyDocDirectory\document.docx"  
@@ -101,7 +102,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

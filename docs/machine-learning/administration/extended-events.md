@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 12839d5c10e5ba50cc1b57b297ee1afa9569fe15
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110170"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115715"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで Python および R のスクリプトを監視する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 拡張イベントを使用して、SQL Server Machine Learning Services、SQL Server Launchpad、Python または R のジョブの外部スクリプトに関連する操作を監視およびトラブルシューティングする方法について説明します。
 
@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-拡張イベントの使用法の詳細については、「[拡張イベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)」を参照してください。
+拡張イベントの使用法の詳細については、「[拡張イベント ツール](../../relational-databases/extended-events/extended-events-tools.md)」を参照してください。
 
 ## <a name="additional-events-specific-to-machine-learning-services"></a>Machine Learning Services 固有のその他のイベント
 
@@ -54,7 +54,7 @@ AND p.name = 'SQLSatellite';
 |satellite_abort_received|中止メッセージがサテライト接続経由で受信したときに発生します。||  
 |satellite_abort_sent|中止メッセージがサテライト接続経由で送信されたときに発生します。||  
 |satellite_authentication_completion|TCP または名前付きパイプ経由の接続の認証が完了したときに発生します。||  
-|satellite_authorization_completion|TCP または名前付きパイプ経由の接続の承認が完了したときに発生します。||  
+|satellite_authorization_completion|TCP または名前付きパイプ経由の接続の認可が完了したときに発生します。||  
 |satellite_cleanup|サテライトがクリーンアップを呼び出したときに発生します。|外部プロセスからのみ起動されます。 外部プロセスからイベントを収集する手順を参照してください。|  
 |satellite_data_chunk_sent|サテライト接続が 1 つのデータ チャンクの送信を完了したときに発生します。|イベントにより、送信された行数と列数、使用された SNI パケット数、チャンクの送信にかかった時間 (ミリ秒) が報告されます。 この情報は、さまざまな型のデータを渡すためにかかった時間と、使用されたパケット数を理解するのに役立ちます。|  
 |satellite_data_receive_completion|サテライト接続経由でクエリに必要なすべてのデータが受信されたときに発生します。|外部プロセスからのみ起動されます。 外部プロセスからイベントを収集する手順を参照してください。|  
@@ -102,7 +102,7 @@ SQL Server Machine Learning Services は、SQL Server プロセスの外部で�
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`。
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`。
 
 構成ファイルは、"[name].xevents.xml" の形式を使用した実行可能ファイルと同じ名前にする必要があります。 つまり、次のようにファイルに名前を付ける必要があります。
 
@@ -112,7 +112,7 @@ SQL Server Machine Learning Services は、SQL Server プロセスの外部で�
 構成ファイル自体は、次の形式になります。
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

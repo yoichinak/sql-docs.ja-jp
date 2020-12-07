@@ -1,6 +1,6 @@
 ---
 title: IRowsetFind での比較 | Microsoft Docs
-description: IRowsetFind での比較
+description: OLE DB Driver for SQL Server で日付/時刻型に対して IRowsetFind がサポートする比較について説明します。 その他の比較については、DB_E_BADCOMPAREOP が返されます。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetFind comparability
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a5f118f11cc5036d4c8aaf4173b10484d56b1e41
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 16ef589a18c2be5317157e7db5790af06c8c613a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011054"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861403"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind での比較
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

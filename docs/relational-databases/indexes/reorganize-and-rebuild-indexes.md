@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: carlrab
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords:
@@ -32,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7694d4675d37045b7b463e950d1811cec197ee4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba0eb3c9907acfe02939c49ea253869adbfc992b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011944"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867348"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>インデックスを再構成または再構築することでインデックス断片化を解決する
 
@@ -87,7 +86,7 @@ ms.locfileid: "86011944"
 
 <sup>2</sup> インデックスの再構築はオンラインでもオフラインでも実行できます。 インデックスの再構成は、常にオンラインで実行されます。 再構成オプションと同様の可用性を実現するには、インデックスをオンラインで再構築してください。 詳しくは、[インデックス](#rebuild-an-index)に関するページと「[オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。
 
-断片化が 5% 未満のインデックスはデフラグする必要がありません。インデックスの再構成や再構築には、ほとんどの場合、そのようなわずかな断片化を解消するには見合わない CPU コストがかかります。 また、小さな行ストア インデックスを再構築または再構成しても、一般的に、断片化が実際に解消することはありません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]までは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、混合エクステントを使用して領域が割り当てられます。 このため、小さいインデックスのページは、混合エクステントに格納される場合があります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md#extents)」を参照してください。
+インデックスの断片化が 5% 未満の場合は、デフラグする必要はありません。これは、インデックスの再構成または再構築で、このような少量の断片化を解消するのに見合わない CPU コストが通常かかるからです。 また、少量の行ストア インデックスを再構築または再構成しても、一般的に実際断片化は解消されません。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]までは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では、混合エクステントを使用して領域が割り当てられます。 このため、小さいインデックスのページは、混合エクステントに格納される場合があります。 混合エクステントは最大 8 つのオブジェクトで共有されるため、小さなインデックスを再構成または再構築しても、その断片化は解消されない場合があります。 「[行ストア インデックスの再構築に固有の注意点](#considerations-specific-to-rebuilding-rowstore-indexes)」を参照してください。 エクステントの詳細については、「[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md#extents)」を参照してください。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>列ストア インデックスの断片化を検出する
 
@@ -247,7 +246,7 @@ object_id   TableName                   index_id    IndexName                   
 - **db_owner** データベース ロール
 - **sysadmin** サーバー ロール
 
-<sup>1</sup>**db_ddladmin** データベース ロールには[最も低い特権レベル](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)が設定されています。
+<sup>1</sup>**db_ddladmin** データベース ロールには [最も低い特権レベル](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)が設定されています。
 
 ### <a name="remove-fragmentation-using-ssmanstudiofull"></a><a name="SSMSProcedureReorg"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用して断片化を取り除く
 
@@ -402,13 +401,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!WARNING]
 > 固定されていないインデックスをパーティションが 1, 000 個以上あるテーブルに作成または再構築することは可能ですが、サポートされていません。 このような操作を行うと、操作中にパフォーマンスが低下したりメモリが過度に消費される可能性があります。 パーティションの数が 1,000 個を超えた場合は、[固定されたインデックス](../partitions/partitioned-tables-and-indexes.md#aligned-index)のみを使用することをお勧めします。
 
-インデックスのあるファイル グループが**オフライン**であるか、または**読み取り専用**に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。
+インデックスのあるファイル グループが **オフライン** であるか、または **読み取り専用** に設定されている場合、インデックスを再構成または再構築することはできません。 キーワード `ALL` を指定した場合で、1 つ以上のインデックスがオフラインまたは読み取り専用のファイル グループにある場合、ステートメントは失敗します。
 
 [統計] :
 
-- インデックスが**作成**または**再構築**されるとき、テーブル内のすべての行がスキャンされて、統計が作成または更新されます。 ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成または更新されることはありません。 代わりに、クエリ オプティマイザーによって既定のサンプリング アルゴリズムを使用してこれらの統計が生成されます。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) または [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を使用します。
+- インデックスが **作成** または **再構築** されるとき、テーブル内のすべての行がスキャンされて、統計が作成または更新されます。 ただし、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、パーティション インデックスが作成または再構築されたとき、テーブル内のすべての行をスキャンして統計が作成または更新されることはありません。 代わりに、クエリ オプティマイザーによって既定のサンプリング アルゴリズムを使用してこれらの統計が生成されます。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、`FULLSCAN` 句で [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) または [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を使用します。
 
-- インデックスが**再構成**されるとき、統計は更新されません。
+- インデックスが **再構成** されるとき、統計は更新されません。
 
 `ALLOW_PAGE_LOCKS` を OFF に設定した場合、インデックスを再構成することはできません。
 
@@ -435,4 +434,4 @@ ALTER INDEX ALL ON HumanResources.Employee
 - [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)
 - [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 - [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)
-- [Columnstore indexes and the merge policy for rowgroups (列ストア インデックスと、行グループのマージ ポリシー)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)
+- [Columnstore indexes and the merge policy for rowgroups (列ストア インデックスと、行グループのマージ ポリシー)](/archive/blogs/sqlserverstorageengine/columnstore-index-merge-policy-for-reorganize)

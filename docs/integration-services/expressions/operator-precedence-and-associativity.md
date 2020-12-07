@@ -1,4 +1,5 @@
 ---
+description: 演算子の優先順位と結合規則
 title: 演算子の優先順位と結合規則 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477505"
 ---
 # <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
 
@@ -31,13 +32,13 @@ ms.locfileid: "86901283"
   
 |演算子記号|演算の種類|結合規則|  
 |---------------------|-----------------------|-------------------|  
-|( )|式|左から右|  
-|–、!、~|単項演算子|右から左|  
-|キャスト|単項演算子|右から左|  
-|*、/、%|乗算|左から右|  
+|( )|正規表現|左から右|  
+|–、!、~|単項|右から左|  
+|キャスト|単項|右から左|  
+|*, / ,%|乗法|左から右|  
 |+、-|加法|左から右|  
-|\<, >, \<=, >=|リレーショナル|左から右|  
-|==、!=|等式|左から右|  
+|\<, >, \<=, >=|関係|左から右|  
+|==、!=|等価比較|左から右|  
 |&|ビット演算子 AND|左から右|  
 |^|ビット演算子排他的 OR|左から右|  
 |&#124;|ビット演算子包含的 OR|左から右|  

@@ -1,4 +1,5 @@
 ---
+description: CLR アセンブリカタログビュー (Transact-sql)
 title: CLR アセンブリカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - assemblies [CLR integration], catalog views
 - CLR assembly catalog views
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bae2182aec6b86776c28fa6573d7f249c5e11de
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1d27ee8c9460b8b14b451479cd061af08b9dfdce
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472648"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810264"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>CLR アセンブリカタログビュー (Transact-sql)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,6 +48,5 @@ ms.locfileid: "87472648"
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

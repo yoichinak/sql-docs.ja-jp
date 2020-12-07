@@ -1,4 +1,5 @@
 ---
+description: 行セット内のデータの更新-SQL Server Native Client での行の再同期
 title: 行の再同期 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: d2d30505-a878-4aa9-b821-53d8118a45a5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e260334701d49f31e42a289e08c3938955ce4fcd
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 65f077141e6e29e3f524f8ac183e5f624b187319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448344"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows-in-sql-server-native-client"></a>行セット内のデータの更新-SQL Server Native Client での行の再同期
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

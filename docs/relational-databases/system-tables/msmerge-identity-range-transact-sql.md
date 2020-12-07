@@ -1,4 +1,5 @@
 ---
+description: MSmerge_identity_range (Transact-sql)
 title: MSmerge_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d4b83d497e70182d8980ec043396b79d7c65ec49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0c473f481bc2a997d222558654ae960d4359667b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889777"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547110"
 ---
 # <a name="msmerge_identity_range-transact-sql"></a>MSmerge_identity_range (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,10 +38,10 @@ ms.locfileid: "85889777"
 |**range_end**|**数値 (38)**|現在の範囲の末尾にある id 値。|  
 |**next_range_begin**|**数値 (38)**|割り当てられる次の範囲の先頭にある id 値。|  
 |**next_range_end**|**数値 (38)**|割り当てられる次の範囲の末尾にある id 値。|  
-|**is_pub_range**|**bit**|Id 範囲がパブリケーションに割り当てられている場合は**1**を指定します。|  
+|**is_pub_range**|**bit**|Id 範囲がパブリケーションに割り当てられている場合は **1** を指定します。|  
 |**max_used**|**数値 (38)**|割り当てることができる最大 id 値。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

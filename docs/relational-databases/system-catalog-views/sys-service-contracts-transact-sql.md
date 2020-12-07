@@ -1,4 +1,5 @@
 ---
+description: sys.service_contracts (Transact-SQL)
 title: service_contracts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contracts catalog view
 ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f0aaada78471cb31e24d3adfd5d1f541d33430a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 00e98ef129f6430a644b1a688e838fa51c5b6ae5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539549"
 ---
 # <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

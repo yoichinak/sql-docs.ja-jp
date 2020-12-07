@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio (SSMS) のサポート ポリシー
 title: SQL Server Management Studio (SSMS) のサポート ポリシー
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497270"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) のサポート ポリシー
 
@@ -43,4 +44,4 @@ Microsoft では、1 年に数回 SQL Server Management Studio (SSMS) の更新�
 
 
 > [!NOTE]
-> 最新のブランチ バージョンは常に、**フル サポート** サービス提供フェーズになります。 このサポートに関する声明は、重要な更新プログラムに相当するコードの欠陥が発生した場合は、修正プログラムを受信するために、最新のブランチ バージョンをインストールする必要があることを意味しています。
+> 最新のブランチ バージョンは常に、**フル サポート** サービス提供フェーズになります。 このサポートに関する説明は、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があることを意味しています。

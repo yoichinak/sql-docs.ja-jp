@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER ROLE (Transact-SQL)
 title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a8f5b2204323c0da73371ba1298bc2b0f636e1a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929245"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379665"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "67929245"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DROP SERVER ROLE role_name  
 ```  
   
@@ -45,7 +46,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  サーバーから削除するユーザー定義サーバー ロールを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールは、サーバーから削除できません。 セキュリティ保護可能なリソースを所有するユーザー定義サーバー ロールを削除するには、まず、セキュリティ保護可能なリソースの所有権を転送するか、リソースを削除する必要があります。  
   
  メンバーを含むユーザー定義サーバー ロールは削除できません。 メンバーを含むユーザー定義サーバー ロールを削除するには、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) を使用して先にロールのメンバーを削除しておく必要があります。  
@@ -62,7 +63,7 @@ DROP SERVER ROLE role_name
 ### <a name="a-to-drop-a-server-role"></a>A. サーバー ロールを削除するには  
  次の例では、サーバー ロール `purchasing` を削除します。  
   
-```  
+```sql  
 DROP SERVER ROLE purchasing;  
 GO  
 ```  
@@ -70,7 +71,7 @@ GO
 ### <a name="b-to-view-role-membership"></a>B. ロールのメンバーシップを表示するには  
  ロールのメンバーシップを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバー ロール (メンバー)]** ページを使用するか、次のクエリを実行します。  
   
-```  
+```sql  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -84,7 +85,7 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="c-to-view-role-membership"></a>C. ロールのメンバーシップを表示するには  
  サーバー ロールが別のサーバー ロールを所有しているかどうかを判断するには、次のクエリを実行します。  
   
-```  
+```sql  
 SELECT SP1.name AS RoleOwner, SP2.name AS Server_Role  
 FROM sys.server_principals AS SP1  
 JOIN sys.server_principals AS SP2  

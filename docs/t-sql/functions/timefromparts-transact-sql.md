@@ -1,4 +1,5 @@
 ---
+description: TIMEFROMPARTS (Transact-SQL)
 title: TIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,12 +19,12 @@ ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b22a13e149e63aa459d825b62bef4ab0145c928
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b6ae1434ea9ec664481d233c4e38be7b0ada7389
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380468"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87394251"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -70,7 +71,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の簡単な例  
   
-```  
+```sql
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
 ```  
   

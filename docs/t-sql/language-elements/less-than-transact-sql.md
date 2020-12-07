@@ -1,4 +1,5 @@
 ---
+description: '&lt; (より小さい) (Transact-SQL)'
 title: '&lt; (より小さい) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acf733931022d3acf8725799c4fef987e7a2951
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b9f3b61dd27e8519ca85038711e838c1265bdb70
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916618"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193342"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt; (より小さい) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86916618"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression < expression  
 ```  
   
@@ -57,7 +58,7 @@ expression < expression
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで < を使用する  
  次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 3 未満の行をすべて返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
@@ -81,10 +82,9 @@ DepartmentID Name
   
 ### <a name="b-using--to-compare-two-variables"></a>B. < を使用して 2 つの変数を比較する  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a < @b, 'TRUE', 'FALSE' ) AS Result;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

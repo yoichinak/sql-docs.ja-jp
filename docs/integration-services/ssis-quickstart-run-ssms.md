@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する
 title: SSMS を使用して SSIS パッケージを実行する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: beb9a1e1dcb25f42e2d9a49c1e0e5c1a77a3f0ea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921844"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193062"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する
 
@@ -26,7 +27,7 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 ## <a name="prerequisites"></a>前提条件
 
-開始する前に、最新バージョンの SQL Server Management Studio (SSMS) があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+開始する前に、最新バージョンの SQL Server Management Studio (SSMS) があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 Azure SQL Database サーバーは、ポート 1433 でリッスンします。 企業のファイアウォール内から Azure SQL Database サーバーに接続しようとする場合、正常に接続するには、このポートを企業のファイアウォールで開ける必要があります。
 
@@ -45,7 +46,7 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure Portal](https://portal.azure.com/) にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -65,7 +66,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
    | **パスワード** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
-3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
+3. **[Connect]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
 4. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
@@ -73,9 +74,9 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
 
 1. オブジェクト エクスプローラーで、実行するパッケージを選択します。
 
-2. 右クリックして、 **[実行]** を選択します。 **[パッケージの実行]** ダイアログ ボックスが開きます。
+2. 右クリックして、**[実行]** を選択します。 **[パッケージの実行]** ダイアログ ボックスが開きます。
 
-3.  [パッケージの実行] ダイアログ ボックスの **[パラメーター]** タブ、 **[接続マネージャー]** タブ、 **[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。
+3.  **[パッケージの実行]** ダイアログ ボックスの **[パラメーター]** タブ、 **[接続マネージャー]** タブ、 [詳細設定] タブの設定を使用して、パッケージの実行を構成します。
 
 4.  [OK] をクリックしてパッケージを実行します。
 
@@ -85,4 +86,4 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
-    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md)

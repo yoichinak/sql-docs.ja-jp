@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717086"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512318"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "85717086"
 
 シングル ユーザー モードでインスタンスを起動する場合は、まず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを停止してください。 そうしないと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが先に接続し、サーバーへの使用可能な接続のみを取得して、ログインをブロックする可能性があります。
 
-また、ログインできるようになる前に、不明なクライアント アプリケーションが使用可能な接続のみを取得してしまう場合もあります。 このような状況が発生しないようにするには、`-m` オプションの後にアプリケーション名を指定することで、指定したアプリケーションからの単一の接続に限定することができます。 たとえば、`-m"sqlcmd"` を指定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始すると、**sqlcmd** クライアント プログラムとして識別される単一の接続に限定されます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のクエリ エディターを使用して接続するには、`-m"Microsoft SQL Server Management Studio - Query"` を使用します。  
+また、ログインできるようになる前に、不明なクライアント アプリケーションが使用可能な接続のみを取得してしまう場合もあります。 このような状況が発生しないようにするには、`-m` オプションの後にアプリケーション名を指定することで、指定したアプリケーションからの単一の接続に限定することができます。 たとえば、`-mSQLCMD` を指定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始すると、**sqlcmd** クライアント プログラムとして識別される単一の接続に限定されます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のクエリ エディターを使用して接続するには、`-m"Microsoft SQL Server Management Studio - Query"` を使用します。  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "85717086"
 | オプション | 説明 | 使用する場合 |
 |:---|:---|:---|
 |`-m` | 単一の接続に限定します | 他のユーザーがインスタンスに接続しようとしていない場合、またはインスタンスへの接続に使用しているアプリケーション名がわからない場合。 |
-|`-m"sqlcmd"`| **sqlcmd** クライアント プログラムとして識別される必要がある単一の接続に限定します| **sqlcmd** でインスタンスに接続しようとしているときに、他のアプリケーションが使用可能な接続を取得できないようにする場合。 |
+|`-mSQLCMD`| **sqlcmd** クライアント プログラムとして識別される必要がある単一の接続に限定します| **sqlcmd** でインスタンスに接続しようとしているときに、他のアプリケーションが使用可能な接続を取得できないようにする場合。 |
 |`-m"Microsoft SQL Server Management Studio - Query"`| **Microsoft SQL Server Management Studio クエリ** アプリケーションとして識別される必要がある単一の接続に限定します。| [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のクエリ エディターでインスタンスに接続しようとしているときに、他のアプリケーションが使用可能な接続のみを取得できないようにする場合。 |
 |`-f`| 単一の接続に限定し、インスタンスを最小構成で開始します | 他の構成によって開始が妨げられている場合。 |
 | &nbsp; | &nbsp; | &nbsp; |

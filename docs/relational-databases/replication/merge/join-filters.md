@@ -1,4 +1,5 @@
 ---
+description: 結合フィルター
 title: 結合フィルター | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470264"
 ---
 # <a name="join-filters"></a>結合フィルター
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85882472"
   
  これらのテーブルは、移動営業部門を支援するアプリケーションで利用できます。ただし、 **HumanResources.Employee** テーブルの各営業担当者が担当顧客の注文に関連するデータのみを受け取れるように、これらのテーブルをフィルター選択する必要があります。  
   
- 最初に、親テーブルに対してパラメーター化されたフィルターを定義します。この例では、 **HumanResources.Employee** が親テーブルになります。 このテーブルには **LoginID**列が含まれており、この列には各従業員のログインが *domain\login*形式で格納されています。 このテーブルにフィルターを適用して各従業員が関連データのみを受け取れるようにするには、パラメーター化されたフィルター句を次のように指定します。  
+ 最初に、親テーブルに対してパラメーター化されたフィルターを定義します。この例では、 **HumanResources.Employee** が親テーブルになります。 このテーブルには **LoginID** 列が含まれており、この列には各従業員のログインが *domain\login* 形式で格納されています。 このテーブルにフィルターを適用して各従業員が関連データのみを受け取れるようにするには、パラメーター化されたフィルター句を次のように指定します。  
   
 ```  
 LoginID = SUSER_SNAME()  

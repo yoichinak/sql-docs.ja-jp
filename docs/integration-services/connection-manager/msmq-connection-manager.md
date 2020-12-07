@@ -1,4 +1,5 @@
 ---
+description: MSMQ 接続マネージャー
 title: MSMQ 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7eb223aaa1ab8ece253e90db998b258e843f225e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923122"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724991"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
 
@@ -51,7 +52,7 @@ ms.locfileid: "86923122"
 ## <a name="configuration-of-the-msmq-connection-manager"></a>MSMQ 接続マネージャーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [MSMQ 接続マネージャー エディター]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -86,5 +87,4 @@ ms.locfileid: "86923122"
 ## <a name="see-also"></a>参照  
  [メッセージ キュー タスク](../../integration-services/control-flow/message-queue-task.md)   
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

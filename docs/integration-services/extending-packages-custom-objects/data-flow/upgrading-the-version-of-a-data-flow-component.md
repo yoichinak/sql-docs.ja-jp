@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネントのバージョンのアップグレード
 title: データ フロー コンポーネントのバージョンのアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67d520b058c9b40a69822c710ec460612cda7ce6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa2e496279b6a7470ad3d98bbc5eb78766831b87
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457166"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>データ フロー コンポーネントのバージョンのアップグレード
 

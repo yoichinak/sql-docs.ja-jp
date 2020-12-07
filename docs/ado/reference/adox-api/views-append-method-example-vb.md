@@ -1,8 +1,9 @@
 ---
+description: Views Append メソッドの例 (VB)
 title: Views Append メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3be71b5bf0ba2e6424d3b90a7165dcc570cc4cda
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753000"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982883"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append メソッドの例 (VB)
-次のコードは、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[Views](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md)メソッドを使用して、基になるデータソースに新しいビューを作成する方法を示しています。  
+次のコードは、 [コマンド](../ado-api/command-object-ado.md) オブジェクトと [Views](./views-collection-adox.md) collection [Append](./append-method-adox-views.md) メソッドを使用して、基になるデータソースに新しいビューを作成する方法を示しています。  
   
 ```  
 ' BeginCreateViewVB  
@@ -62,8 +63,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Append メソッド (ADOX Views)](./append-method-adox-views.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [View オブジェクト (ADOX)](./view-object-adox.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

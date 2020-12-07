@@ -1,4 +1,5 @@
 ---
+description: 構造と DMX 予測クエリの使用
 title: 構造と DMX 予測クエリの使用方法 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 242e86a0ac74dacd8682825f25adab4a847a82e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500781"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>構造と DMX 予測クエリの使用
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -26,10 +27,10 @@ ms.locfileid: "86970284"
  DMX を使用すると、次の種類の予測を作成できます。  
   
  Prediction join  
- マイニング モデル内に存在するパターンに基づいて、入力データに対する予測を作成するのに使用します。 このクエリステートメント**の後に**、マイニングモデル列と入力列の間の結合条件を指定する ON 句を指定する必要があります。  
+ マイニング モデル内に存在するパターンに基づいて、入力データに対する予測を作成するのに使用します。 このクエリステートメント **の後に** 、マイニングモデル列と入力列の間の結合条件を指定する ON 句を指定する必要があります。  
   
  自然予測結合  
- クエリを実行するテーブル内の列の名前と正確に一致する、マイニング モデル内の列の名前に基づいた予測を作成するのに使用します。 このクエリステートメントでは、マイニングモデル列と入力列の間で一致する名前に基づいて結合条件が自動的に生成されるため、 **ON**句は必要ありません。  
+ クエリを実行するテーブル内の列の名前と正確に一致する、マイニング モデル内の列の名前に基づいた予測を作成するのに使用します。 このクエリステートメントでは、マイニングモデル列と入力列の間で一致する名前に基づいて結合条件が自動的に生成されるため、 **ON** 句は必要ありません。  
   
  Empty prediction join  
  入力データを提供することなく、最も可能性の高い予測を検出するには、を使用します。 これにより、マイニングモデルのコンテンツのみに基づく予測が返されます。  
@@ -52,7 +53,7 @@ ms.locfileid: "86970284"
   
 -   **ORDER BY**  
   
- 予測クエリの**SELECT**要素では、結果セットに表示される列と式を定義します。次のデータを含めることができます。  
+ 予測クエリの **SELECT** 要素では、結果セットに表示される列と式を定義します。次のデータを含めることができます。  
   
 -   マイニングモデルの列を**予測**または**predictonly**します。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86970284"
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   
   

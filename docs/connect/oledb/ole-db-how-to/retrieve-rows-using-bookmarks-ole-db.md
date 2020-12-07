@@ -1,6 +1,6 @@
 ---
 title: ブックマークを使用した行の取得 (OLE DB ドライバー)
-description: ブックマークを使用した行の取得 (OLE DB)
+description: この例では、コンシューマーが OLE DB Driver for SQL Server でブックマークを使用して行を取得する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 51d4b45e42aa9545825ef6c59be6d82b8945e799
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d456e16308944d8678d5938e0e56d094a0afa196
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244661"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727057"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87244661"
   コンシューマーは、バインド構造体の **dwFlag** フィールド値に DBCOLUMNSINFO_ISBOOKMARK を設定して、その列がブックマークに使用されることを示します。 また、コンシューマーは行セット プロパティ DBPROP_BOOKMARKS に VARIANT_TRUE を設定します。 これによって、列 0 を行セットに入れることができます。 次に **IRowsetLocate::GetRowsAt** メソッドが使用され、ブックマークからのオフセットで指定される行から始まる行が取り出されます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>ブックマークを使用して行を取得するには  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

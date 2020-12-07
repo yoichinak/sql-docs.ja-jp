@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_enable_db (Transact-sql)
 title: sp_cdc_enable_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c40d3904737c7740c3658eda12e2f9c9df340b0a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891133"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534751"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +55,12 @@ sys.sp_cdc_enable_db
 ## <a name="remarks"></a>解説  
  [システムデータベース](../../relational-databases/databases/system-databases.md)またはディストリビューションデータベースでは、変更データキャプチャを有効にできません。  
   
- sys.sp_cdc_enable_db を実行すると、メタデータ テーブルや DDL トリガーなど、データベース全体のスコープを持つ変更データ キャプチャ オブジェクトが作成されます。 また、cdc スキーマと cdc データベースユーザーを作成し、データベースエントリの [is_cdc_enabled] 列を [ [sys. データベース](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)] カタログビューに1に設定します。  
+ sys.sp_cdc_enable_db を実行すると、メタデータ テーブルや DDL トリガーなど、データベース全体のスコープを持つ変更データ キャプチャ オブジェクトが作成されます。 また、cdc スキーマと cdc データベースユーザーを作成し、データベースエントリの [is_cdc_enabled] 列を [ [sys. データベース](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ] カタログビューに1に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、変更データキャプチャを有効にします。  
   
 ```  
@@ -69,7 +70,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

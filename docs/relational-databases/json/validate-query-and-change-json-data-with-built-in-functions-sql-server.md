@@ -1,4 +1,5 @@
 ---
+description: 組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
 title: 組み込み関数を使用した JSON データの検証、クエリ、変更
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88424094"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -174,7 +175,7 @@ FROM Families f
 | familyName | childGivenName | childFirstName | petName |
 | --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
-| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Jesse | Merriam | シャドウ |
 | AndersenFamily | Lisa | Miller| `NULL` |
 
 ルート ドキュメントは、最初の `OPENJSON(children)` の呼び出しによって返される 2 つの `children` 行と結合されて、2 つの行 (またはタプル) が作成されます。 その後、各行は、`OUTER APPLY` 演算子を使用して `OPENJSON(pets)` によって生成される新しい行と結合されます。 Jesse にはペットが 2 匹いるため、`(AndersenFamily, Jesse, Merriam)` は Goofy および Shadow に対して生成される 2 つの行と結合されます。 Lisa にはペットがいないため、このタプルに対して `OPENJSON(pets)` によって返される行はありません。 ただし、`OUTER APPLY` を使用しているため、列には `NULL` が設定されます。 `OUTER APPLY` の代わりに `CROSS APPLY` を指定した場合、このタプルと結合できるペット行がないので、Lisa についての結果は返されません。

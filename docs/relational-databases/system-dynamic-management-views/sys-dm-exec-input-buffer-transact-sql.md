@@ -1,4 +1,5 @@
 ---
+description: dm_exec_input_buffer (Transact-sql)
 title: dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4fecdc698dc7015ab47e5a8c97b3990c7e5bf1f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821073"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536956"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>dm_exec_input_buffer (Transact-sql)
 
@@ -41,19 +42,19 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="arguments"></a>引数
 
-*session_id*検索するバッチを実行するセッション ID を指定します。 *session_id*は**smallint**です。 *session_id*は、次の動的管理オブジェクトから取得できます。
+*session_id* 検索するバッチを実行するセッション ID を指定します。 *session_id* は **smallint**です。 *session_id* は、次の動的管理オブジェクトから取得できます。
 
 - [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
 
-*request_id*[Dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)からの request_id。 *request_id*は**int**です。
+*request_id*[Dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)からの request_id。 *request_id* は **int**です。
 
 ## <a name="table-returned"></a>返されるテーブル
 
 |列名|データ型|説明|
 |-----------------|---------------|-----------------|
-|**event_type**|**nvarchar(256)**|指定された spid の入力バッファー内のイベントの種類。|
+|**event_type**|**nvarchar (256)**|指定された spid の入力バッファー内のイベントの種類。|
 |**parameters**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
 |**event_info**|**nvarchar(max)**|指定された spid の入力バッファー内のステートメントのテキスト。|
 
@@ -71,7 +72,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="remarks"></a>解説
 
-この動的管理関数は、**クロス適用**を行うことによって、dm_exec_sessions または sys. dm_exec_requests と組み合わせて使用できます。
+この動的管理関数は、 **クロス適用**を行うことによって、dm_exec_sessions または sys. dm_exec_requests と組み合わせて使用できます。
 
 ## <a name="examples"></a>例
 

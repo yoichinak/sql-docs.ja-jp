@@ -1,4 +1,5 @@
 ---
+description: 算術演算子 (Transact-SQL)
 title: 算術演算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/06/2017
@@ -17,24 +18,24 @@ ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6fd33150c41b692c803348f3246a165b785f0a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b51c473bb75f3f2e1c82f96dcd8af743597678fc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85990605"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124549"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術演算子 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 算術演算子は、1 つまたは複数のデータ型の 2 つの式に対して算術演算を実行します。 それらは、数値データ型のカテゴリから実行されます。 データ型の分類の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。  
   
-|演算子|意味|  
+|演算子|説明|  
 |--------------|-------------|  
 |[+ (加算)](../../t-sql/language-elements/add-transact-sql.md)|加算|  
 |[- (減算)](../../t-sql/language-elements/subtract-transact-sql.md)|減算|  
 |[* (乗算)](../../t-sql/language-elements/multiply-transact-sql.md)|乗算|  
-|[/ (除算)](../../t-sql/language-elements/divide-transact-sql.md)|除算|  
+|[/ (除算)](../../t-sql/language-elements/divide-transact-sql.md)|事業部|  
 |[% (剰余)](../../t-sql/language-elements/modulo-transact-sql.md)|除算による整数の剰余を返します。 たとえば、12 % 5 の場合、12 を 5 で割ると余りは 2 なので、12 % 5 = 2 となります。|  
   
 加算 (+) 演算子と減算 (-) 演算子を使用して、**datetime** 型と **smalldatetime** 型の値に対して算術演算を実行することもできます。  

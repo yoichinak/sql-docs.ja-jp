@@ -1,4 +1,5 @@
 ---
+description: DROP BROKER PRIORITY (Transact-SQL)
 title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - DROP BROKER PRIORITY statement
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 29f990193e9082bf9fc75135d05743c43de84693
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b1ecefa12702aade36144df55600f696e2042e2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484713"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127450"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86484713"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  
 ```  
@@ -54,9 +54,8 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="examples"></a>例  
  次の例では、`InitiatorAToTargetPriority` という名前のメッセージ交換の優先度を削除します。  
   
-```  
-DROP BROKER PRIORITY InitiatorAToTargetPriority;  
-  
+```sql  
+DROP BROKER PRIORITY InitiatorAToTargetPriority;
 ```  
   
 ## <a name="see-also"></a>参照  

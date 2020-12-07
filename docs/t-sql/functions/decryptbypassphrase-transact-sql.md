@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYPASSPHRASE (Transact-SQL)
 title: DECRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2998d9ff84d7902095620e2e7949985adc3a6b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 96f5b7e89f1fd8ef297fabf3c27169375e53951f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113004"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117097"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,6 @@ ms.locfileid: "87113004"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }  
@@ -83,10 +83,10 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="examples"></a>例  
 この例では、[EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) で更新されたレコードを復号します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- Get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   

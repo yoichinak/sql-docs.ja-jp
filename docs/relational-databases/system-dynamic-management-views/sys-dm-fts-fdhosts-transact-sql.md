@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_fdhosts (Transact-SQL)
 title: dm_fts_fdhosts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -21,12 +22,12 @@ ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b954e5d9c122f09d1ed16162f34ce94cdbc4100
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d282a4d64f82420a37a991d95e81422f019bc4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489889"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "85734567"
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、フィルター デーモン ホストの名前とフィルター デーモン ホストのスレッドの最大数を返します。 また、フィルターデーモンで現在処理されているバッチの数も監視します。 この情報は、パフォーマンスを診断するために使用できます。  
   
 ```  
@@ -56,8 +57,8 @@ SELECT fdhost_name, batch_count, max_thread FROM sys.dm_fts_fdhosts;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数 ](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   
   

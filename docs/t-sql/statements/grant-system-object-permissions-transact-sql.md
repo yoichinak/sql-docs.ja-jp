@@ -1,4 +1,5 @@
 ---
+description: GRANT (システム オブジェクトの権限の許可) (Transact-SQL)
 title: GRANT (システム オブジェクトの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485417"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570592"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (システム オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  権限を許可するプリンシパルを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このステートメントを使用すると、特定のストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされたシステム テーブルに対する権限を許可できます。 これらのシステム オブジェクトはそれぞれ、サーバーのリソース データベース (mssqlsystemresource) に一意なレコードとして存在しています。 リソース データベースは読み取り専用です。 オブジェクトへのリンクは、各データベースの sys スキーマでは 1 レコードとして表されます。 システム オブジェクトを実行または選択する権限は、許可、拒否、および取り消しが可能です。  
   
  オブジェクトを実行または選択する権限を許可しても、そのオブジェクトの使用に必要なすべての権限が与えられるわけではありません。 ほとんどのオブジェクトでは、操作の実行に追加の権限が必要です。 たとえば、ユーザーに対して sp_addlinkedserver の EXECUTE 権限が許可されていても、sysadmin 固定サーバー ロールのメンバーでない限り、そのユーザーはリンク サーバーを作成できません。  
@@ -60,11 +61,11 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  システム オブジェクトの権限は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアップグレード時も維持されます。  
   
- システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。 システム オブジェクトの権限は、master データベースの [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) カタログ ビューで確認できます。  
+ システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。 システム オブジェクトの権限は、 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) データベースの sys.database_permissions カタログ ビューで確認できます。  
   
  次のクエリでは、システム オブジェクトの権限に関する情報が返されます。  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -78,9 +79,9 @@ GO
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. ビューに対する SELECT 権限を許可する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、`Sylvester1` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `Sylvester1` に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -88,9 +89,9 @@ GO
 ```  
   
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 拡張ストアド プロシージャに対する EXECUTE 権限を許可する  
- 次の例では、`EXECUTE` に対し、`xp_readmail` の `Sylvester1` 権限を許可します。  
+ 次の例では、`Sylvester1` に対し、`xp_readmail` の `EXECUTE` 権限を許可します。  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

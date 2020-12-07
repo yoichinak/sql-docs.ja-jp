@@ -1,4 +1,5 @@
 ---
+description: レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
 title: レポート サーバー アイテムの SharePoint サイトおよびリスト アクセス許可のリファレンス | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373368"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  
@@ -27,18 +28,25 @@ ms.locfileid: "65570685"
   
  それぞれの表の先頭には、SharePoint の権限のリストと説明があります。 個々の権限が定義済みの権限レベルでどのように使用されているかを示す列が 3 つ用意されています。 定義済みの権限レベルには、次のものがあります。  
   
-|権限レベル|省略形|  
+|アクセス許可レベル|省略形|  
 |----------------------|------------------|  
 |フル コントロール|**F**|  
 |投稿|**C**|  
 |ビジター|**V**|  
   
  レポート サーバーに影響しない権限は除外しています。 また、個人用の設定に使用する権限もすべてこのリファレンス資料から除外しています。 個人用に設定された Web サイトにレポート サーバーのアイテムを含めることは可能ですが、個人用設定の要求や操作がレポート サーバーで直接処理されるわけではありません。  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード &#124; SharePoint 2010 と SharePoint 2013|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
+    :::column-end:::
+    :::column:::
+          SharePoint 2010 および SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>リスト権限  
  ユーザーがレポート サーバー アイテムにアクセスする方法は、それらのアイテムが格納されているライブラリに設定した権限によって決まります。  
   
@@ -66,7 +74,7 @@ ms.locfileid: "65570685"
 |ページの追加とカスタマイズ|HTML ページまたは Web パーツ ページを追加、変更、または削除します。また、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]互換のエディターを使用して Web サイトを編集します。|X|||レポート ビューアー Web パーツを追加または削除します。|  
 |ユーザー情報の参照|Web サイトのユーザーに関する情報を表示します。|X|X|X|さまざまなサイト、ライブラリ、およびフォルダーに含まれているレポートなどのアイテムを参照します。 ライブラリにレポートなどのアイテムをパブリッシュします。|  
 |権限の一覧|Web サイト、リスト、フォルダー、ドキュメント、またはリスト アイテムに対する権限を一覧表示します。|X|||すべてのレポート サーバー アイテムに対する権限を読み取ります。 モデル アイテム セキュリティ設定を含むレポート モデルが使用されているクリックスルー レポートを表示します。|  
-|警告の管理|Web サイトのすべてのユーザーに対して通知を管理します。|X|||サイトのサブスクリプションの作成、変更、および削除を行います。|  
+|アラートの管理|Web サイトのすべてのユーザーに対して通知を管理します。|X|||サイトのサブスクリプションの作成、変更、および削除を行います。|  
 |リモート インターフェイスの使用|SOAP、Web DAV、または SharePoint デザイナー インターフェイスを使用して Web サイトにアクセスします。|X|X|X|レポート サーバーに対する URL プロキシ エンドポイントを呼び出すために使用します。|  
 |[ファイル]|Web サイト、リスト、またはフォルダーを開き、これらのコンテナー内のアイテムにアクセスします。|X|X|X|スケジュールおよびアイテム プロパティを読み取ります。|  
   

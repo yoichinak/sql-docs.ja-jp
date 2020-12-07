@@ -2,19 +2,19 @@
 title: 使用状況データ コレクションとクラッシュ レポートを有効または無効にする
 description: この記事では、使用状況とクラッシュ レポートのデータが収集されて Microsoft に送信されるかどうかを制御する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
-ms.topic: conceptual
+ms.technology: azure-data-studio
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: ad36e319338c90c33e0969f75ee34e980f3d23f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ef44a7e2981d98c749e25692e667ae71b42843d
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771934"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91363889"
 ---
 # <a name="enable-or-disable-usage-data-collection-for-azure-data-studio"></a>Azure Data Studio のデータ コレクションを有効または無効にする
 

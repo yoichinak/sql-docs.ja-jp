@@ -1,4 +1,5 @@
 ---
+description: Subset (MDX)
 title: サブセット (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d0b7e79ebf0415011665ae63e7b9699200e374b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386728"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
 
@@ -37,8 +38,8 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Count*  
  返す組の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>Remarks  
- 指定されたセットから**サブセット**関数は、指定された開始位置から始まる指定された数の組を含むサブセットを返します。 開始位置は、0から始まるインデックスに基づいています。つまり、ゼロ (0) は、指定されたセット内の最初の組に対応し、1は2番目の組に対応します。  
+## <a name="remarks"></a>解説  
+ 指定されたセットから **サブセット** 関数は、指定された開始位置から始まる指定された数の組を含むサブセットを返します。 開始位置は、0から始まるインデックスに基づいています。つまり、ゼロ (0) は、指定されたセット内の最初の組に対応し、1は2番目の組に対応します。  
   
  *Count*が指定されていない場合、関数は、セットの*先頭*から末尾までのすべての組を返します。  
   
@@ -58,7 +59,7 @@ SELECT Subset
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

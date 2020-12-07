@@ -1,4 +1,5 @@
 ---
+description: NCHAR (Transact-SQL)
 title: NCHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6964acd1127db3bcdb25d551116865073e43974
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111475"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445724"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ NCHAR ( integer_expression )
  データベースの照合順序が SC フラグをサポートする場合、これは 0 から 1114111 (0 から 0x10FFFF) までの正の整数です。 この範囲外の値を指定すると NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)** 。  
+ 既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)**。  
   
- 既定のデータベースの照合順序が補助文字をサポートする場合は **nvarchar(2)** 。  
+ 既定のデータベースの照合順序が補助文字をサポートする場合は **nvarchar(2)**。  
   
  パラメーター *integer_expression* が 0 ～ 0 xFFFF の範囲内にある場合、1 つの文字だけが返されます。 値が大きい場合、NCHAR から対応するサロゲート ペアが返されます。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベースの照合順序を使用して、サロゲート ペアの Unicode コードポイントを指定します。 次の例では、サロゲート ペアを構築する古いスタイルの方法と Unicode コードポイントを指定する推奨される方法の両方を示しています。  
   

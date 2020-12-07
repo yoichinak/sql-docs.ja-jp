@@ -1,4 +1,5 @@
 ---
+description: SQLGetConnectOption (Visual FoxPro ODBC ドライバー)
 title: SQLGetConnectOption (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2dd801988343ded46305665ab2a99aa4e7d76cba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd22ec3862ff2f0f3c4f7b5aa9dbeff53a5d8cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411788"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -31,13 +32,13 @@ ms.locfileid: "81298632"
   
  次の表では、 **SQLGetConnectOption**の VISUAL FoxPro ODBC ドライバーの実装に固有の動作を持つ引数のみについて説明します。  
   
-|*fOption*|Remarks|  
+|*fOption*|解説|  
 |---------------|-------------|  
-|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは[Sqltransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。Visual FoxPro ODBC ドライバーは、完了時に不可能ステートメントを自動的にコミットしません。 ステートメントが不可能の場合、ドライバーはトランザクションを開始します。|  
+|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは [Sqltransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。Visual FoxPro ODBC ドライバーは、完了時に不可能ステートメントを自動的にコミットしません。 ステートメントが不可能の場合、ドライバーはトランザクションを開始します。|  
 |SQL_CURRENT_QUALIFIER|には、完全修飾データベース (dbc ファイル) 名を指定することも、0個以上のテーブル (.dbf ファイル) を含むディレクトリへの完全修飾パスを指定することもできます。|  
 |SQL_LOGINTIMEOUT|"ドライバーがサポートされていません" エラーを返します。|  
 |SQL_CURSORS|"ドライバーがサポートされていません" エラーを返します。|  
 |SQL_PACKET_SIZE|"ドライバーがサポートされていません" エラーを返します。|  
-|SQL_TXN_ISOLATION|ドライバーは SQL_TXN_READ_COMMITTED のみを許可します。<br /><br /> 次の*Vparam*はサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_TXN_ISOLATION|ドライバーは SQL_TXN_READ_COMMITTED のみを許可します。<br /><br /> 次の *Vparam*はサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
  詳細については、 *ODBC プログラマーリファレンス*の「 [SQLGetConnectOption](../../odbc/reference/syntax/sqlgetconnectoption-function.md) 」を参照してください。

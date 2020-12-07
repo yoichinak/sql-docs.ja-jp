@@ -1,4 +1,5 @@
 ---
+description: CREATE MASTER KEY (Transact-SQL)
 title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -24,12 +25,12 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1f9a640dff75d54a4377f512b3a1e17200f48377
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393210"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126177"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
@@ -52,7 +53,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 PASSWORD ='*password*' は、データベース内のマスター キーの暗号化に使用されているパスワードです。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 *password* は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] では省略可能です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 データベース マスター キーは対称キーで、証明書の秘密キーやデータベース内に存在する非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、AES_256 アルゴリズムとユーザー指定のパスワードを使用してマスター キーを暗号化します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] では、トリプル DES アルゴリズムを使用します。 マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してキーのコピーを暗号化し、データベースと master の両方に格納します。 通常、master に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 この既定の設定は、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) の DROP ENCRYPTION BY SERVICE MASTER KEY オプションを使って変更できます。 サービス マスター キーによって暗号化されていないマスター キーは、[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントとパスワードを使って開かれている必要があります。
 
@@ -82,7 +83,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = '23987hxJ#KL95234nl0zBe';
 GO
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)
 - [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

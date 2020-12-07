@@ -1,4 +1,5 @@
 ---
+description: プログラムによるタスクの接続
 title: プログラムによるタスクの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d543534b58eb630cfe9a4dd8e7e4822c521faca4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8fbe6beb6556db9e5dfddc6f63e6922a34ae6fe5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919428"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123794"
 ---
 # <a name="connecting-tasks-programmatically"></a>プログラムによるタスクの接続
 

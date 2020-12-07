@@ -1,4 +1,5 @@
 ---
+description: 用語ベースのリレーションの作成
 title: 用語ベースのリレーションの作成
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b6b0a4fe9786e47ec8352ce829be628c11bea928
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0dfc837238d20e58b04b66ae4ea998e60ee80247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882580"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725396"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
 
@@ -62,7 +63,7 @@ ms.locfileid: "85882580"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  用語ベースのリレーションを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="create-term-based-relations"></a><a name="Create"></a>用語ベースのリレーションを作成する  
+##  <a name="create-term-based-relations"></a><a name="Create"></a> 用語ベースのリレーションを作成する  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -99,9 +100,8 @@ ms.locfileid: "85882580"
   
 6.  **[変更を適用]** をクリックして、ドメインに用語ベースのリレーションを適用します。  
   
-7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> 補足情報: 用語ベースのリレーションを作成した後  
  用語ベースのリレーションを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
-  
   

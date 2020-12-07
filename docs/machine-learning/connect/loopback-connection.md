@@ -1,26 +1,26 @@
 ---
-title: SQL ループバック接続
+title: Python と R の SQL ループバック接続
 description: sp_execute_external_script から実行される Python または R スクリプトからデータの読み取りまたは書き込みを行うために、ループバック接続を使用して ODBC 経由で SQL Server に接続する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
-ms.topic: conceptual
+ms.date: 08/20/2020
+ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482663"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988478"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python または R スクリプトからの SQL Server へのループバック接続
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-`sp_execute_external_script` から実行される Python または R スクリプトからデータの読み取りまたは書き込みを行うために、ループバック接続を使用して [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 経由で SQL Server に接続する方法について説明します。 この方法は、`sp_execute_external_script` の **InputDataSet** 引数と **OutputDataSet** 引数を使用できない場合に使用できます。
+[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) から実行される Python または R スクリプトからデータの読み取りまたは書き込みを行うために、ループバック接続と [Machine Learning Services](../sql-server-machine-learning-services.md) を使用して [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) 経由で SQL Server に接続する方法について説明します。 この方法は、`sp_execute_external_script` の **InputDataSet** 引数と **OutputDataSet** 引数を使用できない場合に使用できます。
 
 ## <a name="connection-string"></a>接続文字列
 
@@ -48,7 +48,7 @@ Linux でのループバック接続文字列の例を次に示します。
 
 サーバー アドレス、クライアント証明書ファイルの場所、およびクライアント キー ファイルの場所は、どの `sp_execute_external_script` でも固有であり、Python の場合は API **rx_get_sql_loopback_connection_string()**、R の場合は API **rxGetSqlLoopbackConnectionString()** を使用して取得できます。
 
-接続文字列の属性について詳しくは、Microsoft ODBC Driver for SQL Server の「[DSN と接続文字列のキーワードと属性](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes)」を参照してください。
+接続文字列の属性について詳しくは、Microsoft ODBC Driver for SQL Server の「[DSN と接続文字列のキーワードと属性](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes)」を参照してください。
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Python の revoscalepy を使用して接続文字列を生成する
 

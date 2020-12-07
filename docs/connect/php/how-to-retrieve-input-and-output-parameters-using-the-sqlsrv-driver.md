@@ -1,7 +1,8 @@
 ---
-title: '方法: SQLSRV ドライバーを使用して I/O パラメーターを取得する | Microsoft Docs'
+title: '方法: SQLSRV ドライバーを使用して I/O パラメーターを取得する'
+description: このトピックでは、ストアド プロシージャと Microsoft SQLSRV Driver for PHP for SQL Server を使用して入力パラメーターと出力パラメーターを取得する方法について説明します
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916098"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680687"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、SQLSRV ドライバーを使用して 1 つのパラメーターが入力/出力パラメーターとして定義されているストアド プロシージャを呼び出す方法、およびその結果を取得する方法について説明します。 出力パラメーターまたは入出力パラメーターを取得する場合、返されるパラメーター値にアクセスできるようになる前に、ストアド プロシージャによって返されるすべての結果を使用する必要があります。  
@@ -32,7 +33,7 @@ ms.locfileid: "80916098"
 > [!NOTE]  
 > *$vacationHrs* を 4 に初期化すると、返される PHPTYPE が整数に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に入力/出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
-ストアド プロシージャは 2 つの結果を返すため、ストアド プロシージャが実行された後に [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を呼び出して出力パラメーターの値を使用できるようにする必要があります。 **sqlsrv_next_result** の呼び出しの後、 *$vacationHrs* にはストアド プロシージャによって返される出力パラメーターの値が含まれます。  
+ストアド プロシージャは 2 つの結果を返すため、ストアド プロシージャが実行された後に [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を呼び出して出力パラメーターの値を使用できるようにする必要があります。 **sqlsrv_next_result** の呼び出しの後、*$vacationHrs* にはストアド プロシージャによって返される出力パラメーターの値が含まれます。  
   
 > [!NOTE]  
 > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)」を参照してください。  
@@ -152,9 +153,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [データの取得](../../connect/php/retrieving-data.md)  
   

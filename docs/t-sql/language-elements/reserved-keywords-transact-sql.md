@@ -1,4 +1,5 @@
 ---
+description: 予約済みキーワード (Transact-SQL)
 title: 予約済みキーワード (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9c0264ccc6e2f083b61b4c80c98248be80e33675
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91227362"
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
+ 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の予約キーワードの一覧です。  
 
 :::row:::
     :::column:::
@@ -221,7 +222,7 @@ ms.locfileid: "87396357"
 :::row-end:::  
 :::row:::
     :::column:::
-        CHECK
+        チェック
     :::column-end:::
     :::column:::
         IDENTITY_INSERT
@@ -628,7 +629,7 @@ ms.locfileid: "87396357"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        End
     :::column-end:::
     :::column:::
         OVER
@@ -715,7 +716,7 @@ ms.locfileid: "87396357"
 :::row-end:::
 
   
-**Azure SQL Data Warehouse** に固有の予約済みキーワードの一覧を次の表に示します。
+**[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]** に固有の予約キーワードの一覧を次の表に示します。
   
 :::row:::
     :::column:::
@@ -770,7 +771,7 @@ ms.locfileid: "87396357"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **追加**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -1944,7 +1945,7 @@ ms.locfileid: "87396357"
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        状態
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ ms.locfileid: "87396357"
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2455,7 +2456,7 @@ ms.locfileid: "87396357"
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS

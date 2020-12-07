@@ -1,4 +1,5 @@
 ---
+description: getSchemas (String, String) メソッド
 title: getSchemas メソッド (String, String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0c96bed6c22706a03983849387662e811584b2c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a3b421ae475d6c161396380073d1d8336b7f1b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434644"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas (String, String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  getSchemas メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|種類|説明|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|スキーマの名前です。|  
 |TABLE_CATALOG|**String**|スキーマのカタログ名です。|  

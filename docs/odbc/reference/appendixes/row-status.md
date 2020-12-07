@@ -1,4 +1,5 @@
 ---
+description: 行の状態
 title: 行の状態 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4ae4169dc3f2a491663f4a86c564cfee5c2f4d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8970e78d523ca86a50edb1e27b159ef15a1a1747
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424964"
 ---
 # <a name="row-status"></a>行の状態
 > [!IMPORTANT]  
@@ -32,6 +33,6 @@ ms.locfileid: "81305101"
   
 -   **Sqlfetch**を使用してデータソースから行を取得中にエラーが発生したときに SQL_ROW_ERROR します。  
   
--   データソースから**Sqlfetch**を使用して行が正常にフェッチされたときに SQL_ROW_SUCCESS します。  
+-   データソースから **Sqlfetch**を使用して行が正常にフェッチされたときに SQL_ROW_SUCCESS します。  
   
 -   行に対して位置指定更新ステートメントを実行するときに SQL_ROW_UPDATED します。

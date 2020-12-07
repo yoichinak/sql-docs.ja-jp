@@ -1,4 +1,5 @@
 ---
+description: ParallelPeriod (MDX)
 title: ParallelPeriod (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c8a6c91bae50ca06be46926f34de172e424e613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471724"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -31,20 +32,20 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式です。  
   
- *化*  
+ *Index*  
  遅延する並列期間の数を指定する有効な数値式です。  
   
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [いとこ](../mdx/cousin-mdx.md)関数と同様に、 **parallelperiod**関数は時系列に密接に関連しています。 **Parallelperiod**関数は、指定されたレベルで指定されたメンバーの先祖を受け取り、指定されたラグを持つ先祖の兄弟を検索し、最後に、指定されたメンバーの、兄弟の子孫間での並列期間を返します。  
   
  **Parallelperiod**関数には、次の既定値があります。  
   
--   レベル式もメンバー式も指定されていない場合、既定のメンバー値は、メジャーグループ内の*Time*型を持つ最初のディメンションの最初の階層の現在のメンバーになります。  
+-   レベル式もメンバー式も指定されていない場合、既定のメンバー値は、メジャーグループ内の *Time* 型を持つ最初のディメンションの最初の階層の現在のメンバーになります。  
   
--   レベル式が指定されていても、メンバー式が指定されていない場合、既定のメンバー値は*Level_Expression*になります。**Hierarchy. CurrentMember**。  
+-   レベル式が指定されていても、メンバー式が指定されていない場合、既定のメンバー値は *Level_Expression*になります。**Hierarchy. CurrentMember**。  
   
 -   既定のインデックス値は1です。  
   

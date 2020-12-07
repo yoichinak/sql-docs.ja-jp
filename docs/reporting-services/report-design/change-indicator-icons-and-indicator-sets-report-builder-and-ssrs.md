@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3c0df0ae9ee9e67697d4f3ec321ab323cfd188e
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 8fac0aa2fd1b480c91204d87bcfbbbfb37253af1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881768"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935458"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ページ分割されたレポート向けに、あらかじめ構成済みのインジケーター セットが用意されていますが、これらが常にデータを効果的に表したり、配信されたレポートで正しく機能するとは限りません。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "84881768"
   
      必要に応じて、 **式** ( *[fx]* ) ボタンをクリックし、 **[色]** オプションの値を設定する式を編集します。  
   
-     **[その他の色]** をクリックした場合は、 **[色の選択]** ダイアログ ボックスが表示され、さまざまな色から選択できます。 各オプションの詳細については、「[[色の選択] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)」を参照してください。 **[OK]** をクリックして、 **[色の選択]** ダイアログ ボックスを閉じます。  
+     **[その他の色]** をクリックした場合は、 **[色の選択]** ダイアログ ボックスが表示され、さまざまな色から選択できます。 各オプションの詳細については、「[[色の選択] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](./formatting-lines-colors-and-images-report-builder-and-ssrs.md)」を参照してください。 **[OK]** をクリックして、 **[色の選択]** ダイアログ ボックスを閉じます。  
   
 4.  **[OK]** をクリックします。  
   
@@ -91,5 +91,4 @@ ms.locfileid: "84881768"
   
 ## <a name="see-also"></a>参照  
  [インジケーター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
-  
   

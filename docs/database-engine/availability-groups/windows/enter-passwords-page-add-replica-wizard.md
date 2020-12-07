@@ -6,18 +6,18 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 761e91a8da521756e212da501c2dd768e998f35f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4ab6d424bfa1ff70ada91956e4552032843ff28b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894439"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584274"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性グループの [パスワードの入力] ページ (レプリカ追加ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

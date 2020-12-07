@@ -1,4 +1,5 @@
 ---
+description: SqlErrorLogFile クラス
 title: SqlErrorLogFile クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 186ceb700a09436ba7bc44934b28627480fa0454
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442496"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891642"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ class SQLErrorLogFile
 ## <a name="properties"></a>Properties  
  SQLErrorLogFile クラスは、次のプロパティを定義します。  
   
-| プロパティ | Description |
+| プロパティ | 説明 |
 | -------- | ----------- |
 |ArchiveNumber|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのアーカイブ番号。|  
-|InstanceName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
+|InstanceName|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LastModified|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
 |LogFileSize|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
-|名前|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
+|名前|データ型: **文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 | Type | 名前 |
 | ---- | ---- |
@@ -75,8 +76,8 @@ WScript.Echo "Instance Name:  " & logFile.InstanceName & vbNewLine _
 Next   
 ```  
   
-## <a name="comments"></a>コメント  
- WQL ステートメントで*InstanceName*が指定されていない場合、クエリは既定のインスタンスの情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
+## <a name="comments"></a>説明  
+ WQL ステートメントで *InstanceName* が指定されていない場合、クエリは既定のインスタンスの情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
@@ -88,16 +89,15 @@ Next
 -   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
     > [!NOTE]  
-    >  WMI のアクセス許可を確認する方法については、「[オフラインログファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」の「セキュリティ」セクションを参照してください。  
+    >  WMI のアクセス許可を確認する方法については、「 [オフラインログファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」の「セキュリティ」セクションを参照してください。  
   
 -   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあり \<*Drive> ます (* は、がインストールされているドライブを表し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<*InstanceName*> はのインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )。  
   
      ** \<Drive> : Server\MSSQL11** **。 \<InstanceName>\MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogEvent クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

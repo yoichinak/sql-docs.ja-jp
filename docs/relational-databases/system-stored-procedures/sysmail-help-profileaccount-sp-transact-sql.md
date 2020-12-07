@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profileaccount_sp (Transact-SQL)
 title: sysmail_help_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541073"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +44,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id`一覧表示するプロファイルのプロファイル ID を示します。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` 一覧表示するプロファイルのプロファイル ID を示します。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'`一覧表示するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 一覧表示するプロファイルのプロファイル名を指定します。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @account_id = ] account_id`一覧表示するアカウント ID を示します。 *account_id*は**int**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
+`[ @account_id = ] account_id` 一覧表示するアカウント ID を示します。 *account_id* は **int**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
   
-`[ @account_name = ] 'account_name'`一覧表示するアカウントの名前を指定します。 *account_name*は**sysname**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
+`[ @account_name = ] 'account_name'` 一覧表示するアカウントの名前を指定します。 *account_name* は **sysname**,、既定値は NULL です。 *Account_id*と*account_name*が両方とも NULL の場合、はプロファイル内のすべてのアカウントを一覧表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  次の列を含む結果セットが返されます。  
@@ -65,13 +66,13 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|アカウントの名前。|  
 |**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  *Profile_id*または*profile_name*が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのプロファイルに関する情報を返します。  
   
- ストアドプロシージャ**sysmail_help_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_help_profileaccount_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  **A. 特定のプロファイルのアカウントを名前順に一覧表示する**  
@@ -132,6 +133,6 @@ profile_id  profile_name                 account_id  account_name         sequen
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

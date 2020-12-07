@@ -1,4 +1,5 @@
 ---
+description: fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
 title: fn_stmt_sql_handle_from_sql_stmt (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,18 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5008d433757351e6d4be65d6db9c3ba8e0deb10f
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002989"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646502"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>fn_stmt_sql_handle_from_sql_stmt (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  **stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定されたパラメーター化の型 (simple または forced) の下のステートメントの stmt_sql_handle を取得します。 これにより、テキストがわかっている場合に**stmt_sql_handle**を使用して、クエリストアに格納されているクエリを参照できます。  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+  **stmt_sql_handle** [!INCLUDE[tsql](../../includes/tsql-md.md)] 指定されたパラメーター化の型 (simple または forced) の下のステートメントの stmt_sql_handle を取得します。 これにより、テキストがわかっている場合に **stmt_sql_handle** を使用して、クエリストアに格納されているクエリを参照できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,10 +41,10 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引数  
  *query_sql_text*  
- クエリストア内でハンドルを作成するクエリのテキストを指定します。 *query_sql_text*は**nvarchar (max)**,、既定値はありません。  
+ クエリストア内でハンドルを作成するクエリのテキストを指定します。 *query_sql_text* は **nvarchar (max)**,、既定値はありません。  
   
  *query_param_type*  
- クエリのパラメーターの型です。 *query_param_type*は**tinyint**です。 次のいずれかの値になります。  
+ クエリのパラメーターの型です。 *query_param_type* は **tinyint**です。 次のいずれかの値になります。  
   
 -   NULL-既定値は0です。  
   
@@ -68,7 +71,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>解説  
   
 ## <a name="permissions"></a>アクセス許可  
- では、データベースに対する**EXECUTE**権限と、クエリストアのカタログビューに対する**DELETE**権限が必要です。  
+ では、データベースに対する **EXECUTE** 権限と、クエリストアのカタログビューに対する **DELETE** 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、ステートメントを実行し、を使用し `sys.fn_stmt_sql_handle_from_sql_stmt` てそのステートメントの SQL ハンドルを返します。  

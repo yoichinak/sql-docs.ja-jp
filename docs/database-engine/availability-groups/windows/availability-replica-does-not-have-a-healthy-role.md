@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords:
 - sql13.swb.agdashboard.arp1rolehealthy.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: e124d7eea8b72a9ec4397d6be238c1e521156076
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9d5257ddbdb4e5506339fa2047fe42bf7c92a668
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883577"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584651"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性レプリカに正常なロールがない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

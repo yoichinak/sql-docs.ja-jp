@@ -1,4 +1,5 @@
 ---
+description: CREATE XML SCHEMA COLLECTION (Transact-SQL)
 title: CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 35b21b919f86addb49cdb30972ce6a8bde1888e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485003"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131381"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "86485003"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -58,7 +58,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *[式]*  
  文字列定数またはスカラー変数を指定します。 **varchar**、**varbinary**、**nvarchar**、または **xml** 型です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用して、新しい名前空間をコレクションに追加したり、コレクションの既存の名前空間に新しいコンポーネントを追加したりすることもできます。  
   
  コレクションを削除するには、[DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md) を使用します。  
@@ -83,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. データベースに XML スキーマ コレクションを作成する  
  次の例では、XML スキーマ コレクション `ManuInstructionsSchemaCollection` を作成します。 コレクションにはスキーマ名前空間が 1 つだけ含まれます。  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -175,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
  XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 次に例を示します。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -187,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  次の例では、2 つの XML スキーマ名前空間を含む XML スキーマ コレクション `ProductDescriptionSchemaCollection` を作成します。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -233,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 対象の名前空間が指定されていないスキーマをインポートする  
  次の例に示すように、**targetNamespace** 属性が含まれていないスキーマをコレクションにインポートする場合、スキーマのコンポーネントは空文字列の対象の名前空間に関連付けられます。 コレクションにインポートされる 1 つ以上のスキーマについて関連付けを行わない場合は、複数のスキーマ コンポーネント (場合によっては関係のないコンポーネント) が既定の空文字列の名前空間に関連付けられるため注意してください。  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -253,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. XML スキーマ コレクションとバッチを使用する  
  スキーマ コレクションを作成した同じバッチ内で、そのスキーマ コレクションを参照することはできません。 作成した同じバッチ内でコレクションを参照しようとすると、コレクションが存在しないというエラーを受け取ります。 次の例は動作しますが、`GO` を削除し、同じバッチ内で、`xml` 変数を入力するために XML スキーマ コレクションを参照しようとすると、エラーが返されます。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  
@@ -264,7 +264,7 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

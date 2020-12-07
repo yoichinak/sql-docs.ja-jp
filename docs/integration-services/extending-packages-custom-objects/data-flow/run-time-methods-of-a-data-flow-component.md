@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネントの実行時のメソッド
 title: データ フロー コンポーネントの実行時のメソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71ddcaf7b0d77e43babf283358d4267e3f310232
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 619e1bb5c71b0085e635c7dba29c5d9e2e6ad57e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457190"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントの実行時のメソッド
 
@@ -212,7 +213,7 @@ End Sub
   
  入力バッファー内の行を受け取るコンポーネントの開発の詳細については、「[カスタム変換先コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)」および「[同期出力型のカスタム変換コンポーネントの開発](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   

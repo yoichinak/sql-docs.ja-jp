@@ -1,8 +1,9 @@
 ---
+description: Filter および RecordCount プロパティの例 (VB)
 title: Filter および RecordCount プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7cee9fa6460366dd727c2eb1c6ce26c43286ea51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756767"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973043"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
-次の例では、 ***Pubs***データベースの Publishers テーブルで[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。 次に、 [Filter](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 **RecordCount**プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  
+次の例では、 ***Pubs***データベースの Publishers テーブルで[レコードセット](./recordset-object-ado.md)を開きます。 次に、 [Filter](./filter-property.md) プロパティを使用して、表示されるレコードの数を特定の国/地域の出版社に限定します。 **RecordCount**プロパティは、フィルター処理されたレコードセットとフィルター処理されていないレコードセットの違いを示すために使用されます。  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +109,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  選択するデータがわかっている場合は、通常、SQL ステートメントを使用して**レコードセット**を開く方が効率的です。 この例では、1つの**レコードセット**だけを作成し、特定の国からレコードを取得する方法を示します。  
+>  選択するデータがわかっている場合は、通常、SQL ステートメントを使用して **レコードセット** を開く方が効率的です。 この例では、1つの **レコードセット** だけを作成し、特定の国からレコードを取得する方法を示します。  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter プロパティ](./filter-property.md)   
+ [RecordCount プロパティ (ADO)](./recordcount-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

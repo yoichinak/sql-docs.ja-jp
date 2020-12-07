@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_SENT (Transact-SQL)'
 title: '@@PACK_SENT (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da77f0255a67c175537dd6ba5ea6030555f31c68
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3cea756a7ba5ddb79bc9855af183663f53c91dd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110849"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128380"
 ---
 # <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87110849"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 @@PACK_SENT  
 ```  
   

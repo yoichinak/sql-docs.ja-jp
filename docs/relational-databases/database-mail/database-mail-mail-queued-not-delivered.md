@@ -1,4 +1,5 @@
 ---
+description: データベース メール:メールがキューされました、配信されません
 title: データベース メール:メールがキューされました、配信されません | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b35c244e086c32cf62882a5e3f09b8fcc410b23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726520"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128805"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>データベース メール:メールがキューされました、配信されません 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-unsent"></a>メッセージの状態 - unsent 
 
-状態 **unsent** は、電子メール メッセージが[データベース メール外部プログラム](database-mail-external-program.md)でまだ処理されていないことを表します。 データベース メール外部プログラムによるメッセージの処理は遅れることがあります。この外部プログラムのメッセージ処理速度は、ネットワークの状態、再試行タイムアウト、メッセージの量、および SMTP サーバーの処理能力によって異なります。 問題が解決しない場合は、複数のプロファイルを使用して、複数の SMTP サーバーにメッセージを分散させることを検討します。
+状態 **unsent** は、電子メール メッセージが [データベース メール外部プログラム](database-mail-external-program.md)でまだ処理されていないことを表します。 データベース メール外部プログラムによるメッセージの処理は遅れることがあります。この外部プログラムのメッセージ処理速度は、ネットワークの状態、再試行タイムアウト、メッセージの量、および SMTP サーバーの処理能力によって異なります。 問題が解決しない場合は、複数のプロファイルを使用して、複数の SMTP サーバーにメッセージを分散させることを検討します。
 
 正常に配信されたメッセージを対象に、最終更新日をチェックします。 最後に正常な配信が行われてからしばらく経過している場合は、sysmail_event_log ビューで、この外部プログラムが Service Broker によって正常に開始されたことを確認します。 最後の試行で外部プログラムが開始されなかった場合は、データベース メール外部プログラムが適切なディレクトリにあり、SQL Server のサービス アカウントにこの実行可能ファイルの実行権限があるかどうかを確認します。
 
@@ -69,7 +70,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-failed"></a>メッセージの状態 - failed
 
-状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、 **[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
+状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、**[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
 
 
 

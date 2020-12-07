@@ -1,4 +1,5 @@
 ---
+description: setCharacterStream (int, java.io.Reader, long) メソッド
 title: setCharacterStream メソッド (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14b8060d09cf70df8da011fa14add2fac613e1d6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 669d9bbbf6f626a33c8162b789ddce719efbddcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432284"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>setCharacterStream (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

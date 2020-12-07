@@ -1,4 +1,5 @@
 ---
+description: スクリプトによるパッケージの拡張
 title: スクリプトによるパッケージの拡張 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7721e38ca3f9e19ecf3d8d4ee6113f1768427b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0c4a0b243fbb6935a0d456955e70b58f6ac1394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425334"
 ---
 # <a name="extending-packages-with-scripting"></a>スクリプトによるパッケージの拡張
 
@@ -49,7 +50,7 @@ ms.locfileid: "86915959"
  スクリプト コンポーネントを使用して、カスタム データ フローの変換元、変換、および変換先を作成する方法について説明します。 通常は、処理するデータ行ごとにデータ フロー コンポーネントが 1 回呼び出されます。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
  事前に定義されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -59,7 +60,7 @@ ms.locfileid: "86915959"
  [プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、実行、読み込み、保存、および管理する方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

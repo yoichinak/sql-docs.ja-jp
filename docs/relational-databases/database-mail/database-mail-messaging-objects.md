@@ -1,4 +1,5 @@
 ---
+description: データベース メール メッセージング オブジェクト
 title: データベース メール メッセージング オブジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e627bd6505d43737061d8fab34cc819d52c22106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494575"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726485"
   
  これらのオブジェクトは、メール ホスト データベース内のデータベース メールのインターフェイスです。 上記で一覧したオブジェクトによって提供される機能を実装するために、他のオブジェクトがインストールされます。 ただし、このようなオブジェクトは内部使用のために予約されています。  
   
-|Name|種類|説明|  
+|名前|Type|説明|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**表示**|データベース メールに送信されたすべてのメッセージの一覧を表示します。|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**表示**|[Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)の動作に関するメッセージの一覧を表示します。|  

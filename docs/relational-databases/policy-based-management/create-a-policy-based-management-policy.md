@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ポリシーの作成
 title: ポリシー ベースの管理ポリシーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 89e8ca51ce8f53e27ea2c46659d118cec57e1193
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a27cb717d8a54de804469d210e0eaaf3b622dd9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654695"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127925"
 ---
 # <a name="create-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーの作成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85654695"
   
 #### <a name="to-create-a-policy"></a>ポリシーを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、新しいポリシー ベースの管理ポリシーを作成するサーバーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プラス記号をクリックして、新しいポリシー ベースの管理ポリシーを作成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   

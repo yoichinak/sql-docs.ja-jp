@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_distribution_agent_properties
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 07898bbe042d3539778317d5ea886a1043b95dc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 276e56e28c7455949fcf12b32f684365c20c618f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891568"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547639"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,19 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値はありません。  
   
-`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**であり、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname**であり、既定値はありません。  
   
-`[ @property = ] 'property'`変更するパブリケーションプロパティを設定します。 *プロパティ*は**sysname**,、既定値はありません。  
+`[ @property = ] 'property'` 変更するパブリケーションプロパティを設定します。 *プロパティ* は **sysname**,、既定値はありません。  
   
-`[ @value = ] 'value'`新しいプロパティ値を指定します。 *値*は**nvarchar (524)**,、既定値は NULL です。  
+`[ @value = ] 'value'` 新しいプロパティ値を指定します。 *値* は **nvarchar (524)**,、既定値は NULL です。  
   
  次の表では、変更可能なディストリビューションエージェントジョブのプロパティと、それらのプロパティの値に関する制限について説明します。  
   
@@ -71,9 +71,9 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_password**||サブスクライバーのパスワード。<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**subscriber_provider**||データソース以外の OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *このプロパティは、以外の場合にのみ有効です* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー。*|  
 |**subscriber_providerstring**||データソースを識別する OLE DB プロバイダー固有の接続文字列。 *このプロパティは、SQL Server 以外のサブスクライバーに対してのみ有効です。*|  
-|**subscriber_security_mode**|**1**|Windows 認証。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
+|**subscriber_security_mode**|**1**|[Windows 認証]。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
-|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバ|  
+|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバ|  
 ||**1**|ODBC データソースサーバー|  
 ||**3**|OLE DB プロバイダー|  
 |**subscriptionstreams**||変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を表します。 *以外の場合はサポートされません* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。*サブスクライバー、Oracle パブリッシャー、またはピアツーピアサブスクリプション。*|  
@@ -82,17 +82,17 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_MSchange_distribution_agent_properties**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_MSchange_distribution_agent_properties** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- パブリッシャーが以降のバージョンのインスタンスで実行されている場合は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を使用して、ディストリビューターで実行されるプッシュサブスクリプションを同期するマージエージェントジョブのプロパティを変更する必要があります。  
+ パブリッシャーが以降のバージョンのインスタンスで実行されている場合は [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、ディストリビューターで実行されるプッシュサブスクリプションを同期するマージエージェントジョブのプロパティを変更する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_MSchange_distribution_agent_properties**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_events (Transact-SQL)
 title: server_event_session_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 18a39be6519d22e8a568e48be616c57bc1b6a069
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7f58a80a3d3d85fd7411d629d9d018a40002641
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442489"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551425"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +46,10 @@ ms.locfileid: "87442489"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| ソース | ターゲット | リレーションシップ |
+| From | 終了 | リレーションシップ |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|server_event_sessions。 event_session_id|多対一|  
   

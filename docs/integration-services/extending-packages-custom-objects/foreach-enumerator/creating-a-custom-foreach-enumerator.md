@@ -1,4 +1,5 @@
 ---
+description: カスタム Foreach 列挙子の作成
 title: カスタム Foreach 列挙子の作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08eaa7d908f421ec3dd4e321e47985f8d7dd6c04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d98191945b17cb1471d6e255b8f41680a03cc459
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902365"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123118"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>カスタム Foreach 列挙子の作成
 
@@ -49,7 +50,7 @@ ms.locfileid: "86902365"
  どちらのプロジェクトも、アセンブリに署名するよう構成します。アセンブリは、厳密な名前のキー ファイルを使用して、ビルド時に生成されます。  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>DtsForEachEnumerator 属性の適用  
- 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性を適用して、そのクラスが foreach 列挙子として識別されるようにします。 この属性は、foreach 列挙子の名前や説明など、デザイン時の情報を表します。 **Name** プロパティは、 **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** タブにある使用可能な列挙子のドロップダウン リストに表示されます。  
+ 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性を適用して、そのクラスが foreach 列挙子として識別されるようにします。 この属性は、foreach 列挙子の名前や説明など、デザイン時の情報を表します。 **Name** プロパティは、**[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** タブにある使用可能な列挙子のドロップダウン リストに表示されます。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> プロパティを使用して、foreach 列挙子をそのカスタム ユーザー インターフェイスにリンクします。 このプロパティに必要な公開キー トークンを取得するには、**sn.exe -t** を使用して、ユーザー インターフェイス アセンブリへの署名に使用するキー ペア (.snk) ファイルから公開キー トークンを表示します。  
   

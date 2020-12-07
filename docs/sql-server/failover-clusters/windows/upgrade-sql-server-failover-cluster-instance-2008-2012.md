@@ -5,19 +5,19 @@ ms.date: 06/15/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61681e248ae49443518f8daeb3b86e8939ddd138
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8077a17676d38937d82241c2e58b556bd322f8a2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779614"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120977"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -25,7 +25,7 @@ ms.locfileid: "84779614"
 
 ## <a name="prerequisites"></a>前提条件
 
--   移行方法のいずれかを実行する前に、Windows Server 2016/2012 R2 で並列 Windows Server フェールオーバー クラスターを準備する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を構成するすべてのノードを、並列 FCI がインストールされている Windows クラスターに結合する必要があります。 移行前に、Windows Server フェールオーバー クラスターにスタンドアロン コンピューターを結合することは**できません**。 移行前に、ユーザー データベースを新しい環境で同期する必要があります。
+-   移行方法のいずれかを実行する前に、Windows Server 2016/2012 R2 で並列 Windows Server フェールオーバー クラスターを準備する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を構成するすべてのノードを、並列 FCI がインストールされている Windows クラスターに結合する必要があります。 移行前に、Windows Server フェールオーバー クラスターにスタンドアロン コンピューターを結合することは **できません**。 移行前に、ユーザー データベースを新しい環境で同期する必要があります。
 -   対象のすべてのインスタンスは、元の環境の並列インスタンスと同じバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を同じインスタンス名と ID で実行し、同じ機能と共にインストールされる必要があります。 インストール パスとディレクトリ構造は、対象のコンピューターで同じである必要があります。 これには FCI 仮想ネットワーク名は含まれません。移行前は、この名前は異なっている必要があります。 元のインスタンスで有効になっているすべての機能 (Always On、FILESTREAM など) は、対象のインスタンスでも有効にする必要があります。
 
 -   移行前に、並列クラスターに [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]をインストールする必要はありません。
@@ -321,7 +321,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 ## <a name="next-steps"></a>次のステップ
 - [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [データベース互換性モードの変更とクエリ ストアの使用](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
-- [SQL Server 2016 の新機能を利用する](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [SQL Server 2016 の新機能を利用する](../../what-s-new-in-sql-server-2017.md)
 - [SQL Server フェールオーバー クラスター インスタンスのアップグレード](upgrade-a-sql-server-failover-cluster-instance.md)
 - [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [SQL Server 2016 のインスタンスへの機能の追加 (セットアップ)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [SQL Server 2016 のインスタンスへの機能の追加 (セットアップ)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)

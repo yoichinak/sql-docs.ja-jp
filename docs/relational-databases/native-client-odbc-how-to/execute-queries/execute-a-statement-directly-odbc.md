@@ -14,12 +14,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5264929258fb03c7572de1459a57fb86dbd99ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf661d045b24c3844513356a2cdd081c05ff2620
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328958"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867922"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>ステートメントの直接実行 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "88328958"
   
 1.  ステートメントにパラメーターマーカーがある場合は、 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を使用して、各パラメーターをプログラム変数にバインドします。 プログラム変数にデータ値を入力してから、実行時データ パラメーターをセットアップします。  
   
-2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)を呼び出して、ステートメントを実行します。  
+2.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)を呼び出して、ステートメントを実行します。  
   
-3.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) は SQL_NEED_DATA を返します。 [Sqlparamdata](https://go.microsoft.com/fwlink/?LinkId=58405)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
+3.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) は SQL_NEED_DATA を返します。 [Sqlparamdata](../../../odbc/reference/syntax/sqlparamdata-function.md)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
 
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>列方向のパラメーターのバインドを使用してステートメントを複数回実行するには  
   
@@ -57,9 +57,9 @@ ms.locfileid: "88328958"
   
      S データ値および S データの長さを、バインドされたパラメーター配列に置きます。  
   
-3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)を呼び出して、ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
+3.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)を呼び出して、ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
   
-4.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) は SQL_NEED_DATA を返します。 [Sqlparamdata](https://go.microsoft.com/fwlink/?LinkId=58405)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
+4.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) は SQL_NEED_DATA を返します。 [Sqlparamdata](../../../odbc/reference/syntax/sqlparamdata-function.md)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>行方向のパラメーターのバインドを使用してステートメントを複数回実行するには  
   
@@ -83,13 +83,12 @@ ms.locfileid: "88328958"
   
 4.  バインドされたパラメーターのバッファー配列にデータ値を入力します。  
   
-5.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)を呼び出して、ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
+5.  [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)を呼び出して、ステートメントを実行します。 ドライバーによって、S 回 (パラメーターのセットごとに 1 回) ステートメントが効率よく実行されます。  
   
-6.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) は SQL_NEED_DATA を返します。 [Sqlparamdata](https://go.microsoft.com/fwlink/?LinkId=58405)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
+6.  実行時データ入力パラメーターが使用されている場合、 [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) は SQL_NEED_DATA を返します。 [Sqlparamdata](../../../odbc/reference/syntax/sqlparamdata-function.md)と[sqlparamdata](../../../relational-databases/native-client-odbc-api/sqlputdata.md)を使用して、データをチャンク単位で送信します。  
   
- **メモ**列方向と行方向のバインドは、通常、 [SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)と[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)ではなく[sqlexecute](https://go.microsoft.com/fwlink/?LinkId=58400)と組み合わせて使用されます。  
+ **メモ**列方向と行方向のバインドは、通常、 [SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)と[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)ではなく[sqlexecute](../../../odbc/reference/syntax/sqlexecute-function.md)と組み合わせて使用されます。  
   
 ## <a name="see-also"></a>参照  
  [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

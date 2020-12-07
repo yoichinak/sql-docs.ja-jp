@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-sql)
 title: sp_dropmessage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881787"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536517"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  のインスタンスから、指定されたユーザー定義エラーメッセージを削除 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 ユーザー定義のメッセージは、**システム**カタログビューを使用して表示できます。  
+  のインスタンスから、指定されたユーザー定義エラーメッセージを削除 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] します。 ユーザー定義のメッセージは、 **システム** カタログビューを使用して表示できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @msgnum = ] message_number`削除するメッセージ番号を指定します。 *message_number*は、5万より大きいメッセージ番号を持つユーザー定義メッセージである必要があります。 *message_number*は**int**,、既定値は NULL です。  
+`[ @msgnum = ] message_number` 削除するメッセージ番号を指定します。 *message_number* は、5万より大きいメッセージ番号を持つユーザー定義メッセージである必要があります。 *message_number* は **int**,、既定値は NULL です。  
   
-`[ @lang = ] 'language'`削除するメッセージの言語を示します。 **All**を指定した場合、 *message_number*のすべての言語バージョンが削除されます。 *language*は**sysname**,、既定値は NULL です。  
+`[ @lang = ] 'language'` 削除するメッセージの言語を示します。 **All**を指定した場合、 *message_number*のすべての言語バージョンが削除されます。 *language* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**および**serveradmin**固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Language*に**all**を指定しない限り、英語版のメッセージを削除する前に、メッセージのすべてのローカライズ版を削除する必要があります。  
   
 ## <a name="examples"></a>例  
@@ -67,7 +68,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B: ローカライズされたバージョンを含むユーザー定義メッセージを削除する  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. ローカライズされたバージョンを含むユーザー定義メッセージを削除する  
  次の例では、 `60000` メッセージのローカライズされたバージョンを含む、ユーザー定義のメッセージ番号を削除します。  
   
 ```  
@@ -101,7 +102,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-### <a name="c-dropping-a-localized-version-of-a-user-defined-message"></a>C: ユーザー定義メッセージのローカライズ版の削除  
+### <a name="c-dropping-a-localized-version-of-a-user-defined-message"></a>C. ユーザー定義メッセージのローカライズ版の削除  
  次の例では、メッセージ全体を削除せずに、ユーザー定義のメッセージ数のローカライズ版を削除し `60000` ます。  
   
 ```  
@@ -130,7 +131,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: dm_clr_loaded_assemblies (Transact-sql)
 title: dm_clr_loaded_assemblies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42abc84bf1b5a78979da4c7443158abc6eddabc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894624"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539462"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>dm_clr_loaded_assemblies (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,15 +36,15 @@ ms.locfileid: "85894624"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|読み込まれたアセンブリの ID。 **Assembly_id**を使用すると、 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)カタログビュー &#40;のアセンブリに関する詳細情報を参照できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)現在のデータベースのみにアセンブリが表示されていることに注意してください。 Dm_clr_loaded_assemblies ビューには、サーバー上のすべての読み込ま**れ**たアセンブリが表示されます。|  
-|**appdomain_address**|**int**|アセンブリが読み込まれるアプリケーションドメイン (**AppDomain**) のアドレス。 1人のユーザーが所有するすべてのアセンブリは、常に同じ**AppDomain**に読み込まれます。 **Appdomain_address**を使用すると、 [Dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)ビューで**appdomain**に関する詳細情報を参照できます。|  
+|**assembly_id**|**int**|読み込まれたアセンブリの ID。 **Assembly_id**を使用すると、 [transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)カタログビュー &#40;のアセンブリに関する詳細情報を参照できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)現在のデータベースのみにアセンブリが表示されていることに注意してください。 Dm_clr_loaded_assemblies ビューには、サーバー上のすべての読み込ま **れ** たアセンブリが表示されます。|  
+|**appdomain_address**|**int**|アセンブリが読み込まれるアプリケーションドメイン (**AppDomain**) のアドレス。 1人のユーザーが所有するすべてのアセンブリは、常に同じ **AppDomain**に読み込まれます。 **Appdomain_address**を使用すると、 [Dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)ビューで**appdomain**に関する詳細情報を参照できます。|  
 |**load_time**|**datetime**|アセンブリが読み込まれた時刻。 がメモリ不足になるまでアセンブリが読み込まれ、AppDomain がアンロードされることに注意して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ください。 **AppDomain** **Load_time**を監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] して、メモリ不足の発生頻度を把握し、 **AppDomain**をアンロードできます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
- Appdomain_address ビューには**dm_clr_loaded_assemblies** 、 **dm_clr_appdomains appdomain_address**との多対一のリレーションシップがあります。 **Dm_clr_loaded_assemblies assembly_id**ビューには、 **assembly_id**との一対多のリレーションシップがあります。  
+## <a name="remarks"></a>解説  
+ Appdomain_address ビューには **dm_clr_loaded_assemblies** 、  **dm_clr_appdomains appdomain_address**との多対一のリレーションシップがあります。 **Dm_clr_loaded_assemblies assembly_id**ビューには、 **assembly_id**との一対多のリレーションシップがあります。  
   
 ## <a name="examples"></a>例  
  次の例は、現在読み込まれている現在のデータベースのすべてのアセンブリの詳細を表示する方法を示しています。  
@@ -55,7 +56,7 @@ INNER JOIN sys.assemblies AS a
 ON l.assembly_id = a.assembly_id;  
 ```  
   
- 次の例は、特定のアセンブリが読み込まれる**AppDomain**の詳細を表示する方法を示しています。  
+ 次の例は、特定のアセンブリが読み込まれる **AppDomain** の詳細を表示する方法を示しています。  
   
 ```  
 SELECT appdomain_id, creation_time, db_id, user_id, state  
@@ -66,7 +67,7 @@ WHERE appdomain_address =
  WHERE assembly_id = 555);  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;共通言語ランタイム関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

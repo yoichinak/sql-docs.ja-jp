@@ -1,4 +1,5 @@
 ---
+description: DBCC SQLPERF (Transact-SQL)
 title: DBCC SQLPERF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
@@ -22,25 +23,25 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: baa77f853e048fdc1098a93ae7036fd927efbe9c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ac8696fb3b4b88d4258cb6434e394a97e7bd747d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485560"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034855"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 すべてのデータベースを対象として、トランザクション ログ領域の使用状況に関する統計情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、待機統計情報とラッチ統計情報のリセットにも使用できます。
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([一部の地域ではプレビュー版](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag))
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DBCC SQLPERF   
 (  
      [ LOGSPACE ]  
@@ -59,10 +60,10 @@ LOGSPACE
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のトランザクション ログの容量利用情報については、このトピックの「[注釈](#Remarks)」セクションを参照してください。
   
-**"sys.dm_os_latch_stats"** , CLEAR  
+**"sys.dm_os_latch_stats"**, CLEAR  
 ラッチ統計をリセットします。 詳細については、「[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
   
-**"sys.dm_os_wait_stats"** , CLEAR  
+**"sys.dm_os_wait_stats"**, CLEAR  
 待機統計をリセットします。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
   
 WITH NO_INFOMSGS  
@@ -124,5 +125,4 @@ DBCC SQLPERF("sys.dm_os_wait_stats",CLEAR);
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
-[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)     
-
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)

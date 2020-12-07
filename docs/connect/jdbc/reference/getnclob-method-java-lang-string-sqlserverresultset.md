@@ -1,4 +1,5 @@
 ---
+description: getNClob (java.lang.String) メソッド (SQLServerResultSet)
 title: getNClob メソッド (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b8ea745ec5d0c52a799785078ea194800b91d7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9694239056ac410610874e31af35fea34ac8aa34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435274"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ## <a name="remarks"></a>解説  
  この getNClob メソッドは、java.sql.ResultSet インターフェイスの getNClob メソッドで規定されています。  
   
- このメソッドは、**nvarchar(max)** 、**ntext**、および **xml** 列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、**nvarchar(max)**、**ntext**、および **xml** 列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

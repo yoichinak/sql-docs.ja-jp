@@ -1,4 +1,5 @@
 ---
+description: セマンティック検索を使用したドキュメント内のキー フレーズの検索
 title: セマンティック検索を使用したドキュメント内のキー フレーズの検索
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ac80ea56e1ba6cf3adcb0f913325b0347ade455e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62a0ba559733c42ddf25b5d40896c4e53bdcf7b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490571"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>セマンティック検索を使用したドキュメント内のキー フレーズの検索
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85730188"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> 例 1: 特定のドキュメントに含まれる上位のキー フレーズを見つける  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。  
   
 ```sql  
@@ -53,7 +54,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> 例 2: 特定のキー フレーズを含む上位のドキュメントを見つける  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列から、キー フレーズ "Bracket" を含む上位 25 個のドキュメントを取得します。  
   
 ```sql  

@@ -1,4 +1,5 @@
 ---
+description: cdc. lsn_time_mapping (Transact-sql)
 title: cdc. lsn_time_mapping (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 009ba2559c798fbe6dfeb524d99de585909782fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4791eba84c89b96b03acc6011a018bab2bda4b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890602"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544630"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc. lsn_time_mapping (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

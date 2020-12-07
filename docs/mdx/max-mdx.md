@@ -1,4 +1,5 @@
 ---
+description: Max (MDX)
 title: Max (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad4bc2bf41caacbafb5bf36b5e95263ab2f85d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cd8f78426229328e0b56fecc79fed4a8163668b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429834"
 ---
 # <a name="max-mdx"></a>Max (MDX)
 
@@ -34,7 +35,7 @@ Max( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  数値式を指定した場合、この数値式がセットに対して評価されてから、その評価で得られる最大値が返されます。 数値式を指定しなかった場合、指定したセットがそのセットのメンバーの現在のコンテキストで評価されてから、その評価で得られる最大値が返されます。  
   
 > [!NOTE]  

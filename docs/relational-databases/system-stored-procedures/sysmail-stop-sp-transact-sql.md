@@ -1,4 +1,5 @@
 ---
+description: sysmail_stop_sp (Transact-SQL)
 title: sysmail_stop_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e503667d51da42f5d103ae479dba3b4a1cba7fce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6630ddcb05645422ba2049636637a3e480e543c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473350"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,25 +43,25 @@ sysmail_stop_sp
  None  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- このストアドプロシージャは**msdb**データベースにあります。  
+## <a name="remarks"></a>解説  
+ このストアドプロシージャは **msdb** データベースにあります。  
   
  このストアドプロシージャは、送信メッセージ要求を保持するデータベースメールキューを停止し、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 外部プログラムのアクティブ化をオフにします。  
   
  キューが停止されると、データベースメール外部プログラムはメッセージを処理しません。 このストアド プロシージャを使用すると、トラブルシューティングやメンテナンスの目的でデータベース メールを停止できます。  
   
- データベースメールを開始するには、 **sysmail_start_sp**を使用します。 オブジェクトが停止しても、 **sp_send_dbmail**はメールを受け取ることに注意 [!INCLUDE[ssSB](../../includes/sssb-md.md)] してください。  
+ データベースメールを開始するには、 **sysmail_start_sp**を使用します。 オブジェクトが停止しても、 **sp_send_dbmail** はメールを受け取ることに注意 [!INCLUDE[ssSB](../../includes/sssb-md.md)] してください。  
   
 > [!NOTE]  
 >  このストアドプロシージャは、データベースメールのキューのみを停止します。 このストアドプロシージャは [!INCLUDE[ssSB](../../includes/sssb-md.md)] 、データベースでのメッセージ配信を非アクティブ化しません。 このストアドプロシージャでは、データベースメール拡張ストアドプロシージャを無効にして、セキュリティでセキュリティを低下させることはできません。 拡張ストアドプロシージャを無効にするには、 **sp_configure**システムストアドプロシージャの[データベースメール XPs オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 **msdb**データベースのデータベースメールを停止します。 この例では、データベースメールが有効になっていることを前提としています。  
+## <a name="examples"></a>例  
+ 次の例では、 **msdb** データベースのデータベースメールを停止します。 この例では、データベースメールが有効になっていることを前提としています。  
   
 ```  
 USE msdb ;  
@@ -70,9 +71,9 @@ EXECUTE dbo.sysmail_stop_sp ;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_start_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

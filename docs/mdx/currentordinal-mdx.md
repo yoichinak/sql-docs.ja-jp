@@ -1,4 +1,5 @@
 ---
+description: CurrentOrdinal (MDX)
 title: CurrentOrdinal (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68119266fd9460a28e036914fce036ec165e553a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413158"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -31,11 +32,11 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [Filter (mdx)](../mdx/filter-mdx.md)関数や[Generate (mdx)](../mdx/generate-mdx.md)関数などを使用してセットを反復処理する場合、 **currentordinal**関数はイテレーション番号を返します。  
   
-## <a name="examples"></a>使用例  
- 次の簡単な例では、 **Currentordinal**を**Generate**と共に使用して、セット内の各項目の名前とセット内の位置を含む文字列を返す方法を示しています。  
+## <a name="examples"></a>例  
+ 次の簡単な例では、 **Currentordinal** を **Generate** と共に使用して、セット内の各項目の名前とセット内の位置を含む文字列を返す方法を示しています。  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   

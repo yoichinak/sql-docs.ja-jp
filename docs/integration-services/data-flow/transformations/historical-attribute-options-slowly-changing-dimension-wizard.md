@@ -1,4 +1,5 @@
 ---
+description: '[履歴属性オプション] (緩やかに変化するディメンション ウィザード)'
 title: 履歴属性オプション (緩やかに変化するディメンション ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4dfa3579fb37fab94f8bc5731738ed024676018e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9610a734543c9199e54d3f8489d86e03089f10ed
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430704"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>[履歴属性オプション] (緩やかに変化するディメンション ウィザード)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919308"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[現在のレコードと有効期限が切れたレコードを 1 列で表示する]**  
  1 列を使用して履歴属性のステータスを記録する場合は、次のオプションを使用できます。  
   

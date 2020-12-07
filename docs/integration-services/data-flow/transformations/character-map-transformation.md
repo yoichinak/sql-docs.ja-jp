@@ -1,4 +1,5 @@
 ---
+description: 文字マップ変換
 title: 文字マップ変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b825ff5cee4ceba526d59cc30dc0bb1205896171
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922461"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123431"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
 
@@ -77,7 +78,7 @@ ms.locfileid: "86922461"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -125,6 +126,5 @@ ms.locfileid: "86922461"
  各出力列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  
   
  **エラー出力の構成**  
- [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
-  
+ [[エラー出力の構成]](../error-handling-in-data.md) ダイアログ ボックスを使用して、この変換のエラー処理オプションを指定します。  
   

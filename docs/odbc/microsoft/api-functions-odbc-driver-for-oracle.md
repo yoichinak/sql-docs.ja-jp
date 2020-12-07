@@ -1,4 +1,5 @@
 ---
+description: API 関数 (ODBC Driver for Oracle)
 title: API 関数 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22caca270e9023057e9a4e146482a57bf4bad754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a19eb25f15cfea874d7ac84b9ad41a8a342c4859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500395"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -27,8 +28,8 @@ ms.locfileid: "81299912"
   
  Microsoft ODBC Driver for Oracle は、コアレベル、レベル1、レベル2の API 関数をサポートしています。 これらの関数は、「 [ODBC 準拠レベル](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)」に記載されています。  
   
--   [コアレベルインターフェイス](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)(CLI) 準拠は、ISO cli 仕様で定義されている機能と、OPEN Group CLI 仕様で定義されている必須機能を提供します。  
+-   [コアレベルインターフェイス](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md) (CLI) 準拠は、ISO cli 仕様で定義されている機能と、OPEN Group CLI 仕様で定義されている必須機能を提供します。  
   
--   [レベル 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)の準拠には、コアレベルのインターフェイスの機能だけでなく、トランザクションなどの追加機能が用意されています。  
+-   [レベル 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) の準拠には、コアレベルのインターフェイスの機能だけでなく、トランザクションなどの追加機能が用意されています。  
   
--   [レベル 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)の準拠では、レベル1の機能に加えて、ブックマーク、動的パラメーター、ODBC 関数の非同期実行などの追加機能が提供されます。
+-   [レベル 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) の準拠では、レベル1の機能に加えて、ブックマーク、動的パラメーター、ODBC 関数の非同期実行などの追加機能が提供されます。

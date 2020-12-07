@@ -1,4 +1,5 @@
 ---
+description: Start, Stop, or Pause the SQL Server Agent Service
 title: サービスの開始、停止、または一時停止
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3aa4067cc1b398a07a46ea74ed0fa7fafe9a5832
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02bc27675493e7e8d1b5c5012d7541c0ad295bae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755091"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038756"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の SQL Server エージェント サービスを開始、停止、または一時停止する方法について説明します。  
   
@@ -62,15 +63,14 @@ ms.locfileid: "85755091"
   
 1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、管理する SQL Server エージェント サービスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[開始]** 、 **[停止]** 、または **[再起動]** を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[開始]**、 **[停止]**、または **[再起動]** を選択します。  
   
-3.  **[ユーザー アカウント制御]** ダイアログ ボックスで、 **[はい]** をクリックします。  
+3.  **[ユーザー アカウント制御]** ダイアログ ボックスで、**[はい]** をクリックします。  
   
 4.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 詳細については、次を参照してください。  
   
--   [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)  
+-   [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
 -   [SQL Server エージェントの自動起動 (SQL Server Management Studio)](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
-  

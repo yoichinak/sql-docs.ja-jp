@@ -1,8 +1,9 @@
 ---
+description: Groups および Users Append、ChangePassword メソッドの例 (VB)
 title: Groups および Users Append、ChangePassword メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c71cca25412a00ea53d62b44a0a4ff7ced67643
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 824cf44560335152ac6079c4ff61f2177368447c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761740"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984383"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Groups および Users Append、ChangePassword メソッドの例 (VB)
-この例では、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)の[append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドと、システムに新しい[グループ](../../../ado/reference/adox-api/group-object-adox.md)と新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)を追加することによる[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)の[追加](../../../ado/reference/adox-api/append-method-adox-users.md)方法を示します。 新しい**グループ**は、新しい**ユーザー**の**Groups**コレクションに追加されます。 その結果、新しい**ユーザー**が**グループ**に追加されます。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して**ユーザー**パスワードを指定します。  
+この例では、[グループ](./groups-collection-adox.md)の[append](./append-method-adox-groups.md)メソッドと、システムに新しい[グループ](./group-object-adox.md)と新しい[ユーザー](./user-object-adox.md)を追加することによる[ユーザー](./users-collection-adox.md)の[追加](./append-method-adox-users.md)方法を示します。 新しい**グループ**は、新しい**ユーザー**の**Groups**コレクションに追加されます。 その結果、新しい **ユーザー** が **グループ**に追加されます。 また、 [ChangePassword](./changepassword-method-adox.md) メソッドを使用して **ユーザー** パスワードを指定します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 ' BeginGroupVB  
@@ -123,11 +124,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append メソッド (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [ChangePassword メソッド (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
- [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Append メソッド (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append メソッド (ADOX Users)](./append-method-adox-users.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [ChangePassword メソッド (ADOX)](./changepassword-method-adox.md)   
+ [Group オブジェクト (ADOX)](./group-object-adox.md)   
+ [Groups コレクション (ADOX)](./groups-collection-adox.md)   
+ [User オブジェクト (ADOX)](./user-object-adox.md)   
+ [Users コレクション (ADOX)](./users-collection-adox.md)

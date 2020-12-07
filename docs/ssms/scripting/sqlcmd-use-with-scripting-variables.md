@@ -4,7 +4,7 @@ description: スクリプト変数を使用して、複数のシナリオで使�
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +19,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3628994d100057de864ac1e1188e865d14dca8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ca718daf11f544120db3a17aed21f73b2e467c54
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246201"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036255"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - スクリプト変数の使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -332,8 +332,7 @@ C:\> sqlcmd
 ```
   
 ## <a name="see-also"></a>参照  
- [sqlcmd ユーティリティの使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+ [sqlcmd ユーティリティの使用](./sqlcmd-use-the-utility.md)   
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
-  
   

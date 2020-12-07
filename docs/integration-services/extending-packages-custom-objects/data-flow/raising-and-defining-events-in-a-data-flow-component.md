@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネントのイベントの発生と定義
 title: データ フロー コンポーネントのイベントの発生と定義 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21d0abf3f0032644e70054813328afdb1bf1732f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4cc968d9004d269a21a95578a21eeeb1877faa13
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915986"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192563"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>データ フロー コンポーネントのイベントの発生と定義
 
@@ -96,6 +97,5 @@ End Sub
 
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [パッケージにイベント ハンドラーを追加する](../../integration-services-ssis-event-handlers.md)  
   

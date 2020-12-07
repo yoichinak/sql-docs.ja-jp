@@ -1,4 +1,5 @@
 ---
+description: Stretch Database を無効にしてリモート データを戻す
 title: Stretch Database を無効にしてリモート データを戻す
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454379"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database を無効にしてリモート データを戻す
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   テーブルに対する Stretch Database を無効にするには、SQL Server Management Studio のテーブルで **[拡張する]** を選択します。 次のいずれかを選択します。  

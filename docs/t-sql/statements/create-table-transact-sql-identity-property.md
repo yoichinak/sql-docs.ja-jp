@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 title: IDENTITY (プロパティ) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e12c04d0dfa9ad03e7e0009f50a11c91d444702b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8f9508420a8f629a189a1d623e5ac1d310a7f940
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396571"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257759"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,11 +41,15 @@ ms.locfileid: "87396571"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 IDENTITY [ (seed , increment) ]
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *seed*  
  テーブルに読み込まれる最初の行に使用される値です。  
   
@@ -65,16 +70,16 @@ IDENTITY [ (seed , increment) ]
   
  列の ID プロパティでは、次の点は保証されません。  
   
--   **値の一意性**: **PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスを使用して、一意性を強制する必要があります。 - 
+-   **値の一意性** : **PRIMARY KEY** 制約、 **UNIQUE** 制約、または **UNIQUE** インデックスを使用して、一意性を強制する必要があります。 - 
  
 > [!NOTE]
-> Azure Synapse Analytics では、**PRIMARY KEY** 制約、**UNIQUE** 制約、または **UNIQUE** インデックスはサポートされません。 詳細については、「[Synapse SQL プールで IDENTITY を使用して代理キーを作成する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)」を参照してください。
+> Azure Synapse Analytics では、 **PRIMARY KEY** 制約、 **UNIQUE** 制約、または **UNIQUE** インデックスはサポートされません。 詳細については、「[Synapse SQL プールで IDENTITY を使用して代理キーを作成する](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key)」を参照してください。
 
--   **トランザクション内の連続する値**: 複数行を挿入するトランザクションは、テーブルで同時に他の挿入が実行される可能性があるため、その複数行の連続する値を取得するとは限りません。 連続した値にする必要がある場合、トランザクションはテーブル上で排他ロックを使用するか、**SERIALIZABLE** 分離レベルを使用する必要があります。  
+-   **トランザクション内の連続する値** : 複数行を挿入するトランザクションは、テーブルで同時に他の挿入が実行される可能性があるため、その複数行の連続する値を取得するとは限りません。 連続した値にする必要がある場合、トランザクションはテーブル上で排他ロックを使用するか、 **SERIALIZABLE** 分離レベルを使用する必要があります。  
   
 -   **サーバーの再起動または他のエラーが発生した後の連続した値** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パフォーマンス上の理由から ID 値をキャッシュすることがあります。割り当てられた値の一部は、データベースの障害やサーバーの再起動が発生したときに失われることがあります。 その結果、挿入時に非連続的な ID 値が生成される場合があります。 非連続的な値が許可されない場合、アプリケーションは独自のメカニズムを使用してキー値を生成する必要があります。 シーケンス ジェネレーターを **NOCACHE** オプションを指定して使用すると、非連続的な値を絶対にコミットされないトランザクションに制限することができます。  
   
--   **値の再利用**: 特定のシードと増分値が指定された特定の ID プロパティでは、ID 値がエンジンによって再利用されることはありません。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
+-   **値の再利用** : 特定のシードと増分値が指定された特定の ID プロパティでは、ID 値がエンジンによって再利用されることはありません。 特定の挿入ステートメントが失敗した場合または挿入ステートメントがロールバックされた場合、使用した ID 値は失われ、再度生成されることはありません。 その結果、それ以降の ID 値が生成されると、連続しない場合があります。  
   
  これらの制限事項が設計に含まれているのは、パフォーマンスを向上するため、および多くの一般的な状況で許容されるためです。 これらの制限事項が原因で ID 値を使用できない場合は、アプリケーションを使用して、現在の値を保持する別のテーブルを作成し、テーブルと番号の割り当てへのアクセスを管理します。  
   
@@ -89,7 +94,7 @@ IDENTITY [ (seed , increment) ]
 ### <a name="a-using-the-identity-property-with-create-table"></a>A. CREATE TABLE で IDENTITY プロパティを使用する  
  次の例では、ID 番号を自動的に増分するテーブルを、`IDENTITY` プロパティを使用して新規作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
@@ -120,7 +125,7 @@ VALUES
 > [!NOTE]  
 >  次に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの最初の部分は、あくまでも参考です。 実行できるのは、"`-- Create the img table`" というコメントで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトです。  
   
-```  
+```sql 
 -- Here is the generic syntax for finding identity value gaps in data.  
 -- The illustrative example starts here.  
 SET IDENTITY_INSERT tablename ON;  
@@ -152,14 +157,14 @@ SET IDENTITY_INSERT tablename OFF;
 IF OBJECT_ID ('dbo.img', 'U') IS NOT NULL  
    DROP TABLE img;  
 GO  
-CREATE TABLE img (id_num int IDENTITY(1,1), company_name sysname);  
+CREATE TABLE img (id_num INT IDENTITY(1,1), company_name sysname);  
 INSERT img(company_name) VALUES ('New Moon Books');  
 INSERT img(company_name) VALUES ('Lucerne Publishing');  
 -- SET IDENTITY_INSERT ON and use in img table.  
 SET IDENTITY_INSERT img ON;  
   
-DECLARE @minidentval smallint;  
-DECLARE @nextidentval smallint;  
+DECLARE @minidentval SMALLINT;  
+DECLARE @nextidentval SMALLINT;  
 SELECT @minidentval = MIN($IDENTITY) FROM img  
  IF @minidentval = IDENT_SEED('img')  
     SELECT @nextidentval = MIN($IDENTITY) + IDENT_INCR('img')  

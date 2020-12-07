@@ -1,4 +1,5 @@
 ---
+description: SET RESULT_SET_CACHING (Transact-SQL)
 title: RESULT_SET_CACHING の設定 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -14,12 +15,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c975242a65da5ef29374267262deb6d8bf370f25
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 93dfd425619744107fcf1123862cd0df76cad5ce
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397021"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300811"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>結果セット キャッシュの設定 (Transact-SQL) 
 
@@ -27,7 +28,7 @@ ms.locfileid: "87397021"
 
 現在のクライアント セッションの結果セットのキャッシュ動作を制御します。  
 
-適用対象: Azure SQL Data Warehouse  
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] への適用  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -36,7 +37,9 @@ ms.locfileid: "87397021"
 ```syntaxsql
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="remarks"></a>解説  
 
 result_set_caching の設定を構成するユーザー データベースに接続した状態で、このコマンドを実行します。
@@ -49,7 +52,7 @@ result_set_caching の設定を構成するユーザー データベースに接
 
 ## <a name="examples"></a>例
 
-クエリの request_id を指定して [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) 内の result_cache_hit 列をクエリし、このクエリの実行時に、結果のキャッシュ ヒットおよびキャッシュ ミスのいずれが使用されたかを確認します。
+クエリの request_id を指定して [sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) 内の result_cache_hit 列をクエリし、このクエリの実行時に、結果のキャッシュ ヒットおよびキャッシュ ミスのいずれが使用されたかを確認します。
 
 ```sql
 SELECT result_cache_hit
@@ -64,7 +67,7 @@ public ロールのメンバーシップが必要です
 ## <a name="see-also"></a>参照
 
 - [結果セットのキャッシュを使用したパフォーマンスのチューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
-- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)
-- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
-- [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)
-- [DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
+- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](./alter-database-transact-sql-set-options.md?preserve-view=true&view=azure-sqldw-latest)
+- [ALTER DATABASE &#40;Transact-SQL&#41;](./alter-database-transact-sql.md?preserve-view=true&view=azure-sqldw-latest)
+- [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](../database-console-commands/dbcc-showresultcachespaceused-transact-sql.md)
+- [DBCC DROPRESULTSETCACHE (Transact-SQL)](../database-console-commands/dbcc-dropresultsetcache-transact-sql.md)

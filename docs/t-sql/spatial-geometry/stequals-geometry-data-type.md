@@ -1,4 +1,5 @@
 ---
+description: STEquals (geometry データ型)
 title: STEquals (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: af6fdaff361ae845000455bf53cb952466a0ef30
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4ce45e482bac277168afdf65d447a53ebed00ea5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445092"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554302"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
 ## <a name="examples"></a>例  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

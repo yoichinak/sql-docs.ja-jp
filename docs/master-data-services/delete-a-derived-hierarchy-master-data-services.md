@@ -1,4 +1,5 @@
 ---
+description: 派生階層を削除する (マスター データ サービス)
 title: 派生階層を削除する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93e9a09dd93fc8da3d62840fd2b7463c48c4ece1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b86680615b5c823d5e1db08860ddbdd5ff52bd80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495055"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85811582"
 > [!NOTE]  
 >  派生階層を削除しても、その階層が基づいている属性リレーションシップには影響しません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>派生階層を削除するには  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85811582"
   
 6.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [派生階層 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

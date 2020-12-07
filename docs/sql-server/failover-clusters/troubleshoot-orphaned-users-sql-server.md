@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - orphaned users [SQL Server]
 - logins [SQL Server], orphaned users
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e302910a5a7870ed7c57a7325e6686f42a15707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6356874ac61790fe27730961e0429db92760bfce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999719"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121246"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立したユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,9 +73,9 @@ WHERE sp.SID IS NULL
   
  現在のデータベース内で、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにもリンクされていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ユーザーとそのセキュリティ識別子 (SID) が出力されます。  
 
-**SQL Database および SQL Data Warehouse の場合**
+**SQL Database と Azure Synapse Analytics の場合**
 
-`sys.server_principals` テーブルは、SQL Database または SQL Data Warehouse では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
+`sys.server_principals` テーブルは、SQL Database または Azure Synapse Analytics では使用できません。 これらの環境では、次の手順を使用して孤立ユーザーを識別します。
 
 1. `master` データベースに接続し、次のクエリを使用してログインの SID を選択します。
     ```
@@ -105,7 +105,7 @@ WITH PASSWORD = '<use_a_strong_password_here>',
 SID = <SID>;  
 ```  
   
- **マスター**に既に存在するログインに孤立ユーザーをマッピングするには、ログイン名を指定し、ユーザー データベースで [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) ステートメントを実行します。  
+ **マスター** に既に存在するログインに孤立ユーザーをマッピングするには、ログイン名を指定し、ユーザー データベースで [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) ステートメントを実行します。  
   
 ```  
 ALTER USER <user_name> WITH Login = <login_name>;  
@@ -119,8 +119,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
 > [!IMPORTANT]  
 >  いずれのログインでも、固有のパスワードを変更できます。 `ALTER ANY LOGIN` 権限を持つログインだけが、他のユーザーのログイン パスワードを変更できます。 ただし、 **sysadmin** ロール メンバーのパスワードを変更できるのは、 **sysadmin** ロールのメンバーだけです。  
-  
- 非推奨のプロシージャ [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) も孤立ユーザーで機能します。 `sp_change_users_login` と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]は一緒には使用できません。  
   
 ## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

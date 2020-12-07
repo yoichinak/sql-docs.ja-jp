@@ -1,4 +1,5 @@
 ---
+description: テキスト関数とイメージ関数 - TEXTVALID (Transact-SQL)
 title: TEXTVALID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 808e0c57888cfdb7daa64ca5ec70c9068e1d12c0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 52b353a09f8f175496a75a512188f5637d01d8e5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112628"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92036469"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>テキスト関数とイメージ関数 - TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "87112628"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
@@ -78,7 +78,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 > [!NOTE]  
 >  この例を実行するには、**pubs** データベースをインストールする必要があります。  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, 'Valid (if 1) Text data'   
@@ -109,7 +109,6 @@ pub_id Valid (if 1) Text data
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](./text-and-image-functions-textptr-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)  
-  
   

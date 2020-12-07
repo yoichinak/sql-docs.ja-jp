@@ -1,4 +1,5 @@
 ---
+description: ステートメントおよび結果セットの操作
 title: ステートメントおよび結果セットの操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57ecb70e98b4b0a82d18c2ca9e9ac417a53addca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5699e2cf4155da371aaffcf6478ac8d323743770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450030"
 ---
 # <a name="working-with-statements-and-result-sets"></a>ステートメントおよび結果セットの操作
 
@@ -47,6 +48,6 @@ JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerSt
 
 ストリームまたは、徐々に取り出される BLOB および CLOB を使用して、大きな列値の更新や大きな IN パラメーターの送信を処理します。 JDBC ドライバーは、これらを複数のラウンド トリップでサーバーに "チャンク化" し、メモリに収まりきらない大きな値を設定および更新できるようにします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

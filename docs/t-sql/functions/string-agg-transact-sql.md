@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG (Transact-SQL)
 title: STRING_AGG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fa5490a488168716649a913045b38dc04591ce27
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111310"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379810"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -50,7 +51,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 連結時に式は `NVARCHAR` または `VARCHAR` 型に変換されます。 文字列以外の型は `NVARCHAR` 型に変換されます。
 
 *separator*  
-連結される文字列の区切り記号として使用される [ または ](../../t-sql/language-elements/expressions-transact-sql.md) 型の`NVARCHAR`式`VARCHAR`です。 リテラルまたは変数を使用できます。 
+連結される文字列の区切り記号として使用される `NVARCHAR` または `VARCHAR` 型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 リテラルまたは変数を使用できます。 
 
 <order_clause>   
 必要に応じて、`WITHIN GROUP` 句を使用して連結結果の順序を指定します。
@@ -74,7 +75,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int、bigint、smallint、tinyint、numeric、float、real、bit、decimal、smallmoney、money、datetime、datetime2、 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `STRING_AGG` は、すべての式を行から取り出し、それらを 1 つの文字列に連結する集計関数です。 式の値は、暗黙的に文字列型に変換され、連結されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型の変換の詳細については、「[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 
 
@@ -92,7 +93,7 @@ null 値は無視され、対応する区切り記号は追加されません。
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG (CONVERT(nvarchar(max),FirstName), CHAR(13)) AS csv 
+SELECT STRING_AGG (CONVERT(NVARCHAR(max),FirstName), CHAR(13)) AS csv 
 FROM Person.Person;  
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -101,10 +102,10 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL` セルにある `name` 値は結果で返されません。   
+`name` セルにある `NULL` 値は結果で返されません。   
 
 > [!NOTE]  
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装することはできません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。       
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装することはできません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。       
 > [結果をテキストで表示] は既定では、256 文字に切り詰められます。 この制限を引き上げるには、 **[各列に表示される最大文字数]** オプションを変更します。
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まない、コンマ区切りの名前のリストを生成する
@@ -113,7 +114,7 @@ FROM Person.Person;
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG(CONVERT(nvarchar(max),ISNULL(FirstName,'N/A')), ',') AS csv 
+SELECT STRING_AGG(CONVERT(NVARCHAR(max), ISNULL(FirstName,'N/A')), ',') AS csv 
 FROM Person.Person; 
 ```
 
@@ -131,7 +132,7 @@ FROM Person.Person;
 ```sql
 USE AdventureWorks2016
 GO
-SELECT STRING_AGG(CONVERT(nvarchar(max),CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')')), CHAR(13)) AS names 
+SELECT STRING_AGG(CONVERT(NVARCHAR(max), CONCAT(FirstName, ' ', LastName, '(', ModifiedDate, ')')), CHAR(13)) AS names 
 FROM Person.Person; 
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
@@ -144,7 +145,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
-> Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。
+> Management Studio のクエリ エディターを使用している場合、**[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 関連するタグが付いたニュース記事を返す
 
@@ -167,7 +168,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `GROUP BY` 関数が `STRING_AGG` 一覧内の唯一の項目ではない場合は、`SELECT` 句が必要です。
+> `STRING_AGG` 関数が `SELECT` 一覧内の唯一の項目ではない場合は、`GROUP BY` 句が必要です。
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 町ごとの電子メール アドレスのリストを生成する
 
@@ -177,7 +178,7 @@ GROUP BY a.articleId, title;
 USE AdventureWorks2016
 GO
 
-SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') AS emails 
+SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') AS emails 
 FROM Person.BusinessEntityAddress AS BEA  
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
@@ -200,7 +201,7 @@ GROUP BY City;
 |Bell Gardens|christy8@adventure-works.com
 |ベルビュー|min0@adventure-works.com;gigi0@adventure-works.com;terry18@adventure-works.com;...|
 |Bellflower|philip0@adventure-works.com;emma34@adventure-works.com;jorge8@adventure-works.com;...|
-|Bellingham|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
+|ベリンガム|christopher23@adventure-works.com;frederick7@adventure-works.com;omar0@adventure-works.com;...|
 
 emails 列に返された電子メール アドレスは、特定の市区町村で働く従業員のグループに電子メールを送信する場合にそのまま使用できます。 
 
@@ -211,7 +212,7 @@ emails 列に返された電子メール アドレスは、特定の市区町村
 USE AdventureWorks2016
 GO
 
-SELECT TOP 10 City, STRING_AGG(CONVERT(nvarchar(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
+SELECT TOP 10 City, STRING_AGG(CONVERT(NVARCHAR(max), EmailAddress), ';') WITHIN GROUP (ORDER BY EmailAddress ASC) AS emails 
 FROM Person.BusinessEntityAddress AS BEA  
 INNER JOIN Person.Address AS A ON BEA.AddressID = A.AddressID
 INNER JOIN Person.EmailAddress AS EA ON BEA.BusinessEntityID = EA.BusinessEntityID 
@@ -236,7 +237,7 @@ GROUP BY City;
 |Berkshire|barbara41@adventure-works.com;brenda4@adventure-works.com;carrie14@adventure-works.com;...|
 |Berks|adriana6@adventure-works.com;alisha13@adventure-works.com;arthur19@adventure-works.com;...|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  

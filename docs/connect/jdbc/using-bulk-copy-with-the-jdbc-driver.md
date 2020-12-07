@@ -2,7 +2,7 @@
 title: JDBC ドライバーでの一括コピーの使用
 description: SQLServerBulkCopy クラスを使用すると、標準の JDBC API よりも大幅にパフォーマンスが向上するデータ読み込みソリューションを Java で記述することができます。
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042235"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  一括コピー操作は、単独の操作として、または、複数の手順からなるトランザクションの一部として実行されます。 複数の手順からなるトランザクションの一部として実行する場合、挿入、更新、削除など、他のデータベース操作に加えて、同じトランザクション内で一括コピー操作を複数回実行でき、トランザクション全体をコミットまたはロールバックすることもできます。  
   
  既定では、一括コピー操作は単独の操作として実行されます。 この一括コピー操作は非トランザクション方式で処理され、ロールバックできません。 エラーの発生時に一括コピー処理の全部または一部をロールバックする必要がある場合は、`SQLServerBulkCopy` により管理されるトランザクションを使用するか、既存のトランザクション内で一括コピー操作を実行できます。  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>拡張された Azure Data Warehouse の一括コピー
+
+ドライバー バージョン 8.4.1 には、新しい接続プロパティである `sendTemporalDataTypesAsStringForBulkCopy` が追加されています。 このブール型プロパティの既定値は `true` です。
+
+この接続プロパティを `false` に設定すると、**DATE**、**DATETIME**、**DATIMETIME2**、**DATETIMEOFFSET**、**SMALLDATETIME**、および **TIME** データ型が文字列として送信されず、それぞれの型として送信されます。
+
+テンポラル データ型をそれぞれの型として送信すると、ユーザーは Azure Synapse Analytics (SQL DW) の列にデータを送信できます。この操作は、以前はドライバーがデータを文字列に変換していたためできませんでした。 SQL Server では暗黙的な変換が実行されるため、テンポラル列に文字列データを送信しても機能しますが、Azure Synapse Analytics (SQL DW) では同じように機能しません。
+
+さらに、**v8.4.1** 以降では、この接続文字列を 'false' に設定しなくても、**MONEY** および **SMALLMONEY** データ型が **DECIMAL** ではなく **MONEY** / **SMALLMONEY** データ型 として送信されるため、これらのデータ型も Azure Synapse Analytics (SQL DW) に一括コピーできます。
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>拡張された Azure Data Warehouse の一括コピーの制限事項
+
+現在、次の 2 つの制限があります。
+
+1. この接続プロパティが `false` に設定されている場合、次の例のように、ドライバーは各テンポラル データ型の既定の文字列リテラル形式のみを受け入れます。
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. この接続プロパティが `false` に設定されている場合、一括コピーで指定する列の種類は、[こちら](../../connect/jdbc/using-basic-data-types.md)のデータ型マッピング表を反映している必要があります。 たとえば、以前のユーザーはデータを `DATE` 列に一括コピーするために `java.sql.Types.TIMESTAMP` を指定できましたが、この機能を有効にした場合は、同じ操作を実行するために `java.sql.Types.DATE` を指定する必要があります。
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>非トランザクション処理の一括コピー操作の実行
 
@@ -455,7 +485,7 @@ public class BulkCopyNonTransacted {
 
 ### <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>トランザクションでの専用の一括コピー操作の実行
 
-既定では、一括コピー操作ではトランザクション自体は作成されません。 専用の一括コピー操作を実行する場合は、接続文字列を使用して `SQLServerBulkCopy` の新しいインスタンスを作成します。 このシナリオでは、一括コピー操作の各バッチがデータベースによって暗黙的にコミットされます。 `UseInternalTransaction` オプションを `SQLServerBulkCopyOptions` の `true` に設定すると、一括コピー操作によってトランザクションが作成され、一括コピー操作の各バッチの後にコミットが実行されます。
+既定では、一括コピー操作ではトランザクション自体は作成されません。 専用の一括コピー操作を実行する場合は、接続文字列を使用して `SQLServerBulkCopy` の新しいインスタンスを作成します。 このシナリオでは、一括コピー操作の各バッチがデータベースによって暗黙的にコミットされます。 `SQLServerBulkCopyOptions` の `UseInternalTransaction` オプションを `true` に設定すると、一括コピー操作によってトランザクションが作成され、一括コピー操作の各バッチの後にコミットが実行されます。
   
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>CSV ファイルのデータとして使用される区切り記号を含む一括コピー
+
+ドライバー バージョン 8.4.1 には、新しい API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)` が追加されています。 true に設定すると、次のルールが適用されます。
+
+- 各フィールドを二重引用符で囲んでも囲まなくてもかまいかせん。
+- フィールドを二重引用符で囲む場合、そのフィールド内に二重引用符を含めることはできません。
+- 二重引用符や区切り記号を含むフィールドは、二重引用符で囲む必要があります。
+- 二重引用符を使用してフィールドを囲む場合、フィールド内に現れる二重引用符は、その直前に別の二重引用符を追加してエスケープする必要があります。
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>一括コピーと [Always Encrypted] 列  
 

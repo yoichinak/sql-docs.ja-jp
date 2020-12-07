@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクによる HTML メール メッセージの送信
 title: スクリプト タスクによる HTML メール メッセージの送信 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8df42af0f45aaff966e05c66cde7b32feaddd088
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6894402970f0d49c964553a12ec7ea5887568d50
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917139"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430374"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
 

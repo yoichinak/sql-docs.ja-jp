@@ -1,4 +1,5 @@
 ---
+description: エンティティの同期関係の作成と実行 (マスター データ サービス)
 title: エンティティの同期関係の作成と実行
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461797"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の作成と実行 (マスター データ サービス)
 
@@ -23,20 +24,20 @@ ms.locfileid: "85813044"
 
   エンティティ同期は、エンティティのバージョン間での反復可能な一方向の同期です。 異なるモデルの間でエンティティ データを共有する方法を提供します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  エンティティの同期関係を作成するための前提条件を次に示します。  
   
--   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   ターゲット モデルのモデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   ターゲット モデルのモデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   少なくとも、ソース エンティティとそのすべての属性およびメンバーに対する読み取りアクセス権が必要です。  
   
  エンティティの同期関係を実行するための前提条件を次に示します。  
   
--   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   ターゲット モデルのモデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   ターゲット モデルのモデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
  エンティティの同期関係を作成するときには、次の点に注意してください。  
   
@@ -95,9 +96,9 @@ ms.locfileid: "85813044"
 ## <a name="sync-relationship-information"></a>同期関係の情報  
  作成された同期関係ごとに、10 列の行がグリッドに追加されます。 次の表で各列について説明します。  
   
-|Column|説明|  
+|列|説明|  
 |------------|-----------------|  
-|Status|同期関係の状態。<br /><br /> [**保存**] をクリックするか、同期関係を実行すると、同期関係が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 同期関係の作成、編集、または実行中にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
+|Status|同期関係の状態。<br /><br /> [ **保存** ] をクリックするか、同期関係を実行すると、同期関係が更新中であることを示す ![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") が表示されます。<br /><br /> 同期関係の作成、編集、または実行中にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|  
 |ソース モデル|ソース モデルの名前。|  
 |ソース バージョン|ソース バージョンの名前。|  
 |ソース エンティティ|ソース エンティティの名前。|  

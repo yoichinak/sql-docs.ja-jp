@@ -1,4 +1,5 @@
 ---
+description: dm_db_persisted_sku_features (Transact-sql)
 title: dm_db_persisted_sku_features (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c41fcc673152f0cb253c0a5f10721beb40cf7628
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 552bb8927c8609a2cfa406243be102372b855c0c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894568"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548662"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>dm_db_persisted_sku_features (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +42,18 @@ ms.locfileid: "85894568"
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  特定のエディションで制限されている機能がデータベースで使用されていない場合、ビューは行を返しません。  
   
  dm_db_persisted_sku_features には、特定のエディションに限定された次のデータベース変更機能が表示される場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   **Changecapture**: データベースで変更データキャプチャが有効になっていることを示します。 変更データキャプチャを削除するには、 [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)ストアドプロシージャを使用します。 詳細については、「[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)」を参照してください。  
+-   **Changecapture**: データベースで変更データキャプチャが有効になっていることを示します。 変更データキャプチャを削除するには、 [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) ストアドプロシージャを使用します。 詳細については、「[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)」を参照してください。  
   
--   **Columnstoreindex**: 少なくとも1つのテーブルに列ストアインデックスがあることを示します。 この機能をサポートしていないのエディションにデータベースを移動できるようにするに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメントを使用して列ストアインデックスを削除します。 詳細については、「[列ストアインデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。  
+-   **Columnstoreindex**: 少なくとも1つのテーブルに列ストアインデックスがあることを示します。 この機能をサポートしていないのエディションにデータベースを移動できるようにするに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) または [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) ステートメントを使用して列ストアインデックスを削除します。 詳細については、「 [列ストアインデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。  
   
     **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
   
--   **Compression**: 少なくとも1つのテーブルまたはインデックスで、データ圧縮または vardecimal ストレージ形式が使用されていることを示します。 この機能をサポートしていないのエディションにデータベースを移動できるようにするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)ステートメントまたは[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)ステートメントを使用して、データ圧縮を解除します。 vardecimal ストレージ形式を削除するには、sp_tableoption ステートメントを使用します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
+-   **Compression**: 少なくとも1つのテーブルまたはインデックスで、データ圧縮または vardecimal ストレージ形式が使用されていることを示します。 この機能をサポートしていないのエディションにデータベースを移動できるようにするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) ステートメントまたは [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) ステートメントを使用して、データ圧縮を解除します。 vardecimal ストレージ形式を削除するには、sp_tableoption ステートメントを使用します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
 -   複数の**fsコンテナ**: データベースが複数の FILESTREAM コンテナーを使用することを示します。 データベースには、複数のコンテナー (ファイル) を含む FILESTREAM ファイルグループがあります。 詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」をご覧ください。  
   
@@ -74,9 +75,9 @@ SELECT feature_name FROM sys.dm_db_persisted_sku_features;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [エディションと SQL Server 2016 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

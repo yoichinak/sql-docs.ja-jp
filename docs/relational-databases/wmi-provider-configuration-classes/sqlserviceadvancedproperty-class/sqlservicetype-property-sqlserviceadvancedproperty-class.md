@@ -1,4 +1,5 @@
 ---
+description: SqlServiceType プロパティ (SqlServiceAdvancedProperty クラス)
 title: SqlServiceType プロパティ (Sqlserviceadvanced プロパティ)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServiceType property
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d7014c0d3e7c9b1ffb9077dc6055cfc0dc0b12ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a726b0e38909b8831926da20bd6682f2b244f9a7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888259"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550819"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType プロパティ (SqlServiceAdvancedProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.SetBoolValue(NumValue)
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの種類を指定する uint32 値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  戻り値は次のいずれかです。  
   
 |Type|定義|  
@@ -60,7 +61,7 @@ object.SetBoolValue(NumValue)
 |*11*|SQLPBDMS は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase データ移動サービスです。|  
 |*12*|MSSQLLaunchpad は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スタートパッドサービスです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

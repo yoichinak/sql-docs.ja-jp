@@ -1,4 +1,5 @@
 ---
+description: カスタム データ フロー コンポーネントの作成
 title: カスタム データ フロー コンポーネントの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7acd3f9c218a068f5af09da21ec21b1fcf6e065
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 30052448f3b6c39d032d9bb4338639e23ff8b189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484275"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの作成
 
@@ -48,9 +49,9 @@ ms.locfileid: "86921258"
   
  コンポーネントで使用するオブジェクトによっては、次のアセンブリの一部またはすべてに対する参照がプロジェクトに必要です。  
   
-|機能|参照するアセンブリ|インポートする名前空間|  
+|特徴量|参照するアセンブリ|インポートする名前空間|  
 |-------------|---------------------------|-------------------------|  
-|Data flow|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
+|データ フロー|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |データ フロー ラッパー|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  
 |ランタイム|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |ランタイム ラッパー|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  

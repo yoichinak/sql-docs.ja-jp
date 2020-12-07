@@ -18,11 +18,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457260"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126616"
 ---
 # <a name="execution-plans"></a>実行プラン
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "86457260"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、実行プランを表示するための 3 つのオプションがあります。        
-> -  "***[推定実行プラン](../../relational-databases/performance/display-the-estimated-execution-plan.md)***" は、見積もりに基づいてクエリ オプティマイザーによって生成された、コンパイル済みプランです。 これは、プラン キャッシュに格納されているクエリ プランです。        
-> -  "***[実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)***" は、コンパイル済みプランにその[実行コンテキスト](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を加えたものです。 これは、**クエリの実行が完了した後に**使用できるようになります。 これには、実際のランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の場合) が含まれます。         
-> -  "***[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)***" は、コンパイル済みプランにその実行コンテキストを加えたものです。 これは**使用中のクエリ実行**に対して使用でき、1 秒ごとに更新されます。 これには、[演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)を通過する実際の行数、経過時間、およびクエリの推定進行状況などのランタイム情報が含まれます。
+> -  "**_[推定実行プラン](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _" は、見積もりに基づいてクエリ オプティマイザーによって生成された、コンパイル済みプランです。 これは、プラン キャッシュに格納されているクエリ プランです。        
+> -  " _*_ [実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ " は、コンパイル済みプランにその[実行コンテキスト](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)を加えたものです。 これは、_*クエリの実行が完了した後に** 使用できるようになります。 これには、実際のランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の場合) が含まれます。         
+> -  "**_[ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)_ *_" は、コンパイル済みプランにその実行コンテキストを加えたものです。これは _* 使用中のクエリ実行** に対して使用でき、1 秒ごとに更新されます。 これには、[演算子](../../relational-databases/showplan-logical-and-physical-operators-reference.md)を通過する実際の行数、経過時間、およびクエリの推定進行状況などのランタイム情報が含まれます。
 
 > [!TIP]
 > クエリ処理およびクエリ実行プランの詳細については、「クエリ処理アーキテクチャ ガイド」の「[SELECT ステートメントの最適化](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)」と「[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)」のセクションを参照してください。

@@ -1,4 +1,5 @@
 ---
+description: '[テーブルの更新] ダイアログ ボックス (Visual Database Tools)'
 title: '[テーブルの更新] ダイアログ ボックス'
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 19251316d4674ad7632c6f220f85e2178f4365ca
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 93c0ed1368325ec27ff9ebb640f48ee45f7de8ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88369178"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>[テーブルの更新] ダイアログ ボックス (Visual Database Tools)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86004124"
 
 クエリの種類を UPDATE クエリに変更するときに、ダイアグラム ペインに複数のテーブルが表示される場合、このダイアログ ボックスが表示されます。  
 
-更新するテーブルを選択し、 **[OK]** をクリックします。
+更新するテーブルを選択し、**[OK]** をクリックします。
 
 > [!NOTE]
 > テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。

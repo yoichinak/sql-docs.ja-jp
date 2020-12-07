@@ -1,4 +1,5 @@
 ---
+description: Oracle 接続マネージャー
 title: Oracle 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430744"
 ---
 # <a name="oracle-connection-manager"></a>Oracle 接続マネージャー
 
@@ -30,7 +31,7 @@ Oracle 接続マネージャーの構成の変更は、実行時に Integration 
 
 ![接続マネージャー](media/oracle-connection-manager.png)
 
-### <a name="options"></a>Options
+### <a name="options"></a>オプション
 
 #### <a name="connection-manager-information"></a>接続マネージャー情報
 
@@ -84,7 +85,7 @@ Oracle 接続マネージャーには、次のカスタム接続マネージャ�
 
 カスタム プロパティは、Oracle 接続マネージャー エディターには表示されません。 **OracleHome** プロパティと **OracleHome64** プロパティを設定するには:
 
-1. [接続マネージャー] 領域で、作業中の Oracle 接続マネージャーを右クリックし、 **[プロパティ]** を選択します。
+1. [接続マネージャー] 領域で、作業中の Oracle 接続マネージャーを右クリックし、**[プロパティ]** を選択します。
 
 2. **[プロパティ]** ウィンドウで、**OracleHome** プロパティまたは **OracleHome64** プロパティに Oracle ホーム ディレクトリへの完全なパスを設定します。
 

@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
@@ -12,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 748ed216b16788e176db5ad459d8e2b05c563c96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8c7ca98b19a801daa73367ee50df525ab43d1406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484238"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722093"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -39,6 +40,8 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 [;]  
 ```  
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>引数
 
  `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
@@ -50,7 +53,7 @@ VIEW SERVER STATE 権限が必要です。
   
 ## <a name="result-sets"></a>結果セット
 
-これは、すべてのテーブルの結果セットです。
+これは、すべてのテーブルの結果セットです。  レプリケートされた Synapse テーブルのキャッシュが作成される前に、DBCC の結果には、各ディストリビューションの基になるラウンド ロビン テーブルの合計サイズが反映されます。  キャッシュが作成された後の結果には、ラウンド ロビン テーブルとキャッシュの合計サイズが反映されます。   
   
 |列|データ型|説明|  
 |------------|---------------|-----------------|  
@@ -70,7 +73,7 @@ VIEW SERVER STATE 権限が必要です。
 |index_space|bigint|インデックスに使用されている領域 (KB 単位)。||  
 |unused_space|bigint|予約済み領域の一部で使用されていない領域 (KB 単位)。||  
 |pdw_node_id|INT|領域の使用状況の報告に使用されるコンピューティング ノード。||  
-|distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
+|distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|Parallel Data Warehouse の場合、レプリケートされたテーブルのその値は -1 です。|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  

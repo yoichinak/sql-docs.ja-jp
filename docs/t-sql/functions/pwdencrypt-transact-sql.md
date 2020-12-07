@@ -1,4 +1,5 @@
 ---
+description: PWDENCRYPT (Transact-SQL)
 title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6341652a8d7ea7ef4f27cecac4a8764a2f464e8d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 359caf584357994eab4441e345aefdc528cb363b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111410"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380707"
 ---
 # <a name="pwdencrypt-transact-sql"></a>PWDENCRYPT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "87111410"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 PWDENCRYPT ( 'password' )  
 ```  
   
@@ -44,7 +44,7 @@ PWDENCRYPT ( 'password' )
 
 ## <a name="arguments"></a>引数
  *password*  
- 暗号化されるパスワードです。 *パスワード* は **sysname**です。  
+ 暗号化されるパスワードです。 *パスワード* は **sysname** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary (128)**  

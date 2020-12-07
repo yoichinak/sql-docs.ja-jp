@@ -1,4 +1,5 @@
 ---
+description: Members (String) (MDX)
 title: Members (String) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95e90f488f4b9182fc237045b570bc9da02f47e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483825"
 ---
 # <a name="members-string-mdx"></a>Members (String) (MDX)
 
@@ -31,7 +32,7 @@ Members(Member_Name)
  *Member_Name*  
  メンバー名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Members (String)** 関数は、名前が指定された1つのメンバーを返します。 通常、members **(** string) 関数を外部関数と共に使用し、 **members (string)** 関数にメンバーを識別する文字列を指定します。また、 **members (string)** 関数は、この指定されたメンバーの値を返します。  
   
 ## <a name="example"></a>例  

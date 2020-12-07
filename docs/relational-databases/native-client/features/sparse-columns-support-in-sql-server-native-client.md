@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client におけるスパース列のサポート
 title: スパース列のサポート
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,18 +15,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd75d0e9202ec81be1fe89c6b7f3c97a4f983432
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498868"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client におけるスパース列のサポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はスパース列をサポートしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのスパース列の詳細については、[スパース列の使用](../../../relational-databases/tables/use-sparse-columns.md)に関するページと「[列セットの使用](../../../relational-databases/tables/use-column-sets.md)」を参照してください。  
   
- Native Client でのスパース列のサポートの詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「スパース列の[サポート &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) 」と「[スパース列での &#40;OLE DB の&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)のサポート」を参照してください。  
+ Native Client でのスパース列のサポートの詳細につい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ては、「スパース列の [サポート &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) 」と「 [スパース列での &#40;OLE DB の&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)のサポート」を参照してください。  
   
  この機能を説明するサンプル アプリケーションについては、「[SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
@@ -52,13 +54,13 @@ ms.locfileid: "86009006"
  下位クライアントでは、スパース **column_set** のメンバーである列に名前でアクセスできます。[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] クライアントでは、XML 列として **column_set** 列にアクセスできます。  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>一括コピー (BCP) によるスパース列のサポート  
- スパース列または**column_set**の機能に対して、ODBC または OLE DB で BCP API を変更することはできません。  
+ スパース列または **column_set** の機能に対して、ODBC または OLE DB で BCP API を変更することはできません。  
   
  テーブルに **column_set** がある場合、スパース列は個別の列として処理されません。 すべてのスパース列の値は **column_set** の値に含まれ、XML 列と同じ方法でエクスポートされます。つまり、バイナリ型としてバインドされている場合は **varbinary(max)** として、**char** 型または **wchar** 型としてバインドされている場合は **nvarchar(max)** として、エクスポートされます。 インポートの際には、**column_set** の値が **column_set** のスキーマに準拠している必要があります。  
   
  **queryout** の操作については、明示的に参照されている列の処理方法は変更されていません。 **column_set** 列の動作は XML 列と同じで、名前で参照されているスパース列の処理には、列がスパース列であることの影響はありません。  
   
- ただし、**queryout** をエクスポートに使用する場合に、スパース列セットのメンバーであるスパース列を名前で参照すると、同じ構造のテーブルへの直接インポートができなくなります。 これは、BCP がインポートの**select &#42;** 操作と一貫性のあるメタデータを使用し、このメタデータと**column_set**メンバー列を一致させることができないためです。 **column_set** メンバー列を個別にインポートするには、目的の **column_set** 列を参照するテーブルのビューを定義して、そのビューを使用してインポート操作を行う必要があります。  
+ ただし、**queryout** をエクスポートに使用する場合に、スパース列セットのメンバーであるスパース列を名前で参照すると、同じ構造のテーブルへの直接インポートができなくなります。 これは、BCP がインポートの **select &#42;** 操作と一貫性のあるメタデータを使用し、このメタデータと **column_set** メンバー列を一致させることができないためです。 **column_set** メンバー列を個別にインポートするには、目的の **column_set** 列を参照するテーブルのビューを定義して、そのビューを使用してインポート操作を行う必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)  

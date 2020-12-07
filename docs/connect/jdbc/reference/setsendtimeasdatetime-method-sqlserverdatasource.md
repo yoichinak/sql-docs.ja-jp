@@ -1,4 +1,5 @@
 ---
+description: setSendTimeAsDatetime メソッド (SQLServerDataSource)
 title: setSendTimeAsDatetime メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ded6641232939ce0f76ade9f332646bbdd4c4d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52136134199ac4811d22b48bfbad768dbcdf8e7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458408"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 #### <a name="parameters"></a>パラメーター  
  *sendTimeAsDateTime*  
   
- ブール値です。 true の場合、java.sql.Time 値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** 型としてサーバーに送信されます。 false の場合、java.sql.Time 値は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **time** 型としてサーバーに送信されます。  
+ ブール値です。 true の場合、java.sql.Time 値は  の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 型としてサーバーに送信されます。 false の場合、java.sql.Time 値は  の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **time** 型としてサーバーに送信されます。  
   
 ## <a name="remarks"></a>解説  
  [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md) は、**sendTimeAsDatetime** 接続プロパティの設定が返されます。  

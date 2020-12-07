@@ -1,4 +1,5 @@
 ---
+description: STAsBinary (geography データ型)
 title: STAsBinary (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f2b110b4ee7abafc2c38ebc774d3d1673f0586c7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7ae9c800cffd7df80ba8447c2e16de745a0009bc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88359448"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

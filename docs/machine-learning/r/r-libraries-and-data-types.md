@@ -3,64 +3,64 @@ title: R と SQL のデータ型を変換する
 description: データ サイエンスおよび機械学習のソリューションで、R と SQL Server の間の暗黙的および明示的なデータ型の変換について確認します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: d10d65f8be4ff8e53cbfad795f1e515a22eada71
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411640"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098861"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server の間のデータ型マッピング
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
-SQL Server Machine Learning Services の R 統合機能で実行される R ソリューションについて、サポートされないデータ型の一覧と、R ライブラリと SQL Server の間でデータが受け渡されるときに暗黙的に実行される可能性のあるデータ型の変換について確認します。
+この記事では、SQL Server Machine Learning Services の R 統合機能を使用する場合にサポートされるデータ型および実行されるデータ型変換の一覧を示します。
 
 ## <a name="base-r-version"></a>基本の R のバージョン
 
-SQL Server 2016 R Services および SQL Server Machine Learning Services (R 付属) は、Microsoft R Open の特定のリリースに合わせられています。 たとえば、最新リリースの SQL Server Machine Learning Services は、Microsoft R Open 3.3.3 に基づいて構築されています。
+SQL Server 2016 R Services および SQL Server Machine Learning Services (R 付属) は、Microsoft R Open の特定のリリースに合わせられています。 たとえば、最新リリースの SQL Server 2019 Machine Learning Services は、Microsoft R Open 3.5.2 に基づいて構築されています。
 
-SQL Server の特定のインスタンスに関連付けられている R のバージョンを表示するには、**RGui** を開きます。 既定のインスタンスの場合、パスは次のようになります。`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+SQL Server の特定のインスタンスに関連付けられている R のバージョンを表示するには、SQL インスタンスで **RGui** を開きます。 たとえば、SQL Server 2019 での既定のインスタンスのパスは、`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe` となります。
 
-このツールでは、基本の R とその他のライブラリが読み込まれます。 パッケージのバージョン情報は、セッションの開始時に読み込まれる各パッケージの通知に記載されています。 
+このツールでは、基本の R とその他のライブラリが読み込まれます。 パッケージのバージョン情報は、セッションの開始時に読み込まれる各パッケージの通知に記載されています。
 
 ## <a name="r-and-sql-data-types"></a>R と SQL のデータ型
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は数十種類のデータ型をサポートしていますが、R がサポートするスカラー データ型は限定されています (数値、整数、複素数、論理、文字、日時および未処理)。 その結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを R スクリプト内で使用する場合、データは互換性のあるデータ型に暗黙的に変換される可能性があります。 ただし、多くの場合は正確な変換を自動的に実行することはできず、"未処理の SQL データ型" などのエラーが返されます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は数十種類のデータ型をサポートしていますが、R がサポートするスカラー データ型は限られています (数値、整数、複素数、論理、文字、日時および未処理)。 その結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを R スクリプト内で使用する場合、データは互換性のあるデータ型に暗黙的に変換される可能性があります。 ただし、多くの場合は正確な変換を自動的に実行することはできず、"未処理の SQL データ型" などのエラーが返されます。
 
 このセクションでは、提供されている暗黙的な変換の一覧を示し、サポートされていないデータ型についても一覧表示します。 R と SQL Server の間でデータ型をマッピングするための、いくつかのガイダンスが用意されています。
 
-## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R と SQL Server 間の暗黙のデータ型変換
+## <a name="implicit-data-type-conversions"></a>暗黙的なデータ型の変換
 
 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを R スクリプトで使用する場合と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に返された場合のデータ型と値の変化の一覧です。
 
-|SQL 型|R クラス|RESULT SET の型|説明|
-|-|-|-|-|
-|**bigint**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、bigint データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R では最大 53 ビットの整数がサポートされるだけであり、その後は精度が失われ始めます。|
-|**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
-|**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します|
-|**datetime**|`POSIXct`|**datetime**|GMT として表現されます|
-|**date**|`POSIXct`|**datetime**|GMT として表現されます|
-|**decimal(p,s)**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、decimal データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。|
-|**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
-|**money**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、money データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 セント値が不正確になり、次のような警告が発行されることがあります。"*警告: セント値を正確に表すことができません*"。  |
-|**numeric(p,s)**|`numeric`|**float**|`sp_execute_external_script` で R スクリプトを実行すると、numeric データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。|
-|**real**|`numeric`|**float**||
-|**smalldatetime**|`POSIXct`|**datetime**|GMT として表現されます|
-|**smallint**|`integer`|**int**||
-|**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
-|**uniqueidentifier**|`character`|**varchar(max)**||
-|**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
-|**varbinary(max)**|`raw`|**varbinary(max)**|入力パラメーターと出力にのみ使用できます。|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します|
+| SQL 型                         | R クラス     | RESULT SET の型    | 説明            |
+|----------------------------------|-------------|--------------------|---------------------|
+| **bigint**                       | `numeric`   | **float**          | `sp_execute_external_script` で R スクリプトを実行すると、bigint データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R では最大 53 ビットの整数がサポートされるだけであり、その後は精度が失われ始めます。                                                                                         |
+| **binary(n)**<br /> n <= 8000    | `raw`       | **varbinary(max)** | 入力パラメーターと出力にのみ使用できます。 |
+| **bit**                          | `logical`   | **bit**            |                     |
+| **char(n)**<br /> n <= 8000      | `character` | **varchar(max)**   | 入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します                                                                                                                                                                                                                                           |
+| **datetime**                     | `POSIXct`   | **datetime**       | GMT として表現されます  |
+| **date**                         | `POSIXct`   | **datetime**       | GMT として表現されます  |
+| **decimal(p,s)**                 | `numeric`   | **float**          | `sp_execute_external_script` で R スクリプトを実行すると、decimal データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。 |
+| **float**                        | `numeric`   | **float**          |                     |
+| **int**                          | `integer`   | **int**            |                     |
+| **money**                        | `numeric`   | **float**          | `sp_execute_external_script` で R スクリプトを実行すると、money データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 セント値が不正確になり、次のような警告が発行されることがあります。"*警告: セント値を正確に表すことができません*"。                                               |
+| **numeric(p,s)**                 | `numeric`   | **float**          | `sp_execute_external_script` で R スクリプトを実行すると、numeric データ型が入力データとして許可されます。 ただし、それらは R の数値型に変換されるため、きわめて大きい値や小数点値を持つ値では精度が失われます。 R スクリプトによる `sp_execute_external_script` では、このデータ型の範囲全体はサポートされておらず、小数部分がある場合は特に、末尾の数桁が変更される場合があります。 |
+| **real**                         | `numeric`   | **float**          |                     |
+| **smalldatetime**                | `POSIXct`   | **datetime**       | GMT として表現されます  |
+| **smallint**                     | `integer`   | **int**            |                     |
+| **smallmoney**                   | `numeric`   | **float**          |                     |
+| **tinyint**                      | `integer`   | **int**            |                     |
+| **uniqueidentifier**             | `character` | **varchar(max)**   |                     |
+| **varbinary(n)**<br /> n <= 8000 | `raw`       | **varbinary(max)** | 入力パラメーターと出力にのみ使用できます。 |
+| **varbinary(max)**               | `raw`       | **varbinary(max)** | 入力パラメーターと出力にのみ使用できます。 |
+| **varchar(n)**<br /> n <= 8000   | `character` | **varchar(max)**   | 入力データ フレーム (input_data_1) は、*stringsAsFactors* パラメーターを明示的に設定することなく作成されるため、列の型は R の *default.stringsAsFactors()* に依存します                                                                                                                                                                                                                                           |
 
 ## <a name="data-types-not-supported-by-r"></a>R でサポートされていないデータ型
 
@@ -72,15 +72,15 @@ SQL Server の特定のインスタンスに関連付けられている R のバ
 
 ## <a name="data-types-that-might-convert-poorly"></a>適切に変換できない可能性があるデータ型
 
-+ **datetimeoffset** 以外のほとんどの日時型は動作します 
-+ ほとんどの数値データ型はサポートされますが、**money** と **smallmoney** は変換が失敗することがあります
++ **datetimeoffset** 以外のほとんどの datetime 型は機能します。
++ ほとんどの数値データ型はサポートされますが、**money** と **smallmoney** については、変換が失敗することがあります。
 + **varchar** はサポートされますが、SQL Server では原則として Unicode を使用するため、可能な場合には **nvarchar** とその他の Unicode テキスト データ型の使用をお勧めします。
 + RevoScaleR ライブラリの先頭に rx が付く関数は、SQL バイナリ データ型 (**バイナリ**と **varbinary**) を処理できますが、ほとんどのシナリオでは、これらの型に対して特別な処理が必要になります。 R コードの大部分は、バイナリ列で動作しません。
 
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型について詳しくは、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」をご覧ください
 
-## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>SQL Server 2016 とそれより前のバージョンの間でのデータ型の変更
+## <a name="changes-in-data-types-between-sql-server-versions"></a>SQL Server バージョン間でのデータ型の変更
 
 Microsoft SQL Server 2016 以降では、データ型変換とその他のいくつかの操作の改善が行われています。 これらの改善のほとんどでは、浮動小数点型を処理する場合の精度が向上し、従来の**日時**型に対する操作が若干変更されています。
 
@@ -89,7 +89,7 @@ Microsoft SQL Server 2016 以降では、データ型変換とその他のいく
 詳しくは、「[SQL Server 2016 improvements in handling some data types and uncommon operations](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon-)」(いくつかのデータ型と一般的でない操作を処理するときの SQL Server の 2016 の機能強化) をご覧ください。
  
 
-## <a name="verify-r-and-sql-data-schemas-in-advance"></a>R と SQL のデータ スキーマを事前に確認する 
+## <a name="verify-r-and-sql-data-schemas-in-advance"></a>R と SQL のデータ スキーマを事前に確認する
 
 一般的に、特定のデータ型またはデータ構造を R で使用する方法についてわからない点がある場合は、  `str()` 関数を使用して内部構造と R オブジェクトの種類を取得してください。 この関数の結果は R コンソールに出力され、 **の** [メッセージ] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]タブのクエリ結果で確認することもできます。 
 
@@ -136,35 +136,36 @@ outputDataSet <- inputDataSet'
 
 **結果**
 
-||||||
+|行 \#|C1|C2|C3|C4|
 |-|-|-|-|-|
-||C1|C2|C3|C4|
 |1|1|こんにちは|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|2|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 R で `str` 関数を使用すると、出力データのスキーマが取得されます。 この関数からは、次の情報が返されます。
 
-<code>'data.frame':2 obs. of  4 variables:</code>
-<code> $ c1: int  1 -11</code>
-<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>
-<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>
-<code> $ cR: num  4 2</code>
+```output
+'data.frame':2 obs. of  4 variables:
+ $ c1: int  1 -11
+ $ c2: Factor w/ 2 levels "Hello","world": 1 2
+ $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1
+ $ cR: num  4 2
+```
 
 その結果から、次のデータ型の変換がこのクエリの一部として暗黙的に実行されたことがわかります。
 
--   **列 C1**。 この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `integer` 、出力結果セットでは **ssNoversion** と表現されます。  
++ **列 C1**。 この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `integer` 、出力結果セットでは **ssNoversion** と表現されます。  
   
-     型変換は実行されていません。  
+  型変換は実行されていません。  
   
--   **列 C2**。 この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `factor` 、出力結果セットでは **varchar(max)** と表現されます。  
++ **列 C2**。 この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `factor` 、出力結果セットでは **varchar(max)** と表現されます。  
   
-     出力の変化に注目してください。文字列の長さにかかわらず、R の文字列 (係数または通常の文字列) は **varchar(max)** と表現されます。  
+  出力の変化に注目してください。文字列の長さにかかわらず、R の文字列 (係数または通常の文字列) は **varchar(max)** と表現されます。  
   
--   **列 C3**。  この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `character` 、出力結果セットでは **varchar(max)** と表現されます。
++ **列 C3**。  この列は **ssNoversion** では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、R では `character` 、出力結果セットでは **varchar(max)** と表現されます。
   
-     発生したデータ型の変換に注目してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **ssNoversion** をサポートしていますが、R はサポートしていません。そのため、識別子は文字列として表されます。
+  発生したデータ型の変換に注目してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **ssNoversion** をサポートしていますが、R はサポートしていません。そのため、識別子は文字列として表されます。
   
--   **列 C4**。 この列には、元のデータには存在しない、R スクリプトで生成された値が含まれます。
++ **列 C4**。 この列には、元のデータには存在しない、R スクリプトで生成された値が含まれます。
 
 
 ## <a name="example-2-dynamic-column-selection-using-r"></a>例 2:R を使用した動的な列の選択
@@ -181,3 +182,4 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>関連項目
 
++ [Python と SQL Server の間のデータ型マッピング](../python/python-libraries-and-data-types.md)

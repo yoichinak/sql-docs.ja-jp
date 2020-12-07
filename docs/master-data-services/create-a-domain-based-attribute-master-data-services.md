@@ -1,4 +1,5 @@
 ---
+description: ドメイン ベースの属性を作成する (マスター データ サービス)
 title: ドメイン ベースの属性を作成する
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461864"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
 
@@ -27,12 +28,12 @@ ms.locfileid: "85813125"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
  この手順を実行するには
 
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。
 
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。
 
 -   属性値のソースとして使用する 1 つのエンティティが存在する必要があります。 たとえば、Color エンティティに基づくドメイン ベースの属性を作成するには、最初に Color エンティティを作成する必要があります。 詳細については、「[エンティティを作成する (マスター データ サービス)](../master-data-services/create-an-entity-master-data-services.md)」を参照してください。
 
@@ -41,10 +42,10 @@ ms.locfileid: "85813125"
 ## <a name="attribute-information"></a>属性情報
  作成された属性ごとに、7 列の行がグリッドに追加されます。 次の表で各列について説明します。
 
-|Column|説明|
+|列|説明|
 |------------|-----------------|
-|Status|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|
-|名前|属性名です。|
+|Status|属性の状態。<br /><br /> [保存] をクリックすると、属性が更新中であることを示す ![更新状態の画像のアイコン](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") が表示されます。<br /><br /> 属性の作成時または編集時にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] 状態の画像のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|
+|名前|属性名。|
 |表示名|属性の表示名。|
 |説明|属性の説明。|
 |ピクセル幅の表示|属性の幅。|
@@ -99,7 +100,7 @@ ms.locfileid: "85813125"
 
 13. **[保存]** をクリックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
  [ドメインベースの属性 &#40;マスターデータサービス](../master-data-services/domain-based-attributes-master-data-services.md)[派生 &#40;階層を作成](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;マスターデータサービス&#41;属性[名とデータ型を変更](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#40;マスターデータサービス&#41;[属性 &#40;削除](../master-data-services/delete-an-attribute-master-data-services.md)マスターデータサービス&#41;
 
 

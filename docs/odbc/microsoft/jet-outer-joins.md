@@ -1,4 +1,5 @@
 ---
+description: 'Jet: 外部結合'
 title: 'Jet: Outer Join |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 173f785dae601ad733aa73eb536e5f410d9a10d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02919a3816cd63cc51102443b8846a5a0732b764
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483555"
 ---
 # <a name="jet-outer-joins"></a>Jet: 外部結合
 SELECT ステートメントには、外部結合句のリストを含めることができます。 入れ子になった外部結合がサポートされています。 外部結合の詳細については、 *『 Microsoft Jet データベースエンジンプログラマーズガイド』* を参照してください。

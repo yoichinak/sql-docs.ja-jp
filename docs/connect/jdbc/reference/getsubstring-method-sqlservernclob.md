@@ -1,4 +1,5 @@
 ---
+description: getSubString メソッド (SQLServerNClob)
 title: getSubString メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9fb3e1d0df17c71f915d34c202fcf1c4b4960a6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434304"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

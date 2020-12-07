@@ -1,4 +1,5 @@
 ---
+description: APP_NAME (Transact-SQL)
 title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5bba743ec083c5eda630e9d14799cae34726a848
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e8b24e74faa029f72bedf464ddbd06d79a8750ef
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113190"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126263"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "87113190"
   
 ## <a name="syntax"></a>構文  
   
-```sql
-  
+```syntaxsql
 APP_NAME  ( )  
 ```  
   
@@ -50,10 +50,10 @@ APP_NAME  ( )
 ## <a name="return-types"></a>戻り値の型
 **nvarchar(128)**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `APP_NAME` は、アプリケーションごとに異なるアクションを実行する手段として、異なるアプリケーションを区別するために使用します。 たとえば、アプリケーションごとに異なる日付形式を使用するために、`APP_NAME` で異なるアプリケーションを区別することができます。 また、特定のアプリケーションに対して情報メッセージを返すこともできます。
   
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でアプリケーション名を設定する場合、 **[データベース エンジンへの接続]** ダイアログ ボックスで **[オプション]** をクリックします。 **[追加の接続パラメーター]** タブ上で、**app** 属性を `;app='application_name'` 形式で指定します。
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でアプリケーション名を設定する場合、**[データベース エンジンへの接続]** ダイアログ ボックスで **[オプション]** をクリックします。 **[追加の接続パラメーター]** タブ上で、**app** 属性を `;app='application_name'` 形式で指定します。
   
 ## <a name="example"></a>例  
 この例では、このプロセスを開始したクライアント アプリケーションが `SQL Server Management Studio` セッションかどうかを確認します。 その後、US または ANSI 形式で日付の値を指定します。
@@ -62,13 +62,13 @@ APP_NAME  ( )
 USE AdventureWorks2012;  
 GO  
 IF APP_NAME() = 'Microsoft SQL Server Management Studio - Query'  
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 101) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 101) + '.';  
 ELSE   
-PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( varchar(100) , GETDATE(), 102) + '.';  
+PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT ( VARCHAR(100) , GETDATE(), 102) + '.';  
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [関数](../../t-sql/functions/functions.md)
   

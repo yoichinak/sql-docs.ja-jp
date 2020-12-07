@@ -1,4 +1,5 @@
 ---
+description: SQLServerDriver のメンバー
 title: SQLServerDriver のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed87b925bd5c835a6955b9fb7e67aeed05a4ffdd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dbdee613bcf217f7f60401c305ce6f68ca55ad29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450513"
 ---
 # <a name="sqlserverdriver-members"></a>SQLServerDriver のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80913388"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80913388"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|渡された URL が有効であることを確認します。|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|データベースへの接続を確立します。|  

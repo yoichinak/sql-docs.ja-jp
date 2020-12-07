@@ -1,4 +1,5 @@
 ---
+description: サブスクリプション ビュー形式 (マスター データ サービス)
 title: サブスクリプション ビュー形式
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456746"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85812320"
 |**派生親子関係 (派生階層ビュー)**|派生階層構造を親子形式で含みます。|  
 |**派生レベル (派生階層ビュー)**|派生階層構造をレベル形式で含みます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: データのエクスポート &#40;マスターデータサービス&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

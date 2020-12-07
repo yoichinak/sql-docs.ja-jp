@@ -1,4 +1,5 @@
 ---
+description: SupportAlias プロパティ (ClientNetworkProtocol クラス)
 title: SupportAlias プロパティ (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1699ac7afd32bc94ffcdf432e1bb8f0d00960ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 456f4bfd3d2051bff614d1d65710366ea39b08b5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881048"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888961"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias プロパティ (ClientNetworkProtocol クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +47,8 @@ object.SupportAlias [= value]
   
  False の場合、クライアント ネットワーク プロトコルは別名をサポートしません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: IS_OBJECTSIGNED (Transact-SQL)
 title: IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe913220d11523bc52b36498d1517c384991e2de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d48004bfe0dd40545941bf23a41b91c49485233b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110450"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115181"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "87110450"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 IS_OBJECTSIGNED (   
 'OBJECT', @object_id, @class, @thumbprint  
   )   
@@ -81,7 +81,7 @@ IS_OBJECTSIGNED (
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. データベースの拡張プロパティを表示する  
  次の例では、**master** データベースの spt_fallback_db テーブルがスキーマ署名証明書によって署名されているかどうかをテストします。  
   
-```  
+```sql  
 USE master;  
 -- Declare a variable to hold a thumbprint and an object name  
 DECLARE @thumbprint varbinary(20), @objectname sysname;  

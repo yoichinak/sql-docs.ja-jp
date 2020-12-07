@@ -1,4 +1,5 @@
 ---
+description: CREATE SYNONYM (Transact-SQL)
 title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - CREATE SYNONYM statement
 - synonyms [SQL Server], creating
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d6e3fdfbb1614a24960d4d2115e0ca17e26be8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484571"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688702"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 
@@ -39,7 +40,7 @@ ms.locfileid: "86484571"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- SQL Server Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>  
@@ -127,7 +128,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 ### <a name="a-creating-a-synonym-for-a-local-object"></a>A. ローカル オブジェクトに対してシノニムを作成する  
  次の例では、まず `Product` データベース中のベース オブジェクト `AdventureWorks2012` に対してシノニムを作成し、次にシノニムに対してクエリを実行します。  
   
-```  
+```sql 
 -- Create a synonym for the Product table in AdventureWorks2012.  
 CREATE SYNONYM MyProduct  
 FOR AdventureWorks2012.Production.Product;  
@@ -159,7 +160,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql 
 EXEC sp_addlinkedserver Server_Remote;  
 GO  
 USE tempdb;  
@@ -171,10 +172,10 @@ GO
 ### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. ユーザー定義関数に対してシノニムを作成する  
  次の例では、注文量をちょうど 1 ダース単位に増やす `dbo.OrderDozen` という名前の関数を作成します。 次に、シノニム `dbo.CorrectOrder` を `dbo.OrderDozen` 関数に対して作成します。  
   
-```  
+```sql  
 -- Creating the dbo.OrderDozen function  
-CREATE FUNCTION dbo.OrderDozen (@OrderAmt int)  
-RETURNS int  
+CREATE FUNCTION dbo.OrderDozen (@OrderAmt INT)  
+RETURNS INT  
 WITH EXECUTE AS CALLER  
 AS  
 BEGIN  
@@ -187,7 +188,7 @@ END;
 GO  
   
 -- Using the dbo.OrderDozen function  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.OrderDozen(@Amt) AS ModifiedOrder;  
   
@@ -197,7 +198,7 @@ FOR dbo.OrderDozen;
 GO  
   
 -- Using the dbo.CorrectOrder synonym.  
-DECLARE @Amt int;  
+DECLARE @Amt INT;  
 SET @Amt = 15;  
 SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;  
 ```  

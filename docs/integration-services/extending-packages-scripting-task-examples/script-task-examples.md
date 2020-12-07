@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクの例
 title: スクリプト タスクの例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f001a8b784af159efff980a4fa1ca966af0892e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430384"
 ---
 # <a name="script-task-examples"></a>スクリプト タスクの例
 

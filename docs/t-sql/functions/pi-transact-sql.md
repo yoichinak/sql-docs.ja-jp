@@ -1,4 +1,5 @@
 ---
+description: PI (Transact-SQL)
 title: PI (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818f68046fe916bcafbcd91bdc865d6b6f039cb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4afad65060a553689abe0bb28a11c740eb8d38f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111880"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380757"
 ---
 # <a name="pi-transact-sql"></a>PI (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87111880"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 PI ( )  
 ```  
   
@@ -47,7 +48,7 @@ PI ( )
 ## <a name="examples"></a>例  
  次の例では、`PI` の値を返します。  
   
-```  
+```sql  
 SELECT PI();  
 GO  
 ```  

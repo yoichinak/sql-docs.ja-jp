@@ -1,4 +1,5 @@
 ---
+description: CREATE SEQUENCE (Transact-SQL)
 title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - sequence object
 - number, sequence
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fae3e0c336af71fc73e8b39fd52d8ded0b478237
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8eb9c50b7c30a53265c22b29d616ef3471515ea3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465269"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547845"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 

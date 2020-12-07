@@ -1,4 +1,5 @@
 ---
+description: パーセント文字 (ワイルドカード - 一致する文字列) (Transact-SQL)
 title: ワイルドカード検索 (%)
 ms.custom: seo-lt-2019
 ms.date: 12/06/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4cbc1a9-37e1-4101-97fb-e6ac30c1223e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 156ee6ad9860838b1d750f523cd936cbce15e0fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b9a47ebd388c5720a8016763d36eac3b913ce14
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736330"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191224"
 ---
 # <a name="percent-character-wildcard---characters-to-match-transact-sql"></a>パーセント文字 (ワイルドカード - 一致する文字列) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85736330"
 ## <a name="examples"></a>例  
  次の例では、`Person` の `AdventureWorks2012` テーブルに登録されている人のうち、`Dan` で始まるすべての名前を返します。  
   
-```  
+```syntaxsql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  
@@ -46,7 +47,7 @@ WHERE FirstName LIKE 'Dan%';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  

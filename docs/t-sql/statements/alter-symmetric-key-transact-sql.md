@@ -1,4 +1,5 @@
 ---
+description: ALTER SYMMETRIC KEY (Transact-SQL)
 title: ALTER SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3574e981ad09555533a7dc96e8ede27c50f9339d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: a5635a7a0cc1d4c90ea70cf5973f0fc09b938f63
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380955"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124195"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,6 @@ ms.locfileid: "86380955"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER SYMMETRIC KEY Key_name <alter_option>  
   
 <alter_option> ::=  
@@ -79,7 +79,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  ASYMMETRIC KEY *Asym_Key_Name*  
  変更する対称キーの暗号化に使用されている非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!CAUTION]  
 >  データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE_DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
@@ -97,7 +97,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 ## <a name="examples"></a>例  
  次の例では、対称キーの保護に使用されている暗号化の方法を変更します。 対称キー `JanainaKey043` は、作成時に証明書 `Shipping04` を使用して暗号化されています。 暗号化なしでキーを格納することはできないため、この例では、パスワードによる暗号化を追加した後、証明書による暗号化を削除します。  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey043 WITH ALGORITHM = AES_256   
     ENCRYPTION BY CERTIFICATE Shipping04;  
 -- Open the key.   

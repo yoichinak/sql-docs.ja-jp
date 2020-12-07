@@ -1,4 +1,5 @@
 ---
+description: システム バージョン管理されたテンポラル テーブルのデータのクエリ
 title: システム バージョン管理されたテンポラル テーブルのデータのクエリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 878db75acb871faa3f76ef6b3d3264c1bd78766e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f25698110307ca4539b0939ad8c1f0cb9696145b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537831"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのデータのクエリ
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 テンポラル テーブルのデータの最新 (実際) の状態を取得するときは、テンポラル以外のテーブルをクエリするときとまったく同じ方法でクエリできます。 PERIOD 列が非表示ではない場合は、それらの値が SELECT \* クエリで表示されます。 **PERIOD** 列を非表示として指定した場合は、それらの値は SELECT \* クエリでは表示されません。 **PERIOD** 列が非表示の場合は、SELECT 句で **PERIOD** 列を明示的に参照すると、これらの列の値が返されます。
 

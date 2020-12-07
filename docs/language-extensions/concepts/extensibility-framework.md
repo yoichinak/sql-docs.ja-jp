@@ -1,7 +1,7 @@
 ---
 title: SQL Server 言語拡張の機能拡張アーキテクチャ
 titleSuffix: ''
-description: SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
+description: SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java、Python、R がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40fd6b73bf28b6a201a1c0fedd1624a09d67b9c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722557"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935371"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>SQL Server 言語拡張の機能拡張アーキテクチャ
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
+SQL Server 言語拡張機能に使用される機能拡張アーキテクチャについて説明します。これにより、SQL Server で外部コードを実行できるようになります。 SQL Server 2019 では、Java、Python、R がサポートされています。 このコードは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
 ## <a name="background"></a>バックグラウンド
 
-機能拡張フレームワークの目的は、SQL Server と Java などの外部言語の間にインターフェイスを提供することです。 SQL Server によって管理される安全なフレームワーク内で信頼できる言語を実行することで、データベース管理者は、データ科学者による企業データへのアクセスを許可しながら、セキュリティを維持することができます。
+機能拡張フレームワークの目的は、SQL Server と外部言語の間にインターフェイスを提供することです。 SQL Server によって管理される安全なフレームワーク内で信頼できる言語を実行することで、データベース管理者は、データ科学者による企業データへのアクセスを許可しながら、セキュリティを維持することができます。
 
 <!-- We need to get a diagram like the one below.
 The following diagram visually describes opportunities and benefits of the extensible architecture.
@@ -54,11 +54,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] は、スクリプトの実行を担当する外部プロセスのライフタイム、リソース、およびセキュリティ境界を管理するサービスです。 これは、フルテキスト インデックス作成およびクエリ サービスがフルテキスト クエリを処理する際に別のホストを起動する方法と似ています。 スタート パッド サービスでは、Microsoft によって公開された信頼できるランチャーか、パフォーマンスとリソース管理の要件を満たしているものとして Microsoft に認定されたランチャーのみを起動できます。
 
-| 信頼できるランチャー | 拡張機能 | SQL Server のバージョン |
-|-------------------|-----------|---------------------|
-| Java 用 JavaLauncher.dll | Java 拡張機能 | SQL Server 2019 |
-
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、実行の分離のために、[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) を使用する **SQLRUserGroup** 以下で実行されます。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスは、実行の分離のために、[AppContainers](/windows/desktop/secauthz/appcontainer-isolation) を使用する **SQLRUserGroup** 以下で実行されます。
 
 SQL Server Machine 言語拡張を追加したデータベース エンジン インスタンスごとに、個別の [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] サービスが作成されます。 データベース エンジン インスタンスごとに 1 つのスタート パッド サービスが存在するため、外部スクリプトをサポートするインスタンスが複数ある場合は、インスタンスごとに 1 つずつスタート パッド サービスが存在します。 データベース エンジン インスタンスは、それに対して作成されたスタート パッド サービスにバインドされます。 ストアド プロシージャまたは T-SQL で外部スクリプトが呼び出されるたびに、SQL Server サービスにより、同じインスタンスに対して作成されたスタート パッド サービスが呼び出されます。
 
@@ -86,7 +82,7 @@ SQL Server Machine 言語拡張を追加したデータベース エンジン �
 
 + **その他のプロトコル**
 
-  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
+  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
 
 ## <a name="next-steps"></a>次のステップ
 

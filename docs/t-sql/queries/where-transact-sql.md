@@ -1,4 +1,5 @@
 ---
+description: WHERE (Transact-SQL)
 title: WHERE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -22,12 +23,12 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98638f23d0216bb100d34d180fce91358724bf56
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 16532428288ad69146a80aa028640f4ea20bbc7e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554417"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114742"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86554417"
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 単純な等式を使用して行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -62,7 +63,7 @@ WHERE LastName = 'Smith' ;
   
 ### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 値を文字列の一部として含む行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -72,7 +73,7 @@ WHERE LastName LIKE ('%Smi%');
   
 ### <a name="c-finding-rows-by-using-a-comparison-operator"></a>C. 比較演算子を使用して行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -82,7 +83,7 @@ WHERE EmployeeKey  <= 500;
   
 ### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. 3 つの条件のいずれかを満たす行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -92,7 +93,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
   
 ### <a name="e-finding-rows-that-must-meet-several-conditions"></a>E. 複数の条件を満たす行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -102,7 +103,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
   
 ### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>F. 値のリストに含まれている行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -112,7 +113,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
   
 ### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>G. 2 つの値の間の値を持つ行を検索する  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  

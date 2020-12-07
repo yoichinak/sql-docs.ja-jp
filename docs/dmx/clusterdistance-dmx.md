@@ -1,4 +1,5 @@
 ---
+description: ClusterDistance (DMX)
 title: ClusterDistance (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 0dfcf7804455ecb3b16a29a8cab2f61d91df6b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969981"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726353"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,10 +34,10 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **Clusterdistance**関数は、入力したケースと、その入力ケースの確率が最も高いクラスターとの距離を返します。  
   
- K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
+ K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION を照会または参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
   
  既定の EM クラスタリング方法の場合、クラスター内のすべてのポイントは同じように見なされます。したがって、設計上、クラスターの重心はありません。 特定のケースと特定のクラスター *N*の間の**clusterdistance**の値は、次のように計算されます。  
   
@@ -47,7 +48,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance (N) = 1-Clusterdistance (N))  
   
 ## <a name="related-prediction-functions"></a>関連する予測関数  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]には、クラスターモデルにクエリを実行するための次の関数が用意されています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、クラスターモデルにクエリを実行するための次の関数が用意されています。  
   
 -   [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)関数を使用して、最も可能性の高いクラスターを返します。  
   
@@ -75,7 +76,7 @@ NATURAL PREDICTION JOIN
   
  結果の例:  
   
-|Expression|  
+|式|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -88,7 +89,7 @@ NATURAL PREDICTION JOIN
 |クラスター 6|  
   
 ## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>例 2: 指定したクラスターまでの距離の取得  
- 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 その後、 **Clusterdistance**関数でクラスター識別子の引数としてノードのキャプションを使用できます。  
+ 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 その後、 **Clusterdistance** 関数でクラスター識別子の引数としてノードのキャプションを使用できます。  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -127,7 +128,6 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>参照  
  [DMX&#41;のクラスター &#40;](../dmx/cluster-dmx.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

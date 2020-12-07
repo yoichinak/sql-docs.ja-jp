@@ -1,4 +1,5 @@
 ---
+description: UNION クエリの作成 (Visual Database Tools)
 title: UNION クエリの作成
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a7a274c092a98cbe63313f633ec37fc4377aa75
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b6d4d7618b3130e2b06d3efb8e9e2a35bc7ca0ee
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000015"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038375"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、「 [SELECT の例 (Transact-SQL)](https://msdn.microsoft.com/9b9caa3d-e7d0-42e1-b60b-a5572142186c)」を参照してください。  
+UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、「 [SELECT の例 (Transact-SQL)](../../t-sql/queries/select-examples-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
 > ダイアグラム ペインに表示できるのは、1 つの SELECT 句だけです。 したがって、UNION クエリを使用している場合、クエリ デザイナーにはテーブル操作ペインは表示されません。  
@@ -50,8 +51,8 @@ UNION キーワードを使用すると、2 つの SELECT ステートメント�
   
     UNION クエリがクエリ デザイナーによって書式化されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [サポートされるクエリの種類](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [クエリおよびビューのデザインの操作方法に関するトピック](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [クエリに関する基本操作の実行](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)
+[UNION (Transact-SQL)](../../t-sql/language-elements/set-operators-union-transact-sql.md)

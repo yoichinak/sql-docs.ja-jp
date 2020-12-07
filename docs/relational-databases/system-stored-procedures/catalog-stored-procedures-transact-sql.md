@@ -1,4 +1,5 @@
 ---
+description: ストアド プロシージャ カタログ (Transact-SQL)
 title: カタログのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], catalog
 - catalog system stored procedures [SQL Server]
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab5a056beff9f0b384acbb2667770543ac145ce4
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5faa36951062a82a89ae9b6ec3a22be61b113c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977642"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543748"
 ---
 # <a name="catalog-stored-procedures-transact-sql"></a>ストアド プロシージャ カタログ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ODBC データ辞書関数を実装し、基になるシステムテーブルへの変更から ODBC アプリケーションを分離する、次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ODBC データ辞書関数を実装し、基になるシステムテーブルへの変更から ODBC アプリケーションを分離する、次のシステムストアドプロシージャをサポートしています。  
 
 :::row:::
     :::column:::

@@ -1,4 +1,5 @@
 ---
+description: datetime データ型の SQL から C への変換
 title: SQL から C への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420636"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime データ型の SQL から C への変換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,6 +68,6 @@ ms.locfileid: "87331066"
  このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、SQLBindParameter で指定されたサーバーの型がサーバー上の実際の型と一致しないと、サーバーによって暗黙的な変換が実行され、クライアントに返される型は SQLBindParameter によって指定された型と一致します。 これにより、サーバーの変換規則が前の表に記載されているものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

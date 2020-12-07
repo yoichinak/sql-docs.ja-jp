@@ -1,4 +1,5 @@
 ---
+description: '[リレーションシップの作成]'
 title: '[リレーションシップの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b961f1d97430b87343832710c27d79e1e329c6bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 118516d9d6c149b9a8c86840af60b96170e6f091
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918852"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192672"
 ---
 # <a name="create-relationships"></a>[リレーションシップの作成]
 
@@ -54,8 +55,7 @@ ms.locfileid: "86918852"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../../integration-services/integration-services-error-and-message-reference.md)   
- [あいまい参照変換エディター &#40;[列] タブ&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [[参照変換エディター] &#40;[列] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [用語参照変換エディター ([用語参照] タブ)](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
+ [あいまい参照変換エディター &#40;[列] タブ&#41;](./fuzzy-lookup-transformation.md)   
+ [[参照変換エディター] &#40;[列] ページ&#41;](./lookup-transformation.md)   
+ [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](./term-lookup-transformation.md)  
   

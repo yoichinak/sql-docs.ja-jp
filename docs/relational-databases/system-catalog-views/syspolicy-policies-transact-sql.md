@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policies (Transact-sql)
 title: syspolicy_policies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49ef90e030c2899e49adcb69e8765a57f623ace7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419806"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85900584"
 |policy_id|**int**|ポリシーの識別子。|  
 |name|**sysname**|ポリシーの名前。|  
 |condition_id|**int**|このポリシーによって適用またはテストされた条件の ID。|  
-|root_condition_id|**int**|内部使用専用です。|  
+|root_condition_id|**int**|内部使用のみ。|  
 |date_created|**datetime**|ポリシーが作成された日時。|  
 |execution_mode|**int**|ポリシーの評価モード。 使用できる値は次のとおりです。<br /><br /> 0 = 要求時<br /><br /> このモードでは、ユーザーが直接指定した場合にポリシーが評価されます。<br /><br /> 1 = 変更時: 回避<br /><br /> この自動モードでは、DDL トリガーを使用してポリシー違反が防止されます。<br /><br /> 2 = 変更時: ログのみ<br /><br /> この自動モードでは、イベント通知を使用して、関連する変更が発生したときにポリシーを評価し、ポリシー違反をログに記録します。<br /><br /> 4 = スケジュールに基づいて<br /><br /> この自動モードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用してポリシーが定期的に評価されます。 モードでは、ポリシー違反がログに記録されます。<br /><br /> 注: 値3は有効な値ではありません。|  
 |policy_category|**int**|このポリシーが属するポリシー ベースの管理のポリシー カテゴリの ID。 既定のポリシー グループの場合は NULL です。|  
@@ -49,13 +50,13 @@ ms.locfileid: "85900584"
 |modified_by|**sysname**|ポリシーを最後に変更したログイン。 変更されていない場合は NULL になります。|  
 |date_modified|**datetime**|ポリシーが作成された日時。 変更されていない場合は NULL になります。|  
   
-## <a name="remarks"></a>注釈  
- ポリシーベースの管理のトラブルシューティングを行うときは、 [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)ビューに対してクエリを実行し、ポリシーが有効になっているかどうかを確認します。 このビューには、ポリシーを作成または最後に変更したユーザーも表示されます。  
+## <a name="remarks"></a>解説  
+ ポリシーベースの管理のトラブルシューティングを行うときは、 [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) ビューに対してクエリを実行し、ポリシーが有効になっているかどうかを確認します。 このビューには、ポリシーを作成または最後に変更したユーザーも表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ALL (Transact-SQL)
 title: ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab67f5da461c944b1742c5a391b25f0b4e5d5118
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8848a62320f33b2d55cae25b30375324df67af0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923008"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196946"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "86923008"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
@@ -69,10 +69,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="examples"></a>例  
  次の例では、ストアド プロシージャを作成し、`SalesOrderID` データベース内にある指定した [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のすべての部品が、指定した日数で製造できるかどうかを判定します。 この例では、サブクエリを使用して、特定の `DaysToManufacture` のすべての部品に対する `SalesOrderID` の値一覧を作成し、その中のすべての `DaysToManufacture` が指定した日数以内であることを確認します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE DaysToBuild @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE DaysToBuild @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays >= ALL  
@@ -86,12 +86,11 @@ IF
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
 PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
-  
 ```  
   
  このプロシージャをテストするには、`SalesOrderID 49080` を使用してプロシージャを実行します。この注文内容には、必要な日数が `2` 日の部品が 1 つと 0 日の部品が 2 つが含まれています。 次に示す最初のステートメントは条件を満たします。 2 番目のクエリはそうではありません。  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 2 ;  
 ```  
   
@@ -99,7 +98,7 @@ EXECUTE DaysToBuild 49080, 2 ;
   
  `All items for this order can be manufactured in specified number of days or less.`  
   
-```  
+```sql  
 EXECUTE DaysToBuild 49080, 1 ;  
 ```  
   

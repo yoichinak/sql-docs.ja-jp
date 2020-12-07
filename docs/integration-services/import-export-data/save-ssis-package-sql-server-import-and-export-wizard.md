@@ -1,4 +1,5 @@
 ---
+description: '[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)'
 title: '[SSIS パッケージの保存] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f354643c156024eeee1db53ad366dfb63f55859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dc69ad61d1f2eb025d4a5fcae317ba787da61860
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914381"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439306"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86914381"
 ![パッケージの保存 - 共通オプション](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>パッケージの名前と説明を指定します。  
- **Name**  
+ **名前**  
  パッケージの一意な名前を指定します。  
   
  **説明**  
@@ -48,12 +49,12 @@ ms.locfileid: "86914381"
 
  次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[SQL Server]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
-![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package2.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
+![[パッケージの保存および実行] ページで [SQL Server] を選択した場合のインポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/save-package2.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
 ## <a name="options-to-specify-target--sql-server"></a>指定するオプション (ターゲット = SQL Server) 
 
  > [!NOTE]
- > ウィザードは、**msdb** データベースの **sysssispackages** テーブルにパッケージを保存します。 このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存**できません**。  
+ > ウィザードは、 **msdb** データベースの **sysssispackages** テーブルにパッケージを保存します。 このオプションでは、SSIS カタログ データベース (SSISDB) にパッケージを保存 **できません** 。  
  
  **サーバー名**  
  保存先のサーバー名を入力または選択します。  
@@ -74,7 +75,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
  
 次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[ファイル システム]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
-![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package1.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
+![[パッケージの保存および実行] ページで [ファイル システム] オプションを選択した場合のインポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/save-package1.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
 ## <a name="options-to-specify-target--file-system"></a>指定するオプション (ターゲット = ファイル システム)
 
@@ -110,10 +111,10 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 ## <a name="customize-the-saved-package"></a>保存されたパッケージをカスタマイズする  
  保存されたパッケージをカスタマイズする方法については、「[Integration Services (SSIS) パッケージ](../../integration-services/integration-services-ssis-packages.md)」を参照してください。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  パッケージ保存の追加オプションを指定した後、次のページは **[ウィザードの完了]** です。 このページでは、ウィザードで選択した内容を確認し、操作を開始します。 詳細については、「 [[ウィザードの完了] (SQL Server インポートおよびエクスポート ウィザード)](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)」を参照してください。  
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [パッケージを保存する](../../integration-services/save-packages.md)  
 [Integration Services (SSIS) パッケージの実行](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

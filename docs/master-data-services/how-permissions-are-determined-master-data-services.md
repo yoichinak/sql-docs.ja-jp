@@ -1,4 +1,5 @@
 ---
+description: 権限の決定方法 (Master Data Services)
 title: 権限の決定方法
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 729f8c21155b06f42858edd4cf530f08c049fa47
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 81463077bc370b4cae8ae1838da14a27cdd20f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471946"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>権限の決定方法 (Master Data Services)
 
@@ -78,7 +79,7 @@ ms.locfileid: "85812981"
   
  この場合に、モデル オブジェクトと階層メンバーの権限を比較するには、ユーザーとグループでの権限の重複を解決する必要があります。 詳細については、「 [ユーザー権限とグループ権限の重複 (マスター データ サービス)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ユーザーおよびグループのアクセス許可の重複 &#40;マスターデータサービス&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

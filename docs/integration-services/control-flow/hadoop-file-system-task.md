@@ -1,4 +1,5 @@
 ---
+description: Hadoop ファイル システム タスク
 title: Hadoop ファイル システム タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393138"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop ファイル システム タスク
 
@@ -43,7 +44,7 @@ ms.locfileid: "86918210"
 |**[Local File Connection] (ローカル ファイル接続)**|既存のファイル接続マネージャーを指定するか、新しいファイル接続マネージャーを作成します。 この接続マネージャーは、ソース ファイルがホストされる場所を示します。|  
 |**[Is Recursive] (再帰的)**|すべてのサブフォルダーを再帰的にコピーするかどうかを指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Hadoop 接続マネージャー](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   

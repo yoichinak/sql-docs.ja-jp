@@ -1,4 +1,5 @@
 ---
+description: 等しくない (Transact SQL) - 従来
 title: '&lt;&gt; (等しくない) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -24,12 +25,12 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6e3c1ec06dc31a2d39fbecc0a237ede3e55a4ff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2fdd50143dd1ca8bc0b4dbed97aa1b9ab08ca1b2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918522"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187537"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>等しくない (Transact SQL) - 従来
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86918522"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression <> expression  
 ```  
   
@@ -58,13 +59,12 @@ expression <> expression
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで <> を使用する  
  次の例では、`Production.ProductCategory` テーブル内で、`ProductCategoryID` の値が値 3 または値 2 以外の行をすべて返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductCategoryID, Name  
 FROM Production.ProductCategory  
 WHERE ProductCategoryID <> 3 AND ProductCategoryID <> 2;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

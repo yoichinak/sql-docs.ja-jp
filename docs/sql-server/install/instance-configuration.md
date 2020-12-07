@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 040136a7867d2a56e8ec97f183227c6b8d7268f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54030568192560200dd365bbffaedc33df1959a6
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730765"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127481"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
@@ -134,10 +134,10 @@ ms.locfileid: "85730765"
   
 |説明|既定のディレクトリ|推奨事項|  
 |-----------------|-----------------------|---------------------|  
-|**データ ルート ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
-|**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
-|**Temp ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Temp ディレクトリは、高パフォーマンスのストレージ サブシステムに配置してください。|  
-|**バックアップ ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |このディレクトリは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のバックアップ ファイルのディレクトリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールでは、このディレクトリには [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] システム サービスによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ファイルもキャッシュされます。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
+|**データ ルート ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data\ |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
+|**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log\ |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
+|**Temp ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp\ |Temp ディレクトリは、高パフォーマンスのストレージ サブシステムに配置してください。|  
+|**バックアップ ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup\ |このディレクトリは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のバックアップ ファイルのディレクトリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールでは、このディレクトリには [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] システム サービスによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ファイルもキャッシュされます。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
 ### <a name="considerations"></a>考慮事項  
   
@@ -167,10 +167,10 @@ ms.locfileid: "85730765"
   
 |説明|既定のディレクトリ|推奨事項|  
 |-----------------|-----------------------|---------------------|  
-|**データ ルート ディレクトリ** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
-|**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
-|**Temp ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Temp ディレクトリは、高パフォーマンスのストレージ サブシステムに配置してください。|  
-|**バックアップ ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |このディレクトリは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のバックアップ ファイルのディレクトリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールでは、ここは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] システム サービスによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ファイルがキャッシュされる場所でもあります。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
+|**データ ルート ディレクトリ** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Data |\Program files\Microsoft SQL Server\ フォルダーが権限の制限により保護されていることを確認してください。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のパフォーマンスは、多くの構成で、データ ディレクトリが配置されているストレージのパフォーマンスに依存します。 このディレクトリは、システムに割り当てられている中でパフォーマンスが最も高いストレージに配置してください。 フェールオーバー クラスターのインストールの場合は、データ ディレクトリが共有ディスク上に配置されるようにしてください。|  
+|**ログ ファイル ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Log |このディレクトリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリであり、FlightRecorder ログを含んでいます。 フライト レコーダーの時間を増加する場合、ログ ディレクトリに十分な容量があることを確認してください。|  
+|**Temp ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Temp |Temp ディレクトリは、高パフォーマンスのストレージ サブシステムに配置してください。|  
+|**バックアップ ディレクトリ**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS *nn*.\<InstanceID>\OLAP\Backup |このディレクトリは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のバックアップ ファイルのディレクトリです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールでは、ここは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] システム サービスによって [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ファイルがキャッシュされる場所でもあります。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
 #### <a name="considerations"></a>考慮事項
   
@@ -205,7 +205,7 @@ ms.locfileid: "85730765"
   
 ### <a name="options"></a>Options
 
-**[セキュリティ モード]** : インストール用に **Windows 認証**または**混合モード認証**を選択します。  
+**[セキュリティ モード]** : インストール用に **Windows 認証** または **混合モード認証** を選択します。  
   
 **[Windows Principal Provisioning]\(Windows プリンシパルのプロビジョニング\)** : 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Windows の BUILTIN\Administrators ローカル グループが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** サーバー ロールに配置されました。これにより、Windows 管理者に対し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのアクセスが実質的に許可されました。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、BUILTIN\Administrators グループは **sysadmin** サーバー ロールで提供されません。 代わりに、セットアップ時に新規インストール用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を明示的に用意する必要があります。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "85730765"
   
 一覧の編集が完了したら、 **[OK]** を選択し、構成ダイアログ ボックスで管理者の一覧を確認します。 一覧が完成したら、 **[次へ]** を選択します。  
   
-**混合モード認証**を選択した場合は、あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者 (**sa**) アカウントのログイン資格情報を入力する必要があります。  
+**混合モード認証** を選択した場合は、あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者 (**sa**) アカウントのログイン資格情報を入力する必要があります。  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -289,9 +289,9 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**データ ルート ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリのアクセス制御リスト (ACL) が構成され、構成の一部として継承が無効になります。|  
-|**ユーザー データベース ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
-|**ユーザー データベース ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
-|**バックアップ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
+|**ユーザー データベース ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data |ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
+|**ユーザー データベース ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
+|**バックアップ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
 \* 共有ディスクがサポートされていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスに対して使用することはお勧めしません。  
   
@@ -301,10 +301,10 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**データ ルート ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。|  
-|**ユーザー データベース ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
-|**ユーザー データベース ログ ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ログ ディレクトリに十分な領域があることを確認してください。|  
-|**バックアップ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が SQL Server サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
+|**データ ルート ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。|  
+|**ユーザー データベース ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。|  
+|**ユーザー データベース ログ ディレクトリ**|共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ログ ディレクトリに十分な領域があることを確認してください。|  
+|**バックアップ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|データの損失を防ぐために適切な権限を設定して、バックアップ ディレクトリに書き込むための適切な権限が SQL Server サービスのユーザー アカウントにあることを確認してください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
 ### <a name="security-considerations"></a>セキュリティに関する考慮事項
   
@@ -345,8 +345,8 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**データ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> **tempdb** ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。 データ ファイルを複数のボリュームに分散させるには、複数のフォルダーまたはドライブを指定します。|  
-|**ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
+|**データ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> **tempdb** ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。 データ ファイルを複数のボリュームに分散させるには、複数のフォルダーまたはドライブを指定します。|  
+|**ログ ディレクトリ**|ローカル ディスク、SMB ファイル サーバー、共有ストレージ*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data|ログ ディレクトリに十分な領域があることを確認してください。|  
   
 \* 共有ディスクがサポートされていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスに対して使用することはお勧めしません。  
   
@@ -356,14 +356,14 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 |説明|サポートされているストレージの種類|既定のディレクトリ|推奨事項|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb データ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> 指定のディレクトリ (複数のファイルが指定される場合、ディレクトリも複数になります) はすべてのクラスター ノードで有効にします。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。|  
-|**tempdb ログ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで**共有ディスク**を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。<br /><br /> 指定したディレクトリがすべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。<br /><br /> ログ ディレクトリに十分な領域があることを確認してください。|  
+|**tempdb データ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディレクトリの ACL が構成され、構成の一部として継承が無効になります。<br /><br /> 指定のディレクトリ (複数のファイルが指定される場合、ディレクトリも複数になります) はすべてのクラスター ノードで有効にします。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。|  
+|**tempdb ログ ディレクトリ**|ローカル ディスク、共有ストレージ、SMB ファイル サーバー|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL *nn*.\<InstanceID>\MSSQL\Data<br /><br /> **ヒント**: **[クラスター ディスクの選択]** ページで **共有ディスク** を選択した場合、既定値は最初の共有ディスクになります。 **[クラスター ディスクの選択]** ページで何も選択しない場合、このフィールドの既定値は空白になります。|ユーザー データ ディレクトリのベスト プラクティスは、ワークロードとパフォーマンスの要件によって異なります。<br /><br /> 指定したディレクトリがすべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、**tempdb** のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、SQL Server リソースはオンラインへの移行に失敗します。<br /><br /> ログ ディレクトリに十分な領域があることを確認してください。|  
   
 ### <a name="ui-element-list"></a>UI 要素の一覧
 
 作業負荷と要件に合わせて **tempdb** の設定を構成します。 次の設定は、 **tempdb** データ ファイルに適用されます。  
   
-* **ファイル数** は **tempdb**のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとしては、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用します。 競合が発生する場合は、競合が許容できるレベルに低下するまでデータ ファイルの数を 4 の倍数分ずつ増やすか(最大で、論理プロセッサの数まで)、ワークロードまたはコードを変更します。
+* **ファイル数** は **tempdb** のデータ ファイルの合計数です。 既定値は 8 とセットアップ時に検出された論理コア数の小さいほうになります。 一般的なルールとしては、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用します。 競合が発生する場合は、競合が許容できるレベルに低下するまでデータ ファイルの数を 4 の倍数分ずつ増やすか(最大で、論理プロセッサの数まで)、ワークロードまたはコードを変更します。
   
 * **初回サイズ (MB)** は各 **tempdb** データ ファイルの初回サイズです (メガバイト単位)。 既定値は 8 MB です (または、[!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] の場合は 4 MB)。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] では、最大初期ファイル サイズ 262,144 MB (256 GB) が導入されます。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] の最大初期ファイル サイズは 1024 MB です。 すべての **tempdb** データ ファイルの初回サイズは同じです。 **tempdb** は SQL Server が起動するか、フェールオーバーするたびに再作成されるため、通常の作業のワークロードに必要なサイズに近いサイズを指定します。 起動時にさらに効率的に **tempdb** を作成するには、[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を有効にします。  
   
@@ -400,7 +400,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
   
 * SMB ファイル サーバーを使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントはドメイン アカウントである必要があります。  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、データ ディレクトリとして使用する SMB ファイル共有フォルダーに対する**フル コントロール**の NTFS 権限が必要です。  
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、データ ディレクトリとして使用する SMB ファイル共有フォルダーに対する **フル コントロール** の NTFS 権限が必要です。  
   
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、SMB ファイル サーバーに対する SeSecurityPrivilege 特権を付与する必要があります。 この特権を付与するには、ファイル サーバーで [ローカル セキュリティ ポリシー] コンソールを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査とセキュリティ ログの管理 **ポリシーに** セットアップ アカウントを追加します。 この設定は、[ローカル セキュリティ ポリシー] コンソールの **[ローカル ポリシー]** の **[ユーザー権利の割り当て]** セクションにあります。  
   
@@ -430,21 +430,21 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="a-namememory-database-engine-configuration---memory-page"></a><a name="memory"><a/> [データベース エンジンの構成] - [メモリ] ページ
 
-**[最小サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの下限が決まります。 既定値は 0 で、推奨値も 0 です。 **最小サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
+**[最小サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの下限が決まります。 既定値は 0 で、推奨値も 0 です。 **最小サーバー メモリ** の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
 
-**[最大サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの上限が決まります。 既定値は 2,147,483,647 メガバイト (MB) であり、計算された推奨値は、「[サーバー メモリの構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)」の、既存のシステム メモリに基づくスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対するメモリ構成ガイドラインと一致します。 **最大サーバー メモリ**の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
+**[最大サーバー メモリ]** では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] でバッファー プールとその他のキャッシュに使用されるメモリの上限が決まります。 既定値は 2,147,483,647 メガバイト (MB) であり、計算された推奨値は、「[サーバー メモリの構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually)」の、既存のシステム メモリに基づくスタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対するメモリ構成ガイドラインと一致します。 **最大サーバー メモリ** の効果について詳しくは、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)」をご覧ください。
 
-セットアップの間にこのページをスキップした場合に使用される既定の**最大サーバー メモリ**の値は、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値 (2,147,483,647 メガバイト) です。 **[推奨]** ラジオ ボタンを選択すると、このページでこれらの設定を手動で構成でき、インストール後にこれらの設定を変更できます。 詳細については、 [サーバー メモリ構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)の設定を参照してください。
+セットアップの間にこのページをスキップした場合に使用される既定の **最大サーバー メモリ** の値は、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値 (2,147,483,647 メガバイト) です。 **[推奨]** ラジオ ボタンを選択すると、このページでこれらの設定を手動で構成でき、インストール後にこれらの設定を変更できます。 詳細については、 [サーバー メモリ構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)の設定を参照してください。
 
 ### <a name="ui-element-list"></a>UI 要素の一覧
   
-**既定**:このラジオ ボタンは既定で選択されており、**最小サーバー メモリ**と**最大サーバー メモリ**の設定は [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値に設定されます。 
+**既定**:このラジオ ボタンは既定で選択されており、**最小サーバー メモリ** と **最大サーバー メモリ** の設定は [!INCLUDE[ssde_md](../../includes/ssde_md.md)] の既定値に設定されます。 
 
 **[推奨]** : 計算された推奨値を受け入れる場合、または計算された値をユーザー構成値に変更する場合は、このラジオ ボタンを選択する必要があります。  
   
-**[最小サーバー メモリ (MB)]** : 計算された推奨値からユーザー構成値に変更する場合は、**最小サーバー メモリ**の値を入力します。  
+**[最小サーバー メモリ (MB)]** : 計算された推奨値からユーザー構成値に変更する場合は、**最小サーバー メモリ** の値を入力します。  
   
-**[最大サーバー メモリ (MB)]** : 計算された推奨値からユーザー構成値に変更する場合は、**最大サーバー メモリ**の値を入力します。  
+**[最大サーバー メモリ (MB)]** : 計算された推奨値からユーザー構成値に変更する場合は、**最大サーバー メモリ** の値を入力します。  
 
 **[SQL Server データベース エンジン用に推奨されているメモリ構成を受け入れるには、ここをクリックします]** : このサーバーで計算された推奨メモリ構成を受け入れるには、このチェック ボックスをオンにします。 **[推奨]** ラジオ ボタンを選択した場合、このチェック ボックスをオンにしないとセットアップを続行できません。
 

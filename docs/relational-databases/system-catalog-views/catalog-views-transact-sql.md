@@ -1,4 +1,5 @@
 ---
+description: システムカタログビュー (Transact-sql)
 title: カタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -20,15 +21,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], metadata
 - catalog views [SQL Server], about catalog views
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914308"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038302"
 ---
 # <a name="system-catalog-views-transact-sql"></a>システムカタログビュー (Transact-sql)
 
@@ -39,13 +40,13 @@ ms.locfileid: "86914308"
 > [!NOTE]
 > カタログ ビューには、レプリケーション、バックアップ、データベース メンテナンス プラン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントなどのカタログ データに関する情報は含まれていません。
 
- カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、、[テーブル](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログビューは[、の各カタログビュー](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を継承します。 sys.objects カタログ ビューはベース ビューと呼ばれ、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 sys.objects カタログ ビューでは、テーブル以外の、ストアド プロシージャやビューなどのオブジェクトの行が返されます。 テーブルが作成されると、両方のビューでテーブルのメタデータが返されます。 これら 2 つのカタログ ビューではテーブルに関する異なるレベルの情報が返されますが、このテーブルのメタデータ内のエントリは 1 つだけで、名前と object_id が、それぞれ 1 つだけ含まれています。 まとめると次のようになります。
+ カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、、 [テーブル](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) カタログビューは [、の各カタログビュー](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) を継承します。 sys.objects カタログ ビューはベース ビューと呼ばれ、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 sys.objects カタログ ビューでは、テーブル以外の、ストアド プロシージャやビューなどのオブジェクトの行が返されます。 テーブルが作成されると、両方のビューでテーブルのメタデータが返されます。 これら 2 つのカタログ ビューではテーブルに関する異なるレベルの情報が返されますが、このテーブルのメタデータ内のエントリは 1 つだけで、名前と object_id が、それぞれ 1 つだけ含まれています。 まとめると次のようになります。
 
 - ベース ビューには列のサブセットと行のスーパーセットが含まれます。
 - 派生ビューには列のスーパーセットと行のサブセットが含まれます。
 
 > [!IMPORTANT]
-> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 \*返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys. catalog_view_name*を使用することをお勧めします。
+> 今後の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] のリリースでは、列のリストの末尾に列を追加することにより、システム カタログ ビューの定義が拡張される可能性があります。 \*返される列の数が変更され、アプリケーションが中断される可能性があるため、実稼働コードで SELECT FROM *sys.catalog_view_name*を使用することをお勧めします。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカタログ ビューは、次のカテゴリに分類されます。
 
@@ -79,7 +80,7 @@ ms.locfileid: "86914308"
         
         [Filestream および FileTable のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索カタログビュー ](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)
         
         [リンクサーバーのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)
     :::column-end:::
@@ -96,7 +97,7 @@ ms.locfileid: "86914308"
         
         [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
         
-        [Transact-sql&#41;&#40;スカラー型のカタログビュー](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
+        [Transact-sql&#41;&#40;スカラー型のカタログビュー ](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)
         
         [スキーマカタログビュー &#40;Transact-sql&#41;](../system-catalog-views/schemas-catalog-views-sys-schemas.md)
         
@@ -108,7 +109,7 @@ ms.locfileid: "86914308"
         
         [空間データのカタログ ビュー](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Stretch Database カタログビュー &#40;Transact-sql&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

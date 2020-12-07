@@ -1,4 +1,5 @@
 ---
+description: Azure SQL Database への接続 (MySQLToSQL)
 title: Azure SQL Database への接続 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,26 +10,26 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454134"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Azure SQL Database への接続 (MySQLToSQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
   
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは **SQL Azure に再接続します。**  
   
 ## <a name="options"></a>オプション  
 **[サーバー名]**  
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**データベース**  
+**[データベース]**  
   
-データベース名を選択、入力、または**参照**します。  
+データベース名を選択、入力、または **参照** します。  
   
 > [!IMPORTANT]  
 > SSMA for MySQL は、SQL Azure の master データベースへの接続をサポートしていません。  

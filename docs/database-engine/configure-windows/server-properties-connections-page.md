@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2def17317b17442403df731f327b22ce5370f1a7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759143"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670025"
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,6 @@ ms.locfileid: "85759143"
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
 ## <a name="see-also"></a>参照  
- [オプション &#40;クエリ実行:SQL Server:[詳細設定] ページ&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [オプション &#40;クエリ実行:SQL Server:[詳細設定] ページ&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
   

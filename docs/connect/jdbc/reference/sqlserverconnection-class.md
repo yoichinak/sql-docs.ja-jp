@@ -1,5 +1,6 @@
 ---
-title: SQLServerConnection クラス | Microsoft Docs
+title: SQLServerConnection クラス
+description: JDBC Driver for SQL Server の SQLServerConnection クラスのパブリック API 詳細について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6248e126806b15592bbc3d6c458045ca7d9db042
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6827b79b4d1cc7b3f66db3c53c338614ec49fc3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920676"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411478"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,6 +1,6 @@
 ---
 title: Linux での SQL Server のセキュリティの概要
-description: この記事では、一般的なセキュリティ アクションについて説明します。
+description: さらに調査する部分がわかるように、SQL Server on Linux のセキュリティ機能について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883010"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115815"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
 
@@ -250,7 +250,7 @@ TDE を削除するには、`ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OF
 > [!WARNING]
 >  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
 
-TDE の詳細については、「[Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md)」を参照してください。   
+TDE の詳細については、「[Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。   
 
 
 ## <a name="configure-backup-encryption"></a>バックアップの暗号化の構成

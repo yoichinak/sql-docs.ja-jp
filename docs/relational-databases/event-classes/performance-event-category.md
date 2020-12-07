@@ -1,4 +1,5 @@
 ---
+description: Performance イベント カテゴリ
 title: Performance イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c9db194a87092fb9d24ed9ae1c1bb80e664af40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b652324f42375bd1de7161ac596f13be13891475
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791033"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88499430"
 ---
 # <a name="performance-event-category"></a>Performance イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

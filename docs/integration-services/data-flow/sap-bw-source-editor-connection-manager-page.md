@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW ソース エディター] ([接続マネージャー] ページ)'
 title: SAP BW 変換元エディター ([接続マネージャー] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194755"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>[SAP BW ソース エディター] ([接続マネージャー] ページ)
 
@@ -53,7 +54,7 @@ ms.locfileid: "86917842"
  **[新規作成]**  
  **[SAP BW 接続マネージャー]** ダイアログ ボックスを使用して、新しい接続マネージャーを作成します。  
   
- このダイアログ ボックスの詳細については、「 [SAP BW 接続マネージャー エディター](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)」を参照してください。  
+ このダイアログ ボックスの詳細については、「 [SAP BW 接続マネージャー エディター](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  **OHS 転送先**  
  ソースからデータを抽出するためのオープン ハブ サービス (OHS) 転送先を選択します。  
@@ -89,7 +90,7 @@ ms.locfileid: "86917842"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -115,7 +116,7 @@ ms.locfileid: "86917842"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -132,5 +133,4 @@ ms.locfileid: "86917842"
  [SAP BW ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [SAP BW ソース エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

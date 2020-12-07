@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - management tools, upgrading
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
-author: stevestein
-ms.author: sstein
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c10d77a72ef23616feb2ac59db44589966fe49a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c26897d0783788d458745904f412ce81b20244b2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900230"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125739"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 管理ツールのアップグレード
 
@@ -52,7 +52,6 @@ ms.locfileid: "85900230"
   
 ## <a name="see-also"></a>参照  
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [旧バージョンとの互換性_削除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
+ [旧バージョンとの互換性_削除](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))   
  [インストール ウィザードを使用した SQL Server のアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742041"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396091"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード  
+    :::column-end:::
+:::row-end:::
+
  **この記事の内容:**  
   
 -   [ネイティブ モードのユーザー インターフェイス](#bkmk_native_mode)  
@@ -48,17 +55,17 @@ ms.locfileid: "80742041"
 |------------|-----------------|  
 |新しいサブスクリプション|初めてサブスクリプションを作成するときに表示されます。|  
 |非アクティブ|サブスクリプションを処理できないときに表示されます。 詳細については、この記事の後半にある「非アクティブなサブスクリプションの管理」をご覧ください。|  
-|完了: 合計 \<*number*> 件のうち、処理済み \<*number*> 件; エラー \<*number*> 件です。|データ ドリブン サブスクリプション実行の状態を表示します。このメッセージはスケジュールおよび配信のプロセッサで作成されます。|  
-|\<*number*> 処理済み|スケジュールおよび配信のプロセッサが正常に配信した通知、または配信の試行が行われなくなった通知の件数です。 データ ドリブンの配信が完了したとき、処理された通知の件数と生成された通知の合計件数が等しくなる必要があります。|  
+|終了: 合計 \<*number*> 件のうち \<*number*> 件を処理し、\<*number*> 件のエラーが発生しました。|データ ドリブン サブスクリプション実行の状態を表示します。このメッセージはスケジュールおよび配信のプロセッサで作成されます。|  
+|\<*number*> 件を処理しました|スケジュールおよび配信のプロセッサが正常に配信した通知、または配信の試行が行われなくなった通知の件数です。 データ ドリブンの配信が完了したとき、処理された通知の件数と生成された通知の合計件数が等しくなる必要があります。|  
 |\<*number*> 合計|最後にサブスクリプションを配信したときに生成されたサブスクリプションの通知の合計件数です。|  
 |\<*number*> エラー|スケジュールおよび配信のプロセッサが配信できなかった通知、または配信の試行が行われなくなった通知の件数です。|  
 |電子メールを送信できません: サーバーに接続できなかったため、配信が失敗しました。|レポート サーバーがメール サーバーに接続されなかったことを示します。このメッセージは電子メールの配信拡張機能で作成されます。|  
-|ファイル \<*filename*> が \<path> に保存されました。|ファイル共有の場所への配信が成功したことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
+|ファイル \<*filename*> が \<path> に書き込まれました。|ファイル共有の場所への配信が成功したことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
 |ファイルへの書き込み時に不明のエラーが発生しました。|ファイル共有の場所への配信が失敗したことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
 |接続先のフォルダー \<path> にアクセスしようとしたときにエラーが発生しました。 接続先のフォルダーまたはファイル共有が存在することを確認してください。|指定したフォルダーが見つからなかったことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
 |ファイル \<filename> を \<path> に書き込めませんでした。 再試行しています。|ファイルを新しいバージョンに更新できなかったことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
 |ファイル \<filename> に書き込めません: \<message>|ファイル共有の場所への配信が失敗したことを示します。このメッセージはファイル共有の配信拡張機能で作成されます。|  
-|\<カスタム ステータス メッセージ>|配信拡張機能で提供される、配信の成功および失敗に関する状態メッセージです。 サード パーティまたはカスタムの配信拡張機能を使用している場合、追加の状態メッセージが提供される可能性があります。|  
+|\<custom status messages>|配信拡張機能で提供される、配信の成功および失敗に関する状態メッセージです。 サード パーティまたはカスタムの配信拡張機能を使用している場合、追加の状態メッセージが提供される可能性があります。|  
   
  また、レポート サーバー管理者は、現在処理中の標準のサブスクリプションを監視することもできます。 データ ドリブン サブスクリプションは監視できません。 詳細については、「 [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)」を参照してください。  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742041"
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS ログ ファイル  
  サブスクリプション関連の情報は、SharePoint ULS ログに書き込まれます。 ULS ログの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] イベント構成の詳細については、「[SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)」を参照してください。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションに関連した ULS ログのエントリの例を次に示します。  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Process|領域|カテゴリ|Level|Correlation|Message|  
+|-|-|-|-|-|-|-|  
 |2019/5/21 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外:System.Net.Mail.SmtpException:メールボックスが使用できません。 サーバーの応答内容:5.7.1 クライアントは、次の場所で、この送信者として送信する権限がありません。System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)、System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)、System.Net.Mail.SmtpClient.Send(MailMessage message)、Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> PowerShell を使用してサブスクリプションを監視する  

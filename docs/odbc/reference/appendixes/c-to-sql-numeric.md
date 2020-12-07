@@ -1,4 +1,5 @@
 ---
+description: 'C から SQL へ: 数値'
 title: 'C から SQL: Numeric |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbc0a994ef95f2deca29c8a4cbb06f3167b0433f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111d2bedf6b988255a569587fd766406b6b4176a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421516"
 ---
 # <a name="c-to-sql-numeric"></a>C から SQL へ: 数値
 数値の ODBC C データ型の識別子は次のとおりです。  
@@ -52,7 +53,7 @@ ms.locfileid: "81304733"
   
  SQL_C_UBIGINT  
   
- 次の表は、数値 C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
+ 次の表は、数値 C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「 [データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

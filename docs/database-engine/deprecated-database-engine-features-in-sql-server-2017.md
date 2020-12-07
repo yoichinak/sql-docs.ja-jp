@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5285873c9fc81849d8da8b48140dfbb71281e1aa
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244081"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670523"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
@@ -62,7 +62,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | 非推奨の機能 | 代替 | 機能名 | 機能 ID |
 |--------------------|-------------|--------------|------------|
-バージョン 100 (SQL Server 2008 および SQL Server 2008 R2) からアップグレードします。 | SQL Server バージョンが[サポート](https://aka.ms/sqllifecycle)対象外になったときに、関連するデータベース互換性レベルに非推奨の印が付けられます。 しかし、Microsoft では、アップグレードをより簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。 | Database compatibility level 100 | 108 |
+バージョン 100 (SQL Server 2008 および SQL Server 2008 R2) からアップグレードします。 | SQL Server バージョンが[サポート](/lifecycle/products/?products=sql-server)対象外になったときに、関連するデータベース互換性レベルに非推奨の印が付けられます。 しかし、Microsoft では、アップグレードをより簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。 | Database compatibility level 100 | 108 |
 
 ### <a name="database-objects"></a>データベース オブジェクト
 
@@ -370,6 +370,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
-
+ [SQL Server 2016 で廃止されたデータベース エンジンの機能](./discontinued-database-engine-functionality-in-sql-server.md)  

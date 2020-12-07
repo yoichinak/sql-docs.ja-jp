@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT STOPLIST (Transact-SQL)
 title: DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e7ecfcce3c2805091bd605d5870c85d948d0619e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e82a6c699aa31b58e5bdd79d122754cabf728941
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484380"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131222"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "86484380"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT STOPLIST stoplist_name  
 ;  
 ```  
@@ -52,7 +52,7 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  データベースから削除するフルテキスト ストップリストの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  削除するフルテキスト ストップリストを参照するフルテキスト インデックスが 1 つでもあると、DROP FULLTEXT STOPLIST は失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -61,11 +61,11 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="examples"></a>例  
  次の例では、`myStoplist` というフルテキスト ストップリストを削除します。  
   
-```  
+```sql 
 DROP FULLTEXT STOPLIST myStoplist;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   

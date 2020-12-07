@@ -1,4 +1,5 @@
 ---
+description: prepareStatement (java.lang.String, int, int, int) メソッド
 title: prepareStatement メソッド (java.lang.String, int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 644b5e0f1ff37ba3e955b0f74096d47df10bd01a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432924"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement (java.lang.String, int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_log_on_success (Transact-sql)
 title: sp_syspolicy_set_log_on_success (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485606"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @value = ] value`成功したポリシー評価をログに記録するかどうかを決定します。 *値*は**sqlvariant**で、次のいずれかの値を指定できます。  
+`[ @value = ] value` 成功したポリシー評価をログに記録するかどうかを決定します。 *値* は **sqlvariant**で、次のいずれかの値を指定できます。  
   
 -   0 または 'false' = 成功したポリシー評価はログに記録されません。  
   
 -   1 または 'true' = 成功したポリシー評価がログに記録されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  msdb システム データベースのコンテキストで sp_syspolicy_set_log_on_success を実行する必要があります。  
   
  *Value*が0または ' false ' に設定されている場合、失敗したポリシー評価だけがログに記録されます。  
@@ -69,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DBMS ベースのドライバー診断の例
 title: DBMS ベースのドライバー診断の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 117f43548d2b57233dea6f7423e6bad67b6233b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5425afb18a5582a840966798ea7a7209dba7e1e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424744"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS ベースのドライバー診断の例
 DBMS ベースのドライバーは、DBMS に要求を送信し、ドライバーマネージャーを使用してアプリケーションに情報を返します。 ドライバーはドライバーマネージャーとのインターフェイスを持つコンポーネントであるため、 **SQLGetDiagRec**の引数を書式設定して返します。  
@@ -34,7 +35,7 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CUR
   
  ドライバーでエラーが発生したため、ベンダー ([Microsoft]) とドライバー ([ODBC Rdb ドライバー]) の診断メッセージにプレフィックスが追加されました。  
   
- DBMS が EMPLOYEE テーブルを見つけることができなかった場合、ドライバーは**SQLGetDiagRec**から次の値を書式設定して返します。  
+ DBMS が EMPLOYEE テーブルを見つけることができなかった場合、ドライバーは **SQLGetDiagRec**から次の値を書式設定して返します。  
   
 ```  
 SQLSTATE:         "42S02"  

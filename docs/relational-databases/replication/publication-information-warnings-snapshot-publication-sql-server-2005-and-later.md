@@ -1,4 +1,5 @@
 ---
+description: パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降)
 title: 警告 (スナップショット - レプリケーション モニター)
 decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -14,16 +15,16 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e23c798722928a8374dae43002ba44ca0347c76a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7930a4badc30f1e41f0dd5b9eb577ab19f0da95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423446"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降を実行しているディストリビューターでは、**[警告]** タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   警告を有効にする。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85720925"
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85720925"
  **[変更の保存]**  
  クリックすると、警告およびしきい値に対する変更が保存されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  

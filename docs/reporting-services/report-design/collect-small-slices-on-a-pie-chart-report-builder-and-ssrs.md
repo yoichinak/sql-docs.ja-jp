@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4e51e1a12f28ae18ff6ba833ace19a1a97ba72dd
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462066"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907240"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)
 スライスが多すぎる円グラフは、煩雑に見えることがあります。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで円グラフの多数の小さいスライスを 1 つのスライスにまとめる方法を説明します。
@@ -23,7 +23,7 @@ ms.locfileid: "84462066"
  
  最初にサンプル データを使って試してみたい場合は、「[チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)」で小さいスライスを 1 つのスライスにまとめる手順が説明されています。
  
- ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
+ ![[その他] のスライスを示すレポート ビルダーの円グラフのスクリーンショット。](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
  小さいスライスは、1 つ目の円グラフでまとめられたスライスから切り離し、2 つ目の円グラフにまとめることもできます。 2 つ目の円グラフは元の円グラフの右側に描画されます。  
   
@@ -40,24 +40,24 @@ ms.locfileid: "84462066"
   
 4.  [CollectedStyle] プロパティを **[SingleSlice]** に設定します。  
 
-    ![report-builder-pie-chart-single-slice-property](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
+    ![1 つのスライス プロパティを構成する方法を示すレポート ビルダーの円グラフのスクリーンショット。](../../reporting-services/media/report-builder-pie-chart-single-slice-property.png)
   
 5.  収集されるしきい値としきい値の種類を設定します。 次の例は、収集されるしきい値を設定する一般的な方法です。  
   
     -   **比率で設定します。** たとえば、円グラフ上の 10% 未満の小さいスライスを 1 つのスライスにまとめるには、次の手順を実行します。  
   
-         [CollectedThresholdUsePercent] プロパティを **True**に設定します。  
+         [CollectedThresholdUsePercent] プロパティを **True** に設定します。  
   
-         [CollectedThreshold] プロパティを **10**に設定します。  
+         [CollectedThreshold] プロパティを **10** に設定します。  
   
         > [!NOTE]  
         >  [CollectedStyle] を **[SingleSlice]** に、[CollectedThreshold] を **100** より大きい値に、[CollectedThresholdUsePercent] を **[True]** に設定した場合、グラフではパーセンテージを計算できないため、例外がスローされます。 この問題を解決するには、[CollectedThreshold] を **100** 未満の値に設定します。  
   
     -   **データ値で設定します。** たとえば、円グラフ上の 5,000 未満の小さいスライスを 1 つのスライスにまとめるには、次の手順を実行します。  
   
-         [CollectedThresholdUsePercent] プロパティを **False**に設定します。  
+         [CollectedThresholdUsePercent] プロパティを **False** に設定します。  
   
-         [CollectedThreshold] プロパティを **5000**に設定します。  
+         [CollectedThreshold] プロパティを **5000** に設定します。  
   
 6.  [CollectedLabel] プロパティを、収集されたスライスに表示されるテキスト ラベルを表す文字列に設定します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "84462066"
   
 2.  [CollectedStyle] プロパティを **[CollectedPie]** に設定します。  
   
-3.  [CollectedThreshold] プロパティを、小さいスライスを 1 つのスライスにまとめる基準となるしきい値を表す値に設定します。 [CollectedStyle] プロパティが **CollectedPie**に設定された場合、[CollectedThresholdUsePercent] プロパティは常に **True**に設定され、収集されるしきい値は常に比率で表されます。  
+3.  [CollectedThreshold] プロパティを、小さいスライスを 1 つのスライスにまとめる基準となるしきい値を表す値に設定します。 [CollectedStyle] プロパティが **CollectedPie** に設定された場合、[CollectedThresholdUsePercent] プロパティは常に **True** に設定され、収集されるしきい値は常に比率で表されます。  
   
 4.  (省略可) CollectedColor、CollectedLabel、CollectedLegendText および CollectedToolTip の各プロパティを設定します。 "Collected" という名前を持つその他すべてのプロパティは、まとめられた円に適用されません。  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_value
 title: catalog.set_customized_logging_level_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0eb4147d63c18b910405d3f9b7db3939d44c28f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f5e101e0413381a2b633e758e0d67a0c4c8167b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912895"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129707"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
@@ -38,7 +39,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  *level_name* は **nvarchar(128)** です。  
   
  [ @property_name = ] *property_name*  
- 変更するプロパティの名前。 有効な値は **PROFILE** と **EVENTS**です。  
+ 変更するプロパティの名前。 有効な値は **PROFILE** と **EVENTS** です。  
   
  *Property_name* は **nvarchar(128)** です。  
   
@@ -49,7 +50,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  *property_value* は **bigint** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

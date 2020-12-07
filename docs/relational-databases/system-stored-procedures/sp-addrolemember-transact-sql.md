@@ -1,4 +1,5 @@
 ---
+description: sp_addrolemember (Transact-SQL)
 title: sp_addrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/30/2019
@@ -18,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180111"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670865"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "88180111"
   データベース ユーザー、データベース ロール、Windows ログイン、または Windows グループを、現在のデータベースのデータベース ロールに追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,13 +41,15 @@ ms.locfileid: "88180111"
 ```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
 ```    
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
  [ @rolename =] '*role*'  
- 現在のデータベースのデータベースロールの名前を指定します。 *role*は**sysname**で、既定値はありません。  
+ 現在のデータベースのデータベースロールの名前を指定します。 *role* は **sysname**で、既定値はありません。  
   
  [ @membername =] '*security_account*'  
- ロールに追加するセキュリティアカウントを示します。 *security_account*は**sysname**であり、既定値はありません。 *security_account*には、データベースユーザー、データベースロール、windows ログイン、または windows グループを指定できます。  
+ ロールに追加するセキュリティアカウントを示します。 *security_account* は **sysname**であり、既定値はありません。 *security_account* には、データベースユーザー、データベースロール、windows ログイン、または windows グループを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -116,12 +119,12 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-## <a name="see-also"></a>参照  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

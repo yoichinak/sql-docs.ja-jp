@@ -1,4 +1,5 @@
 ---
+description: レプリケーション エージェント イベントに対する警告の使用
 title: レプリケーション エージェント イベントに対する警告の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dc93e307fb7e9b7afab3717d32dd4be58a1ec818
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919748"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892152"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +42,13 @@ ms.locfileid: "86919748"
 |14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|はい|  
 |14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|はい|  
 |14157|**レプリケーション: 有効期限の切れたサブスクリプションを削除しました**|有効期限の切れたサブスクリプションが削除されました。|いいえ|  
-|20572|**レプリケーション: データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
-|20574|**レプリケーション: サブスクライバーでデータ検証で問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
-|20575|**レプリケーション: サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
+|20572|**レプリケーション:データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
+|20574|**レプリケーション:サブスクライバーでデータ検証の問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
+|20575|**レプリケーション:サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
- これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)」を参照してください。  
+ これらの警告に加え、レプリケーション モニターでは、ステータスおよびパフォーマンスに関連する一連の警告を使用できます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警告システムを使用して、他のレプリケーション イベントの警告を定義することもできます。 詳細については、「[ユーザー定義イベントの作成](../../../ssms/agent/create-a-user-defined-event.md)」を参照してください。  
   
  **定義済みのレプリケーションの警告を構成するには**  
   
@@ -92,5 +93,4 @@ deallocate hc
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [監視 (レプリケーション)](../../../relational-databases/replication/monitor/monitoring-replication.md)  
-  
   

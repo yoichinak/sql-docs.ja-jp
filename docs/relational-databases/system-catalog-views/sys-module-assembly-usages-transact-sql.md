@@ -1,4 +1,5 @@
 ---
+description: sys.module_assembly_usages (Transact-SQL)
 title: module_assembly_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.module_assembly_usages catalog view
 ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: beb4638b5fa9c1e2030f5a5fa5e42a784a165ab6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a69f3d46502dbc116b15b56ebfa8b8074ef58ae8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883786"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537345"
 ---
 # <a name="sysmodule_assembly_usages-transact-sql"></a>sys.module_assembly_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "85883786"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

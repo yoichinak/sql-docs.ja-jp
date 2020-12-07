@@ -1,4 +1,5 @@
 ---
+description: NonEmpty (MDX)
 title: 空でない (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b887988327908f128633349de52f39a17d1e0978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483725"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -34,17 +35,17 @@ NONEMPTY(set_expression1 [,set_expression2])
  *set_expression2*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、2番目のセット内の組全体で評価されるときに、空でない最初の指定されたセット内の組を返します。 **空**でない関数は計算を考慮し、重複する組を保持します。 2番目のセットが指定されていない場合、式は、属性階層のメンバーの現在の座標とキューブ内のメジャーのコンテキストで評価されます。  
   
 > [!NOTE]  
->  非推奨の[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)関数ではなく、この関数を使用します。  
+>  非推奨の [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md) 関数ではなく、この関数を使用します。  
   
 > [!IMPORTANT]  
 >  空以外は、組自体ではなく、組によって参照されるセルの特性です。  
   
-## <a name="examples"></a>使用例  
- 次のクエリは、**空**でないの簡単な例を示しています。この例では、2001年7月1日に Internet Sales Amount の null 以外の値を持つすべての顧客が返されます。  
+## <a name="examples"></a>例  
+ 次のクエリは、 **空**でないの簡単な例を示しています。この例では、2001年7月1日に Internet Sales Amount の null 以外の値を持つすべての顧客が返されます。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -60,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 次の例では、顧客と購入日を含む組のセットを返します。**フィルター**関数と**空**でない関数を使用して、各顧客が購入した最後の日付を検索します。  
+ 次の例では、顧客と購入日を含む組のセットを返します。 **フィルター** 関数と **空** でない関数を使用して、各顧客が購入した最後の日付を検索します。  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -86,7 +87,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
  [MDX&#41;のフィルター処理 &#40;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   

@@ -1,4 +1,5 @@
 ---
+description: 並べ替え変換
 title: 並べ替え変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca81d0c01b618fd880e3e0ae8c2afe830f8dc24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7830dbd1bcb5daf81234a6948b13effc37a3b46b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914284"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195936"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
 
@@ -50,7 +51,7 @@ ms.locfileid: "86914284"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86914284"
 ## <a name="sort-transformation-editor"></a>並べ替え変換エディター
   **[並べ替え変換エディター]** ダイアログ ボックスを使用すると、並べ替える列を選択し、並べ替え順を設定して、重複する部分を削除するかどうかを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **使用できる入力列**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
@@ -94,5 +95,4 @@ ms.locfileid: "86914284"
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

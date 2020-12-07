@@ -1,4 +1,5 @@
 ---
+description: テーブル名
 title: テーブル名 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b264999f800e4387099240526f558110c39e27a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471460"
 ---
 # <a name="table-names"></a>テーブル名
 DBASE、Microsoft Excel、Paradox、または Text driver が使用されている場合、SELECT または DELETE の FROM 句で使用されるテーブル名、INSERT の INTO 句、および after UPDATE、CREATE TABLE、および DROP TABLE の後に、有効なパス、プライマリ名、およびファイル名拡張子を含めることができます。  

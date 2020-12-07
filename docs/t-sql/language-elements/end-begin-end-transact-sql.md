@@ -1,4 +1,5 @@
 ---
+description: END (BEGIN...END) (Transact-SQL)
 title: END (BEGIN...END) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9bfb64ba2763de78a9d3636d6f73200c00046eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c50de2be56f75681675511755cca1a3bf1641c60
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915502"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196586"
 ---
 # <a name="end-beginend-transact-sql"></a>END (BEGIN...END) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,20 +56,19 @@ END
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`BEGIN` と `END` を使用して、まとめて実行する一連の [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを定義します。 `BEGIN...END` ブロックが含まれていない場合、次の例は連続するループになります。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @Iteration Integer = 0  
+DECLARE @Iteration INTEGER = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
     FROM dbo.DimCustomer WHERE LastName = 'Adams';  
 SET @Iteration += 1  
 END;  
-  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   

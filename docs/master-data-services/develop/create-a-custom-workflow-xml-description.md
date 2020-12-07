@@ -1,4 +1,5 @@
 ---
+description: カスタム ワークフローの作成 - XML の説明
 title: カスタム ワークフローの XML の説明
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,18 +11,18 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389788"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>カスタム ワークフローの作成 - XML の説明
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  では、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ワークフローの開始時に、SQL SERVER MDS Workflow Integration Service によって、 [MasterDataServices *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))メソッドが呼び出されています。 このメソッドは、ワークフロー ビジネス ルールをトリガーしたアイテムに関するメタデータとデータを、XML のブロックとして受け取ります。 ワークフロー ハンドラーを実装するコードの例については、「[カスタム ワークフローの例 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)」を参照してください。  
+  では、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ワークフローの開始時に、SQL SERVER MDS Workflow Integration Service によって、 [MasterDataServices *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) メソッドが呼び出されています。 このメソッドは、ワークフロー ビジネス ルールをトリガーしたアイテムに関するメタデータとデータを、XML のブロックとして受け取ります。 ワークフロー ハンドラーを実装するコードの例については、「[カスタム ワークフローの例 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)」を参照してください。  
   
  次の例は、ワークフロー ハンドラーに送られる XML の内容を示したものです。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85897424"
 |\<Name>|変更されたメンバーの最初の属性。 この例のメンバーには、Name 属性と Code 属性のみが含まれています。|  
 |\<Code>|変更されたメンバーの次の属性。 この例のメンバーにさらに多くの属性が含まれていた場合、それらはこのタグの後に続きます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタムワークフロー &#40;マスターデータサービスの作成&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [カスタム ワークフローの例 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   

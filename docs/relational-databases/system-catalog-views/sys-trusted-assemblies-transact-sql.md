@@ -1,5 +1,6 @@
 ---
-title: trusted_assemblies (Transact-sql) |Microsoft Docs
+description: sys.trusted_assemblies (Transact-SQL)
+title: sys.trusted_assemblies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8144e6a134edf3331b34f5c91f6d676e6a9302f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4cbf5b3310d23f5bc3f488a536447d0dc3e92350
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733405"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243838"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -41,13 +42,15 @@ ms.locfileid: "85733405"
 |created_by |nvarchar(128) |アセンブリをリストに追加したプリンシパルのログイン名。 |
 | | | |
 
+### <a name="permissions"></a>アクセス許可  
+ サーバーに対する VIEW SERVER STATE 権限が必要です。  
+ 
+## <a name="remarks"></a>解説  
+**[Sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)** を使用して、からアセンブリを削除し、 **[sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)** し `sys.trusted_assemblies` ます。
 
-## <a name="remarks"></a>Remarks  
-
-を使用して**sp_add_trusted_assembly を追加**し、 **sys を追加する必要**があります。また、からアセンブリを追加または削除 trusted_assemblies。 `sys.trusted_assemblies`
-
-## <a name="see-also"></a>関連項目  
-  [sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys. sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [drop assembly &#40;transact-sql&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+## <a name="see-also"></a>参照  
+  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)  
+  [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
-

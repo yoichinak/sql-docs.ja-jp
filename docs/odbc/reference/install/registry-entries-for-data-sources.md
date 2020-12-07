@@ -1,4 +1,5 @@
 ---
+description: データ ソースのレジストリ エントリ
 title: データソースのレジストリエントリ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82759a988a0a2ff290d67406a1450ec9cb228a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461304"
 ---
 # <a name="registry-entries-for-data-sources"></a>データ ソースのレジストリ エントリ
 > [!NOTE]  
@@ -37,7 +38,7 @@ ms.locfileid: "81296272"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- どのキーが使用されるかは、データソースが*システムデータソース*であるか、すべてのユーザーが利用できるか、または現在のユーザーのみが使用できる*ユーザーデータソース*であるかによって異なります。 システムデータソースは HKEY_LOCAL_MACHINE ツリーに格納され、ユーザーデータソースは HKEY_CURRENT_USER ツリーに格納されます。 それ以外の点では、システムデータソースとユーザーデータソースは同じです。  
+ どのキーが使用されるかは、データソースが *システムデータソース* であるか、すべてのユーザーが利用できるか、または現在のユーザーのみが使用できる *ユーザーデータソース* であるかによって異なります。 システムデータソースは HKEY_LOCAL_MACHINE ツリーに格納され、ユーザーデータソースは HKEY_CURRENT_USER ツリーに格納されます。 それ以外の点では、システムデータソースとユーザーデータソースは同じです。  
   
  このセクションでは、次のトピックを扱います。  
   

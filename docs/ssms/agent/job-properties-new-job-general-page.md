@@ -1,4 +1,5 @@
 ---
+description: ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
 title: ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,38 +14,38 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eeb3b97ab94c9510ae66b3ebf6c018799dcf07a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9da8480712a40612b4078af57864dffdec561c4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764123"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037921"
 ---
 # <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの全般プロパティを表示および変更できます。  
   
 ## <a name="options"></a>オプション  
-**Name**  
+**名前**  
 ジョブの名前を変更します。  
   
-**[所有者]**  
+**所有者**  
 ジョブの所有者を選択します。  
   
 **カテゴリ**  
 ジョブのカテゴリを選択します。  
   
-**[...]**  
+**...**  
 選択したカテゴリのジョブを表示します。  
   
 **説明**  
 ジョブの説明を変更します。  
   
-**有効**  
+**Enabled**  
 ジョブを有効にします。 ジョブが有効ではない場合、スケジュールや警告に応じてジョブが実行されることはありませんが、 **sp_start_job** ストアド プロシージャを使用して引き続きジョブを開始することができます。  
   
 **ソース**  
@@ -65,4 +66,3 @@ ms.locfileid: "85764123"
 ## <a name="see-also"></a>参照  
 [ジョブの実装](../../ssms/agent/implement-jobs.md)  
 [[ジョブ カテゴリ] - [ジョブ カテゴリの管理]](../../ssms/agent/job-categories-manage-job-categories.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: dm_os_virtual_address_dump (Transact-sql)
 title: dm_os_virtual_address_dump (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_virtual_address_dump dynamic management view
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e261a40797bbcdeaaa2226c3bd127a3ff03e7d43
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 731d180d3f269c6404c9cadf9587099d6ee48f41
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396729"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539276"
 ---
 # <a name="sysdm_os_virtual_address_dump-transact-sql"></a>dm_os_virtual_address_dump (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87396729"
 |**region_state**|**varbinary (8)**|領域の現在の状態。 これは、次のいずれかになります。<br /><br /> -MEM_COMMIT<br />-MEM_RESERVE<br />-MEM_FREE<br /><br /> NULL 値は許可されません。|  
 |**region_current_protection**|**varbinary (8)**|保護属性。 値は、次のいずれかになります。<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-PAGE_EXECUTE_READWRITE<br />-PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> NULL 値は許可されません。|  
 |**region_type**|**varbinary (8)**|領域内のページの種類を識別します。 値は次のいずれかになります。<br /><br /> -MEM_PRIVATE<br />-MEM_MAPPED<br />-MEM_IMAGE<br /><br /> NULL 値は許可されません。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

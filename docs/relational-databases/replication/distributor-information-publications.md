@@ -1,4 +1,5 @@
 ---
+description: ディストリビューター情報、パブリケーション
 title: ディストリビューター情報、パブリケーション | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653552"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121333"
 ---
 # <a name="distributor-information-publications"></a>ディストリビューター情報、パブリケーション
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85653552"
 ### <a name="snapshot-replication"></a>スナップショット レプリケーション 
   スナップショット パブリケーションのサブスクリプションの情報にはパブリッシャーの名前が含まれます。 それ以外は、このダイアログ ボックスで提供される機能と情報はパブリッシャーのビューと同様です。 このダイアログ ボックスに関する情報については、「[Publisher Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)」 (パブリッシャー情報、サブスクリプション ウォッチ リスト スナップショット (スナップショット パブリケーション、SQL Server 2005 以降)) を参照してください。  
 
-## <a name="agents"></a>[エージェント]
+## <a name="agents"></a>エージェント
 **[エージェント]** タブには、パブリッシャーおよびサブスクライバーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
   
  ディストリビューター ビューのディストリビューターの **[エージェント]** タブで利用可能なエージェントには、パブリッシャーの **[エージェント]** タブで利用可能なすべてのエージェントが含まれています。 ただし、ディストリビューター ビューのディストリビューターの **[エージェント]** タブには、ディストリビューター エージェントおよびマージ エージェントも含まれています。  
@@ -56,7 +57,7 @@ ms.locfileid: "85653552"
  エージェントの状態です。 表示される状態の種類を、次に示します。  
   
 -   エラー    
--   [再試行]    
+-   再試行    
 -   実行中    
 -   停止中   
 -   [一度も開始していない]  
@@ -64,7 +65,7 @@ ms.locfileid: "85653552"
  **発行元**  
  パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスです。  
   
- **パブリケーション**  
+ **Publication**  
  エージェントが関連付けられているパブリケーションの名前です。  
   
  **サブスクリプション**  
@@ -103,7 +104,7 @@ ms.locfileid: "85653552"
   
 -   エラー  
   
--   [再試行]  
+-   再試行  
   
 -   実行中  
   
@@ -114,7 +115,7 @@ ms.locfileid: "85653552"
  **発行元**  
  パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスです。  
   
- **パブリケーション**  
+ **Publication**  
  エージェントが関連付けられているパブリケーションの名前です。  
   
  **サブスクリプション**  

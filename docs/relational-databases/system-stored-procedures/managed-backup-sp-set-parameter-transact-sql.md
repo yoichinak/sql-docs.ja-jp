@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 sp_set_parameter (Transact-sql)
 title: managed_backup。 sp_set_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,13 +19,14 @@ helpviewer_keywords:
 - sp_set_parameter
 - smart_admin.sp_set_parameter
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfb0a9ddbdec9ebe94dd3bda4307a5fdf31e1c29
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052918"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546275"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup。 sp_set_parameter (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,22 +46,22 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @parameter_name  
- 値を設定するパラメーターの名前。 @parameter_nameNVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**storageoperationdebugxevent**です。  
+ 値を設定するパラメーターの名前。 @parameter_name NVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および **storageoperationdebugxevent**です。  
   
  @parameter_value  
- 設定するパラメーターの値。 @parameter値は NVARCHAR (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
+ 設定するパラメーターの値。 @parameter 値は NVARCHAR (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
   
--   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' email '  
+-   @parameter_name = ' SSMBackup2WANotificationEmailIds ': @parameter_value  = ' email '  
   
--   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' SSMBackup2WADebugXevent ': @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' FileRetentionDebugXevent ': @parameter_value = {' true ' |' false '}  
+-   @parameter_name = ' FileRetentionDebugXevent ': @parameter_value  = {' true ' |' false '}  
   
--   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' |' false '}  
+-   @parameter_name = ' StorageOperationDebugXevent ' = {' true ' |' false '}  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -67,10 +69,10 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="best-practices"></a>ベスト プラクティス  
  ステートメントまたはルーチンの実行時にユーザーが知る必要のあるベストプラクティスについて説明する省略可能なセクションです。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- Managed_backup に対する**EXECUTE**権限が必要です **。 sp_set_parameter**ストアドプロシージャ。  
+ Managed_backup に対する **EXECUTE** 権限が必要です **。 sp_set_parameter** ストアドプロシージャ。  
   
 ## <a name="examples"></a>例  
  次の例では、拡張イベントの操作とデバッグを有効にします。  

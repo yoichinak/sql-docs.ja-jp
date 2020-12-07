@@ -1,4 +1,5 @@
 ---
+description: INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にする方法
 title: INSERT ステートメントと UPDATE ステートメントで外部キー制約を無効にする
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84d49673a2a3d3483dc80f5c19cd11188dce159e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d68a5689d31d5db0e4221e4fc58ec5d724ee4fdf
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394417"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130883"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にする方法
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87394417"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にするには:**  
   
@@ -57,7 +58,7 @@ ms.locfileid: "87394417"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、制約が含まれているテーブルを展開し、 **[キー]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、制約が含まれているテーブルを展開し、 **[キー]** フォルダーを展開します。  
   
 2.  制約を右クリックし、 **[変更]** をクリックします。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "87394417"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

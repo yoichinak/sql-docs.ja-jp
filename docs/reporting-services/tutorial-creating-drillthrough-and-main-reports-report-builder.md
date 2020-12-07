@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e5d34588bef3022f340d6a52dded1b03aad30d0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238406"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364644"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
@@ -37,7 +37,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 全般的な要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
 ## <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用して詳細レポートを作成する  
-[作業の開始] ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
+[作業の開始] ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード** を使用してマトリックス レポートを作成します。 このウィザードには、レポート デザイン モードと共有データセット デザイン モードの 2 つのモードがあります。 このチュートリアルでは、レポート デザイン モードを使用します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
@@ -123,7 +123,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online および Reseller。  
   
-6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
+6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name** の下) にドラッグします。  
   
 7.  **[フィルター式]** の一覧を開き、 **[All Sales Territory]** を展開して **[North America]** をクリックし、 **[OK]** をクリックします。  
   
@@ -141,7 +141,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-the-parameter"></a>パラメーターを作成するには  
   
-1.  Product ディメンションを展開し、Product Category Name メンバーを **[階層]** 列 ( **Calendar Year**の下) にドラッグします。  
+1.  Product ディメンションを展開し、Product Category Name メンバーを **[階層]** 列 ( **Calendar Year** の下) にドラッグします。  
   
 2.  **[フィルター式]** の一覧を開き、 **[All Products]** をクリックして、 **[OK]** をクリックします。  
   
@@ -166,7 +166,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 7.  **[次へ]** をクリックします。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. データをグループにまとめる  
+## <a name="1c-organize-drillthrough-report-data-into-groups"></a><a name="DLayout"></a>1c. 詳細レポート データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -192,7 +192,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  **[次へ]** をクリックします。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 小計と合計を追加する  
+## <a name="1d-add-drillthrough-report-subtotals-and-totals"></a><a name="DTotals"></a>1d. 詳細レポートの小計と合計を追加する  
 グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかも選択できます。  
   
 #### <a name="to-add-subtotals-and-totals"></a>小計と合計を追加するには  
@@ -280,7 +280,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 レポート タイトルに含まれるのは、最初の製品カテゴリの名前です。 この後の手順でこのレポートを詳細レポートとして実行すると、メイン レポートでクリックした製品カテゴリの名前を反映して製品カテゴリの名前が動的に変化します。  
   
-## <a name="5-update-parameter-properties"></a><a name="DParameter"></a>5.パラメーターのプロパティを更新する  
+## <a name="5-set-hidden-parameter-property"></a><a name="DParameter"></a>5.パラメーターのプロパティを非表示に設定する  
 既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 したがって、詳細レポートのパラメーターのプロパティを更新します。  
   
 #### <a name="to-hide-a-parameter"></a>パラメーターを非表示にするには  
@@ -294,7 +294,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[全般]** タブで **[非表示]** をクリックします。  
   
-4.  **[プロンプト]** ボックスに「 **Product Category**」と入力します。  
+4.  **[プロンプト]** ボックスに「 **Product Category** 」と入力します。  
   
     > [!NOTE]  
     > このパラメーターは非表示なので、このプロンプトは使用されません。  
@@ -329,7 +329,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  レポートを保存するライブラリに移動します。  
   
-6.  **[名前]** ボックスに表示されている既定の名前を「 **ResellerVSOnlineDrillthrough**」に変更します。  
+6.  **[名前]** ボックスに表示されている既定の名前を「 **ResellerVSOnlineDrillthrough** 」に変更します。  
   
     > [!NOTE]  
     > メイン レポートも同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションのパスを更新する必要があります。  
@@ -337,7 +337,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 7.  **[保存]** をクリックします。  
   
 ## <a name="1-create-the-main-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1.テーブルまたはマトリックス ウィザードを使用してメイン レポートを作成する  
-**[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
+**[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード** を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-the-main-report"></a>メイン レポートを作成するには  
   
@@ -349,7 +349,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
  
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-## <a name="1a-specify-a-data-connection"></a><a name="MConnection"></a>1a. データ接続を指定する  
+## <a name="1a-add-embedded-data-source"></a><a name="MConnection"></a>1a. 埋め込みデータ ソースを追加する  
 メイン レポートに埋め込みデータ ソースを追加します。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -388,7 +388,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 14. **[次へ]** をクリックします。  
   
-## <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. MDX クエリを作成する  
+## <a name="1b-create-embedded-dataset"></a><a name="MMDXQuery"></a>1b. 埋め込みデータセットを作成する  
 次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -414,7 +414,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online および Reseller。  
   
-6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
+6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name** の下) にドラッグします。  
   
 7.  **[フィルター式]** の一覧を開き、 **[All Sales Territory]** を展開して **[North America]** をクリックし、 **[OK]** をクリックします。  
   
@@ -432,7 +432,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-the-parameter"></a>パラメーターを作成するには  
   
-1.  Product ディメンションを展開し、Product Category Name メンバーを **[階層]** 列 ( **Sales Territory Group**の下) にドラッグします。  
+1.  Product ディメンションを展開し、Product Category Name メンバーを **[階層]** 列 ( **Sales Territory Group** の下) にドラッグします。  
   
 2.  **[フィルター式]** の一覧を開き、 **[All Products]** をクリックして、 **[OK]** をクリックします。  
   
@@ -452,7 +452,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
     [Measures].[Sales Quantity] - [Measures].[Sales Return Quantity]  
     ```  
   
-4.  [名前] ボックスに「 **Net QTY**」と入力し、 **[OK]** をクリックします。  
+4.  [名前] ボックスに「 **Net QTY** 」と入力し、 **[OK]** をクリックします。  
   
     計算されるメンバー ペインに、計算されるメンバー **Net QTY** が表示されます。  
   
@@ -468,7 +468,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
     [Measures].[Sales Amount] - [Measures].[Sales Return Amount]  
     ```  
   
-8.  **[名前]** ボックスに「  **Net Sales**」と入力し、 **[OK]** をクリックします。計算されるメンバー ペインに、計算されるメンバー **Net Sales** が表示されます。  
+8.  **[名前]** ボックスに「  **Net Sales** 」と入力し、 **[OK]** をクリックします。計算されるメンバー ペインに、計算されるメンバー **Net Sales** が表示されます。  
   
 ### <a name="to-create-the-dataset"></a><a name="MSkip"></a>データセットを作成するには  
   
@@ -486,7 +486,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 6.  **[次へ]** をクリックします。  
   
-## <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. データをグループにまとめる  
+## <a name="1c-organize-main-report-data-into-groups"></a><a name="MLayout"></a>1c. メイン レポート データをグループにまとめる  
 データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -505,7 +505,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     手順 3. および 4. で、マトリックスに表示するデータが指定されます。  
   
-## <a name="1d-add-subtotals-and-totals"></a><a name="MTotals"></a>1d. 小計と合計を追加する  
+## <a name="1d-add-main-report-subtotals-and-totals"></a><a name="MTotals"></a>1d. メイン レポートの小計と合計を追加する  
 レポートには小計と総計を表示できます。 メイン レポートのデータはインジケーターとして表示されるため、ウィザードの完了後に総計を削除します。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>小計と総計を追加するには  
@@ -590,7 +590,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_QTY`] を選択します。  
   
-6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 2. ～ 5. を繰り返します。  
+6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある** セルに対して、手順 2. ～ 5. を繰り返します。  
   
 #### <a name="to-add-an-indicator-for-net-sales-values"></a>Net Sales 値のインジケーターを追加するには  
   
@@ -602,11 +602,11 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_Sales`] を選択します。  
   
-5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 1. ～ 4. を繰り返します。  
+5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある** セルに対して、手順 1. ～ 4. を繰り返します。  
   
 6.  レポートをプレビューするには、 **[実行]** をクリックします。  
   
-## <a name="5-update-parameter-properties"></a><a name="MParameter"></a>5.パラメーターのプロパティを更新する  
+## <a name="5-set-internal-parameter-property"></a><a name="MParameter"></a>5.内部パラメーターのプロパティを設定する  
 既定ではパラメーターが表示されますが、この設定は、このレポートには適していません。 パラメーターのプロパティを更新して、パラメーターを内部パラメーターにします。  
   
 #### <a name="to-make-the-parameter-internal"></a>パラメーターを内部パラメーターにするには  
@@ -628,7 +628,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「**2009 Product Category Sales:Online and Reseller Category:** 」と入力します。  
+2.  「 **2009 Product Category Sales:Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   
@@ -655,7 +655,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  レポートを保存するライブラリに移動します。  
   
-6.  **[名前]** に表示されている既定の名前を「 **ResellerVSOnlineMain**」に変更します。  
+6.  **[名前]** に表示されている既定の名前を「 **ResellerVSOnlineMain** 」に変更します。  
   
     > [!IMPORTANT]  
     > メイン レポートは、詳細レポートを保存した場所と同じ場所に保存します。 メイン レポートと詳細レポートをそれぞれ異なるサイトまたはライブラリに保存する場合は、メイン レポートの **[レポートに移動する]** アクションで指定されている詳細レポートの場所が正しいことを確認してください。  

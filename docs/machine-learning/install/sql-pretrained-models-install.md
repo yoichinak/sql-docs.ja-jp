@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6407ed2cd23b8fad1f63a1b670a4cce2ad54790c
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771762"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793749"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習モデルを SQL Server にインストールする
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-この記事では Powershell を使用して、"*感情分析*" および "*イメージの特性付け*" のための事前トレーニング済みの機械学習モデルを、R または Python が統合されている SQL Server インスタンスに追加する方法について説明します。 事前トレーニング済みのモデルは Microsoft によって構築され、すぐに使用できる状態で、インストール後のタスクとしてインスタンスに追加されます。 これらのモデルの詳細については、この記事の「[リソース](#bkmk_resources)」セクションを参照してください。
+この記事では、PowerShell を使用して、" *感情分析* " および " *イメージの特性付け* " のための無料の事前トレーニング済みの機械学習モデルを、R または Python が統合されている SQL Server インスタンスに追加する方法について説明します。 事前トレーニング済みのモデルは Microsoft によって構築され、すぐに使用できる状態で、インストール後のタスクとしてインスタンスに追加されます。 これらのモデルの詳細については、この記事の「[リソース](#bkmk_resources)」セクションを参照してください。
 
 インストールが完了すると、事前トレーニング済みのモデルは、MicrosoftML (R) ライブラリと microsoftml (Python) ライブラリの特定の機能を強化する実装の詳細と見なされます。 モデルを表示、カスタマイズ、または再トレーニングしないでください (そうすることもできません)。また、これらをカスタム コードの独立したリソースとして扱うことや、他の関数と組み合わせて使用することもできません。 
 
@@ -27,8 +27,8 @@ ms.locfileid: "85771762"
 
 | R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像ファイル入力からテキスト情報を抽出します。 |
+| [getSentiment](/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](/machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
+| [featurizeImage](/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像ファイル入力からテキスト情報を抽出します。 |
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -39,15 +39,15 @@ ms.locfileid: "85771762"
 外部スクリプトを有効にし、SQL Server LaunchPad サービスが実行されている必要があります。 インストール手順では、これらの機能を有効にして確認する手順について説明します。 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-[MicrosoftML R パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)または [microsoftml Python パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)には、事前トレーニング済みモデルが含まれています。
+[MicrosoftML R パッケージ](/machine-learning-server/r-reference/microsoftml/microsoftml-package)または [microsoftml Python パッケージ](/machine-learning-server/python-reference/microsoftml/microsoftml-package)には、事前トレーニング済みモデルが含まれています。
 
 [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) には、機械学習ライブラリの両方の言語バージョンが含まれているため、ユーザー側でこれ以上の操作をしなくてもこの前提条件は満たされます。 ライブラリが存在するため、この記事で説明されている PowerShell スクリプトを使用して、事前トレーニング済みのモデルをこれらのライブラリに追加できます。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[MicrosoftML R package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) には、事前トレーニング済みモデルが含まれています。
+[MicrosoftML R package](/machine-learning-server/r-reference/microsoftml/microsoftml-package) には、事前トレーニング済みモデルが含まれています。
 
-[SQL Server R Services](sql-r-services-windows-install.md) は、R 専用であり、すぐに使用可能な [MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)が含まれていません。 MicrosoftML を追加するには、[コンポーネントのアップグレード](../install/upgrade-r-and-python.md)を行う必要があります。 コンポーネントのアップグレードの利点の 1 つは、事前トレーニング済みのモデルを同時に複数追加できるため、PowerShell スクリプトを実行する必要がないことです。 ただし、既にアップグレードしたが、事前トレーニング済みのモデルを最初に追加しなかった場合は、この記事の説明に従って PowerShell スクリプトを実行できます。 これは両方のバージョンの SQL Server で機能します。 その前に、`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` に MicrosoftML ライブラリが存在することを確認してください。
+[SQL Server R Services](sql-r-services-windows-install.md) は、R 専用であり、すぐに使用可能な [MicrosoftML パッケージ](/machine-learning-server/r-reference/microsoftml/microsoftml-package)が含まれていません。 MicrosoftML を追加するには、[コンポーネントのアップグレード](../install/upgrade-r-and-python.md)を行う必要があります。 コンポーネントのアップグレードの利点の 1 つは、事前トレーニング済みのモデルを同時に複数追加できるため、PowerShell スクリプトを実行する必要がないことです。 ただし、既にアップグレードしたが、事前トレーニング済みのモデルを最初に追加しなかった場合は、この記事の説明に従って PowerShell スクリプトを実行できます。 これは両方のバージョンの SQL Server で機能します。 その前に、`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` に MicrosoftML ライブラリが存在することを確認してください。
 ::: moniker-end
 
 <a name="file-location"></a>
@@ -196,7 +196,7 @@ R モデルと Python モデルのインストール パスは次のとおりで
 
 ## <a name="research-and-resources"></a>調査とリソース
 
-現在使用できるモデルは、感情分析とイメージ分類のためのディープ ニューラル ネットワーク (DNN) モデルです。 事前トレーニング済みのモデルはすべて、Microsoft の [Computation Network Toolkit](https://cntk.ai/Features/Index.html) (**CNTK**) を使用してトレーニングされています。
+現在使用できるモデルは、感情分析とイメージ分類のためのディープ ニューラル ネットワーク (DNN) モデルです。 事前トレーニング済みのモデルはすべて、Microsoft の [Computation Network Toolkit](https://cntk.ai/Features/Index.html) ( **CNTK** ) を使用してトレーニングされています。
 
 各ネットワークの構成は、次の参照実装に基づいています。
 
@@ -215,5 +215,5 @@ R モデルと Python モデルのインストール パスは次のとおりで
 
 + [SQL Server Machine Learning サービス](sql-machine-learning-services-windows-install.md)
 + [SQL Server のインスタンス内の R および Python コンポーネントをアップグレードする](../install/upgrade-r-and-python.md)
-+ [R 用の MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [Python 用の microsoftml パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [R 用の MicrosoftML パッケージ](/machine-learning-server/r-reference/microsoftml/microsoftml-package)
++ [Python 用の microsoftml パッケージ](/machine-learning-server/python-reference/microsoftml/microsoftml-package)

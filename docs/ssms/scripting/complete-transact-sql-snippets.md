@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7abde619db694c4b1157b2258491d73f7d1bd979
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 7f5e6f93c102c4f08d2f52e0359e77d2c450a74d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122893"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039113"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL スニペットの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "87122893"
 3.  一覧からアイテムを選択するか、置換を入力します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
- [ブロックの挿入 Transact-SQL スニペットの挿入](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Transact-SQL スニペットの挿入](./insert-transact-sql-snippets.md)   
+ [ブロックの挿入 Transact-SQL スニペットの挿入](./insert-surround-with-transact-sql-snippets.md)  
   

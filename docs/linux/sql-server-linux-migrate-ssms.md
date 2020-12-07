@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f83f95fa17e99c20754bbde9d1d4a7fb388df74b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887844"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115695"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows 上で SSMS または SqlPackage.exe を使用して Linux 上でデータベースをエクスポートおよびインポートする
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) と [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) を使用して SQL Server on Linux 上でデータベースをエクスポートおよびインポートする方法について説明します。 SSMS と SqlPackage.exe は Windows アプリケーションなので、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがある場合は、この手法を使用します。
+この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) と [SqlPackage.exe](../tools/sqlpackage.md) を使用して SQL Server on Linux 上でデータベースをエクスポートおよびインポートする方法について説明します。 SSMS と SqlPackage.exe は Windows アプリケーションなので、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがある場合は、この手法を使用します。
 
 [Windows 上の SSMS を使用して SQL Server on Linux に接続する方法](sql-server-linux-manage-ssms.md)に関するページの説明に従い、常に SQL Server Management Studio (SSMS) の最新バージョンをインストールして使用するようにします。
 
@@ -32,7 +32,7 @@ ms.locfileid: "85887844"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. オブジェクト エクスプローラーでソース データベースに接続します。 オンプレミスまたはクラウドの Linux、Windows、または Docker で実行されている Microsoft SQL Server、および Azure SQL Database または Azure SQL Data Warehouse のソース データベースを使用できます。
+2. オブジェクト エクスプローラーでソース データベースに接続します。 オンプレミスまたはクラウドの Linux、Windows、または Docker で実行されている Microsoft SQL Server、および Azure SQL Database または Azure Synapse Analytics のソース データベースを使用できます。
 
 3. オブジェクト エクスプローラーでソース データベースを右クリックし、 **[タスク]** をポイントして、 **[データ層アプリケーションのエクスポート]** をクリックします。
 
@@ -50,7 +50,7 @@ ms.locfileid: "85887844"
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. オブジェクト エクスプローラーでターゲット サーバーに接続します。 オンプレミスまたはクラウドの Linux、Windows、または Docker で実行されている Microsoft SQL Server、および Azure SQL Database または Azure SQL Data Warehouse のターゲット サーバーを使用できます。
+2. オブジェクト エクスプローラーでターゲット サーバーに接続します。 オンプレミスまたはクラウドの Linux、Windows、または Docker で実行されている Microsoft SQL Server、および Azure SQL Database または Azure Synapse Analytics のターゲット サーバーを使用できます。
 
 3. オブジェクト エクスプローラーで **Databases** フォルダーを右クリックし、 **[データ層アプリケーションのインポート]** をクリックします
 
@@ -64,7 +64,7 @@ ms.locfileid: "85887844"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage のコマンドライン オプション
 
-また、SQL Server Data Tools (SSDT) コマンドライン ツールである [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) を使用して、BACPAC ファイルをエクスポートおよびインポートすることもできます。
+また、SQL Server Data Tools (SSDT) コマンドライン ツールである [SqlPackage.exe](../tools/sqlpackage.md) を使用して、BACPAC ファイルをエクスポートおよびインポートすることもできます。
 
 次のコマンド例では、BACPAC ファイルをエクスポートします。
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>関連項目
-SSMS の使用方法の詳細については、[SQL Server Management Studio の使用](https://msdn.microsoft.com/library/ms174173.aspx)に関するページを参照してください。 SqlPackage.exe の詳細については、[SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)を参照してください。
+SSMS の使用方法の詳細については、[SQL Server Management Studio の使用](../ssms/sql-server-management-studio-ssms.md)に関するページを参照してください。 SqlPackage.exe の詳細については、[SqlPackage のリファレンス ドキュメント](../tools/sqlpackage.md)を参照してください。

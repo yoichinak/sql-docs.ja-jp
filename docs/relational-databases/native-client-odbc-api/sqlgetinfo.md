@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo
 title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,30 +15,31 @@ ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e716e9400b41a2b8c7726efa6f3208ea637727d9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d98baf95cbc3efac8c5bf36b53b6e0d88097e3a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000359"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810988"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   この表は、 **SQLGetInfo**によって返される値を示しています。 返される値は、接続先サーバーのバージョン番号によって異なる場合があります。  
   
- **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアントの Sqlgetinfo は、 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlgetinfo**が SQL_KEYWORDS でバッファー長が0の場合に、ODBC ドライバー (SQLSRV32.DLL) の sqlgetinfo とは異なります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の**SQLGetInfo**は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブクライアントの Sqlgetinfo は、 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sqlgetinfo**が SQL_KEYWORDS でバッファー長が0の場合に、ODBC ドライバー (SQLSRV32.DLL) の sqlgetinfo とは異なります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーは SQL_SUCCESS を返しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは SQL_SUCCESS_WITH_INFO を返します。  ただし、出力キーワード文字列よりも小さい0以外のバッファー長を指定して呼び出された場合、Native Client の **SQLGetInfo** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO と SQLState 01004 を返します。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーは、この**SQLGetInfo**要求に対して0を返します。|  
-|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーは、この**SQLGetInfo**要求に対して0を返します。|  
-|SQL_ACTIVE_STATEMENTS|ドライバーは、この**SQLGetInfo**要求に対して1を返します。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
-|SQL_ALTER_DOMAIN|false|  
+|SQL_ACTIVE_CONNECTIONS|接続数は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって制限されます。 ドライバーは、この **SQLGetInfo** 要求に対して0を返します。|  
+|SQL_ACTIVE_ENVIRONMENTS|環境の数はドライバーによって制限されません。 ドライバーは、この **SQLGetInfo** 要求に対して0を返します。|  
+|SQL_ACTIVE_STATEMENTS|ドライバーは、この **SQLGetInfo** 要求に対して1を返します。 アプリケーションで使用できるステートメント ハンドルの数はドライバーによって制限されませんが、あるステートメント ハンドルでの既定の実行が、別のハンドルでの実行をブロックすることがあります。|  
+|SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN、SQL_AT_ADD_COLUMN_DEFAULT、SQL_AT_ADD_COLUMN_SINGLE、SQL_AT_ADD_CONSTRAINT、SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION、SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
-|SQL_DATETIME_LITERALS|false|  
+|SQL_DATETIME_LITERALS|FALSE|  
 |SQL_ASYNC_MODE|SQL_AM_STATEMENT|  
 |SQL_BATCH_ROW_COUNT|SQL_BRC_EXPLICIT|  
 |SQL_BATCH_SUPPORT|SQL_BS_ROW_COUNT_EXPLICIT、SQL_BS_ROW_COUNT_PROC、SQL_BS_SELECT_EXPLICIT、SQL_BS_SELECT_PROC|  
@@ -76,18 +78,18 @@ ms.locfileid: "86000359"
 |SQL_CONVERT_WLONGVARCHAR|SQL_CVT_CHAR、SQL_CVT_VARCHAR、SQL_CVT_LONGVARCHAR、SQL_CVT_WCHAR、SQL_CVT_WLONGVARCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_WVARCHAR|SQL_CVT_CHAR、SQL_CVT_NUMERIC、SQL_CVT_DECIMAL、SQL_CVT_INTEGER、SQL_CVT_SMALLINT、SQL_CVT_FLOAT、SQL_CVT_REAL、SQL_CVT_VARCHAR、SQL_CVT_LONGVARCHAR、SQL_CVT_BINARY、SQL_CVT_VARBINARY、SQL_CVT_BIT、SQL_CVT_TINYINT、SQL_CVT_TIMESTAMP、SQL_CVT_LONGVARBINARY、SQL_CVT_WCHAR、SQL_CVT_WLONGVARCHAR、SQL_CVT_WVARCHAR|  
 |SQL_CORRELATION_NAME|SQL_CN_ANY|  
-|SQL_CREATE_ASSERTION|false|  
-|SQL_CREATE_CHARACTER_SET|false|  
-|SQL_CREATE_COLLATION|false|  
-|SQL_CREATE_DOMAIN|false|  
+|SQL_CREATE_ASSERTION|FALSE|  
+|SQL_CREATE_CHARACTER_SET|FALSE|  
+|SQL_CREATE_COLLATION|FALSE|  
+|SQL_CREATE_DOMAIN|FALSE|  
 |SQL_CREATE_SCHEMA|SQL_CS_AUTHORIZATION、SQL_CS_CREATE_SCHEMA|  
 |SQL_CREATE_TABLE|SQL_CT_CREATE_TABLE|  
-|SQL_CREATE_TRANSLATION|false|  
+|SQL_CREATE_TRANSLATION|FALSE|  
 |SQL_CREATE_VIEW|SQL_CV_CHECK_OPTION、SQL_CV_CREATE_VIEW|  
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 接続でデータソース名が指定されていない場合、 *Stringlength ptr*によって示される値を0に設定します。|  
+|SQL_DATA_SOURCE_NAME|現在のデータ ソース名。 接続でデータソース名が指定されていない場合、 *Stringlength ptr* によって示される値を0に設定します。|  
 |SQL_DATA_SOURCE_READ_ONLY|接続属性 SQL_ATTR_ACCESS_MODE の設定によって異なります。|  
 |SQL_DATABASE_NAME|接続の現在のデータベース。|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -97,13 +99,13 @@ ms.locfileid: "86000359"
 |SQL_DRIVER_NAME|"sqlncli11.dll"|  
 |SQL_DRIVER_ODBC_VER|ドライバーがサポートする ODBC バージョン。|  
 |SQL_DRIVER_VER|ドライバーのバージョン番号。|  
-|SQL_DROP_ASSERTION|false|  
-|SQL_DROP_CHARACTER_SET|false|  
-|SQL_DROP_COLLATION|false|  
-|SQL_DROP_DOMAIN|false|  
+|SQL_DROP_ASSERTION|FALSE|  
+|SQL_DROP_CHARACTER_SET|FALSE|  
+|SQL_DROP_COLLATION|FALSE|  
+|SQL_DROP_DOMAIN|FALSE|  
 |SQL_DROP_SCHEMA|DROP SCHEMA はサポートしません。|  
 |SQL_DROP_TABLE|SQL_DT_DROP_TABLE|  
-|SQL_DROP_TRANSLATION|false|  
+|SQL_DROP_TRANSLATION|FALSE|  
 |SQL_DROP_VIEW|SQL_DV_DROP_VIEW|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE、SQL_CA1_BULK_ADD、SQL_CA1_LOCK_NO_CHANGE、SQL_CA1_NEXT、SQL_CA1_POS_DELETE、SQL_CA1_POS_POSITION、SQL_CA1_POS_REFRESH、SQL_CA1_POS_UPDATE、SQL_CA1_POSITIONED_UPDATE、SQL_CA1_POSITIONED_DELETE、SQL_CA1_RELATIVE、SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_CA2_LOCK_CONCURRENCY、SQL_CA2_MAX_ROWS_CATALOG、SQL_CA2_MAX_ROWS_DELETE、SQL_CA2_MAX_ROWS_INSERT、SQL_CA2_MAX_ROWS_SELECT、SQL_CA2_MAX_ROWS_UPDATE、SQL_CA2_OPT_ROWVER_CONCURRENCY、SQL_CA2_OPT_VALUES_CONCURRENCY、SQL_CA2_READ_ONLY_CONCURRENCY、SQL_CA2_SENSITIVITY_ADDITIONS、SQL_CA2_SENSITIVITY_UPDATES、SQL_CA2_SIMULATE_UNIQUE|  
@@ -181,11 +183,11 @@ ms.locfileid: "86000359"
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|接続のサーバー名。|  
 |SQL_SPECIAL_CHARACTERS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールされている文字セットによって異なります。|  
-|SQL_SQL92_DATETIME_FUNCTIONS|false|  
-|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|false|  
-|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|false|  
+|SQL_SQL92_DATETIME_FUNCTIONS|FALSE|  
+|SQL_SQL92_FOREIGN_KEY_DELETE_RULE|FALSE|  
+|SQL_SQL92_FOREIGN_KEY_UPDATE_RULE|FALSE|  
 |SQL_SQL92_GRANT|SQL_SG_WITH_GRANT_OPTION|  
-|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|false|  
+|SQL_SQL92_NUMERIC_VALUE_FUNCTIONS|FALSE|  
 |SQL_SQL92_PREDICATES|SQL_SP_EXISTS、SQL_SP_ISNOTNULL、SQL_SP_ISNULL、SQL_SP_LIKE、SQL_SP_IN、SQL_SP_BETWEEN、SQL_SP_UNIQUE|  
 |SQL_SQL92_RELATIONAL_JOIN_OPERATORS|SQL_SRJO_CROSS_JOIN、SQL_SRJO_FULL_OUTER_JOIN、SQL_SRJO_INNER_JOIN、SQL_SRJO_LEFT_OUTER_JOIN、SQL_SRJO_RIGHT_OUTER_JOIN、SQL_SRJO_UNION_JOIN|  
 |SQL_SQL92_REVOKE|SQL_SR_GRANT_OPTION_FOR|  
@@ -209,7 +211,6 @@ ms.locfileid: "86000359"
 |SQL_USER_NAME|現在のユーザー名。|  
   
 ## <a name="see-also"></a>参照  
- [SQLGetInfo 関数](https://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo 関数](../../odbc/reference/syntax/sqlgetinfo-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

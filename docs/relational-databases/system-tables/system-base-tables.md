@@ -1,4 +1,5 @@
 ---
+description: システム ベース テーブル
 title: システムベーステーブル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 09f898ac65e48977b98b55c1f6b5e5ed9057ee49
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889233"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810212"
 ---
 # <a name="system-base-tables"></a>システム ベース テーブル
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85889233"
 >  システム ベース テーブルは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]内のみで使用されるテーブルであり、一般ユーザーが使用するテーブルではありません。 これらは変更される可能性があり、互換性は保証されていません。  
   
 ## <a name="system-base-table-metadata"></a>システム ベース テーブルのメタデータ  
- データベースに対する CONTROL、ALTER、または VIEW DEFINITION 権限を持つ権限付与対象ユーザーは、システムベーステーブルのメタデータを使用して、システム**のカタログビュー**を表示できます。 権限付与対象ユーザーは、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)や[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)などの組み込み関数を使用して、システムベーステーブルの名前とオブジェクト id を解決することもできます。  
+ データベースに対する CONTROL、ALTER、または VIEW DEFINITION 権限を持つ権限付与対象ユーザーは、システムベーステーブルのメタデータを使用して、システム **のカタログビュー** を表示できます。 権限付与対象ユーザーは、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) や [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)などの組み込み関数を使用して、システムベーステーブルの名前とオブジェクト id を解決することもできます。  
   
  システムベーステーブルにバインドするには、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用管理者接続 (DAC) を使用してのインスタンスに接続する必要があります。 DAC で接続せずにシステム ベース テーブルから SELECT クエリを実行しようとすると、エラーが発生します。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85889233"
 |ベーステーブル|説明|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|すべてのデータベースに存在します。 各行は、データベース内のオブジェクトを表します。|  
-|**sys.sysbinobjs**|すべてのデータベースに存在します。 データベース内の Service Broker エンティティごとに1行のデータを格納します。 Service Broker エンティティには次のものがあります。<br /><br /> メッセージ型<br /><br /> サービスコントラクト<br /><br /> サービス<br /><br /> 名前および型では、固定されているバイナリ照合順序を使用します。|  
+|**sys.sysbinobjs**|すべてのデータベースに存在します。 データベース内の Service Broker エンティティごとに1行のデータを格納します。 Service Broker エンティティには次のものがあります。<br /><br /> メッセージの種類<br /><br /> サービスコントラクト<br /><br /> サービス<br /><br /> 名前および型では、固定されているバイナリ照合順序を使用します。|  
 |**sys.sysclsobjs**|すべてのデータベースに存在します。 次のような共通プロパティを共有する、分類されたエンティティごとに1行の情報を格納します。<br /><br /> アセンブリ<br /><br /> バックアップ デバイス<br /><br /> フルテキスト カタログ<br /><br /> パーティション関数<br /><br /> パーティション構成<br /><br /> ファイル グループ<br /><br /> 隠ぺいキー|  
 |**sys.sysnsobjs**|すべてのデータベースに存在します。 名前空間スコープのエンティティごとに1行の値を格納します。 このテーブルは、XML コレクション エンティティの格納に使用されます。|  
 |**sys.syscolpars**|すべてのデータベースに存在します。 テーブル、ビュー、またはテーブル値関数内のすべての列に対応する行が含まれています。 また、プロシージャまたは関数のパラメーターごとの行も格納します。|  
@@ -55,12 +56,12 @@ ms.locfileid: "85889233"
 |**sys.sysscalartypes**|すべてのデータベースに存在します。 ユーザー定義型またはシステム型ごとに1行の値を格納します。|  
 |**sys.sysdbreg**|**Master**データベースのみに存在します。 登録されたデータベースごとに 1 行のデータを格納します。|  
 |**sys.sysxsrvs**|**Master**データベースのみに存在します。 ローカル サーバー、リンク サーバー、またはリモート サーバーごとに 1 行のデータを格納します。|  
-|**sys.sysrmtlgns**|このシステムベーステーブルは、 **master**データベースにのみ存在します。 リモートログインマッピングごとに1行の値を格納します。 対応するサーバーから送信されてきたと称する受信ログインを、実際のローカル ログインにマップするために使用します。|  
+|**sys.sysrmtlgns**|このシステムベーステーブルは、 **master** データベースにのみ存在します。 リモートログインマッピングごとに1行の値を格納します。 対応するサーバーから送信されてきたと称する受信ログインを、実際のローカル ログインにマップするために使用します。|  
 |**sys.syslnklgns**|**Master**データベースのみに存在します。 リンク ログイン マッピングごとに 1 行のデータを格納します。 リンクされたログインのマッピングは、リモートプロシージャコールおよびローカルサーバーから対応するリンクサーバーに送信される分散クエリによって使用されます。|  
 |**sys.sysxlgns**|**Master**データベースのみに存在します。 サーバープリンシパルごとに1行の値を格納します。|  
-|**sys.sysdbfiles**|すべてのデータベースに存在します。 列**dbid**が0の場合、行はこのデータベースに属するファイルを表します。 **Master**データベースでは、列**dbid**を0以外にすることができます。 その場合、該当する行は master ファイルを表します。|  
+|**sys.sysdbfiles**|すべてのデータベースに存在します。 列 **dbid** が0の場合、行はこのデータベースに属するファイルを表します。 **Master**データベースでは、列**dbid**を0以外にすることができます。 その場合、該当する行は master ファイルを表します。|  
 |**sys.sysusermsg**|**Master**データベースのみに存在します。 各行は、ユーザー定義のエラーメッセージを表します。|  
-|**sys.sysprivs**|すべてのデータベースに存在します。 データベース レベルまたはサーバー レベルの権限ごとに 1 行のデータを格納します。<br /><br /> 注: サーバーレベルの権限は**master**データベースに格納されます。|  
+|**sys.sysprivs**|すべてのデータベースに存在します。 データベース レベルまたはサーバー レベルの権限ごとに 1 行のデータを格納します。<br /><br /> 注: サーバーレベルの権限は **master** データベースに格納されます。|  
 |**sys.sysowners**|すべてのデータベースに存在します。 各行は、データベースプリンシパルを表します。|  
 |**sys.sysobjkeycrypts**|すべてのデータベースに存在します。 オブジェクトに関連付けられた対称キー、暗号化、または暗号化プロパティごとに1行の値を格納します。|  
 |**sys.syscerts**|すべてのデータベースに存在します。 データベース内の証明書ごとに 1 行のデータを格納します。|  
@@ -84,7 +85,7 @@ ms.locfileid: "85889233"
 |**sys.sysxmlplacement**|すべてのデータベースに存在します。 XML コンポーネントの XML 配置ごとに 1 行のデータを格納します。|  
 |**sys.syssingleobjrefs**|すべてのデータベースに存在します。 一般的な N 対 1 参照ごとに 1 行のデータを格納します。|  
 |**sys.sysmultiobjrefs**|すべてのデータベースに存在します。 一般的な N から N への参照ごとに1行の値を格納します。|  
-|**Objvalues のsys.sys**|すべてのデータベースに存在します。 エンティティの一般値プロパティごとに1行の値を格納します。|  
+|** Objvalues のsys.sys**|すべてのデータベースに存在します。 エンティティの一般値プロパティごとに1行の値を格納します。|  
 |**sys.sysguidrefs**|すべてのデータベースに存在します。 GUID で分類された ID 参照ごとに 1 行のデータを格納します。|  
   
 ## <a name="updating-system-base-tables"></a>システムベーステーブルの更新    
@@ -99,4 +100,4 @@ ms.locfileid: "85889233"
 ### <a name="executing-the-dbcc_checkdb-command-after-a-system-table-is-manually-updated"></a>システムテーブルを手動で更新した後に DBCC_CHECKDB コマンドを実行する
 メッセージ 3859: 警告: システムカタログがデータベース ID 17 で直接更新されました。これは date_time で最近行われたものです。
 
-システムテーブルに対して手動更新を実行し、問題が発生した場合は、バックアップから復元するか、影響を受けるデータベースから新しいデータベースにデータをコピーするかを確認するメッセージが表示されることがあります。 [ユーザーアクションのエラーメッセージ](https://docs.microsoft.com/sql/relational-databases/errors-events/mssqlserver-8992-database-engine-error?view=sql-server-ver15#user-action)の詳細を表示します。
+システムテーブルに対して手動更新を実行し、問題が発生した場合は、バックアップから復元するか、影響を受けるデータベースから新しいデータベースにデータをコピーするかを確認するメッセージが表示されることがあります。 [ユーザーアクションのエラーメッセージ](../errors-events/mssqlserver-8992-database-engine-error.md?view=sql-server-ver15#user-action)の詳細を表示します。

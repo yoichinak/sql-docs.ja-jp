@@ -1,4 +1,5 @@
 ---
+description: '[モデルから] を選択し &lt; &gt; ます。DIMENSION_CONTENT (DMX)'
 title: '[モデルから] を選択し &lt; &gt; ます。DIMENSION_CONTENT (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472031"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>[モデルから] を選択し &lt; &gt; ます。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  マイニング モデルは、OLAP キューブのディメンションとして使用できます。このとき、モデルの各ノードは、ディメンションのメンバーとして表されます。 **SELECT FROM \<model> です。Dimension_CONTENT**ステートメントは、ディメンションとしての使用に関連するモデルのコンテンツを返します。  
+  マイニング モデルは、OLAP キューブのディメンションとして使用できます。このとき、モデルの各ノードは、ディメンションのメンバーとして表されます。 **SELECT FROM \<model> です。Dimension_CONTENT** ステートメントは、ディメンションとしての使用に関連するモデルのコンテンツを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *式 (expression)*  
  任意。 スカラー値を返す式。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  アルゴリズムプロバイダーは、返されるコンテンツとその編成方法を定義します。 たとえば、プロバイダーはディメンション コンテンツに示されるノード数を制限する場合があります。  
   
  次の表は、ディメンション コンテンツのためにクエリできる列と、各列がデータ マイニング ディメンションとして実行する関数について示しています。  

@@ -1,8 +1,9 @@
 ---
+description: AddNew メソッドの例 (VBScript)
 title: AddNew メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d10fadde8b509b504ca857530d43d81b749ffaf4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760618"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976703"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
- Active Server ページ (ASP) で次の例を使用します。 [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewvbs. asp**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
+ Active Server ページ (ASP) で次の例を使用します。 [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewvbs. asp**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
- この例を実行するには、HTML フォームに新しいレコードを追加します。 [**新規追加**] をクリックします。 不要なレコードを削除するには、 [Delete メソッドの例](../../../ado/reference/ado-api/delete-method-example-vbscript.md)を参照してください。  
+ この例を実行するには、HTML フォームに新しいレコードを追加します。 [ **新規追加**] をクリックします。 不要なレコードを削除するには、 [Delete メソッドの例](./delete-method-example-vbscript.md) を参照してください。  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -213,5 +214,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew メソッド (ADO)](./addnew-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

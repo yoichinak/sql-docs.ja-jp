@@ -1,4 +1,5 @@
 ---
+description: 変数値ファイルの作成 (OracleToSQL)
 title: 変数値ファイルの作成 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,15 +14,15 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 763785b09adf1a562d497d4c1b448ec03d502bfc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b97455172dbed11a8d29168946decca7b3b919e4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934929"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039206"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>変数値ファイルの作成 (OracleToSQL)
-変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v**スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
+変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v** スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
   
 > [!NOTE]  
 > 1.  変数名の先頭には $ (ドル) 記号が付きます。 変数に変数値ファイルの値が割り当てられていない場合、スクリプトファイルの解析中にエラーが発生し、コンソールの実行プロセスが停止します。  
@@ -91,5 +92,4 @@ ms.locfileid: "87934929"
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;OracleToSQL&#41;作成し](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)ます。  
   
 ## <a name="see-also"></a>参照  
-[サーバーファイルの作成 (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
-  
+[サーバーファイルの作成 (Oracle)](./creating-the-server-connection-files-oracletosql.md)  

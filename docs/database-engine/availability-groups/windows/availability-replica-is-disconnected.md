@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords:
 - sql13.swb.agdashboard.arp2connected.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 7270d87a38465e173a488d9159cd08186333ceee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e06e94693f8f6102962b08893878ba5ac249cb3b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883547"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584630"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>Always On 可用性グループ内で可用性レプリカの参加が解除されている
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

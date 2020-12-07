@@ -1,4 +1,5 @@
 ---
+description: 新しいインスタンス ウィザードの使用
 title: 新しいインスタンス ウィザードの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 37b453c91ce19289aa2f8b8684c163dc0fc638a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b9d1037b11f92857700330c66b2fda4170058d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394478"
 ---
 # <a name="use-the-new-instance-wizard"></a>新しいインスタンス ウィザードの使用
 
@@ -42,7 +43,7 @@ ms.locfileid: "86913983"
   
 -   [[完了]](../../integration-services/change-data-capture/finish.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50ff7c29e6718d8d38829d9cb23f5fafb6cf4dea
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767055"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935057"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
 
@@ -85,7 +85,7 @@ ms.locfileid: "83767055"
 |[パラメーター領域の幅]|測定単位と値を選択できます。 既定値は 200 ピクセルです。 このプロパティの唯一の要件は、0 より大きい値を設定することです。|  
 |ドキュメント マップ|レポートで定義するレポート ナビゲーション コントロールであり、1 回のクリック操作でレポート内の特定のセクションにアクセスするために使用されます。 このコントロールは HTML レポートで利用できます。 ドキュメント マップは、レポート表示領域の横にある折りたたみ可能な領域に表示されます。 有効な値には、 **Displayed**、 **Collapsed**、および **Hidden**が含まれます。 レポートにドキュメント マップが定義されている場合、Web パーツのプロパティで [非表示] または [折りたたみ済み] が指定されていない限り、この領域は既定で展開されます。 ドキュメント マップが折りたたんだ状態で表示された場合は、矢印をクリックして領域を展開できます。|  
 |[ドキュメント マップ領域の幅]|測定単位と値を選択できます。 既定値は 200 ピクセルです。 このプロパティの唯一の要件は、0 より大きい値を設定することです。|  
-|[パラメーターの読み込み]|レポートのパラメーターのプロパティを取得します。 ただし、すべてのレポートにパラメーターが設定されているとは限りません。 レポートにパラメーターがない場合は、値が返されません。 アップロードしたばかりのレポートにプロパティを設定しようとすると、データ ソース接続が削除されたというエラーが表示されることがあります。 その場合、接続をリセットし、接続を指定した後でパラメーター プロパティを設定してください。 接続の設定方法の詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。<br /><br /> 最良の結果を得るには、 **[適用]** をクリックした後で [パラメーターの読み込み] をクリックしてください。<br /><br /> パラメーター プロパティを読み込んだ後、レポートのパラメーターのプロパティ ページで設定する場合と同じ方法でプロパティを設定できます。 パラメーターの設定方法の詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。|  
+|[パラメーターの読み込み]|レポートのパラメーターのプロパティを取得します。 ただし、すべてのレポートにパラメーターが設定されているとは限りません。 レポートにパラメーターがない場合は、値が返されません。 アップロードしたばかりのレポートにプロパティを設定しようとすると、データ ソース接続が削除されたというエラーが表示されることがあります。 その場合、接続をリセットし、接続を指定した後でパラメーター プロパティを設定してください。 接続の設定方法の詳細については、「[共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](/previous-versions/sql/)」を参照してください。<br /><br /> 最良の結果を得るには、 **[適用]** をクリックした後で [パラメーターの読み込み] をクリックしてください。<br /><br /> パラメーター プロパティを読み込んだ後、レポートのパラメーターのプロパティ ページで設定する場合と同じ方法でプロパティを設定できます。 パラメーターの設定方法の詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。|  
 
 ## <a name="customizing-the-toolbar"></a>ツール バーのカスタマイズ
 
@@ -95,13 +95,13 @@ ms.locfileid: "83767055"
 
 ## <a name="customizing-the-viewing-area"></a>表示領域のカスタマイズ
 
- 表示領域はレポートの表示に使用されます。 レポートの表示領域の一部は、パラメーター領域と資格情報領域 (使用される場合) としても利用されます。 資格情報が必要な場合、空のレポート表示領域の横に資格情報領域が表示されます。 ユーザーが資格情報を入力してレポートを実行すると、資格情報領域は閉じます。 ユーザーに資格情報の設定を求めるテキストをカスタマイズするには、データ ソース接続のプロパティを変更します。 詳細については、「[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)」を参照してください。  
+ 表示領域はレポートの表示に使用されます。 レポートの表示領域の一部は、パラメーター領域と資格情報領域 (使用される場合) としても利用されます。 資格情報が必要な場合、空のレポート表示領域の横に資格情報領域が表示されます。 ユーザーが資格情報を入力してレポートを実行すると、資格情報領域は閉じます。 ユーザーに資格情報の設定を求めるテキストをカスタマイズするには、データ ソース接続のプロパティを変更します。 詳細については、「[共有データ ソースを作成および管理する &#40;Reporting Services の SharePoint 統合モード&#41;](/previous-versions/sql/)」を参照してください。  
   
  パラメーター領域には、レポートの実行前に値を入力するためのフィールドが用意されています。 この領域は、レポート定義にパラメーターが含まれている場合にのみ使用されます。 パラメーター領域または資格情報領域が表示されるときには、Web パーツの残りの幅に収まるようにレポート表示が調整されます。 Web パーツのプロパティを設定して、パラメーターの幅をカスタマイズできます。 ページ上で個々のパラメーターの横に表示されるラベルも定義できます。 パラメーター ラベルの変更方法の詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
- [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint サイトのレポート ビューアー Web パーツ](./report-viewer-web-part-sharepoint-site.md)   
  [レポート ビューアー Web パーツを Web ページに追加する](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

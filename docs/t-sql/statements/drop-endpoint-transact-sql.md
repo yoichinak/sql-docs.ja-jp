@@ -1,4 +1,5 @@
 ---
+description: DROP ENDPOINT (Transact-SQL)
 title: DROP ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - DROP ENDPOINT statement
 - dropping endpoints
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 97ed90451d50aab822e2ab96708c0d7303805b53
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1ebeeee770fc161d289a10f246559ca353446618
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484131"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380033"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86484131"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
@@ -57,7 +57,7 @@ DROP ENDPOINT endPointName
 ## <a name="examples"></a>例  
  次の例では、以前に作成したエンドポイント `sql_endpoint` を削除します。  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   

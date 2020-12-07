@@ -1,4 +1,5 @@
 ---
+description: COT (Transact-SQL)
 title: COT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 111ba6e1e80a455aa5081d16756f5b012657dfd9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 13a9f556b74300fde0c792380d8616b36cccb19a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112751"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124849"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ COT ( float_expression )
 
 ## <a name="arguments"></a>引数
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。
+**float** 型、または暗黙的に **float** 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -60,13 +61,13 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 The COT of the angle is: -0.040312                
   
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

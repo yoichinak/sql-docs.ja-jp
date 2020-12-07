@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4619b4bd72258e67388ee7498eff63b28a1f3b03
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773885"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869010"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server の知的所有権の保護
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,11 @@ ms.locfileid: "85773885"
 クライアントがコンピューターの管理者でない場合は、クライアントのアクセスを阻止できます。 ファイル データの暗号化、バックアップの暗号化、すべてのユーザー操作の監査には、[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の管理者と管理グループは、これらの操作を取り消すことができます。
 
 ## <a name="solution"></a>解決策
-クライアントのコンピューターに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールしなくてもクライアントのデータ アクセスを構成する方法は多数あります。 最も簡単な方法は、クライアントが管理者ではない [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] を [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と組み合わせて使用する方法です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の概要については、「[SQL Database とは SQL データベースの概要](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)」を参照してください。  
+クライアントのコンピューターに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールしなくてもクライアントのデータ アクセスを構成する方法は多数あります。 最も簡単な方法は、クライアントが管理者ではない [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] を [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と組み合わせて使用する方法です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の概要については、「[SQL Database とは SQL データベースの概要](/azure/sql-database/sql-database-technical-overview)」を参照してください。  
 
 また、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] を自分のネットワークにホストし、クライアントがネットワーク経由で直接または Web アプリケーションを経由してデータにアクセスできるようにできます。
 
 ## <a name="see-also"></a>参照
 
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server の保護](../../relational-databases/security/securing-sql-server.md)  
-
+[SQL Server の保護](../../relational-databases/security/securing-sql-server.md)

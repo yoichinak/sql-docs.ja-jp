@@ -1,4 +1,5 @@
 ---
+description: GetDescendant (データベース エンジン)
 title: GetDescendant (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e6471b791a4ff1196321de649c645d8775d9308
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c5e76db626c0129253f343075894825c114da4ec
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554483"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037156"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,12 +32,12 @@ ms.locfileid: "86554483"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 parent.GetDescendant ( child1 , child2 )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )   
 ```  
@@ -154,8 +155,7 @@ Console.Write(parent.GetDescendant(child1, child2).ToString());
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

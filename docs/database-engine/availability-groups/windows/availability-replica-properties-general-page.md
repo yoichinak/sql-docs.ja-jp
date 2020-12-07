@@ -6,18 +6,18 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2a94f6331b19a0b3c5f4cc523f5933f8c451c476
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1851f55f215e78bc0243ee650c1f4e878b5b8fc6
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896213"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584573"
 ---
 # <a name="availability-replica-properties-general-page-for-always-on-availability-groups"></a>Always On 可用性グループの可用性レプリカのプロパティ ([全般] ページ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスク エディターでのスクリプト タスクの構成
 title: スクリプト タスク エディターでのスクリプト タスクの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40edbb718dac8f1be4a33fa1766c757aa1962306
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b4a052ea59e3c72adda887c3084bca278059f0b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913950"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122925"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  スクリプト タスクにカスタム コードを記述する前に、 **[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
+  スクリプト タスクにカスタム コードを記述する前に、**[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
   
 > [!NOTE]  
 >  スクリプトをプリコンパイルするかどうかを指定できた以前のバージョンとは異なり、[!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 以降ではすべてのスクリプトがプリコンパイルされます。  
@@ -40,7 +41,7 @@ ms.locfileid: "86913950"
  **[スクリプト タスク エディター]** の **[スクリプト]** ページには、スクリプト タスクのカスタム プロパティが表示されます。  
   
 ### <a name="scriptlanguage-property"></a>ScriptLanguage プロパティ  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# のプログラミング言語がサポートされます。 スクリプト タスクにスクリプトを作成した後で、 **[ScriptLanguage]** プロパティの値を変更することはできません。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# のプログラミング言語がサポートされます。 スクリプト タスクにスクリプトを作成した後で、**[ScriptLanguage]** プロパティの値を変更することはできません。  
   
  スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   

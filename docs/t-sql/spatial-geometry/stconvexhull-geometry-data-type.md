@@ -1,4 +1,5 @@
 ---
+description: STConvexHull (geometry データ型)
 title: STConvexHull (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c8e05b92fdbbcfb34d4e1eb82c4bf159d911b628
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: add89c5a1705344a661b6061dd7668429961ec14
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555665"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472529"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555665"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `STConvexHull()` は、指定された **geometry** インスタンスを含む最小の凸多角形を返します。 **Points** インスタンスまたは同一直線上の **LineString** インスタンスは、入力と同じ型のインスタンスを作成します。  
   
 ## <a name="examples"></a>例  

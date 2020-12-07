@@ -1,4 +1,5 @@
 ---
+description: SET CONTEXT_INFO (Transact-SQL)
 title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - CONTEXT_INFO option
 - SET CONTEXT_INFO statement
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e5deb7adf0be9de47cdd05e04280a1eb8b9f6678
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e352a36f5106c4df7e6d4bb986ef6817212d901
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484699"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548950"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  現在のセッションまたは接続に関連付けるコンテキスト値を保持するための、**varbinary** または **binary** 変数を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  現在のセッションのコンテキスト情報を取得するには、CONTEXT_INFO 関数を使用することをお勧めします。 セッションのコンテキスト情報は、次のシステム ビューの **context_info** 列にも格納されます。  
   
 -   **sys.dm_exec_requests**  
@@ -94,6 +95,6 @@ GO
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: URL の構成 (レポート サーバー構成マネージャー)
 title: URL の構成 (構成マネージャー) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487171"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934780"
 ---
-# <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
+# <a name="configure-a-url--report-server-configuration-manager"></a>URL の構成 (レポート サーバー構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
   
  URL を構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用します。 URL のすべての部分をこのツールで定義します。 以前のリリースとは異なり、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] アプリケーションへのアクセスにインターネット インフォメーション サービス (IIS) Web サイトは使用されません。  
@@ -31,7 +32,7 @@ ms.locfileid: "81487171"
   
 -   URL の詳細プロパティを設定して追加の URL を定義する。  
   
- URL の格納および管理のしくみや相互運用性の問題に関する詳細については、「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「[Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)」を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
+ URL の格納と管理のしくみや相互運用性の問題に関する詳細については、[URL の予約と登録について (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) に関する記事、および [Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) に関する記事を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  URL の作成や変更を行う前に、次の点を確認してください。  
@@ -44,7 +45,7 @@ ms.locfileid: "81487171"
   
 -   レポートがあまり使用されない時間に行うようにしてください。 URL 予約を変更するたびに、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のアプリケーション ドメインの再利用が行われる可能性があります。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の URL の構成の概要については、「[レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での URL の構成と使用に関する概要については、「[レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください。  
   
 ### <a name="to-configure-a-url-for-the-report-server-web-service"></a>レポート サーバー Web サービスの URL を構成するには  
   
@@ -68,7 +69,7 @@ ms.locfileid: "81487171"
   
     -   **[::1]** は、IPv6 形式のループバック アドレスです。  
   
-    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスは、コロンで区切られた 8 つの 4 バイト フィールドから成る 128 ビットのアドレスです \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*。  
+    -   特定の IP アドレスもこの一覧に表示されます。 IP アドレスは、IPv4 形式および IPv6 形式で指定できます。 "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの 32 ビット IPv4 アドレスです。 IPv6 アドレスは、コロンで区切られた 8 つの 4 バイト フィールドから成る 128 ビットです \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*。  
   
          複数のカードがある場合や、ネットワークで IPv4 と IPv6 の両方のアドレスがサポートされている場合は、複数の IP アドレスが表示されます。 1 つの IP アドレスのみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。 通常、この値を選択するのは、明確な IP アドレスやホスト名を指定する複数の URL 予約 (イントラネット接続に使用するネットワーク アダプター カード用と外部接続に使用するネットワーク アダプター カード用など) を構成する場合です。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "81487171"
   
 9. **[適用]** をクリックして URL を作成します。  
   
-10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
+10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モードのレポート サーバー データベースの作成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
 
 > [!NOTE]
 >  既存の TLS バインドと URL 予約があり、TLS バインドを変更する (たとえば、別の証明書やホスト ヘッダーを使用する) 場合、次の手順を順番に実行することをお勧めします。  
@@ -160,7 +161,7 @@ ms.locfileid: "81487171"
 6.  ブラウザー ウィンドウを開き、URL を入力して、URL をテストします。  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの URL  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の複数のインスタンスの URL を予約する場合は、名前の競合が発生しないように名前付け規則に従う必要があります。 詳細については、「[レポート サーバーの複数インスタンス配置における URL 予約 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の複数のインスタンスの URL を予約する場合は、名前の競合が発生しないように名前付け規則に従う必要があります。 詳細については、[レポート サーバーの複数インスタンス配置の URL 予約 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md) に関する記事を参照してください。  
   
 ##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> URL の構成の例  
  レポート サーバーの URL の具体例を次に示します。  
@@ -191,6 +192,6 @@ ms.locfileid: "81487171"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+## <a name="see-also"></a>参照
+
+ [レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

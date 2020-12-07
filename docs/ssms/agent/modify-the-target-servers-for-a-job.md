@@ -1,4 +1,5 @@
 ---
+description: Modify the Target Servers for a Job
 title: Modify the Target Servers for a Job
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,21 +16,21 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cb213fa8d51950d33565c0e4e0339d32d18339b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9dd059571a35162cabe462500751331667552e26
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715762"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035585"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエージェント ジョブのターゲット サーバーを変更する方法について説明します。
+ このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエージェント ジョブのターゲット サーバーを変更する方法について説明します。
 
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85715762"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、ジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、ジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
 3.  **[ジョブのプロパティ]** ダイアログ ボックスで **[対象サーバー]** ページをクリックし、 **[ローカル サーバーを対象とする]** または **[複数のサーバーを対象とする]** をクリックします。  
   
@@ -76,8 +77,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-詳細については、「 [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)」を参照してください。  
+詳細については、「 [sp_add_jobserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  
-  

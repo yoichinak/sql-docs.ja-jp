@@ -1,4 +1,5 @@
 ---
+description: SET NUMERIC_ROUNDABORT (Transact-SQL)
 title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - NUMERIC_ROUNDABORT
 - SET NUMERIC_ROUNDABORT statement
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dccf50490a8304507d621fc1e7fcdb06fb33a13
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 27e909770af34fc41dbfaadc8a7d2397bf5583b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999360"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540600"
 ---
 # <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,9 @@ ms.locfileid: "85999360"
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
 SET NUMERIC_ROUNDABORT が ON の場合には、式の精度が低下するとエラーが生成されます。 OFF に設定すると、精度の低下によるエラー メッセージは生成されません。 結果は、結果を格納する列または変数の有効桁数に丸められます。  
   
 精度の損失は、固定精度の列または精度の低い変数に固定精度を持つ値を格納しようとしたときに発生します。  

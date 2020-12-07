@@ -1,4 +1,5 @@
 ---
+description: DENY (Service Broker の権限の拒否) (Transact-SQL)
 title: DENY (Service Broker の権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483825"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131344"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Service Broker の権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,23 +60,23 @@ DENY permission  [ ,...n ] ON
  *permission*  
  セキュリティ保護可能な [!INCLUDE[ssSB](../../includes/sssb-md.md)] に対して拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  権限を拒否するコントラクトを指定します。 スコープ修飾子 **::** が必要です。  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  権限を拒否するメッセージ型を指定します。 スコープ修飾子 **::** が必要です。  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  権限を拒否するリモート サービス バインドを指定します。 スコープ修飾子 **::** が必要です。  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  権限を拒否するルートを指定します。 スコープ修飾子 **::** が必要です。  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  権限を拒否するサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれか:  
+ 権限を拒否するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール  
@@ -90,7 +91,7 @@ CASCADE
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
 *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール  
@@ -101,7 +102,7 @@ CASCADE
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="service-broker-contracts"></a>Service Broker コントラクト  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

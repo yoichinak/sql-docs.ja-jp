@@ -2,7 +2,7 @@
 title: JDBC ドライバーによるパフォーマンスと信頼性の強化
 description: Microsoft JDBC driver for SQL Server を使用する際の、アプリケーションのパフォーマンスと信頼性を強化するさまざまな方法について説明します。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728476"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565380"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC ドライバーによるパフォーマンスと信頼性の強化
 
@@ -37,6 +37,7 @@ ms.locfileid: "81728476"
 |[スパース列](../../connect/jdbc/sparse-columns.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスパース列に対する JDBC ドライバーのサポートについて説明します。|  
 |[JDBC ドライバーの準備されたステートメント メタデータ キャッシュ](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|準備されたステートメント クエリを使用してパフォーマンスを向上させる方法について説明します。|
 |[バッチ挿入操作に一括コピー API を使用する](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|バッチ挿入操作に対して一括コピー API を有効にする方法とその利点について説明します。|
+|[String パラメーターが Unicode として送信されない](../../connect/jdbc/setting-the-connection-properties.md)|**CHAR**、**VARCHAR**、**LONGVARCHAR** データを使用するとき、ユーザーはパフォーマンスを最適化する目的で、接続プロパティ **sendStringParametersAsUnicode** を `false` に設定できます。|
 
 ## <a name="see-also"></a>関連項目
 

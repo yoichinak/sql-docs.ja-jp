@@ -1,6 +1,6 @@
 ---
 title: 永続的なメモリ (PMEM) の構成
-description: この記事では、Linux で PMEM を構成する手順について説明します。
+description: SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法、および PMEM デバイス用の名前空間を作成する方法について説明します。
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0222b763ea7898a18443175a88012b5fb5aed42
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901512"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115690"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 デバイスを `ndctl` を使用して構成し、作成とマウントを行ったら、そこにデータベース ファイルを配置するか、新しいデータベースを作成できます。
 
-PMEM デバイスは、O_DIRECT (ダイレクト I/O) セーフであるため、トレース フラグ 3979 を有効にして強制フラッシュ メカニズムを無効にすることを検討してください。 詳細については、[FUA のサポート](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux) に関するページをご覧ください。 強制ユニット アクセスの内部については、[FUA の内部](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)に関するページをご覧ください。
+PMEM デバイスは、O_DIRECT (ダイレクト I/O) セーフであるため、トレース フラグ 3979 を有効にして強制フラッシュ メカニズムを無効にすることを検討してください。 詳細については、[FUA のサポート](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux) に関するページをご覧ください。 強制ユニット アクセスの内部については、[FUA の内部](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals)に関するページをご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 

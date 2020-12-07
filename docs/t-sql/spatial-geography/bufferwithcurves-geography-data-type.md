@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (geography データ型)
 title: BufferWithCurves (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555507"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124360"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "86555507"
   
 -   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表に、さまざまな distance 値に対して返される結果を示します。  
   
 |distance 値|型ディメンション|返される空間の種類|  
@@ -141,7 +142,7 @@ ms.locfileid: "86555507"
   
  前の 2 つの例では、文字列リテラルを `BufferWithCurves()` メソッドに渡しています。 最初の方の例は、文字列リテラルを数値に変換できるので機能します。 一方、2 番目の例では `ArgumentException` がスローされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geography インスタンスの拡張メソッド](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

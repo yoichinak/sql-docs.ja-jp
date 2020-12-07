@@ -1,4 +1,5 @@
 ---
+description: '[フォルダーのプロパティ] ダイアログ ボックス'
 title: '[フォルダーのプロパティ] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922648"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123776"
 ---
 # <a name="folder-properties-dialog-box"></a>[フォルダーのプロパティ] ダイアログ ボックス
 
@@ -40,7 +41,7 @@ ms.locfileid: "86922648"
   
 5.  **[OK]** をクリックして変更を受け入れ、 **[フォルダーのプロパティ]** ダイアログ ボックスを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; サーバー](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   

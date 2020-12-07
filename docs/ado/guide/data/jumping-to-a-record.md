@@ -1,8 +1,9 @@
 ---
+description: レコードへのジャンプ
 title: レコードへのジャンプ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980403"
 ---
 # <a name="jumping-to-a-record"></a>レコードへのジャンプ
-[Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用すると、次の構文を使用して、**レコードセット**内で指定した数のレコードを前方または後方に移動できます。  
+[Move](../../reference/ado-api/move-method-ado.md)メソッドを使用すると、次の構文を使用して、**レコードセット**内で指定した数のレコードを前方または後方に移動できます。  
   
 ```  
 oRs.Move NumRecords, Start  
@@ -38,6 +39,6 @@ oRs.Move NumRecords, Start
   
  空の**レコードセット**オブジェクトから**Move**メソッドを呼び出すと、エラーが生成されます。  
   
- Start 引数にブックマークを渡すと、**レコードセット**オブジェクトがブックマークをサポートしていると仮定した場合、このブックマークを持つレコードに対する相対移動が*実行*されます。 ブックマークは、 [bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)プロパティを使用して取得します。 指定しない場合、移動は現在のレコードを基準にして行われます。  
+ Start 引数にブックマークを渡すと、**レコードセット**オブジェクトがブックマークをサポートしていると仮定した場合、このブックマークを持つレコードに対する相対移動が*実行*されます。 ブックマークは、 [bookmark](../../reference/ado-api/bookmark-property-ado.md) プロパティを使用して取得します。 指定しない場合、移動は現在のレコードを基準にして行われます。  
   
- プロバイダーからローカルにレコードをキャッシュするために**CacheSize**プロパティを使用している場合は、現在のレコードの位置をキャッシュされたレコードの現在のグループの外側に移動する*NumRecords*引数を渡すと、変換先レコードから始まる新しいレコードのグループが ADO によって強制的に取得されます。 **CacheSize**プロパティは、新しく取得したグループのサイズを決定し、宛先レコードは最初に取得されたレコードになります。
+ プロバイダーからローカルにレコードをキャッシュするために **CacheSize** プロパティを使用している場合は、現在のレコードの位置をキャッシュされたレコードの現在のグループの外側に移動する *NumRecords* 引数を渡すと、変換先レコードから始まる新しいレコードのグループが ADO によって強制的に取得されます。 **CacheSize**プロパティは、新しく取得したグループのサイズを決定し、宛先レコードは最初に取得されたレコードになります。

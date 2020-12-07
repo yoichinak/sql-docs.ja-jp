@@ -1,4 +1,5 @@
 ---
+description: 拡張イベントの動的管理ビュー
 title: 拡張イベントの動的管理ビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - extended events [SQL Server], dynamic management objects
 - dynamic management objects (SQL Server)
 ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4cc30d3abd721d7e7b889c29b017cf31c5efdde8
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f926b6ad0b90af3ec04a668b1f81a762373037
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942610"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544887"
 ---
 # <a name="extended-events-dynamic-management-views"></a>拡張イベントの動的管理ビュー
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

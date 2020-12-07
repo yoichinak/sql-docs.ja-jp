@@ -1,4 +1,5 @@
 ---
+description: New Publication Wizard
 title: パブリケーションの新規作成ウィザード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405828"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,23 +58,23 @@ ms.locfileid: "85721223"
   
 -   [パブリケーション データベース](../../relational-databases/replication/publication-database.md)  
   
--   [パブリケーションの種類](../../relational-databases/replication/publication-type.md)  
+-   [[パブリケーションの種類]](../../relational-databases/replication/publication-type.md)  
   
 -   [サブスクライバーの種類](../../relational-databases/replication/subscriber-types.md)  
   
 -   [エージェント セキュリティ (パブリケーションの新規作成ウィザード)](../../relational-databases/replication/agent-security-new-publication-wizard.md)  
   
--   [アーティクル](../../relational-databases/replication/articles.md)  
+-   [記事](../../relational-databases/replication/articles.md)  
   
--   [アーティクルの問題点](../../relational-databases/replication/article-issues.md)  
+-   [[アーティクルの問題点]](../../relational-databases/replication/article-issues.md)  
   
--   [テーブル行のフィルター選択](../../relational-databases/replication/filter-table-rows.md)  
+-   [[テーブル行のフィルター選択]](../../relational-databases/replication/filter-table-rows.md)  
   
 -   [フィルターの追加または編集](../../relational-databases/replication/add-or-edit-filter.md)  
   
 -   [結合の追加と編集](../../relational-databases/replication/add-or-edit-join.md)  
   
--   [フィルターの生成](../../relational-databases/replication/generate-filters.md)  
+-   [[フィルターの生成]](../../relational-databases/replication/generate-filters.md)  
   
 -   [スナップショット エージェント (パブリケーションの新規作成ウィザード)](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   

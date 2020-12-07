@@ -1,8 +1,9 @@
 ---
+description: アドレス帳アプリケーションのシステム要件
 title: アドレス帳アプリケーションのシステム要件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7edd6f3c383c1563122bff053e39a372dff264b3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764633"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722834"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>アドレス帳アプリケーションのシステム要件
 アドレス帳のサンプルアプリケーションを設定するには、次のソフトウェアとデータベースの要件を満たしている必要があります。  
   
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
 ## <a name="software-requirements"></a>ソフトウェア要件  
  この Web アプリケーションを実行するためのサーバーコンピューターソフトウェアの要件は次のとおりです。  
@@ -51,8 +52,6 @@ ms.locfileid: "82764633"
  権限を持っていない場合は、データベース管理者がシステムをセットアップし、データベースへのアクセス許可を付与するか、データベースをセットアップする必要があります。  
   
 ## <a name="see-also"></a>参照  
- [アドレス帳 SQL スクリプトの実行](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [アドレス帳のサンプル アプリケーションの実行](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [アドレス帳 SQL スクリプトの実行](./running-the-address-book-sql-script.md)   
+ [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [アドレス帳のサンプル アプリケーションの実行](./running-the-address-book-sample-application.md)

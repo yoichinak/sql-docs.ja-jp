@@ -1,4 +1,5 @@
 ---
+description: getString (int) メソッド (SQLServerResultSet)
 title: getString メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ apitype: Assembly
 ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 48398fea07323cf4126e753f02dee035b337a52d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 89cf4ecbf3177864f8400280bef07bb677e60046
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434434"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>getString (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の **String** として取得されます。  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の** String** として取得されます。  
   
 ## <a name="syntax"></a>構文  
   

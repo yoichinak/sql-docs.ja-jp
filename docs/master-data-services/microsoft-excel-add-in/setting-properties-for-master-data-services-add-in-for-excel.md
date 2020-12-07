@@ -1,4 +1,5 @@
 ---
+description: Excel 用マスター データ サービス アドインのプロパティの設定
 title: プロパティの設定
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b790b0f733a862f93249ecf85490d914e8e8d3b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87361802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500565"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel 用マスター データ サービス アドインのプロパティの設定
 
@@ -27,7 +28,7 @@ ms.locfileid: "87361802"
   
 ## <a name="excel-add-in-settings"></a>Excel アドインの設定  
   
-|タブとセクション|設定|[説明]|  
+|タブとセクション|設定|説明|  
 |-|-|-|  
 |設定: [パブリッシュ]|[パブリッシュ時に **[パブリッシュと注釈設定]** ダイアログ ボックスを表示する]|**[パブリッシュ]** をクリックした後に **[パブリッシュと注釈設定]** ダイアログ ボックスが表示されるようにする場合はオンにします。こうすると、すべての変更についての単一の注釈を入力したり、各変更の注釈を個別に入力することができます。<br /><br /> **[パブリッシュと注釈設定]** ダイアログ ボックスを表示せずにパブリッシュ プロセスが開始されるようにする場合はオフにします。 注釈を入力する機会はありません。|  
 |設定: [バージョン]|[バージョンの選択]|Excel アドインに読み込まれるマスター データのバージョンを選択します。 次の値をとります。<br /><br /> **[なし]** : どのバージョンも既定のバージョンにしない場合に選択します。<br /><br /> **[最も古い]** : 最も古いバージョンを既定のバージョンにする場合に選択します。 **[最も新しい]** : 最も新しいバージョンを既定のバージョンにする場合に選択します。|  

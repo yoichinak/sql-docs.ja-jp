@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (SSISDB データベース)
 title: catalog.validate_project (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912728"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129573"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB データベース)
 

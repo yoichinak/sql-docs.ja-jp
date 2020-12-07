@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7efe4f3f8456dc68171b804d7afd28f565a4fbe2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27b03d13ede2b861f90e194e4939e8c9c77ecafb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888243"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542751"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL を使用して構成管理の WMI プロバイダーにアクセスする
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "85888243"
   
 ### <a name="querying-services-using-wbemtest"></a>WBEMtest を使用したサービスの照会  
   
-1.  [**スタート**] メニューの [**実行**] をクリックし、「 **WBEMtest**」と入力します。  
+1.  [ **スタート** ] メニューの [ **実行**] をクリックし、「 **WBEMtest**」と入力します。  
   
 2.  WBEMtest.exe のダイアログ ボックスが表示されます。 **[Connect]** をクリックします。  
   
 3.  最初のテキスト フィールドに、WMI Provider for Computer Management の名前空間 (「root\Microsoft\SqlServer\ComputerManagement11」) を入力します。 **[Connect]** をクリックします。  
   
-4.  **[クエリ]** をクリックします。 ローカルコンピューターで現在実行されているサービスを返すクエリを入力します: **SELECT \* FROM sqlservice。** **[適用]** をクリックします。  
+4.  **[クエリ]** をクリックします。 ローカルコンピューターで現在実行されているサービスを返すクエリを入力します: **SELECT \* FROM sqlservice。** **[Apply]** をクリックします。  
   
 5.  **WHERE ServiceName = "MSSQLSERVER"** を追加して、クエリをさらに絞り込みます。  
   

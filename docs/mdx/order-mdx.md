@@ -1,4 +1,5 @@
 ---
+description: Order (MDX)
 title: Order (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471744"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -44,13 +45,13 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  有効な文字列式です。通常は、文字列として表現された数値を返すセル座標の有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- **Order**関数は、( **ASC**または**desc**フラグを使用して指定されたように)、または非階層型 ( **basc**または**bdesc**フラグを使用して指定された) のいずれかにすることができます。 **B**は "break hierarchy" を表します。 **ASC**または**DESC**が指定されている場合、 **Order**関数は、まず階層内の位置に基づいてメンバーを配置し、次に各レベルを順序付けます。 **Basc**または**bdesc**が指定されている場合、 **Order**関数は、階層に関係なく、セット内のメンバーを整列します。 フラグを指定しない場合、 **ASC**が既定値になります。  
+## <a name="remarks"></a>解説  
+ **Order**関数は、( **ASC**または**desc**フラグを使用して指定されたように)、または非階層型 ( **basc**または**bdesc**フラグを使用して指定された) のいずれかにすることができます。 **B**は "break hierarchy" を表します。 **ASC**または**DESC**が指定されている場合、 **Order**関数は、まず階層内の位置に基づいてメンバーを配置し、次に各レベルを順序付けます。 **Basc**または**bdesc**が指定されている場合、 **Order**関数は、階層に関係なく、セット内のメンバーを整列します。 フラグを指定しない場合、 **ASC** が既定値になります。  
   
- 2つ以上の階層がクロス結合されているセットで**Order**関数が使用されていて、 **DESC**フラグが使用されている場合、セット内の最後の階層のメンバーのみが並べ替えられます。 この点が Analysis Services 2000 とは異なります。Analysis Services 2000 では、セットのすべての階層が並べ替えられます。  
+ 2つ以上の階層がクロス結合されているセットで **Order** 関数が使用されていて、 **DESC** フラグが使用されている場合、セット内の最後の階層のメンバーのみが並べ替えられます。 この点が Analysis Services 2000 とは異なります。Analysis Services 2000 では、セットのすべての階層が並べ替えられます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 **Adventure works**キューブから、Date ディメンションの calendar 階層のすべての四半期の再販業者の注文数を返します。**Order**関数は、ROWS 軸のセットを並べ替えます。 **Order**関数は、 `[Reseller Order Count]` `[Calendar]`階層によって決定される階層の降順でセットを並べ替えます。  
+## <a name="examples"></a>例  
+ 次の例では、 **Adventure works** キューブから、Date ディメンションの calendar 階層のすべての四半期の再販業者の注文数を返します。 **Order** 関数は、ROWS 軸のセットを並べ替えます。 **Order**関数は、階層によって決定される階層の降順でセットを並べ替え `[Reseller Order Count]` `[Calendar]` ます。  
   
  `SELECT`  
   
@@ -68,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- この例では、 **DESC**フラグが**bdesc**に変更されると、階層が破損し、階層に関係なく、カレンダー四半期の一覧が返されます。  
+ この例では、 **DESC** フラグが **bdesc**に変更されると、階層が破損し、階層に関係なく、カレンダー四半期の一覧が返されます。  
   
  `SELECT`  
   
@@ -108,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 次の例では、 **rank**関数を使用して、再販業者の Sales Amount メジャーに基づいて City 階層のメンバーにランクを付け、順位の順に表示します。 **Order**関数を使用して City 階層のメンバーのセットを最初に並べ替えると、並べ替えは一度だけ実行された後、線形スキャンが行われてから、並べ替えられた順序で表示されます。  
+ 次の例では、 **rank** 関数を使用して、再販業者の Sales Amount メジャーに基づいて City 階層のメンバーにランクを付け、順位の順に表示します。 **Order**関数を使用して City 階層のメンバーのセットを最初に並べ替えると、並べ替えは一度だけ実行された後、線形スキャンが行われてから、並べ替えられた順序で表示されます。  
   
 ```  
 WITH   
@@ -160,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- 組のセットで**DESC**フラグがどのように機能するかを理解するには、まず次のクエリの結果を検討します。  
+ 組のセットで **DESC** フラグがどのように機能するかを理解するには、まず次のクエリの結果を検討します。  
   
 ```  
   
@@ -174,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- Rows 軸では、販売区域グループは、北米、ヨーロッパ、太平洋、NA のように、課税額の降順に並べ替えられていることがわかります。 次のように、一連の製品サブカテゴリを使用して販売区域グループのセットを crossjoin し、同じ方法で**Order**関数を適用するとどうなるかを見てみましょう。  
+ Rows 軸では、販売区域グループは、北米、ヨーロッパ、太平洋、NA のように、課税額の降順に並べ替えられていることがわかります。 次のように、一連の製品サブカテゴリを使用して販売区域グループのセットを crossjoin し、同じ方法で **Order** 関数を適用するとどうなるかを見てみましょう。  
   
 ```  
   
@@ -190,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- 製品サブカテゴリのセットは階層順に降順に並べ替えられていますが、販売区域グループは、ヨーロッパ、NA、北米および太平洋の階層に表示される順序で並べ替えられずに表示されるようになりました。 これは、組のセット (製品サブカテゴリ) の最後の階層のみが並べ替えられるためです。 Analysis Services 2000 の動作を再現するには、次の例のように、入れ子になった一連の**生成**関数を使用して、各セットをクロス結合する前に並べ替えます。  
+ 製品サブカテゴリのセットは階層順に降順に並べ替えられていますが、販売区域グループは、ヨーロッパ、NA、北米および太平洋の階層に表示される順序で並べ替えられずに表示されるようになりました。 これは、組のセット (製品サブカテゴリ) の最後の階層のみが並べ替えられるためです。 Analysis Services 2000 の動作を再現するには、次の例のように、入れ子になった一連の **生成** 関数を使用して、各セットをクロス結合する前に並べ替えます。  
   
 ```  
   

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 02b4015803a214d1f04d1e28a8e7d1812d47a642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8c04c84468a61987f27f9bdd0a53d51869111d5
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774842"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713720"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>実行中のトレースからのテンプレートの作成 (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "85774842"
 ## <a name="see-also"></a>参照  
  [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
-  
   

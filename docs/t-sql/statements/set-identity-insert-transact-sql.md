@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identity values [SQL Server], explicit values
 - identity columns [SQL Server], explicit values
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: bdb2ccb6cf5f151507ab2a05bf48b7e1b449b21a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 08c8fd59e702d668f7218757021f415b0bea3e39
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394603"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544252"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "87394603"
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *database_name*  
  指定したテーブルが含まれているデータベースの名前を指定します。  
   

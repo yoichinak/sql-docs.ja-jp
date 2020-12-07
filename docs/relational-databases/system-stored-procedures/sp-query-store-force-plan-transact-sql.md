@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_force_plan (Transact-sql)
 title: sp_query_store_force_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -18,20 +19,21 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 503305e4e1954f7d549244bee058ad449c975ec7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046808"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534989"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  特定のクエリに対して特定のプランを強制することができます。  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+特定のクエリに対して特定のプランを強制することができます。  
   
  特定のクエリに対してプランが強制されると、クエリが発生するたびに、クエリ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オプティマイザーでプランが強制的に実行されます。 プランの強制に失敗した場合は、拡張イベントが発生し、通常の方法で最適化するようにクエリオプティマイザーに指示されます。  
   
@@ -44,9 +46,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @query_id = ] query_id`クエリの id を示します。 *query_id*は**bigint**,、既定値はありません。  
+`[ @query_id = ] query_id` クエリの id を示します。 *query_id* は **bigint**,、既定値はありません。  
   
-`[ @plan_id = ] plan_id`強制されるクエリプランの id を指定します。 *plan_id*は**bigint**,、既定値はありません。  
+`[ @plan_id = ] plan_id` 強制されるクエリプランの id を指定します。 *plan_id* は **bigint**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,7 +56,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>解説  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースに対する**ALTER**権限が必要です。
+ データベースに対する **ALTER** 権限が必要です。
   
 ## <a name="examples"></a>例  
  次の例では、クエリストア内のクエリに関する情報を返します。  

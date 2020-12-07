@@ -1,4 +1,5 @@
 ---
+description: SSMA for DB2 の新しい GUI 機能 (DB2ToSQL)
 title: SSMA for DB2 の新しい GUI 機能 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d3ad4946b7e900fa9ca4adc22e16a299948e00f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488153"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新しい GUI 機能 (DB2ToSQL)
 この章では、SSMA ユーザーインターフェイスの新機能について説明します。  
   
-## <a name="layouts"></a>Layouts  
+## <a name="layouts"></a>レイアウト  
 この機能を使用すると、定義済みの2つの windows レイアウトを選択したり、独自のレイアウトを作成したりすることができます。 レイアウトサブメニューにアクセスするには、[表示] メニューの [レイアウト] をポイントします。 ここでは、既存のレイアウトの1つを選択し、新しいレイアウトを追加したり、レイアウトを管理したりすることができます。  
   
 ### <a name="add-current-layout"></a>現在のレイアウトの追加  

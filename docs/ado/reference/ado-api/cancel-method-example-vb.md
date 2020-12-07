@@ -1,8 +1,9 @@
 ---
+description: Cancel メソッドの例 (VB)
 title: Cancel メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 614fd4adfd531ca7d47b7b7ffdfa912c141e06c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3ca981db6a75beb2c4c4c04c03386f8e8b82920f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763553"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975633"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel メソッドの例 (VB)
-この例では、接続がビジーの場合に、 [cancel](../../../ado/reference/ado-api/cancel-method-ado.md)メソッドを使用して、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトで実行されているコマンドを取り消します。  
+この例では、接続がビジーの場合に、 [cancel](./cancel-method-ado.md) メソッドを使用して、 [接続](./connection-object-ado.md) オブジェクトで実行されているコマンドを取り消します。  
   
 ```  
 'BeginCancelVB  
@@ -103,5 +104,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Cancel メソッド (ADO)](./cancel-method-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)

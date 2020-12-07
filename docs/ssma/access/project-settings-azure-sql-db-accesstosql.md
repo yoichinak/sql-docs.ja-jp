@@ -1,4 +1,5 @@
 ---
+description: プロジェクトの設定 (Azure SQL Database) (SQL server による)
 title: プロジェクトの設定 (Azure SQL Database) (SQL server による) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9954fe012158526e87bd30512b13eca0314bc00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418548"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>プロジェクトの設定 (Azure SQL Database) (SQL server による)
 SQL Azure のプロジェクト設定を使用すると、接続ダイアログに追加する Azure SQL Database サフィックスを構成し、SQL Azure 接続でハートビートメカニズムを実装することもできます。  
   
-SQL Azure ウィンドウは、[プロジェクトの**設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
+SQL Azure ウィンドウは、[プロジェクトの **設定** ] ダイアログボックスと [ **既定のプロジェクトの設定** ] ダイアログボックスで使用できます。  
   
--   [プロジェクトの設定] ダイアログボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[**ツール**] メニューの [**プロジェクトの設定**] を選択し、左側のウィンドウの下部にある [**全般**] をクリックして、[ **SQL Azure**] を選択します。  
+-   [プロジェクトの設定] ダイアログボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[ **ツール** ] メニューの [ **プロジェクトの設定**] を選択し、左側のウィンドウの下部にある [ **全般** ] をクリックして、[ **SQL Azure**] を選択します。  
   
--   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[**ツール**] メニューの [ **Defaultproject の設定**] を選択し、[**移行先のバージョン**] コンボボックスで [SQL Azure] としてプロジェクトの種類を選択して SQL Azure ウィンドウの設定にアクセスします。次に、左側のウィンドウの下部にある [**全般**] をクリックし、[ **SQL Azure**] を選択します。  
+-   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 SQL Azure 設定にアクセスするには、[ **ツール** ] メニューの [ **Defaultproject の設定**] を選択し、[ **移行先のバージョン** ] コンボボックスで [SQL Azure] としてプロジェクトの種類を選択して SQL Azure ウィンドウの設定にアクセスします。次に、左側のウィンドウの下部にある [ **全般** ] をクリックし、[ **SQL Azure**] を選択します。  
   
 ## <a name="options"></a>オプション  
   

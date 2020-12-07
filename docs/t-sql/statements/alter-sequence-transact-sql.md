@@ -1,4 +1,5 @@
 ---
+description: ALTER SEQUENCE (Transact-SQL)
 title: ALTER SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sequence number object, altering
 - ALTER SEQUENCE statement
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b6b37879dc3f2e274a5cd322f14cd9050c66a2d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381086"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688177"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,6 @@ ms.locfileid: "86381086"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -92,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>アクセス許可  
  シーケンスに対する **ALTER** 権限、またはスキーマに対する **ALTER** 権限が必要です。 シーケンスに対する **ALTER** 権限を許可するには、次の形式で **ALTER ON OBJECT** を使います。  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -107,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. シーケンスを変更する  
  次の例では、100 から 200 の範囲の **int** データ型を使って、Test という名前のスキーマと TestSeq という名前のシーケンスを作成します。 シーケンスは 125 で始まり、数値が生成されるたびに 25 ずつ増加します。 シーケンスは循環するように設定されているため、値が最大値の 200 を超えると、最小値の 100 で再開します。  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -125,7 +125,7 @@ GO
   
  次の例では、50 から 200 の範囲を指定して TestSeq シーケンスを変更します。 シーケンスの番号が 100 から再開し、数値が生成されるたびに 50 ずつ増加します。  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -142,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. シーケンスを再開する  
  次の例では、CountBy1 という名前のシーケンスを作成します。 このシーケンスでは既定値が使用されます。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  シーケンスの値を生成するには、所有者は次のステートメントを実行します。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  返される値 -9,223,372,036,854,775,808 は、**bigint** データ型の最小値です。 所有者は、シーケンスを 1 から開始しようとしていたのに、シーケンスの作成時に **START WITH** 句を指定していなかったことに気付きました。 このエラーを修正するには、所有者は次のステートメントを実行します。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  その後、次のステートメントを再度実行して、シーケンス番号を生成します。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -168,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  CountBy1 シーケンスは、9,223,372,036,854,775,807 の数を生成すると操作を中止するようにするために、既定値の NO CYCLE を使用して作成されました。 この後にシーケンス オブジェクトを呼び出すと、エラー 11728 が返されます。 次のステートメントでは、シーケンス オブジェクトが循環するように変更され、キャッシュが 20 に設定されます。  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  これにより、シーケンス オブジェクトは 9,223,372,036,854,775,807 に達すると循環し、次の数値はデータ型の最小値である -9,223,372,036,854,775,808 になります。  

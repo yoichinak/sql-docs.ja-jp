@@ -1,4 +1,5 @@
 ---
+description: SETUSER (Transact-SQL)
 title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88478671"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

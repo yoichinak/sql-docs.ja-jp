@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rows_affected
 title: sqlsrv_rows_affected | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06c661c0ab5075082df0c1753f7fcc17942e9ffa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 77581d5effb8454f7ef34b38b5994f7d459f46e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466717"
 ---
 # <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ sqlsrv_rows_affected( resource $stmt)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
   
 ## <a name="return-value"></a>戻り値  
 直前に実行されたステートメントによって変更された行数を示す整数です。 変更された行がない場合は、ゼロ (0) が返されます。 変更された行数に関する情報が使用できない場合は、マイナス 1 (-1) が返されます。 変更された行数の取得中にエラーが発生した場合は、 **false** が返されます。  

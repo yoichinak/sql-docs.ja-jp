@@ -1,4 +1,5 @@
 ---
+description: '!&lt;(より小さくない) (Transact-SQL)'
 title: '!&lt;(より小さくない) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d0e41f3afc5a48e1150d8b8997bd2377f1483ec3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 328c7feba7e11a6ef59e12ac499ef8522cb9a7de
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915118"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196801"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt;(より小さくない) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86915118"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 expression !< expression  
 ```  
   

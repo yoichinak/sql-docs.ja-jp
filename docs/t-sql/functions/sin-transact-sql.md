@@ -1,4 +1,5 @@
 ---
+description: SIN (Transact-SQL)
 title: SIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59e915517c3f6be998b25b1d8184bd48a6113b88
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 98cda2eaebc8dba22cf1784f3f4a4ae1845ce018
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112287"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380587"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87112287"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SIN ( float_expression )  
 ```  
   
@@ -52,10 +53,10 @@ SIN ( float_expression )
 ## <a name="examples"></a>例  
  次の例では、指定された角度の SIN を計算します。  
   
-```  
-DECLARE @angle float;  
+```sql  
+DECLARE @angle FLOAT;  
 SET @angle = 45.175643;  
-SELECT 'The SIN of the angle is: ' + CONVERT(varchar,SIN(@angle));  
+SELECT 'The SIN of the angle is: ' + CONVERT(VARCHAR, SIN(@angle));  
 GO  
 ```  
   
@@ -70,7 +71,7 @@ The SIN of the angle is: 0.929607
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、指定された角度の sine を計算します。  
   
-```  
+```sql  
 SELECT SIN(45.175643);  
 ```  
   

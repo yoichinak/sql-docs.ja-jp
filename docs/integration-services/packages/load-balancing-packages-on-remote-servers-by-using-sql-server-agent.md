@@ -1,4 +1,5 @@
 ---
+description: リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
 title: リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425214"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
 

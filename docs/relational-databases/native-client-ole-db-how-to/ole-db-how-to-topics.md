@@ -1,4 +1,5 @@
 ---
+description: OLE DB 操作方法に関するトピック (Native Client OLE DB プロバイダー)
 title: 操作方法に関するトピック (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c76eaf2a48fcea81ecaf348e8907daecbeee08
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43cfa6e21939d316657cd1d80ef7959721e057f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381078"
 ---
 # <a name="ole-db-how-to-topics-native-client-ole-db-provider"></a>OLE DB 操作方法に関するトピック (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

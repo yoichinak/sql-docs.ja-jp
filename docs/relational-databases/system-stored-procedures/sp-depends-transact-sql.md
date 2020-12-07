@@ -1,4 +1,5 @@
 ---
+description: sp_depends (Transact-sql)
 title: sp_depends (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5133cd72de0f5b812b8425b6fb1b7f8ae82d8241
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861402"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539072"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85861402"
   テーブルまたはビューに依存するビューやプロシージャ、ビューまたはプロシージャに依存しているテーブルやビューなど、データベースオブジェクトの依存関係に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 [dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) と [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,13 +56,13 @@ sp_depends [ @objname = ] '<object>'
  オブジェクトが所属するスキーマの名前を指定します。  
   
  *object_name*  
- 依存関係を調べるデータベースオブジェクトを示します。 オブジェクトには、テーブル、ビュー、ストアドプロシージャ、ユーザー定義関数、またはトリガーを指定できます。 o*bject_name*は**nvarchar (776)**,、既定値はありません。  
+ 依存関係を調べるデータベースオブジェクトを示します。 オブジェクトには、テーブル、ビュー、ストアドプロシージャ、ユーザー定義関数、またはトリガーを指定できます。 o*bject_name* は **nvarchar (776)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_depends**には、2つの結果セットが表示されます。  
+ **sp_depends** には、2つの結果セットが表示されます。  
   
  次の結果セットは、が依存するオブジェクトを示して *\<object>* います。  
   
@@ -94,18 +95,18 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>B: トリガーの従属性を一覧表示する  
+### <a name="b-listing-dependencies-on-a-trigger"></a>B. トリガーの従属性を一覧表示する  
  次の例では、トリガーが依存しているデータベースオブジェクトを一覧表示し `iWorkOrder` ます。  
   
 ```  
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

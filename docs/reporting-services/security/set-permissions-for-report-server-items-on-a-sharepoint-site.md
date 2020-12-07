@@ -1,4 +1,5 @@
 ---
+description: SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
 title: SharePoint サイト上のレポート サーバー アイテムに対するアクセス許可の設定 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eacc9d9163773076ce1792d3c58a07fef83f126
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423196"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  

@@ -1,8 +1,9 @@
 ---
+description: Open および Close メソッドの例 (VB)
 title: Open および Close メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9d46d7ec04d5b19331ecda3b887e59862cdcf48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 631afc8911c02dd58f819ffab0f162f952fddeec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762290"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990373"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open および Close メソッドの例 (VB)
-この例では、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用します。  
+この例では、開いている[レコードセット](./recordset-object-ado.md)と[接続](./connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](./close-method-ado.md)メソッドを使用します。  
   
 ```  
 'BeginOpenVB  
@@ -102,8 +103,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close メソッド (ADO)](./close-method-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Open メソッド (ADO Connection)](./open-method-ado-connection.md)   
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

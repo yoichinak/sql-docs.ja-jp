@@ -15,14 +15,14 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6b400efdcf437fd97952ae215f5279d770c0598a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725220"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130565"
 ---
 # <a name="back-up-files-and-filegroups"></a>ファイルおよびファイル グループのバックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -202,7 +202,7 @@ GO
   
 ## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用
 
-[SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)を設定して使用します。
+[SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)を設定して使用します。
   
 **Backup-SqlDatabase** コマンドレットを使用して- **BackupAction** パラメーターの値の **ファイル** を指定します。 また、次のいずれかのパラメーターを指定します。  
   
@@ -226,4 +226,4 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
  [ファイルの完全バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [ファイルの復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
+ [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)

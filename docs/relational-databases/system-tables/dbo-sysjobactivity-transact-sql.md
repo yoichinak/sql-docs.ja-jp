@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobactivity (Transact-SQL)
 title: dbo.sysjobactivity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -17,26 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: aee1a088e4b2c95b33f8bdb4002853877d8c1275
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd0fb9ae28d2101b02feb17bc5b2eacbfcb476a7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551123"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルは、 **msdb**データベースに格納されます。
+  現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの利用状況と状態を記録します。  このテーブルは、 **msdb** データベースに格納されます。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|**Msdb**データベースの**syssessions**テーブルに格納されているセッションの ID。|  
 |**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**run_requested_date**|**datetime**|ジョブの実行が要求された日付と時刻。|  
-|**run_requested_source**|**sysname (nvarchar (128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|ジョブがキューに格納された日時。 ジョブが直接実行された場合、この列は NULL になります。|  
 |**start_execution_date**|**datetime**|ジョブの実行がスケジュールされている日付と時刻。|  
 |**last_executed_step_id**|**int**|実行された最後のジョブ ステップの ID。|  
@@ -61,7 +62,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dbo.sysjobhistory &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

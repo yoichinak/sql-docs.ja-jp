@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment (SSISDB データベース)
 title: catalog.create_environment (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d7d856d9a90e86c4e1fe188a7526312500b4e3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3657b4d171dd3cef40fbde37c8a13dceaebd0b20
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917175"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129894"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB データベース)
 

@@ -1,4 +1,5 @@
 ---
+description: LinRegVariance (MDX)
 title: LinRegVariance (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b45328614bbefe730c815f528e82f220ad0093e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd223530c0b184dd723abbb68c2acccd1240d870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477034"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
@@ -37,7 +38,7 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  *Numeric_Expression_x*  
  有効な数値式です。通常は、X 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  最小二乗法を使用する線形回帰では、回帰直線の式 (つまり、一連の点に最適な線) が計算されます。 回帰直線の式は次のようになります。ここで、は傾き、b は切片です。  
   
  y = ax+b  

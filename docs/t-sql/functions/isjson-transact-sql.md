@@ -1,4 +1,5 @@
 ---
+description: ISJSON (Transact-SQL)
 title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -16,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cdf9f8c9f79ec7bf286eb1d29a9274baf9a1887f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1021ea35eac59145cc5042e8775b432618464286
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395367"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91111058"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,15 +33,13 @@ ms.locfileid: "87395367"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql  
 ISJSON ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- テストする文字列です。  
+ テストする文字列。  
   
 ## <a name="return-value"></a>戻り値  
  文字列に有効な JSON が含まれている場合は 1 を、それ以外の場合は 0 を返します。 *式* が null の場合は null を返します。  

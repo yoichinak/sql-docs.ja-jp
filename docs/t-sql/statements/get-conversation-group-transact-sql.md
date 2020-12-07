@@ -1,4 +1,5 @@
 ---
+description: GET CONVERSATION GROUP (Transact-SQL)
 title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -22,14 +23,14 @@ helpviewer_keywords:
 - GET CONVERSATION GROUP statement
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 58d29c1979dc97b43dd6ccb82c5bad4c875995e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e433b0ba5513396d732c1230f8e3ce43539e3976
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484910"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497870"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "86484910"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
       FROM <queue>  
@@ -79,7 +79,7 @@ ms.locfileid: "86484910"
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、 **ステートメントのターミネータであるセミコロン (** ;[!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定する必要があります。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "86484910"
 ### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>A. 無制限に待機して、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 このコマンドは、メッセージが使用できるようになるまで待機します。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 WAITFOR (  
@@ -117,7 +117,7 @@ WAITFOR (
 ### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>B. 1 分間待機して、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 使用できるメッセージが 1 分以内に取得できない場合、GET CONVERSATION GROUP では、`@conversation_group_id` の値が変更されずに返されます。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER  
   
 WAITFOR (  
@@ -129,7 +129,7 @@ TIMEOUT 60000 ;
 ### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 待機せず、メッセージ交換グループを取得する  
  次の例では、`@conversation_group_id` にメッセージ交換グループの識別子を設定します。このメッセージ交換グループは、`ExpenseQueue` 上にあり、次に使用できるメッセージで使用されます。 使用できるメッセージがない場合、`GET CONVERSATION GROUP` ステートメントでは、`@conversation_group_id` の値が変更されずにすぐに返されます。  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 GET CONVERSATION GROUP @conversation_group_id  

@@ -1,4 +1,5 @@
 ---
+description: BufferWithTolerance (geometry データ型)
 title: BufferWithTolerance (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555138"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128181"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555138"
  *tolerance*  
  バッファー距離の許容範囲を指定する **float** 式です。  
   
- *許容範囲*とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
+ *許容範囲* とは、返された線形近似の理想的なバッファー距離の最大幅のことです。  
   
  たとえば、ある地点の理想のバッファー距離は円ですが、多角形によって近似された形状になる必要があります。 許容範囲が小さいほど、多角形の頂点の数は多くなります。つまり、計算結果の複雑性が増しますが、元の図形との差が小さくなります。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "86555138"
   
  バッファーに負の値を指定すると、**geometry** インスタンスの境界から、指定された距離の範囲内にある地点をすべて削除します。  
   
- 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)」を参照してください。  
+ 理論上のバッファーと計算されたバッファーの間の誤差は、max(tolerance, extents \* 1.E-7) です。この tolerance は *tolerance* パラメーターの値になります。 エクステントの詳細については、「[geometry データ型メソッド リファレンス](./spatial-types-geometry-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`BufferWithTolerance()` を使用して、インスタンスの周りの大まかなバッファーを取得する例を次に示します。  
@@ -93,9 +94,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STBuffer &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

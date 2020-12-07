@@ -1,4 +1,5 @@
 ---
+description: IPAddressName プロパティ (ServerNetworkProtocolProperty クラス)
 title: IPAddressName プロパティ (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IpAddressName property
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6217cb2441f0a24c8b8ebd5dd25737dd5973e3d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a59bdfcdbd67882d7404be822f8012eb6694d626
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880788"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544473"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName プロパティ (ServerNetworkProtocolProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ object.IPAddressName [= value]
   
 ## <a name="parts"></a>指定項目  
  *object*  
- のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ のインスタンス上のネットワークプロトコルの属性を表す [Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  IP アドレスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_job (Transact-sql)
 title: sp_help_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893717"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549703"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,16 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`ジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`ジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  特定のジョブを表示するには、 *job_id*または*job_name*のいずれかを指定する必要があります。  すべてのジョブに関する情報を返すには、 *job_id*と*job_name*の両方を省略します。
+>  特定のジョブを表示するには、 *job_id* または *job_name* のいずれかを指定する必要があります。  すべてのジョブに関する情報を返すには、 *job_id* と *job_name* の両方を省略します。
   
-`[ @job_aspect = ] 'job_aspect'`表示するジョブ属性。 *job_aspect*は**varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+`[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect* は **varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
@@ -69,19 +70,19 @@ sp_help_job { [ @job_id = ] job_id
 |**よう**|ジョブ ステップ情報|  
 |**ターゲット**|ターゲット情報|  
   
-`[ @job_type = ] 'job_type'`レポートに含めるジョブの種類。 *job_type*は**varchar (12)**,、既定値は NULL です。 *Job_type* **ローカル**または**マルチサーバー**を指定できます。  
+`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type* は **varchar (12)**,、既定値は NULL です。 *Job_type* **ローカル** または **マルチサーバー**を指定できます。  
   
-`[ @owner_login_name = ] 'login_name'`ジョブの所有者のログイン名です。 *login_name*は**sysname**,、既定値は NULL です。  
+`[ @owner_login_name = ] 'login_name'` ジョブの所有者のログイン名です。 *login_name* は **sysname**,、既定値は NULL です。  
   
-`[ @subsystem = ] 'subsystem'`サブシステムの名前。 *サブシステム*は**nvarchar (40)**,、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'` サブシステムの名前。 *サブシステム* は **nvarchar (40)**,、既定値は NULL です。  
   
-`[ @category_name = ] 'category'`カテゴリの名前。 *category*は**sysname**,、既定値は NULL です。  
+`[ @category_name = ] 'category'` カテゴリの名前。 *category* は **sysname**,、既定値は NULL です。  
   
-`[ @enabled = ] enabled`有効なジョブまたは無効になっているジョブの情報を表示するかどうかを示す数値です。 *有効*になっているは**tinyint**,、既定値は NULL です。 **1**は有効なジョブを示し、 **0**は無効になっているジョブを示します。  
+`[ @enabled = ] enabled` 有効なジョブまたは無効になっているジョブの情報を表示するかどうかを示す数値です。 *有効* になっているは **tinyint**,、既定値は NULL です。 **1** は有効なジョブを示し、 **0** は無効になっているジョブを示します。  
   
-`[ @execution_status = ] status`ジョブの実行状態です。 *状態*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+`[ @execution_status = ] status` ジョブの実行状態です。 *状態* は **int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
 |**1**|実行.|  
@@ -91,26 +92,26 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状態.|  
 |**7**|完了操作の実行中。|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison*は**char (1)**,、は =, \<, or > です。  
+`[ @date_comparator = ] 'date_comparison'`*Date_created*と*date_modified*の比較に使用する比較演算子。 *date_comparison* は **char (1)**,、は =, \<, or > です。  
   
-`[ @date_created = ] date_created`ジョブが作成された日付。 *date_created*は**datetime**,、既定値は NULL です。  
+`[ @date_created = ] date_created` ジョブが作成された日付。 *date_created*は **datetime**,、既定値は NULL です。  
   
-`[ @date_last_modified = ] date_modified`ジョブが最後に変更された日付。 *date_modified*は**datetime**,、既定値は NULL です。  
+`[ @date_last_modified = ] date_modified` ジョブが最後に変更された日付。 *date_modified* は **datetime**,、既定値は NULL です。  
   
-`[ @description = ] 'description_pattern'`ジョブの説明。 *description_pattern*は**nvarchar (512)**,、既定値は NULL です。 *description_pattern*には、パターンマッチングに SQL Server ワイルドカード文字を含めることができます。  
+`[ @description = ] 'description_pattern'` ジョブの説明。 *description_pattern* は **nvarchar (512)**,、既定値は NULL です。 *description_pattern* には、パターンマッチングに SQL Server ワイルドカード文字を含めることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 引数を指定しない場合、 **sp_help_job**はこの結果セットを返します。  
+ 引数を指定しない場合、 **sp_help_job** はこの結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
 |**originating_server**|**nvarchar(30)**|ジョブの送信元のサーバーの名前。|  
 |**name**|**sysname**|ジョブの名前。|  
-|**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
+|**有効**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category**|**sysname**|ジョブ カテゴリ。|  
@@ -154,7 +155,7 @@ sp_help_job { [ @job_id = ] job_id
 |**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**nvarchar (4000)**|ステップが成功した場合の対処方法:<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = エラーで終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
 |**on_success_step_id**|**int**|**On_success_action**が**4**の場合は、次に実行する手順を示します。|  
-|**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は**on_success_action**の場合と同じです。|  
+|**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は **on_success_action**の場合と同じです。|  
 |**on_fail_step_id**|**int**|**On_fail_action**が**4**の場合は、次に実行する手順を示します。|  
 |**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|ステップの場合 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、これはコマンドを実行するデータベースです。|  
@@ -162,7 +163,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
 |**retry_interval**|**int**|再試行の間隔 (分単位)。|  
 |**os_run_priority**|**varchar (4000)**|予約済み。|  
-|**output_file_name**|**varchar (200)**|コマンド出力を書き込むファイル ( [!INCLUDE[tsql](../../includes/tsql-md.md)] および**CmdExec**ステップのみ)。|  
+|**output_file_name**|**varchar (200)**|コマンド出力を書き込むファイル ( [!INCLUDE[tsql](../../includes/tsql-md.md)] および **CmdExec** ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
 |**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  
 |**last_run_retries**|**int**|最後にステップを実行したときにコマンドが再試行された回数。|  
@@ -176,12 +177,12 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|すべてのジョブで一意なスケジュール識別子。|  
 |**schedule_name**|**sysname**|スケジュールの名前 (このジョブでのみ一意)。|  
-|**enabled**|**int**|スケジュールがアクティブである (**1**) かどうか (**0**)。|  
-|**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = **SQLServerAgent**サービスの開始時に実行します。|  
-|**freq_interval**|**int**|ジョブが実行された日。 値は**freq_type**の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**有効**|**int**|スケジュールがアクティブである (**1**) かどうか (**0**)。|  
+|**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = **SQLServerAgent** サービスの開始時に実行します。|  
+|**freq_interval**|**int**|ジョブが実行された日。 値は **freq_type**の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_subday_type**|**Int**|**Freq_subday_interval**の単位。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_subday_interval**|**int**|ジョブの各実行間に発生する**freq_subday_type**期間の数。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_relative_interval**|**int**|スケジュールされたジョブの各月の**freq_interval**の発生。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_subday_interval**|**int**|ジョブの各実行間に発生する **freq_subday_type** 期間の数。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_relative_interval**|**int**|スケジュールされたジョブの各月の **freq_interval** の発生。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_recurrence_factor**|**int**|スケジュールされたジョブの実行間隔 (月数)。|  
 |**active_start_date**|**int**|ジョブの実行を開始する日付。|  
 |**active_end_date**|**int**|ジョブの実行を終了する日付。|  
@@ -209,7 +210,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_outcome_message**|**nvarchar(1024)**|この対象サーバーで最後に実行されたときのジョブからの結果メッセージ。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -234,7 +235,7 @@ EXEC dbo.sp_help_job ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>B: 特定の条件に一致するジョブの情報を一覧表示する  
+### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>B. 特定の条件に一致するジョブの情報を一覧表示する  
  次の例では、`françoisa` が所有するマルチサーバー ジョブのジョブ情報を一覧表示します。ここでは、有効でかつ、実行中のジョブが対象になります。  
   
 ```  
@@ -249,7 +250,7 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-### <a name="c-listing-all-aspects-of-information-for-a-job"></a>C: ジョブに関するすべての属性情報を一覧表示する  
+### <a name="c-listing-all-aspects-of-information-for-a-job"></a>C. ジョブに関するすべての属性情報を一覧表示する  
  次の例では、`NightlyBackups` ジョブに関するすべての属性情報を一覧表示します。  
   
 ```  
@@ -262,8 +263,8 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

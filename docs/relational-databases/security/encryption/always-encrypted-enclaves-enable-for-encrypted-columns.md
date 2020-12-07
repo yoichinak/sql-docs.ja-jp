@@ -1,4 +1,5 @@
 ---
+description: 既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 title: 既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411408"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130912"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

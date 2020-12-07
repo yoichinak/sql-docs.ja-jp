@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;SERVICENAME (Transact-SQL)'
 title: '@@SERVICENAME (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 112f387c1f3f3817535c354a8e934b8fd1f864b4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f78b9b0a946d4140c9404ecfa4bdaac350ad2e2c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113342"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380267"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87113342"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@SERVICENAME  
 ```  
   
@@ -51,7 +52,7 @@ ms.locfileid: "87113342"
 ## <a name="examples"></a>例  
  次の例に、`@@SERVICENAME` の使用方法を示します。  
   
-```  
+```sql  
 SELECT @@SERVICENAME AS 'Service Name';  
 ```  
   

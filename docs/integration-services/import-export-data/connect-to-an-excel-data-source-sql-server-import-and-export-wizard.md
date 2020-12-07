@@ -1,4 +1,5 @@
 ---
+description: Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 title: Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a017d8de23da9297062e1d232ea86ad2aabb25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39ff753dec9f3f918fbd21dea3b04306feba307a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425304"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -42,7 +43,7 @@ Excel ファイルに接続するために追加のファイルのダウンロ�
 -   ローカル コンピューター上の上のファイルの場合、**C:\\MyData.xlsx** です。
 -   ネットワーク共有上のファイルの場合、 **\\\\Sales\\Database\\Northwind.xlsx** です。
 
-または、 **[参照]** をクリックします。  
+または、**[参照]** をクリックします。  
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  
@@ -66,7 +67,7 @@ Excel ファイルに接続するために追加のファイルのダウンロ�
 > [!NOTE]
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)

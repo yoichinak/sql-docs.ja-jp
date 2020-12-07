@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: SQL Server Management Studio (SSMS) の概要とその機能に関する説明。
+description: Analysis Services ソリューションの管理方法を含め、SQL Server Management Studio (SSMS) と SMMS で行える機能の詳細について説明します。
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,34 +16,34 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 396df64c5c5be5d7ea9c5fc67d7cb1ff0a7d990f
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001590"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243851"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) とは何か?
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、SQLインフラストラクチャを管理するための統合環境です。 SSMS を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database、および SQL Data Warehouse のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 SSMS には、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできる包括的なユーティリティが 1 つ用意されています。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) は、SQLインフラストラクチャを管理するための統合環境です。 SSMS を使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database、および Azure Synapse Analytics のすべてコンポーネントのアクセス、構成、管理、運営、および開発を行います。 SSMS には、さまざまなグラフィック ツールと、機能の豊富な多くのスクリプト エディターを結合して、あらゆるスキル レベルの開発者やデータベース管理者が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にアクセスできる包括的なユーティリティが 1 つ用意されています。
 
 - [**SQL Server Management Studio (SSMS) のダウンロード**](download-sql-server-management-studio-ssms.md)
 - [**SQL Server Developer のダウンロード**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Visual Studio のダウンロード**](https://www.visualstudio.com/downloads/)
 
-![SSMS](media/sql-server-management-studio-ssms/ssms.png)
+![SQL Server Management Studio のスクリーンショット。](media/sql-server-management-studio-ssms/ssms.png)
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  
   
 |説明|コンポーネント|  
 |---------------|---------|  
 |**オブジェクト エクスプローラー** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 1 つ以上のインスタンスに存在するすべてのオブジェクトを表示および管理します。|[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|  
-|**テンプレート エクスプローラー**を使用し、クエリとスクリプトの開発を迅速化する定型句ファイルを作成し、管理する方法。|[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|  
+|**テンプレート エクスプローラー** を使用し、クエリとスクリプトの開発を迅速化する定型句ファイルを作成し、管理する方法。|[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|  
 |将来非推奨となっている **ソリューション エクスプローラー** を使用して、スクリプトやクエリなどの管理アイテムを扱うためのプロジェクトを構築する方法。|[ソリューション エクスプローラー](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に付属のビジュアル デザイン ツールを使用する方法。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 言語エディターを使用し、クエリおよびスクリプトを対話形式でビルド、デバッグする方法。|[クエリ エディターとテキスト エディター](scripting/query-and-text-editors-sql-server-management-studio.md)
+|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 言語エディターを使用し、クエリおよびスクリプトを対話形式でビルド、デバッグする方法。|[クエリ エディターとテキスト エディター](./f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>ビジネス インテリジェンスのための SQL Server Management Studio
 
@@ -58,7 +58,7 @@ ms.locfileid: "86001590"
 
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、および XML for Analysis (XMLA) で作成されるスクリプトの開発と保存を行う [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトが提供されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] インスタンスで管理タスクを実行したり、データベースやキューブなどのオブジェクトを再作成したりする場合に使用します。 たとえば、既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] インスタンスで直接新しいオブジェクトを作成する XMLA スクリプトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトで開発することができます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] スクリプト プロジェクトは、ソリューションの一部として保存し、ソース コード コントロールに統合できます。
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の使用方法について詳しくは、「 [SQL Server Management Studio を使用した開発と実装](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)」をご覧ください。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の使用方法について詳しくは、「 [SQL Server Management Studio を使用した開発と実装](/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)」をご覧ください。
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio を使用した Integration Services ソリューションの管理
 
@@ -90,7 +90,7 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
 
 - SSMS 17.0 以降、SQL Tools チームは [Microsoft モダン ライフサイクル ポリシー](https://support.microsoft.com/help/30881/modern-lifecycle-policy)を採用しました。
 - 元の[モダン ライフサイクル ポリシーに関するお知らせ](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)を参照してください。 詳細については、「[モダン ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)」を参照してください。
-- 診断データの収集と機能の使用方法について詳しくは、「[SQL Server のプライバシーの補足情報](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)」を参照してください。
+- 診断データの収集と機能の使用方法について詳しくは、「[SQL Server のプライバシーの補足情報](../sql-server/sql-server-privacy.md)」を参照してください。
 
 ## <a name="cross-platform-tool"></a>クロスプラットフォーム ツール
 
@@ -101,8 +101,8 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
 ## <a name="next-steps"></a>次のステップ
 
 - [英語以外の言語バージョンの SSMS をインストールする](install-other-languages.md)
-- [SQL Server インスタンスに接続してクエリを実行する](tutorials/connect-query-sql-server.md)
-- [Transact-SQL ステートメントの作成](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [SQL Server インスタンスに接続してクエリを実行する](./quickstarts/connect-query-sql-server.md)
+- [Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

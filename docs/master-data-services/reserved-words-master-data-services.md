@@ -1,4 +1,5 @@
 ---
+description: 予約語 (マスター データ サービス)
 title: 予約語
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456716"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811465"
 > [!NOTE]  
 >  特殊文字 (記号、ハイフネーションなど) の使用も極力控えてください。  
   
--   [モデル](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [エンティティ](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -37,18 +38,18 @@ ms.locfileid: "85811465"
   
 -   [属性](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [メンバー](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [[メンバー]](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>モジュール  
+##  <a name="models"></a><a name="models"></a> モジュール  
  名前を **Name** または **Code**に設定したモデルを作成する場合は、 **[モデルと同じ名前のエンティティを作成する]** を選択しないでください。エンティティの名前に **Name** または **Code** は使用できません。  
   
-##  <a name="entities"></a><a name="entities"></a>事業  
+##  <a name="entities"></a><a name="entities"></a> 事業  
  エンティティ名には **Name** または **Code**を使用できません。  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>明示的階層  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> 明示的階層  
  明示的階層名には **Name** または **Code**を使用できません。  
   
-##  <a name="attributes"></a><a name="attributes"></a>アトリビュート  
+##  <a name="attributes"></a><a name="attributes"></a> アトリビュート  
   
 -   **ID**  
   
@@ -76,10 +77,10 @@ ms.locfileid: "85811465"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>属する  
+##  <a name="members"></a><a name="members"></a> 属する  
  メンバーの場合、 **MDMMemberStatus**、 **MDMUnused**、または **ROOT** を **Code** 属性値として使用することはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

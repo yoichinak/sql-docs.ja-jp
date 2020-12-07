@@ -1,4 +1,5 @@
 ---
+description: STDistance (geometry データ型)
 title: STDistance (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555033"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88467375"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555033"
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STDistance()` は常に null を返します。  
   
 ## <a name="examples"></a>例  

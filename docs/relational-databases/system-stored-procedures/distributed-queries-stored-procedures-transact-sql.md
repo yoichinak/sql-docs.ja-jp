@@ -1,4 +1,5 @@
 ---
+description: 分散クエリのストアドプロシージャ (Transact-sql)
 title: 分散クエリのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], distributed queries
 - distributed queries [SQL Server], stored procedures
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 435465438134495b102ea4421786c5f29b0e5e20
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977572"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529708"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>分散クエリのストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、分散クエリの実装と管理に使用される次のシステムストアドプロシージャをサポートしています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、分散クエリの実装と管理に使用される次のシステムストアドプロシージャをサポートしています。  
 
 :::row:::
     :::column:::

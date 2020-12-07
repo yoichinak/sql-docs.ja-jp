@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 6068c871bd96908e501c552e0388050aedfa47bf
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681401"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907230"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、既定で凡例にカテゴリが表示されます。 凡例にパーセンテージまたはパイ スライス自体を表示することもできます。   
 
-![report-builder-pie-chart-preview-percents](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
+![円のスライスのパーセンテージが示された円グラフのスクリーンショット。](../../reporting-services/media/report-builder-pie-chart-preview-percents.png)
 
  「[チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)」では、最初にサンプル データを使って試す場合に、パーセンテージをパイ スライスに追加する手順について説明します。
  
@@ -34,7 +34,7 @@ ms.locfileid: "84681401"
   
 4.  **[ラベル データ]** オプションに **#PERCENT** と入力します。  
   
-5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、「#PERCENT{P*n*}」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「#PERCENT{P0}」と入力します。  
+5.  (省略可) ラベルに表示する小数点以下桁数を指定するには、「#PERCENT{P *n* }」と入力します。ここで、 *n* は、表示する小数点以下桁数を表します。 たとえば、小数点以下を表示しない場合は「#PERCENT{P0}」と入力します。  
   
 ## <a name="to-display-percentage-values-in-the-legend-of-a-pie-chart"></a>円グラフの凡例にパーセンテージを表示するには  
   

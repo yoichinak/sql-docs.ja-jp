@@ -1,4 +1,5 @@
 ---
+description: SQL Server Express LocalDB リファレンス - インスタンス API
 title: SQL Server Express LocalDB インスタンスの API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2122ff4cddd045b3d73567af660ddc925d4152ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 892ccbc66070e7ef0d198daba60698502ee3bd0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767787"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541195"
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>SQL Server Express LocalDB リファレンス - インスタンス API
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85767787"
   
  LocalDB インスタンスは、常に1人のユーザーによって所有され、インスタンス共有が有効になっている場合を除き、このユーザーのコンテキストからのみアクセスできます。  
   
- 厳密には、LocalDB インスタンスは従来の SQL Server インスタンスとは異なりますが、意図されている用途はほぼ同じです。 これらは*インスタンス*と呼ばれ、この類似性を強調し、SQL Server ユーザーにとって直観的にするために使用されます。  
+ 厳密には、LocalDB インスタンスは従来の SQL Server インスタンスとは異なりますが、意図されている用途はほぼ同じです。 これらは *インスタンス* と呼ばれ、この類似性を強調し、SQL Server ユーザーにとって直観的にするために使用されます。  
   
  LocalDB では、自動インスタンス (AI) と名前付きインスタンス (NI) という 2 種類のインスタンスがサポートされています。 LocalDB インスタンスの識別子は、インスタンス名です。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85767787"
  各名前付きインスタンスには、特定の LocalDB バージョンが関連付けらています。つまり、各名前付きインスタンスは、LocalDB バイナリの特定のセットを指しています。 名前付きインスタンスのバージョンは、インスタンス作成時に設定されます。  
   
 ### <a name="named-instance-naming-rules"></a>名前付きインスタンスの名前付け規則  
- LocalDB インスタンス名の最大文字数は128文字です ( **sysname**データ型によって制限されています)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この違いの理由は、LocalDB ではデータベースがファイルとして扱われるため、ファイルベースのセマンティクスを意味するので、ユーザーはより自由にインスタンス名を選択できます。  
+ LocalDB インスタンス名の最大文字数は128文字です ( **sysname** データ型によって制限されています)。 これは、従来の SQL Server インスタンス名と比較すると、大きく異なります。従来は、16 の ASCII 文字で構成される NetBIOS 名に制限されていました。 この違いの理由は、LocalDB ではデータベースがファイルとして扱われるため、ファイルベースのセマンティクスを意味するので、ユーザーはより自由にインスタンス名を選択できます。  
   
  LocalDB のインスタンス名には、ファイル名コンポーネント内で有効な任意の Unicode 文字を使用できます。 ファイル名コンポーネント内の無効な文字には、通常、ASCII/Unicode 文字 1 ~ 31 の文字、引用符 (")、小なり ( \<), greater than (> )、パイプ (|)、バックスペース (\b)、タブ (\t)、コロン (:)、アスタリスク (*)、疑問符 (?)、円記号 ( \\ )、およびスラッシュ (/) が含まれます。 null 文字 (\0) は、文字列の終端として許可されています。最初に検出された null 文字以降は、すべての文字が無視されます。  
   

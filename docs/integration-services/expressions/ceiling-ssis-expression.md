@@ -1,4 +1,5 @@
 ---
+description: CEILING (SSIS 式)
 title: CEILING (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb62380f0c779ee96a4bd305e8892418b4171077
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 533cef6354c3dcea15146809a1f2466f342e60c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457284"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
 
@@ -41,7 +42,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  関数に送信された数値式のデータ型です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  引数が NULL の場合、CEILING は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -63,9 +64,9 @@ CEILING(-124.27)
 CEILING(0.00)  
 ```  
   
- 0\.00 を返します。  
+ 0.00 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FLOOR &#40;SSIS 式&#41;](../../integration-services/expressions/floor-ssis-expression.md)   
  [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   

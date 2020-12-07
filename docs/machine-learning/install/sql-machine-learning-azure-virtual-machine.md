@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7516d23ade89b4d82858c209f46498207f06cde5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882131"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956973"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Azure の仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする方法について説明します。 これにより、Machine Learning Services のインストールと構成タスクが不要になります。
 
@@ -30,9 +30,9 @@ Azure の仮想マシンに SQL Server Machine Learning Services と共に Pytho
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Azure に SQL Server 仮想マシンをプロビジョニングする
 
-詳細な手順については、「[Azure portal で Windows SQL Server 仮想マシンをプロビジョニングする方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)」を参照してください。 
+詳細な手順については、「[Azure portal で Windows SQL Server 仮想マシンをプロビジョニングする方法](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)」を参照してください。 
 
-Machine Learning Services をお使いのインスタンスに追加する手順は、「[SQL Server の設定を構成する](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)」にあります。
+Machine Learning Services をお使いのインスタンスに追加する手順は、「[SQL Server の設定を構成する](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)」にあります。
 
 <a name="firewall"></a>
 

@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3eef56e8db1a92d021d074de9a1c821f8d3fbc9
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: b788a7f0996eaf8b6321caf9418d660deb08ac9c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122944"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039066"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "87122944"
  **[検索する文字列]** ボックスまたは **[置換後の文字列]** ボックスに入力された特殊文字を解釈する方法を指定します。 オプションは **[ワイルドカード]** と **[正規表現]** です。  
   
  **Regular Expressions**  
- 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)」を参照してください。  
+ 検索するテキストのパターンを定義する、特殊な表記です。 一覧については、「 [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)」を参照してください。  
   
  **ワイルドカード**  
- アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+ アスタリスク (`*`) や疑問符 (`?`) などの特殊文字は、1 つまたは複数の文字を表します。 一覧については、「 [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)」を参照してください。  
   
  **[次を検索]**  
  **[検索する文字列]** ボックス内のテキストの検索を開始します。  
@@ -124,4 +124,4 @@ ms.locfileid: "87122944"
  このツール バー タブを使用すると、ダイアログ ボックスが **[フォルダーを指定して置換]** ダイアログ ボックスに変わります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

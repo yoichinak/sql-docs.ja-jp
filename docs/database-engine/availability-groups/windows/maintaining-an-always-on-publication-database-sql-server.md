@@ -6,19 +6,19 @@ ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6962df1084579693ec5b281514b12db83fdb07da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 864fca7c1d2983bec6296f1e82304cff31f658cb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896079"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584214"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 可用性グループの一部として複製したパブリッシャー データベースを管理する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

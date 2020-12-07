@@ -1,4 +1,5 @@
 ---
+description: '[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)'
 title: 基になるクエリの指定 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347168"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86920168"
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>クエリを指定して構文を確認する
 **SQL ステートメント**  
- ソース データベースから特定のデータ行と列を取得する SELECT クエリを入力します。 保存されたクエリのテキストを貼り付けるか、 **[参照]** をクリックしてファイルからクエリを読み込むこともできます。 
+ ソース データベースから特定のデータ行と列を取得する SELECT クエリを入力します。 保存されたクエリのテキストを貼り付けるか、**[参照]** をクリックしてファイルからクエリを読み込むこともできます。 
   
  たとえば、次のクエリは、歩合率が 1.5% より高い販売担当者の **SalesPersonID**、**SalesQuota**、および **SalesYTD** を AdventureWorks サンプル データベースから取得します。  
   
@@ -50,7 +51,7 @@ WHERE CommissionPct > 0.015
 
 データ ソースが Excel の場合、クエリで Excel ワークシートと範囲を指定する方法については、このトピックで後述する「 [Excel のソース クエリを指定する](#excelQueries) 」を参照してください。
   
- **解析**  
+ **Parse**  
  **[SQL ステートメント]** テキスト ボックスで、入力した SQL ステートメントの構文をチェックします。  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ WHERE CommissionPct > 0.015
 > Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
 
 クエリに使用できる Excel オブジェクトは 3 種類あります。
--   **ワークシート。** ワークシートをクエリするには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]** )。
+-   **ワークシート。** ワークシートをクエリするには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]**)。
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ WHERE CommissionPct > 0.015
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  コピーするデータを選択するための SQL クエリを記述してテストした後、次に表示されるページは、データの宛先によって異なります。  
   
 -   ほとんどの宛先では、次のページは **[コピー元のテーブルおよびビューを選択]** になります。 このページで、指定したクエリを確認し、オプションでコピーする列を選択し、サンプル データをプレビューします。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。  

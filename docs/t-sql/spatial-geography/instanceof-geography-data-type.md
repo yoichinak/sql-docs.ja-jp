@@ -1,4 +1,5 @@
 ---
+description: InstanceOf (geography データ型)
 title: InstanceOf (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552927"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88422386"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,9 +46,9 @@ ms.locfileid: "86552927"
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
-CLR の戻り値の型:**SqlBoolean**  
+CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 **geography** インスタンスの型が指定した型と同じである場合、または指定した型がインスタンスの型の先祖である場合は 1 を返します。それ以外の場合は 0 を返します。  
   
 この **geography** データ型メソッドは、半球より大きい **FullGlobe** インスタンスまたは空間インスタンスをサポートします。  

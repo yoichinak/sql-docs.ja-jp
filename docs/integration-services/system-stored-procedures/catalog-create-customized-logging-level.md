@@ -1,4 +1,5 @@
 ---
+description: catalog.create_customized_logging_level
 title: catalog.create_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a3bff065a7a89a1e0708fc5a1d782979652cbd3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917118"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129902"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -49,7 +50,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @profile_value = ] *profile_value*  
  新しいする統計情報は、ログに記録するログ記録レベルをカスタマイズできます。  
   
- 統計情報の有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
+ 統計情報の有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
   
 -   実行 = 0  
   
@@ -62,7 +63,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] *events_value*  
  新しいイベントは、ログに記録するログ記録レベルをカスタマイズできます。  
   
- イベントの有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
+ イベントの有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
   
 |イベントをイベントのコンテキスト|イベントのコンテキストを持つイベント|  
 |----------------------------------|-------------------------------|  

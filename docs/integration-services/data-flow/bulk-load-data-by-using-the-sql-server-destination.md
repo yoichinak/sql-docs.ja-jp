@@ -1,4 +1,5 @@
 ---
+description: SQL Server 変換先を使用してデータの一括読み込みを行う
 title: SQL Server 変換先を使用してデータの一括読み込みを行う | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38b4b61cecf57f4ce0db7152aff1bc5c08ccf500
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3bce4cae8fc71c93487f65a726bb42f58618d5a7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915518"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127325"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 変換先を使用してデータの一括読み込みを行う
 
@@ -58,7 +59,7 @@ ms.locfileid: "86915518"
     > [!NOTE]  
     >  この変換先では、同じ名前の列は自動的にマップされます。  
   
-9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、および **[トリガーを起動する]** を設定します。  
+9. **[詳細設定]** をクリックし、一括読み込みオプションの **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、および **[トリガーを起動する]** を設定します。  
   
      必要に応じて、挿入する最初の入力行と最後の入力行、挿入操作が停止するまでに発生できるエラーの最大数、および挿入を並べ替える列を指定します。  
   

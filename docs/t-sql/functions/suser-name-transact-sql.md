@@ -1,4 +1,5 @@
 ---
+description: SUSER_NAME (Transact-SQL)
 title: SUSER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1044f594889c8d7a6698c0ffc5a09692ed734a47
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379778"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "87110752"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
@@ -54,7 +54,7 @@ _server\_user\_id_
 ## <a name="return-types"></a>戻り値の型  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、サーバー ユーザー識別番号 (SUID) の代わりにセキュリティ識別番号 (SID) が使用されます。  
   
 SUSER_NAME では、**syslogins** システム テーブル内にエントリがあるログインに対してのみログイン名が返されます。  
@@ -67,11 +67,11 @@ SUSER_NAME は、選択リストの中、WHERE 句の中、また、式を使え
 ## <a name="examples"></a>例  
 次の例では、ログイン識別番号 `1` のユーザーのログイン識別名を返します。  
   
-```  
+```sql
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
 [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

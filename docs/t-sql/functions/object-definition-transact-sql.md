@@ -1,4 +1,5 @@
 ---
+description: OBJECT_DEFINITION (Transact-SQL)
 title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 59f2044a1f7c23f5cb5c81dedf134eab69b880f5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 239a48b378e186e6149a31012785835939d2cde7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110391"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115947"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "87110391"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 OBJECT_DEFINITION ( object_id )  
 ```  
   
@@ -81,14 +81,14 @@ OBJECT_DEFINITION ( object_id )
 -   V = ビュー  
   
 ## <a name="permissions"></a>アクセス許可  
- システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>A. ユーザー定義オブジェクトのソース テキストを返す  
  次の例では、ユーザー定義トリガー `uAddress` の定義を `Person` スキーマで返します。 組み込み関数 `OBJECT_ID` を使用して、トリガーのオブジェクト ID を `OBJECT_DEFINITION` ステートメントに返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition];   
@@ -98,7 +98,7 @@ GO
 ### <a name="b-returning-the-source-text-of-a-system-object"></a>B. システム オブジェクトのソース テキストを返す  
  次の例では、システム ストアド プロシージャ `sys.sp_columns` の定義を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'sys.sp_columns')) AS [Object Definition];  

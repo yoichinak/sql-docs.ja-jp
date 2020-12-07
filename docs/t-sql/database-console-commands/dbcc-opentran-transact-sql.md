@@ -1,4 +1,5 @@
 ---
+description: DBCC OPENTRAN (Transact-SQL)
 title: DBCC OPENTRAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: bfea3cb27b67208179dcb7dcce8a0352f369b84c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e7c653d422938a3ead8bcd42bbbbdc8e6718a811
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484289"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114977"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +73,7 @@ DBCC OPENTRAN は、開かれたトランザクションがトランザクショ
 ## <a name="result-sets"></a>結果セット  
 開かれたトランザクションがない場合、DBCC OPENTRAN は次の結果セットを返します。
   
-```sql
+```
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
@@ -85,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 次の例では、現在のデータベースのトランザクション情報を取得します。 結果は異なる場合があります。
   
 ```sql  
-CREATE TABLE T1(Col1 int, Col2 char(3));  
+CREATE TABLE T1(Col1 INT, Col2 CHAR(3));  
 GO  
 BEGIN TRAN  
 INSERT INTO T1 VALUES (101, 'abc');  
@@ -120,7 +121,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
-   ActiveTransaction varchar(25),  
+   ActiveTransaction VARCHAR(25),  
    Details sql_variant   
    );  
 -- Execute the command, putting the results in the table.  

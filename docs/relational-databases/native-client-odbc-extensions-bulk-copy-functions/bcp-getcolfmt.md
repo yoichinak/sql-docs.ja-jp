@@ -1,4 +1,5 @@
 ---
+description: bcp_getcolfmt
 title: bcp_getcolfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e279af67313107d495e5ef864414e53997c3cff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bb8dc47bd4f7d2c77aeb92a04048734dc66ed395
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494113"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +51,7 @@ RETCODE bcp_getcolfmt (
  *分野*  
  プロパティを取得する列番号です。  
   
- *プロパティ*  
+ *property*  
  プロパティ定数のいずれかを指定します。  
   
  *pValue*  
@@ -64,15 +66,15 @@ RETCODE bcp_getcolfmt (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- 列形式のプロパティ値については、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)のトピックを参照してください。 列形式のプロパティ値は**bcp_setcolfmt**関数を呼び出すことによって設定され、 **bcp_getcolfmt**関数は列形式のプロパティ値を検索するために使用されます。  
+## <a name="remarks"></a>解説  
+ 列形式のプロパティ値については、 [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) のトピックを参照してください。 列形式のプロパティ値は **bcp_setcolfmt** 関数を呼び出すことによって設定され、 **bcp_getcolfmt** 関数は列形式のプロパティ値を検索するために使用されます。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以前のバージョンと比較して、(またはそれ以降の) サーバーコンピューターに接続するときに、動作の変更が検出される場合があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt による機能強化された日付と時刻のサポート  
- 日付型または時刻型の**BCP_FMT_TYPE**プロパティと共に使用される型は、 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)で指定されています。  
+ 日付型または時刻型の **BCP_FMT_TYPE** プロパティと共に使用される型は、 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更 ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)で指定されています。  
   
- 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「 [日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

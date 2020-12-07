@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 530d1eacd6c4bb480c8a8932563077b764b027fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 710554564bf1018c1551fe0e6dbbe065ea395924
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723233"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384766"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "85723233"
 
 新しいメモリ最適化テーブルを作成するか、既存のディスク ベース テーブルを [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブルに移行するかにかかわりなく、各テーブルのメモリ必要量に関する適切な推定を実施することは重要であり、その結果、サーバーで十分なメモリを準備することができます。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
   
-ディスク ベース テーブルをメモリ最適化テーブルに移行することを検討している場合は、このトピックを読み進める前に、どのテーブルを移行するのが最善であるかを示す「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 」というトピックを参照してください。 「 [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) 」に掲載されているすべてのトピックには、ディスク ベース テーブルからメモリ最適化テーブルへの移行に関するガイダンスが掲載されています。 
+ディスク ベース テーブルをメモリ最適化テーブルに移行することを検討している場合は、このトピックを読み進める前に、どのテーブルを移行するのが最善であるかを示す「 [テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 」というトピックを参照してください。 「 [インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) 」に掲載されているすべてのトピックには、ディスク ベース テーブルからメモリ最適化テーブルへの移行に関するガイダンスが掲載されています。 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>メモリ要件を見積もるための基本的なガイダンス
 
@@ -132,7 +132,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 新しいテーブルを作成する場合は、配列のサイズを推測するか、配置を実行する前にテストからデータを収集する必要があります。  
   
-[!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)」(ハッシュ インデックス) を参照してください。  
+[!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130))」(ハッシュ インデックス) を参照してください。  
   
 #### <a name="setting-the-hash-index-array-size"></a>ハッシュ インデックスの配列サイズの設定  
   
@@ -162,7 +162,7 @@ SELECT COUNT(DISTINCT [Col2])
  非クラスター化インデックスは、次のクエリで例示する範囲参照の場合に使用するのが最適です。  
   
 ```sql  
-SELECT * FRON t_hk  
+SELECT * FROM t_hk  
    WHERE c2 > 5;  
 ```  
   
@@ -194,5 +194,4 @@ SELECT * FRON t_hk
   
 ## <a name="see-also"></a>参照
 
-[インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

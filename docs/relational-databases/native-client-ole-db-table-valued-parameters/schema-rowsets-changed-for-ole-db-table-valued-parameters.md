@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client で OLE DB テーブル値パラメーターのスキーマ行セットが変更されました
 title: スキーマ行セット、OLE DB テーブル値パラメーター
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3daa573e198ec95daeecccee0e433e86d2366c49
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d68366d87fdee64096ebca492b318c711fd2b038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482608"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters-in-sql-server-native-client"></a>SQL Server Native Client で OLE DB テーブル値パラメーターのスキーマ行セットが変更されました
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

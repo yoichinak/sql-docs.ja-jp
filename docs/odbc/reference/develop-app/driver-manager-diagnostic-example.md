@@ -1,4 +1,5 @@
 ---
+description: ドライバー マネージャー診断の例
 title: ドライバーマネージャーの診断の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 839095e5544cab73cdddd4f4b17a3d8d52136c9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d852436600ffb3ce5258e731d23c4579bf8964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483065"
 ---
 # <a name="driver-manager-diagnostic-example"></a>ドライバー マネージャー診断の例
-ドライバーマネージャーは診断メッセージを生成することもできます。 たとえば、アプリケーションで**Sqldatasources ソース**に無効な direction オプションが渡された場合、ドライバーマネージャーは**SQLGetDiagRec**から次の値を書式設定して返します。  
+ドライバーマネージャーは診断メッセージを生成することもできます。 たとえば、アプリケーションで **Sqldatasources ソース**に無効な direction オプションが渡された場合、ドライバーマネージャーは **SQLGetDiagRec**から次の値を書式設定して返します。  
   
 ```  
 SQLSTATE:         "HY103"  

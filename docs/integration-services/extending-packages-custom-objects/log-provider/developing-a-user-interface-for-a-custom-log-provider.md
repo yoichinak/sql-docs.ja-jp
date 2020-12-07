@@ -1,4 +1,5 @@
 ---
+description: カスタム ログ プロバイダー用ユーザー インターフェイスの開発
 title: カスタム ログ プロバイダー用ユーザー インターフェイスの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ffd790e725daa8aaf40f0c2c54724bd5d42876b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4b1807cc004c21d58b75ef25713b7fdb62ac8b5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916420"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123090"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>カスタム ログ プロバイダー用ユーザー インターフェイスの開発
 

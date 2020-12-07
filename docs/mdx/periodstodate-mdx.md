@@ -1,4 +1,5 @@
 ---
+description: PeriodsToDate (MDX)
 title: PeriodsToDate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b18fe4d90a8a0c56424c5e0a7f3607ceea0eae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471704"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -34,10 +35,10 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **PeriodsToDate**関数は、指定されたレベルのスコープ内で、指定されたメンバーと同じレベルにある期間のセットを返します。最初の期間から始まり、指定されたメンバーで終わります。  
   
--   レベルが指定されている場合、階層の現在のメンバーは推定*階層*です。**Currentmember**。ここで、*階層*は指定されたレベルの階層です。  
+-   レベルが指定されている場合、階層の現在のメンバーは推定 *階層*です。**Currentmember**。ここで、 *階層*は指定されたレベルの階層です。  
   
 -   レベルもメンバーも指定されていない場合、レベルは、メジャーグループ内の Time 型の最初の次元の最初の階層の現在のメンバーの親レベルになります。  
   
@@ -45,8 +46,8 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
   
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
-## <a name="examples"></a>使用例  
- 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
+## <a name="examples"></a>例  
+ 次の例では、 `Measures.[Order Quantity]` `Date` **Adventure works** キューブから、ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

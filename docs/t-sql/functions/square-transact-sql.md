@@ -1,4 +1,5 @@
 ---
+description: SQUARE (Transact-SQL)
 title: SQUARE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0df938f2e88300a5b9bcc5b741c041996c9ea571
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c50317300611ecb805835283cf0bd0a7a01d31b1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113325"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379892"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87113325"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SQUARE ( float_expression )  
 ```  
   
@@ -43,7 +44,7 @@ SQUARE ( float_expression )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に float 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -51,8 +52,8 @@ SQUARE ( float_expression )
 ## <a name="examples"></a>例  
  次の例では、半径が `1` インチで高さが `5` インチの円柱の体積を返します。  
   
-```  
-DECLARE @h float, @r float;  
+```sql  
+DECLARE @h FLOAT, @r FLOAT;  
 SET @h = 5;  
 SET @r = 1;  
 SELECT PI()* SQUARE(@r)* @h AS 'Cyl Vol';  
@@ -69,13 +70,13 @@ Cyl Vol
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`volume` テーブル内の `containers` 列の値の 2 乗を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE TABLE Containers (  
-    ID int NOT NULL,  
-    Name varchar(20),  
-    Volume float(24));  
+    ID INT NOT NULL,  
+    Name VARCHAR(20),  
+    Volume FLOAT(24));  
   
 INSERT INTO Containers VALUES (1, 'Cylinder', '125.22');  
 INSERT INTO Containers VALUES (2, 'Cube', '23.98');  

@@ -1,4 +1,5 @@
 ---
+description: RESTORE ステートメント - FILELISTONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f69f4ac410c3a625fce65b560af4b0611c1bca4c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635727"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497236"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメント - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +44,6 @@ ms.locfileid: "81635727"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 RESTORE FILELISTONLY   
 FROM <backup_device>   
 [ WITH   
@@ -74,7 +74,6 @@ FROM <backup_device>
    | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
-  
 ```  
 
 > [!NOTE] 
@@ -90,9 +89,9 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|ファイルの論理名です。|  
 |PhysicalName|**nvarchar(260)**|ファイルの物理名またはオペレーティング システム名です。|  
-|種類|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
+|Type|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
 |FileGroupName|**nvarchar(128)** NULL|このファイルを含むファイル グループの名前。|  
-|Size|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
+|サイズ|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
 |MaxSize|**numeric(20,0)**|最大許容サイズ (バイト単位)。|  
 |FileID|**bigint**|データベース内で一意なファイル識別子。|  
 |CreateLSN|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
@@ -111,7 +110,7 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)** NULL|データベース暗号化キーの拇印を表示します。 暗号化の拇印とは、キーの暗号化で使用された証明書の SHA-1 ハッシュです。 データベース暗号化の詳細については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。|  
 |SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT バックアップに含まれているデータベース ファイルの Azure のスナップショットの URL。 FILE_SNAPSHOT バックアップがない場合は、NULL を返します。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
@@ -123,7 +122,7 @@ FROM <backup_device>
 ## <a name="examples"></a>例  
  次の例は、`AdventureWorksBackups` というバックアップ デバイスから情報を返します。 この例では `FILE` オプションを使用して、デバイスで 2 番目のバックアップ セットを指定しています。  
   
-```  
+```sql  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  
 GO  

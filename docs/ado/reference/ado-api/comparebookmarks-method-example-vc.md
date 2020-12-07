@@ -1,8 +1,9 @@
 ---
+description: CompareBookmarks メソッドの例 (VC++)
 title: CompareBookmarks メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c11d385b6ae77208843d8eac430f65e18d3a35
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b30ea43d8a47e5e32b57f94f997ea05bfbe641de
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760348"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975033"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (VC++)
-この例は、 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
+この例は、 [Comparebookmarks](./comparebookmarks-method-ado.md) メソッドを示しています。 ブックマークの相対値は、特定のブックマークが特別に特殊な場合を除き、ほとんど必要ありません。  
   
- ***Authors***テーブルから派生した[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
+ ***Authors***テーブルから派生した[レコードセット](./recordset-object-ado.md)のランダムな行を検索の対象として指定します。 次に、そのターゲットに対して相対的な各行の位置を表示します。  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -170,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [CompareBookmarks メソッド (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks メソッド (ADO)](./comparebookmarks-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

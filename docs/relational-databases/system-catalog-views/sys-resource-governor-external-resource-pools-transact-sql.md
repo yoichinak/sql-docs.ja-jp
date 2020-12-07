@@ -1,4 +1,5 @@
 ---
+description: resource_governor_external_resource_pools (Transact-sql)
 title: resource_governor_external_resource_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -16,13 +17,14 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 65fcc8dc4054c3aa7b55a543acb1aeebc9bd3bcd
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24b51d8970e9609e486c3a5623ba914aee5e64bd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052902"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550467"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

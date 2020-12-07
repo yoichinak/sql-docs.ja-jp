@@ -1,4 +1,5 @@
 ---
+description: CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0a9c2fc146de0ea8b6e5ab769b0eccfc1bca6d12
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396185"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067294"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -53,6 +54,7 @@ WITH
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -179,7 +181,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## <a name="see-also"></a>参照
 
-[SQL Data Warehouse の分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
+[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)</br>
 [DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)</br>
 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)

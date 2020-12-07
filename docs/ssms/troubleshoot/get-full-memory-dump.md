@@ -1,6 +1,7 @@
 ---
+description: 完全メモリ ダンプの取得
 title: SSMS のトラブルシューティングを行うために完全メモリ ダンプを取得する
-Description: 完全メモリ ダンプを収集して SSMS の応答停止やクラッシュの問題のトラブルシューティングを行う
+Description: クラッシュやシステムが応答しない問題を解決できるように、SQL Server Management Studio (SSMS) から診断情報を取得します。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.reviewer: dineth, sstein
+ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: d6055d14fd6edbc711c950aa194cd9b553cb3b78
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091260"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035920"
 ---
 # <a name="get-full-memory-dump"></a>完全メモリ ダンプの取得
 
@@ -26,13 +27,13 @@ ms.locfileid: "86091260"
 
 問題解決のために診断情報を取得するには、以下の手順を行います。
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
+1. [ProcDump](/sysinternals/downloads/procdump) をダウンロードします。
 
 2. ダウンロードしたものをフォルダーに解凍します。
 
 3. コマンド プロンプトを開き (`cmd.exe` など)、次のコマンドを実行します。
 
-    ```
+    ```console
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
@@ -60,7 +61,7 @@ OutOfMemoryException (あらゆる管理対象例外) がスローされたら�
 
 SSMS から OutOfMemoryException の問題を解決するための診断情報を取得するには、以下の手順を行います。
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
+1. [ProcDump](/sysinternals/downloads/procdump) をダウンロードします。
 
 2. ダウンロードしたものをフォルダーに解凍します。
 

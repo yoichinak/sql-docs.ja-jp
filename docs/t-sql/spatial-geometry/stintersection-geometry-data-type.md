@@ -1,4 +1,5 @@
 ---
+description: STIntersection (geometry データ型)
 title: STIntersection (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6365d94822d8d291951de3e59c7c71fbed487163
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479254"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555667"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STIntersection()` は常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  

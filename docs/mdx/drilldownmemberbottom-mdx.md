@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberBottom (MDX)
 title: ドリルダウン Memberbottom (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 442f9c57124e06236d50d60f0e5db1de3ebbe731
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: eb308c3fbdbcf9f13398a7d44c885069c1665db1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971500"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193984"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 
@@ -50,9 +51,9 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
 ## <a name="remarks"></a>注釈  
- 数値式を指定する**と、子**メンバーのセットに対して評価された数値式の値に従って、1番目のセット内の各メンバーの子を昇順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を昇順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す、下端のカウントおよび末尾 (MDX) 関数に似ています。  
+ 数値式を指定する **と、子** メンバーのセットに対して評価された数値式の値に従って、1番目のセット内の各メンバーの子を昇順で並べ替えます。 数値式が指定されていない場合、関数は、クエリコンテキストによって決定される子メンバーのセットによって表されるセルの値に基づいて、最初のセット内の各メンバーの子を昇順で並べ替えます。 この動作は、並べ替えを行わずに、一連のメンバーを自然な順序で返す、下端のカウントおよび末尾 (MDX) 関数に似ています。  
   
- 並べ替えの後、**ドリルダウン Memberbottom**関数は、親メンバーと子メンバーの*数を含む*セットを返します。これには、最小値が設定され、両方のセットに含まれています。  
+ 並べ替えの後、 **ドリルダウン Memberbottom** 関数は、親メンバーと子メンバーの *数を含む* セットを返します。これには、最小値が設定され、両方のセットに含まれています。  
   
  **RECURSIVE**が指定されている場合、関数は、前に説明したように最初のセットを並べ替えてから、階層に編成されている最初のセットのメンバーを2番目のセットに対して再帰的に比較します。 この関数は、最初のセットのメンバーのうち、2 番目のセット内にも存在する各メンバーの子を、最小のものから指定されている数だけ取得します。  
   
@@ -60,9 +61,8 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  **ドリルダウン Memberbottom**関数は、[ドリルダウンメンバー](../mdx/drilldownmember-mdx.md)関数と似ていますが、2番目のセットにも含まれている最初のセット内の各メンバーのすべての子を含めるのではなく、**ドリルダウン memberbottom**関数は各メンバーの最下位の子メンバーの数を返します。  
   
- XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
+ XMLA プロパティ MdpropMdxDrillFunctions に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「 [サポートされる Xmla プロパティ &#40;xmla&#41;](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

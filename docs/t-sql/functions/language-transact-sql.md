@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LANGUAGE (Transact-SQL)'
 title: '@@LANGUAGE (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 929db8e4c69fe8e5e37b6519b97327428cbffbb6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fc24d75bbe3ca32e0e3aede50109ab467570db8e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111950"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124659"
 ---
 # <a name="x40x40language-transact-sql"></a>&#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87111950"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@LANGUAGE  
 ```  
   
@@ -52,7 +53,7 @@ ms.locfileid: "87111950"
 ## <a name="examples"></a>例  
  次の例では、現在のセッションの言語を返します。  
   
-```  
+```sql  
 SELECT @@LANGUAGE AS 'Language Name';  
 ```  
   

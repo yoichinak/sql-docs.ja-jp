@@ -1,4 +1,5 @@
 ---
+description: ツールボックスの使用
 title: ツールボックスの使用
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f1337cc28109bf1fce2d65b9a0bd46a2302e01db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315258"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86009350"
   
 ツールボックス内のアイテムは、タブと呼ばれるセクションにグループ分けされています。 よく使用されるツールボックスのタスクとその実行方法について、参照用一覧を次に示します。  
   
-|ターゲット|方法|  
+|終了|方法|  
 |------|-----------|  
 |ツールボックスを開く|**[表示]** メニューの **[ツールボックス]** をクリックします。|  
 |ツールボックスを自動的に閉じる|ツールボックスを開きます。 **[ウィンドウ]** メニューの **[自動的に隠す]** をオンにします。|  

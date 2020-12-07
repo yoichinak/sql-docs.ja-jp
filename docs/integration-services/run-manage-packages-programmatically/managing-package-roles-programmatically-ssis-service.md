@@ -1,4 +1,5 @@
 ---
+description: プログラムによるパッケージのロールの管理 (SSIS Service)
 title: プログラムによるパッケージのロールの管理 (SSIS Service) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ca7748f3a768edf438fa2da1b4db836bbde2012
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33922748916193e875799839fbbf6fe0f7a76a26
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495529"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>プログラムによるパッケージのロールの管理 (SSIS Service)
 

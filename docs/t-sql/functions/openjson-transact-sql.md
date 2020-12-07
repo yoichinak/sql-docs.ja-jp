@@ -1,4 +1,5 @@
 ---
+description: OPENJSON (Transact-SQL)
 title: OPENJSON (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394794"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117076"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -65,8 +66,6 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 *with_clause* には、**OPENJSON** が返す列とそれらの型の一覧が含まれます。 既定では、**OPENJSON** は、*with_clause* に指定された列名を持つ *jsonExpression* 内のキーと照合されます ( (この場合のキーの一致は、大文字と小文字の区別があるという意味を含みます)。 列名がキー名と一致しない場合は、省略可能な *column_path* を指定できます。これは *jsonExpression* 内のキーを参照する [JSON パス式](../../relational-databases/json/json-path-expressions-sql-server.md) です。 
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引数
 
 ### <a name="jsonexpression"></a>*jsonExpression*
@@ -76,7 +75,7 @@ JSON テキストを含む Unicode 文字式です。
 OPENJSON では、配列の要素または JSON 式内のオブジェクトのプロパティを反復処理し、各要素またはプロパティの 1 つの行を返します。 次の例では、*jsonExpression* として指定されたオブジェクトの各プロパティを返します。  
 
 ```sql
-DECLARE @json NVarChar(2048) = N'{
+DECLARE @json NVARCHAR(2048) = N'{
    "String_value": "John",
    "DoublePrecisionFloatingPoint_value": 45,
    "DoublePrecisionFloatingPoint_value": 2.3456,
@@ -205,11 +204,11 @@ DECLARE @json NVARCHAR(MAX) = N'[
 SELECT *
 FROM OPENJSON ( @json )  
 WITH (   
-              Number   varchar(200)   '$.Order.Number',  
-              Date     datetime       '$.Order.Date',  
-              Customer varchar(200)   '$.AccountNumber',  
-              Quantity int            '$.Item.Quantity',  
-              [Order]  nvarchar(MAX)  AS JSON  
+              Number   VARCHAR(200)   '$.Order.Number',  
+              Date     DATETIME       '$.Order.Date',  
+              Customer VARCHAR(200)   '$.AccountNumber',  
+              Quantity INT            '$.Item.Quantity',  
+              [Order]  NVARCHAR(MAX)  AS JSON  
  )
 ```  
   
@@ -232,7 +231,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|INT|  
+        |2|数値|  
         |3|true/false|  
         |4|array|  
         |5|object|  
@@ -327,7 +326,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```sql  
 SELECT SalesOrderID, OrderDate, value AS Reason  
 FROM Sales.SalesOrderHeader  
-     CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
+     CROSS APPLY OPENJSON (SalesReasons) WITH (value NVARCHAR(100) '$')
 ```  
   
 この例では、`$` パスは、配列内の各要素を参照します。 返される値を明示的にキャストする場合は、この種類のクエリを使用できます。  
@@ -340,7 +339,7 @@ FROM Sales.SalesOrderHeader
 SELECT store.title, location.street, location.lat, location.long  
 FROM store  
 CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')   
-     WITH (street varchar(500) ,  postcode  varchar(500) '$.postcode' ,  
+     WITH (street VARCHAR(500) ,  postcode VARCHAR(500) '$.postcode' ,  
      lon int '$.geo.longitude', lat int '$.geo.latitude')  
      AS location
 ```  
@@ -370,10 +369,10 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
-        firstName nvarchar(50), lastName nvarchar(50),   
-        isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50))
+  WITH (id INT,  
+        firstName NVARCHAR(50), lastName NVARCHAR(50),   
+        isAlive BIT, age INT,  
+        dateOfBirth DATETIME, spouse NVARCHAR(50))
 ```  
 
 ### <a name="example-6---simple-example-with-json-content"></a>例 6 - JSON コンテンツを使用したシンプルな例

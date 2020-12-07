@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT CATALOG (Transact-SQL)
 title: DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - deleting full-text catalogs
 - DROP FULLTEXT CATALOG statement
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f9d5d286ca13d0160ea88c784af4262c0ef70f35
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 71061c8265ccd7ca2b1d8ed060843b06db621b0e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483509"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127435"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86483509"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql  
 DROP FULLTEXT CATALOG catalog_name  
 ```  
   
@@ -51,7 +51,7 @@ DROP FULLTEXT CATALOG catalog_name
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト カタログの DROP 権限を持っているか、**db_owner** または **db_ddladmin** のいずれかの固定データベース ロールのメンバーであることが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   

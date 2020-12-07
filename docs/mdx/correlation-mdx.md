@@ -1,4 +1,5 @@
 ---
+description: Correlation (MDX)
 title: 相関関係 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 35227d129f70a505a33157d1aa945da5acb219d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae050b681830b81ffa63ae82c714d69d54b03c91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387648"
 ---
 # <a name="correlation-mdx"></a>Correlation (MDX)
 
@@ -37,7 +38,7 @@ Correlation( Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  有効な数値式です。通常は、X 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **相関**関数は、最初に最初の数値式に対して指定されたセットを評価し、y 軸の値を取得することで、2つの値のペアの相関係数を計算します。 次に、関数は、指定されたセットを2番目の数値式 (存在する場合) に対して評価し、x 軸の値のセットを取得します。 2番目の数値式が指定されていない場合、関数は、指定されたセット内のセルの現在のコンテキストを x 軸の値として使用します。  
   
 > [!NOTE]  

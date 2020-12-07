@@ -1,4 +1,5 @@
 ---
+description: STArea (geometry データ型)
 title: STArea (geometry Data Type) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 95aa0235e1f9f2daa63a91b1765cfc548969a7b2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2dec51b1ce17ed52ed7c6bb6d601b5977eaf2172
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554692"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88422286"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86554692"
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、`STArea()` は 0 を返します。 **geometry** インスタンスが初期化されていない場合、`STArea()` は **NULL** を返します。  
   
 ## <a name="examples"></a>例  

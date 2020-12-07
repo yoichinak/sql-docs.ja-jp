@@ -1,27 +1,27 @@
 ---
-title: 10 進数文字列と金額の書式設定 (SQLSRV ドライバー) | Microsoft Docs
+title: 10 進数文字列と金額の書式設定 (SQLSRV ドライバー)
+description: Microsoft SQLSRV Driver for PHP for SQL Server を使用する場合に FormatDecimals オプションと DecimalPlaces オプションを使用して 10 進数または金額を書式設定する方法について説明します。
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265144"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726824"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>10 進数文字列と金額の書式設定 (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-正確さを維持するため、[decimal 型または numeric 型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)は、正確な精度と小数点以下桁数の文字列として常にフェッチされます。 値が 1 未満の場合、先頭の 0 はありません。 money フィールドと smallmoney フィールドも、小数点以下桁数が 4 に固定された 10 進数フィールドであるため、これと同じです。
+正確さを維持するため、[decimal 型または numeric 型](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)は、正確な精度と小数点以下桁数の文字列として常にフェッチされます。 値が 1 未満の場合、先頭の 0 はありません。 money フィールドと smallmoney フィールドも、小数点以下桁数が 4 に固定された 10 進数フィールドであるため、これと同じです。
 
 ## <a name="add-leading-zeroes-if-missing"></a>先頭に 0 がない場合に追加する
 バージョン 5.6.0 以降、オプション `FormatDecimals` が sqlsrv 接続およびステートメント レベルに追加され、ユーザーは 10 進数文字列を書式設定できます。 このオプションはブール値 (true または false) であり、フェッチされた結果の decimal または numeric の値の書式設定にのみ影響します。 つまり、`FormatDecimals` オプションは挿入や更新などの他の操作には影響しません。

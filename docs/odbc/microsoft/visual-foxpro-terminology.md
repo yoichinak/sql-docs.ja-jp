@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro 用語集
 title: Visual FoxPro の用語 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 159314e3dddb946bceaeab5079ac81a685d087d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e75879d62c73d731b09273e26304c7d5d92ee2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466294"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 用語集
 **database**  
- Visual FoxPro では、データベースファイルには dbc という拡張子が付いており、1つ以上の**テーブル**を含めることができます。  
+ Visual FoxPro では、データベースファイルには dbc という拡張子が付いており、1つ以上の **テーブル**を含めることができます。  
   
  **データベーステーブル**  
  Visual FoxPro では、データベースに関連付けられているテーブル。 **フリーテーブル**を比較します。  
@@ -38,4 +39,4 @@ ms.locfileid: "81307573"
  **テーブル**  
  Visual FoxPro では、レコードはテーブルに格納されます。 テーブルの各行はレコードを表し、テーブルの列はレコードのフィールドを表します。 各 Visual FoxPro テーブルは、.dbf という拡張子を持つ独自のファイルに格納されます。 Visual FoxPro テーブルは、データベースに関連付けることができます。  
   
- FoxPro バージョン2。*x*テーブルはデータベースに関連付けられていません。
+ FoxPro バージョン2。*x* テーブルはデータベースに関連付けられていません。

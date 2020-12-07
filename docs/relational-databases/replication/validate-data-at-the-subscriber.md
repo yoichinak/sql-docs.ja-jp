@@ -1,4 +1,5 @@
 ---
+description: レプリケートされたデータの検証
 title: レプリケートされたデータの検証 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58fdc4a2f811e93651da79b9732acbe6ecc00435
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470192"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87110550"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>データ検証の動作  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パブリッシャー側の行数やチェックサムを計算し、それらの値をサブスクライバー側で計算された行数やチェックサムと比較することで、データの検証を行います。 一方の値はパブリケーション テーブル全体に対して計算され、もう一方の値はサブスクリプション テーブル全体に対して計算されます。ただし、 **text**列、 **ntext**列、または **image** 列にあるデータはその計算には含まれません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パブリッシャー側の行数やチェックサムを計算し、それらの値をサブスクライバー側で計算された行数やチェックサムと比較することで、データの検証を行います。 一方の値はパブリケーション テーブル全体に対して計算され、もう一方の値はサブスクリプション テーブル全体に対して計算されます。ただし、 **text** 列、 **ntext** 列、または **image** 列にあるデータはその計算には含まれません。  
   
  計算が行われている間は、行数またはチェックサムの計算が行われているテーブルに共有ロックが一時的にかかりますが、計算はすぐに終了し、通常、数秒で共有ロックは解除されます。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "87110550"
 
  データの検証は、3 つの部分で構成されるプロセスです。  
   
-1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、 **[サブスクリプションの検証]** 、 **[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、**[サブスクリプションの検証]**、**[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 2.  サブスクリプションは、ディストリビューション エージェント (トランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) による次回の同期時に検証されます。 ディストリビューション エージェントは、通常は連続して実行されるので、検証はすぐに実行されます。マージ エージェントは、通常は要求時に実行されるので、エージェントを実行した後で検証が実行されます。  
   
@@ -77,7 +78,7 @@ ms.locfileid: "87110550"
   
  データ検証の問題に対処するために、次の点を検討してください。  
   
--   レプリケーション警告を **[レプリケーション: サブスクライバーでデータ検証の問題が見つかりました]** というレプリケーション警告が通知されるようにします。 詳細については、「[Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)」 (定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;) を参照してください。  
+-   失敗が通知されるように、 **[レプリケーション: サブスクライバーでデータ検証で問題が見つかりました]** というレプリケーション警告を設定します。 詳細については、「[Configure Predefined Replication Alerts &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)」 (定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;) を参照してください。  
   
 -   検証の失敗はアプリケーションにとって問題となりますか? 検証の失敗が問題となる場合、データを手動で更新して同期するか、サブスクリプションを再初期化してください。  
   
@@ -271,7 +272,7 @@ ms.locfileid: "87110550"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false** を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> メソッドを呼び出します。 次のパラメーターを指定します。  
   
@@ -291,7 +292,7 @@ ms.locfileid: "87110550"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false** を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> メソッドを呼び出します。 必要な <xref:Microsoft.SqlServer.Replication.ValidationOption>を指定します。  
   
@@ -303,7 +304,7 @@ ms.locfileid: "87110550"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 パブリケーションの <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> プロパティおよび <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> プロパティを設定します。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに、手順 1. の接続を設定します。  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトの残りのプロパティを取得します。 このメソッドが **false** を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> メソッドを呼び出します。 サブスクライバーの名前、検証対象のサブスクリプション データベース、および、必要な <xref:Microsoft.SqlServer.Replication.ValidationOption>を指定します。  
   

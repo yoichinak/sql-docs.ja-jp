@@ -1,4 +1,5 @@
 ---
+description: クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
 title: クエリおよびビュー デザイナー内を移動する
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423076"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85996772"
   
 ## <a name="any-pane"></a>すべてのペイン  
   
-|**To**|**ショートカット キー**|**クリックする場所**|  
+|**To**|**ショートカット キー**|**Click**|  
 |----------|-------------|-------------|  
 |クエリおよびビュー デザイナーのペイン間で移動する|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|移動先のペイン内の任意の箇所|  
   
@@ -37,7 +38,7 @@ ms.locfileid: "85996772"
   
 ## <a name="diagram-pane"></a>ダイアグラム ペイン  
   
-|**To**|**ショートカット キー**|**クリックする場所**|  
+|**To**|**ショートカット キー**|**Click**|  
 |----------|-------------|-------------|  
 |テーブルやその他のテーブル構造オブジェクト間で移動する (または、結合線に移動する)|Tab または Shift + Tab|移動先のテーブル、テーブル構造オブジェクト、または結合線|  
 |テーブルまたはテーブル構造オブジェクト内の列間で移動する|方向キー|移動先の列|  
@@ -52,10 +53,10 @@ ms.locfileid: "85996772"
   
 ## <a name="criteria-pane"></a>抽出条件ペイン  
   
-|ターゲット|ショートカット キー|Click|  
+|終了|ショートカット キー|Click|  
 |------|---------|---------|  
 |セル間で移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
-|選択した列の最後の行に移動する|Ctrl + ↓||  
+|選択した列の最後の行に移動する|Ctrl +↓||  
 |選択した列の最初の行に移動する|Ctrl + ↑||  
 |グリッド内の見えている範囲の左上隅にあるセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home||  
 |右下隅にあるセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;End||  
@@ -64,7 +65,7 @@ ms.locfileid: "85996772"
 |編集モードとセル選択モードを切り替える|F2||  
 |セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|Ctrl + C||  
 |セル内で選択したテキストを切り取ってクリップボードに送る (編集モードの場合)|Ctrl + X||  
-|クリップボードからテキストを貼り付ける (編集モードの場合)|CTRL + V||  
+|クリップボードからテキストを貼り付ける (編集モードの場合)|Ctrl + V||  
 |セルでの編集中に挿入モードと上書きモードを切り替える|Ins||  
 |[出力] 列のチェック ボックスのオンとオフを切り替える|Space キー|チェック ボックス|  
 |セルの選択した内容を削除する|DELETE||  
@@ -78,7 +79,7 @@ ms.locfileid: "85996772"
 詳細については、「[抽出条件ペイン (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)」を参照してください。  
   
 ## <a name="sql-pane"></a>SQL ペイン  
-SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]** 、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
+SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
   
 > [!NOTE]  
 > テキストの挿入だけができます。上書きモードはありません。  
@@ -87,13 +88,13 @@ SQL ペインでの作業時には、標準の Windows 編集キーを使用で�
   
 ## <a name="results-pane"></a>結果ペイン  
   
-|**To**|**ショートカット キー**|**クリックする場所**|  
+|**To**|**ショートカット キー**|**Click**|  
 |----------|-------------|-------------|  
 |セル間を移動する|方向キーまたは Tab または Shift + Tab|移動先のセル|  
 |現在の行の最初または最後のセルに移動する|ホームまたは End||  
 |現在の列の最初の行に移動する|Ctrl + ↑||  
 |左上隅のセルに移動する|Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;Home||  
-|最初の列の一番下のセルに移動する|Ctrl + ↓||  
+|最初の列の一番下のセルに移動する|Ctrl +↓||  
 |セル内の最初の文字を選択する|Shift</localizedText> + <localizedText>Home||  
 |セル内の最後の文字を選択する|Shift</localizedText> + <localizedText>End||  
 |編集モードとセル選択モードを切り替える|F2||  
@@ -105,7 +106,7 @@ SQL ペインでの作業時には、標準の Windows 編集キーを使用で�
 |選択した列または行をクリップボードにコピーする|Ctrl + C||  
 |セル内の選択された文字列をクリップボードにコピーする (編集モードの場合)|Ctrl + C||  
 |セル内の選択された文字列を切り取ってクリップボードに送る (編集モードの場合)|Ctrl + X||  
-|クリップボードからテキストを貼り付ける (編集モードの場合)|CTRL + V||  
+|クリップボードからテキストを貼り付ける (編集モードの場合)|Ctrl + V||  
   
 > [!NOTE]  
 > 複数の項目を選択している場合は、このキーを押すと、選択されているすべての項目が影響を受けます。  

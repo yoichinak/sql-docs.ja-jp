@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 69df287d23713b1465a44f46e68f190bf3e25b09
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728344"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081741"
 ---
 # <a name="example-application-sqlsrv-driver"></a>サンプル アプリケーション (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ AdventureWorks Product Reviews サンプル アプリケーションを実行す
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがアタッチされた SQL Server 2005 または SQL Server 2008 がローカル コンピューターにインストールされていること。  
 -   Web ブラウザーがインストールされていること。  
   
-## <a name="demonstrates"></a>対象  
+## <a name="adventureworks-example"></a>AdventureWorks の例  
 AdventureWorks Product Reviews サンプル アプリケーションでは、以下のデモンストレーションを行います。  
   
 -   Windows 認証を使用して SQL Server への接続を開く方法。  
@@ -52,8 +52,7 @@ AdventureWorks Product Reviews サンプル アプリケーションでは、以
 -   ストリームとしてデータを送信する方法。  
 -   エラーをチェックする方法。  
   
-## <a name="example"></a>例  
-AdventureWorks Product Reviews サンプル アプリケーションは、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
+この例では、ユーザーが入力した文字列が名前に含まれる製品の情報をデータベースから返します。 返された製品の一覧から、ユーザーはレビューを表示し、画像を表示し、画像をアップロードし、選択した製品のレビューを書くことができます。  
   
 adventureworks_demo.php という名前のファイルに次のコードを追加します。  
   
@@ -492,7 +491,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="lob-example"></a>LOB の例  
 photo.php スクリプトは、指定された **ProductID**の製品の写真を返します。 このスクリプトは、adventureworks_demo.php スクリプトから呼び出されます。  
   
 photo.php という名前のファイルに次のコードを追加します。  

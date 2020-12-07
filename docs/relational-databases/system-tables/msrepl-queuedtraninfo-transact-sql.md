@@ -1,4 +1,5 @@
 ---
+description: MSrepl_queuedtraninfo (Transact-sql)
 title: MSrepl_queuedtraninfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dcefa2680dd5126c9d3cd378d6e71f527681f12e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17cb198af3d8e8fedb182f2e382656586f59c3df
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889485"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540873"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889485"
 |**maxorderkey**|**bigint**|内部使用のみ。|  
 |**commandcount**|**bigint**|内部使用のみ。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

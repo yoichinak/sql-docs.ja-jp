@@ -1,4 +1,5 @@
 ---
+description: DBCC CLEANTABLE (Transact-SQL)
 title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e8ef7510dfa2583464ac5f0dcf29405c13318476
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485263"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115008"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 
@@ -42,7 +43,6 @@ ms.locfileid: "86485263"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DBCC CLEANTABLE  
 (  
     { database_name | database_id | 0 }  
@@ -80,7 +80,7 @@ DBCC CLEANTABLE は、定期的なメンテナンス タスクとして実行す
 ## <a name="result-sets"></a>結果セット  
 DBCC CLEANTABLE は次の値を返します。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   

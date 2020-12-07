@@ -1,8 +1,9 @@
 ---
+description: Indexes Append メソッドの例 (VB)
 title: Indexes Append メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0702fa4580cadce688591b976102b25118f7a189
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d87c05fc89d614881ab8114c02f7bf7a0564aabc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746843"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984243"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append メソッドの例 (VB)
 次のコードは、新しいインデックスを作成する方法を示しています。 インデックスは、テーブル内の2つの列にあります。  
@@ -81,6 +82,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Append メソッド (ADOX Indexes)](./append-method-adox-indexes.md)   
+ [Index オブジェクト (ADOX)](./index-object-adox.md)   
+ [Indexes コレクション (ADOX)](./indexes-collection-adox.md)

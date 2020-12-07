@@ -1,4 +1,5 @@
 ---
+description: CREATE REMOTE SERVICE BINDING (Transact-SQL)
 title: CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -37,12 +38,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 881e474fb34edbb438d626a23dbaa507f86fb2b6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a3339b5c4e7b54ce26f0760b22d0f0fed1a931b5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392870"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128009"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,6 @@ ms.locfileid: "86392870"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE REMOTE SERVICE BINDING binding_name   
    [ AUTHORIZATION owner_name ]   
    TO SERVICE 'service_name'   
@@ -101,7 +101,7 @@ CREATE REMOTE SERVICE BINDING binding_name
 ### <a name="a-creating-a-remote-service-binding"></a>A. リモート サービス バインドを作成する  
  次の例では、サービス `//Adventure-Works.com/services/AccountsPayable` のバインドを作成します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、データベース プリンシパル `APUser` が所有する証明を使用してリモート サービスへの認証が行われ、リモート サービスとの間でセッション暗号化キーが交換されます。  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser ;  
@@ -110,13 +110,13 @@ CREATE REMOTE SERVICE BINDING APBinding
 ### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. 匿名認証を使用してリモート サービス バインドを作成する  
  次の例では、サービス `//Adventure-Works.com/services/AccountsPayable` のバインドを作成します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、データベース プリンシパル `APUser` が所有する証明を使用して、リモート サービスとの間でセッション暗号化キーが交換されます。 Service Broker でリモート サービスへの認証は行われません。 リモート サービスをホストするデータベースでは、メッセージは **guest** ユーザーとして配信されます。  
   
-```  
+```sql  
 CREATE REMOTE SERVICE BINDING APBinding  
     TO SERVICE '//Adventure-Works.com/services/AccountsPayable'  
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

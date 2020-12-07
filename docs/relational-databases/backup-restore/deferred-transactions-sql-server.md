@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deferred transactions
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8d748a5997df33ab9448fc9ba604ae700b87c0ee
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748415"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127033"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748415"
 |データベース ミラーリングの再実行|遅延トランザクション|  
 |ファイル グループのオフライン化|遅延トランザクション|  
   
+### <a name="requirements-and-limitations"></a>要件と制限
+
+ - データベースでは、FULL または BULK-LOGGED モデルが使用されている必要があります。
+ - データベースに対して少なくとも 1 つのデータベースとログのバックアップが完了している必要があります
+ - 遅延トランザクションは、データベースがオンラインになった後のトランザクションのロールバック中に発生したエラーには適用されません。 (例: ランタイム エラー)
+ - データベースのアタッチ中に復旧エラーが発生した場合、トランザクションを遅延させることはできません
+ - システム トランザクションなどの一部のトランザクション (例: ページ割り当て) は延期できません
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>トランザクションの DEFERRED 状態の解決  
   
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: '[プロセス チェーンの参照]'
 title: '[プロセス チェーンの参照] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14b8d6250ede770df8dae9d565e4144e389968d8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 28d354fce02498905c61df6b61a35a774d804eec
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916488"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495830"
 ---
 # <a name="look-up-process-chain"></a>[プロセス チェーンの参照]
 

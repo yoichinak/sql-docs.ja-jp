@@ -1,4 +1,5 @@
 ---
+description: データ層アプリケーション テーブル - sysdac_instances_internal
 title: sysdac_instances_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_instances_internal
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ccda567989211074c8d151de7f2b3936ccd2b69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890564"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544612"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>データ層アプリケーション テーブル - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ ms.locfileid: "85890564"
 |date_created|**datetime**|DAC インスタンスが作成された日付と時刻。|  
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
- [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+## <a name="see-also"></a>参照  
+ [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

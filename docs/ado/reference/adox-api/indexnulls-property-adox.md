@@ -1,8 +1,9 @@
 ---
+description: IndexNulls プロパティ (ADOX)
 title: IndexNulls プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0834560d90fe8dc5d8a5130f024bac7b3bc3517
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 055b873866758c4aede2a3f6364eb99036159427
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984153"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls プロパティ (ADOX)
 インデックスフィールドに null 値を持つレコードのインデックスエントリがあるかどうかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Allownullsenum](../../../ado/reference/adox-api/allownullsenum.md)値を設定して返します。 既定値は**Adindexnullsdisallow**です。  
+ [Allownullsenum](./allownullsenum.md)値を設定して返します。 既定値は **Adindexnullsdisallow**です。  
   
-## <a name="remarks"></a>Remarks  
- このプロパティは、既にコレクションに追加されている[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトでは読み取り専用です。  
+## <a name="remarks"></a>解説  
+ このプロパティは、既にコレクションに追加されている [インデックス](./index-object-adox.md) オブジェクトでは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index オブジェクト (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [IndexNulls プロパティの例 (VB)](./indexnulls-property-example-vb.md)

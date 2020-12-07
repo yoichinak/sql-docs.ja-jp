@@ -1,4 +1,5 @@
 ---
+description: テーブルへの列の追加 (データベース エンジン)
 title: テーブルへの列の追加 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394488"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128755"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
 
@@ -44,7 +45,7 @@ ms.locfileid: "87394488"
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>テーブル デザイナーでテーブルに列を挿入するには
 
-1. **オブジェクト エクスプローラー**で、列を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。
+1. **オブジェクト エクスプローラー** で、列を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。
 2. **[列名]** 列内の最初の空白セルをクリックします。
 3. セルに列名を入力します。 [列名] には値が必要です。
 4. Tab キーを押して **[データ型]** セルに移動し、ドロップダウンからデータ型を選択します。
@@ -52,14 +53,14 @@ ms.locfileid: "87394488"
    データ型は必須の値です。選択しない場合は既定の値が割り当てられます。
 
    > [!NOTE]
-   > この既定の値は、 **[データベース ツール]** の下の **[オプション]** ダイアログ ボックスで変更できます。
+   >  この既定の値は、 **[データベース ツール]** の下の **[オプション]** ダイアログ ボックスで変更できます。
 
 5. 次に **[列のプロパティ]** タブで他の列のプロパティを定義します。
 
     > [!NOTE]
     > 新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。
 
-6. 列の追加が完了したら、 **[ファイル]** メニューで [ **<テーブル名>** _を保存_] を選択します。
+6. 列の追加が完了したら、 **[ファイル]** メニューで [ _<テーブル名>_ **を保存**] を選択します。
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
   

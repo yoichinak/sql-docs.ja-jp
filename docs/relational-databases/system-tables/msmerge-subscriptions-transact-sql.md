@@ -1,4 +1,5 @@
 ---
+description: MSmerge_subscriptions (Transact-SQL)
 title: MSmerge_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eb31a5a858bb93c8ca503ba5e72687306c8750e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6e522b60af93e74980c0465e771ddd820ac9149
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889683"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545584"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85889683"
 |**status**|**tinyint**|サブスクリプションの状態です。|  
 |**subscription_time**|**datetime**|サブスクリプションが追加された時刻。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

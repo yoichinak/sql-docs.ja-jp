@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ecbbdced731e940de46dbde4a65adc486f602c2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400480"
 ---
 # <a name="remote-table-copy"></a>リモートテーブルのコピー
 リモートテーブルのコピー機能を使用して、SQL Server PDW データベースからリモート (アプライアンス以外) の SMP SQL Server データベースにテーブルをコピーする方法について説明します。 リモートテーブルのコピーを使用して、SQL Server PDW のハブアンドスポークシナリオを有効にします。  
   
 ## <a name="understand-remote-table-copy-for-sql-server-pdw"></a><a name="BasicsPDE"></a>SQL Server PDW のリモートテーブルのコピーについて  
-リモートテーブルコピーは SQL Server PDW の機能です。この機能を使用すると、SQL SELECT ステートメントの結果を SMP データベースのテーブルにコピーすることによって、ハブとスポークのシナリオを有効にすることができます。 リモートテーブルのコピーは、 [CREATE REMOTE table AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md)ステートメントを使用して開始されます。  
+リモートテーブルコピーは SQL Server PDW の機能です。この機能を使用すると、SQL SELECT ステートメントの結果を SMP データベースのテーブルにコピーすることによって、ハブとスポークのシナリオを有効にすることができます。 リモートテーブルのコピーは、 [CREATE REMOTE table AS SELECT](../t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md) ステートメントを使用して開始されます。  
   
 ## <a name="requirements-for-using-remote-table-copy"></a><a name="BasicsPrerequisites"></a>リモートテーブルのコピーを使用するための要件  
 リモートテーブルコピーを使用すると、これらの条件が満たされた場合に SQL Server PDW から SQL Server データベースにテーブルをコピーできます。  
   
 -   転送先データベースは、microsoft® SQL Server®のインスタンスである必要があります。このインスタンスは、SQL Server PDW アプライアンスに接続できるが、アプライアンス内のサーバー上には存在しない Microsoft Windows®システム上で実行されています。 リモート SQL Server は、InfiniBand ネットワークまたはイーサネットネットワークを使用して SQL Server PDW に接続できます。  
   
--   コピーされるデータは、1つの有効な SQL Server PDW [select](../t-sql/queries/select-transact-sql.md)ステートメントを使用して選択できる必要があります。  
+-   コピーされるデータは、1つの有効な SQL Server PDW [select](../t-sql/queries/select-transact-sql.md) ステートメントを使用して選択できる必要があります。  
   
 -   転送先サーバーは、非アプライアンス サーバーである必要があります。 このトピックの手順に従って、データを1つのアプライアンスから別のアプライアンスに直接コピーすることはできません。  
   

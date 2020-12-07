@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_customized_logging_level
 title: catalog.delete_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d7db61c085f6ac085ce0585428d43cffcdb66cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 302201f4d3932867265b507c78290e511913bed7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913127"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129857"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
@@ -35,7 +36,7 @@ catalog.delete_customized_logging_level [ @level_name = ] level_name
   
  *level_name* は **nvarchar(128)** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

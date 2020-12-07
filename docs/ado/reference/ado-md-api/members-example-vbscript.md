@@ -1,8 +1,9 @@
 ---
+description: Members の例 (VBScript)
 title: Members の例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3064c920c8d18e702541138de9f2151f5d8fbb03
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4ca97249cff49d0c85a306b145e189354a918da5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986303"
 ---
 # <a name="members-example-vbscript"></a>Members の例 (VBScript)
 このサンプルでは、MDX クエリ文字列を使用して OLAP データを取得し、複数次元のセルセットの列にまたがる特徴を使用して、結果のセルセットを HTML テーブル構造に書き込みます。  

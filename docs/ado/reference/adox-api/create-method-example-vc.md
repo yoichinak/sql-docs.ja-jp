@@ -1,8 +1,9 @@
 ---
+description: Create メソッドの例 (VC++)
 title: Create メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e89a9fa34b4388fbfb283b223d637dde7fdf636
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 191d5634da4e59b03ee472bf39902a894a61f73f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759248"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984823"
 ---
 # <a name="create-method-example-vc"></a>Create メソッドの例 (VC++)
-次のコードは、 [create](../../../ado/reference/adox-api/create-method-adox.md)メソッドを使用して新しい Microsoft Jet データベースを作成する方法を示しています。  
+次のコードは、 [create](./create-method-adox.md) メソッドを使用して新しい Microsoft Jet データベースを作成する方法を示しています。  
   
 ```  
 // BeginCreateDatabaseCpp.cpp  
@@ -76,4 +77,4 @@ void CreateDatabaseX() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Create メソッド (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Create メソッド (ADOX)](./create-method-adox.md)

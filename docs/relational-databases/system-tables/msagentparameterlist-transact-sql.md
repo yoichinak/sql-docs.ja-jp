@@ -1,4 +1,5 @@
 ---
+description: MSagentparameterlist (Transact-SQL)
 title: MSagentparameterlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - Msagentparameterlist system table
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f03817f9e7b13e21eb7513de4a4d96216b700460
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5fcded0e1ffe97578832f773e65d2d08e1c41d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890067"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551047"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Msagentparameterlist**テーブルには、レプリケーションエージェントのパラメーター情報が含まれており、特定の種類のエージェントに対して設定できるパラメーターを指定するために使用されます。 このテーブルは、 **msdb**データベースに格納されます。  
+  **Msagentparameterlist**テーブルには、レプリケーションエージェントのパラメーター情報が含まれており、特定の種類のエージェントに対して設定できるパラメーターを指定するために使用されます。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +38,7 @@ ms.locfileid: "85890067"
 |**min_value**|**int**|エージェントパラメーターの下限を設定します。 NULL は下限がないことを示します。|  
 |**max_value**|**int**|エージェント パラメーターの上限を設定します。NULL は上限がないことを示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

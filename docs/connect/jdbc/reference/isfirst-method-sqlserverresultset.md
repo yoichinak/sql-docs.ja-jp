@@ -1,4 +1,5 @@
 ---
+description: isFirst メソッド (SQLServerResultSet)
 title: isFirst メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4533d66311bf4a7d2ad277c9ed62d7b7147c47fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 05892bce86471733edca6a19a163603dc2a6bbce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433574"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

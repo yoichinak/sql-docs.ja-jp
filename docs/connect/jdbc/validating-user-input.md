@@ -1,4 +1,5 @@
 ---
+description: ユーザー入力の検証
 title: ユーザー入力の検証 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3b732f1f09d4852f30d3b086ea5d88ea1a71eca9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe5ef27b46481eeb32478eaee9866a73ce11802
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69025592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450110"
 ---
 # <a name="validating-user-input"></a>ユーザー入力の検証
 
@@ -27,6 +28,6 @@ ms.locfileid: "69025592"
 
 SQL インジェクションと、この攻撃を避ける方法の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「SQL インジェクション」を参照してください。 ストアド プロシージャのパラメーターの検証の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「ストアド プロシージャ ([!INCLUDE[ssDE](../../includes/ssde_md.md)])」およびその下位のトピックを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)

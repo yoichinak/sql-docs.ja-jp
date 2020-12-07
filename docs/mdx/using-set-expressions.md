@@ -1,4 +1,5 @@
 ---
+description: セット式の使用
 title: Set 式を使用する |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893504"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193468"
 ---
 # <a name="using-set-expressions"></a>セット式の使用
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893504"
   
  セットの完全な式は、中かっこで囲まれた0個以上の明示的に指定された組で構成されます。  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }]...]}  
   
  セット式で指定されたメンバー式は、1つのメンバーのタプル式に変換されます。  
   
@@ -57,9 +58,8 @@ ms.locfileid: "68893504"
   
  このセットは 3 つの組で構成されており、それぞれの組には、Product ディメンションの Product Categories 階層のメンバーと Date ディメンションの Calendar 階層のメンバーへの、2 つの明示的な参照が含まれています。  
   
- セットを返す関数の例については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
+ セットを返す関数の例については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作 ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [MDX &#40;式&#41;](../mdx/expressions-mdx.md)  
-  
   

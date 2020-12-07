@@ -1,4 +1,5 @@
 ---
+description: Broker:Message Undeliverable イベント クラス
 title: Broker:Message Undeliverable イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c405bcc285464983f844b386c36f97022428e522
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 828791161e2ca6dd493941e3759284510c2c3bb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487000"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Broker:Message Undeliverable イベント クラス
 
@@ -27,7 +28,7 @@ ms.locfileid: "85762970"
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Broker:Message Undeliverable イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**アプリケーション名**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|配信不能メッセージのシーケンス番号。|52|いいえ|  
@@ -44,7 +45,7 @@ ms.locfileid: "85762970"
 |**IntegerData2**|**int**|配信不能メッセージが受信確認していたメッセージ フラグメント番号。|55|いいえ|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\Username という形式の Windows ログイン資格情報)。|11|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|ダイアログのメッセージ交換ハンドル。|34|いいえ|  

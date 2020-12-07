@@ -1,8 +1,9 @@
 ---
+description: Update および CancelUpdate メソッドの例 (VC++)
 title: Update および CancelUpdate メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3e1b9eed98ba310498706c9708cb47ee8d6680
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d8277ab358c7eb90737f4da5a0f118d3b087150
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759508"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988113"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update および CancelUpdate メソッドの例 (VC++)
-この例では、[更新](../../../ado/reference/ado-api/update-method.md)メソッドと[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッドの組み合わせを示します。  
+この例では、 [更新](./update-method.md) メソッドと [CancelUpdate](./cancelupdate-method-ado.md) メソッドの組み合わせを示します。  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -310,5 +311,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Update メソッド](../../../ado/reference/ado-api/update-method.md)
+ [CancelUpdate メソッド (ADO)](./cancelupdate-method-ado.md)   
+ [Update メソッド](./update-method.md)

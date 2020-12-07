@@ -1,4 +1,5 @@
 ---
+description: カーソルの行セット サイズ
 title: カーソル行セットサイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,11 +16,12 @@ ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bf13437fa739f00b771dd10b97c6f3b70b3c4b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 71ff730734a82d37cff8e13ea6c89ce55722c186
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420646"
 ---
 # <a name="cursor-rowset-size"></a>カーソルの行セット サイズ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,11 +45,11 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      1 行のすべての列のデータとインジケーターが含まれる構造体を使用して配列が構築されます。 この配列には行セット サイズと同じ数の構造体が含まれます。  
   
- 列方向または行方向のバインドのいずれかを使用すると、 **Sqlfetch**または**sqlfetchscroll**を呼び出すたびに、バインドされた配列に、取得した行セットのデータが格納されます。  
+ 列方向または行方向のバインドのいずれかを使用すると、 **Sqlfetch** または **sqlfetchscroll** を呼び出すたびに、バインドされた配列に、取得した行セットのデータが格納されます。  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md)を使用して、ブロックカーソルから列データを取得することもできます。 **SQLGetData**は一度に1行ずつ動作するため、 **SQLGetData**を呼び出す前に**SQLSetPos**を呼び出して、行セット内の特定の行を現在の行として設定する必要があります。  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) を使用して、ブロックカーソルから列データを取得することもできます。 **SQLGetData**は一度に1行ずつ動作するため、 **SQLGetData**を呼び出す前に**SQLSetPos**を呼び出して、行セット内の特定の行を現在の行として設定する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、行セットを使用して結果セット全体をすばやく取得する最適化が提供されます。 この最適化を使用するには、 **SQLExecDirect**または**sqlexecute**が呼び出されたときに、カーソルの属性を既定値 (順方向専用、読み取り専用、行セットサイズ = 1) に設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、既定の結果セットを設定します。 スクロールを使用しないでクライアントに結果を送信する場合は、既定の結果セットの方がサーバー カーソルよりも効率的です。 ステートメントを実行後、行セット サイズを増やし、列方向のバインドか行方向のバインドを使用します。 これにより、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既定の結果セットを使用してクライアントに結果行を効率的に送信でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。一方、NATIVE client ODBC ドライバーでは、クライアントのネットワークバッファーから行を継続的にプルします。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、行セットを使用して結果セット全体をすばやく取得する最適化が提供されます。 この最適化を使用するには、 **SQLExecDirect** または **sqlexecute** が呼び出されたときに、カーソルの属性を既定値 (順方向専用、読み取り専用、行セットサイズ = 1) に設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、既定の結果セットを設定します。 スクロールを使用しないでクライアントに結果を送信する場合は、既定の結果セットの方がサーバー カーソルよりも効率的です。 ステートメントを実行後、行セット サイズを増やし、列方向のバインドか行方向のバインドを使用します。 これにより、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 既定の結果セットを使用してクライアントに結果行を効率的に送信でき [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ます。一方、NATIVE client ODBC ドライバーでは、クライアントのネットワークバッファーから行を継続的にプルします。  
   
 ## <a name="see-also"></a>参照  
  [カーソルのプロパティ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation イベント クラス
 title: Broker:Conversation イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410228"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
 
@@ -27,7 +28,7 @@ ms.locfileid: "85679502"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
@@ -38,7 +39,7 @@ ms.locfileid: "85679502"
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**MethodName**|**nvarchar**|このメッセージ交換が属しているメッセージ交換グループ。|47|いいえ|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
@@ -55,7 +56,7 @@ ms.locfileid: "85679502"
 |||**CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。|||  
 |||**DI**。 受信切断状態。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションは引き続きこのメッセージ交換のメッセージを受信できます。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションで END CONVERSATION を発行すると、メッセージ交換は終了 (CD) 状態に移行します。|||  
 |||**DO**。 送信切断状態。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側で END CONVERSATION が承認されると、メッセージの交換は終了 (CD) 状態に移行します。|||  
-|||**ER**。 エラーが発生します。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。|||  
+|||**ER**。 エラー。 このエンドポイントでエラーが発生しました。 Error、Severity、State の各列に、発生した特定のエラーに関する情報が含まれています。|||  
 |||**CD**。 終了状態。 メッセージ交換のエンドポイントは解放されました。|||  
 |**Transaction ID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85679502"
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **がダイアログのエンドポイントを作成すると** Dialog Created [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントが生成されます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、現在のデータベースがダイアログの開始側か相手側かにかかわらず、新しいダイアログが確立されるたびにエンドポイントを作成します。|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で WITH CLEANUP 句を指定した END CONVERSATION ステートメントが実行されるときに、END CONVERSATION WITH CLEANUP イベントが生成されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

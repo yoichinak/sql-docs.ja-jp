@@ -1,4 +1,5 @@
 ---
+description: ROWCOUNT_BIG (Transact-SQL)
 title: ROWCOUNT_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1d6b588a7955f51a78ae89f1d82f55ac965eabdb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 124ba59b2942fcfa7c4ac26be7b24df35c75806a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113374"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379977"
 ---
 # <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "87113374"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ROWCOUNT_BIG ( )  
 ```  
   

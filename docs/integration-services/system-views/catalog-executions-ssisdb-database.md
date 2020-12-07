@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (SSISDB データベース)
 title: catalog.executions (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425104"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB データベース)
 
@@ -43,9 +44,9 @@ ms.locfileid: "86912559"
 |executed_as_sid|**varbinary(85)**|実行のインスタンスを起動したユーザーの SID。|  
 |executed_as_name|**nvarchar(128)**|実行のインスタンスを起動するために使用されたデータベース プリンシパルの名前。|  
 |use32bitruntime|**bit**|64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行するかどうかを示します。 値が `1` の場合、実行は 32 ビット ランタイムで実行されます。 値が `0` の場合、実行は 64 ビット ランタイムで実行されます。|  
-|object_type|**smallint**|オブジェクトの種類。 オブジェクトは、プロジェクト (`20`) またはパッケージ (`30`) です。|  
+|object_type|**smallint**|オブジェクトの型。 オブジェクトは、プロジェクト (`20`) またはパッケージ (`30`) です。|  
 |object_id|**bigint**|操作の影響を受けるオブジェクトの ID。|  
-|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作のステータス。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |start_time|**datetimeoffset**|実行のインスタンスが起動された時間。|  
 |end_time|**datetimeoffsset**|実行のインスタンスが終了した時間。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
@@ -62,7 +63,7 @@ ms.locfileid: "86912559"
 |machine_name|**nvarchar(128)**|サーバー インスタンスが稼働しているコンピューターの名前。|  
 |dump_id|**uniqueidentifier**|実行ダンプの ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このビューは、カタログの実行の各インスタンスの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

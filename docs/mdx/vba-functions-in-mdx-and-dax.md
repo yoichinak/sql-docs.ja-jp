@@ -1,4 +1,5 @@
 ---
+description: MDX および DAX での VBA 関数
 title: MDX および DAX の VBA 関数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,24 +9,24 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dcbf0f0321ddc0c1959c4681c0b1dddf49c1aba
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135020"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192292"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 
 
-  このドキュメントには、MDX でサポートされている[Visual Basic for Applications 関数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications)で使用できるすべての VBA 関数の参照が含まれています。また、DAX 言語との機能の等価性がある場合、一覧にはメモが含まれます。  
+  このドキュメントには、MDX でサポートされている [Visual Basic for Applications 関数](/office/vba/Language/Reference/functions-visual-basic-for-applications) で使用できるすべての VBA 関数の参照が含まれています。また、DAX 言語との機能の等価性がある場合、一覧にはメモが含まれます。  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   
-|関数名|サポートされています|メモ|  
+|関数名|サポートされています|Notes|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
-|配列|サポートされていません||  
+|Array|サポートされていません||  
 |Asc|MDX のみ||  
 |AscW|MDX のみ||  
 |Atn|MDX のみ||  
@@ -36,13 +37,13 @@ ms.locfileid: "68135020"
 |CDate|MDX のみ||  
 |CDbl|MDX のみ||  
 |CDec|MDX のみ||  
-|選択|MDX のみ||  
+|Choose|MDX のみ||  
 |Chr|MDX のみ||  
 |CInt|MDX のみ||  
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|コマンド|サポートされていません||  
+|command|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -50,24 +51,24 @@ ms.locfileid: "68135020"
 |CurDir|サポートされていません||  
 |CVar|MDX のみ||  
 |CVErr|サポートされていません||  
-|日付|MDX のみ|**警告**DAX は、同じ名前の別の関数を実装しています。指定された引数から日付型の値を生成するために使用される日付 (年、月、日) 関数|  
-|DateAdd|MDX のみ|**警告**DAX は、同じ名前の別の関数を実装しています。指定され\<た日付を一定の間隔で\<シフトするために使用される DATEADD (dates>、<number_of_intervals>、interval>) 関数|  
+|Date|MDX のみ|**警告** DAX は、同じ名前の別の関数を実装しています。指定された引数から日付型の値を生成するために使用される日付 (年、月、日) 関数|  
+|DateAdd|MDX のみ|**警告** DAX は、同じ名前の別の関数を実装しています。指定された日付を一定 \<dates> \<interval> の間隔でシフトするために使用される DATEADD (, <number_of_intervals>,) 関数|  
 |DateDiff|MDX のみ||  
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
 |DateValue|DAX、MDX||  
-|日|DAX、MDX||  
+|日間|DAX、MDX||  
 |DDB|MDX のみ||  
 |Dir|サポートされていません||  
 |DoEvents|サポートされていません||  
 |Environ|サポートされていません||  
 |EOF|サポートされていません||  
-|Error|サポートされていません||  
+|エラー|サポートされていません||  
 |Exp|DAX、MDX||  
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
 |FileLen|サポートされていません||  
-|Assert|サポートされていません|**警告**MDX では、同じ名前の別の関数が実装されています。FILTER (Set_Expression, Logical_Expression) 関数は、指定された引数の検索条件に基づいて、指定されたセットをフィルター処理した結果セットを返します。<br /><br /> **警告**DAX は、同じ名前の別の関数を実装しています。FILTER (\<table>,\<filter>) 関数は、指定された引数から別のテーブルまたは式のサブセットを表すテーブルを返します。|  
+|Assert|サポートされていません|**警告** MDX では、同じ名前の別の関数が実装されています。FILTER (Set_Expression, Logical_Expression) 関数は、指定された引数の検索条件に基づいて、指定されたセットをフィルター処理した結果セットを返します。<br /><br /> **警告** DAX は、同じ名前の別の関数を実装しています。FILTER ( \<table> , \<filter> ) 関数は、指定された引数から別のテーブルまたは式のサブセットを表すテーブルを返します。|  
 |Fix|MDX のみ||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|サポートされていません||  
@@ -81,8 +82,8 @@ ms.locfileid: "68135020"
 |GetObject|サポートされていません||  
 |GetSetting|サポートされていません||  
 |Hex|MDX のみ||  
-|時|DAX、MDX||  
-|Iif|MDX のみ|**警告**DAX は、IF (logical_test, value_if_true, value_if_false) 関数という名前の同様の関数を実装します。|  
+|時間|DAX、MDX||  
+|Iif|MDX のみ|**警告** DAX は、IF (logical_test, value_if_true, value_if_false) 関数という名前の同様の関数を実装します。|  
 |IMEStatus|サポートされていません||  
 |入力|サポートされていません||  
 |InputBox|サポートされていません||  
@@ -106,7 +107,7 @@ ms.locfileid: "68135020"
 |Len|DAX、MDX||  
 |Loc|サポートされていません||  
 |LOF|サポートされていません||  
-|ログ|MDX のみ|**重要**DAX は、同じ名前の別の関数を実装しています。LOG (number, base) 関数。 指定された引数から指定された底に対する数値の対数を返します。|  
+|ログ|MDX のみ|**重要** DAX は、同じ名前の別の関数を実装しています。LOG (number, base) 関数。 指定された引数から指定された底に対する数値の対数を返します。|  
 |LTrim|MDX のみ||  
 |MacID|サポートされていません||  
 |MacScript|サポートされていません||  
@@ -132,7 +133,7 @@ ms.locfileid: "68135020"
 |Rnd|MDX のみ||  
 |Round|DAX、MDX||  
 |RTrim|MDX のみ||  
-|秒|DAX、MDX||  
+|Second|DAX、MDX||  
 |Seek|サポートされていません||  
 |Sgn|DAX、MDX||  
 |Shell|サポートされていません||  
@@ -147,7 +148,7 @@ ms.locfileid: "68135020"
 |StrConv|MDX のみ||  
 |String|MDX のみ||  
 |StrReverse|サポートされていません||  
-|Switch|MDX のみ||  
+|スイッチ|MDX のみ||  
 |SYD|MDX のみ||  
 |タブ|サポートされていません||  
 |Tan|MDX のみ||  
@@ -163,6 +164,5 @@ ms.locfileid: "68135020"
 |VarType|サポートされていません||  
 |平日|DAX、MDX||  
 |WeekdayName|サポートされていません||  
-|Year|DAX、MDX||  
-  
+|年|DAX、MDX||  
   

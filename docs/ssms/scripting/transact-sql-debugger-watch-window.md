@@ -3,7 +3,7 @@ title: '[ウォッチ] ウィンドウ'
 description: 選択した式に関する情報を表示する [ウォッチ] ウィンドウ (一度に最大 4 つ) について説明します。 情報はデバッグ モードでのみ表示されます。
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ddd23645e866cd066f8d70ea2cded0f9c0fcd0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248012"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036131"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Transact-SQL デバッガー - [ウォッチ] ウィンドウ
 
@@ -64,9 +64,9 @@ ms.locfileid: "87248012"
  式のデータ型を表示します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [[ローカル] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [[呼び出し履歴] ウィンドウ](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [[クイック ウォッチ] ダイアログ ボックス](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)   
+ [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)   
+ [[ローカル] ウィンドウ](./transact-sql-debugger-locals-window.md)   
+ [[呼び出し履歴] ウィンドウ](./transact-sql-debugger-call-stack-window.md)   
+ [[クイック ウォッチ] ダイアログ ボックス](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

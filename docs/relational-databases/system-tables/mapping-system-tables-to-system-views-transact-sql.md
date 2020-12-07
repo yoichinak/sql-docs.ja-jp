@@ -1,4 +1,5 @@
 ---
+description: システムビューへのシステムテーブルのマッピング (Transact-sql)
 title: システムビューへのシステムテーブルのマッピング (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - mapping system tables to system views [SQL Server]
 - system tables [SQL Server], mapping to catalog views
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 424dda2a57b51f6486cabcadadce7342c0a0eb0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0770074106a8d8dcbf0744297f7e6fa84b556420
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890099"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538309"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>システムビューへのシステムテーブルのマッピング (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85890099"
 |syslockinfo|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|動的管理ビュー|  
 |syslocks|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|動的管理ビュー|  
 |syslogins|[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)<br /><br /> [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)|カタログ ビュー|  
-|sysmessages|[システムメッセージ](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|カタログ ビュー|  
+|sysmessages|[sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|カタログ ビュー|  
 |sysoledbusers|[sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)|カタログ ビュー|  
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|動的管理ビュー|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|動的管理ビュー|  
@@ -74,9 +75,9 @@ ms.locfileid: "85890099"
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|カタログ ビュー|  
 |sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|カタログ ビュー|  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

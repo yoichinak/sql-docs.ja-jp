@@ -1,4 +1,5 @@
 ---
+description: ISNUMERIC (Transact-SQL)
 title: ISNUMERIC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa4dd405cb7a67f24dc0f2db7b8eef7945be6a93
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d1214d622d6da50961ac6b36c6f4f4d6cee9abc9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111516"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115217"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87111516"
   
 ## <a name="syntax"></a>構文  
   
-``` 
+```syntaxsql 
 ISNUMERIC ( expression )  
 ```  
   

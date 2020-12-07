@@ -1,4 +1,5 @@
 ---
+description: CHECK 制約の変更
 title: CHECK 制約の変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88488570"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85786068"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **CHECK 制約を変更するための方法:**  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85786068"
   
 #### <a name="to-modify-a-check-constraint"></a>CHECK 制約を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、CHECK 制約を含むテーブルを右クリックし、 **[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、CHECK 制約を含むテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
 2.  **[テーブル デザイナー]** メニューの **[CHECK 制約]** をクリックします。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85786068"
   
 4.  次の表の操作を完了します。  
   
-    |ターゲット|手順|  
+    |終了|手順|  
     |--------|------------------------|  
     |制約式を編集する。|**[式]** フィールドに新しい式を入力します。|  
     |制約名を変更する。|**[名前]** フィールドに新しい名前を入力します。|  
@@ -72,7 +73,7 @@ ms.locfileid: "85786068"
   
 5.  **[閉じる]** をクリックします。  
   
-6.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
+6.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  

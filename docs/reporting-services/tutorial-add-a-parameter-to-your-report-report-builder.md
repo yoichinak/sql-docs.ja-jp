@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8e4d7569f8624843f0cf05b4c873f0be7b26df3c
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245679"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043781"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートにパラメーターを追加し、レポート閲覧者が 1 つまたは複数の値でレポート データをフィルター処理できるようにします。 
   
-![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
+![ページ分割されたレポートにパラメーターを追加できることを示すスクリーンショット。](../reporting-services/media/report-builder-parameter-tutorial.png)
 
 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。 
    
@@ -51,7 +51,7 @@ ms.locfileid: "87245679"
   
 4.  **[データセットの選択]** ページで、 **[データセットを作成する]**  >  **[次へ]** をクリックします。  
   
-7.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 種類が **SQL Server**である任意のデータ ソースを選択します。  
+7.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 種類が **SQL Server** である任意のデータ ソースを選択します。  
       
 8.  **[次へ]** をクリックします。  
 
@@ -135,7 +135,7 @@ ms.locfileid: "87245679"
   
 1.  **[デザイン]** をクリックして再びデザイン ビューに切り替えます。  
   
-2.  レポート データ ペインで、 **[データセット]** フォルダーを展開して **DataSet1**を右クリックし、 **[クエリ]** をクリックします。  
+2.  レポート データ ペインで、 **[データセット]** フォルダーを展開して **DataSet1** を右クリックし、 **[クエリ]** をクリックします。  
   
 3.  クエリの最後の行に、次の [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 句を追加します。  
   
@@ -147,11 +147,11 @@ ms.locfileid: "87245679"
   
 4.  クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。 **[クエリ パラメーターの定義]** ダイアログ ボックスが開き、クエリ パラメーター *\@StoreID* の値を入力するように求められます。  
   
-5.  **[パラメーター値]** に「 **200**」と入力します。  
+5.  **[パラメーター値]** に「 **200** 」と入力します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    結果セットには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
+    結果セットには、店舗 ID **200** について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -182,7 +182,7 @@ ms.locfileid: "87245679"
   
 6.  **[実行]** をクリックして、レポートをプレビューします。 レポート ビューアーには、 *\@StoreID* の入力を求めるプロンプト **Store Identifier?** が表示されます。  
   
-7.  レポート ビューアー ツール バーで、店舗 ID の横に「 **200**」と入力し、 **[レポートの表示]** をクリックします。  
+7.  レポート ビューアー ツール バーで、店舗 ID の横に「 **200** 」と入力し、 **[レポートの表示]** をクリックします。  
   
 ![SSRB_ParamTutStoreID](../reporting-services/media/ssrb-paramtutstoreid.png)  
   
@@ -195,7 +195,7 @@ ms.locfileid: "87245679"
   
 2.  レポート データ ペインで、 **[データセット]** フォルダーを右クリックし、 **[データセットの追加]** をクリックします。  
   
-3.  **[名前]** に、「 **Stores**」と入力します。  
+3.  **[名前]** に、「 **Stores** 」と入力します。  
   
 4.  **[レポートに埋め込まれたデータセットを使用します]** を選択します。  
   
@@ -241,11 +241,11 @@ ms.locfileid: "87245679"
   
 9. レポートをプレビューします。  
   
-    レポート ビューアー ツール バーのパラメーター テキスト ボックスがドロップダウン リストに変わり、" **値を選択してください**" と表示されるようになりました。  
+    レポート ビューアー ツール バーのパラメーター テキスト ボックスがドロップダウン リストに変わり、" **値を選択してください** " と表示されるようになりました。  
   
 10. ドロップダウン リストから Contoso Catalog Store を選択し、 **[レポートの表示]** をクリックします。  
   
-レポートには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
+レポートには、店舗 ID **200** について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
   
 ## <a name="4c-specify-a-default-value"></a><a name="DefaultValues"></a>4c. 既定値を指定する 
 各パラメーターの既定値を指定して、レポートが自動的に実行されるようにすることができます。  
@@ -266,7 +266,7 @@ ms.locfileid: "87245679"
   
 7.  レポートをプレビューします。  
   
-*\@StoreID* に対して、レポート ビューアーによって値 "Contoso North America Online Store" が表示されます。これがデータセット **Stores** の結果セットの最初の値であるためです。 レポートには、店舗 ID **199**について、Digital Cameras の販売数量が表示されます。  
+*\@StoreID* に対して、レポート ビューアーによって値 "Contoso North America Online Store" が表示されます。これがデータセット **Stores** の結果セットの最初の値であるためです。 レポートには、店舗 ID **199** について、Digital Cameras の販売数量が表示されます。  
   
 ### <a name="to-specify-a-custom-default-value"></a>カスタムの既定値を指定するには  
   
@@ -276,13 +276,13 @@ ms.locfileid: "87245679"
   
 3.  **[既定値]**  >  **[値を指定]**  >  **[追加]** をクリックします。 新しい値の行が追加されます。  
   
-4.  **[値]** に「 **200**」と入力します。  
+4.  **[値]** に「 **200** 」と入力します。  
   
 5.  [!INCLUDE[clickOK_md](../includes/clickok-md.md)] 
   
 6.  レポートをプレビューします。  
   
-*\@StoreID* に対して、レポート ビューアーによって "Contoso Catalog Store" が表示されます。これが店舗 ID **200** の表示名であるためです。 レポートには、店舗 ID **200**について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
+*\@StoreID* に対して、レポート ビューアーによって "Contoso Catalog Store" が表示されます。これが店舗 ID **200** の表示名であるためです。 レポートには、店舗 ID **200** について、Accessories、Camcorders、および Digital SLR Cameras の販売数量が表示されます。  
   
 ## <a name="4d-look-up-a-namevalue-pair"></a><a name="NameValue"></a>4d. 名前/値のペアを参照する  
 データセットには、ID と対応する名前フィールドの両方が含まれている場合があります。 ID しかない場合は、名前と値のペアが格納されている作成済みのデータセットで対応する名前を参照できます。  
@@ -309,7 +309,7 @@ ms.locfileid: "87245679"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    店舗の列見出しに、複合式の表示テキストとして次が示されます:**Expr**。  
+    店舗の列見出しに、複合式の表示テキストとして次が示されます: **Expr** 。  
   
 8.  レポートをプレビューします。  
   
@@ -361,7 +361,7 @@ ms.locfileid: "87245679"
   
     マトリックスに、"Contoso Catalog Store" のデータのみが表示されます。  
   
-9. レポート ビューアー ツール バーで、" **Store name?** " に対して **Contoso Asia Online Store**を選択し、 **[レポートの表示]** をクリックします。  
+9. レポート ビューアー ツール バーで、" **Store name?** " に対して **Contoso Asia Online Store** を選択し、 **[レポートの表示]** をクリックします。  
   
 マトリックスに、選択した店舗に対応するデータが表示されます。  
   
@@ -378,9 +378,9 @@ ms.locfileid: "87245679"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  レポート データ ペインで、 **[データセット]** フォルダーを展開して **DataSet1**を右クリックし、 **[クエリ]** をクリックします。  
+5.  レポート データ ペインで、 **[データセット]** フォルダーを展開して **DataSet1** を右クリックし、 **[クエリ]** をクリックします。  
   
-6.  クエリの最後の行で、**等号** (=) を [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 句の **IN** に変更します。  
+6.  クエリの最後の行で、 **等号** (=) を [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 句の **IN** に変更します。  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -422,7 +422,7 @@ ms.locfileid: "87245679"
   
 19. ドロップダウン リストで **[すべて選択]** をクリックして一覧を消去し、"Contoso Catalog Store" と "Contoso Asia Online Store" をクリックして **[レポートの表示]** をクリックします。  
 
-    ![report-builder-parameter-multiselect](../reporting-services/media/report-builder-parameter-multiselect.png)
+    ![レポートに追加するパラメーターを複数選択できることを示すスクリーンショット。](../reporting-services/media/report-builder-parameter-multiselect.png)
   
  
 ## <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8.条件付き表示のためにブール型パラメーターを追加する  
@@ -441,7 +441,7 @@ ms.locfileid: "87245679"
   
 6.  **[値の指定]** をクリックして、 **[追加]** をクリックします。  
   
-7.  **[値]** に「 **False**」と入力します。  
+7.  **[値]** に「 **False** 」と入力します。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -465,7 +465,7 @@ ms.locfileid: "87245679"
   
     パラメーターの選択肢を表示するテキスト ボックスがフッターに表示されません。  
   
-8.  レポート ビューアー ツール バーで、" **Show selections**" の横の **[True]**  >  **[レポートの表示]** をクリックします。  
+8.  レポート ビューアー ツール バーで、" **Show selections** " の横の **[True]**  >  **[レポートの表示]** をクリックします。  
   
     ページ フッターにテキスト ボックスが表示され、選択したすべての店舗名が示されます。  
   
@@ -489,7 +489,7 @@ ms.locfileid: "87245679"
   
 3.  レポートを保存する権限があるレポート サーバーの名前を入力するか選択します。  
   
-    " **レポート サーバーに接続しています**" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
+    " **レポート サーバーに接続しています** " というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
 4.  **[名前]** に表示されている既定の名前を Parameterized Sales Report に変更します。  
   

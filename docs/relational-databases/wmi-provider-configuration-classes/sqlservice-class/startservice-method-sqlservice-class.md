@@ -1,4 +1,5 @@
 ---
+description: StartService メソッド (SqlService クラス)
 title: StartService メソッド (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a8e4f618436ed4b563d2f6dd623bd84cd099c21c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888309"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539973"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ object.StartService()
  正常終了しました。 要求が受け入れられました。  
   
  1  
- サポート範囲外。 要求はサポートされていません。  
+ サポートされていません。 要求はサポートされていません。  
   
  2  
  アクセスが拒否されました。 ユーザーには適切なアクセス権がありませんでした。  
@@ -117,9 +118,9 @@ object.StartService()
  24  
  サービスは既に一時停止しています。 サービスは現在システムで一時停止されています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

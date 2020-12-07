@@ -1,8 +1,9 @@
 ---
+description: 名前空間
 title: 名前空間 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f3261b7b68213205dbcc51e155832242aa42747
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03d70d1e5df026e13e23c9759462f53114f4d2af
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980263"
 ---
 # <a name="namespaces"></a>名前空間
 ADO の XML 永続化形式では、次の4つの名前空間が使用されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ADO の XML 永続化形式では、次の4つの名前空間が使用されます。  
   
 |Prefix|説明|  
@@ -46,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  この名前が XML ドキュメント全体で一貫して使用されている限り、ユーザーはこれを任意の名前に定義できます。 ADO は常に "s"、"rs"、"dt"、"z" を書き込みますが、これらのプレフィックス名は読み込みコンポーネントにハードコードされません。  
   
 ## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

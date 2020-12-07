@@ -1,8 +1,9 @@
 ---
+description: AbsolutePosition およびカーソルのプロパティの例 (VB)
 title: AbsolutePosition およびカーソルのプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ccef63f898063abd4e87332285bd81c1e4a845
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a693873e674a0a12dc523994faa1eded7e52a3ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764583"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977193"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition およびカーソルのプロパティの例 (VB)
-この例では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを使用します。  
+この例では、 [AbsolutePosition](./absoluteposition-property-ado.md) プロパティを使用して、 [レコードセット](./recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](./cursorlocation-property-ado.md)プロパティを使用します。  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -92,6 +93,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [カーソル位置プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition プロパティ (ADO)](./absoluteposition-property-ado.md)   
+ [カーソル位置プロパティ (ADO)](./cursorlocation-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

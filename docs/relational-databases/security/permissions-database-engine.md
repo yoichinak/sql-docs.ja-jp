@@ -2,7 +2,7 @@
 title: 権限 (データベース エンジン) | Microsoft Docs
 description: この SQL Server 権限の完全な一覧を参照して、使用するプラットフォームに適用される権限を確認します。
 ms.custom: ''
-ms.date: 01/03/2017
+ms.date: 10/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,22 +17,23 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-author: VanMSFT
-ms.author: vanto
+author: AndreasWolter
+ms.author: anwolter
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5da1bad65cf04093be339e1f2e55bddd30efffbf
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009390"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243641"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に対して付与することができず、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。
+[!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] の権限の合計数 は 248 です。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は 254 の権限を公開します。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に対して付与することができず、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で意味を成すのは、いくつかの権限のみです。
+新しい権限が、新しいリリースで徐々に導入されています。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] は 238 の権限を公開します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどの権限が新しいかが明確に記載されています。
 
 権限を理解したら、 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)、および [DENY](../../t-sql/statements/deny-transact-sql.md) ステートメントを使用してサーバー レベルの権限をログインとデータベース レベルの権限ユーザーに付与します。 たとえば次のようになります。   
 ```sql
@@ -52,13 +53,13 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      セキュリティ保護可能な特定のリソースのプロパティを変更できるようにします。ただし、所有権は変更できません。 スコープに対して許可された場合、ALTER では、そのスコープに含まれているセキュリティ保護可能なすべてのリソースの変更、作成、または削除も行えるようになります。 たとえば、スキーマに対する ALTER 権限には、スキーマのオブジェクトを作成、変更、および削除する権限が含まれています。  
   
--   ALTER ANY \<*Server Securable*>。ここで、*Server Securable* には、任意のセキュリティ保護可能なサーバーを指定できます。  
+-   ALTER ANY \<*Server Securable*>。ここで、 *Server Securable* には、任意のセキュリティ保護可能なサーバーを指定できます。  
   
-     *Server Securable*の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
+     *Server Securable* の個々のインスタンスを作成、変更、削除できるようにします。 たとえば、ALTER ANY LOGIN では、インスタンス内の任意のログインを作成、変更、または削除できます。  
   
--   ALTER ANY \<*Database Securable*>。ここで、*Database Securable* には、データベース レベルの任意のセキュリティ保護可能なリソースを指定できます。  
+-   ALTER ANY \<*Database Securable*>。ここで、 *Database Securable* には、データベース レベルの任意のセキュリティ保護可能なリソースを指定できます。  
   
-     *Database Securable*の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
+     *Database Securable* の個々のインスタンスを CREATE、ALTER、DROP できるようにします。 たとえば、ALTER ANY SCHEMA では、データベース内の任意のスキーマを作成、変更、または削除できます。  
   
 -   TAKE OWNERSHIP  
   
@@ -74,11 +75,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 -   CREATE \<*Server Securable*>  
   
-     権限を与えられたユーザーが *Server Securable*を作成できるようにします。  
+     権限を与えられたユーザーが *Server Securable* を作成できるようにします。  
   
 -   CREATE \<*Database Securable*>  
   
-     権限を与えられたユーザーが *Database Securable*を作成できるようにします。  
+     権限を与えられたユーザーが *Database Securable* を作成できるようにします。  
   
 -   CREATE \<*Schema-contained Securable*>  
   
@@ -363,7 +364,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> 権限チェック アルゴリズムの概要  
- 権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト**、 **権限領域**、および **必要な権限**です。  
+ 権限のチェックは複雑な場合があります。 権限チェック アルゴリズムには、グループ メンバーシップの重複、所有権の継承、明示的および暗黙的な権限が含まれます。また、セキュリティ保護可能なエンティティを含むセキュリティ保護可能なクラスに対する権限の影響を受けることもあります。 アルゴリズムの一般的な手順では、関連する権限がすべて収集されます。 ブロックする DENY が見つからない場合、十分なアクセス権を付与する GRANT が検索されます。 アルゴリズムには、不可欠な要素が 3 つあります。 **セキュリティ コンテキスト** 、 **権限領域** 、および **必要な権限** です。  
   
 > [!NOTE]  
 >  sa、dbo、エンティティ所有者、information_schema、sys、または自分自身に対する権限を許可、拒否、または取り消すことはできません。  
@@ -403,18 +404,18 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
 2.  所有権の継承が適用され、その継承内でオブジェクトに対するアクセス チェックが以前にセキュリティ チェックに合格している場合は、アクセスを許可します。  
   
-3.  呼び出し元に関連付けられたサーバーレベル、データベースレベル、署名付きモジュールの各 ID を集計して、 **セキュリティ コンテキスト**を作成します。  
+3.  呼び出し元に関連付けられたサーバーレベル、データベースレベル、署名付きモジュールの各 ID を集計して、 **セキュリティ コンテキスト** を作成します。  
   
-4.  その **セキュリティ コンテキスト**用に、 **権限領域**に対して許可または拒否された権限をすべて収集します。 権限は、GRANT、GRANT WITH GRANT、または DENY として明示的に指定される場合と、暗黙権限または包含権限の GRANT または DENY である場合があります。 たとえば、スキーマに対する CONTROL 権限を使用した場合、テーブルに対する CONTROL 権限も暗黙的に適用されます。 また、テーブルに対して CONTROL 権限を使用した場合、SELECT 権限も暗黙的に適用されます。 したがって、スキーマに対する CONTROL 権限が許可された場合、テーブルに対する SELECT 権限も許可されます。 テーブルに対する CONTROL 権限が拒否された場合、テーブルに対する SELECT 権限も拒否されます。  
+4.  その **セキュリティ コンテキスト** 用に、 **権限領域** に対して許可または拒否された権限をすべて収集します。 権限は、GRANT、GRANT WITH GRANT、または DENY として明示的に指定される場合と、暗黙権限または包含権限の GRANT または DENY である場合があります。 たとえば、スキーマに対する CONTROL 権限を使用した場合、テーブルに対する CONTROL 権限も暗黙的に適用されます。 また、テーブルに対して CONTROL 権限を使用した場合、SELECT 権限も暗黙的に適用されます。 したがって、スキーマに対する CONTROL 権限が許可された場合、テーブルに対する SELECT 権限も許可されます。 テーブルに対する CONTROL 権限が拒否された場合、テーブルに対する SELECT 権限も拒否されます。  
   
     > [!NOTE]  
     >  列レベルの権限の GRANT により、オブジェクト レベルの DENY がオーバーライドされます。  
   
-5.  **必要な権限**を識別します。  
+5.  **必要な権限** を識別します。  
   
-6.  **権限領域** 内のオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト**の任意の ID に対し直接または暗黙的に拒否されている場合は、権限チェックが不合格となります。  
+6.  **権限領域** 内のオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** の任意の ID に対し直接または暗黙的に拒否されている場合は、権限チェックが不合格となります。  
   
-7.  **権限領域** 内のすべてのオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** のいずれの ID に対しても直接または暗黙的に拒否されておらず、 **必要な権限**に GRANT 権限または GRANT WITH GRANT 権限が含まれている場合は、権限チェックが合格となります。  
+7.  **権限領域** 内のすべてのオブジェクトについて、 **必要な権限** が、 **セキュリティ コンテキスト** のいずれの ID に対しても直接または暗黙的に拒否されておらず、 **必要な権限** に GRANT 権限または GRANT WITH GRANT 権限が含まれている場合は、権限チェックが合格となります。  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列レベルのアクセス許可に関する特別な考慮事項
 

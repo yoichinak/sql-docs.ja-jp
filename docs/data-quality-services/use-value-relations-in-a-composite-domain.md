@@ -1,4 +1,5 @@
 ---
+description: 複合ドメインでの値のリレーションの使用
 title: 複合ドメインでの値のリレーションの使用
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466597"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>複合ドメインでの値のリレーションの使用
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883301"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  複合ドメインの値のリレーションを表示するには、DQS_MAIN データベースに対する dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>値のリレーションの表示  
+##  <a name="view-value-relations"></a><a name="Use"></a> 値のリレーションの表示  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -49,9 +50,9 @@ ms.locfileid: "85883301"
     > [!NOTE]  
     >  **"値"** テーブルには、複合ドメイン内に存在する値の各組み合わせが表示されます。 各値は、適用先の単一ドメインに表示されます。 値のリレーション テーブルの既定の並べ替えは頻度順ですが、別の列をクリックしてその列で並べ替えることができます。 頻度が 20 以上の値だけが表示されます。  
   
-6.  テーブル内の値はいずれも変更できません。 その他の操作を実行している場合は、 **[完了]** をクリックし、ドメイン管理アクティビティを完了します。 それ以外の場合は、[**キャンセル**] をクリックします。  
+6.  テーブル内の値はいずれも変更できません。 その他の操作を実行している場合は、 **[完了]** をクリックし、ドメイン管理アクティビティを完了します。 それ以外の場合は、[ **キャンセル**] をクリックします。  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>補足情報: 値のリレーションを表示した後  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> 補足情報: 値のリレーションを表示した後  
  値のリレーションを表示した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

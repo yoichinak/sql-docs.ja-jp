@@ -1,4 +1,5 @@
 ---
+description: SQLColumns (テキスト ファイル ドライバー)
 title: SQLColumns (テキストファイルドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78c2e20f12dedf399ab36dd908f83aa93bebffc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fed898b4b4c821571423eba1b99ef093bf38b844
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412028"
 ---
 # <a name="sqlcolumns-text-file-driver"></a>SQLColumns (テキスト ファイル ドライバー)
 > [!NOTE]  
 >  このトピックでは、テキストファイルドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|列|説明|  
+|列|コメント|  
 |------------|--------------|  
 |TABLE_QUALIFIER|ディレクトリへのパスが返されます。|  
 |TABLE_OWNER|所有者名がサポートされていないため、この列には NULL が返されます。|  

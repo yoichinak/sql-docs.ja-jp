@@ -1,4 +1,5 @@
 ---
+description: DENSE_RANK (Transact-SQL)
 title: DENSE_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37668bcc7e2d2b06120f4dfaaaa4de906678ea59
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113013"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116758"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87113013"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -65,7 +66,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. パーティション内の行に順位を付ける  
 この例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 `DENSE_RANK` は `LocationID` で結果セットをパーティション分割し、`Quantity` で論理的に結果セットを並べ替えます。 494 と 495 の製品が同じ数量であることを確認します。 いずれの数量値も同じであるため、両方に順位値 1 が与えられます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 結果セット内のすべての行に順位を付ける  
 この例では、給与に順位を付け、トップ 10 の従業員を返します。 `SELECT` ステートメントで `PARTITION BY` 句が指定されなかったため、`DENSE_RANK` 関数はすべての結果セット行に適用されました。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -137,7 +138,7 @@ BusinessEntityID Rate                  RankBySalary
 
 が同じクエリで使用されます。 各順位付け関数をそれぞれの例で確認してください。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -179,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D:パーティション内の行に順位を付ける  
 この例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 `DENSE_RANK` は `SalesTerritoryGroup` で行セットをパーティション分割し、`SalesAmountQuota` で結果セットを並べ替えます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

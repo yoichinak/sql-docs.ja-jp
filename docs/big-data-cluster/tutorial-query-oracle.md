@@ -3,24 +3,24 @@ title: Oracle の外部データにクエリを実行する
 titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターから Oracle データにクエリを実行する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772839"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196086"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターから Oracle データにクエリを実行する方法について説明します。 このチュートリアルを実行するには、Oracle サーバーにアクセスできる必要があります。 アクセスできない場合は、このチュートリアルで、SQL Server ビッグ データ クラスター内の外部データ ソースに対してデータ仮想化がどのように機能するかを理解できます。
+このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターから Oracle データにクエリを実行する方法について説明します。 このチュートリアルを実行するには、Oracle サーバーにアクセスできる必要があります。 外部オブジェクトに対して読み取り特権を持つ Oracle ユーザー アカウントが必要です。 Oracle プロキシ ユーザー認証がサポートされています。 アクセスできない場合は、このチュートリアルで、SQL Server ビッグ データ クラスター内の外部データ ソースに対してデータ仮想化がどのように機能するかを理解できます。
 
 このチュートリアルでは、以下の内容を学習します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "85772839"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. このテーブルに、**inventory.csv** ファイルの内容をインポートします。 このファイルは、「[前提条件](#prereqs) 」セクションのサンプル作成スクリプトによって作成されたものです。
+1. このテーブルに、 **inventory.csv** ファイルの内容をインポートします。 このファイルは、「[前提条件](#prereqs) 」セクションのサンプル作成スクリプトによって作成されたものです。
 
 ## <a name="create-an-external-data-source"></a>外部データ ソースを作成する
 
@@ -90,6 +90,30 @@ ms.locfileid: "85772839"
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>省略可能:Oracle プロキシ認証
+
+Oracle は、きめ細かいアクセス制御を備えるプロキシ認証をサポートしています。 プロキシ ユーザーは、その資格情報を使用して Oracle データベースに接続し、データベース内の別のユーザーの権限を借用します。 
+
+プロキシ ユーザーは、権限が借用されているユーザーと比較してアクセスが制限されるように構成することができます。 たとえば、プロキシ ユーザーは、権限が借用されているユーザーの特定のデータベース ロールを使用して接続することができます。 複数のユーザーがプロキシ認証を使用して接続している場合でも、プロキシ ユーザーを介して Oracle データベースに接続しているユーザーの ID は接続に保持されます。 Oracle では、これを利用してアクセス制御を実施し、実際のユーザーに代わって実行されたアクションを監査することができます。
+
+oracle プロキシ ユーザーの使用が必要なシナリオの場合は、 __前の手順の 4 と 5 を次のものに置き換えてください__ 。
+
+4. Oracle サーバーに接続するためのデータベース スコープ資格情報を作成します。 次のステートメントで、Oracle サーバーに適切な oracle プロキシ ユーザーの資格情報を指定します。
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Oracle サーバーを指す外部データ ソースを作成します。
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>外部テーブルを作成する

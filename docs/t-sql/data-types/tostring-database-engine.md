@@ -1,4 +1,5 @@
 ---
+description: ToString (データベース エンジン)
 title: ToString (データベース エンジン)
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1d1460c83488f7ba708f737e7c9bb7bd46819152
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555928"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037465"
 ---
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
 
@@ -31,19 +32,19 @@ ms.locfileid: "86555928"
 *this* の論理的表現に基づく文字列を返します ToString から変換するとき暗黙的に呼び出されます **hierarchyid** を文字列型が発生します。 逆の役割を果たします #40 を[解析する (& a)";"データベース エンジン"&"#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>構文  
-  
-```sql
--- Transact-SQL syntax  
-node.ToString  ( )   
+
+```syntaxsql
+-- Transact-SQL syntax
+node.ToString  ( )
 -- This is functionally equivalent to the following syntax  
 -- which implicitly calls ToString():  
 CAST(node AS nvarchar(4000))  
 ```  
   
-```sql
--- CLR syntax  
-string ToString  ( )   
-```  
+```syntaxsql
+-- CLR syntax
+string ToString  ( )
+```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -120,8 +121,7 @@ this.ToString()
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

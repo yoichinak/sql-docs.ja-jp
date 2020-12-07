@@ -1,4 +1,5 @@
 ---
+description: 複合ドメインでのデータのクレンジング
 title: 複合ドメインでのデータのクレンジング
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cb8b752d47113c546358ba0e22c77df08cad24c6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f35430d590be36bb7ae487d32a9a0fc97c0275ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449950"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>複合ドメインでのデータのクレンジング
 
@@ -56,7 +57,7 @@ ms.locfileid: "85901135"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジングデータ品質プロジェクトでは、この明確なクロスドメインルールによってデータが100% の信頼度で変更され、[**理由**] 列に "ルール ' ' によって修正されました" というメッセージが表示されます *\<Cross-Domain Rule Name>* 。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
+ 明確な *Then* クロス ドメイン ルール **"値が次の値と等しい"** をテストするときは、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスに、正しいデータを示す新しい列 **[次に修正]** が含まれます。 クレンジングデータ品質プロジェクトでは、この明確なクロスドメインルールによってデータが100% の信頼度で変更され、[ **理由** ] 列に "ルール ' ' によって修正されました" というメッセージが表示されます *\<Cross-Domain Rule Name>* 。 クロス ドメイン ルールの詳細については、「 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)」を参照してください。  
   
 > [!NOTE]  
 >  明確なクロス ドメイン ルールは、参照データ サービスにアタッチされている複合ドメインでは動作しません。  

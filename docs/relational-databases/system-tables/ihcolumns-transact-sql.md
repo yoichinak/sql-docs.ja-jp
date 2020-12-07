@@ -1,4 +1,5 @@
 ---
+description: IHcolumns (Transact-sql)
 title: IHcolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a27e72b46fed5f814e91d447abf30c9c905cba4d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890313"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540984"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85890313"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|パブリッシュされた列を識別します。|  
-|**publishercolumn_id**|**int**|パブリッシュされた列を、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システムテーブルに格納されている列のメタデータに関連付けます。|  
+|**publishercolumn_id**|**int**|パブリッシュされた列を、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) システムテーブルに格納されている列のメタデータに関連付けます。|  
 |**name**|**sysname**|列名を指定します。|  
 |**article_id**|**int**|列が属しているアーティクルを識別します。|  
 |**column_ordinal**|**int**|順序に基づいた列の識別子。|  
@@ -42,13 +43,13 @@ ms.locfileid: "85890313"
 |**mapped_length**|**bigint**|サブスクライバーの列の長さです。|  
 |**mapped_prec**|**int**|サブスクライバーの列の有効桁数です。|  
 |**mapped_scale**|**int**|サブスクライバーの列の小数点以下桁数です。|  
-|**mapped_nullable**|**bit**|サブスクライバーの列で NULL 値を許容するかどうかを示します。 **1**は null 値が許容されることを示します。|  
+|**mapped_nullable**|**bit**|サブスクライバーの列で NULL 値を許容するかどうかを示します。 **1** は null 値が許容されることを示します。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;システムビュー&#41; &#40;Transact-sql&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

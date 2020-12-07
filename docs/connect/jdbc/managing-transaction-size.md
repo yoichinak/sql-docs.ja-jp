@@ -1,4 +1,5 @@
 ---
+description: トランザクション サイズの管理
 title: トランザクション サイズの管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14729ba2782bfd9f88e718fbde50de30ae13e645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ba88edf4c4c8f1dfb4e8b7cd27db3102be448c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438374"
 ---
 # <a name="managing-transaction-size"></a>トランザクション サイズの管理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80923097"
   
  さらに、アプリケーションでブロックの問題が発生する可能性があり、タイムアウトする必要がある場合は、ロック タイムアウトの設定を使用してください。 これを行うには、[setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md) メソッドを使用します。 ロック タイムアウトの既定値は -1 です。これは、ロックを待機している間に無期限にブロックすることを意味します。 ロック タイムアウトを 30 秒に設定すると、別の接続によってブロックされている接続が 30 秒でタイムアウトになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

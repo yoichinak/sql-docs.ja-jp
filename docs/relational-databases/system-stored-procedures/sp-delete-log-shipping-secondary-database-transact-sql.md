@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_secondary_database (Transact-sql)
 title: sp_delete_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28527dcb21243c7853439b2f8244fc1ca696b3c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8eb3b4818674ebb8e52c340fad8452269a2a50d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469686"
 ---
 # <a name="sp_delete_log_shipping_secondary_database-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,11 +49,11 @@ sp_delete_log_shipping_secondary_database
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
- **sp_delete_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_delete_log_shipping_secondary_database** は、セカンダリサーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

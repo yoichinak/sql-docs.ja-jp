@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition 変換先
 title: SQL Server Compact Edition 変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d7d1fe2884d202125c545088b714a5f93cfb7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b8ae3e0af8f30b38b77b0e3c7a327db4a46707
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916028"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194736"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition 変換先
 
@@ -46,7 +47,7 @@ ms.locfileid: "86916028"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [SQL Server 変換先のカスタム プロパティ](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -55,5 +56,4 @@ ms.locfileid: "86916028"
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

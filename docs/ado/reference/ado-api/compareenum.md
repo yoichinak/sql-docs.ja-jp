@@ -1,8 +1,9 @@
 ---
+description: CompareEnum
 title: CompareEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6460e755ec3fc1f9675af1f88d673b403b13b377
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a5a983f1808d71404279c5332aedfcfb1f1501d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975023"
 ---
 # <a name="compareenum"></a>CompareEnum
 ブックマークによって表される2つのレコードの相対位置を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|ブックマークが等しいことを示します。|  
 |**adCompareGreaterThan**|2|最初のブックマークが2番目のブックマークの後にあることを示します。|  
@@ -45,7 +46,7 @@ ms.locfileid: "82760338"
 |AdoEnums の比較|  
   
 ## <a name="applies-to"></a>適用対象  
- [CompareBookmarks メソッド (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks メソッド (ADO)](./comparebookmarks-method-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [CompareBookmarks メソッド (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+ [CompareBookmarks メソッド (ADO)](./comparebookmarks-method-ado.md)

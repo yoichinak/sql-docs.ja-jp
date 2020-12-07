@@ -1,19 +1,19 @@
 ---
 title: SQL Server on Linux 用の Pacemaker クラスターをデプロイする
-description: このチュートリアルでは、SQL Server on Linux 用に Pacemaker クラスターをデプロイする方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+description: SQL Server Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI) 用の Linux Pacemaker クラスターのデプロイについて説明します。
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: b2e5c3adb5f04f3e138b1d0644a047b8a443fde7
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196760"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91785173"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux 用の Pacemaker クラスターをデプロイする
 

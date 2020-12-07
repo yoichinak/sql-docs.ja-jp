@@ -1,4 +1,5 @@
 ---
+description: '[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda6ec744ca603c1a03df22bcb391b6d75bbff58
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917651"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439346"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917651"
 ## <a name="screen-shot---operation-completed"></a>スクリーン ショット - 操作の完了 
  次のスクリーンショットは、操作が完了した後に表示されるウィザードの **[操作を実行しています]** ページを示します。 **[メッセージ]** 列のアイテムをクリックすると、対応する手順の詳細が表示されます。  
   
- ![インポートおよびエクスポート ウィザードの [操作を実行しています] ページ](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
+ ![インポートおよびエクスポート ウィザードの [成功] ページのスクリーンショット。](../../integration-services/import-export-data/media/performing-operation2.png "インポートおよびエクスポート ウィザードの [操作を実行しています] ページ")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>操作の進行状況を確認する
  **操作**  
@@ -52,12 +53,12 @@ ms.locfileid: "86917651"
  **Report**  
  結果レポートを表示したり、ファイルに保存することができます。さらに、レポートをクリップボードにコピーすることも、電子メールで送信することもできます。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の内容  
  構成した操作が正常に実行されて完了したら、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの実行は終了です。  
 -   操作をすぐに実行した場合は、選択したコピー先を開いてウィザードがコピーしたデータを確認できます。  
 -   ウィザードによって作成された SSIS パッケージを保存した場合は、それを SQL Server Data Tools で開いてカスタマイズし、再利用できます。 保存されたパッケージをカスタマイズし、後でもう一度実行する方法の詳細については、 [SSIS パッケージの保存](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

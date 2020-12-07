@@ -1,8 +1,9 @@
 ---
+description: Stream プロパティ
 title: Stream プロパティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdcd6d9fb734f50c110a3e59e9d24874ea71b974
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1903644370172e716de78bc49a68af03a742c125
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759600"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988513"
 ---
 # <a name="stream-property"></a>Stream プロパティ
 **ADOStreamConstruction**オブジェクトからの OLE DB**ストリーム**オブジェクトを取得します。値の設定もできます。  
@@ -40,13 +41,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>パラメーター  
  *ppStream*  
- OLE DB**ストリーム**オブジェクトへのポインター。  
+ OLE DB **ストリーム** オブジェクトへのポインター。  
   
  *pStream*  
- OLE DB**ストリーム**オブジェクト。  
+ OLE DB **ストリーム** オブジェクト。  
   
 ## <a name="return-values"></a>戻り値  
  このプロパティメソッドは、標準の HRESULT 値を返します。 これには、S_OK と E_FAIL が含まれます。  
   
 ## <a name="applies-to"></a>適用対象  
- [ADOStreamConstruction インターフェイス](../../../ado/reference/ado-api/adostreamconstruction-interface.md)
+ [ADOStreamConstruction インターフェイス](./adostreamconstruction-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: ConfigurationSetting メソッド - GetAdminSiteUrl
 title: GetAdminSiteUrl メソッド (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0032f92c79916cbd12962e792b51a05e9f353388
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6bfb2aa4e5f5f06ca8994f322b4d7f9eab6fea09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423206"
 ---
 # <a name="configurationsetting-method---getadminsiteurl"></a>ConfigurationSetting メソッド - GetAdminSiteUrl
   レポート サーバーが統合されている Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームのサーバー管理 Web サイトの絶対 URL を取得します。  
@@ -45,6 +46,6 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [MSReportServer_ConfigurationSetting Methods](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
+ [MSReportServer_ConfigurationSetting メソッド](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData)
 title: supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 067809bbd5bad3933dd3e7e66f538663ceb4e103
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f420aff2681495a8890a1c86841e124c73a98184
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919969"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243717"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,14 +61,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  *concurrency*  
   
- 結果セットのコンカレンシー レベルを示す **int**。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定します。  
+ 結果セットのコンカレンシー レベルを示す **int** 。java.sql.ResultSet または SQLServerResultSet での定義に従って、次のいずれかの値を指定します。  
   
-## <a name="javasqlresultset-types"></a>java.sql.ResultSet の種類  
+## <a name="concurrency-javasqlresultset-types"></a>コンカレンシー java.sql.ResultSet の種類  
  CONCUR_READ_ONLY  
   
  CONCUR_UPDATABLE  
   
-## <a name="sqlserverresultset-types"></a>SQLServerResultSet の種類  
+## <a name="concurrency-sqlserverresultset-types"></a>コンカレンシーの SQLServerResultSet の種類  
  CONCUR_SS_OPTIMISTIC_CC  
   
  CONCUR_SS_SCROLL_LOCKS  
@@ -75,7 +76,7 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、 **true** です。 それ以外の場合は、 **false** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

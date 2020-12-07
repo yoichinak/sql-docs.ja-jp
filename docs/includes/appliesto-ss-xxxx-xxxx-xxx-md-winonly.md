@@ -1,1 +1,1 @@
-<Token>**適用対象:** ![はい](media/yes-icon.png)SQL Server (Windows only) ![いいえ](media/no-icon.png)Azure SQL Database ![いいえ](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![いいえ](media/no-icon.png)Parallel Data Warehouse </Token>
+<Token>**適用対象:** :::image type="icon" source="media/yes-icon.png":::SQL Server (Windows のみ) :::image type="icon" source="media/no-icon.png":::Azure SQL Database :::image type="icon" source="media/no-icon.png":::Azure Synapse Analytics (SQL DW) :::image type="icon" source="media/no-icon.png":::Parallel Data Warehouse </Token>

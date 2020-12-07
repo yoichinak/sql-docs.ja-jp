@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_alert (Transact-SQL)
 title: log_shipping_monitor_alert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_alert system table
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 98cf21802910299e73b4839e93451080993228db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0251792954c4d6a534ae6175843192619e8de8ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890198"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525556"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ログ配布の警告ジョブ ID を格納します。 このテーブルは、 **msdb**データベースに格納されます。   
+  ログ配布の警告ジョブ ID を格納します。 このテーブルは、 **msdb** データベースに格納されます。   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

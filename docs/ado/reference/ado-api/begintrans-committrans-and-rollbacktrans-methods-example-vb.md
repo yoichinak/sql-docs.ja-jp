@@ -1,8 +1,9 @@
 ---
+description: BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
 title: BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2166aa19e0938ce14254abcf94ac21e12b00c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762885"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975923"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
-この例では、データベースの***Titles***テーブルにあるすべての心理学ブックの書籍の種類を変更します。 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、 ***Titles***テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  
+この例では、データベースの ***Titles*** テーブルにあるすべての心理学ブックの書籍の種類を変更します。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、 ***Titles***テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](./update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  
   
 ```  
 'BeginBeginTransVB  
@@ -132,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)

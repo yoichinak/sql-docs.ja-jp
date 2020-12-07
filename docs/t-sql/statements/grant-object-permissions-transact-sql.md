@@ -1,4 +1,5 @@
 ---
+description: GRANT (オブジェクトの権限の許可) (Transact-SQL)
 title: GRANT (オブジェクトの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e15656ca8506ac03f2556f202284d601b58a981
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483945"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570580"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -159,7 +160,7 @@ PRIVILEGES
 ### <a name="a-granting-select-permission-on-a-table"></a>A. テーブルの SELECT 権限を許可する  
  次の例では、`AdventureWorks2012` データベース内にある `Person.Address` テーブルでの `SELECT` 権限を、ユーザー `RosaQdM` に対して許可します。  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -167,7 +168,7 @@ GO
 ### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. ストアド プロシージャの EXECUTE 権限を許可する  
  次の例では、ストアド プロシージャ `HumanResources.uspUpdateEmployeeHireInfo` での `EXECUTE` 権限を、アプリケーション ロール `Recruiting11` に対して許可します。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -177,7 +178,7 @@ GO
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. GRANT OPTION を指定してビューの REFERENCES 権限を許可する  
  次の例では、`GRANT OPTION` を指定して、ビュー `HumanResources.vEmployee` にある列 `BusinessEntityID` での `REFERENCES` 権限を、ユーザー `Wanida` に対して許可します。  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -186,7 +187,7 @@ GO
 ### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. OBJECT 句を使用せずにテーブルの SELECT 権限を許可する  
  次の例では、`AdventureWorks2012` データベース内にある `Person.Address` テーブルでの `SELECT` 権限を、ユーザー `RosaQdM` に対して許可します。  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -194,7 +195,7 @@ GO
 ### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>E. テーブルの SELECT 権限をドメイン アカウントに許可する  
  次の例では、`AdventureWorks2012` データベース内にある `Person.Address` テーブルでの `SELECT` 権限を、ユーザー `AdventureWorks2012\RosaQdM` に対して許可します。  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -202,7 +203,7 @@ GO
 ### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>F. プロシージャの EXECUTE 権限をロールに許可する  
  次の例では、ロールを作成し、`AdventureWorks2012` データベースのプロシージャ `uspGetBillOfMaterials` の `EXECUTE` 権限をそのロールに対して許可します。  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

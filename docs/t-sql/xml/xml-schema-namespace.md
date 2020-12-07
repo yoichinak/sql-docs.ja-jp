@@ -1,4 +1,5 @@
 ---
+description: xml_schema_namespace
 title: xml_schema_namespace (Transact-SQL)
 ms.custom: ''
 ms.date: 07/27/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4f3035f1883f12924956958ab35ac4f3ca571814
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c74b2b1f47c9e928d7c3028add043e539134828d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391857"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112986"
 ---
 # <a name="xml_schema_namespace"></a>xml_schema_namespace
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "86391857"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
 ```  
   
@@ -66,7 +66,7 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
 ## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `ProductDescriptionSchemaCollection` を、`AdventureWorks` データベース内の運用リレーショナル スキーマから取得します。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  

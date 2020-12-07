@@ -1,4 +1,5 @@
 ---
+description: GRANT (Service Broker の権限の許可) (Transact-SQL)
 title: GRANT (Service Broker の権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484351"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472207"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Service Broker の権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,23 +58,23 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Service Broker のセキュリティ保護可能なリソースに対して許可できる権限を指定します。  以下に一覧を示します。  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  権限を許可するコントラクトを指定します。 スコープ修飾子"::" が必須です。  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  権限を許可するメッセージ型を指定します。 スコープ修飾子 "::" が必要です。  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  権限を許可するリモート サービス バインドを指定します。 スコープ修飾子 "::" が必要です。  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  権限を許可するルートを指定します。 スコープ修飾子 "::" が必要です。  
   
  SERVICE **::** _service_name_  
  権限を許可するサービスを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -95,7 +96,7 @@ GRANT permission  [ ,...n ] ON
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
  *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -113,7 +114,7 @@ GRANT permission  [ ,...n ] ON
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="service-broker-contracts"></a>Service Broker コントラクト  
  Service Broker コントラクトは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、Service Broker コントラクトで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  

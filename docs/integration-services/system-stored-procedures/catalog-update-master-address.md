@@ -1,4 +1,5 @@
 ---
+description: catalog.update_master_address (SSISDB データベース)
 title: catalog.update_master_address (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a400275aa68d9906ad16ae7d1236b019f4e9f6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80b5e28a0d552955154849d2f593fc32be79f656
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912748"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129528"
 ---
 # <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address (SSISDB データベース)
 

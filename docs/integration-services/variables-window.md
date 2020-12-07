@@ -1,4 +1,5 @@
 ---
+description: '[変数] ウィンドウ'
 title: '[変数] ウィンドウ | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 061adfeced9ab5caa6da3e303593310761fa9e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa326be8b57eed58f0aa52876d0d32b889320c58
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913698"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193744"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
 
@@ -36,8 +37,8 @@ ms.locfileid: "86913698"
 > [!NOTE]
 >  **Name** プロパティと **Namespace** プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
-## <a name="options"></a>オプション  
- **変数の追加**  
+## <a name="options"></a>Options  
+ **[変数の追加]**  
  ユーザー定義変数を追加します。  
   
  **変数の移動**  
@@ -49,7 +50,7 @@ ms.locfileid: "86913698"
  変数を一覧から選択し、 **[変数の削除]** をクリックします。  
   
  **グリッドのオプション**  
- クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション](../integration-services/variable-grid-options.md)」を参照してください。  
+ クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション]()」を参照してください。  
   
  **Name**  
  変数名を表示します。 ユーザー定義変数の名前を更新できます。  
@@ -115,8 +116,7 @@ ms.locfileid: "86913698"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [パッケージで変数を使用する](./integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [パッケージ実行用のダンプ ファイルを生成する](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
-  
   

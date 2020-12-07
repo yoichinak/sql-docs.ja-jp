@@ -1,4 +1,5 @@
 ---
+description: MSreplication_subscriptions (Transact-SQL)
 title: MSreplication_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4d0ec6418e25b59afb3a82ed8b6b97f4e2ceadc6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b89aee32b5ea431da77043938104960d4d353b74
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889464"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551034"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889464"
 |**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> 0 = プッシュ。<br /><br /> 1 = プル<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|ディストリビューションエージェントの名前。|  
 |**Time**|**smalldatetime**|ディストリビューションエージェントによって最後に更新された時刻。|  
-|**description**|**nvarchar(255)**|サブスクリプションの説明。|  
+|**description**|**nvarchar (255)**|サブスクリプションの説明。|  
 |**transaction_timestamp**|**varbinary(16)**|内部使用のみ。|  
 |**update_mode**|**tinyint**|更新の種類。|  
 |**agent_id**|**binary(16)**|エージェントの ID。|  
@@ -46,7 +47,7 @@ ms.locfileid: "85889464"
 |**subid**|**binary(16)**|匿名サブスクリプションのグローバル識別子。|  
 |**immediate_sync**|**bit**|スナップショットエージェントが実行されるたびに同期ファイルが作成または再作成されるかどうかを示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;REMSERVER (Transact-SQL)'
 title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a0d2b5d50144ca96b9208dfa1c0d6844b456fe6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 65ab8cab274a4fa70aa70898725431a4d59bcd11
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110831"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380627"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87110831"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@REMSERVER  
 ```  
 
@@ -48,13 +49,13 @@ ms.locfileid: "87110831"
 ## <a name="return-types"></a>戻り値の型
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  @@REMSERVER は、プロシージャを実行するデータベース サーバーの名前をストアド プロシージャが調べることができるようにします。  
   
 ## <a name="examples"></a>例  
  次の例では、リモート サーバーの名前を返すプロシージャ `usp_CheckServer` を作成します。  
   
-```  
+```sql  
 CREATE PROCEDURE usp_CheckServer  
 AS  
 SELECT @@REMSERVER;  
@@ -62,7 +63,7 @@ SELECT @@REMSERVER;
   
  次のストアド プロシージャは、ローカル サーバーの `SEATTLE1` 上に作成されます。 ユーザーはリモート サーバーの `LONDON2` にログインし、`usp_CheckServer` を実行します。  
   
-```  
+```sql  
 EXEC SEATTLE1...usp_CheckServer;  
 ```  
   

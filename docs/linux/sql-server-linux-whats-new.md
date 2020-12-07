@@ -1,18 +1,18 @@
 ---
 title: SQL Server 2017 on Linux の新機能
-description: この記事では、SQL Server 2017 on Linux の新機能について説明します。
+description: この記事では、Linux 上で実行される SQL Server 2017 で使用できる主な機能とサービスについて説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1d36925292bee040735dc07df3044293263661e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893814"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115585"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 on Linux の新機能
 
@@ -57,7 +57,7 @@ SQL Server 2017 CU20 以降では、RHEL 8 がサポートされるようにな�
 
 - コマンドライン構成ツール、[mssql-confmssql-conf](sql-server-linux-configure-mssql-conf.md)。
 - [環境変数](sql-server-linux-configure-environment-variables.md)での無人インストールのサポート。
-- クロスプラットフォームの [Visual Studio Code mssql-server 拡張機能](sql-server-linux-develop-use-vscode.md)。
+- クロスプラットフォームの [Visual Studio Code mssql-server 拡張機能](../tools/visual-studio-code/sql-server-develop-use-vscode.md)。
 - クロスプラットフォームのスクリプト ジェネレーター、[mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md)。
 - クロスプラットフォームの動的管理ビュー (DMV) モニター、[DBFS ツール](https://github.com/Microsoft/dbfs)。
 

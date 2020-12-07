@@ -1,4 +1,5 @@
 ---
+description: MSrepl_originators (Transact-SQL)
 title: MSrepl_originators (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_originators system table
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6afe910bc5e758a0003bd15c9376d4d50583eb38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19e66da5cab574e18b592e0636cd9b3412870a10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889506"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544499"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889506"
 |**publication_id**|**int**|パブリケーションを識別します。|  
 |**dbversion**|**int**|データベースのバージョンを識別します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

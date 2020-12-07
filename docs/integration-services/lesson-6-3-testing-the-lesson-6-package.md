@@ -1,4 +1,5 @@
 ---
+description: レッスン 6-3:レッスン 6 のパッケージをテストする
 title: 手順 3:レッスン 6 のパッケージをテストする | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc7b150f94d0f857244587140fd54b8fe7d38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487736"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>レッスン 6-3:レッスン 6 のパッケージをテストする
 
@@ -39,9 +40,9 @@ ms.locfileid: "86922370"
   
 ## <a name="test-the-lesson-6-package"></a>レッスン 6 のパッケージをテストする  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 4:レッスン 6 のパッケージを配置する](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  

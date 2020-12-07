@@ -1,6 +1,6 @@
 ---
 title: SQL Server テーブルに列を追加する (OLE DB ドライバー) | Microsoft Docs
-description: OLE DB Driver for SQL Server を利用し、SQL Server テーブルに列を追加する
+description: ITableDefinition::AddColumn メソッドを利用すると、コンシューマーは OLE DB Driver for SQL Server の SQL Server テーブルに列を追加できます。そのしくみについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AddColumn function
 - OLE DB Driver for SQL Server, columns
 - adding columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4366011d2f417dc7c35383a4460bfe5871065940
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943144"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859800"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server テーブルへの列の追加
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

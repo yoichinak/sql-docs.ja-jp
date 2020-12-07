@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247201"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396479"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用できる HTML ビューアーがあります。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "87247201"
   
  次の表では、一般的に使用されるレポート ツール バーの機能を説明します。 各機能は、アクセスに使用するコントロールごとに分類されています。  
   
-|使用するアイコンまたはコントロール||ターゲット|  
+|アイコンまたはコントロール|名前|説明|  
 |------------------------------|-|--------|  
 |![ページ ナビゲーション コントロール](../reporting-services/media/htmlviewer-pagenav.gif "ページ ナビゲーション コントロール")|**ページ ナビゲーション コントロール**|レポートの最初または最後のページを開き、レポートをページごとにスクロールし、レポートの特定のページを開きます。 特定のページを表示するには、ページ番号を入力して Enter キーを押します。|  
 |![ページ表示コントロール](../reporting-services/media/htmlviewer-pagesize.gif "ページ表示コントロール")|**ページ表示コントロール**|レポート ページのサイズを拡大または縮小します。 パーセンテージ ベースの変更以外に、 **[ページの幅]** を選択してレポート ページの幅をブラウザー ウィンドウに合わせるか、 **[ページ全体]** を選択してレポートの高さをブラウザー ウィンドウに合わせることができます。 **[ズーム]** オプションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 5.5 以降のバージョンでサポートされています。|  

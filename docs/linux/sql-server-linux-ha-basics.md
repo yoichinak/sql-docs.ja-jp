@@ -2,19 +2,19 @@
 title: Linux デプロイでの SQL Server の高可用性
 description: Always On 可用性グループ、フェールオーバー クラスター インスタンス (FCI)、ログ配布など、SQL Server on Linux の高可用性オプションについて説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196855"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115645"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -216,7 +216,7 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 仮想化環境で AG と FCI を使用する場合は、指定された Pacemaker クラスターのノードに対して、アンチアフィニティが設定されていることを確認してください。 AG または FCI の構成で高可用性向けに構成された場合、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をホストしている各 VM は、同じハイパーバイザー ホストで実行されないようにする必要があります。 たとえば、2 ノードの FCI がデプロイされている場合、特にライブ マイグレーションや vMotion のような機能を使用している場合には、ホストで障害が発生したときに、ノードをホストしている VM のいずれかに対して移行先を確保できるよう、"*少なくとも*" 3 つのハイパーバイザー ホストを確保する必要があります。
 
 詳細については、以下を参照してください。
--   Hyper-V のドキュメント - [高可用性のためのゲスト クラスタリングの使用](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Hyper-V のドキュメント - [高可用性のためのゲスト クラスタリングの使用](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))
 -   ホワイトペーパー (Windows ベースのデプロイ向けに記述されていますが、ほとんどの概念が適用されます) - [VMware vSphere を使用したミッション クリティカルな高可用性 SQL Server デプロイの計画](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 ### <a name="networking"></a>ネットワーク

@@ -1,4 +1,5 @@
 ---
+description: dm_resource_governor_resource_pool_volumes (Transact-sql)
 title: dm_resource_governor_resource_pool_volumes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_volumes
 - sys.dm_resource_governor_resource_pool_volumes
 ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73a99b7db59061df8b01c5baffacb22a0ab4c83d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fd7feb957b93590d76ff92aab14fd745b7c43dd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442730"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543851"
 ---
 # <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>dm_resource_governor_resource_pool_volumes (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "87442730"
   
 ## <a name="see-also"></a>関連項目  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   

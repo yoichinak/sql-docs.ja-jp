@@ -1,4 +1,5 @@
 ---
+description: '[サーバーへの接続] (Oracle)、[ログイン]'
 title: '[サーバーへの接続] (Oracle)、[ログイン] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e029a225d46d24730bb16c9ef55a13f676c81e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b585e2a17e577aab7ade2c5906bdcd184a12e8dd
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773943"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121347"
 ---
 # <a name="connect-to-server-oracle-login"></a>[サーバーへの接続] (Oracle)、[ログイン]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **[サーバーへの接続]** ダイアログ ボックスの **[ログイン]** タブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターから Oracle パブリッシャーへの接続を確立するためのアカウントを指定できます。 パブリッシャーの構成時にレプリケーション管理ユーザー スキーマ用に指定したものと同じアカウントを使用する必要があります。 詳細については、「[Configure an Oracle Publisher](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+  **[サーバーへの接続]** ダイアログ ボックスの **[ログイン]** タブを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディストリビューターから Oracle パブリッシャーへの接続を確立するためのアカウントを指定できます。 パブリッシャーの構成時にレプリケーション管理ユーザー スキーマ用に指定したものと同じアカウントを使用する必要があります。 詳細については、「[Oracle パブリッシャーの構成](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **サーバー インスタンス**  
  ディストリビューターにインストールされた Oracle クライアント ソフトウェアの構成時に指定される、Oracle パブリッシャーの TNS (Transparent Network Substrate) 名です。  
   

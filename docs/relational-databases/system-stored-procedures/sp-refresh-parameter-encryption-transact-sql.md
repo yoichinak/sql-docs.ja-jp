@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-sql)
 title: sp_refresh_parameter_encryption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -16,17 +17,19 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b2172c7d17d9c3d9ebb6680fc7af0212c0a01e12
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002137"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526187"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 現在のデータベースのスキーマバインドされていないストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーのパラメーターの Always Encrypted メタデータを更新します。 
 
@@ -45,16 +48,16 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引数
 
-`[ @name = ] 'module_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 の*module_name*はで `nvarchar` 、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
+`[ @name = ] 'module_name'` ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name* を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name* をスキーマバインドにすることはできません。 の*module_name*はで `nvarchar` 、既定値はありません。 *module_name* にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
 
-`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 `<class>` は、が必要です。 `<class>` が `nvarchar(20)`です。 有効な入力値は `DATABASE_DDL_TRIGGER` 、と `SERVER_DDL_TRIGGER` です。    
+`[ @namespace = ] ' < class > '` は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合 `<class>` は、が必要です。 `<class>` が `nvarchar(20)`です。 有効な入力値は `DATABASE_DDL_TRIGGER` 、と `SERVER_DDL_TRIGGER` です。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
 0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
 * モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  
@@ -62,7 +65,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 テーブルの暗号化プロパティが変更された場合、は、 `sp_refresh_parameter_encryption` 直接または間接的にテーブルを参照しているモジュールに対して実行する必要があります。 このストアドプロシージャは、これらのモジュールで任意の順序で呼び出すことができます。ユーザーは、最初に内部モジュールを更新してから呼び出し元に移動する必要がありません。
 
-`sp_refresh_parameter_encryption`は、 `SET` オブジェクトに関連付けられている権限、拡張プロパティ、またはオプションには影響しません。 
+`sp_refresh_parameter_encryption` は、 `SET` オブジェクトに関連付けられている権限、拡張プロパティ、またはオプションには影響しません。 
 
 サーバーレベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアドプロシージャを実行します。
 

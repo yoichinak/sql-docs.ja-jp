@@ -1,4 +1,5 @@
 ---
+description: SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプトタスクを作成する
 title: SSIS PDW 変換先アダプターを使用したスクリプトタスクの作成
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438524"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプトタスクを作成する
 この SSIS パッケージスクリプトコードは、SSIS PDW 変換先アダプターを使用するためのコード例です。  Integration Services スクリプトタスクを使用すると、SSIS 制御フローのコンテキスト内で .Net アプリケーションで実行できるほぼすべての操作を実行できます。 
@@ -23,13 +24,13 @@ ms.locfileid: "74401220"
   
 1.  SSIS で空のスクリプトタスクを作成します。  
   
-2.  [**スクリプトタスクエディター**] でタスクを開き、[**スクリプトの編集**] をクリックします。  
+2.  [ **スクリプトタスクエディター**] でタスクを開き、[ **スクリプトの編集**] をクリックします。  
   
 3.  スクリプトを編集して、以下に示すコードを使用します。 次の変更を行うことで、スクリプトを環境に合わせてカスタマイズします。  
   
-    -   スクリプトタスクによって作成されたスクリプトの名前空間を保持する必要があります。 名前空間`namespace ST_<GUID>`の名前をメモし、次のスクリプトを編集して、 *ST_<GUID> *をスクリプトタスクの元の*GUID*に変更します。  
+    -   スクリプトタスクによって作成されたスクリプトの名前空間を保持する必要があります。 名前空間の名前をメモ `namespace ST_<GUID>` し、次のスクリプトを編集して、 * <GUID> ST_* をスクリプトタスクの元の*GUID*に変更します。  
   
-    -   プレースホルダー値*xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx*の4回の出現箇所を環境に適した値に置き換えて、目的のアクションを実行します。  
+    -   プレースホルダー値 *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* の4回の出現箇所を環境に適した値に置き換えて、目的のアクションを実行します。  
   
     ```c#  
     #region Help:  Introduction to the script task  

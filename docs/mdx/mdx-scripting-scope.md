@@ -1,4 +1,5 @@
 ---
+description: SCOPE ステートメント (MDX)
 title: SCOPE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f6738b2d7e0764e750b25f09001b7e9d3864a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483865"
 ---
 # <a name="mdx-scripting---scope"></a>MDX スクリプティング - SCOPE
 
@@ -72,18 +73,18 @@ Limited_Set ::=
  *single_tuple*  
  1 つの組です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SCOPE ステートメントは、1つまたは複数の MDX ステートメントの実行によって影響を受けるサブキューブを決定します。 MDX ステートメントが SCOPE ステートメント内にある場合を除き、MDX ステートメントの暗黙的なスコープはキューブ全体です。  
   
 > [!NOTE]  
 >  SCOPE ステートメントは、非表示のメンバーも公開します。  
   
- SCOPE ステートメントは、 **MDX 互換性**の設定に関係なく、"ホール" を公開するサブキューブを作成します。 たとえば、というステートメント`Scope( Customer.State.members )`では、都道府県を含まない国または地域の州を含めることができますが、それ以外の非表示のプレースホルダーメンバーが挿入されます。  
+ SCOPE ステートメントは、 **MDX 互換性** の設定に関係なく、"ホール" を公開するサブキューブを作成します。 たとえば、というステートメントでは、 `Scope( Customer.State.members )` 都道府県を含まない国または地域の州を含めることができますが、それ以外の非表示のプレースホルダーメンバーが挿入されます。  
   
  スコープステートメント内で作成された計算されるメンバーおよび名前付きセットは、SCOPE ステートメントの影響を受けません。  
   
 ## <a name="example"></a>例  
- 次の例では、Adventure Works サンプルソリューションの MDX 計算スクリプトから、現在のスコープを会計四半期として2005、sales amount quota メジャーを定義して、 **Parallelperiod**関数を使用して現在のスコープ内のセルに値を割り当てています。 次に、別の SCOPE ステートメントを使用してスコープを変更した後、 [This (MDX)](../mdx/this-mdx.md)関数を使用して別の割り当てを実行します。  
+ 次の例では、Adventure Works サンプルソリューションの MDX 計算スクリプトから、現在のスコープを会計四半期として2005、sales amount quota メジャーを定義して、 **Parallelperiod** 関数を使用して現在のスコープ内のセルに値を割り当てています。 次に、別の SCOPE ステートメントを使用してスコープを変更した後、 [This (MDX)](../mdx/this-mdx.md) 関数を使用して別の割り当てを実行します。  
   
 ```  
 Scope   

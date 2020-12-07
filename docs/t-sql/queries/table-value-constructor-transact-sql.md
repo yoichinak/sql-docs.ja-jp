@@ -1,4 +1,5 @@
 ---
+description: テーブル値コンストラクター (Transact-SQL)
 title: テーブル値コンストラクター (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e7fe813ca74c5f8bfd8a7746a05613d95d3373c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c82909bb5a128ee0a1dff9fa48b0a213a3c931e4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555547"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115408"
 ---
 # <a name="table-value-constructor-transact-sql"></a>テーブル値コンストラクター (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86555547"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 VALUES ( <row value expression list> ) [ ,...n ]   
   
 <row value expression list> ::=  
@@ -74,7 +74,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.MyProducts (Name varchar(50), ListPrice money);  
+CREATE TABLE dbo.MyProducts (Name VARCHAR(50), ListPrice MONEY);  
 GO  
 -- This statement fails because the third values list contains multiple columns in the subquery.  
 INSERT INTO dbo.MyProducts (Name, ListPrice)  
@@ -99,7 +99,7 @@ GO
  複数行の INSERT ステートメントで指定された値は、UNION ALL 構文のデータ型変換プロパティに従います。 この結果、一致しない型は、[優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)の高い型に暗黙的に変換されます。 暗黙的な変換がサポートされていない場合は、エラーが返されます。 たとえば、次のステートメントでは、整数値と文字値が、**char** 型の列に挿入されます。  
   
 ```sql
-CREATE TABLE dbo.t (a int, b char);  
+CREATE TABLE dbo.t (a INT, b CHAR);  
 GO  
 INSERT INTO dbo.t VALUES (1,'a'), (2, 1);  
 GO  
@@ -184,7 +184,7 @@ GROUP BY Change;
   次の例では、派生テーブルとしてテーブル値コンストラクターを使用する方法を示します。 これにより、1 つのテーブル値コンストラクターから 1,000 より多くの行を挿入できます。
   
 ```sql
-CREATE TABLE dbo.Test ([Value] int);  
+CREATE TABLE dbo.Test ([Value] INT);  
   
 INSERT INTO dbo.Test ([Value])  
   SELECT drvd.[NewVal]

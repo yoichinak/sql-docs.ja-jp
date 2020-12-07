@@ -1,4 +1,5 @@
 ---
+description: テンポラル テーブル メタデータのビューおよび関数
 title: テンポラル テーブル メタデータのビューおよび関数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455305f89d22ba63884097b8a9fdcaa6e9386ac0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2d71f195f6432a5d27598d7861526f2a6475307c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554855"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537847"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>テンポラル テーブル メタデータのビューおよび関数
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] にはいくつかのメタベース ビューおよび関数が含まれており、管理者これによってテンポラル テーブルに関する情報を取得できます。
 

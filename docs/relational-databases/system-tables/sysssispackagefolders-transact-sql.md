@@ -1,4 +1,5 @@
 ---
+description: sysssispackagefolders (Transact-sql)
 title: sysssispackagefolders (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c525b1b457c2bc9f505a83cc89a08a57c27e6279
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7924de782ca499f5a92458d0024b57877c7310c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419126"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85881284"
   
  **Foldername**列にはオブジェクトエクスプローラーに表示されるフォルダーの名前が含まれています。  
   
- このテーブルは、 **msdb**データベースに格納されます。  
+ このテーブルは、 **msdb** データベースに格納されます。  
 
   
 |列名|データ型|説明|  

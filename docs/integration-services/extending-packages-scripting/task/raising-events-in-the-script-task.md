@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクでのイベントの発生
 title: スクリプト タスクでのイベントの発生 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa645e56314e460a70e9ee5c95fb02cecb8cc1e3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5f08d7185375906020df764441927f91fe97f7ed
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195254"
 ---
 # <a name="raising-events-in-the-script-task"></a>スクリプト タスクでのイベントの発生
 
@@ -148,6 +149,5 @@ public class ScriptMain
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [パッケージにイベント ハンドラーを追加する](../../integration-services-ssis-event-handlers.md)  
   

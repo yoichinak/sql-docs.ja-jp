@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication_snapshot (Transact-SQL)
 title: sp_helppublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a1dc48a88bd9a180b7cb0ce65a24c607b80cd6a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e423df4dcda235063e496b1474055c8d7de4e28e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725761"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543284"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
 >  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -61,7 +62,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**frequency_type**|**int**|エージェントの実行スケジュールを設定する頻度を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月の相対<br /><br /> **64** = 自動開始<br /><br /> **128** = 定期的|  
 |**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1** = 日曜日<br /><br /> **2** = 月曜日<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10** = 週末|  
 |**frequency_subday_type**|**int**|*Frequency_type*が**4** (毎日) の場合にエージェントを実行する頻度を定義する型です。これらの値のいずれかを指定できます。<br /><br /> **1** = 指定された時間<br /><br /> **2** = 秒<br /><br /> **4** = 分<br /><br /> **8** = 時間|  
-|**frequency_subday_interval**|**int**|エージェントのスケジュールされた実行の間に発生する*frequency_subday_type*の間隔の数。|  
+|**frequency_subday_interval**|**int**|エージェントのスケジュールされた実行の間に発生する *frequency_subday_type* の間隔の数。|  
 |**frequency_relative_interval**|**int**|*Frequency_type*が**32** (月単位) の場合に、特定の月にエージェントが実行される週を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
 |**frequency_recurrence_factor**|**int**|エージェントのスケジュールされた実行の間隔を週または月単位で指定します。|  
 |**active_start_date**|**int**|エージェントの最初の実行予定日。日付の形式は YYYYMMDD です。|  
@@ -70,15 +71,15 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**active_end_time**|**int**|エージェントの実行が最後にスケジュールされた時刻 (HHMMSS 形式)。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_help_publication_snapshot**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_help_publication_snapshot** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_help_publication_snapshot**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   

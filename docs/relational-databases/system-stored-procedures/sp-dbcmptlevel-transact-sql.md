@@ -1,4 +1,5 @@
 ---
+description: sp_dbcmptlevel (Transact-sql)
 title: sp_dbcmptlevel (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2c5200a785b533a4d013f7e9b24eed2fac863ba7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867257"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541923"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85867257"
   データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに[ALTER Database 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに [ALTER Database 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] name`互換性レベルを変更するデータベースの名前を指定します。 データベース名は、識別子の規則に従っている必要があります。 *名前*は**sysname**,、既定値は NULL です。  
+`[ @dbname = ] name` 互換性レベルを変更するデータベースの名前を指定します。 データベース名は、識別子の規則に従っている必要があります。 *名前* は **sysname**,、既定値は NULL です。  
   
-`[ @new_cmptlevel = ] version`データベースに互換性を持たせるのバージョンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *version*は**tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
+`[ @new_cmptlevel = ] version` データベースに互換性を持たせるのバージョンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定します。 *version* は **tinyint**,、既定値は NULL です。 値は、次のいずれかである必要があります。  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -61,18 +62,18 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- パラメーターが指定されていない場合、または*name*パラメーターが指定されていない場合、 **sp_dbcmptlevel**はエラーを返します。  
+ パラメーターが指定されていない場合、または *name* パラメーターが指定されていない場合、 **sp_dbcmptlevel** はエラーを返します。  
   
  *Name*が指定されて*いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、データベース所有者、固定サーバーロール**sysadmin**のメンバー、および**db_owner**固定データベースロール (現在のデータベースを変更している場合) だけです。  
+ このプロシージャを実行できるのは、データベース所有者、固定サーバーロール **sysadmin** のメンバー、および **db_owner** 固定データベースロール (現在のデータベースを変更している場合) だけです。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

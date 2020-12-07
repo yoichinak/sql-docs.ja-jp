@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate (geometry データ型)
 title: EnvelopeAggregate (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3aee28aab0c847f86a247531c1529068412aa0bc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 240df782e2175d22d9f00e38427c39a2b7115213
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552458"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128160"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

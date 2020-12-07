@@ -1,4 +1,5 @@
 ---
+description: パッケージ実行のレポートのトラブルシューティング
 title: パッケージ実行のレポートのトラブルシューティング | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a9525a8fb130b7fcf08c22d5b9fe9012d28c518
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91d575842410d79411bb5cdd77d5ecff27f13c7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495186"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>パッケージ実行のレポートのトラブルシューティング
 

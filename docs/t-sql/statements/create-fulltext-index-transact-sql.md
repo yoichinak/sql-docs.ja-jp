@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX (Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eac401156014952142c39851b1e703605997c245
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392900"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128005"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ CREATE FULLTEXT INDEX ON table_name
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
 TYPE COLUMN *type_column_name*       
-**varbinary(max)** または **image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
+**varbinary(max)** または **image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char** 型、 **nchar** 型、 **varchar** 型、 **nvarchar** 型にする必要があります。  
   
 TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary(max)** または **image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
   
@@ -155,7 +156,7 @@ OFF
 *property_list_name*       
 フルテキスト インデックスに関連付ける検索プロパティ リストの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 フルテキスト インデックスについて詳しくは、「[フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)」をご覧ください。  
   
 **xml** 列にフルテキスト インデックスを作成して XML 要素のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 属性値には、数値でない限り、フルテキスト インデックスが設定されます。 要素タグはトークンの境界として使用されます。 複数言語を含む整形式の XML または HTML ドキュメントやフラグメントはサポートされます。 詳細については、「 [XML 列でのフルテキスト検索の使用](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)」を参照してください。  
@@ -246,7 +247,7 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)       
 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)       
 [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)       

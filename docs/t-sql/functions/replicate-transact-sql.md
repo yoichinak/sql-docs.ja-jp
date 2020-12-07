@@ -1,4 +1,5 @@
 ---
+description: REPLICATE (Transact-SQL)
 title: REPLICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2b7aa0c438ffbdb3a625537501815d8c18435ba
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a110938d9b07551b54d361153530ffedeb42d02
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110847"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380647"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ REPLICATE ( string_expression , integer_expression )
 ### <a name="a-using-replicate"></a>A. REPLICATE を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの取り扱い品目コードの前に `0` という文字を 4 回繰り返します。  
   
-```  
+```sql
 SELECT [Name]  
 , REPLICATE('0', 4) + [ProductLine] AS 'Line Code'  
 FROM [Production].[Product]  
@@ -89,7 +90,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ### <a name="b-using-replicate-and-datalength"></a>B. REPLICATE と DATALENGTH を使用する  
  次の例では、数値データ型から文字または Unicode に数値を変換するときに、その数値の左側を埋めて指定された長さにします。  
   
-```  
+```sql
 IF EXISTS(SELECT name FROM sys.tables  
       WHERE name = 't1')  
    DROP TABLE t1;  
@@ -127,7 +128,7 @@ Varchar Column        Char Column
 ### <a name="c-using-replicate"></a>C: REPLICATE を使用する  
  次の例では、`ItemCode` 値の前に `0` という文字を 4 回繰り返します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName AS Name,  

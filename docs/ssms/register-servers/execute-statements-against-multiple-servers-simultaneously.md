@@ -1,4 +1,5 @@
 ---
+description: 複数のサーバーに対するステートメントの同時実行
 title: 複数のサーバーに対するステートメントの同時実行
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: f492f130da8e30493e1e1a446a951f90b1312464
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001724"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037579"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>複数のサーバーに対するステートメントの同時実行
 
@@ -29,7 +30,7 @@ ms.locfileid: "86001724"
 
 クエリから返された結果は、結合して 1 つの結果ペインに表示するか、別々の結果ペインに表示することができます。 結果セットには、サーバー名を表示する列と、各サーバーに対するクエリで使用されたログインを表示する列を追加できます。 中央管理サーバーおよび従属サーバーは、Windows 認証を使用しないと登録できません。 ローカル サーバー グループ内のサーバーは、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録できます。  
   
-> **注:** 次の手順を実行する前に、中央管理サーバーとサーバー グループを作成する必要があります。 詳細については、「[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)」を参照してください。  
+> **注:** 次の手順を実行する前に、中央管理サーバーとサーバー グループを作成する必要があります。 詳細については、「[中央管理サーバーとサーバー グループの作成 &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)」を参照してください。  
 
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
@@ -56,11 +57,10 @@ ms.locfileid: "86001724"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[クエリ結果]** 、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
+2.  **[クエリ結果]**、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
   
 3.  **[マルチサーバーの結果]** ページで、使用するオプション設定を指定し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: MSmerge_past_partition_mappings (Transact-SQL)
 title: MSmerge_past_partition_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_past_partition_mappings system table
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2895684bc8769a16120d4831ccc9b0dc9a6f2391
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6f6725fc632ae132cde37191eda73035f23092d5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889767"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545630"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85889767"
 |**generation**|**bigint**|パーティションの変更が発生した生成の値。|  
 |**reason**|**tinyint**|内部使用のみ。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

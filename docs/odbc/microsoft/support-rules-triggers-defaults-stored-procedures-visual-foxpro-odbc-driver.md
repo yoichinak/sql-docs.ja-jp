@@ -1,4 +1,5 @@
 ---
+description: ルール、トリガー、既定値、およびストアド プロシージャのサポート (Visual FoxPro ODBC ドライバー)
 title: ルール、トリガー、既定値、およびストアドプロシージャのサポートMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,19 +29,19 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449114"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャのサポート (Visual FoxPro ODBC ドライバー)
 Visual foxpro ODBC ドライバーを使用して、Visual FoxPro の規則、トリガー、既定値、またはストアドプロシージャを作成することはできません。 ただし、アプリケーションは、データベースに格納されている Visual FoxPro データを挿入、更新、または削除するときに、既存のルール、トリガー、既定値、またはストアドプロシージャと対話する場合があります。  
   
  次の表に、コマンドまたは関数がルール、トリガー、既定値、またはストアドプロシージャに存在する場合に、Visual FoxPro ODBC ドライバーによってサポートされる Visual FoxPro のコマンドと関数を示します。  
   
- アプリケーションが、ルール、トリガー、既定値、またはストアドプロシージャが他の Visual FoxPro コマンドまたは関数を呼び出すデータと対話する場合、ドライバーはエラーを生成します。 ドライバーでサポートされていないコマンドと関数の一覧については、「サポートされていない[Visual FoxPro のコマンドと関数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)」を参照してください。  
+ アプリケーションが、ルール、トリガー、既定値、またはストアドプロシージャが他の Visual FoxPro コマンドまたは関数を呼び出すデータと対話する場合、ドライバーはエラーを生成します。 ドライバーでサポートされていないコマンドと関数の一覧については、「サポートされていない [Visual FoxPro のコマンドと関数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) 」を参照してください。  
   
 > [!TIP]  
 >  ルール、トリガー、またはストアドプロシージャに条件付きコードを挿入して、ドライバーによって呼び出されたときに実行するコマンドを決定する場合は、 **VERSION ()** 関数を使用できます。 **VERSION ()** 関数は、 *\<version>* ドライバーによって呼び出されたときに "Visual FoxPro ODBC ドライバー" を返します。  

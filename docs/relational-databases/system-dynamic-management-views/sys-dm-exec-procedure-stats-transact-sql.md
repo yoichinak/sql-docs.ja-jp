@@ -1,4 +1,5 @@
 ---
+description: dm_exec_procedure_stats (Transact-sql)
 title: dm_exec_procedure_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -17,14 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 958167d816d50a32e11d45983c47f3e98c50a70a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000260"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546642"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>dm_exec_procedure_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,8 +46,8 @@ ms.locfileid: "86000260"
 |**object_id**|**int**|ストアド プロシージャのオブジェクト ID 番号。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアド プロシージャ|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された**dm_exec_query_stats**のクエリと相関させることができます。|  
-|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された **dm_exec_query_stats** のクエリと相関させることができます。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans** 動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|前回ストアド プロシージャが実行された時刻。|  
 |**execution_count**|**bigint**|ストアドプロシージャが最後にコンパイルされてから実行された回数。|  
@@ -73,20 +75,20 @@ ms.locfileid: "86000260"
 |**last_spills**|**bigint**|ストアドプロシージャが最後に実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**min_spills**|**bigint**|このストアドプロシージャが1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**max_spills**|**bigint**|このストアドプロシージャが1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br />**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br />**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|コンパイル後にこのストアドプロシージャの実行によって実行されたページサーバー読み取りの合計数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
 |**last_page_server_reads**|**bigint**|最後にストアドプロシージャを実行したときに実行されたページサーバーの読み取り回数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
 |**min_page_server_reads**|**bigint**|このストアドプロシージャの1回の実行で行われた、ページサーバーの読み取りの最小数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
 |**max_page_server_reads**|**bigint**|このストアドプロシージャの1回の実行で行われた、ページサーバーの読み取りの最大数。<br /><br /> **適用対象**: Azure SQL Database ハイパースケール|  
   
- <sup>1</sup>ネイティブコンパイルストアドプロシージャの統計コレクションが有効になっている場合、ワーカー時間はミリ秒単位で収集されます。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。  
+ <sup>1</sup> ネイティブコンパイルストアドプロシージャの統計コレクションが有効になっている場合、ワーカー時間はミリ秒単位で収集されます。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。  
   
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ビュー内の統計は、ストアド プロシージャの実行が完了したときに更新されます。  
   
 ## <a name="examples"></a>例  

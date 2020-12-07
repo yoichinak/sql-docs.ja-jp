@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c8413bf0a78ea1780d0babfc6fd88abb615d4ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243363"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538483"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sp_rda_deauthorize_db (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  ローカル Stretch 対応データベースとリモート Azure データベース間の認証された接続を削除します。 リモートデータベースにアクセスできない場合、またはデータベース内のすべての Stretch 対応テーブルのクエリ動作を変更する場合は、 **sp_rda_deauthorize_db**を実行します。  
+  ローカル Stretch 対応データベースとリモート Azure データベース間の認証された接続を削除します。 リモートデータベースにアクセスできない場合、またはデータベース内のすべての Stretch 対応テーブルのクエリ動作を変更する場合は、 **sp_rda_deauthorize_db**  を実行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_rda_deauthorize_db
   
 -   [Transact-sql&#41;&#40;sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行して、リモートの Azure データベースに再接続します。 この操作により、クエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
--   ローカルデータに対してのみクエリを実行できるようにするには、LOCAL_ONLY 引数を使用して[transact-sql&#41;&#40;sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)を実行します。  
+-   ローカルデータに対してのみクエリを実行できるようにするには、LOCAL_ONLY 引数を使用して [transact-sql&#41;&#40;sp_rda_set_query_mode ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) を実行します。  
   
 ## <a name="see-also"></a>参照  
  [sp_rda_set_query_mode &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   

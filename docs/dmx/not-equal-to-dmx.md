@@ -1,5 +1,6 @@
 ---
-title: '&lt;&gt;(等しくない)(DMX) |Microsoft Docs'
+description: '&lt;&gt; (等しくない)DMX'
+title: '&lt;&gt; (等しくない)(DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1181e781da0e752cb68f0fbf1d8c84d257407a3e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8aebff9e74a7c310a2af650c0cebbcaed2c91e9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426224"
 ---
-# <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt;(等しくない)DMX
+# <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; (等しくない)DMX
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   1つのデータマイニング拡張機能 (DMX) 式の値が、別の DMX 式の値と等しくないかどうかを判断する比較演算を実行します。  
@@ -35,8 +36,8 @@ DMX_Expression <> DMX_Expression
  両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値と等しくない場合、TRUE を含むブール値です。 両方のパラメーターが null 以外で、最初のパラメーターの値が2番目のパラメーターの値と等しい場合、ブール値には FALSE が含まれます。 ブール値には、いずれかのパラメーターまたは両方のパラメーターが null 値に評価される場合、null 値が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [DMX&#41;&#40;比較演算子](../dmx/operators-comparison.md)   
+ [DMX&#41;&#40;比較演算子 ](../dmx/operators-comparison.md)   
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)  
   
   

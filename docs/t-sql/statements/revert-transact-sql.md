@@ -1,4 +1,5 @@
 ---
+description: REVERT (Transact-SQL)
 title: REVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 82fe397e6709617af5aa7f92db170e25ccd9b8d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485403"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91498034"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -39,8 +40,7 @@ ms.locfileid: "86485403"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -51,10 +51,10 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *\@varbinary_variable* は **varbinary(100)** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内で、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -68,7 +68,7 @@ GO
   
  次の例のように、ストアド プロシージャが実行されるセッションで、セッションの実行コンテキストが明示的に `login1` に変更されるとします。  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -92,7 +92,7 @@ EXECUTE dbo.usp_myproc;
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 REVERT ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 REVERT ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -136,8 +136,8 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
  次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -146,7 +146,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

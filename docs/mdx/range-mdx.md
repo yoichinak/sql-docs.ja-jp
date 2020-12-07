@@ -1,4 +1,5 @@
 ---
+description: ': (範囲) (MDX)'
 title: ': (範囲) (MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d52a78a1fcdefa4ee7bf09fa4125b488165e09c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500465"
 ---
 # <a name="-range-mdx"></a>: (範囲) (MDX)
 
@@ -34,12 +35,12 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>戻り値  
  指定したメンバーと、指定したメンバー間のすべてのメンバーを含むセット。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  両方のパラメーターに、ディメンションの同じレベルと同じ階層にあるメンバーを指定する必要があります。 両方のパラメーターが同じメンバーを指定している場合、 **: (範囲)** 演算子は、指定されたメンバーだけを含むセットを返します。 最初のパラメーターが Null の場合、このセットには、2番目のパラメーターで指定したメンバーのレベルの先頭から、そのメンバーまでのすべてのメンバーが含まれます。 2番目のパラメーターが Null の場合、このセットには、最初のパラメーターで指定されたメンバーのすべてのメンバーが含まれます。このメンバーは、同じレベルの最後のメンバーを含みます。  
   
  MDX にこのセット演算子と等価な関数はありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この演算子の使用例を次に示します。  
   
 ```  

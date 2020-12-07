@@ -2,27 +2,28 @@
 title: Linux をインストールする
 titleSuffix: SQL Server Machine Learning Services
 description: Linux に SQL Server Machine Learning Services (Python と R) をインストールする方法を説明します:(Red Hat、Ubuntu、SUSE)。
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.date: 03/05/2020
-ms.topic: conceptual
+ms.date: 11/24/2020
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 34e33ea3fbb3ff0ef10e237bc7bdc0ad61c223db
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d236f70a3fdc3e03909078e366ec1f776b68c689
+ms.sourcegitcommit: f2bdebed3efa55a2b7e64de9d6d9d9b1c85f479e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484629"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "96129430"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux に SQL Server Machine Learning Services (Python と R) をインストールする
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
-この記事では、Linux に [SQL Server Machine Learning Services](../machine-learning/index.yml) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
+この記事では、Linux に [SQL Server Machine Learning Services](../machine-learning//sql-server-machine-learning-services.md) をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python と R のスクリプトを実行できます。
+
+Machine Learning Services は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu にインストールできます。 詳細については、[「SQL Server on Linux のインストール ガイド」の「サポートされているプラットフォーム」](sql-server-linux-setup.md#supportedplatforms)を参照してください。
 
 > [!NOTE]
 > Machine Learning Services は、既定で SQL Server ビッグ データ クラスターにインストールされます。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください
@@ -36,8 +37,6 @@ ms.locfileid: "86484629"
 * SQL Server Linux リポジトリで、Python と R の拡張機能を確認します。 
   データベース エンジンのインストール用にソース リポジトリを既に構成している場合は、同じリポジトリ登録を使用して **mssql-mlservices** パッケージ インストール コマンドを実行できます。
 
-  SQL Server は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、および Ubuntu にインストールできます。 詳細については、[「SQL Server on Linux のインストール ガイド」の「サポートされているプラットフォーム」](sql-server-linux-setup.md#supportedplatforms)を参照してください。
-
 * (R のみ) Microsoft R Open (MRO) は、SQL Server の R 機能用の基本 R ディストリビューションを提供します。また、RevoScaleR、MicrosoftML、および Machine Learning Services と共にインストールされるその他の R パッケージを使用するための前提条件です。
     * 必要なバージョンは MRO 3.5.2 です。
     * MRO をインストールするには、次の 2 つのアプローチを使用します。
@@ -47,7 +46,7 @@ ms.locfileid: "86484629"
 
 * T-SQL コマンドを実行するためのツールを用意しておく必要があります。 
 
-  * [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio) を使用できます。これは、Linux、Windows、macOS で実行される無料のデータベース ツールです。
+  * [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) を使用できます。これは、Linux、Windows、macOS で実行される無料のデータベース ツールです。
 
 ## <a name="package-list"></a>パッケージ一覧
 
@@ -299,7 +298,7 @@ sudo zypper install mssql-mlservices-packages-r
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)します。
+4. R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの [一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)します。
 
    + ユーザーのホーム ディレクトリでファイル `.bash_profile` を編集または作成し、行 `export MKL_CBWR="AUTO"` をファイルに追加します。
 
@@ -439,4 +438,4 @@ Python 開発者は、次のチュートリアルに従って、SQL Server で P
 R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
 + [クイック スタート: T-SQL での R の実行](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../machine-learning/tutorials/r-taxi-classification-introduction.md)

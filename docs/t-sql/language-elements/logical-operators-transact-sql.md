@@ -1,4 +1,5 @@
 ---
+description: 論理演算子 (Transact-SQL)
 title: 論理演算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55057a5cf385468fc7e01d813e451ac152c31c92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fe06931370c3c97598ed2b9789b1e692a3980ac
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445460"
 ---
 # <a name="logical-operators-transact-sql"></a>論理演算子 (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  論理演算子は、条件の真偽をテストします。 論理演算子は、比較演算子と同様、TRUE、FALSE、または UNKNOWN を値にとる**ブール** データ型を返します。  
+  論理演算子は、条件の真偽をテストします。 論理演算子は、比較演算子と同様、TRUE、FALSE、または UNKNOWN を値にとる **ブール** データ型を返します。  
   
-|演算子|意味|  
+|演算子|説明|  
 |--------------|-------------|  
 |[ALL](../../t-sql/language-elements/all-transact-sql.md)|すべての比較セットが TRUE の場合、TRUE を返します。|  
 |[AND](../../t-sql/language-elements/and-transact-sql.md)|両方のブール式が TRUE の場合、TRUE を返します。|  

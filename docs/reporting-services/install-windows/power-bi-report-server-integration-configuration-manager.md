@@ -1,4 +1,5 @@
 ---
+description: Power BI レポート サーバーの統合 (構成マネージャー)
 title: Power BI Report Server の統合 (構成マネージャー) | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47964ebf5702542452227589e1426948825cc216
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265644"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678868"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI レポート サーバーの統合 (構成マネージャー)
 
@@ -23,9 +24,9 @@ ms.locfileid: "68265644"
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] サービスを参照できるようにするためのアクティブなインターネット接続に加え、 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]統合を完了するには次の要件があります。
 
-- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「[Azure Active Directory とは](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)」を参照してください。
+- **Azure Active Directory:** 組織で Azure Active Directory を使用する必要があります。Azure Active Directory では、Azure サービスと Web アプリケーションのディレクトリと ID を管理できます。 詳細については、「[Azure Active Directory とは](/azure/active-directory/fundamentals/active-directory-whatis)」を参照してください。
 
-- **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Office 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
+- **管理対象テナント:** レポート アイテムをピン留めする [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] ダッシュボードは、Azure AD 管理対象テナントに属している必要があります。  管理対象テナントは、組織が Microsoft 365 や Microsoft Intune などの Azure サービスに初めてサブスクライブしたときに自動的に作成されます。   バイラル テナントは現在サポートされていません。  詳細については、「 [Azure AD ディレクトリとは](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)」の「Azure AD テナントとは」および「Azure AD ディレクトリを取得する方法」を参照してください。
 
 - [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合を実行するユーザーは、Azure AD テナントのメンバーで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] システム管理者であり、ReportServer カタログ データベースのシステム管理者でもある必要があります。
 
@@ -45,7 +46,7 @@ ms.locfileid: "68265644"
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> レポート サーバーを統合および登録するには
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、「[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで次の手順を完了します。 詳細については、[Report Server 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。
 
 1. [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 統合ページを選択します。
 
@@ -112,7 +113,7 @@ ms.locfileid: "68265644"
 
 1. ユーザーが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] でレポートをプレビューし、[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]でレポート アイテムをクリックして初めてピン留めすると、
 
-2. Azure AD サインイン ページにリダイレクトされます。 ユーザーは、[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の **[個人用設定]** ページからサインインすることもできます。 ユーザーが Azure 管理対象テナントにサインインすると、Azure アカウントと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアクセス許可の間に関係が確立されます。  詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](../my-settings-for-power-bi-integration-web-portal.md)」を参照してください。
+2. Azure AD サインイン ページにリダイレクトされます。 ユーザーは、 の [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **[個人用設定]** ページからサインインすることもできます。 ユーザーが Azure 管理対象テナントにサインインすると、Azure アカウントと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアクセス許可の間に関係が確立されます。  詳細については、「 [Power BI 統合の個人用設定 &#40;Web ポータル&#41;](../my-settings-for-power-bi-integration-web-portal.md)」を参照してください。
 
 3. ユーザーのセキュリティ トークンがレポート サーバーに返されます。
 
@@ -124,11 +125,11 @@ ms.locfileid: "68265644"
 
 7. ダッシュボード タイルのレポート アイテムのスケジュールされた更新を管理するために、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションが作成されます。 サブスクリプションでは、ユーザーがサインインしたときに作成されたセキュリティ トークンを使用します。
 
-     トークンの有効期間は **90 日間**です。有効期間を過ぎたら、ユーザーはもう一度サインインして新しいユーザー トークンを作成する必要があります。 トークンの有効期限が切れても、ピン留めされたタイルはダッシュボードに引き続き表示されますが、データは更新されなくなります。  新しいユーザー トークンが作成されるまで、ピン留めされたアイテムに使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでエラーが発生します。 「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](../my-settings-for-power-bi-integration-web-portal.md)」を参照してください。 ご覧ください。
+     トークンの有効期間は **90 日間** です。有効期間を過ぎたら、ユーザーはもう一度サインインして新しいユーザー トークンを作成する必要があります。 トークンの有効期限が切れても、ピン留めされたタイルはダッシュボードに引き続き表示されますが、データは更新されなくなります。  新しいユーザー トークンが作成されるまで、ピン留めされたアイテムに使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションでエラーが発生します。 「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](../my-settings-for-power-bi-integration-web-portal.md)」を参照してください。 ご覧ください。
 
 ユーザーが 2 回目にアイテムをピン留めするときは、手順 1 ～ 4 がスキップされます。代わりに、ReportServer データベースからアプリ ID と URL が取得され、手順 5 からフローが続行されます。
 
-![ssRS-pin-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
+![ユーザーがレポート アイテムをダッシュボードにピン留めした場合の動作を示す図。](../../reporting-services/install-windows/media/ssrs-pin-to-powerbi-flow.png)
 
  **サブスクリプションが起動してダッシュボード タイルを更新する場合:**
 
@@ -142,7 +143,7 @@ ms.locfileid: "68265644"
 
 5. トークンが無効な場合は、エラーが返され、レポート サーバーでログに記録されます。  状態などの情報はダッシュボードに送信されません。
 
-![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
+![サブスクリプションが起動して、ダッシュボード タイルが更新される場合の動作を示す図。](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 

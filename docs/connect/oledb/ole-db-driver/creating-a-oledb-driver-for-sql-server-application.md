@@ -1,6 +1,6 @@
 ---
 title: OLE DB Driver for SQL Server のアプリケーションの作成 | Microsoft Docs
-description: OLE DB Driver for SQL Server のアプリケーションの作成
+description: OLE DB Driver for SQL Server アプリケーションを作成するために必要な手順とその他のリソースについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, application creation
 - applications [OLE DB Driver for SQL Server]
 - OLE DB, creating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e6b1ef5d4c4cbf486bd041c3bc39668fb9595e4b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed150ea18d1141e6116efe177e65836c235cf703
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004429"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727224"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>OLE DB Driver for SQL Server のアプリケーションの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86004429"
 3.  結果の処理。  
   
 > [!NOTE]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](/windows/win32/seccng/cng-portal) を使用して暗号化してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -51,5 +51,4 @@ ms.locfileid: "86004429"
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server のプログラミング](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: STIsRing (geometry データ型)
 title: STIsRing (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad91e97b30f5cc0e232437dcc8ae775253801abc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 06702731a47683c44d6096b354c3ec2f773aefaf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472494"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86555975"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  インスタンスが **LineString** でない場合、このメソッドは null を返します。  
   
 ## <a name="examples"></a>例  

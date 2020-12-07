@@ -1,4 +1,5 @@
 ---
+description: 'C から SQL へ: Time'
 title: 'C から SQL へ: Time |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449044"
 ---
 # <a name="c-to-sql-time"></a>C から SQL へ: Time
 Time ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_TYPE_TIME  
   
- 次の表は、C データを変換する必要がある ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
+ 次の表は、C データを変換する必要がある ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「 [データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

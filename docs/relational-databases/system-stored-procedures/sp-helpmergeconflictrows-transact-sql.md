@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows (Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6d8ea39fd9ccc48f96c838367d5f859226098d1
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893577"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809838"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +42,18 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*の**sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers**テーブルに**WA**および**ca**パブリケーションの競合行がある場合、パブリケーション名**ca**を渡すと、 **ca**パブリケーションに関連する競合が取得されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* の **sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。 たとえば、 **MSmerge_conflict_Customers** テーブルに **WA** および **ca** パブリケーションの競合行がある場合、パブリケーション名 **ca** を渡すと、 **ca** パブリケーションに関連する競合が取得されます。  
   
-`[ @conflict_table = ] 'conflict_table'`競合テーブルの名前を指定します。 *conflict_table*は**sysname**であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
+`[ @conflict_table = ] 'conflict_table'` 競合テーブルの名前を指定します。 *conflict_table* は **sysname**であり、既定値はありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは、競合テーブルの名前は、パブリッシュされたアーティクルごとに1つのテーブルと共に、 **MSmerge_conflict \_ _パブリケーション \_ アーティクル_** での形式名を使用して付けられます。  
   
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。*publisher_db*は**sysname**,、既定値は NULL です。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。*publisher_db* は **sysname**,、既定値は NULL です。  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`結果セットに論理レコードの競合に関する情報が含まれているかどうかを示します。 *logical_record_conflicts*は**int**,、既定値は0です。 **1**は、論理レコードの競合情報が返されることを意味します。  
+`[ @logical_record_conflicts = ] logical_record_conflicts` 結果セットに論理レコードの競合に関する情報が含まれているかどうかを示します。 *logical_record_conflicts* は **int**,、既定値は0です。 **1** は、論理レコードの競合情報が返されることを意味します。  
   
 ## <a name="result-sets"></a>結果セット  
- **sp_helpmergeconflictrows**は、ベーステーブル構造とこれらの追加列で構成される結果セットを返します。  
+ **sp_helpmergeconflictrows** は、ベーステーブル構造とこれらの追加列で構成される結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -64,16 +65,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |**MSrepl_create_time**|**datetime**|競合情報が追加された時刻。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpmergeconflictrows**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>注釈  
+ **sp_helpmergeconflictrows** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergeconflictrows**を実行できるのは、固定サーバーロール**sysadmin** 、 **db_owner**固定データベースロールのメンバー、およびディストリビューションデータベースの**replmonitor**ロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [マージパブリケーションの競合情報を表示 &#40;レプリケーション Transact-sql プログラミング&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+## <a name="see-also"></a>参照  
+ [マージパブリケーションの競合情報を表示 &#40;レプリケーション Transact-sql プログラミング&#41;](../replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
-  
   

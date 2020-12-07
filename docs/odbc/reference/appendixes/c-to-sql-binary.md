@@ -1,4 +1,5 @@
 ---
+description: 'C から SQL へ: Binary'
 title: 'C から SQL へ: Binary |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818de0086ce3996cc1f6194311d2a2bb80c9f564
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87e6d6a58afb41f03027fbfd25aaca50af5e7bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500045"
 ---
 # <a name="c-to-sql-binary"></a>C から SQL へ: Binary
 バイナリ ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_BINARY  
   
- 次の表は、バイナリ C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
+ 次の表は、バイナリ C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「 [データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

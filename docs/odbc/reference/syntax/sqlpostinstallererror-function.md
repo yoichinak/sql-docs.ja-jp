@@ -1,4 +1,5 @@
 ---
+description: SQLPostInstallerError 関数
 title: Sqlpostインストーラ Error 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdceff5c4e175ba9f135c6e5e4405933b1a86b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a041069de4c8b86946f7088d6a46462468cc3656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487211"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 関数
 **互換性**  
  導入されたバージョン: ODBC 3.0  
   
  **まとめ**  
- **Sqlpostインストーラエラー**は、ドライバーまたはトランスレーターセットアップライブラリが、 **configdriver**、 **Configdriver**、および**configdriver**関数のエラーをインストーラーのエラーキューに報告するためのメカニズムを提供します。 アプリケーションは、この API を使用しません。エラーを取得するには、 **Sqlインストーラエラー**を使用します。  
+ **Sqlpostインストーラエラー** は、ドライバーまたはトランスレーターセットアップライブラリが、 **configdriver**、 **Configdriver**、および **configdriver** 関数のエラーをインストーラーのエラーキューに報告するためのメカニズムを提供します。 アプリケーションは、この API を使用しません。エラーを取得するには、 **Sqlインストーラエラー** を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,7 +54,7 @@ RETCODE SQLPostInstallerError(
  SQL_SUCCESS または SQL_ERROR。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlpostインストーラエラー**は、それ自体のエラー値を通知しません。 エラーがインストーラーエラーキューに正常にポストされた場合 ( **Sqlインストーラエラー**を使用して取得可能)、SQL_SUCCESS が返されます。 *Dwerrorcode*引数の値が、指定されたインストーラーエラーコードのいずれでもない場合、SQL_ERROR が返されます。  
+ **Sqlpostインストーラエラー** は、それ自体のエラー値を通知しません。 エラーがインストーラーエラーキューに正常にポストされた場合 ( **Sqlインストーラエラー**を使用して取得可能)、SQL_SUCCESS が返されます。 *Dwerrorcode*引数の値が、指定されたインストーラーエラーコードのいずれでもない場合、SQL_ERROR が返されます。  
   
 ## <a name="related-functions"></a>関連する関数  
   

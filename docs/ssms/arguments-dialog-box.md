@@ -1,4 +1,5 @@
 ---
+description: '[引数] ダイアログ ボックス'
 title: '[引数] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82ddc00bcf23aae923047ef204587728107b0ada
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3d4dec835ba0c084b2d3e0ad1bfa02d8944fc8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463005"
 ---
 # <a name="arguments-dialog-box"></a>[引数] ダイアログ ボックス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: クエリの保存 (Visual Database Tools)
 title: クエリの保存
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: fcc5b07a6b89e448568b4c41c6d50f2961cf72cb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c456f00064003e6d56e40be0343e10eaa2576c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460044"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86010634"
 2.  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
   
     > [!NOTE]  
-    > 新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、 **[名前を付けて <クエリ名> を保存]** を選択します。  
+    > 新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、**[名前を付けて <クエリ名> を保存]** を選択します。  
   
 3.  クエリは、ソリューション エクスプローラーのプロジェクトの Queries フォルダーに保存されます。  
   

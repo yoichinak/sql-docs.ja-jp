@@ -1,4 +1,5 @@
 ---
+description: sp_OASetProperty (Transact-SQL)
 title: sp_OASetProperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0fe6c5074f8f9d6bb34bf3dfed8c8506fea1c939
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2865189ad38f31382257a51117c62cd5d52454c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899293"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538706"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 以前に**sp_OACreate**によって作成された OLE オブジェクトのオブジェクトトークンです。  
+ 以前に **sp_OACreate**によって作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *propertyname*  
  新しい値に設定する OLE オブジェクトのプロパティ名を指定します。  
@@ -49,7 +50,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  プロパティの新しい値を指定します。指定する場合は、適切なデータ型の値にする必要があります。  
   
  *インデックス*  
- はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
+ はインデックスパラメーターです。 指定する場合、 *インデックス* は、適切なデータ型の値である必要があります。  
   
  一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
   
@@ -62,10 +63,10 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
   
 ## <a name="examples"></a>例  
- 次の例では、 `HostName` 以前に作成した**SQLServer**オブジェクトのプロパティを新しい値に設定します。  
+ 次の例では、 `HostName` 以前に作成した **SQLServer** オブジェクトのプロパティを新しい値に設定します。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -76,8 +77,8 @@ BEGIN
 END'  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

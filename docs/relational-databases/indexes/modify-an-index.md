@@ -1,4 +1,5 @@
 ---
+description: インデックスの変更
 title: インデックスの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68316966"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88499364"
 ---
 # <a name="modify-an-index"></a>インデックスの変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -1,8 +1,9 @@
 ---
+description: Field (ADO - WFC 構文)
 title: Field (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9b35f89911c0b016c52eed00f8165b767968180
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757078"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973253"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -68,9 +69,9 @@ public AdoProperties getProperties()
   
  ADO/WFC は、VARIANT オブジェクトを返す**getValue**メソッドを使用して**Value**プロパティを実装します。また、 **setValue**を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
   
- ADO/WFC は、 **Value**プロパティに加えて、Java データ型を使用して**Field**オブジェクトのコンテンツを取得および設定する*アクセサー*メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_または**set**_datatype_という形式の名前があります。  
+ ADO/WFC は、 **Value**プロパティに加えて、Java データ型を使用して**Field**オブジェクトのコンテンツを取得および設定する*アクセサー*メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_ または **set**_datatype_という形式の名前があります。  
   
- 注目すべき例外が2つあります。いずれかの**getObject**メソッドが、指定されたクラスに強制変換されたオブジェクトを返します。 **Getnull**プロパティはありません。その代わりに、フィールドが null かどうかを示すブール値を返す**isNull**プロパティがあります。  
+ 注目すべき例外が2つあります。いずれかの **getObject** メソッドが、指定されたクラスに強制変換されたオブジェクトを返します。 **Getnull**プロパティはありません。その代わりに、フィールドが null かどうかを示すブール値を返す**isNull**プロパティがあります。  
   
 ```  
 public native boolean getBoolean();  

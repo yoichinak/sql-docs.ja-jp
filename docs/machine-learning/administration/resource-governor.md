@@ -3,25 +3,25 @@ title: リソース ガバナーを使用した管理
 description: リソース ガバナーを使用して、SQL Server Machine Learning Services での Python および R のワークロードに対する CPU、物理 IO、およびメモリ リソースの割り当てを管理する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 20506baeb0a22e4e32fd1c4b24a7d00f4493b6d5
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881975"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956535"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でリソース ガバナーを使用して Python と R のワークロードを管理する
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)を使用して、SQL Server Machine Learning Services での Python および R のワークロードに対する CPU、物理 IO、およびメモリ リソースの割り当てを管理する方法について説明します。
 
-Python および R の機械学習アルゴリズムは、通常、多くのコンピューティング処理を必要とします。 ワークロードの優先度によっては、Machine Learning Services に使用できるリソースを増減することが必要になる場合があります。
+Python および R の機械学習アルゴリズムは、多くのコンピューティング処理を必要とします。 ワークロードの優先度によっては、Machine Learning Services に使用できるリソースを増減することが必要になる場合があります。
 
 一般情報については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。
 
@@ -34,13 +34,13 @@ Python および R の機械学習アルゴリズムは、通常、多くのコ�
 
 ## <a name="manage-resources-with-resource-governor"></a>リソース ガバナーを使用したリソースの管理
  
-既定では、外部プロセスでは、ローカル サーバー上の合計ホスト メモリの最大 20% が使用されます。 既定のリソース プールを変更して、サーバー全体の変更を加えることができます。外部プロセスで使用できるようにする容量を R と Python のプロセスで利用できるように設定できます。
+既定では、外部プロセスでは、ローカル サーバー上の合計ホスト メモリの最大 20% が使用されます。 既定のリソース プールを変更して、サーバー全体の変更を加えることができます。外部プロセスで使用できるようにする容量を R と Python のプロセスで使用できるように設定できます。
 
-または、関連するワークロード グループと分類子を使用して、カスタムの**外部リソース プール**を作成して、特定のプログラム、ホスト、またはその他の条件によって送信された要求のリソース割り当てを決定することもできます。 外部リソース プールは、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に導入された種類のリソース プールです。データベース エンジン外部の R および Python のプロセスの管理に役立ちます。
+必要に応じて、関連するワークロード グループと分類子を使用してカスタムの**外部リソース プール**を作成し、特定のプログラム、ホスト、またはその他の条件によって送信された要求のリソース割り当てを決定することもできます。 外部リソース プールは、[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に導入された種類のリソース プールです。データベース エンジン外部の R および Python のプロセスの管理に役立ちます。
 
-1. [リソース ガバナンスを有効にします](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (既定ではオフになっています)。
+1. [リソース ガバナンスを有効にします](../../relational-databases/resource-governor/enable-resource-governor.md) (既定ではオフになっています)。
 
-2. [外部リソース プールを作成する](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql)を実行してリソース プールを作成および構成し、その後 [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) を実行してこれを実装します。
+2. [外部リソース プールを作成する](../../t-sql/statements/create-external-resource-pool-transact-sql.md)を実行してリソース プールを作成および構成し、その後 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) を実行してこれを実装します。
 
 3. トレーニングとスコア付けなど、粒度の細かい割り当て用のワークロード グループを作成します。
 

@@ -1,4 +1,5 @@
 ---
+description: 'SQL から C へ: GUID'
 title: 'SQL から C: GUID |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a0285850372d78bbe0a24c8707e14e4f5672fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456503"
 ---
 # <a name="sql-to-c-guid"></a>SQL から C へ: GUID
 GUID ODBC SQL データ型の識別子は次のとおりです。  
@@ -34,10 +35,10 @@ GUID ODBC SQL データ型の識別子は次のとおりです。
 ||*Bufferlength* < 37|未定義。|未定義。|22003|  
 |SQL_C_WCHAR|*Bufferlength* > 文字長|データ|36|該当なし|  
 ||*Bufferlength* < 37|未定義。|未定義。|22003|  
-|SQL_C_BINARY|データ\< = *バッファー長*のバイト長|データ|データの長さ (バイト単位)|該当なし|  
+|SQL_C_BINARY|データ \< =  *バッファー長*のバイト長|データ|データの長さ (バイト単位)|該当なし|  
 ||データ > *bufferlength*のバイト長|未定義。|未定義。|22003|  
 |SQL_C_GUID|なし [a]|データ|16 [b]|該当なし|  
   
- [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [a] この変換では、 *Bufferlength* の値は無視されます。 ドライバーは、**Targetvalueptr* のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。

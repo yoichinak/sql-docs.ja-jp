@@ -1,4 +1,5 @@
 ---
+description: IBCPSession (Native Client OLE DB プロバイダー)
 title: IBCPSession (Native Client OLE DB provider) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4dd2290097132730c160359a68b800992b50bc5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 779ade2e7678efb39df29efe38113630d5e03d9d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247727"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868374"
 ---
 # <a name="ibcpsession-native-client-ole-db-provider"></a>IBCPSession (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87247727"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|Method|説明|  
+|方法|説明|  
 |------------|-----------------|  
 |[IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)|プログラム変数と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列のバインドを作成します。|  
 |[IBCPSession::BCPColumns &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列にバインドされるフィールド数を設定します。|  
@@ -49,6 +50,5 @@ ms.locfileid: "87247727"
 |[IBCPSession::BCPWriteFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)|フォーマット ファイルに列ごとのフォーマット情報を書き込みます。|  
   
 ## <a name="see-also"></a>参照  
- [インターフェイス &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [インターフェイス &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

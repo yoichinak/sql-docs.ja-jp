@@ -1,4 +1,5 @@
 ---
+description: システムでバージョン管理されたメモリ最適化テンポラル テーブルのパフォーマンス
 title: システムでバージョン管理されたメモリ最適化テンポラル テーブルのパフォーマンス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdb3feaead360c65760cb4e6ae996990c1d6bba9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5c4b159f41f998155d4013413e69346ab0c4a239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552644"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516970"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>システムでバージョン管理されたメモリ最適化テンポラル テーブルのパフォーマンス
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 このトピックでは、システム バージョン管理およびメモリ最適化されたテンポラル テーブルを使用する場合のパフォーマンスに関するいくつかの考慮事項について説明します。
 

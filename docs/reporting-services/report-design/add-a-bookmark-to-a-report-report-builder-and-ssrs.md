@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: c3922a25108de54db68075589a5832a2f90832b7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779504"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934031"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  
@@ -23,7 +23,7 @@ ms.locfileid: "84779504"
   
  たとえば、レポートに色別にグループ化されたテーブルが表示される場合、グループ ヘッダーにグループ式に基づくブックマークを追加します。 次に、色の値が表示されたレポートの先頭に単一のテキスト ボックスのあるテーブルを追加し、そのテキスト ボックスにブックマーク リンクを設定します。 色をクリックすると、レポートはその色のグループ ヘッダー行が表示されるページにジャンプします。  
   
- 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)」を参照してください。  
+ 任意のレポート アイテムにブックマークを追加したり、グラフのテキスト ボックス、画像、計算系列など、 **Action** プロパティのある任意のアイテムへのブックマーク リンクを追加したりできます。 詳細については、「[[アクション プロパティ] ダイアログ ボックス (レポート ビルダーおよび SSRS)](./add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -57,5 +57,4 @@ ms.locfileid: "84779504"
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

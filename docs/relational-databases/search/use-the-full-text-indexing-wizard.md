@@ -1,4 +1,5 @@
 ---
+description: フルテキスト インデックス作成ウィザードの使用
 title: フルテキスト インデックス作成ウィザードの使用 | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628805"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88490584"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85628805"
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
 
-> **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image**である場合のみ有効です。  
+> **注:****[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
   
 6. **[統計的セマンティクス]。** 選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85628805"
      **[自動]**  
      基底のデータの変更に合わせて自動的にフルテキスト インデックスが更新されるようにするには、このオプション ボタンをクリックします。  
   
-     **手動で**  
+     **手動**  
      基底のデータの変更に合わせて自動的にフルテキスト インデックスが更新されないようにするには、このオプション ボタンをクリックします。 基底のデータに対する変更は保持されます。 ただし、変更をフルテキスト インデックスに適用するには、このプロセスを手動で開始またはスケジュール設定する必要があります。  
   
      **[変更を追跡しない]**  

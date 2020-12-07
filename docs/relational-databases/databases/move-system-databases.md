@@ -1,4 +1,5 @@
 ---
+description: システム データベースの移動
 title: システム データベースの移動 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9edfd5b460a6a6b80900e1beced674b80bfce93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763221"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195018"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -123,7 +124,7 @@ ms.locfileid: "85763221"
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     **sqlcmd** ユーティリティの使用方法については、「 [sqlcmd ユーティリティの使用](../../relational-databases/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
+     **sqlcmd** ユーティリティの使用方法については、「 [sqlcmd ユーティリティの使用](../../ssms/scripting/sqlcmd-use-the-utility.md)」を参照してください。  
   
 4.  **sqlcmd** ユーティリティまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を終了します。  
   
@@ -269,5 +270,4 @@ ms.locfileid: "85763221"
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)  
-  
   

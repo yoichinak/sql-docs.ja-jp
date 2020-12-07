@@ -1,4 +1,5 @@
 ---
+description: Resource Governor 関連の動的管理ビュー (Transact-sql)
 title: Resource Governor 関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Resource Governor, dynamic management views
 - dynamic management views [SQL Server], Resource Governor
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4d01fbd3183042adcc1085d767d10773534b20f0
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7733af9ac9c41368ba53d0035f79ac09cda4a409
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942156"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534618"
 ---
 # <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>Resource Governor 関連の動的管理ビュー (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: カスタム Foreach 列挙子のコーディング
 title: カスタム Foreach 列挙子のコーディング | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 539231ea284fd43f797858cf2dd549d578dfab6c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 046b40b0dd7502e57614691066d8c87bcfe5d9fa
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902507"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123132"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>カスタム Foreach 列挙子のコーディング
 
@@ -111,7 +112,7 @@ Public Overrides Function GetEnumerator() As Object
 End Function  
 ```  
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム Foreach 列挙子の作成](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
  [カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   

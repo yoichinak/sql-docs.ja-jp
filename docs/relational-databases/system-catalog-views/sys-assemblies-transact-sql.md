@@ -1,4 +1,5 @@
 ---
+description: sys. アセンブリ (Transact-sql)
 title: sys. assemblies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assemblies catalog view
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b430767a7ded990b440c3f22b68c2bfab2573a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7a0c333f1c7af1b90a8bd620ce33a7a13579d19d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394836"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539729"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys. アセンブリ (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "87394836"
 |**is_visible**|**bit**|1 = アセンブリは [!INCLUDE[tsql](../../includes/tsql-md.md)] エントリ ポイントを登録するため表示されます。<br /><br /> 0 = アセンブリは管理されている呼び出し元のみを対象にしています。 つまり、アセンブリによって、データベース内の他のアセンブリの内部実装が提供されます。|  
 |**create_date**|**datetime**|アセンブリが作成または登録された日付。|  
 |**modify_date**|**datetime**|アセンブリが変更された日付。|  
-|**is_user_defined**|**bit**|アセンブリのソースを示します。<br /><br /> 0 = システム定義のアセンブリ ( **hierarchyid**データ型の場合は、Microsoft. SqlServer. Types など)<br /><br /> 1 = ユーザー定義のアセンブリ|  
+|**is_user_defined**|**bit**|アセンブリのソースを示します。<br /><br /> 0 = システム定義のアセンブリ ( **hierarchyid** データ型の場合は、Microsoft. SqlServer. Types など)<br /><br /> 1 = ユーザー定義のアセンブリ|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

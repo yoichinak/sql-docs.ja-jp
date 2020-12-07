@@ -1,4 +1,5 @@
 ---
+description: CHECKSUM (Transact-SQL)
 title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f93b8ac9dc503d60f095add6e4a98050a93544d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f27205e76df6ba323ae586a84a19dcf05b654aa9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394250"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124884"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -41,13 +42,14 @@ CHECKSUM ( * | expression [ ,...n ] )
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
 \*  
 この引数は、チェックサムの計算がすべてのテーブル列をカバーしていることを指定します。 列のいずれかが比較できないデータ型である場合、`CHECKSUM` ではエラーが返されます。 比較できないデータ型は次のとおりです。
 
 - **cursor**
-- **画像**
+- **image**
 - **ntext**
 - **text**
 - **XML**
@@ -105,7 +107,7 @@ GO
   
 計算列にインデックスを作成するとチェックサム列が具体化され、`ProductName` 値を変更すると、それがどのような変更であってもチェックサム列に反映されます。 代わりに、インデックスを作成する列に直接インデックスを作成することができます。 ただし、長いキー値の場合は、通常のインデックスはチェックサム インデックスと同様に機能しない可能性があります。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

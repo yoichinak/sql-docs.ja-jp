@@ -1,4 +1,5 @@
 ---
+description: ディストリビューターの設定
 title: ディストリビューターの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653317"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131000"
 ---
 # <a name="distributor-settings"></a>ディストリビューターの設定
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85653317"
  **[レプリケーション モニターが起動したときに自動的に接続する]**  
  レプリケーション モニターでディストリビューターに接続して状態情報を取得する場合に選択します。  
   
- **Connection**  
+ **接続**  
  クリックすると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、レプリケーション モニターがディストリビューターに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
   
  **[このディストリビューターとパブリケーションのステータスを自動的に更新する]**  
@@ -42,10 +43,10 @@ ms.locfileid: "85653317"
  **[このディストリビューターのすべてのパブリッシャーを次のグループに表示する]**  
  一覧からパブリッシャー グループを選択します。 パブリッシャーは、左ペインでこのグループの下に表示されます。 グループはパブリッシャーを整理するもので、レプリケーションの動作には影響を与えません。  
   
- **[新しいグループ]**  
+ **新しいグループ**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

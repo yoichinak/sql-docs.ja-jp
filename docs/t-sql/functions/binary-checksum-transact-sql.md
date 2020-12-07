@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM (Transact-SQL)
 title: BINARY_CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2dd65d2923d063440e292884da2bb4c6aecf0ec4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397121"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124895"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,13 +40,15 @@ ms.locfileid: "87397121"
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 *\**  
 計算がすべてのテーブルの列に対して行われることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型は次のとおりです。  
 * **cursor**  
-* **画像**  
+* **image**  
 * **ntext**  
 * **text**  
 * **xml**  
@@ -86,7 +89,7 @@ or
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE myTable (column1 int, column2 varchar(256));  
+CREATE TABLE myTable (column1 INT, column2 VARCHAR(256));  
 GO  
 INSERT INTO myTable VALUES (1, 'test');  
 GO  
@@ -98,7 +101,7 @@ SELECT BINARY_CHECKSUM(*) from myTable;
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  

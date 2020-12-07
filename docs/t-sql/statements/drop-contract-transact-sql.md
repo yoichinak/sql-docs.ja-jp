@@ -1,4 +1,5 @@
 ---
+description: DROP CONTRACT (Transact-SQL)
 title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - contracts [Service Broker], dropping
 - DROP CONTRACT statement
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13a7fb5a90441ab9cf3bf287634e7433308151d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e0de044e06a6a78d9b0b8e7bb3f7020d5a356cc0
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484000"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380147"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,6 @@ ms.locfileid: "86484000"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP CONTRACT contract_name   
 [ ; ]  
 ```  
@@ -60,9 +60,8 @@ DROP CONTRACT contract_name
 ## <a name="examples"></a>例  
  次の例では、データベースからコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` を削除します。  
   
-```  
-DROP CONTRACT   
-    [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
+```sql  
+DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
 ## <a name="see-also"></a>参照  

@@ -1,4 +1,5 @@
 ---
+description: Microsoft 提供の ODBC ドライバー
 title: Microsoft 提供の ODBC ドライバー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ce30389ee9c81352c84f75459a87b686fb0766a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449424"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供の ODBC ドライバー
-*ドライバー*は、ODBC API の関数を実装するライブラリです。 各ドライバーは、特定のデータベース管理システム (DBMS) に固有のものです。 ほとんどの場合、ドライバーは、基になる DBMS の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 ドライバーは特定のタスクを実行し、ファイルベースと DBMS ベースの2つのカテゴリに分類できます。 ドライバーとドライバーのアーキテクチャの詳細については、「[ドライバー](../../odbc/reference/drivers.md)」を参照してください。  
+*ドライバー* は、ODBC API の関数を実装するライブラリです。 各ドライバーは、特定のデータベース管理システム (DBMS) に固有のものです。 ほとんどの場合、ドライバーは、基になる DBMS の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 ドライバーは特定のタスクを実行し、ファイルベースと DBMS ベースの2つのカテゴリに分類できます。 ドライバーとドライバーのアーキテクチャの詳細については、「 [ドライバー](../../odbc/reference/drivers.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -1,4 +1,5 @@
 ---
+description: internal_partitions (Transact-sql)
 title: internal_partitions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,18 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e7e6f8d248ef4d000c98a664148a5a5b33f0786b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002719"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645939"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>internal_partitions (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  ディスクベーステーブルの列ストアインデックスの内部データを追跡する行セットごとに1行のデータを返します。 これらの行セットは、列ストアインデックスの内部にあり、削除された行、行グループのマッピング、およびデルタストアの行グループを追跡します。 各テーブルパーティションのデータを追跡します。各テーブルには、少なくとも1つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを再構築するたびに、行セットを再作成します。   
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+  ディスクベーステーブルの列ストアインデックスの内部データを追跡する行セットごとに1行のデータを返します。 これらの行セットは、列ストアインデックスの内部にあり、削除された行、行グループのマッピング、およびデルタストアの行グループを追跡します。 各テーブルパーティションのデータを追跡します。各テーブルには、少なくとも1つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列ストアインデックスを再構築するたびに、行セットを再作成します。   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +46,7 @@ ms.locfileid: "86002719"
  `public` ロールのメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列ストアインデックスを作成または再構築するたびに、新しい列ストア内部インデックスを再作成します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列ストアインデックスを作成または再構築するたびに、新しい列ストア内部インデックスを再作成します。  
   
 ## <a name="examples"></a>例  
   
@@ -59,8 +62,8 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システム カタログに対するクエリに関してよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

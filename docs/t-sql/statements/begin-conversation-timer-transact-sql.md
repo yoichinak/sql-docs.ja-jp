@@ -1,4 +1,5 @@
 ---
+description: BEGIN CONVERSATION TIMER (Transact-SQL)
 title: BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -30,14 +31,14 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7143f1aee0047f00c0b21507f8b25290866f3faf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc2b02a96911dc0ff6e7be86c5cbd36708ddf348
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380905"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124167"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,6 @@ ms.locfileid: "86380905"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
 [ ; ]  
@@ -64,7 +64,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  メッセージをキューに配置する前に待機する時間を、秒単位で指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  メッセージ交換タイマーによって、特定の時間が経過すると、メッセージ交換でメッセージを受信する方法がアプリケーションに提供されます。 タイマーが時間切れになる前にメッセージ交換で BEGIN CONVERSATION TIMER を呼び出すと、タイムアウトが新しい値に設定されます。 メッセージ交換の有効期間とは異なり、メッセージ交換の送信側と受信側に個別のメッセージ交換タイマーがあります。 **DialogTimer** メッセージは、リモート側のメッセージ交換に影響することなくローカル キューに届きます。 したがって、タイマー メッセージはアプリケーションでどのような目的にも使用できます。  
   
  たとえばメッセージ交換タイマーを使用すると、アプリケーションで、期限の切れた応答に対する待機時間を短くすることができます。 アプリケーションが 30 秒以内にダイアログを完了するようにする場合、そのダイアログのメッセージ交換タイマーを 60 秒 (30 秒に 30 秒の猶予時間を加えたもの) に設定できます。 ダイアログが 60 秒後もまだ開いている場合、アプリケーションはそのダイアログのキューでタイムアウト メッセージを受信します。  
@@ -79,7 +79,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ## <a name="examples"></a>例  
  次の例では、`@dialog_handle` で指定されるダイアログに 2 分間のタイムアウトを設定します。  
   
-```  
+```sql 
 -- @dialog_handle is of type uniqueidentifier and  
 -- contains a valid conversation handle.  
   

@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_agents (Transact-sql)
 title: MSsnapshot_agents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 20394d5204059b7ec55c09b9feb6092415ccda12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c5b83521f64253aaa5d4eb6dfd6d5e49eb5d71b4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889429"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524121"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,8 @@ ms.locfileid: "85889429"
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号を指定します。|  
 |**profile_id**|**int**|[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルの構成 ID。|  
-|**dynamic_filter_login**|**sysname**|パーティションを定義するパラメーター化されたフィルターで[SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md)関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
-|**dynamic_filter_hostname**|**sysname**|パーティションを定義するパラメーター化されたフィルターで[HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md)関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
+|**dynamic_filter_login**|**sysname**|パーティションを定義するパラメーター化されたフィルターで [SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md) 関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
+|**dynamic_filter_hostname**|**sysname**|パーティションを定義するパラメーター化されたフィルターで [HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md) 関数を評価するために使用される値。 この列は、パーティションスナップショットに使用されます。|  
 |**publisher_security_mode**|**smallint**|パブリッシャーに接続するときにエージェントによって使用されるセキュリティモード。次のいずれかになります。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログインです。|  
 |**publisher_password**|**nvarchar (524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  
@@ -49,7 +50,7 @@ ms.locfileid: "85889429"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

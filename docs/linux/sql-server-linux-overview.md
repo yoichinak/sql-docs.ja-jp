@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 38cdca8bea1c524ac4b8c964871ac04d5b221506
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ecec5879e66f17426b9aa68014c2b2d0f751153
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887863"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115532"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上の SQL Server
 
@@ -61,7 +61,7 @@ SQL Server 2019 は Linux で動作します。 これは同じ SQL Server デ�
 
 | ツール | チュートリアル |
 |-----|-----|
-| Visual Studio Code (VS Code) | [SQL Server on Linux で VS Code を使用する](sql-server-linux-develop-use-vscode.md) |
+| Visual Studio Code (VS Code) | [SQL Server on Linux で VS Code を使用する](../tools/visual-studio-code/sql-server-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Windows 上の SSMS を使用して SQL Server on Linux に接続する](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [SQL Server on Linux で SSDT を使用する](sql-server-linux-develop-use-ssdt.md) |
 

@@ -1,4 +1,5 @@
 ---
+description: sp_changemergefilter (Transact-SQL)
 title: sp_changemergefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872498"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539127"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はありません。  
   
-`[ @filtername = ] 'filtername'`フィルターの現在の名前を指定します。 *filtername*は**sysname**,、既定値はありません。  
+`[ @filtername = ] 'filtername'` フィルターの現在の名前を指定します。 *filtername* は **sysname**,、既定値はありません。  
   
-`[ @property = ] 'property'`変更するプロパティの名前を指定します。 *プロパティ*は**sysname**,、既定値はありません。  
+`[ @property = ] 'property'` 変更するプロパティの名前を指定します。 *プロパティ* は **sysname**,、既定値はありません。  
   
-`[ @value = ] 'value'`指定したプロパティの新しい値を指定します。 *値*は**nvarchar (1000)**,、既定値はありません。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値を指定します。 *値*は **nvarchar (1000)**,、既定値はありません。  
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
@@ -66,23 +67,23 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|結合は、一意なキーに基づいて行われます。|  
 ||**false**|結合が一意のキーではありません。|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot* は **ビット**であり、既定値は **0**です。  
   
- **0**を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+ **0** を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
   
- **1**に設定すると、マージアーティクルへの変更によってスナップショットが無効になる可能性があります。また、新しいスナップショットを必要とする既存のサブスクリプションが存在する場合は、既存のスナップショットに古いスナップショットとしてマークを付け、新しいスナップショットを生成する権限を与えます。  
+ **1** に設定すると、マージアーティクルへの変更によってスナップショットが無効になる可能性があります。また、新しいスナップショットを必要とする既存のサブスクリプションが存在する場合は、既存のスナップショットに古いスナップショットとしてマークを付け、新しいスナップショットを生成する権限を与えます。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription*は**ビット**で、既定値は**0**です。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription* は **ビット** で、既定値は **0**です。  
   
- **0**を指定すると、マージアーティクルへの変更によってサブスクリプションが再初期化されることはありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+ **0** を指定すると、マージアーティクルへの変更によってサブスクリプションが再初期化されることはありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
   
- **1**を指定すると、マージアーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を行う権限が与えられます。  
+ **1** を指定すると、マージアーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を行う権限が与えられます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_changemergefilter**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_changemergefilter** は、マージレプリケーションで使用します。  
   
  マージアーティクルのフィルターを変更するには、スナップショットが存在する場合は再作成する必要があります。 これを行うには、 ** \@ force_invalidate_snapshot**を**1**に設定します。 また、この記事へのサブスクリプションがある場合は、サブスクリプションを再初期化する必要があります。 これを行うには、 ** \@ force_reinit_subscription**を**1**に設定します。  
   
@@ -91,10 +92,10 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+ [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

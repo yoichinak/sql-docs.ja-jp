@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4424f11e4b8d31c964d024b3ecaf90bec0cd7c21
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006984"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727343"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のダウンロード
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006984"
 OLE DB Driver for SQL Server はスタンドアロンのデータ アクセス アプリケーション プログラミング インターフェイス (API) で、OLE DB に使用されます。 OLE DB Driver for SQL Server は Windows 上で利用でき、SQL OLE DB ドライバーが 1 つのダイナミック リンク ライブラリ (DLL) で提供されます。
 
 ## <a name="download"></a>ダウンロード
+
+Microsoft OLE DB Driver for SQL Server の再頒布可能インストーラーでは、新しい SQL Server 機能を利用するために実行時に必要なクライアント コンポーネントがインストールされます。 バージョン 18.3 以降のインストーラーには、Microsoft Active Directory 認証ライブラリ (ADAL.dll) も含まれていてインストールされます。
 
 Microsoft OLE DB Driver 18.4 for SQL Server は、最新の一般提供 (GA) バージョンです。 以前のバージョンの Microsoft OLE DB Driver 18 for SQL Server がインストールされている場合は、18.4 をインストールすると 18.4 にアップグレードされます。
 
@@ -33,7 +35,7 @@ Microsoft OLE DB Driver 18.4 for SQL Server は、最新の一般提供 (GA) バ
 - リリース日:2020 年 5 月 30 日
 
 > [!Note]
-> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadmsoledbsqlusenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版]()をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
 
 ## <a name="available-languages"></a>使用できる言語
 

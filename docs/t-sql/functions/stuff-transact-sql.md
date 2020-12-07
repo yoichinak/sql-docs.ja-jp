@@ -1,4 +1,5 @@
 ---
+description: STUFF (Transact-SQL)
 title: STUFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
@@ -24,12 +25,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46ccac4e4cdacea4caa8be6d31561ceb145f1969
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d798e00eccd5252c5142c0e6e19ac842b02d500d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379821"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +74,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="examples"></a>例  
  次の例では、最初の文字列 (`abcdef`) の位置 `2` (`b`) から 3 文字を削除し、その位置に 2 番目に指定した文字列を挿入して生成される文字列を返します。  
   
-```  
+```sql  
 SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
 GO  
 ```  

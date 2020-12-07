@@ -1,4 +1,5 @@
 ---
+description: カスタム ForEach 列挙子用ユーザー インターフェイスの開発
 title: カスタム ForEach 列挙子用ユーザー インターフェイスの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ac765cc6b597fe569d687da3c4791169ce04a30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55e03f664f2c0b9c5664c6bcb308cad21d628f84
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915983"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123103"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>カスタム ForEach 列挙子用ユーザー インターフェイスの開発
 
@@ -43,7 +44,7 @@ ms.locfileid: "86915983"
 ### <a name="saving-settings"></a>設定の保存  
  <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.SaveSettings%2A> メソッドをオーバーライドして、ユーザーがエディターを終了したときに、ユーザーが選択した値をコントロールから列挙子のプロパティにコピーします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム Foreach 列挙子の作成](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
  [カスタム Foreach 列挙子のコーディング](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: カタログビューの Azure SQL Database
 title: Azure SQL Database カタログビュー |Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2015
@@ -11,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Azure SQL Database catalog views
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a36a617fa9774a5b527bae73ffdf933582abb2d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e1837256316541ba5b14740961a36e77b099d8a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920728"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551462"
 ---
 # <a name="azure-sql-database-catalog-views"></a>カタログビューの Azure SQL Database
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -1,4 +1,5 @@
 ---
+description: position メソッド (SQLServerNClob)
 title: position メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1fee13f46ed969f9eaddd7019efd00f05949611d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432974"
 ---
 # <a name="position-method-sqlservernclob"></a>position メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "67976332"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[position メソッド &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|指定された **NClob** オブジェクトの *searchstr* が、この **NClob** オブジェクト内で出現する文字位置を取得します。|  
 |[position メソッド &#40;java.lang.String、long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|指定された部分文字列 *searchstr* が、この **NClob** オブジェクトによって表される **NCLOB** 値の中で出現する文字位置を取得します。|  

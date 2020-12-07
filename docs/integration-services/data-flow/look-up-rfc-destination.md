@@ -1,4 +1,5 @@
 ---
+description: '[RFC 転送先の参照]'
 title: '[RFC 転送先の参照] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 023ecbe65136661f8afbaaf68078cd0a04cc2a1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d938b3d742dd9d4b43f0a9b3704281392d89049d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495805"
 ---
 # <a name="look-up-rfc-destination"></a>[RFC 転送先の参照]
 
@@ -41,7 +42,7 @@ ms.locfileid: "86916478"
   
      **[SAP BW 変換元エディター]** で、 **[RFC 転送先]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]** または **[W - 通知を待機]** である場合にのみ表示されます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **宛先**  
  SAP Netweaver BW システムで定義された RFC 転送先の名前を表示します。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "86916478"
  ゲートウェイ ホストのサーバー名または IP アドレスを表示します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を表示します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を表示します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を表示します。  

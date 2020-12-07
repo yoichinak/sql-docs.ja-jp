@@ -1,8 +1,9 @@
 ---
+description: Parameters コレクションのプロパティ、メソッド、およびイベント
 title: Parameters コレクションのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0bfbb7129cd4937052e919f4282e3303a29de29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 506b9177976b24277dfe132368c828d54f571c75
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763383"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990103"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameters コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
- [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count プロパティ](./count-property-ado.md)  
   
- [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](./item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [Append メソッド](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append メソッド](./append-method-ado.md)  
   
- [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+ [Delete メソッド (ADO Parameters コレクション)](./delete-method-ado-parameters-collection.md)  
   
- [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh メソッド](./refresh-method-ado.md)  
   
 ## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)

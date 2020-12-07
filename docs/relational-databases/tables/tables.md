@@ -1,4 +1,5 @@
 ---
+description: テーブル
 title: テーブル | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -14,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 55fdb422e4a8dd35a23e8e637cabd165729c97b0
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396884"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809978"
 ---
 # <a name="tables"></a>テーブル
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "87396884"
 
 ### <a name="system-tables"></a>システム テーブル
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーの構成とすべてのテーブルの構成を定義したデータが、システム テーブルという特殊なテーブル セットに格納されます。 ユーザーは、システム テーブルに対して直接クエリや更新を行うことはできません。 システム テーブル内の情報は、システム ビューから入手できます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)」を参照してください。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、サーバーの構成とすべてのテーブルの構成を定義したデータが、システム テーブルという特殊なテーブル セットに格納されます。 ユーザーは、システム テーブルに対して直接クエリや更新を行うことはできません。 システム テーブル内の情報は、システム ビューから入手できます。 詳細については、「[システム ビュー &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)」を参照してください。 
  
 ### <a name="wide-tables"></a>幅の広いテーブル
 
@@ -84,7 +85,7 @@ ms.locfileid: "87396884"
 |テーブルを削除する方法について説明します。|[テーブルの削除 &#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|
 |既存のテーブルの一部またはすべての列を含む新しいテーブルを作成する方法について説明します。|[テーブルの複製](../../relational-databases/tables/duplicate-tables.md)|
 |テーブル名を変更する方法について説明します。|[テーブル名の変更 &#40;データベース エンジン&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|
-|テーブルのプロパティを表示する方法について説明します。|[テーブル定義の表示](../../relational-databases/tables/view-the-table-definition.md)|
+|テーブルのプロパティを表示する方法について説明します。|[テーブルの定義の表示](../../relational-databases/tables/view-the-table-definition.md)|
 |ビューやストアド プロシージャなどの他のオブジェクトがテーブルに依存しているかどうかを判断する方法について説明します。|[テーブルの依存関係の表示](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
 
  次の表に、テーブル内の列の作成や変更に関連する一般的なタスクへのリンクを示します。 
@@ -102,5 +103,3 @@ ms.locfileid: "87396884"
 
 ## <a name="see-also"></a>参照
  [主キー制約と外部キー制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [UNIQUE 制約と CHECK 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
-
-

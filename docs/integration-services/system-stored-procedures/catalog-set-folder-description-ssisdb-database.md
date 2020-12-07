@@ -1,4 +1,5 @@
 ---
+description: catalog.set_folder_description (SSISDB データベース)
 title: catalog.set_folder_description (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16dad0ab077a475cf495b11e958fa6336c189671
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912818"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129641"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (SSISDB データベース)
 

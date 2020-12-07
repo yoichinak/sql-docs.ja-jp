@@ -2,7 +2,7 @@
 title: JDBC 基本データ型の使用
 description: Microsoft JDBC Driver for SQL Server では、SQL Server データ型を Java で認識できる形式に変換するために、JDBC 基本データ型が使用されます。
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728382"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806998"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
@@ -35,9 +35,9 @@ ms.locfileid: "81728382"
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ ms.locfileid: "81728382"
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ ms.locfileid: "81728382"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
+<sup>1</sup> 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
-(2) [DateTimeOffset Class](reference/datetimeoffset-class.md) で **datetimeoffset** の値にプログラムでアクセスできます。  
+<sup>2</sup> [DateTimeOffset Class](reference/datetimeoffset-class.md) で **datetimeoffset** の値にプログラムでアクセスできます。  
+  
+<sup>3</sup> SQL Server 2016 以降、datetime 列からの値を比較するために java.sql.Timestamp 値を使用することができなくなりました。 この制限は、datetime を datetime2 に異なるように変換し、値が同じでなくなるサーバー側の変更に起因するものです。 この問題を回避するには、datetime 列を datetime2(3) に変更するか、java.sql.Timestamp ではなく String を使用するか、データベースの互換性レベルを 120 以下に変更します。
   
 以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](basic-data-types-sample.md)」をご覧ください。  
   

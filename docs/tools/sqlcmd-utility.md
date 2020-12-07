@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246641"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005950"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> SQL Server 2014 以前については、「[sqlcmd ユーティリティ](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014)」を参照してください。
+> SQL Server 2014 以前については、「[sqlcmd ユーティリティ](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true)」を参照してください。
 >
 > Linux 上で sqlcmd を使用する場合は、[Linux への sqlcmd と bcp のインストール](../linux/sql-server-linux-setup-tools.md)に関する記事を参照してください。
 
@@ -54,25 +54,25 @@ ms.locfileid: "87246641"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>最新バージョンの sqlcmd ユーティリティをダウンロードする
 
-**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x64) をダウンロードする (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x86) をダウンロードする (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![x64 用 sqlcmd のダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![x86 用 sqlcmd のダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 コマンドライン ツールは一般提供 (GA) ですが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のインストーラー パッケージと共にリリースされています。
 
 **バージョン情報**
 
-リリース番号:15.0 <br>
-ビルド番号:15.0.1300.359<br>
-リリース日: 2019 年 3 月 13 日
+リリース番号:15.0.2<br>
+ビルド番号:15.0.2000.5<br>
+リリース日: 2020 年 9 月 11 日
 
-新しいバージョンの SQLCMD では、SQL Database、SQL Data Warehouse、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
-新しい BCP では、SQL Database と SQL Data Warehouse の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
+新しいバージョンの SQLCMD では、SQL Database、Azure Synapse Analytics、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
+新しい BCP では、SQL Database と Azure Synapse Analytics の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 
 **システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008-2019。
 
-このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://www.microsoft.com/download/details.aspx?id=56567) の両方が必要です。
+このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://aka.ms/downloadmsodbcsql) の両方が必要です。
  
-SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実行し、15.0.1300.359 以降のバージョンが使用されていることを確認します。
+SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実行し、15.0.2000.5 以降のバージョンが使用されていることを確認します。
 
 > [!NOTE]
 > Always Encrypted (`-g`) と Azure Active Directory 認証 (`-G`) を利用するには、バージョン 13.1 以降が必要です。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)
@@ -89,8 +89,8 @@ SSMS で sqlcmd ステートメントを実行するには、上部のナビゲ�
 
  その他のトピック: 
 
-- [sqlcmd ユーティリティの起動](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [sqlcmd ユーティリティの起動](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [sqlcmd ユーティリティの使用](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>構文
 
@@ -102,6 +102,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -148,17 +149,23 @@ sqlcmd
 
 **ログイン関連のオプション**
 
-**-A**
-
+**-A**  
 専用管理者接続 (DAC) を使用して SQL Server にサインインします。 この種類の接続は、サーバーのトラブルシューティングで使用されます。 この接続は、DAC をサポートしているサーバー コンピューターでのみ機能します。 DAC を使用できない場合は、**sqlcmd** はエラー メッセージを生成して終了します。 DAC の詳細については、「 [データベース管理者用の診断接続](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。 -A オプションは -G オプションではサポートされていません。 -A を使用して SQL Database に接続する場合は、SQL Server 管理者である必要があります。 Azure Active Directory 管理者は DAC を使用できません。
 
-**-C** クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
+**-C**  
+クライアントでこのスイッチを使用して、サーバーの証明書を検証せずに暗黙的に信頼するようにクライアントを構成できます。 このオプションは、ADO.NET オプションの `TRUSTSERVERCERTIFICATE = true`と同等です。  
 
 **-d** _db_name_  
 **sqlcmd** の開始時に `USE` *db_name* ステートメントを実行します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDDBNAME が設定されます。 このパラメーターにより初期データベースが指定されます。 既定値は、ログインの既定データベースのプロパティです。 データベースが存在しない場合は、エラー メッセージが生成され、 **sqlcmd** は終了します。  
 
+**-D**  
+-S に指定されたサーバー名を、ホスト名としてではなく、DSN として解釈します。 詳細については、「[sqlcmd による接続](../connect/odbc/linux-mac/connecting-with-sqlcmd.md)」の「_sqlcmd および bcp の DSN サポート_」を参照してください。
+
+> [!NOTE]
+> -D オプションは、Linux および MacOS クライアントでのみ使用できます。 これは、Windows クライアントでは以前、廃止済みオプションとされていましたが、これまでに削除され、現在は無視されています。
+
 **-l** _login_timeout_  
-サーバーに接続を試みたときに、 **sqlcmd** が ODBC ドライバーにログインするまでのタイムアウトを秒数で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDLOGINTIMEOUT が設定されます。 **sqlcmd** でのログインに関する既定のタイムアウトは 8 秒です。 **-G** オプションを使用して、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory で認証する場合は、タイムアウト値を少なくとも 30 秒にすることをお勧めします。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。
+サーバーに接続を試みたときに、 **sqlcmd** が ODBC ドライバーにログインするまでのタイムアウトを秒数で指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDLOGINTIMEOUT が設定されます。 **sqlcmd** でのログインに関する既定のタイムアウトは 8 秒です。 **-G** オプションを使用して、SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory で認証する場合は、タイムアウト値を 30 秒以上にすることをお勧めします。 ログイン タイムアウトは、0 ～ 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。 この値に 0 を指定すると、タイムアウトは無制限になります。
 
 **-E**  
 ユーザー名とパスワードを使用せずにセキュリティ接続を使用して SQL Server にサインインします。 既定では、 **-E** を指定しないと、 **sqlcmd** ではセキュリティ接続オプションが使用されます。  
@@ -169,11 +176,11 @@ sqlcmd
 列の暗号化設定を `Enabled`に設定します。 詳細については、「 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。 Windows 証明書ストアに格納されているマスター キーのみがサポートされます。 -g スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。
 
 **-G**  
-このスイッチは、SQL Database または SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database または SQL Data Warehouse に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)」を参照してください。 -A オプションは -G オプションではサポートされていません。
+このスイッチは、SQL Database または Azure Synapse Analytics に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDUSEAAD = true が設定されます。 -G スイッチには、 **sqlcmd** バージョン [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)以上が必要です。 バージョンを判断するには、 `sqlcmd -?`を実行します。 詳細については、[Azure Active Directory 認証を使用した SQL Database または Azure Synapse Analytics への接続](/azure/azure-sql/database/authentication-aad-overview)に関する記事を参照してください。 -A オプションは -G オプションではサポートされていません。
 
 > [!IMPORTANT]
 > `-G` オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> 現在、AAD 統合認証と対話型認証は、Linux または macOS 上でサポートされていません。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) バージョン 17.6.1 以降と、適切に構成された Kerberos 環境が必要です。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -209,9 +216,9 @@ sqlcmd
 
 - **Azure Active Directory 対話型**
 
-    Azure SQL Database と SQL Data Warehouse の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Azure Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
+    Azure SQL Database と Azure Synapse Analytics の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Azure Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
 
-   Azure AD 対話型には、**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 以降と [ODBC バージョン 17.2 以降](https://www.microsoft.com/download/details.aspx?id=56567)が必要です。  
+   Azure AD 対話型には、**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 以降と [ODBC バージョン 17.2 以降](https://aka.ms/downloadmsodbcsql)が必要です。  
 
    対話型認証を有効にするには、-G オプションにパスワードを指定せず、ユーザー名 (-U) のみを指定します。
 
@@ -235,7 +242,7 @@ sqlcmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   ゲスト ユーザーが特定の Azure AD に存在し、SQL DB に存在するグループに属し、そのグループが sqlcmd コマンドを実行するデータベース アクセス許可を持つ場合、ゲスト ユーザーの別名が使用されます (たとえば、 *keith0@adventureworks.com* )。
+   ゲスト ユーザーが特定の Azure AD に存在し、SQL Database に存在するグループに属し、そのグループが sqlcmd コマンドを実行するデータベース アクセス許可を持つ場合、ゲスト ユーザーの別名が使用されます (たとえば、 *keith0@adventureworks.com* )。
 
   >[!IMPORTANT]
   >SQLCMD で `-G` および `-U` オプションを使用する場合、既知の問題として、`-G` オプションの前に `-U` オプションを指定すると、認証が失敗する可能性があります。 常に `-G` オプションから始め、`-U` オプションがその後になるようにします。
@@ -251,7 +258,7 @@ sqlcmd
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)。
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -612,7 +619,7 @@ sqlcmd
 |**GO** [*count*]|**:List**|  
 |**[:]** **RESET**|**:Error**|  
 |**[:]** **ED**|**:Out**|  
-|**[:]** **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |**[:]** **QUIT**|**:Connect**|  
 |**[:]** **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +935,5 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 - [クエリ エディターによる SQLCMD スクリプトの編集](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [ジョブ ステップの管理](~/ssms/agent/manage-job-steps.md)   
 - [CmdExec ジョブ ステップの作成](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>フィードバック
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL クライアント ツール フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,6 +1,6 @@
 ---
 title: dbSqlPackage プロバイダーでの MSDeploy の使用
-description: MSDeploy プロバイダーの古い DbSqlPackage について説明します。 パラメーター、例、および SQL Server と SQL Azure の各代替データベース発行ツールを確認します。
+description: MSDeploy プロバイダーの古い DbSqlPackage について説明します。 パラメーター、例、SQL Server と Azure SQL Database の代替公開ツールを確認します。
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899744"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987768"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage プロバイダーでの MSDeploy の使用
 
-**DbSqlPackage** は SQL Server/SQL Azure データベースとのやり取りを可能にする **MSDeploy** プロバイダーです。 **DbSqlPackage** は次の操作をサポートしています。  
+**DbSqlPackage** は SQL Server と Azure SQL Azure データベースとのやりとりを可能にする **MSDeploy** プロバイダーです。 **DbSqlPackage** は次の操作をサポートしています。  
   
--   **Extract**: ライブ SQL Server または SQL Azure の各データベースからデータベース スナップショット (.dacpac) ファイルを作成します。  
+-   **Extract**: ライブ SQL Server または Azure SQL Database からデータベース スナップショット (.dacpac) ファイルを作成します。  
   
 -   **発行**:ソース .dacpac ファイルのスキーマに合わせてデータベース スキーマの増分更新を行います。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "85899744"
   
 -   **Script**: 公開操作によって実行されるスクリプトに対応する Transact\-SQL スクリプトを作成します。  
   
-DACFx について詳しくは、[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) または [SqlPackage.exe](../tools/sqlpackage.md) (DACFx コマンド ライン ツール) の DACFx マネージド API のドキュメントをご覧ください。  
+DACFx について詳しくは、[https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) または [SqlPackage.exe](../tools/sqlpackage.md) (DACFx コマンド ライン ツール) の DACFx マネージド API のドキュメントをご覧ください。  
   
 > [!IMPORTANT]  
 > dbSqlPackage のプロバイダー機能は、Visual Studio の次回メジャー リリースから削除される予定です。 Web Deploy を使用してデータベースの公開を処理する方法については、「[増分データベース公開のための dbDacFx プロバイダー (英語)](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing)」を参照してください。  
@@ -57,7 +57,7 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/A**|*input* は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスです。<br /><br />**注:** 入力ソースとして接続文字列を使用する場合、サポートされる接続文字列プロパティは *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* および *ConnectionTimeout* のみです。|  
   
-入力ソースがライブ SQL Server/Azure データベースへの接続文字列の場合、**dbSqlPackage** はライブ SQL Server/Azure データベースから .dacpac ファイルの形式でデータベース スナップショットを抽出します。  
+入力ソースが SQL Server と Azure SQL データベースへの接続文字列の場合、**dbSqlPackage** は SQL Server と Azure SQL データベースから .dacpac ファイルの形式でデータベース スナップショットを抽出します。  
   
 **Source** パラメーターは次のとおりです。  
   
@@ -203,4 +203,3 @@ MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:d
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
-  

@@ -1,4 +1,5 @@
 ---
+description: 統合メンバー ステージング テーブル (Master Data Services)
 title: 統合メンバー ステージング テーブル
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ccf1ce5b444c86c8fe979f2865314d947d37ff8a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b0104722d3fcea882b08aab3f44becc334b2d52c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429984"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>統合メンバー ステージング テーブル (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85813124"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの統合メンバー ステージング テーブル (stg.name_Consolidated) を使用して、統合メンバーを作成、更新、非アクティブ化、および削除します。 このテーブルを使用して、統合メンバーの属性値を更新することも可能です。  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>テーブルの列  
+##  <a name="table-columns"></a><a name="TableColumns"></a> テーブルの列  
  次の表は、統合ステージング テーブルの各フィールドの用途を説明しています。  
   
 |列名|説明|  
@@ -43,7 +44,7 @@ ms.locfileid: "85813124"
 |**NewCode**|メンバー コードを変更する場合にのみ使用します。|  
 |\<Attribute name>|エンティティ内の属性ごとに列が存在します。 **ImportType** が **0** または **2**の場合に、これを使用します。 自由形式属性の場合、属性の新しいテキストまたは文字列値を指定します。 ドメイン ベース属性の場合は、属性となるメンバーのコードを指定します。 リンク属性の場合、URL は **https://** で始まる必要があります。<br /><br /> <br /><br /> 注: ファイル属性をステージングすることはできません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [ステージング &#40;マスターデータサービス中に発生したエラーを表示&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)  

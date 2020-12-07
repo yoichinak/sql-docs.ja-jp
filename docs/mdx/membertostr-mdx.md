@@ -1,4 +1,5 @@
 ---
+description: MemberToStr (MDX)
 title: MemberToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6217120c7e6d5ee55670be3d902a9ea99333273f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483805"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -31,7 +32,7 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、メンバーの uniquename を含む文字列を返します。 通常は、メンバーの uniquename を外部関数に渡すために使用されます。  
   
 ## <a name="example"></a>例  

@@ -1,4 +1,5 @@
 ---
+description: カスタム コンポーネントの複数バージョン対応のサポート
 title: カスタム コンポーネントの複数バージョン対応のサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4020d295bc29fa3d240c0176611d446fcb427197
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7bfd8409894c1f98fe4d63efcd122b4bf8025aae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430464"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
 
@@ -32,7 +33,7 @@ ms.locfileid: "86916389"
  
 SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対応がサポートされています。
 -   接続マネージャー
--   処理手順
+-   タスク
 -   列挙子
 -   ログ プロバイダー
 -   データ フロー コンポーネント
@@ -99,7 +100,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **エラー メッセージ。** 型 'System.__ComObject' の COM オブジェクトをインターフェイス型 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' にキャストできません。 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' が指定されたインターフェイスの COM コンポーネント上での QueryInterface 呼び出しのときに次のエラーが発生したため、この操作に失敗しました: インターフェイスがサポートされていません。(HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、 **[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
+**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
 
 ![相互運用機能型の埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

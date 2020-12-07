@@ -1,8 +1,9 @@
 ---
+description: CursorType、LockType、および EditMode プロパティの例 (VC + +)
 title: CursorType、LockType、および EditMode プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e8c31affe3afd6a5bbbc3926bd724e8daf40834
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763525"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974343"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、および EditMode プロパティの例 (VC + +)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティと[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での[EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
+この例では、[レコードセット](./recordset-object-ado.md)を開く前に、 [CursorType](./cursortype-property-ado.md)プロパティと[LockType](./locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での [EditMode](./editmode-property.md) プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -162,7 +163,7 @@ void PrintComError(_com_error &e) {
 **編集後:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>参照  
- [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType プロパティ (ADO)](./cursortype-property-ado.md)   
+ [EditMode プロパティ](./editmode-property.md)   
+ [LockType プロパティ (ADO)](./locktype-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

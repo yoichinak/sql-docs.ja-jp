@@ -1,4 +1,5 @@
 ---
+description: ValidMeasure (MDX)
 title: ValidMeasure (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd2bc2385a3445076636fb1b4001120463d1cd89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494834"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -31,14 +32,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Validmeasure**関数は、組の値を返します。タプルが返す値を持つメジャーグループとのリレーションシップを持たない属性は無視されます。 属性にメジャーとの間のリレーションシップが存在しない理由は 2 つ考えられます。  
   
 -   属性のディメンションに、タプル内のメジャーのメジャーグループとのリレーションシップがありません。  
   
 -   属性のディメンションには、メジャーのメジャーグループとのリレーションシップがありませんが、粒度属性はキー属性ではなく、粒度属性には組の属性との直接的な関係がありません。  
   
- この関数によって指定される動作は、既定のサーバー側の動作であり、メジャーグループオブジェクトの**Ignoreun関連性ディメンション**プロパティによって制御されます。  
+ この関数によって指定される動作は、既定のサーバー側の動作であり、メジャーグループオブジェクトの **Ignoreun関連性ディメンション** プロパティによって制御されます。  
   
  指定された組の各属性に粒度が指定されている場合 (つまり、組のメンバーが All メンバーでない場合)、各属性の現在の座標は次のように移動されます。  
   

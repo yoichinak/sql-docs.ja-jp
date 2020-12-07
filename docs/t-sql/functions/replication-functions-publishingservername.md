@@ -1,4 +1,5 @@
 ---
+description: レプリケーション関数 - PUBLISHINGSERVERNAME
 title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5ce454f544fd1c1216b0c72dbdad3490e5fb11e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e6b42d4883053a32ec97f76278139fad8d0cf0f4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112849"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036598"
 ---
 # <a name="replication-functions---publishingservername"></a>レプリケーション関数 - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +35,7 @@ ms.locfileid: "87112849"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 PUBLISHINGSERVERNAME()  
 ```  
   
@@ -53,6 +53,5 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [レプリケーションの動作 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
-  
+ [レプリケーションの動作 &#40;Transact-SQL&#41;]()  
   

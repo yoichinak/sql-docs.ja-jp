@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_primary (Transact-sql)
 title: log_shipping_monitor_primary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_primary system table
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f7b071535ced290b10c059f6b450895a71b0f7ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f349cd5cfc01141ea7127847cb9006adfeaa3bad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890189"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547169"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  各ログ配布構成内のプライマリ データベースごとに、1 つの監視レコードを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  各ログ配布構成内のプライマリ データベースごとに、1 つの監視レコードを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
  履歴と監視に関連するテーブルは、プライマリサーバーとセカンダリサーバーでも使用されます。   
   
@@ -44,8 +45,8 @@ ms.locfileid: "85890189"
 |**last_backup_date_utc**|**datetime**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。協定世界時で表されます。|  
 |**history_retention_period**|**int**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
-## <a name="remarks"></a>Remarks  
- リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報は、プライマリサーバーの**log_shipping_monitor_primary**テーブルに格納されます。  
+## <a name="remarks"></a>解説  
+ リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報は、プライマリサーバーの **log_shipping_monitor_primary** テーブルに格納されます。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

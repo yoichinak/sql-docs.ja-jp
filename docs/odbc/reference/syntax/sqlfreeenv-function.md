@@ -1,4 +1,5 @@
 ---
+description: SQLFreeEnv 関数
 title: SQLFreeEnv 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6f036c6feca31985afdddddb63df683f6c0daae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853184b9f9cb298a9942190e96053469eafaa67b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491295"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 関数
 **互換性**  
@@ -36,6 +37,6 @@ ms.locfileid: "81285802"
 > [!NOTE]
 >  *Odbc 2.x アプリケーションが*odbc *2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの機能をマップする方法の詳細については、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

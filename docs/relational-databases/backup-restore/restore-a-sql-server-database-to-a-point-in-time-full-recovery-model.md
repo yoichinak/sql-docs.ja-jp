@@ -1,4 +1,5 @@
 ---
+description: SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
 title: SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル) | Microsoft Docs
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f03b1f490e46fac62c42dea09e78e7fdf9c28acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96125565"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85717980"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **SQL Server データベースを特定の時点まで復元する場合に使用するツール:**  
   
@@ -66,7 +67,7 @@ ms.locfileid: "85717980"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をポイントして、 **[データベース]** をクリックします。  
   
-4.  **[全般]** ページの **復元元**のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
+4.  **[全般]** ページの **復元元** のセクションを使用して、復元するバックアップ セットの復元元ファイルと場所を指定します。 以下のオプションの 1 つを選択します。  
   
     -   **[データベース]**  
   
@@ -81,11 +82,11 @@ ms.locfileid: "85717980"
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
-         **[ソース: デバイス: データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。  
+         **[ソース: デバイス:データベース]** リスト ボックスで、復元するデータベースの名前を選択します。  
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
-5.  **復元先のセクション**の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
+5.  **復元先のセクション** の **[データベース]** ボックスに、復元するデータベースの名前が自動的に表示されます。 データベースの名前を変更するには、 **[データベース]** ボックスに新しい名前を入力します。  
   
 6.  **[タイムライン]** をクリックして、 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスします。  
   
@@ -120,7 +121,7 @@ ms.locfileid: "85717980"
   
      オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
-12. 選択した時点まで復元するために必要であれば、 **[復元の前にログ末尾のバックアップを実行する]** が選択されます。 この設定を変更する必要はありません。ログの末尾をバックアップする必要がない場合でも、そのように選択してかまいません。  
+12. 選択した時点まで復元するために必要であれば、**[復元の前にログ末尾のバックアップを実行する]** が選択されます。 この設定を変更する必要はありません。ログの末尾をバックアップする必要がない場合でも、そのように選択してかまいません。  
   
 13. データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。  
   
@@ -137,7 +138,7 @@ ms.locfileid: "85717980"
   
  RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY...  
   
- 復旧ポイントは、 **time** で指定する *datetime*の値以前に行われた最後のトランザクション コミットの時点です。  
+ 復旧ポイントは、 **time** で指定する *datetime* の値以前に行われた最後のトランザクション コミットの時点です。  
   
  特定の時点より前に行われた変更のみを復元するには、復元するバックアップごとに WITH STOPAT **=** _time_ を指定します。 これにより、目的の時点を過ぎる危険性を回避できます。  
   
@@ -155,7 +156,7 @@ ms.locfileid: "85717980"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
+4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  

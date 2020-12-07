@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_get_field
 title: sqlsrv_get_field | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9770d24fc810860088f853a2effaadd8d125ab22
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b5fa8e85d6dc1af26c543c9c31cafa621b10bcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426254"
 ---
 # <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +41,10 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: 取得するフィールドのインデックス。 インデックスは 0 から始まります。  
   
-*$getAsType* [省略可能]: 返されるデータの PHP データ型を決定する **SQLSRV** 定数 (**SQLSRV_PHPTYPE_&#x2a;** )。 サポートされるデータ型については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+*$getAsType* [省略可能]: 返されるデータの PHP データ型を決定する **SQLSRV** 定数 (**SQLSRV_PHPTYPE_&#x2a;**)。 サポートされるデータ型については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。 戻り値の型が指定されていない場合、既定の PHP 型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値  
-フィールドのデータ。 *$getAsType* パラメーターを指定して、返されるデータの PHP データ型を指定できます。 戻り値のデータ型が指定されていない場合、既定の PHP データ型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+フィールドのデータ。 *$getAsType* パラメーターを指定して、返されるデータの PHP データ型を指定できます。 戻り値のデータ型が指定されていない場合、既定の PHP データ型が返されます。 既定の PHP 型の詳細については、「 [Default PHP Data Types](../../connect/php/default-php-data-types.md)」を参照してください。 PHP データ型の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
 **sqlsrv_fetch** と **sqlsrv_get_field** の組み合わせでは、データに対する順方向専用のアクセスが提供されます。  

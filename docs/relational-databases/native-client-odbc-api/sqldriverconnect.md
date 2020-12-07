@@ -15,11 +15,12 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92f4924433c5d577b8550a8d097a2802fda2f5f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 76942f8367bb6c38da195c61fa8d428b877d0042
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007188"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810078"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86007188"
   
  *Drivercompletion*の値でドライバーの接続ダイアログボックスを表示する必要がある (または必要になる可能性がある) 場合は、 **SQLDriverConnect**に有効な*WindowHandle*を指定する必要があります。 無効なハンドルを指定すると、SQL_ERROR が返されます。  
   
- DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 DRIVER が指定されている場合、またはが2の左端で、 **SQLDriverConnect**_drivercompletion_パラメーター値が SQL_DRIVER_NOPROMPT の場合、SERVER キーワードと適切な値が必要です。  
+ DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 DRIVER が指定されている場合、またはが2の左端で、 **SQLDriverConnect**_drivercompletion_ パラメーター値が SQL_DRIVER_NOPROMPT の場合、SERVER キーワードと適切な値が必要です。  
   
  SQL_DRIVER_NOPROMPT が指定されているときは、ユーザー認証に関するキーワードに値が指定されている必要があります。 ドライバーは、文字列 "Trusted_Connection=yes" または UID キーワードと PWD キーワードの両方が指定されていることを確認します。  
   
@@ -52,13 +53,13 @@ ms.locfileid: "86007188"
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SQLDriverConnect によるサービス プリンシパル名 (SPN) のサポート  
  SQLDDriverConnect では、プロンプトが有効になっているときに ODBC ログインダイアログボックスが使用されます。 これにより、プリンシパル サーバーとそのフェールオーバー パートナーの両方に対して SPN を入力できます。  
   
- SQLDriverConnect は新しい接続文字列キーワード**Serverspn**と**failoverpartnerspn**を受け入れ、新しい接続属性 SQL_COPT_SS_SERVER_SPN と SQL_COPT_SS_FAILOVER_PARTNER_SPN を認識します。  
+ SQLDriverConnect は新しい接続文字列キーワード **Serverspn** と **failoverpartnerspn**を受け入れ、新しい接続属性 SQL_COPT_SS_SERVER_SPN と SQL_COPT_SS_FAILOVER_PARTNER_SPN を認識します。  
   
  接続属性の値が複数指定されている場合は、DSN の値や接続文字列の値より、プログラムによって設定された値が優先されます。 DSN の値は接続文字列の値より優先されます。  
   
  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。  
   
- Spn の詳細については、「[クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
+ Spn の詳細については、「 [クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
  次の呼び出しは、 **SQLDriverConnect**に必要なデータ量の最小値を示しています。  
@@ -69,7 +70,7 @@ SQLDriverConnect(hdbc, hwnd,
     MAX_CONN_OUT, &cbOutConn, SQL_DRIVER_COMPLETE);  
 ```  
   
- 次の接続文字列は、 *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT 場合に最低限必要なデータを示しています。  
+ 次の接続文字列は、 *Drivercompletion* パラメーター値が SQL_DRIVER_NOPROMPT 場合に最低限必要なデータを示しています。  
   
 ```  
 "DSN=Human Resources;Trusted_Connection=yes"  
@@ -80,10 +81,9 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLDriverConnect 関数](https://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect 関数](../../odbc/reference/syntax/sqldriverconnect-function.md)   
  [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET ANSI_NULLS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
-  
   

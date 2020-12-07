@@ -1,4 +1,5 @@
 ---
+description: ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
 title: ダイアグラムでテーブル間のリレーションシップを作成する
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 665de2b5956d769a31ee24a1dbb5966ea1f1c49a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000032"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037530"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86000032"
   
 6.  グリッドには、ローカル列とそれに対応する外部列が表示されます。 テーブル列の追加や削除またはマッピングの変更が可能です。  
   
-7.  **[OK]** を選択します。  
+7.  **[OK]** を選びます。  
   
     **[外部キーのリレーションシップ]** ダイアログ ボックスが表示されます。 **[選択されたリレーションシップ]** には、作成したリレーションシップが表示されます。  
   
@@ -49,6 +50,5 @@ ms.locfileid: "86000032"
   
 ## <a name="see-also"></a>参照  
 [[テーブルと列] ダイアログ ボックス (Visual Database Tools)](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[制約の使用](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[制約の使用](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
 [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-  

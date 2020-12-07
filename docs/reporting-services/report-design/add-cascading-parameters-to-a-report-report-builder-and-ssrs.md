@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3335665e1e7e7212c6521e6c6c654a1eb5ee04ba
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85035040"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364664"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -120,7 +120,7 @@ ms.locfileid: "85035040"
   
  次に、このデータセットを使用する 2 番目のパラメーターのプロパティを設定して、実行時に使用可能な値を入力します。  
   
-## <a name="to-set-available-values-for-a-report-parameter"></a>レポート パラメーターに使用可能な値を設定するには  
+## <a name="to-set-available-values-for-the-second-parameter"></a>2 番目のパラメーターに使用可能な値を設定するには  
   
 1.  レポート データ ペインでパラメーター フォルダーの最初のパラメーターを右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   

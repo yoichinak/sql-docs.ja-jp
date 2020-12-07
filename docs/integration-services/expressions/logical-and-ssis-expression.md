@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (論理 AND) (SSIS 式)'
 title: '&amp;&amp; (論理 AND) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425404"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (論理 AND) (SSIS 式)
 
@@ -42,17 +43,17 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表は、&& 演算子の結果を示します。  
   
-|結果|式|式|  
+|結果|式|Expression|  
 |------------|----------------|----------------|  
-|TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
-|FALSE|FALSE|FALSE|  
+|TRUE|TRUE|true|  
+|false|true|FALSE|  
+|FALSE|FALSE|false|  
 |NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|NULL|NULL|true|  
+|false|NULL|false|  
   
 ## <a name="expression-examples"></a>式の例  
  この例では、 **StandardCost** 列と **ListPrice** 列を使用しています。 **StandardCost** 列の値が 300 より小さく、かつ **ListPrice** 列の値が 500 より大きい場合、式は TRUE に評価されます。  
@@ -67,7 +68,7 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [& (ビット演算子 AND) (SSIS 式)](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

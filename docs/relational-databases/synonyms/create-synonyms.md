@@ -1,4 +1,5 @@
 ---
+description: シノニムの作成
 title: シノニムの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e814efc2cc1d48698dda9d4b413a494f53ef3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5c4d25ed48715c9317ebe0df37ee4d2779abe10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787237"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125103"
 ---
 # <a name="create-synonyms"></a>シノニムの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85787237"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **次を使用してシノニムを作成するには:**  
   
@@ -48,9 +49,9 @@ ms.locfileid: "85787237"
   
 #### <a name="to-create-a-synonym"></a>シノニムを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
+1.  **オブジェクト エクスプローラー** で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[シノニム]** フォルダーを右クリックし、 **[新しいシノニム...]** をクリックします。  
+2.  **[シノニム]** フォルダーを右クリックし、**[新しいシノニム...]** をクリックします。  
   
 3.  **[シノニムの追加]** ダイアログ ボックスで、次の情報を入力します。  
 

@@ -1,4 +1,5 @@
 ---
+description: RESTORE ステートメント - VERIFYONLY (Transact-SQL)
 title: RESTORE VERIFYONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -23,12 +24,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6d3ceae764bd65d03d56db32fb28f8855cc2ebfe
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d198e47b3faf8cb7efc81a4075d90407f75dfb59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634756"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498024"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE ステートメント - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +46,6 @@ ms.locfileid: "81634756"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 RESTORE VERIFYONLY  
 FROM <backup_device> [ ,...n ]  
 [ WITH    
@@ -112,7 +112,7 @@ FROM <backup_device> [ ,...n ]
 > [!NOTE]  
 >  スナップショットのバックアップでは、バックアップ ファイルで指定された場所にスナップショットが存在することが RESTORE VERIFYONLY によって確認されます。 スナップショット バックアップは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新機能です。 スナップショット バックアップの詳細については、「[Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
  バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
@@ -124,7 +124,7 @@ FROM <backup_device> [ ,...n ]
 ## <a name="examples"></a>例  
  次の例ではディスクからのバックアップを検証します。
   
-```  
+```sql  
 RESTORE VERIFYONLY FROM DISK = 'D:\AdventureWorks.bak';
 GO
 ```  

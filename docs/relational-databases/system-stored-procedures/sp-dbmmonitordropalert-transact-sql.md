@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitordropalert (Transact-sql)
 title: sp_dbmmonitordropalert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 00841f918a5b93b0ae27f907bff263f4c0a0174a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8f78f822e269c86b6958e068b12c5757f9519a91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866381"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548182"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,12 +57,12 @@ sp_dbmmonitordropalert database_name
 |5|保持期間|データベースミラーリング状態テーブルの行を保持する期間を制御するメタデータ。|  
   
 > [!NOTE]  
->  この手順では、 **sp_dbmmonitorchangealert**またはデータベースミラーリングモニターのどちらを使用して指定したかにかかわらず、警告しきい値を削除します。  
+>  この手順では、 **sp_dbmmonitorchangealert** またはデータベースミラーリングモニターのどちらを使用して指定したかにかかわらず、警告しきい値を削除します。  
   
  警告に対応するイベント Id の詳細については、「 [&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -69,7 +70,7 @@ sp_dbmmonitordropalert database_name
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースの保有期間の設定を削除し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
@@ -82,8 +83,8 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;
 EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
   

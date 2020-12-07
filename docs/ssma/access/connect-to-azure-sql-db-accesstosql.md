@@ -1,4 +1,5 @@
 ---
+description: Azure SQL Database への接続 (アクセス先の SQL)
 title: Azure SQL Database への接続 (アクセス先の SQL) |Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
@@ -10,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418568"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Azure SQL Database への接続 (アクセス先の SQL)
 [SQL Azure への接続] ダイアログボックスを使用して、移行する Azure SQL Database 内のデータベースに接続します。  
   
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは**SQL Azure に再接続します。**  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **SQL Azure に接続**] を選択します。 以前に接続している場合、コマンドは **SQL Azure に再接続します。**  
   
 ## <a name="options"></a>オプション  
 **[サーバー名]**  
   
 SQL Azure に接続するためのサーバー名を選択または入力します。  
   
-**データベース**  
+**[データベース]**  
   
-データベース名を選択、入力、または**参照**します。  
+データベース名を選択、入力、または **参照** します。  
   
 > [!IMPORTANT]  
 > SSMA for Access は、SQL Azure の master データベースへの接続をサポートしていません。  

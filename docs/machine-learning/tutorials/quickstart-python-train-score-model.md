@@ -4,32 +4,23 @@ titleSuffix: SQL machine learning
 description: このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルをデータベースのテーブルに保存し、そのモデルを使用し、SQL 機械学習を使用して新しいデータから値を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/28/2020
 ms.topic: quickstart
-author: cawrites
-ms.author: chadam
-ms.reviewer: davidph
+author: dphansen
+ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6913f80cb96942d7063e4c61caf2c2109ee79a48
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772379"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869992"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用して Python で予測モデルを作成してスコア付けする
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使用して新しいデータから値を予測します。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) を使用して新しいデータから値を予測します。
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルをデータベースのテーブルに保存し、そのモデルを使用し、[Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) を使用して新しいデータから値を予測します。
-::: moniker-end
+このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)、[Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)、[SQL Server ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)を使用して新しいデータから値を予測します。
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初の例では、クラシックなアヤメの花のデータセットを使用して、花の特性に基づいてアヤメの種を推測する Naïve Bayes モデルを生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに Python コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
@@ -44,15 +35,10 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 このクイック スタートを実行するには、次の前提条件を用意しておく必要があります。
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- SQL Server Machine Learning Services。 Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
-::: moniker-end
+- 次のいずれかのプラットフォーム上の SQL データベース:
+  - [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)。 インストールするには、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。
+  - SQL Server ビッグ データ クラスター。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)方法に関するページを参照してください。
+  - Azure SQL Managed Instance の Machine Learning Services。 詳細については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 
 - Python スクリプトを含む SQL クエリを実行するためのツールです。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
 
@@ -108,7 +94,7 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 
 この手順では、埋め込みコードを実行するプロシージャを実行し、トレーニング済みのシリアル化されたモデルを出力として作成します。 
 
-データベースで再利用するために格納されているモデルは、バイト ストリームとしてシリアル化され、データベース テーブルの「VARBINARY (MAX)」列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリング ワークロードの [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 関数から呼び出すことができます。
+データベースで再利用するために格納されているモデルは、バイト ストリームとしてシリアル化され、データベース テーブルの「VARBINARY (MAX)」列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリング ワークロードの [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) 関数から呼び出すことができます。
 
 1. プロシージャを実行するには、次のコードを実行します。 ストアド プロシージャを実行するための特定のステートメントは、4 行目の `EXECUTE` です。
 

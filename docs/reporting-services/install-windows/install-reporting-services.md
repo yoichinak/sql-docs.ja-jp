@@ -1,4 +1,5 @@
 ---
+description: SQL Server Reporting Services のインストール
 title: SQL Server Reporting Services のインストール | Microsoft Docs
 ms.date: 05/01/2020
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 74713128e0a7e1c749bcde676d02c63ec05e3632
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693800"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891932"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -67,7 +68,7 @@ Reporting Services をインストールする前に、「[Hardware and software
     > [!NOTE]
     > 既定のパスは、C:\Program Files\Microsoft SQL Server Reporting Services です。
 
-7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
+7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、レポート サーバー構成マネージャーを起動します。
 
 ## <a name="configure-your-report-server"></a>レポート サーバーを構成する
 

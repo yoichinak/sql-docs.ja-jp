@@ -1,4 +1,5 @@
 ---
+description: 生成 (MDX)
 title: Generate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9746d83589464f75bbc951c20dc15d04b7b2037d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429954"
 ---
 # <a name="generate-mdx"></a>生成 (MDX)
 
@@ -44,12 +45,12 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *区切り記号*  
  文字列式として表された有効な区切り記号です。  
   
-## <a name="remarks"></a>Remarks  
- 2番目のセットを指定した場合、 **Generate**関数は、2番目のセット内の組を1つ目のセット内の各組に適用して生成されたセットを返し、和集合によって結果セットを結合します。 **ALL**を指定した場合、関数は結果セット内の重複部分を保持します。  
+## <a name="remarks"></a>解説  
+ 2番目のセットを指定した場合、 **Generate** 関数は、2番目のセット内の組を1つ目のセット内の各組に適用して生成されたセットを返し、和集合によって結果セットを結合します。 **ALL**を指定した場合、関数は結果セット内の重複部分を保持します。  
   
- 文字列式が指定されている場合、 **Generate**関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結することによって生成される文字列を返します。 必要に応じて、文字列を区切り、結果として連結された文字列内の各結果を区切ることができます。  
+ 文字列式が指定されている場合、 **Generate** 関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結することによって生成される文字列を返します。 必要に応じて、文字列を区切り、結果として連結された文字列内の各結果を区切ることができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="set"></a>オン  
  次の例では、set [Date] に4つのメンバーがあるため、Internet Sales amount メジャーを含むセットが返されます。[Calendar Year]。[Calendar Year]。属する  
@@ -89,7 +90,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 年ごとに異なる上位10件が表示され、この結果を取得する唯一の方法は [**生成**の使用] であることに注意してください。 次の例に示すように、Calendar year と上位10製品のセットをクロス結合するだけで、すべての時間について上位10製品が表示されます。  
+ 年ごとに異なる上位10件が表示され、この結果を取得する唯一の方法は [ **生成** の使用] であることに注意してください。 次の例に示すように、Calendar year と上位10製品のセットをクロス結合するだけで、すべての時間について上位10製品が表示されます。  
   
 ```  
 SELECT   
@@ -104,8 +105,8 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
- 次の例は、 **Generate**を使用して文字列を返す方法を示しています。  
+### <a name="string"></a>文字列型  
+ 次の例は、 **Generate** を使用して文字列を返す方法を示しています。  
   
 ```  
 WITH   
@@ -124,7 +125,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  この形式の**Generate**関数は、計算をデバッグするときに便利です。これにより、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 これは、 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md)関数が返すセットの厳密な MDX 表現よりも読みやすくなる可能性があります。  
+>  この形式の **Generate** 関数は、計算をデバッグするときに便利です。これにより、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 これは、 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md) 関数が返すセットの厳密な MDX 表現よりも読みやすくなる可能性があります。  
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -1,4 +1,5 @@
 ---
+description: プロジェクトへの新規項目の追加
 title: プロジェクトへの新規項目の追加
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0440f720923ebfa6378766372e4bcdb48a2a166d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7b3b36bfa75c39a4acc0c41c8dae5199b7973391
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003305"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036055"
 ---
 # <a name="add-new-items-to-a-project"></a>プロジェクトへの新規項目の追加
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,6 @@ ms.locfileid: "86003305"
   
 ## <a name="see-also"></a>参照  
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
-[ファイル拡張子をコード エディターに関連付ける](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[ファイル拡張子をコード エディターに関連付ける](../scripting/associate-file-extensions-to-a-code-editor.md)  
 [既存の項目をプロジェクトに追加する](../../ssms/solution/add-existing-items-to-a-project.md)  
 [アイテムやプロジェクトのクリアまたは削除](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
-  

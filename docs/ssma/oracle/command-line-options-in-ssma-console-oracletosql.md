@@ -1,4 +1,5 @@
 ---
+description: SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 title: SSMA コンソールのコマンドラインオプション (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1a950ff2e2870519ae7063bfc0df615fd971187b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468841"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -125,7 +126,7 @@ Xmloutput には、可視化の2つのオプションを使用できます。
 ### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
 このオプションは、サーバー接続の暗号化されたパスワードを示します。 このオプションは、他のすべてのオプションとは異なります。このオプションでは、どのスクリプトも実行されず、移行に関連するアクティビティでも役に立ちませんが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
-コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-oracletosql.md)」セクションを参照してください。  
+コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「 [パスワードの管理](managing-passwords-oracletosql.md) 」セクションを参照してください。  
   
 では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
@@ -170,9 +171,9 @@ SSMA コンソールのコマンドラインオプションの表形式の表示
 ### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)」を参照してください。  
+-   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの [管理 &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)」を参照してください。  
   
--   レポートを生成する方法については、「[レポートの生成 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)」を参照してください。  
+-   レポートを生成する方法については、「 [レポートの生成 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)」を参照してください。  
   
--   コンソールでの問題のトラブルシューティングについては、「 [&#40;OracleToSQL&#41;のトラブルシューティング](../../ssma/oracle/troubleshooting-oracletosql.md)」を参照してください。  
+-   コンソールでの問題のトラブルシューティングについては、「 [&#40;OracleToSQL&#41;のトラブルシューティング ](../../ssma/oracle/troubleshooting-oracletosql.md)」を参照してください。  
   

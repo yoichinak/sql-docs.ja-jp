@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922205"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899521"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6、2020 年 7 月
+
+| [新しい項目] | 詳細 |
+| :------- | :------ |
+| 新しいディストリビューションのサポート。 | Ubuntu 20.04 |
+| フェデレーション認証のサポート | [Azure Active Directory の使用](../using-azure-active-directory.md)に関するページを参照してください。 |
+| 準備されたステートメントのメタデータ キャッシュ | [Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページを参照してください。 |
+| 自動 BEGIN TRANSACTION が ROLLBACK または COMMIT の後に行われるかどうかを制御する SQL_COPT_SS_AUTOBEGINTXN 接続属性 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
+| バグが修正されました。 | [バグの修正](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2、2020 年 4 月 (Alpine Linux のみ)
 
@@ -91,7 +103,7 @@ GeneMi.  2019/04/03.
 | [新しい項目] | 詳細 |
 | :------- | :------ |
 | 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
+| Azure Active Directory マネージド ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
 | Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 詳細については、「[Always Encrypted を使用するときの ODBC ドライバーの制限事項](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」を参照してください。 |
 | XA 分散トランザクション。 | 「[XA トランザクションの使用](../use-xa-with-dtc.md)」を参照してください。<br/><br/>XA は _eXtended Architecture_ の頭字語です。これは、複数のサーバー側データ ストレージ システムにアクセスするグローバル トランザクションの実行の標準です。 |
 | &nbsp; | &nbsp; |

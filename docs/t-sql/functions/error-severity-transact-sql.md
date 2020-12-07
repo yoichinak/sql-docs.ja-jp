@@ -1,4 +1,5 @@
 ---
+description: ERROR_SEVERITY (Transact-SQL)
 title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d48e01cf44a0c8e3d03bcd665ca35dc876147f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d14ac2a7f8feb6b9d7b7fd7ceafad4d7454b4c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365678"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ERROR_SEVERITY ( )
 
 `ERROR_SEVERITY` は、CATCH ブロックの範囲外で呼び出された場合に NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `ERROR_SEVERITY` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
 `ERROR_SEVERITY` は、実行回数に関係なく、あるいは `CATCH` ブロックのスコープ内の実行場所に関係なく、エラーのエラー重大度を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  

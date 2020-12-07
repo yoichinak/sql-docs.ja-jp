@@ -1,4 +1,5 @@
 ---
+description: .dqs ファイルからのナレッジ ベースのインポート
 title: .dqs ファイルからのナレッジ ベースのインポート
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb9487a3f633aa60dcfd66557d3fb9d33f62ad54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6be16bf484f3b5f6f55afaaacbeda8d2bb6d341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491571"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs ファイルからのナレッジ ベースのインポート
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895428"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ナレッジ ベースを .dqs データ ファイルからインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>Dqs ファイルからナレッジベースをインポートする  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a> Dqs ファイルからナレッジベースをインポートする  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   

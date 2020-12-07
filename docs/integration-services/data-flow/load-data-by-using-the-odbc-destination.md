@@ -1,4 +1,5 @@
 ---
+description: ODBC 入力先を使用したデータ読み込み
 title: ODBC 入力先を使用したデータ読み込み | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ea049a657b5d0392841f8bd6e44954d2774c13c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904847"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193232"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
 
@@ -40,7 +41,7 @@ ms.locfileid: "86904847"
   
     -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
   
-    -   **[テーブル名 - 行ごと]** : 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
+    -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
 7.  **[テーブル名またはビュー名]** フィールドで、使用できるテーブルまたはビューを一覧のデータベースから選択するか、正規表現を入力してテーブルを指定します。この一覧には、最初の 1,000 テーブルのみが表示されます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
@@ -55,8 +56,7 @@ ms.locfileid: "86904847"
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
-  
+ [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](./odbc-destination.md)   
+ [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](./odbc-destination.md)   
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](./odbc-source.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: DEGREES (Transact-SQL)
 title: DEGREES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b14fefc451ec334815e8921294616ad67a3a8913
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7930e915884ee84884f1d1069622e7cc75d06c5f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113554"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124779"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ DEGREES ( numeric_expression )
 
 ## <a name="arguments"></a>引数
  *numeric_expression*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
+**bit** データ型を除く、真数または概数データ型カテゴリの [式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
 データ型が *numeric_expression* のデータ型に一致する値を返します。  
@@ -51,7 +52,7 @@ DEGREES ( numeric_expression )
 ## <a name="examples"></a>例  
 この例では、PI/2 ラジアンの角度を度の単位で返します。  
   
-```  
+```sql  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
 CONVERT(VARCHAR, DEGREES((PI()/2)));  
 GO  

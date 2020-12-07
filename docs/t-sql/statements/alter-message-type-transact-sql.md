@@ -1,4 +1,5 @@
 ---
+description: ALTER MESSAGE TYPE (Transact-SQL)
 title: ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e0e9e6a6d8e0f4b976775271532fc61b03b199fa
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 21c3ca718321ec94ae1becb5b46aaaa15c653d25
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381176"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688253"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "86381176"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
     {  NONE   
@@ -68,7 +68,7 @@ ALTER MESSAGE TYPE message_type_name
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  メッセージの本文には、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があります。 *schema_collection_name* は、既存の XML スキーマ コレクションの名前であることが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  メッセージ型の検証を変更しても、既にキューに配布されているメッセージには影響しません。  
   
  メッセージ型の AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
@@ -81,13 +81,13 @@ ALTER MESSAGE TYPE message_type_name
 ## <a name="examples"></a>例  
  次の例では、メッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を変更し、メッセージ本文に整形式の XML ドキュメントが含まれることを要求します。  
   
-```  
+```sql  
 ALTER MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   

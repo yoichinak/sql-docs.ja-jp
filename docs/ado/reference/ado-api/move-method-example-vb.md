@@ -1,8 +1,9 @@
 ---
+description: Move メソッドの例 (VB)
 title: Move メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37befcf2e00ad4b3555e114a2c7584ae31e6ca64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23640ae4d6613c3502b8021af5efebe16c9d6161
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762493"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990583"
 ---
 # <a name="move-method-example-vb"></a>Move メソッドの例 (VB)
-この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
+この例では、 [Move](./move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
 ```  
 'BeginMoveVB  
@@ -127,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move メソッド (ADO)](./move-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

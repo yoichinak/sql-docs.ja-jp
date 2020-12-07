@@ -1,4 +1,5 @@
 ---
+description: ServerNetworkProtocolIPAddress クラス
 title: ServerNetworkProtocolIPAddress クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0cc6f508b355ffae370ea83e45449e0217f70dda
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 99c1849396cda0390ec31ede6b22340a0e2343ab
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880842"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547028"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85880842"
   
 -   IP アドレスの有効化および無効化  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

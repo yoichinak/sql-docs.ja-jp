@@ -1,8 +1,9 @@
 ---
+description: GetString メソッドの例 (VC++)
 title: GetString メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1b01ef4a6cbb0b8cdc3d00d86302eababfac34a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a17c15f7ab3ec1764c9902a87ea4e7229af1fa2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758728"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990853"
 ---
 # <a name="getstring-method-example-vc"></a>GetString メソッドの例 (VC++)
-この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドを示します。  
+この例では、 [GetString](./getstring-method-ado.md) メソッドを示します。  
   
- データアクセスの問題をデバッグしているときに、小さな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
+ データアクセスの問題をデバッグしているときに、小さな [レコードセット](./recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
   
 ## <a name="example"></a>例  
   
@@ -175,7 +176,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
@@ -184,5 +185,5 @@ Sylvia   Panteley   1956 Arlington Pl.   Rockville
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString メソッド (ADO)](./getstring-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

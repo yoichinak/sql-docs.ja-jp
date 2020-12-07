@@ -1,4 +1,5 @@
 ---
+description: '[XML インデックス] ダイアログ ボックス (Visual Database Tools)'
 title: '[XML インデックス] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b6753441008d5c88681a0931be512e70a3e54458
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7b42b572c782ffa13436de6b8a687e1a594e03c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459986"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ XML インデックスを新規作成します。
 **[選択された XML インデックス]** ボックスで選択されている XML インデックスを削除します。 プライマリ XML インデックスを削除すると、セカンダリ インデックスもすべて削除されることを示すメッセージが表示されます。このとき、削除を続行するか取り消すかを選択できます。  
   
 **[全般] カテゴリ**  
-展開して **[列]** 、 **[Is Primary]** 、および **[型]** のプロパティ フィールドを表示します。  
+展開して **[列]**、 **[Is Primary]**、および **[型]** のプロパティ フィールドを表示します。  
   
 **[列]**  
 このインデックスの並べ替えが昇順で行われることを示します。  
@@ -54,7 +55,7 @@ XML インデックスを新規作成します。
 **[IDENTITY] カテゴリ**  
 展開して、 **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
-**Name**  
+**名前**  
 XML インデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
 **説明**  

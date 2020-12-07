@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: f98991f50c259950ce9b3743d1aaff9a69bcf427
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011860"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934977"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ データ領域には、データセットの単一の値が表示されます。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 1 つのゲージ パネル内に、フィルター選択、グループ化、並べ替えなどの共通機能を使用する複数のゲージを作成できます。  
@@ -283,16 +283,13 @@ ms.locfileid: "84011860"
   
 -   [ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)](./set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> トピックの内容  
  次の各トピックでは、ゲージの使用に関する追加情報について説明します。  
   
-|||  
-|-|-|  
 |期間|定義|  
+|-|-|  
 |[ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|ゲージのスケールの書式設定に関する一般情報と、放射状および線形ゲージのスケールの書式設定オプションに関する詳細情報について説明します。|  
 |[ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|ゲージのポインターの書式設定に関する一般情報と、放射状および線形ゲージで使用可能なポインター スタイルの書式設定オプションに関する詳細情報について説明します。|  
 |[ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|ゲージ上の値の重要なサブセクションを示したり、ポインター値が特定の値範囲に入る時期を視覚的に示したりするゲージ上の範囲の書式設定に関する情報について説明します。|  
@@ -303,5 +300,4 @@ ms.locfileid: "84011860"
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
   

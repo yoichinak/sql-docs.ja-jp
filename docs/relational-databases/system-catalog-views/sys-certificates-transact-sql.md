@@ -1,4 +1,5 @@
 ---
+description: sys.certificates (Transact-SQL)
 title: sys. 証明書 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30c3ca8a7bb1c80aea923b228bee34024482f4a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95e4d3b3b1b06810fc1e60564a4ad7c84e85189a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85979260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486540"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +45,7 @@ ms.locfileid: "85979260"
 |**cert_serial_number**|**nvarchar (64)**|証明書のシリアル番号。|  
 |**sid**|**varbinary (85)**|この証明書のログイン SID。|  
 |**string_sid**|**nvarchar(128)**|この証明書のログイン SID の文字列表現|  
-|**件名**|**nvarchar (4000)**|証明書のサブジェクト。|  
+|**subject**|**nvarchar (4000)**|証明書のサブジェクト。|  
 |**expiry_date**|**datetime**|証明書の有効期限が切れた場合。|  
 |**start_date**|**datetime**|証明書が有効になったとき。|  
 |**拇印**|**varbinary(32)**|証明書の SHA-1 ハッシュ。 SHA-1 ハッシュはグローバルに一意です。|  
@@ -54,8 +56,8 @@ ms.locfileid: "85979260"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   

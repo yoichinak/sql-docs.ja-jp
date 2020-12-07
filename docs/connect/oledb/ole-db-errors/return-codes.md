@@ -1,6 +1,6 @@
 ---
 title: リターンコード (OLE DB ドライバー)
-description: リターン コード
+description: OLE DB Driver for SQL Server のメンバー関数のリターン コードと、成功以外の結果に関する詳細情報を取得する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - S_OK
 - FAILED macro
 - errors [OLE DB], return codes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2c87c3ebe7580fdde67417049c1b889dcd2bee42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244797"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727186"
 ---
 # <a name="return-codes"></a>リターン コード
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "87244797"
 
   最も基本的なレベルでは、メンバー関数は成功するか失敗するかのどちらかです。 それよりもやや詳細なレベルでは、関数は成功しても、その成功はアプリケーション開発者が意図した状態ではない場合があります。  
   
- OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)」を参照してください。  
+ OLE DB のリターン コードの詳細については、「[リターン コード (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85))」を参照してください。  
   
  OLE DB Driver for SQL Server のメンバー関数が S_OK を返したときは、その関数は成功しています。  
   
@@ -50,5 +50,4 @@ ms.locfileid: "87244797"
   
 ## <a name="see-also"></a>参照  
  [エラー](../../oledb/ole-db-errors/errors.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: カスタム タスクでのイベントの発生と定義
 title: カスタム タスクでのイベントの発生と定義 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a0cdd94e6ad739b24eccc5ce466a4e916850674
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69f2f6c7f27f4a199ff96661595bb03b3eaafb62
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477378"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
 

@@ -1,4 +1,5 @@
 ---
+description: MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 title: MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a0cc86dfd923b3a17981b970dfb9aedbb888a0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e8af657b56bdd2cba6babe2869b21647bf807d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495608"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -37,7 +38,7 @@ ms.locfileid: "86914223"
 
 |必要な情報|.NET Framework Data Provider for MySQL プロパティ|
 |---|---|
-|サーバー名|**[サーバー]**|
+|サーバー名|**サーバー**|
 |データベース名|**[データベース]**|
 |認証 (ログイン) 情報|**ユーザー ID**と**パスワード**|
 |||
@@ -68,7 +69,7 @@ MySQL ODBC ドライバーを使用して MySQL に接続するには、次の�
 **[ドライバー]**  
 ODBC ドライバーの名前。
 
-**[サーバー]**  
+**サーバー**  
 MySQL サーバーの名前。 
 
 **[データベース]**  

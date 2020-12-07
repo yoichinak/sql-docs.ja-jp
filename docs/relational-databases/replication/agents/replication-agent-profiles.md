@@ -1,4 +1,5 @@
 ---
+description: レプリケーション エージェント プロファイル
 title: レプリケーション エージェント プロファイル | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 95166948ff2d447eaac439442230af91d75c1bf3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 49fc84b9ac85d17d85f63372c8bdd57d0619413d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88427984"
 ---
 # <a name="replication-agent-profiles"></a>レプリケーション エージェント プロファイル
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86922853"
 ## <a name="snapshot-agent-profiles"></a>スナップショット エージェント プロファイル  
  次の表は、スナップショット エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、「 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)」を参照してください。  
   
-||既定値 (default)|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +57,7 @@ ms.locfileid: "86922853"
 ## <a name="log-reader-agent-profiles"></a>ログ リーダー エージェント プロファイル  
  次の表は、ログ リーダー エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)」を参照してください。  
   
-||既定値 (default)|詳細履歴|  
+||default|詳細履歴|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +69,7 @@ ms.locfileid: "86922853"
 ## <a name="distribution-agent-profiles"></a>ディストリビューション エージェント プロファイル  
  次の表は、ディストリビューション エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)」を参照してください。  
   
-||既定値 (default)|詳細履歴|Windows 同期マネージャー|データ一貫性エラー時続行|OLE DB ストリーム用ディストリビューション プロファイル|  
+||default|詳細履歴|Windows 同期マネージャー|データ一貫性エラー時続行|OLE DB ストリーム用ディストリビューション プロファイル|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -89,7 +90,7 @@ ms.locfileid: "86922853"
 ## <a name="merge-agent-profiles"></a>マージ エージェント プロファイル  
  次の表は、マージ エージェントのプロファイルに定義されているパラメーターを示しています。 表の各列は名前付きプロファイルを表しています。 これらのパラメーターの詳細については、「 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
   
-||既定値 (default)|詳細履歴|Windows 同期マネージャー|行数検証|行数とチェックサム検証|低速リンク|高ボリューム サーバー間|  
+||default|詳細履歴|Windows 同期マネージャー|行数検証|行数とチェックサム検証|低速リンク|高ボリューム サーバー間|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +121,7 @@ ms.locfileid: "86922853"
 ## <a name="queue-reader-agent-profiles"></a>キュー リーダー エージェント プロファイル  
  次の表は、キュー リーダー エージェントの既定のプロファイルに定義されているパラメーターを示しています。 これらのパラメーターの詳細については、「 [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)」を参照してください。  
   
-||既定値 (default)|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  

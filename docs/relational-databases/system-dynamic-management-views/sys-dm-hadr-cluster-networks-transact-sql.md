@@ -1,4 +1,5 @@
 ---
+description: dm_hadr_cluster_networks (Transact-sql)
 title: dm_hadr_cluster_networks (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_networks dynamic management view
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dfb1a973e9c86fa67b4e3495f77dff42273d8bc5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 832ade6b7e10eaa2a8bbcddfbdcc685ff7664f96
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783919"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546554"
 ---
 # <a name="sysdm_hadr_cluster_networks-transact-sql"></a>dm_hadr_cluster_networks (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +48,14 @@ ms.locfileid: "85783919"
 |**is_public**|**bit**|ネットワークが WSFC クラスターでプライベートかパブリックかを示します。次のいずれかになります。<br /><br /> 0 = プライベート<br /><br /> 1 = パブリック|  
 |**is_ipv4**|**bit**|サブネットの種類。次のいずれかになります。<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [フェールオーバークラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [フェールオーバー クラスタリングと Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [dm_os_cluster_nodes &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: SSMA コンソールのコマンド ライン オプション (MySQLToSQL)
 title: SSMA コンソールのコマンドラインオプション (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 51dcd0878e489148471de60d7fa44d76324b40ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372718"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA コンソールのコマンド ライン オプション (MySQLToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -129,7 +130,7 @@ Xmloutput には、可視化の2つのオプションを使用できます。
 ### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
 このオプションは、サーバー接続の暗号化されたパスワードを示します。 このオプションは、他のすべてのオプションとは異なります。このオプションでは、どのスクリプトも実行されず、移行に関連するアクティビティでも役に立ちませんが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
-コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-mysqltosql.md)」セクションを参照してください。  
+コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「 [パスワードの管理](managing-passwords-mysqltosql.md) 」セクションを参照してください。  
   
 では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
@@ -174,9 +175,9 @@ SSMA コンソールのコマンドラインオプションの表形式の表示
 ### <a name="next-step"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)」を参照してください。  
+-   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの [管理 &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)」を参照してください。  
   
--   レポートを生成する方法については、「[レポートの生成 &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)」を参照してください。  
+-   レポートを生成する方法については、「 [レポートの生成 &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)」を参照してください。  
   
--   コンソールでの問題のトラブルシューティングについては、「 [&#40;MySQLToSQL&#41;のトラブルシューティング](../../ssma/mysql/troubleshooting-mysqltosql.md)」を参照してください。  
+-   コンソールでの問題のトラブルシューティングについては、「 [&#40;MySQLToSQL&#41;のトラブルシューティング ](../../ssma/mysql/troubleshooting-mysqltosql.md)」を参照してください。  
   

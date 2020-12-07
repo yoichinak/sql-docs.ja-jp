@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (以下) (Transact-SQL)'
 title: '&lt;= (以下) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b16b7fa8a30679192293a8e549e1e55dd5a9b5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e1f67d02775cd1531d2a78e680d3a357514c70d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918398"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193358"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (以下) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86918398"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression <= expression  
 ```  
   
@@ -59,14 +60,13 @@ expression <= expression
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで <= を使用する  
  次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 3 以下の行をすべて返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE DepartmentID <= 3  
 ORDER BY DepartmentID;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

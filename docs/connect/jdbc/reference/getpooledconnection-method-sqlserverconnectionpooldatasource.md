@@ -1,4 +1,5 @@
 ---
+description: getPooledConnection メソッド (SQLServerConnectionPoolDataSource)
 title: getPooledConnection メソッド (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 030ad599-0431-4242-9428-e9ead7b75b1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89bdd9c7d62554df915a84ff51240f5a19ee8605
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 99450dfa4667192a36f1402d62acd7c72d96b2b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904318"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434974"
 ---
 # <a name="getpooledconnection-method-sqlserverconnectionpooldatasource"></a>getPooledConnection メソッド (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80904318"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getPooledConnection ()](../../../connect/jdbc/reference/getpooledconnection-method.md)|プールされた接続として使用できる物理データベース接続の確立を試みます。|  
 |[getPooledConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getpooledconnection-method-java-lang-string-java-lang-string.md)|渡されたユーザー名とパスワードに基づいて、プールされた接続として使用できる物理データベース接続の確立を試みます。|  

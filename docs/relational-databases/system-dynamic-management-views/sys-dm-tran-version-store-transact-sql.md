@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_version_store (Transact-SQL)
 title: dm_tran_version_store (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_version_store dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccd2b0e596fc9787a655aa7ef6f612327f7f41b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd71e1c70ef06d5e669158aea06b7f3dde720951
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676343"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546454"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85676343"
   
  バージョン管理された各レコードは、追跡情報や状態情報と共にバイナリデータとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
- バージョン付きのレコードはバイナリとして格納されるため、異なるデータベースからの異なる照合順序に関する問題はありません。 バージョンストアに存在する行の以前のバージョンをバイナリ表現で検索するには、 **dm_tran_version_store**を使用します。  
+ バージョン付きのレコードはバイナリとして格納されるため、異なるデータベースからの異なる照合順序に関する問題はありません。 バージョンストアに存在する行の以前のバージョンをバイナリ表現で検索するには、 **dm_tran_version_store** を使用します。  
   
   
 ## <a name="syntax"></a>構文  
@@ -63,7 +64,7 @@ sys.dm_tran_version_store
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、4 つの同時実行トランザクションが存在するテスト シナリオを使用します。これらのトランザクションはそれぞれトランザクション シーケンス番号 (XSN) で識別され、ALLOW_SNAPSHOT_ISOLATION オプションと READ_COMMITTED_SNAPSHOT オプションが ON に設定されているデータベース内で実行されます。 実行されるトランザクションは次のとおりです。  
   
 -   XSN-57。SERIALIZABLE 分離での更新操作です。  
@@ -131,8 +132,8 @@ record_length_second_part_in_bytes record_image_second_part
   
  この出力は、XSN-57 で 1 つのテーブルから 3 つの行バージョンが作成され、XSN-58 で他のテーブルから 1 つの行バージョンが作成されたことを示しています。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

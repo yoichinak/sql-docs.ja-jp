@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetservergroup (Transact-SQL)
 title: sp_delete_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetservergroup
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d6f00cf5fcc0cad2c5b6874b7302d00655e7a76
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1aebbb09f70f0a0cc3756c4cec53decc0cdbf94
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862370"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548120"
 ---
 # <a name="sp_delete_targetservergroup-transact-sql"></a>sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`削除する対象サーバーグループの名前を指定します。 *名前*は**sysname**,、既定値はありません。  
+`[ @name = ] 'name'` 削除する対象サーバーグループの名前を指定します。 *名前* は **sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -50,7 +51,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、対象サーバーグループを削除し `Servers Processing Customer Orders` ます。  
   
 ```  
@@ -62,7 +63,7 @@ EXEC sp_delete_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_help_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)  

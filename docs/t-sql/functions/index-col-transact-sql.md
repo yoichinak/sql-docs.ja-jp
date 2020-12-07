@@ -1,4 +1,5 @@
 ---
+description: INDEX_COL (Transact-SQL)
 title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6144ba5cf5848beef7960debaaed6e12014d31b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e84cc199c94775a38268ab486712c5f5982bdb26
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110446"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115456"
 ---
 # <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "87110446"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]  
     table_or_view_name', index_id , key_id )   
 ```  
@@ -56,7 +56,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  テーブルまたはインデックス付きビューのスキーマです。 *table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
   
  *index_id*  
- インデックスの ID です。 *index_ID* は **int**です。  
+ インデックスの ID です。 *index_ID* は **int** です。  
   
  *key_id*  
  インデックス キー列の位置です。 *key_ID* is **int**.  
@@ -74,7 +74,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
 ### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. INDEX_COL を使用してインデックス列名を返す  
  この例では、インデックス `PK_SalesOrderDetail_SalesOrderID_LineNumber` の 2 つのキー列の列名を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

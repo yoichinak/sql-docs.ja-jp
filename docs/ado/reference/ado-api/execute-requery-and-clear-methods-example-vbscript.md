@@ -1,8 +1,9 @@
 ---
+description: Execute、Requery、および Clear メソッドの例 (VBScript)
 title: Execute、Requery、および Clear メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0785e3e91c6d01f446e1d49b34a41beef052c48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a584d2c0c0187425cc5796fa8c7a0070f358b31
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760158"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973414"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute、Requery、および Clear メソッドの例 (VBScript)
-この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  
   
  Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program Raplatform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソースた advworks-srv01 (SDK サンプルと共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
- [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **ExecuteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
+ [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **ExecuteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
 ```  
 <!-- BeginExecuteVBS -->  

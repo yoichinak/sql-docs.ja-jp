@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する
 title: Transact-SQL (VS Code) を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921869"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130012"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS プロジェクトを配置する
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921869"
 
 このクイックスタートでは、Visual Studio Code を使用して、SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS プロジェクトを SSIS カタログに配置する方法を示します。
 
-Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
+Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure Synapse Analytics に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -48,7 +49,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
  
-3. 開いた **[言語モードの選択]** ドロップダウン メニューで、 **[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
+3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
 
 ## <a name="supported-authentication-method"></a>サポートされている認証方法
 
@@ -62,7 +63,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 
 2. 「**sqlcon**」と入力し、**Enter** キーを押します。
 
-3. **Enter** キーを押して、 **[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
+3. **Enter** キーを押して、**[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
 
 4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 

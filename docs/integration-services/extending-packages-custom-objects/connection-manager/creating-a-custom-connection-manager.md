@@ -1,4 +1,5 @@
 ---
+description: カスタム接続マネージャーの作成
 title: カスタム接続マネージャーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c137a62711ad824772b1845776cd383b3ee235ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55eafedfd05ce1dde2468bfda62b515057ea4bb6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919465"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123167"
 ---
 # <a name="creating-a-custom-connection-manager"></a>カスタム接続マネージャーの作成
 

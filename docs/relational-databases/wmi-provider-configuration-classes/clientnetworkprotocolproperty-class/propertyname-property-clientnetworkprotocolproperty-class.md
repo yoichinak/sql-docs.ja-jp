@@ -1,4 +1,5 @@
 ---
+description: PropertyName プロパティ (ClientNetworkProtocolProperty クラス)
 title: PropertyName プロパティ (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyName property
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1fa2ab9bf19df36fdb191eb0fe5f51c082919be7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8221f6342b0cf79df020152e317321b313efe96c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888978"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540788"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName プロパティ (ClientNetworkProtocolProperty クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.PropertyName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  現在のプロパティの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

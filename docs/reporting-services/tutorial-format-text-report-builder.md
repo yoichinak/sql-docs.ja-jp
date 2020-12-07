@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 833efefc3cf79e6a4939a46e15fd80acb493f541
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248121"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243803"
 ---
 # <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87248121"
 
 空のレポートと、データ ソースおよびデータセットを設定した後、調べたい書式を選んで進めることができます。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
-![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
+![書式が設定されたレポート ビルダー レポートのスクリーンショット。](../reporting-services/media/report-build-format-report.png) 
   
 途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
     
@@ -51,7 +51,7 @@ ms.locfileid: "87248121"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
+2.  **[名前]** ボックスに、「 **TextDataSource** 」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "87248121"
   
 1.  レポート データ ペインで、 **[新規作成]**  >  **[データセット]** をクリックします。  
   
-2.  データ ソースが **TextDataSource**であることを確認します。  
+2.  データ ソースが **TextDataSource** であることを確認します。  
   
-3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
+3.  **[名前]** ボックスに、「 **TextDataset** 」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "87248121"
   
 2.  **[実行]** をクリックします。  
   
-    **Fernando Ross**というレコード 1 つのみが表示されます。このレコードは、アルファベット順でクエリの最初のレコードです。 フィールドの表示が繰り返されず、フィールド内の他のレコードが表示されません。  
+    **Fernando Ross** というレコード 1 つのみが表示されます。このレコードは、アルファベット順でクエリの最初のレコードです。 フィールドの表示が繰り返されず、フィールド内の他のレコードが表示されません。  
   
 3.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
@@ -182,9 +182,9 @@ ms.locfileid: "87248121"
   
 2.  新しいテーブル/マトリックス ウィザードの **[データセットの選択]** ページで、 **[このレポートの既存のデータセットまたは共有データセットを選択する]** > **[TextDataset (このレポートで)]** > **[次へ]** をクリックします。  
   
-3.  **[フィールドの配置]** ページで、 **Territory**、 **LinkText**、および **Product** フィールドを **[行グループ]** にドラッグし、 **Sales** フィールドを **[値]** にドラッグしてから、 **[次へ]** をクリックします。  
+3.  **[フィールドの配置]** ページで、 **Territory** 、 **LinkText** 、および **Product** フィールドを **[行グループ]** にドラッグし、 **Sales** フィールドを **[値]** にドラッグしてから、 **[次へ]** をクリックします。  
 
-    ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
+    ![レポート ビルダーでテキスト フィールドを配置する方法を示すスクリーンショット。](../reporting-services/media/report-builder-text-arrange-fields.png)
   
 4.  **[レイアウトの選択]** ページで、 **[グループの展開/折りたたみ]** チェック ボックスをオフにしてテーブル全体が見えるようにしてから、 **[次へ]** をクリックします。 
   
@@ -194,21 +194,21 @@ ms.locfileid: "87248121"
   
     テーブルは問題ないように見えますが、合計行が 2 か所に含まれています。 **LinkText** フィールドには合計行は必要ありません。  
     
-    ![report-builder-format-2-totals](../reporting-services/media/report-builder-format-2-totals.png)
+    ![レポート ビルダー レポートで 2 つの合計を示すスクリーンショット。](../reporting-services/media/report-builder-format-2-totals.png)
   
 8.  **[デザイン]** をクリックしてデザイン ビューに戻ります。  
   
-9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル (**[Product]** 列の空のセルと **[Sales]** 列の [`[Sum(Sales)]`] セル) を選択します。  
+9. **[LinkText]** 列の **[合計]** セルを選択し、Shift キーを押しながらこのセルの右にある 2 つのセル ( **[Product]** 列の空のセルと **[Sales]** 列の [`[Sum(Sales)]`] セル) を選択します。  
   
 11. これらの 3 つのセルが選択された状態で、3 つのうちのいずれか 1 つのセルを右クリックして、 **[行の削除]** をクリックします。  
 
-    ![report-builder-format-delete-rows](../reporting-services/media/report-builder-format-delete-rows.png)
+    ![レポート ビルダー レポートから列を削除する方法を示すスクリーンショット。](../reporting-services/media/report-builder-format-delete-rows.png)
   
 12. **[実行]** をクリックします。  
 
     1 つの [合計] のみになります。
     
-    ![report-builder-format-one-total](../reporting-services/media/report-builder-format-one-total.png)
+    ![レポート ビルダー レポートで 1 つの合計を示すスクリーンショット。](../reporting-services/media/report-builder-format-one-total.png)
   
 ## <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>レポートにハイパーリンクを追加する  
 ここでは、前のセクションで作成したテーブルのテキストに、ハイパーリンクを追加します。  
@@ -231,7 +231,7 @@ ms.locfileid: "87248121"
   
     テキストがリンクらしく見えるようになりました。  
     
-    ![report-builder-format-hyperlink](../reporting-services/media/report-builder-format-hyperlink.png)
+    ![レポート ビルダー レポートでハイパーリンクされているテキストを示すスクリーンショット。](../reporting-services/media/report-builder-format-hyperlink.png)
   
 10. リンクをクリックします。 コンピューターがインターネットに接続している場合は、レポート ビルダー ヘルプのトピックが表示されたブラウザーが開きます。  
   
@@ -251,15 +251,15 @@ ms.locfileid: "87248121"
     > [!NOTE]  
     > プロパティ ペインのプロパティがカテゴリごとに整理されている場合、WritingMode は、 **[ローカライズ]** カテゴリ内にあります。 テキストではなくセルを選択してあることを確認します。 WritingMode は、テキストではなくテキスト ボックスのプロパティです。  
 
-    ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
+    ![レポート ビルダー レポートの [Territory] フィールドのスクリーンショット。](../reporting-services/media/report-builder-select-territory-cell.png)
    
-6.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]** をクリックして、テキストをセルの**中央**に配置します。  
+6.  **[ホーム]** タブの **[段落]** セクションで、垂直方向と水平方向で **[中央揃え]** をクリックして、テキストをセルの **中央** に配置します。  
   
 8.  [実行]\( **!** ) をクリックします。  
   
 `[Territory]` セル内のテキストがセルの下から上に向かって縦に表示されます。  
 
-![report-builder-format-rotate-270](../reporting-services/media/report-builder-format-rotate-270.png)
+![270 度回転した [Territory] 値を示すスクリーンショット。](../reporting-services/media/report-builder-format-rotate-270.png)
 
 ## <a name="format-currency"></a><a name="FormatCurrency"></a>通貨の書式設定  
   
@@ -271,7 +271,7 @@ ms.locfileid: "87248121"
   
 4.  (省略可能) 地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。  
 
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![レポート ビルダーの [サンプルの値] オプションのスクリーンショット。](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (省略可) **[ホーム]** タブの **[数値]** グループで、 **[小数点表示桁下げ]** ボタンを 2 回クリックして、表示されるドルの値にセントの部分が含まれないようにします。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "87248121"
   
 レポートには書式が設定されたデータが表示され、読みやすくなりました。  
 
-![report-build-format-report](../reporting-services/media/report-build-format-report.png)
+![書式が再設定されたレポート ビルダー書式のレポートを示すスクリーンショット。](../reporting-services/media/report-build-format-report.png)
     
 ## <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>HTML 形式のテキストの表示  
   
@@ -321,7 +321,7 @@ ms.locfileid: "87248121"
   
 テキスト ボックス内のテキストが、見出し、段落、箇条書きとして表示されます。  
   
-![report-builder-format-html](../reporting-services/media/report-builder-format-html.png)
+![レポート ビルダー レポートで書式が設定されたテキストを示すスクリーンショット。](../reporting-services/media/report-builder-format-html.png)
 
 ## <a name="save-the-report"></a><a name="Save"></a>レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  

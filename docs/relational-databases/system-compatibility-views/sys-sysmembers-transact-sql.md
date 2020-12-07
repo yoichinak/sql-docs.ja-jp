@@ -1,4 +1,5 @@
 ---
+description: sys.sysメンバー (Transact-sql)
 title: sys.sysメンバー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8814ca2cb5b87a3f69c9162bdbb3c00126838ef2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9d528e9479b5a193baccf6ccf26c327f53016fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399328"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysメンバー (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85896721"
 |**memberuid**|**smallint**|ロールメンバーのユーザー ID。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**groupuid**|**smallint**|ロールのユーザー ID。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

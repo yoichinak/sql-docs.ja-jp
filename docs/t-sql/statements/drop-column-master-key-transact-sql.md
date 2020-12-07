@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN MASTER KEY (Transact-SQL)
 title: DROP COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 69d223d694c1a53c36db976c6dbf38b386d18951
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1e2b72e3b398f5b79f1467530b589853f7f67781
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110629"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380139"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   データベースから、列のマスター キーを削除します。 これはメタデータの操作です。  
   
@@ -35,8 +37,7 @@ ms.locfileid: "87110629"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP COLUMN MASTER KEY key_name;  
 ```  
 
@@ -44,7 +45,7 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  列のマスター キーの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈
  列マスター キーできるのは、その列マスター キーを使用して暗号化された列暗号化キー値がない場合に限られます。 列の暗号化キーの値を削除するには、[DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) ステートメントを使います。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -55,12 +56,12 @@ DROP COLUMN MASTER KEY key_name;
 ### <a name="a-dropping-a-column-master-key"></a>A. 列のマスター キーを削除します  
  次の例では、`MyCMK` という名前の列マスター キーを削除します。  
   
-```  
+```sql  
 DROP COLUMN MASTER KEY MyCMK;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   

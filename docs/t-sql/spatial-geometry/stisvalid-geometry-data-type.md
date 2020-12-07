@@ -1,4 +1,5 @@
 ---
+description: STIsValid (geometry データ型)
 title: STIsValid (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6068ed19c1f531104127402fddfa75ab30210932
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 65e86550626b1461cb8b0abc5e7fb354e6b4e3a4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554654"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472427"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Open Geospatial Consortium (OGC) の型に基づいて **geometry** インスタ
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) を呼び出すことによって判別できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、有効な **geometry** インスタンスのみを生成しますが、無効なインスタンスの取得と格納が可能です。 無効なインスタンスと同じ地点のセットを表す有効なインスタンスは、`MakeValid()` メソッドを使用して取得できます。  

@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用してデータを変換する
-description: RevoScaleR チュートリアル 9:SQL Server で R 言語を使用してデータを変換する方法。
+description: 分析のさまざまな段階でデータを変換するための RevoScaleR 関数と、SQL Server で R 言語を使用してデータを変換する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ed1884b1d4dc6f2b1b32a06d348307171edd592
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6260905faa886383ea41d913d1645fa47dc8ce7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757112"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195094"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R を使用してデータを変換する (SQL Server と RevoScaleR のチュートリアル)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 9 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 9 です。
 
 このチュートリアルでは、分析のさまざまな段階におけるデータの変換に関して **RevoScaleR** 関数について説明します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "85757112"
 
 ## <a name="use-rxdatastep-to-transform-variables"></a>rxDataStep を使用して変数を変換する
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 関数は一度に 1 つのチャンクのデータを処理し、1 つのデータ ソースからデータを読み取って別のデータ ソースに書き込みます。 変換する列や読み込む変換などを指定できます。
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 関数は一度に 1 つのチャンクのデータを処理し、1 つのデータ ソースからデータを読み取って別のデータ ソースに書き込みます。 変換する列や読み込む変換などを指定できます。
 
 この例を興味深いものにするため、別の R パッケージの関数を使用してデータを変換します。 **boot** パッケージは "推奨" パッケージの 1 つであり、 **boot** は R のすべてのディストリビューションに含まれますが、起動時に自動的に読み込まれることはありません。 そのため、パッケージは、R 統合用に構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで既に使用できるようになっている必要があります。
 
@@ -76,7 +76,7 @@ ms.locfileid: "85757112"
         overwrite = TRUE)
     ```
 
-    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、[RevoScaleR を使用したデータの変換およびサブセット化の方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)に関するセクションを参照してください。
+    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、[RevoScaleR を使用したデータの変換およびサブセット化の方法](/machine-learning-server/r/how-to-revoscaler-data-transform)に関するセクションを参照してください。
   
 6. **rxGetVarInfo** を呼び出して、新しいデータ セットの変数の概要を表示します。
   

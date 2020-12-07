@@ -1,1 +1,0 @@
-![いいえ](media/no.png)SQL Server Reporting Services (2016)

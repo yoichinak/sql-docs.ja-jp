@@ -1,4 +1,5 @@
 ---
+description: CREATE MESSAGE TYPE (Transact-SQL)
 title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -26,14 +27,14 @@ helpviewer_keywords:
 - binary [SQL Server], message types
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ad277a8538eee95404be124068635bc4d9ea5fa
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393190"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124045"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -79,7 +80,7 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  メッセージの本文に、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があることを指定します。*schema_collection_name* は、既存の XML スキーマ コレクションの名前にする必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では受信メッセージが検証されます。 メッセージに、指定された検証の種類に準拠しないメッセージの本文が含まれている場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって無効なメッセージが破棄され、メッセージを送信したサービスにエラー メッセージが返されます。  
   
  メッセージ交換の両側で、メッセージ型に同じ名前を定義する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換の両側で同じ検証を使用する必要はありませんが、トラブルシューティングで役立つように、通常はメッセージ交換の両側でメッセージ型に同じ検証を指定します。  
@@ -98,7 +99,7 @@ CREATE MESSAGE TYPE message_type_name
 ### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>A. 整形式の XML を含むメッセージ型を作成する  
  次の例では、整形式の XML が含まれる新しいメッセージ型を作成します。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
   [//Adventure-Works.com/Expenses/SubmitExpense]  
   VALIDATION = WELL_FORMED_XML ;     
@@ -107,7 +108,7 @@ CREATE MESSAGE TYPE
 ### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. 型指定された XML を含むメッセージ型を作成する  
  次の例では、XML でエンコードされた経費報告書に対するメッセージ型を作成します。 この例では、シンプルな経費報告書に対するスキーマを保持する XML スキーマ コレクションを作成します。 次に、スキーマに対するメッセージを検証する新しいメッセージ型を作成します。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -146,7 +147,7 @@ N'<?xml version="1.0" encoding="UTF-16" ?>
 ### <a name="c-creating-a-message-type-for-an-empty-message"></a>C. 空のメッセージに対するメッセージ型を作成する  
  次の例では、空のエンコードを使用して新しいメッセージ型を作成します。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]  
     VALIDATION = EMPTY ;  
@@ -155,13 +156,13 @@ CREATE MESSAGE TYPE
 ### <a name="d-creating-a-message-type-containing-binary-data"></a>D. バイナリ データを含むメッセージ型を作成する  
  次の例では、バイナリ データを保持する新しいメッセージ型を作成します。 メッセージには XML 以外のデータが含まれるので、メッセージ型には `NONE` の検証型が指定されます。 この場合、この型のメッセージを受信するアプリケーションで、メッセージにデータが含まれ、このデータが目的の型であることを確認する必要があります。  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/ReceiptImage]  
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB (geometry データ型)
 title: STGeomCollFromWKB (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 746c6f3564af7084b86babe54be88c6f25947260
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88454324"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `STGeomCollFromWKB()` によって返される **geometry** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeomCollection**、**MultiPolygon**、**MultiLineString**、**MultiPoint** のいずれかに設定されます。  
   
  このメソッドは、入力が適切な形式でない場合に、FormatException 例外をスローします。  

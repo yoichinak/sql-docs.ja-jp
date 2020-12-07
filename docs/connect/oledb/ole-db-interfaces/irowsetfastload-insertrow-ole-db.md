@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad::InsertRow (OLE DB ドライバー) | Microsoft Docs
-description: IRowsetFastLoad::InsertRow (OLE DB)
+description: OLE DB Driver for SQL Server で IRowsetFastLoad::InsertRow メソッドを使用して一括コピー行セットに行を追加する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - InsertRow method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f56a44eb1e38ce98399ae546a20fb72e67846596
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5a631a9385b323b3b8b8ac0d276ff9eb2d560ef3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244470"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726956"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ HRESULT InsertRow(
  一括コピーの行データを定義するアクセサーのハンドルを指定します。 参照されるアクセサーは行アクセサーで、データ値を保持するコンシューマー所有のメモリをバインドします。  
   
  *pData*[in]  
- データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](https://go.microsoft.com/fwlink/?LinkId=65955)」を参照してください。  
+ データ値を保持するコンシューマー所有のメモリへのポインターを指定します。 詳細については、「[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -76,5 +76,4 @@ HRESULT InsertRow(
   
 ## <a name="see-also"></a>参照  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
-  
   

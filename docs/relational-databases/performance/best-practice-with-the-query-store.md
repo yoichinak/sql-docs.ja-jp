@@ -2,10 +2,9 @@
 title: クエリ ストアを使用する際のベスト プラクティス | Microsoft Docs
 description: 最新の SQL Server Management Studio や Query Performance Insight を使用するなど、ワークロードに SQL Server クエリ ストアを使用する際のベスト プラクティスについて説明します。
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1ad9bb98b55e654efd60c028187d6085f698e1f9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970083"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194334"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -29,13 +28,13 @@ ms.locfileid: "86970083"
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a> 最新の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用する
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、クエリ ストアを構成し、ワークロードに関する収集データを使用するための一連のユーザー インターフェイスが用意されています。 最新バージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は[ここ](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)からダウンロードしてください。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、クエリ ストアを構成し、ワークロードに関する収集データを使用するための一連のユーザー インターフェイスが用意されています。 最新バージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は[ここ](../../ssms/download-sql-server-management-studio-ssms.md)からダウンロードしてください。
 
 トラブルシューティング シナリオでクエリ ストアを使用する方法の簡単な説明については、[\@Azure ブログのクエリ ストアに関する記事](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)を参照してください。
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](../../azure-data-studio/what-is.md) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)」を参照してください。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](../../azure-data-studio/what-is.md) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)」を参照してください。
 
 このセクションでは、クエリ ストアおよび依存機能を確実に操作できるように設計された最適な構成の既定値について説明します。 既定の構成は、データ収集が継続的に実施される (OFF/READ_ONLY 状態の時間が最小限になる) ように最適化されています。 使用可能なすべてのクエリ ストア オプションの詳細については、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)」を参照してください。
 
@@ -421,7 +420,7 @@ WHERE is_forced_plan = 1;
 
 データベース名を変更すると、プランの強制適用が失敗し、その後のすべてのクエリ実行で再コンパイルが発生します。
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> ミッション クリティカルなサーバーでトレース フラグを使用する
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> ミッション クリティカルなサーバーでのクエリ ストアの使用
 
 グローバル トレース フラグ 7745 と 7752 を使用すると、クエリ ストアを使ってデータベースの可用性を向上させることができます。 詳しくは、「[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」をご覧ください。
 
@@ -432,7 +431,10 @@ WHERE is_forced_plan = 1;
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 7752 に効力はありません。
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で適宜、ワークロードを洞察するためにクエリ ストアを使用する場合は、[KB 4340759](https://support.microsoft.com/help/4340759) のパフォーマンス スケーラビリティの修正プログラムをできるだけ早くインストールするように計画してください。
+> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 におけるパフォーマンス スケーラビリティの強化 ([KB 4340759](https://support.microsoft.com/help/4340759)) をできるだけ早くインストールするように計画してください。 これらの強化がない場合、データベースでワークロードが重いときにスピンロックの競合が発生し、サーバーのパフォーマンスが低速になる場合があります。 特に、`QUERY_STORE_ASYNC_PERSIST` スピンロックまたは `SPL_QUERY_STORE_STATS_COOKIE_CACHE` スピンロックで激しい競合が発生する場合があります。 この強化を適用すると、クエリ ストアによってスピンロックの競合が発生しなくなります。
+
+> [!IMPORTANT]
+> ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Just-In-Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU15、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22、および [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU8 のパフォーマンスのスケーラビリティ向上をできるだけ早くインストールするように計画してください。 この強化がない場合、データベースでアドホック ワークロードが重いときにクエリ ストアによって大量のメモリが使用され、サーバーのパフォーマンスが低速になる場合があります。 この強化を適用すると、クエリ ストアでは、さまざまなコンポーネントが使用できるメモリ量に内部的な制限が設けられます。また、十分なメモリが [!INCLUDE[ssde_md](../../includes/ssde_md.md)] に返されるまでの間、動作モードを読み取り専用に自動的に変更できます。 クエリ ストアの内部的なメモリ制限は、変更の可能性があるため文書化されないことに注意してください。  
 
 ## <a name="see-also"></a>関連項目
 

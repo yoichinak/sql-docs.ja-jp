@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネントの検証
 title: データ フロー コンポーネントの検証 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c5092990f2600fc79ebea4759d71aee4e2cbefc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e50a3f642bc4ecc9782aea699f49e6403d98c23
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457181"
 ---
 # <a name="validating-a-data-flow-component"></a>データ フロー コンポーネントの検証
 

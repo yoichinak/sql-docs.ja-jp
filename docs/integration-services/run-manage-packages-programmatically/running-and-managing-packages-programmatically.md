@@ -1,4 +1,5 @@
 ---
+description: プログラムによるパッケージの実行と管理
 title: プログラムによるパッケージの実行と管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495527"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>プログラムによるパッケージの実行と管理
 
@@ -32,7 +33,7 @@ ms.locfileid: "86913288"
   
  数行のコードを記述するだけで、クライアント アプリケーションから既存のパッケージを読み込んで実行することができます。  
   
- ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]プログラムによるパッケージの作成[」トピックの説明に従い、1 行ずつプログラムを指定して ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) パッケージを作成できます。  
+ ここでは、プログラムで既存のパッケージを実行する方法、および他のアプリケーションからデータ フローの出力にアクセスする方法について説明します。 詳細なプログラミング オプションとして、「[プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)」トピックの説明に従い、1 行ずつプログラムを指定して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成できます。  
   
  また、保存されているパッケージ、実行中のパッケージ、およびパッケージ ロールを管理するためにプログラムによって実行できる他の管理タスクについても説明します。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "86913288"
  パッケージまたはフォルダーに割り当てられているロールに関する情報を取得または設定する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
  事前に定義されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  

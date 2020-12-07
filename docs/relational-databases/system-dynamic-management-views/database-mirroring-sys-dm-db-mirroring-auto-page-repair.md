@@ -1,4 +1,5 @@
 ---
+description: データベースミラーリング-sys. dm_db_mirroring_auto_page_repair
 title: dm_db_mirroring_auto_page_repair (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - sys.dm_db_mirroring_auto_page_repair dynamic management view
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c6f86d9c0c334ed5ce86b0227e4fd4f0ce408087
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1d82a2f1a152bacf4458a92727d62da5d93f4c31
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894720"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537266"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>データベースミラーリング-sys. dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ ms.locfileid: "85894720"
 |**page_status**|**int**|ページ修復の試行ステータスです。<br /><br /> 2 = パートナーからの要求を待機中。<br /><br /> 3 = 要求がパートナーに送信されました。<br /><br /> 4 = 自動ページ修復のためのキューに登録済み (応答をパートナーから受信)<br /><br /> 5 = ページの自動修復に成功し、ページは使用可能。<br /><br /> 6 = 修復不可能。 これは、ページの修復の試行中にエラーが発生したことを示します。たとえば、ページがパートナーでも破損している、パートナーが切断されている、ネットワークの問題が発生したなどが原因です。 この状態はターミナルではありません。ページで再び破損が発生した場合は、そのページがパートナーから再度要求されます。|  
 |**modification_time**|**datetime**|ページの状態が最後に変更された時刻。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [自動ページ修復 &#40;可用性グループ: データベースミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [ページの自動修復 &#40;可用性グループ:データベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;Transact-sql&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

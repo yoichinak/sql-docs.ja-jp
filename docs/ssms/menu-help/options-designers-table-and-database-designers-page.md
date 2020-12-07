@@ -1,4 +1,5 @@
 ---
+description: '[オプション] ([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)'
 title: '[オプション] ([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d7b15f63893dfc052902f245cbb4a52220fd00c5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 36e62c2d30e4678c8b41223003db35b13e8d15ac
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001605"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679239"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>[オプション] ([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ ms.locfileid: "86001605"
   
 -   **[テーブル名のみ]**  
   
-    テーブルのヘッダーと名前のみ表示します。  
+    テーブル ヘッダーと名前のみ表示します。  
   
 -   **Custom**  
   

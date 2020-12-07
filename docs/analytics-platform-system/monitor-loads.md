@@ -9,15 +9,15 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bc64949b0e636a6c64e7b0ef576613f6e02c5c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400962"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777721"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>並列データウェアハウスへの負荷を監視する
-Analytics Platform System (APS) 管理コンソールまたは並列データウェアハウス (PDW)[システムビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)を使用して、アクティブおよび最近の[dwloader](dwloader.md)の読み込みを監視します。 
+Analytics Platform System (APS) 管理コンソールまたは並列データウェアハウス (PDW)[システムビュー](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)を使用して、アクティブおよび最近の[dwloader](dwloader.md)の読み込みを監視します。 
   
 > [!TIP]  
 > 読み込みを実行するために SQL ステートメントを使用する INSERT ステートメントまたはビジネスインテリジェンスツールを使用することによって、一部の読み込みが開始されます。 
@@ -41,15 +41,15 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 1.  管理コンソールにログオンします。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  上部のメニューで、[**読み込み**] をクリックします。 最近とアクティブなすべての読み込みを含む並べ替え可能なテーブルが表示され、読み込みが完了しているか、まだアクティブになっているかなどの追加情報が表示されます。 列ヘッダーをクリックすると、行が並べ替えられます。  
+2.  上部のメニューで、[ **読み込み**] をクリックします。 最近とアクティブなすべての読み込みを含む並べ替え可能なテーブルが表示され、読み込みが完了しているか、まだアクティブになっているかなどの追加情報が表示されます。 列ヘッダーをクリックすると、行が並べ替えられます。  
   
-3.  特定の負荷に関するその他の詳細を表示するには、左側の列の [読み込み**ID** ] をクリックします。 詳細ビューでは、負荷の各ステップの進行状況を確認できます。  
+3.  特定の負荷に関するその他の詳細を表示するには、左側の列の [読み込み **ID** ] をクリックします。 詳細ビューでは、負荷の各ステップの進行状況を確認できます。  
   
 管理コンソールに表示される負荷に関するメタデータの詳細については、次のシステムビューを参照してください。  
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
+-   [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md?view=aps-pdw-2016-au7)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -58,15 +58,15 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>システムビューを使用して負荷を監視するには  
 SQL Server PDW ビューを使用してアクティブおよび最近の読み込みを監視するには、次の手順に従います。 使用されるシステムビューごとに、ビューによって返される列と可能性のある値の詳細については、そのビューのドキュメントを参照してください。  
   
-1.  このビュー `request_id`の`command`列でローダーコマンドラインを見つけることにより、 [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ビューでの読み込みのを検索します。  
+1.  `request_id`このビューの列でローダーコマンドラインを見つけることにより、 [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ビューでの読み込みのを検索し `command` ます。  
   
-    たとえば、次のコマンドは、コマンドテキストと現在の状態、およびを`request_id`返します。  
+    たとえば、次のコマンドは、コマンドテキストと現在の状態、およびを返し `request_id` ます。  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  `request_id`を使用して、 [pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 、および[sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)ビューを使用して、読み込みに関する追加情報を取得します。 たとえば、次のクエリでは、 `run_id`負荷の開始時刻、終了時刻、および実行時間に関する情報と、処理された行数に関する情報が返されます。  
+2.  を使用し `request_id` て、 [pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 、および [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) ビューを使用して、読み込みに関する追加情報を取得します。 たとえば、次のクエリでは、 `run_id` 負荷の開始時刻、終了時刻、および実行時間に関する情報と、処理された行数に関する情報が返されます。  
   
     ```sql  
     SELECT lbr.run_id,   
@@ -83,4 +83,3 @@ SQL Server PDW ビューを使用してアクティブおよび最近の読み�
 ## See Also  
 [Common metadata query examples](metadata-query-examples.md)
 -->  
-  

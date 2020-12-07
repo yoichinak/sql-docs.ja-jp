@@ -1,5 +1,6 @@
 ---
-title: ODBC ドライバーでの接続プールの認識の開発 |Microsoft Docs
+description: ODBC ドライバー対応接続プールの開発
+title: ODBC ドライバーでの Connection-Pool 認識の開発 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f77fea1d8439ac9ce7374b7dd47db5665686cfbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283432"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192312"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>ドライバー対応接続プールの有効化  
+## <a name="enabling-driver-aware-connection-pooling"></a>Driver-Aware 接続プールの有効化  
  ドライバーは、次の ODBC サービスプロバイダーインターフェイス (SPI) 関数を実装する必要があります。  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -37,7 +38,7 @@ ms.locfileid: "81283432"
   
 -   SQLCleanupConnectionPoolID  
   
- 詳細については、「 [ODBC サービスプロバイダインターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)」を参照してください。  
+ 詳細については、「 [ODBC サービスプロバイダインターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) 」を参照してください。  
   
  ドライバーが対応するプールを有効にするには、次の既存の関数も実装する必要があります。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "81283432"
   
  ドライバーマネージャーは、プール Id によって異なるプールを使用します。 同じプール内のすべての接続は再利用できます。 ドライバーマネージャーは、別のプール ID を持つ接続を再利用することはありません。  
   
- したがって、ドライバーは、定義されたキー属性の値が同じである接続のグループごとに一意のプール ID を割り当てる必要があります。 ドライバーでキー属性の値が異なる2つの接続に同じプール ID が使用されている場合、ドライバーマネージャーはそれらを同じプールに配置します (ドライバーマネージャーは、ドライバー固有のキー属性については何も認識しません)。 これは、別のキー属性セットとの接続が[SQLRateConnection 関数](../../../odbc/reference/syntax/sqlrateconnection-function.md)内で再利用できないことをドライバーマネージャーに報告する必要があることを意味します。 これにより、パフォーマンスが低下する可能性があります。これは推奨されません。  
+ したがって、ドライバーは、定義されたキー属性の値が同じである接続のグループごとに一意のプール ID を割り当てる必要があります。 ドライバーでキー属性の値が異なる2つの接続に同じプール ID が使用されている場合、ドライバーマネージャーはそれらを同じプールに配置します (ドライバーマネージャーは、ドライバー固有のキー属性については何も認識しません)。 これは、別のキー属性セットとの接続が [SQLRateConnection 関数](../../../odbc/reference/syntax/sqlrateconnection-function.md)内で再利用できないことをドライバーマネージャーに報告する必要があることを意味します。 これにより、パフォーマンスが低下する可能性があります。これは推奨されません。  
   
  ドライバーマネージャーは、すべての接続情報が一致する場合でも、別のドライバー環境から割り当てられた接続を再利用しません。 ドライバーマネージャーは、接続に同じプール ID が割り当てられている場合でも、異なる環境に対して異なるプールを使用します。 そのため、プール ID はドライバー環境に対してローカルです。  
   
@@ -67,7 +68,7 @@ ms.locfileid: "81283432"
 ## <a name="the-connection-rating"></a>接続の評価  
  新しい接続の確立と比較すると、プールされた接続の一部の接続情報 (データベースなど) をリセットすることで、パフォーマンスを向上させることができます。 したがって、キー属性のセットにデータベース名を含めることはできません。 そうしないと、データベースごとに個別のプールを作成できます。これは、顧客がさまざまな接続文字列を使用する中間層アプリケーションでは適切ではない可能性があります。  
   
- 属性の不一致がある接続を再利用する場合は常に、新しいアプリケーションの要求に基づいて一致しない属性をリセットし、返された接続がアプリケーションの要求と同一になるようにします ( [SQLSetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59368)の属性 SQL_ATTR_DBC_INFO_TOKEN の説明を参照してください)。 ただし、これらの属性をリセットすると、パフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのため、完全に一致する接続を再利用できます (使用可能な場合)。  
+ 属性の不一致がある接続を再利用する場合は常に、新しいアプリケーションの要求に基づいて一致しない属性をリセットし、返された接続がアプリケーションの要求と同一になるようにします ( [SQLSetConnectAttr 関数](../syntax/sqlsetconnectattr-function.md)の属性 SQL_ATTR_DBC_INFO_TOKEN の説明を参照してください)。 ただし、これらの属性をリセットすると、パフォーマンスが低下する可能性があります。 たとえば、データベースをリセットするには、サーバーへのネットワーク呼び出しが必要です。 そのため、完全に一致する接続を再利用できます (使用可能な場合)。  
   
  ドライバーの評価関数は、新しい接続要求で既存の接続を評価できます。 たとえば、ドライバーの評価機能は次のことを判断できます。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "81283432"
   
 -   リセットに非常に時間がかかる属性で不一致が発生した場合 (ドライバーの開発者は、プール ID の生成に使用されるキー属性のセットにこの属性を追加することを検討できます)。  
   
- 0 ~ 100 の間のスコアは可能です。0は再利用されず、100は完全に一致することを意味します。 [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)は、接続を評価する関数です。  
+ 0 ~ 100 の間のスコアは可能です。0は再利用されず、100は完全に一致することを意味します。 [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) は、接続を評価する関数です。  
   
 ## <a name="new-odbc-handle---sql_handle_dbc_info_token"></a>新しい ODBC ハンドル-SQL_HANDLE_DBC_INFO_TOKEN  
  ドライバー対応接続プールをサポートするには、ドライバーがプール ID を計算するために接続情報を必要とします。 また、ドライバーは、新しい接続要求とプール内の接続を比較するための接続情報も必要です。  プール内の接続を再利用できない場合、ドライバーは新しい接続を確立する必要があるため、接続情報が必要になります。  
@@ -92,7 +93,7 @@ ms.locfileid: "81283432"
   
  このハンドルの親ハンドルの種類は SQL_HANDLE_ENV であり、ドライバーは接続情報の解決中に HENV ハンドルから環境情報を取得できます。  
   
- ドライバーマネージャーは、新しい接続要求を受信するたびに、接続プールの認識をサポートしていることを確認した後、接続情報を格納するための SQL_HANDLE_DBC_INFO_TOKEN 種類のハンドルを割り当てます。 ハンドルの使用が終了したとき (ただし、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)または[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)からの SQL_STILL_EXECUTING 以外のリターンコードを返す前) は、ドライバーマネージャーによってハンドルが解放されます。 したがって、ハンドルは SQLAllocHandle 呼び出しの後に作成され、SQLFreeHandle 呼び出しの後に破棄されます。 ドライバーマネージャーは、関連付けられている HENV を解放する前にハンドルが解放されることを保証します ( [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)または[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)がエラーを返す場合)。  
+ ドライバーマネージャーは、新しい接続要求を受信するたびに、接続プールの認識をサポートしていることを確認した後、接続情報を格納するための SQL_HANDLE_DBC_INFO_TOKEN 種類のハンドルを割り当てます。 ハンドルの使用が終了したとき (ただし、 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) または [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)からの SQL_STILL_EXECUTING 以外のリターンコードを返す前) は、ドライバーマネージャーによってハンドルが解放されます。 したがって、ハンドルは SQLAllocHandle 呼び出しの後に作成され、SQLFreeHandle 呼び出しの後に破棄されます。 ドライバーマネージャーは、関連付けられている HENV を解放する前にハンドルが解放されることを保証します ( [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) または [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) がエラーを返す場合)。  
   
  ドライバーは、新しいハンドル型 SQL_HANDLE_DBC_INFO_TOKEN を受け入れるように次の関数を変更する必要があります。  
   
@@ -106,7 +107,7 @@ ms.locfileid: "81283432"
   
  ドライバーマネージャーは、複数のスレッドが同時に同じ SQL_HANDLE_DBC_INFO_TOKEN ハンドルを使用しないことを保証します。 このため、このハンドルの同期モデルはドライバー内で非常に単純にすることができます。 ドライバーマネージャーは、SQL_HANDLE_DBC_INFO_TOKEN を割り当てて解放する前に、環境ロックを取得しません。  
   
- ドライバーマネージャーの**SQLAllocHandle**と**sqlfreehandle**は、この新しいハンドルの種類を受け入れません。  
+ ドライバーマネージャーの **SQLAllocHandle** と **sqlfreehandle** は、この新しいハンドルの種類を受け入れません。  
   
  SQL_HANDLE_DBC_INFO_TOKEN には、資格情報などの機密情報が含まれている場合があります。 そのため、ドライバーは、 **Sqlfreehandle**でこのハンドルを解放する前に、機密情報を格納するメモリバッファー ( [secureゼロメモリ](https://msdn.microsoft.com/library/windows/desktop/aa366877\(v=vs.85\).aspx)を使用) を安全にクリアする必要があります。 アプリケーションの環境ハンドルを閉じるたびに、関連付けられているすべての接続プールが閉じられます。  
   
@@ -125,7 +126,7 @@ ms.locfileid: "81283432"
   
 -   現在のスレッドのセキュリティ識別子 (SID) は、hCandidate を開くために使用される SID と同じである必要があります。  
   
--   参加と参加解除にかかるコストが高いドライバー ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)の SQL_DTC_TRANSITION_COST の説明を参照) については、 *hrequest*を再利用する場合、追加の参加または参加解除は必要ありません。  
+-   参加と参加解除にかかるコストが高いドライバー ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)の SQL_DTC_TRANSITION_COST の説明を参照) については、 *hrequest* を再利用する場合、追加の参加または参加解除は必要ありません。  
   
  次の表は、さまざまなシナリオのスコア割り当てを示しています。  
   
@@ -141,7 +142,7 @@ ms.locfileid: "81283432"
  ![シーケンス図](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>状態ダイアグラム  
- この状態の図は、このトピックで説明する接続情報トークンオブジェクトを示しています。 図には[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のみが表示されますが、 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)のケースは似ています。 ドライバーマネージャーは、いつでもエラーを処理する必要があるため、ドライバーマネージャーは[Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)を任意の状態に対して呼び出すことができます。  
+ この状態の図は、このトピックで説明する接続情報トークンオブジェクトを示しています。 図には [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) のみが表示されますが、 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) のケースは似ています。 ドライバーマネージャーは、いつでもエラーを処理する必要があるため、ドライバーマネージャーは [Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) を任意の状態に対して呼び出すことができます。  
   
  ![状態の図](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   

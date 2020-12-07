@@ -1,5 +1,6 @@
 ---
-title: JDBC ドライバーのデータ型について | Microsoft Docs
+title: JDBC ドライバーのデータ型について
+description: JDBC データ型と、SQL Server 向け Microsoft JDBC ドライバーで JDBC データ型をデータベース データ型に変換するしくみについて説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920272"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410918"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC ドライバーのデータ型について
 
@@ -40,6 +41,6 @@ JDBC の型システムは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 | [XML データのサポート](../../connect/jdbc/supporting-xml-data.md)                                                                                 | SQLXML インターフェイスについて説明します。 **SQLXML** Java データ型を使用して、リレーショナル データベースから XML データを読み取ったり、リレーショナル データベースに XML データを書き込んだりする方法についても説明します。                                                                                                             |
 | [ラッパーとインターフェイス](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | アプリケーション サーバーがクラスのプロキシを作成することを可能にする、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 固有のメソッドと定数を持つインターフェイスについて説明します。また、`java.sql.Wrapper` インターフェイスのサポートについても説明します。 |
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

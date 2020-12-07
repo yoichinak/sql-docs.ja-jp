@@ -1,4 +1,5 @@
 ---
+description: 列方向のバインド
 title: 列方向のバインド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494682"
 ---
 # <a name="column-wise-binding"></a>列方向のバインド
 列方向のバインドを使用する場合、アプリケーションは、データが返される各列に1つまたは2つ (場合によっては3つの配列) をバインドします。 最初の配列はデータ値を保持し、2番目の配列は長さ/インジケーターバッファーを保持します。 SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の記述子フィールドを異なる値に設定することにより、インジケーターと長さの値を別々のバッファーに格納できます。これを実行すると、3番目の配列がバインドされます。 各配列には、行セット内の行と同じ数の要素が含まれています。  

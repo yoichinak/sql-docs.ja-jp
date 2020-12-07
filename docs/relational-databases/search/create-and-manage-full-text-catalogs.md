@@ -1,10 +1,14 @@
 ---
-title: フルテキスト カタログの作成と管理 | Microsoft Docs
+title: フルテキスト カタログの作成と管理
+description: フルテキスト カタログの作成と管理
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
 ms.topic: conceptual
+f1_keywords:
+- sql13.swb.fulltextsearch.ftcatalog.general.f1
+- sql13.swb.fulltextsearch.fulltextindexproperties.general.f1
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
@@ -13,14 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b391b06d12908023375fbbf40005d1d04af60a5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a431635fdca556023a5e598502919bfdc9e40db6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934327"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130924"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 フルテキスト カタログは、フルテキスト インデックスのグループの論理的なコンテナーです。 フルテキスト インデックスを作成する前に、フルテキスト カタログを作成する必要があります。
 
@@ -45,7 +50,7 @@ GO
   
 3.  **[新しいフルテキスト カタログ]** を選択します。  
   
-4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql)」を参照してください。  
+4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     >  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  

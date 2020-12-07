@@ -1,4 +1,5 @@
 ---
+description: ODBC 64 ビットの情報
 title: ODBC 64 ビット情報 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 791bb54481ae5844061852f5321bdf07fc027b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461284"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
-Windows Server 2003 以降、Microsoft オペレーティングシステムでは、64ビットの ODBC ライブラリがサポートされています。 MDAC 2.7 SDK に最初に付属する ODBC ヘッダーおよびライブラリには、プログラマが新しい64ビットプラットフォームのコードを簡単に記述できるようにするための変更が含まれています。 コードで次に示す ODBC 定義型を使用することにより、 **_WIN64**または**WIN32**マクロに基づいて、64ビットプラットフォームと32ビットプラットフォームの両方で同じソースコードをコンパイルできます。  
+Windows Server 2003 以降、Microsoft オペレーティングシステムでは、64ビットの ODBC ライブラリがサポートされています。 MDAC 2.7 SDK に最初に付属する ODBC ヘッダーおよびライブラリには、プログラマが新しい64ビットプラットフォームのコードを簡単に記述できるようにするための変更が含まれています。 コードで次に示す ODBC 定義型を使用することにより、 **_WIN64** または **WIN32** マクロに基づいて、64ビットプラットフォームと32ビットプラットフォームの両方で同じソースコードをコンパイルできます。  
   
  64ビットプロセッサのプログラミングでは、次の点に注意する必要があります。  
   
@@ -26,9 +27,9 @@ Windows Server 2003 以降、Microsoft オペレーティングシステムで�
   
 -   ODBC のいくつかの関数は、ポインターパラメーターの取得として宣言されています。 32ビット ODBC では、ポインターとして定義されたパラメーターは、呼び出しのコンテキストに応じて、整数値またはバッファーへのポインターを渡すために頻繁に使用されていました。 これはもちろん、ポインターと整数のサイズが同じであることが原因です。 64ビットの Windows では、これは当てはまりません。  
   
--   以前に**SQLINTEGER**および**SQLUINTEGER**パラメーターで定義されていた ODBC 関数の中には、新しい**Sqllen**と**sqlulen** typedef を使用する適切な場所に変更されたものがあります。 これらの変更については、次のセクション「関数宣言の変更」を参照してください。  
+-   以前に **SQLINTEGER** および **SQLUINTEGER** パラメーターで定義されていた ODBC 関数の中には、新しい **Sqllen** と **sqlulen** typedef を使用する適切な場所に変更されたものがあります。 これらの変更については、次のセクション「関数宣言の変更」を参照してください。  
   
--   さまざまな**Sqlset**および**sqlset**関数を通じて設定できる記述子フィールドの一部は、64ビット値に対応するように変更されていますが、それ以外の値は32ビット値のままです。 これらのフィールドを設定および取得するときは、適切なサイズの変数を使用するようにしてください。 変更された記述子フィールドの詳細については、「関数宣言の変更」に記載されています。  
+-   さまざまな **Sqlset** および **sqlset** 関数を通じて設定できる記述子フィールドの一部は、64ビット値に対応するように変更されていますが、それ以外の値は32ビット値のままです。 これらのフィールドを設定および取得するときは、適切なサイズの変数を使用するようにしてください。 変更された記述子フィールドの詳細については、「関数宣言の変更」に記載されています。  
   
 ## <a name="function-declaration-changes"></a>関数宣言の変更  
  64ビットプログラミングでは、次の関数シグネチャが変更されました。 太字で表示される項目は、特定のパラメーターとは異なります。  
@@ -496,5 +497,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の概要](../../odbc/reference/introduction-to-odbc.md)

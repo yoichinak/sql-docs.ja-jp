@@ -1,6 +1,6 @@
 ---
-title: 強化された日付/時刻機能の使用 (OLE DB) | Microsoft Docs
-description: 強化された日付/時刻機能の使用 (OLE DB)
+title: 強化された日付/時刻機能の使用 (OLE DB ドライバー)
+description: OLE DB Driver for SQL Server で日付/時刻機能 (date、time、datetime2、datetimeoffset) を使用してコマンドを実行し、行セットの結果を取得する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 013e933fe4aeab69abf28148949dfcb0b5b4d47d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e3b0f8be8bccfe9c6ecb74252a12d2bc80619e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012026"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727063"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>強化された日付/時刻機能の使用 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "86012026"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="example"></a>例  
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、サンプルで使用するストアド プロシージャを作成します。  
@@ -652,5 +652,4 @@ int main() {
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'sp_datetimetypes')  
      DROP PROCEDURE sp_datetimetypes  
 ```  
-  
   

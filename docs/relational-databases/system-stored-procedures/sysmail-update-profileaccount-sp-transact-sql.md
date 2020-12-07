@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profileaccount_sp (Transact-SQL)
 title: sysmail_update_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473351"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id`更新するプロファイルのプロファイル ID。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` 更新するプロファイルのプロファイル ID。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'`更新するプロファイルのプロファイル名。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 更新するプロファイルのプロファイル名。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @account_id = ] account_id`更新するアカウント ID。 *account_id*は**int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_id = ] account_id` 更新するアカウント ID。 *account_id* は **int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
   
-`[ @account_name = ] 'account_name'`更新するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name* は **sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
   
-`[ @sequence_number = ] sequence_number`アカウントの新しいシーケンス番号。 *sequence_number*は**int**,、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順序が決まります。  
+`[ @sequence_number = ] sequence_number` アカウントの新しいシーケンス番号。 *sequence_number* は **int**,、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順序が決まります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -65,10 +66,10 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  同じシーケンス番号を持つアカウントが複数存在する場合、データベース メールでは、指定された電子メール メッセージに対して、これらのアカウントのいずれか 1 つのみが使用されます。 この場合、そのシーケンス番号に対してどのアカウントが使用されるか、またメッセージごとに同じアカウントが使用されるかついては、データベース メールでは保証されません。  
   
- ストアドプロシージャ**sysmail_update_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_update_profileaccount_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  次の例では、msdb データベースのプロファイル内のアカウントのシーケンス番号を変更し `Admin-BackupServer` `AdventureWorks Administrator` ます。 **msdb** このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
@@ -80,10 +81,10 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
     ,@sequence_number = 3;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

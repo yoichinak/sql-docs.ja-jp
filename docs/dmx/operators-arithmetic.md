@@ -1,4 +1,5 @@
 ---
+description: 算術演算子 (DMX)
 title: 算術演算子 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c01879c7b99b1cc9c184513c1e95ec174d8f39d7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 77b9f300859b6ce1250ed9d36a33a88a3dd12fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426194"
 ---
 # <a name="operators---arithmetic"></a>演算子 - 算術
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -24,10 +25,10 @@ ms.locfileid: "86971620"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[+ &#40;&#41; &#40;DMX&#41;を追加する](../dmx/add-dmx.md)|2 つの数値を加算します。|  
-|[-&#40;&#41; &#40;DMX&#41;を減算する](../dmx/subtract-dmx.md)|ある数値から別の数値を減算します。|  
+|[+ &#40;&#41; &#40;DMX&#41;を追加する ](../dmx/add-dmx.md)|2 つの数値を加算します。|  
+|[-&#40;&#41; &#40;DMX&#41;を減算する ](../dmx/subtract-dmx.md)|ある数値から別の数値を減算します。|  
 |[&#41; &#40;DMX&#41;を乗算&#42; &#40;](../dmx/multiply-dmx.md)|ある数値を別の数値によって乗算します。|  
-|[DMX&#41;&#41; &#40;分割&#40;](../dmx/divide-dmx.md)|1つの数値を別の数値で除算します。|  
+|[ DMX&#41;&#41; &#40;分割&#40;](../dmx/divide-dmx.md)|1つの数値を別の数値で除算します。|  
   
  次の規則は、DMX 式の算術演算子の優先順位を決定します。  
   
@@ -44,9 +45,9 @@ ms.locfileid: "86971620"
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [DMX&#41;&#40;式](../dmx/expressions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)   
+ [DMX&#41;&#40;式 ](../dmx/expressions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

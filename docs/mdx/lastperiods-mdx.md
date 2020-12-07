@@ -1,4 +1,5 @@
 ---
+description: LastPeriods (MDX)
 title: LastPeriods (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e8adf1dba453fb536f95a4fa113e16f6950f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494885"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -28,22 +29,22 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *インデックス*  
+ *Index*  
  期間の数を指定する有効な数値式です。  
   
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- 指定された期間の数が正の場合、 **lastperiods**関数は、指定されたメンバー式から*インデックス*-1 を遅延するメンバーで始まり、指定されたメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、 *Index*と同じです。  
+## <a name="remarks"></a>解説  
+ 指定された期間の数が正の場合、 **lastperiods** 関数は、指定されたメンバー式から *インデックス* -1 を遅延するメンバーで始まり、指定されたメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、 *Index*と同じです。  
   
- 指定された期間の数が負の値の場合、 **lastperiods**関数は、指定されたメンバーで始まり、指定されたメンバーから (- *Index* -1) のメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、*インデックス*の絶対値と同じです。  
+ 指定された期間の数が負の値の場合、 **lastperiods** 関数は、指定されたメンバーで始まり、指定されたメンバーから (- *Index* -1) のメンバーで終わるメンバーのセットを返します。 関数によって返されるメンバーの数は、 *インデックス*の絶対値と同じです。  
   
- 指定された期間の数が0の場合、 **lastperiods**関数は空のセットを返します。 これは**Lag**関数とは異なり、0が指定されている場合は、指定されたメンバーを返します。  
+ 指定された期間の数が0の場合、 **lastperiods** 関数は空のセットを返します。 これは **Lag** 関数とは異なり、0が指定されている場合は、指定されたメンバーを返します。  
   
- メンバーが指定されていない場合、 **Lastperiods**関数は、 **Time. currentmember**を使用します。 ディメンションが時間ディメンションとしてマークされていない場合、関数はエラーを発生させずに解析して実行しますが、クライアントアプリケーションではセルエラーが発生します。  
+ メンバーが指定されていない場合、 **Lastperiods** 関数は、 **Time. currentmember**を使用します。 ディメンションが時間ディメンションとしてマークされていない場合、関数はエラーを発生させずに解析して実行しますが、クライアントアプリケーションではセルエラーが発生します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、2002会計年度の第2第3四半期と第4四半期の既定のメジャー値が返されます。  
   
 ```  

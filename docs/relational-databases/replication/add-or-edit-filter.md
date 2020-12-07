@@ -1,4 +1,5 @@
 ---
+description: フィルターの追加または編集
 title: フィルターの追加または編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 75b874fe2ded7f6baacdd65dddfd8ea3d371ba7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15859f0f54804417e1bb0e6a871b1d84d1e40191
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423646"
 ---
 # <a name="add-or-edit-filter"></a>フィルターの追加または編集
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85726111"
   
  行フィルターを使用すれば、テーブルからパブリッシュの対象となる行のサブセットを指定できます。 行フィルターを使用して、ユーザーにとって必要のない行 (機密性の高い情報など) を削除したり、さまざまなサブスクライバーに送られるさまざまなデータのパーティションを作成したりできます。 さまざまなデータのパーティションをさまざまなサブスクライバーにパブリッシュすると、複数のサブスクライバーが同じデータを更新することによって発生する可能性のある競合を回避するためにも役立ちます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  このダイアログ ボックスには、トランザクション パブリケーションとスナップショット アプリケーション用の 2 段階のプロセスと、マージ パブリケーション用の 3 段階のプロセスがあります。 すべての種類のパブリケーションで、フィルター対象のテーブルと、フィルターに含む 1 つまたは複数の列を選択する必要があります。フィルターは、標準の WHERE 句として定義されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  

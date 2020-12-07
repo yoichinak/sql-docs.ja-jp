@@ -1,8 +1,9 @@
 ---
+description: レコードを XML 形式で保持する
 title: XML 形式でのレコードの保持 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763613"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980063"
 ---
 # <a name="persisting-records-in-xml-format"></a>レコードを XML 形式で保持する
-ADTG 形式と同様に、XML 形式の**レコードセット**の永続化は、Microsoft OLE DB の永続化プロバイダーと共に実装されます。 このプロバイダーは、ADO によって生成されたスキーマ情報を格納する、保存されている XML ファイルまたはストリームから、順方向専用の読み取り専用の行セットを生成します。 同様に、ADO**レコードセット**を取得し、XML を生成して、COM **IStream**インターフェイスを実装するファイルまたは任意のオブジェクトに保存することもできます。 (実際には、ファイルは、 **IStream**をサポートするオブジェクトの別の例にすぎません)。バージョン2.5 以降では、ADO は Microsoft XML Parser (MSXML) を使用して XML を**レコードセット**に読み込みます。そのため、msxml.dll が必要です。  
+ADTG 形式と同様に、XML 形式の **レコードセット** の永続化は、Microsoft OLE DB の永続化プロバイダーと共に実装されます。 このプロバイダーは、ADO によって生成されたスキーマ情報を格納する、保存されている XML ファイルまたはストリームから、順方向専用の読み取り専用の行セットを生成します。 同様に、ADO **レコードセット**を取得し、XML を生成して、COM **IStream** インターフェイスを実装するファイルまたは任意のオブジェクトに保存することもできます。 (実際には、ファイルは、 **IStream**をサポートするオブジェクトの別の例にすぎません)。バージョン2.5 以降では、ADO は Microsoft XML Parser (MSXML) を使用して XML を **レコードセット**に読み込みます。そのため msxml.dll が必要です。  
   
 > [!NOTE]
->  階層的な**レコードセット**(データ図形) を XML 形式に保存する際には、いくつかの制限が適用されます。 階層**レコードセット**に保留中の更新が含まれている場合は XML に保存できません。また、パラメーター化された階層**レコードセット**を保存することもできません。 詳細については、「フィルター処理された[レコードセットと階層レコードセットの永続](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)化  
+>  階層的な **レコードセット** (データ図形) を XML 形式に保存する際には、いくつかの制限が適用されます。 階層 **レコードセット** に保留中の更新が含まれている場合は XML に保存できません。また、パラメーター化された階層 **レコードセット**を保存することもできません。 詳細については、「フィルター処理された [レコードセットと階層レコードセットの永続](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)化  
   
- データを XML に永続化し、ADO を使用して再度読み込む方法としては、それぞれ**Save**メソッドと**Open**メソッドを使用する方法が最も簡単です。 次の ADO コード例**は、titles テーブルの**データを sav という名前のファイルに保存する方法を示しています。  
+ データを XML に永続化し、ADO を使用して再度読み込む方法としては、それぞれ **Save** メソッドと **Open** メソッドを使用する方法が最も簡単です。 次の ADO コード例 **は、titles テーブルの** データを sav という名前のファイルに保存する方法を示しています。  
   
 ```  
 Dim rs as new Recordset  
@@ -59,14 +60,14 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO では、**レコードセット**オブジェクト全体が常に保持されます。 **Recordset**オブジェクトの行のサブセットを保持する場合は、**フィルター**メソッドを使用して行を絞り込むか、選択句を変更します。 ただし、フィルターメソッドを使用して行のサブセットを保存するには、クライアント側のカーソル (**cursor location**adUseClient) を使用して**レコードセット**オブジェクトを開く必要があり  =  **adUseClient** **Filter**ます。 たとえば、文字 "b" で始まるタイトルを取得するには、開いている**レコードセット**オブジェクトにフィルターを適用できます。  
+ ADO では、 **レコードセット** オブジェクト全体が常に保持されます。 **Recordset**オブジェクトの行のサブセットを保持する場合は、**フィルター**メソッドを使用して行を絞り込むか、選択句を変更します。 ただし、フィルターメソッドを使用して行のサブセットを保存するには、クライアント側のカーソル (**cursor location**adUseClient) を使用して**レコードセット**オブジェクトを開く必要があり  =  **adUseClient** **Filter**ます。 たとえば、文字 "b" で始まるタイトルを取得するには、開いている **レコードセット** オブジェクトにフィルターを適用できます。  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO は常にクライアントカーソルエンジンの行セットを使用して、永続化プロバイダーによって生成される順方向専用データの上にスクロール可能な bookmarkable **Recordset**オブジェクトを生成します。  
+ ADO は常にクライアントカーソルエンジンの行セットを使用して、永続化プロバイダーによって生成される順方向専用データの上にスクロール可能な bookmarkable **Recordset** オブジェクトを生成します。  
   
  このセクションでは、次のトピックを扱います。  
   

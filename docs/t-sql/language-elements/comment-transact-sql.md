@@ -1,4 +1,5 @@
 ---
+description: -- (コメント) (Transact-SQL)
 title: -- (コメント) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2019
@@ -22,12 +23,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2c799aeb38088baacc6110459d42db6138f3575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c45b673424fd20defd40d2b62fab19cded05cbca
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922982"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128336"
 ---
 # <a name="---comment-transact-sql"></a>-- (コメント) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "86922982"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 -- text_of_comment  
 ```  
   
@@ -47,9 +47,9 @@ ms.locfileid: "86922982"
 
 ## <a name="arguments"></a>引数
  *text_of_comment*  
- コメントのテキストを構成する文字列です。  
+ コメントのテキストを表す文字列です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 1 行のコメントまたは入れ子にしたコメントには、2 つのハイフン ( **--** ) を使用します。 **--** によって挿入された コメントは、復帰文字 (U+000A)、改行文字 (U+000D)、またはその 2 つの組み合わせで指定された改行で終了します。 コメントの長さには制限がありません。 次の表に、テキストのコメント化/コメント解除に使用できるキーボード ショートカットを示します。
   
 |アクション|Standard|  
@@ -64,7 +64,7 @@ ms.locfileid: "86922982"
 ## <a name="examples"></a>例  
  次の例では、-- コメント文字を使用します。  
   
-```  
+```sql  
 -- Choose the AdventureWorks2012 database.  
 USE AdventureWorks2012;  
 GO  
@@ -76,7 +76,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF (SSIS 式)
 title: DATEDIFF (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484430"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
 
@@ -47,21 +48,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。  
   
 |datepart|省略形|  
 |--------------|-------------------|  
-|年|yy、yyyy|  
+|Year|yy、yyyy|  
 |Quarter|qq、q|  
 |Month|mm、m|  
 |Dayofyear|dy、y|  
-|日|dd、d|  
-|Week|wk、ww|  
+|日間|dd、d|  
+|週|wk、ww|  
 |平日|dw、w|  
-|時|Hh|  
+|時間|Hh|  
 |分|mi、n|  
-|秒|ss、s|  
+|Second|ss、s|  
 |Millisecond|Ms|  
   
  引数のいずれかが NULL の場合、DATEDIFF は NULL を返します。  
@@ -91,7 +92,7 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   

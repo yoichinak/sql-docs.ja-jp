@@ -1,4 +1,5 @@
 ---
+description: 有効桁数、小数点以下桁数、長さ (Transact-SQL)
 title: 有効桁数、小数点以下桁数、および長さ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ecb198e9c2bcc7e23d1b4b66e8109ecf7c8fb5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786580"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116954"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、および長さ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,12 +80,12 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 
 次の式は、`decimal(38,6)` に収めた結果 `0.000001` を返します。
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 ここでは、precision は 61 であり、scale は 20 です。
 scale が 6 桁を越えており、整数部 (`precision-scale = 41`) が 32 を超えています。 これは乗算ルールの (3) に該当するため、結果の型は `decimal(38,6)` になります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

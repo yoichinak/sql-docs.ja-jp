@@ -1,4 +1,5 @@
 ---
+description: M (geography データ型)
 title: M (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 580feb4d6727e84f982a09ca8a96337d5b1a31df
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77a79972671854e7e8538de7b943545955f61e89
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88422426"
 ---
 # <a name="m-geography-data-type"></a>M (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86552556"
 ## <a name="return-types"></a>戻り値の型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>解説  
  **geography** インスタンスが **Point** ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  

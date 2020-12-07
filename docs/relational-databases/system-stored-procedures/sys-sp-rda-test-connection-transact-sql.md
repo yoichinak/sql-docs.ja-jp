@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246491"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540406"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sp_rda_test_connection (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,29 +43,29 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>引数  
- @database_name= N '*db_name*'  
+ @database_name = N '*db_name*'  
  Stretch が有効な SQL Server データベースの名前。 このパラメーターは省略可能です。  
   
- @server_address= N '*azure_server_fully_qualified_address*'  
+ @server_address = N '*azure_server_fully_qualified_address*'  
  Azure サーバーの完全修飾アドレス。  
   
 -   ** \@ Database_name**に値を指定しても、指定したデータベースで Stretch が有効になっていない場合は、 ** \@ server_address**の値を指定する必要があります。  
   
 -   ** \@ Database_name**の値を指定し、指定されたデータベースで Stretch が有効になっている場合、 ** \@ server_address**の値を指定する必要はありません。 ** \@ Server_address**に値を指定した場合、ストアドプロシージャはそれを無視し、既に Stretch が有効なデータベースに関連付けられている既存の Azure サーバーを使用します。  
   
- @azure_username= N '*azure_username*  
+ @azure_username = N '*azure_username*  
  リモート Azure サーバーのユーザー名。  
   
- @azure_password= N '*azure_password*'  
+ @azure_password = N '*azure_password*'  
  リモート Azure サーバーのパスワード。  
   
- @credential_name= N '*credential_name*'  
+ @credential_name = N '*credential_name*'  
  ユーザー名とパスワードを指定する代わりに、Stretch が有効なデータベースに格納されている資格情報の名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **成功**した場合、sp_rda_test_connection によってエラー 14855 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) と重大度 EX_INFO および成功したリターンコードが返されます。  
   
- エラーが**発生**した場合、sp_rda_test_connection によってエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) と重大度 EX_USER およびエラーリターンコードが返されます。  
+ エラーが **発生**した場合、sp_rda_test_connection によってエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) と重大度 EX_USER およびエラーリターンコードが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   

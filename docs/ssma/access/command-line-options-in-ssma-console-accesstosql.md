@@ -1,4 +1,5 @@
 ---
+description: SSMA コンソールのコマンドラインオプション (フル実行 Sql)
 title: SSMA コンソールのコマンドラインオプション ([ストアドプロシージャ]) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ca276036465ca5228fd5c52ca7d4b7de3fdbf13f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7e0baa3982fd6b123a4cce29aaada1d78478fd46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497806"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソールのコマンドラインオプション (フル実行 Sql)
 Microsoft では、SSMA アクティビティを実行および制御するための、堅牢な一連のコマンドラインオプションを提供しています。 後続のセクションでは、追加の詳細情報を提供します。  
@@ -120,7 +121,7 @@ Xmloutput には、次の2つのオプションがあります。
 ### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
 このオプションは、サーバー接続の暗号化されたパスワードを示します。 これは、移行関連のアクティビティでスクリプトやヘルプを実行しないという点で、他のすべてのオプションとは異なりますが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
-コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-accesstosql.md)」セクションを参照してください。  
+コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「 [パスワードの管理](managing-passwords-accesstosql.md) 」セクションを参照してください。  
   
 では、次のサブオプションがサポートされてい `-p/securepassword` ます。  
   
@@ -162,12 +163,12 @@ SSMA コンソールオプションの構文の概要が表示されます。
   
 SSMA コンソールのコマンドラインオプションの表形式の表示については、 [「付録-1 &#40;](../../ssma/access/appendix-1-accesstosql.md)参照」を参照してください&#41;  
   
-### <a name="next-steps"></a>次のステップ  
+### <a name="next-steps"></a>次の手順  
 次の手順は、プロジェクトの要件によって異なります。  
   
-1.  パスワードの指定、またはパスワードのエクスポート/インポートについては、「パスワードの管理」を参照してください[&#40;&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
+1.  パスワードの指定、またはパスワードのエクスポート/インポートについては、「パスワードの管理」を参照してください [&#40;&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
   
-2.  レポートを生成する方法については、「レポートの生成」を参照してください[&#40;&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
+2.  レポートを生成する方法については、「レポートの生成」を参照してください [&#40;&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
   
-3.  コンソールでの問題のトラブルシューティングについては、「 [&#41;&#40;のトラブルシューティング](../../ssma/access/troubleshooting-accesstosql.md)」を参照してください。  
+3.  コンソールでの問題のトラブルシューティングについては、「 [&#41;&#40;のトラブルシューティング ](../../ssma/access/troubleshooting-accesstosql.md)」を参照してください。  
   

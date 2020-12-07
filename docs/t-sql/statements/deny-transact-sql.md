@@ -1,4 +1,5 @@
 ---
+description: DENY (Transact-SQL)
 title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
@@ -27,12 +28,12 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 36cca2b149d2a633d2402d388bbc3a8b22397d84
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484840"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990267"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 
@@ -64,7 +65,7 @@ DENY   { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DENY   
     <permission> [ ,...n ]  

@@ -1,4 +1,5 @@
 ---
+description: STInteriorRingN (geometry データ型)
 title: STInteriorRingN (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e78d4d7fd52e018d4224726c82f1251bb1fe22a1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 52d1f15affc8f253303bb636c4b94f280e8a3319
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554653"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479272"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

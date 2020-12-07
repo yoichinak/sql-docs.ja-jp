@@ -1,4 +1,5 @@
 ---
+description: Manage an Oracle CDC Service
 title: Oracle CDC Service の管理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82c3d3d2cdac0bb13eb1fd740da96bd7a7f7589a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aea4d1beb0a77e6bc7a0456c3f3437c919698bcd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88426074"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
 

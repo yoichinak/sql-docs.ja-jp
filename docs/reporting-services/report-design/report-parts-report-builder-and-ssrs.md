@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 48e6da2956896035f53e070a3ea48d3d72e0f7d8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255261"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945719"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、グラフ、画像などのレポート アイテムを、 *レポート パーツ*としてパブリッシュできます。 レポート パーツは、レポート サーバーに個別にパブリッシュされ、別のページ分割されたレポートで再利用できる、ページ分割されたレポート用のアイテムです。 レポート パーツのファイル拡張子は .rsc です。  
@@ -108,7 +108,7 @@ ms.locfileid: "84255261"
  レポートを開くたびに、レポート ビルダーによって、そのレポートにあるレポート パーツのサーバー インスタンスがサーバー上で更新されたかどうかが確認されます。 また、データセットやパラメーターなどのレポート パーツの依存アイテムに変更が加えられたかどうかも確認されます。 パブリッシュ済みレポート パーツまたはレポート パーツの依存アイテムがサーバー上で更新されている場合は、レポート内の情報バーに、更新されたアイテムの数が表示されます。 更新は、表示して受け入れることも、拒否することもできます。また、情報バーを消去することもできます。 更新内容を表示すると、レポート パーツのサムネイル、最終変更者、および最終変更日が表示されます。 更新されたアイテムのすべてまたは一部を受け入れることができます。  
   
 > [!NOTE]  
->  情報バーを無効にして、レポート パーツの変更に関する情報が表示されないようにすることもできます。 このオプションは、レポートにレポート パーツを追加する場合に設定します。 情報バーを無効にした場合でも、更新を確認できます。 詳細については、「[更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)」をご覧ください。  
+>  情報バーを無効にして、レポート パーツの変更に関する情報が表示されないようにすることもできます。 このオプションは、レポートにレポート パーツを追加する場合に設定します。 情報バーを無効にした場合でも、更新を確認できます。
   
  レポート ビルダーによって、レポート パーツのサーバー上での最終更新日とレポート パーツとサーバーの最終同期日が異なるかどうかが確認されます。 レポート内のレポート パーツの変更日は確認されません。 したがって、レポート内のレポート パーツとサーバー上のレポート パーツはまったく異なる場合がありますが、レポート ビルダーが更新を確認する際には、その違いは検出されません。  
   
@@ -137,11 +137,6 @@ ms.locfileid: "84255261"
   
  [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
-  
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [レポート パーツの管理](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+ [レポート パーツの管理](../../reporting-services/report-design/managing-report-parts.md) 

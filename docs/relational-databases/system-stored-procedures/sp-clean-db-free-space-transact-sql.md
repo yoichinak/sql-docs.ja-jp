@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_free_space (Transact-SQL)
 title: sp_clean_db_free_space (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_clean_db_free_space
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1c434dda6a19a6090c9ba3c670ce33e673d7abf7
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 508ead96133a178e5abbe939defcefa4d6c33492
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122327"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546279"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>引数  
- @dbname= '*database_name*'  
- クリーニングするデータベースの名前です。 *dbname*は**sysname**であり、NULL にすることはできません。  
+ @dbname = '*database_name*'  
+ クリーニングするデータベースの名前です。 *dbname* は **sysname** であり、NULL にすることはできません。  
   
- @cleaning_delay= '*delay_in_seconds*'  
- ページをクリーニングする間隔を指定します。 これにより、i/o システムへの影響が軽減されます。 *delay_in_seconds*は**int**で、既定値は0です。  
+ @cleaning_delay = '*delay_in_seconds*'  
+ ページをクリーニングする間隔を指定します。 これにより、i/o システムへの影響が軽減されます。 *delay_in_seconds* は **int** で、既定値は0です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,7 +58,7 @@ sp_clean_db_free_space
   
  を実行する前に `sp_clean_db_free_space` 、データベースの完全バックアップを作成することをお勧めします。  
   
- 関連する[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)ストアドプロシージャは、1つのファイルをクリーンアップできます。  
+ 関連する [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) ストアドプロシージャは、1つのファイルをクリーンアップできます。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースロールのメンバーシップが必要です `db_owner` 。  
@@ -72,7 +73,7 @@ EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ゴーストクリーンアッププロセスガイド](../ghost-record-cleanup-process-guide.md)    
  [sp_clean_db_file_free_space (Transact-sql)](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)
   

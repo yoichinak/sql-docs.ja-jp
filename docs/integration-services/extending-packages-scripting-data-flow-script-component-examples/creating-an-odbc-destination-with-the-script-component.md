@@ -1,4 +1,5 @@
 ---
+description: スクリプト コンポーネントによる ODBC 変換先の作成
 title: スクリプト コンポーネントによる ODBC 変換先の作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916319"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123043"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>スクリプト コンポーネントによる ODBC 変換先の作成
 
@@ -39,7 +40,7 @@ ms.locfileid: "86916319"
   
 -   マネージド コードから ODBC 接続マネージャーの **AcquireConnection** メソッドを呼び出すことはできません。このメソッドを呼び出すと、ネイティブ オブジェクトが返されます。 そのため、この例では、接続マネージャーの接続文字列を使用して、マネージド ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーで直接データ ソースに接続しています。  
   
--   **OdbcCommand** には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます (一方、**SqlCommand** では名前付きパラメーターが必要です)。  
+-   **OdbcCommand** には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます  (一方、**SqlCommand** では名前付きパラメーターが必要です)。  
   
  この例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用します。 この例では、このテーブルの第 1 列と第 4 列、つまり **int _AddressID_** 列と **nvarchar(30) _City_** 列をデータ フローに渡します。 「[特定の種類のスクリプト コンポーネントの開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」の変換元、変換、および変換先の例でも、同じデータが使用されます。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86916319"
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換なしで直接変換元を変換先に接続することもできます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換なしで直接変換元を変換先に接続することもできます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
   
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "86916319"
   
 7.  **[接続マネージャー]** ページで、ODBC 接続マネージャーを追加または作成し、**MyODBCConnectionManager** などのわかりやすい名前を付けます。  
   
-8.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
+8.  **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
   
 9. スクリプト開発環境と **[スクリプト変換エディター]** を閉じ、サンプルを実行します。  
   

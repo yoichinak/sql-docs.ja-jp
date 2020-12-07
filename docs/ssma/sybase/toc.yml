@@ -10,7 +10,7 @@
   href: legal-notice-ssma-for-sybase.md
 - name: SSMA の新機能
   href: what-s-new-in-ssma-for-sybase-sybasetosql.md
-- name: SSMA for Sybase クライアントのインストール
+- name: Sybase クライアントの SSMA のインストール
   href: installing-ssma-for-sybase-client-sybasetosql.md
 - name: SSMA GUI の新機能
   href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: サンプルのコンソール スクリプト ファイルの操作
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Azure SQL DB への Sybase ASE データベースの移行
+- name: Azure SQL Database への Sybase ASE データベースの移行
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: 変換のための Sybase ASE データベース オブジェクトの評価
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: 影響を受けるオブジェクトの選択と構成
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database への接続
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: パスワードの管理
   href: managing-passwords-sybasetosql.md
 - name: プロジェクト オプションの設定
   href: setting-project-options-sybasetosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database に接続する
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: データの移行設定
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: SQL Server での SSMA コンポーネントのインストール
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: Azure SQL DB への Sybase ASE データの移行
+- name: Azure SQL Database への Sybase ASE データの移行
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Sybase への接続
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL データベース
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: 移行
       href: project-settings-migration-sybasetosql.md

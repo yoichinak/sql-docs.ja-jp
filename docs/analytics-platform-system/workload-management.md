@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399446"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System のワークロード管理
@@ -32,10 +32,10 @@ SQL Server PDW のワークロード管理機能を使用すると、ユーザ�
   
 ### <a name="key-terms"></a>主な用語  
 ワークロード管理  
-*ワークロード管理*は、同時要求に最適なパフォーマンスを実現するために、システムリソースの使用率を把握し、調整する機能です。  
+*ワークロード管理* は、同時要求に最適なパフォーマンスを実現するために、システムリソースの使用率を把握し、調整する機能です。  
   
 リソース クラス  
-SQL Server PDW の*リソースクラス*は、メモリと同時実行に対して事前に割り当てられた制限を持つ組み込みのサーバーロールです。 SQL Server PDW は、要求を送信するログインのリソースクラスサーバーロールメンバーシップに従って、リソースを要求に割り当てます。  
+SQL Server PDW の *リソースクラス* は、メモリと同時実行に対して事前に割り当てられた制限を持つ組み込みのサーバーロールです。 SQL Server PDW は、要求を送信するログインのリソースクラスサーバーロールメンバーシップに従って、リソースを要求に割り当てます。  
   
 コンピューティングノードでは、リソースクラスの実装で SQL Server の Resource Governor 機能が使用されます。 Resource Governor の詳細については、MSDN の「 [Resource Governor](../relational-databases/resource-governor/resource-governor.md) 」を参照してください。  
   
@@ -47,9 +47,9 @@ For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../s
 -->
   
 ### <a name="adjust-resource-allocations"></a>リソース割り当ての調整  
-リソース使用率を調整するには、要求を送信しているログインのリソースクラスのメンバーシップを変更します。 リソースクラスのサーバーロールには、 **mediumrc**、 **largerc**、および**xlargerc**という名前が付けられます。 これらは、それぞれ中規模、大規模、および特大のリソース割り当てを表します。  
+リソース使用率を調整するには、要求を送信しているログインのリソースクラスのメンバーシップを変更します。 リソースクラスのサーバーロールには、 **mediumrc**、 **largerc**、および **xlargerc**という名前が付けられます。 これらは、それぞれ中規模、大規模、および特大のリソース割り当てを表します。  
   
-たとえば、大量のシステムリソースを要求に割り当てるには、要求を送信しているログインを**largerc**サーバーロールに追加します。 次の ALTER SERVER ROLE ステートメントでは、ログイン Anna を largerc サーバーロールに追加します。  
+たとえば、大量のシステムリソースを要求に割り当てるには、要求を送信しているログインを **largerc** サーバーロールに追加します。 次の ALTER SERVER ROLE ステートメントでは、ログイン Anna を largerc サーバーロールに追加します。  
   
 ```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
@@ -60,8 +60,8 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 = 32)|説明|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|中間|400 MB|1|既定では、各ログインには、少量のメモリと、その要求に対する同時実行リソースが許可されます。<br /><br />リソースクラスにログインを追加すると、新しいクラスが優先されます。 ログインがすべてのリソースクラスから削除されると、ログインは既定のリソース割り当てに戻ります。|  
-|MediumRC|中間|1200 MB|3|中規模リソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大きなハッシュ結合を持つ CTAS 操作。<br /><br />ディスクへのキャッシュを回避するために、より多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
+|default|Medium|400 MB|1|既定では、各ログインには、少量のメモリと、その要求に対する同時実行リソースが許可されます。<br /><br />リソースクラスにログインを追加すると、新しいクラスが優先されます。 ログインがすべてのリソースクラスから削除されると、ログインは既定のリソース割り当てに戻ります。|  
+|MediumRC|Medium|1200 MB|3|中規模リソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大きなハッシュ結合を持つ CTAS 操作。<br /><br />ディスクへのキャッシュを回避するために、より多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
 |Largerc|高|2.8 GB|7|大きなリソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大量のハッシュ結合を持つか、大きな集計 (large ORDER BY 句や GROUP BY 句など) を含む非常に大きな CTAS 操作。<br /><br />ハッシュ結合などの操作に非常に大量のメモリを必要とする操作、または ORDER BY 句や GROUP BY 句などの集計を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
 |xlargerc|高|8.4 GB|22|特大のリソースクラスは、実行時に追加の大規模なリソース消費が必要になる可能性のある要求に使用されます。|  
   
@@ -98,7 +98,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 各リソースクラス内では、要求が先入れ先出し (FIFO) の順序で実行されます。  
   
-## <a name="general-remarks"></a><a name="GeneralRemarks"></a>全般的な解説  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>一般的な解説  
 ログインが複数のリソースクラスのメンバーである場合は、最も多くのリソースを持つクラスが優先されます。  
   
 リソースクラスに対してログインが追加または削除されると、その変更は、今後のすべての要求に対して直ちに有効になります。実行中または待機中の現在の要求は影響を受けません。 このログインは、変更を行うために切断して再接続する必要はありません。  
@@ -177,7 +177,7 @@ SQL Server PDW は、ステートメントを実行する前に、要求に必�
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>関連タスク  
 [ワークロード管理タスク](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

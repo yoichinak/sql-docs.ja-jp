@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネントのログ エントリの記録と定義
 title: データ フロー コンポーネントのログ エントリの記録と定義 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1f8a82b02a7743362f3769725074501b584140a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f221b2d27723714edce8c3b0cc893b1d71b4164a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484171"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>データ フロー コンポーネントのログ エントリの記録と定義
 
@@ -99,7 +100,7 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- ユーザーがパッケージを実行し、 **[ログ記録]** ダイアログ ボックスで [My Custom Component Log Entry] を選択すると、「User::My Custom Component Log Entry」というラベルが付けられたエントリがログに含まれます。 この新しいログ エントリには、SQL ステートメントのテキスト、タイムスタンプ、および開発者によってログが記録された追加のデータが含まれます。  
+ ユーザーがパッケージを実行し、**[ログ記録]** ダイアログ ボックスで [My Custom Component Log Entry] を選択すると、「User::My Custom Component Log Entry」というラベルが付けられたエントリがログに含まれます。 この新しいログ エントリには、SQL ステートメントのテキスト、タイムスタンプ、および開発者によってログが記録された追加のデータが含まれます。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のログ記録](../../../integration-services/performance/integration-services-ssis-logging.md)  

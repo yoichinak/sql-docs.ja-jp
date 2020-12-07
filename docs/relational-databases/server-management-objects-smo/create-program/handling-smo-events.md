@@ -1,4 +1,5 @@
 ---
+description: SMO イベントの処理
 title: SMO イベントの処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f913497891eb947b669cbca67912717d1e6c7f5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79a3bcc31c8b237a93cd5d7d1d32ae425c626735
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490440"
 ---
 # <a name="handling-smo-events"></a>SMO イベントの処理
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -37,7 +39,7 @@ ms.locfileid: "86006355"
 ## <a name="event-subscription"></a>イベント サブスクリプション  
  イベントを処理するには、イベント ハンドラー クラスを作成し、イベント ハンドラー クラスのインスタンスの作成して、イベント ハンドラーを親オブジェクトに割り当てて、イベントをサブスクライブします。  
   
- イベントを処理するためには、イベント ハンドラー クラスが作成される必要があります。 イベント ハンドラー クラスは、2 つ以上のイベント ハンドラー関数を含めることができます。また、処理されるイベントに対してインストールされている必要があります。 イベントハンドラー関数は、イベントに関する情報をレポートするために使用できる*ServerEventNotificatificationArgs*パラメーターから、イベントに関する情報を受け取ります。  
+ イベントを処理するためには、イベント ハンドラー クラスが作成される必要があります。 イベント ハンドラー クラスは、2 つ以上のイベント ハンドラー関数を含めることができます。また、処理されるイベントに対してインストールされている必要があります。 イベントハンドラー関数は、イベントに関する情報をレポートするために使用できる *ServerEventNotificatificationArgs* パラメーターから、イベントに関する情報を受け取ります。  
   
  処理できるデータベースおよびサーバーイベントの種類は、クラスとクラスに一覧表示され <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> ます。  
   

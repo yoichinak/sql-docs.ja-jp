@@ -1,4 +1,5 @@
 ---
+description: dm_exec_requests (Transact-sql)
 title: dm_exec_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,18 +21,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489970"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>dm_exec_requests (Transact-sql)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-で実行されている各要求に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 要求の詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+で実行されている各要求に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 要求の詳細については、「 [スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "85734690"
 |request_id|**int**|要求の ID。 セッションのコンテキスト内で一意です。 NULL 値は許可されません。|  
 |start_time|**datetime**|要求が到着したときのタイムスタンプ。 NULL 値は許可されません。|  
 |status|**nvarchar(30)**|要求の状態。 DLL は、次のいずれかの場所に置くことができます。<br /><br /> バックグラウンド<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
-|コマンドを使用します|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
+|command|**nvarchar(32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
 |sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。| 
 |statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_end_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
 |statement_end_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの終了位置を、0から始まるバイト単位で示します。 、、および動的管理関数と共に使用して、 `sql_handle` `statement_start_offset` `sys.dm_exec_sql_text` 要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
@@ -51,13 +52,13 @@ ms.locfileid: "85734690"
 |wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類の詳細については、「 [sys. dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |last_wait_type|**nvarchar(60)**|要求がブロックされていた場合の最後の待機の種類。 NULL 値は許可されません。|  
-|wait_resource|**nvarchar(256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
+|wait_resource|**nvarchar (256)**|要求が現在ブロックされている場合の現在待機中のリソース。 NULL 値は許可されません。|  
 |open_transaction_count|**int**|この要求に対して開いているトランザクションの数。 NULL 値は許可されません。|  
 |open_resultset_count|**int**|この要求に対して開いている結果セットの数。 NULL 値は許可されません。|  
 |transaction_id|**bigint**|要求が実行されるトランザクションの ID。 NULL 値は許可されません。|  
 |context_info|**varbinary (128)**|セッションの CONTEXT_INFO 値。 NULL 値が許可されます。|  
 |percent_complete|**real**|次のコマンドで完了した作業の割合。<br /><br /> ALTER INDEX REORGANIZE<br />ALTER DATABASE の AUTO_SHRINK オプション<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE の暗号化<br /><br /> NULL 値は許可されません。|  
-|estimated_completion_time|**bigint**|内部のみ。 NULL 値は許可されません。|  
+|estimated_completion_time|**bigint**|内部でのみ使用されます。 NULL 値は許可されません。|  
 |cpu_time|**int**|要求で使用される CPU 時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |total_elapsed_time|**int**|要求を受信してから経過した総時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |scheduler_id|**int**|この要求のスケジュールを設定しているスケジューラの ID。 NULL 値は許可されません。|  
@@ -98,15 +99,15 @@ ms.locfileid: "85734690"
 |page_server_reads|**bigint**|**適用対象**: Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>解説 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
-[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、 **row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の **読み取り**、 **書き込み**、 **logical_reads**、 **row_count** は、コーディネータースレッドに対して更新され **ません** 。 列 **wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および **granted_query_memory** は、コーディネータースレッドに対して **のみ更新** されます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
-ユーザーが `VIEW SERVER STATE` サーバーに対する権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE`Azure SQL Database で許可することはできません `sys.dm_exec_requests` 。したがって、は常に現在の接続に限定されます。
+ユーザーが `VIEW SERVER STATE` サーバーに対する権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE` Azure SQL Database で許可することはできません `sys.dm_exec_requests` 。したがって、は常に現在の接続に限定されます。
 
-Always On シナリオでは、セカンダリレプリカが**読み取り目的のみ**に設定されている場合、セカンダリへの接続では、を追加することによって、接続文字列パラメーターでアプリケーションの目的を指定する必要があり `applicationintent=readonly` ます。 そうしないと、 `sys.dm_exec_requests` 権限が存在する場合でも、可用性グループ内のデータベースに対するのアクセス確認は成功しません `VIEW SERVER STATE` 。
+Always On シナリオでは、セカンダリレプリカが **読み取り目的のみ**に設定されている場合、セカンダリへの接続では、を追加することによって、接続文字列パラメーターでアプリケーションの目的を指定する必要があり `applicationintent=readonly` ます。 そうしないと、 `sys.dm_exec_requests` 権限が存在する場合でも、可用性グループ内のデータベースに対するのアクセス確認は成功しません `VIEW SERVER STATE` 。
 
   
 ## <a name="examples"></a>例  
@@ -127,16 +128,16 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B: 実行中のバッチが保持しているすべてのロックを検索する
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 実行中のバッチが保持しているすべてのロックを検索する
 
-次の例では、 **dm_exec_requests**を照会して、興味深いバッチを見つけて、出力からコピーします `transaction_id` 。
+次の例では、 **dm_exec_requests** を照会して、興味深いバッチを見つけて、出力からコピーします `transaction_id` 。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-次に、ロック情報を検索するには、 `transaction_id` システム関数**sys. dm_tran_locks**と共にコピーされたを使用します。  
+次に、ロック情報を検索するには、 `transaction_id` システム関数 **sys. dm_tran_locks**と共にコピーされたを使用します。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -145,9 +146,9 @@ WHERE request_owner_type = N'TRANSACTION'
 GO  
 ```
 
-### <a name="c-finding-all-currently-blocked-requests"></a>C: 現在ブロックされているすべての要求を検索しています
+### <a name="c-finding-all-currently-blocked-requests"></a>C. 現在ブロックされているすべての要求を検索しています
 
-次の例では、 **sys. dm_exec_requests**を照会して、ブロックされた要求に関する情報を検索します。  
+次の例では、 **sys. dm_exec_requests** を照会して、ブロックされた要求に関する情報を検索します。  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -158,7 +159,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>D: CPU による既存の要求の順序付け
+### <a name="d-ordering-existing-requests-by-cpu"></a>D. CPU による既存の要求の順序付け
 
 ```sql
 SELECT 

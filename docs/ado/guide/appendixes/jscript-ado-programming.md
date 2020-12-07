@@ -1,8 +1,9 @@
 ---
+description: JScript での ADO プログラミング
 title: JScript ADO プログラミング |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ceeb7c32a821d42d36b4f2f749069e42fa7b320
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760498"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991103"
 ---
 # <a name="jscript-ado-programming"></a>JScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -39,7 +40,7 @@ ms.locfileid: "82760498"
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>JScript での ADO オブジェクトの作成  
- 代わりに、 **CreateObject**関数の呼び出しを使用する必要があります。  
+ 代わりに、 **CreateObject** 関数の呼び出しを使用する必要があります。  
   
 ```javascript
 var Rs1;  
@@ -47,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript の例  
- 次のコードは、**レコードセット**オブジェクトを開く Active Server ページ (ASP) ファイルでの JScript のサーバー側プログラミングの一般的な例です。  
+ 次のコードは、 **レコードセット** オブジェクトを開く Active Server ページ (ASP) ファイルでの JScript のサーバー側プログラミングの一般的な例です。  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

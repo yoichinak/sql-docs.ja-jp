@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_sessions (Transact-SQL)
 title: server_event_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5821e5a64670bec6f9129ee98bd343f176048db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e97bffc2aff0a5c1fc176747ac965ce296d5b914
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885984"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551392"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +50,8 @@ ms.locfileid: "85885984"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [拡張イベントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   

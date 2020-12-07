@@ -1,4 +1,5 @@
 ---
+description: '[警告] ノード (SQL Server エージェント F1 ヘルプ)'
 title: '[警告] ノード (SQL Server エージェント F1 ヘルプ)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,19 +12,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eeb312c2ac7e11c7446c075d60a7815883976d14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5667d3c8cf6d180cccb2fad66afee3123253948f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749193"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036583"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>[警告] ノード (SQL Server エージェント F1 ヘルプ)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
-ここでは、 **のオブジェクト エクスプローラーの** [警告] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードの F1 ヘルプについて紹介します。  
-  
-
+ ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[警告]** ノードの F1 ヘルプについて紹介します。  

@@ -2,7 +2,7 @@
 title: Transact-SQL コードのステップ実行
 description: Transact-SQL デバッガーを使用して、データベース エンジン クエリ エディター ウィンドウで実行される Transact-SQL ステートメントを制御する方法について説明します。
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2a953cd71bc267622dd158569da80bc924e89b83
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246189"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036235"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
 
@@ -33,7 +33,7 @@ ms.locfileid: "87246189"
 
 ## <a name="breakpoints"></a>ブレークポイント
 
-ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止することをデバッガーに指示するために使用します。 ブレークポイントの詳細については、「[Transact-SQL ブレークポイント](../../relational-databases/scripting/transact-sql-breakpoints.md)」を参照してください。  
+ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止することをデバッガーに指示するために使用します。 ブレークポイントの詳細については、「[Transact-SQL ブレークポイント](./transact-sql-breakpoints.md)」を参照してください。  
   
 ## <a name="controlling-statement-execution"></a>ステートメントの実行の制御
 
@@ -67,4 +67,4 @@ ms.locfileid: "87246189"
   
 ## <a name="see-also"></a>参照
 
-- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)

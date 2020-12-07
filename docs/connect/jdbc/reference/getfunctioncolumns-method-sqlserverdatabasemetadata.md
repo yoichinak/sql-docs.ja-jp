@@ -1,4 +1,5 @@
 ---
+description: getFunctionColumns メソッド (SQLServerDatabaseMetaData)
 title: getFunctionColumns メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 4cb46e108c2a6c3842d55af9e07f06f909e721ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436024"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +63,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  結果セットの各行には、パラメーターの説明、列の説明、または戻り値の型に対する次の列が含まれます。  
   
-|名前|Type|説明|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|関数が存在するデータベースの名前です。|  
 |FUNCTION_SCHEM|**String**|関数のスキーマです。|  

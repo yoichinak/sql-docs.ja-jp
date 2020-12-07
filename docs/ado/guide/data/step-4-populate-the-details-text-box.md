@@ -1,8 +1,9 @@
 ---
+description: 手順 4:Details テキスト ボックスに値を設定する
 title: '手順 4: 詳細を入力するテキストボックス |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 868066b8225a3e87a2aad37ddd7569cc5be6bd75
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760788"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979483"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>手順 4:Details テキスト ボックスに値を設定する
-詳細テキストボックスを設定するには、 **Recfields**という名前の新しいサブルーチンを作成し、次のコードを挿入します。  
+詳細テキストボックスを設定するには、 **Recfields** という名前の新しいサブルーチンを作成し、次のコードを挿入します。  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  

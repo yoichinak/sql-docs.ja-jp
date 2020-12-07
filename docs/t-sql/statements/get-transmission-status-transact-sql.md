@@ -1,4 +1,5 @@
 ---
+description: GET_TRANSMISSION_STATUS (Transact-SQL)
 title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 22293acb123af48eee2806a9536b9bcebc3f07bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a3aa4aecb35151734d2a0b9a7e7305dbb2643c1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91497834"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "86483808"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
@@ -66,7 +66,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="examples"></a>例  
  次の例では、メッセージ交換ハンドル `58ef1d2d-c405-42eb-a762-23ff320bddf0` とのメッセージ交換に関する転送状態がレポートされます。  
   
-```  
+```sql  
 SELECT Status =  
     GET_TRANSMISSION_STATUS('58ef1d2d-c405-42eb-a762-23ff320bddf0') ;  
 ```  

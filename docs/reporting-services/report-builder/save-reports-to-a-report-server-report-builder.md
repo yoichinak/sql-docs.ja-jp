@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f16f6e58a227c25a2c631a949a96e73e5aaf8a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ae3aa7ed5cb93ab251e9b41ee6364bc93e3f064
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290807"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891782"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義をレポート サーバーに保存できます (レポートのパブリッシュとも呼ばれます)。 レポート サーバーにレポートを保存すると、他のユーザーがレポートを表示できます。 パブリッシュしたレポートを実行するたびに最新のデータが取得されます。 表示されたレポートの静的コピーを保存するには、レポートを他のファイル形式にエクスポートし、それを保存するか、またはレポート履歴機能を使用して、表示されたレポートのバージョンを保存します。  
@@ -24,7 +24,7 @@ ms.locfileid: "80290807"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>レポートをレポート サーバーに保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[名前を付けて保存]** _\<Report Item>_ ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、[名前を付けて保存] を使用します。  
@@ -39,7 +39,7 @@ ms.locfileid: "80290807"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>レポートを別の名前で保存するには  
   
-1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[名前を付けて保存]** _\<Report Item>_ ダイアログ ボックスが表示されます。  
   
 2.  レポートを保存するレポート サーバーの場所またはファイル共有を参照します。  
   
@@ -51,6 +51,5 @@ ms.locfileid: "80290807"
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [別の種類のファイルとしてレポートをエクスポートする &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
-  
+ [別の種類のファイルとしてレポートをエクスポートする &#40;レポート ビルダーおよび SSRS&#41;](/previous-versions/sql/)  
   

@@ -1,4 +1,5 @@
 ---
+description: SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
 title: SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備 | Microsoft Docs
 ms.date: 06/03/2016
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454534"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
@@ -67,7 +68,7 @@ ms.locfileid: "62651951"
   
 4.  **[状態の表示]** 領域で、SQL Server エージェントが実行中であることを確認します。  
   
-5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]** -GrantRights.sql)。  
+5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]**-GrantRights.sql)。  
   
 ### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>PowerShell を使用して Transact-SQL ステートメントを生成するには  
   

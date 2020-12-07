@@ -1,4 +1,5 @@
 ---
+description: 各国語文字セットのサポート
 title: 各国語文字セットのサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ceb2d12ba3d062b3ba592eb6baa93fe93223907
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 394d81f28921bfc4e68204778ed6fcdf1e2fb9e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438344"
 ---
 # <a name="national-character-set-support"></a>各国語文字セットのサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "80912218"
   
  アプリケーションからサーバーに対し文字列パラメーターを Unicode 形式で送信するには、JDBC 4.0 の新しい National Character メソッドを使用する必要があります。National Character メソッド以外のメソッドを使用する場合は、**sendStringParametersAsUnicode** 接続プロパティを "**true**" に設定する必要があります。 できる限り、JDBC 4.0 の新しい National Character メソッドを使用することをお勧めします。 **sendStringParametersAsUnicode** 接続プロパティについて詳しくは、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

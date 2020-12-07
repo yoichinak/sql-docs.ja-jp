@@ -1,4 +1,5 @@
 ---
+description: データ品質プロジェクトの作成
 title: データ品質プロジェクトの作成
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487970"
 ---
 # <a name="create-a-data-quality-project"></a>データ品質プロジェクトの作成
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900460"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  データ品質プロジェクトを作成するには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>データ品質プロジェクトの作成  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> データ品質プロジェクトの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   

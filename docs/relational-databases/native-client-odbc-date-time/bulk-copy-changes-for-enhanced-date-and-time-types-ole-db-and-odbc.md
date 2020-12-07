@@ -1,4 +1,5 @@
 ---
+description: 機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
 title: 一括コピー、拡張型、OLE DB
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e2fedfdc15ae247a77523a405204ed0b52edda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 208cc75e186c0c1de32ed10d263359ffdbb7e039
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423884"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +29,7 @@ ms.locfileid: "86001695"
 ## <a name="format-files"></a>フォーマット ファイル  
  フォーマット ファイルを対話形式で作成する場合に、日付型と時刻型の指定に使用する入力、および対応するホスト ファイル データ型名を次の表に示します。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|プロンプトに対する応答: "フィールドのファイルストレージ型を入力 <field_name> [ \<default> ]:"|  
+|ファイル ストレージ型|ホスト ファイル データ型|次のプロンプトへの応答:"フィールド <field_name> [\<default>]: のファイル ストレージ型を入力してください"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -63,7 +65,7 @@ ms.locfileid: "86001695"
 ```  
   
 ## <a name="character-data-files"></a>文字データ ファイル  
- 文字データファイルでは、日付と時刻の値は、「odbc の日付と時刻の機能強化のための[データ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」セクションで説明されているように、または OLE DB の[OLE DB の日付と時刻の機能強化に関するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)について説明しています。  
+ 文字データファイルでは、日付と時刻の値は、「odbc の日付と時刻の機能強化のための [データ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) 」の「データ形式: 文字列とリテラル」セクションで説明されているように、または OLE DB の [OLE DB の日付と時刻の機能強化に関するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) について説明しています。  
   
  Native data ファイルでは、4つの新しい型の日付と時刻の値は、小数点以下桁数が7の TDS 表現として表現されます (これは、でサポートされている最大値で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp データファイルにはこれらの列の小数点以下桁数が格納されていないため)。 既存の **datetime** 型および **smalldatetime** 型や、それらの TDS (表形式のデータ ストリーム) 表現のストレージに変更はありません。  
   
@@ -109,7 +111,7 @@ ms.locfileid: "86001695"
   
  **OLE DB に関するメモ** 次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad では、「[クライアントからサーバーへの変換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)」に定義されているとおり、OLE DB 変換が使用されます。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|To --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|To --><br /><br /> ソース|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
 |Time|該当なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
@@ -130,7 +132,7 @@ ms.locfileid: "86001695"
 |-|変換はサポートされていません。<br /><br /> "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の ODBC 診断レコードが生成されます。|  
 |1|指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の ODBC 診断レコードが生成されます。 datetimeoffset 値の場合は、UTC への変換が必要なくても、時刻部分は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するためです。 したがって、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があります。|  
 |2|時刻部分は無視されます。|  
-|3|ODBC の場合、データ損失を伴う切り捨てが発生すると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。秒の小数部の桁数 (小数点以下桁数) は、次の表に従って変換先の列のサイズによって決まります。 テーブルの範囲よりサイズが大きい列の場合、7 桁と見なされます。 この変換では、最大9桁の小数点以下桁数 (ODBC で許容される最大値) を使用できます。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の位取り 1.. 7** 10、16<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 21.. 27<br /><br /> <br /><br /> **型:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 28.. 34<br /><br /> OLE DB の場合は、データの損失を伴う切り捨てが行われると、エラーが通知されます。 datetime2 に関しては、次の表に示すように、秒の小数点以下桁数 (スケール) は変換先の列のサイズによって決まります。 テーブルの範囲よりサイズが大きい列の場合は、9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、OLE DB で許容される最大桁数です。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の小数点以下桁数 1..9** 1..9<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1..9:** 21..29<br /><br /> <br /><br /> **型:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1..9:** 28..36|  
+|3|ODBC の場合、データ損失を伴う切り捨てが発生すると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。秒の小数部の桁数 (小数点以下桁数) は、次の表に従って変換先の列のサイズによって決まります。 テーブルの範囲よりサイズが大きい列の場合、7 桁と見なされます。 この変換では、最大9桁の小数点以下桁数 (ODBC で許容される最大値) を使用できます。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の位取り 1.. 7** 10、16<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 21.. 27<br /><br /> <br /><br /> **種類:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1.. 7:** 28.. 34<br /><br /> OLE DB の場合は、データの損失を伴う切り捨てが行われると、エラーが通知されます。 datetime2 に関しては、次の表に示すように、秒の小数点以下桁数 (スケール) は変換先の列のサイズによって決まります。 テーブルの範囲よりサイズが大きい列の場合は、9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、OLE DB で許容される最大桁数です。<br /><br /> **種類:** DBTIME2<br /><br /> **暗黙の小数点以下桁数 0** 8<br /><br /> **暗黙の小数点以下桁数 1..9** 1..9<br /><br /> <br /><br /> **種類:** DBTIMESTAMP<br /><br /> **暗黙の小数点以下桁数 0:** 19<br /><br /> **暗黙の小数点以下桁数 1..9:** 21..29<br /><br /> <br /><br /> **種類:** DBTIMESTAMPOFFSET<br /><br /> **暗黙の小数点以下桁数 0:** 26<br /><br /> **暗黙の小数点以下桁数 1..9:** 28..36|  
 |4|日付部分は無視されます。|  
 |5|タイム ゾーンは UTC (00:00 など) に設定されます。|  
 |6|時刻は 0 に設定されます。|  
@@ -144,5 +146,5 @@ ms.locfileid: "86001695"
 |||
 
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
+ [ODBC&#41;&#40;の日付と時刻の改善 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

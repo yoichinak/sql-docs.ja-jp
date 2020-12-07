@@ -1,8 +1,9 @@
 ---
+description: Visual Basic for Applications の関数
 title: Visual Basic for Applications functions |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242922"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978933"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications の関数
 次の Visual Basic for Applications 関数は、データシェイプの CALC 式で使用できます。  
@@ -63,14 +64,14 @@ ms.locfileid: "87242922"
         Error$  
         Exp  
         Fix  
-        Format  
+        書式  
         Format$  
         FV  
         Hex  
     :::column-end:::
     :::column:::
         Hex$  
-        時間  
+        時  
         IIF  
         InStr  
         int  
@@ -132,11 +133,11 @@ ms.locfileid: "87242922"
         StrConv  
     :::column-end:::
     :::column:::
-        String  
+        文字列型  
         String$  
         SYD  
         Tan  
-        Time  
+        時間  
         Time$  
         Timer  
         TimeSerial  

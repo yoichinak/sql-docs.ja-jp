@@ -1,4 +1,5 @@
 ---
+description: ExitCode プロパティ (SqlService クラス)
 title: ExitCode プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ExitCode property
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 144c6eb8797ca9e559c050b381e725d26e55d040
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 71e5fbe4180c67560709f004ba099bb90ca83b02
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880636"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542848"
 ---
 # <a name="exitcode-property-sqlservice-class"></a>ExitCode プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ object.ExitCode [= value]
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 終了コードを指定する**uint32**値。  
+ 終了コードを指定する **uint32** 値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このプロパティは、エラーがこのクラスによって表されているサービスに特有な場合には、ERROR_SERVICE_SPECIFIC_ERROR (1066) に設定されます。 サービスは、実行時にこの値を NO_ERROR に設定し、通常終了時にも再度設定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

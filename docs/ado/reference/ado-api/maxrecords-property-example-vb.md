@@ -1,8 +1,9 @@
 ---
+description: MaxRecords プロパティの例 (VB)
 title: MaxRecords プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1873c6a3d887ddfbcccf9f51f86a94f882047e77
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754364"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990623"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords プロパティの例 (VB)
-この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開きます。  
+この例では、 [MaxRecords](./maxrecords-property-ado.md)プロパティを使用して、***タイトル***テーブルに最も高価な10個のタイトルを含む[レコードセット](./recordset-object-ado.md)を開きます。  
   
 ```  
 'BeginMaxRecordsVB  
@@ -88,5 +89,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords プロパティ (ADO)](./maxrecords-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

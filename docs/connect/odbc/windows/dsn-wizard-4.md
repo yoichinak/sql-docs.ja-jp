@@ -1,4 +1,5 @@
 ---
+description: データ ソース ウィザード画面 4 (ODBC Driver for SQL Server)
 title: データ ソース ウィザード画面 4 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462184"
 ---
 # <a name="data-source-wizard-screen-4"></a>データ ソース ウィザード画面 4
 
@@ -55,7 +56,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>[ODBC ドライバーの統計情報ログを以下のログ ファイルに保存する]
 
-統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、 **[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
+統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、**[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
 
 統計情報ログはタブで区切られており、タブ区切りのファイルをサポートする Microsoft Excel やその他のアプリケーションで分析できます。
 
@@ -73,7 +74,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="finish"></a>[完了]
 
-この画面で指定された情報が完了すると、 **[完了]** をクリックできます。 このウィザードのこの画面および他の画面で指定されたすべての属性を使用して DSN が作成され、新しく作成された DSN をテストする機会が与えられます。
+この画面で指定された情報が完了すると、**[完了]** をクリックできます。 このウィザードのこの画面および他の画面で指定されたすべての属性を使用して DSN が作成され、新しく作成された DSN をテストする機会が与えられます。
 
 ## <a name="next-steps"></a>次のステップ
 

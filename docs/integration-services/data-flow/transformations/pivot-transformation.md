@@ -1,4 +1,5 @@
 ---
+description: ピボット変換
 title: ピボット変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a4a969e44fde0abaf221592ed32a48cd233fc9e
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5166b67a52cc93190c9dc6c273d9336c0f6d7552
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472539"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195327"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
 
@@ -130,7 +131,7 @@ ms.locfileid: "87472539"
   
  **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -141,5 +142,4 @@ ms.locfileid: "87472539"
  [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

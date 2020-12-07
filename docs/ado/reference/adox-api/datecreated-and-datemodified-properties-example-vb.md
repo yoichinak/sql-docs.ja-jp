@@ -1,8 +1,9 @@
 ---
+description: DateCreated および DateModified プロパティの例 (VB)
 title: DateCreated プロパティと DateModified プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c78010e98c82f5c43484fe39bbbec506c77b45e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759238"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984803"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated および DateModified プロパティの例 (VB)
-この例では、既存の[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に新しい[列](../../../ado/reference/adox-api/column-object-adox.md)を追加し、新しい**テーブル**を作成することによって、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)プロパティと[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを示します。 この例を実行するには、DateOutput プロシージャが必要です。  
+この例では、既存の[テーブル](./table-object-adox.md)に新しい[列](./column-object-adox.md)を追加し、新しい**テーブル**を作成することによって、 [DateCreated](./datecreated-property-adox.md)プロパティと[DateModified](./datemodified-property-adox.md)プロパティを示します。 この例を実行するには、DateOutput プロシージャが必要です。  
   
 ```  
 ' BeginDateCreatedVB  
@@ -95,9 +96,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [DateCreated プロパティ (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified プロパティ (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [プロシージャオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [DateCreated プロパティ (ADOX)](./datecreated-property-adox.md)   
+ [DateModified プロパティ (ADOX)](./datemodified-property-adox.md)   
+ [プロシージャオブジェクト (ADOX)](./procedure-object-adox.md)   
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)   
+ [View オブジェクト (ADOX)](./view-object-adox.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

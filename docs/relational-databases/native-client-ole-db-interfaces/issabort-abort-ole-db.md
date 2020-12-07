@@ -1,4 +1,5 @@
 ---
+description: 'ISSAbort:: Abort (Native Client OLE DB provider)'
 title: 'ISSAbort:: Abort (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0da4aced1b1c5eaba473e88d4d2938c9f4f42d2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 16e72e33c4ddd618ab9753cb13e1073d9defe365
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947889"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081581"
 ---
 # <a name="issabortabort-native-client-ole-db-provider"></a>ISSAbort:: Abort (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87947889"
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  中断されているコマンドがストアドプロシージャ内にある場合、ストアドプロシージャ (およびそのプロシージャを呼び出したプロシージャ) の実行が終了され、ストアドプロシージャ呼び出しを含むコマンドバッチも終了します。 サーバーがクライアントに結果セットを転送中の場合、この処理も停止します。 クライアントが結果セットを使用しない場合、行セットを解放する前に **ISSAbort::Abort** を呼び出すと、行セットの解放が高速になります。ただし、開いているトランザクションがあり、XACT_ABORT が ON の場合、**ISSAbort::Abort** が呼び出されたときに、トランザクションがロールバックされます。  
   
  **ISSAbort::Abort** が S_OK を返すと、関連する **IMultipleResults** インターフェイスは使用できない状態になり、このインターフェイスが解放されるまで、すべてのメソッド呼び出しに DB_E_CANCELED が返されます (ただし **IUnknown** インターフェイスで定義されたメソッドは除きます)。 **Abort** を呼び出す前に、**IMultipleResults** から **IRowset** を取得している場合、これも使用できない状態になり、**ISSAbort::Abort** の正常な呼び出し後にこのインターフェイスが解放されるまでは、すべてのメソッド呼び出しで DB_E_CANCELED が返されます (ただし、**IUnknown** インターフェイスと **IRowset::ReleaseRows** で定義されたメソッドは除きます)。  
@@ -61,7 +62,7 @@ HRESULT Abort(void);
  バッチは取り消されませんでした。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細については、 [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_UNEXPECTED  
  メソッドの呼び出しが予期されませんでした。 たとえば、**ISSAbort::Abort** が既に呼び出されていたために、オブジェクトがゾンビ状態になっている場合などです。  
@@ -70,6 +71,5 @@ HRESULT Abort(void);
  メモリ不足エラー。  
   
 ## <a name="see-also"></a>参照  
- [ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
-  
+ [ISSAbort &#40;OLE DB&#41;]()  
   

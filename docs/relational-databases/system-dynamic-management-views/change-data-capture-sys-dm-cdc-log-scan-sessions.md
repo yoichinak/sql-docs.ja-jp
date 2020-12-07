@@ -1,4 +1,5 @@
 ---
+description: 変更データキャプチャ-sys. dm_cdc_log_scan_sessions
 title: dm_cdc_log_scan_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d70c211c388fca8e0ab26ba69083378924e5bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bef7989e6533b56ff1976ccf5fe145954a69afb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894735"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534340"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>変更データキャプチャ-sys. dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,17 +52,17 @@ ms.locfileid: "85894735"
 |**first_begin_cdc_lsn**|**nvarchar (23)**|変更データ キャプチャ トランザクションを含んでいた最初の LSN です。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションを含んでいる最初の LSN です。|  
 |**last_commit_cdc_lsn**|**nvarchar (23)**|変更データキャプチャトランザクションが含まれていた最後のコミットログレコードの LSN。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションが含まれているすべてのセッションの最後のコミットログレコードの LSN|  
 |**last_commit_cdc_time**|**datetime**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードが処理された時刻です。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションが含まれているセッションの最後のコミットログレコードの時刻。|  
-|**短い**|**int**|セッションの**end_time**と**last_commit_cdc_time**の差 (秒単位)。 このカウンターはフェーズ7の最後に設定されます。<br /><br /> **Session_id** = 0 の場合、セッションによって記録された最後の0以外の待機時間の値。|  
+|**短い**|**int**|セッションの **end_time** と **last_commit_cdc_time** の差 (秒単位)。 このカウンターはフェーズ7の最後に設定されます。<br /><br /> **Session_id** = 0 の場合、セッションによって記録された最後の0以外の待機時間の値。|  
 |**empty_scan_count**|**int**|変更データキャプチャトランザクションが含まれていない連続したセッションの数。|  
 |**failed_sessions_count**|**int**|失敗したセッションの数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この動的管理ビューの値は、のインスタンスが起動されるたびにリセットされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Dm_cdc_log_scan_sessions**動的管理ビューに対してクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ **Dm_cdc_log_scan_sessions**動的管理ビューに対してクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、最新のセッションに関する情報を返します。  
   
 ```  
@@ -77,7 +78,7 @@ WHERE session_id = (SELECT MAX(b.session_id) FROM sys.dm_cdc_log_scan_sessions A
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_cdc_errors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   

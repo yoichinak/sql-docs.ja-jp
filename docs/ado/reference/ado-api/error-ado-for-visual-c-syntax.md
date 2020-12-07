@@ -1,8 +1,9 @@
 ---
+description: Error (Visual C++ 構文用の ADO)
 title: Error (Visual C++ 構文の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 373cd6d8ba4a58ecc8631195156d65847e5ef633
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc77b15187701e94469660e3cc8ef29c9a060139
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765523"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973769"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (Visual C++ 構文用の ADO)
 ## <a name="properties"></a>プロパティ  

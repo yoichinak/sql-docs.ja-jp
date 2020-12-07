@@ -1,4 +1,5 @@
 ---
+description: dm_exec_connections (Transact-sql)
 title: dm_exec_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d128ee81a4465bdb24b9e6fde48d5dbe8cc8b8cc
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 9f9885ce0232b9fc36cbcec48ed17d16b54f4f57
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942364"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546652"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>dm_exec_connections (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86942364"
 |session_id|**int**|この接続に関連付けられたセッションの識別子。 NULL 値が許可されます。|  
 |most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 (SOAP 接続は別のセッションで再利用できます。)Null 値は許容されます。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|net_transport|**nvarchar(40)**|接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、常に**セッション**を返します。<br /><br /> **注:** この接続で使用される物理トランスポートプロトコルについて説明します。 NULL 値は許可されません。|  
+|net_transport|**nvarchar(40)**|接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、常に **セッション** を返します。<br /><br /> **注:** この接続で使用される物理トランスポートプロトコルについて説明します。 NULL 値は許可されません。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
 |protocol_version|**int**|この接続に関連付けられているデータアクセスプロトコルのバージョン。 NULL 値が許可されます。|  
 |endpoint_id|**int**|この接続の種類を表す識別子。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  
@@ -59,7 +60,7 @@ ms.locfileid: "86942364"
 |connection_id|**uniqueidentifier**|各接続の一意識別子。 NULL 値は許可されません。|  
 |parent_connection_id|**uniqueidentifier**|MARS セッションが使用しているプライマリ接続を識別します。 NULL 値が許可されます。|  
 |most_recent_sql_handle|**varbinary(64)**|この接続で実行された最新の要求の SQL ハンドル。 most_recent_sql_handle 列は、常に most_recent_session_id 列と同期されます。 NULL 値が許可されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 

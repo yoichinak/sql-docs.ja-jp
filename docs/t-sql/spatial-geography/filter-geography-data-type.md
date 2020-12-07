@@ -1,4 +1,5 @@
 ---
+description: Filter (geography データ型)
 title: Filter (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: feb6c65ca3263e1ca5c26db21a1350285539d785
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a5e5ff41504184bd8c1aa0805267f38566b5162
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555209"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124314"
 ---
 # <a name="filter-geography-data-type"></a>Filter (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86555209"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このメソッドは決定的でなく、正確ではありません。  
   
 ## <a name="examples"></a>例  

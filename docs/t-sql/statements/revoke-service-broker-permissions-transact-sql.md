@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Service Broker の権限の取り消し) (Transact-SQL)
 title: REVOKE (Service Broker の権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3794c016c95be48cfe9e740ac22831641db0f3b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483553"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88357118"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (Service Broker の権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のセキュリティ保護可能なリソースに対して取り消せる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  権限を取り消すコントラクトを指定します。 スコープ修飾子 **::** が必要です。  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  権限を取り消すメッセージ型を指定します。 スコープ修飾子 **::** が必要です。  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  権限を取り消すリモート サービス バインドを指定します。 スコープ修飾子 **::** が必要です。  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  権限を取り消すルートを指定します。 スコープ修飾子 **::** が必要です。  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  権限を取り消すサービスを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
@@ -105,7 +106,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 *revoking_principal*には、次のいずれかを指定することができます。  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 *revoking_principal* には、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   
@@ -123,7 +124,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="service-broker-contracts"></a>Service Broker コントラクト  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトは、データベース レベルのセキュリティ保護可能な権限の階層で親となっているデータベースに格納されています。 次の表に、[!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクトで取り消せる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -181,7 +182,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] コントラクト、メッセージ型、リモート サービス バインド、ルート、またはサービスに対する CONTROL 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
  [DENY (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

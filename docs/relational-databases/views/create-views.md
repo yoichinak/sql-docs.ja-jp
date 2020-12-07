@@ -1,4 +1,5 @@
 ---
+description: ビューの作成
 title: ビューの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5251863e3b02f62cb1af6cec6da4166081239d1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 654dbae04bbc69fa257b288f6b130c6b17f75ace
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395732"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130839"
 ---
 # <a name="create-views"></a>ビューの作成
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87395732"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してビューを作成するには**  
   
@@ -60,29 +61,29 @@ ms.locfileid: "87395732"
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>クエリおよびビュー デザイナーを使用してビューを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
+1.  **オブジェクト エクスプローラー** で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** フォルダーを右クリックし、 **[新しいビュー]** をクリックします。  
+2.  **[ビュー]** フォルダーを右クリックし、**[新しいビュー]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
 4.  **[追加]** をクリックし、 **[閉じる]** をクリックします。  
   
-5.  **ダイアグラム ペイン**で、新しいビューに含める列またはその他の要素を選択します。  
+5.  **ダイアグラム ペイン** で、新しいビューに含める列またはその他の要素を選択します。  
   
-6.  **抽出条件ペイン**で、列の追加の並べ替え条件またはフィルター条件を選択します。  
+6.  **抽出条件ペイン** で、列の追加の並べ替え条件またはフィルター条件を選択します。  
   
-7.  **ファイル** メニューの **view name**_の保存_をクリックします。  
+7.  **ファイル** メニューの **view name**_の保存_ をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]** をクリックします。  
 
-     クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
+     クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)」を参照してください。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-view"></a>ビューを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -105,5 +106,4 @@ ms.locfileid: "87395732"
     ```  
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
-  
   

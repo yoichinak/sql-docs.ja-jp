@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661091"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765941"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -46,7 +46,7 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
    - すべてのノード全体で 24 個以上の接続されたディスク
 
    > [!TIP]
-   > Azure インフラストラクチャでは、VM に対して複数のサイズ オプションを提供しています。展開を計画しているリージョンでの選択については、[こちら](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)を参照してください。
+   > Azure インフラストラクチャでは、VM に対して複数のサイズ オプションを提供しています。展開を計画しているリージョンでの選択については、[こちら](/azure/virtual-machines/windows/sizes)を参照してください。
 
 ## <a name="create-a-resource-group"></a>リソース グループを作成する
 
@@ -110,7 +110,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
+1. [az aks create](/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
 
    スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
 
@@ -149,7 +149,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続する
 
-1. kubectl を構成して Kubernetes クラスターに接続するには、[az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) コマンドを実行します。 この手順では、資格情報をダウンロードし、それらを使用するために kubectl CLI を構成します。
+1. kubectl を構成して Kubernetes クラスターに接続するには、[az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) コマンドを実行します。 この手順では、資格情報をダウンロードし、それらを使用するために kubectl CLI を構成します。
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 上記のコマンドを利用して Azure Kubernetes サービスを作成する際に問題が発生した場合は、次の解決策を試してください。
 
-- [最新の Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていることを確認してください。
+- [最新の Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていることを確認してください。
 - 別のリソース グループとクラスター名を使用して、同じ手順を試してください。
-- 詳細な [AKS のトラブルシューティングのドキュメント](https://docs.microsoft.com/azure/aks/troubleshooting)を参照してください。
+- 詳細な [AKS のトラブルシューティングのドキュメント](/azure/aks/troubleshooting)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

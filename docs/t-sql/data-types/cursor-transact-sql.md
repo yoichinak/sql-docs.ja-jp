@@ -1,4 +1,5 @@
 ---
+description: cursor (Transact-SQL)
 title: cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc1f3981733712758230287c770c47dd0bf43562
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732871"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124985"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 カーソルへの参照を含む、変数またはストアド プロシージャの OUTPUT パラメーターのデータ型。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 **cursor** 型の変数とパラメーターを参照できる操作は次のとおりです。
 -   DECLARE *\@local_variable* ステートメントと SET *\@local_variable* ステートメント。  
 -   OPEN、FETCH、CLOSE、DEALLOCATE cursor ステートメント。  
@@ -40,7 +41,7 @@ ms.locfileid: "85732871"
   
 **カーソル** CREATE TABLE ステートメント内の列のデータ型を使用することはできません。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
 [データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  

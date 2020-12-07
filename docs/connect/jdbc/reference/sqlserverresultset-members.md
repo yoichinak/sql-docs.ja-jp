@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSet のメンバー
 title: SQLServerResultSet のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458234"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "67970562"
   
 ## <a name="fields"></a>フィールド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|行ロックを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|行ロックを使用しない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り/書き込みのオプティミスティック同時実行制御の種類を指定する場合に使用します。|  
@@ -46,7 +47,7 @@ ms.locfileid: "67970562"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトで指定した行にカーソルを移動します。|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの最終行の後ろにカーソルを移動します。|  
@@ -105,7 +106,7 @@ ms.locfileid: "67970562"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの最終行にカーソルを移動します。|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|記憶されているカーソル位置 (通常は現在の行) に、カーソルを移動します。|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|カーソルを挿入行に移動します。|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|カーソルを現在の位置から 1 行下に移動します。|  
+|[次へ](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|カーソルを現在の位置から 1 行下に移動します。|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの前の行にカーソルを移動します。|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|データベース内の最新の値を使用して、現在の行を更新します。|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|カーソルを指定された行数分、現在の行を基準に正または負の方向に移動します。|  

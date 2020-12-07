@@ -1,4 +1,5 @@
 ---
+description: DBCC HELP (Transact-SQL)
 title: DBCC HELP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: aa73ad04708c75a474fade49a183b2f66b55c006
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5a609cd126f131e59ac2ed09ef91df70021c1ca6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485031"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116891"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "86485031"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -68,7 +69,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>B. DBCC HELP と ? オプション  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. DBCC HELP と ?  オプション  
 次の例は、ヘルプ情報を取得できるすべての DBCC ステートメントを返します。
   
 ```sql  

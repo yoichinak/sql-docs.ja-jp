@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_PADDING (Transact-SQL)
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f764b11533be2eb6e6e4a71e5b0fe388da9bdcc6
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396521"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328084"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -39,20 +40,20 @@ ms.locfileid: "87396521"
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文
-  
+ 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] および [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] の構文 
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_PADDING { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] および [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] の構文
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
-
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  **char**、**varchar**、**binary**、および **varbinary** データ型で定義された列は、定義されたサイズを持ちます。  
   
  この設定は新しい列の定義にだけ影響します。 列が作成された後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列の作成時の設定に基づいて値が格納されます。 この設定を後で変更しても、既存の列には影響がありません。  
@@ -74,7 +75,7 @@ SET ANSI_PADDING ON
   
 既定では、SET ANSI_PADDING は ON に設定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_PADDING が ON に設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義でき、接続前にアプリケーションで設定される OLE DB 接続プロパティでも定義できます。 DB-Library アプリケーションからの接続に対しては、既定で SET ANSI_PADDING は OFF に設定されています。  
   
- SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)** 、**varchar(max)** 、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
+ SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)**、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
   
 ANSI_DEFAULTS が ON の場合は、ANSI_PADDING が有効になります。  
   

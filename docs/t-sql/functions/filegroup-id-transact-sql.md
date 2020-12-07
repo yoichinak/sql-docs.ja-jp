@@ -1,4 +1,5 @@
 ---
+description: FILEGROUP_ID (Transact-SQL)
 title: FILEGROUP_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cd6899dfdb19dad3b1f1c95ec12ffe67ab8e9da
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ff8932e241349836f34dad60c805d4396ca84575
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112439"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128471"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87112439"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql 
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
@@ -53,9 +54,9 @@ FILEGROUP_ID ( 'filegroup_name' )
 *filegroup_name* に対応する、 **名前** 内の列、 **sys.filegroups** カタログ ビューです。  
   
 ## <a name="examples"></a>例  
-この例では、`PRIMARY` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のファイル グループのファイル グループ ID を取得します。  
+この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PRIMARY` という名前のファイル グループのファイル グループ ID を取得します。  
   
-```  
+```sql  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  

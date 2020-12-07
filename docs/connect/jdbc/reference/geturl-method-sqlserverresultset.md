@@ -1,4 +1,5 @@
 ---
+description: getURL メソッド (SQLServerResultSet)
 title: getURL メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 738ffe3d-0df0-4884-9bd8-31b951e008c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8d26b12d8be679c33d6d4dcc49a0cd90fc38e46
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 611833b19948e08394edac8927e327f0a48535f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433814"
 ---
 # <a name="geturl-method-sqlserverresultset"></a>getURL メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80910490"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getURL (int)](../../../connect/jdbc/reference/geturl-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値を、URL オブジェクトとして取得します。|  
 |[getURL (java.lang.String)](../../../connect/jdbc/reference/geturl-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、URL オブジェクトとして取得します。|  

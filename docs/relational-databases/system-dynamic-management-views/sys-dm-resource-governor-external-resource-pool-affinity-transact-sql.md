@@ -1,4 +1,5 @@
 ---
+description: dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 title: dm_resource_governor_external_resource_pool_affinity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
@@ -17,13 +18,14 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6d583ec570c7532fbafc354d4d5c70016a8cebd1
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ad8fa57e43d1b456434f007e224464af11aa53e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053164"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546499"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -37,9 +39,9 @@ ms.locfileid: "86053164"
 |processor_group|**smallint**|Windows 論理プロセッサグループの ID。 NULL 値は許可されません。|
 |cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリマスク。 NULL 値は許可されません。|
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-アフィニティを使用して作成されたプールは、アフィニティがない `AUTO` ため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメント」を参照してください。
+アフィニティを使用して作成されたプールは、アフィニティがない `AUTO` ため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) ステートメント」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 

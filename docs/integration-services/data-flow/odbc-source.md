@@ -1,4 +1,5 @@
 ---
+description: ODBC 入力元
 title: ODBC 入力元 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914993"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92194775"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
 
@@ -50,7 +51,7 @@ ms.locfileid: "86914993"
   
 -   標準出力データ列。  
   
- ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)」を参照してください。  
+ ODBC 入力元は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](./odbc-destination.md)」を参照してください。  
   
 ## <a name="data-type-support"></a>データ型のサポート  
  ODBC 入力元でサポートされるデータ型については、「Connector for Open Database Connectivity (ODBC)」を参照してください。  
@@ -85,9 +86,9 @@ ms.locfileid: "86914993"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換元を使用したデータ抽出](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [ODBC 入力元を使用したデータ抽出](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [ODBC 変換元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC 入力元のカスタム プロパティ](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>[ODBC ソース エディター] ([接続マネージャー] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、入力元の ODBC 接続マネージャーを選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -113,7 +114,7 @@ ms.locfileid: "86914993"
 |オプション|説明|  
 |------------|-----------------|  
 |テーブル名|ODBC データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択する場合は、以下の一覧から値を選択します。|  
-||**[テーブル名またはビュー名]** : 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
+||**[テーブル名またはビュー名]**: 使用できるテーブルまたはビューを一覧から選択するか、正規表現を入力してテーブルを特定します。|  
 ||この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。|  
 |[SQL コマンド]|SQL クエリを使用して、ODBC データ ソースからデータを取得します。 使用しているソース データベースの構文でクエリを記述してください。 このオプションを選択する場合は、以下のいずれかの方法でクエリを入力します。|  
 ||**[SQL コマンド テキスト]** フィールドに SQL クエリのテキストを入力します。|  
@@ -175,7 +176,7 @@ ms.locfileid: "86914993"
  ODBC 入力元でフローの切り捨てを処理する方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
 #### <a name="description"></a>説明  
- 使用されていません。  
+ 使用しません。  
   
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力元でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
@@ -194,5 +195,4 @@ ms.locfileid: "86914993"
   
 #### <a name="redirect-flow"></a>[フローのリダイレクト]  
  エラーまたは切り捨てが ODBC 入力元のエラー出力に送られる原因となった行。  
-  
   

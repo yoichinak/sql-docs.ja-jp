@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_secondary_database (Transact-SQL)
 title: sp_help_log_shipping_secondary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485997"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_id = ] 'secondary_id'`ログ配布構成におけるセカンダリサーバーの ID。 *secondary_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @secondary_id = ] 'secondary_id'` ログ配布構成におけるセカンダリサーバーの ID。 *secondary_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -84,15 +85,15 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
 |**last_restored_latency**|ログバックアップがプライマリで作成されてからセカンダリに復元されるまでの経過時間 (分単位)。<br /><br /> 初期値が NULL です。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  *Secondary_database*パラメーターを指定した場合、結果セットにはそのセカンダリデータベースに関する情報が含まれます。*secondary_id*パラメーターを指定した場合、結果セットには、そのセカンダリ id に関連付けられているすべてのセカンダリデータベースに関する情報が含まれます。  
   
- **sp_help_log_shipping_secondary_database**は、セカンダリサーバーの**master**データベースから実行する必要があります。  
+ **sp_help_log_shipping_secondary_database** は、セカンダリサーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_help_log_shipping_secondary_primary &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

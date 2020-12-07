@@ -14,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5499ace3a3a0b0f1ba98b8ae1859b51d9867eeb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866065"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397091"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint および Reporting Services サーバーのサポートされる組み合わせ
 
@@ -38,7 +38,7 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 
 ### <a name="supported-combinations"></a>サポートされる組み合わせ
 
-||レポート サーバー|アドイン|SharePoint バージョン|
+|Number|レポート サーバー|アドイン|SharePoint バージョン|
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
@@ -57,7 +57,7 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 |15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 SP2|SQL Server 2008 および SQL Server 2008 SP2|SharePoint 2007|
 
- \* 例外: Power View の統合はサポートされていません。
+ * 例外: Power View の統合はサポートされていません。
 
  アドインのダウンロード ページへのリンクについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
 
@@ -73,7 +73,7 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 
 - SQL Server 2008 R2 アドインは、SQL Server 2012 (以降) のレポート サーバーではサポートされていません。 SharePoint 2010 の必須コンポーネントのインストーラーによって、SQL Server 2008 R2 アドインが自動的にインストールされます。 新しいバージョンのアドインをインストールする前に、SQL Server 2008 R2 アドインをアンインストールする必要があります。 アドインのインプレース アップグレードはサポートされていません。
 
-- **アップグレード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインと共にインストールされた SharePoint 2010 を SharePoint 2013 にインプレース アップグレードすることはできません。 SharePoint 2013 には、SQL Server 2012 SP1 以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインとレポート サーバーが必要です。 アップグレードの詳細については、「 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。
+- **アップグレード:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインと共にインストールされた SharePoint 2010 を SharePoint 2013 にインプレース アップグレードすることはできません。 SharePoint 2013 には、SQL Server 2012 SP1 以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインとレポート サーバーが必要です。 アップグレードの詳細については、「 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

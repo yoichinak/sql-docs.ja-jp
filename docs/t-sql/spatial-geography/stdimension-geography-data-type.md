@@ -1,4 +1,5 @@
 ---
+description: STDimension (geography データ型)
 title: STDimension (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7cd207272093ab77aea443737f27bd99a35e2e5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479300"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

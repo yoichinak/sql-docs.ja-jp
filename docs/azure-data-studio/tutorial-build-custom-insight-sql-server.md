@@ -1,20 +1,20 @@
 ---
-title: チュートリアル:カスタムの分析情報ウィジェットを構築する
+title: カスタムの分析情報ウィジェットを構築する
 description: このチュートリアルでは、カスタムの分析情報ウィジェットを構築し、Azure Data Studio のデータベースとサーバー ダッシュボードに追加する方法について説明します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 14f3e502c3370056515f17915a370473d10b3b2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661144"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283753"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル:カスタムの分析情報ウィジェットを構築する
 
@@ -104,7 +104,7 @@ ms.locfileid: "85661144"
 
 7. *[ユーザー設定]* ファイルを保存し、*TutorialDB* データベース ダッシュボードを開き、アクティブになっているセッション ウィジェットを表示します。
 
-   ![activesession 分析情報](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![activesession 分析情報ダッシュボード](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>詳細をカスタムの分析情報に追加する
 
@@ -159,7 +159,7 @@ ms.locfileid: "85661144"
 
 7. *[ユーザー設定]* ファイルを保存し、*TutorialDB* データベース ダッシュボードを開きます。 *[My-Widget]\(マイ ウィジェット\)* の隣にある省略記号 (...) をクリックすると、詳細が表示されます。
 
-    ![activesession 分析情報](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![activesession 分析情報詳細](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>次のステップ
 このチュートリアルでは、以下の内容を学習しました。

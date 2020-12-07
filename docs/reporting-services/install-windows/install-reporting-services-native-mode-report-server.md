@@ -1,4 +1,5 @@
 ---
+description: Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 title: Reporting Services 2016 ネイティブ モードのレポート サーバーのインストール | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b741c74a2cc614ecab4e866f9bcfe26618133aa4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486853"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891902"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 
@@ -57,7 +58,7 @@ ms.locfileid: "81486853"
 
 - レポート サーバー データベース用の接続情報 (データ ソース名 (DSN) とも呼ばれます)。
 
- セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
+ セットアップでは、自動実行用アカウント、レポート サーバーの電子メール、暗号化キーのバックアップ、およびスケールアウト配置が構成されません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、これらのプロパティを構成できます。 詳細については、「[レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。
 
 ## <a name="when-to-install-the-default-configuration-for-native-mode"></a><a name="bkmk_whentoinstalldefaultconfig"></a> ネイティブ モードの既定の構成をインストールする場合
 
@@ -93,7 +94,7 @@ URL 予約は、プレフィックス、ホスト名、ポート、および仮�
 |Prefix|既定のプレフィックスは HTTP です。 以前にトランスポート層セキュリティ(TLS) (旧称 Secure Sockets Layer (SSL)) 証明書をインストールした場合は、セットアップによって、HTTPS プレフィックスを使用する URL 予約の作成が試みられます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|
 |Port|既定のポートは 80 です。 80 以外のポートを使用する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web アプリケーションをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があるので注意してください。|
-|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer_\<*instance_name*> の形式で、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] の場合は Reports_\<*instance_name*> の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]の既定の仮想ディレクトリは、 **reports**です。|
+|仮想ディレクトリ|既定では、仮想ディレクトリは、レポート サーバー Web サービスの場合は ReportServer_\<*instance_name*> の形式で作成され、Web ポータル[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]の場合は Reports_\<*instance_name*> の形式で作成されます。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]の既定の仮想ディレクトリは、 **reports**です。|
 
 完全な URL 文字列の例を次に示します。
 

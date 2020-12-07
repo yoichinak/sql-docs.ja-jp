@@ -1,4 +1,5 @@
 ---
+description: OPEN (Transact-SQL)
 title: OPEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 525e0b30fd68aa45425849b9f2e144621b92286f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919914"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92187687"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*ステートメントで指定される* ステートメントを実行することによって、カーソルを生成します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルをオープンし、DECLARE CURSOR または SET *cursor_variable* ステートメントで指定される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することによって、カーソルを生成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
@@ -65,7 +65,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
 ## <a name="examples"></a>例  
  次の例では、カーソルをオープンし、すべての行をフェッチします。  
   
-```  
+```sql  
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LastName, FirstName  
 FROM AdventureWorks2012.HumanResources.vEmployee  

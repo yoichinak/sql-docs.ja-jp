@@ -1,4 +1,5 @@
 ---
+description: レコードセット変換先を使用する
 title: レコードセット変換先を使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425604"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
 
@@ -41,7 +42,7 @@ ms.locfileid: "86916660"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成または開きます。  
   
-2.  レコードセット変換先でメモリに保存されたレコードセットを格納する変数を作成し、変数の型を **Object**に設定します。  
+2.  レコードセット変換先でメモリに保存されたレコードセットを格納する変数を作成し、変数の型を **Object** に設定します。  
   
 3.  使用するレコードセットの各列の値を格納するために、適切な型の追加の変数を作成します。  
   
@@ -72,19 +73,19 @@ ms.locfileid: "86916660"
   
 3.  **[変数]** ウィンドウで、レコードセットと現在の行の列値を格納する変数を作成します。  
   
-    1.  **BonusRecordset**という名前の変数を作成し、その型を **Object**に設定します。  
+    1.  **BonusRecordset** という名前の変数を作成し、その型を **Object** に設定します。  
   
          **BonusRecordset** 変数にはレコードセットが格納されます。  
   
-    2.  **EmailAddress**という名前の変数を作成し、その型を **String**に設定します。  
+    2.  **EmailAddress** という名前の変数を作成し、その型を **String** に設定します。  
   
          **EmailAddress** 変数には販売員の電子メール アドレスが格納されます。  
   
-    3.  **FirstName**という名前の変数を作成し、その型を **String**に設定します。  
+    3.  **FirstName** という名前の変数を作成し、その型を **String** に設定します。  
   
          **FirstName** 変数には販売員の名が格納されます。  
   
-    4.  **Bonus**という名前の変数を作成し、その型を **Double**に設定します。  
+    4.  **Bonus** という名前の変数を作成し、その型を **Double** に設定します。  
   
          **Bonus** 変数には販売員のボーナス額が格納されます。  
   
@@ -119,13 +120,13 @@ ms.locfileid: "86916660"
         ```  
   
         > [!NOTE]  
-        >  Bonus 列の **currency** 値を **Double** 型のパッケージ変数に読み込む前に、その値を **float**に変換する必要があります。  
+        >  Bonus 列の **currency** 値を **Double** 型のパッケージ変数に読み込む前に、その値を **float** に変換する必要があります。  
   
 4.  **[データ フロー]** タブで、レコードセット変換先を追加し、この変換先を OLE DB ソースの後に連結します。  
   
 5.  **[レコードセット変換先エディター]** を開いて、次の設定を使用して変換先を構成します。  
   
-    1.  **[コンポーネントのプロパティ]** タブの **VariableName** プロパティで、 **User::BonusRecordset**を選択します。  
+    1.  **[コンポーネントのプロパティ]** タブの **VariableName** プロパティで、 **User::BonusRecordset** を選択します。  
   
     2.  **[入力列]** タブで、使用可能な 3 つすべての列を選択します。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "86916660"
   
 2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **[コレクション]** ページの **[列挙子]** で **[Foreach ADO 列挙子]** を選択し、 **[ADO オブジェクト ソース変数]** で **User::BonusRecordset**を選択します。  
+    1.  **[コレクション]** ページの **[列挙子]** で **[Foreach ADO 列挙子]** を選択し、 **[ADO オブジェクト ソース変数]** で **User::BonusRecordset** を選択します。  
   
     2.  **[変数のマッピング]** ページで、 **User::EmailAddress** をインデックス 0、 **User::FirstName** をインデックス 1、 **User::Bonus** をインデックス 2 にマップします。  
   
@@ -157,7 +158,7 @@ ms.locfileid: "86916660"
   
     5.  **[MessageSourceType]** に対して **[直接入力]** を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン ( **[...]** ) をクリックして **[プロパティ式エディター]** を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
   
 6.  **[プロパティ式エディター]** で、次の情報を入力します。  
   

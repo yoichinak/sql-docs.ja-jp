@@ -1,4 +1,5 @@
 ---
+description: '[推定ディメンション メンバー] (緩やかに変化するディメンション ウィザード)'
 title: 推定ディメンション メンバー (緩やかに変化するディメンション ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e6a71efbd5036a409cad5613fc35612724538d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4066795817035e6ac149de7fd86b2f4fb816f828
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919275"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425774"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>[推定ディメンション メンバー] (緩やかに変化するディメンション ウィザード)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919275"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[推定メンバー サポートを有効にする]**  
  推定メンバーを有効にすることを選択した場合は、次のどちらかのオプションを選択する必要があります。  
   

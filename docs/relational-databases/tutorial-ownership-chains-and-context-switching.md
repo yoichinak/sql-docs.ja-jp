@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Ownership Chains and Context Switching'
 title: 'Tutorial: Ownership Chains and Context Switching'
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6e8c2aeabcbfa73de3a0b02b6b3e6a637bcf1eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4c1494efa032ba58315e8a5f7fe5fd855b3e51f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915109"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809368"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>チュートリアル:所有権の継承とコンテキストの切り替え
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 このチュートリアルでは、1 つのシナリオを使用して、所有権の継承とユーザー コンテキストの切り替えに関係する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のセキュリティ概念について説明します。  
   
@@ -45,11 +46,11 @@ ms.locfileid: "86915109"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](../samples/adventureworks-install-configure.md)をダウンロードする。
 
-SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。   
+SQL Server Management Studio でデータベースを復元する手順については、[データベースの復元](./backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。   
   
 ## <a name="1-configure-the-environment"></a>1.環境を構成する  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] と次のコードを使用して `AdventureWorks2017` データベースを開き、`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用して、dbo ユーザーがコンテキストとして表示されていることを確認します。  
@@ -333,6 +334,5 @@ GO
   
 ## <a name="see-also"></a>参照  
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

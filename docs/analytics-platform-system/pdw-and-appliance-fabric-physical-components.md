@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400908"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理コンポーネント-分析プラットフォームシステム
@@ -26,9 +26,9 @@ PDW およびアプライアンスファブリック物理コンポーネント�
   
 ![PDW リージョン コンポーネント名 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
-PDW コンポーネントの実際の名前は、PDW のリージョン名、ダッシュ、コンポーネント名の順に続きます。 たとえば、PDW のリージョン名が PDW123 の場合、実際の名前は**PDW123-CTL01**、 **PDW123 pqth4a-cmp01**などになります。  
+PDW コンポーネントの実際の名前は、PDW のリージョン名、ダッシュ、コンポーネント名の順に続きます。 たとえば、PDW のリージョン名が PDW123 の場合、実際の名前は **PDW123-CTL01**、 **PDW123 pqth4a-cmp01**などになります。  
   
-同様に、アプライアンスファブリックコンポーネントの実際の名前はアプライアンスドメイン、ダッシュ、コンポーネント名の順になります。 たとえば、アプライアンスドメインが FSW123 の場合、アプライアンスファブリック Vm は**FSW123**、 **FSW123**、 **FSW123**のようになります。  
+同様に、アプライアンスファブリックコンポーネントの実際の名前はアプライアンスドメイン、ダッシュ、コンポーネント名の順になります。 たとえば、アプライアンスドメインが FSW123 の場合、アプライアンスファブリック Vm は **FSW123**、 **FSW123**、 **FSW123**のようになります。  
   
 次に示すのは、6つのコンピューティングノードを持つ PDW リージョンの統合ビューです。  
   
@@ -49,7 +49,7 @@ PDW の仮想マシンは、PDW のリージョンに含まれています。
 ## <a name="appliance-fabric-components"></a><a name="fabric"></a>アプライアンスファブリックコンポーネント  
 これらのコンポーネントは、アプライアンスファブリックの一部です。  
   
-### <a name="virtual-machines"></a>Virtual Machines  
+### <a name="virtual-machines"></a>仮想マシン  
 *appliance_domain*-WDS  
 この仮想マシンは Windows 展開サービス (WDS) をホストします。これは、分析プラットフォームシステムが、アプライアンスネットワーク経由で Windows オペレーティングシステムを展開します。 また、DHCP サービスもホストします。これにより、アプライアンスホストは、事前に構成された IP アドレスを使用せずにアプライアンスネットワークに参加できます。  
   

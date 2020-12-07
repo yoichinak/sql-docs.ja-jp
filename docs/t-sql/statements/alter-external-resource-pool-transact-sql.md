@@ -1,7 +1,8 @@
 ---
+description: ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -16,16 +17,16 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4400ca838ba1e79cb2ebf12ce915bf728efe96d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6279d5eae855c87e7f93cb47e3b2fb55bfcc2dba
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913558"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283504"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 外部プロセスで使うことができるリソースを指定する Resource Governor 外部プールを変更します。 
 
@@ -33,15 +34,31 @@ ms.locfileid: "86913558"
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の場合、外部プールは `rterm.exe`、`python.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>構文
-
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
+ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
+[ WITH (
+    [ MAX_CPU_PERCENT = value ]
+    [ [ , ] MAX_MEMORY_PERCENT = value ]
+    [ [ , ] MAX_PROCESSES = value ]
+    )
+]
+[ ; ]
+  
+<CPU_range_spec> ::=
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
+```  
+::: moniker-end
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+ ```syntaxsql
+
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -60,7 +77,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 <CPU_range_spec> ::=
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
-  
+::: moniker-end 
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
@@ -69,6 +87,18 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 既存のユーザー定義の外部リソース プール、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする際に作成される既定の外部リソース プールの名前です。
 "default" を `ALTER EXTERNAL RESOURCE POOL` で使用する場合は、システム予約語の `DEFAULT` と競合しないように、引用符 ("") または角かっこ ([]) で囲む必要があります。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+CPU の競合がある場合に、この外部リソース プールのすべての要求が受け取ることのできる最大平均 CPU 帯域幅を指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
+
+MAX_MEMORY_PERCENT =*value*  
+この外部リソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
+
+MAX_PROCESSES =*value*  
+外部リソース プールに許されるプロセスの最大数を指定します。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 CPU の競合がある場合に、この外部リソース プールのすべての要求が受け取ることのできる最大平均 CPU 帯域幅を指定します。 *value* は整数です。 *value* の許容範囲は 1 ～ 100 です。
 
@@ -82,7 +112,7 @@ MAX_MEMORY_PERCENT =*value*
 
 MAX_PROCESSES =*value*  
 外部リソース プールに許されるプロセスの最大数を指定します。 0 を指定すると、プールのしきい値は無制限になり、その後はコンピューターのリソースによってのみ拘束されます。
-
+::: moniker-end
 ## <a name="remarks"></a>解説
 
 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) ステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はリソース プールを実装します。
@@ -97,7 +127,20 @@ MAX_PROCESSES =*value*
 ## <a name="examples"></a>例
 
 次のステートメントは外部プールを変更して、CPU 使用率を 50% に、最大メモリ量をコンピューターで使用可能なメモリの 25% に制限します。
-  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
+```sql
+ALTER EXTERNAL RESOURCE POOL ep_1
+WITH (
+    MAX_CPU_PERCENT = 50
+    , MAX_MEMORY_PERCENT = 25
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -109,6 +152,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

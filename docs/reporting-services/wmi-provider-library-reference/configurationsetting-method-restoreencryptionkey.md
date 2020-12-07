@@ -1,4 +1,5 @@
 ---
+description: RestoreEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
 title: RestoreEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1888599934b6641e4e6501e36c7c4eaeb0eee92
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 548ab9282246754fd3a21952b07dc7c1f2aa858e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472654"
 ---
 # <a name="configurationsetting-method---restoreencryptionkey"></a>ConfigurationSetting メソッド - RestoreEncryptionKey
   指定した暗号化キーをレポート サーバー データベースに再適用します。  

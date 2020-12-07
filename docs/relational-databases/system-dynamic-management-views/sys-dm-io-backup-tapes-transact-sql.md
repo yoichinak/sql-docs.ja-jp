@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_backup_tapes (Transact-SQL)
 title: dm_io_backup_tapes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c0d66f545b9e98525d293cf80967ba3ed929008c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898815"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532921"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,17 +34,17 @@ ms.locfileid: "85898815"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar (520)**|バックアップを実行できる実際の物理デバイスの名前。 NULL 値は許可されません。|  
-|**logical_device_name**|**nvarchar(256)**|ドライブのユーザー指定の名前 ( **sys. backup_devices**)。 ユーザー指定の名前が使用できない場合は NULL です。 NULL 値が許可されます。|  
+|**logical_device_name**|**nvarchar (256)**|ドライブのユーザー指定の名前 ( **sys. backup_devices**)。 ユーザー指定の名前が使用できない場合は NULL です。 NULL 値が許可されます。|  
 |**status**|**int**|テープの状態。<br /><br /> 1 = オープン、使用可能<br /><br /> 2 = マウント保留<br /><br /> 3 = 使用中<br /><br /> 4 = 読み込み中<br /><br /> **注:** テープが読み込まれている間 (**status = 4**)、メディアラベルはまだ読み取られていません。 **Media_sequence_number**など、メディアラベルの値をコピーする列には、予測される値が表示されます。これは、テープの実際の値とは異なる場合があります。 ラベルが読み取られた後**status**への変更**3** (使用) 中、メディア ラベル列が読み込まれている実際のテープを反映します。<br /><br /> NULL 値は許可されません。|  
 |**status_desc**|**nvarchar (520)**|テープの状態の説明。<br /><br /> AVAILABLE <br /><br /> マウントが保留中です<br /><br /> IN USE <br /><br /> LOADING MEDIA <br /><br /> NULL 値は許可されません。|  
 |**mount_request_time**|**datetime**|マウントが要求された時刻。 保留中マウントがない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
 |**mount_expiration_time**|**datetime**|マウント要求の有効期限が切れる時刻 (タイムアウト)。 保留中マウントがない場合は NULL (**status! = 2**)。 NULL 値が許可されます。|  
-|**database_name**|**nvarchar(256)**|このデバイスにバックアップされるデータベース。 NULL 値が許可されます。|  
-|**調べる**|**int**|セッション ID。 これにより、テープのユーザーが識別されます。 NULL 値が許可されます。|  
+|**database_name**|**nvarchar (256)**|このデバイスにバックアップされるデータベース。 NULL 値が許可されます。|  
+|**spid**|**int**|セッション ID。 これにより、テープのユーザーが識別されます。 NULL 値が許可されます。|  
 |**command**|**int**|バックアップを実行するコマンド。 NULL 値が許可されます。|  
 |**command_desc**|**nvarchar(120)**|コマンドの説明です。 NULL 値が許可されます。|  
-|**media_family_id**|**int**|メディアファミリのインデックス (1.* ..n*)、 *n*は、メディアセット内のメディアファミリの数です。 NULL 値が許可されます。|  
-|**media_set_name**|**nvarchar(256)**|メディアセットが作成されたときに、MEDIANAME オプションで指定されたメディアセットの名前 (存在する場合)。 NULL 値が許可されます。|  
+|**media_family_id**|**int**|メディアファミリのインデックス (1.* ..n*)、 *n* は、メディアセット内のメディアファミリの数です。 NULL 値が許可されます。|  
+|**media_set_name**|**nvarchar (256)**|メディアセットが作成されたときに、MEDIANAME オプションで指定されたメディアセットの名前 (存在する場合)。 NULL 値が許可されます。|  
 |**media_set_guid**|**uniqueidentifier**|メディアセットを一意に識別する識別子。 NULL 値が許可されます。|  
 |**media_sequence_number**|**int**|メディアファミリ内のボリュームのインデックス (1.* ..n*)。 NULL 値が許可されます。|  
 |**tape_operation**|**int**|実行中のテープ操作:<br /><br /> 1 = 読み取り<br /><br /> 2 = 形式<br /><br /> 3 = 初期化<br /><br /> 4 = 追加<br /><br /> NULL 値が許可されます。|  
@@ -54,8 +55,8 @@ ms.locfileid: "85898815"
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、サーバーに対する VIEW SERVER STATE 権限を持っている必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

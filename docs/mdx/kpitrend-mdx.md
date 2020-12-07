@@ -1,4 +1,5 @@
 ---
+description: KPITrend (MDX)
 title: KPITrend (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc672146a8f00902012f21f48cbfed460eb48690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483915"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
 
@@ -31,7 +32,7 @@ KPITrend(KPI_Name)
  *KPI_Name*  
  KPI の名前を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  傾向値は、通常、-1 ~ 1 の範囲で正規化された値です。  
   
 ## <a name="example"></a>例  

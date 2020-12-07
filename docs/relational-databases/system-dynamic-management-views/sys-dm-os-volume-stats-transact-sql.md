@@ -1,7 +1,8 @@
 ---
+description: dm_os_volume_stats (Transact-sql)
 title: dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829326"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614601"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>dm_os_volume_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +39,12 @@ ms.locfileid: "82829326"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *database_id*  
  データベースの ID です。 *database_id* は** int**, 、既定値はありません。 Nll は指定できません。  
   
  *file_id*  
- ファイルの ID。 *file_id*は**int**,、既定値はありません。 Nll は指定できません。  
+ ファイルの ID。 *file_id* は **int**,、既定値はありません。 Nll は指定できません。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -52,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**列**|**データの種類**|**説明**|  
 |**database_id**|**int**|データベースの ID です。 null にすることはできません。|  
 |**file_id**|**int**|ファイルの ID。 null にすることはできません。|  
-|**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 は空の文字列を返すことができます。|  
-|**volume_id**|**nvarchar(512)**|オペレーティングシステムのボリューム ID。 空の文字列を返すことができます。|  
-|**logical_volume_name**|**nvarchar(512)**|論理ボリューム名。 空の文字列を返すことができます。|  
-|**file_system_type**|**nvarchar(512)**|ファイルシステムボリュームの種類 (たとえば、NTFS、FAT、RAW)。 空の文字列を返すことができます。|  
+|**volume_mount_point**|**nvarchar(512)**|ボリュームがルートとするマウント ポイント。 は空の文字列を返すことができます。 Linux オペレーティングシステムでは null を返します。|  
+|**volume_id**|**nvarchar(512)**|オペレーティングシステムのボリューム ID。 は空の文字列を返すことができます。 Linux オペレーティングシステムでは null を返します。|  
+|**logical_volume_name**|**nvarchar(512)**|論理ボリューム名。 は空の文字列を返すことができます。 Linux オペレーティングシステムでは null を返します。|  
+|**file_system_type**|**nvarchar(512)**|ファイルシステムボリュームの種類 (たとえば、NTFS、FAT、RAW)。 は空の文字列を返すことができます。 Linux オペレーティングシステムでは null を返します。|  
 |**total_bytes**|**bigint**|ボリュームの合計サイズ (バイト単位)。 null にすることはできません。|  
 |**available_bytes**|**bigint**|ボリューム上の使用可能な空き領域。 null にすることはできません。|  
-|**supports_compression**|**bit**|ボリュームがオペレーティング システムによる圧縮をサポートするかどうかを示します。 null にすることはできません。|  
-|**supports_alternate_streams**|**bit**|ボリュームが代替ストリームをサポートするかどうかを示します。 null にすることはできません。|  
-|**supports_sparse_files**|**bit**|ボリュームがスパースファイルをサポートするかどうかを示します。  null にすることはできません。|  
-|**is_read_only**|**bit**|ボリュームが現在読み取り専用としてマークされているかどうかを示します。 null にすることはできません。|  
-|**is_compressed**|**bit**|このボリュームが現在圧縮されているかどうかを示します。 null にすることはできません。|  
+|**supports_compression**|**tinyint**|ボリュームがオペレーティング システムによる圧縮をサポートするかどうかを示します。 Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
+|**supports_alternate_streams**|**tinyint**|ボリュームが代替ストリームをサポートするかどうかを示します。 Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
+|**supports_sparse_files**|**tinyint**|ボリュームがスパースファイルをサポートするかどうかを示します。  Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
+|**is_read_only**|**tinyint**|ボリュームが現在読み取り専用としてマークされているかどうかを示します。 null にすることはできません。|  
+|**is_compressed**|**tinyint**|このボリュームが現在圧縮されているかどうかを示します。 Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
+|**incurs_seek_penalty**|**tinyint**|このボリュームをサポートしているストレージの種類を示します。 設定可能な値は、次のとおりです。<br /><br />0: 通常、記憶装置が PMM または SSD の場合、このボリュームに対するシークペナルティはありません。<br /><br />1: 通常、記憶装置が HDD の場合、このボリュームのシークペナルティ<br /><br />2: ボリュームが UNC パスまたはマウントされた共有にある場合、記憶域の種類を特定できません<br /><br />NULL: ストレージの種類を Linux オペレーティングシステムで特定できません<br /><br />**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
 ## <a name="security"></a>Security  
   

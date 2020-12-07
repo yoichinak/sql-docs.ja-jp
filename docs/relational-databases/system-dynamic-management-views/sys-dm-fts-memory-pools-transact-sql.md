@@ -1,4 +1,5 @@
 ---
+description: dm_fts_memory_pools (Transact-sql)
 title: dm_fts_memory_pools (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f14acaaf8e4f92a603270619c181e9d97108c5d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 720c3a3727f332c289b08480f6367babc0213ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489887"
 ---
 # <a name="sysdm_fts_memory_pools-transact-sql"></a>dm_fts_memory_pools (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,11 +51,11 @@ ms.locfileid: "85734519"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|ソース|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers。 pool_id|dm_fts_memory_pools.pool_id|多対一|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] プロセスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト Gatherer コンポーネントが所有する共有メモリの合計を返します。  
   
 ```  
@@ -62,7 +63,7 @@ SELECT SUM(buffer_size * buffer_count) AS "total memory"
     FROM sys.dm_fts_memory_pools;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数 ](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

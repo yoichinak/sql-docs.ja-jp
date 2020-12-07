@@ -1,4 +1,5 @@
 ---
+description: query_context_settings (Transact-sql)
 title: query_context_settings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.query_context_settings catalog view
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ce442458968fe21fc8ac84008bf33e823c2f3876
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394016"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542496"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>query_context_settings (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87394016"
 |**status**|**varbinary (2)**|クエリが実行されたクエリまたはコンテキストの種類を示すビットマスクフィールドです。 <br />列の値は、複数のフラグの組み合わせにすることができます (16 進数で表現)。<br /><br /> 0x0-通常のクエリ (特定のフラグなし)<br /><br /> 0x1-カーソル Api ストアドプロシージャのいずれかを使用して実行されたクエリ<br /><br /> 0x2-通知のクエリ<br /><br /> 0x4-内部クエリ<br /><br /> 0x8-汎用パラメーター化を使用しない自動パラメーター化クエリ<br /><br /> 0x10-カーソルフェッチ更新クエリ<br /><br /> 0x20-カーソル更新要求で使用されているクエリ<br /><br /> 0x40-カーソルを開いたときに最初の結果セットが返される (Cursor Auto Fetch)<br /><br /> 0x80-暗号化されたクエリ<br /><br /> 0x100-行レベルのセキュリティ述語のコンテキストでのクエリ|  
 |**required_cursor_options**|**int**|カーソルの種類など、ユーザーによって指定されたカーソルオプション。|  
 |**acceptable_cursor_options**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がステートメントの実行をサポートするために暗黙的に変換できるカーソル オプションです。|  
-|**merge_action_type**|**smallint**|**MERGE**ステートメントの結果として使用されるトリガー実行プランの種類です。<br /><br /> 0は、非トリガープラン、 **merge**ステートメントの結果として実行されないトリガープラン、または**DELETE**アクションのみを指定する**merge**ステートメントの結果として実行されるトリガープランを示します。<br /><br /> 1は、 **MERGE**ステートメントの結果として実行される**INSERT**トリガープランを示します。<br /><br /> 2は、 **MERGE**ステートメントの結果として実行される**UPDATE**トリガープランを示します。<br /><br /> 3は、対応する**INSERT**または**UPDATE**アクションを含む**MERGE**ステートメントの結果として実行される**DELETE**トリガープランを示します。<br /><br /> <br /><br /> 連鎖アクションによって実行される入れ子になったトリガーの場合、この値は cascade の原因となった**MERGE**ステートメントのアクションです。|  
+|**merge_action_type**|**smallint**|**MERGE**ステートメントの結果として使用されるトリガー実行プランの種類です。<br /><br /> 0は、非トリガープラン、 **merge**ステートメントの結果として実行されないトリガープラン、または**DELETE**アクションのみを指定する**merge**ステートメントの結果として実行されるトリガープランを示します。<br /><br /> 1は、 **MERGE**ステートメントの結果として実行される**INSERT**トリガープランを示します。<br /><br /> 2は、 **MERGE**ステートメントの結果として実行される**UPDATE**トリガープランを示します。<br /><br /> 3は、対応する**INSERT**または**UPDATE**アクションを含む**MERGE**ステートメントの結果として実行される**DELETE**トリガープランを示します。<br /><br /> <br /><br /> 連鎖アクションによって実行される入れ子になったトリガーの場合、この値は cascade の原因となった **MERGE** ステートメントのアクションです。|  
 |**default_schema_id**|**int**|既定のスキーマの ID。完全に修飾されていない名前を解決するために使用されます。|  
 |**is_replication_specific**|**bit**|レプリケーションに使用されます。|  
 |**is_contained**|**varbinary (1)**|1は、包含データベースを示します。|  

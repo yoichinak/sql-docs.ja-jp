@@ -8,7 +8,7 @@
   href: legal-notice-mysqltosql.md
 - name: 変換の設定
   href: conversion-settings-mysqltosql.md
-- name: SSMA for MySQL クライアントのインストール
+- name: MySQL クライアントへの SSMA のインストール
   href: installing-ssma-for-mysql-client-mysqltosql.md
 - name: SSMA コンソールの実行
   href: executing-the-ssma-console-mysqltosql.md
@@ -18,7 +18,7 @@
   href: sql-modes-mysqltosql.md
 - name: SQL Server への接続
   href: connect-to-sql-server-mysqltosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database への接続
   href: connecting-to-azure-sql-db-mysqltosql.md
 - name: スクリプト ファイルの作成
   href: creating-script-files-mysqltosql.md
@@ -26,7 +26,7 @@
   href: loading-converted-database-objects-into-sql-server-mysqltosql.md
 - name: MySQL データベースの変換
   href: converting-mysql-databases-mysqltosql.md
-- name: SQL Server への移行 - Azure SQL DB
+- name: SQL Server への移行 - Azure SQL Database
   href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
 - name: SSMA コンソールのコマンド ライン オプション
   href: command-line-options-in-ssma-console-mysqltosql.md
@@ -44,9 +44,9 @@
   href: connect-to-mysql-mysqltosql.md
 - name: SSMA for MySQL コンポーネントの削除
   href: removing-the-ssma-for-mysql-components-mysqltosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database に接続する
   href: connect-to-azure-sql-db-mysqltosql.md
-- name: MySQL データベースの Azure SQL DB への移行
+- name: Azure SQL Database への MySQL データベースの移行
   href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
 - name: サンプルのコンソール スクリプト ファイルの操作
   href: working-with-the-sample-console-script-files-mysqltosql.md
@@ -102,7 +102,7 @@
   items:
     - name: GUI
       href: project-settings-gui-mysqltosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL データベース
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: 型のマッピング
       href: project-settings-type-mapping-mysqltosql.md

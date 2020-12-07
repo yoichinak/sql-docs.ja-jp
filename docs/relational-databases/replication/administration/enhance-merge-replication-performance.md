@@ -1,4 +1,5 @@
 ---
+description: マージ レプリケーション パフォーマンスの向上
 title: マージ レプリケーション パフォーマンスの向上 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423606"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  「 [レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
+  「[レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
   
 ## <a name="database-design"></a>データベースの設計  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85897885"
   
 -   Large Object (LOB) データ型を含むテーブルで、正規化を十分に行うことを検討する。  
   
-     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の各データ型を使用することをお勧めします。  
+     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** の各データ型を使用することをお勧めします。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   

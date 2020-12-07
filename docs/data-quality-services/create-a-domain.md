@@ -1,4 +1,5 @@
 ---
+description: ドメインの作成
 title: ドメインの作成
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 399cc88598173e7406b326c83ea9a098b879c59e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887992"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725362"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
 
@@ -36,7 +37,7 @@ ms.locfileid: "85887992"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator が必要です。  
   
-##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a>ナレッジ検出アクティビティでのドメインの作成  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> ナレッジ検出アクティビティでのドメインの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85887992"
   
 5.  **"マッピング"** テーブルで、空の行の **[ソース列]** 列のドロップダウン リストからソース列を選択します。 対応するドメインが存在しない場合は、 **[ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>ドメイン管理アクティビティでドメインを作成する  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> ドメイン管理アクティビティでドメインを作成する  
   
 1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、 **[ナレッジ ベースを開く]** をクリックし、ナレッジ ベースを選択するか、 **[新しいナレッジ ベース]** をクリックし、新しいナレッジ ベースのプロパティを入力します。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887992"
   
 3.  **[ドメイン管理]** ページで、ドメイン リストの上にある **[ドメインの作成]** アイコンをクリックします。  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>ドメインのプロパティの設定  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> ドメインのプロパティの設定  
   
 1.  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。  
   
@@ -89,9 +90,8 @@ ms.locfileid: "85887992"
   
 9. **[OK]** をクリックします。  
   
-10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+10. **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a>補足情報: ドメインを作成した後  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 補足情報: ドメインを作成した後  
  ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
-  
   

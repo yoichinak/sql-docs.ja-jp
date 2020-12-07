@@ -1,4 +1,5 @@
 ---
+description: SET ROWCOUNT (Transact-SQL)
 title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,15 +25,15 @@ helpviewer_keywords:
 - limiting rows returned
 - queries [SQL Server], stopping
 ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91739df2125005e123f2d9acd19c71682111f9a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e5c692f62e047d27277536241a41e4d9f0d03ea7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484023"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540548"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

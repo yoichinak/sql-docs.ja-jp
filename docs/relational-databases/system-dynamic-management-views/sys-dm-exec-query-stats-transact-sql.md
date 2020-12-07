@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_stats (Transact-SQL)
 title: dm_exec_query_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865320"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546588"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -115,20 +116,20 @@ ms.locfileid: "87865320"
 |**last_spills**|**bigint**|クエリが最後に実行されたときに書き込まれたページの数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**min_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最小数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**max_spills**|**bigint**|このクエリで1回の実行中に書き込まれたページの最大数。<br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および CU3 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|このプランがコンパイルされてから、このプランの実行でリモートページサーバーの読み取り回数の合計。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
 |**last_page_server_reads**|**bigint**|プランを最後に実行したときに実行されたリモートページサーバーの読み取り回数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
 |**min_page_server_reads**|**bigint**|このプランの1回の実行で行われたリモートページサーバー読み取りの最小数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
 |**max_page_server_reads**|**bigint**|このプランで1回の実行で行われたリモートページサーバー読み取りの最大数。<br /><br /> **適用対象:** Azure SQL Database ハイパースケール |  
 > [!NOTE]
-> <sup>1</sup>ネイティブコンパイルストアドプロシージャの統計コレクションが有効になっている場合、ワーカー時間はミリ秒単位で収集されます。 クエリが1ミリ秒未満で実行された場合、値は0になります。  
+> <sup>1</sup> ネイティブコンパイルストアドプロシージャの統計コレクションが有効になっている場合、ワーカー時間はミリ秒単位で収集されます。 クエリが1ミリ秒未満で実行された場合、値は0になります。  
   
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビュー内の統計は、クエリが完了したときに更新されます。  
   
 ## <a name="examples"></a>例  

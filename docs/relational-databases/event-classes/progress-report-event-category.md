@@ -1,4 +1,5 @@
 ---
+description: Progress Report イベント カテゴリ
 title: Progress Report イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 393ca541b06fa44cc7cca6967db840c5be36d246
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 400c0e28040f0db76ab609edb726146e3be4295d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424194"
 ---
 # <a name="progress-report-event-category"></a>Progress Report イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85733721"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[Progress Report: Online Index Operation イベント クラス](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|オンライン インデックスの構築操作の進行状況を示します。|  
+|[Progress Report:Online Index Operation イベント クラス](../../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)|オンライン インデックスの構築操作の進行状況を示します。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

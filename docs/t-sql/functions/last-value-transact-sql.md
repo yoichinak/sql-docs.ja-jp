@@ -1,7 +1,8 @@
 ---
+description: LAST_VALUE (Transact-SQL)
 title: LAST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2015
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bf0c5880131805f3bdf7d654730ac48ea0bdb04
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: afff4f59dace8695e8b209acb2201a8cddd86069
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523144"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116081"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "87523144"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
-LAST_VALUE ( [ scalar_expression ] )   
+
+```syntaxsql 
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -46,6 +47,14 @@ LAST_VALUE ( [ scalar_expression ] )
 ## <a name="arguments"></a>引数
  *scalar_expression*  
  返される値。 *scalar_expression* 列、サブクエリ、または 1 つの値となるその他の式を指定できます。 他の分析関数は指定できません。  
+  
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **適用対象**:Azure SQL Edge
+
+ IGNORE NULLS: パーティションの最後の値の計算時に、データセット内の null 値を無視します。     
+ RESPECT NULLS: パーティションの最後の値の計算時に、データセット内の null 値を使用します。     
+ 
+  詳細については、[欠損値の補完](/azure/azure-sql-edge/imputing-missing-values/)に関する記事を参照してください。
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。  
@@ -63,7 +72,7 @@ LAST_VALUE ( [ scalar_expression ] )
 ### <a name="a-using-last_value-over-partitions"></a>A. パーティションで LAST_VALUE を使用する  
  次の例では、特定の給与 (等級) について各部門の最後の従業員の採用日を返します。  PARTITION BY 句によって部門ごとに従業員がパーティションに分割され、各パーティションに個別に LAST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に LAST_VALUE 関数が適用される論理的な順序を決定します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate, HireDate,   
@@ -73,8 +82,7 @@ INNER JOIN HumanResources.EmployeePayHistory AS eph
     ON eph.BusinessEntityID = edh.BusinessEntityID  
 INNER JOIN HumanResources.Employee AS e  
     ON e.BusinessEntityID = edh.BusinessEntityID  
-WHERE Department IN (N'Information Services',N'Document Control');  
-  
+WHERE Department IN (N'Information Services',N'Document Control');   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -106,7 +114,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
  以下に示すように、この例の場合、DifferenceFromLastQuarter 列でゼロ以外の値を返すには、"RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" 句が必要です。 既定の範囲は "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW" です。 この例では、この既定の範囲を使用した場合 (または、範囲を含めない結果、既定値が使用される場合)、DifferenceFromLastQuarter 列にゼロが返されます。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 SELECT BusinessEntityID, DATEPART(QUARTER,QuotaDate)AS Quarter, YEAR(QuotaDate) AS SalesYear,   
     SalesQuota AS QuotaThisQuarter,   
@@ -153,4 +161,6 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
   
 ```  
   
-  
+## <a name="see-also"></a>参照  
+
+ [First_Value &#40;Transact-SQL&#41;](first-value-transact-sql.md)  

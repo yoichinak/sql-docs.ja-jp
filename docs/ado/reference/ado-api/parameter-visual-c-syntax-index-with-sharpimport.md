@@ -1,8 +1,9 @@
 ---
+description: 'Parameter (Visual C++ 構文インデックス #import)'
 title: 'Parameter (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b998aa20df1110c6708bf857d39e679ed871e68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8158bdde481d6f13810500d755bf9a3509e8c6f7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763423"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990153"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parameter (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -70,4 +71,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter オブジェクト](./parameter-object.md)

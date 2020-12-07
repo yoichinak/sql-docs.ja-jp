@@ -1,5 +1,6 @@
 ---
-title: 属性の型の変更 (Excel 用 MDS アドイン) | Microsoft Docs
+description: 属性の型の変更 (Excel 用 MDS アドイン)
+title: 属性の型の変更
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd0e7f0acbe6792a5d303d50ef66014ebc5c1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257571"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68092479"
   
 -   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   既存のモデル、エンティティ、および属性が存在している必要があります。  
   
@@ -58,8 +59,8 @@ ms.locfileid: "68092479"
   
 -   "_old" サフィックスが付いた、前の値が格納された属性のコピーを生成する。 これを、非推奨の属性といいます。  
   
-## <a name="see-also"></a>関連項目  
- [属性 (マスター データ サービス)](../../master-data-services/attributes-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [属性 &#40;マスターデータサービス&#41;](../../master-data-services/attributes-master-data-services.md)   
  [モデルの構築 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

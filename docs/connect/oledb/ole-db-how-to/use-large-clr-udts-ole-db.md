@@ -1,6 +1,6 @@
 ---
-title: 大きな CLR UDT の使用 (OLE DB) | Microsoft Docs
-description: 大きな CLR UDT の使用 (OLE DB)
+title: 大きな CLR UDT の使用 (OLE DB ドライバー)
+description: この例では、OLE DB Driver for SQL Server で大きなユーザー定義型を持つ行を結果セットからフェッチする方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ed3fd1d54b0b505d3ec6486a8d4cff7dee6449fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dda2e8221c825ee9ca5aad3d14eba14c6d7315f2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007223"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862313"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>大きな CLR UDT の使用 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "86007223"
   このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、「[大きな CLR ユーザー定義型 &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
   
 ## <a name="example"></a>例  
- このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  
+ このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。 このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  
   
  1 つ目の (C#) コード リストを DLL にコンパイルします。  次に、この DLL を C ドライブのルート ディレクトリにコピーします。  
   

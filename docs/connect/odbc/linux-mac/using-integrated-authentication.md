@@ -1,8 +1,8 @@
 ---
 title: 統合認証を使用する
-descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
+description: Linux および macOS での Microsoft ODBC Driver for SQL Server は、Kerberos 統合認証を使用する接続をサポートしています。
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,24 +13,26 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629662"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727420"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Kerberos 統合認証を使用する接続をサポートしています。 MIT Kerberos キー配布センター (KDC) をサポートしており、Generic Security Services Application Program Interface (GSSAPI) および Kerberos v5 ライブラリと連動します。
-  
+
+バージョン 17.6 の時点で、ドライバーは、システム ライブラリ制限の有無にかかわらず、フェデレーション アカウントを使用した Azure Active Directory による統合認証もサポートします。 詳しくは、「[Azure Active Directory の使用](../using-azure-active-directory.md)」をご覧ください。
+
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>統合認証を使用して ODBC アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する  
 
 **SQLDriverConnect** または **SQLConnect** の接続文字列で **Trusted_Connection=yes** 指定して、Kerberos 統合認証を有効にすることができます。 次に例を示します。  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Connection=yes** を追加することもできます。
@@ -126,7 +128,7 @@ Linux または macOS コンピューターの時刻と Kerberos キー配布セ
 
 Kerberos 認証が失敗すると、Linux または macOS 上の ODBC ドライバーで NTLM 認証が使用されません。  
 
-Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)」をご覧ください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
+Active Directory を使用した Linux または macOS コンピューターの認証の詳細については、「[Active Directory を使用して Linux クライアントを認証する](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048)」をご覧ください。 Kerberos の構成に関する詳細については、[MIT Kerberos のドキュメント](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)を参照してください。
 
 ## <a name="see-also"></a>参照  
 [プログラミング ガイドライン](programming-guidelines.md)

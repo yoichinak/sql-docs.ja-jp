@@ -1,4 +1,5 @@
 ---
+description: STEndPoint (geography データ型)
 title: STEndPoint (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 475b5e99cd7628992e90a2921c0bd726f8f69560
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e7b33ea60599dc5920d15df18177a34bcdde07c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416978"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,6 +61,6 @@ SELECT @g.STEndPoint().ToString();
 ```  
   
 ## <a name="see-also"></a>参照  
- [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

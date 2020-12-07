@@ -1,4 +1,5 @@
 ---
+description: レコード カウント
 title: レコード数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d329ca3638f964244cea8c28f7e07e171887fb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465672"
 ---
 # <a name="record-count"></a>レコード カウント
 記述子の SQL_DESC_COUNT header フィールドは、データを格納する最大番号のレコードの1から始まるインデックスです。 このフィールドは、バインドされているすべての列またはパラメーターの数ではありません。 記述子が割り当てられると、SQL_DESC_COUNT の初期値は0になります。  

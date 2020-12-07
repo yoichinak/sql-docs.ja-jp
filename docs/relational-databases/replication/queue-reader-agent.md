@@ -1,4 +1,5 @@
 ---
+description: キュー リーダー エージェント (Queue Reader Agent)
 title: キュー リーダー エージェント (Queue Reader Agent) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c11190db072518a506950bc5bf3409d1be770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405648"
 ---
 # <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85737069"
  **Start Time**  
  セッションの開始時刻です。  
   
- **[終了時刻]**  
+ **終了時刻**  
  セッションの終了時刻です。 エージェントが停止していない場合は、このフィールドは空になっています。  
   
  **Duration**  
@@ -63,7 +64,7 @@ ms.locfileid: "85737069"
  **[選択されたセッションのエラーの詳細またはメッセージ]**  
  選択したセッションの **[状態]** 列に **[エラー]** の値が表示されている場合にのみ表示されます。 このテキスト領域では、エラーの詳細情報とエラーの発生時に試行されたコマンドが表示されます。 エラーに関連する追加コンテンツへのリンクも含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)   

@@ -1,4 +1,5 @@
 ---
+description: STDimension (geometry データ型)
 title: STDimension (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19df63a5bb10ad8015e4ecf25e77c113829f1f17
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fa206e923e2b7c0b251eca657365bc0d24541806
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416938"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

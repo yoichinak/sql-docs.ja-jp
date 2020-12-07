@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_buffer_descriptors (Transact-SQL)
 title: dm_os_buffer_descriptors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -17,20 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe2641c33169e094b5e3cf5ae49a36508f5d4d00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787012"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539401"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  現在バッファープールにあるすべてのデータページに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「[バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
+  現在バッファープールにあるすべてのデータページに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 このビューの出力を使用すると、データベース、オブジェクト、または型に応じて、バッファープール内のデータベースページの分布を確認できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、この動的管理ビューは、バッファー プール拡張ファイルのデータ ページに関する情報も返します。 詳細については、「 [バッファープール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。  
   
  ディスクから読み込まれたデータ ページは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プールにコピーされ、再使用に備えてキャッシュされます。 キャッシュされた各データページには、1つのバッファー記述子があります。 このバッファー記述子により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに現在キャッシュされている各データ ページが一意に識別されます。 dm_os_buffer_descriptors は、すべてのユーザーデータベースおよびシステムデータベースのキャッシュされたページを返します。 これには、リソースデータベースに関連付けられているページも含まれます。  
   
@@ -50,14 +51,14 @@ ms.locfileid: "85787012"
 |numa_node|**int**|バッファーの Nonuniform Memory Access ノード。 NULL 値が許可されます。|  
 |read_microsec|**bigint**|バッファーにページを読み込むために必要な実際の時間 (マイクロ秒単位)。 この数値は、バッファーが再利用されるとリセットされます。 NULL 値が許可されます。|  
 |is_in_bpool_extension|**bit**|1 = ページはバッファープール拡張機能に含まれています。 NULL 値が許可されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  dm_os_buffer_descriptors によって、リソースデータベースによって使用されているページが返されます。 dm_os_buffer_descriptors では、無料または盗難にあったページ、または読み取り時にエラーが発生したページに関する情報は返されません。  
   
 |From|終了|オン|リレーションシップ|  
@@ -83,7 +84,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B: 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B. 現在のデータベース内の各オブジェクトのキャッシュ ページ数を返す  
  次の例では、現在のデータベース内の各オブジェクトに対して読み込まれたページ数を返します。  
   
 ```  
@@ -112,7 +113,7 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

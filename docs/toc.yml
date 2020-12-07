@@ -58,22 +58,22 @@
           items:
             - name: ビッグ データ ツールをインストールする
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: azdata をインストールする
+            - name: Azure Data CLI をインストールする
               items:
                 - name: インストール
-                  href: big-data-cluster/deploy-install-azdata.md
+                  href: azdata/install/deploy-install-azdata.md
                 - name: macOS
-                  href: big-data-cluster/deploy-install-azdata-macos.md
+                  href: azdata/install/deploy-install-azdata-macos.md
                 - name: Windows
-                  href: big-data-cluster/deploy-install-azdata-installer.md
+                  href: azdata/install/deploy-install-azdata-installer.md
                 - name: Linux (apt を使用)
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                  href: azdata/install/deploy-install-azdata-linux-package.md
                 - name: Linux (yum を使用)
-                  href: big-data-cluster/deploy-install-azdata-yum.md
+                  href: azdata/install/deploy-install-azdata-yum.md
                 - name: Linux (zypper を使用)
-                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                  href: azdata/install/deploy-install-azdata-zypper.md
                 - name: pip を使う
-                  href: big-data-cluster/deploy-install-azdata-pip.md
+                  href: azdata/install/deploy-install-azdata-pip.md
         - name: 配置
           items:
             - name: 展開のガイダンス
@@ -88,8 +88,6 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: オフライン展開
               href: big-data-cluster/deploy-offline.md
-            - name: Active Directory モード
-              href: big-data-cluster/deploy-active-directory.md
             - name: 高可用性で展開する
               items:
                 - name: マスター インスタンス
@@ -102,10 +100,14 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
+                - name: OpenShift
+                  href: big-data-cluster/deploy-openshift.md
             - name: 展開スクリプト
               items:
                 - name: AKS Python スクリプト
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: ARO Python スクリプト
+                  href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
                 - name: 単一ノードの Kubeadm スクリプト
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: ノートブックを使用したデプロイ
@@ -126,10 +128,44 @@
           href: big-data-cluster/concept-compute-pool.md
         - name: Security
           href: big-data-cluster/concept-security.md
+        - name: 管理リソース
+          href: big-data-cluster/view-cluster-status.md
+        - name: Active Directory モード
+          items:
+            - name: 前提条件
+              href: big-data-cluster/active-directory-prerequisites.md
+            - name: デプロイ
+              items:
+                - name: 単純な AD の展開
+                  href: big-data-cluster/active-directory-deploy.md
+                - name: AKS で AD を計画する
+                  href: big-data-cluster/active-directory-deployment-aks.md
+                - name: チュートリアル - AKS の AD
+                  href: big-data-cluster/active-directory-deployment-aks-tutorial.md
+            - name: 接続する
+              href: big-data-cluster/active-directory-connect.md
+            - name: 同じ AD ドメインの複数の BDC
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: 自動生成された AD オブジェクト
+              href: big-data-cluster/active-directory-objects.md
+            - name: AD DNS の調整
+              href: big-data-cluster/active-directory-dns-reconciliation.md
+            - name: ユーザー アクセスを管理する
+              href: big-data-cluster/manage-user-access.md
+        - name: プライベート クラスター
+          items:
+            - name: デプロイ
+              href: big-data-cluster/private-deploy.md
+            - name: 管理する
+              href: big-data-cluster/private-manage.md
+            - name: トラフィックを制限する
+              href: big-data-cluster/private-restrict-egress-traffic.md
     - name: 操作方法ガイド
       items:
         - name: 構成
           items:
+            - name: クラスター
+              href: big-data-cluster/configure-cluster.md
             - name: SQL Server マスター インスタンス
               href: big-data-cluster/configure-sql-server-master-instance.md
             - name: Apache Spark と Apache Hadoop を構成する
@@ -168,16 +204,130 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 展開および使用するアプリ
           items:
-            - name: azdata を使用した配置
-              href: big-data-cluster/big-data-cluster-create-apps.md
+            - name: Azure Data CLI を使用してデプロイする
+              href: big-data-cluster/app-create.md
             - name: VS Code を使用した展開
               href: big-data-cluster/app-deployment-extension.md
             - name: アプリの利用
-              href: big-data-cluster/big-data-cluster-consume-apps.md
+              href: big-data-cluster/app-consume.md
+            - name: アプリの実行
+              href: big-data-cluster/app-run.md
+            - name: アプリの監視
+              href: big-data-cluster/app-monitor.md
         - name: ビッグ データ/Machine Learning
           items:
             - name: Machine Learning Services (Python、R) の使用
               href: big-data-cluster/machine-learning-services.md
+            - name: 機械学習のクイックスタート
+              items:
+                - name: Python
+                  items:
+                    - name: Python スクリプトを実行する
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: データ構造とオブジェクト
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: Python 関数
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: モデルのトレーニングとスコア付け
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                - name: R
+                  items:
+                    - name: R スクリプトの実行
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: データ型とオブジェクト
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: R 関数
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: モデルのトレーニングとスコア付け
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: 機械学習のチュートリアル
+              items:
+                - name: Python
+                  items:
+                    - name: スキー レンタル (線形回帰)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データを準備する
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - モデルをトレーニングする
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - モデルをデプロイする
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: 顧客を分類する (K-Means クラスタリング)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データを準備する
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - モデルを作成する
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - モデルをデプロイする
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: NYC タクシーのヒント (分類)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データの探索
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - 機能エンジニアリング
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - トレーニングおよびデプロイ
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 5 - 予測
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                - name: R
+                  items:
+                    - name: スキー レンタル (デシジョン ツリー)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データを準備する
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - モデルをトレーニングする
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - モデルをデプロイする
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: 顧客を分類する (K-Means クラスタリング)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データを準備する
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - モデルを作成する
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - モデルをデプロイする
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: NYC タクシーのヒント (分類)
+                      items:
+                        - name: 1 - 概要
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 2 - データの探索
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 3 - 機能エンジニアリング
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 4 - トレーニングおよびデプロイ
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                        - name: 5 - 予測
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+            - name: Python、R パッケージの管理
+              items:
+                - name: Python
+                  items:
+                    - name: Python パッケージ情報の取得
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: sqlmlutils を使用してインストールする
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                - name: R
+                  items:
+                    - name: R パッケージ情報の取得
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: sqlmlutils を使用してインストールする
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: miniCRAN リポジトリの作成
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
+                    - name: R パッケージを使用するためのヒント
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: PROSE コード アクセラレータを使用したデータ ラングリング
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: MLeap での Spark の機械学習モデル
@@ -190,20 +340,50 @@
           items:
             - name: 接続する
               href: big-data-cluster/connect-to-big-data-cluster.md
-            - name: クラスターの状態を表示する
-              href: big-data-cluster/view-cluster-status.md
             - name: コントローラー ダッシュボードを使って管理する
               href: big-data-cluster/manage-with-controller-dashboard.md
             - name: 既存のノートブックを管理する
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: Spark を使用してノートブックを実行する
               href: big-data-cluster/notebooks-tutorial-spark.md
-            - name: Security
+            - name: 操作ノートブックの一覧表示
+              href: big-data-cluster/cluster-manage-notebooks.md
+        - name: モニター
+          items:
+            - name: Azure Data Studio で監視する
+              href: big-data-cluster/cluster-monitor-ads.md
+            - name: コマンドレットを使用して監視する
+              href: big-data-cluster/cluster-monitor-cmdlet.md
+            - name: ノートブックを使用して監視する
+              href: big-data-cluster/cluster-common-notebooks.md
+            - name: 監視 - Grafana
+              href: big-data-cluster/cluster-monitor-grafana.md
+            - name: ログ - Kibana
+              href: big-data-cluster/cluster-logging-kibana.md
+            - name: 監視ノートブックの一覧表示
+              href: big-data-cluster/cluster-monitor-notebooks.md
+            - name: ログ記録ノートブックの一覧表示
+              href: big-data-cluster/cluster-logging-notebooks.md
+        - name: パフォーマンス
+          items:
+            - name: チューニング ガイド
+              href: big-data-cluster/performance-guidelines-tuned.md
+        - name: セキュリティで保護
+          items:
+            - name: BDC 用 Kubernetes RBAC
+              href: big-data-cluster/kubernetes-rbac.md
+            - name: AZDATA_PASSWORD を更新する
+              href: big-data-cluster/change-azdata-password.md
+            - name: ルートではないコンテナー
+              href: big-data-cluster/non-root-containers.md
+            - name: 保存時の暗号化
               items:
-                - name: AZDATA_PASSWORD を更新する
-                  href: big-data-cluster/change-azdata-password.md
-                - name: ユーザー アクセスを管理する
-                  href: big-data-cluster/manage-user-access.md
+                - name: 概念と構成
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: SQL Server TDE
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: HDFS 暗号化ゾーン
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Spark ジョブ
           items:
             - name: Azure Data Studio で Spark ジョブを送信する
@@ -218,14 +398,22 @@
           items:
             - name: Kubernetes のトラブルシューティング
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory ドメイン グループのスコープ
-              href: big-data-cluster/troubleshoot-active-directory.md
-            - name: Active Directory DNS
-              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-            - name: Active Directory ログインに失敗する
-              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: HDFS 管理者権限
+            - name: Pyspark ノートブックのトラブルシューティング
+              href: big-data-cluster/troubleshoot-pyspark-notebook.md
+            - name: Active Directory のトラブルシューティング
+              items:
+                - name: AD の展開の停止
+                  href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+                - name: AD ドメイン グループのスコープ
+                  href: big-data-cluster/troubleshoot-active-directory.md
+                - name: AD DNS
+                  href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+                - name: AD ログインに失敗する
+                  href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
+            - name: HDFS 管理者のアクセス許可のトラブルシューティング
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
+            - name: クラスターのトラブルシューティング ノートブック
+              href: big-data-cluster/cluster-troubleshooter-notebooks.md
     - name: リファレンス
       items:
         - name: BDC パートナー
@@ -234,64 +422,70 @@
           items:
             - name: 展開構成フォーム
               href: big-data-cluster/reference-deployment-config.md
-        - name: azdata リファレンス
+        - name: 構成
           items:
-            - name: azdata
+            - name: マスター インスタンス
+              href: big-data-cluster/reference-config-master-instance.md
+            - name: Apache Spark と Apache Hadoop
+              href: big-data-cluster/reference-config-spark-hadoop.md
+        - name: Azure Data CLI リファレンス
+          items:
+            - name: Azure データ CLI
               items:
                 - name: azdata
-                  href: big-data-cluster/reference-azdata.md
+                  href: azdata/reference/reference-azdata.md
                 - name: ノートブック
-                  href: big-data-cluster/reference-azdata-notebook.md
+                  href: azdata/reference/reference-azdata-notebook.md
                 - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
+                  href: azdata/reference/reference-azdata-sql.md
             - name: アプリ配置
               items:
                 - name: app
-                  href: big-data-cluster/reference-azdata-app.md
+                  href: azdata/reference/reference-azdata-app.md
                 - name: アプリ テンプレート
-                  href: big-data-cluster/reference-azdata-app-template.md
+                  href: azdata/reference/reference-azdata-app-template.md
             - name: クラスター
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-azdata-bdc.md
+                  href: azdata/reference/reference-azdata-bdc.md
                 - name: bdc app
-                  href: big-data-cluster/reference-azdata-bdc-app.md
+                  href: azdata/reference/reference-azdata-bdc-app.md
                 - name: bdc app status
-                  href: big-data-cluster/reference-azdata-bdc-app-status.md
+                  href: azdata/reference/reference-azdata-bdc-app-status.md
                 - name: bdc の構成
-                  href: big-data-cluster/reference-azdata-bdc-config.md
+                  href: azdata/reference/reference-azdata-bdc-config.md
                 - name: bdc コントロール
-                  href: big-data-cluster/reference-azdata-bdc-control.md
+                  href: azdata/reference/reference-azdata-bdc-control.md
                 - name: bdc コントロールの状態
-                  href: big-data-cluster/reference-azdata-bdc-control-status.md
+                  href: azdata/reference/reference-azdata-bdc-control-status.md
                 - name: bdc のデバッグ
-                  href: big-data-cluster/reference-azdata-bdc-debug.md
+                  href: azdata/reference/reference-azdata-bdc-debug.md
                 - name: bdc エンドポイント
-                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                  href: azdata/reference/reference-azdata-bdc-endpoint.md
                 - name: bdc gateway
-                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                  href: azdata/reference/reference-azdata-bdc-gateway.md
                 - name: bdc gateway status
-                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+                  href: azdata/reference/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
-                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs のマウント
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc hdfs status
-                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+                  href: azdata/reference/reference-azdata-bdc-hdfs-status.md
                 - name: bdc spark
-                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                  href: azdata/reference/reference-azdata-bdc-spark.md
                 - name: bdc spark バッチ
-                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                  href: azdata/reference/reference-azdata-bdc-spark-batch.md
                 - name: bdc spark セッション
-                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                  href: azdata/reference/reference-azdata-bdc-spark-session.md
                 - name: bdc spark ステートメント
-                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                  href: azdata/reference/reference-azdata-bdc-spark-statement.md
                 - name: bdc spark status
-                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                  href: azdata/reference/reference-azdata-bdc-spark-status.md
                 - name: bdc sql
-                  href: big-data-cluster/reference-azdata-bdc-sql.md
+                  href: azdata/reference/reference-azdata-bdc-sql.md
                 - name: bdc の状態
-                  href: big-data-cluster/reference-azdata-bdc-status.md
+                  href: azdata/reference/reference-azdata-bdc-status.md
 - name: ビジネス継続性
   items:
     - name: 概要
@@ -1542,7 +1736,7 @@
               href: relational-databases/indexes/columnstore-indexes-query-performance.md
             - name: リアルタイム運用分析
               href: relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md
-            - name: データ ウェアハウス (data warehouse)
+            - name: Azure Synapse Analytics
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: デフラグ
               href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
@@ -1678,15 +1872,6 @@
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
         - name: エッジ制約
           href: relational-databases/tables/graph-edge-constraints.md
-          items:
-            - name: 作成
-              href: relational-databases/tables/create-edge-constraints.md
-            - name: 削除
-              href: relational-databases/tables/delete-edge-constraint.md
-            - name: 変更
-              href: relational-databases/tables/modify-edge-constraint.md
-            - name: 表示
-              href: relational-databases/tables/view-edge-constraint-properties.md
         - name: 主キー
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:
@@ -1813,12 +1998,13 @@
             - name: 相互運用性
               href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: トリガー
-      href: relational-databases/triggers/logon-triggers.md
       items:
-        - name: ログオン トリガーのイベント データのキャプチャ
-          href: relational-databases/triggers/capture-logon-trigger-event-data.md
-        - name: トリガーのセキュリティの管理
-          href: relational-databases/triggers/manage-trigger-security.md
+        - name: ログオン トリガー
+          items:
+            - name: ログオン トリガー
+              href: relational-databases/triggers/logon-triggers.md
+            - name: ログオン トリガーのイベント データのキャプチャ
+              href: relational-databases/triggers/capture-logon-trigger-event-data.md
         - name: DDL トリガー
           href: relational-databases/triggers/ddl-triggers.md
           items:
@@ -1853,6 +2039,8 @@
               href: relational-databases/triggers/get-information-about-dml-triggers.md
             - name: DML トリガーの削除または無効化
               href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+        - name: トリガーのセキュリティの管理
+          href: relational-databases/triggers/manage-trigger-security.md
     - name: ユーザー定義関数
       href: relational-databases/user-defined-functions/user-defined-functions.md
       items:
@@ -2111,8 +2299,6 @@
     - name: データ層アプリケーション
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
-        - name: SQL Server オブジェクトとバージョンの DAC サポート
-          href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
         - name: 削除
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: 配置
@@ -2542,12 +2728,14 @@
           items:
             - name: 言語拡張とは
               href: language-extensions/language-extensions-overview.md
+            - name: Java 言語拡張とは
+              href: language-extensions/java-overview.md
             - name: 新機能
               href: language-extensions/language-extensions-whats-new.md
         - name: インストール
           items:
             - name: Windows に言語拡張をインストールする
-              href: language-extensions/install/install-sql-server-language-extensions-on-windows.md
+              href: language-extensions/install/windows-java.md
         - name: チュートリアル
           items:
             - name: Java で正規表現を使って文字列を検索する
@@ -2565,7 +2753,7 @@
             - name: Java から SQL データ型
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java の jar ファイルを作成する
-              href: language-extensions/how-to/call-java-from-sql.md
+              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
         - name: リファレンス
           items:
             - name: 機能拡張フレームワーク API
@@ -3421,7 +3609,7 @@
               href: relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md
             - name: ファイルとバージョン番号
               href: relational-databases/server-management-objects-smo/files-and-version-numbers.md
-            - name: 'Visual Studio .NET で Visual C# SMO プロジェクトを作成する方法'
+            - name: Visual Studio .NET で Visual C# SMO プロジェクトを作成する方法
               href: relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
             - name: SMO オブジェクト モデル ダイアグラム
               href: relational-databases/server-management-objects-smo/smo-object-model-diagram.md
@@ -3429,7 +3617,7 @@
               href: relational-databases/server-management-objects-smo/smo-object-model-namespaces.md
             - name: SMO オブジェクト モデル
               href: relational-databases/server-management-objects-smo/smo-object-model.md
-            - name: 'SMO プログラミング - Visual C# .NET の概要'
+            - name: SMO プログラミング - Visual C# .NET の概要
               href: relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md
             - name: SMO プログラミング言語
               href: relational-databases/server-management-objects-smo/smo-programming-languages.md
@@ -4179,6 +4367,10 @@
       href: relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
     - name: メモリ管理アーキテクチャ
       href: relational-databases/memory-management-architecture-guide.md
+    - name: ラッチの競合の診断
+      href: relational-databases/diagnose-resolve-latch-contention.md
+    - name: スピンロックの競合の診断
+      href: relational-databases/diagnose-resolve-spinlock-contention.md
 - name: インストール
   items:
     - name: 概要
@@ -4227,11 +4419,7 @@
         - name: 使用状況と診断データの収集
           items:
             - name: SQL Server のプライバシーの補足情報
-              items:
-                - name: SQL Server 2017 以前
-                  href: sql-server/sql-server-privacy.md
-                - name: SQL Server 2019
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: SQL Server の使用状況と診断データを構成する
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: ツールの使用状況と診断データを構成する
@@ -4296,7 +4484,7 @@
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: サポートされているバージョンとエディションのアップグレード SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
         - name: Data Migration Assistant を実行してアップグレードを準備する
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
         - name: Analysis Services
@@ -4393,6 +4581,10 @@
               href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
             - name: アドホック分散クエリ
               href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
+            - name: ADR クリーナーの再試行のタイムアウト
+              href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+            - name: ADR Preallocation Factor
+              href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
             - name: affinity Input-Output mask
               href: database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
             - name: affinity64 Input-Output mask
@@ -4403,6 +4595,8 @@
               href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
             - name: Agent XP
               href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+            - name: allow polybase export
+              href: database-engine/configure-windows/allow-polybase-export.md
             - name: allow updates
               href: database-engine/configure-windows/allow-updates-server-configuration-option.md
             - name: バックアップ チェックサムの既定
@@ -4521,6 +4715,8 @@
               href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
             - name: SMO & DMO XPs
               href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+            - name: 復旧モデルのエラーの抑制
+              href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
             - name: transform noise words
               href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
             - name: two digit year cutoff の構成
@@ -4591,6 +4787,8 @@
               href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
             - name: 複数の TCP ポートでリッスンするデータベース エンジンの構成
               href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+            - name: SQLPS を使用した TCP プロトコルの有効化
+              href: powershell/how-to-enable-tcp-sqlps.md
             - name: データベース エンジンがインストールされ開始されているかどうかの確認
               href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
             - name: 拡張保護を使用したデータベース エンジンへの接続
@@ -4658,6 +4856,10 @@
     - name: Azure Integration Services >
       displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
+    - name: 移行ガイド
+      items:
+        - name: DB2 から
+          href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: Data Quality Services (DQS)
       items:
         - name: 概要
@@ -5869,8 +6071,6 @@
       items:
         - name: 新機能
           href: dma/dma-whatsnew.md
-        - name: SQL Database の評価
-          href: dma/dma-assesssqlonprem.md
         - name: SQL Server Integration Services (SSIS) の評価
           href: dma/dma-assess-ssis.md
         - name: 評価の保存と読み込み
@@ -5883,8 +6083,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: SQL Server ログインの移行
           href: dma/dma-migrateserverlogins.md
-        - name: Azure SQL Database の準備のための SQL Server データ資産の評価
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: ベスト プラクティス
           href: dma/dma-bestpractices.md
         - name: 評価レポートの統合
@@ -5895,6 +6093,14 @@
           href: dma/dma-commandline.md
         - name: 設定の構成
           href: dma/dma-configurationsettings.md
+        - name: Azure SQL DB の準備状態の評価
+          items:
+            - name: 評価を作成する
+              href: dma/dma-assesssqlonprem.md
+            - name: DMA GUI を使用する
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: DMA コマンドラインを使用する
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: SQL Server Migration Assistant (SSMA)
       href: ssma/toc.yml
 - name: 管理、監視、チューニング
@@ -6061,6 +6267,8 @@
               items:
                 - name: 非対称キー暗号化の強度
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: データベース ファイルとは別のデバイス上のバックアップ ファイル
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: ディスク I/O サブシステムの IO 遅延問題の確認
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: ディスク I/O サブシステムの読み取り再試行の問題の確認
@@ -6069,6 +6277,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: affinity mask と affinity I/O mask の重複の修正
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: データベース復旧モデル
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: 既定のトレース ログ ファイルの無効化
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: I/O 要求失敗の検出
@@ -6103,6 +6313,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: AUTO_SHRINK データベース オプションを OFF に設定
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: ユーザー データベースの照合順序を master および model データベースと一致するように設定する
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: 最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: PAGE_VERIFY データベース オプションを CHECKSUM に設定
@@ -6232,7 +6444,7 @@
             - name: ユーティリティ エクスプローラーの F1 ヘルプ
               href: relational-databases/manage/utility-explorer-f1-help.md
         - name: SQL Assessment API
-          href: sql-assessment-api/sql-assessment-api-overview.md
+          href: tools/sql-assessment-api/sql-assessment-api-overview.md
     - name: モニター
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -6707,7 +6919,7 @@
                   href: relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
                 - name: ネイティブ コンパイルされたプロシージャの統合
                   href: relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                - name: 'インメモリの SMO C#'
+                - name: インメモリの SMO C#
                   href: relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
             - name: 操作方法ガイド
               items:
@@ -6849,7 +7061,7 @@
       href: relational-databases/cursors.md
     - name: 結合
       href: relational-databases/performance/joins.md
-    - name: スクリプトの作成
+    - name: スクリプト
       href: relational-databases/scripting/database-engine-scripting.md
     - name: サブクエリ
       href: relational-databases/performance/subqueries.md
@@ -6863,7 +7075,7 @@
           items:
             - name: クエリのシナリオ
               href: relational-databases/polybase/polybase-queries.md
-            - name: プッシュ ダウン計算
+            - name: プッシュダウン計算
               href: relational-databases/polybase/polybase-pushdown-computation.md
             - name: スケール アウト グループ
               href: relational-databases/polybase/polybase-scale-out-groups.md
@@ -6903,9 +7115,9 @@
                   href: relational-databases/polybase/configure-scale-out-groups-windows.md
             - name: データ仮想化ウィザード
               items:
-                - name: リレーショナル データを仮想化する
+                - name: データの仮想化
                   href: relational-databases/polybase/data-virtualization.md
-                - name: CSV データを仮想化する
+                - name: CSV データの仮想化
                   href: relational-databases/polybase/data-virtualization-csv.md
             - name: トラブルシューティング
               items:
@@ -6927,8 +7139,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: スタック オーバーフロー >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN フォーラム >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Microsoft Q & A >>
+              href: 'https://docs.microsoft.com/answers/products/sql-server'
             - name: フィードバックの送信 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -7554,6 +7766,8 @@
                   items:
                     - name: SSMS での Always Encrypted を使用した列のクエリ
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                    - name: Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
                 - name: Always Encrypted で保護された機密データの移行
                   items:
                     - name: エクスポートとインポート
@@ -7623,6 +7837,8 @@
                   href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
                 - name: SQL Server コネクタのトラブルシューティング
                   href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
+                - name: SQL Server コネクタのログ記録
+                  href: relational-databases/security/encryption/sql-server-connector-registry-modification.md
             - name: サービス マスター キーをバックアップする
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: サービス マスター キーを復元する
@@ -7762,118 +7978,8 @@
   items:
     - name: 概要
       href: tools/overview-sql-tools.md
-    - name: Azure Data Studio
-      href: azure-data-studio/what-is.md
-      items:
-        - name: インストール
-          href: azure-data-studio/download-azure-data-studio.md
-        - name: リリース ノート
-          href: azure-data-studio/release-notes-azure-data-studio.md
-        - name: クイックスタート
-          items:
-            - name: SQL Server に対する接続およびクエリ
-              href: azure-data-studio/quickstart-sql-server.md
-            - name: Azure SQL Database に対する接続およびクエリ
-              href: azure-data-studio/quickstart-sql-database.md
-            - name: Azure SQL Data Warehouse に対する接続およびクエリ
-              href: azure-data-studio/quickstart-sql-dw.md
-            - name: PostgreSQL に対する接続およびクエリ
-              href: azure-data-studio/quickstart-postgres.md
-        - name: チュートリアル
-          items:
-            - name: T-SQL エディター
-              href: azure-data-studio/tutorial-sql-editor.md
-            - name: '分析情報の例: 速度の遅いクエリ'
-              href: azure-data-studio/tutorial-qds-sql-server.md
-            - name: '分析情報の例: テーブル領域使用状況'
-              href: azure-data-studio/tutorial-table-space-sql-server.md
-            - name: カスタム インサイトのビルド
-              href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
-            - name: バックアップと復元
-              href: azure-data-studio/tutorial-backup-restore-sql-server.md
-        - name: 概念
-          items:
-            - name: 拡張機能
-              href: azure-data-studio/extensions.md
-              items:
-                - name: PostgreSQL の拡張機能
-                  href: azure-data-studio/postgres-extension.md
-                - name: データの仮想化の拡張機能
-                  href: azure-data-studio/data-virtualization-extension.md
-                - name: SQL Server エージェント
-                  href: azure-data-studio/sql-server-agent-extension.md
-                - name: SQL Server 中央管理サーバーの拡張機能
-                  href: azure-data-studio/sql-server-cms-extension.md
-                - name: SQL Server dacpac の拡張機能
-                  href: azure-data-studio/sql-server-dacpac-extension.md
-                - name: SQL Server インポート
-                  href: azure-data-studio/sql-server-import-extension.md
-                - name: SQL Server プロファイラー
-                  href: azure-data-studio/sql-server-profiler-extension.md
-                - name: スキーマ比較の拡張機能
-                  href: azure-data-studio/schema-compare-extension.md
-                - name: PowerShell の拡張機能
-                  href: azure-data-studio/powershell-extension.md
-                - name: Managed Instance の拡張機能
-                  href: azure-data-studio/azure-sql-managed-instance-extension.md
-                - name: SandDance の拡張機能
-                  href: azure-data-studio/sanddance-extension.md
-            - name: 拡張機能のオーサリング
-              items:
-                - name: 拡張性の概要
-                  href: azure-data-studio/extensibility.md
-                - name: 拡張機能のオーサリング
-                  href: azure-data-studio/extension-authoring.md
-                - name: 拡張機能を作成する
-                  href: azure-data-studio/tutorial-create-extension.md
-                - name: 拡張性 API
-                  href: azure-data-studio/extensibility-apis.md
-            - name: ノートブック
-              items:
-                - name: Notebooks の概要
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: SQL カーネルを使用する
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Python カーネルを使用する
-                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
-                - name: Kqlmagic
-                  href: azure-data-studio/notebooks-kql-magic.md
-                - name: ノートブックを管理する
-                  href: azure-data-studio/notebooks-manage-sql-server.md
-        - name: 操作方法ガイド
-          items:
-            - name: ダッシュボードおよび分析情報のウィジェット
-              href: azure-data-studio/insight-widgets.md
-            - name: コード スニペット
-              href: azure-data-studio/code-snippets.md
-            - name: 統合ターミナル (PowerShell、Bash)
-              href: azure-data-studio/integrated-terminal.md
-            - name: キーボード ショートカット
-              href: azure-data-studio/keyboard-shortcuts.md
-            - name: エクスプローラーの Azure SQL リソース
-              href: azure-data-studio/azure-resource-explorer.md
-            - name: サーバー グループ
-              href: azure-data-studio/server-groups.md
-            - name: ソース管理
-              href: azure-data-studio/source-control.md
-            - name: 使用状況データ収集
-              href: azure-data-studio/usage-data-collection.md
-            - name: ワークスペースとユーザー設定
-              href: azure-data-studio/settings.md
-            - name: Windows 認証 (Kerberos)
-              href: azure-data-studio/enable-kerberos.md
-            - name: 使用状況データ収集
-              href: azure-data-studio/usage-data-collection.md
-        - name: リソース
-          items:
-            - name: よく寄せられる質問
-              href: azure-data-studio/faq.md
-            - name: Azure Data Studio の GitHub リポジトリ >>
-              href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server ブログ >>
-              href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 問題の報告と提案 >>
-              href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: Azure Data Studio >
+      href: azure-data-studio/index.yml
     - name: コマンド プロンプト ユーティリティ
       href: tools/command-prompt-utility-reference-database-engine.md
       items:
@@ -7887,8 +7993,6 @@
           href: tools/profiler-utility.md
         - name: sqlagent90 アプリケーション
           href: tools/sqlagent90-application.md
-        - name: sqlcmd
-          href: tools/sqlcmd-utility.md
         - name: SQLdiag
           href: tools/sqldiag-utility.md
         - name: sqlmaint
@@ -8182,6 +8286,8 @@
               href: tools/configuration-manager/viewing-the-windows-application-log.md
     - name: sqlcmd
       items:
+        - name: sqlcmd の概要
+          href: tools/sqlcmd-utility.md
         - name: ユーティリティの起動
           href: ssms/scripting/sqlcmd-start-the-utility.md
         - name: ユーティリティの使用
@@ -8212,10 +8318,10 @@
           href: ssdt/release-notes-ssdt.md
         - name: SSDT と SSDT-BI の以前のリリース
           href: ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+        - name: SQL Server Data Tools
+          href: ssdt/sql-server-data-tools.md
         - name: Azure Active Directory のサポート
           href: ssdt/azure-active-directory.md
-        - name: SQL Server のツール
-          href: ssdt/sql-server-tools.md
         - name: プロジェクト指向のオフライン データベース開発
           href: ssdt/project-oriented-offline-database-development.md
           items:
@@ -8398,10 +8504,20 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: チュートリアル
+        - name: クイックスタート
           items:
             - name: SQL Server に対する接続およびクエリ
-              href: ssms/tutorials/connect-query-sql-server.md
+              href: ssms/quickstarts/connect-query-sql-server.md
+        - name: チュートリアル
+          items:
+            - name: SSMS を構成する
+              href: ssms/tutorials/ssms-configuration.md
+            - name: その他のヒントとテクニックを使用する
+              href: ssms/tutorials/ssms-tricks.md
+            - name: オブジェクトをスクリプト化する
+              href: ssms/tutorials/scripting-ssms.md
+            - name: フラット ファイルのインポート
+              href: relational-databases/import-export/import-flat-file-wizard.md
         - name: 概念
           items:
             - name: SSMS でのツール ウィンドウ
@@ -8416,6 +8532,8 @@
               href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
             - name: '[ツール] メニューへの外部ツールの追加'
               href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: SQL Server Management Studio (SSMS) への拡張機能のインストール
+              href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
             - name: SSMS ユーティリティ
               href: ssms/ssms-utility.md
             - name: SSMS のキーボード ショートカット
@@ -8558,7 +8676,7 @@
                     - name: スクリプト生成ウィザードでサポートされるオブジェクト
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: クエリ エディターとテキスト エディター
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
                   items:
                     - name: XML エディター
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -8684,18 +8802,14 @@
               href: ssms/install-other-languages.md
             - name: SSMS でテンプレートを使用する
               href: ssms/template/templates-ssms.md
-            - name: オブジェクトをスクリプト化する
-              href: ssms/tutorials/scripting-ssms.md
-            - name: SSMS を構成する
-              href: ssms/tutorials/ssms-configuration.md
-            - name: その他のヒントとテクニックを使用する
-              href: ssms/tutorials/ssms-tricks.md
             - name: メニューとショートカット キーのカスタマイズ
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
               href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
             - name: ログインの監査の構成
               href: ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: '[検索と置換] ウィンドウからのコピーを有効にする'
+              href: ssms/troubleshoot/enable-copying-find-replace-window.md
             - name: トラブルシューティング
               items:
                 - name: 完全メモリ ダンプの取得
@@ -8982,7 +9096,7 @@
               href: ssms/scripting/database-engine-scripting.md
               items:
                 - name: クエリ エディターとテキスト エディター
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: データベース エンジン クエリ エディター
                   href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                 - name: XML エディター
@@ -9621,6 +9735,8 @@
           href: tools/release-notes-sqlpackage.md
         - name: sqlpackage ref
           href: tools/sqlpackage.md
+        - name: 開発パイプラインでの SqlPackage
+          href: tools/sqlpackage-pipelines.md
     - name: SQL Server プロファイラー
       href: tools/sql-server-profiler/sql-server-profiler.md
       items:
@@ -9755,7 +9871,7 @@
     - name: Visual Studio Code
       items:
         - name: T-SQL スクリプト
-          href: visual-studio-code/sql-server-develop-use-vscode.md
+          href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: チュートリアル
   items:
     - name: SQL Server
@@ -9826,6 +9942,12 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: チュートリアル
       items:
+        - name: SQL Server の初心者用ドキュメント
+          href: linux/new-to-sql-learning-resources.yml
+        - name: Linux の初心者用ドキュメント
+          href: linux/new-to-linux-learning-resources.yml
+        - name: Linux の初心者用リソース
+          href: linux/new-to-linux-resources.md
         - name: Windows からの移行
           href: linux/sql-server-linux-migrate-restore-database.md
         - name: Docker への移行
@@ -9867,12 +9989,12 @@
               href: linux/sql-server-linux-setup-full-text-search.md
             - name: SQL Server Integration Services のインストール
               href: linux/sql-server-linux-setup-ssis.md
-            - name: SQL Server Machine Learning Services のインストール
+            - name: SQL Server Machine Learning Services のインストール (Python と R)
               href: linux/sql-server-linux-setup-machine-learning.md
-            - name: Docker に SQL Server Machine Learning Services をインストールする
+            - name: Docker に SQL Server Machine Learning Services (Python と R) をインストールする
               href: linux/sql-server-linux-setup-machine-learning-docker.md
-            - name: SQL Server の言語拡張をインストールする
-              href: linux/sql-server-linux-setup-language-extensions.md
+            - name: SQL Server Java 言語拡張機能をインストールする
+              href: linux/sql-server-linux-setup-language-extensions-java.md
             - name: リポジトリの構成
               href: linux/sql-server-linux-change-repo.md
         - name: 構成
@@ -9889,10 +10011,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: Containers
           items:
-            - name: Docker コンテナーの構成
-              href: linux/sql-server-linux-configure-docker.md
+            - name: コンテナーにデプロイして接続する
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: コンテナーを構成してカスタマイズする
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: コンテナーのセキュリティ
+              href: linux/sql-server-linux-docker-container-security.md
             - name: MSDTC 用の Docker の構成
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Docker コンテナーのトラブルシューティング
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: 開発
           href: linux/sql-server-linux-develop-overview.md
           items:
@@ -10035,8 +10163,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: フィードバックの送信 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10045,10 +10173,24 @@
   items:
     - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse >
+    - name: Azure Synapse Analytics >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: Azure VM 上の SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: Azure Arc 対応 SQL Server (プレビュー)
+  items:
+    - name: 概要
+      href: sql-server/azure-arc/overview.md
+    - name: リリース ノート
+      href: sql-server/azure-arc/release-notes.md
+    - name: 接続する
+      href: sql-server/azure-arc/connect.md
+    - name: 大規模な接続
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: アクセス
+      href: sql-server/azure-arc/assess.md
+    - name: 高度なデータ セキュリティの構成
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: リソース
   items:
     - name: オフライン SQL Server のドキュメント
@@ -10057,24 +10199,24 @@
       items:
         - name: 学習用リソース
           href: sql-server/educational-sql-resources.yml
-        - name: Microsoft Virtual Academy >>
-          href: 'https://mva.microsoft.com/product-training/sql-server'
+        - name: Microsoft Learn >>
+          href: 'https://docs.microsoft.com/learn/'
         - name: Channel 9 での SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: Help
       items:
         - name: ヘルプの参照
           href: sql-server/sql-server-get-help.md
-        - name: SQL ドキュメントのバージョン管理
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: ドキュメントのナビゲーションに関するヒント
+          href: sql-server/sql-docs-navigation-guide.md
     - name: ブログ
       items:
         - name: SQL Server >>
@@ -10107,14 +10249,10 @@
   items:
     - name: データベースのサンプル
       items:
-        - name: サンプルの概要
+        - name: 概要
           href: samples/sql-samples-where-are.md
-        - name: すべての GitHub サンプル >>
-          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
-          items:
-            - name: インストールと構成
-              href: samples/adventureworks-install-configure.md
+          href: samples/adventureworks-install-configure.md
         - name: Wide World Importers
           items:
             - name: 概要
@@ -10127,7 +10265,7 @@
                   href: samples/wide-world-importers-oltp-install-configure.md
                 - name: SQL Server 機能
                   href: samples/wide-world-importers-oltp-use-of-sql-server-features.md
-            - name: データ ウェアハウス (data warehouse)
+            - name: Azure Synapse Analytics
               items:
                 - name: データベース カタログ
                   href: samples/wide-world-importers-dw-database-catalog.md
@@ -10139,6 +10277,8 @@
               href: samples/wide-world-importers-generate-data.md
             - name: ETL ワークフロー
               href: samples/wide-world-importers-perform-etl.md
+        - name: すべての GitHub サンプル >>
+          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
     - name: エラーとイベント
       href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
       items:
@@ -10195,6 +10335,8 @@
                   href: relational-databases/errors-events/mssqlserver-824-database-engine-error.md
                 - name: 825
                   href: relational-databases/errors-events/mssqlserver-825-database-engine-error.md
+                - name: 832
+                  href: relational-databases/errors-events/mssqlserver-832-database-engine-error.md
                 - name: 833
                   href: relational-databases/errors-events/mssqlserver-833-database-engine-error.md
                 - name: 844
@@ -10205,6 +10347,12 @@
                   href: relational-databases/errors-events/mssqlserver-846-database-engine-error.md
                 - name: 847
                   href: relational-databases/errors-events/mssqlserver-847-database-engine-error.md
+                - name: 854
+                  href: relational-databases/errors-events/mssqlserver-854-database-engine-error.md
+                - name: 855
+                  href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
+                - name: 856
+                  href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
                 - name: 905
                   href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
                 - name: 916
@@ -10317,6 +10465,10 @@
                   href: relational-databases/errors-events/mssqlserver-2814-database-engine-error.md
             - name: エラー 3000 から 4850
               items:
+                - name: 3013
+                  href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
+                - name: 3023
+                  href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
                 - name: 3151
                   href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
                 - name: 3156
@@ -10359,18 +10511,26 @@
                   href: relational-databases/errors-events/mssqlserver-3937-database-engine-error.md
                 - name: 3961
                   href: relational-databases/errors-events/mssqlserver-3961-database-engine-error.md
+                - name: 3859
+                  href: relational-databases/errors-events/mssqlserver-3859-database-engine-error.md
                 - name: 4064
                   href: relational-databases/errors-events/mssqlserver-4064-database-engine-error.md
                 - name: 4104
                   href: relational-databases/errors-events/mssqlserver-4104-database-engine-error.md
                 - name: 4186
                   href: relational-databases/errors-events/mssqlserver-4186-database-engine-error.md
+                - name: 4214
+                  href: relational-databases/errors-events/mssqlserver-4214-database-engine-error.md
                 - name: 4846
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: エラー 5000 から 8000
               items:
+                - name: 5009
+                  href: relational-databases/errors-events/mssqlserver-5009-database-engine-error.md
                 - name: 5120
                   href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
+                - name: 5180
+                  href: relational-databases/errors-events/mssqlserver-5180-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -10399,6 +10559,8 @@
                   href: relational-databases/errors-events/mssqlserver-5515-database-engine-error.md
                 - name: 5554
                   href: relational-databases/errors-events/mssqlserver-5554-database-engine-error.md
+                - name: 7105
+                  href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
                 - name: 7308
                   href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
                 - name: 7711
@@ -10627,6 +10789,8 @@
                   href: relational-databases/errors-events/mssqlserver-17083-database-engine-error.md
                 - name: 17084
                   href: relational-databases/errors-events/mssqlserver-17084-database-engine-error.md
+                - name: 17112
+                  href: relational-databases/errors-events/mssqlserver-17112-database-engine-error.md
                 - name: 17128
                   href: relational-databases/errors-events/mssqlserver-17128-database-engine-error.md
                 - name: 17130
@@ -10647,6 +10811,8 @@
                   href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
+                - name: 17659
+                  href: relational-databases/errors-events/mssqlserver-17659-database-engine-error.md
                 - name: 17660
                   href: relational-databases/errors-events/mssqlserver-17660-database-engine-error.md
                 - name: 17676
@@ -10663,6 +10829,8 @@
                   href: relational-databases/errors-events/mssqlserver-17884-database-engine-error.md
                 - name: 17887
                   href: relational-databases/errors-events/mssqlserver-17887-database-engine-error.md
+                - name: 17892
+                  href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
                 - name: 18264
                   href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
                 - name: 18452
@@ -11776,7 +11944,7 @@
               href: relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
             - name: sys.spatial_reference_systems
               href: relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-        - name: SQL Data Warehouse
+        - name: Azure Synapse Analytics
           href: relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
           items:
             - name: sys.pdw_column_distribution_properties
@@ -11831,6 +11999,8 @@
               href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
             - name: sys.pdw_nodes_tables
               href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+            - name: sys.pdw_permanent_table_mappings
+              href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
             - name: sys.pdw_replicated_table_cache_state
               href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
             - name: sys.pdw_table_distribution_properties
@@ -12381,7 +12551,7 @@
           items:
             - name: sys.dm_db_objects_disabled_on_compatibility_level_change
               href: relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md
-        - name: SQL Data Warehouse と Parallel Data Warehouse
+        - name: Azure Synapse Analytics と Parallel Data Warehouse
           href: relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md
           items:
             - name: sys.dm_pdw_component_health_active_alerts
@@ -13424,10 +13594,14 @@
               href: relational-databases/system-stored-procedures/sp-oastop-transact-sql.md
         - name: PolyBase
           items:
-            - name: polybase_join_group
+            - name: sp_polybase_join_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md
             - name: sp_polybase_leave_group
               href: relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md
+            - name: sp_data_source_table_columns
+              href: relational-databases/system-stored-procedures/sp-data-source-table-columns.md
+            - name: sp_data_source_objects
+              href: relational-databases/system-stored-procedures/sp-data-source-objects.md
         - name: ポリシー ベースの管理
           href: relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md
           items:
@@ -14062,7 +14236,7 @@
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
             - name: sp_delete_backup
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-        - name: SQL Data Warehouse
+        - name: Azure Synapse Analytics
           href: relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
           items:
             - name: sp_datatype_info_90
@@ -15434,6 +15608,8 @@
                   href: t-sql/functions/current-timestamp-transact-sql.md
                 - name: CURRENT_TIMEZONE
                   href: t-sql/functions/current-timezone-transact-sql.md
+                - name: CURRENT_TIMEZONE_ID
+                  href: t-sql/functions/current-timezone-id-transact-sql.md
                 - name: '[DATEADD]'
                   href: t-sql/functions/dateadd-transact-sql.md
                 - name: DATEDIFF
@@ -16011,7 +16187,7 @@
                       href: t-sql/language-elements/modulo-transact-sql.md
                     - name: '%= 剰余代入'
                       href: t-sql/language-elements/modulo-equals-transact-sql.md
-                - name: = (代入)
+                - name: '= (代入)'
                   href: t-sql/language-elements/assignment-operator-transact-sql.md
                 - name: ビット演算子
                   href: t-sql/language-elements/bitwise-operators-transact-sql.md
@@ -16033,7 +16209,7 @@
                 - name: 比較
                   href: t-sql/language-elements/comparison-operators-transact-sql.md
                   items:
-                    - name: = (等しい)
+                    - name: '= (等しい)'
                       href: t-sql/language-elements/equals-transact-sql.md
                     - name: '> (より大きい)'
                       href: t-sql/language-elements/greater-than-transact-sql.md
@@ -16133,7 +16309,7 @@
               items:
                 - name: AT TIME ZONE
                   href: t-sql/queries/at-time-zone-transact-sql.md
-                - name: 別名 (Azure SQL Data Warehouse、Parallel Data Warehouse)
+                - name: エイリアス化 (Azure Synapse Analytics、Parallel Data Warehouse)
                   href: t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: EXPLAIN
                   href: t-sql/queries/explain-transact-sql.md
@@ -16147,7 +16323,7 @@
                   href: t-sql/queries/readtext-transact-sql.md
                 - name: 検索条件
                   href: t-sql/queries/search-condition-transact-sql.md
-                - name: サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse)
+                - name: サブクエリ (Azure Synapse Analytics、Parallel Data Warehouse)
                   href: t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: テーブル値コンストラクター
                   href: t-sql/queries/table-value-constructor-transact-sql.md
@@ -16238,138 +16414,205 @@
             - name: ALTER
               items:
                 - name: APPLICATION ROLE
+                  displayName: ALTER APPLICATION ROLE
                   href: t-sql/statements/alter-application-role-transact-sql.md
                 - name: ASSEMBLY
+                  displayName: ALTER ASSEMBLY
                   href: t-sql/statements/alter-assembly-transact-sql.md
                 - name: ASYMMETRIC KEY
+                  displayName: ALTER ASYMMETRIC KEY
                   href: t-sql/statements/alter-asymmetric-key-transact-sql.md
                 - name: AUTHORIZATION
+                  displayName: ALTER AUTHORIZATION
                   href: t-sql/statements/alter-authorization-transact-sql.md
                 - name: AVAILABILITY GROUP
+                  displayName: ALTER AVAILABILITY GROUP
                   href: t-sql/statements/alter-availability-group-transact-sql.md
                 - name: BROKER PRIORITY
+                  displayName: ALTER BROKER PRIORITY
                   href: t-sql/statements/alter-broker-priority-transact-sql.md
                 - name: CERTIFICATE
+                  displayName: ALTER CERTIFICATE
                   href: t-sql/statements/alter-certificate-transact-sql.md
                 - name: COLUMN ENCRYPTION KEY
+                  displayName: ALTER COLUMN ENCRYPTION KEY
                   href: t-sql/statements/alter-column-encryption-key-transact-sql.md
                 - name: CREDENTIAL
+                  displayName: ALTER CREDENTIAL
                   href: t-sql/statements/alter-credential-transact-sql.md
                 - name: CRYPTOGRAPHIC PROVIDER
+                  displayName: ALTER CRYPTOGRAPHIC PROVIDER
                   href: t-sql/statements/alter-cryptographic-provider-transact-sql.md
                 - name: DATABASE
+                  displayName: ALTER DATABASE
                   href: t-sql/statements/alter-database-transact-sql.md
                 - name: DATABASE AUDIT SPECIFICATION
+                  displayName: ALTER DATABASE AUDIT SPECIFICATION
                   href: t-sql/statements/alter-database-audit-specification-transact-sql.md
                 - name: DATABASE 互換性レベル
+                  displayName: ALTER DATABASE compatibility level
                   href: t-sql/statements/alter-database-transact-sql-compatibility-level.md
                 - name: DATABASE データベース ミラーリング
+                  displayName: ALTER DATABASE mirroring
                   href: t-sql/statements/alter-database-transact-sql-database-mirroring.md
                 - name: DATABASE ENCRYPTION KEY
+                  displayName: ALTER DATABASE ENCRYPTION KEY
                   href: t-sql/statements/alter-database-encryption-key-transact-sql.md
                 - name: DATABASE の File および Filegroup オプション
+                  displayName: ALTER DATABASE file & filegroup options
                   href: t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md
                 - name: DATABASE HADR
+                  displayName: ALTER DATABASE HADR
                   href: t-sql/statements/alter-database-transact-sql-set-hadr.md
                 - name: DATABASE SCOPED CREDENTIAL
+                  displayName: ALTER DATABASE SCOPED CREDENTIAL
                   href: t-sql/statements/alter-database-scoped-credential-transact-sql.md
                 - name: DATABASE SCOPED CONFIGURATION
+                  displayName: ALTER DATABASE SCOPED CONFIGURATION
                   href: t-sql/statements/alter-database-scoped-configuration-transact-sql.md
                 - name: DATABASE の SET オプション
+                  displayName: ALTER DATABASE SET Options
                   href: t-sql/statements/alter-database-transact-sql-set-options.md
                 - name: ENDPOINT
+                  displayName: ALTER ENDPOINT
                   href: t-sql/statements/alter-endpoint-transact-sql.md
                 - name: EVENT SESSION
+                  displayName: ALTER EVENT SESSION
                   href: t-sql/statements/alter-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
+                  displayName: ALTER EXTERNAL DATA SOURCE
                   href: t-sql/statements/alter-external-data-source-transact-sql.md
                 - name: EXTERNAL LANGUAGE
+                  displayName: ALTER EXTERNAL LANGUAGE
                   href: t-sql/statements/alter-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
+                  displayName: ALTER EXTERNAL LIBRARY
                   href: t-sql/statements/alter-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL
+                  displayName: ALTER EXTERNAL RESOURCE POOL
                   href: t-sql/statements/alter-external-resource-pool-transact-sql.md
                 - name: FULLTEXT CATALOG
+                  displayName: ALTER FULLTEXT CATALOG
                   href: t-sql/statements/alter-fulltext-catalog-transact-sql.md
                 - name: FULLTEXT INDEX
+                  displayName: ALTER FULLTEXT INDEX
                   href: t-sql/statements/alter-fulltext-index-transact-sql.md
                 - name: FULLTEXT STOPLIST
+                  displayName: ALTER FULLTEXT STOPLIST
                   href: t-sql/statements/alter-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
+                  displayName: ALTER FUNCTION
                   href: t-sql/statements/alter-function-transact-sql.md
                 - name: INDEX
+                  displayName: ALTER INDEX
                   href: t-sql/statements/alter-index-transact-sql.md
                 - name: INDEX (選択的 XML インデックス)
+                  displayName: ALTER INDEX (Selective XML Indexes)
                   href: t-sql/statements/alter-index-selective-xml-indexes.md
                 - name: Login
+                  displayName: ALTER LOGIN
                   href: t-sql/statements/alter-login-transact-sql.md
                 - name: MASTER KEY
+                  displayName: ALTER MASTER KEY
                   href: t-sql/statements/alter-master-key-transact-sql.md
                 - name: MATERIALIZED VIEW
+                  displayName: ALTER MATERIALIZED VIEW
                   href: t-sql/statements/alter-materialized-view-transact-sql.md
                 - name: MESSAGE TYPE
+                  displayName: ALTER MESSAGE TYPE
                   href: t-sql/statements/alter-message-type-transact-sql.md
                 - name: PARTITION FUNCTION
+                  displayName: ALTER PARTITION FUNCTION
                   href: t-sql/statements/alter-partition-function-transact-sql.md
                 - name: PARTITION SCHEME
+                  displayName: ALTER PARTITION SCHEME
                   href: t-sql/statements/alter-partition-scheme-transact-sql.md
                 - name: PROCEDURE
+                  displayName: ALTER PROCEDURE
                   href: t-sql/statements/alter-procedure-transact-sql.md
                 - name: QUEUE
+                  displayName: ALTER QUEUE
                   href: t-sql/statements/alter-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
+                  displayName: ALTER REMOTE SERVICE BINDING
                   href: t-sql/statements/alter-remote-service-binding-transact-sql.md
                 - name: RESOURCE GOVERNOR
+                  displayName: ALTER RESOURCE GOVERNOR
                   href: t-sql/statements/alter-resource-governor-transact-sql.md
                 - name: RESOURCE POOL
+                  displayName: ALTER RESOURCE POOL
                   href: t-sql/statements/alter-resource-pool-transact-sql.md
                 - name: ROLE
+                  displayName: ALTER ROLE
                   href: t-sql/statements/alter-role-transact-sql.md
                 - name: ROUTE
+                  displayName: ALTER ROUTE
                   href: t-sql/statements/alter-route-transact-sql.md
                 - name: SCHEMA
+                  displayName: ALTER SCHEMA
                   href: t-sql/statements/alter-schema-transact-sql.md
                 - name: SEARCH PROPERTY LIST
+                  displayName: ALTER SEARCH PROPERTY LIST
                   href: t-sql/statements/alter-search-property-list-transact-sql.md
                 - name: SECURITY POLICY
+                  displayName: ALTER SECURITY POLICY
                   href: t-sql/statements/alter-security-policy-transact-sql.md
                 - name: SEQUENCE
+                  displayName: ALTER SEQUENCE
                   href: t-sql/statements/alter-sequence-transact-sql.md
                 - name: SERVER AUDIT
+                  displayName: ALTER SERVER AUDIT
                   href: t-sql/statements/alter-server-audit-transact-sql.md
                 - name: SERVER AUDIT SPECIFICATION
+                  displayName: ALTER SERVER AUDIT SPECIFICATION
                   href: t-sql/statements/alter-server-audit-specification-transact-sql.md
                 - name: SERVER CONFIGURATION
+                  displayName: ALTER SERVER CONFIGURATION
                   href: t-sql/statements/alter-server-configuration-transact-sql.md
                 - name: SERVER ROLE
+                  displayName: ALTER SERVER ROLE
                   href: t-sql/statements/alter-server-role-transact-sql.md
                 - name: SERVICE
+                  displayName: ALTER SERVICE
                   href: t-sql/statements/alter-service-transact-sql.md
                 - name: SERVICE MASTER KEY
+                  displayName: ALTER SERVICE MASTER KEY
                   href: t-sql/statements/alter-service-master-key-transact-sql.md
                 - name: SYMMETRIC KEY
+                  displayName: ALTER SYMMETRIC KEY
                   href: t-sql/statements/alter-symmetric-key-transact-sql.md
                 - name: TABLE
+                  displayName: ALTER TABLE
                   href: t-sql/statements/alter-table-transact-sql.md
                 - name: TABLE column_constraint
+                  displayName: ALTER TABLE column_constraint
                   href: t-sql/statements/alter-table-column-constraint-transact-sql.md
                 - name: TABLE column_definition
+                  displayName: ALTER TABLE column_definition
                   href: t-sql/statements/alter-table-column-definition-transact-sql.md
                 - name: TABLE computed_column_definition
+                  displayName: ALTER TABLE computed_column_definition
                   href: t-sql/statements/alter-table-computed-column-definition-transact-sql.md
                 - name: TABLE index_option
+                  displayName: ALTER TABLE index_option
                   href: t-sql/statements/alter-table-index-option-transact-sql.md
                 - name: TABLE table_constraint
+                  displayName: ALTER TABLE table_constraint
                   href: t-sql/statements/alter-table-table-constraint-transact-sql.md
                 - name: TRIGGER
+                  displayName: ALTER TRIGGER
                   href: t-sql/statements/alter-trigger-transact-sql.md
                 - name: User
+                  displayName: ALTER USER
                   href: t-sql/statements/alter-user-transact-sql.md
                 - name: VIEW
+                  displayName: ALTER VIEW
                   href: t-sql/statements/alter-view-transact-sql.md
                 - name: WORKLOAD GROUP
+                  displayName: ALTER WORKLOAD GROUP
                   href: t-sql/statements/alter-workload-group-transact-sql.md
                 - name: XML SCHEMA COLLECTION
+                  displayName: ALTER XML SCHEMA COLLECTION
                   href: t-sql/statements/alter-xml-schema-collection-transact-sql.md
             - name: バックアップと復元
               items:
@@ -16404,154 +16647,229 @@
             - name: CREATE
               items:
                 - name: AGGREGATE
+                  displayName: CREATE AGGREGATE
                   href: t-sql/statements/create-aggregate-transact-sql.md
                 - name: APPLICATION ROLE
+                  displayName: CREATE APPLICATION ROLE
                   href: t-sql/statements/create-application-role-transact-sql.md
                 - name: ASSEMBLY
+                  displayName: CREATE ASSEMBLY
                   href: t-sql/statements/create-assembly-transact-sql.md
                 - name: ASYMMETRIC KEY
+                  displayName: CREATE ASYMMETRIC KEY
                   href: t-sql/statements/create-asymmetric-key-transact-sql.md
                 - name: AVAILABILITY GROUP
+                  displayName: CREATE AVAILABILITY GROUP
                   href: t-sql/statements/create-availability-group-transact-sql.md
                 - name: BROKER PRIORITY
+                  displayName: CREATE BROKER PRIORITY
                   href: t-sql/statements/create-broker-priority-transact-sql.md
                 - name: CERTIFICATE
+                  displayName: CREATE CERTIFICATE
                   href: t-sql/statements/create-certificate-transact-sql.md
                 - name: COLUMNSTORE INDEX
+                  displayName: CREATE COLUMNSTORE INDEX
                   href: t-sql/statements/create-columnstore-index-transact-sql.md
                 - name: COLUMN ENCRYPTION KEY
+                  displayName: CREATE COLUMN ENCRYPTION KEY
                   href: t-sql/statements/create-column-encryption-key-transact-sql.md
                 - name: COLUMN MASTER KEY
+                  displayName: CREATE COLUMN MASTER KEY
                   href: t-sql/statements/create-column-master-key-transact-sql.md
                 - name: CONTRACT
+                  displayName: CREATE CONTRACT
                   href: t-sql/statements/create-contract-transact-sql.md
                 - name: CREDENTIAL
+                  displayName: CREATE CREDENTIAL
                   href: t-sql/statements/create-credential-transact-sql.md
                 - name: CRYPTOGRAPHIC PROVIDER
+                  displayName: CREATE CRYPTOGRAPHIC PROVIDER
                   href: t-sql/statements/create-cryptographic-provider-transact-sql.md
                 - name: DATABASE
+                  displayName: CREATE DATABASE
                   href: t-sql/statements/create-database-transact-sql.md
                 - name: DATABASE AUDIT SPECIFICATION
+                  displayName: CREATE DATABASE AUDIT SPECIFICATION
                   href: t-sql/statements/create-database-audit-specification-transact-sql.md
                 - name: DATABASE ENCRYPTION KEY
+                  displayName: CREATE DATABASE ENCRYPTION KEY
                   href: t-sql/statements/create-database-encryption-key-transact-sql.md
                 - name: DATABASE SCOPED CREDENTIAL
+                  displayName: CREATE DATABASE SCOPED CREDENTIAL
                   href: t-sql/statements/create-database-scoped-credential-transact-sql.md
                 - name: DEFAULT
+                  displayName: CREATE DEFAULT
                   href: t-sql/statements/create-default-transact-sql.md
                 - name: ENDPOINT
+                  displayName: CREATE ENDPOINT
                   href: t-sql/statements/create-endpoint-transact-sql.md
                 - name: EVENT NOTIFICATION
+                  displayName: CREATE EVENT NOTIFICATION
                   href: t-sql/statements/create-event-notification-transact-sql.md
                 - name: EVENT SESSION
+                  displayName: EVENT SESSION
                   href: t-sql/statements/create-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
+                  displayName: CREATE EXTERNAL DATA SOURCE
                   href: t-sql/statements/create-external-data-source-transact-sql.md
                 - name: EXTERNAL LANGUAGE
+                  displayName: CREATE EXTERNAL LANGUAGE
                   href: t-sql/statements/create-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
+                  displayName: CREATE EXTERNAL LIBRARY
                   href: t-sql/statements/create-external-library-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
+                  displayName: CREATE EXTERNAL FILE FORMAT
                   href: t-sql/statements/create-external-file-format-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL
+                  displayName: CREATE EXTERNAL RESOURCE POOL
                   href: t-sql/statements/create-external-resource-pool-transact-sql.md
                 - name: EXTERNAL TABLE
+                  displayName: CREATE EXTERNAL TABLE
                   href: t-sql/statements/create-external-table-transact-sql.md
                 - name: EXTERNAL TABLE AS SELECT
+                  displayName: CREATE EXTERNAL TABLE AS SELECT
                   href: t-sql/statements/create-external-table-as-select-transact-sql.md
                 - name: FULLTEXT CATALOG
+                  displayName: CREATE FULLTEXT CATALOG
                   href: t-sql/statements/create-fulltext-catalog-transact-sql.md
                 - name: FULLTEXT INDEX
+                  displayName: CREATE FULLTEXT INDEX
                   href: t-sql/statements/create-fulltext-index-transact-sql.md
                 - name: FULLTEXT STOPLIST
+                  displayName: CREATE FULLTEXT STOPLIST
                   href: t-sql/statements/create-fulltext-stoplist-transact-sql.md
                 - name: FUNCTION
+                  displayName: CREATE FUNCTION
                   href: t-sql/statements/create-function-transact-sql.md
-                - name: FUNCTION (SQL Data Warehouse)
+                - name: FUNCTION (Azure Synapse Analytics)
+                  displayName: CREATE FUNCTION (Azure Synapse Analytics)
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
+                  displayName: CREATE INDEX
                   href: t-sql/statements/create-index-transact-sql.md
                 - name: Login
+                  displayName: CREATE LOGIN
                   href: t-sql/statements/create-login-transact-sql.md
                 - name: MASTER KEY
+                  displayName: CREATE MASTER KEY
                   href: t-sql/statements/create-master-key-transact-sql.md
                 - name: MATERIALIZED VIEW AS SELECT
+                  displayName: CREATE MATERIALIZED VIEW AS SELECT
                   href: t-sql/statements/create-materialized-view-as-select-transact-sql.md
                 - name: MESSAGE TYPE
+                  displayName: CREATE MESSAGE TYPE
                   href: t-sql/statements/create-message-type-transact-sql.md
                 - name: PARTITION FUNCTION
+                  displayName: CREATE PARTITION FUNCTION
                   href: t-sql/statements/create-partition-function-transact-sql.md
                 - name: PARTITION SCHEME
+                  displayName: CREATE PARTITION SCHEME
                   href: t-sql/statements/create-partition-scheme-transact-sql.md
                 - name: PROCEDURE
+                  displayName: CREATE PROCEDURE
                   href: t-sql/statements/create-procedure-transact-sql.md
                 - name: QUEUE
+                  displayName: CREATE QUEUE
                   href: t-sql/statements/create-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
+                  displayName: CREATE REMOTE SERVICE BINDING
                   href: t-sql/statements/create-remote-service-binding-transact-sql.md
                 - name: REMOTE TABLE AS SELECT (並列データ ウェアハウス)
+                  displayName: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
                   href: t-sql/statements/create-remote-table-as-select-parallel-data-warehouse.md
                 - name: RESOURCE POOL
+                  displayName: CREATE RESOURCE POOL
                   href: t-sql/statements/create-resource-pool-transact-sql.md
                 - name: ROLE
+                  displayName: CREATE ROLE
                   href: t-sql/statements/create-role-transact-sql.md
                 - name: ROUTE
+                  displayName: CREATE ROUTE
                   href: t-sql/statements/create-route-transact-sql.md
                 - name: RULE
+                  displayName: CREATE RULE
                   href: t-sql/statements/create-rule-transact-sql.md
                 - name: SCHEMA
+                  displayName: CREATE SCHEMA
                   href: t-sql/statements/create-schema-transact-sql.md
                 - name: SEARCH PROPERTY LIST
+                  displayName: CREATE SEARCH PROPERTY LIST
                   href: t-sql/statements/create-search-property-list-transact-sql.md
                 - name: SECURITY POLICY
+                  displayName: CREATE SECURITY POLICY
                   href: t-sql/statements/create-security-policy-transact-sql.md
                 - name: SELECTIVE XML INDEX
+                  displayName: CREATE SELECTIVE XML INDEX
                   href: t-sql/statements/create-selective-xml-index-transact-sql.md
                 - name: SEQUENCE
+                  displayName: CREATE SEQUENCE
                   href: t-sql/statements/create-sequence-transact-sql.md
                 - name: SERVER AUDIT
+                  displayName: CREATE SERVER AUDIT
                   href: t-sql/statements/create-server-audit-transact-sql.md
                 - name: SERVER AUDIT SPECIFICATION
+                  displayName: CREATE SERVER AUDIT SPECIFICATION
                   href: t-sql/statements/create-server-audit-specification-transact-sql.md
                 - name: SERVER ROLE
+                  displayName: CREATE SERVER ROLE
                   href: t-sql/statements/create-server-role-transact-sql.md
                 - name: SERVICE
+                  displayName: CREATE SERVICE
                   href: t-sql/statements/create-service-transact-sql.md
                 - name: SPATIAL INDEX
+                  displayName: CREATE SPATIAL INDEX
                   href: t-sql/statements/create-spatial-index-transact-sql.md
                 - name: STATISTICS
+                  displayName: CREATE STATISTICS
                   href: t-sql/statements/create-statistics-transact-sql.md
                 - name: SYMMETRIC KEY
+                  displayName: CREATE SYMMETRIC KEY
                   href: t-sql/statements/create-symmetric-key-transact-sql.md
                 - name: SYNONYM
+                  displayName: CREATE SYNONYM
                   href: t-sql/statements/create-synonym-transact-sql.md
                 - name: TABLE
+                  displayName: CREATE TABLE
                   href: t-sql/statements/create-table-transact-sql.md
-                - name: TABLE (Azure SQL Data Warehouse)
+                - name: TABLE (Azure Synapse Analytics)
+                  displayName: CREATE TABLE (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-azure-sql-data-warehouse.md
                 - name: TABLE (SQL グラフ)
+                  displayName: CREATE TABLE (SQL Graph)
                   href: t-sql/statements/create-table-sql-graph.md
-                - name: TABLE AS SELECT (Azure SQL Data Warehouse)
+                - name: TABLE AS SELECT (Azure Synapse Analytics)
+                  displayName: CREATE TABLE AS SELECT (Azure Synapse Analytics)
                   href: t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md
                 - name: TABLE IDENTITY (プロパティ)
+                  displayName: CREATE TABLE IDENTITY (Property)
                   href: t-sql/statements/create-table-transact-sql-identity-property.md
                 - name: TRIGGER
+                  displayName: CREATE TRIGGER
                   href: t-sql/statements/create-trigger-transact-sql.md
                 - name: TYPE
+                  displayName: CREATE TYPE
                   href: t-sql/statements/create-type-transact-sql.md
                 - name: User
+                  displayName: CREATE USER
                   href: t-sql/statements/create-user-transact-sql.md
                 - name: VIEW
+                  displayName: CREATE VIEW
                   href: t-sql/statements/create-view-transact-sql.md
                 - name: ワークロードの分類子
+                  displayName: CREATE WORKLOAD CLASSIFIER
                   href: t-sql/statements/create-workload-classifier-transact-sql.md
                 - name: WORKLOAD GROUP
+                  displayName: CREATE WORKLOAD GROUP
                   href: t-sql/statements/create-workload-group-transact-sql.md
                 - name: XML INDEX
+                  displayName: CREATE XML INDEX
                   href: t-sql/statements/create-xml-index-transact-sql.md
                 - name: XML INDEX (選択的 XML インデックス)
+                  displayName: CREATE XML INDEX (Selective XML Indexes)
                   href: t-sql/statements/create-xml-index-selective-xml-indexes.md
                 - name: XML SCHEMA COLLECTION
+                  displayName: CREATE XML SCHEMA COLLECTION
                   href: t-sql/statements/create-xml-schema-collection-transact-sql.md
             - name: 照合順序
               items:
@@ -16791,7 +17109,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: '権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)'
+                - name: '権限:GRANT、DENY、REVOKE (Azure Synapse Analytics、Parallel Data Warehouse)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md

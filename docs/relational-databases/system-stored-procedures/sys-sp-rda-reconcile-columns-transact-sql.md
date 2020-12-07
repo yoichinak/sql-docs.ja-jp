@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245749"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538447"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sp_rda_reconcile_columns (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   リモート Azure テーブルの列を、Stretch が有効な SQL Server テーブルの列に調整します。  
     
-  **sp_rda_reconcile_columns**では、リモートテーブルではなく、Stretch が有効な SQL Server テーブルに存在するリモートテーブルに列が追加されます。 これらの列は、リモートテーブルから誤って削除した列である場合があります。 ただし、リモートテーブルには存在するが SQL Server テーブルには存在しない列は、リモートテーブルからは削除されません**sp_rda_reconcile_columns** 。
+  **sp_rda_reconcile_columns** では、リモートテーブルではなく、Stretch が有効な SQL Server テーブルに存在するリモートテーブルに列が追加されます。 これらの列は、リモートテーブルから誤って削除した列である場合があります。 ただし、リモートテーブルには存在するが SQL Server テーブルには存在しない列は、リモートテーブルからは削除されません **sp_rda_reconcile_columns** 。
   
   > [!IMPORTANT]
   > **sp_rda_reconcile_columns** がリモート テーブルから誤って削除した列を再作成する場合、削除された列に属していたデータは復元されません。

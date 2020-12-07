@@ -6,19 +6,19 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.adddatabasewizard.connecttoreplicas.f1
 - sql13.swb.addreplicawizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 98228b5e666642221e56960c6e6161804b264d3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b5f10ac1247bca942cc7362530104dce1d97285d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893182"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584487"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>[既存のセカンダリ レプリカへの接続] ページ - Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

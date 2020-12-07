@@ -1,4 +1,5 @@
 ---
+description: sp_msx_enlist (Transact-SQL)
 title: sp_msx_enlist (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 551d0796ce534f77d4994064a9af032f34f81f04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9435c4b8628bb119b0ac81126e50e37a67650532
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893474"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541636"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +44,12 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @msx_server_name = ] 'msx_server'`マルチサーバー管理 (マスター) サーバーの名前。 *msx_server*は**sysname**であり、既定値はありません。  
+`[ @msx_server_name = ] 'msx_server'` マルチサーバー管理 (マスター) サーバーの名前。 *msx_server* は **sysname**であり、既定値はありません。  
   
-`[ @location = ] 'location'`追加する対象サーバーの場所です。 *場所*は**nvarchar (100)**,、既定値は NULL です。  
+`[ @location = ] 'location'` 追加する対象サーバーの場所です。 *場所* は **nvarchar (100)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -56,7 +57,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のサーバーを `AdventureWorks1` マスター サーバーに追加します。 現在のサーバーの場所は `Building 21, Room 309, Rack 5` です。  
   
 ```  
@@ -68,9 +69,9 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_msx_defect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [xp_cmdshell &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server テーブルから列を削除する (OLE DB ドライバー)
-description: OLE DB Driver for SQL Server を利用し、SQL Server テーブルから列を削除する
+description: OLE DB Driver for SQL Server からは ITableDefinition::DropColumn 関数が公開されます。この関数を利用すると、コンシューマーは SQL Server テーブルから列を削除できます。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - removing columns
 - DropColumn function
 - OLE DB Driver for SQL Server, columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7467d30e8cb13badbea21eff9804710ff4361259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0672669e6d724e7dfcb5338c76694473f078da10
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244113"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859462"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

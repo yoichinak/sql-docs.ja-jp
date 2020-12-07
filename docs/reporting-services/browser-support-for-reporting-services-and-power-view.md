@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8b47d98cdb6da8b29983cadbe3c0f6f44ba924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891232"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
@@ -157,9 +157,8 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
 [Web ポータルを使用したレポートの検索と表示](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)  
-[Web ポータル (SSRS ネイティブ モード)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Web ポータル (SSRS ネイティブ モード)](./web-portal-ssrs-native-mode.md)  
 [HTML ビューアーとレポート ツールバー](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL アクセス パラメーター リファレンス](../reporting-services/url-access-parameter-reference.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
-

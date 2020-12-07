@@ -1,4 +1,5 @@
 ---
+description: '[インデックスの再構成タスク] (メンテナンス プラン)'
 title: '[インデックスの再構成タスク] (メンテナンス プラン) | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/21/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6615df0fafc2190eece4aa74c7bf36e57a2d80a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715361"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88494178"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] (メンテナンス プラン)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[インデックスの再構成タスク]** ダイアログを使用すると、インデックス ページを効率的な検索順になるように移動できます。 このタスクでは、 `ALTER INDEX REORGANIZE` データベースに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ステートメントを使用します。  
   
-## <a name="options"></a>オプション  
- **Connection**  
+## <a name="options"></a>Options  
+ **接続**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -41,7 +42,7 @@ ms.locfileid: "85715361"
   
 -   **[すべてのシステム データベース]**  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベース ( **tempdb**を除く) を対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データベース ( **tempdb** を除く) を対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。 ユーザーが作成したデータベースではメンテナンス タスクは実行されません。  
   
 -   **[すべてのユーザー データベース]**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "85715361"
 
   
 ## <a name="new-connection-dialog-box"></a>[新しい接続] ダイアログ ボックス  
- **[接続名]**  
+ **接続名**  
  新しい接続の名前を入力します。  
   
  **[サーバー名の選択または入力]**  
@@ -85,10 +86,10 @@ ms.locfileid: "85715361"
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスに接続します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  

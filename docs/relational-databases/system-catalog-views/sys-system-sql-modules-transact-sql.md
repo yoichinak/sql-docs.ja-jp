@@ -1,4 +1,5 @@
 ---
+description: sys.system_sql_modules (Transact-sql)
 title: sys.system_sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,19 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_sql_modules catalog view
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2754beba5dba55e1af19a293f9a181a737c229fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8f4995bcfdd1fb234d65c0409a956380e0e8393b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999113"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551360"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SQL 言語定義モジュールを含むシステム オブジェクトごとに 1 行のデータを返します。 FN、IF、P、PC、TF、V 型のシステムオブジェクトには、SQL モジュールが関連付けられています。 親オブジェクトを識別するには、このビューを[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)に結合します。  
+  SQL 言語定義モジュールを含むシステム オブジェクトごとに 1 行のデータを返します。 FN、IF、P、PC、TF、V 型のシステムオブジェクトには、SQL モジュールが関連付けられています。 親オブジェクトを識別するには、このビューを [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)に結合します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +51,7 @@ ms.locfileid: "85999113"
 ## <a name="see-also"></a>参照  
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [all_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

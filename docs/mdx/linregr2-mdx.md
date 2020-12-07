@@ -1,4 +1,5 @@
 ---
+description: LinRegR2 (MDX)
 title: LinRegR2 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748b332d7925313c5b5d8c1d3dfe868e3eb3e9cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429824"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
@@ -37,7 +38,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  有効な数値式です。通常は、X 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  最小二乗法を使用する線形回帰では、回帰直線の式 (つまり、一連の点に最適な線) が計算されます。 回帰直線の式は次のようになります。ここで、は傾き、b は切片です。  
   
  y = ax+b  
@@ -50,7 +51,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 >  **LinRegR2**関数は、空のセル、またはテキストや論理値を含むセルを無視します。 ただし、この関数には0の値を持つセルが含まれています。  
   
 ## <a name="example"></a>例  
- 次の例では、線形回帰式が単位売上と店舗売上メジャーの点に適合することを示す統計 R<sup>2</sup>を返します。  
+ 次の例では、線形回帰式が単位売上と店舗売上メジャーの点に適合することを示す統計 R<sup>2</sup> を返します。  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  

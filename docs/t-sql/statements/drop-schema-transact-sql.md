@@ -1,4 +1,5 @@
 ---
+description: DROP SCHEMA (Transact-SQL)
 title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - dropping schemas
 - removing schemas
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd04321eba4f590a20e61be24fb3756ad92277d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: abbd46f60fa8b8bea82f681c5073a2d08b292a8c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481852"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498283"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,14 +39,15 @@ ms.locfileid: "86481852"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP SCHEMA schema_name  
 ```  
@@ -61,12 +63,12 @@ DROP SCHEMA schema_name
  *schema_name*  
  データベースで認識されるスキーマの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  削除するスキーマは、オブジェクトが含まれていないスキーマであることが必要です。 オブジェクトがスキーマに含まれている場合、DROP ステートメントは失敗します。  
   
  スキーマに関する情報は、[sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) カタログ ビューで確認できます。  
   
- **注意** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **注意事項** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する CONTROL 権限、またはデータベースに対する ALTER ANY SCHEMA 権限が必要です。  
@@ -74,9 +76,9 @@ DROP SCHEMA schema_name
 ## <a name="examples"></a>例  
  次の例では、まず単一の `CREATE SCHEMA` ステートメントを実行し、 `Sprockets` が所有するスキーマ `Krishna` を作成します。次にテーブル `Sprockets.NineProngs` を作成した後、`SELECT` に対して `Anibal` 権限を許可し、`SELECT` に対して `Hung-Fu` 権限を拒否します。  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -84,7 +86,7 @@ GO
   
  次のステートメントでは、このスキーマを削除します。 先に、スキーマに含まれるテーブルを削除する必要があることに注意してください。  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

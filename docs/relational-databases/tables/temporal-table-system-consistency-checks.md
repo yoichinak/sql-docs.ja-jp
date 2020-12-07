@@ -1,4 +1,5 @@
 ---
+description: テンポラル テーブルのシステム一貫性のチェック
 title: テンポラル テーブルのシステム一貫性のチェック | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a6b62ef573638a1cd3602eecc14e3f489f87d2b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8df54961057d12191e732fc4f3ec287f9bd32ef9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555278"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89523689"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>テンポラル テーブルのシステム一貫性のチェック
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 テンポラル テーブルを使用する際、システムでは、スキーマがテンポラルの要件に準拠しているか、またそのデータに一貫性がありそれが維持されるかを確認する、さまざまな一貫性チェックが実行されます。 また、 **DBCC CHECKCONSTRAINTS** ステートメントにもテンポラル チェックが追加されています。
 

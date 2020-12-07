@@ -1,4 +1,5 @@
 ---
+description: SQLTransact 関数
 title: SQLTransact 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a4f1da36a7c233e9a1b5832ee83e86a5c1f77d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 35eb9ff0a59d1b11838c1b74f8b229ce324f9e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421036"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 関数
 **互換性**  
@@ -36,6 +37,6 @@ ms.locfileid: "81287082"
 > [!NOTE]  
 >  ODBC 3.8 で導入された属性 SQL_ASYNC_DBC_FUNCTION_ENABLE は、 **Sqltransact**ではサポートされていません。 接続ハンドルで非同期操作を使用するアプリケーションでは、 **SQLEndTran**を使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

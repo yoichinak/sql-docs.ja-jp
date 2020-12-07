@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_DB_NAME (Transact-SQL)
 title: ORIGINAL_DB_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 889cdb18a323e64cf1b94bcde57eaf77c37e89d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c22913dfea659c94b3e780d86272aabf55ccbd2b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892548"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88459625"
 ---
 # <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,12 @@ ms.locfileid: "85892548"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ORIGINAL_DB_NAME ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説  
  初期データベースが指定されていない場合、この関数は空文字列を返します。  
   

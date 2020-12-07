@@ -1,4 +1,5 @@
 ---
+description: Hierarchize (MDX)
 title: Hierarchize (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429914"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -31,7 +32,7 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Hierarchize**関数は、指定されたセットのメンバーを階層順に編成します。 この関数は、常に重複部分を保持します。  
   
 -   **POST**が指定されていない場合、関数は、レベル内のメンバーを自然な順序で並べ替えます。 その自然な順序は、他の並べ替え条件が指定されていない場合の、階層におけるメンバーの既定の順序です。 子メンバーは親メンバーの直後になります。  
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれている2003の最初の9か月に対して集計されたメンバーの合計を返します。 **PeriodsToDate**関数は、集計関数の演算対象となるセット内の組を定義します。 **Hierarchize**関数は、指定されたメンバーのセットのメンバーを Product ディメンションから階層順に編成します。  
+ 次の例では、 `Measures.[Order Quantity]` `Date` **Adventure works** キューブから、ディメンションに含まれている2003の最初の9か月に対して集計されたメンバーの合計を返します。 **PeriodsToDate**関数は、集計関数の演算対象となるセット内の組を定義します。 **Hierarchize**関数は、指定されたメンバーのセットのメンバーを Product ディメンションから階層順に編成します。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 2c0b42a27fcb49835c33b45ee73a9d31151a5e28
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160160"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257162"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Red Hat OpenShift (ARO) に展開する
 
@@ -25,6 +25,10 @@ ms.locfileid: "86160160"
 > [!TIP]
 > ARO は、ビッグ データ クラスター用の Kubernetes をホストするための選択肢の 1 つにすぎません。 その他の展開オプションと、展開オプションをカスタマイズする方法の詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。
 
+
+> [!WARNING]
+> 組み込みのストレージ クラスである *managed-premium* によって作成された永続ボリュームには、*Delete* の再要求ポリシーが用意されています。 そのため、SQL Server ビッグ データ クラスターを削除すると、永続ボリューム要求は、永続ボリュームと同様に削除されます。 [ストレージの概念](/azure/aks/concepts-storage/#storage-classes)に関する記事に示すように、*Retain* 再要求ポリシーによって azure-disk プロビジョナーを使用して、カスタム ストレージ クラスを作成してください。 下のスクリプトでは、*managed-premium* ストレージ クラスを使用しています。 詳細については、[データ永続化](concept-data-persistence.md)に関するトピックをご覧ください。
+
 ここで使用される既定のビッグ データ クラスターの展開は、1 つの SQL マスター インスタンス、1 つのコンピューティング プール インスタンス、2 つのデータ プール インスタンス、2 つの記憶域プール インスタンスで構成されています。 データは、ARO の既定の記憶域クラスを使用する Kubernetes 永続ボリュームを使用して永続化されます。 このチュートリアルで使用する既定の構成は、開発/テスト環境に適しています。
 
 ## <a name="prerequisites"></a>前提条件
@@ -33,7 +37,7 @@ ms.locfileid: "86160160"
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python 最小バージョン 3.0](https://www.python.org/downloads)
 - [`az` CLI](/cli/azure/install-azure-cli/)
-- [`azdata` CLI](deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## <a name="log-in-to-your-azure-account"></a>Azure アカウントにログインする
@@ -90,7 +94,7 @@ az group delete -n <resource group name>
 #
 # Prerequisites: 
 # 
-# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), azdata CLI (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
+# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), Azure Data CLI (`azdata`) (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
 #
 # Run `az login` at least once BEFORE running this script
 #

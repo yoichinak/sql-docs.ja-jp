@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdb67ef174ec849233826b65a2d90f08e8e4eb7d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00a954a23cf9b17a58c3272a03222019400ae891
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290764"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907040"
 ---
 # <a name="start-report-builder"></a>レポート ビルダーの起動
 
@@ -30,7 +30,7 @@ ms.locfileid: "80290764"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を初めて起動する場合は、Microsoft ダウンロード センターからダウンロードするように求められます。 
  
-![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
+!["レポート ビルダーを開いています" メッセージのスクリーンショット。](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  ユーザー自身、または管理者が [Microsoft ダウンロード センターからユーザーのコンピューターにレポート ビルダーをインストールする](https://go.microsoft.com/fwlink/?LinkID=219138)こともできます。 詳細については、「 [レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md) 」の「Systems Manager Server を使用したレポート ビルダーのインストール」を参照してください。
  
@@ -40,7 +40,7 @@ ms.locfileid: "80290764"
   
 ## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルから起動するには  
   
-1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は https://\<*サーバー名*>/reports です。  
+1.  Web ブラウザーで、アドレス バーにレポート サーバーの URL を入力します。 既定の URL は、 https://\<*servername*>/reports です。  
   
 2.  Web ポータルの上部のバーで、 **[新規]**  >  **[ページ分割されたレポート]** の順に選択します。  
   

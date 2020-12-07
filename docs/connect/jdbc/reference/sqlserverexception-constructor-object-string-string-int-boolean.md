@@ -1,4 +1,5 @@
 ---
+description: SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 title: SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -11,14 +12,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f66bd8759733c2574438ba12ce9f12b00cf88842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450510"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

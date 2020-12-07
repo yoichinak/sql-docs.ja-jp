@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5d936933b96c8d7f5c4c2830707b4a6bb4d9fe2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4efd72f1c2d6f9098e2af4840483d38d4749d264
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243554"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243747"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>サブスクリプションの操作 (Web ポータル)
 
@@ -28,7 +28,7 @@ ms.locfileid: "87243554"
 > SQL Server エージェント サービスを開始する必要があります。   
   
 ![サブスクリプションの管理](../reporting-services/media/working-with-subscriptions-web-portal/ssrs-manage-subscriptions.png)  
-レポートの**省略記号 [...]** 、 **[管理]** 、 **[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスします。  
+レポートの **省略記号 [...]** 、 **[管理]** 、 **[サブスクリプション]** の順に選択して、[サブスクリプション] ページにアクセスします。  
   
 [サブスクリプション] ページで、 **[+ 新しいサブスクリプション]** を選択すると、新しいサブスクリプションを作成できます。 既存のサブスクリプションを編集したり、選択したサブスクリプションを削除したりすることもできます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "87243554"
 ## <a name="type-of-subscription"></a>サブスクリプションの種類  
 **[標準サブスクリプション]** と **[データ ドリブン サブスクリプション]** から選択できます。  
   
-![ssRSWebPortal-subscriptions3](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
+![[サブスクリプションの種類] セクションを示すスクリーンショット。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions3.png)  
    
 データ ドリブン サブスクリプションは、サブスクリプションを実行するたびに、サブスクライバー データベースにサブスクリプション情報をクエリするサブスクリプションです。 データ ドリブン サブスクリプションはクエリ結果を使用して、サブスクリプションの受信先、配信設定、およびレポート パラメーターの値を決定します。 実行時に、レポート サーバーで、サブスクリプションの設定に使用されている値を取得するクエリが実行されます。   
   
@@ -57,7 +57,7 @@ ms.locfileid: "87243554"
   
 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーにインストールおよび構成されているかどうかによって決まります。 レポート サーバーの電子メールは、既定の配信拡張機能ですが、使用する前に構成する必要があります。 ファイル共有配信は構成の必要はありませんが、共有フォルダーは使用前に定義が必要です。  
   
-![ssRSWebPortal-subscriptions2](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
+![[宛先] セクションと [配信オプション (Windows ファイル共有)] セクションを示すスクリーンショット。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions2.png)  
   
 選択した配信拡張機能に応じて、次の設定が表示されます。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87243554"
 ## <a name="data-driven-subscription-dataset"></a>データ ドリブン サブスクリプション データセット  
 データ ドリブン サブスクリプションの場合は、サブスクリプションで使用されるデータセットを定義する必要があります。 **[データセットの編集]** を選択して情報を指定します。  
   
-![ssRSWebPortal-subscriptions4](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
+![[データセット] セクションを示すスクリーンショット。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions4.png)  
   
 クエリに使用するには、最初に **[データ ソース]** を指定する必要があります。 共有データ ソースにするか、カスタム データ ソースを指定することができます。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "87243554"
   
 -   結果セット内の行によって、生成されるレポート配信の数が決まります。 行数が 10,000 の場合、レポート サーバーから通知と配信が 10,000 回生成されます。  
   
-![ssRSWebPortal-subscriptions5](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
+![[クエリ] セクションを示すスクリーンショット。](../reporting-services/media/working-with-subscriptions-web-portal/ssrswebportal-subscriptions5.png)  
   
-クエリを検証できます。 また、 **query timeout**を定義することもできます。  
+クエリを検証できます。 また、 **query timeout** を定義することもできます。  
   
 クエリが作成された後、必要なフィールドに値を割り当てることができます。 手動のデータを入力するか、作成したデータセットからフィールドを選択できます。 
 

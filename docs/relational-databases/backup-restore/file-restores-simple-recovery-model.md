@@ -18,14 +18,14 @@ helpviewer_keywords:
 - file restores [SQL Server], simple recovery model
 - file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7722c033fd9434f04c70b046aeaa91591f30dd3c
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718072"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126939"
 ---
 # <a name="file-restores-simple-recovery-model"></a>ファイルの復元 (単純復旧モデル)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "85718072"
   
 -   オフライン ファイル復元  
   
-     *オフライン ファイル復元*では、破損したファイルまたはファイル グループを復元する間、データベースはオフラインになります。 データベースは、復元シーケンスの最後にオンラインになります。  
+     *オフライン ファイル復元* では、破損したファイルまたはファイル グループを復元する間、データベースはオフラインになります。 データベースは、復元シーケンスの最後にオンラインになります。  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ではすべてのエディションで、オフラインのファイル復元がサポートされます。  
   
 -   オンライン ファイル復元  
   
-     *オンライン ファイル復元*では、復元中にデータベースがオンラインであれば、データベースをオンラインにしたままファイル復元を実行できます。 ただし、復元操作時は、ファイルが復元される各ファイル グループがオフラインになります。 オフライン ファイル グループ内のすべてのファイルが復旧されると、そのファイル グループは自動的にオンラインになります。  
+     *オンライン ファイル復元* では、復元中にデータベースがオンラインであれば、データベースをオンラインにしたままファイル復元を実行できます。 ただし、復元操作時は、ファイルが復元される各ファイル グループがオフラインになります。 オフライン ファイル グループ内のすべてのファイルが復旧されると、そのファイル グループは自動的にオンラインになります。  
   
-     オンライン ページおよびファイルの復元の詳細については、「[データベース エンジンの機能とタスク](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
+     オンライン ページおよびファイルの復元の詳細については、「[データベース エンジンの機能とタスク](../../sql-server/what-s-new-in-sql-server-ver15.md)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)」を参照してください。  
   
     > [!TIP]  
     >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
@@ -96,7 +96,7 @@ ms.locfileid: "85718072"
   
 -   [ファイルおよびファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore メソッド (サーバー) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Restore.SqlRestore メソッド (サーバー) (SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
 ## <a name="see-also"></a>参照  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
@@ -107,5 +107,4 @@ ms.locfileid: "85718072"
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [データベースの全体復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

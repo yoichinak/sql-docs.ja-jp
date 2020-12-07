@@ -1,4 +1,5 @@
 ---
+description: ABS (Transact-SQL)
 title: ABS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,17 +22,17 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efa759a700a092a78d13bf3e7a9f299939152e40
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bb8aca979735819200d8b03c2c2f77a30f2c8398
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113231"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128586"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は、負の値を正の値を変更します `ABS` は、0 または正の値には影響しません)。
+指定した数値式の絶対値 (正値) を返す数学関数です。 (`ABS` は、負の値を正の値を変更します  `ABS` は、0 または正の値には影響しません)。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +49,7 @@ ABS ( numeric_expression )
 真数のデータ型または概数のデータ型の式を指定します。
   
 ## <a name="return-types"></a>戻り値の型  
-*numeric_expression*と同じ型を返します。
+*numeric_expression* と同じ型を返します。
   
 ## <a name="examples"></a>例  
 次の例では、3 つの異なる値に対して `ABS` 関数を使用した結果を示します。
@@ -59,7 +60,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ---- ---- ----  
 1.0  .0   1.0  
 ```  
@@ -67,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 `ABS` 関数では、数値の絶対値が指定のデータ型で表現できる最大値を超えている場合に、オーバーフロー エラーを生成することができます。 たとえば、`int` データ型の値の範囲が `-2,147,483,648` から `2,147,483,647` だとします。 符号付き整数 `-2,147,483,648` の絶対値を計算すると、`int` データ型の正数範囲の上限を超えるため、オーバーフロー エラーが発生します。
   
 ```sql
-DECLARE @i int;  
+DECLARE @i INT;  
 SET @i = -2147483648;  
 SELECT ABS(@i);  
 GO  
@@ -80,7 +81,7 @@ GO
 "式をデータ型 int に変換中に演算のオーバーフロー エラーが発生しました"
 
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

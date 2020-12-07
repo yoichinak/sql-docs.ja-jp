@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 887dc0895351eecf351e08efdfe6c40a8285a6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd5c3c1b9345ff39ad19e4f5f1541ac80024db26
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918408"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986488"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI プロバイダーへのアクセス
   Reporting Services WMI プロバイダーは、ネイティブ モードのレポート サーバー インスタンスの管理に使用できる 2 つの WMI クラスを、スクリプトを通じて公開します。  
@@ -34,7 +34,7 @@ ms.locfileid: "86918408"
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
   
- 上記のクラスの各インスタンスは、レポート サーバー インスタンスごとに作成されます。 レポート サーバーによって公開されている WMI オブジェクト (.NET Framework 自体によって公開されている WMI プログラミング インターフェイスを含む) へは、Microsoft またはサード パーティの任意のツールを使用してアクセスできます。 このトピックでは、PowerShell コマンド [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)を使用した、WMI クラスのインスタンスに対するアクセス方法と使用方法について説明します。  
+ 上記のクラスの各インスタンスは、レポート サーバー インスタンスごとに作成されます。 レポート サーバーによって公開されている WMI オブジェクト (.NET Framework 自体によって公開されている WMI プログラミング インターフェイスを含む) へは、Microsoft またはサード パーティの任意のツールを使用してアクセスできます。 このトピックでは、PowerShell コマンド [Get-WmiObject](/previous-versions//dd315295(v=technet.10))を使用した、WMI クラスのインスタンスに対するアクセス方法と使用方法について説明します。  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>名前空間文字列内のインスタンス名の確認  
  Reporting Services WMI クラスの名前空間パスに含まれるインスタンス名は、名前付き Reporting Services インスタンスのインストール時に指定したインスタンス名のエンコードです。 つまり、インスタンス名に含まれる特殊文字はエンコードされます。 たとえば、アンダースコア (_) は "_5f" としてエンコードされるので、"My_Instance" のインスタンス名は WMI 名前空間パス内では "My_5fInstance" としてエンコードされます。  
@@ -85,5 +85,4 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
 ## <a name="see-also"></a>参照  
  [Reporting Services WMI プロバイダー ライブラリ リファレンス (SSRS)](../../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
-  
   

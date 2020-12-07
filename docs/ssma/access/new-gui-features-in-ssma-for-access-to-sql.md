@@ -1,4 +1,5 @@
 ---
+description: SQL にアクセスするための SSMA の新しい GUI 機能
 title: SSMA で SQL にアクセスするための新しい GUI 機能Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 89c22a7151a7c7aa94c76d5278edd5911b9f2b6d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: efeebd6774a3f264d590c3f8d08da7f281c64464
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320808"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>SQL にアクセスするための SSMA の新しい GUI 機能
 この章では、SSMA ユーザーインターフェイスの新機能について説明します。  
   
-## <a name="layouts"></a>Layouts  
+## <a name="layouts"></a>レイアウト  
 この機能を使用すると、定義済みの2つのウィンドウのレイアウトを選択することも、独自のレイアウトを作成することもできます。 レイアウトサブメニューにアクセスするには、[表示] メニューの [レイアウト] をポイントします。 ここでは、既存のレイアウトの1つを選択したり、現在のレイアウトを追加したり、レイアウトを管理したりすることができます。  
   
 ### <a name="add-current-layout"></a>現在のレイアウトの追加  

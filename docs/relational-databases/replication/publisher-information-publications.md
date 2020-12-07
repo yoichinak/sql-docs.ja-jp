@@ -1,4 +1,5 @@
 ---
+description: パブリッシャー情報、[パブリケーション]
 title: パブリッシャー情報、[パブリケーション] | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493883"
 ---
 # <a name="publisher-information-publications"></a>パブリッシャー情報、[パブリケーション]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "85719537"
 ## <a name="options"></a>オプション  
  グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
+-   **[並べ替え]**: **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
--   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
+-   **[表示する列の選択]**: **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
+-   **[フィルター]**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
   
--   **[フィルターのクリア]** : グリッドのフィルター設定をすべてクリアします。  
+-   **[フィルターのクリア]**: グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85719537"
   
  **[パフォーマンス クリティカル]** 状態は、トランザクション サブスクリプションとマージ サブスクリプションに関連しています。トランザクション サブスクリプションの場合は、しきい値が設定されている場合にのみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
- **パブリケーション**  
+ **Publication**  
  各パブケーションの名前です。 *PublicationDatabaseName: PublicationName*という形式になります。  
   
  **サブスクリプション**  
@@ -72,15 +73,15 @@ ms.locfileid: "85719537"
   
  パフォーマンス評価は、次のいずれかの値になります。  
   
--   [非常に良い]  
+-   非常に良い  
   
--   [良い]  
+-   良い  
   
--   [普通]  
+-   普通  
   
 -   悪い  
   
--   Critical  
+-   重要  
   
  パフォーマンス評価の定義方法とパフォーマンスしきい値の設定方法については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) を参照してください。  
   

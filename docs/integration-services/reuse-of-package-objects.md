@@ -1,4 +1,5 @@
 ---
+description: パッケージ オブジェクトの再利用
 title: パッケージ オブジェクトの再利用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0068126b439ff99ec88c76a0329454cc5931b683
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f3ce79b8cc4d0a8fff0dda5bf833f918285eb4c7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923768"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192439"
 ---
 # <a name="reuse-of-package-objects"></a>パッケージ オブジェクトの再利用
 
@@ -45,8 +46,7 @@ ms.locfileid: "86923768"
   
 -   [パッケージ オブジェクトをコピーする](../integration-services/copy-package-objects.md)  
   
--   [プロジェクト アイテムをコピーする](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
+-   [プロジェクト アイテムをコピーする](./integration-services-ssis-projects-and-solutions.md)  
   
--   [パッケージをパッケージ テンプレートとして保存する](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
-  
+-   [パッケージをパッケージ テンプレートとして保存する](./save-packages.md)  
   

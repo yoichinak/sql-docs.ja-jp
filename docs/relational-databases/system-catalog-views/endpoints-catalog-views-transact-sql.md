@@ -1,4 +1,5 @@
 ---
+description: エンドポイントのカタログビュー (Transact-sql)
 title: エンドポイントのカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 505b5a4b6a5528015acc1592bb63c91e13557a4d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 22e2a4f57d8453d8c69a0594bcf6d5b16ee6b6a6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442630"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810265"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>エンドポイントのカタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,6 @@ ms.locfileid: "87442630"
 :::row-end:::
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
   

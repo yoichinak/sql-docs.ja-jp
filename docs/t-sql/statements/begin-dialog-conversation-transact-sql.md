@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -28,14 +29,14 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380845"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126185"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +48,6 @@ ms.locfileid: "86380845"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -78,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid* は **nvarchar(128)** 型です。 データベースの *service_broker_guid* を検索するには、データベースで次のクエリを実行します。  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -103,12 +103,12 @@ WHERE database_id = DB_ID() ;
  ダイアログを開いたままにする最長時間を指定します。 ダイアログを正常に完了するには、有効期間の終了までに、双方のエンドポイントが明示的にダイアログを終了する必要があります。 *dialog_lifetime* の値は秒単位で表す必要があります。 有効期間は **int** 型です。LIFETIME 句を指定しない場合、ダイアログの有効期間は **int** データ型の最大値になります。  
   
  ENCRYPTION  
- このダイアログで送受信したメッセージを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部に送信する場合に、暗号化するかどうかを指定します。 暗号化が必要なダイアログは、*セキュリティで保護されたダイアログ*です。 ENCRYPTION = ON の状態で、暗号化のサポートに必要な証明書が構成されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換に関するエラー メッセージが返されます。 ENCRYPTION = OFF の状態で、*target_service_name* に対してリモート サービス バインドが構成されている場合は、暗号化が使用されます。それ以外の場合、メッセージは暗号化されずに送信されます。 この句を指定しない場合、既定値の ON が使用されます。  
+ このダイアログで送受信したメッセージを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部に送信する場合に、暗号化するかどうかを指定します。 暗号化が必要なダイアログは、*セキュリティで保護されたダイアログ* です。 ENCRYPTION = ON の状態で、暗号化のサポートに必要な証明書が構成されていない場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換に関するエラー メッセージが返されます。 ENCRYPTION = OFF の状態で、*target_service_name* に対してリモート サービス バインドが構成されている場合は、暗号化が使用されます。それ以外の場合、メッセージは暗号化されずに送信されます。 この句を指定しない場合、既定値の ON が使用されます。  
   
 > [!NOTE]  
 >  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにあるサービス間で交換されるメッセージは暗号化されません。 ただし、メッセージ交換を行うサービスが異なるデータベースにある場合は、暗号化したメッセージ交換を行うために、データベースのマスター キーと暗号化の証明書が必要になります。 これらを用意しておくと、メッセージ交換中にデータベースの 1 つが別のインスタンスに移動した場合でも、メッセージ交換を続行できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  すべてのメッセージはメッセージ交換の一部になります。 したがって、発信先サービスにメッセージを送信するには、発信側サービスで、発信先サービスとのメッセージ交換を開始する必要があります。 BEGIN DIALOG CONVERSATION ステートメントで指定する情報は、手紙の住所に似ています。[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではこの情報を使用して、正しいサービスにメッセージを配信します。 TO SERVICE 句で指定するサービスは、メッセージの送信先アドレスです。 FROM SERVICE 句で指定するサービスは、メッセージの返信先アドレスです。  
   
  メッセージ交換の発信先で BEGIN DIALOG CONVERSATION を呼び出す必要はありません。 発信側からメッセージ交換の最初のメッセージが届くと、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって発信先データベースにメッセージ交換が作成されます。  
@@ -131,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. ダイアログを開始する  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle.` にダイアログの識別子を格納します。`//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -143,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 有効期間を明示してダイアログを開始する  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 `60` 秒以内に END CONVERSATION コマンドを使用してダイアログを閉じなかった場合は、ブローカーによってダイアログが終了され、エラーが返されます。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -156,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. 特定のブローカー インスタンスとのダイアログを開始する  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 ここでは、ブローカーによって、このダイアログから GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.` で指定されたブローカーにメッセージがルートされます。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -169,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. ダイアログを開始し、そのダイアログを既存のメッセージ交換グループに関連付ける  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 ここでは、ブローカーによって、新しいメッセージ交換グループが作成されるのではなく、`@conversation_group_id` で指定したメッセージ交換グループにダイアログが関連付けられます。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -185,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. 有効期間を明示してダイアログを開始し、そのダイアログと既存のメッセージ交換を関連付ける  
  次の例では、ダイアログ メッセージ交換を開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 新しいダイアログは、`@existing_conversation_handle` が属するメッセージ交換グループと同じメッセージ交換グループに属します。 `600` 秒以内に END CONVERSATION コマンドを使用してダイアログを閉じなかった場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってダイアログが終了され、エラーが返されます。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -202,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. 暗号化のオプションを指定してダイアログを開始する  
  次の例では、ダイアログを開始し、`@dialog_handle` にダイアログの識別子を格納します。 `//Adventure-Works.com/ExpenseClient` サービスはダイアログの発信側で、`//Adventure-Works.com/Expenses` サービスはダイアログの発信先です。 このダイアログはコントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従います。 この例のメッセージ交換では、暗号化が利用できない場合に、暗号化していないメッセージをネットワークを介して送信できます。  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

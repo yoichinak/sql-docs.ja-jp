@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 10/19/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e8bb8de8d13a9b7696bb6505363b15d38cd35994
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286466"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194278"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>[サーバーのプロパティ] の [詳細設定] ページ - Power BI Report Server と Reporting Services
 
@@ -51,7 +51,17 @@ ms.locfileid: "79286466"
 
 (Power BI Report Server 2020 年 1 月、Reporting Services 2019 以降のみ)
 
-指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用して CustomHeaders 値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 既定では、カスタム ヘッダーは存在せず、値は空白です。 
+指定された正規表現パターンに一致するすべての URL のヘッダー値を設定します。 ユーザーは、有効な XML を使用して CustomHeaders 値を更新し、選択した要求 URL のヘッダー値を設定できます。 管理者は、XML 内に任意の数のヘッダーを追加できます。 Reporting Services 2019 では、既定でカスタム ヘッダーは存在せず、値は空白です。 Power BI Report Server 2020 年 1 月以降では、値は既定で次のようになっています。
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > ヘッダーが多すぎると、パフォーマンスに影響する可能性があります。 
@@ -72,7 +82,7 @@ ms.locfileid: "79286466"
 
 #### <a name="setting-the-customheaders-property"></a>CustomHeaders プロパティの設定
 
-- パラメーターとして CustomHeaders プロパティを渡す [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP エンドポイントを使用して設定できます。
+- パラメーターとして CustomHeaders プロパティを渡す [SetSystemProperties](/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) SOAP エンドポイントを使用して設定できます。
 - REST エンドポイント [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties): `/System/Properties` を使用して CustomHeaders プロパティを渡すことができます
 
 #### <a name="example"></a>例
@@ -83,8 +93,8 @@ ms.locfileid: "79286466"
 <CustomHeaders>
     <Header>
         <Name>Strict-Transport-Security</Name>
-        <Pattern>\/Reports\/mobilereport</Pattern>
-        <Value>max-age=86400</Value>
+        <Pattern>(.+)\/Reports\/mobilereport(.+)</Pattern>
+        <Value>max-age=86400; includeSubDomains=true</Value>
     </Header>
     <Header>
         <Name>Embed</Name>
@@ -94,7 +104,7 @@ ms.locfileid: "79286466"
 </CustomHeaders>
 ```
 
-上記の XML の最初のヘッダーによって、一致する要求に `Strict-Transport-Security: max-age=86400` ヘッダーが追加されます。
+上記の XML の最初のヘッダーによって、一致する要求に `Strict-Transport-Security: max-age=86400; includeSubDomains=true` ヘッダーが追加されます。
 - http://adventureworks/Reports/mobilereport/New%20Mobile%20Report - 正規表現が一致し、HSTS ヘッダーが設定されます
 - http://adventureworks/ReportServer/mobilereport/New%20Mobile%20Report - 一致しません
 
@@ -154,7 +164,7 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 レポート実行情報を実行ログに保持する日数。 このプロパティの有効値は、 **-1** - **2**、**147**、**483**、**647**です。 値が **-1** の場合、エントリは実行ログ テーブルから削除されません。 既定値は **60**です。  
 
 > [!NOTE]
-> **0** の値を設定すると、実行ログからすべてのエントリが "*削除*" されます。 値が **-1** の場合、実行ログのエントリは保持され、それらは削除されません。
+> **0 の値を設定すると、実行ログからすべてのエントリが "** *削除*" されます。 値が **-1** の場合、実行ログのエントリは保持され、それらは削除されません。
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 実行ログ レベルを設定します。 *既定値は Normal です。*
@@ -223,7 +233,7 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 レポート サーバーが保存できるパラメーター値の最大数を指定します。 有効値は **-1**、 **+1** ～ **2,147,483,647**です。 既定値は **1500**です。  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Power BI Report Server 2019 年 1 月、Reporting Services 2019 以降のみ) 表示できるハイパーリンク アクションで定義できる URI スキームのコンマ区切りの一覧を設定するか、"&ast;" を設定してすべてのハイパーリンク スキームを有効にします。 たとえば、"http,https" を設定すると、"https://www. contoso.com" へのハイパーリンクは許可されますが、"mailto:bill@contoso.com" や "javascript:window.open(‘ www.contoso.com’, ‘_blank’)" へのハイパーリンクは削除されます。 既定値は "&ast;" です。
+(Power BI Report Server 2019 年 1 月、Reporting Services 2019 以降のみ) 表示できるハイパーリンク アクションで定義できる URI スキームのコンマ区切りの一覧を設定するか、"&ast;" を設定してすべてのハイパーリンク スキームを有効にします。 たとえば、"http,https" を設定すると、"https://www. contoso.com” へのハイパーリンクは許可されますが、“mailto:bill@contoso.com” または “javascript:window.open(‘ www.contoso.com’, ‘_blank’)” へのハイパーリンクは削除されます。 既定値は “&ast;” です。
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 レポート サーバー名前空間で管理されているすべてのレポートの既定のレポート処理タイムアウト値 (秒単位)。 この値はレポート レベルでオーバーライドできます。 このプロパティを設定すると、レポート サーバーは指定された時間が経過した後、レポートの処理を停止しようとします。 有効値は **-1** ～ **2**、**147**、**483**、**647**です。 値に **-1**を設定すると、名前空間内のレポートが処理中にタイムアウトしません。 既定値は **1800**です。  

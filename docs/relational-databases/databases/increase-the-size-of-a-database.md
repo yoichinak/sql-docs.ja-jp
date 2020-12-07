@@ -1,4 +1,5 @@
 ---
+description: データベースのサイズを大きくする
 title: データベースのサイズを大きくする | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 381e611f78e1b3e6725312b534618ad10eb28ce0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ba22ed5ef08a90bd0726dfefb1f748da0588cb1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726460"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91810037"
 ---
 # <a name="increase-the-size-of-a-database"></a>データベースのサイズを大きくする
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースのサイズを大きくする方法について説明します。 既存のデータ ファイルまたはログ ファイルのサイズを大きくするか、データベースに新しいファイルを追加することで、データベースを拡張します。  
   
  **このトピックの内容**  
@@ -33,7 +35,7 @@ ms.locfileid: "85726460"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータベースのサイズを大きくするには:**  
   
@@ -56,13 +58,13 @@ ms.locfileid: "85726460"
   
 #### <a name="to-increase-the-size-of-a-database"></a>データベースのサイズを大きくするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、サイズを大きくするデータベースを右クリックして、 **[プロパティ]** をクリックします。  
+2.  [ **データベース**] を展開し、サイズを大きくするデータベースを右クリックして、[ **プロパティ**] をクリックします。  
   
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[ファイル]** ページをクリックします。  
   
-4.  既存のファイルのサイズを大きくするには、目的のファイルの **[初期サイズ (MB)]** 列の値を大きくします。 データベースのサイズは、少なくとも 1 MB ずつ大きくする必要があります。  
+4.  既存のファイルのサイズを大きくするには、目的のファイルの [ **初期サイズ (MB)** ] 列の値を大きくします。 データベースのサイズは、少なくとも 1 MB ずつ大きくする必要があります。  
   
 5.  新しいファイルを追加してデータベースのサイズを大きくするには、 **[追加]** をクリックして、新しいファイルの値を入力します。 詳細については、「 [データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)」をご覧ください。  
   

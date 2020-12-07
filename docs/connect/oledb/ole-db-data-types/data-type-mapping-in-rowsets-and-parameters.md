@@ -1,6 +1,6 @@
 ---
 title: 行セットとパラメーターでのデータ型マッピング (OLE DB ドライバー) | Microsoft Docs
-description: 行セットとパラメーターでのデータ型マッピング
+description: OLE DB Driver for SQL Server で、OLE DB で定義されるデータ型を使用して行セット内またはパラメーター値の SQL Server データがどのように表されるかについて説明します。
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244920"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861608"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

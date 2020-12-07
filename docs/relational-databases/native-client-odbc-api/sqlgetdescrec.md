@@ -1,4 +1,5 @@
 ---
+description: SQLGetDescRec
 title: SQLGetDescRec |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c3c3f91a81213159f283d769a106b75f1ea28f6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04c209c9a9795e832648f91e52f1ee35f8f0db3c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332308"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811029"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "87332308"
   このトピックでは、Native Client に固有の SQLGetDescRec 機能について説明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec とテーブル値パラメーター  
- SQLGetDescRec を使用すると、テーブル値パラメーターおよびテーブル値パラメーター列の属性の値を取得できます。 SQLGetDescRec の*Recnumber*パラメーターは、SQLBindParameter の*parameternumber*パラメーターに対応します。  
+ SQLGetDescRec を使用すると、テーブル値パラメーターおよびテーブル値パラメーター列の属性の値を取得できます。 SQLGetDescRec の *Recnumber* パラメーターは、SQLBindParameter の *parameternumber* パラメーターに対応します。  
   
  テーブル値パラメーター列は、記述子のヘッダー フィールド SQL_SOPT_SS_PARAM_FOCUS に、SQL_DESC_TYPE が SQL_SS_TABLE に設定されているレコードの序数が設定される場合のみ使用できます。 の SQL_SOPT_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。  
   
@@ -36,13 +37,13 @@ ms.locfileid: "87332308"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*名前*|ストアド プロシージャ呼び出しの場合は仮パラメーター名。それ以外の場合は長さが 0 の文字列。|テーブル値パラメーター列の名前。|  
 |*TypePtr*|SQL_DESC_TYPE。 テーブル値パラメーターの場合、これは SQL_SS_TABLE です。|SQL_DESC_TYPE|  
-|*SubTypePtr*|未定義|SQL_DESC_DATETIME_INTERVAL_CODE (SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合)。|  
+|*SubTypePtr*|未定義。|SQL_DESC_DATETIME_INTERVAL_CODE (SQL_DATETIME 型または SQL_INTERVAL 型のレコードの場合)。|  
 |*Length Ptr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
 |*NullablePtr*|1|SQL_DESC_NULLABLE|  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdescrec-support-for-enhanced-date-and-time-features"></a>SQLGetDescRec による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値を次に示します。  
@@ -56,13 +57,12 @@ ms.locfileid: "87332308"
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  
   
- 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「 [日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdescrec-support-for-large-clr-udts"></a>SQLGetDescRec による大きな CLR UDT のサポート  
- **Sqlgetdescrec**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ **Sqlgetdescrec** は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](../../odbc/reference/syntax/sqlgetdescrec-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

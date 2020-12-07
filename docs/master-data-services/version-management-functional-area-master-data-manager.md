@@ -1,4 +1,5 @@
 ---
+description: '[バージョン管理] 機能領域 (マスター データ マネージャー)'
 title: '[バージョン管理] 機能領域'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d7ae4fa3f7249c604acaf9df1387282a4d459dce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1b4188672c484b8894b37e713d5907ccb9e3736e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471885"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
 
@@ -50,7 +51,7 @@ ms.locfileid: "85813188"
   
  [トランザクションを破棄する (マスター データ サービス)](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

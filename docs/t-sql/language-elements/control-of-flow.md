@@ -1,4 +1,5 @@
 ---
+description: フロー制御言語
 title: フロー制御言語 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18dd2df663babde055be4756e6f3e4d2bff40f42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0229be825cfb465c12fd5e19f18d83517554c57b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248489"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128286"
 ---
 # <a name="control-of-flow"></a>フロー制御言語
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

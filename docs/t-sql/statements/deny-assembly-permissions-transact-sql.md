@@ -1,4 +1,5 @@
 ---
+description: DENY (アセンブリの権限の拒否) (Transact-SQL)
 title: DENY (アセンブリの権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 657f932df77506dee1e99e77aa4ab37f89125e07
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1905b2a0c2eaa017249ac9ab7f86a6523c4366c2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484983"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131353"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY (アセンブリの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  権限を拒否するアセンブリを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれか:  
+ 権限を拒否するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -74,7 +75,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -92,7 +93,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  アセンブリは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、アセンブリで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
 |アセンブリ権限|権限が含まれるアセンブリ権限|権限が含まれるデータベース権限|  

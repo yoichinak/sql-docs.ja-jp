@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-sql)
 title: 最短パス (SQL グラフ) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475845"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -84,14 +86,14 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="last_value"></a>LAST_VALUE
 走査されたパスの最後のノードから属性を射影するために、LAST_VALUE 集計関数を使用できます。 この関数への入力としてエッジテーブルの別名を指定するとエラーになります。使用できるのは、ノードのテーブル名または別名だけです。
 
-**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 (例: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`)。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
+**最後のノード**: 最後のノードは、一致述語の矢印の方向に関係なく、走査されたパスの最後に表示されるノードを参照します。 たとえば、`MATCH(SHORTEST_PATH(n(-(e)->p)+) )` のように指定します。 ここで、パスの最後のノードが最後にアクセスした P ノードになります。 
 
-一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+一方、最後のノードは、このパターンの出力グラフパスの最後の n 番目のノードです。 `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
-### <a name="sum"></a>[SUM]
+### <a name="sum"></a>SUM
 この関数は、指定されたノード/エッジ属性値またはスキャンされたパスに出現する式の合計を返します。
 
-### <a name="count"></a>[COUNT]
+### <a name="count"></a>COUNT
 この関数は、パス内の必要なノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数では、 \* ノードまたはエッジテーブルの別名を持つ ' ' 演算子がサポートされています。 ノードまたはエッジテーブルの別名がないと、の使用法があいまいになり、エラーが発生し \* ます。
 
 ```syntaxsql
@@ -101,13 +103,13 @@ STRING_AGG 関数は、式と区切り記号を入力として受け取り、文
 ### <a name="avg"></a>AVG
 指定されたノード/エッジ属性値またはスキャンされたパスに出現する式の平均を返します。
 
-### <a name="min"></a>[MIN]
+### <a name="min"></a>MIN
 指定されたノード/エッジ属性値またはスキャンパスに出現する式からの最小値を返します。
 
-### <a name="max"></a>[MAX]
+### <a name="max"></a>MAX
 指定されたノード/エッジ属性値、またはスキャンされたパスに出現する式から最大値を返します。
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
 shortest_path 関数は、MATCH 内でのみ使用できます。     
 LAST_NODE は shortest_path 内でのみサポートされます。     
 重み付けされた最短パス、すべてのパス、またはすべての最短パスを検索することはできません。         

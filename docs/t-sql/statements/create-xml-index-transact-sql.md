@@ -1,14 +1,11 @@
 ---
-title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
+title: CREATE XML INDEX (Transact-SQL)
+description: CREATE XML INDEX (Transact-SQL)
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- XML_TSQL
 - CREATE_XML_INDEX_TSQL
 - XML INDEX
 - CREATE_XML_TSQL
@@ -16,7 +13,6 @@ f1_keywords:
 - CREATE XML
 - CREATE XML INDEX
 - XML_INDEX_TSQL
-- FOR_XML_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -27,12 +23,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8aa04b27ec929809e55896421f9f0656fbf9b44
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/10/2017
+ms.openlocfilehash: bd8f6e580290a0b10c833f9ee94158c69eb09229
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485014"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674220"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,8 +46,7 @@ ms.locfileid: "86485014"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
-Create XML Index   
+--Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
     ON <object> ( xml_column_name )  
     [ USING XML INDEX xml_index_name   
@@ -71,7 +69,6 @@ CREATE [ PRIMARY ] XML INDEX index_name
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
 }  
-  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -193,7 +190,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  オフラインのインデックス操作で、XML インデックスの作成、再構築、または削除を行う場合は、テーブルで Sch-M (スキーマ修正) ロックが取得されます。 このため、操作中は、すべてのユーザーは基になるテーブルにアクセスできません。  
   
 > [!NOTE]
->  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  行ロックを許可するかどうかを指定します。 既定値は ON です。  
@@ -233,7 +230,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]
->  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 ## <a name="remarks"></a>解説  
  計算列のデータ型をインデックス キー列または非キー列として使用できる限り、**xml** データ型から派生した計算列は、キー列または非キー列としてインデックスを設定できます。 **xml** 計算列にプライマリ XML インデックスを作成することはできません。  
@@ -298,5 +295,3 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
-  
-

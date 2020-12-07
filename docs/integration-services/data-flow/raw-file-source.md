@@ -1,4 +1,5 @@
 ---
+description: RAW ファイル ソース (Raw File source)
 title: RAW ファイル ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd61425f63f4124951c8c0c90c6c599292602c23
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45181333134ff1150d4a121bf3201e78b1c2fde0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916043"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194195"
 ---
 # <a name="raw-file-source"></a>RAW ファイル ソース (Raw File source)
 
@@ -48,7 +49,7 @@ ms.locfileid: "86916043"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [RAW ファイルのカスタム プロパティ](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -66,5 +67,4 @@ ms.locfileid: "86916043"
 ## <a name="see-also"></a>参照  
  [RAW ファイル変換先](../../integration-services/data-flow/raw-file-destination.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

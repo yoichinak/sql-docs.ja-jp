@@ -1,4 +1,5 @@
 ---
+description: 論理関数 - CHOOSE (Transact-SQL)
 title: CHOOSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5bd06dd57b1b5c8bc26acbe0c85af175ba9c8d8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 68ad50b69fefd541e083ecab096732d549d171d1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110419"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124649"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "87110419"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
@@ -52,7 +52,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>戻り値の型  
  関数に渡される一連の型の中から最も優先順位の高いデータ型を返します。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  CHOOSE は、配列へのインデックスと同じように機能します。ここで、配列はインデックス引数の後に続く引数で構成されます。 インデックス引数は、後続の値のうちどの値が返されるのかを決定します。  
   
 ## <a name="examples"></a>例  
@@ -61,7 +61,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 
  次の例では、入力される値のリストの 3 番目の項目が返されます。  
  
-```  
+```sql 
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
   
@@ -79,7 +79,7 @@ Developer
 
  次の例では、`ProductCategoryID` 列の値に基づく単純な文字列が返されます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductCategoryID, CHOOSE (ProductCategoryID, 'A','B','C','D','E') AS Expression1  
@@ -105,7 +105,7 @@ ProductCategoryID Expression1
   
  次の例では、従業員が採用された季節が返されます。 `HireDate` 列から月の値を返すために MONTH 関数が使用されています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, HireDate, CHOOSE(MONTH(HireDate),'Winter','Winter', 'Spring','Spring','Spring','Summer','Summer',   
@@ -131,7 +131,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

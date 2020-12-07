@@ -1,7 +1,8 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008054"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760332"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -48,7 +49,7 @@ ms.locfileid: "86008054"
 |要素範囲|YYYY は、年を表す 0001 から 9999 までの 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、時を表す 00 から 23 までの 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 までの 2 桁の数字です。<br /><br /> ss は、秒を表す 00 ～ 59 の 2 桁の数字です。<br /><br /> n* は、秒の小数部の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部が 3 桁より多いときは切り捨てられます。|  
 |文字長|19 文字 (YYYY-MM-DD hh:mm:ss ) 以上、27 文字 (YYYY-MM-DD hh:mm:ss.0000000) 以下|  
 |有効桁数、小数点以下桁数|0 から 7 桁で、精度は 100ns です。 既定の有効桁数は 7 桁です。|  
-|ストレージ サイズ|有効桁数が 3 より小さい場合は 6 バイトです。<br/>有効桁数が 3 または 4 の場合は 7 バイトです。<br/>その他のすべての有効桁数では 8 バイトが必要です。<sup>1</sup>|  
+|ストレージ サイズ <sup>1</sup>|有効桁数が 3 より小さい場合は 6 バイトです。<br/>有効桁数が 3 または 4 の場合は 7 バイトです。<br/>その他のすべての有効桁数では 8 バイトが必要です。<sup>2</sup>|  
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00|  
 |Calendar|グレゴリオ暦|  
@@ -56,14 +57,16 @@ ms.locfileid: "86008054"
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
 
-<sup>1</sup>**datetime2** 値の最初のバイトで、値の有効桁数が格納されます。つまり、**datetime2** 値に必要な実際のストレージは、上の表に示されているストレージ サイズに、有効桁数を格納するためにさらに 1 バイトを加算したものとなります。  これにより、**datetime2** 値の最大サイズは 9 バイトとなります。つまり、最大有効桁数でのデータ ストレージのために 8 バイトを加算した有効桁数が、1 バイトで格納されます。
+<sup>1</sup> 指定された値は、非圧縮行ストア用です。 [データ圧縮](../../relational-databases/data-compression/data-compression.md)または[列ストア](../../relational-databases/indexes/columnstore-indexes-overview.md)を使用すると、有効桁数ごとにストレージ サイズが変更される可能性があります。 また、ディスク上およびメモリ内のストレージ サイズが異なる場合があります。 たとえば、バッチ モードを使用する場合、**datetime2** 値は常にメモリ内の 8 バイトを必要とします。
+
+<sup>2</sup> **datetime2** 値が **varbinary** 値にキャストされると、有効桁数を格納するために追加のバイトが **varbinary** 値に追加されます。
 
 データ型のメタデータについては、「[sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)」または「[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)」をご覧ください。 一部の日付時刻データ型では、有効桁数および小数点以下桁数が可変です。 列の有効桁数と小数点以下桁数を取得す方法については、「[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)」、[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)」、または「[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」をご覧ください。
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2 でサポートされる文字列リテラル形式
 次の表は、**datetime2** でサポートされている ISO 8601 および ODBC の文字列リテラル形式を一覧にしたものです。 **datetime2** の日付部分と時刻部分に使用できるアルファベット、数値、区切りなし、時刻の各形式については、「[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)」および「[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)」をご覧ください。
   
-|ISO 8601|[説明]|  
+|ISO 8601|説明|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|この形式は、セッションのロケール設定である SET LANGUAGE および SET DATEFORMAT の影響を受けません。 文字列リテラルには、**T**、コロン (:)、およびピリオド (.) が含まれます (例: '2007-05-02T19:58:47.1234567')。|  
   
@@ -197,7 +200,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|Output|  
+|データ型|出力|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -206,7 +209,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

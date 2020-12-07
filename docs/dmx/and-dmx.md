@@ -1,4 +1,5 @@
 ---
+description: AND (DMX)
 title: AND (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea3cacd8fe2d80e6037cf83df9eea1fd112a4b05
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 17dabee823323c63a2d36a21cd79b81e9a323803
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431204"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,19 +38,19 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターが TRUE と評価される場合に TRUE を返すブール値です。それ以外の場合は FALSE。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  どちらのパラメーターもブール値として処理されます (FALSE の場合は0、それ以外の場合は TRUE)。 次の表に、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
 |Expression1|Expression2|戻り値はです。|  
 |-----------------------|-----------------------|---------------------|  
 |true|true|true|  
-|TRUE|FALSE|false|  
-|FALSE|TRUE|FALSE|  
+|true|false|false|  
+|false|true|false|  
 |false|false|false|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [DMX&#41;&#40;論理演算子](../dmx/operators-logical.md)   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
+ [DMX&#41;&#40;論理演算子 ](../dmx/operators-logical.md)   
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)  
   
   

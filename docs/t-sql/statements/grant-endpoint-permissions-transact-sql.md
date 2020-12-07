@@ -1,4 +1,5 @@
 ---
+description: GRANT (エンドポイントの権限の許可) (Transact-SQL)
 title: GRANT (エンドポイントの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49e815376b97606036b454f387ea96868719278c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ac369044de3cbc01e3087e7f3619950ebcaa8010
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483583"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570571"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT (エンドポイントの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +101,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を許可する  
  次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に許可します。  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -109,7 +110,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION を指定して TAKE OWNERSHIP 権限を許可する  
  次の例では、エンドポイント `Shipping83` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` に許可します。ここでは `GRANT OPTION` を使用します。  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     WITH GRANT OPTION;  

@@ -1,4 +1,5 @@
 ---
+description: 'Jet: 日付、時刻、およびタイムスタンプのリテラル'
 title: 'Jet: Date、Time、および Timestamp リテラル |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 372b7c1dab1ad8ff000fb88729c3b02e05d4a21c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02b2a7c5c633ee891dbcd962786cb1904bfd5df8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449444"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 日付、時刻、およびタイムスタンプのリテラル
 相互運用性を最大にするために、アプリケーションは、エスケープ句の構文を使用して、ODBC 標準形式で日付リテラルを渡す必要があります。  

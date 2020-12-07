@@ -1,6 +1,6 @@
 ---
 title: IColumnsRowset (OLE DB ドライバー) | Microsoft Docs
-description: IColumnsRowset インターフェイス
+description: IColumnsRowset::GetColumnRowset の DBCOLUMN_BASETABLEINSTANCE 列は、Microsoft が OLE DB Driver for SQL Server で使用するために予約されています。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e4716aba6a47da41ec7cedf8543c122a9d63b0f2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6de3b4f286f891d611b2b9b874b9101a9490903f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244543"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860194"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

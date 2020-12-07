@@ -1,4 +1,5 @@
 ---
+description: データベース関連の動的管理ビュー (Transact-SQL)
 title: データベース関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - database dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], database
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 757e536bd5110b1a4a5abb70a0fc3d899d70f852
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cfffdf68d61b0a9ec40b0649f0e92fed93f442b3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942284"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006574"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>データベース関連の動的管理ビュー (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,20 +54,20 @@ ms.locfileid: "86942284"
     :::column-end:::
 :::row-end:::
 
-DMV は SQL Database または SQL Data Warehouse に固有です。   
+DMV は SQL Database または Azure Synapse Analytics に固有のものです。   
 
 :::row:::
     :::column:::
-        [dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
+        [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)
 
-        [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
+        [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)
 
-        [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+        [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
     :::column-end:::
     :::column:::
         [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
-        [dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
+        [sys.dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)
     :::column-end:::
 :::row-end:::
   

@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012458"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646062"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- XML ドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに一括インポートすることも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから一括エクスポートすることもできます。 このトピックではその両方の例を示します。  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+XML ドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに一括インポートすることも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから一括エクスポートすることもできます。 このトピックではその両方の例を示します。
+
+データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
   
- データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
+- **bcp** ユーティリティ  
+   **bcp** ユーティリティは、パーティション分割されたビューを含めて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで SELECT ステートメントが機能する任意の場所からデータをエクスポートするためにも使用できます。  
+
+- BULK INSERT  
   
--   **bcp** ユーティリティ  
-    **bcp** ユーティリティは、パーティション分割されたビューを含めて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで SELECT ステートメントが機能する任意の場所からデータをエクスポートするためにも使用できます。  
-  
--   BULK INSERT  
-  
--   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
+- INSERT ...SELECT * FROM OPENROWSET(BULK...)  
 
 詳細については、次の各トピックを参照してください。
 - [bcp ユーティリティを使用した一括データのインポートとエクスポート (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

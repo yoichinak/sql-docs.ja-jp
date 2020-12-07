@@ -1,6 +1,6 @@
 ---
 title: 日付と時刻の機能強化 | Microsoft Docs
-description: OLE DB Driver for SQL Server の日付と時刻の機能強化
+description: SQL Server 2008 に追加された日付と時刻のデータ型に対する OLE DB Driver for SQL Server のサポートについて説明します。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4ad635d32571bcf79b9280df7c18a2ff2b77fda4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba77a851ca8193ab3f809352d0d7804cc8189f6c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006944"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861496"
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

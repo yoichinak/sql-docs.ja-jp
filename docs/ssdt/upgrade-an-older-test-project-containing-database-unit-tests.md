@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883392"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987788"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>データベース単体テストを含む以前のテスト プロジェクトをアップグレードする
 
@@ -24,7 +24,7 @@ Visual Studio 2010 で作成され、データベース単体テストを含ん�
 > [!TIP]  
 > Visual Studio 2010 を使用している場合は、SQL Server 単体テストをテスト プロジェクトに追加した後、以前のデータベース単体テスト テンプレートを使用して単体テストを追加しないでください。 追加した場合は、再度プロジェクトを変換しないと、テストが正常に実行されなくなります。  
   
-Visual Studio 2010 より前のリリースで作成されたテスト データベース プロジェクトがある場合は、「[方法: 以前のリリースの Visual Studio からデータベース単体テストをアップグレードする](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)」の情報を利用して、データベース プロジェクトを Visual Studio 2010 にアップグレードしてから SQL Server Data Tools にアップグレードできます。  
+Visual Studio 2010 より前のリリースで作成されたテスト データベース プロジェクトがある場合は、「[方法: 以前のリリースの Visual Studio からデータベース単体テストをアップグレードする](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100))」の情報を利用して、データベース プロジェクトを Visual Studio 2010 にアップグレードしてから SQL Server Data Tools にアップグレードできます。  
   
 ### <a name="initiating-an-upgrade"></a>アップグレードの開始  
   
@@ -41,4 +41,3 @@ Visual Studio 2010 より前のリリースで作成されたテスト データ
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
 title: DENY (データベース スコープの資格情報の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd618fe62a6894211bbad05135e9296e8679679c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cd88bb7760810e490fc4da457a3e9edc0bd1ad47
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484783"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131250"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -55,7 +56,7 @@ DENY permission  [ ,...n ]
  権限を拒否するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれか:  
+ 権限を拒否するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -77,7 +78,7 @@ DENY permission  [ ,...n ]
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -95,7 +96,7 @@ DENY permission  [ ,...n ]
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベース スコープの資格情報は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、データベース スコープの資格情報で拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
 |データベース スコープの資格情報の権限|権限が含まれるデータベース スコープの資格情報の権限|権限が含まれるデータベース権限|  

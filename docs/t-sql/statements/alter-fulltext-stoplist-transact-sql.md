@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a314867515ecbde34702761e7c9ee8904523d0a3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301847"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128089"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86301847"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ALTER FULLTEXT STOPLIST stoplist_name  
 {   
         ADD [N] 'stopword' LANGUAGE language_term    
@@ -65,18 +65,18 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  *language_term* には、次のように、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。  
   
-|Format|説明|  
+|形式|説明|  
 |------------|-----------------|  
-|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列は、 **'***language_term***'** のように引用符 (') で囲む必要があります。|  
-|整数|*language_term* には、言語の LCID を指定します。|  
+|String|*language_term* には、[sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 互換性ビューの **alias** 列の値と同じ値を指定します。 文字列は、 **'** _language_term_*_'_* のように単一引用符で囲む必要があります。|  
+|Integer|*language_term* には、言語の LCID を指定します。|  
 |16 進数|*language_term* には、"0x" の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。 値を 2 バイト文字セット (DBCS) の形式で指定すると、SQL Server で Unicode に変換されます。|  
   
- ADD **'***stopword***'** LANGUAGE *language_term*  
+ ADD **'** _stopword_*_'_* LANGUAGE *language_term*  
  LANGUAGE *language_term* で指定した言語のストップリストにストップワードを追加します。  
   
  指定したキーワードの組み合わせと言語の LCID 値がストップリスト内で一意でない場合、エラーが返されます。  LCID 値が登録言語に対応していない場合は、エラーが生成されます。  
   
- DROP { **'***stopword***'** LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
+ DROP { **'** _stopword_*_'_* LANGUAGE *language_term* | ALL LANGUAGE *language_term* | ALL }  
  ストップ リストからストップ ワードを削除します。  
   
  **'** *stopword* **'** LANGUAGE *language_term*  
@@ -97,7 +97,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="examples"></a>例  
  次の例では、`CombinedFunctionWordList` というストップリストを変更して、単語 'en' をまずスペイン語用に、次にフランス語用に追加します。  
   
-```  
+```sql  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  

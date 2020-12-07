@@ -1,5 +1,6 @@
 ---
-title: 方法:ストリームとしてデータを送信する | Microsoft Docs
+title: 方法:ストリームとしてデータを送信する
+description: SQL Server 用の Microsoft SQLSRV Driver for PHP と PDO_SQLSRV Driver for PHP を使用し、ストリームを利用してデータベースに大きなオブジェクトを送信する方法について説明します。
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915948"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411439"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>方法:ストリームとしてデータを送信する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription (Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760033"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543125"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,24 +45,24 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`状態を監視するパブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 **Null**の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。 **Null**の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシュされたデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname**で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
-`[ @publication = ] 'publication'`監視されているパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は NULL です。  
+`[ @publication = ] 'publication'` 監視されているパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。  
   
-`[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
+`[ @publication_type = ] publication_type` パブリケーションの種類。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
 |**2**|マージ パブリケーションです。|  
 |NULL (既定値)|レプリケーションは、パブリケーションの種類を特定しようとします。|  
   
-`[ @mode = ] mode`サブスクリプションの監視情報を返すときに使用するフィルター処理モードを選択します。 *モード*は**int**,、これらの値のいずれかを指定できます。  
+`[ @mode = ] mode` サブスクリプションの監視情報を返すときに使用するフィルター処理モードを選択します。 *モード* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|すべてのサブスクリプションを返します。|  
 |**1**|エラーがあるサブスクリプションだけを返します。|  
@@ -72,11 +73,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|現在同期されているサブスクリプションのみを返します。|  
 |**7**|現在同期していないサブスクリプションだけを返します。|  
   
-`[ @topnum = ] topnum`返されるデータの先頭にある、指定された数のサブスクリプションのみに結果セットを制限します。 *topnum*は**int**,、既定値はありません。  
+`[ @topnum = ] topnum` 返されるデータの先頭にある、指定された数のサブスクリプションのみに結果セットを制限します。 *topnum* は **int**,、既定値はありません。  
   
-`[ @exclude_anonymous = ] exclude_anonymous`匿名プルサブスクリプションを結果セットから除外するかどうかを示します。 *exclude_anonymous*は**ビット**,、既定値は**0**です。値が**1**の場合、匿名サブスクリプションは除外され、値**0**はそれらが含まれることを意味します。  
+`[ @exclude_anonymous = ] exclude_anonymous` 匿名プルサブスクリプションを結果セットから除外するかどうかを示します。 *exclude_anonymous* は **ビット**,、既定値は **0**です。値が **1** の場合、匿名サブスクリプションは除外され、値 **0** はそれらが含まれることを意味します。  
   
-`[ @refreshpolicy = ] refreshpolicy`内部でのみ使用します。  
+`[ @refreshpolicy = ] refreshpolicy` 内部でのみ使用します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -89,7 +90,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
 |**レプリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_type**|**int**|パブリケーションの種類を指定します。次のいずれかの値を指定できます。<br /><br /> **0** = トランザクションパブリケーション<br /><br /> **1** = スナップショットパブリケーション<br /><br /> **2** = マージパブリケーション|  
-|**subtype**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**内部**|**int**|サブスクリプションの種類です。次のいずれかの値をとります。<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
 |**短い**|**int**|トランザクションパブリケーションのログリーダーまたはディストリビューションエージェントによって反映されたデータ変更の待機時間の最大値 (秒単位)。|  
 |**latencythreshold**|**int**|トランザクションパブリケーションの最大待機時間です。この値を超えると警告が生成されます。|  
 |**agentnotrunning**|**int**|エージェントが実行されていない時間の長さを時間単位で指定します。|  
@@ -114,17 +115,17 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergeagentprofileid**|**int**|マージエージェントによって使用されるエージェントプロファイルの ID。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replmonitorhelpsubscription**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replmonitorhelpsubscription** は、すべての種類のレプリケーションで使用されます。  
   
- **sp_replmonitorhelpsubscription**は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking*の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
+ **sp_replmonitorhelpsubscription** は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking*の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replmonitorhelpsubscription**を実行できるのは、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

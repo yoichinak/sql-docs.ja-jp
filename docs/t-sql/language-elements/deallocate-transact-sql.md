@@ -1,4 +1,5 @@
 ---
+description: DEALLOCATE (Transact-SQL)
 title: DEALLOCATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8470f4d370e3879f1bdaadee3b08b80f758ccadc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b29ee9539e8b6d4da64dfcc0da7c2ef9f4296a87
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914078"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124459"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,12 +46,12 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
 
 ## <a name="arguments"></a>引数
  *cursor_name*  
- 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、*を指定すると*cursor_name`GLOBAL` ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
+ 宣言済みのカーソル名を指定します。 *cursor_name* という名前のカーソルとして、グローバル カーソルとローカル カーソルの両方がある場合は、`GLOBAL` を指定すると *cursor_name* ではグローバル カーソルが参照され、`GLOBAL` を指定しないとローカル カーソルが参照されます。  
   
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 `DEALLOCATE` を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、`DEALLOCATE` で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
   
 `DECLARE CURSOR` ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
@@ -141,7 +142,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [カーソル](../../relational-databases/cursors.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

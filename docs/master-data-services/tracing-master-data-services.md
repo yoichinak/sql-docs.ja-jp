@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812687"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195039"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
 
@@ -51,7 +51,7 @@ ms.locfileid: "85812687"
   
 -   トレースは、Warning メッセージと ActivityTracing メッセージに対して有効になっています。  
   
-     詳細については、「 [SourceLevels 列挙体](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)」を参照してください。  
+     詳細については、「 [SourceLevels 列挙体](/dotnet/api/system.diagnostics.sourcelevels)」を参照してください。  
   
 -   ログは、WebApplication フォルダーの下の Logs フォルダーに保存されます。 既定の場所は、C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs です。  
   
@@ -67,9 +67,8 @@ ms.locfileid: "85812687"
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
     |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
     |Level|このトレース エントリのレベル。|  
-    |Message|トレースのメッセージ本文。|  
+    |メッセージ|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ記事「 [Troubleshooting Logging Improvement (トラブルシューティングのためのログ記録の改善)](https://go.microsoft.com/fwlink/p/?LinkId=615377)」  
-  
+ msdn.com のブログ記事「 [Troubleshooting Logging Improvement (トラブルシューティングのためのログ記録の改善)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)」  
   

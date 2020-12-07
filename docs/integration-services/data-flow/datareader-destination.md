@@ -1,4 +1,5 @@
 ---
+description: DataReader 変換先
 title: DataReader 変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16e98a1cd172f3d325023430cfa03c66b3834faa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: efae870a84f4009664d82faa5bf8c8015562f56a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916777"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194209"
 ---
 # <a name="datareader-destination"></a>DataReader 変換先
 
@@ -40,10 +41,9 @@ ms.locfileid: "86916777"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [DataReader 変換先のカスタム プロパティ](../../integration-services/data-flow/datareader-destination-custom-properties.md)  
   
  プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_secondary (Transact-sql)
 title: sp_add_log_shipping_primary_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 575656d0fb80328b65c72735d0a4c5b9e1a8a59e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68e63391d03d97aee8474a7aac95ebdfc09b04b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464680"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @primary_database = ] 'primary_database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_server = ] 'secondary_server',`セカンダリサーバーの名前を指定します。 *secondary_server*は**sysname**であり、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server',` セカンダリサーバーの名前を指定します。 *secondary_server* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,13 +56,13 @@ sp_add_log_shipping_primary_secondary
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_primary_secondary**は、プライマリサーバーの**master**データベースから実行する必要があります。  
+ **sp_add_log_shipping_primary_secondary** は、プライマリサーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例では、 **sp_add_log_shipping_primary_secondary**を使用してセカンダリデータベース**LogShipAdventureWorks**のエントリをセカンダリサーバーに追加しています。  
+## <a name="examples"></a>例  
+ この例では、 **sp_add_log_shipping_primary_secondary** を使用してセカンダリデータベース **LogShipAdventureWorks** のエントリをセカンダリサーバーに追加しています。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

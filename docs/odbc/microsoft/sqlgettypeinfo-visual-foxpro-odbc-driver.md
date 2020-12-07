@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo (Visual FoxPro ODBC ドライバー)
 title: SQLGetTypeInfo (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 23db0350f0f7271f85e2bc5c6a9e6c8767443a85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e24f506f1134e9191e370971795a23bbbb3bd380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81299522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500179"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "81299522"
 |SQL_BIGINT|サポートされていません。 64ビットの Visual FoxPro の種類がありません。|  
 |SQL_BIT|論理|  
 |SQL_CHAR|文字|  
-|SQL_DATE|日付|  
+|SQL_DATE|Date|  
 |SQL_DECIMAL|数値|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
@@ -44,7 +45,7 @@ ms.locfileid: "81299522"
 |SQL_NUMERIC|Numeric *、Currency、Float|  
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
-|SQL_TIME|サポートされていません。 Visual FoxPro の*時刻*型はありません。|  
+|SQL_TIME|サポートされていません。 Visual FoxPro の *時刻* 型はありません。|  
 |SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|メモ (バイナリ) *、全般|  

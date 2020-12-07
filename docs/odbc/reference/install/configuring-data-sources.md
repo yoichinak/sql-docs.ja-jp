@@ -1,4 +1,5 @@
 ---
+description: データ ソースの構成
 title: データソースの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0d52c154f4e9d38aad9d08668f41917793e5893
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 291e7b047acf9fbbab86f2cca63f319595f87d2f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300352"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193924"
 ---
 # <a name="configuring-data-sources"></a>データ ソースの構成
 データソースに関する情報は、システムレジストリに格納されます。 ユーザーは、管理プログラムを使用してデータソース情報を変更します。 これには、ODBC 管理者、ODBC コントロールパネルデバイス、またはアプリケーションまたはドライバー開発者が作成した管理プログラムを使用できます。  
   
- PowerShell コマンドを使用して、データソースを変更することができます。 これらの PowerShell コマンドの詳細については、「 [Windows Data Access Components の Powershell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)」を参照してください。  
+ PowerShell コマンドを使用して、データソースを変更することができます。 これらの PowerShell コマンドの詳細については、「 [Windows Data Access Components の Powershell コマンド](/previous-versions/windows/desktop/jj134064(v=vs.85))」を参照してください。  
   
 > [!NOTE]  
 >  このセクションは、Microsoft Windows®プラットフォームに固有のものです。 他のプラットフォームでのデータソースの構成方法は、プラットフォームによって異なります。  

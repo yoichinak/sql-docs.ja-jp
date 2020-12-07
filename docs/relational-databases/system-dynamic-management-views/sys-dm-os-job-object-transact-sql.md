@@ -1,5 +1,6 @@
 ---
-title: dm_os_job_object (Azure SQL Database) |Microsoft Docs
+description: sys.dm_os_job_object (Azure SQL Database)
+title: sys.dm_os_job_object (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865280"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834077"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -56,5 +57,4 @@ SQL Managed Instance では、 `VIEW SERVER STATE` 権限が必要です。 SQL 
  
 ## <a name="see-also"></a>参照  
 
-マネージインスタンスの詳細については、「 [SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)」を参照してください。
-  
+マネージインスタンスの詳細については、「 [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)」を参照してください。

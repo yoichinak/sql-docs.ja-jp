@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Excel ドライバー)
 title: SQLGetInfo (Excel ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d2cb149601f9c34bb7f0c35ca980a847b7948f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421756"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
 >  このトピックでは、Excel ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **SQLGetInfo**では、SQL_FILE_USAGE 情報の種類がサポートされています。 返される値は、ドライバーがデータソース内のファイルを直接扱う方法を示す16ビット整数です。  
+ **SQLGetInfo** では、SQL_FILE_USAGE 情報の種類がサポートされています。 返される値は、ドライバーがデータソース内のファイルを直接扱う方法を示す16ビット整数です。  
   
 -   SQL_FILE_NOT_SUPPORTED-ドライバーが単一層のドライバーではありません。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "81298582"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|バージョン|バージョン番号の形式|  
+|ドライバー|Version|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
@@ -64,7 +65,7 @@ ms.locfileid: "81298582"
  31 (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_name_separator"></a>SQL_CATALOG_NAME_SEPARATOR  
- "\\" (Excel 3.0/4.0)  
+ " \\ " (Excel 3.0/4.0)  
   
  "."(Excel 5.0/7.0/97)  
   

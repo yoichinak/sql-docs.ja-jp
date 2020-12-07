@@ -1,4 +1,5 @@
 ---
+description: STCrosses (geometry データ型)
 title: STCrosses (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec1a8795b6f54a9c4380ab42ddc2bfc341775556
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88458940"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554341"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の条件が両方とも該当する場合、2 つの **geometry** インスタンスは交差します。  
   
 -   2 つの **geometry** インスタンスが交差すると、ジオメトリの次元は、基になる **geometry** インスタンスの最大次元数よりも小さくなります。  

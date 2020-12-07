@@ -1,12 +1,11 @@
 ---
 title: xml (Transact-SQL)
-ms.custom: ''
-ms.date: 07/26/2017
+description: xml (Transact-SQL)
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
+- XML_TSQL
 - xml_TSQL
 - xml
 dev_langs:
@@ -16,12 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b06e817cd649937b48c95fb6dc31e2ae38978c7a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 07/26/2017
+ms.openlocfilehash: 885499cdd42d429c1fd86f098ad03be7b4b54ed2
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393240"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674203"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,8 +34,7 @@ ms.locfileid: "86393240"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
@@ -58,11 +59,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="examples"></a>例  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
-SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+DECLARE @DemographicData XML (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData = (SELECT TOP 1 Demographics FROM Person.Person);  
 SELECT @DemographicData;  
 GO  
 ```  

@@ -1,5 +1,6 @@
 ---
-title: '[SQL Server ログイン] ダイアログ ボックス (ODBC) | Microsoft Docs'
+title: '[SQL Server ログイン] ダイアログ ボックス (ODBC)'
+description: データベースに接続するための情報を寿分に指定せずにアプリケーションで ODBC 接続が行われると、SQL Server ログイン ダイアログが表示されることがあります。
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 35a9c6b6c254d6ed7c3283aedba15e65b6114579
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920125"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898808"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
@@ -39,6 +40,7 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 - ログイン ID とパスワードを使用した **Active Directory パスワード**
 - 現在ログインしているユーザーのアカウントを使用した **Active Directory 統合**認証
 - ログイン ID を使用した **Active Directory 対話型**認証
+- マネージド ID による**マネージド サービス ID** 認証
 
 認証モードの詳細については、「[データ ソース ウィザード画面 2](../../../connect/odbc/windows/dsn-wizard-2.md)」を参照してください。
 
@@ -48,7 +50,7 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 ### <a name="login-id"></a>Login ID
 
-**[認証モード]** が **[SQL Server]** 、 **[Active Directory パスワード]** または **[Active Directory 対話型]** に設定されている場合は、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します。 それ以外の場合、 **[ログイン ID]** ボックスは無効になります。
+**[認証モード]** が **[SQL Server]** 、 **[Active Directory パスワード]** 、 **[Active Directory 対話型]** 、 **[マネージド サービス ID]** に設定されている場合は、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します。 それ以外の場合、 **[ログイン ID]** ボックスは無効になります。
 
 ### <a name="password"></a>Password
 

@@ -1,6 +1,6 @@
 ---
 title: Linux 上の SQL エージェントでの DB メールと電子メール アラート
-description: この記事では、SQL Server on Linux で DB メールと電子メール アラートを使用する方法について説明します。
+description: Linux 上の SQL Server エージェント (mssql-server-agent) で DB メールを使用する方法と電子メール アラートを設定する方法について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896509"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088984"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux 上の SQL エージェントでの DB メールと電子メール アラート
 

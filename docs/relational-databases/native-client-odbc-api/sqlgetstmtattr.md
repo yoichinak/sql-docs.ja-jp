@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtAttr
 title: SQLGetStmtAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,26 +15,27 @@ ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be21c239bd01dea39022a75a3220f7093b4a3bef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0ec97baa1cfa8f1d891c3c0950e530f52294a434
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000355"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811006"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーは、ドライバー固有のステートメント属性を公開するために、SQLGetStmtAttr を拡張します。  
   
- [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)には、読み取りと書き込みの両方のステートメント属性が一覧表示されます。 ここでは、読み取り専用のステートメント属性のみを示します。  
+ [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) には、読み取りと書き込みの両方のステートメント属性が一覧表示されます。 ここでは、読み取り専用のステートメント属性のみを示します。  
   
 ## <a name="sql_sopt_ss_current_command"></a>SQL_SOPT_SS_CURRENT_COMMAND  
  コマンド バッチの現在のコマンドを公開します。 バッチ内のコマンドの位置を表す整数を返します。 *Valueptr*値の型は SQLLEN です。  
   
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
- SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
+ SQL_SOPT_SS_NOCOUNT_STATUS 属性は、NOCOUNT オプションの現在の設定を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。これは、 [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) が呼び出されたときに、がステートメントの影響を受ける行の数をレポートするかどうかを制御します。 *Valueptr*値の型は SQLLEN です。  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT を OFF にします。 SQLRowCount は、影響を受けた行数を返します。|  
 |SQL_NC_ON|NOCOUNT を ON にします。 影響を受ける行の数は SQLRowCount によって返されず、戻り値は0です。|  
@@ -48,10 +50,9 @@ ms.locfileid: "86000355"
 ## <a name="sqlgetstmtattr-and-table-valued-parameters"></a>SQLGetStmtAttr とテーブル値パラメーター  
  SQLGetStmtAttr を呼び出すと、テーブル値パラメーターを操作するときに、アプリケーションパラメーター記述子 (APD) の SQL_SOPT_SS_PARAM_FOCUS の値を取得できます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr 関数](../../odbc/reference/syntax/sqlsetstmtattr-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

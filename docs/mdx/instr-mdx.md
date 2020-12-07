@@ -1,4 +1,5 @@
 ---
+description: Instr (MDX)
 title: Instr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 877fc4658081108e810e404dfc8d4a368c6964ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387358"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,12 +38,12 @@ InStr([start, ]searched_string, search_string[, compare])
  検索対象の文字列式。  
   
  *比較*  
- (省略可) 整数値です。 この引数は常に無視されます。 他の言語での他の**Instr**関数との互換性のために定義されています。  
+ (省略可) 整数値です。 この引数は常に無視されます。 他の言語での他の **Instr** 関数との互換性のために定義されています。  
   
 ## <a name="return-value"></a>戻り値  
  *String1**の開始位置を表す*整数値。  
   
- また、 **InStr**関数は、条件に応じて、次の表に示す値を返します。  
+ また、 **InStr** 関数は、条件に応じて、次の表に示す値を返します。  
   
 |条件|戻り値|  
 |---------------|------------------|  
@@ -56,10 +57,10 @@ InStr([start, ]searched_string, search_string[, compare])
 ## <a name="remarks"></a>解説  
   
 > [!WARNING]  
->  **Instr**は、常に大文字と小文字を区別しない比較を実行します。  
+>  **Instr** は、常に大文字と小文字を区別しない比較を実行します。  
   
 ## <a name="example"></a>例  
- 次の例は、 **Instr**関数の使用方法を示しています。また、さまざまな結果のシナリオを示しています。  
+ 次の例は、 **Instr** 関数の使用方法を示しています。また、さまざまな結果のシナリオを示しています。  
   
 ```  
 with   

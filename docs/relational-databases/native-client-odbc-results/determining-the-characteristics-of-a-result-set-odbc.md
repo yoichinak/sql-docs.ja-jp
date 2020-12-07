@@ -1,4 +1,5 @@
 ---
+description: 結果セットの特性の決定 (ODBC)
 title: 結果セットの特性 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec78b6708feae1b8eea6394705516577772026ae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 81554f5b82a37ab2c1597234e434ae396cc4c129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465320"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>結果セットの特性の決定 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,15 +44,15 @@ ms.locfileid: "86002874"
   
 -   要求から返される列の数を確認するには、 [Sqlnumresultcols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)を指定します。  
   
--   [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)または[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)を実行して、結果セット内の列を記述します。  
+-   [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) または [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) を実行して、結果セット内の列を記述します。  
   
- 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンスを得るには、ステートメントの実行後に、アプリケーションで**Sqlcolattribute**、 **SQLDescribeCol**、および**sqlnumresultcols**を呼び出す必要があります。  
+ 適切にデザインされたアプリケーションを作成する場合、結果セットの状態が不明であることが前提となります。またアプリケーションでは、これらの関数により返される情報を使用して結果セットの列をバインドします。 アプリケーションは、ステートメントが準備または実行されると、いつでもこれらの関数を呼び出すことができます。 ただし、最適なパフォーマンスを得るには、ステートメントの実行後に、アプリケーションで **Sqlcolattribute**、 **SQLDescribeCol**、および **sqlnumresultcols** を呼び出す必要があります。  
   
  メタデータを取得するための呼び出しを複数同時に実行できます。 ODBC カタログ API 実装の基盤であるシステム カタログ プロシージャは、ODBC ドライバーが静的サーバー カーソルを使用しているときでも ODBC ドライバーから呼び出すことができます。 このため、アプリケーションは ODBC カタログ関数の複数の呼び出しを同時に処理できます。  
   
  アプリケーションが特定のメタデータのセットを複数回使用する場合、関数からの情報を最初に取得した時点でプライベート変数に格納すると、メタデータの利点を活用することができます。 このような操作を行うと、同じ情報を取得するために、ドライバーとサーバー間のラウンドトリップが必要になる ODBC カタログ関数の呼び出しを後で実行する必要がなくなります。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;結果の処理 ](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

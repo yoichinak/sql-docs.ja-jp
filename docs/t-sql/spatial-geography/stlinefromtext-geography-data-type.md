@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (geography データ型)
 title: STLineFromText (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5a18ea2d855cd40c15eb3659a782a706139f7a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eaf35bb927fc876725a134f50b74bf73e5c48f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445175"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

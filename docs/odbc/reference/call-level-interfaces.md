@@ -1,4 +1,5 @@
 ---
+description: コールレベル インターフェイス
 title: 呼び出しレベルのインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448960"
 ---
 # <a name="call-level-interfaces"></a>コールレベル インターフェイス
 SQL ステートメントを DBMS に送信するための最後の手法は、呼び出しレベルのインターフェイス (CLI) を使用することです。 呼び出しレベルのインターフェイスには、アプリケーションプログラムから呼び出すことができる DBMS 関数のライブラリが用意されています。 そのため、SQL を別のプログラミング言語と blend するのではなく、呼び出しレベルのインターフェイスは、C の文字列、i/o、または数値演算ライブラリなど、ほとんどのプログラマが使用することに慣れているルーチンライブラリに似ています。埋め込み SQL をサポートする Dbms には、呼び出しレベルのインターフェイスが既にあります。 ただし、これらの呼び出しは非公開であり、予告なしに変更される可能性があります。  

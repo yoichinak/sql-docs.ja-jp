@@ -1,4 +1,5 @@
 ---
+description: updateNString (java.lang.String, java.lang.String) メソッド
 title: updateNString (java.lang.String, java.lang.String) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 325832acffb99c76819bd842bd2954b891900ed0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 21edbf36ab5817f02bcf049654bc083d2cd7624a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450111"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

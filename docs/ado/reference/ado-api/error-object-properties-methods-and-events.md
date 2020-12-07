@@ -1,8 +1,9 @@
 ---
+description: Error オブジェクトのプロパティ、メソッド、およびイベント
 title: Error オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2baa9e6dcbc6dd67b93867cdf4f4b5e558cf8861
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a37fb2ed117a5d5db71061d323bb16c590984e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765503"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973695"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
@@ -34,7 +35,7 @@ ms.locfileid: "82765503"
  [SQLState プロパティ](../../../ado/reference/ado-api/sqlstate-property.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>イベント  
  [なし] :  

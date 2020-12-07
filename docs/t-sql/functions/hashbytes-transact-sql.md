@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES (Transact-SQL)
 title: HASHBYTES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d70ad412676a06c9a72eac8379fc72673c41275f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113529"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116367"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -64,26 +65,26 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>戻り値  
  **varbinary** (最大 8,000 バイト)  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 ハッシュ値を計算するための別の方法として、`CHECKSUM` または `BINARY_CHECKSUM` の使用を検討してください。
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、MD2、MD4、MD5、SHA、SHA1 のアルゴリズムは非推奨です。 代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。
 
 ## <a name="examples"></a>例  
 ### <a name="return-the-hash-of-a-variable"></a>変数のハッシュを返す  
- 次の例では、変数 `SHA2_256` に格納されている **nvarchar** 型のデータの `@HashThis` ハッシュを返します。  
+ 次の例では、変数 `@HashThis` に格納されている **nvarchar** 型のデータの `SHA2_256` ハッシュを返します。  
   
 ```sql  
-DECLARE @HashThis nvarchar(32);  
-SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+DECLARE @HashThis NVARCHAR(32);  
+SET @HashThis = CONVERT(NVARCHAR(32),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>テーブル列のハッシュを返す  
- 次の例では、テーブル `c1` 内の列 `Test1` の値の SHA2_256 ハッシュを返します。  
+ 次の例では、テーブル `Test1` 内の列 `c1` の値の SHA2_256 ハッシュを返します。  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
+CREATE TABLE dbo.Test1 (c1 NVARCHAR(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  

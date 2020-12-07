@@ -1,4 +1,5 @@
 ---
+description: 管理パスワード
 title: 管理パスワード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,16 +14,16 @@ ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a16cbfbbae359a563b60d11a79451ad72bd45383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feef4402a50bedb326b67c2de5633c90bf9e994e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740439"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121363"
 ---
 # <a name="administrative-password"></a>管理パスワード
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  このウィザードの **[ディストリビューター]** ページで、このパブリッシャーに対してリモート ディストリビューターを選択した場合、レプリケーションがパブリッシャーとディストリビューターの間に作成した接続に対するパスワードを、 **distributor_admin** ログインを使用して入力する必要があります。 入力するパスワードは、ディストリビューションの構成ウィザードの **[ディストリビューター パスワード]** ページまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで指定されたパスワードと一致する必要があります。  
+   このウィザードの **[ディストリビューター]** ページで、このパブリッシャーに対してリモート ディストリビューターを選択した場合、レプリケーションがパブリッシャーとディストリビューターの間に作成した接続に対するパスワードを、**distributor_admin** ログインを使用して入力する必要があります。 入力するパスワードは、ディストリビューションの構成ウィザードの **[ディストリビューター パスワード]** ページまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで指定されたパスワードと一致する必要があります。  
   
 ## <a name="options"></a>オプション  
  **パスワード**  

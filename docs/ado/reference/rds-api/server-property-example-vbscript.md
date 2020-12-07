@@ -1,6 +1,7 @@
 ---
+description: Server プロパティの例 (VBScript)
 title: Server プロパティの例 (VBScript) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f7fee3011edc0db739518e5e3244fb6cbedc1f0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e078fcd743094e3b0f469f4e0d82dd1eb021bb76
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750994"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724251"
 ---
 # <a name="server-property-example-vbscript"></a>Server プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- 次のコードは、RDS を設定する方法を示して[います。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)パラメーターをデザイン時に使用し、SQLOLEDB プロバイダーを使用してデータ対応コントロールにバインドします。 このコードを切り取って、通常の ASP ドキュメントに貼り付け、「 **Serverdesignvbs .asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次のコードは、RDS を設定する方法を示して [います。DataControl](./datacontrol-object-rds.md) パラメーターをデザイン時に使用し、SQLOLEDB プロバイダーを使用してデータ対応コントロールにバインドします。 このコードを切り取って、通常の ASP ドキュメントに貼り付け、「 **Serverdesignvbs .asp**」という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -89,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 次の例は、RDS の必要なパラメーターを設定する方法を示して**います。** 実行時に DataControl。 この例をテストするには、このコードを切り取って通常の ASP ドキュメントに貼り付け、 **ServerRuntimeVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
+ 次の例は、RDS の必要なパラメーターを設定する方法を示して **います。** 実行時に DataControl。 この例をテストするには、このコードを切り取って通常の ASP ドキュメントに貼り付け、 **ServerRuntimeVBS**という名前を付けます。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -177,39 +178,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Server プロパティ (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)   
+ [Server プロパティ (RDS)](./server-property-rds.md)

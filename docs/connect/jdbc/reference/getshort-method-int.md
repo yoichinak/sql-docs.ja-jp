@@ -1,4 +1,5 @@
 ---
+description: getShort (int) メソッド
 title: getShort (int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2b3a2b821a05f51a39cce4bf6b6458ccfe3c0e64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67979880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434564"
 ---
 # <a name="getshort-method-int"></a>getShort (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

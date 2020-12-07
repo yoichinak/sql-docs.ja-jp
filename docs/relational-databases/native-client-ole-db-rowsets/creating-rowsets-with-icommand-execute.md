@@ -1,4 +1,5 @@
 ---
+description: 'ICommand:: Execute (Native Client OLE DB provider) を使用した行セットの作成'
 title: 'ICommand:: Execute (Native Client OLE DB provider) を使用した行セットの作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afae8387088ce856ad6ab268d97f7506baa83c57
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bfb523c7a22c59d85f16821b2e3f5fbc1b6a1229
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428234"
 ---
 # <a name="creating-rowsets-with-icommandexecute-in-sql-server-native-client"></a>SQL Server Native Client での ICommand:: Execute を使用した行セットの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

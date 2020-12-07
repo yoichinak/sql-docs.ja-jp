@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergedeleteconflictrows (Transact-SQL)
 title: sp_helpmergedeleteconflictrows (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4c0712dc9b72d9a515dce7f5948c81f49d509a49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d08f7557606b56b215d3040f57e5790420c0245e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527052"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*の**sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* の **sysname**,、既定値は **%** です。 パブリケーションが指定されている場合は、パブリケーションによって修飾されたすべての競合が返されます。  
   
-`[ @source_object = ] 'source_object'`ソースオブジェクトの名前を指定します。 *source_object*は**nvarchar (386)**,、既定値は NULL です。  
+`[ @source_object = ] 'source_object'` ソースオブジェクトの名前を指定します。 *source_object* は **nvarchar (386)**,、既定値は NULL です。  
   
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。*publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。*publisher* は **sysname**で、既定値は NULL です。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。*publisher_db*は**sysname**,、既定値は NULL です。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。*publisher_db* は **sysname**,、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -62,15 +63,15 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**MSrepl_create_time**|**datetime**|競合情報が追加された時刻。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpmergedeleteconflictrows**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpmergedeleteconflictrows** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helpmergedeleteconflictrows**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

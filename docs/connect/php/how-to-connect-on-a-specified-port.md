@@ -1,5 +1,6 @@
 ---
-title: 方法:指定されたポートで接続する | Microsoft Docs
+title: 方法:指定されたポートで接続する
+description: SQL Server 用の Microsoft SQLSRV Driver for PHP と PDO_SQLSRV Driver for PHP を使用し、特定のポートで構成されているデータベースに接続する方法について説明します。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916502"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435229"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>方法:指定されたポートで接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80916502"
   
 ### <a name="to-connect-on-a-specified-port"></a>指定されたポートで接続するには  
   
-1.  サーバーが接続を受け入れるようにポートが構成されていることを確認します。 指定されたポートで接続を受け入れるようにサーバーを構成する方法については、[特定の TCP ポートでリッスンするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)に関するページを参照してください。  
+1.  サーバーが接続を受け入れるようにポートが構成されていることを確認します。 指定されたポートで接続を受け入れるようにサーバーを構成する方法の詳細については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)」を参照してください。  
   
 2.  目的のポートを [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 関数の *$serverName* パラメーターに追加します。 サーバー名とポートをコンマで区切ります。 たとえば、次のコード行は SQLSRV ドライバーを使用して、ポート 1521 で *myServer* という名前のサーバーに接続する方法を示しています。  
   

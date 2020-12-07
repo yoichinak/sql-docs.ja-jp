@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;SERVERNAME (Transact-SQL)'
 title: '@@SERVERNAME (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/07/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf55af418ce48a62d122362996dc9a7151cfa30f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8407991622201fe3798695c4aecdd4514c5492f9
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110798"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379684"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "87110798"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 @@SERVERNAME  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87110798"
 |インスタンス|サーバー情報|  
 |--------------|------------------------|  
 |既定のインスタンス|'*servername*'|  
-|[名前付きインスタンス]|'*servername*\\*instancename*'|  
+|名前付きインスタンス|'*servername*\\*instancename*'|  
 |フェールオーバー クラスター インスタンス - 既定のインスタンス|'*network_name_for_fci_in_wsfc*'|  
 |フェールオーバー クラスター インスタンス - 名前付きインスタンス|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "87110798"
 ## <a name="examples"></a>例  
  次の例に、`@@SERVERNAME` の使用方法を示します。  
   
-```  
+```sql  
 SELECT @@SERVERNAME AS 'Server Name'  
 ```  
   
@@ -75,7 +75,7 @@ ACCTG
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成関数 &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)  

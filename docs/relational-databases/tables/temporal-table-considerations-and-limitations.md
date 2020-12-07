@@ -1,4 +1,5 @@
 ---
+description: テンポラル テーブルの考慮事項と制約
 title: テンポラル テーブルの考慮事項と制約 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97d7b734cf0933f9e5bcdaccb177e05e452ff061
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 28e2c218d9f474638c7d0d8c390f79bf42ca3679
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552707"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548880"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>テンポラル テーブルの考慮事項と制約
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 テンポラル テーブルを使用する場合は、システムのバージョン管理の性質の上、注意すべき考慮事項と制約がいくつかあります。
 

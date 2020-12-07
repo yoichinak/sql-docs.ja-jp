@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753204"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868783"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753204"
   
  メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでサポートされる機能の詳細については、次のトピックを参照してください。  
   
--   [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Transact-SQL によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [インメモリ OLTP に対してサポートされていない SQL Server の機能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>インメモリ OLTP を使用するデータベース  
  次の表に、サポートされていない [!INCLUDE[tsql](../../includes/tsql-md.md)] 機能、およびインメモリ OLTP データベースに関するエラー メッセージのテキストに含まれるキーワードを示します。 また、エラーの解決方法も示します。  
@@ -110,7 +110,7 @@ ms.locfileid: "85753204"
 |特徴量|COMPUTE|**COMPUTE** 句はサポートされていません。 クエリから削除します。|  
 |特徴量|SELECT INTO|**INTO** 句は **SELECT** ステートメントではサポートされていません。 クエリを **INSERT INTO** _Table_ **SELECT** に書き換えます。|  
 |特徴量|不完全な挿入列リスト|通常、INSERT ステートメントでは、テーブルのすべての列に値を指定する必要があります。<br /><br /> ただし、メモリ最適化テーブルでは、DEFAULT 制約と IDENTITY(1,1) 列はサポートされません。 これらの列は INSERT 列リストから省略でき、IDENTITY 列の場合は INSERT 列リストから省略する必要があります。|  
-|特徴量|*Function*|いくつかの組み込み関数は、ネイティブ コンパイル ストアド プロシージャではサポートされません。 ストアド プロシージャから、拒否された関数を削除します。 サポートされる組み込み関数の詳細については、<br />「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」または<br />「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」を参照してください。|  
+|特徴量|*Function*|いくつかの組み込み関数は、ネイティブ コンパイル ストアド プロシージャではサポートされません。 ストアド プロシージャから、拒否された関数を削除します。 サポートされる組み込み関数の詳細については、<br />「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」または<br />「[ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)」を参照してください。|  
 |特徴量|CASE|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>**CASE** 式は、ネイティブ コンパイル ストアド プロシージャ内のクエリではサポートされていません。 各ケースのクエリを作成します。 詳細については、「 [ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)」を参照してください。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では CASE 式をサポートしていません。|  
 |特徴量|INSERT EXECUTE|参照を削除します。|  
 |特徴量|EXECUTE|ネイティブ コンパイル ストアド プロシージャおよびユーザー定義関数を実行する場合にのみサポートされます。|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753204"
 |演算子|TSEQUAL|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **TSEQUAL** を削除します。|  
 |演算子|LIKE|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **LIKE** を削除します。|  
 |演算子|NEXT VALUE FOR|シーケンスは、ネイティブ コンパイル ストアド プロシージャ内で参照できません。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して値を取得し、それをネイティブ コンパイル ストアド プロシージャに渡します。 詳細については、「 [メモリ最適化テーブルへの IDENTITY の実装](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)」を参照してください。|  
-|SET オプション|*オプション*|SET オプションは、ネイティブ コンパイル ストアド プロシージャ内で変更できません。 特定のオプションは BEGIN ATOMIC ステートメントで設定できます。 詳細については、「 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」の ATOMIC ブロックに関するセクションを参照してください。|  
+|SET オプション|*オプション*|SET オプションは、ネイティブ コンパイル ストアド プロシージャ内で変更できません。 特定のオプションは BEGIN ATOMIC ステートメントで設定できます。 詳細については、「 [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md)」の ATOMIC ブロックに関するセクションを参照してください。|  
 |オペランド|TABLESAMPLE|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **TABLESAMPLE** を削除します。|  
 |オプション|RECOMPILE|ネイティブ コンパイル ストアド プロシージャは、作成時にコンパイルされます。 プロシージャの定義から **RECOMPILE** を削除します。<br /><br /> ネイティブ コンパイル ストアド プロシージャに対して sp_recompile を実行できます。これにより、このプロシージャは次の実行時に再コンパイルされます。|  
 |オプション|ENCRYPTION|このオプションはサポートされていません。 プロシージャの定義から **ENCRYPTION** を削除します。|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753204"
 |特徴量|DTC|メモリ最適化テーブルにアクセスするトランザクションは、分散トランザクションにすることはできません。|  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [インメモリ OLTP への移行](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

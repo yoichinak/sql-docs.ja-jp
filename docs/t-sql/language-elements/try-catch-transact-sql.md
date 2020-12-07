@@ -1,4 +1,5 @@
 ---
+description: TRY...CATCH (Transact-SQL)
 title: TRY...CATCH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -29,12 +30,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 423713fc581277e949f73180d5e9e1b6fa758c15
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 92bff367250e61827b9f820d68b8d1d12db776e1
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916951"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036647"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -140,7 +141,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- ERROR\_\* 関数は、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)内の `CATCH` ブロックでも機能します。  
+ ERROR\_\* 関数は、[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)内の `CATCH` ブロックでも機能します。  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 構造の影響を受けないエラー  
  TRY...CATCH 構造では、次の条件はトラップされません。  
@@ -318,7 +319,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- You may want to commit a transaction in a catch block if you want to commit changes to statements that ran prior to the error.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  
@@ -367,5 +369,3 @@ GO
  [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)   
  [SET XACT_ABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
-  
-

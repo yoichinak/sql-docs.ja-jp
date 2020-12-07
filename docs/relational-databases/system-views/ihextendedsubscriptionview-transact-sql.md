@@ -1,4 +1,5 @@
 ---
+description: IHextendedSubscriptionView (Transact-SQL)
 title: IHextendedSubscriptionView (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 909aa160bdd5f7b5f60255e1187f07ab6ef1b3fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aca2ddea9625b5b2a40fea6ef27d6f218a71cda0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485437"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHextendedSubscriptionView**ビューでは、非 SQL Server パブリケーションのサブスクリプションに関する情報が公開されます。 このビューは、**ディストリビューション**データベースに格納されます。  
+  **IHextendedSubscriptionView**ビューでは、非 SQL Server パブリケーションのサブスクリプションに関する情報が公開されます。 このビューは、 **ディストリビューション** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,8 +50,8 @@ ms.locfileid: "85889199"
 |**publisher_seqno**|**varbinary(16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  
 |**ss_cplt_seqno**|**varbinary(16)**|同時実行スナップショット処理の完了を示すために使用するシーケンス番号。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs
+description: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 329fdde13e276726f616a7d7fe56893d28172b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422756"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,18 +34,20 @@ ms.locfileid: "85898989"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>戻り値の型  
  **varbinary(max)**  
   
 ## <a name="return-value"></a>戻り値  
  トランザクションが開始されていないか、キャンセルまたはコミットされている場合、NULL が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  トランザクションは明示的にする必要があります。 BEGIN TRANSACTION に続けて、COMMIT TRANSACTION または ROLLBACK TRANSACTION を使用します。  
   
  GET_FILESTREAM_TRANSACTION_CONTEXT を呼び出すと、トランザクションへのファイル システム アクセス権が呼び出し元に与えられます。このアクセス権は、トランザクションが完了するまで有効です。 トランザクションに対するファイル システム経由のアクセスを別のユーザーに許可するには、EXECUTE AS を使用して、別のユーザーとして GET_FILESTREAM_TRANSACTION_CONTEXT を実行します。  

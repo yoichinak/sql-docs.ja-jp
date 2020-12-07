@@ -1,4 +1,5 @@
 ---
+description: DDL トリガー
 title: DDL トリガー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4e723b2ef95fa3b1916d972a5b911dda5201a3d
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757601"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328062"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,5 +124,5 @@ GO
  [DML トリガー](../../relational-databases/triggers/dml-triggers.md)   
  [ログオン トリガー](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-  
+ [EVENT DATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

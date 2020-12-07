@@ -1,4 +1,5 @@
 ---
+description: destination_data_spaces (Transact-sql)
 title: destination_data_spaces (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.destination_data_spaces catalog view
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b1cdfa6a75dab86aac70dc859878e593b0906cad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a1bf415042ea6c5a4e2c1fa996961af72247a9f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548810"
 ---
 # <a name="sysdestination_data_spaces-transact-sql"></a>destination_data_spaces (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85893992"
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

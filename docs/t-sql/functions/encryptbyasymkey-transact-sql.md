@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYASYMKEY (Transact-SQL)
 title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 42ffb61535beefeee149124adf7873cce78c1535
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113545"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128505"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +93,7 @@ or
 ## <a name="examples"></a>例  
 この例では、`@cleartext` に格納されているテキストを非対称キー `JanainaAsymKey02` を使用して暗号化します。 このステートメントは、`ProtectedData04` テーブルに暗号化されたデータを挿入します。  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  

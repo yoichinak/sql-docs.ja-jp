@@ -1,4 +1,5 @@
 ---
+description: Hadoop 接続マネージャー
 title: Hadoop 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350218"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
 
@@ -28,7 +29,7 @@ ms.locfileid: "86915102"
   
 ## <a name="configure-the-hadoop-connection-manager"></a>Hadoop 接続マネージャーの構成  
   
-1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Hadoop]**  >  **[追加]** の順に選択します。 **[Hadoop Connection Manager Editor]** (Hadoop Connection 接続マネージャー エディター) ダイアログ ボックスが表示されます。  
+1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Hadoop]** > **[追加]** の順に選択します。 **[Hadoop Connection Manager Editor]** (Hadoop Connection 接続マネージャー エディター) ダイアログ ボックスが表示されます。  
   
 2.  関連する Hadoop クラスター情報を構成するには、左側のウィンドウで **[WebHCat]** または **[WebHDFS]** タブを選択します。
   
@@ -36,7 +37,7 @@ ms.locfileid: "86915102"
   
     1.  **[WebHCat ホスト]** に、WebHCat サービスをホストするサーバーを入力します。  
   
-    2.  **[WebHCat Port]** (WebHCat ポート) に、WebHCat サービスのポートを入力します (既定値は 50111 です)。  
+    2.  **[WebHCat Port]**(WebHCat ポート) に、WebHCat サービスのポートを入力します (既定値は 50111 です)。  
   
     3.  WebHCat サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]** です。  
   
@@ -44,19 +45,19 @@ ms.locfileid: "86915102"
   
          ![Hadoop 接続マネージャー エディターと Kerberos 認証のスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop 接続マネージャー エディターと Kerberos 認証")  
   
-    4.  **[WebHCat User]** (WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
+    4.  **[WebHCat User]**(WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
   
     5.  **[Kerberos]** 認証を選択した場合は、ユーザーの **パスワード** と **ドメイン**を入力します。  
   
 4.  HDFS との間でデータをコピーするために **WebHDFS** オプションを有効にする場合は、次の操作を行います。 
   
-    1.  **[WebHDFS Host]** (WebHDFS ホスト) に、WebHDFS サービスをホストするサーバーを入力します。  
+    1.  **[WebHDFS Host]**(WebHDFS ホスト) に、WebHDFS サービスをホストするサーバーを入力します。  
   
-    2.  **[WebHDFS Port]** (WebHDFS ポート) に、WebHDFS サービスのポートを入力します (既定値は 50070 です)。  
+    2.  **[WebHDFS Port]**(WebHDFS ポート) に、WebHDFS サービスのポートを入力します (既定値は 50070 です)。  
   
     3.  WebHDFS サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]** です。  
   
-    4.  **[WebHDFS User]** (WebHDFS ユーザー) に、HDFS へのアクセスが許可されているユーザーを入力します。  
+    4.  **[WebHDFS User]**(WebHDFS ユーザー) に、HDFS へのアクセスが許可されているユーザーを入力します。  
   
     5.  **[Kerberos]** 認証を選択した場合は、ユーザーの **パスワード** と **ドメイン**を入力します。  
   
@@ -69,7 +70,7 @@ Hadoop 接続マネージャーで Kerberos 認証を使用できるようにオ
 -   オプション 1: [SSIS コンピューターを Kerberos 領域に参加させる](#kerberos-join-realm)
 -   オプション 2:[Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする](#kerberos-mutual-trust)
 
-### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>オプション 1: SSIS コンピューターを Kerberos 領域に参加させる
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>方法 1: SSIS コンピューターを Kerberos 領域に参加させる
 
 #### <a name="requirements"></a>要件:
 
@@ -175,7 +176,7 @@ KDC サーバー:
 
     1. **[サーバー マネージャー]**  >  **[グループ ポリシーの管理]**  >  **[ドメイン]** の順に選択します。 次に、 **[グループ ポリシー オブジェクト]**  >  **[Default or Active Domain Policy]\(既定またはアクティブなドメイン ポリシー\)**  >  **[編集]** の順に選択します。
 
-    2. **グループ ポリシー管理エディター**のポップアップ ウィンドウで、 **[コンピューターの構成]**  >  **[ポリシー]**  >  **[Windows の設定]** の順に選択します。 次に、 **[セキュリティ設定]**  >  **[ローカル ポリシー]**  >  **[セキュリティ オプション]** の順に選択します。 **[ネットワーク セキュリティ: Kerberos で許可する暗号化の種類を構成する]** を構成します。
+    2. **グループ ポリシー管理エディター**のポップアップ ウィンドウで、**[コンピューターの構成]** > **[ポリシー]** > **[Windows の設定]** の順に選択します。 次に、 **[セキュリティ設定]**  >  **[ローカル ポリシー]**  >  **[セキュリティ オプション]** の順に選択します。 **[ネットワーク セキュリティ: Kerberos で許可する暗号化の種類を構成する]** を構成します。
 
     3. KDC への接続に使用する暗号化アルゴリズムを選択します。 通常は任意のオプションを選択できます。
 
@@ -191,7 +192,7 @@ KDC サーバー:
 
     2. **[表示]**  >  **[高度な機能]** の順に選択して、高度な機能を構成します。
 
-    3. マッピングを作成するアカウントを見つけ、右クリックして **[名前のマッピング]** を表示し、 **[Kerberos 名]** タブを選択します。
+    3. マッピングを作成するアカウントを見つけ、右クリックして **[名前のマッピング]** を表示し、**[Kerberos 名]** タブを選択します。
 
     4. 領域からプリンシパルを追加します。
 

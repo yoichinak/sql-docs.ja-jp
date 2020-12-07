@@ -1,4 +1,5 @@
 ---
+description: UPDATE (Transact-SQL)
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -38,12 +39,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8db85a2dc347cbfda62713dab61946e6f57cc0e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 56eaaeb3dfc90ee9de1f5ee769417eb75c232e4b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554435"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035815"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,7 +105,7 @@ UPDATE
 ```  
   
 ```syntaxsql 
--- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+-- Syntax for Azure Synapse Analysis
 
 [ WITH <common_table_expression> [ ,...n ] ]
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
@@ -282,10 +283,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2   
-    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT PRIMARY KEY NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
@@ -312,10 +313,10 @@ IF OBJECT_ID ('dbo.Table2', 'U') IS NOT NULL
     DROP TABLE dbo.Table2;  
 GO  
 CREATE TABLE dbo.Table1  
-    (c1 int PRIMARY KEY NOT NULL, c2 int NOT NULL);  
+    (c1 INT PRIMARY KEY NOT NULL, c2 INT NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2  
-    (d1 int PRIMARY KEY NOT NULL, d2 int NOT NULL);  
+    (d1 INT PRIMARY KEY NOT NULL, d2 INT NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES (1, 10);  
 INSERT INTO dbo.Table2 VALUES (1, 20), (2, 30);  
@@ -427,8 +428,8 @@ GO
 USE tempdb;  
 GO  
 -- UPDATE statement with CTE references that are correctly matched.  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -456,8 +457,8 @@ CTE 参照が正しく一致していない UPDATE ステートメント。
 ```sql  
 USE tempdb;  
 GO  
-DECLARE @x TABLE (ID int, Value int);  
-DECLARE @y TABLE (ID int, Value int);  
+DECLARE @x TABLE (ID INT, Value INT);  
+DECLARE @y TABLE (ID INT, Value INT);  
 INSERT @x VALUES (1, 10), (2, 20);  
 INSERT @y VALUES (1, 100),(2, 200);  
   
@@ -641,7 +642,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NewPrice int = 10;  
+DECLARE @NewPrice INT = 10;  
 UPDATE Production.Product  
 SET ListPrice += @NewPrice  
 WHERE Color = N'Red';  
@@ -722,10 +723,10 @@ JOIN Production.WorkOrder AS wo
 USE AdventureWorks2012;  
 GO  
 -- Create the table variable.  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    NewVacationHours int,  
-    ModifiedDate datetime);  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    NewVacationHours INT,  
+    ModifiedDate DATETIME);  
   
 -- Populate the table variable with employee ID values from HumanResources.Employee.  
 INSERT INTO @MyTableVar (EmpID)  
@@ -784,7 +785,7 @@ GO
 ```  
   
 ###  <a name="updating-rows-in-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルの行を更新する  
- このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
+ このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../functions/opendatasource-transact-sql.md)を使用してリモート テーブルを参照し、リモートの対象テーブルの行を更新する方法を示します。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. リンク サーバーを使用してリモート テーブルのデータを更新する  
  次の例では、リモート サーバー上のテーブルを更新します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 server.catalog.schema.object という形式の 4 部構成のオブジェクト名の一部として、リンク サーバー名 `MyLinkedServer` を指定します。 `@datasrc` には有効なサーバー名を指定する必要があります。  
@@ -836,9 +837,9 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table (  
-    SummaryBefore nvarchar(max),  
-    SummaryAfter nvarchar(max));  
+DECLARE @MyTableVar TABLE (  
+    SummaryBefore NVARCHAR(max),  
+    SummaryAfter NVARCHAR(max));  
 UPDATE Production.Document  
 SET DocumentSummary .WRITE (N'features',28,10)  
 OUTPUT deleted.DocumentSummary,   
@@ -926,7 +927,7 @@ GO
   
 ```sql  
 UPDATE Archive.dbo.Records  
-SET [Chart] = CAST('Xray 1' as varbinary(max))  
+SET [Chart] = CAST('Xray 1' as VARBINARY(max))  
 WHERE [SerialNumber] = 2;  
 ```  
   
@@ -986,7 +987,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE Production.uspProductUpdate  
-@Product nvarchar(25)  
+@Product NVARCHAR(25)  
 AS  
 SET NOCOUNT ON;  
 UPDATE Production.Product  
@@ -1009,10 +1010,10 @@ EXEC Production.uspProductUpdate 'BK-%';
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyTableVar table(  
-    EmpID int NOT NULL,  
-    OldVacationHours int,  
-    NewVacationHours int,  
+DECLARE @MyTableVar TABLE (  
+    EmpID INT NOT NULL,  
+    OldVacationHours INT,  
+    NewVacationHours INT,  
     ModifiedDate datetime);  
 UPDATE TOP (10) HumanResources.Employee  
 SET VacationHours = VacationHours * 1.25,  
@@ -1042,7 +1043,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 CREATE PROCEDURE HumanResources.Update_VacationHours  
-@NewHours smallint  
+@NewHours SMALLINT  
 AS   
 SET NOCOUNT ON;  
 UPDATE HumanResources.Employee  
@@ -1143,8 +1144,8 @@ OPTION (LABEL = N'label1');
 -- Uses AdventureWorks  
   
 CREATE TABLE YearlyTotalSales (  
-    YearlySalesAmount money NOT NULL,  
-    Year smallint NOT NULL )  
+    YearlySalesAmount MONEY NOT NULL,  
+    Year SMALLINT NOT NULL )  
 WITH ( DISTRIBUTION = REPLICATE );  
   
 INSERT INTO YearlyTotalSales VALUES (0, 2004);  
@@ -1164,10 +1165,10 @@ SELECT * FROM YearlyTotalSales;
 
 ```sql
 CREATE TABLE dbo.Table1   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 CREATE TABLE dbo.Table2   
-    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+    (ColA INT NOT NULL, ColB DECIMAL(10,3) NOT NULL);  
 GO  
 INSERT INTO dbo.Table1 VALUES(1, 10.0);  
 INSERT INTO dbo.Table2 VALUES(1, 0.0);  
@@ -1189,9 +1190,8 @@ GO
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [テキスト関数とイメージ関数 &#40;Transact-SQL&#41;](../functions/text-and-image-functions-textptr-transact-sql.md)   
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
  [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)    
- [1 バイト文字セットとマルチバイト文字セット](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  
- 
+ [1 バイト文字セットとマルチバイト文字セット](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)  

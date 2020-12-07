@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0012b7d1122de32834d6d71b2a32bbec45369c49
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916174"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192527"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SQL Server Integration Services (SSIS) パッケージを検証する
 
@@ -33,7 +33,7 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 ## <a name="validate-connection-managers"></a>接続マネージャーを検証する
 
 ウィザードでは、接続を失敗させる可能性がある次の問題がないか、特定の接続マネージャーが確認されます。
-- **Windows 認証**。 接続文字列で Windows 認証を使用する場合、検証で警告が表示されます。 Windows 認証は、追加の構成手順を要求します。 詳細については、「[Windows 認証でデータとファイル共有に接続する](ssis-azure-connect-with-windows-auth.md)」を参照してください。
+- **Windows 認証**。 接続文字列で Windows 認証を使用する場合、検証で警告が表示されます。 Windows 認証は、追加の構成手順を要求します。 詳細については、「[Windows 認証でデータとファイル共有に接続する](/azure/data-factory/ssis-azure-connect-with-windows-auth)」を参照してください。
 - **ファイル パス**。 接続文字列に `C:\\...` のようなハードコーディングされたローカル ファイル パスが含まれる場合、検証で警告が表示されます。 絶対パスを含むパッケージは失敗することがあります。
 - **UNC パス**。 接続文字列に UNC パスが含まれる場合、検証で警告が表示されます。 UNC パスを含むパッケージは失敗することがあります。一般的に、UNC パスはアクセスに Windows 認証を要求するためです。
 - **ホスト名**。 サーバー プロパティに IP アドレスではなくホスト名が含まれる場合、検証で警告が表示されます。 ホスト名を含むパッケージは失敗することがあります。一般的に、Azure 仮想ネットワークは DNS 名前解決のために正しい DNS 構成を必要とするためです。
@@ -67,7 +67,7 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 
 -   Attunity Oracle ソース/ターゲット
 -   Attunity Teradata ソース/ターゲット
--   SAP BI ソース/ターゲット
+-   SAP BW 変換元と変換先
 
 ## <a name="validate-tasks-and-components"></a>タスクとコンポーネントの検証
 

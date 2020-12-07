@@ -1,8 +1,9 @@
 ---
+description: Refresh メソッドの例 (VC++)
 title: Refresh メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 540c30018ed9b9c7d8d08239d4c93cf7a146b23e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756528"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989573"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh メソッドの例 (VC++)
-この例では、 [refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを更新します。  
+この例では、 [refresh](./refresh-method-ado.md)メソッドを使用して、ストアドプロシージャ[コマンド](./command-object-ado.md)オブジェクトの[パラメーター](./parameters-collection-ado.md)コレクションを更新します。  
   
 ## <a name="example"></a>例  
   
@@ -224,7 +225,7 @@ void PrintComError(_com_error &e) {
 25  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Authors with 25 percent royalty  
@@ -234,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Refresh メソッド (ADO)](./refresh-method-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: SQL Server レプリケーションの [パブリッシャーの設定] ダイアログ ボックス
 title: '[パブリッシャーの設定] (SSMS) | Microsoft Docs'
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678480"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88427924"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーの設定] ダイアログ ボックス
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,10 +47,10 @@ ms.locfileid: "85678480"
  **[このパブリッシャーを次のグループに表示する]**  
  一覧からパブリッシャー グループを選択します。 パブリッシャーは、左ペインでこのグループの下に表示されます。 グループはパブリッシャーを整理するもので、レプリケーションの動作には影響を与えません。  
   
- **[新しいグループ]**  
+ **新しいグループ**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

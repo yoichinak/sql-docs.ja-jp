@@ -1,4 +1,5 @@
 ---
+description: CREATE USER (Transact-SQL)
 title: CREATE USER (Transact-SQL)
 ms.custom: ''
 ms.date: 11/06/2019
@@ -29,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed4f20d64aff96e367c0f3aeb5e56746826615f5
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 43214b8f1e0b81b75c34c33b8b8b7df53bdd8d03
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862826"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131393"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -144,7 +145,7 @@ CREATE USER user_name
 > 作成後の Azure SQL Managed Instance 機能の Azure AD 管理者が変更されました。 詳しくは、「[マネージド インスタンス用の新しい Azure AD 管理機能](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi)」をご覧ください。
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -205,7 +206,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)に関するページを参照してください。  
+ 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](/azure/azure-sql/database/authentication-aad-overview)に関するページを参照してください。  
   
 WITH PASSWORD = '*password*'  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
@@ -343,7 +344,7 @@ SQL Managed Instance データベースでユーザーを作成するとき、lo
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で包含データベース ユーザーを使用する場合、サーバー レベルのファイアウォール ルールではなく、データベース レベルのファイアウォール ルールを使用してアクセスを構成します。 詳細については、「[sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)」を参照してください。
  
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の包含データベースのユーザーについては、SSMS で多要素認証がサポートされます。 詳細については、「 [SQL Database と SQL Data Warehouse での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)」をご覧ください。  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] の包含データベースのユーザーについては、SSMS で多要素認証がサポートされます。 詳細については、[SQL Database と [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] での Azure AD MFA のための SSMS のサポート](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)に関するページを参照してください。  
   
 ### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  
@@ -353,13 +354,13 @@ SQL Managed Instance データベースでユーザーを作成するとき、lo
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. SQL Server ログインに基づくデータベース ユーザーを作成する  
  次の例では、最初に `AbolrousHazem` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成し、次に対応するデータベース ユーザー `AbolrousHazem` を `AdventureWorks2012` に作成します。  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 ユーザー データベースに変更します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では `USE AdventureWorks2012` ステートメントを使用します。 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、ユーザー データベースへの新しい接続を作成する必要があります。
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -367,7 +368,7 @@ GO
 ### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. 既定のスキーマでデータベース ユーザーを作成する  
  次の例では、まず `WanidaBenshoof` というサーバー ログインをパスワード付きで作成し、次に対応するデータベース ユーザー `Wanida` を既定のスキーマ `Marketing` で作成します。  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -381,7 +382,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -394,7 +395,7 @@ GO
 ###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. ログインのないユーザーを作成して使用する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップされないデータベース ユーザー `CustomApp` を作成します。 その後、ユーザー `adventure-works\tengiz0` に、`CustomApp` ユーザーの権限を借用する権限を許可します。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -403,14 +404,14 @@ GO
   
  ユーザー `CustomApp` が `adventure-works\tengiz0` の資格情報を使用するには、次のステートメントを実行します。  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  `adventure-works\tengiz0` の資格情報に戻すには、次のステートメントを実行します。  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -420,7 +421,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 この例は DEFAULT_LANGUAGE が削除された場合に [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] で機能します。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -435,7 +436,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -447,12 +448,11 @@ GO
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. 暗号化されたデータをコピーするためのユーザーを作成する  
@@ -460,7 +460,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  
@@ -471,7 +471,7 @@ WITH
 
  Azure AD ログインから Azure AD ユーザーを作成するには、次の構文を使用します。
 
- `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql#examples) 例で作成されました。
+ `sysadmin` ロールで付与された Azure AD ログインを使用してマネージド インスタンスにサインインします。 次の命令文ではログイン bob@contoso.com から Azure AD ユーザー bob@contoso.com が作成されます。 このログインは [CREATE LOGIN](./create-login-transact-sql.md#examples) 例で作成されました。
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -516,5 +516,5 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [包含データベース](../../relational-databases/databases/contained-databases.md)   
- [Azure Active Directory の認証を使用して、SQL データベースに接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
- [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
+ [Azure Active Directory の認証を使用して、SQL データベースに接続する](/azure/azure-sql/database/authentication-aad-overview)   
+ [データベース エンジンの権限の概要](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)

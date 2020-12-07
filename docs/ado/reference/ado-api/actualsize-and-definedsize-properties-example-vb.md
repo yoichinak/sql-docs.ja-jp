@@ -1,8 +1,9 @@
 ---
+description: ActualSize とのサイズプロパティの例 (VB)
 title: ActualSize とのサイズプロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8694873320659b69ef127a7cd3056185fc1b9f9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 67fd214c594a808955e54edbb9ccb4e7d424e836
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976933"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize とのサイズプロパティの例 (VB)
-この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティと defined [size](../../../ado/reference/ado-api/definedsize-property.md)プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。  
+この例では、 [ActualSize](./actualsize-property-ado.md) プロパティと defined [size](./definedsize-property.md) プロパティを使用して、フィールドの定義済みのサイズと実際のサイズを表示します。  
   
 ```vb
 'BeginActualSizeVB  
@@ -88,6 +89,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- ["未定義のサイズ" プロパティ](../../../ado/reference/ado-api/definedsize-property.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)
+ [ActualSize プロパティ (ADO)](./actualsize-property-ado.md)   
+ ["未定義のサイズ" プロパティ](./definedsize-property.md)   
+ [Field オブジェクト](./field-object.md)

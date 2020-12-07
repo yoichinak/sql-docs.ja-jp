@@ -4,7 +4,7 @@ description: '[検索と置換] ダイアログボックスの [検索する文�
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8e2766939038879d92de0f8f73b5c2eab38f45d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f8f8ece77ca6d756ff621ded095e25e062508a23
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122793"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036345"
 ---
 # <a name="search-text-with-wildcards"></a>ワイルドカードを使用したテキスト検索
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,5 +45,5 @@ ms.locfileid: "87122793"
 |文字のセット|[ ]|セット内に指定されている任意の 1 文字に相当します。|  
   
 ## <a name="see-also"></a>参照  
- [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
+ [検索と置換](./search-and-replace.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)

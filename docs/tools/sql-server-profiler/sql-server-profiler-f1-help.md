@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722641"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713800"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 
@@ -52,7 +52,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |---|---
 |**[イベント]** 列|イベント列のチェック ボックスをオンまたはオフにして、トレースするイベントを指定します。 **[イベント]** 列は、イベント カテゴリ別に分類されています。 テンプレートで指定されているイベント クラスが自動的に選択されます。 詳しくは、「 [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
 |データ列|必要なイベント列とデータ列に対応するチェック ボックスをオンにして、トレースするデータ列を指定します。 トレースの対象になる各イベントに対応するイベント列は、既定ですべてオンになっています。  
-|フィルター|フィルターを指定するには、データ列のヘッダーをクリックし、フィルター基準を入力します。 フィルター選択されるデータ列については、 **[フィルターの編集]** ダイアログ ボックスの列ラベルの左側にフィルターのアイコンが表示されます。 詳細については、「 [SQL Server Profiler - [フィルターの編集]](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)」を参照してください。  
+|フィルター|フィルターを指定するには、データ列のヘッダーをクリックし、フィルター基準を入力します。 フィルター選択されるデータ列については、 **[フィルターの編集]** ダイアログ ボックスの列ラベルの左側にフィルターのアイコンが表示されます。 詳細については、「 [SQL Server Profiler - [フィルターの編集]](?view=sql-server-ver15)」を参照してください。  
 |**[すべてのイベントを表示する]**|表示できるイベントをすべて表示します。 既定では、 **[イベントの選択]** グリッドで選択されている行だけが表示されます。 このチェック ボックスをオフにすると、 **[イベントの選択]** グリッドで選択されていないイベントがすべて非表示になります。  
 |**[すべての列を表示]**|表示できるデータ列をすべて表示します。 既定では、選択されているデータ列だけが表示されます。 このチェック ボックスをオフにすると、 **[イベントの選択]** グリッドで選択されていないデータ列がすべて非表示になります。  
 |**列フィルター**|**[フィルターの編集]** ダイアログ ボックスを起動します。 このダイアログ ボックスを使用して、データ列のフィルターを編集できます。  
@@ -279,5 +279,4 @@ Microsoft SQL Server Profiler および チューニング アドバイザーで
 ## <a name="see-also"></a>関連項目 
 [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [サーバーのパフォーマンスと利用状況の監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

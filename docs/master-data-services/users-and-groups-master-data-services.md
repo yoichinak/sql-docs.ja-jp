@@ -1,5 +1,6 @@
 ---
-title: ユーザーおよびグループ (Master Data Services) | Microsoft Docs
+title: ユーザーとグループ
+description: マスターデータマネージャー web アプリケーションへのアクセス権を付与する方法について説明します。 ユーザーは適切なアカウントを持っている必要があります。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f52031d8dead33601dd9f60e5475da53b0b9c9d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0136c2fe08e59169eda2b41a0557b7fd66c3e437
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92258059"
 ---
 # <a name="users-and-groups-master-data-services"></a>ユーザーおよびグループ (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションにアクセスするには、Windows ドメイン アカウント、または [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] がインストールされているサーバー コンピューター上のアカウントがユーザーに必要です。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] へのアクセスを許可するには、次のいずれかを実行します。  
   
@@ -44,10 +45,10 @@ ms.locfileid: "68102580"
   
  個々のユーザーに追加の権限を割り当てたり、ユーザーを [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスできる複数のグループに含めたりしないでください。 また、特定のメンバーに対するグループのアクセスを制限する必要がない限り、階層メンバーの権限は使用しないでください。  
   
-## <a name="see-also"></a>関連項目  
- [ユーザーを追加する (マスター データ サービス)](../master-data-services/add-a-user-master-data-services.md)   
- [グループを追加する (マスター データ サービス)](../master-data-services/add-a-group-master-data-services.md)   
- [ユーザーまたはグループを削除する (マスター データ サービス)](../master-data-services/delete-users-or-groups-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [ユーザー &#40;マスターデータサービスを追加&#41;](../master-data-services/add-a-user-master-data-services.md)   
+ [グループ &#40;マスターデータサービスを追加&#41;](../master-data-services/add-a-group-master-data-services.md)   
+ [マスターデータサービス &#40;のユーザーまたはグループを削除&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
  [ユーザーのアクセス許可のテスト (マスター データ サービス)](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

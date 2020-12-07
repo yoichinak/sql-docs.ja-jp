@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_brokers (Transact-SQL)
 title: dm_os_memory_brokers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_brokers dynamic management view
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6d59886a480f38ce9e734e8dae7baa7604922c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d521d1992d9afe60ea5ba3f664823c332f63882
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898757"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536973"
 ---
 # <a name="sysdm_os_memory_brokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +49,14 @@ ms.locfileid: "85898757"
 |**future_allocations_kb**|**bigint**|次の数秒で実行される、割り当ての予測数 (KB 単位)。|  
 |**overall_limit_kb**|**bigint**|ブローカーが割り当てることができるメモリの最大量 (KB 単位)。|  
 |**last_notification**|**nvarchar(60)**|メモリ使用量の推奨値。現在の設定と使用パターンに基づいて決定されます。 有効な値は次のとおりです。<br /><br /> 拡大<br /><br /> shrink<br /><br /> 安定|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium レベルでは、データベースの権限が必要です `VIEW DATABASE STATE` 。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Standard レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
   [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

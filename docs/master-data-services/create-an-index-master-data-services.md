@@ -1,4 +1,5 @@
 ---
+description: インデックスを作成する (マスター データ サービス)
 title: インデックスを作成する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461830"
 ---
 # <a name="create-an-index-master-data-services"></a>インデックスを作成する (マスター データ サービス)
 
@@ -23,12 +24,12 @@ ms.locfileid: "85813082"
 
   頻繁にクエリを実行する属性の一覧にカスタム インデックスを作成して、クエリのパフォーマンスを高めます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   [システム管理] 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
  **インデックスを作成するには**  
   
@@ -52,7 +53,7 @@ ms.locfileid: "85813082"
   
 |列名|説明|  
 |-----------------|-----------------|  
-|Status|インデックスの状態。<br /><br /> [**保存**] をクリックすると、![更新中の状態の](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン")画像を示すアイコンが表示され、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生した場合は、![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] ステータスイメージのアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")が表示されます。|  
+|Status|インデックスの状態。<br /><br /> [ **保存**] をクリックすると、 ![更新中の状態の](../master-data-services/media/mds-statusicon-updating.png "状態を更新するためのアイコン") 画像を示すアイコンが表示され、インデックスが更新中であることを示します。<br /><br /> インデックスの作成中または編集中にエラーが発生した場合は、 ![エラー状態の画像のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") が表示されます。<br /><br /> それ以外の場合、状態は [OK] になり、 ![[OK] ステータスイメージのアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン") が表示されます。|  
 |名前|インデックス名。|  
 |[Is Unique]|インデックスが一意かどうかを示します。|  
 |[On Attributes] (属性)|インデックスが定義されている属性の表示名を示します。|  
@@ -70,7 +71,7 @@ ms.locfileid: "85813082"
 ## <a name="next-steps"></a>次の手順  
  [インデックスの編集と削除 (マスター データ サービス)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)  
   
   

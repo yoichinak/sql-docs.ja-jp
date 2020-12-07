@@ -1,5 +1,6 @@
 ---
-title: メンバーまたはコレクションを再アクティブ化する (マスター データ サービス) | Microsoft Docs
+description: メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)
+title: メンバーまたはコレクションを再アクティブ化する
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257939"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、次のいずれかの状態にあったメンバーを再アクティブ化できます。  
   
@@ -42,12 +43,12 @@ ms.locfileid: "68093113"
   
  メンバーまたはコレクションを再アクティブ化すると、以前のトランザクションがすべて復元されます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の **[バージョン管理]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>メンバーまたはコレクションを再アクティブ化するには  
   
@@ -65,9 +66,9 @@ ms.locfileid: "68093113"
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。 **[新しい値]** 列に **[アクティブ]** と表示され、新しいトランザクションが追加されます。  
   
-## <a name="see-also"></a>関連項目  
- [メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [マスターデータサービス &#40;のメンバーまたはコレクションを削除&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
+ [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)   
  [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
   

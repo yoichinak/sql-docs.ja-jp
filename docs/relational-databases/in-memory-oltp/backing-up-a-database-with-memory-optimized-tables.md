@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef4d351d9eb1cdfc58cfe78696b21451163c42c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723401"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867336"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>メモリ最適化テーブルが含まれるデータベースのバックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,6 +70,5 @@ ms.locfileid: "85723401"
  データベース サイズの大部分がメモリ最適化テーブルである場合は、差分バックアップによってデータベース バックアップのサイズを大幅に削減することができます。 一般的な OLTP ワークロードの場合、差分バックアップは完全バックアップより非常に小さくなります。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルのバックアップ、復元、復旧](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [メモリ最適化テーブルのバックアップ、復元、復旧](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

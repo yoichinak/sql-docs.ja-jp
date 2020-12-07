@@ -1,4 +1,5 @@
 ---
+description: CERTENCODED (Transact-SQL)
 title: CERTENCODED (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a82e5c9a18f1bb21ac58d3158395881ee973a9a5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 61cc512f017701c6349430bd1a4cc9e878ce1de3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111663"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114962"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87111663"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CERTENCODED ( cert_id )  
 ```  
   

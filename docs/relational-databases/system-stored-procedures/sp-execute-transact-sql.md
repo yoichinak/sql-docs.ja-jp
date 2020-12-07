@@ -1,4 +1,5 @@
 ---
+description: sp_execute (Transact-sql)
 title: sp_execute (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfa6e7d37aae2a5ffc58828d47ace11d558487
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 49b5548d149640b7e9d78b38c70c22fd6c5ae163
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392937"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005609"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87392937"
 ## <a name="syntax"></a>構文  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_execute handle OUTPUT  
     [,bound_param  ]  [,...n ]  ]  
@@ -43,16 +44,16 @@ sp_execute handle OUTPUT
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- Sp_prepare によって返される*ハンドル*値です。 *handle*は、 **int**入力値を呼び出す必須のパラメーターです。  
+ Sp_prepare によって返される *ハンドル* 値です。 *handle* は、 **int** 入力値を呼び出す必須のパラメーターです。  
   
  *bound_param*  
- 追加のパラメーターを使用することを示します。 *bound_param*は、プロシージャの追加パラメーターを示すために、任意のデータ型の入力値を呼び出す必須のパラメーターです。  
+ 追加のパラメーターを使用することを示します。 *bound_param* は、プロシージャの追加パラメーターを示すために、任意のデータ型の入力値を呼び出す必須のパラメーターです。  
   
 > [!NOTE]  
 >  *bound_param*は、sp_prepare*params*値によって行われた宣言と一致する必要があり、 * @name = value*または*value*の形式で指定できます。  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   
   

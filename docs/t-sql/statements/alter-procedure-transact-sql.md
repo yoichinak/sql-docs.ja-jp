@@ -1,4 +1,5 @@
 ---
+description: ALTER PROCEDURE (Transact-SQL)
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -20,15 +21,15 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676696f50495ab042bbaf38bf9b6fd1ce374d3a7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 554855a0ed47914c06099a3297b1c1a7e3512c79
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381266"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128081"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86381266"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -57,7 +58,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -69,8 +70,8 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```sql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
     [ { @parameterdata_type } [= ] ] [ ,...n ]  
@@ -105,7 +106,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはストアド プロシージャによって動的に作成され、その内容は変化します。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
- *既定値*  
+ *default*  
  パラメーターの既定値です。  
   
  OUT | OUTPUT  
@@ -148,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
- CLR ストアド プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 クラス名に名前空間とその区切り文字のピリオド ( **.** ) が含まれる場合は、クラス名をかっこ ( **[ ]** ) または引用符 ( **""** ) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
+ CLR ストアド プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 クラス名に名前空間とその区切り文字のピリオド (**.**) が含まれる場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
   
  既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 共通言語ランタイム モジュールを参照するデータベース オブジェクトを作成、変更、および削除することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれらの参照を実行するには、[clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。 このオプションを有効にするには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。  
   
@@ -164,7 +165,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
   
  ストアド プロシージャについて詳しくは、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」をご覧ください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  プロシージャの **ALTER** 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
@@ -172,8 +173,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ## <a name="examples"></a>例  
  次の例では、`uspVendorAllInfo` ストアド プロシージャを作成します。 このプロシージャは、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] を提供するすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返します。 このプロシージャを作成した後、別の結果セットを返すように変更されます。  
   
-```  
-  
+```sql
 IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE Purchasing.uspVendorAllInfo;  
 GO  
@@ -190,17 +190,16 @@ AS
     INNER JOIN Production.Product p  
       ON pv.ProductID = p.ProductID   
     ORDER BY v.Name ASC;  
-GO  
-  
+GO    
 ```  
   
  次の例では、`uspVendorAllInfo` ストアド プロシージャを変更します。 EXECUTE AS CALLER 句を削除し、指定した製品を供給するベンダーだけを返すようにプロシージャの本体を変更します。 ここでは、 `LEFT` 関数および `CASE` 関数を使用して、結果セットの表示をカスタマイズします。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
-    @Product varchar(25)   
+    @Product VARCHAR(25)   
 AS  
     SET NOCOUNT ON;  
     SELECT LEFT(v.Name, 25) AS Vendor, LEFT(p.Name, 25) AS 'Product name',   
@@ -224,7 +223,6 @@ AS
     WHERE p.Name LIKE @Product  
     ORDER BY v.Name ASC;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

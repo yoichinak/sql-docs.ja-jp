@@ -1,4 +1,5 @@
 ---
+description: ドリルダウンレベル (MDX)
 title: ドリルダウンレベル (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ef2f94eb843b3ffbfbb67eb6ca01f2114522e024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfdb8e77fcb92fe208e83f45c32a5c20c5d29615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421906"
 ---
 # <a name="drilluplevel-mdx"></a>ドリルダウンレベル (MDX)
 
@@ -34,10 +35,10 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ドリルダウンレベル**関数は、指定されたセットに含まれるメンバーに基づいて階層的に編成されたメンバーのセットを返します。 指定されたセット内のメンバーの間に順序が保持されます。  
   
- レベル式が指定されている場合、**ドリル**ダウンレベル関数は、指定されたレベルを超えるメンバーだけを取得してセットを構築します。 レベル式が指定されていて、指定されたレベルのメンバーが指定されたセットで表されていない場合、指定されたセットが返されます。  
+ レベル式が指定されている場合、 **ドリル** ダウンレベル関数は、指定されたレベルを超えるメンバーだけを取得してセットを構築します。 レベル式が指定されていて、指定されたレベルのメンバーが指定されたセットで表されていない場合、指定されたセットが返されます。  
   
  レベル式が指定されていない場合、指定されたセット内で参照されている最初のディメンションの最下位レベルより 1 つ上のレベルにあるメンバーだけを取得してセットを構築します。  
   

@@ -1,4 +1,5 @@
 ---
+description: ユーザー定義関数の表示
 title: ユーザー定義関数の表示 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727061"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88460194"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85727061"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **関数に関する情報を取得するために使用するもの:**  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85727061"
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>ユーザー定義関数のプロパティを表示するには  
   
-1.  **オブジェクト エクスプローラー**で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プロパティを表示する関数を含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
 2.  プラス記号をクリックして **[関数]** フォルダーを展開します。  
   
@@ -70,12 +71,12 @@ ms.locfileid: "85727061"
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
 
-     **[関数のプロパティ -** function_name _]_ ダイアログ ボックスに、次のプロパティが表示されます。  
+     **[関数のプロパティ -** _function_name_] ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **[データベース]**  
      この関数を含むデータベースの名前です。  
   
-     **[サーバー]**  
+     **サーバー**  
      現在のサーバー インスタンスの名前です。  
   
      **User**  
@@ -87,7 +88,7 @@ ms.locfileid: "85727061"
      **[実行時の権限]**  
      関数の実行コンテキストです。  
   
-     **Name**  
+     **名前**  
      現在の関数の名前です。  
   
      **[スキーマ]**  
@@ -115,7 +116,7 @@ ms.locfileid: "85727061"
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>関数の定義およびプロパティを取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -156,7 +157,7 @@ ms.locfileid: "85727061"
   
 #### <a name="to-get-the-dependencies-of-a-function"></a>関数の依存関係を取得するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

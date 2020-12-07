@@ -1,4 +1,5 @@
 ---
+description: 外部結合の作成 (Visual Database Tools)
 title: 外部結合の作成
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3328277c15511a94603436c7c845671e9fd8dc86
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3e337deac89fb3e788def041524801ad94db4943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468438"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86000065"
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラム ペインで結合線を選択し、 **[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
+2.  ダイアグラム ペインで結合線を選択し、**[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   

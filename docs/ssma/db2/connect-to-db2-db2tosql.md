@@ -1,4 +1,5 @@
 ---
+description: DB2 への接続 (DB2ToSQL)
 title: DB2 への接続 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426974"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
-[ **Db2 への接続**] ダイアログボックスを使用して、移行する db2 データベースに接続します。  
+[ **Db2 への接続** ] ダイアログボックスを使用して、移行する db2 データベースに接続します。  
   
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **DB2 への接続**] を選択します。 以前に接続している場合は、コマンドが**DB2 に再接続**されます。  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **DB2 への接続**] を選択します。 以前に接続している場合は、コマンドが **DB2 に再接続**されます。  
   
 ## <a name="options"></a>オプション  
 **プロバイダー**  

@@ -1,4 +1,5 @@
 ---
+description: パッケージでプロパティ式を使用する
 title: パッケージでプロパティ式を使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d8775714da1c59e86a6ba62661610a0f5abbd11e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922291"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193183"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
 
@@ -56,7 +57,7 @@ ms.locfileid: "86922291"
   
  1 つのプロパティで使用できるプロパティ式は 1 つだけであり、1 つのプロパティ式は 1 つのプロパティだけに適用できます。 ただし、同じプロパティ式を複数個作成し、それらを異なるプロパティに割り当てることができます。  
   
- プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式で **DTSLoggingMode** 列挙からの値を使用する **LoggingMode** プロパティを設定する場合、プロパティ式では表示名 **Enabled**、 **Disabled**、または **UseParentSetting**ではなく 0、1、または 2 を使用する必要があります。 詳細については、「 [Enumerated Constants in Property Expressions](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
+ プロパティによっては、列挙子の値を使用して設定するものもあります。 プロパティ式で列挙子メンバーを参照するときは、その列挙子メンバーの表示名に相当する数値を使用する必要があります。 たとえば、プロパティ式で **DTSLoggingMode** 列挙からの値を使用する **LoggingMode** プロパティを設定する場合、プロパティ式では表示名 **Enabled**、 **Disabled**、または **UseParentSetting** ではなく 0、1、または 2 を使用する必要があります。 詳細については、「 [Enumerated Constants in Property Expressions](../../integration-services/expressions/enumerated-constants-in-property-expressions.md)」(プロパティ式における列挙定数) を参照してください。  
   
 ## <a name="property-expression-user-interface"></a>プロパティ式のユーザー インターフェイス  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、プロパティ式を作成および管理するためのツール セットが用意されています。  
@@ -118,7 +119,7 @@ ms.locfileid: "86922291"
  プロパティ式でのシステム変数、演算子、関数、および文字列リテラルの使い方を次のサンプル式に示します。  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>パッケージの LoggingMode プロパティ用のプロパティ式  
- 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値 1 は LoggingMode 列挙子メンバー **Enabled**に相当する整数で、値 2 はメンバー **Disabled**に相当する整数です。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。  
+ 次のプロパティ式を使用すると、パッケージの LoggingMode プロパティを設定できます。 この式では、DAY 関数と GETDATE 関数を使用して、ある日付の日要素を表す整数を取得します。 日要素が 1 日または 15 日の場合、ログ記録が有効です。それ以外の場合は、ログ記録が無効です。 値 1 は LoggingMode 列挙子メンバー **Enabled** に相当する整数で、値 2 はメンバー **Disabled** に相当する整数です。 式では、列挙子のメンバー名ではなく、数値を使用する必要があります。  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -176,6 +177,5 @@ ms.locfileid: "86922291"
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [パッケージで変数を使用する](../integration-services-ssis-variables.md)  
   

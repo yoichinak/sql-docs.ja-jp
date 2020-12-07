@@ -1,8 +1,9 @@
 ---
+description: 'Field (Visual C++ 構文インデックス #import)'
 title: 'Field (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e2c57f4e00b4a4dae03a11ee357dd8f1d6398e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d9c7abe0375f02d0bb0250d283acca2d5ca1a37
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758778"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973223"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Field (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  

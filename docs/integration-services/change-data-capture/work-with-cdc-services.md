@@ -1,4 +1,5 @@
 ---
+description: CDC Service の操作
 title: CDC Service の操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921448"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88394498"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
 
@@ -43,7 +44,7 @@ ms.locfileid: "86921448"
   
  [新しい Oracle CDC Service] ダイアログ ボックスが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC Service の操作方法](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Oracle CDC Service の作成と編集](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

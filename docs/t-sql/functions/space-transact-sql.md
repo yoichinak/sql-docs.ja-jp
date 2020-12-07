@@ -1,4 +1,5 @@
 ---
+description: SPACE (Transact-SQL)
 title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d049dc8aaadc2abb952fcbe864b2a6f35bdd33fd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 11eb965ba1917d413e212ecca49a8abddc231379
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112810"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379917"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ SPACE ( integer_expression )
 ## <a name="examples"></a>例  
  次の例では、`Person` の `AdventureWorks2012` テーブルに格納されている人名の姓を取り出して、コンマ、空白文字 2 つ、および名を連結します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
@@ -69,7 +70,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`DimCustomer` の `AdventureWorksPDW2012` テーブルに格納されている人名の姓を取り出して、コンマ、空白文字 2 つ、および名を連結します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  

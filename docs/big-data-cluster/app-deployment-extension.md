@@ -2,19 +2,19 @@
 title: アプリ展開の拡張機能
 titleSuffix: SQL Server big data clusters
 description: SQL Server ビッグ データ クラスターに、Python または R スクリプトをアプリケーションとして展開します。
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728867"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678916"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Visual Studio Code を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]にアプリケーションを展開する方法
 
@@ -93,7 +93,7 @@ azdata bdc endpoint list
 
 ### <a name="app-template"></a>アプリ テンプレート
 
-Visual Studio Code 内で、アプリの成果物を保存する*ワークスペースを開く*必要があります。
+Visual Studio Code 内で、アプリの成果物を保存する *ワークスペースを開く* 必要があります。
 
 いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
 
@@ -153,9 +153,9 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 
 `Links` をクリックすると、展開されたアプリの `swagger.json` にアクセスできることがわかります。これにより、アプリを呼び出す独自のクライアントを作成できます。
 
-![Swagger](media/vs-extension/swagger.png)
+![VS Code UI のスクリーンショット。swagger.json ファイルが表示されています。](media/vs-extension/swagger.png)
 
-詳細については、「[ビッグ データ クラスターでアプリケーションを使用する](big-data-cluster-consume-apps.md)」を参照してください。
+詳細については、「[ビッグ データ クラスターでアプリケーションを使用する](app-consume.md)」を参照してください。
 
 ### <a name="app-run"></a>アプリ実行
 
@@ -199,7 +199,7 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 
 ## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](app-consume.md)に関するページを参照してください。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。
 

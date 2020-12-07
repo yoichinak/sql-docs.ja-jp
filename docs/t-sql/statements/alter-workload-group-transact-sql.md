@@ -1,4 +1,5 @@
 ---
+description: ALTER WORKLOAD GROUP (Transact-SQL)
 title: ALTER WORKLOAD GROUP (Transact-SQL)
 ms.custom: ''
 ms.date: 05/05/2020
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909a970b37b23a1767d45bdae14e29441822acb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: acbd75ed614f6f7a2c018fb537b01528fe166e80
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864463"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496967"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -36,7 +37,7 @@ ms.locfileid: "87864463"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -57,7 +58,7 @@ ms.locfileid: "87864463"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -78,7 +79,7 @@ ms.locfileid: "87864463"
         [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

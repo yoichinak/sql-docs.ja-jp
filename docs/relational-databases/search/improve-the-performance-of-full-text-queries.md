@@ -1,4 +1,5 @@
 ---
+description: フルテキスト クエリのパフォーマンスの向上
 title: フルテキスト クエリのパフォーマンスの向上 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fe209581f1ce57d40c7757333a6da8ea84898e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 783d2a0e80728f323b5b9d25048c10189df695a3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91868048"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>フルテキスト クエリのパフォーマンスの向上
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85629471"
   
 -   フルテキスト キーまたは順位情報だけが必要な場合は、CONTAINS の代わりに [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) を使用し、FREETEXT の代わりに [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用します。  
   
--   結果を制限してパフォーマンスを向上させるには、FREETEXTTABLE 関数および CONTAINSTABLE 関数の *top_n_by_rank* パラメーターを使用します。 *top_n_by_rank* を使用すると、最も関連性の高いヒットだけを呼び出すことができます。 ビジネス シナリオですべてのヒットを呼び出す必要がない場合 (つまり、 *総呼び出し*が不要な場合) にのみ、このパラメーターを使用してください。  
+-   結果を制限してパフォーマンスを向上させるには、FREETEXTTABLE 関数および CONTAINSTABLE 関数の *top_n_by_rank* パラメーターを使用します。 *top_n_by_rank* を使用すると、最も関連性の高いヒットだけを呼び出すことができます。 ビジネス シナリオですべてのヒットを呼び出す必要がない場合 (つまり、 *総呼び出し* が不要な場合) にのみ、このパラメーターを使用してください。  
   
     > [!NOTE]  
     >  一般に、総呼び出しは法務シナリオで必要とされますが、e ビジネスなどのビジネス シナリオではパフォーマンスの方が重視されることがあります。  
@@ -49,10 +50,9 @@ ms.locfileid: "85629471"
 -   選択的リレーションの述語が含まれているアプリケーションにおいて、選択的リレーションの述語と非選択的なフルテキスト述語を使用するクエリでは、クエリ オプティマイザーを使用するように記述した場合に最適なパフォーマンスを得られる可能性があります。 この場合、効果的なクエリ プランを作成するために述語を利用するかプッシュダウンを適用するかが、クエリ オプティマイザーによって判断されます。 この方法は、リレーショナル データをフルテキスト データとしてインデックス作成するよりも単純であり、多くの場合、効率的でもあります。  
   
 ## <a name="related-resources"></a>関連リソース  
- [SQL Server 2008 フルテキスト検索: 内部構造と機能強化](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 フルテキスト検索: 内部構造と機能強化](/previous-versions/sql/sql-server-2008/cc721269(v=sql.100))  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
-  
   

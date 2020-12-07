@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 fn_available_backups (Transact-sql)
 title: managed_backup。 fn_available_backups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23c7f7cb176bf91494b41cf8b81435b287d261fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419536"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup。 fn_available_backups (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86052888"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @database_name  
  データベースの名前。 @database_nameは NVARCHAR (512) です。  
   
@@ -70,7 +72,7 @@ LSN にギャップがある場合は、ログチェーンが中断されてい�
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- この関数に対する**SELECT**権限が必要です。  
+ この関数に対する **SELECT** 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] データベース ' MyDB ' に対してバックアップされている利用可能なすべてのバックアップを一覧表示します。  

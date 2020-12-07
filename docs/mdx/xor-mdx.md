@@ -1,4 +1,5 @@
 ---
+description: XOR (MDX)
 title: XOR (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b74d4ec3d92469dc0372218bfe66375c0844384e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421876"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -38,8 +39,8 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>戻り値  
  1つの引数だけが**true**と評価される場合に**True**を返すブール値です。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>Remarks  
- **XOR**演算子は、両方のパラメーターをブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理的な除外を実行します。 次の表は、 **XOR**演算子が論理的な除外を実行する方法を示しています。  
+## <a name="remarks"></a>解説  
+ **XOR**演算子は、両方のパラメーターをブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理的な除外を実行します。 次の表は、 **XOR** 演算子が論理的な除外を実行する方法を示しています。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  

@@ -1,7 +1,7 @@
 ---
 title: Azure へのマネージド バックアップを使用する
 description: Microsoft Azure への SQL Server マネージド バックアップをデータベース レベルおよびインスタンス レベルで有効にする方法と、通知を有効にしてバックアップ アクティビティを監視する方法について説明します。
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, devx-track-azurecli
 ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -9,21 +9,21 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 554bb3164902afa909556ea6836335fdd76dd79a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248643"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96126972"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップを有効にする
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、データベース レベルとインスタンス レベルの両方で、既定の設定を使用して [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする方法について説明します。 また、電子メール通知を有効にする方法と、バックアップ処理を監視する方法についても説明します。  
   
- このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  
+ このチュートリアルでは、Azure PowerShell を使用します。 チュートリアルを開始する前に、 [Azure PowerShell をダウンロードしてインストールします](/powershell/azure/)。  
   
 > [!IMPORTANT]  
 >  また、高度なオプションを有効にする場合やカスタムのスケジュールを使用する場合、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を有効にする前にまずその設定を構成します。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "87248643"
 
 このプロセスには、Azure アカウントが必要です。 既にアカウントがある場合は、次の手順に進みます。 ない場合は、 [無料評価版](https://azure.microsoft.com/pricing/free-trial/) から始めるか、 [購入オプション](https://azure.microsoft.com/pricing/purchase-options/)を調べることができます。
 
-ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。 
+ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](/azure/storage/common/storage-account-create)」を参照してください。 
 
 #### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ URL が含まれている場合、疑問符で SAS トークンから区切り�
 |**SAS トークン**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、[Shared Access Signature に関する記事のパート 1 の SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。  
+SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録します。 SAS の詳細については、[Shared Access Signature に関する記事のパート 1 の SAS モデル](/azure/storage/common/storage-sas-overview)に関するページを参照してください。  
   
 ## <a name="enable-managed-backup-to-azure"></a>Azure へのマネージド バックアップを有効にする
   
@@ -211,4 +211,4 @@ SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録
 このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
   
 ## <a name="see-also"></a>関連項目  
- [Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

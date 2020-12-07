@@ -1,4 +1,5 @@
 ---
+description: ビット処理演算子
 title: ビット処理演算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed7036599f6415162514c2b9d9a243430ff30d9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484055"
 ---
 # <a name="bitwise-operators"></a>ビット処理演算子
 
@@ -25,7 +26,7 @@ ms.locfileid: "68016969"
 |演算子|説明|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|2つの数値式の論理積を実行します。|  
-|[勧め](../mdx/is-mdx.md)|2つのオブジェクト式の論理比較を実行します。|  
+|[IS](../mdx/is-mdx.md)|2つのオブジェクト式の論理比較を実行します。|  
 |[NOT](../mdx/not-mdx.md)|数値式の論理否定を実行します。|  
 |[OR](../mdx/or-mdx.md)|2つの数値式の論理和を実行します。|  
 |[XOR](../mdx/xor-mdx.md)|2つの数値式に対して論理的な除外を実行します。|  

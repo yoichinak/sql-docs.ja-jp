@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.agp3autofailover.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 79992ce77b803858c86d4bace6b9f6b128688447
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1a5609955ca61cb1ef2df4a940e749c6cb7c038c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565598"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584745"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性グループで自動フェールオーバーの準備ができていない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

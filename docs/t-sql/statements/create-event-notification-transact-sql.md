@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT NOTIFICATION (Transact-SQL)
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f814c52713663a1977038f772ea1fc0389e87d09
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392750"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128018"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,6 @@ ms.locfileid: "86392750"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   
 [ WITH FAN_IN ]  
@@ -53,7 +53,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 
 ## <a name="arguments"></a>引数
  *event_notification_name*  
- イベント通知の名前です。 イベント通知名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があり、作成先のスコープ (SERVER、DATABASE、または *object_name*) で一意であることが必要です。  
+ イベント通知の名前です。 イベント通知名は [識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があり、作成先のスコープ (SERVER、DATABASE、または *object_name*) で一意であることが必要です。  
   
  SERVER  
  イベント通知のスコープを現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに適用します。 指定した場合、FOR 句で指定したイベントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで発生するたびに、通知が行われます。  
@@ -89,7 +89,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  *event_group*  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] または SQL トレース イベントの定義済みグループの名前を指定します。 イベント通知は、イベント グループに属するイベントが実行された後に実行されます。 DDL イベント グループと、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] イベント、およびそれらを定義できるスコープの一覧については、「[DDL イベント グループ](../../relational-databases/triggers/ddl-event-groups.md)」を参照してください。  
   
- *event_group* は、対応するイベントの種類を**sys.events** カタログ ビューに追加した場合、CREATE EVENT NOTIFICATION ステートメントが終了したときにマクロとしても動作します。  
+ *event_group* は、対応するイベントの種類を **sys.events** カタログ ビューに追加した場合、CREATE EVENT NOTIFICATION ステートメントが終了したときにマクロとしても動作します。  
   
  **'** *broker_service* **'**  
  イベント インスタンスのデータを受信するターゲット サービスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、イベント通知用に対象サービスに対して 1 つ以上のメッセージ交換が開きます。 このサービスは、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントのメッセージ型と、メッセージの送信に使用されるコントラクトに従っている必要があります。  
@@ -97,7 +97,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  メッセージ交換は、イベント通知が削除されるまで開いたままになります。 特定のエラーが発生すると、メッセージ交換が予定よりも早く閉じる場合があります。 明示的にメッセージ交換の一部または全部を終了することで、ターゲット サービスでそれ以上メッセージを受信しないようにできます。  
   
  { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
- *broker_service* を解決する Service Broker インスタンスを指定します。 **sys.databases** カタログ ビューの **service_broker_guid** 列にクエリを実行することで、特定の Service Broker の値を取得できます。 現在のデータベースの Service Broker インスタンスを指定するには、 **'current database'** を使用します。 **'current database'** は大文字と小文字を区別しない文字列リテラルです。  
+ *broker_service* を解決する Service Broker インスタンスを指定します。 **sys.databases** カタログ ビューの **service_broker_guid** 列にクエリを実行することで、特定の Service Broker の値を取得できます。 現在のデータベースの Service Broker インスタンスを指定するには、**'current database'** を使用します。 **'current database'** は大文字と小文字を区別しない文字列リテラルです。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
@@ -135,24 +135,27 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  これらの例をコピーして実行するには、この GUID をお使いのコンピューターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの GUID に置き換える必要があります。 前述の「引数」セクションで説明したように、sys.databases カタログ ビューの service_broker_guid 列に対してクエリを実行することで **'** _broker\_instance\_specifier_ **'** を取得することができます。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. サーバー スコープのイベント通知を作成する  
- 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、`Object_Created` インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
+ 次の例では、[!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用する対象サービスの設定で必要となるオブジェクトを作成します。 対象サービスでは、イベント通知専用の開始サービスのメッセージ型とコントラクトが参照されます。 作成後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで `Object_Created` トレース イベントが発生するたびに通知を送信する対象サービスに対して、イベント通知が作成されます。  
   
 ```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
+
 --Create a service on the queue that references  
 --the event notifications contract.  
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 ([https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
 GO  
+
 --Create a route on the service to define the address   
 --to which Service Broker sends messages for the service.  
 CREATE ROUTE NotifyRoute  
 WITH SERVICE_NAME = 'NotifyService',  
 ADDRESS = 'LOCAL';  
-GO  
+GO 
+
 --Create the event notification.  
 CREATE EVENT NOTIFICATION log_ddl1   
 ON SERVER   
@@ -162,7 +165,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. データベース スコープのイベント通知を作成する  
- 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、`ALTER_TABLE` サンプル データベースで [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] イベントが発生した後に行われます。  
+ 次の例では、前の例と同じターゲット サービスに対してイベント通知を作成します。 イベント通知は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースで `ALTER_TABLE` イベントが発生した後に行われます。  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
@@ -175,7 +178,7 @@ TO SERVICE 'NotifyService',
 ### <a name="c-getting-information-about-an-event-notification-that-is-server-scoped"></a>C. サーバー スコープのイベント通知に関する情報を取得する  
  次の例では、`sys.server_event_notifications` カタログ ビューをクエリして、サーバー スコープで作成されたイベント通知 `log_ddl1` に関するメタデータを取得します。  
   
-```  
+```sql  
 SELECT * FROM sys.server_event_notifications  
 WHERE name = 'log_ddl1';  
 ```  

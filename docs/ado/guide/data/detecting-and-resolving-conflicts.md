@@ -1,8 +1,9 @@
 ---
+description: 競合の検出および解決
 title: 競合の検出と解決Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761088"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991393"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディエイトモードでレコードセットを処理する場合、同時実行の問題が発生する可能性は非常に低くなります。 一方、アプリケーションでバッチモードの更新を使用している場合、同じレコードを編集している別のユーザーが行った変更が保存される前に、1人のユーザーがレコードを変更する可能性があります。 このような場合は、アプリケーションで競合を適切に処理する必要があります。 最後のユーザーがサーバーに更新プログラムを送信することになります。 または、競合する2つの値のいずれかを選択することによって、優先する更新プログラムを最新のユーザーが判断できるようにすることもできます。  
@@ -113,7 +114,7 @@ ms.locfileid: "82761088"
   
  現在のレコードまたは特定のフィールドの Status プロパティを使用して、発生した競合の種類を特定できます。  
   
- エラー処理の詳細については、「[エラー処理](../../../ado/guide/data/error-handling.md)」を参照してください。  
+ エラー処理の詳細については、「 [エラー処理](./error-handling.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [バッチ モード](../../../ado/guide/data/batch-mode.md)
+ [バッチ モード](./batch-mode.md)

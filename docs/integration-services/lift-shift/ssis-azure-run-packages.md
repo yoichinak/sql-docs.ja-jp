@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 6da4e6ea9ecb867ab35c6e8c8fb6d5a85b2b7431
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4f6031cd363db4ae3c26511daf91811c3d133d1e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915328"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192543"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージを実行する
 
@@ -74,11 +74,11 @@ Azure SQL Database に接続し、Transact-SQL コードを実行できるあら
 
 ## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> SSIS パッケージの実行アクティビティを使用してパッケージを実行する
 
-詳細については、[Azure Data Factory で SSIS パッケージの実行アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)方法に関するページを参照してください。
+詳細については、[Azure Data Factory で SSIS パッケージの実行アクティビティを使用して SSIS パッケージを実行する](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)方法に関するページを参照してください。
 
 ## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> ストアド プロシージャ アクティビティを使用してパッケージを実行する
 
-詳細については、「[Azure Data Factory のストアド プロシージャ アクティビティを使用して SSIS パッケージを実行する](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)」をご覧ください。
+詳細については、「[Azure Data Factory のストアド プロシージャ アクティビティを使用して SSIS パッケージを実行する](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)」をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 

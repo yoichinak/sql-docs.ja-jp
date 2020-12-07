@@ -1,4 +1,5 @@
 ---
+description: '[ポリシー管理] ノード (オブジェクト エクスプローラー)'
 title: '[ポリシー管理] ノード (オブジェクト エクスプローラー) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fcd37d6584b38c50b35248124ade0a146af956d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8bdc9732ab9623d4053ee0408873cc533c4564b2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88494002"
 ---
 # <a name="policy-management-node-object-explorer"></a>[ポリシー管理] ノード (オブジェクト エクスプローラー)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  ここでは、 **のオブジェクト エクスプローラーの** PolicyManagement [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードに関する F1 ヘルプ トピックを紹介します。  
+   ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **PolicyManagement** ノードに関する F1 ヘルプ トピックを紹介します。  
   
 -   [[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   

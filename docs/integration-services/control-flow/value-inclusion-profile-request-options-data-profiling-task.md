@@ -1,4 +1,5 @@
 ---
+description: '[値包含プロファイル要求] のオプション (データ プロファイル タスク)'
 title: '[値包含プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913835"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430934"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -57,7 +58,7 @@ ms.locfileid: "86913835"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[値包含プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]** ( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
+-   **[データ]**( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
   
 -   **全般**  
   
@@ -104,7 +105,7 @@ ms.locfileid: "86913835"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -157,7 +158,7 @@ ms.locfileid: "86913835"
  **[MaxNumberOfViolations]**  
  出力で報告する包含違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[InclusionThresholdSetting]** で **[Exact]** が選択されている場合、このオプションは無効です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

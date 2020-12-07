@@ -1,4 +1,5 @@
 ---
+description: ClientNetworkProtocol クラス
 title: ClientNetworkProtocol クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientNetworkProtocol class
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 28921c2d11dad248eb497258ec3c3aa9a47654e3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ad9ac6a0915da30f998b3e02bdaeb0dfeb029a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889063"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522846"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

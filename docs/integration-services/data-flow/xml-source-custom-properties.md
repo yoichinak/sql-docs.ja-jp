@@ -1,4 +1,5 @@
 ---
+description: XML 入力元のカスタム プロパティ
 title: XML ソースのカスタム プロパティ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9d64d5b477ff31334bc6b60b88e1bbb01811d8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8aa4a0c94f0728162230c5a282cbac7410643a4b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920308"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194556"
 ---
 # <a name="xml-source-custom-properties"></a>XML 入力元のカスタム プロパティ
 
@@ -28,7 +29,7 @@ ms.locfileid: "86920308"
   
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
-|AccessMode|整数|XML データへのアクセスに使用するモード。|  
+|AccessMode|Integer|XML データへのアクセスに使用するモード。|  
 |UseInlineSchema|Boolean|XML ソース内のインライン スキーマ定義を使用するかどうかを示す値。 このプロパティの既定値は **False**です。|  
 |XMLData|String|XML データを取得するファイルまたは変数。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
 |XMLSchemaDefinition|String|スキーマ定義ファイル (.xsd) のパスおよびファイル名。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
@@ -44,6 +45,5 @@ ms.locfileid: "86920308"
  詳細については、「 [XML ソース](../../integration-services/data-flow/xml-source.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

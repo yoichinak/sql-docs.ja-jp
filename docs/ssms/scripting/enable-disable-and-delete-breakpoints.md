@@ -4,7 +4,7 @@ description: '[ブレークポイント] ウィンドウを使用して、ブレ
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: markingmyname
@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122927"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039058"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>ブレークポイントの有効化、無効化、および削除
 
@@ -29,7 +29,7 @@ ms.locfileid: "87122927"
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>[ブレークポイント] ウィンドウ  
- **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。 **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)」を参照してください。  
+ **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。 **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](./transact-sql-debugger-breakpoints-window.md)」を参照してください。  
   
  ブレークポイントを無効化した場合、そのブレークポイントで実行は一時停止されませんが、後でブレークポイントを有効化できるように、定義がその位置に保持されます。 削除したブレークポイントは完全に削除されます。 そのステートメントで実行を一時停止するには、新たにブレークポイントを設定する必要があります。  
   
@@ -101,6 +101,5 @@ ms.locfileid: "87122927"
 -   **[ブレークポイント]** ウィンドウのツール バーの **[すべてのブレークポイントの削除]** ボタンをクリックする。  
   
 ## <a name="see-also"></a>参照  
- [ブレークポイントの切り替え](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [ブレークポイントの切り替え](./toggle-a-breakpoint.md)  
   

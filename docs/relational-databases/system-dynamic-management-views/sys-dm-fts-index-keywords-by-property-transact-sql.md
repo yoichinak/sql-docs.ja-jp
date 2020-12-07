@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_keywords_by_property (Transact-SQL)
 title: dm_fts_index_keywords_by_property (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcb2864644941786244b19f0a3aa08dc25f7dca6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447576"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85734551"
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
 > [!NOTE]  
->  検索プロパティリストの詳細については、「検索[プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
+>  検索プロパティリストの詳細については、「検索 [プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -74,7 +75,7 @@ OBJECT_ID('table_name')
 |document_id|**int**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
 |property_id|**int**|OBJECT_ID ('*table_name*') パラメーターで指定したテーブルのフルテキストインデックス内の検索プロパティの内部プロパティ ID。<br /><br /> 特定のプロパティが検索プロパティ リストに追加されると、Full-Text Engine はプロパティを登録し、このプロパティ リストに固有の内部プロパティ ID を、そのプロパティに割り当てます。 内部プロパティ ID (整数) は、特定の検索プロパティリストに対して一意です。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。<br /><br /> 注: 内部プロパティ ID は、プロパティを検索プロパティリストに追加するときに指定されるプロパティ整数識別子とは異なります。 詳細については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。<br /><br /> Property_id とプロパティ名の間の関連付けを表示するには、次のようにします。<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この動的管理ビューでは、次のような質問に答えることができます。  
   
 -   指定された DocID の特定のプロパティにどのようなコンテンツが格納されますか。  
@@ -85,7 +86,7 @@ OBJECT_ID('table_name')
   
  フルテキスト キー列が整数データ型 (推奨されるデータ型) の場合、document_id はベース テーブルのフルテキスト キー値に直接マップされます。  
   
- 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この場合、dm_fts_index_keywords_by_property によって返されるベーステーブル内の行を識別するには、 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)によって返された結果と共にこのビューを結合する必要があります。 結合する前に、ストアドプロシージャの出力を一時テーブルに格納する必要があります。 その後、dm_fts_index_keywords_by_property の document_id 列を、このストアドプロシージャによって返される DocId 列に結合できます。 **Timestamp**列はによって自動生成されるため、挿入時に値を受け取ることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 そのため、 **timestamp**列は、 **varbinary (8)** 列に変換する必要があります。 次の例では、これらの手順を示します。 この例では、 *table_id*はテーブルの id、 *database_name*はデータベースの名前、 *table_name*はテーブルの名前です。  
+ 一方、フルテキスト キー列で整数データ型以外のデータ型が使用されている場合は、document_id はベース テーブルのフルテキスト キーを表しません。 この場合、dm_fts_index_keywords_by_property によって返されるベーステーブル内の行を識別するには、 [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)によって返された結果と共にこのビューを結合する必要があります。 結合する前に、ストアドプロシージャの出力を一時テーブルに格納する必要があります。 その後、dm_fts_index_keywords_by_property の document_id 列を、このストアドプロシージャによって返される DocId 列に結合できます。 **Timestamp**列はによって自動生成されるため、挿入時に値を受け取ることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 そのため、 **timestamp** 列は、 **varbinary (8)** 列に変換する必要があります。 次の例では、これらの手順を示します。 この例では、 *table_id* はテーブルの id、 *database_name* はデータベースの名前、 *table_name* はテーブルの名前です。  
   
 ```  
 USE database_name;  
@@ -108,8 +109,8 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`Author` サンプル データベースの `Production.Document` テーブルのフルテキスト インデックスにある `AdventureWorks` プロパティからキーワードが返されます。 この例では、 `KWBPOP` **dm_fts_index_keywords_by_property**によって返されるテーブルの別名を使用します。 この例では、内部結合を使用して、 [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)と[sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)の列を結合します。  
+## <a name="examples"></a>例  
+ 次の例では、`Author` サンプル データベースの `Production.Document` テーブルのフルテキスト インデックスにある `AdventureWorks` プロパティからキーワードが返されます。 この例では、 `KWBPOP` **dm_fts_index_keywords_by_property**によって返されるテーブルの別名を使用します。 この例では、内部結合を使用して、 [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) と [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)の列を結合します。  
   
 ```  
 -- Once the full-text index is configured to support property searching  
@@ -130,7 +131,7 @@ SELECT KWBPOP.* FROM
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [フルテキストインデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

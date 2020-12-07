@@ -1,4 +1,5 @@
 ---
+description: パスワードの管理 (MySQLToSQL)
 title: パスワードの管理 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 50238d3cbcd65077ad724d41c907221d5d8be998
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935291"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988528"
 ---
 # <a name="managing-passwords-mysqltosql"></a>パスワードの管理 (MySQLToSQL)
 この記事では、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。
@@ -29,7 +30,7 @@ SSMA を使用すると、データベースのパスワードをセキュリテ
   
 次の3つの方法のいずれかを使用して、有効なパスワードを指定します。  
   
-1.  **クリアテキスト:**[パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
+1.  **クリアテキスト:** [パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
   
     クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt; サーバー-id パスワードはセキュリティで保護されてい &gt; ないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
   
@@ -134,5 +135,4 @@ SSMA コンソールアプリケーションを使用すると、ローカルコ
 8. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[SSMA コンソールの実行 (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

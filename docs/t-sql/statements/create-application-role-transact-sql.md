@@ -1,4 +1,5 @@
 ---
+description: CREATE APPLICATION ROLE (Transact-SQL)
 title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: da64f4dfa4c6013a8aba2928236db09004db8f1b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391787"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128042"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!IMPORTANT]  
 >  アプリケーション ロールのパスワードを設定するときには、パスワードの複雑性が確認されます。 アプリケーション ロールを呼び出すアプリケーションは、これらのパスワードを格納する必要があります。 アプリケーション ロールのパスワードは常に暗号化して保存する必要があります。  

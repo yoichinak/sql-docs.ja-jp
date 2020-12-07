@@ -1,8 +1,9 @@
 ---
+description: DataTypeEnum
 title: DataTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974243"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)のデータ型を指定します。 対応する OLE DB 型インジケーターは、次の表の説明列にかっこで囲まれています。  
@@ -45,9 +46,9 @@ ms.locfileid: "87242385"
 |**adError**|10|32ビットエラーコード (DBTYPE_ERROR) を示します。|  
 |**adFileTime**|64|1601 (DBTYPE_FILETIME) 以降の100ナノ秒間隔の数を表す64ビットの値を示します。|  
 |**adGUID**|72|グローバル一意識別子 (GUID) (DBTYPE_GUID) を示します。|  
-|**adIDispatch**|9|COM オブジェクト (DBTYPE_IDISPATCH) の**IDispatch**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
+|**adIDispatch**|9|COM オブジェクト (DBTYPE_IDISPATCH) の **IDispatch** インターフェイスへのポインターを示します。<br /><br /> **メモ** 現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
 |**adInteger**|3|4バイト符号付き整数 (DBTYPE_I4) を示します。|  
-|**adIUnknown**|13|COM オブジェクト (DBTYPE_IUNKNOWN) の**IUnknown**インターフェイスへのポインターを示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
+|**adIUnknown**|13|COM オブジェクト (DBTYPE_IUNKNOWN) の **IUnknown** インターフェイスへのポインターを示します。<br /><br /> **メモ** 現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
 |**adLongVarBinary**|205|Long バイナリ値を示します。|  
 |**adLongVarChar**|201|長い文字列値を示します。|  
 |**adLongVarWChar**|203|長い null で終わる Unicode 文字列値を示します。|  
@@ -63,7 +64,7 @@ ms.locfileid: "87242385"
 |**adUserDefined**|132|ユーザー定義変数 (DBTYPE_UDT) を示します。|  
 |**adVarBinary**|204|バイナリ値を示します。|  
 |**adVarChar**|200|文字列値を示します。|  
-|**adVariant**|12|オートメーション**バリアント**(DBTYPE_VARIANT) を示します。<br /><br /> **メモ**現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
+|**adVariant**|12|オートメーション **バリアント** (DBTYPE_VARIANT) を示します。<br /><br /> **メモ** 現在、このデータ型は ADO ではサポートされていません。 使用状況によって予期しない結果が生じる可能性があります。|  
 |**adVarNumeric**|139|数値を示します。|  
 |**adVarWChar**|202|Null で終わる Unicode 文字列を示します。|  
 |**adWChar**|130|Null で終わる Unicode 文字列 (DBTYPE_WSTR) を示します。|  

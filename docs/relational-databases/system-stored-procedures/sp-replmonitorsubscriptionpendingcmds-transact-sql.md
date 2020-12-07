@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b83c6492f065f29335bc4665156c02a18367795
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786125"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534912"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,19 +43,19 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシュされたデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値はありません。  
   
-`[ @subscriber_db = ] 'subscriber_db'`サブスクリプションデータベースの名前を指定します。 *subscriber_db*は**sysname**であり、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname**であり、既定値はありません。  
   
-`[ @subscription_type = ] subscription_type`サブスクリプションの種類。 *publication_type*は**int**,、既定値はありませんこれらの値のいずれかを指定することができます。  
+`[ @subscription_type = ] subscription_type` サブスクリプションの種類。 *publication_type* は **int**,、既定値はありませんこれらの値のいずれかを指定することができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|プッシュ サブスクリプション|  
 |**1**|プルサブスクリプション|  
@@ -68,15 +68,15 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 |**estimatedprocesstime**|**int**|保留中のすべてのコマンドをサブスクライバーに配信するために必要な秒数の見積もり。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replmonitorsubscriptionpendingcmds**は、トランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_replmonitorsubscriptionpendingcmds** は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replmonitorsubscriptionpendingcmds**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベース内の**db_owner**固定データベースロールのメンバーだけです。 ディストリビューションデータベースを使用するパブリケーションのパブリケーションアクセスリストのメンバーは、 **sp_replmonitorsubscriptionpendingcmds**を実行して、そのパブリケーションの保留中のコマンドを返すことができます。  
+ **Sp_replmonitorsubscriptionpendingcmds**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベース内の**db_owner**固定データベースロールのメンバーだけです。 ディストリビューションデータベースを使用するパブリケーションのパブリケーションアクセスリストのメンバーは、 **sp_replmonitorsubscriptionpendingcmds** を実行して、そのパブリケーションの保留中のコマンドを返すことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

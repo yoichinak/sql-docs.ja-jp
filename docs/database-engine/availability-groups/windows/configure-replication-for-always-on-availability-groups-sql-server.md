@@ -6,20 +6,20 @@ ms.date: 01/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 08718e9da3d0c053b9ab28ac53d0cb69fc78adf3
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 505982d700608d34e909248b02ade932d470c4b5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565304"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584465"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
@@ -32,7 +32,7 @@ ms.locfileid: "87565304"
   
  SQL Server 2012 と SQL Server 2014 では、ディストリビューション データベースを可用性グループに配置することはできません。 ディストリビューション データベースを可用性グループに配置することは、SQL 2016 以降でサポートされています。ただし、マージ、双方向、またはピア ツー ピアのレプリケーション トポロジで使用されるディストリビューション データベースは除きます。 詳しくは、[可用性グループ内のディストリビューション データベースの構成](../../../relational-databases/replication/configure-distribution-availability-group.md)に関する記事をご覧ください。
   
-1.  ディストリビューター側のディストリビューションを構成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributor**を実行します。 *\@password* パラメーターを使用して、リモート パブリッシャーからディストリビューターに接続するときに使用するパスワードを指定します。 このパスワードは、各リモート パブリッシャーでリモート ディストリビューターを設定するときにも必要になります。  
+1.  ディストリビューター側のディストリビューションを構成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributor** を実行します。 *\@password* パラメーターを使用して、リモート パブリッシャーからディストリビューターに接続するときに使用するパスワードを指定します。 このパスワードは、各リモート パブリッシャーでリモート ディストリビューターを設定するときにも必要になります。  
   
     ```  
     USE master;  
@@ -42,7 +42,7 @@ ms.locfileid: "87565304"
         @password = '**Strong password for distributor**';  
     ```  
   
-2.  ディストリビューター側のディストリビューション データベースを作成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributiondb**を実行します。  
+2.  ディストリビューター側のディストリビューション データベースを作成します。 ストアド プロシージャを使用して構成する場合は、 **sp_adddistributiondb** を実行します。  
   
     ```  
     USE master;  
@@ -52,7 +52,7 @@ ms.locfileid: "87565304"
         @security_mode = 1;  
     ```  
   
-3.  リモート パブリッシャーを構成します。 ストアド プロシージャを使用してディストリビューターを構成する場合は、 **sp_adddistpublisher**を実行します。 *\@security_mode* パラメーターを使用して、レプリケーション エージェントから実行されるパブリッシャーの検証ストアド プロシージャを現在のプライマリに接続する方法を指定します。 1 に設定すると、現在のプライマリへの接続に Windows 認証が使用されます。 0 に設定すると、指定した *\@login* と *\@password* の値を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が使用されます。 検証ストアド プロシージャをセカンダリ レプリカに正常に接続するには、各レプリカで有効なログインとパスワードを指定する必要があります。  
+3.  リモート パブリッシャーを構成します。 ストアド プロシージャを使用してディストリビューターを構成する場合は、 **sp_adddistpublisher** を実行します。 *\@security_mode* パラメーターを使用して、レプリケーション エージェントから実行されるパブリッシャーの検証ストアド プロシージャを現在のプライマリに接続する方法を指定します。 1 に設定すると、現在のプライマリへの接続に Windows 認証が使用されます。 0 に設定すると、指定した *\@login* と *\@password* の値を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が使用されます。 検証ストアド プロシージャをセカンダリ レプリカに正常に接続するには、各レプリカで有効なログインとパスワードを指定する必要があります。  
   
     > [!NOTE]  
     >  変更されたレプリケーション エージェントをディストリビューター以外のコンピューターで実行する場合、プライマリへの接続に Windows 認証を使用するには、レプリカのホスト コンピューター間の通信に使用する Kerberos 認証を構成する必要があります。 現在のプライマリへの接続に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを使用する場合は、Kerberos 認証は必要ありません。  
@@ -72,7 +72,7 @@ ms.locfileid: "87565304"
   
  **元のパブリッシャーでのパブリッシャーの構成**  
   
-1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_adddistributor**を実行します。 *\@password* には、ディストリビューションを設定するためにディストリビューターで **sp_adddistrbutor** を実行したときに使ったのと同じ値を指定します。  
+1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_adddistributor** を実行します。 *\@password* には、ディストリビューションを設定するためにディストリビューターで **sp_adddistrbutor** を実行したときに使ったのと同じ値を指定します。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -80,7 +80,7 @@ ms.locfileid: "87565304"
         @password = 'MyDistPass'  
     ```  
   
-2.  データベースでレプリケーションを有効にします。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_replicationdboption**を実行します。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
+2.  データベースでレプリケーションを有効にします。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_replicationdboption** を実行します。 データベースに対してトランザクション レプリケーションとマージ レプリケーションの両方を構成する場合は、それぞれを有効にする必要があります。  
   
     ```  
     USE master;  
@@ -176,7 +176,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- ストアド プロシージャ **sp_validate_replica_hosts_as_publishers** は、可用性グループ レプリカの各ホストで、可用性グループに関する情報をクエリするための十分な権限を持つログインから実行する必要があります。 このストアド プロシージャでは、 **sp_validate_redirected_publisher**とは異なり、msdb.dbo.MSdistpublishers に保持されているログインではなく、呼び出し元の資格情報を使用して可用性グループ レプリカに接続します。  
+ ストアド プロシージャ **sp_validate_replica_hosts_as_publishers** は、可用性グループ レプリカの各ホストで、可用性グループに関する情報をクエリするための十分な権限を持つログインから実行する必要があります。 このストアド プロシージャでは、 **sp_validate_redirected_publisher** とは異なり、msdb.dbo.MSdistpublishers に保持されているログインではなく、呼び出し元の資格情報を使用して可用性グループ レプリカに接続します。  
   
 > [!NOTE]  
 >  セカンダリ レプリカのホストで読み取りアクセスが許可されていない場合や、読み取りを目的としたアクセスを指定する必要がある場合、**sp_validate_replica_hosts_as_publishers** による検証は失敗し、次のエラー メッセージが表示されます。  

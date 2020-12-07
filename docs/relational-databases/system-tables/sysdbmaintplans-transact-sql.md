@@ -1,4 +1,5 @@
 ---
+description: sysdbmaintplans (Transact-SQL)
 title: sysdbmaintplans (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplans system table
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7eb84e9d50a797e52aca749cf590ca95b4f3e835
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 160abf3a360d18e3ba83df0f11cc9982984df049
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881399"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516996"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このテーブルは、以前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされたインスタンスの情報を保持するために、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属されたものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、このテーブルの内容は変更されません。 このテーブルは、 **msdb**データベースに格納されます。  
+  このテーブルは、以前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされたインスタンスの情報を保持するために、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属されたものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このテーブルの内容は変更されません。 このテーブルは、 **msdb** データベースに格納されます。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
 
@@ -45,6 +46,6 @@ ms.locfileid: "85881399"
 |**user_defined_2**|**nvarchar (100)**|既定値は NULL です。|  
 |**user_defined_3**|**datetime**|既定値は NULL です。|  
 |**user_defined_4**|**uniqueidentifier**|既定値は NULL です。|  
-|**log_shipping**|**bit**|ログ配布の状態。<br /><br /> **0** = 無効**1** = 有効|  
+|**log_shipping**|**bit**|ログ配布の状態。<br /><br /> **0** = 無効 **1** = 有効|  
   
   

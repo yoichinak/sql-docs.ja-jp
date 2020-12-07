@@ -1,6 +1,6 @@
 ---
 title: クライアントからサーバーへの変換 | Microsoft Docs
-description: クライアントからサーバーへの変換
+description: OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションと SQL Server との間で実行される日付/時刻の変換について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244890"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860222"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244890"
 |15|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] より前のバージョンの **datetime** に対する変換セマンティクスが保持されます。 秒は、1/300 秒単位に丸められます。|  
 |16|SSVARIANT クライアントの構造体に埋め込まれた (特定の型の) 値の変換動作は、SSVARIANT クライアントの構造体に埋め込まれていない場合の同一の値および型の動作と同じです。|  
   
-|種類|長さ (文字数)|スケール|  
-|-|-|-|  
+| 種類 | 長さ (文字数) | スケール |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8、10..18|0、1..9|  
 |DBTIMESTAMP|19、21..29|0、1..9|  
 |DBTIMESTAMPOFFSET|26、28..36|0、1..9|  

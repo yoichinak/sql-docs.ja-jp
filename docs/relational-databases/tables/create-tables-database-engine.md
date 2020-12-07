@@ -1,4 +1,5 @@
 ---
+description: テーブルの作成 (データベース エンジン)
 title: テーブルの作成 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/22/2016
@@ -13,12 +14,12 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d37b8d87be1b6207ba9dcfd9bc1a8dcaa1ab039
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9d1826e8c9291dbfb92b7cccbd48ac0bf34fe690
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394587"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128730"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -37,15 +38,15 @@ ms.locfileid: "87394587"
  
 ## <a name="using-table-designer"></a>テーブル デザイナーを使用する  
   
-1.  SSMS の **オブジェクト エクスプローラー**で、変更するデータベースを含む [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
+1.  SSMS の **オブジェクト エクスプローラー** で、変更するデータベースを含む [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
-2.  **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開し、新しいテーブルを格納するデータベースを展開します。  
+2.  **オブジェクト エクスプローラー** で、 **[データベース]** ノードを展開し、新しいテーブルを格納するデータベースを展開します。  
   
 3.  オブジェクト エクスプローラーで、データベースの **[テーブル]** ノードを右クリックし、 **[新しいテーブル]** をクリックします。  
   
 4.  次の図に示すように、列名を入力し、データ型を選択した後、各列で null 値を許可するかどうかを選択します。  
   
-     ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
+     ![ModifiedDate 列に [Null を許容] オプションが選択されていることを示すスクリーンショット。](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
 5.  他のプロパティ (ID 列または計算列の値など) を指定するには、列をクリックし、列のプロパティ タブで適切なプロパティを選択します。 列のプロパティの詳細については、「[テーブル列のプロパティ &#40;SQL Server Management Studio&#41;](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md)」を参照してください。  
   
@@ -53,27 +54,27 @@ ms.locfileid: "87394587"
   
 7.  外部キーのリレーションシップ、CHECK 制約、またはインデックスを作成するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、一覧からオブジェクトを選択します。  
   
-     ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
+     ![[リレーションシップ] オプションを示すスクリーンショット。](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   
      これらのオブジェクトの詳細については、「 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)」、「 [Create Check Constraints](../../relational-databases/tables/create-check-constraints.md) 」、および「 [Indexes](../../relational-databases/indexes/indexes.md)」を参照してください。  
   
 8.  既定では、テーブルは **dbo** スキーマに含まれています。 テーブルに対して別のスキーマを指定するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、 **[プロパティ]** を選択します。 **[スキーマ]** ボックスの一覧で、適切なスキーマを選択します。  
   
-     ![Specifyatableschema](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
+     ![[スキーマ] オプションが表示されている [プロパティ] ペインのスクリーンショット。](../../relational-databases/tables/media/specifyatableschema.gif "Specifyatableschema")  
   
      スキーマの詳細については、「 [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9. **[ファイル]** メニューの [ **<テーブル名>** *を保存*] を選択します。  
+9. **[ファイル]** メニューの [ *<テーブル名>* **を保存**] を選択します。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。  
   
-11. 新しいテーブルを表示するには、 **オブジェクト エクスプローラー**で、 **[テーブル]** ノードを展開し、 **F5** キーを押してオブジェクトの一覧を更新します。 新しいテーブルがテーブルの一覧に表示されます。  
+11. 新しいテーブルを表示するには、 **オブジェクト エクスプローラー** で、 **[テーブル]** ノードを展開し、 **F5** キーを押してオブジェクトの一覧を更新します。 新しいテーブルがテーブルの一覧に表示されます。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 ## <a name="using-query-editor"></a>クエリ エディターを使用する  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

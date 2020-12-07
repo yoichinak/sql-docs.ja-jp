@@ -1,4 +1,5 @@
 ---
+description: InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)
 title: InstanceName プロパティ (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17a996b70a402e1088dd9f65b28f9985344653db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc0af527898dd923d394bbb9881621ce774ce81f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880902"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538250"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

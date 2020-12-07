@@ -1,8 +1,9 @@
 ---
+description: Source プロパティの例 (VC++)
 title: Source プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7b582582fa3acc91921aeee41a465915979a6c7d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759788"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988893"
 ---
 # <a name="source-property-example-vc"></a>Source プロパティの例 (VC++)
-この例では、さまざまなデータソースに基づいて3つの[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを開くことによって、 [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを示します。  
+この例では、さまざまなデータソースに基づいて3つの[レコードセット](./recordset-object-ado.md)オブジェクトを開くことによって、 [Source](./source-property-ado-recordset.md)プロパティを示します。  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -157,5 +158,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Source プロパティ (ADO Recordset)](./source-property-ado-recordset.md)

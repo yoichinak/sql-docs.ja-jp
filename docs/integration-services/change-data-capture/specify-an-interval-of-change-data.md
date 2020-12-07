@@ -1,4 +1,5 @@
 ---
+description: 変更データの間隔を指定する
 title: 変更データの間隔を指定する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 960567c1278f1ed4e5da60a018c330591cd3627d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91724976"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
 
@@ -52,13 +53,13 @@ ms.locfileid: "86921282"
  間隔のエンドポイントのパッケージ変数を設定したら、そのエンドポイントの実際の値を計算し、対応するパッケージ変数にマップできるようになります。 このエンドポイントは **datetime** 値なので、 **datetime** 値を計算または操作できる関数を使用する必要があります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語と Transact-SQL の両方に、 **datetime** 値を操作する関数が用意されています。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datetime **値を操作する** 式言語の関数  
- -   [DATEADD (SSIS 式)](../../integration-services/expressions/dateadd-ssis-expression.md)  
+ -   [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF (SSIS 式)](../../integration-services/expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)  
   
 -   [DATEPART (SSIS 式)](../../integration-services/expressions/datepart-ssis-expression.md)  
   
--   [DAY (SSIS 式)](../../integration-services/expressions/day-ssis-expression.md)  
+-   [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)  
   
 -   [GETDATE (SSIS 式)](../../integration-services/expressions/getdate-ssis-expression.md)  
   
@@ -66,7 +67,7 @@ ms.locfileid: "86921282"
   
 -   [MONTH (SSIS 式)](../../integration-services/expressions/month-ssis-expression.md)  
   
--   [YEAR (SSIS 式)](../../integration-services/expressions/year-ssis-expression.md)  
+-   [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)  
   
  **datetime** 値を操作する Transact-SQL の関数  
  [日付と時刻のデータ型および関数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
@@ -109,12 +110,11 @@ ms.locfileid: "86921282"
 ## <a name="next-step"></a>次の手順  
  変更の範囲の開始時点と終了時点を計算したら、次の手順で、変更データが準備できているかどうかを判断します。  
   
- **次のトピック:** [変更データの準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **次のトピック:** [データの変更の準備ができているかどうかを判断する](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>参照  
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+## <a name="see-also"></a>関連項目  
+ [パッケージで変数を使用する](../integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)   
  [スクリプト タスク](../../integration-services/control-flow/script-task.md)  
-  
   

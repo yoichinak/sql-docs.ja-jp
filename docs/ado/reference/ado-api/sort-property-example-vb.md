@@ -1,8 +1,9 @@
 ---
+description: Sort プロパティの例 (VB)
 title: Sort プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 47cae7b3aabda7192467bf4dd746ac9a083b404a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759858"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989033"
 ---
 # <a name="sort-property-example-vb"></a>Sort プロパティの例 (VB)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Sort](../../../ado/reference/ado-api/sort-property.md)プロパティを使用して、 ***Pubs***データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
+この例では、[レコードセット](./recordset-object-ado.md)オブジェクトの[Sort](./sort-property.md)プロパティを使用して、 ***Pubs***データベースの***Authors***テーブルから派生した**レコードセット**の行を並べ替えます。 セカンダリユーティリティルーチンによって各行が出力されます。  
   
 ```  
 'BeginSortVB  
@@ -103,12 +104,12 @@ End Sub
 'EndSortVB  
 ```  
   
- これは、指定されたタイトルと、指定された**レコードセット**の内容を出力するセカンダリユーティリティルーチンです。  
+ これは、指定されたタイトルと、指定された **レコードセット**の内容を出力するセカンダリユーティリティルーチンです。  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Sort プロパティ](./sort-property.md)

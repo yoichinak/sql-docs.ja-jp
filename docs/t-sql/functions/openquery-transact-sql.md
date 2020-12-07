@@ -1,4 +1,5 @@
 ---
+description: OPENQUERY (Transact-SQL)
 title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f4a7ce873c59268255a3ecd073e49d53877f12c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e8af312809066bef0a1e73bcdb1d8902f1c7808
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112874"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91117058"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87112874"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 OPENQUERY ( linked_server ,'query' )  
 ```  
   

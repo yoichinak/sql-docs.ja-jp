@@ -1,4 +1,5 @@
 ---
+description: ROLLBACK TRANSACTION (Transact-SQL)
 title: ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -25,17 +26,19 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9eb54f4ecc659a3691ee7ed27a3330be8481e9e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0b0c259abda86eef45cc241453caae074d845c3e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394154"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195515"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   明示的または暗黙的なトランザクションを、トランザクションの開始位置またはトランザクション内のセーブポイントまでロールバックします。 ROLLBACK TRANSACTION を使用して、トランザクションの開始またはセーブポイント発行時点以降に行われたすべてのデータ変更を消去できます。 トランザクションが保持していたリソースも解放されます。  
+  
+  これには、ローカル変数またはテーブル変数に加えられた変更は含まれません。 これらは、このステートメントによって消去されることはありません。
   
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -53,7 +56,7 @@ ROLLBACK { TRAN | TRANSACTION }
 
 ## <a name="arguments"></a>引数
  *transaction_name*  
- BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 *のインスタンスで大文字と小文字が区別されない場合であっても、* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
+ BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*transaction_name* では常に大文字と小文字が区別されます。  
   
  **@** *tran_name_variable*  
  有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  
@@ -111,10 +114,10 @@ ROLLBACK { TRAN | TRANSACTION }
 ```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int);  
+CREATE TABLE ValueTable ([value] INT);  
 GO  
   
-DECLARE @TransactionName varchar(20) = 'Transaction1';  
+DECLARE @TransactionName VARCHAR(20) = 'Transaction1';  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  

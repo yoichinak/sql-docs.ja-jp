@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111832"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380067"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87111832"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -57,7 +58,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SUSER_SNAME は、ALTER TABLE または CREATE TABLE の中で、DEFAULT 制約として使用できます。 SUSER_SNAME は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 SUSER_SNAME の後には、パラメーターを指定しない場合も含め、常にかっこが必要です。  
   
  SUSER_SNAME を引数なしで呼び出すと、現在のセキュリティ コンテキストの名前が返されます。 EXECUTE AS を使用してコンテキストを切り替えたバッチ内で SUSER_SNAME を引数なしで呼び出すと、権限を借用したコンテキストの名前が返されます。 権限を借用したコンテキストから ORIGINAL_LOGIN を呼び出すと、元のコンテキストの名前が返されます。  
@@ -72,7 +73,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ### <a name="a-using-suser_sname"></a>A. SUSER_SNAME を使用する  
  次の例では、現在のセキュリティ コンテキストのログイン名が返されます。  
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 ```  
@@ -82,7 +83,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
@@ -90,7 +91,7 @@ GO
 ### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. SUSER_SNAME を DEFAULT 制約として使用する  
  次の例では、`SUSER_SNAME` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sname_example  
@@ -109,7 +110,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 EXECUTE AS LOGIN = 'WanidaBenShoof';  
@@ -117,8 +118,7 @@ SELECT SUSER_SNAME();
 REVERT;  
 GO  
 SELECT SUSER_SNAME();  
-GO  
-  
+GO 
 ```  
   
  以下に結果を示します。  
@@ -134,7 +134,7 @@ sa
 ### <a name="e-using-suser_sname"></a>E. SUSER_SNAME を使用する  
  次の例では、セキュリティ ID 番号が `0x01` のログイン名を返します。  
   
-```  
+```sql
 SELECT SUSER_SNAME(0x01);  
 GO  
 ```  
@@ -142,12 +142,12 @@ GO
 ### <a name="f-returning-the-current-login"></a>F. 現在のログインを返す  
  次の例では、現在のログインのログイン名を返します。  
   
-```  
+```sql
 SELECT SUSER_SNAME() AS CurrentLogin;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

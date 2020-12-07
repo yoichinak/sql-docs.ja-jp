@@ -1,4 +1,5 @@
 ---
+description: sp_executesql (Transact-sql)
 title: sp_executesql (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 6eac2107c22781c278e173992d8994fc68fea981
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180239"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005758"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "88180239"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
 [   
@@ -49,22 +50,22 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@ stmt =]*ステートメント*  
- ステートメントまたはバッチを含む Unicode 文字列を指定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に**N**を付ける必要があります。たとえば、Unicode 定数**N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである**nvarchar (max)** の 2 GB に制限されています。  
+ [ \@ stmt =] *ステートメント*  
+ ステートメントまたはバッチを含む Unicode 文字列を指定し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に **N**を付ける必要があります。たとえば、Unicode 定数 **N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである **nvarchar (max)** の 2 GB に制限されています。  
   
 > [!NOTE]  
->  \@stmt には、変数名と同じ形式のパラメーターを含めることができます。次に例を示します。`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt には、変数名と同じ形式のパラメーターを含めることができます。次に例を示します。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Stmt に含まれる各パラメーターには、 \@ \@ params パラメーター定義リストとパラメーター値リストの両方に対応するエントリが必要です。  
   
- [ \@ params =] N ' \@*parameter_name* *data_type* [,...*n* ] '  
- Stmt に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 \@ します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmt に指定するすべてのパラメーター \@ は、params で定義する必要があり \@ ます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt のステートメントまたはバッチにパラメーターが含まれていない場合 \@ 、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
+ [ \@ params =] N ' \@*parameter_name* *data_type* [,... *n* ] '  
+ Stmt に埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定 \@ します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n* は、追加のパラメーター定義を示すプレースホルダーです。 Stmt に指定するすべてのパラメーター \@ は、params で定義する必要があり \@ ます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt のステートメントまたはバッチにパラメーターが含まれていない場合 \@ 、 \@ params は必要ありません。 このパラメーターの既定値は NULL です。  
   
  [ \@ param1 =] '*value1*'  
- パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 Stmt に含まれるすべてのパラメーターにパラメーター値が指定されている必要があり \@ ます。[!INCLUDE[tsql](../../includes/tsql-md.md)]Stmt のステートメントまたはバッチにパラメーターがない場合、値は必要ありません \@ 。  
+ パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 Stmt に含まれるすべてのパラメーターにパラメーター値が指定されている必要があり \@ ます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] Stmt のステートメントまたはバッチにパラメーターがない場合、値は必要ありません \@ 。  
   
  [ OUT | OUTPUT ]  
- パラメーターが出力パラメーターであることを示します。 **text**、 **ntext**、および**image**パラメーターは、プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、出力パラメーターとして使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
+ パラメーターが出力パラメーターであることを示します。 **text**、 **ntext**、および **image** パラメーターは、プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、出力パラメーターとして使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
   
  *n*  
  追加のパラメーターの値のプレースホルダーです。 定数または変数のみを指定できます。 値には、関数や演算子を使用して作成された式など、より複雑な式を指定することはできません。  
@@ -75,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>結果セット  
  SQL 文字列に組み込まれているすべての SQL ステートメントからの結果セットを返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  sp_executesql パラメーターは、このトピックの「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
  sp_executesql は、バッチ、名前の有効範囲、およびデータベース コンテキストに関して、EXECUTE と同じように動作します。 [!INCLUDE[tsql](../../includes/tsql-md.md)]Sp_executesql stmt パラメーターのステートメントまたはバッチ \@ は、sp_executesql ステートメントが実行されるまでコンパイルされません。 次に、stmt の内容を \@ コンパイルして、sp_executesql を呼び出したバッチの実行プランとは別の実行プランとして実行します。 sp_executesql バッチから、sp_executesql を呼び出すバッチ内で宣言されている変数は参照できません。 sp_executesql バッチ内のローカル カーソルまたはローカル変数は、sp_executesql を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、sp_executesql ステートメント終了時まで有効です。  
@@ -205,7 +206,7 @@ GO
  このプロシージャでは、sp_executesql を使用して文字列を実行しますが、これは EXECUTE を使用する場合と比べて効率的です。 sp_executesql を使用する場合、INSERT 文字列は各月のテーブルごとに 1 つずつ、12 とおり作成されます。 EXECUTE では、パラメーター値が異なるため、各挿入文字列は一意です。 どちらの方法でも作成するバッチの数は同じですが、sp_executesql で作成される INSERT 文字列には類似性があるので、クエリ オプティマイザーで実行プランを再利用しやすくなります。  
   
 ### <a name="c-using-the-output-parameter"></a>C. OUTPUT パラメーターを使用する  
- 次の例では、パラメーターを使用し `OUTPUT` て、ステートメントによって生成された結果セットを `SELECT` パラメーターに格納し `@SQLString` ます。`SELECT`次に、パラメーターの値を使用する2つのステートメントが実行され `OUTPUT` ます。  
+ 次の例では、パラメーターを使用し `OUTPUT` て、ステートメントによって生成された結果セットを `SELECT` パラメーターに格納し `@SQLString` ます。 `SELECT` 次に、パラメーターの値を使用する2つのステートメントが実行され `OUTPUT` ます。  
   
 ```sql  
 USE AdventureWorks2012;  

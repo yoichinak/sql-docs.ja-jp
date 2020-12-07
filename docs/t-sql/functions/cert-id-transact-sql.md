@@ -1,4 +1,5 @@
 ---
+description: CERT_ID (Transact-SQL)
 title: CERT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 07c8a6220ae5c9b20b659bbb791407fc4dd1aa09
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 70e1cb5ea77b6bd779d63cd349f1478cda31598f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111105"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114952"
 ---
 # <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111105"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 Cert_ID ( 'cert_name' )  
 ```  
   
@@ -64,7 +65,7 @@ SELECT Cert_ID('ABerglundCert3');
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)

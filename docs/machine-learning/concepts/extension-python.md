@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 8ed1adfff31afc57f50e6b5e0757370b152cd544
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406285"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956519"
 ---
 # <a name="python-language-extension-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の Python 言語拡張機能
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で外部 Python スクリプトを実行するための Python 拡張機能について説明します。 拡張機能により、次のものが追加されます。
 
@@ -42,8 +42,8 @@ Microsoft が並列ワークロードと分散ワークロード用に追加し�
 
 | ライブラリ | 説明 |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 詳細については、[SQL Server での revoscalepy モジュール](../python/ref-py-revoscalepy.md)に関するページをご覧ください。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server での microsoftml モジュール](../python/ref-py-microsoftml.md)に関するページを参照してください。 |
+| [**revoscalepy**](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 詳細については、[SQL Server での revoscalepy モジュール](../python/ref-py-revoscalepy.md)に関するページをご覧ください。  |
+| [**microsoftml**](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server での microsoftml モジュール](../python/ref-py-microsoftml.md)に関するページを参照してください。 |
 
 microsoftml と revoscalepy は密結合されています。microsoftml で使用されるデータ ソースは、revoscalepy オブジェクトとして定義されています。 revoscalepy でコンピューティング コンテキストの制限は microsoftml に転送されます。 つまり、ローカル操作ではすべての機能を使用できますが、リモート コンピューティング コンテキストに切り替えるには RxInSqlServer が必要です。
 
@@ -102,7 +102,7 @@ Linux の場合、SQL では**スタート パッド** サービスを使用し�
 ## <a name="next-steps"></a>次のステップ
 
 + [SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)
-+ [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [revoscalepy 関数リファレンス](/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
 + [SQL Server の R および機械学習拡張機能](extension-r.md)
 + [Python パッケージ情報の取得](../package-management/python-package-information.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522346"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196356"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
 
@@ -76,7 +76,7 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>コマンド プロンプトからの Scale Out Master のインストール
 
-「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Master のパラメーターを設定します。
+「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Master のパラメーターを設定します。
  
 1.  パラメーター `/FEATURES` に `IS_Master` を追加します。
 
@@ -131,7 +131,7 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>コマンド プロンプトからの Scale Out Worker のインストール
 
-「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Worker のパラメーターを設定します。
+「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Worker のパラメーターを設定します。
 
 1.  パラメーター `/FEATURES` に IS_Worker を追加します。
 

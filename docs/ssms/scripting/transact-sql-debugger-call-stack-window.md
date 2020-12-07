@@ -3,7 +3,7 @@ title: '[呼び出し履歴] ウィンドウ'
 description: Transact-SQL デバッガーの [呼び出し履歴] ウィンドウを使用して、パラメーターのデータ型、およびストアドプロシージャ、関数、トリガーの値も確認する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8421e448b36cb1cf4958ef5cfaa1d583a7cca262
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3df3d33392751bcdc98b2c9efd2ea7b6b24ed5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248036"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036185"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Transact-SQL デバッガー - [呼び出し履歴] ウィンドウ
 
@@ -77,6 +77,6 @@ ms.locfileid: "87248036"
   
 ## <a name="see-also"></a>参照
 
-- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL デバッガー](./transact-sql-debugger.md)
+- [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)
+- [Transact-SQL コードのステップ実行](./step-through-transact-sql-code.md)

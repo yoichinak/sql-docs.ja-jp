@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client でのデータベースミラーリングの使用
 title: データベース ミラーリングの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d282569bf88379e36ebb5297d3dbb9f6cf945fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f664a072461674f47157265a770c154550b440b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448304"
 ---
 # <a name="using-database-mirroring-in-sql-server-native-client"></a>SQL Server Native Client でのデータベースミラーリングの使用
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87246739"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用します。  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータベース ミラーリングは、データベースの可用性とデータの冗長性を高めるためのソリューションです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、データベースミラーリングの暗黙的なサポートが提供されるため、開発者は、データベースに対して構成されたコードを記述したり、他のアクションを実行したりする必要はありません。  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータベース ミラーリングは、データベースの可用性とデータの冗長性を高めるためのソリューションです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client では、データベースミラーリングの暗黙的なサポートが提供されるため、開発者は、データベースに対して構成されたコードを記述したり、他のアクションを実行したりする必要はありません。  
   
  データベース ミラーリングは、データベースごとに実装され、スタンバイ サーバー上に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 運用データベースのコピーを保持します。 このサーバーは、データベース ミラーリング セッションの構成および状態に応じて、ホット スタンバイ サーバーかウォーム スタンバイ サーバーのいずれかになります。 ホット スタンバイ サーバーはコミット済みトランザクションが失われない高速フェールオーバーをサポートし、ウォーム スタンバイ サーバーはサービスの強制 (データ損失の可能性あり) をサポートします。  
   
@@ -62,12 +63,12 @@ ms.locfileid: "87246739"
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。これは、 **CoUninitialize**が呼び出されるか、または、アプリケーションに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データソースオブジェクトなどの Native Client OLE DB プロバイダーによって管理されるオブジェクトへの参照が含まれている限り保持されます。  
+ フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。これは、 **CoUninitialize** が呼び出されるか、または、アプリケーションに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データソースオブジェクトなどの Native Client OLE DB プロバイダーによって管理されるオブジェクトへの参照が含まれている限り保持されます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーによるデータベースミラーリングのサポートの詳細については、「[初期化と承認のプロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、接続と接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数で使用するために追加されています。また、 **Failover_Partner**キーワードが新しい接続文字列属性として追加されています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーでは、接続と接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) および [Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) 関数で使用するために追加されています。また、 **Failover_Partner** キーワードが新しい接続文字列属性として追加されています。  
   
  アプリケーションに環境ハンドルが少なくとも 1 つ割り当てられている限り、フェールオーバー キャッシュが保持されます。 反対に、最後の環境ハンドルの割り当てが解除されると、キャッシュが消失します。  
   

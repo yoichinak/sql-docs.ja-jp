@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ストアド プロシージャ (Transact-SQL)
 title: ポリシーベースの管理ストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - Policy-Based Management, stored procedures
 - stored procedures [Policy-Based Management]
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0a8e08f63bc4bb039436c94f0fb678ace795927a
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3eb2ac9d9f0ad157d183cf1e5e18edda4b0a30a1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977524"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542024"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>ポリシー ベースの管理ストアド プロシージャ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ポリシーベースの管理に使用される次のシステムストアドプロシージャがサポートされています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ポリシーベースの管理に使用される次のシステムストアドプロシージャがサポートされています。  
   
 > [!IMPORTANT]  
 >  サポートされているのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックに記載されているポリシー ベースの管理ストアド プロシージャのみです。 ドキュメントに記載されていないストアドプロシージャは、内部ポリシーベースの管理コンポーネントによって使用されているため、ポリシーベースの管理を管理するためには使用しないでください。  

@@ -1,6 +1,6 @@
 ---
 title: IRow::GetColumns を使用した列のフェッチ (OLE DB ドライバー) | Microsoft Docs
-description: IRow::GetColumns を使用した列のフェッチ (OLE DB)
+description: OLE DB Driver for SQL Server での IRow::GetColumns メソッドを使用した列のフェッチについて説明します。 この例では、行から一度に 1 つの列を取得します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 005748886f0a0e3b6e35b97ac02d1ca77b290b0c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244798"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727166"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "87244798"
 -   列に 2 回アクセスする方法。 列の実際の幅の初回取得以降は、この実際の値がアクセスされます。 DBCOLUMNACCESS 構造体では、**pData** が NULL で **cbMaxLen** が 0 の場合、**IRow**- **>GetColumns()** を呼び出すと、列の実際の長さだけが返されます。 この場合、**IRow->GetColumns()** を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>IRow::GetColumns を使用して列をフェッチするには  
   
@@ -522,5 +522,4 @@ go
   
 ## <a name="see-also"></a>参照  
  [OLE DB の使用法に関するトピック](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

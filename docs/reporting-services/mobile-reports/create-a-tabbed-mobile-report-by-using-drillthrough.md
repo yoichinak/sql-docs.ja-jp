@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 99e176988287a457738a05a4a7ab71653b281070
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95b153be1b4dc5a45effeb678ca0ccef83f06e6e
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448035"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907340"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>ドリルスルーを使用してタブ付きモバイル レポートを作成する
 ドリルスルーとパラメーターを使用して、タブ付きレポートのような外観と動作の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成する方法について説明します。
 
 たとえば、このレポートでは、上部にあるゲージはタブのように動作します。 輸送ゲージをクリックすると、他のグラフのデータがフィルターされ、輸送データのみが表示されます。
 
-![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
+![[Transportation]\(輸送\) ゲージが選択されている [Financials - Transportation]\(金融 - 輸送\) レポートを示すスクリーンショット。](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
 実際には、これは 5 つの独立したレポートのセットであり、それぞれがレポート上部で選択されたゲージと一致するようにレポートをフィルター処理する異なるパラメーターを備えています。 最初に 5 つのレポートをすべて作成した後、それぞれについて、他の 4 つのゲージで他の 4 つのレポートにドリルスルーできるようにします。
 
@@ -37,11 +37,11 @@ ms.locfileid: "79448035"
     * ストレージ
     * その他諸経費
 
-   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![5 つのゲージがある売上というレポートのスクリーンショット。](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
 2. レポートの他の部分よりも目立つように (この例では黒地に白)、売上ゲージの **[アクセント]** を **[オン]** に設定します。
 
-    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![オンの位置にある [アクセント] スライダーを示す赤色の矢印が付いた売上ゲージのスクリーンショット。](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
 3. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート サーバーに保存します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "79448035"
 
 1. 売上レポートで輸送ゲージを選択します。
 
-    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![輸送ゲージから [ドリルスルー ターゲット] オプションへの赤色の矢印が付いた売上レポートのスクリーンショット。](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
 2. **[レイアウト]** タブを選択した状態で、 **[ビジュアルのプロパティ]** ウィンドウの **[ドリルスルー ターゲット]** を選択します。
 
@@ -70,11 +70,11 @@ ms.locfileid: "79448035"
 
 4. ドリルスルー対象のレポートを探して選択します。この例では、"金融 - 輸送" です。
 
-    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![[Financials - Transportation]\(金融 - 輸送\) オプションにコールアウトが付けられた [サーバーから開く] ダイアログ ボックスのスクリーンショット。](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
 5. **[ターゲット レポートの構成]** でレポートをフィルター処理するパラメーターを選択し、 **[適用]** を選択します。
 
-   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![[Financials - Transportation]\(金融 - 輸送\) レポート パラメーターを示す [ターゲット レポートの構成] セクションのスクリーンショット。](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
 6. 売上レポートの他の各ゲージについてこれらの手順を繰り返します。 
 
@@ -92,11 +92,11 @@ ms.locfileid: "79448035"
 
 2. 各ゲージの右上にドリルスルー アイコンが表示される点に注目してください。
 
-    ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
+    ![燃料ゲージのスクリーンショット。](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
 3. ゲージのいずれかを選択すると、そのゲージのデータに絞り込まれたレポートが表示されます。
 
-   ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
+   ![輸送ゲージを指す赤色の矢印が付いた [Financials - Transportation]\(金融 - 輸送\) レポートを示すスクリーンショット。](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
 ### <a name="see-also"></a>関連項目
     

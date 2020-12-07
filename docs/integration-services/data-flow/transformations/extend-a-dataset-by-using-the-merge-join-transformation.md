@@ -1,4 +1,5 @@
 ---
+description: マージ結合変換を使用してデータセットを拡張する
 title: マージ結合変換を使用してデータセットを拡張する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3cb54271e151720be7a479c5fc688fe2b7dac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7000b1593f20305c4d09f1f8ee11eb4b874ee3aa
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919358"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123353"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>マージ結合変換を使用してデータセットを拡張する
 

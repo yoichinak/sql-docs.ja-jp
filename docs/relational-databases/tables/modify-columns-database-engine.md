@@ -1,4 +1,5 @@
 ---
+description: 列の変更 (データベース エンジン)
 title: 列の変更 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394497"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88460214"
 ---
 # <a name="modify-columns-database-engine"></a>列の変更 (データベース エンジン)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87394497"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **列のデータ型を変更する方法:**  
   
@@ -53,13 +54,13 @@ ms.locfileid: "87394497"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>列のデータ型を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、有効桁数を変更する列が含まれているテーブルを右クリックし、 **[デザイン]** をクリックします。  
+1.  **オブジェクト エクスプローラー** で、有効桁数を変更する列が含まれているテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
 2.  データ型を変更する列を選択します。  
   
 3.  **[列のプロパティ]** タブで、 **[データ型]** プロパティのグリッド セルをクリックし、ドロップダウン リストから新しいデータ型を選択します。  
   
-4.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
+4.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
   
 > [!NOTE]  
 >  列のデータ型を変更すると、テーブル デザイナーでは選択したデータ型の既定の長さが適用されます。これは既に別の長さを選択していた場合でも同じです。 データ型の指定後、必要な値を格納できるようにするために、データ型に適切な長さを設定してください。  
@@ -71,7 +72,7 @@ ms.locfileid: "87394497"
   
 #### <a name="to-modify-the-data-type-of-a-column"></a>列のデータ型を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

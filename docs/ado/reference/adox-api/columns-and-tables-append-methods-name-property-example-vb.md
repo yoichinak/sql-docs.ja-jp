@@ -1,8 +1,9 @@
 ---
+description: Columns および Tables Append メソッド、Name プロパティの例 (VB)
 title: Columns および Tables Append メソッド、Name プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d25582b8059f59e20ffd3c96a86049bd692a4303
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef7ac3ff021f31123c1ecaf550f174f69af4b0b7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759358"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985043"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns および Tables Append メソッド、Name プロパティの例 (VB)
 次のコードは、新しいテーブルを作成する方法を示しています。  
@@ -67,10 +68,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Append メソッド (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append メソッド (ADOX Tables)](./append-method-adox-tables.md)   
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)   
+ [Name プロパティ (ADOX)](./name-property-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)   
+ [Tables コレクション (ADOX)](./tables-collection-adox.md)

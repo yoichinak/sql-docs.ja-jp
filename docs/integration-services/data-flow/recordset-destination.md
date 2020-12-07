@@ -1,4 +1,5 @@
 ---
+description: レコードセット変換先
 title: レコードセット変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb6f5361b6ad2f967bc57838ac5df785733d9aa8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2e840a22a2946e1278aae09b294952129d737713
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916021"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194160"
 ---
 # <a name="recordset-destination"></a>レコードセット変換先
 
@@ -42,7 +43,7 @@ ms.locfileid: "86916021"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [レコードセット変換先のカスタム プロパティ](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   
@@ -50,5 +51,4 @@ ms.locfileid: "86916021"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [レコードセット変換先を使用する](../../integration-services/data-flow/use-a-recordset-destination.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: FT:Crawl Aborted イベント クラス
 title: FT:Crawl Aborted イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b8532a83614fa8b45ccff4af8452c3ff36cf79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b1e35188537099313ed22c79f4ef5fd13c19124
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88383988"
 ---
 # <a name="ftcrawl-aborted-event-class"></a>FT:Crawl Aborted イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

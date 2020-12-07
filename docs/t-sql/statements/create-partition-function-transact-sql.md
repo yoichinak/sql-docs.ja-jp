@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 571da08ba525e2d6dcf143fc6e207266cd1a816d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392700"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127988"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  パーティション関数の名前です。 パーティション関数の名前は、データベース内で一意であり、かつ[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
  *input_parameter_type*  
- パーティション分割に使用される列のデータ型です。 すべてのデータ型は、 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、別名データ型、または CLR ユーザー定義データ型を除いて、列を分割して使用することができます。  
+ パーティション分割に使用される列のデータ型です。 すべてのデータ型は、 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、別名データ型、または CLR ユーザー定義データ型を除いて、列を分割して使用することができます。  
   
  パーティション分割列と呼ばれる実際の列は、CREATE TABLE ステートメントまたは CREATE INDEX ステートメントで指定します。  
   
@@ -77,7 +78,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]が境界値を左から右の昇順にソートする場合に、*boundary_value* [ **,** _...n_ ] が各境界値間隔のどちら側 (左または右) に属するかを指定します。 指定しない場合は、LEFT が既定値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パーティション関数のスコープは、関数が作成されたデータベース内に制限されます。 データベース内では、パーティション関数は他の関数とは別の名前空間に配置されます。  
   
  NULL が境界値として指定され、RIGHT が指定された場合を除き、パーティション分割列に NULL 値がある行はすべて、左端のパーティションに配置されます。 この場合、左端のパーティションは空のパーティションになり、NULL 値は次のパーティションに配置されます。  
@@ -189,7 +190,7 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [$PARTITION &#40;Transact-SQL&#41;](../../t-sql/functions/partition-transact-sql.md)   
  [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   

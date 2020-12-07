@@ -1,4 +1,5 @@
 ---
+description: エラーとイベントのリファレンス (レプリケーション)
 title: エラーとイベントのリファレンス (レプリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482420"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85652988"
 |MSSQL_ENG021642。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '%s' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。|  
 |MSSQL_ENG021663。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|ソース テーブル [%s].[%s] に有効な主キーが見つかりません。|  
 |MSSQL_ENG021684。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|Oracle パブリッシャー '%s' の管理者ログインに関連付けられた権限が不十分です。|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' には 'MACHINE\Login' または 'DOMAIN\Login' の形式で有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|続行する前に、'%s' エージェント ジョブを '%s' 経由で追加してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|プロセスは、'%1' を '%2' で実行できませんでした。|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|マージ プロセスが、'%1' で生成履歴を変更できませんでした。 トラブルシューティングを行うには、詳細な履歴ログとの同期を再開して、書き込み先の出力ファイルを指定してください。|  

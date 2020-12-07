@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 04a4513ed886c29a18d5bee3d45324a35b3d63ea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988554"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810430"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server のインスタンスの登録 (SQL Server ユーティリティ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "87988554"
  続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server インスタンスの指定  
- 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
+ 接続ダイアログ ボックスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択するには、 **[接続]** をクリックします。ComputerName\InstanceName の形式でコンピューター名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を指定します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
  続行するには、 **[次へ]** をクリックします。  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 接続ダイアログ  
- [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)」を参照してください。  
+ [サーバーへの接続] ダイアログ ボックスで、サーバーの種類、コンピューター名、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名の情報を確認します。 詳細については、「[サーバーへの接続 &#40;データベース エンジン&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)」を参照してください。  
   
 > [!NOTE]  
 >  接続が暗号化されている場合、暗号化された接続が使用されます。 接続が暗号化されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは暗号化された接続を使用して再接続します。  
@@ -129,7 +129,7 @@ ms.locfileid: "87988554"
 |指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのコレクション セットを停止する必要があります。|指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの既存のコレクション セットを停止します。 データ コレクターが無効になっている場合は、それを有効にして、実行中のコレクション セットを停止し、UCP の作成操作に対して検証規則を再実行します。<br /><br /> データ コレクターを有効にするには :<br /><br /> オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。<br /><br /> **[データ コレクション]** を右クリックし、 **[データ コレクションの有効化]** をクリックします。<br /><br /> コレクション セットを停止するには :<br /><br /> オブジェクト エクスプローラーで、[管理] ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。<br /><br /> 停止するコレクション セットを右クリックして **[データ コレクション セットの停止]** をクリックします。<br /><br /> メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに赤い丸が付いている場合は、コレクション セットが停止していることを示します。|  
 |指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始する必要があります。|指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを開始します。 指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインスタンスである場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを手動で開始するように構成します。 それ以外の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に開始されるように構成します。|  
 |UCP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始する必要があります。|UCP の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを開始します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインスタンスである場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを手動で開始するように構成します。 それ以外の場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが自動的に開始されるように構成します。|  
-|WMI が正しく構成されている必要があります。|WMI の構成をトラブルシューティングするには、「 [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。|  
+|WMI が正しく構成されている必要があります。|WMI の構成をトラブルシューティングするには、「 [SQL Server ユーティリティのトラブルシューティング](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントは、UCP の有効な Windows ドメイン アカウントである必要があります。|有効な Windows ドメイン アカウントを指定します。 アカウントが有効であることを確認するには、Windows ドメイン アカウントを使用して UCP にログオンします。|  
 |プロキシ アカウント オプションを選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントは、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの有効な Windows ドメイン アカウントである必要があります。|有効な Windows ドメイン アカウントを指定します。 アカウントが有効であることを確認するには、Windows ドメイン アカウントを使用して、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログオンします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントをビルトイン アカウント (Network Service など) にすることはできません。|アカウントを Windows ドメイン ユーザー アカウントに再割り当てします。 アカウントが有効であることを確認するには、Windows ドメイン アカウントを使用して、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログオンします。|  
@@ -173,7 +173,7 @@ ms.locfileid: "87988554"
 >   
 >  追加情報:Windows NT グループまたはユーザー '\<DomainName\AccountName>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
 >   
->  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)」を参照してください。  
+>  このエラーのトラブルシューティングの詳細については、「 [SQL Server ユーティリティのトラブルシューティング](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンス上の "ユーティリティ情報" コレクション セットのプロパティは一切変更しないでください。また、データ コレクションはユーティリティ エージェント ジョブによって制御されるため、データ コレクションのオン/オフを手動で切り替えることも避けてください。  
@@ -199,6 +199,5 @@ ms.locfileid: "87988554"
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server ユーティリティのトラブルシューティング](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

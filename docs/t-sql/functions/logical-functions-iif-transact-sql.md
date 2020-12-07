@@ -1,4 +1,5 @@
 ---
+description: 論理関数 - IIF (Transact-SQL)
 title: IIF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cda1db97174190f27f2de801c751045bffb61793
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b58823a6b9e6b43b3458392d1b9016c0716a2e32
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112920"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116363"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>論理関数 - IIF (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "87112920"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
@@ -53,7 +53,7 @@ IIF ( boolean_expression, true_value, false_value )
  *boolean_expression* が false に評価された場合に返す値。  
   
 ## <a name="return-types"></a>戻り値の型  
- 内の型からの優先順位が最も高いデータ型を返します *true_value* と *false_value*です。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
+ 内の型からの優先順位が最も高いデータ型を返します *true_value* と *false_value* です。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>解説  
  IIF は CASE 式の簡略版です。 最初の引数として渡されたブール式を評価し、評価の結果に基づいて他の 2 つの引数のいずれかを返します。 つまり、 *true_value* ブール式が true の場合、返されると、 *false_value* ブール式が false または不明のかどうかに返されます。 任意の型の *true_value* と *false_value* を指定できます。 ブール式、NULL 処理、および戻り値の型に対する CASE 式に適用されるのと同じ規則が IIF にも適用されます。 詳細については、を参照してください。 [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
@@ -64,8 +64,8 @@ IIF ( boolean_expression, true_value, false_value )
   
 ### <a name="a-simple-iif-example"></a>A. 簡単な IIF の例  
   
-```  
-DECLARE @a int = 45, @b int = 40;  
+```sql  
+DECLARE @a INT = 45, @b INT = 40;  
 SELECT IIF ( @a > @b, 'TRUE', 'FALSE' ) AS Result;  
 ```  
   
@@ -81,7 +81,7 @@ TRUE
   
 ### <a name="b-iif-with-null-constants"></a>B. NULL 定数を使用する IIF  
   
-```  
+```sql 
 SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;  
 ```  
   
@@ -89,7 +89,7 @@ SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;
   
 ### <a name="c-iif-with-null-parameters"></a>C. NULL のパラメーターを使用する IIF  
   
-```  
+```sql  
 DECLARE @P INT = NULL, @S INT = NULL;  
 SELECT IIF ( 45 > 30, @p, @s ) AS Result;  
 ```  

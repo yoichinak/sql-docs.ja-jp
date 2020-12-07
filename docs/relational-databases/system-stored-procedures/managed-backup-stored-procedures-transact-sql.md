@@ -1,4 +1,5 @@
 ---
+description: マネージバックアップストアドプロシージャ (Transact-sql)
 title: マネージバックアップストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,13 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: bc9d5273-b47d-4c32-a3af-839d963e0548
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 739c95d16b28bac2f5e5b53975fe72f872e984e0
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10cbbdd96df97ff1100443f1363418f18d28c538
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052738"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549958"
 ---
 # <a name="managed-backup-stored-procedures-transact-sql"></a>マネージバックアップストアドプロシージャ (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

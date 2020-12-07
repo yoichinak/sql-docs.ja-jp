@@ -1,4 +1,5 @@
 ---
+description: CREATE STATISTICS (Transact-SQL)
 title: CREATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
@@ -23,15 +24,15 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac582a10b7a3c0bf143fe431cdcdd6d142c372b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 578d639eb80bd85e56d282dbae1495e2abd3ff42
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484413"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990208"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +90,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }

@@ -1,4 +1,5 @@
 ---
+description: レポート サーバー データベースのアップグレード
 title: レポート サーバー データベースのアップグレード | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -11,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575238"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891172"
 ---
 # <a name="upgrade-a-report-server-database"></a>レポート サーバー データベースのアップグレード
 
 レポート サーバー データベースは、1 台以上のレポート サーバー インスタンスの記憶域になります。 レポート サーバー データベースのスキーマは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が新たにリリースされるたびに変更される可能性があります。そのため、使用中のレポート サーバー インスタンスのバージョンとデータベースのバージョンを一致させる必要があります。 ほとんどの場合、レポート サーバー データベースは自動的にアップグレードされます。ユーザーは何も処理する必要がありません。  
   
- **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際にはレポート サーバー データベースは、ReportServer および ReportServerTempDB という既定の名前の付いた 2 つのデータベースで構成されます。  
+ **ネイティブ モード:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、実際にはレポート サーバー データベースは、ReportServer および ReportServerTempDB という既定の名前の付いた 2 つのデータベースで構成されます。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -60,7 +61,7 @@ ms.locfileid: "65575238"
   
  しかし、リモート コンピューターのデータベースに対する **sysadmin** アクセス許可がないと、接続が拒否され、次のエラー メッセージが表示されます。  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  この時点で、レポート サーバーのプログラム ファイルはアップグレードされますが、レポート サーバー データベースは以前のバージョンの形式のままになります。 データベースを手動でアップグレードしてアップグレード プロセスを完了するまで、レポート サーバーは使用できません。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "65575238"
   
 ## <a name="next-steps"></a>次のステップ
 
-[Reporting Services 構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[レポート サーバー構成マネージャー](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services のインストールを移行する](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

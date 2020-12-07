@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400994"
 ---
 # <a name="monitor-appliance-health-state"></a>アプライアンスの正常性状態の監視
@@ -27,7 +27,7 @@ ms.locfileid: "74400994"
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>管理コンソールを使用してコンポーネントのステータスを監視する  
 管理コンソールを使用してコンポーネントのステータスを取得するには:  
   
-1.  [アプライアンスの**状態**] タブをクリックします。  
+1.  [アプライアンスの **状態** ] タブをクリックします。  
   
 2.  [アプライアンスの状態] ページで、特定のノードをクリックすると、ノードの詳細が表示されます。  
   
@@ -73,7 +73,7 @@ Status プロパティに返される値は次のとおりです。
   
 -   ほど  
   
--   重大  
+-   重要  
   
 -   Unknown  
   
@@ -83,7 +83,7 @@ Status プロパティに返される値は次のとおりです。
   
 -   回復不能  
   
-すべてのコンポーネントのすべてのプロパティを表示するに`WHERE  p.property_name = 'Status'`は、句を削除します。  
+すべてのコンポーネントのすべてのプロパティを表示するには、句を削除し `WHERE  p.property_name = 'Status'` ます。  
   
 **[Update_time]** 列には、コンポーネントが SQL Server PDW 正常性エージェントによって最後にポーリングされた時刻が表示されます。  
   

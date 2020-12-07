@@ -1,4 +1,5 @@
 ---
+description: グローバル設定 (テスター) (SybaseToSQL)
 title: グローバル設定 (テスター) (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492178"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>グローバル設定 (テスター) (SybaseToSQL)
-[**グローバル設定**] ダイアログボックスの [テスト担当者] ページを使用して、Ssma tester の設定を指定します。  
+[ **グローバル設定** ] ダイアログボックスの [テスト担当者] ページを使用して、Ssma tester の設定を指定します。  
   
-テスト担当者の設定にアクセスするには、[**ツール**] メニューの [**グローバル設定**] を選択し、左側のウィンドウの下部にある [**テスト担当**者] をクリックします。  
+テスト担当者の設定にアクセスするには、[ **ツール** ] メニューの [ **グローバル設定**] を選択し、左側のウィンドウの下部にある [ **テスト担当** 者] をクリックします。  
   
 ## <a name="options"></a>オプション  
 **テスト可能オブジェクト分析**  
-この設定では、テスト可能オブジェクトの分析を実行するかどうかを指定します。 SSMA Tester が依存オブジェクトを分析し、自動的に確認するようにする場合は、[**はい]** を選択します。 既定のオプションセットは **[はい]** です。  
+この設定では、テスト可能オブジェクトの分析を実行するかどうかを指定します。 SSMA Tester が依存オブジェクトを分析し、自動的に確認するようにする場合は、[ **はい]** を選択します。 既定のオプションセットは **[はい]** です。  
   
 この設定では、次のオプションを使用できます。  
   
@@ -42,10 +43,10 @@ ms.locfileid: "87931289"
   
 4.  テーブル比較に失敗した場合にユーザーに確認する  
   
-既定のオプションセットは、[**常に削除**] です。  
+既定のオプションセットは、[ **常に削除**] です。  
   
 **データのロールバックを実行する**  
-この設定では、各テストケースが実行された後にロールバック操作を実行するかどうかを指定します。 既定のオプションセットは [**いいえ**] です。  
+この設定では、各テストケースが実行された後にロールバック操作を実行するかどうかを指定します。 既定のオプションセットは [ **いいえ**] です。  
   
 この設定では、次のオプションを使用できます。  
   
@@ -63,5 +64,5 @@ ms.locfileid: "87931289"
 2.  いいえ  
   
 ## <a name="see-also"></a>参照  
-[テストケースの準備 &#40;SybaseToSQL&#41;を終了しています](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+[テストケースの準備 &#40;SybaseToSQL&#41;を終了しています ](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

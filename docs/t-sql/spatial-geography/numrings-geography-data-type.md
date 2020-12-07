@@ -1,4 +1,5 @@
 ---
+description: NumRings (geography データ型)
 title: NumRings (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0b85a8842a7bc33753394c5de96582ca41b9d635
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fddcc951ae438b054c68d6e9755e62388fb098e3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552499"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88422326"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  **Polygon** インスタンス内のリングの合計数を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **geography** 型では、すべてのリングが外部リングとして扱われるため、外部リングと内部リングは区別されません。  
+  **Polygon** インスタンス内のリングの合計数を返します。  の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 型では、すべてのリングが外部リングとして扱われるため、外部リングと内部リングは区別されません。  
   
 ## <a name="syntax"></a>構文  
   

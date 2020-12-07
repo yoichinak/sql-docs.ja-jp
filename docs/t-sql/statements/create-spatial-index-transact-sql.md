@@ -1,4 +1,5 @@
 ---
+description: CREATE SPATIAL INDEX (Transact-SQL)
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2019
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4c329846eade8548834747732ddc0ace944baea4
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 549f9157341c6b9508e63c0fadcdb06bade25d18
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484189"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538123"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

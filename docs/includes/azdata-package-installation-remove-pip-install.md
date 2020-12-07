@@ -4,16 +4,16 @@ ms.prod: sql
 ms.topic: include
 ms.date: 01/07/2020
 ms.author: mikeray
-ms.openlocfilehash: 401d214495cd8df8ec3401c0b18db8ebe8773226
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c15fb58bb076724402ab72f81e58ce46c8b7b1e
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75721535"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257412"
 ---
 ### <a name="pythonpip-installation"></a>Python と Pip のインストール
 
-yum、apt、または zypper を使用して Linux に `azdata` をインストールするか、Homebrew インストール パッケージ マネージャーを使用して macOS にインストールすることができます。 これらのパッケージ マネージャーが使用可能になる前は、インストールに Python と pip が必要でした。
+yum、apt、または zypper を使用して Linux に [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] をインストールするか、Homebrew インストール パッケージ マネージャーを使用して macOS にインストールすることができます。 これらのパッケージ マネージャーが使用可能になる前は、インストールに Python と pip が必要でした。
 
 >[!IMPORTANT]
 >次に進む前に、グローバル システム Python にインストールされた `azdata` のすべてのインストールを削除する必要があります。 新しいインストーラーまたはネイティブ パッケージによってパスに `azdata` が追加されます。どれが最初かを判別することはできません。

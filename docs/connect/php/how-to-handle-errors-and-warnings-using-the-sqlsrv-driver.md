@@ -1,7 +1,8 @@
 ---
-title: '方法: SQLSRV ドライバーを使用してエラーと警告を処理する | Microsoft Docs'
+title: 方法:SQLSRV ドライバーを使用してエラーと警告を処理する
+description: Microsoft SQLSRV Driver for PHP for SQL Server を使用する場合にエラーと警告を処理する方法について説明します
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916266"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680647"
 ---
-# <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーと警告を処理する
+# <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用してエラーと警告を処理する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 既定で、SQLSRV ドライバーは警告をエラーとして扱います。エラーまたは警告を生成する **sqlsrv** 関数の呼び出しは **false**を返します。 このトピックでは、この既定の動作を無効にする方法と、エラーとは別に警告を処理する方法について説明します。  
@@ -200,7 +201,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

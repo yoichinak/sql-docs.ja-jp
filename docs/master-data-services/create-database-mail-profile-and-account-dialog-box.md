@@ -1,4 +1,5 @@
 ---
+description: '[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス'
 title: '[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス'
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6c9b1c9b455b7e192c5c4c4ec921b8b9cdebcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461806"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス
 
@@ -59,7 +60,7 @@ ms.locfileid: "85812427"
 |**[パスワードの確認入力]**|パスワードに間違いがないことを確認するために、設定したパスワードをもう一度入力します。|  
 |**匿名認証**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)
   

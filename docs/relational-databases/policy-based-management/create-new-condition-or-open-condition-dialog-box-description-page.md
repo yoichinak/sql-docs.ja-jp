@@ -1,4 +1,5 @@
 ---
+description: '[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ'
 title: '[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11868bd313afa40e371cf37a74214b627f5548ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49bd9755e1ad9725b06a3cc891f192ff5d1d86d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380858"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "85749489"
  **作成者**  
  条件を作成したログイン。  
   
- **[更新日]**  
+ **更新日時**  
  条件が最後に変更された日付。  
   
  **[変更者]**  
  条件を最後に変更したログイン。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

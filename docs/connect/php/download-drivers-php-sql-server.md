@@ -1,8 +1,8 @@
 ---
-title: SQL Server 用 Microsoft Drivers for PHP をダウンロードする | Microsoft Docs
+title: Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 description: SQL Server や Azure SQL Database に接続する PHP アプリケーションを開発するには、Microsoft Drivers for PHP for SQL Server をダウンロードします。
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487944"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680767"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 
-Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2005 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを提供します。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。
+Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケーション用に SQL Server を統合することができます。 このドライバーは、PHP スクリプト内から SQL Server データの読み取りと書き込みを可能にする PHP 拡張機能であり、 Azure SQL Database 内のデータおよび SQL Server 2005 以降のすべてのエディション (Express Edition を含む) 内のデータにアクセスするためのインターフェイスを備えています。 このドライバーは、PHP ストリームなどの PHP 機能を使用して、ラージ オブジェクトの読み取りと書き込みを行います。
 
 Linux と macOS では、PECL を使用して PHP 用のドライバーを簡単にダウンロードしてインストールできます。 詳細については、[Linux および macOS のインストール チュートリアル](installation-tutorial-linux-mac.md)に関する記事を参照してください。 Linux および macOS で PHP 用のドライバーを手動でダウンロードしてインストールする必要がある場合は、GitHub リリース タグにこれらのプラットフォーム用のパッケージがあります。
 

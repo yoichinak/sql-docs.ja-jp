@@ -1,4 +1,5 @@
 ---
+description: DROP INDEX (Transact-SQL)
 title: DROP INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -29,15 +30,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f35c835eb8165bf0c9985a2bea322f8f30d64b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3294204f42537dbaabcce17d230c894e71e4435f
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483853"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990204"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +101,7 @@ DROP INDEX
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
@@ -273,7 +274,7 @@ OFFLINE でクラスター化インデックスを削除すると、クラスタ
 ### <a name="a-dropping-an-index"></a>A. インデックスを削除する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `ProductVendor` テーブルの `IX_ProductVendor_VendorID` インデックスを削除します。  
   
-```  
+```sql  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
     ON Purchasing.ProductVendor;  
 GO  
@@ -282,7 +283,7 @@ GO
 ### <a name="b-dropping-multiple-indexes"></a>B. 複数のインデックスを削除する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースから、単一のトランザクションで 2 つのインデックスを削除します。  
   
-```  
+```sql  
 DROP INDEX  
     IX_PurchaseOrderHeader_EmployeeID ON Purchasing.PurchaseOrderHeader,  
     IX_Address_StateProvinceID ON Person.Address;  
@@ -294,7 +295,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-```  
+```sql  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
     ON Production.BillOfMaterials WITH (ONLINE = ON, MAXDOP = 2);  
 GO  
@@ -305,7 +306,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
 CREATE UNIQUE CLUSTERED INDEX  
     AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -358,7 +359,7 @@ GO
   
  次の例では、制約を削除することで、PRIMARY KEY 制約によるクラスター化インデックスを削除します。 `ProductCostHistory` テーブルには FOREIGN KEY 制約はありません。 それがある場合には、まずそれらの制約を削除する必要があります。  
   
-```  
+```sql  
 -- Set ONLINE = OFF to execute this example on editions other than Enterprise Edition.  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
@@ -368,7 +369,7 @@ WITH (ONLINE = ON);
 ### <a name="f-dropping-an-xml-index"></a>F. XML インデックスを削除する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `ProductModel` テーブルの XML インデックスを削除します。  
   
-```  
+```sql  
 DROP INDEX PXML_ProductModel_CatalogDescription   
     ON Production.ProductModel;  
 ```  
@@ -378,7 +379,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql  
 DROP INDEX PK_MyClusteredIndex   
     ON dbo.MyTable   
     WITH (MOVE TO MyPartitionScheme,  

@@ -1,4 +1,5 @@
 ---
+description: ドメインの管理
 title: ドメインの管理
 ms.date: 07/31/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: fb3e35b7ad6809eef6fec9bf8e390f36f6572cdf
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363012"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724632"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
 
@@ -52,7 +53,7 @@ ms.locfileid: "87363012"
 |ナレッジ ベース内の値を変更または拡張する|[ドメイン値の変更](../data-quality-services/change-domain-values.md)|  
 |検証と標準化の規則を使用する|[ドメイン ルールの作成](../data-quality-services/create-a-domain-rule.md)|  
 |リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションの作成](../data-quality-services/create-term-based-relations.md)|  
-|ドメイン管理アクティビティを完了、終了、またはキャンセルする|[ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|ドメイン管理アクティビティを完了、終了、またはキャンセルする|[ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -61,5 +62,4 @@ ms.locfileid: "87363012"
 |ナレッジ検出を実行し、対話方式でナレッジを管理して、ナレッジ ベースを構築します。|[ナレッジ ベースの作成](../data-quality-services/building-a-knowledge-base.md)|  
 |ナレッジをナレッジ ベースにインポートするか、ナレッジ ベースからナレッジをエクスポートします。|[ナレッジのインポートとエクスポート](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |複合ドメインを作成し、ナレッジをドメインに追加します。|[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)|  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: MSrepl_errors (Transact-SQL)
 title: MSrepl_errors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 982e54a31231a9a425c55a3c3f1849a1e64c500f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5afa86de5a33eab4f7e77da1c825619a738381de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889538"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540283"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889538"
 |**command_id**|**int**|失敗した実行バッチのコマンド ID。 ディストリビューションエージェントでのみ使用されます。これは、失敗した実行バッチ内の最初のコマンドのコマンド ID です。|  
 |**session_id**|**int**|エラーが発生したエージェントセッションの ID。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

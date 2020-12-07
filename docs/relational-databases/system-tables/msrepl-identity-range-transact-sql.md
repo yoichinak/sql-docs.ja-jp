@@ -1,4 +1,5 @@
 ---
+description: MSrepl_identity_range (Transact-sql)
 title: MSrepl_identity_range (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_identity_range system table
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4aafc6415d968d25b7ba4e708985e72378f9d95f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8099f50052fdb41d2e5136b6644e6f016d05ab71
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889515"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540261"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889515"
 |**threshold**|**int**|Id 範囲のしきい値の割合。|  
 |**current_max**|**bigint**|割り当て可能であるが必ずしも割り当てられていない、現在の最大値。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

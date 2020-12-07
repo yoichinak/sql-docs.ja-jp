@@ -1,4 +1,5 @@
 ---
+description: SQLSTATE マッピング
 title: SQLSTATE マッピング |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec58c0e41869529bbba5fd31ad534976923a990d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14be1946b34433b0ff094cb79e2a1ec2ee849cd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476404"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
-このトピックでは、ODBC 2.x*および odbc* *3. x*の SQLSTATE 値について説明します。 ODBC *3. x* SQLSTATE の値の詳細については、「[付録 a: odbc エラーコード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。  
+このトピックでは、ODBC 2.x *および odbc* *3. x*の SQLSTATE 値について説明します。 ODBC *3. x* SQLSTATE の値の詳細については、「 [付録 a: odbc エラーコード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。  
   
- ODBC 3.x では、S1xxx ではなく HYxxx SQLSTATEs が返され、S00XX ではなく 42 Sxx SQLSTATEs が返され*ます*。 これは、オープングループと ISO 標準に合わせて行われました。 多くの場合、マッピングは1対1ではありません。これは、標準によって複数の SQLSTATEs の解釈が再定義されているためです。  
+ ODBC 3.x では、S1xxx ではなく HYxxx SQLSTATEs が返され、S00XX ではなく 42 Sxx SQLSTATEs が返され *ます*。 これは、オープングループと ISO 標準に合わせて行われました。 多くの場合、マッピングは1対1ではありません。これは、標準によって複数の SQLSTATEs の解釈が再定義されているためです。  
   
  *Odbc 2.x アプリケーションを*odbc *2.x アプリケーションに*アップグレードする場合は、odbc 2.x sqlstates では*なく odbc* *2.x sqlstates*を想定するようにアプリケーションを変更する必要があります。 次の表に、各 ODBC 2.x*の SQLSTATE の*マップ先と*なる odbc 3.x*の状態を示します。  
   
- SQL_ATTR_ODBC_VERSION 環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは、 **SQLGetDiagField**または**SQLGetDiagRec**が呼び出されたときに odbc 2.x sqlstates では*なく odbc 2.x* *sqlstates*をポストします。 特定のマッピングを決定するには、次の表の列1に*ある odbc 2.x で、odbc* *3.* x sqlstate (列 2) に対応する必要があります。  
+ SQL_ATTR_ODBC_VERSION 環境属性が SQL_OV_ODBC2 に設定されている場合、ドライバーは、 **SQLGetDiagField**または**SQLGetDiagRec**が呼び出されたときに odbc 2.x sqlstates では*なく odbc 2.x* *sqlstates*をポストします。 特定のマッピングを決定するには、次の表の列1に *ある odbc 2.x で、odbc* *3.* x sqlstate (列 2) に対応する必要があります。  
   
-|ODBC *2.x*|ODBC *3. x* SQLSTATE|説明|  
+|ODBC *2.x*|ODBC *3. x* SQLSTATE|コメント|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  

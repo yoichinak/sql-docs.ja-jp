@@ -1,4 +1,5 @@
 ---
+description: ODBC Driver for Oracle
 title: ODBC Driver for Oracle |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a561539ff960dfa6691d26496b1b62d2ee8ae763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449334"
 ---
 # <a name="odbc-driver-for-oracle"></a>ODBC Driver for Oracle
 > [!IMPORTANT]  
@@ -33,7 +34,7 @@ ms.locfileid: "81298132"
   
  ![ODBC Driver for Oracle app&#47;ドライバーのアーキテクチャ](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- ODBC Driver for Oracle は、API の準拠レベル1と SQL 適合性レベルのコアに準拠しています。 また、API 準拠レベル2の一部の関数、およびコアと拡張 SQL の準拠レベルの文法のほとんどもサポートしています。 ドライバーは ODBC 2.5 に準拠し、32ビットシステムをサポートしています。 Oracle 7.3 x は完全にサポートされています。Oracle8 のサポートは限られています。 ODBC Driver for Oracle では、新しい Oracle8 データ型 (Unicode データ型、Blob、CLOBs) はサポートされていません。また、Oracle の新しいリレーショナルオブジェクトモデルもサポートしていません。 サポートされているデータ型の詳細については、このガイドの「[サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)」を参照してください。  
+ ODBC Driver for Oracle は、API の準拠レベル1と SQL 適合性レベルのコアに準拠しています。 また、API 準拠レベル2の一部の関数、およびコアと拡張 SQL の準拠レベルの文法のほとんどもサポートしています。 ドライバーは ODBC 2.5 に準拠し、32ビットシステムをサポートしています。 Oracle 7.3 x は完全にサポートされています。Oracle8 のサポートは限られています。 ODBC Driver for Oracle では、新しい Oracle8 データ型 (Unicode データ型、Blob、CLOBs) はサポートされていません。また、Oracle の新しいリレーショナルオブジェクトモデルもサポートしていません。 サポートされているデータ型の詳細については、このガイドの「 [サポートされるデータ型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) 」を参照してください。  
   
  Oracle データにアクセスするには、次のコンポーネントが必要です。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "81298132"
   
  特定の Oracle 製品の動作に関する詳細については、Oracle 製品に付属のドキュメントを参照してください。  
   
- ODBC データソースアドミニストレーターを使用した Microsoft ODBC Driver for Oracle の設定または構成の詳細については、 [Odbc データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)のドキュメントを参照してください。  
+ ODBC データソースアドミニストレーターを使用した Microsoft ODBC Driver for Oracle の設定または構成の詳細については、 [Odbc データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md) のドキュメントを参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

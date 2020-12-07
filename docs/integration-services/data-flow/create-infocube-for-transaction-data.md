@@ -1,4 +1,5 @@
 ---
+description: '[トランザクション データのインフォキューブの作成]'
 title: '[トランザクション データのインフォキューブの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923578"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127306"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
 
@@ -67,7 +68,7 @@ ms.locfileid: "86923578"
 |値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|Units|  
+|UNI|ユニット|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   

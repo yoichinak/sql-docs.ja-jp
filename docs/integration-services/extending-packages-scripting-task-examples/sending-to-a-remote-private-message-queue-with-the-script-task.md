@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクによるリモート プライベート メッセージ キューへの送信
 title: スクリプト タスクによるリモート プライベート メッセージ キューへの送信 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58fc117593359bf8e06b7d38a3eb0510a44de09a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5bc25b37bb4dfac2aa03795972edb56eb406aebd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430344"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>スクリプト タスクによるリモート プライベート メッセージ キューへの送信
 
@@ -106,7 +107,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メッセージ キュー タスク](../../integration-services/control-flow/message-queue-task.md)  
   
   

@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: fa517d2ee19d4adc5a6d9acff56ed6f240acc1ee
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818200"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005777"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 
@@ -60,11 +60,11 @@ PolyBase では、次の Microsoft の SQL 製品にこれらと同じ機能を�
 
 - SQL Server 2016 以降のバージョン (Windows のみ)
 - Analytics Platform System (旧称 Parallel Data Warehouse)
-- Azure SQL Data Warehouse
+- Azure Synapse Analytics
 
 ### <a name="azure-integration"></a>Azure との統合
 
-下層 の PolyBase のサポートにより、T-SQL クエリでは Azure Blob Storage のデータをインポートおよびエクスポートすることもできます。 さらに、PolyBase によって、Azure SQL Data Warehouse で Azure Data Lake Store および Azure Blob Storage のデータをインポートおよびエクスポートできるようになります。
+下層 の PolyBase のサポートにより、T-SQL クエリでは Azure Blob Storage のデータをインポートおよびエクスポートすることもできます。 さらに、PolyBase によって、Azure Synapse Analytics で Azure Data Lake Store および Azure Blob Storage のデータをインポートおよびエクスポートできるようになります。
 
 ## <a name="why-use-polybase"></a>PolyBase を使用する理由
 

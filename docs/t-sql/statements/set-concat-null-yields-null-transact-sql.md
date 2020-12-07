@@ -1,4 +1,5 @@
 ---
+description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,15 +21,15 @@ helpviewer_keywords:
 - concatenation [SQL Server]
 - SET CONCAT_NULL_YIELDS_NULL statement
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0bd39f63162511ba0541ecf4c218da2e18bc11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc2e5858e978aa88c55e2cdbbd7c54cb06a814dc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392609"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91226772"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -49,12 +50,14 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET CONCAT_NULL_YIELDS_NULL が ON の場合、NULL 値を文字列と連結すると、結果は NULL になります。 たとえば、`SELECT 'abc' + NULL` の結果は `NULL` になります。 SET CONCAT_NULL_YIELDS_NULL が OFF の場合、NULL 値を文字列と連結すると、結果は元の文字列になり、NULL 値は空文字列として扱われます。 たとえば、`SELECT 'abc' + NULL` の結果は `abc` になります。  
   
  SET CONCAT_NULL_YIELDS_NULL を指定しなかった場合は、**CONCAT_NULL_YIELDS_NULL** データベース オプションの設定が適用されます。  

@@ -1,8 +1,9 @@
 ---
+description: AbsolutePosition およびカーソルのプロパティの例 (VC + +)
 title: AbsolutePosition およびカーソルのプロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58455116560db74d1e1966752e16595be3b74be8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e20f457007e6254afd416fc357f081bb4def3c6b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758938"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977183"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition およびカーソルのプロパティの例 (VC + +)
-この例では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを使用します。  
+この例では、 [AbsolutePosition](./absoluteposition-property-ado.md) プロパティを使用して、 [レコードセット](./recordset-object-ado.md)のすべてのレコードを列挙するループの進行状況を追跡する方法を示します。 カーソルをクライアントカーソルに設定することによって、 **AbsolutePosition**プロパティを有効にするには、cursor [location](./cursorlocation-property-ado.md)プロパティを使用します。  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  
@@ -258,6 +259,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [カーソル位置プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition プロパティ (ADO)](./absoluteposition-property-ado.md)   
+ [カーソル位置プロパティ (ADO)](./cursorlocation-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

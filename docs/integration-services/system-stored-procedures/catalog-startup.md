@@ -1,4 +1,5 @@
 ---
+description: catalog.startup
 title: catalog.startup |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fedf6c41eb47de9fdafef5375af7f0f04b0ab335
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3ad08806328cbeb1e99ff997db9dc6593ce9430
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912770"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129604"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
 

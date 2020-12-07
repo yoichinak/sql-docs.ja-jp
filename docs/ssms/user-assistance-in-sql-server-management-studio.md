@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio のユーザー サポート
 title: SQL Server Management Studio のユーザー サポート
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417838"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86009344"
 ## <a name="the-help-interface"></a>[ヘルプ] のインターフェイス  
 **[目次]** と **[キーワード]** の機能やインターフェイスは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のユーザーには既におなじみです。 他のオプションは次のとおりです。  
   
--   **[カテゴリから検索]**  
+-   **操作方法**  
   
     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なタスクに関する有用なトピックのページがリンクによって階層的にまとめられています。 内容はコンポーネント別、タスク別に編成されており、たとえば、レプリケーションならレプリケーションに関するトピックがひとまとめになっています。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86009344"
 [ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次のようにすることができます。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次の操作を行います。  
   
 -   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "86009344"
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Management Studio のウィンドウ内でヘルプと SQL Server オンライン ブックを起動するための構成を行うには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** 、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]**、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
   
 2.  **[次を使用してヘルプを表示する]** ボックスで **[統合ヘルプ ビューアー]** をクリックします。  
   

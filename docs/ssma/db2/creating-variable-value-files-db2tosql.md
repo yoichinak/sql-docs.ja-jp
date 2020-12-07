@@ -1,4 +1,5 @@
 ---
+description: 変数値ファイルの作成 (DB2ToSQL)
 title: 変数値ファイルの作成 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463492"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>変数値ファイルの作成 (DB2ToSQL)
-変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v**スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
+変数値ファイルは、などのコマンドのパラメーター値を構成する XML ファイルです。サーバーの移行から別のサーバーへの移行に頻繁に変更される転送元または転送先のサーバー名を指定します。 多数のデータベースの移行が行われると、各ソースサーバーの値を格納するための複数の変数ファイルが作成され、コマンドラインで **-v** スイッチを使用してマスタースクリプトファイルに参照されます。 これにより、複数の変数ファイルの変数値を使用して、いくつかのスクリプトファイルで静的な値を保持することができます。  
   
 > [!NOTE]  
 > 1.  変数名の先頭には $ (ドル) 記号が付きます。 変数に変数値ファイルの値が割り当てられていない場合、スクリプトファイルの解析中にエラーが発生し、コンソールの実行プロセスが停止します。  
@@ -86,6 +87,6 @@ ms.locfileid: "87933857"
 ## <a name="next-step"></a>次の手順  
 コンソールを操作する次の手順では、[サーバー接続ファイル &#40;DB2ToSQL&#41;作成し](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)ます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [サーバー接続ファイルの作成](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

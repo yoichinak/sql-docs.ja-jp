@@ -1,4 +1,5 @@
 ---
+description: レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
 title: 手順 4:レッスン 2 のチュートリアル パッケージのテスト | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11d621289dbff6e6940df75e13f07af287c4e9ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d431f2c14b42d5dbaa1dfdc7d987560eab58d4c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413568"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
 
@@ -41,11 +42,11 @@ Foreach ループ コンテナーとフラット ファイル接続マネージ�
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージのテスト  
   
-1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、 **[パッケージの実行]** を選択します。  
+1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、**[パッケージの実行]** を選択します。  
   
     パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、 **[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む  
 [レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  

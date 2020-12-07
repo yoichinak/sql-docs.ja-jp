@@ -1,4 +1,5 @@
 ---
+description: DROP XML SCHEMA COLLECTION (Transact-SQL)
 title: DROP XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c46567c63dbfda8f622f1c70d32a5dfdc82925ac
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483384"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497858"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +39,7 @@ XML スキーマ コレクション全体とそのすべてのコンポーネン
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -52,7 +52,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 削除する XML スキーマ コレクションの名前。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 XML スキーマ コレクションの削除は、トランザクション操作です。 トランザクション内で XML スキーマ コレクションを削除した後にそのトランザクションをロールバックすると、その XML スキーマ コレクションは削除されなかったことになります。  
   
 使用中の XML スキーマ コレクションは削除できません。 つまり、次のいずれかの条件に該当するコレクションは削除できません。  
@@ -63,7 +63,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
   
 -   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `WITH SCHEMABINDING` が指定されるので、XML スキーマ コレクション `MyCollection` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -81,7 +81,7 @@ XML SCHEMA COLLECTION を削除するには、コレクションに対する DRO
 ## <a name="examples"></a>例  
 次の例では、XML スキーマ コレクションを削除します。  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

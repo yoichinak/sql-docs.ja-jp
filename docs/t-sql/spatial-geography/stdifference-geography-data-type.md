@@ -1,4 +1,5 @@
 ---
+description: STDifference (geography データ型)
 title: STDifference (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8165c78e7eced334e31ed7b0ccb0d2bfbab74af4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 067d49755229cad03fe77ae981cf7673d68f536a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552890"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88417038"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_details (Transact-SQL)
 title: fn_syscollector_get_execution_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474666"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>引数  
  *log_id*  
- 実行ログの一意なローカル識別子を指定します。 *log_id*は**int**です。  
+ 実行ログの一意なローカル識別子を指定します。 *log_id* は **int**です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|ログエントリの一意の識別子。|  
-|イベント|**sysname**|ログ エントリを生成したイベントの名前。|  
+|event|**sysname**|ログ エントリを生成したイベントの名前。|  
 |コンピュータ|**nvarchar**|ログ エントリの生成時にパッケージが実行されていたコンピューター。|  
 |operator|**nvarchar**|ログエントリを生成したパッケージを実行したユーザーまたはエージェントのユーザー名。|  
 |source|**nvarchar**|ログエントリを生成した実行可能ファイルの名前。|  
@@ -56,14 +57,14 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|パッケージの実行が開始された時刻です。|  
 |endtime|**datetime**|パッケージが完了した時刻です。|  
 |datacode|**int**|ログエントリに関連付けられたイベントを識別する整数値です。 "0" は、イベントで識別子が指定されていないことを示します。|  
-|databytes|**イメージ**|戻り値を識別するバイト配列。|  
+|databytes|**image**|戻り値を識別するバイト配列。|  
 |message|**nvarchar**|イベントの説明とイベントに関連付けられている情報。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **Dc_operator**に対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Data Tools でパッケージのログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

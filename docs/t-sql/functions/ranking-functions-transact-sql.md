@@ -1,4 +1,5 @@
 ---
+description: 順位付け関数 (Transact-SQL)
 title: 順位付け関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cf854b2edac064596bcce2ff417a6151f8bb170c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248523"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380659"
 ---
 # <a name="ranking-functions-transact-sql"></a>順位付け関数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "87248523"
 ## <a name="examples"></a>例  
  以下の例では、同じクエリ内で 4 つの順位付け関数を使用します。 関数に固有の例については、各順位付け関数を参照してください。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  

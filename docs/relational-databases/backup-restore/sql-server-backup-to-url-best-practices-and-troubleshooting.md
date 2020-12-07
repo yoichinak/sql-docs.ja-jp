@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98507653332b0dc221a0f1c93b189607e50574e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 4212c397c712351e951060032f6e7a2ece6a5c3f
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759019"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129028"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 
@@ -35,7 +35,7 @@ ms.locfileid: "85759019"
   
 -   BLOB を誤って上書きしないように、各バックアップに一意なファイル名を付けることをお勧めします。  
   
--   コンテナーを作成する際は、アクセス レベルを **private**に設定し、必要な認証情報を指定できるユーザーまたはアカウントだけがコンテナー内の BLOB の読み取りや書き込みを実行できるようにすることをお勧めします。  
+-   コンテナーを作成する際は、アクセス レベルを **private** に設定し、必要な認証情報を指定できるユーザーまたはアカウントだけがコンテナー内の BLOB の読み取りや書き込みを実行できるようにすることをお勧めします。  
   
 -   Azure 仮想マシンで実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの場合、仮想マシンと同じリージョンのストレージ アカウントを使用して、リージョン間のデータ転送のコストがかからないようにします。 また、同じ地域を使用すると、バックアップ操作と復元操作で最適なパフォーマンスを得ることができます。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "85759019"
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
-    ,SECRET = '<storage access key> ;  
+    , SECRET = '<storage access key>' ;  
     ```  
   
--   資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **Alter any credential** 権限がある ***db_backupoperator*** ロールのログイン アカウントを使用してください。  
+-   資格情報は存在しますが、BACKUP コマンドの実行に使用されるログイン アカウントに資格情報へのアクセス権限がありません。 **_Alter any credential_* _ 権限がある **db_backupoperator** ロールのログイン アカウントを使用してください。  
   
 -   ストレージ アカウントの名前とキーの値を確認してください。 資格情報に格納されている情報は、バックアップ操作と復元操作で使用する Azure ストレージ アカウントのプロパティの値と一致する必要があります。  
   
- **バックアップ エラー/障害:**  
+ _ *バックアップ エラー/障害:* *  
   
 -   同じ BLOB への並列バックアップを実行すると、バックアップの 1 つが " **初期化に失敗しました** " エラーで失敗します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85759019"
   
     -   Windows イベント ログ (`SQLBackupToUrl` という名前のアプリケーション ログ) を確認することで情報を見つけることもできます。  
 
-    -   大規模なデータベースをバックアップする場合には、COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE、および複数の URL 引数を検討してください。  「[Backing up a VLDB to Azure Blob Storage](https://blogs.msdn.microsoft.com/sqlcat/2017/03/10/backing-up-a-vldb-to-azure-blob-storage/)」(VLDB を Azure Blob Storage にバックアップする) を参照してください
+    -   大規模なデータベースをバックアップする場合には、COMPRESSION、MAXTRANSFERSIZE、BLOCKSIZE、および複数の URL 引数を検討してください。  「[Backing up a VLDB to Azure Blob Storage](/archive/blogs/sqlcat/backing-up-a-vldb-to-azure-blob-storage)」(VLDB を Azure Blob Storage にバックアップする) を参照してください
   
         ```console
         Msg 3202, Level 16, State 1, Line 1
@@ -182,4 +182,3 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
  [Microsoft Azure に格納されたバックアップからの復元](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
-  

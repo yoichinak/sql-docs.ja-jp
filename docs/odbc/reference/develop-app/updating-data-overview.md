@@ -1,4 +1,5 @@
 ---
+description: データの概要の更新
 title: データの更新の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424424"
 ---
 # <a name="updating-data-overview"></a>データの概要の更新
-アプリケーションでは、SQL ステートメントを実行するか、 **SQLSetPos**または**sqlbulkoperations**を呼び出すことによって、データを更新できます。 **UPDATE**、 **DELETE**、および**INSERT**ステートメントは、データソース上で直接動作し、通常はドライバーによってサポートされます。 検索される update ステートメントと delete ステートメントには、変更する行の指定が含まれています。 位置指定の update および delete ステートメントと**SQLSetPos**は、カーソルを介してデータソースに対して動作し、広くサポートされていません。  
+アプリケーションでは、SQL ステートメントを実行するか、 **SQLSetPos** または **sqlbulkoperations**を呼び出すことによって、データを更新できます。 **UPDATE**、 **DELETE**、および **INSERT** ステートメントは、データソース上で直接動作し、通常はドライバーによってサポートされます。 検索される update ステートメントと delete ステートメントには、変更する行の指定が含まれています。 位置指定の update および delete ステートメントと **SQLSetPos** は、カーソルを介してデータソースに対して動作し、広くサポートされていません。  
   
- このセクションで説明するメソッドを使用して、カーソルが結果セットに加えられた変更を検出できるかどうかは、カーソルの種類と実装方法によって異なります。 順方向専用カーソルは行を再確認しないため、変更は検出されません。 スクロール可能なカーソルが変更を検出できるかどうかについては、「スクロール可能な[カーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)」を参照してください。  
+ このセクションで説明するメソッドを使用して、カーソルが結果セットに加えられた変更を検出できるかどうかは、カーソルの種類と実装方法によって異なります。 順方向専用カーソルは行を再確認しないため、変更は検出されません。 スクロール可能なカーソルが変更を検出できるかどうかについては、「スクロール可能な [カーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

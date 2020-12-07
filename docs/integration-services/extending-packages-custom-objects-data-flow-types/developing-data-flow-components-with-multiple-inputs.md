@@ -1,4 +1,5 @@
 ---
+description: 複数の入力を持つデータ フロー コンポーネントの開発
 title: 複数の入力を持つデータ フロー コンポーネントの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fee34f2e35920f8a470c549afec71c5bf4963913
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e73d9b4a6f23473e0dcb7600507dc29fd795679a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920208"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123205"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>複数の入力を持つデータ フロー コンポーネントの開発
 
@@ -58,7 +59,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドの実装では、基本クラスで実装を呼び出す必要はありません。 基本クラスでのこのメソッドの既定の実装では、**NotImplementedException** を発生させるだけです。  
   
- このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します (入力は *inputIDs* 配列内の ID 値によって識別されます)。入力に対して *canProcess* 配列の要素の値を **true** に設定すると、データ フロー エンジンは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを呼び出し、指定した入力に対して追加データを提供します。  
+ このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します  (入力は *inputIDs* 配列内の ID 値によって識別されます)。入力に対して *canProcess* 配列の要素の値を **true** に設定すると、データ フロー エンジンは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを呼び出し、指定した入力に対して追加データを提供します。  
   
  アップストリーム データを追加で使用できますが、少なくとも 1 つの入力に対して *canProcess* 配列要素の値を常に **true** に設定する必要があります。設定しない場合は、処理が停止します。  
   

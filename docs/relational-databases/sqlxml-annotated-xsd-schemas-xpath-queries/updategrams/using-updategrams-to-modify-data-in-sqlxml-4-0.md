@@ -26,12 +26,12 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c043425e8db0ce36776e8fec938e3b083d230c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa45ac2a57ff4f59dc3f3367dc2c66f638f2516b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733654"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811066"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、アップデートグラムを使用したデータ変更
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85733654"
  [アップデートグラムでの注釈付きマッピングスキーマの指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
  アップデートグラムの注釈付きマッピング スキーマについて説明し、使用例を示します。  
   
- [&#40;SQLXML 4.0&#41;の NULL 処理](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;の NULL 処理 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md)  
  要素値と属性値に NULL を指定する方法について説明します。  
   
  [XML アップデートグラムを使用したデータの挿入 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
@@ -64,10 +64,9 @@ ms.locfileid: "85733654"
  [アップデートグラムでのデータベースの同時実行に関する問題の処理 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  アップデートグラムでのコンカレンシーの問題に対応するために可能なさまざまなレベルの保護について説明し、例を示します。  
   
- [アップデートグラムサンプルアプリケーション &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
+ [アップデートグラムサンプルアプリケーション &#40;SQLXML 4.0&#41;]()  
  アップデートグラムを使用したサンプル アプリケーションを提供します。  
   
  [XML アップデートグラムのガイドラインと制限 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  アップデートグラムを使用する場合の注意点をいくつか挙げます。  
-  
   

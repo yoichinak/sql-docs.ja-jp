@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_READ (Transact-SQL)'
 title: '@@TOTAL_READ (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d812089875ef00b035e30ce98627c8b46462b31
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7f31072dc67bb72fcbf484d74d697594425c1256
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110704"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124579"
 ---
 # <a name="x40x40total_read-transact-sql"></a>&#x40;&#x40;TOTAL_READ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "87110704"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 @@TOTAL_READ  
 ```  
   
@@ -48,12 +48,12 @@ ms.locfileid: "87110704"
  **integer**  
   
 ## <a name="remarks"></a>解説  
- いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor**です。  
+ いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行を含む、読み取りおよび書き込み動作では、統計、 **sp_monitor** です。  
   
 ## <a name="examples"></a>例  
  次の例では、現在のシステム上の日付と時刻におけるディスクの読み取りおよび書き込みの合計数が返されます。  
   
-```  
+```sql
 SELECT @@TOTAL_READ AS 'Reads', @@TOTAL_WRITE AS 'Writes', GETDATE() AS 'As of';  
 ```  
   

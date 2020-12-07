@@ -1,4 +1,5 @@
 ---
+description: sys.database_role_members (Transact-SQL)
 title: database_role_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
@@ -20,16 +21,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9669462c83252af8c4526ddda0f155cdcb6b8a92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482141"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  データベース ロールのメンバーごとに 1 行のデータを返します。  データベースユーザー、アプリケーションロール、およびその他のデータベースロールは、データベースロールのメンバーになることができます。 ロールにメンバーを追加するには、 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md)ステートメントをオプションと共に使用し `ADD MEMBER` ます。 値の名前を返すには、 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)と結合します。 `principal_id`
+  データベース ロールのメンバーごとに 1 行のデータを返します。  データベースユーザー、アプリケーションロール、およびその他のデータベースロールは、データベースロールのメンバーになることができます。 ロールにメンバーを追加するには、 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) ステートメントをオプションと共に使用し `ADD MEMBER` ます。 値の名前を返すには、 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)と結合します。 `principal_id`
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +59,7 @@ ORDER BY DP1.name;
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
 [ALTER ROLE (Transact-sql)](../../t-sql/statements/alter-role-transact-sql.md)      

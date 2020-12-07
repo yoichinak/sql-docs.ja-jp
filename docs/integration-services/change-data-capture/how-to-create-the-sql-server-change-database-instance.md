@@ -1,4 +1,5 @@
 ---
+description: SQL Server 変更データベース インスタンスを作成する方法
 title: SQL Server 変更データベース インスタンスを作成する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fb085a9917e5237d23ac2b2b60a7fbbe3034b6e3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaee23380c929ce5f9f106fb130d328bd3c7e47
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921568"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88478061"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 変更データベース インスタンスを作成する方法
 

@@ -1,6 +1,6 @@
 ---
-title: OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート | Microsoft Docs
-description: OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート
+title: OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート
+description: 高可用性とディザスター リカバリーの機能が構成されているデータベースに接続する場合の、これらの機能に対する OLE DB Driver for SQL Server でのサポートについて説明します。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26c340a10118f115db87c742e570831edc8b65f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f7e926485480bb18979350eea69ace972c0a102
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006916"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860702"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

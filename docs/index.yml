@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Microsoft SQL ドキュメント
-summary: Azure SQL サービスと SQL Server を使用してオンプレミスとクラウドの両方でデータベースのニーズを管理する方法について説明します。
+summary: 'SQL Server と Azure SQL を使用し、オンプレミスとクラウドの両方で、お使いのデータベースのニーズを管理する方法について説明します。 (クイック リンク: https://aka.ms/sqldocs)'
 brand: sql
 metadata:
   title: Microsoft SQL ドキュメント | Microsoft Docs
-  description: Azure SQL サービスと SQL Server を使用してオンプレミスとクラウドの両方でデータベースのニーズを管理する方法について説明します。
+  description: 'SQL Server と Azure SQL を使用し、オンプレミスとクラウドの両方で、お使いのデータベースのニーズを管理する方法について説明します。 (クイック リンク: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: c593194a2c254baaec71cf7874e6ffd2d1883740
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: 2aceef5d8f718cc0720727e32a53b1986ef16c1a
+  ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80664349"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96443060"
 highlightedContent:
   items:
   - title: SQL Server 2019 をお試しください
@@ -28,28 +28,32 @@ highlightedContent:
     url: sql-server/educational-sql-resources.yml
 productDirectory:
   items:
-  - title: Azure 上の SQL
-    imageSrc: media/index/azure.svg
-    links:
-    - url: https://docs.microsoft.com/azure/sql-database/
-      text: Azure SQL データベース
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (SQL DW)
   - title: Windows 上の SQL Server
     imageSrc: media/index/windows.svg
     links:
     - url: sql-server/index.yml
       text: オンプレミス
-    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
       text: Azure VM 上
     - url: https://docs.microsoft.com/previous-versions/sql/
       text: 以前のバージョン (SQL 2005-2012)
+  - title: Azure 上の SQL
+    imageSrc: media/index/azure.svg
+    links:
+    - url: https://docs.microsoft.com/azure/azure-sql/database/
+      text: Azure SQL データベース
+    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+      text: Azure SQL Managed Instance
+    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+      text: Azure SQL Edge
+    - url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
+      text: Azure Synapse Analytics
   - title: Linux 上の SQL Server
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: オンプレミス
-    - url: linux/quickstart-install-connect-clouds.md
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
       text: Azure VM 上
 conceptualContent:
   items:
@@ -86,6 +90,9 @@ conceptualContent:
       itemType: whats-new
     - text: SQL Server Machine Learning サービス
       url: machine-learning/index.yml
+      itemType: whats-new
+    - text: SQL Server 対応 Azure Arc (プレビュー)
+      url: sql-server/azure-arc/overview.md
       itemType: whats-new
   - title: インストール
     links:
@@ -141,9 +148,9 @@ additionalContent:
         url: connect/homepage-sql-connection-programming.md
       - text: SQL Server を使用する DevOps
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-      - text: Azure SQL DB アプリケーション
+      - text: Azure SQL Database アプリケーション
         url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
-      - text: Azure SQL DB 接続ライブラリ
+      - text: Azure SQL Database 接続ライブラリ
         url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
@@ -169,11 +176,9 @@ additionalContent:
         url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview
       - text: Polybase によるデータ仮想化
         url: relational-databases/polybase/polybase-guide.md
-      - text: Azure Synapse Analytics (SQL DW)
-        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure Synapse Analytics
+        url: https://docs.microsoft.com/azure/synapse-analytics/overview-what-is/
       - text: Microsoft Analytics Platform System
         url: analytics-platform-system/index.md
       - text: SQL Server Machine Learning Services (R と Python)
         url: machine-learning/index.yml
-      - text: Azure Machine Learning
-        url: https://docs.microsoft.com/azure/machine-learning/

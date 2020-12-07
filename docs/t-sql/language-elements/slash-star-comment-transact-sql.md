@@ -1,4 +1,5 @@
 ---
+description: スラッシュ アスタリスク (ブロック コメント) (Transact-SQL)
 title: スラッシュ アスタリスク (ブロック コメント) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 161c90803b636ff8aacd67f773c739b0d0153150
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195434"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>スラッシュ アスタリスク (ブロック コメント) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "86912375"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 /*  
 text_of_comment  
 */  
@@ -60,8 +60,8 @@ text_of_comment
   
  たとえば、次のコードではエラーが生成されます。  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
@@ -72,21 +72,20 @@ GO
   
  このエラーを回避するには、次のように変更してください。  
   
-```  
-DECLARE @comment AS varchar(20);  
+```sql  
+DECLARE @comment AS VARCHAR(20);  
 GO  
 /*  
 SELECT @comment = '/*';  
 */ */  
 SELECT @@VERSION;  
 GO  
-  
 ```  
   
 ## <a name="examples"></a>例  
  次の例では、コード セクションの作業内容を説明するコメントを使用しています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 /*  

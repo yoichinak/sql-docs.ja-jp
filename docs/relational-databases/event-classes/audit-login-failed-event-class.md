@@ -1,4 +1,5 @@
 ---
+description: Audit Login Failed イベント クラス
 title: Audit Login Failed イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b00b8493151b49d3c83816680c4d06ff548bbb18
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49346257189dc6e1f4ffe3f773abd1bc92b565f7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629889"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126796"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

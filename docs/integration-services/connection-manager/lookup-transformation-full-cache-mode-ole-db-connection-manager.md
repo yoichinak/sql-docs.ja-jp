@@ -1,4 +1,5 @@
 ---
+description: フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
 title: フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55a439be88d422130e8a511a5c1d2071ece7fc2c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923130"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91719770"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
 
@@ -39,11 +40,11 @@ ms.locfileid: "86923130"
 3.  参照変換をデータ フローに連結します。連結するには、変換元または前の変換から参照変換にコネクタをドラッグします。  
   
     > [!NOTE]  
-    >  参照変換が空の日付フィールドを含むフラット ファイルに接続される場合、その変換は検証されないことがあります。 変換が検証されるかどうかは、フラット ファイルの接続マネージャーが NULL 値を保持するように構成されているかどうかによって決まります。 参照変換が検証されるようにするには、 **フラット ファイル ソース エディター**の **[接続マネージャー]** ページで、 **[データ ソースの NULL 値をデータ フローで NULL 値として保持する]** オプションを選択します。  
+    >  参照変換が空の日付フィールドを含むフラット ファイルに接続される場合、その変換は検証されないことがあります。 変換が検証されるかどうかは、フラット ファイルの接続マネージャーが NULL 値を保持するように構成されているかどうかによって決まります。 参照変換が検証されるようにするには、 **フラット ファイル ソース エディター** の **[接続マネージャー]** ページで、 **[データ ソースの NULL 値をデータ フローで NULL 値として保持する]** オプションを選択します。  
   
 4.  変換元または前の変換をダブルクリックして、コンポーネントを構成します。  
   
-5.  参照変換をダブルクリックし、 **参照変換エディター**の **[全般]** ページで **[フル キャッシュ]** を選択します。  
+5.  参照変換をダブルクリックし、 **参照変換エディター** の **[全般]** ページで **[フル キャッシュ]** を選択します。  
   
 6.  **[接続の種類]** 領域で、 **[OLE DB 接続マネージャー]** を選択します。  
   
@@ -55,11 +56,11 @@ ms.locfileid: "86923130"
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         または  
+         - または -  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         または  
+         - または -  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -81,13 +82,12 @@ ms.locfileid: "86923130"
   
     2.  **[参照操作]** ボックスの一覧で、参照列の値を入力列の値と置き換えるか、新しい列に書き出すかを指定します。  
   
-12. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+12. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../data-flow/transformations/lookup-transformation.md)」をご覧ください。  
   
 13. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

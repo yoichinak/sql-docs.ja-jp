@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor_secondary (Transact-sql)
 title: sp_help_log_shipping_monitor_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e9bfac5c9cbb8594667f33a3abcc0a3a7561b49d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489362"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @secondary_server = ] 'secondary_server'`セカンダリサーバーの名前を指定します。 *secondary_server*は**sysname**であり、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server'` セカンダリサーバーの名前を指定します。 *secondary_server* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|Column|説明|  
+|列|説明|  
 |------------|-----------------|  
 |**secondary_server**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのセカンダリインスタンスの名前です。|  
 |**secondary_database**|ログ配布構成のセカンダリデータベースの名前。|  
@@ -69,13 +70,13 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|セカンダリデータベースでの最後の復元操作の日時。協定世界時で表されます。|  
 |**history_retention_period**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
   
-## <a name="remarks"></a>注釈  
- **sp_help_log_shipping_monitor_secondary**は、監視サーバーの**master**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_help_log_shipping_monitor_secondary** は、監視サーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>こちらもご覧ください  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

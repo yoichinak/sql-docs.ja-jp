@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - CREATE SESSION CUBE
 title: CREATE SESSION CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483875"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ操作 - CREATE SESSION CUBE
 
@@ -101,16 +102,16 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  セッションキューブ内のディメンションの名前です。  
   
- FROM \<dim from 句>  
+ FROM \<dim from clause>  
  派生ディメンションの定義のみの有効な仕様です。  
   
  NOT_RELATED_TO_FACTS  
  派生ディメンションの定義のみの有効な仕様です。  
   
- \<レベルの種類>  
+ \<level type>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー キューブやローカル キューブと異なり、セッション キューブは、それを作成したセッションの期間を超えて保持されません。 セッションキューブは、それを定義するメジャーと定義に基づいて定義されます。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  
@@ -199,7 +200,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX&#41;&#40;のグローバルキューブステートメントの作成](../mdx/mdx-data-definition-create-global-cube.md)  
+ [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX&#41;&#40;のグローバルキューブステートメントの作成 ](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

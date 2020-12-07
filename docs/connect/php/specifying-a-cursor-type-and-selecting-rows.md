@@ -1,5 +1,6 @@
 ---
-title: カーソルの種類を指定し、行を選択する | Microsoft Docs
+title: カーソルの種類を指定し、行を選択する
+description: Microsoft Drivers for PHP for SQL Server を使用してカーソルの種類を指定し、行を選択する方法について説明します。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ae3d54f71c70b06601309ea490377241b84598b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d7031f5aa0d3b2e3c222feface1b2c857a7b2384
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923786"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603420"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>カーソルの種類を指定し、行を選択する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

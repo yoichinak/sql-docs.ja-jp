@@ -1,4 +1,5 @@
 ---
+description: ALTER BROKER PRIORITY (Transact-SQL)
 title: ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2db827883ba69ac4183352241459638b4adf0638
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f6d90dce7df2acb45c28ac7ebb74c4d03817fec
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301967"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124311"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -123,7 +124,7 @@ FOR CONVERSATION
 ### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>A. 既存のメッセージ交換の優先度レベルのみ変更する  
  優先度レベルを変更しますが、コントラクト、ローカル サービス、またはリモート サービスの各プロパティは変更しません。  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (PRIORITY_LEVEL = 3);  
@@ -132,7 +133,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
 ### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>B. 既存のメッセージ交換の優先度のプロパティをすべて変更する  
  優先度レベル、コントラクト、ローカル サービス、リモート サービスの各プロパティを変更します。  
   
-```  
+```sql  
 ALTER BROKER PRIORITY SimpleContractPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContractB,  

@@ -1,8 +1,9 @@
 ---
+description: Delete メソッドの例 (VBScript)
 title: Delete メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 44bd0d4bda4601ccb7589c8b0a5e3be4f448ffb8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765583"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974063"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete メソッドの例 (VBScript)
-この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドを使用して、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
+この例では、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) メソッドを使用して、レコード [セット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定されたレコードを削除します。  
   
  Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があるか、このファイルの実際の場所を反映するようにコード例のパスを編集する必要があります。 これは、Microsoft Access データベースファイルです。  
   
- [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **DeleteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
+ [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **DeleteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
- この例を実行するには、最初に[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)の例を使用していくつかのレコードを追加します。 その後、削除を試みることができます。 任意のクライアントブラウザーで結果を表示します。  
+ この例を実行するには、最初に [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) の例を使用していくつかのレコードを追加します。 その後、削除を試みることができます。 任意のクライアントブラウザーで結果を表示します。  
   
 ```  
 <!-- BeginDeleteVBS -->  

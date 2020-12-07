@@ -15,14 +15,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883003"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584864"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85883003"
  プライマリ データベースに適用されるセキュリティ設定は、セカンダリ データベースに保存されます。 これには、ユーザー、データベース ロール、およびアプリケーション ロールと、それぞれの権限が含まれます。また、透過的なデータ暗号化 (TDE) も含まれます (プライマリ データベースで有効な場合)。  
   
 > [!NOTE]  
->  セカンダリ データベースにデータを書き込むことはできませんが、ユーザー データベースやシステム データベース ( **tempdb**など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
+>  セカンダリ データベースにデータを書き込むことはできませんが、ユーザー データベースやシステム データベース ( **tempdb** など) を含め、セカンダリ レプリカをホストするサーバー インスタンス上の読み書き可能なデータベースには書き込むことができます。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] また、読み取り可能なセカンダリ レプリカへの読み取りを目的とした接続要求の再ルーティング (*読み取り専用ルーティング*) もサポートしています。 読み取り専用ルーティングについては、「 [リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85883003"
   
 -   ディスク ベース テーブルに対する読み取り専用ワークロードは、行のバージョン管理を使用してセカンダリ データベースでのブロック競合を除去します。 他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、スナップショット分離トランザクション レベルに自動的にマップされます。 また、すべてのロック ヒントが無視されます。 これにより、リーダー/ライターの競合が解消されます。  
   
--   持続性のあるメモリ最適化テーブルに対する読み取り専用ワークロードは、同じトランザクション分離レベル制限 (「 [データベース エンジンにおける分離レベル](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)」を参照) でネイティブ ストアド プロシージャまたは SQL 相互運用性を使用して、プライマリ データベースでのアクセスとまったく同じ方法でデータにアクセスします。 プライマリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、セカンダリ レプリカでも変更せずに実行できます。 同様に、セカンダリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、プライマリ レプリカでも変更せずに実行できます。  他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、ディスク ベース テーブルと同様に、スナップショット分離トランザクション レベルに自動的にマップされます。  
+-   持続性のあるメモリ最適化テーブルに対する読み取り専用ワークロードは、同じトランザクション分離レベル制限 (「 [データベース エンジンにおける分離レベル](/previous-versions/sql/sql-server-2008-r2/ms189122(v=sql.105))」を参照) でネイティブ ストアド プロシージャまたは SQL 相互運用性を使用して、プライマリ データベースでのアクセスとまったく同じ方法でデータにアクセスします。 プライマリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、セカンダリ レプリカでも変更せずに実行できます。 同様に、セカンダリ レプリカで実行されるレポート ワークロードまたは読み取り専用クエリは、プライマリ レプリカでも変更せずに実行できます。  他のトランザクション分離レベルが明示的に設定されていても、セカンダリ データベースに対して実行されるすべてのクエリは、ディスク ベース テーブルと同様に、スナップショット分離トランザクション レベルに自動的にマップされます。  
   
 -   セカンダリ レプリカ上では、ディスク ベースおよびメモリ最適化テーブル型の両方について、テーブル変数に対する DML 操作が許可されます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "85883003"
   
 -   **可用性グループ リスナー**  
   
-     読み取り専用ルーティングをサポートするには、可用性グループに [可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。 読み取り専用クライアントは、このリスナーに接続要求を送信する必要があります。クライアントの接続文字列では、アプリケーションの目的として "読み取り専用" を指定する必要があります。 つまり、 *読み取りを目的とした接続要求*であることが必要です。  
+     読み取り専用ルーティングをサポートするには、可用性グループに [可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。 読み取り専用クライアントは、このリスナーに接続要求を送信する必要があります。クライアントの接続文字列では、アプリケーションの目的として "読み取り専用" を指定する必要があります。 つまり、 *読み取りを目的とした接続要求* であることが必要です。  
   
 -   **読み取り専用ルーティング**  
   
@@ -153,18 +153,18 @@ ms.locfileid: "85883003"
 ###  <a name="indexing"></a><a name="bkmk_Indexing"></a> インデックス作成  
  読み取り可能なセカンダリ レプリカでの読み取り専用ワークロードを最適化するには、セカンダリ データベースのテーブルにインデックスを作成できます。 セカンダリ データベースではスキーマやデータの変更を行えないため、プライマリ データベースでインデックスを作成し、再実行プロセスによってセカンダリ データベースに変更を転送できるようにします。  
   
- セカンダリ レプリカでのインデックス使用状況を監視するには、 **sys.dm_db_index_usage_stats**動的管理ビューの **user_seeks**列、 **user_scans** 列、および [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 列を照会します。  
+ セカンダリ レプリカでのインデックス使用状況を監視するには、 **sys.dm_db_index_usage_stats** 動的管理ビューの **user_seeks** 列、 **user_scans** 列、および [user_lookups](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md) 列を照会します。  
   
 ###  <a name="statistics-for-read-only-access-databases"></a><a name="Read-OnlyStats"></a> 読み取り専用アクセス データベースの統計  
  テーブルとインデックス付きビューの列の統計情報を使用して、クエリ プランを最適化します。 可用性グループの場合、プライマリ データベースで作成および管理される統計は、トランザクション ログ レコードの適用の一部としてセカンダリ データベースに自動的に保存されます。 ただし、セカンダリ データベースの読み取り専用ワークロードについて、プライマリ データベースで作成される統計とは別の統計が必要になることがあります。 しかし、セカンダリ データベースは読み取り専用アクセスに制限されているため、セカンダリ データベースで統計を作成することはできません。  
   
- この問題に対処するために、セカンダリ レプリカでは、セカンダリ データベースの一時的な統計を、 **tempdb**に作成して管理します。 一時的な統計と、(プライマリ データベースで作成されてセカンダリ データベースに保存される) 永続的な統計とを区別するために、サフィックス _readonly_database_statistic が一時的な統計の名前に付加されます。  
+ この問題に対処するために、セカンダリ レプリカでは、セカンダリ データベースの一時的な統計を、 **tempdb** に作成して管理します。 一時的な統計と、(プライマリ データベースで作成されてセカンダリ データベースに保存される) 永続的な統計とを区別するために、サフィックス _readonly_database_statistic が一時的な統計の名前に付加されます。  
   
  一時的な統計を作成して更新できるのは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のみです。 ただし、永続的な統計の場合と同じツールを使用すると、一時的な統計を削除したり、そのプロパティを監視したりできます。  
   
 -   [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して一時的な統計を削除します。  
   
--   **sys.stats** カタログ ビューと **sys.stats_columns** カタログ ビューを使用して統計を監視します。 **sys_stats** には、どの統計が一時的または永続的なものかを示すための **is_temporary**列が含まれています。  
+-   **sys.stats** カタログ ビューと **sys.stats_columns** カタログ ビューを使用して統計を監視します。 **sys_stats** には、どの統計が一時的または永続的なものかを示すための **is_temporary** 列が含まれています。  
   
  プライマリ レプリカまたはセカンダリ レプリカ上のメモリ最適化テーブルでは、自動統計更新がサポートされません。 セカンダリ レプリカに対するクエリ パフォーマンスとプランを監視し、必要であれば、プライマリ レプリカの統計を手動で更新する必要があります。 ただし、不足している統計は、プライマリ レプリカとセカンダリ レプリカについて自動的に作成されます。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "85883003"
   
 ####  <a name="limitations-and-restrictions"></a><a name="StatsLimitationsRestrictions"></a> 制限事項と制約事項  
   
--   一時的な統計は **tempdb**に格納されるので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
+-   一時的な統計は **tempdb** に格納されるので、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
   
 -   サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 このサフィックスは、プライマリ データベースで統計を作成するときには使用できません。 詳細については、[統計](../../../relational-databases/statistics/statistics.md)に関する記事を参照してください。  
   
@@ -207,9 +207,9 @@ GO
   
 -   ディスク ベース テーブルの場合、読み取り可能なセカンダリ レプリカでは、2 つの理由から **tempdb** に領域が必要になることがあります。  
   
-    -   スナップショット分離レベルは行バージョンを **tempdb**にコピーします。  
+    -   スナップショット分離レベルは行バージョンを **tempdb** にコピーします。  
   
-    -   セカンダリ データベースの一時的な統計が **tempdb**に作成されて管理されます。 一時的な統計により、 **tempdb**のサイズが多少増加することがあります。 詳細については、このセクションの後の「 [読み取り専用アクセス データベースの統計](#Read-OnlyStats)」をご覧ください。  
+    -   セカンダリ データベースの一時的な統計が **tempdb** に作成されて管理されます。 一時的な統計により、 **tempdb** のサイズが多少増加することがあります。 詳細については、このセクションの後の「 [読み取り専用アクセス データベースの統計](#Read-OnlyStats)」をご覧ください。  
   
 -   1 つまたは複数のセカンダリ レプリカに対して読み取りアクセスを構成した場合、ディスク ベース テーブルについてセカンダリ データベースに行バージョンのポインターを格納するために、プライマリ データベースでデータ行の削除、変更、または挿入ごとに 14 バイトのオーバーヘッドが生成されます。 この 14 バイトのオーバーヘッドはセカンダリ データベースに適用されます。 14 バイトのオーバーヘッドがデータ行に追加されるため、ページ分割が発生することがあります。  
   
@@ -240,12 +240,11 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [統計](../../../relational-databases/statistics/statistics.md)  
-  
   

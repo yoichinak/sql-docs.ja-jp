@@ -1,4 +1,5 @@
 ---
+description: 列コピー変換
 title: 列コピー変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af29ab26c4bd67bdb4ac00eadcfa59bb61bbb7ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 27673de93d920cdc6adddd12deadcdc4a774d86c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914604"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194144"
 ---
 # <a name="copy-column-transformation"></a>列コピー変換
 
@@ -40,7 +41,7 @@ ms.locfileid: "86914604"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -65,5 +66,4 @@ ms.locfileid: "86914604"
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

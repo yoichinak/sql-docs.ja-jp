@@ -1,4 +1,5 @@
 ---
+description: ALTER ASYMMETRIC KEY (Transact-SQL)
 title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.date: 04/12/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 596002d6c5440ec9896c5122aa78da4ca085506d
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 814df70ce91d6cc65b6c2a86d0617dc42bbb4489
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301895"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128150"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,10 +63,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  秘密キーの保護を変更します。  
   
- ENCRYPTION BY PASSWORD **='***strongPassword***'**  
+ ENCRYPTION BY PASSWORD **='** _strongPassword_*_'_*  
  秘密キーを保護するための新しいパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。 このオプションを省略した場合、秘密キーはデータベースのマスター キーで暗号化されます。  
   
- DECRYPTION BY PASSWORD **='***oldPassword***'**  
+ DECRYPTION BY PASSWORD **='** _oldPassword_*_'_*  
  現在秘密キーが保護されている、古いパスワードを指定します。 秘密キーがデータベースのマスター キーで暗号化されている場合は指定する必要はありません。  
   
 ## <a name="remarks"></a>解説  
@@ -91,7 +92,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ### <a name="a-changing-the-password-of-the-private-key"></a>A. 秘密キーのパスワードを変更する  
  次の例では、非対称キー `PacificSales09` の秘密キーの保護に使用するパスワードを変更します。 新しいパスワードは `<enterStrongPasswordHere>` です。  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales09   
     WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<oldPassword>',  
@@ -102,7 +103,7 @@ GO
 ### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. 非対称キーから秘密キーを削除する  
  次の例では、`PacificSales19` から秘密キーを削除し、公開キーだけを残します。  
   
-```  
+```sql  
 ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;  
 GO  
 ```  
@@ -110,7 +111,7 @@ GO
 ### <a name="c-removing-password-protection-from-a-private-key"></a>C. 秘密キーからパスワード保護を削除する  
  次の例では、秘密キーからパスワード保護を削除し、データベースのマスター キーで保護します。  
   
-```  
+```sql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  

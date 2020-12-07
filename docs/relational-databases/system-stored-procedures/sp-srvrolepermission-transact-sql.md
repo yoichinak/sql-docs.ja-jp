@@ -1,4 +1,5 @@
 ---
+description: sp_srvrolepermission (Transact-sql)
 title: sp_srvrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473714"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @srvrolename = ] 'role'`権限を返す固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 ロールが指定されていない場合は、すべての固定サーバーロールの権限が返されます。 *ロール*は、次のいずれかの値を持つことができます。  
+`[ @srvrolename = ] 'role'` 権限を返す固定サーバーロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。 ロールが指定されていない場合は、すべての固定サーバーロールの権限が返されます。 *ロール* は、次のいずれかの値を持つことができます。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**sysadmin**|システム管理者|  
 |**securityadmin**|セキュリティ管理者|  
@@ -65,7 +66,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**ServerRole**|**sysname**|固定サーバーロールの名前|  
 |**権限**|**sysname**|**ServerRole**に関連付けられたアクセス許可|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  表示される権限には、固定サーバー ロールのメンバーが実行できる、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとその他の特別な操作が含まれます。 固定サーバーロールの一覧を表示するには、 **sp_helpsrvrole**を実行します。  
   
  **Sysadmin**固定サーバーロールには、他のすべての固定サーバーロールの権限が与えられています。  
@@ -81,7 +82,7 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

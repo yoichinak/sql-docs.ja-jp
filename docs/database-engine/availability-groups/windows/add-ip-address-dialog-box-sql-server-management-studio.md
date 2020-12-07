@@ -6,18 +6,18 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: af1d83b298059ef035478c6f8b60b96af80a31e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 37e219416f780f8b707fc90bcd8eb443d91a8745
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900439"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584835"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

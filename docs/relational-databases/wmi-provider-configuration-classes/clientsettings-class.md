@@ -1,4 +1,5 @@
 ---
+description: ClientSettings クラス
 title: ClientSettings クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientSettings class
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e929a3982103db95839a9a69e8c7e54d311e9da3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45b28bc1a026f482172e95ee1c2a30eaa070e722
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888849"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891262"
 ---
 # <a name="clientsettings-class"></a>ClientSettings クラス
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,6 @@ ms.locfileid: "85888849"
   
  このクラスにより、プログラムによるクライアントの管理が可能になります。  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../database-engine/configure-windows/configure-client-protocols.md)  
   

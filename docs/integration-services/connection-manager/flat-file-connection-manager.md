@@ -1,4 +1,5 @@
 ---
+description: フラット ファイル接続マネージャー
 title: フラット ファイル接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 210403386f169488773911b12fd881c4820d5a42
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93890a2bf8fc0b9209eb9582c8129ee6856865ee
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914198"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130102"
 ---
 # <a name="flat-file-connection-manager"></a>フラット ファイル接続マネージャー
 
@@ -46,11 +47,11 @@ ms.locfileid: "86914198"
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>フラット ファイル接続マネージャーの構成  
  フラット ファイル接続マネージャーをパッケージに追加すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時にフラット ファイル接続を解決する接続マネージャーが作成され、フラット ファイル接続プロパティが設定され、フラット ファイル接続マネージャーがパッケージの **Connections** コレクションに追加されます。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **FLATFILE**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **FLATFILE** に設定されます。  
   
  既定では、フラット ファイル接続マネージャーは、引用符で囲まれていないデータの行区切り記号を常に確認し、行区切り記号が見つかると新しい行を開始します。 これにより、接続マネージャーは列フィールドがない行を含むファイルを正しく解析できます。  
   
- 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラット ファイル接続マネージャーのプロパティである **AlwaysCheckForRowDelimiters**を **False**に設定します。  
+ 場合によっては、この機能を無効にすると、パッケージのパフォーマンスが向上します。 この機能を無効にするには、フラット ファイル接続マネージャーのプロパティである **AlwaysCheckForRowDelimiters** を **False** に設定します。  
   
  フラット ファイル接続マネージャーは、次の方法で構成できます。  
   
@@ -72,7 +73,7 @@ ms.locfileid: "86914198"
   
 -   式を使用してファイルを指定する場合は、 **[フラット ファイル接続マネージャー エディター]** の **[ファイル名]** ボックスにファイル パスを追加します。  
   
--   フラット ファイル接続マネージャーの **DelayValidation** プロパティを **True**に設定します。  
+-   フラット ファイル接続マネージャーの **DelayValidation** プロパティを **True** に設定します。  
   
  フラット ファイルの変換先に対してフラット ファイル接続マネージャーを使用することにより、実行時に式を使用してファイル名を作成できます。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "86914198"
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続の一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -240,7 +241,7 @@ ms.locfileid: "86914198"
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -256,7 +257,7 @@ ms.locfileid: "86914198"
 |**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、この値は文字数に対応します。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。 オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[テキスト修飾子]**|テキスト データが引用符などのテキスト修飾子文字で囲まれているかどうかを示します。<br /><br /> True: フラット ファイルのテキスト データは修飾されます。 False: フラット ファイルのテキスト データは修飾されません。|  
-|**Name**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
+|**名前**|わかりやすい列名を指定します。 名前を入力しないと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、列 1、列 2 などの形式で自動的に名前が作成されます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** 。 列は、復帰と改行の組み合わせで区切られます。<br /><br /> **{CR}** 。 列は、復帰で区切られます。<br /><br /> **{LF}** 。 列は、改行で区切られます。<br /><br /> **セミコロン {;}** 。 列は、セミコロンで区切られます。<br /><br /> **コロン {:}** 。 列は、コロンで区切られます。<br /><br /> **コンマ {,}** 。 列は、コンマで区切られます。<br /><br /> **タブ {t}** 。 列は、タブで区切られます。<br /><br /> **縦棒 {&#124;}** 。 列は、縦棒で区切られます。|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
@@ -281,7 +282,7 @@ ms.locfileid: "86914198"
   
  フラット ファイル接続マネージャーの詳細については、「 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおけるフラット ファイル接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   

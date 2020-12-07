@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60dfa5cf08b11789fde744f41a2c139f922d286
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245659"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043800"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)
 
@@ -22,7 +22,7 @@ ms.locfileid: "87245659"
   
 スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レポートで使用されます。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
-![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
+![レポート ビルダー スパークラインを示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-final.png)  
      
 このチュートリアルの推定所要時間:30 分。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "87245659"
   
 5.  **[新規作成]** をクリックします。 **[データ ソースのプロパティ]** ダイアログ ボックスが表示されます。  
   
-6.  **[名前]** に、データ ソースの名前として「 **Product Sales**」と入力します。  
+6.  **[名前]** に、データ ソースの名前として「 **Product Sales** 」と入力します。  
   
 7.  **[接続の種類の選択]** で、 **[Microsoft SQL Server]** が選択されていることを確認します。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "87245659"
   
 4.  クエリ デザイナーのツール バーで、[実行]\( **!** ) をクリックします。  
   
-    **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
+    **SalesDate** 、 **Subcategory** 、 **Product** 、 **Sales** 、および **Quantity** の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
 5.  **[次へ]** をクリックします。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "87245659"
   
 8.  **SalesDate** を **[列グループ]** にドラッグします。  
 
-    ![report-builder-sparkline-arrange-fields](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
+    ![フィールドを配置する方法を示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-arrange-fields.png)
   
 9. **[次へ]** をクリックします。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "87245659"
   
     *  3 行目はテーブルで 1 回表示され、総計を示します。  
     
-    ![report-builder-sparkline-choose-layout](../reporting-services/media/report-builder-sparkline-choose-layout.png)
+    ![レイアウトを選択する方法を示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-choose-layout.png)
   
 11. **[次へ]** をクリックします。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "87245659"
   
 14. テーブルがデザイン画面に追加されます。 テーブルには 3 列および 5 行が含まれています。  
   
-    グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには 1 つの行グループ**Product** が表示されます。 列グループ ペインには 1 つ列グループ**SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+    グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには 1 つの行グループ **Product** が表示されます。 列グループ ペインには 1 つ列グループ **SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
-    ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
+    ![レポート ビルダーのグループ化ペインを示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   
 15. **[実行]** をクリックして、レポートをプレビューします。  
 
@@ -168,15 +168,15 @@ ms.locfileid: "87245659"
   
 2.  **SalesDate** 列の 2 行目 (列見出しの次の行) のセルをクリックします。 Ctrl キーを押しながら、 `[Sum(Sales)]`を含むすべてのセルを選択します。 
 
-    ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
+    ![[Sum(Sales)] を選択する方法を示すスクリーンショット。](../reporting-services/media/report-builder-select-sum-sales.png) 
   
 3.  **[ホーム]** タブの **[数値]** グループで、 **[通貨]** をクリックします。 書式設定された通貨を表示するようにセルが変化します。  
 
-    ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
+    ![プレースホルダーの通貨の値で置き換えられた [Sum(Sales)] を示すスクリーンショット。](../reporting-services/media/report-builder-placeholder-currency.png)
   
     地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。  
     
-    ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![[サンプルの値] オプションが選択されていることを示すスクリーンショット。](../reporting-services/media/report-builder-placeholder-value-button.png)
    
 ### <a name="2b-optional-format-data-as-dates"></a><a name="FormatDates"></a>2b. (オプション) データに日付の書式を設定する  
 既定では、 **SalesDate** フィールドには日付と時刻の情報が表示されます。 このフィールドを書式設定して、日付のみを表示できます。  
@@ -199,23 +199,23 @@ ms.locfileid: "87245659"
   
 3.  右クリックして表示される **[列の挿入]** を選択してから、 **[左]** をクリックします。  
 
-    ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
+    ![左の列を挿入する方法を示すスクリーンショット。](../reporting-services/media/report-builder-add-column-left.png)
   
 4.  新しい列の `[Product]` 行のセルを右クリックし、 **[挿入]**  >  **[スパークライン]** の順にクリックします。  
 
-    ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
+    ![スパークラインを挿入する方法を示すスクリーンショット。](../reporting-services/media/report-builder-insert-sparkline.png)
   
 5.  **[スパークラインの種類を選択]** で、 **[列]** 行の最初のスパークラインが選択されていることを確認してから、 **[OK]** をクリックします。  
   
 6.  スパークラインをクリックして、グラフ データ ペインを表示します。  
   
-7.  [値] ボックスのプラス記号 (+) をクリックしてから、 **Sales**をクリックします。 
+7.  [値] ボックスのプラス記号 (+) をクリックしてから、 **Sales** をクリックします。 
 
-    ![report-builder-sparkline-values](../reporting-services/media/report-builder-sparkline-values.png) 
+    ![レポート ビルダー スパークラインに値を追加する方法を示すスクリーンショット。 ](../reporting-services/media/report-builder-sparkline-values.png) 
   
     **Sales** フィールドの値がスパークラインの値になります。  
   
-8.  [カテゴリ グループ] ボックスのプラス記号 (+) をクリックしてから、 **SalesDate**をクリックします。  
+8.  [カテゴリ グループ] ボックスのプラス記号 (+) をクリックしてから、 **SalesDate** をクリックします。  
   
 9. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "87245659"
   
     また、どの行も、最も高いバーが行の高さになっています。 各行の最大値は同じではないので、誤解を招きます。たとえば、Budget Movie-Maker の最大の値は 10,400 ドルですが、Slim Digital の最大の値は 26,576 ドルで 2 倍以上あります。 ところが、これらの 2 つの行の最も高いバーはほぼ同じ高さになっています。 すべてのスパークラインで、同じスケールを使用する必要があります。  
   
-     ![report-builder-sparkline-misaligned](../reporting-services/media/report-builder-sparkline-misaligned.png)
+     ![揃っていないレポート ビルダー スパークラインを示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-misaligned.png)
   
 ## <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4.スパークラインを垂直方向および水平方向に揃える  
 スパークラインは、測定方法が異なると、読み取りにくくなります。 各スパークラインの縦軸と横軸は、残りのスパークラインと一致させる必要があります。  
@@ -250,7 +250,7 @@ ms.locfileid: "87245659"
   
 これで、各スパークライン内のすべてのバーが、他のスパークライン内のバーと揃えられ、高さが相関的になりました。  
   
-![report-builder-sparkline-aligned](../reporting-services/media/report-builder-sparkline-aligned.png)
+![揃っているレポート ビルダー スパークラインを示すスクリーンショット。](../reporting-services/media/report-builder-sparkline-aligned.png)
   
 ## <a name="7-optional-change-column-widths"></a><a name="Width"></a>7.(オプション) 列幅を変更する  
 テーブルの各セルには、既定でテキスト ボックスが含まれます。 テキスト ボックスは、ページを表示するときにテキストに合わせて垂直方向に拡張されます。 表示されるレポートでは、各行がその行で最も高いテキスト ボックスの高さに拡張されます。 デザイン画面の行の高さは、表示されるレポートの行の高さには影響しません。  
@@ -276,9 +276,9 @@ ms.locfileid: "87245659"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **Sales by Date**」と入力し、テキスト ボックスの外側をクリックします。  
+2.  「 **Sales by Date** 」と入力し、テキスト ボックスの外側をクリックします。  
   
-3.  **Product Sales**を含むテキスト ボックスを選択します。  
+3.  **Product Sales** を含むテキスト ボックスを選択します。  
   
 4.  [ホーム] タブで、 **[フォント]** グループ、 **[色]** の順に進み、 **[青緑]** を選択します。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "87245659"
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
+4.  **[名前]** に入力されている既定の名前を「 **Product Sales** 」に置き換えます。  
   
 5.  **[保存]** をクリックします。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "87245659"
   
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
+3.  **[名前]** に入力されている既定の名前を「 **Product Sales** 」に置き換えます。  
   
 4.  **[保存]** をクリックします。  
   

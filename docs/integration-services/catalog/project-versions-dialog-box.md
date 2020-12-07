@@ -1,4 +1,5 @@
 ---
+description: '[プロジェクトのバージョン] ダイアログ ボックス'
 title: '[プロジェクトのバージョン] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 06a60ad76aff33ddee8e5717fa52b0b678b20270
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afdeac18b14b75461038889fe34b6fd34658991f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922595"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457770"
 ---
 # <a name="project-versions-dialog-box"></a>[プロジェクトのバージョン] ダイアログ ボックス
 

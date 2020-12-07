@@ -1,7 +1,8 @@
 ---
-title: Windows ODBC ドライバーの接続の回復性 | Microsoft Docs
+title: Windows ODBC ドライバーの接続レジリエンシー
+description: ODBC ドライバーの接続の回復性によって、どのようにして接続が透過的に復元され、サーバーがアイドル状態の接続を閉じたときのアプリケーションの動作がどのように改善されるかについて説明します。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c04c0f1573fe3353c7cc65e614b784822e578ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928315"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288124"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80928315"
   確実にアプリケーションを [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)]に接続されたままにするため、Windows 上の ODBC ドライバーは、アイドル状態の接続を復元できます。  
   
 > [!IMPORTANT]  
->  接続の復元機能は Microsoft Azure SQL データベースと SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
+>  接続の復元機能は Microsoft Azure SQL Database と SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
   
  アイドル接続の回復性について詳しくは、「[Technical Article - Idle Connection Resiliency](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx)」 (技術記事 - アイドル接続の回復性) をご覧ください。
   
@@ -61,7 +62,7 @@ ms.locfileid: "80928315"
   
  次の状態コードは、サーバーでコマンドを実行する関数から返されます。  
   
-|State|Message|  
+|State|メッセージ|  
 |-----------|-------------|  
 |IMC01|接続が切断され、復旧は不可能です。 クライアント ドライバーは接続の復旧を 1 回または複数回試行しましたが、すべて失敗しました。 復旧試行数を増やすには、ConnectRetryCount の値を増やします。|  
 |IMC02|サーバーは復旧試行を認識しませんでした。接続復旧は不可能です。|  
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

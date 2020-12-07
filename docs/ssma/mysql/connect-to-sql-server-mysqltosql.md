@@ -1,4 +1,5 @@
 ---
+description: SQL Server への接続 (MySQLToSQL)
 title: SQL Server への接続 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1f47a77b3712c1a943d6a1f87619b03bf93a5598
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: de3254b236dc03d7474aefe465aae91bef518f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372828"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
-[ **SQL Server への接続**] ダイアログボックスを使用すると、に移行するのインスタンスに接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。 [ **SQL Server への接続**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **SQL Server に接続**] をクリックします。  
+[ **SQL Server への接続** ] ダイアログボックスを使用すると、に移行するのインスタンスに接続 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] できます。 [ **SQL Server への接続** ] ダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **SQL Server に接続**] をクリックします。  
   
 ## <a name="options"></a>Options  
 **サーバー名**  
 接続する SQL Server のインスタンスを入力または選択します。 既定では、最近接続したインスタンスが表示されます。  
   
--   ローカルコンピューター上の既定のインスタンスに接続している場合は、 **localhost**またはドット (**.**) のいずれかを入力できます。  
+-   ローカルコンピューター上の既定のインスタンスに接続している場合は、 **localhost** またはドット (**.**) のいずれかを入力できます。  
   
 -   別のコンピューター上の既定のインスタンスに接続している場合は、コンピューターの名前を入力します。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "87936226"
 **サーバーポート**  
 のインスタンス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定のポート (1433) で接続を受け入れるように構成されていない場合は、ポート番号を入力します。 それ以外の場合は、この値を空白のままにします。  
   
-**データベース**  
+**[データベース]**  
 オブジェクトとデータを移行するデータベースを指定します。 このオプションは、に再接続するときには使用できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 **認証**  
@@ -45,11 +46,11 @@ ms.locfileid: "87936226"
 認証を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、のインスタンスにログインするためのパスワードを入力し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 Windows 認証を使用している場合、このオプションは使用できません。  
   
 **暗号化接続**  
-SQL Server に安全に接続する場合は、[**暗号化接続**] チェックボックスをオンにして、暗号化接続を使用します。  
+SQL Server に安全に接続する場合は、[ **暗号化接続** ] チェックボックスをオンにして、暗号化接続を使用します。  
   
 **[Trust Server Certificate]**  
-このオプションを使用する場合は、[**サーバー証明書を信頼**する] チェックボックスをオンにします。  
+このオプションを使用する場合は、[ **サーバー証明書を信頼** する] チェックボックスをオンにします。  
   
 > [!NOTE]  
-> 信頼された**サーバー証明書**を有効にするには、"Encrypt" を**True**に設定する必要があります。  
+> 信頼された **サーバー証明書**を有効にするには、"Encrypt" を **True**に設定する必要があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: ODBC 関数の概要
 title: ODBC 関数の概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487375"
 ---
 # <a name="odbc-function-summary"></a>ODBC 関数の概要
 次の表に、タスクの種類ごとにグループ化された ODBC 関数の一覧を示します。また、各関数の目的について、準拠の指定と簡単な説明が含まれています。 準拠の表記の詳細については、「 [ODBC と標準 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)」を参照してください。 各関数の構文とセマンティクスの詳細については、「 [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md)」を参照してください。  
   
- アプリケーションは**SQLGetInfo**関数を呼び出して、ドライバーに関する準拠情報を取得できます。 ドライバー内の特定の関数のサポートに関する情報を取得するために、アプリケーションは**Sqlgetfunctions**を呼び出すことができます。  
+ アプリケーションは **SQLGetInfo** 関数を呼び出して、ドライバーに関する準拠情報を取得できます。 ドライバー内の特定の関数のサポートに関する情報を取得するために、アプリケーションは **Sqlgetfunctions**を呼び出すことができます。  
   
 |タスク|関数名|互換性|目的|  
 |----------|-------------------|-----------------|-------------|  
-|データ ソースへの接続|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|環境、接続、ステートメント、または記述子ハンドルを取得します。|  
+|データ ソースに接続する|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|環境、接続、ステートメント、または記述子ハンドルを取得します。|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|データソース名、ユーザー ID、およびパスワードを指定して、特定のドライバーに接続します。|  
 ||[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|ODBC|接続文字列によって特定のドライバーに接続します。または、ドライバーマネージャーとドライバーにユーザーの接続ダイアログボックスが表示されるように要求します。|  
 ||[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|ODBC|連続する接続属性のレベルと有効な属性値を返します。 各接続属性に値が指定されると、はデータソースに接続します。|  
@@ -52,7 +53,7 @@ ms.locfileid: "81298923"
 ||[SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)|ODBC|ドライバーによって変換された SQL ステートメントのテキストを返します。|  
 ||[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|ODBC|ステートメント内の特定のパラメーターの説明を返します。|  
 ||[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|ISO 92|ステートメント内のパラメーターの数を返します。|  
-||[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|ISO 92|実行時にパラメーターデータを提供するために、 **Sqlputdata**と組み合わせて使用されます。 (長いデータ値に役立ちます)。|  
+||[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|ISO 92|実行時にパラメーターデータを提供するために、 **Sqlputdata** と組み合わせて使用されます。 (長いデータ値に役立ちます)。|  
 ||[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|ISO 92|パラメーターのデータ値の一部またはすべてを送信します。 (長いデータ値に役立ちます)。|  
 |結果と結果に関する情報の取得|[SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)<br /><br /> [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|ISO 92<br /><br /> ISO 92|挿入、更新、または削除要求の影響を受けた行数を返します。<br /><br /> 結果セット内の列数を返します。|  
 ||[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|ISO 92|結果セットの列について説明します。|  

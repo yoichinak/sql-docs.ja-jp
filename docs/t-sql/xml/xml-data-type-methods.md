@@ -1,4 +1,5 @@
 ---
+description: xml データ型のメソッド
 title: xml データ型のメソッド
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6f1cb562110c113b5d56f680dd1fa86ef41a4c23
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6b139187edc98242b7b4efc03ebd53a71fe415f3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393250"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116563"
 ---
 # <a name="xml-data-type-methods"></a>xml データ型のメソッド
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ ms.locfileid: "86393250"
   
  これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 次に例を示します。  
   
-```  
+```sql
 SELECT XmlCol.query(' ... ')  
-FROM   Table  
+FROM Table  
 ```  
   
 > [!NOTE]  

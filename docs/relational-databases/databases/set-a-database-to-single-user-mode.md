@@ -1,4 +1,5 @@
 ---
+description: データベースをシングル ユーザー モードに設定する
 title: データベースをシングル ユーザー モードに設定する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba2485d34df61b931afef75d68cddbde6b01289f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763378"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88471150"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>データベースをシングル ユーザー モードに設定する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85763378"
   
      [前提条件](#Prerequisites)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してデータベースをシングル ユーザー モードに設定するには:**  
   
@@ -60,7 +61,7 @@ ms.locfileid: "85763378"
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>データベースをシングル ユーザー モードに設定するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  変更するデータベースを右クリックして、 **[プロパティ]** をクリックします。  
   

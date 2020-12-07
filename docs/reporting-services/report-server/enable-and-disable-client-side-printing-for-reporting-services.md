@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547474"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390658"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547474"
   
  ![レポート ツール バー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツール バー")  
   
-|||  
+|相互作用|ユーザー インターフェイス|  
 |-|-|  
 |最初のダイアログ ボックスは、すべてのブラウザーで同じです。印刷の向きなどの基本的なレイアウト プロパティを変更できます。 **[印刷]** をクリックしたときの動作は、使用しているブラウザーによって多少異なります。|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Chrome では、詳細なブラウザーの印刷ダイアログ ボックスが開きます。   印刷設定を変更したり、印刷を実行したり、オペレーティング システムの印刷ダイアログ ボックスを開いたりすることができます。|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

@@ -1,5 +1,6 @@
 ---
-title: dm_os_sys_memory (Transact-sql) |Microsoft Docs
+description: sys.dm_os_sys_memory (Transact-sql)
+title: sys.dm_os_sys_memory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,25 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e79399d5483b84d893a2b4d3943dfd51aec7de6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b91e4ac74636f30f390cf38526be55d0767a27b1
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396765"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834058"
 ---
-# <a name="sysdm_os_sys_memory-transact-sql"></a>dm_os_sys_memory (Transact-sql)
+# <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   オペレーティングシステムからメモリ情報を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、オペレーティングシステムレベルの外部メモリ条件と、基になるハードウェアの物理的な制限によって制限され、応答します。 システム全体の状態を調査することは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量を評価するうえで重要な要素です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティングシステムレベルの外部メモリ条件と、基になるハードウェアの物理的な制限によって制限され、応答します。 システム全体の状態を調査することは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量を評価するうえで重要な要素です。  
   
 > [!NOTE]  
->  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_sys_memory**という名前を使用します。  
+>  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **sys.dm_pdw_nodes_os_sys_memory**という名前を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -46,17 +47,17 @@ ms.locfileid: "87396765"
 |**system_cache_kb**|**bigint**|システム キャッシュ メモリの合計サイズ (KB 単位)。|  
 |**kernel_paged_pool_kb**|**bigint**|ページ カーネル プールの合計サイズ (KB 単位)。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|非ページカーネルプールの合計サイズ (KB 単位)。|  
-|**system_high_memory_signal_state**|**bit**|システムの高メモリ リソース通知の状態。 この値が 1 の場合、Windows によって高メモリ シグナルが設定されていることを意味します。 詳細については、MSDN ライブラリの「 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 」を参照してください。|  
-|**system_low_memory_signal_state**|**bit**|システムのメモリ不足のリソース通知の状態。 値が1の場合は、メモリ不足のシグナルが Windows によって設定されていることを示します。 詳細については、MSDN ライブラリの「 [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 」を参照してください。|  
+|**system_high_memory_signal_state**|**bit**|システムの高メモリ リソース通知の状態。 この値が 1 の場合、Windows によって高メモリ シグナルが設定されていることを意味します。 詳細については、MSDN ライブラリの「 [CreateMemoryResourceNotification](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) 」を参照してください。|  
+|**system_low_memory_signal_state**|**bit**|システムのメモリ不足のリソース通知の状態。 値が1の場合は、メモリ不足のシグナルが Windows によって設定されていることを示します。 詳細については、MSDN ライブラリの「 [CreateMemoryResourceNotification](/windows/win32/api/memoryapi/nf-memoryapi-creatememoryresourcenotification) 」を参照してください。|  
 |**system_memory_state_desc**|**nvarchar (256)**|メモリ状態の説明。 次の表を参照してください。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 |条件|値|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> と<br /><br /> system_low_memory_signal_state = 0|使用可能な物理メモリが十分に存在します。|  
-|system_high_memory_signal_state = 0<br /><br /> と<br /><br /> system_low_memory_signal_state = 1|使用可能な物理メモリが不足しています。|  
-|system_high_memory_signal_state = 0<br /><br /> と<br /><br /> system_low_memory_signal_state = 0|物理メモリの使用量が安定しています。|  
-|system_high_memory_signal_state = 1<br /><br /> と<br /><br /> system_low_memory_signal_state = 1|物理メモリの状態が遷移中です<br /><br /> 高シグナルと低シグナルが同時にオンになることはありません。 ただし、オペレーティングシステムレベルでの迅速な変更により、両方の値がユーザーモードアプリケーションに表示される可能性があります。 両方のシグナルがオンのように見えるとき、その状態は遷移中の状態と解釈されます。|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|使用可能な物理メモリが十分に存在します。|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|使用可能な物理メモリが不足しています。|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|物理メモリの使用量が安定しています。|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|物理メモリの状態が遷移中です<br /><br /> 高シグナルと低シグナルが同時にオンになることはありません。 ただし、オペレーティングシステムレベルでの迅速な変更により、両方の値がユーザーモードアプリケーションに表示される可能性があります。 両方のシグナルがオンのように見えるとき、その状態は遷移中の状態と解釈されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -65,6 +66,3 @@ ms.locfileid: "87396765"
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-

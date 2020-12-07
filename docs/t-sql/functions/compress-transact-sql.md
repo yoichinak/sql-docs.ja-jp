@@ -1,4 +1,5 @@
 ---
+description: COMPRESS (Transact-SQL)
 title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ce9659824a46615da6056928c81e6a8cc4b98b36
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394297"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128552"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -31,33 +32,31 @@ ms.locfileid: "87394297"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>引数
 *式 (expression)*  
 A
 
-* **binary(***n***)**
-* **char(***n***)**
-* **nchar(***n***)**
+* **binary(** _n_*_)_*
+* **char(** _n_*_)_*
+* **nchar(** _n_*_)_*
 * **nvarchar(max)**
-* **nvarchar(***n***)**
+* **nvarchar(** _n_*_)_*
 * **varbinary(max)**
-* **varbinary(***n***)**
+* **varbinary(** _n_*_)_*
 * **varchar(max)**
 
 or
 
-* **varchar(***n***)**
+* **varchar(** _n_*_)_*
 
 expression。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-圧縮された入力内容を表す **varbinary (max)** 。
+圧縮された入力内容を表す **varbinary (max)**。
   
 ## <a name="remarks"></a>解説  
 圧縮されたデータにインデックスを付けることはできません。
@@ -88,7 +87,7 @@ INTO dbo.inactivePlayers
 WHERE datemodified < @startOfYear; 
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [文字列関数 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 [DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   

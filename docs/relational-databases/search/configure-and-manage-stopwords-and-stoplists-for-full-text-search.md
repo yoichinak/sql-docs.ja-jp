@@ -1,4 +1,5 @@
 ---
+description: フルテキスト検索に使用するストップワードとストップリストの構成と管理
 title: フルテキスト検索に使用するストップワードとストップリストの構成と管理
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,18 +19,18 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725980"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127764"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>フルテキスト検索に使用するストップワードとストップリストの構成と管理
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  フルテキスト インデックスが肥大化するのを防ぐため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、頻繁に出現する、検索に役立たない文字列を破棄するメカニズムがあります。 破棄されるこのような文字列を *ストップワード*と呼びます。 インデックスの作成中、Full-Text Engine により、フルテキスト インデックスからストップワードが除外されます。 つまり、フルテキスト クエリでは、ストップワードが検索されません。  
+  フルテキスト インデックスが肥大化するのを防ぐため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、頻繁に出現する、検索に役立たない文字列を破棄するメカニズムがあります。 破棄されるこのような文字列を *ストップワード* と呼びます。 インデックスの作成中、Full-Text Engine により、フルテキスト インデックスからストップワードが除外されます。 つまり、フルテキスト クエリでは、ストップワードが検索されません。  
    
-**ストップワード**」を参照してください。 ストップワードには、特定の言語で意味を持つ単語を指定できます。 たとえば、英語では、"a"、"and"、"is"、"the" などの単語は、検索に役立たないことが知られているため、フルテキスト インデックスから除外されます。 また、ストップワードは言語的な意味を持たない*トークン*でも構いません。  
+**ストップワード**」を参照してください。 ストップワードには、特定の言語で意味を持つ単語を指定できます。 たとえば、英語では、"a"、"and"、"is"、"the" などの単語は、検索に役立たないことが知られているため、フルテキスト インデックスから除外されます。 また、ストップワードは言語的な意味を持たない *トークン* でも構いません。  
 
 **ストップリスト**。 ストップワードは、ストップリストと呼ばれるオブジェクトを使用してデータベースで管理されます。 *ストップリスト* は、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。
    
@@ -68,7 +69,7 @@ ms.locfileid: "85725980"
   
     -   **[既存のフルテキスト ストップリストから作成する]**  
   
-     詳細については、「[新しいフルテキスト ストップリスト &#40;[全般] ページ&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)」を参照してください。  
+     詳細については、「[新しいフルテキスト ストップリスト &#40;[全般] ページ&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130))」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -95,9 +96,9 @@ ms.locfileid: "85725980"
   
 4.  プロパティを変更するストップリストを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  [[フルテキスト ストップリストのプロパティ]](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ダイアログ ボックスで:  
+5.  [[フルテキスト ストップリストのプロパティ]](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) ダイアログ ボックスで:  
   
-    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]** 、 **[ストップワードの削除]** 、 **[すべてのストップワードの削除]** 、 **[ストップリストのクリア]** のいずれかのアクションを選択します。  
+    1.  **[アクション]** ボックスの一覧で、 **[ストップワードの追加]**、 **[ストップワードの削除]**、 **[すべてのストップワードの削除]**、 **[ストップリストのクリア]** のいずれかのアクションを選択します。  
   
     2.  選択したアクションに対して **[ストップワード]** ボックスが有効になっている場合は、単一のストップワードを入力します。 このストップワードは一意である必要があります。つまり、選択した言語で、このストップリストにまだ含まれていないものである必要があります。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "85725980"
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|から|4|  
+|を|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  
@@ -138,6 +139,5 @@ ms.locfileid: "85725980"
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>SQL Server 2005 からのノイズ ワードのアップグレード  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のノイズ ワードは、ストップワードになりました。 データベースが [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]からアップグレードされると、ノイズ ワード ファイルは使用されなくなります。 ただし、ノイズ ワード ファイルは FTDATA\ FTNoiseThesaurusBak フォルダーに保存され、後で更新する際、または対応するストップリストを作成する際に使用できます。 ノイズ ワード ファイルをストップリストにアップグレードする方法の詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
-  
   
   

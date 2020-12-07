@@ -1,4 +1,5 @@
 ---
+description: SQL Server エージェントのストアド プロシージャ (Transact-SQL)
 title: SQL Server エージェントストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 92da9ffca157511b3046d3f4bb25ca66662b16e5
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b81d3535d2ea6a8abf18083f8d6c13d0f6ce8697
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977682"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545876"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server エージェントのストアド プロシージャ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

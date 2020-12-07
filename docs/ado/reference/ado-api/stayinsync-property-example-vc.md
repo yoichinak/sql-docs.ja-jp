@@ -1,8 +1,9 @@
 ---
+description: StayInSync プロパティの例 (VC++)
 title: StayInSync プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cfb2f054e81bf2f34e3bc62331a573b626d713bd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988633"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync プロパティの例 (VC++)
-この例では、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを使用して、階層[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
+この例では、 [StayInSync](./stayinsync-property.md) プロパティを使用して、階層 [レコードセット](./recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
   
- 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
+ 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](./fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -144,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync プロパティ](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [StayInSync プロパティ](./stayinsync-property.md)

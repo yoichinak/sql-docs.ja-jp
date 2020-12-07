@@ -1,4 +1,5 @@
 ---
+description: DQS ログ ファイルの重大度レベルの構成
 title: DQS ログ ファイルの重大度レベルの構成
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449914"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
 
@@ -49,14 +50,14 @@ ms.locfileid: "85894223"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ログの重大度設定を構成するには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>アクティビティレベルでの重大度レベルの構成  
- DQS のドメイン管理、ナレッジ検出、照合ポリシー、データ クレンジング、データ照合、および参照データ サービスの各アクティビティについて、ログの重大度設定を構成することができます。 次の手順に従います。  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> アクティビティレベルでの重大度レベルの構成  
+ DQS のドメイン管理、ナレッジ検出、照合ポリシー、データ クレンジング、データ照合、および参照データ サービスの各アクティビティについて、ログの重大度設定を構成することができます。 これを実行するには、次のようにします。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[構成]** をクリックします。  
   
-3.  次に、[**ログの設定**] タブをクリックします。重大度レベルを選択できる DQS アクティビティが一覧表示されます。**ドメイン管理**、**ナレッジ検出**、**クレンジングプロジェクト (RDS)**、**照合ポリシーと照合プロジェクト**、および**RDS**。  
+3.  次に、[ **ログの設定** ] タブをクリックします。重大度レベルを選択できる DQS アクティビティが一覧表示されます。 **ドメイン管理**、 **ナレッジ検出**、 **クレンジングプロジェクト (RDS)**、 **照合ポリシーと照合プロジェクト**、および **RDS**。  
   
 4.  DQS のアクティビティについて、ログに記録する重大度レベルを選択します。 **[Fatal]**、 **[Error]**、 **[Warn]**、 **[Info]**、および **[Debug]** のいずれかを選択できます。 たとえば、ナレッジ検出アクティビティに対する重大なメッセージだけを DQS ログ ファイルに書き込む場合は、 **[ナレッジ検出]** アクティビティのドロップダウン リストで **[Fatal]** を選択します。  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894223"
   
 5.  **[閉じる]** をクリックします。  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>モジュールレベルでの重大度レベルの構成 (詳細)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> モジュールレベルでの重大度レベルの構成 (詳細)  
  **[ログの設定]** タブの **[詳細設定]** セクションでは、モジュール レベルでログの重大度設定を構成することができます。 モジュールとは、DQS の機能に含まれる個々の機能を実装する DQS システムのアセンブリです。 たとえば、ドメイン管理アクティビティには、ドメイン ルールの定義、ルールの条件の定義、複合ドメインのクロス ドメイン ルールの定義など、さまざまな機能が含まれています。  
   
  アクティビティ レベルよりも詳しい調査が必要なときは、 アクティビティ内の特定のモジュールで発生している問題を調べることができます。 モジュール レベルでログの重大度を構成することで、問題をより正確に切り分けて追跡することができます。  
@@ -90,7 +91,7 @@ ms.locfileid: "85894223"
   
 5.  **[閉じる]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS ログ ファイルの詳細設定の構成](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

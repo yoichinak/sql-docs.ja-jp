@@ -1,12 +1,12 @@
 ---
 title: 可用性グループ リスナーに接続する
 description: プライマリ レプリカや読み取り専用のセカンダリ レプリカへの接続方法、TLS/SSL や Kerberos の使用方法など、Always On 可用性グループ リスナーへの接続について説明します。
-ms.custom: seodec18
+ms.custom: contperfq1
 ms.date: 02/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], read-only routing
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b26671e24cb0419f6737d1f41a5eb2a168dcfe7b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882735"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584236"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ SELECT @@SERVERNAME
  
 -   少なくとも 1 つのセカンダリ レプリカが読み取り専用アクセスに設定され、各読み取り専用セカンダリ レプリカとプライマリ レプリカが[読み取り専用ルーティングをサポートするように構成されている](configure-read-only-routing-for-an-availability-group-sql-server.md)。 
 
--   接続文字列は、可用性グループに含まれるデータベースを参照します。 これに代わる方法は、接続に使うログインで、データベースを既定のデータベースとして構成することです。 詳しくは、[読み取り専用ルーティングでのアルゴリズムの動作に関するこちらの記事](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)をご覧ください。
+-   接続文字列は、可用性グループに含まれるデータベースを参照します。 これに代わる方法は、接続に使うログインで、データベースを既定のデータベースとして構成することです。 詳しくは、[読み取り専用ルーティングでのアルゴリズムの動作に関するこちらの記事](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)をご覧ください。
 
 -   接続文字列は可用性グループ リスナーを参照し、着信接続のアプリケーションの目的が読み取り専用に設定されている (たとえば、ODBC または OLEDB の接続文字列、接続属性、またはプロパティで **Application Intent=ReadOnly** キーワードを使用している)。 
 
@@ -109,7 +109,7 @@ SQL Server のインスタンスにとって、接続のログインで、可用
 ##  <a name="database-mirroring-connection-strings"></a><a name="DbmConnectionString"></a> データベース ミラーリングの接続文字列 
  可用性グループに 1 つしかセカンダリ レプリカが存在せず、さらに、その可用性グループが、セカンダリ レプリカに ALLOW_CONNECTIONS = READ_ONLY または ALLOW_CONNECTIONS = NONE が構成されている場合、クライアントは、データベース ミラーリングの接続文字列を使用してプライマリ レプリカに接続できます。 可用性グループに存在する可用性レプリカが 2 つだけ (プライマリ レプリカおよび 1 つのセカンダリ レプリカ) であれば、既存のアプリケーションをデータベース ミラーリングから可用性グループに移行する際にこの方法を用いることができます。 セカンダリ レプリカをさらに追加する場合は、可用性グループの可用性グループ リスナーを作成し、その可用性グループ リスナー DNS 名を使用するようにアプリケーションを更新する必要があります。  
   
- データベース ミラーリングの接続文字列を使用する際、クライアントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用できます。 クライアントが指定する接続文字列には、最低限、1 つのサーバー インスタンスの名前 ( *イニシャル パートナー名*) が指定されている必要があります。接続先の可用性レプリカを初期状態でホストするサーバー インスタンスは、この名前によって識別されます。 接続文字列には、必要に応じて、別のサーバー インスタンスの名前を指定することもできます。これを *フェールオーバー パートナー名*といい、初期状態でセカンダリ レプリカをホストするサーバー インスタンスは、フェールオーバー パートナー名として識別されます。  
+ データベース ミラーリングの接続文字列を使用する際、クライアントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用できます。 クライアントが指定する接続文字列には、最低限、1 つのサーバー インスタンスの名前 ( *イニシャル パートナー名*) が指定されている必要があります。接続先の可用性レプリカを初期状態でホストするサーバー インスタンスは、この名前によって識別されます。 接続文字列には、必要に応じて、別のサーバー インスタンスの名前を指定することもできます。これを *フェールオーバー パートナー名* といい、初期状態でセカンダリ レプリカをホストするサーバー インスタンスは、フェールオーバー パートナー名として識別されます。  
   
  データベース ミラーリングの接続文字列の詳細については、「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 ドメイン管理者は、リスナーへのクライアント接続のために Kerberos を有効にするように、可用性グループリスナーごとに Active Directory のサービス プリンシパル名 (SPN) を構成する必要があります。 SPN が登録されている場合は、可用性レプリカをホストするサーバー インスタンスのサービス アカウントを使用する必要があります。 SPN がすべてのレプリカで機能するためには、可用性グループをホストする WSFC クラスター内のすべてのインスタンスで同じサービス アカウントを使用する必要があります。  
   
- SPN は、Windows コマンド ライン ツールの **setspn** を使用して構成します。  たとえば、 `AG1listener.Adventure-Works.com` というドメイン アカウントで実行されるように構成された、一連の SQL Server インスタンスでホストされている `corp/svclogin2`という名前の可用性グループの SPN を構成する場合は、次のようになります。  
+ SPN は、Windows コマンド ライン ツールの **setspn** を使用して構成します。  たとえば、 `AG1listener.Adventure-Works.com` というドメイン アカウントで実行されるように構成された、一連の SQL Server インスタンスでホストされている `corp\svclogin2`という名前の可用性グループの SPN を構成する場合は、次のようになります。  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  SQL Server の SPN の手動登録の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 
 リスナーに正常に接続したら、パフォーマンスを向上させるために、[読み取り専用ワークロード](overview-of-always-on-availability-groups-sql-server.md)と[バックアップ](configure-backup-on-availability-replicas-sql-server.md)をセカンダリ レプリカにオフロードすることを検討してください。 また、可用性グループの正常性を確保するために、さまざまな[可用性グループの監視戦略](monitoring-of-availability-groups-sql-server.md)を確認することもできます。 
 
-可用性グループの詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。 
+可用性グループの詳細については、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。

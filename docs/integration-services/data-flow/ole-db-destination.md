@@ -1,4 +1,5 @@
 ---
+description: OLE DB 変換先
 title: OLE DB 変換先 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdf54622b3db05b661f5c71c3f3b6a2e67fbd1ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908399"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195384"
 ---
 # <a name="ole-db-destination"></a>OLE DB 変換先
 
@@ -38,7 +39,7 @@ ms.locfileid: "86908399"
   OLE DB 変換先は、データベースのテーブルやビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込みます。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースのテーブルにデータを読み込むことができます。  
   
 > [!NOTE]  
->  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)」を参照してください。  
+>  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../load-data-to-from-excel-with-ssis.md)」を参照してください。  
   
  OLE DB 変換先には、データを読み込むために、次の 5 つの異なるデータ アクセス モードが用意されています。  
   
@@ -95,7 +96,7 @@ ms.locfileid: "86908399"
   
 |高速読み込みオプション|説明|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** = \<positive integer value**>** です。|  
+|KILOBYTES_PER_BATCH|挿入するサイズを KB 単位で指定します。 このオプションの形式は、**KILOBYTES_PER_BATCH** =  *\<positive integer value>* です。|  
 |FIRE_TRIGGERS|挿入テーブルでトリガーを起動するかどうかを指定します。 このオプションの形式は、 **FIRE_TRIGGERS**です。 このオプションが指定されている場合は、トリガーが起動されます。|  
 |ORDER|入力データの並べ替え方法を指定します。 このオプションの形式は、ORDER \<column name> ASC&#124;DESC です。 並べ替える列のリストには任意の数列を指定できます。並べ替え順序の指定は省略することもできます。 並べ替え順序を指定しなかった場合は、データを並べ替えないと見なして挿入操作が実行されます。<br /><br /> 注:ORDER オプションを使用してテーブル上のクラスター化インデックスに従って入力データを並べ替えると、パフォーマンスが向上する可能性があります。|  
   
@@ -111,7 +112,7 @@ ms.locfileid: "86908399"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -125,10 +126,12 @@ ms.locfileid: "86908399"
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
   
 > [!NOTE]  
->  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)」を参照してください。  
+>  データ ソースが [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 である場合、Excel の以前のバージョンとは異なる接続マネージャーが必要になります。 詳細については、「 [Excel ブックに接続する](../load-data-to-from-excel-with-ssis.md)」を参照してください。  
   
 > [!NOTE]  
 >  OLE DB 変換先の **CommandTimeout** プロパティは、 **[OLE DB 変換先エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 また、一部の高速読み込みオプションは **[詳細エディター]** でしか使用できません。 これらのプロパティの詳細については、「 [OLE DB カスタム プロパティ](../../integration-services/data-flow/ole-db-custom-properties.md)」の OLE DB 変換先に関するセクションを参照してください。  
+> 
+>  **CommandTimeout** プロパティは、データ アクセス モードが **SQL コマンド**の場合にのみ有効です。
   
 ### <a name="static-options"></a>静的オプション  
  **[キャッシュなし]**  
@@ -144,7 +147,7 @@ ms.locfileid: "86908399"
 |------------|-----------------|  
 |[テーブルまたはビュー]|データを OLE DB 変換先のテーブルまたはビューに読み込みます。|  
 |[テーブルまたはビュー - 高速読み込み]|高速読み込みオプションを使用し、データを OLE DB 変換先のテーブルまたはビューに読み込みます。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../integration-services-ssis-variables.md)|  
 |[テーブル名またはビュー名の変数 - 高速読み込み]|高速読み込みオプションを使用し、テーブル名またはビュー名を変数で指定します。 一括挿入用に最適化された高速読み込みデータ アクセス モードの詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。|  
 |[SQL コマンド]|SQL クエリを使用し、データを OLE DB 変換先に読み込みます。|  
   
@@ -306,5 +309,4 @@ ms.locfileid: "86908399"
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  
   

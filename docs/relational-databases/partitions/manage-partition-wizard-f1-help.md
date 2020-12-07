@@ -1,4 +1,5 @@
 ---
+description: パーティションの管理ウィザード
 title: パーティションの管理ウィザード
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 756dd29442fe224f5e0518066cbbfdcbf2ba5ea6
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787556"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364676"
 ---
 # <a name="manage-partition-wizard"></a>パーティションの管理ウィザード 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,10 +43,10 @@ ms.locfileid: "85787556"
   
  パーティション インデックスについての一般情報については、「 [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
   
- ここでは、 **パーティションの管理ウィザード**を使用してパーティションを管理、変更、および実装する場合に必要な情報を提供します。  
+ ここでは、 **パーティションの管理ウィザード** を使用してパーティションを管理、変更、および実装する場合に必要な情報を提供します。  
   
 ##  <a name="in-this-section"></a><a name="Top"></a> トピックの内容  
- 以下のセクションでは、 **パーティションの管理ウィザード**の各ページのヘルプについて紹介します。  
+ 以下のセクションでは、 **パーティションの管理ウィザード** の各ページのヘルプについて紹介します。  
   
  [パーティションの管理ウィザード ([パーティション操作の選択] ページ)](#SelectPartitionAction)  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85787556"
 ### <a name="sliding-window-scenario"></a>スライディング ウィンドウ シナリオ  
  スライディング ウィンドウ シナリオでパーティションを管理するには、 **[スライディング ウィンドウ シナリオでパーティション分割されたデータを管理する]** を選択します。  
   
-## <a name="ui-element-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  **[パーティション切り替え用のステージング テーブルを作成する]**  
  既存のパーティション テーブルのデータの切り替え先または切り替え元になるステージング テーブルを作成します。  
   
@@ -89,12 +90,12 @@ ms.locfileid: "85787556"
  **[スライディング ウィンドウ シナリオでパーティション分割されたデータを管理する]**  
  データの切り替えに使用できる空のパーティションを既存のテーブルに追加します。 ウィザードでは、現在、最後のパーティションへの切り替えと最初のパーティションからの切り替えがサポートされています。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> [パーティションの切り替え先オプションの選択] ページ  
  **[パーティションの切り替え先オプションの選択]** ページを使用すると、パーティション テーブルに切り替えるステージング テーブルを選択できます。  
   
-## <a name="ui-element-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  **[すべてのパーティションを表示]**  
  現在パーティション テーブル内にあるパーティションを含む、すべてのパーティションを表示します。  
   
@@ -102,14 +103,14 @@ ms.locfileid: "85787556"
  選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
  **[切り替え先テーブル]**  
- パーティション テーブルに追加するパーティションを含んでいるステージング テーブルを選択します。 **パーティションの管理ウィザード**でパーティションを切り替える前に、このステージング テーブルを作成する必要があります。  
+ パーティション テーブルに追加するパーティションを含んでいるステージング テーブルを選択します。 **パーティションの管理ウィザード** でパーティションを切り替える前に、このステージング テーブルを作成する必要があります。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> [パーティションの切り替え元オプションの選択] ページ  
  **[パーティションの切り替え元オプションの選択]** ページを使用すると、切り替え元のパーティション テーブルのパーティション分割されたデータを保持するパーティションとステージング テーブルを選択できます。  
   
-## <a name="ui-element-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  **[パーティション グリッド]**  
  選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
@@ -122,7 +123,7 @@ ms.locfileid: "85787556"
  **Existing**  
  現在の切り替え元テーブルを切り替えるパーティションに使用する、既存のステージング テーブルを選択します。 既存のテーブルにデータが含まれている場合は、切り替え元データで上書きされます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> [ステージング テーブル オプションの選択] ページ  
  **[ステージング テーブル オプションの選択]** ページを使用すると、パーティション分割されたデータの切り替えに使用するステージング テーブルを作成できます。  
@@ -131,7 +132,7 @@ ms.locfileid: "85787556"
   
  また、基になるパーティションと同じインデックスを、ステージング テーブルに作成することもできます。 ステージング テーブルには、基になるパーティションの要素に基づく制約が自動的に格納されます。 この制約は、通常、基になるパーティションの境界値から生成されます。  
   
-## <a name="ui-element-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  **[ステージング テーブル名]**  
  ステージング テーブルの名前を作成するか、エディット ボックスに表示された既定の名前を受け入れます。  
   
@@ -144,7 +145,7 @@ ms.locfileid: "85787556"
  **[ファイル グループ]**  
  新しいテーブルのファイル グループを選択します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="select-output-option-page"></a><a name="OutputOption"></a> [出力オプションの選択] ページ  
  **[出力オプションの選択]** ページで、パーティションに対する変更を完了する方法を指定します。  
@@ -153,7 +154,7 @@ ms.locfileid: "85787556"
  ウィザードの完了時に、テーブルのパーティションを変更するためのスクリプトがクエリ エディターで作成されます。 スクリプトを確認し、手動で実行する場合は、 **[スクリプトの作成]** を選択します。  
   
  **[スクリプトをファイルに保存]**  
- スクリプトを .sql ファイルに生成します。 **Unicode** または **ANSI テキスト**を指定します。 ファイルの名前と場所を指定するには、 **[参照]** をクリックします。  
+ スクリプトを .sql ファイルに生成します。 **Unicode** または **ANSI テキスト** を指定します。 ファイルの名前と場所を指定するには、 **[参照]** をクリックします。  
   
  **[スクリプトをクリップボードに保存]**  
  スクリプトをクリップボードに保存します。  
@@ -171,7 +172,7 @@ ms.locfileid: "85787556"
  **[スケジュールの変更]**  
  **[新しいジョブ スケジュール]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、スケジュールされたジョブのプロパティを選択、変更、または表示できます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> [新しいジョブ スケジュール] ページ  
  **[新しいジョブ スケジュール]** ページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
@@ -254,19 +255,19 @@ ms.locfileid: "85787556"
  **Time**  
  ジョブを実行する時刻を選択します。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  **[概要]** ページを使用すると、前の各ページで選択したオプションを確認できます。  
   
-## <a name="ui-element-list"></a>UI 要素の一覧  
+### <a name="ui-element-list"></a>UI 要素の一覧  
  **[選択内容の確認]**  
  ウィザードの各ページで行った選択の内容が表示されます。 ノードをクリックして展開すると、以前に選択したオプションが表示されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ##  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
- **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード**のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
+ **[進行状況]** ページを使用すると、 **パーティションの管理ウィザード** のアクションに関する状態情報を監視できます。 ウィザードで選択したオプションに応じて、 **[進行状況]** ページに 1 つまたは複数のアクションが含まれる可能性があります。 上部のボックスには、ウィザードの全体的な状態と受信した状態メッセージ、エラー メッセージ、および警告メッセージの数が表示されます。  
   
 ### <a name="options"></a>Options  
  **詳細**  
@@ -285,7 +286,7 @@ ms.locfileid: "85787556"
  ウィザードのアクションを停止します。  
   
  **Report**  
- **パーティションの管理ウィザード**の結果を含むレポートを作成します。 オプションは次のとおりです。  
+ **パーティションの管理ウィザード** の結果を含むレポートを作成します。 オプションは次のとおりです。  
   
 -   **[レポートの表示]**  
   
@@ -296,14 +297,13 @@ ms.locfileid: "85787556"
 -   **[レポートを電子メールとして送信]**  
   
  **[レポートの表示]**  
- **[レポートの表示]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、 **パーティションの管理ウィザード**の進行状況のテキスト レポートが表示されます。  
+ **[レポートの表示]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、 **パーティションの管理ウィザード** の進行状況のテキスト レポートが表示されます。  
   
  **[閉じる]**  
  ウィザードを閉じます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
   
 ## <a name="see-also"></a>参照  
  [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-  
   

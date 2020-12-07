@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 40e578837b86b75538e678711293e4adc6b1ac14
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113187"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119540"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87113187"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
@@ -50,7 +51,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーが内部的に保存できる値に内部的にハッシュされます。 *resource_name* は **nvarchar (255**) であり、既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 '*lock_owner*'  
-ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** , 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。
+ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション** です。
   
 ## <a name="return-types"></a>戻り値の型
 **nvarchar(32)**
@@ -62,9 +63,9 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |-|-|-|  
 |**NoLock**|**アップデート**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**[Exclusive]**||  
+|**Shared**|**[排他]**||  
   
-\* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
+* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
   
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**
@@ -82,7 +83,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
-DECLARE @result int;  
+DECLARE @result INT;  
 EXEC @result=sp_getapplock  
     @DbPrincipal='public',  
     @Resource='Form1',  
@@ -131,7 +132,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
 [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
 [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)

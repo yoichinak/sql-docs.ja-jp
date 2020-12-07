@@ -1,6 +1,6 @@
 ---
 title: 日付と時刻の機能強化 (OLE DB) | Microsoft Docs
-description: 日付と時刻の強化機能 (OLE DB)
+description: これらの記事では、OLE DB Driver for SQL Server で新しい日付と時刻のデータ型がどのようにサポートされるかについて説明します。 概要とサンプルを参照してください。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9d3d00493790eed66865d8c3cd393a71b7246776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd0f564a68f0b296008907f8620cd870c0e5ca7d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004474"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862035"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日付と時刻の強化機能 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

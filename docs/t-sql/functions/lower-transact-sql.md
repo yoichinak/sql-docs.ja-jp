@@ -1,4 +1,5 @@
 ---
+description: LOWER (Transact-SQL)
 title: LOWER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -23,12 +24,12 @@ ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4b3fd394ec5dd17048272a99d1b2c9d90bd9821
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5da061dba0641ad1de853323831583df57ad6cbe
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110406"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479641"
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ LOWER ( character_expression )
 
 ## <a name="arguments"></a>引数
  *character_expression*  
- 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar**です。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) を指定して明示的に *character_expression* を変換します。  
+ 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* に暗黙的に変換できるデータ型である必要があります **varchar** です。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) を指定して明示的に *character_expression* を変換します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  

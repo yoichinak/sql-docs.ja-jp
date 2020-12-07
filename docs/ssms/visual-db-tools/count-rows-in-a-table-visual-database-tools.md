@@ -1,4 +1,5 @@
 ---
+description: テーブルの行数のカウント (Visual Database Tools)
 title: テーブル内の行数のカウント
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462873"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>テーブルの行数のカウント (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "86005128"
   
     クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 クエリ出力に表示する列ヘッダーをわかりやすくするには、「[列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-4.  検索するデータ列を追加し、 **[出力]** 列のチェック ボックスをオフにします。  
+4.  検索するデータ列を追加し、**[出力]** 列のチェック ボックスをオフにします。  
   
     クエリおよびビュー デザイナーにより、グリッドの **[グループ化]** 列に **[グループ化]** という語句が自動的に入力されます。  
   

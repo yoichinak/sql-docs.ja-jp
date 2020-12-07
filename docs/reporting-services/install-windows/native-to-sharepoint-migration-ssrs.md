@@ -1,4 +1,5 @@
 ---
+description: ネイティブ モードから SharePoint モードへの移行 (SSRS)
 title: ネイティブから SharePoint への移行 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6eef61dd79dbbbe97326c888698b69152065ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454545"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 
@@ -41,7 +42,7 @@ ms.locfileid: "77082623"
   
  次の表は、スクリプトを使用して移行できる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オブジェクトをまとめたものです。  
   
-|Object|スクリプト化の可否|説明|  
+|オブジェクト|スクリプト化の可否|コメント|  
 |------------|---------------------|--------------|  
 |Reports|はい|移行後にデータソースのパスワードを再入力します。|  
 |データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  

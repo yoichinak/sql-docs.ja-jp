@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 474f5b9f512139762140aa9c1932b6df7da96b0f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629704"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867382"
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -218,6 +218,5 @@ select * from cold order by orderDate desc
 ```  
   
 ## <a name="see-also"></a>参照  
- [インメモリ OLTP のコード サンプル](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [インメモリ OLTP のコード サンプル](./sample-database-for-in-memory-oltp.md)  
   

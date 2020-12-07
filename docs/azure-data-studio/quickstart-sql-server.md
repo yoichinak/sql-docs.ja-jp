@@ -2,19 +2,19 @@
 title: クイック スタート:SQL Server に対する接続およびクエリ
 description: クイックスタートで Azure Data Studio を使用して SQL Server に接続し、Transact-SQL (T-SQL) ステートメントを使用してデータベースを作成します。
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411288"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766361"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>クイック スタート:Azure Data Studio を使用して、SQL Server に接続してクエリを実行する
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411288"
 
 このクイックスタートを完了するには、Azure Data Studio と、SQL Server へのアクセス権が必要です。
 
-- [Azure Data Studio をインストールする](download.md)。
+- [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)。
 
 SQL Server へのアクセス権がない場合は、次のリンクからご利用のプラットフォームを選択してください (SQL ログインとパスワードを忘れないでください)。
 
 - [Windows - SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS - Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - SQL Server 2017 Developer Edition をダウンロードする](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) - 手順に従うだけで、*データを作成してクエリを実行する*ことができます。
+- [macOS - Docker で SQL Server 2017 をダウンロードする](../linux/quickstart-install-connect-docker.md)
+- [Linux - SQL Server 2017 Developer Edition をダウンロードする](../linux/sql-server-linux-overview.md#install) - 手順に従うだけで、*データを作成してクエリを実行する*ことができます。
 
 ## <a name="connect-to-a-sql-server"></a>SQL Server に接続する
 

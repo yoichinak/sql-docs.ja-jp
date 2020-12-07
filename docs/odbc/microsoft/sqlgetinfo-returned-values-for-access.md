@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo で Access に返される値
 title: SQLGetInfo が Access の値を返しました |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27af9272132b2e7f2489def0d1e6720bfdeb4195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421736"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo で Access に返される値
-次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
+次の表に、 *Fin$ type* 引数の C 言語 #defines と **SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
 >  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
@@ -81,9 +82,9 @@ ms.locfileid: "81298562"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
+|SQL_DATA_SOURCE_NAME|Odbc.ini からの DSN、または "" if DRIVER キーワードが使用されている場合 Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|［ファイル名］|  
+|SQL_DATABASE_NAME|ファイル名|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|ACCESS|  
 |SQL_DBMS_VER|[複数の値]|  
@@ -94,7 +95,7 @@ ms.locfileid: "81298562"
 |SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
 |SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
 |SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298562"
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (バッククォート)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (バッククォート)|  
 |SQL_KEYWORDS|[複数の値]|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ ms.locfileid: "81298562"
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|ACCESS|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\\'[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @#$%^& \* \_ -+= \\ } {" \' ;:?/><,.! \'[] &#124; "|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  

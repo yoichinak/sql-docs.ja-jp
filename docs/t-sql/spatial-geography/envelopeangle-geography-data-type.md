@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAngle (geography データ型)
 title: EnvelopeAngle (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2066a2874094e3a6e4f7376809d26cbcbaba9e81
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c72459ec22208dfebbe234430ba49a4e94cb06a4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124335"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ EnvelopeAngle( )
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このメソッドは **geography** インスタンスの地点を度数で返します。 EnvelopeCenter() と共に使用した場合、`EnvelopeAngle()` は、**geography** インスタンスの外接する円を返します。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、このメソッドは **FullGlobe** インスタンスに拡張されました。  

@@ -2,6 +2,7 @@
 title: データの列の暗号化 | Microsoft Docs
 description: Transact-SQL (列レベルまたはセルレベルの暗号化とも呼ばれる) を使用して、SQL Server で対称暗号化を使ってデータ列を暗号化する方法について説明します。
 ms.custom: ''
+titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +18,15 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 90987ec581d734116f386e1a0f3bfd72e4bf15b6
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 882a99eafed8c913ef0edef213b09ef23a0990f7
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091749"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439336"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
+
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
   この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics (SQL DW) でプレビュー段階です。
@@ -55,7 +57,7 @@ PASSWORD = '<some strong password>';
 
 ### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
   
-1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -113,7 +115,7 @@ PASSWORD = '<some strong password>';
   
 ### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   
-1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

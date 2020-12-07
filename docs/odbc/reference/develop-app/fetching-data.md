@@ -1,4 +1,5 @@
 ---
+description: データのフェッチ
 title: データのフェッチ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04e1f562868d2a38bebd7dc0ffcaefaa8ebf5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4e037c68ac34fd0c92e2832e09ab27e29881166
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499882"
 ---
 # <a name="fetching-data"></a>データのフェッチ
-結果セットから行を取得してアプリケーションに返すプロセスは、*フェッチ*と呼ばれます。 ここでは、データをフェッチする方法について説明します。  
+結果セットから行を取得してアプリケーションに返すプロセスは、 *フェッチ*と呼ばれます。 ここでは、データをフェッチする方法について説明します。  
   
  このセクションでは、次のトピックを扱います。  
   

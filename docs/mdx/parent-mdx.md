@@ -1,4 +1,5 @@
 ---
+description: 親 (MDX)
 title: 親 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9449c81e9f8e8de0c21d96062337e91b2f56398d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bbedef9142d87c1522df516884797a0a6dff0b1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471714"
 ---
 # <a name="parent-mdx"></a>親 (MDX)
 
@@ -31,10 +32,10 @@ Member_Expression.Parent
  *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **親**関数は、指定されたメンバーの親メンバーを返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の 2 つの例では、July 1, 2001 メンバーの親メンバーを返しています。 この例では、Date 属性階層のコンテキストでこのメンバーを指定して、All Periods メンバーを返します。  
   
 ```  

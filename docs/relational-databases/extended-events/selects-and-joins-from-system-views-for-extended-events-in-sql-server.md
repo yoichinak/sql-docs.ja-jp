@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756878"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868789"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 
@@ -80,7 +80,7 @@ ms.locfileid: "85756878"
 
 このセクションでは、同じ定義済みイベント セッションを 3 つの異なる技術で示して関連付けます。 セッションは定義されていて SQL Server Management Studio (SSMS.exe) の **オブジェクト エクスプローラー** に表示されますが、現在は実行していません。
 
-予期しない障害を防ぐため、 [SSMS の最新の更新プログラムを毎月インストール](https://msdn.microsoft.com/library/mt238290.aspx)してください。
+予期しない障害を防ぐため、 [SSMS の最新の更新プログラムを毎月インストール](../../ssms/download-sql-server-management-studio-ssms.md)してください。
 
 
 拡張イベントのカタログ ビューに関するリファレンス ドキュメントについては、「 [拡張イベント カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)」をご覧ください。
@@ -891,5 +891,3 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
-
-

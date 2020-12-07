@@ -1,4 +1,5 @@
 ---
+description: GetReportServerUrls メソッド (WMI MSReportServer_Instance)
 title: GetReportServerUrls メソッド (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3b3e0f7e521cd2a105a3cf093c0a179bd7306d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257525"
 ---
 # <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance メソッド - GetReportServerUrls
   ユーザーがレポート サーバーと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに使用できる URL の一覧を返します。  
@@ -39,7 +40,7 @@ public void GetReportServerUrls(out string[] applicationName,
  *URLs[]*  
  正常に登録された URL を含む配列。  
   
- *[データ型]*  
+ *Length*  
  返された配列の長さを含む整数値。  
   
  *HRESULT*  

@@ -1,4 +1,5 @@
 ---
+description: sp_tables (Transact-SQL)
 title: sp_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e58f27f22e0a0d69ab35f21b9dcecdc80fd12e63
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173107"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005557"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "88173107"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
      [ , [ @table_owner = ] 'owner' ]   
@@ -48,20 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_name = ] 'name'`カタログ情報を返すために使用するテーブルです。 *名前*は**nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。  
+`[ @table_name = ] 'name'` カタログ情報を返すために使用するテーブルです。 *名前* は **nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。  
   
-`[ @table_owner = ] 'owner'`カタログ情報を返すために使用するテーブルのテーブル所有者を示します。 *owner*は**nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
+`[ @table_owner = ] 'owner'` カタログ情報を返すために使用するテーブルのテーブル所有者を示します。 *owner* は **nvarchar (384)**,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性ルールが適用されます。  
   
  では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、指定された名前のテーブルが現在のユーザーによって所有されている場合、そのテーブルの列が返されます。 所有者が指定されておらず、現在のユーザーが指定された名前のテーブルを所有していない場合、このプロシージャは、データベース所有者が所有する、指定された名前のテーブルを検索します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
-`[ @table_qualifier = ] 'qualifier'`テーブル修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
+`[ @table_qualifier = ] 'qualifier'` テーブル修飾子の名前を指定します。 *修飾子* は **sysname**,、既定値は NULL です。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート**しています。**_所有者_**。**_名前_)。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、この列はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
-``[ , [ @table_type = ] "'type', 'type'" ]``指定されているテーブル型のすべてのテーブルに関する情報を提供する、コンマで区切られた値の一覧です。 これには、**テーブル**、**システムテーブル**、および**ビュー**が含まれます。 *型*は**varchar (100)**,、既定値は NULL です。  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 指定されているテーブル型のすべてのテーブルに関する情報を提供する、コンマで区切られた値の一覧です。 これには、 **テーブル**、 **システムテーブル**、および **ビュー**が含まれます。 *型* は **varchar (100)**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  単一引用符は各テーブル型を囲む必要があり、二重引用符はパラメーター全体を囲む必要があります。 テーブル型は大文字にする必要があります。 SET QUOTED_IDENTIFIER が ON の場合は、各単一引用符を2倍にし、パラメーター全体を単一引用符で囲む必要があります。  
   
-`[ @fUsePattern = ] 'fUsePattern'`アンダースコア (_)、パーセント (%)、および角かっこ ([または]) の各文字がワイルドカード文字として解釈されるかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern*は**ビット**,、既定値は1です。  
+`[ @fUsePattern = ] 'fUsePattern'` アンダースコア (_)、パーセント (%)、および角かっこ ([または]) の各文字がワイルドカード文字として解釈されるかどうかを決定します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致がオン) です。 *Fusepattern* は **ビット**,、既定値は1です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -74,14 +75,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|テーブル所有者の名前。 では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列は、テーブルを作成したデータベースユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名。 このフィールドは常に値を返します。|  
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システムテーブル、またはビュー。|  
-|**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
+|**備考**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はこの列の値を返しません。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  相互運用性を最大にするために、ゲートウェイクライアントは SQL-92-標準の SQL パターン照合 (% と _ ワイルドカード文字) のみを想定する必要があります。  
   
  現在のユーザーの特定のテーブルに対する読み取りまたは書き込みアクセスに関する特権情報は、常にチェックされません。 そのため、アクセスは保証されません。 この結果セットには、テーブルとビューだけでなく、これらの型をサポートする DBMS 製品へのゲートウェイのシノニムと別名も含まれています。 **Sp_server_info**の結果セットで server 属性**ACCESSIBLE_TABLES**が Y の場合は、現在のユーザーがアクセスできるテーブルだけが返されます。  
   
- **sp_tables**は、ODBC の**sqltables**に相当します。 返される結果は、 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および**TABLE_NAME**順に並べ替えられます。  
+ **sp_tables** は、ODBC の **sqltables** に相当します。 返される結果は、 **TABLE_TYPE**、 **TABLE_QUALIFIER**、 **TABLE_OWNER**、および **TABLE_NAME**順に並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  

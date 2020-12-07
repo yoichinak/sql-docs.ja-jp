@@ -1,4 +1,5 @@
 ---
+description: WMI Provider for Server Events のクラスとプロパティ
 title: WMI Provider for Server Events のクラスとプロパティ
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 000aafb6c7fa7d0c78c0fa5a5596727b8736caad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be17f5425d66956028fce13144b6bb908230fca9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888150"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542733"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events のクラスとプロパティ
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,10 +30,10 @@ ms.locfileid: "85888150"
   
  または、で公開されているイベントスキーマを参照することもでき [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100) ます。  
   
- たとえば、ALTER_DATABASE イベントを参照すると、その親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが**Tsqlcommand**および**DatabaseName**であることがわかります。 イベントは、 **SQLInstance**、 **posttime**、 **ComputerName**、 **SPID**、および**loginの**各プロパティも継承します。 イベントには、子イベントはありません。  
+ たとえば、ALTER_DATABASE イベントを参照すると、その親イベントが DDL_SERVER_LEVEL_EVENTS、そのプロパティが **Tsqlcommand** および **DatabaseName**であることがわかります。 イベントは、 **SQLInstance**、 **posttime**、 **ComputerName**、 **SPID**、および **loginの**各プロパティも継承します。 イベントには、子イベントはありません。  
   
 > [!NOTE]  
->  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと**sp_addtype**ストアドプロシージャはどちらも、CREATE_TYPE イベントで作成されたイベント通知を起動します。 詳細については、「 [DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
+>  DDL と同様の操作を実行するシステム ストアド プロシージャもイベント通知を起動できます。 イベント通知はテストして、実行されているシステム ストアド プロシージャに応答するかどうか、確認してください。 たとえば、CREATE TYPE ステートメントと **sp_addtype** ストアドプロシージャはどちらも、CREATE_TYPE イベントで作成されたイベント通知を起動します。 詳細については、「 [DDL イベント](../../relational-databases/triggers/ddl-events.md)」を参照してください。  
   
  **データ定義言語イベントおよびイベント グループ**  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85888150"
   
  ![トレースイベントとイベントグループ](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "トレース イベントとイベント グループ")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

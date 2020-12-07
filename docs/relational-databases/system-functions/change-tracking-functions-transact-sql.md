@@ -1,4 +1,5 @@
 ---
+description: 変更追跡関数 (Transact-SQL)
 title: Change Tracking 関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -16,19 +17,19 @@ ms.assetid: 04eb53c4-8b69-414e-9696-185d227fea35
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08a9d5907c93b020f45ec8405361626266ec1300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69a301c266ce546733ef1fb26bf1479a5c2d8a2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498235"
 ---
 # <a name="change-tracking-functions-transact-sql"></a>変更追跡関数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   変更の追跡では、追跡対象のテーブルに適用された挿入、更新、削除の各アクティビティを記録して、変更の詳細を簡単に使用できるリレーショナル形式で提供します。 次の関数は、変更に関する情報を返します。  
   
-|関数|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[CHANGETABLE (変更)](../../relational-databases/system-functions/changetable-transact-sql.md)|指定したバージョン以降に発生したテーブルに対するすべての変更の追跡情報を返します。|  
 |[CHANGETABLE (VERSION)](../../relational-databases/system-functions/changetable-transact-sql.md)|指定された行の最新の変更追跡情報を返します。|  
@@ -37,7 +38,7 @@ ms.locfileid: "85734420"
 |[CHANGE_TRACKING_IS_COLUMN_IN_MASK](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)|CHANGETABLE (CHANGES...) 関数によって返される SYS_CHANGE_COLUMNS 値を解釈します。|  
 |[WITH CHANGE_TRACKING_CONTEXT](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)|アプリケーションがデータを変更するときに、発信元 ID などの変更コンテキストを指定できるようにします。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

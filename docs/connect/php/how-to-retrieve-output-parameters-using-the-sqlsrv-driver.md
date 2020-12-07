@@ -1,5 +1,6 @@
 ---
-title: '方法: SQLSRV ドライバーを使用して出力パラメーターを取得する | Microsoft Docs'
+title: 方法:SQLSRV ドライバーを使用して出力パラメーターを取得する
+description: SQL Server 用 Microsoft SQLSRV Driver for PHP を利用し、ストアド プロシージャで出力パラメーターを使用し、取得する方法について説明します。
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916028"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410962"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して出力パラメーターを取得する
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、1 つのパラメーターが出力パラメーターとして定義されているストアド プロシージャを呼び出す方法について説明します。 出力パラメーターまたは入出力パラメーターを取得する場合、返されるパラメーター値にアクセスできるようになる前に、ストアド プロシージャによって返されるすべての結果を使用する必要があります。  
@@ -150,9 +151,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [データの取得](../../connect/php/retrieving-data.md)  
   

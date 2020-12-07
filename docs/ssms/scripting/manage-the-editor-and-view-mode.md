@@ -1,11 +1,8 @@
 ---
 title: エディターと表示モードの管理
 description: SQL Server Management Studio の 2 つの表示モードのいずれかを選択する方法について説明します。タブ付きドキュメント モードと複数のドキュメント インターフェイス モード。 分割ビュー、右端での折り返し、仮想空間モード、行番号の表示、全画面表示モード、および [すべて自動的に隠す] についても説明します。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122589"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038983"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>エディターと表示モードの管理
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  エディターには、コードの表示を制御するさまざまな方法が用意されています。  
-  
+
+エディターには、コードの表示を制御するさまざまな方法が用意されています。  
+
 ## <a name="changing-the-view-mode"></a>表示モードの変更  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 **タブ付きドキュメント**という表示モードが用意されています。タブ付きドキュメントにより、複数のエディターやドキュメントを同時に開くことができ、エディター上部のタブを利用してこれらにアクセスできます。 また、マルチドキュメント インターフェイス (MDI) モードで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くこともできます。この場合は、タブなしでウィンドウが統合され、各ウィンドウを並べて表示したり、最小化したりすることが可能になります。  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 **タブ付きドキュメント**という表示モードが用意されています。タブ付きドキュメントにより、複数のエディターやドキュメントを同時に開くことができ、エディター上部のタブを利用してこれらにアクセスできます。 また、マルチドキュメント インターフェイス (MDI) モードで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開くこともできます。この場合は、タブなしでウィンドウが統合され、各ウィンドウを並べて表示したり、最小化したりすることが可能になります。  
   
 #### <a name="to-switch-between-view-modes"></a>表示モードを切り替えるには  
   
@@ -88,7 +91,7 @@ ms.locfileid: "87122589"
  仮想空間モードが無効な場合、カーソルは、ある行の最後から次の行の最初の文字に折り返されます。逆の場合も同様です。  
   
 ## <a name="displaying-line-numbers"></a>行番号の表示  
- コード行に行番号を付けることができます。 行番号は、コード内を移動する際に便利です。 詳細については、「 [コード内とテキスト内の移動](../../relational-databases/scripting/navigate-code-and-text.md)」を参照してください。  
+ コード行に行番号を付けることができます。 行番号は、コード内を移動する際に便利です。 詳細については、「 [コード内とテキスト内の移動](./navigate-code-and-text.md)」を参照してください。  
   
 > [!NOTE]  
 >  行番号を有効にしても、ドキュメントの印刷時に行番号が印刷されるわけではありません。 行番号を印刷するには、 **[ファイル]** メニューの **[ページ設定]** コマンドを選択し、 **[行番号]** チェック ボックスをオンにする必要があります。  
@@ -119,5 +122,4 @@ ms.locfileid: "87122589"
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>すべてのツール ウィンドウを一度に隠すには  
   
 1.  **[ウィンドウ]** メニューの **[すべて自動的に隠す]** を選択します。  
-  
   

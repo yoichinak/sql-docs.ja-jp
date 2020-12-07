@@ -1,4 +1,5 @@
 ---
+description: サーバーの登録の変更 (SQL Server Management Studio)
 title: サーバーの登録の変更
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: f66817edcd2c7d1c284658625bb5e9e1f658ccf4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e5b44b8acd2d1c46649203c482b8ed4370c0dcb
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001789"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036955"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>サーバーの登録の変更 (SQL Server Management Studio)
 
@@ -31,6 +32,6 @@ ms.locfileid: "86001789"
 
 2. **[サーバー登録プロパティの編集]** ダイアログ ボックスで、サーバー、ログイン情報、または接続プロパティを変更し、 **[保存]** をクリックします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サーバーの登録](../../tools/sql-server-management-studio/register-servers.md)
+[サーバーの登録](./register-servers.md)

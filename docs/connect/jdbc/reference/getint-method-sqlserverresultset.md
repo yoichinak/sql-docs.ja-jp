@@ -1,4 +1,5 @@
 ---
+description: getInt メソッド (SQLServerResultSet)
 title: getInt メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d70950e0-53fb-4f85-a74a-c31882d4dfd6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e7dce6ab9362c4a16ca1331f3870710610f5592
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9c42c78154dc7b1994a9ea22bfe13973149100f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435834"
 ---
 # <a name="getint-method-sqlserverresultset"></a>getInt メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80921437"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getInt (int)](../../../connect/jdbc/reference/getint-method-int-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、Java プログラミング言語の **int** として取得されます。|  
 |[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、Java プログラミング言語の **int** として取得します。|  

@@ -1,4 +1,5 @@
 ---
+description: 大きな CLR ユーザー定義型 (ODBC)
 title: 大きな CLR ユーザー定義型 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,20 +15,21 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428164"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
   
- 大きな CLR Udt の ODBC サポートを示すサンプルについては、「[大きな udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)」を参照してください。  
+ 大きな CLR Udt の ODBC サポートを示すサンプルについては、「 [大きな udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)」を参照してください。  
   
- SQL Server Native Client での大きな CLR Udt のサポートの詳細については、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。  
+ SQL Server Native Client での大きな CLR Udt のサポートの詳細については、「 [大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
  SQL Server Native Client では、大きなオブジェクト (LOB) の型について、列のサイズが 8,000 バイトを超えていることを示す場合に、SQL_SS_LENGTH_UNLIMITED が使用されます。 SQL Server 2008 以降では、サイズが 8,000 バイトを超えている CLR UDT にも同じ値が使用されるようになりました。  
@@ -40,7 +42,7 @@ ms.locfileid: "86009750"
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- 次の表では、対応する構造体と ODBC C 型について説明します。 基本的に、CLR UDT は、追加のメタデータを持つ**varbinary**型です。  
+ 次の表では、対応する構造体と ODBC C 型について説明します。 基本的に、CLR UDT は、追加のメタデータを持つ **varbinary** 型です。  
   
 |SQL データ型|メモリ レイアウト|C データ型|値 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -69,7 +71,7 @@ ms.locfileid: "86009750"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT の名前|UDT の名前|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT の完全修飾名|UDT の完全修飾名|  
   
- UDT パラメーターの場合、SQL_CA_SS_UDT_TYPE_NAME は常に**SQLSetDescField**を使用して設定する必要があります。 SQL_CA_SS_UDT_CATALOG_NAME と SQL_CA_SS_UDT_SCHEMA_NAME は省略可能です。  
+ UDT パラメーターの場合、SQL_CA_SS_UDT_TYPE_NAME は常に **SQLSetDescField**を使用して設定する必要があります。 SQL_CA_SS_UDT_CATALOG_NAME と SQL_CA_SS_UDT_SCHEMA_NAME は省略可能です。  
   
  UDT が、テーブルとは異なるスキーマで同じデータベースに定義されている場合は、SQL_CA_SS_UDT_SCHEMA_NAME を設定する必要があります。  
   
@@ -135,7 +137,7 @@ ms.locfileid: "86009750"
 |SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
- \*バイナリデータは16進数の文字列に変換されます。  
+ \* バイナリデータは16進数の文字列に変換されます。  
   
  C から SQL データ型への変換としてサポートされているものは次のとおりです。  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009750"
 |SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
- \*16進文字列からバイナリデータへの変換が行われます。  
+ \* 16進文字列からバイナリデータへの変換が行われます。  
   
 ## <a name="sql_variant-support-for-udts"></a>SQL_VARIANT による UDT のサポート  
  SQL_VARIANT 列では UDT がサポートされません。  

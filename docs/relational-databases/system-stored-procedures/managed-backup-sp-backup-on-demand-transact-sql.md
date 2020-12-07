@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 sp_backup_on_demand (Transact-sql)
 title: managed_backup。 sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,13 +19,14 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 79188e36e5a876fb61ddda3af94f37372963a08c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548417"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup。 sp_backup_on_demand (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +49,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @database_name  
  バックアップを実行するデータベースの名前を指定します。 @database_nameは**SYSNAME**です。  
   
@@ -57,7 +59,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  

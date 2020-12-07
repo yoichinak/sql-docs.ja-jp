@@ -1,4 +1,5 @@
 ---
+description: sp_change_subscription_properties (Transact-sql)
 title: sp_change_subscription_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715897"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528816"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @property = ] 'property'`変更するプロパティを指定します。 *プロパティ*は**sysname**です。  
+`[ @property = ] 'property'` 変更するプロパティを指定します。 *プロパティ* は **sysname**です。  
   
-`[ @value = ] 'value'`は、プロパティの新しい値です。 *値*は**nvarchar (1000)**,、既定値はありません。  
+`[ @value = ] 'value'` は、プロパティの新しい値です。 *値* は **nvarchar (1000)**,、既定値はありません。  
   
-`[ @publication_type = ] publication_type`パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
+`[ @publication_type = ] publication_type` パブリケーションのレプリケーションの種類を指定します。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|パブリケーションの種類|  
+|[値]|パブリケーションの種類|  
 |-----------|----------------------|  
 |**0**|トランザクション|  
 |**1**|スナップショット|  
-|**2**|Merge|  
+|**2**|マージする|  
 |NULL (既定値)|レプリケーションでは、パブリケーションの種類を決定します。 このストアド プロシージャでは複数のテーブルを検索する必要があるため、このオプションを指定すると、パブリケーションの種類を直接指定したときに比べて動作が遅くなります。|  
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|値|説明|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 NULL に設定した場合、スナップショットファイルはパブリッシャーによって指定された既定の場所から取得されます。|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
@@ -73,7 +74,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|ディストリビューターへの接続時に Windows 認証を使用します。|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターへの接続時に認証を使用します。|  
 |**dts_package_name**||SQL Server 2000 データ変換サービス (DTS) パッケージの名前。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
-|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。<br /><br /> 注: DTS パッケージにはパスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
+|**dts_package_password**||パッケージのパスワードを指定します。 *dts_package_password* は **sysname** で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。<br /><br /> 注: DTS パッケージにはパスワードが必要です。<br /><br /> この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
 |**dts_package_location**||DTS パッケージが格納されている場所。 この値は、パブリケーションがトランザクションまたはスナップショットの場合にのみ指定できます。|  
 |**dynamic_snapshot_location**||スナップショットファイルを保存するフォルダーへのパスを指定します。 この値は、パブリケーションがマージパブリケーションである場合にのみ指定できます。|  
 |**ftp_address**||これは旧バージョンとの互換性のためにだけ用意されています。|  
@@ -100,19 +101,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**working_directory**||ファイル転送プロトコル (FTP) を使用してスナップショットファイルを転送するときに、パブリケーションのデータとスキーマファイルを一時的に格納するために使用する作業ディレクトリの名前。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_change_subscription_properties**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_change_subscription_properties** は、すべての種類のレプリケーションで使用されます。  
   
  プルサブスクリプションには**sp_change_subscription_properties**が使用されます。  
   
- Oracle パブリッシャーの場合、Oracle ではサーバーのインスタンスごとに1つのデータベースのみが許可されるため、 *publisher_db*の値は無視されます。  
+ Oracle パブリッシャーの場合、Oracle ではサーバーのインスタンスごとに1つのデータベースのみが許可されるため、 *publisher_db* の値は無視されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_change_subscription_properties**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: MDX の予約語
 title: MDX の予約語 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b5405241a99c931c1f9e9354214f097645941efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429754"
 ---
 # <a name="mdx-reserved-words"></a>MDX の予約語
 
@@ -62,7 +63,7 @@ ms.locfileid: "87362782"
         COLUMN  
         COLUMNS  
         相関関係  
-        [COUNT]  
+        COUNT  
         いとこ  
         COVARIANCE  
         COVARIANCEN  
@@ -100,7 +101,7 @@ ms.locfileid: "87362782"
         EXCEPT  
         EXCLUDEEMPTY  
         EXTRACT  
-        FALSE  
+        false  
         FILTER  
         FIRSTCHILD  
         FIRSTSIBLING  
@@ -144,13 +145,13 @@ ms.locfileid: "87362782"
         LINREGSLOPE  
         LINREGVARIANCE  
         LOOKUPCUBE  
-        [MAX]  
+        MAX  
         措置  
         MEDIAN  
         MEMBER  
         MEMBERS  
         MEMBERTOSTR  
-        [MIN]  
+        MIN  
         MTD  
         NAME  
         NAMETOSET  
@@ -208,7 +209,7 @@ ms.locfileid: "87362782"
         STRTOVAL  
         STRTOVALUE  
         抽出  
-        [SUM]  
+        SUM  
         TAIL  
         THIS  
         TOGGLEDRILLSTATE  
@@ -217,7 +218,7 @@ ms.locfileid: "87362782"
         TOPSUM  
         累計  
         trEE  
-        TRUE  
+        true  
         TUPLETOSTR  
         TYPE  
         UNION  

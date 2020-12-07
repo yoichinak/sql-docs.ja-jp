@@ -1,4 +1,5 @@
 ---
+description: ERROR_NUMBER (Transact-SQL)
 title: ERROR_NUMBER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b116fa8d49b3e007a35fe3bc846a29157839e22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d00b19d9814e6c364624df4a373db7ff503eff84
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111620"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116746"
 ---
 # <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87111620"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 ERROR_NUMBER ( )  
 ```  
   

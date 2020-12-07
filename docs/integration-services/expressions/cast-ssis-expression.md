@@ -1,4 +1,5 @@
 ---
+description: Cast (SSIS 式)
 title: Cast (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430634"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
 
@@ -48,7 +49,7 @@ ms.locfileid: "86917192"
 ## <a name="result-types"></a>戻り値の型  
  *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の図は、有効なキャスト演算を示しています。  
   
  ![データ型間の有効および無効なキャスト](../../integration-services/expressions/media/data-conversion.gif "データ型間の有効および無効なキャスト")  
@@ -146,7 +147,7 @@ ms.locfileid: "86917192"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Integration Services &#40;SSIS&#41; 式](../../integration-services/expressions/integration-services-ssis-expressions.md)   

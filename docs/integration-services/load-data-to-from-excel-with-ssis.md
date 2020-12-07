@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435436"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991873"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
 
@@ -63,7 +63,7 @@ SSIS を使用して Excel からデータをインポートしたり、デー�
 
 -   32 ビット バージョンの Office を既にインストールしている場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、SSIS パッケージを 32 ビット モードで実行していること、またはインポートおよびエクスポート ウィザードの 32 ビット バージョンを実行していることを確認する必要があります。
 
--   Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 次に例を示します。
+-   Microsoft 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 次に例を示します。
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

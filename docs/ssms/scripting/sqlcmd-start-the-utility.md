@@ -4,19 +4,19 @@ description: sqlcmd ユーティリティを起動する方法について説明
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbbf6064708f272eda5d646043ee7d43e766d104
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 38b89e893efa43df3ae2c78aacd6431727d7765e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248111"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036279"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - ユーティリティの起動
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "87248111"
     >  入力した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはバッファーに格納されます。 GO コマンドが見つかると、ステートメントがバッチとして実行されます。  
   
 ## <a name="see-also"></a>参照  
- [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
-  
+ [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](./sqlcmd-run-transact-sql-script-files.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: end メソッド (SQLServerXAResource)
 title: end メソッド (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fae16dbc10308a558b6b1a7e894ea4391b40326e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7908c25c3366903d13ac27c2cefbb349ef43b4b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437824"
 ---
 # <a name="end-method-sqlserverxaresource"></a>end メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,11 +39,11 @@ public void end(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>パラメーター  
  *xid*  
   
- Xid オブジェクトです。  
+ Xid オブジェクト。  
   
  *flags*  
   
- **int** 値です。  
+ **int** 値。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  

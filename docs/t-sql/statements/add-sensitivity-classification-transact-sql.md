@@ -1,4 +1,5 @@
 ---
+description: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: dea40dcd8f9e7405d6fe4343e48b8cbdaf835593
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523204"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784787"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
@@ -35,7 +36,7 @@ ms.locfileid: "87523204"
 
 1 つ以上のデータベース列に秘密度の分類に関するメタデータを追加します。 分類には、機密ラベルと情報の種類を含めることができます。
 
-SQL Server では、これは SQL Server 2019 で導入されました。
+SQL Server では、これは SQL Server 2012 で導入されました。
 
 データベース環境で機密データを分類すると、可視性の拡張と保護の強化が実現します。 詳しくは、[SQL Information Protection の概要](https://aka.ms/sqlip)に関する記事をご覧ください。
 
@@ -111,7 +112,7 @@ ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIV
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK=CRITICAL )
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. ラベルのみの分類

@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (SSISDB データベース)
 title: catalog.get_parameter_values (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913016"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129780"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
 
@@ -62,7 +63,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|パラメーターの名前。|  
 |parameter_value|**sql_variant**|パラメーターの値。|  
 |sensitive|**bit**|値が `1` の場合、パラメーター値はセンシティブです。 値が `0` の場合、パラメーター値はセンシティブではありません。|  
-|required|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
+|必須|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
 |value_set|**bit**|値が `1` の場合、パラメーター値は割り当てられています。 値が `0` の場合、パラメーター値は割り当てられていません。|  
   
 > [!NOTE]  

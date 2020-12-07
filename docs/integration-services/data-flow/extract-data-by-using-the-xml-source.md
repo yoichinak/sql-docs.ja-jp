@@ -1,4 +1,5 @@
 ---
+description: XML ソースを使用してデータを抽出する
 title: XML ソースを使用してデータを抽出する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2199bfc8ae7d6605dcf7ed92a8749683e17d3fd9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f3cd306d2cf6097fdb5e178f92e41d45de198783
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916886"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127172"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
 

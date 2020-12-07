@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8ba3ebb2aca0f1afd435e654427250901f9d83a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727341"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868564"
 ---
 # <a name="extended-events-overview"></a>拡張イベントの概要
 
@@ -45,7 +45,7 @@ ms.locfileid: "85727341"
 |トピック|説明|  
 |-----------|-----------------|  
 |[SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|オブジェクトを含む拡張イベント パッケージについて説明します。 これらのオブジェクトは、拡張イベント セッションの実行中にデータを取得して処理するために使用されます。|  
-|[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|イベント セッション中にデータを受け取ることができるイベント コンシューマーについて説明します。|  
+|[SQL Server 拡張イベント ターゲット](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))|イベント セッション中にデータを受け取ることができるイベント コンシューマーについて説明します。|  
 |[SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|拡張イベント セッションを実装および管理するエンジンについて説明します。|  
 |[SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|拡張イベント セッションについて説明します。|  
 | &nbsp; | &nbsp; |
@@ -68,7 +68,7 @@ ms.locfileid: "85727341"
   
 -   拡張イベント エンジンはイベントの種類に依存しません。 エンジンはイベントの内容による制約を受けないため、あらゆるイベントをあらゆるターゲットにバインドできます。 拡張イベント エンジンの詳細については、「 [SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)」を参照してください。  
   
--   イベントは、イベント コンシューマー (拡張イベントの *ターゲット* ) とは分離されています。 つまり、任意のターゲットが任意のイベントを受け取ることができます。 さらに、ターゲット側では、発生したあらゆるイベントを自動的に処理できるため、追加のイベント コンテキストを提供したりログに記録したりすることが可能となります。 詳細については、「 [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
+-   イベントは、イベント コンシューマー (拡張イベントの *ターゲット* ) とは分離されています。 つまり、任意のターゲットが任意のイベントを受け取ることができます。 さらに、ターゲット側では、発生したあらゆるイベントを自動的に処理できるため、追加のイベント コンテキストを提供したりログに記録したりすることが可能となります。 詳細については、「 [SQL Server 拡張イベント ターゲット](/previous-versions/sql/sql-server-2016/bb630339(v=sql.130))」を参照してください。  
   
 -   イベントは、イベントが発生した際に実行されるアクションとは異なります。 したがって、すべてのイベントには任意のアクションを関連付けることができます。  
   
@@ -93,15 +93,15 @@ ms.locfileid: "85727341"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |**オブジェクト エクスプローラー** を使用してイベント セッションを管理します。|[オブジェクト エクスプローラーでのイベント セッションの管理](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)|  
-|拡張イベント セッションを作成する方法について説明します。|[拡張イベント セッションの作成](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)|  
+|拡張イベント セッションを作成する方法について説明します。|[拡張イベント セッションの作成](/previous-versions/sql/sql-server-2016/hh213147(v=sql.130))|  
 |ターゲット データを表示および更新する方法について説明します。| [SQL Server での拡張イベントからのターゲット データの詳細表示](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションを作成および管理するために、拡張イベントのツールを使用する方法について説明します。|[拡張イベントのツール](../../relational-databases/extended-events/extended-events-tools.md)|  
 |拡張イベント セッションを変更する方法について説明します。|[拡張イベント セッションの変更](../../relational-databases/extended-events/alter-an-extended-events-session.md)|  
-|イベントに関連付けられているフィールドの情報を取得する方法について説明します。|[すべてのイベントのフィールドを取得する](https://msdn.microsoft.com/library/4e4ee03f-5bca-42ed-a37c-db1c82e3aad2)|  
-|登録パッケージで提供されているイベントを調べる方法について説明します。|[登録パッケージのイベントの表示](https://msdn.microsoft.com/library/9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f)|  
-|登録パッケージで提供されている拡張イベント ターゲットを確認する方法について説明します。|[登録パッケージの拡張イベント ターゲットの表示](https://msdn.microsoft.com/library/4985aa5f-ac99-49f6-852c-9d25916549e9)|  
+|イベントに関連付けられているフィールドの情報を取得する方法について説明します。|[すべてのイベントのフィールドを取得する](/previous-versions/sql/sql-server-2016/bb677249(v=sql.130))|  
+|登録パッケージで提供されているイベントを調べる方法について説明します。|[登録パッケージのイベントの表示](./selects-and-joins-from-system-views-for-extended-events-in-sql-server.md)|  
+|登録パッケージで提供されている拡張イベント ターゲットを確認する方法について説明します。|[登録パッケージの拡張イベント ターゲットの表示](/previous-versions/sql/sql-server-2016/bb677247(v=sql.130))|  
 |SQL トレースのイベントとそれに関連した列について、拡張イベントにおける等価なイベントとアクションを確認する方法について説明します。|[SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
-|CREATE EVENT SESSION または ALTER EVENT SESSION で ADD TARGET 引数を使用する際に設定できるパラメーターを確認する方法について説明します。|[ADD TARGET 引数の構成可能パラメーターの取得](https://msdn.microsoft.com/library/08454543-c5c8-4ca3-9af9-f1d82264471c)|  
+|CREATE EVENT SESSION または ALTER EVENT SESSION で ADD TARGET 引数を使用する際に設定できるパラメーターを確認する方法について説明します。|[ADD TARGET 引数の構成可能パラメーターの取得](/previous-versions/sql/sql-server-2016/bb677176(v=sql.130))|  
 |既存の SQL トレース スクリプトを拡張イベント セッションに変換する方法について説明します。|[既存の SQL トレース スクリプトから拡張イベント セッションへの変換](../../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |ロックを保持しているクエリ、クエリのプラン、およびロックが取得されたときの [!INCLUDE[tsql](../../includes/tsql-md.md)] スタックを特定する方法について説明します。|[ロックを保持しているクエリの特定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |データベース パフォーマンスを低下させているロックのソースを特定する方法について説明します。|[ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
@@ -133,7 +133,7 @@ SELECT
 ## <a name="see-also"></a>参照
 
 [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-[SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[SQL Server オブジェクトとバージョンの DAC サポート](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))  
 [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
 [データ層アプリケーションの監視](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
 &nbsp;  
@@ -142,4 +142,4 @@ SELECT
 &nbsp;  
 [XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。  
 [Read-SQLXEvent PowerShell コマンドレット](https://www.powershellgallery.com/packages/SqlServer.XEvent)、2019 年 6 月リリース。  
-[SQL の謎:XEvent セッションの因果関係の追跡とイベント シーケンス (ブログ公開 2019 年 4 月 1 日)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  
+[SQL の謎:XEvent セッションの因果関係の追跡とイベント シーケンス (ブログ公開 2019 年 4 月 1 日)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)

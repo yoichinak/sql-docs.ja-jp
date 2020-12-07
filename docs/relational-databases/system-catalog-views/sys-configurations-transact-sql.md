@@ -1,4 +1,5 @@
 ---
+description: sys.configurations (Transact-SQL)
 title: sys.configurations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896320"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546839"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,23 +37,23 @@ ms.locfileid: "85896320"
 |**configuration_id**|**int**|構成値の一意の ID。|  
 |**name**|**nvarchar(35)**|構成オプションの名前。|  
 |**value**|**sql_variant**|このオプションの値を構成しました。|  
-|**以降**|**sql_variant**|構成オプションの最小値。|  
-|**個**|**sql_variant**|構成オプションの最大値。|  
+|**minimum**|**sql_variant**|構成オプションの最小値。|  
+|**maximum**|**sql_variant**|構成オプションの最大値。|  
 |**value_in_use**|**sql_variant**|オプションで現在有効な実行値|  
-|**description**|**nvarchar(255)**|構成オプションの説明|  
+|**description**|**nvarchar (255)**|構成オプションの説明|  
 |**is_dynamic**|**bit**|1 = 再構成ステートメントが実行されたときに有効になる変数です。|  
-|**is_advanced**|**bit**|1 = 変数は、 **show advancedoption**が設定されている場合にのみ表示されます。|  
+|**is_advanced**|**bit**|1 = 変数は、 **show advancedoption** が設定されている場合にのみ表示されます。|  
   
- ## <a name="remarks"></a>Remarks
-  すべてのサーバー構成オプションの一覧については、「[サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
+ ## <a name="remarks"></a>解説
+  すべてのサーバー構成オプションの一覧については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  データベースレベルの構成オプションについては、「 [ALTER DATABASE スコープ構成 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 ソフト NUMA を構成するには、「[ソフト numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。  
+>  データベースレベルの構成オプションについては、「 [ALTER DATABASE スコープ構成 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 ソフト NUMA を構成するには、「 [ソフト numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。  
  
 sys.configurations カタログビューを使用すると、config_value ([値] 列)、run_value (value_in_use 列)、および構成オプションが動的 (サーバーエンジンの再起動または is_dynamic 列) かどうかを判断できます。
 
 > [!NOTE]
-> Sp_configure の結果セットの config_value は、 **sys.configurations 値**列と同じです。 **Run_value**は、 **sys.configurations value_in_use**列に相当します。
+> Sp_configure の結果セットの config_value は、 **sys.configurations 値** 列と同じです。 **Run_value**は、 **sys.configurations value_in_use**列に相当します。
 
 次のクエリを使用して、構成済みの値がインストールされていないかどうかを確認できます。
 
@@ -60,13 +61,13 @@ sys.configurations カタログビューを使用すると、config_value ([値]
 select * from sys.configurations where value != value_in_use
 ```
 
-値が構成オプションの変更と同じで、 **value_in_use**が同じでない場合は、再構成コマンドが実行されていないか、失敗したか、またはサーバーエンジンを再起動する必要があります。
+値が構成オプションの変更と同じで、 **value_in_use** が同じでない場合は、再構成コマンドが実行されていないか、失敗したか、またはサーバーエンジンを再起動する必要があります。
 
 値と value_in_use が同じではなく、これが想定される動作である構成オプションがあります。 次に例を示します。
 
 "max server memory (MB)"-0 の既定の構成値は value_in_use = 2147483647 "min server memory (MB)" と表示されます。既定の構成値0は、value_in_use = 8 (32 ビット) または 16 (64 ビット) として表示される場合があります。 
 
-場合によっては、 **value_in_use**が0になります。 この場合、"true" **value_in_use**は 8 (32 ビット) または 16 (64 ビット) です。
+場合によっては、 **value_in_use** が0になります。 この場合、"true" **value_in_use** は 8 (32 ビット) または 16 (64 ビット) です。
 
 **Is_dynamic**列を使用して、構成オプションに再起動が必要かどうかを判断できます。 is_dynamic = 1 は、再構成 (t-sql) のコマンドが実行されると、新しい値が "直ちに" 有効になることを意味します (場合によっては、サーバーエンジンが新しい値をすぐに評価するのではなく、通常の実行時にその値が使用されます)。 is_dynamic = 0 の場合、変更された構成値は、再構成 (T-sql) コマンドが実行された場合でも、サーバーが再起動されるまで有効になりません。
 
@@ -76,7 +77,7 @@ select * from sys.configurations where value != value_in_use
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー全体の構成のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

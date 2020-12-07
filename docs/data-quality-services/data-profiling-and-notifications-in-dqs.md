@@ -1,4 +1,5 @@
 ---
+description: DQS のデータ プロファイルと通知
 title: DQS のデータ プロファイルと通知
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487830"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
 
@@ -49,7 +50,7 @@ ms.locfileid: "85882550"
   
  DQS では、ドメイン管理アクティビティのプロファイル統計情報は提供されません。  
   
-##  <a name="profiling-data-by-activity"></a><a name="Activity"></a>アクティビティ別のプロファイルデータ  
+##  <a name="profiling-data-by-activity"></a><a name="Activity"></a> アクティビティ別のプロファイルデータ  
  DQS のプロファイルでは、完全性 (データがどの程度存在するか)、正確性 (データがどの程度意図されたとおりに使用できるか)、および一意性 (異なるエンティティを異なる値でどの程度表すか) という、標準のデータ品質ディメンションを使用してデータの品質を表します。 既定では、NULL 値と空の値が欠落していると見なされるか、または完全性の割合が低くなります。ただし、その他の値を NULL に相当する値として定義することもできます。その場合、これらの値も欠落していると見なされます。  
   
  プロファイルによってプロセスの評価に必要な統計情報が提供されますが、実際に評価するにはその統計情報を解釈する必要があります。 プロファイルの内容について理解するには、統計情報を列ごとに確認するようにしてください。  
@@ -74,7 +75,7 @@ ms.locfileid: "85882550"
   
 -   [照合プロジェクトの実行](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>アクティビティ監視のプロファイルデータ  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> アクティビティ監視のプロファイルデータ  
  ナレッジ検出、照合ポリシー、照合、およびクレンジングアクティビティのプロファイル情報は、Data Quality client のアクティビティページだけでなく、アクティビティ監視でも使用できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」をご参照ください。  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> 記事  
@@ -82,7 +83,7 @@ ms.locfileid: "85882550"
   
  DQS の通知は、ユーザーに関連すると思われる問題を提起したり、潜在的な問題に対処したりすることを目的としたものです。 通知を操作するかどうかは、目的に応じて決定されます。 たとえば、データ クレンジングで修正された値や提案された値がなく、完全性と正確性がどちらも 100% である場合に DQS で通知が生成されたとします。 この通知はアクティビティを実行する必要がないことを示していると考えられますが、 アクティビティを実行するかどうかはユーザーが選択できます。  
   
- 通知は、ツールヒントによって [**プロファイル**] タブに感嘆符付きで示されます。通知に関連付けられている統計は、通知の統計的根拠を示すために赤で表示されます。  
+ 通知は、ツールヒントによって [ **プロファイル** ] タブに感嘆符付きで示されます。通知に関連付けられている統計は、通知の統計的根拠を示すために赤で表示されます。  
   
  通知の有効 (既定) と無効の切り替えは、Data Quality Client のホーム ページの **[全般設定]** タブにある **[管理]** セクションで行えます。 通知が無効になっている場合、ツールヒントは表示されず、統計は赤で表示されません。 通知を無効にすると、パフォーマンスが大幅に向上することはありません。 通知を無効にしてもプロファイルは実行されます。  
   
@@ -98,7 +99,7 @@ ms.locfileid: "85882550"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|タスクの説明|記事|  
+|タスクの説明|[アーティクル]|  
 |----------------------|-----------|  
 |DQS で通知を有効または無効にする方法について説明します。|[DQS のプロファイル通知の有効化または無効化](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   

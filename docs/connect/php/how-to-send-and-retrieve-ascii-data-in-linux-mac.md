@@ -1,5 +1,6 @@
 ---
-title: 方法:Linux および macOS での ASCII データの送信と取得 (SQL) | Microsoft Docs
+title: 方法:Linux および macOS での ASCII データの送信と取得 (SQL)
+description: このトピックでは、Microsoft Drivers for PHP for SQL Server を使用する場合に Linux および macOS で ASCII データを送信および取得する方法について説明します
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - sending data
 - linux
 - macOS
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 015562e9a783cef79a9466778b89edecffee5fe0
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251901"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680427"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>方法:Linux および macOS での ASCII データの送信と取得 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

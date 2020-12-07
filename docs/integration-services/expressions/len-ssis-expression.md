@@ -1,4 +1,5 @@
 ---
+description: LEN (SSIS 式)
 title: LEN (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad2c2ae4c9cb3e6627827740858598e31e1542b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81bc37e1a46776dbd4b10215ee5dda7b387e5e38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425444"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 式)
 
@@ -41,7 +42,7 @@ LEN(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *character_expression* 引数には、DT_WSTR、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型を使用できます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  *character_expression* が DT_STR データ型の文字列リテラルまたはデータ列である場合は、LEN による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  

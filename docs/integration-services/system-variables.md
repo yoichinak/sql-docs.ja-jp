@@ -1,4 +1,5 @@
 ---
+description: システム変数
 title: システム変数 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192408"
 ---
 # <a name="system-variables"></a>システム変数
 
@@ -45,7 +46,7 @@ ms.locfileid: "86912708"
 |**ExecutionInstanceGUID**|String|実行中のパッケージのインスタンスの一意識別子です。|  
 |**FailedConfigurations**|String|失敗したパッケージ構成の名前。|  
 |**IgnoreConfigurationsOnLoad**|Boolean|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
-|**InteractiveMode**|Boolean|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True**に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False**に設定されます。|  
+|**InteractiveMode**|Boolean|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True** に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False** に設定されます。|  
 |**LocaleId**|Int32|パッケージで使用するロケールです。|  
 |**MachineName**|String|パッケージが実行されているコンピューターの名前です。|  
 |**OfflineMode**|Boolean|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
@@ -72,7 +73,7 @@ ms.locfileid: "86912708"
   
 |システム変数|データ型|説明|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|タスクの名前。|  
+|**CreationName**|String|タスクの名前です。|  
 |**LocaleId**|Int32|タスクが使用するロケールです。|  
 |**TaskID**|String|タスク インスタンスの一意識別子です。|  
 |**TaskName**|String|タスク インスタンスの名前です。|  
@@ -108,6 +109,5 @@ ms.locfileid: "86912708"
  この規則は、ユーザー定義変数にも当てはまります。 ただし、システム変数のデータ型は変更できないため、システム変数を使用する場合はそのデータ型に合わせた調整が必要ですが、ユーザー定義変数にはそれに比べると高い柔軟性があります。 パラメーター バインドで使用するユーザー定義変数は、通常、マップ先パラメーターのデータ型と互換性のあるデータ型で定義します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [クエリ パラメーターを SQL 実行タスクの変数にマップする方法](./control-flow/execute-sql-task.md)  
   

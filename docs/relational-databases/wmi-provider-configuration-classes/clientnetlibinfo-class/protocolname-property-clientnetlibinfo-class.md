@@ -1,4 +1,5 @@
 ---
+description: ProtocolName プロパティ (ClientNetLibInfo クラス)
 title: ProtocolName プロパティ (ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolName property
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fe6c65d4397de928884adb91e326da8ee0bba334
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888940772ea92462368107229865874bfdf408ae
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881127"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890736"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName プロパティ (ClientNetLibInfo クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,8 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリに関連付けられたプロトコルの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

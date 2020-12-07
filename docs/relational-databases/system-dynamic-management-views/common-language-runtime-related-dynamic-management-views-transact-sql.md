@@ -1,4 +1,5 @@
 ---
+description: 共通言語ランタイム関連の動的管理ビュー (Transact-SQL)
 title: 共通言語ランタイム関連の動的管理ビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - common language runtime [SQL Server], dynamic management views
 - dynamic management objects [SQL Server], common language runtime
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7e0cb76aa8d1b3aa24787aeb93ae1b264b8fa04a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef135990c7cb99f312b237c10dc950b4822247f5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942422"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537714"
 ---
 # <a name="common-language-runtime-related-dynamic-management-views-transact-sql"></a>共通言語ランタイム関連の動的管理ビュー (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

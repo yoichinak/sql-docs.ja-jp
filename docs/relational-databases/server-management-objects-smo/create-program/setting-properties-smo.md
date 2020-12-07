@@ -1,4 +1,5 @@
 ---
+description: プロパティの設定 - SMO
 title: 設定のプロパティ-SMO |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fe085d085871da519412203d50613f9d27ac4f5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb20008df79d1b3970c1f3a6c21393fc5e158769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420346"
 ---
 # <a name="setting-properties---smo"></a>プロパティの設定 - SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -61,7 +63,7 @@ ms.locfileid: "86008675"
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic でのプロパティの取得および設定  
- このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の**ExecuteSql**メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
+ このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の **ExecuteSql** メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -74,7 +76,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Visual C# でのプロパティの取得および設定  
- このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の**ExecuteSql**メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
+ このコード例では、オブジェクトのプロパティを取得する方法 <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> <xref:Microsoft.SqlServer.Management.Smo.Information> と <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> 、プロパティのプロパティを <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 列挙型の **ExecuteSql** メンバーに設定する方法を示し <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> ます。  
   
 ```csharp  
 {   
@@ -153,7 +155,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では、オブジェクトの**Properties**コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
+ このコード例では、オブジェクトの **Properties** コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
   
  この例では、<xref:Microsoft.SqlServer.Management.Smo.Property> オブジェクトは [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] のキーワードでもあるため、角かっこで囲まれています。  
   
@@ -177,7 +179,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C# でのオブジェクトのすべてのプロパティの反復処理  
- このコード例では、オブジェクトの**Properties**コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
+ このコード例では、オブジェクトの **Properties** コレクションを反復処理 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> し、出力画面に表示し [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ます。  
   
 ```csharp  
 {   

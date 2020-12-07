@@ -1,4 +1,5 @@
 ---
+description: binary と varbinary (Transact-SQL)
 title: binary と varbinary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2017
@@ -21,12 +22,12 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 842cde194f39b32b2140c09afed458f903dc772d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548744"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130817"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 
@@ -61,11 +62,11 @@ ms.locfileid: "86548744"
 * **varbinary**
 * **text**
 * **ntext**
-* **画像**
+* **image**
 
 他のデータ型が変換される場合 **binary** または **varbinary**, 、データが埋め込まれるか、左側に切り捨てられます。 桁の埋め込みには 16 進数の 0 が使用されます。
   
-データの **binary** データ型と **varbinary** データ型への変換は、データ間を移動するもっとも簡単な方法が**binary** データである場合に便利です。 ある時点で、値の型をサイズが十分に大きなバイナリ値に変換し、その後、元に戻すことがあります。 両方の変換が同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で行われる場合、この変換では常に結果的に同じ値が生成されます。 値の 2 進表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で異なる場合があります。
+データの **binary** データ型と **varbinary** データ型への変換は、データ間を移動するもっとも簡単な方法が **binary** データである場合に便利です。 ある時点で、値の型をサイズが十分に大きなバイナリ値に変換し、その後、元に戻すことがあります。 両方の変換が同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で行われる場合、この変換では常に結果的に同じ値が生成されます。 値の 2 進表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で異なる場合があります。
   
 **int**、**smallint**、**tinyint** を **binary** または **varbinary** に変換できます。 **binary** 型の値を再度 integer 型の値に戻した場合、切り捨てが行われていると、この値は元の integer の値とは同じになりません。 たとえば、次の SELECT ステートメントは整数値 `123456` をバイナリ値 `0x0001e240` として格納することを示しています。
   
@@ -96,7 +97,7 @@ GO
 > [!NOTE]  
 >  すべてのデータ間の変換の入力と **binary** データ型は、バージョンの間で同じであるとは限りません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

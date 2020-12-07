@@ -1,4 +1,5 @@
 ---
+description: Hadoop Pig Task
 title: Hadoop Pig Task | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 375ae2fd7b0e2ba0d125fab597132f3978430346
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8bb1c648647ea2341e899989f6199cbacd583b1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393358"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig Task
 
@@ -37,11 +38,11 @@ ms.locfileid: "86918191"
 |-----------|-----------------|  
 |**Hadoop 接続**|既存の Hadoop 接続マネージャーを指定するか、新しい Hadoop 接続マネージャーを作成します。 この接続マネージャーは、WebHCat サービスがホストされる場所を示します。|  
 |**[SourceType]**|クエリのソースの種類を指定します。 使用できる値は、 **ScriptFile** と **DirectInput**です。|  
-|**[InlineScript]**|**[SourceType]** の値が **DirectInput**の場合は、Pig スクリプトを指定します。|  
+|**InlineScript**|**[SourceType]** の値が **DirectInput**の場合は、Pig スクリプトを指定します。|  
 |**[HadoopScriptFilePath]**|**[SourceType]** の値が **ScriptFile**の場合は、Hadoop 上のスクリプト ファイルのパスを指定します。|  
 |**[TimeoutInMinutes]**|タイムアウト値を分単位で指定します。 タイムアウトが経過するまでに完了していない場合、Hadoop ジョブが停止します。 Hadoop ジョブを非同期的に実行するようにスケジュールを設定するには、0 を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Hadoop 接続マネージャー](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

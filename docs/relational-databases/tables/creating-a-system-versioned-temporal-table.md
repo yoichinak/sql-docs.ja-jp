@@ -1,4 +1,5 @@
 ---
+description: システム バージョン管理されたテンポラル テーブルの作成
 title: システム バージョン管理されたテンポラル テーブルの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/15/2019
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecc9c02dc9126364c5e20de3678bc013053085ee
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552724"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809300"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 システム バージョン管理されたテンポラル テーブルを作成する場合、履歴テーブルの指定方法に関して 3 つの方法があります。
 
@@ -81,7 +84,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 
 - **HISTORY_TABLE** パラメーターにはスキーマ名が必須です。
 - 指定したスキーマが存在しない場合、 **CREATE TABLE** ステートメントは失敗します。
-- **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](https://msdn.microsoft.com/library/dn935015.aspx)が検証されます。 無効な履歴テーブルを指定した場合、**CREATE TABLE** ステートメントは失敗します。
+- **HISTORY_TABLE** パラメーターによって指定されているテーブルが既に存在する場合、新しく作成されるテンポラル テーブルに対して、 [スキーマの整合性およびテンポラル データの整合性](./temporal-tables.md)が検証されます。 無効な履歴テーブルを指定した場合、**CREATE TABLE** ステートメントは失敗します。
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>ユーザー定義の履歴テーブルによるテンポラル テーブルの作成
 
@@ -204,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [システム バージョン管理のテンポラル テーブルのデータの変更](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [システム バージョン管理されたテンポラル テーブルのデータのクエリ](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [システム バージョン管理されたテンポラル テーブルのスキーマを変更する](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

@@ -1,4 +1,5 @@
 ---
+description: sp_scriptdynamicupdproc (Transact-sql)
 title: sp_scriptdynamicupdproc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03be0aa206a4037de5e09e202e38fcce5ecf5a6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901319"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525950"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,13 +38,13 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @artid = ] artid`アーティクル ID を示します。 *artid*は**int**,、既定値はありません。  
+`[ @artid = ] artid` アーティクル ID を示します。 *artid* は **int**,、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
- 1つの**nvarchar (4000)** 列で構成される結果セットを返します。 結果セットは、カスタムストアドプロシージャの作成に使用される CREATE PROCEDURE ステートメント全体を形成します。  
+ 1つの **nvarchar (4000)** 列で構成される結果セットを返します。 結果セットは、カスタムストアドプロシージャの作成に使用される CREATE PROCEDURE ステートメント全体を形成します。  
   
-## <a name="remarks"></a>Remarks  
- **sp_scriptdynamicupdproc**は、トランザクションレプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていない場合は、列がそれ自体に戻されます。この場合、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的なアプローチには、変更された列のみが含まれます。これにより、最適な更新文字列が提供されます。 ただし、動的更新ステートメントがビルドされると、実行時に余分な処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
+## <a name="remarks"></a>解説  
+ **sp_scriptdynamicupdproc** は、トランザクションレプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていない場合は、列がそれ自体に戻されます。この場合、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的なアプローチには、変更された列のみが含まれます。これにより、最適な更新文字列が提供されます。 ただし、動的更新ステートメントがビルドされると、実行時に余分な処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_scriptdynamicupdproc**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
@@ -122,7 +123,7 @@ if @@rowcount = 0
   
  このストアド プロシージャを実行した後、結果のスクリプトを使用して、サブスクライバー側で手動でストアド プロシージャを作成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

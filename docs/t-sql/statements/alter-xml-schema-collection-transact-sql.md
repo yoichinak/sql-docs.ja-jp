@@ -1,4 +1,5 @@
 ---
+description: ALTER XML SCHEMA COLLECTION (Transact-SQL)
 title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd0da4260d4c080b3c8fa1e4a2f8ccc6c187fd67
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 615a18de5c90bec08d79579a038cb106f2a6d3fc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381066"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688543"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +45,7 @@ ms.locfileid: "86381066"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
@@ -66,7 +66,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
   
  次の例では、コレクション `MyColl` の既存の名前空間 `https://MySchema/test_xml_schema` に新しい \<element> を追加します。  
   
-```  
+```sql  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
@@ -98,7 +98,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. データベースに XML スキーマ コレクションを作成する  
  次の例では、XML スキーマ コレクション `ManuInstructionsSchemaCollection` を作成します。 コレクションにはスキーマ名前空間が 1 つだけ含まれます。  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -170,7 +170,7 @@ DROP DATABASE SampleDB;
   
  または、次のようにスキーマ コレクションを変数に割り当て、その変数を `CREATE XML SCHEMA COLLECTION` ステートメントで指定することもできます。  
   
-```  
+```sql  
 DECLARE @MySchemaCollection nvarchar(max);  
 SET @MySchemaCollection  = N' copy the schema collection here';  
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
@@ -191,7 +191,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
  XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 次に例を示します。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION N'  
 <xsd:schema>....</xsd:schema>  
 <xsd:schema>...</xsd:schema>';  
@@ -199,7 +199,7 @@ CREATE XML SCHEMA COLLECTION N'
   
  次の例では、2 つの XML スキーマ名前空間を含む XML スキーマ コレクション `ProductDescriptionSchemaCollection` を作成します。  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -246,7 +246,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. 対象の名前空間が指定されていないスキーマをインポートする  
  次の例に示すように、**targetNamespace** 属性が含まれていないスキーマをコレクションにインポートする場合、スキーマのコンポーネントは空文字列の対象の名前空間に関連付けられます。 コレクションにインポートされる 1 つ以上のスキーマについて関連付けを行わない場合は、複数のスキーマ コンポーネント (場合によっては関係のないコンポーネント) が既定の空文字列の名前空間に関連付けられることになるため注意してください。  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  

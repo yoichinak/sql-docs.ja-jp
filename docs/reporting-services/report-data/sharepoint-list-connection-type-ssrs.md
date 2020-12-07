@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455684"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935336"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
 
@@ -40,7 +40,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
  **表 1**  
   
-||サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
+|取得の種類|サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
 ||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|はい|いいえ|  
@@ -51,7 +51,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
  **表 2**  
   
-||サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
+|取得の種類|サポートされる資格情報|クラシック モードの Windows 認証|*要求認証|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |ローカル ファームの SharePoint リスト|Windows 認証 (統合セキュリティ) または SharePoint ユーザー トークン|はい|はい|  
 ||保存、要求、なし (Windows 資格情報を使用)<br /><br /> Windows 以外の資格情報を使用した場合、保存されている資格情報や資格情報の要求はサポートされません。|いいえ|いいえ|  
@@ -68,7 +68,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
  レポート サーバー (ローカル モード) なしで動作するように構成されている SharePoint テクノロジの場合、このオプションはサポートされません。 ローカル モードの詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート (Reporting Services の SharePoint モード)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)」を参照してください。  
   
  **[資格情報は必要ありません]\([資格情報を使用しない])**  
- このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+ このオプションを使用するには、レポート サーバーで自動実行アカウントを構成する必要があります。 詳細については、「[自動実行アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
  Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   

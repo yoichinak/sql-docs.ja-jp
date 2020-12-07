@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;ERROR (Transact-SQL)'
 title: '@@ERROR (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -20,12 +21,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbc22ecc5bb912ad7f303c2551c076f6ce8393a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 93fe08c7dcba1b9c45f9dfabd0c360b3db2c152f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366258"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87111581"
 ## <a name="return-types"></a>戻り値の型
  整数 (integer)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  直前の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでエラーが発生しなかった場合は、0 が返されます。  
   
  直前のステートメントでエラーが発生した場合は、エラー番号が返されます。 エラーが sys.messages カタログ ビューのエラーであった場合、そのエラーに対応する sys.messages.message_id 列の値が @@ERROR に含まれます。 @@ERROR エラー番号に関連付けられているテキストは、sys.messages で表示できます。  
@@ -73,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. @@ERROR を使用して条件的にプロシージャを終了する  
- 次の例では、`IF...ELSE` ステートメントを使用して、ストアド プロシージャ内で `@@ERROR` ステートメントの後にある `DELETE` をテストします。 `@@ERROR` 変数の値は、呼び出し元のプログラムに返されるリターン コードとして採用され、プロシージャ実行の成否を示します。  
+ 次の例では、`IF...ELSE` ステートメントを使用して、ストアド プロシージャ内で `DELETE` ステートメントの後にある `@@ERROR` をテストします。 `@@ERROR` 変数の値は、呼び出し元のプログラムに返されるリターン コードとして採用され、プロシージャ実行の成否を示します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -170,7 +171,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

@@ -1,8 +1,9 @@
 ---
+description: Open および Close メソッドの例 (VC++)
 title: Open および Close メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7aa6605cb613a8cc3f3a6b41c50747d96991f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2d1846203e4650048378d5fb41c4d2ff198f462
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762213"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990353"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open および Close メソッドの例 (VC++)
-この例では、開いている[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](../../../ado/reference/ado-api/close-method-ado.md)メソッドを使用します。  
+この例では、開いている[レコードセット](./recordset-object-ado.md)と[接続](./connection-object-ado.md)オブジェクトの両方に対して、 **Open**メソッドと[Close](./close-method-ado.md)メソッドを使用します。  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -206,8 +207,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close メソッド (ADO)](./close-method-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Open メソッド (ADO Connection)](./open-method-ado-connection.md)   
+ [Open メソッド (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

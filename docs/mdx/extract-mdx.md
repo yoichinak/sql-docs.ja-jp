@@ -1,4 +1,5 @@
 ---
+description: Extract (MDX)
 title: Extract (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b168794a38a515d4ace97d576710041eac86195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387518"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -37,12 +38,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Extract**関数は、抽出された階層要素の組で構成されるセットを返します。 指定したセット内の組ごとに、指定した階層のメンバーが結果セット内の新しい組に抽出されます。 この関数は、重複する組を常に削除します。  
   
  **Extract**関数は、 [Crossjoin](../mdx/crossjoin-mdx.md)関数の反対のアクションを実行します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のクエリは、**空**でない関数によって返される一連の組に対して**Extract**関数を使用する方法を示しています。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  

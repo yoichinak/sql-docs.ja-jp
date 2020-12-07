@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - compiling queries [SQL Server]
 - NOEXEC option
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 083679a21aec4fa39971cdb99ca75e9bf0db14b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765772"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540563"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765772"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説  
- SET NOEXEC が ON のとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各バッチがコンパイルされますが、実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチはコンパイル後に実行されます。  
+ SET NOEXEC が ON のとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各バッチが解析されてコンパイルされますが、実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチはコンパイル後に実行されます。  NOEXEC では、名前の遅延解決がサポートされています。バッチ内で存在しないオブジェクトが参照されていても、エラーはスローされません。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントの実行には、コンパイルと実行の 2 つのフェーズがあります。 この設定は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行時に [!INCLUDE[tsql](../../includes/tsql-md.md)] コード内の構文とオブジェクト名を検証する場合に便利です。 また、多数のステートメントで構成されたより大きなバッチ内のステートメントを部分的にデバッグする際にも利用できます。  
   

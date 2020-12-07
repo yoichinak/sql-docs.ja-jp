@@ -1,4 +1,5 @@
 ---
+description: SELECT (DMX)
 title: SELECT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf4164308b0fdc9e6ba3fabb756c18214757cde5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 1e44c7d2f4bf872a7629a48c305114f09f98ee66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462048"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  データマイニング拡張機能 (DMX) の**SELECT**ステートメントは、データマイニングの次のタスクに使用されます。  
+  データマイニング拡張機能 (DMX) の **SELECT** ステートメントは、データマイニングの次のタスクに使用されます。  
   
 -   既存のマイニング モデルの内容の参照  
   
@@ -47,7 +48,7 @@ SELECT FLATTENED <select list> FROM ...
 ```  
   
 ## <a name="top-n-and-order-by"></a>TOP \<n> と ORDER BY  
- 式を使用してクエリの結果を並べ替えることができます。その後、 **ORDER by**句と**TOP**句の組み合わせを使用して、結果のサブセットを返すことができます。 これは、最も可能性の高い応答者にのみ結果を送信するような配信先指定メーリングなどのシナリオで役に立ちます。 予測確率によってターゲットメーリングの予測クエリの結果を並べ替え、上位の結果のみを返すことができ \<n> ます。  
+ 式を使用してクエリの結果を並べ替えることができます。その後、 **ORDER by** 句と **TOP** 句の組み合わせを使用して、結果のサブセットを返すことができます。 これは、最も可能性の高い応答者にのみ結果を送信するような配信先指定メーリングなどのシナリオで役に立ちます。 予測確率によってターゲットメーリングの予測クエリの結果を並べ替え、上位の結果のみを返すことができ \<n> ます。  
   
 ## <a name="select-list"></a>リストの選択  
  には、 *\<select list>* スカラー列参照、予測関数、および式を含めることができます。 使用可能なオプションは、アルゴリズムと、次のコンテキストによって異なります。  
@@ -93,7 +94,7 @@ WHERE < condition expression >
   
 -   [&#60;モデルから選択します&#62; 予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
--   [DMX&#41;&#62; &#40;&#60;モデルから選択します](../dmx/select-from-model-dmx.md)  
+-   [DMX&#41;&#62; &#40;&#60;モデルから選択します ](../dmx/select-from-model-dmx.md)  
   
  前者の予測では、複雑な予測をリアルタイムで、またはバッチとして作成することができます。  
   
@@ -105,24 +106,24 @@ WHERE < condition expression >
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- 予測クエリの作成の詳細については、「[構造と DMX 予測クエリの使用方法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)」を参照してください。  
+ 予測クエリの作成の詳細については、「 [構造と DMX 予測クエリの使用方法](../dmx/structure-and-usage-of-dmx-prediction-queries.md)」を参照してください。  
   
 ## <a name="clause-syntax"></a>句の構文  
  **SELECT**ステートメントを使用した参照は複雑であるため、構文の詳細な要素と引数は句によって記述されています。 各句の詳細については、次の一覧のトピックをクリックしてください。  
   
- [DMX&#41;&#62; &#40;&#60;モデルから [DISTINCT] を選択します。](../dmx/select-distinct-from-model-dmx.md)  
+ [DMX&#41;&#62; &#40;&#60;モデルから [DISTINCT] を選択します。 ](../dmx/select-distinct-from-model-dmx.md)  
   
  [&#60;モデル&#62; から選択します。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)  
   
- [&#60;モデル&#62; から選択します。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)  
+ [&#60;モデル&#62; から選択します。DMX&#41;&#40;ケース ](../dmx/select-from-model-cases-dmx.md)  
   
- [&#60;モデル&#62; から選択します。DMX&#41;&#40;の SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)  
+ [&#60;モデル&#62; から選択します。DMX&#41;&#40;の SAMPLE_CASES ](../dmx/select-from-model-sample-cases-dmx.md)  
   
- [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)  
+ [&#60;モデル&#62; から選択します。DMX&#41;&#40;の DIMENSION_CONTENT ](../dmx/select-from-model-dimension-content-dmx.md)  
   
  [&#60;モデルから選択します&#62; 予測結合 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)  
   
- [DMX&#41;&#62; &#40;&#60;モデルから選択します](../dmx/select-from-model-dmx.md)  
+ [DMX&#41;&#62; &#40;&#60;モデルから選択します ](../dmx/select-from-model-dmx.md)  
   
  [&#60;構造&#62; から選択します。場合](../dmx/select-from-structure-cases.md)  
   

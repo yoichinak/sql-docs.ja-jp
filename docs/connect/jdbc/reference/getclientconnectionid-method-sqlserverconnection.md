@@ -1,4 +1,5 @@
 ---
+description: getClientConnectionID メソッド (SQLServerConnection)
 title: getClientConnectionID メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 461a3a0e217fb2ad973830eaffc86ff048830b83
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 18bd2254052364c746ad88e972a57bdfc7bfbf5f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907618"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725443"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,10 +59,9 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** は、接続先のサーバーのバージョンに関係なく使用できますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 以前のサーバーの場合は、拡張イベント ログと、接続リング バッファー エラーに関するエントリが提供されません。  
   
- 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 また、一部の接続エラーについては、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) 内で接続 ID を検索することもできます。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
+ 接続 ID のログ記録に関する拡張イベントが有効になっている場合は、拡張イベント ログ内で接続 ID を探し、エラーがサーバー上のものであるかどうかを確認できます。 また、一部の接続エラーについては、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) 内で接続 ID を検索することもできます。 接続 ID が接続リング バッファー内にない場合は、ネットワーク エラーであると考えることができます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ef2c561979d7f2578863f35366ee33cb21dcdc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 613546be790bac993f1242c6bfba470e95eb8685
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915885"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197046"
 ---
 # <a name="install-integration-services-ssis"></a>Integration Services (SSIS) のインストール
 
@@ -115,7 +115,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 - **SQL Server Data Tools (SSDT)** 。 Visual Studio 2019 向け SSDT スタンドアロン インストーラーは廃止となりました。 Visual Studio 2019 に関しては、今後、[VS マーケット プレース](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects&ssr=false#overview)から SSIS デザイナー拡張機能を入手できます。
 
-- **Integration Services Feature Pack for Azure**。 Feature Pack のダウンロードとインストールについて詳しくは、「[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://docs.microsoft.com/sql/integration-services/azure-feature-pack-for-integration-services-ssis?view=sql-server-2017)」をご覧ください。 Feature Pack をインストールすると、パッケージは、次のサービスを含む Azure クラウドのストレージ サービスと分析サービスに接続できます。
+- **Integration Services Feature Pack for Azure**。 Feature Pack のダウンロードとインストールについて詳しくは、「[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](../azure-feature-pack-for-integration-services-ssis.md?view=sql-server-2017)」をご覧ください。 Feature Pack をインストールすると、パッケージは、次のサービスを含む Azure クラウドのストレージ サービスと分析サービスに接続できます。
 
   - Azure Blob Storage です。
 
@@ -123,7 +123,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
   - Azure Data Lake Store。
 
-  - Azure SQL Data Warehouse。
+  - Azure Synapse Analytics。
 
   - Azure Data Lake Storage (Gen2)。
 

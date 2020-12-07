@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクによる空のフラット ファイルの検出
 title: スクリプト タスクによる空のフラット ファイルの検出 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b07dfb31b7fadf1a1135a0cf716a3051d3961a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5c1c5473eb307480b772d2cecd31b3ebb2a9bed
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923829"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122985"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>スクリプト タスクによる空のフラット ファイルの検出
 

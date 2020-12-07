@@ -1,4 +1,5 @@
 ---
+description: FriendlyName プロパティ (SecurityCertificate クラス)
 title: FriendlyName プロパティ (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7dd3ce18dfe5b84655987a892d4cdc549b94c979
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a58865b030f5dda6db0e392f3f6ae81ee38715eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545275"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName プロパティ (SecurityCertificate クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.FriendlyName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書の別の表示名を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

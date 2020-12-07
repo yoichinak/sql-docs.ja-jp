@@ -1,4 +1,5 @@
 ---
+description: AsGml (geography データ型)
 title: AsGml (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f6b4dc7090262a11d17239d8be50c72a637b04f3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 28d810b8bf74a91a72dad7ab7d9eadce9bbfb9ae
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555538"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124367"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography データ型
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

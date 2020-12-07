@@ -1,4 +1,5 @@
 ---
+description: '[パブリケーションのプロパティ]、[サブスクリプション オプション]'
 title: '[パブリケーションのプロパティ]、[サブスクリプション オプション] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720866"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88420496"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "85720866"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプションの初期化でバックアップ ファイルを使用できるようにするかどうかを決定します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
  **[SQL Server 以外のサブスクライバーを許可]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするかどうかを決定します。 このオプションを **[True]** に設定すると、他のパブリケーション プロパティで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]** 、または **[ピア ツー ピア サブスクリプションを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリケーションで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーをサポートするかどうかを決定します。 このオプションを **[True]** に設定すると、他のパブリケーション プロパティで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされるように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]**、または **[ピア ツー ピア サブスクリプションを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
 ### <a name="data-transformation"></a>[データの変換]  
  **[データ変換を許可]**  

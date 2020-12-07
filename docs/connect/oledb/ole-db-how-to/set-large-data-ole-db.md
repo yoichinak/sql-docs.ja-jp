@@ -1,6 +1,6 @@
 ---
 title: 大きなデータの設定 (OLE DB ドライバー)
-description: 大きなデータの設定 (OLE DB)
+description: OLE DB Driver for SQL Server での BLOB データの設定、テーブルの作成、レコードの追加、そのレコードの行セットへのフェッチ、および BLOB フィールドの値の設定の方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large data
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9650f475da3fd15d2956cc8a64c9fcb995b562ce
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e37968327c3a41a6473545bb4ccfa817a87f855f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244679"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727054"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87244679"
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ## <a name="procedures"></a>手順  
   
@@ -633,5 +633,4 @@ Exit:
    return hr;  
 }  
 ```  
-  
   

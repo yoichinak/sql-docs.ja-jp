@@ -2,7 +2,7 @@
 title: シングル ユーザー モードでの SQL Server の起動 | Microsoft Docs
 description: SQL Server でのシングル ユーザー モードについて説明します。 これが便利なケースと、起動オプション "-m" を使用してこのモードで SQL Server のインスタンスを開始する方法を確認します。
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b4016143632cacac3fe75fe48045bc317b261734
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764005"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670785"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764005"
   
 > [!IMPORTANT]  
 >  このオプションをセキュリティ機能として使用しないでください。 クライアント アプリケーションの名前はクライアント アプリケーションによって接続文字列の一部として指定されるため、本当の名前が指定されるとは限りません。  
-  
+
+次の例では、SQL Server インスタンスがシングル ユーザー モードで起動され、SQL Server Management Studio クエリ エディターからの接続のみが許可されます。
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>クラスター化インストールに関する注意  
  クラスター環境に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動すると、利用可能な接続がクラスター リソースの dll によって占有され、サーバーに対する他の接続がブロックされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこの状態に陥ると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのリソースをオンラインに戻そうとしたときに、SQL のリソースが別のノードにフェールオーバーされる可能性があります (リソースがそのグループに影響するように構成されていた場合)。  
   
@@ -67,11 +73,10 @@ ms.locfileid: "85764005"
 6.  操作が完了したら、コマンド プロンプトを閉じ、クラスター アドミニストレーターから SQL および他のリソースをオンラインに戻します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント サービスの開始、停止、または一時停止](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

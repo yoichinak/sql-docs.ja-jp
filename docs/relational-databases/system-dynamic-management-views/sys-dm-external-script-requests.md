@@ -1,4 +1,5 @@
 ---
+description: sys.dm_external_script_requests
 title: sys. dm_external_script_requests |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2020
@@ -20,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 64a21295da9b399cc212848c83d93657199c3536
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1b3c1f10be0b454503c5fbcfd9cdab191a687797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489845"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "88180199"
 外部スクリプトを実行しているアクティブなワーカー アカウントごとに行を返します。
   
 > [!NOTE]
-> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にした場合にのみ使用できます。 詳細については、 [SQL Server 2017 以降の Machine Learning Services (r、Python)](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 の r Services](../../machine-learning/r/sql-server-r-services.md)、および[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)を参照してください。  
+> この動的管理ビュー (DMV) は、外部スクリプトの実行をサポートする機能をインストールして有効にした場合にのみ使用できます。 詳細については、 [SQL Server 2017 以降の Machine Learning Services (r、Python)](../../machine-learning/sql-server-machine-learning-services.md)、 [SQL Server 2016 の r Services](../../machine-learning/r/sql-server-r-services.md)、および [Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview)を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +50,7 @@ ms.locfileid: "88180199"
 > [!NOTE]
 > 外部スクリプトを実行するユーザーには、追加の権限が必要 `EXECUTE ANY EXTERNAL SCRIPT` です。ただし、この DMV は、管理者がこの権限なしで使用できます。 
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
 
 このビューは、スクリプト言語の識別子を使用してフィルター処理することができます。
 
@@ -79,7 +80,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 + [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

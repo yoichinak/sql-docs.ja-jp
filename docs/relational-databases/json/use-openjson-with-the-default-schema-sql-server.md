@@ -1,4 +1,5 @@
 ---
+description: 既定のスキーマを使用する OPENJSON の使用
 title: 既定のスキーマを使用する OPENJSON の使用
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 595323d28f50100936447a9077af361017cca922
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d88098e4317ebc5f4feb6b21b61cd9a98afee038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424134"
 ---
 # <a name="use-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON の使用 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

@@ -1,4 +1,5 @@
 ---
+description: DATALENGTH (Transact-SQL)
 title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -22,12 +23,12 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8f7372833d70a46e5ea3cb343641b02aa05120
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 462b5e1c9fdd4a0dd42884bf0cadadbb3f013092
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113083"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117917"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87113083"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DATALENGTH ( expression )   
 ```  
 
@@ -52,11 +53,11 @@ DATALENGTH ( expression )
 任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
-**expression** が *varchar(max)* 、**nvarchar(max)** 、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
+*expression* が **varchar(max)**、**nvarchar(max)**、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
 ## <a name="remarks"></a>解説  
 次のような可変長データを格納できるデータ型で使用すると、`DATALENGTH` は非常に便利です。
-- **画像**
+- **image**
 - **ntext**
 - **nvarchar**
 - **text**
@@ -72,7 +73,7 @@ NULL 値の場合、`DATALENGTH` は NULL を返します。
 > 特定の文字列式にエンコードされた文字数を取得するには [LEN](../../t-sql/functions/len-transact-sql.md) を使用し、特定の文字列式のバイト サイズを取得するには [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) を使用します。 これらの出力は、データ型および列で使用されているエンコードの種類によっては、異なる場合があります。 異なる種類のエンコードでの記憶域の違いについて詳しくは、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」をご覧ください。
 
 ## <a name="examples"></a>例  
-この例では、`Name` テーブルの `Product` 列の長さが返されます。
+この例では、`Product` テーブルの `Name` 列の長さが返されます。
   
 ```sql
 USE AdventureWorks2016  
@@ -83,7 +84,7 @@ ORDER BY EnglishProductName;
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

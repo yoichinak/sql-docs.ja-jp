@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 443abad18869728130299be24d542bc54cde670e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552555"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91114702"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,14 +37,13 @@ ms.locfileid: "86552555"
   既存の **text**、**ntext**、または **image** 列の最小限ログに記録する対話型の更新を許可します。 WRITETEXT は、影響のある列内の既存のすべてのデータを上書きします。 WRITETEXT をビュー内の **text** 列、**ntext** 列、**image** 列に対して使用することはできません。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と **UPDATE** ステートメントの [.](../../t-sql/queries/update-transact-sql.md)WRITE 句を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.** WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 WRITETEXT [BULK]  
   { table.column text_ptr }  
   [ WITH LOG ] { data }  
@@ -62,7 +62,7 @@ WRITETEXT [BULK]
  更新するテーブルと **text**、**ntext**、または **image** 型の列の名前。 テーブル名と列名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 データベース名と所有者名の指定は省略可能です。  
   
  *text_ptr*  
- **text**、**ntext**、または **image** データへのポインターを保存する値です。 *text_ptr* は **binary(16)** にする必要があります。テキスト ポインターを作成するには、[text](../../t-sql/statements/insert-transact-sql.md)、[ntext](../../t-sql/queries/update-transact-sql.md)、または **image** 列に対して NULL 以外のデータを使用する **INSERT** ステートメントまたは **UPDATE** ステートメントを実行します。  
+ **text**、**ntext**、または **image** データへのポインターを保存する値です。 *text_ptr* は **binary(16)** にする必要があります。テキスト ポインターを作成するには、**text**、**ntext**、または **image** 列に対して NULL 以外のデータを使用する [INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントまたは [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントを実行します。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では無視されます。 ログ記録は、データベースで有効になっている復旧モデルによって異なります。  
@@ -70,7 +70,7 @@ WRITETEXT [BULK]
  *data*  
  格納する実際の **text**、**ntext**、または **image** データです。 *data* には、リテラルまたはパラメーターを指定することができます。 WRITETEXT を使用して対話的に挿入可能なテキスト長の最大値は、**text**、**ntext**、および **image** データで約 120 KB です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  WRITETEXT を使用して **text**、**ntext**、および **image** データを置き換え、UPDATETEXT を使用して **text**、**ntext**、および **image** データを変更します。 UPDATETEXT は、**text**、**ntext**、または **image** 列の全体ではなく一部のみを変更するため柔軟性があります。  
   
  最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位で **text**、**ntext**、および **image** データを挿入または更新することをお勧めします。  
@@ -97,12 +97,12 @@ WRITETEXT [BULK]
 > [!NOTE]  
 >  この例を実行するには、pubs サンプル データベースをインストールする必要があります。  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   

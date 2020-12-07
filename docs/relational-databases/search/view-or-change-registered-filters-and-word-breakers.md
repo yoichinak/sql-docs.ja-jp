@@ -1,4 +1,5 @@
 ---
+description: 登録済みのフィルターおよびワード ブレーカーの表示または変更
 title: 登録済みのフィルターおよびワード ブレーカーの表示または変更
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fbce0c7f823f33ca9f52c66bd3f3299b31b7d277
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec6bffa39e5f7a9b3bb1938f42dac110b8385da5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628798"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868935"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>登録済みのフィルターおよびワード ブレーカーの表示または変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +81,7 @@ ms.locfileid: "85628798"
   
      **Microsoft Filter Pack IFilters をインストールして読み込むには**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server (Microsoft Filter Pack の IFilter を SQL Server に登録する方法)](https://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server (Microsoft Filter Pack の IFilter を SQL Server に登録する方法)]()  
   
 4.  **sp_fulltext_service** を使用して、新しくインストールされたワード ブレーカーおよびフィルターをサーバー インスタンスに読み込みます。次に例を示します。  
   
@@ -104,5 +105,4 @@ ms.locfileid: "85628798"
  [フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-  
   

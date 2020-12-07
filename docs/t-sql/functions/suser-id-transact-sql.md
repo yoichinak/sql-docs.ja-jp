@@ -1,4 +1,5 @@
 ---
+description: SUSER_ID (Transact-SQL)
 title: SUSER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a9328a48066848228533866547590a2e0e803df2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4b145ad70549fb0dc1103e1b0a9b7f586c99b1d8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110772"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379775"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,8 +43,7 @@ ms.locfileid: "87110772"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SUSER_ID ( [ 'login' ] )   
 ```  
   
@@ -66,7 +66,7 @@ SUSER_ID ( [ 'login' ] )
 ## <a name="examples"></a>例  
  次の例では、`sa` ログインのログイン ID 番号を返します。  
   
-```  
+```sql
 SELECT SUSER_ID('sa');  
 ```  
   

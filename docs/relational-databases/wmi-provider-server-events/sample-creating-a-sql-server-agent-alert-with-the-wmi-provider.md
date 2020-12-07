@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d0c3835f35df6a8e39de23cd215a651c391c8c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4577642217bbebeefcdaef460c0e131faae5be1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888215"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550806"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル:WMI プロバイダーを使用した SQL Server エージェント警告の作成
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85888215"
  警告は、デッドロック グラフ トレース イベントのログが記録されるたびに、ジョブを実行します。 WMI 警告の場合、SQL Server エージェントは、指定された名前空間および WQL ステートメントを使用して通知クエリを作成します。 この警告の場合、SQL Server エージェントは、ローカル コンピューター上の既定のインスタンスを監視します。 WQL ステートメントは、既定のインスタンス内の任意の `DEADLOCK_GRAPH` イベントを要求します。 警告が監視するインスタンスを変更するには、警告する `MSSQLSERVER` 内の `@wmi_namespace` のインスタンス名を置き換えます。  
   
 > [!NOTE]  
->  SQL Server エージェントが WMI イベントを受信するには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] **msdb**およびでを有効にする必要があり [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
+>  SQL Server エージェントが WMI イベントを受信するには、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] **msdb** およびでを有効にする必要があり [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 USE AdventureWorks ;  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>サンプルのテスト  
- ジョブの実行を確認するには、デッドロックを発生させます。 で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、2つの**SQL クエリ**タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
+ ジョブの実行を確認するには、デッドロックを発生させます。 で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、2つの **SQL クエリ** タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
   
 ```  
 USE AdventureWorks ;  
@@ -136,7 +136,7 @@ GO
   
  `DeadlockGraph` 列には、デッドロック グラフ イベントのすべてのプロパティを示した XML ドキュメントが格納されているはずです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

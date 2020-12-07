@@ -1,8 +1,9 @@
 ---
+description: AddNew メソッドの例 (VB)
 title: AddNew メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 573679e173f97840ccffee9ad93d73cf0075b4b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 574bea63894ac304f1b382c5b70b40554c8e5540
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760628"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976723"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew メソッドの例 (VB)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
 ```  
 'BeginAddNewVB  
@@ -108,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew メソッド (ADO)](./addnew-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

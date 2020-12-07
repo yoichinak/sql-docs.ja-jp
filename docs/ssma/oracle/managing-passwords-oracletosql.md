@@ -1,4 +1,5 @@
 ---
+description: パスワードの管理 (OracleToSQL)
 title: パスワードの管理 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b96c7cff343c1c0f00c0e324961d633c4255f2a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934711"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038025"
 ---
 # <a name="managing-passwords-oracletosql"></a>パスワードの管理 (OracleToSQL)
 このセクションでは、データベースのパスワードをセキュリティで保護する方法と、サーバー間でインポートまたはエクスポートする手順について説明します。
@@ -30,7 +31,7 @@ SSMA を使用すると、データベースのパスワードをセキュリテ
   
 次の3つの方法のいずれかを使用して、有効なパスワードを指定します。  
   
-1.  **クリアテキスト:**[パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
+1.  **クリアテキスト:** [パスワード] ノードの値属性にデータベースパスワードを入力します。 これは、スクリプトファイルまたはサーバー接続ファイルのサーバーセクションの [サーバー定義] ノードの下にあります。  
   
     クリアテキストのパスワードはセキュリティで保護されていません。 このため、コンソールの出力には、 *"サーバー &lt; サーバー-id パスワードはセキュリティで保護されてい &gt; ないクリアテキスト形式で提供されます。 ssma コンソールアプリケーションは、暗号化によってパスワードを保護するオプションを提供します。詳細については、ssma ヘルプファイルの-securepassword オプションを参照してください。"*  
   
@@ -131,5 +132,4 @@ SSMA コンソールアプリケーションを使用すると、ローカルコ
 8. パスワードを確認入力してください: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
 
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行 (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[SSMA コンソールの実行 (Oracle)](./executing-the-ssma-console-oracletosql.md)  

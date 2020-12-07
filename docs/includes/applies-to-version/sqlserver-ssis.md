@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 07/20/2020
 ms.author: mikeray
 ms.openlocfilehash: 13abbe0185e747a5c68b2426a45daf9b6de45a76
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96122780"
 ---
 [!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [SQL Server](_ssnoversion.md)] [!INCLUDE [ssis](_ssis.md)]

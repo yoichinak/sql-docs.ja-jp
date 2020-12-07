@@ -1,4 +1,5 @@
 ---
+description: テンポラル テーブル セキュリティ
 title: テンポラル テーブル セキュリティ | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2019
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: a29b6a050779cdf61d97833d49ad9854cac4e484
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122777"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521669"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 テンポラル テーブルに適用されるセキュリティを理解するには、テンポラル テーブルに適用されるセキュリティ原則を理解することが重要です。 これらのセキュリティ原則について理解したら、 **CREATE TABLE**、 **ALTER TABLE**、 **SELECT** ステートメントのセキュリティの学習に入ることができます。
 

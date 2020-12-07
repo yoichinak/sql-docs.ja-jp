@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)'
 title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aef95dbc330d59992513823abcb572ff3c98d8f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3ded3cd350efe55a80ef47c28608a25f75ddbabf
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110380"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124636"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87110380"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@MAX_CONNECTIONS  
 ```  
   
@@ -46,7 +47,7 @@ ms.locfileid: "87110380"
 ## <a name="return-types"></a>戻り値の型
  **integer**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  実際に可能なユーザー接続数は、インストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンと、アプリケーションおよびハードウェアの制限により異なります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で可能な接続数が少なくなるように再構成するには、**sp_configure** を使用します。  
@@ -54,7 +55,7 @@ ms.locfileid: "87110380"
 ## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにおけるユーザー接続の最大数を返します。 この例では、接続数が少なくなるよう [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再構成していないことを前提としています。  
   
-```  
+```sql 
 SELECT @@MAX_CONNECTIONS AS 'Max Connections';  
 ```  
   

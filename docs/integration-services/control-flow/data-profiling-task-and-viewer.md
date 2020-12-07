@@ -1,4 +1,5 @@
 ---
+description: データ プロファイル タスクとビューアー
 title: データ プロファイル タスクとビューアー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06817d0c3af0c4f5446b52ad352b35845f9e122
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad5a2f88c170477095627a5f6da33b089424dcc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495992"
 ---
 # <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
 
@@ -59,15 +60,15 @@ ms.locfileid: "86919814"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services とデータ プロファイル  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]におけるデータのプロファイル処理は、次の手順で構成されています。  
   
- **ステップ 1:データ プロファイル タスクの設定**  
+ **手順 1 : データ プロファイル タスクの設定**  
  データ プロファイル タスクは、計算するプロファイルを構成するために使用するタスクです。 データ プロファイル タスクが含まれているパッケージを実行して、プロファイルを計算します。 このタスクによって、XML 形式のプロファイル出力がファイルまたはパッケージ変数に保存されます。  
   
- **詳細:** [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **詳細情報:** [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
- **手順 2:データ プロファイル タスクで計算されたプロファイルの確認**  
+ **手順 2 : データ プロファイル タスクで計算されたプロファイルの確認**  
  データ プロファイル タスクで計算されたデータ プロファイルを表示するには、出力をファイルに送信して Data Profile Viewer を使用します。 このビューアーは、サマリ形式とオプションのドリル ダウン機能を使用した詳細形式の両方でプロファイル出力を表示するスタンドアロンのユーティリティです。  
   
- **詳細:** [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
+ **詳細情報:** [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>データ プロファイル ワークフローへの条件ロジックの追加  
  データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」をご覧ください。  

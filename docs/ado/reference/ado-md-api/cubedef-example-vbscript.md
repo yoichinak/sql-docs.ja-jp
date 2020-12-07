@@ -1,8 +1,9 @@
 ---
+description: CubeDef の例 (VBScript)
 title: CubeDef の例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef0828d9bc67db5856b5299d03a8970b83c251ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e9119d48c6e19dcf94e3bac3105b2cad65f55f64
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764373"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987043"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef の例 (VBScript)
 この例では、web ページにキューブメタデータを表示します。  

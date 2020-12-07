@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText (geography データ型)
 title: STGeomCollFromText (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d72d49a08deb05bc5e5750e98493047257c6f2ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6caf71740ca5c62e50af582df1a3d6f3866f6ec8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556125"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416958"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

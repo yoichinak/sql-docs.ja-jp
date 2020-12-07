@@ -1,4 +1,5 @@
 ---
+description: MSmerge_settingshistory (Transact-sql)
 title: MSmerge_settingshistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cfcec38c71b1822c51d8ee08227f57f78ef185ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 841f2986d09bd048f857e45a8bde3c5db6d0fc70
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889716"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545605"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85889716"
 |**newvalue**|**sysname**|変更後または作成時のプロパティの値。|  
 |**eventtext**|**nvarchar (2000)**|イベントを説明する文字列。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

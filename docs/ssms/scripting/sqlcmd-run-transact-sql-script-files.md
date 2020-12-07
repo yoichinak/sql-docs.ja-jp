@@ -4,7 +4,7 @@ description: sqlcmd を使用して Transact-SQL スクリプト ファイルを
 ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 560eb5c224c700d5936c53c888af6af4eae08c6f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1914ed4748a14bc7af7fc7113493e18c34604e8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247401"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036302"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Transact-SQL スクリプトの実行
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "87247401"
  コマンド プロンプト ウィンドウには何も出力されません。 代わりに、EmpAdds.txt ファイルに出力されます。 EmpAdds.txt を開くと、この出力を確認できます。  
   
 ## <a name="see-also"></a>参照  
- [sqlcmd ユーティリティの起動](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
+ [sqlcmd ユーティリティの起動](./sqlcmd-start-the-utility.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
-  
   

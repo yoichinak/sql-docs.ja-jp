@@ -1,4 +1,5 @@
 ---
+description: '付録 A: ODBC エラー コード'
 title: '付録 A: ODBC エラーコード |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af288cf9f0564f6fe0dbef14f66143667120c656
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411550"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>付録 A: ODBC エラー コード
 このトピックでは、ODBC 3 の SQLSTATE 値について説明します。*x*。 ODBC 3 の詳細については、「」を参照してください。*x* sqlstate 値、「 [sqlstate マッピング](../../../odbc/reference/develop-app/sqlstate-mappings.md)」を参照してください。  
   
- **SQLGetDiagRec**または**SQLGetDiagField**は、Open Group*データ管理: 構造化照会言語 (SQL)、Version 2* (1995 年3月) によって定義された SQLSTATE 値を返します。 SQLSTATE 値は、5つの文字を含む文字列です。 次の表に、ドライバーが**SQLGetDiagRec**に対して返すことができる SQLSTATE 値を示します。  
+ **SQLGetDiagRec** または **SQLGetDiagField** は、Open Group *データ管理: 構造化照会言語 (SQL)、Version 2* (1995 年3月) によって定義された SQLSTATE 値を返します。 SQLSTATE 値は、5つの文字を含む文字列です。 次の表に、ドライバーが **SQLGetDiagRec**に対して返すことができる SQLSTATE 値を示します。  
   
  SQLSTATE に返される文字列値は、2文字のクラス値とそれに続く3文字のサブクラス値で構成されます。 クラス値 "01" は警告を示し、SQL_SUCCESS_WITH_INFO のリターンコードを伴います。 クラス "IM" 以外の "01" 以外のクラス値は、エラーを示し、SQL_ERROR の戻り値を伴います。 クラス "IM" は、ODBC 自体の実装から派生した警告とエラーに固有のものです。 任意のクラスのサブクラス値 "000" は、その SQLSTATE のサブクラスが存在しないことを示します。 クラスとサブクラスの値の代入は、SQL-92 によって定義されます。  
   
 > [!NOTE]  
 >  関数は正常に実行されますが、通常は戻り値の SQL_SUCCESS によって示されますが、SQLSTATE 00000 も成功したことを示します。  
   
-|SQLSTATE|Error|から返される可能性があります。|  
+|SQLSTATE|エラー|から返される可能性があります。|  
 |--------------|-----------|--------------------------|  
 |01000|一般警告|次を除くすべての ODBC 関数:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|カーソル操作の競合|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
@@ -138,9 +139,9 @@ ms.locfileid: "81307523"
 |IM001|ドライバーはこの機能をサポートしていません|次を除くすべての ODBC 関数:<br /><br /> **SQLAllocHandle**<br /><br /> **SQLDataSources**<br /><br /> **SQLDrivers**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLGetFunctions**|  
 |IM002|データソース名が見つかりません。既定のドライバーが指定されていません|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |IM003|指定されたドライバーを読み込めませんでした|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM004|SQL_HANDLE_ENV のドライバーの**SQLAllocHandle**に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM005|SQL_HANDLE_DBC のドライバーの**SQLAllocHandle**に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|IM006|ドライバーの**SQLSetConnectAttr**に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM004|SQL_HANDLE_ENV のドライバーの **SQLAllocHandle** に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM005|SQL_HANDLE_DBC のドライバーの **SQLAllocHandle** に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|IM006|ドライバーの **SQLSetConnectAttr** に失敗しました|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |IM007|データソースまたはドライバーが指定されていません。ダイアログが禁止されています|**SQLDriverConnect**|  
 |IM008|失敗したダイアログ|**SQLDriverConnect**|  
 |IM009|翻訳 DLL を読み込めません|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLSetConnectAttr**|  

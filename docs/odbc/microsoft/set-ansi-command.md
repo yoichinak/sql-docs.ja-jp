@@ -1,4 +1,5 @@
 ---
+description: SET ANSI コマンド
 title: SET ANSI Command |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97269642b4147b966fdd71003f5f81ebe7905282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466404"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
 Visual FoxPro SQL コマンドで、= 演算子を使用して長さが異なる文字列間の比較を行う方法を決定します。  
@@ -50,12 +51,12 @@ SET ANSI ON | OFF
   
  結果は True (.T.) SET ANSI が off の場合、比較は ' Tom ' の後で停止するためです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SQL 文字列比較の実行時に、2つの文字列の短い方に空白が埋め込まれるかどうかを設定します。 SET ANSI は、= = 演算子には影響しません。= = 演算子を使用すると、比較のために短い文字列には常に空白が埋め込まれます。  
   
 ## <a name="string-order"></a>文字列の順序  
  SQL コマンドでは、比較において、2つの文字列の左から右の順序は、= または = = 演算子の一方の側からもう一方の側の文字列を比較しても、比較の結果には影響しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SELECT-SQL コマンド](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT コマンド](../../odbc/microsoft/set-exact-command.md)

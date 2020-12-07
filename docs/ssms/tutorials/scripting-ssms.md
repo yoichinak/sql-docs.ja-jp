@@ -1,15 +1,11 @@
 ---
 title: SSMS スクリプト オブジェクト
-description: SSMS でのオブジェクトのスクリプトの作成に関するチュートリアル
-keywords: SQL Server, SSMS, SQL Server Management Studio, スクリプト, スクリプト作成
-author: MashaMSFT
-ms.author: mathoma
-ms.date: 03/13/2018
-ms.topic: tutorial
+description: SQL Server Management Studio (SSMS) で見つかるさまざまなオブジェクトの Transact-SQL (T-SQL) スクリプトを生成する方法を説明します。
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-ms.reviewer: sstein
+ms.topic: tutorial
+keywords: SQL Server, SSMS, SQL Server Management Studio, スクリプト, スクリプト作成
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -19,12 +15,16 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein
+ms.date: 03/13/2018
+ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
+ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247298"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638941"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でオブジェクトのスクリプトを作成する
 
@@ -37,17 +37,17 @@ ms.locfileid: "75247298"
 > * ストアド プロシージャ
 > * 拡張イベント
 
-**オブジェクト エクスプローラー**内のオブジェクトをスクリプトするには、そのオブジェクトを右クリックし、 **[Script Object As]\(オブジェクトをスクリプト化\)** オプションを選択します。 このチュートリアルでは、そのプロセスについて説明します。
+**オブジェクト エクスプローラー** 内のオブジェクトをスクリプトするには、そのオブジェクトを右クリックし、 **[Script Object As]\(オブジェクトをスクリプト化\)** オプションを選択します。 このチュートリアルでは、そのプロセスについて説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+* [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md) をインストールします。
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 * [AdventureWorks2016 サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。 
+SSMS でデータベースを復元する手順については、[データベースの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)に関するページを参照してください。 
 
 ## <a name="script-queries-from-the-gui"></a>GUI からクエリのスクリプトを作成する
 
@@ -146,17 +146,17 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
    ![オブジェクトをスクリプト化する](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)を使用します。
+   > **[スクリプトを作成するデータの種類]** オプションに *[スキーマとデータ]* を選択すると、データベースのデータをスクリプト化することができます。 ただし、この設定は大規模なデータベースには適していません。 SSMS で割り当て可能なメモリよりも多くのメモリが割り当てられる可能性があります。 小さなデータベースの場合、この制限は問題ありません。 大規模なデータベースのデータを移動する場合は、[インポートとエクスポート ウィザード](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)を使用します。
 
 6. **[OK]** を選択し、 **[次へ]** を選択します。
 
 7. **[概要]** ページで **[次へ]** を選択します。 もう一度 **[次へ]** を選択して、スクリプトを **[新しいクエリ]** ウィンドウに生成します。
 
-8. キーボードで **[検索]** ダイアログ ボックスを開きます (Ctrl + F キー)。 ↓キーを押して **[置換]** オプションを開きます。 上の **[検索]** 行に「*AdventureWorks2016*」と入力します。 下の **[置換]** 行に「*AdventureWorks2016b*」と入力します。
+8. キーボードで **[検索]** ダイアログ ボックスを開きます (Ctrl + F キー)。 ↓キーを押して **[置換]** オプションを開きます。 上の **[検索]** 行に「 *AdventureWorks2016* 」と入力します。 下の **[置換]** 行に「 *AdventureWorks2016b* 」と入力します。
 
 9. *AdventureWorks2016* のインスタンスをすべて *AdventureWorks2016b* に置き換えるには、 **[すべて置換]** を選択します。
 
-    ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
+    ![AdventureWorks 2016](media/scripting-ssms/adventureworks2016b.png)
 
 10. **[実行]** を選択してクエリを実行し、AdventureWorks2016b データベースを新しく作成します。
 
@@ -195,11 +195,11 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 5. ストアド プロシージャ **dbo.uspGetBillOfMaterials** を右クリックし、 >  **[ストアド プロシージャをスクリプト化]**  >  **[削除および作成]**  >  **[新しいクエリ エディター ウィンドウ]** の順に選択します。
 
-    ![ストアド プロシージャのスクリプトを作成する](media/scripting-ssms/scriptstoredprocedure.PNG)
+    ![ストアド プロシージャのスクリプトを作成する](media/scripting-ssms/script-stored-procedure.png)
 
 ## <a name="script-extended-events"></a>拡張イベントのスクリプトを作成する
 
-このセクションでは、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)のスクリプトを作成する方法について説明します。
+このセクションでは、[拡張イベント](../../relational-databases/extended-events/extended-events.md)のスクリプトを作成する方法について説明します。
 
 1. SQL Server を実行しているサーバーに接続します。
 
@@ -215,7 +215,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 6. **[新しいクエリ エディター ウィンドウ]** でセッションの新しい名前を *system_health* から *system_health2* に変更します。 **[実行]** を選択してクエリを実行します。
 
-7. **オブジェクト エクスプローラー**で **[セッション]** を右クリックします。 **[更新]** を選択すると、新しい拡張イベント セッションが表示されます。 セッションの横にある緑色のアイコンは、セッションが実行中であることを示します。 赤色のアイコンは、セッションが停止していることを示します。
+7. **オブジェクト エクスプローラー** で **[セッション]** を右クリックします。 **[更新]** を選択すると、新しい拡張イベント セッションが表示されます。 セッションの横にある緑色のアイコンは、セッションが実行中であることを示します。 赤色のアイコンは、セッションが停止していることを示します。
 
     ![新しい拡張イベント セッション](media/scripting-ssms/newxevent.png)
 
@@ -224,9 +224,9 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 ## <a name="next-steps"></a>次のステップ
 
-SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の " *チュートリアル* " と " *操作方法* " に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)
 * [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)

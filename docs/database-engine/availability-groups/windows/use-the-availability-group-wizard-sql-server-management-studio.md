@@ -15,18 +15,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 0aa44a34e5c9036fa0657f170f7c3ff05d76a612
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 96ef99a120c050f098d6d690055479e5711c11bb
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894153"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583565"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 **の**新しい可用性グループ ウィザード[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、 **の** 新しい可用性グループ ウィザード[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
@@ -84,7 +84,7 @@ ms.locfileid: "85894153"
 
 6. 次に、クラスター タイプを指定します。 使用できるクラスター タイプは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] バージョンとオペレーティング システムによって異なります。 **WSFC**、**EXTERNAL**、**NONE** のいずれかを選択してください。 詳細については、「[Specify Availability Group Name Page](specify-availability-group-name-page.md)」 ([可用性グループ名の指定] ページ) を参照してください。
  
-6.  **[データベースの選択]** ページのグリッドに、接続されているサーバー インスタンス上の *可用性データベース*として利用できるユーザー データベースが一覧表示されます。 新しい可用性グループに追加する 1 つまたは複数のデータベースを一覧から選択します。 これらのデータベースが初期 *プライマリ データベース*となります。  
+6.  **[データベースの選択]** ページのグリッドに、接続されているサーバー インスタンス上の *可用性データベース* として利用できるユーザー データベースが一覧表示されます。 新しい可用性グループに追加する 1 つまたは複数のデータベースを一覧から選択します。 これらのデータベースが初期 *プライマリ データベース* となります。  
   
      一覧の各データベースの **[サイズ]** 列には、データベースのサイズが表示されます (わかっている場合)。 **[状態]** 列は、データベースが可用性データベースとしての [前提条件](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)を満たしているかどうかを示します。 前提条件が満たされていない場合は、簡単な状態説明によって、データベースが不適格である理由が示されます (完全復旧モデルを使用していない、など)。 詳細については、状態の説明をクリックしてください。  
   
@@ -181,11 +181,11 @@ ms.locfileid: "85894153"
   
 -   **ブログ:**  
   
-     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -195,7 +195,7 @@ ms.locfileid: "85894153"
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -210,4 +210,3 @@ ms.locfileid: "85894153"
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  

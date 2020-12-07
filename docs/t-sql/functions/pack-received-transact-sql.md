@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_RECEIVED (Transact-SQL)'
 title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 235308a339c1e1e668a2243acfadefeb1323480f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b3bb37af363727d1eb41922979ee6f78a9fd008
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110361"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124624"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87110361"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@PACK_RECEIVED  
 ```  
   
@@ -44,13 +45,13 @@ ms.locfileid: "87110361"
 ## <a name="return-types"></a>戻り値の型
  **integer**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 送信または受信されると、パケットをなどの統計情報の実行 **sp_monitor** です。  
   
 ## <a name="examples"></a>例  
  次の例は、`@@PACK_RECEIVED` の使用方法を示しています。  
   
-```  
+```sql  
 SELECT @@PACK_RECEIVED AS 'Packets Received';   
 ```  
   
@@ -62,7 +63,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [システム統計関数](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_dropsubscriber (Transact-sql)
 title: sp_dropsubscriber (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscriber
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7849603dc288bf4e40e5b4067f9098b6c5ebc0ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727196"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538905"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,31 +43,31 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @subscriber = ] 'subscriber'`削除するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` 削除するサブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値はありません。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_dropsubscriber**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_dropsubscriber** は、すべての種類のレプリケーションで使用されます。  
   
- このストアドプロシージャは、サーバーの**サブ**オプションを削除し、システム管理者のリモートログインマッピングを**repl_subscriber**に削除します。  
+ このストアドプロシージャは、サーバーの **サブ** オプションを削除し、システム管理者のリモートログインマッピングを **repl_subscriber**に削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プルサブスクリプションの削除](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

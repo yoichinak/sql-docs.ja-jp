@@ -1,4 +1,5 @@
 ---
+description: '- (減算) (Transact-SQL)'
 title: '- (減算) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f24d5937b7f573951051fa3e27aaf111bdacaa40
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0a00105749ac9ce600f5972e539dc8664472e9dd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395905"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193300"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減算) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87395905"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 expression - expression  
 ```  
   
@@ -58,7 +59,7 @@ expression - expression
   
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(TaxRate) - MIN(TaxRate) AS 'Tax Rate Difference'  
@@ -74,10 +75,10 @@ GO
   
  適用対象: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-DECLARE @altstartdate datetime;  
+DECLARE @altstartdate DATETIME;  
 SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);  
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
@@ -97,14 +98,14 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
 ### <a name="c-using-subtraction-in-a-select-statement"></a>C. SELECT ステートメント内で減算を使用する  
  次の例では、基本給が最高の従業員と最低税率の従業員の間の基本給の差異を `dimEmployee` テーブルから計算します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference  
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [-= &#40;減算&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [複合演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [算術演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   

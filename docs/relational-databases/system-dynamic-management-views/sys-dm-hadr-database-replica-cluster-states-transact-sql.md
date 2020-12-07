@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 title: dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 11f2e6ddb0a51170ebf9da0ed4f5f9d673359e03
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718761"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543874"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,16 +52,16 @@ ms.locfileid: "85718761"
 |**recovery_lsn**|**numeric(25,0)**|プライマリレプリカでは、復旧またはフェールオーバー後、レプリカが新しいログレコードを書き込む前のトランザクションログの末尾。 プライマリ レプリカでは、特定のセカンダリ データベースの行の値が、プライマリ レプリカによって要求されるセカンダリ レプリカの同期先 (つまり、復元先および再初期化先) の値になります。<br /><br /> セカンダリレプリカでは、この値は NULL です。 各セカンダリレプリカには、プライマリレプリカがセカンダリレプリカに返すように指定した最大値または小さい値が含まれていることに注意してください。|  
 |**truncation_lsn**|**numeric(25,0)**|ローカル ログの切り捨てが (バックアップ操作などにより) ブロックされている場合にローカル切り捨て LSN を超える可能性のある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ログ切り捨て値。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Always On 可用性グループの動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On 可用性グループのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

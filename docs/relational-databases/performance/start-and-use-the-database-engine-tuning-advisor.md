@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 68e48fb6316b5794d51208b42ab10938b17126dc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457619"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890751"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457619"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio のクエリ エディターからデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)」を参照してください。  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト内のクエリを選択するか、スクリプト全体を選択します。選択範囲を右クリックし、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。 データベース エンジン チューニング アドバイザー GUI が表示され、そのスクリプトが XML ファイル ワークロードとしてインポートされます。 セッション名とチューニング オプションを指定して、選択した [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを自分のワークロードとしてチューニングできます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "86457619"
   
 ###  <a name="to-create-transact-sql-script-workloads"></a><a name="SSMS"></a> Transact-SQL スクリプトのワークロードを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でクエリ エディターを起動します。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)」を参照してください。  
   
 2.  クエリ エディターに [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを入力します。 このスクリプトには、チューニングする 1 つ以上のデータベースに対して実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれている必要があります。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "86457619"
 > [!NOTE]  
 >  データベース エンジン チューニング アドバイザーの一時停止はサポートされていません。 ツールバーの **[分析の停止]** または **[分析の停止 (推奨設定を使用)]** のいずれかをクリックしてからツールバーの **[分析の開始]** をクリックすると、データベース エンジン チューニング アドバイザーは新しいチューニング セッションを開始します。  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>ワークロード ファイルまたはテーブルを入力として使用してデータベースをチューニングするには  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>ワークロード ファイルまたはテーブルを入力として使用してデータベースをチューニングするには  
   
 1.  解析時に、データベース エンジン チューニング アドバイザーによって追加、削除、または保有を検討するデータベースの機能 (インデックス、インデックス付きビュー、パーティション分割) を決定します。  
   
@@ -195,7 +195,6 @@ ms.locfileid: "86457619"
      テーブルは次の形式で指定します。  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ ms.locfileid: "86457619"
   
  **dta** ユーティリティの構文と例の詳細については、「 [dta Utility](../../tools/dta/dta-utility.md)」を参照してください。  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>プラン キャッシュを使用してデータベースをチューニングするには  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>プラン キャッシュを使用してデータベースをチューニングするには  
   
 1.  **-ip** オプションを指定します。 選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。  
   
@@ -257,7 +256,7 @@ ms.locfileid: "86457619"
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>ワークロードと dta ユーティリティの既定の設定を使用してデータベースをチューニングするには  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>ワークロードと dta ユーティリティの既定の設定を使用してデータベースをチューニングするには  
   
 1.  解析時に、データベース エンジン チューニング アドバイザーによって追加、削除、または保有を検討するデータベースの機能 (インデックス、インデックス付きビュー、パーティション分割) を決定します。  
   
@@ -273,7 +272,7 @@ ms.locfileid: "86457619"
   
      ここで示した 4 つのオプション (データベース名、ワークロード、接続の種類、およびセッション名) は必ず指定する必要があります。  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>リモート データベースまたは名前付きインスタンスを一定時間チューニングするには  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>リモート データベースまたは名前付きインスタンスを一定時間チューニングするには  
   
 1.  解析時に、データベース エンジン チューニング アドバイザーによって追加、削除、または保有を検討するデータベースの機能 (インデックス、インデックス付きビュー、パーティション分割) を決定します。  
   
@@ -288,7 +287,7 @@ ms.locfileid: "86457619"
   
      このコマンドの `-S` はリモート サーバー名とインスタンス (またはローカル サーバー上の名前付きインスタンス) を指定し、 `-D` はチューニングするデータベースの名前を指定します。 `-it` オプションはワークロード テーブル名を指定し、 `-U` および `-P` はリモート データベースに対するログイン ID とパスワードを指定します。また、 `-s` はチューニング セッション名を指定し、 `-A` はチューニング セッションの継続時間を分単位で指定します。 既定では、 **dta** ユーティリティのチューニング時間は 8 時間に設定されています。 データベース エンジン チューニング アドバイザーによるワークロードのチューニング時間を無制限にする場合は、 **オプションを使用して** 0 `-A` (ゼロ) を指定します。  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>XML 入力ファイルを使用してデータベースをチューニングするには  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>XML 入力ファイルを使用してデータベースをチューニングするには  
   
 1.  解析時に、データベース エンジン チューニング アドバイザーによって追加、削除、または保有を検討するデータベースの機能 (インデックス、インデックス付きビュー、パーティション分割) を決定します。  
   
@@ -311,7 +310,7 @@ ms.locfileid: "86457619"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールの次の場所から入手できます。  
   
- C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの XML スキーマは、この [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)からもオンラインで入手できます。  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  現在のチューニング セッションの時間を制限します。 チューニングの時間を増やすことにより、推奨設定の品質が向上します。 推奨設定で最良の結果を得るためには、このオプションをオンにしないでください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、分析中にシステム リソースを使用します。 **[チューニング時間を制限する]** を使用すると、チューニング対象サーバーでワークロードの増大が予想される期間の前にチューニングを停止できます。  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、分析中にシステム リソースを使用します。 **[チューニング時間を制限する]** を使用すると、チューニング対象サーバーでワークロードの増大が予想される期間の前にチューニングを停止できます。  
   
  **[詳細設定オプション]**  
  **[チューニング オプションの詳細設定]** ダイアログ ボックスを使用すると、最大領域、最大キー列数、およびオンライン推奨インデックスを構成できます。  
@@ -518,6 +517,5 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザーからの出力の表示および操作](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta ユーティリティ](../../tools/dta/dta-utility.md)  
-  
-  
+ [dta ユーティリティ](../../tools/dta/dta-utility.md)    
+ [チュートリアル:データベース エンジン チューニング アドバイザー](../../tools/dta/tutorial-database-engine-tuning-advisor.md)

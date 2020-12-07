@@ -1,8 +1,9 @@
 ---
+description: ConvertToString メソッドの例 (VB)
 title: ConvertToString メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90472a43cefe87fdc255d9794f16fa32ca0aff16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2998027f3c32da89f97124671a6c30385d79c64b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762583"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974673"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString メソッドの例 (VB)
 ```  
@@ -99,5 +100,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ConvertToString メソッド (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ConvertToString メソッド (RDS)](../rds-api/converttostring-method-rds.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

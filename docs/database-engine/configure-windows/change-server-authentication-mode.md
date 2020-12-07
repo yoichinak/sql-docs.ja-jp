@@ -1,8 +1,6 @@
 ---
-title: サーバーの認証モードの変更 | Microsoft Docs
+title: サーバーの認証モードの変更
 description: SQL Server でサーバーの認証モードを変更する方法について説明します。 このタスクには、SQL Server Management Studio か Transact-SQL のどちらかを使用できます。
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759224"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200953"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サーバーの認証モードを変更する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はインストール中に、 **[Windows 認証モード]** または **[SQL Server 認証モードと Windows 認証モード]** のいずれかに設定されます。 インストール後は、認証モードをいつでも変更できます。
 
 インストール中に **[Windows 認証モード]** を選択した場合、sa ログインは無効となり、パスワードはセットアップによって割り当てられます。 後で認証モードを **[SQL Server 認証モードと Windows 認証モード]** に変更しても、sa ログインは無効のままです。 sa ログインを使用するには、ALTER LOGIN ステートメントを使用して、sa ログインを有効にし、新しいパスワードを割り当ててください。 sa ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しないとサーバーに接続できません。
 
 ## <a name="before-you-begin"></a>開始する前に
 
-sa アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 sa アカウントは、アプリケーションで必要とならない限り、有効にしないでください。 sa ログインには、複雑なパスワードを使用することが非常に重要です。
+sa アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 sa アカウントは、アプリケーションで必要とならない限り、有効にしないでください。 sa ログインには、複雑なパスワードを使用することが重要です。
 
 ## <a name="change-authentication-mode-with-ssms"></a>SSMS を使用した認証モードを変更する
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
+> [!Note]
+> 認証モードを変更するために必要なアクセス許可は、[sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) または [Control Server](../../relational-databases/security/permissions-database-engine.md) です
+
 ## <a name="see-also"></a>関連項目
 
- [強力なパスワード](../../relational-databases/security/strong-passwords.md)   
- [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+- [強力なパスワード](../../relational-databases/security/strong-passwords.md)
+- [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [システム管理者がロックアウトされた場合の SQL Server への接続](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

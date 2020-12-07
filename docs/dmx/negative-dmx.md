@@ -1,4 +1,5 @@
 ---
+description: '- 低下DMX'
 title: '- 低下(DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f92ceb47494703f6cc75363a19b9c8a030f9c539
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3521477fde679a5e67ece562ca3de1952ad39b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426274"
 ---
 # <a name="--negative-dmx"></a>-(負符号) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86969753"
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)   
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)   
  [単項演算子 &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

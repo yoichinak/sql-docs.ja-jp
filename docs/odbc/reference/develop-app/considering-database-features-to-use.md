@@ -1,4 +1,5 @@
 ---
+description: 使用するデータベース機能の検討
 title: 使用するデータベース機能を検討する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465894"
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
-基本的なレベルの相互運用性が判明したら、アプリケーションで使用されるデータベース機能を考慮する必要があります。 たとえば、アプリケーションはどのような SQL ステートメントを実行しますか。 アプリケーションはスクロール可能なカーソルを使用しますか。 トランザクション? プロシージャ? 長いデータ? すべての Dbms でサポートされていない機能の詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明」と「[付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」を参照してください。 アプリケーションが必要とする機能によって、ターゲット Dbms の一覧から一部の Dbms が削除される場合があります。 また、アプリケーションが多くの Dbms を簡単にターゲットにできることを示している場合もあります。  
+基本的なレベルの相互運用性が判明したら、アプリケーションで使用されるデータベース機能を考慮する必要があります。 たとえば、アプリケーションはどのような SQL ステートメントを実行しますか。 アプリケーションはスクロール可能なカーソルを使用しますか。 トランザクション? プロシージャ? 長いデータ? すべての Dbms でサポートされていない機能の詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 関数の説明」と「 [付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)」を参照してください。 アプリケーションが必要とする機能によって、ターゲット Dbms の一覧から一部の Dbms が削除される場合があります。 また、アプリケーションが多くの Dbms を簡単にターゲットにできることを示している場合もあります。  
   
- たとえば、必要な機能が単純な場合、通常は高レベルの相互運用性で実装できます。 単純な**SELECT**ステートメントを実行し、順方向専用カーソルを使用して結果を取得するアプリケーションは、単純化によって相互運用性が高くなる可能性があります。ほとんどのドライバーと dbms は、必要な機能をサポートしています。  
+ たとえば、必要な機能が単純な場合、通常は高レベルの相互運用性で実装できます。 単純な **SELECT** ステートメントを実行し、順方向専用カーソルを使用して結果を取得するアプリケーションは、単純化によって相互運用性が高くなる可能性があります。ほとんどのドライバーと dbms は、必要な機能をサポートしています。  
   
  ただし、スクロール可能なカーソル、位置指定の update、delete ステートメント、プロシージャなど、必要な機能がより複雑な場合は、トレードオフを頻繁に行う必要があります。 いくつかの可能性があります。  
   

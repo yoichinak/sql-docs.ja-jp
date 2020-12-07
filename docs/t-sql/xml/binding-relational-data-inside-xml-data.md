@@ -1,4 +1,5 @@
 ---
+description: XML データ内部のリレーショナル データのバインド
 title: XML データ内部のリレーショナル データのバインド
 ms.custom: ''
 ms.date: 07/26/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: bbe67c81d106641d56e9ab2deb0bbad246c70b60
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392840"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91113068"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "86392840"
 ## <a name="example-cross-domain-query-using-sqlvariable"></a>例:sql:variable() を使用した複数の領域にまたがるクエリ  
  次の例では、**sql:variable()** を使用してアプリケーションでクエリをパラメーター化できるようにする方法を示します。 ISBN は、SQL 変数 @isbn を使用して渡されます。 定数を **sql:variable()** に置き換えたことにより、ISBN が 0-7356-1588-2 の書籍だけでなく、どの ISBN でも検索できます。  
   
-```  
-DECLARE @isbn varchar(20)  
+```sql
+DECLARE @isbn VARCHAR(20)  
 SET     @isbn = '0-7356-1588-2'  
 SELECT  xCol  
 FROM    T  

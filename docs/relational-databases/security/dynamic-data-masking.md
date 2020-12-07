@@ -11,15 +11,15 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf3c9a827a4a3318bbee7e550aa8759a8dcc0eb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9da4fe7d516453b91ab5d60ec170431035146b6b
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005598"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496952"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE [SQL Server 2016 ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 ![動的データ マスク](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -32,21 +32,19 @@ ms.locfileid: "86005598"
 * DDM には、フル マスク関数と部分マスク関数、および数値データ用のランダム マスクがあります。
 * 単純な [!INCLUDE[tsql_md](../../includes/tsql-md.md)] コマンドで、マスクを定義し、管理します。
 
-たとえば、コール センターのサポート担当者は、社会保障番号やクレジット カード番号などの数桁から顧客を識別することがあります。  社会保障番号やクレジット カード番号はサポート担当者にすべて公開するべきではありません。 クエリの結果セットの社会保障番号やクレジット カード番号の末尾 4 桁を除くすべての数字をマスクするマスク ルールを定義できます。 また、別の例として、適切なデータ マスクを使用して、個人を特定できる情報 (PII) データを保護すると、開発者は法令遵守規定に違反せずに、トラブルシューティングを行うために運用環境に対してクエリを実行することができます。
-
 動的データ マスクの目的は、アクセスすべきではないユーザーがデータを閲覧することを防ぎ、デリケートなデータの公開を制限することにあります。 動的データ マスクは、ユーザーが直接データベースに接続し、徹底的なクエリを実行して、デリケートなデータの漏えいを防ぐことを目的としてはいません。 動的データ マスクは、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ機能 (監査、暗号化、行レベルのセキュリティなど) を補完します。データベース内のデリケートなデータの保護をより強化するために、セキュリティ機能と連携して動的データ マスクを使用することをお勧めします。  
   
-動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure portal で動的データ マスクを構成する方法の詳細については、[SQL Database 動的データ マスクの使用 (Azure ポータル)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)に関するページを参照してください。  
+動的データ マスクは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で使用できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] をコマンドを使用して構成します。 Azure portal で動的データ マスクを構成する方法の詳細については、[SQL Database 動的データ マスクの使用 (Azure ポータル)](/azure/azure-sql/database/dynamic-data-masking-overview)に関するページを参照してください。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>動的データ マスクを定義する
  マスク ルールは、列のデータを難読化するために、テーブル内の列で定義することがあります。 4 種類のマスクを利用できます。  
   
 |機能|説明|例|  
 |--------------|-----------------|--------------|  
-|Default|指定のフィールドのデータ型に応じたフル マスク。<br /><br /> 文字列データ型 (**char**、 **nchar**、  **varchar**、 **nvarchar**、 **text**、 **ntext**) のフィールドのサイズが 4 文字未満の場合は、XXXX またはそれ未満の数の X を使用します。  <br /><br /> 数値データ型 (**bigint**、 **bit**、 **decimal**、 **int**、 **money**、 **numeric**、 **smallint**、 **smallmoney**、 **tinyint**、 **float**、 **real**) の場合は値 0 を使用します。<br /><br /> 日付/時刻のデータ型 (**date**、 **datetime2**、 **datetime**、 **datetimeoffset**、 **smalldatetime**、 **time**) の場合は、01.01.1900 00:00:00.0000000 を使用します。<br /><br />バイナリ データ型 (**binary**、 **varbinary**、 **image**) の場合は、ASCII 値 0 のシングル バイトを使用します。|列定義の構文例: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Default|指定のフィールドのデータ型に応じたフル マスク。<br /><br /> 文字列データ型 ( **char** 、 **nchar** 、  **varchar** 、 **nvarchar** 、 **text** 、 **ntext** ) のフィールドのサイズが 4 文字未満の場合は、XXXX またはそれ未満の数の X を使用します。  <br /><br /> 数値データ型 ( **bigint** 、 **bit** 、 **decimal** 、 **int** 、 **money** 、 **numeric** 、 **smallint** 、 **smallmoney** 、 **tinyint** 、 **float** 、 **real** ) の場合は値 0 を使用します。<br /><br /> 日付/時刻のデータ型 ( **date** 、 **datetime2** 、 **datetime** 、 **datetimeoffset** 、 **smalldatetime** 、 **time** ) の場合は、01.01.1900 00:00:00.0000000 を使用します。<br /><br />バイナリ データ型 ( **binary** 、 **varbinary** 、 **image** ) の場合は、ASCII 値 0 のシングル バイトを使用します。|列定義の構文例: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|メール アドレスの最初の 1 文字と定数サフィックスの ".com" をメール アドレスのフォームで公開するマスク方法。 `aXXX@XXXX.com`.|定義の構文例: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |ランダム|ランダム マスク関数は任意の数字型に使用でき、指定した範囲内で生成したランダムな値でオリジナルの値をマスクします。|定義の構文例: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> ALTER 構文例: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|カスタム文字列|間にカスタム埋め込み文字列を追加し、最初と最後の文字を公開するマスク方法。 `prefix,[padding],suffix`<br /><br /> 注:元の文字列が全体をマスクするには短すぎる場合、プレフィックスまたはサフィックスの一部は公開されません。|定義の構文例: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> その他の例:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|カスタム文字列|間にカスタム埋め込み文字列を追加し、最初と最後の文字を公開するマスク方法。 `prefix,[padding],suffix`<br /><br /> 注:元の文字列が全体をマスクするには短すぎる場合、プレフィックスまたはサフィックスの一部は公開されません。|定義の構文例: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> ALTER 構文例: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> その他の例:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`|  
   
 ## <a name="permissions"></a>アクセス許可  
  動的データ マスクでテーブルを作成するのに特別なアクセス許可は要りません。スキーマ アクセス許可に対する **CREATE TABLE** と **ALTER** のみ必要です。  
@@ -63,7 +61,7 @@ ms.locfileid: "86005598"
   
 -   `SELECT INTO` または `INSERT INTO` を使用して、マスクされた列を別のテーブルにコピーすると、対象のテーブルにマスクされたデータが表示されます。  
   
--   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し (**UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
+-   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し ( **UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
   
 ## <a name="querying-for-masked-columns"></a>マスクされた列に対してクエリを実行する  
  **sys.masked_columns** ビューを使用して、マスク関数が適用されたテーブルの列に対してクエリを実行します。 このビューが継承、 **sys.columns** ビューです。 **sys.columns** ビューのすべての列と、 **is_masked** 列および **masking_function** 列を返して、マスクされた列かどうかを示し、マスクされた列の場合は、どのようなマスキング関数が定義されているかを示します。 これは、列があるマスキング関数が適用されるは表示のみを表示します。  
@@ -89,7 +87,7 @@ WHERE is_masked = 1;
   
 -   データ マスクを持つ列を FULLTEXT インデックスのキーにすることはできません。  
   
- **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT**、 **UPDATETEXT**、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
+ **UNMASK** アクセス許可のないユーザーの場合、非推奨とされている **READTEXT** 、 **UPDATETEXT** 、および **WRITETEXT** ステートメントは、動的データ マスク用に構成された列で適切に動作しません。 
  
  動的データ マスクの追加は基になっているテーブルでのスキーマ変更として実装されるため、依存関係を持つ列では実行できません。 この制限を回避するには、最初に依存関係を削除してから、動的データ マスクを追加した後、依存関係を再作成します。 たとえば、依存関係がその列に依存するインデックスによるものである場合は、インデックスを削除し、マスクを追加してから、依存するインデックスを再作成します。
  
@@ -157,7 +155,7 @@ REVERT;
   
 ### <a name="adding-or-editing-a-mask-on-an-existing-column"></a>既存の列のマスクを追加または編集する  
  **ALTER TABLE** ステートメントを使用して、テーブル内の既存の列にマスクを追加したり、その列のマスクを編集したりします。  
-次の例では、マスク関数を `LastName` 列に追加します。  
+次の例では、`LastName` 列にマスク関数を追加します。  
   
 ```sql  
 ALTER TABLE Membership  
@@ -197,4 +195,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [SQL Database 動的データ マスクの使用 (Azure portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [SQL Database 動的データ マスクの使用 (Azure portal)](/azure/azure-sql/database/dynamic-data-masking-overview)

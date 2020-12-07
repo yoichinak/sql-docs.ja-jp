@@ -1,4 +1,5 @@
 ---
+description: DROP USER (Transact-SQL)
 title: DROP USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -23,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4effac94327209caafa7f0506efd318c846461d8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7baa74c6e4655ee95cfd9e10b7107431339cddb2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481663"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955823"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,18 +40,17 @@ ms.locfileid: "86481663"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP USER [ IF EXISTS ] user_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP USER user_name  
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
@@ -62,7 +62,7 @@ DROP USER user_name
  *user_name*  
  データベース内でユーザーを識別する名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  セキュリティ保護可能なリソースを所有するユーザーは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ユーザーを削除するには、そのリソースの所有権を削除または譲渡する必要があります。  
   
  guest ユーザーは削除できませんが、master または tempdb 以外のデータベースでは、REVOKE CONNECT FROM GUEST を実行して CONNECT 権限を取り消すことにより、guest ユーザーを無効にできます。  
@@ -76,7 +76,7 @@ DROP USER user_name
 ## <a name="examples"></a>例  
  次の例では、`AbolrousHazem` データベースからデータベース ユーザー `AdventureWorks2012` を削除します。  
   
-```  
+```sql  
 DROP USER AbolrousHazem;  
 GO  
 ```  

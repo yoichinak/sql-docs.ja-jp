@@ -1,4 +1,5 @@
 ---
+description: semanticsimilaritytable (Transact-sql)
 title: semanticsimilaritytable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397278"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  **テーブル**  
  フルテキスト インデックスとセマンティック インデックスが有効になっているテーブルの名前を指定します。  
   
@@ -74,15 +75,15 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|ソース ドキュメントを使用して類似したドキュメントを検出したときの、検出元の列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_column_id**|**int**|類似したドキュメントが見つかった列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
 |**matched_document_key**|**\***<br /><br /> このキーは、ソーステーブル内の一意なキーの型と一致します。|クエリで指定したドキュメントに類似していることが判明したドキュメントまたは行の、フルテキストおよびセマンティックな抽出の一意のキー値。|  
-|**学生**|**本当の**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> この値は、[0.0, 1.0] の範囲の小数点値です。この値より高いスコアは、近い方の一致を表し、1.0 は完全なスコアになります。|  
+|**スコア**|**本当の**|類似した他のすべてのドキュメントとの関係における、このドキュメントの類似性の相対値。<br /><br /> この値は、[0.0, 1.0] の範囲の小数点値です。この値より高いスコアは、近い方の一致を表し、1.0 は完全なスコアになります。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、「[セマンティック検索による類似および関連ドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」を参照してください。  
+ 詳細については、「 [セマンティック検索による類似および関連ドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  複数の列にわたって類似したドキュメントに対するクエリを実行することはできません。 **SEMANTICSIMILARITYTABLE**関数は、 **source_key**引数によって識別される、ソース列と同じ列から類似したドキュメントだけを取得します。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
  セマンティック類似性の抽出と作成の詳細と状態については、次の動的管理ビューに対してクエリを実行します。  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
@@ -94,7 +95,7 @@ SEMANTICSIMILARITYTABLE
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  

@@ -1,6 +1,6 @@
 ---
 title: query governor cost limit サーバー構成オプションの構成 | Microsoft Docs
-description: query governor cost limit オプションについて説明します。 これを使用して、一定時間内に完了することが SQL Server によって予測されているクエリだけが実行されるよう制限する方法を説明します。
+description: query governor cost limit オプションについて説明します。 それを使用してクエリの実行を制限する方法を示します。
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 016ca109ae4ad609637a1919c29515dea2548083
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785873"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216731"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 query governor cost limit オプションは、クエリを実行できる時間の上限を指定します。 クエリ コストとは、特定のハードウェア構成でクエリを完了するために必要とされる予測所要時間を秒単位で表したものです。 このオプションの既定値は 0 です。クエリ ガバナーはオフに設定されます。 この場合、すべてのクエリは時間制限なしで実行することが許可されます。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。  
+このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 コスト制限オプションでは、実行する特定のクエリに許容される推定コストの上限を指定します。 クエリ コストは、CPU 時間、メモリ、ディスク IO などの推定実行要件に基づいて、クエリ オプティマイザーによって決定される抽象的な値です。 それは、特定のハードウェア構成でクエリを完了するために必要とされる予測所要時間を秒単位で表しています。 この抽象的な値は、実行中のインスタンスでクエリを完了するために必要な時間とは異なります。 相対的なメジャーとして扱う必要があります。 このオプションの既定値は 0 です。クエリ ガバナーはオフに設定されます。 値を 0 に設定すると、すべてのクエリは時間制限なしで実行することが許可されます。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。   
   
  **このトピックの内容**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "85785873"
   
 3.  **[クエリの実行時間が長くならないようにクエリ ガバナーを使用する]** チェック ボックスをオンまたはオフにします。  
   
-     このチェック ボックスをオンにした場合、下のボックスに正の値を入力します。任意のクエリの実行時間がこの値を超えると、クエリ ガバナーによりクエリの実行が禁止されます。  
+     このチェック ボックスをオンにした場合、下のボックスに正の値を入力します。任意のクエリの推定コストがその値を超えると、クエリ ガバナーによりクエリの実行が禁止されます。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85785873"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `query governor cost limit` オプションの値を `120` 秒に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、`query governor cost limit` オプションの値を、推定クエリ コストの上限である `120` に設定する方法を示します。
   
 ```sql  
 USE AdventureWorks2012 ;  

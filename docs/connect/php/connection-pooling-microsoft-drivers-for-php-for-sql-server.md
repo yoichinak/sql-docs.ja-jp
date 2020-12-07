@@ -1,7 +1,8 @@
 ---
-title: 接続のプール (Microsoft SQL Server 用 Drivers for PHP) | Microsoft Docs
+title: 接続のプール (Microsoft SQL Server 用 Drivers for PHP)
+description: Microsoft SQL Server 用 Drivers for PHP 使用時の接続のプールの詳細と、オペレーティング システムによって動作が異なる場合があることについて説明します。
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900988"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435264"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>接続のプール (Microsoft SQL Server 用 Drivers for PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80900988"
   
 -   Windows の既定では、接続プールは有効になっています。 Linux と macOS では、接続プールが ODBC に対して有効になっている場合にのみ、接続がプールされます (「[接続プールの有効化と無効化](#enablingdisabling-connection-pooling)」を参照してください)。 接続プールが有効になっているときに、サーバーに接続すると、ドライバーでは、新しい接続を作成する前にプールされたものの使用が試みられます。 プールに同等の接続がない場合、新しい接続が構築され、プールに追加されます。 ドライバーは、接続文字列の比較に基づき、接続が同等かどうかを判断します。  
   
--   プールの接続が使用されると、接続状態がリセットされます。  
+-   プールの接続が使用されると、接続状態がリセットされます (Windows のみ)。  
   
 -   接続を閉じると、接続がプールに返されます。  
   
@@ -39,8 +40,12 @@ ms.locfileid: "80900988"
 (接続プールで同等の接続を探す代わりに) 新しい接続を構築するようにドライバーに強制できます。その場合、接続文字列の *ConnectionPooling* 属性を **false** (または 0) に設定します。  
   
 接続文字列から *ConnectionPooling* 属性を省略する場合、あるいは **true** (または 1) に設定する場合、同等の接続が接続プールに存在しないときにのみ、ドライバーは新しい接続を構築します。  
+
+> [!NOTE]  
+> 複数のアクティブな結果セット (MARS) は既定では無効になっています。 MARS とプールの両方が使用されているとき、MARS を正しく機能させるため、"*最初の*" クエリでドライバーの接続リセットにかかる時間が長くなります。そのため、クエリ タイムアウトが指定されていても無視されます。 ただし、クエリのタイムアウト設定は後続のクエリで有効になります。
   
-その他の接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
+必要に応じて「[方法: 複数のアクティブな結果セット (MARS) を無効にする](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)」を参照してください。 その他の接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
+
 ### <a name="linux-and-macos"></a>Linux と macOS
 接続プールを有効または無効にする場合に、*ConnectionPooling* 属性を使用することはできません。 
 
@@ -51,7 +56,7 @@ dbcinst.ini ファイル内で `Pooling` を `Yes` に、`CPTimeout` を正の�
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ CPTimeout=<int value>
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>解説
-- Linux または macOS では、odbcinst.ini ファイル内でプーリングが有効になっている場合、すべての接続がプールされます。 これは、ConnectionPooling 接続オプションの影響を受けないことを意味します。 プーリングを無効にするには、odbcinst.ini ファイル内で Pooling=No を設定し、ドライバーを再度読み込みます。
+- Linux または macOS では、2.3.7 以前の unixODBC で接続プールが推奨されていません。 odbcinst.ini ファイルでプールが有効になっている場合、つまり、ConnectionPooling 接続オプションが適用されない場合、すべての接続がプールされます。 プーリングを無効にするには、odbcinst.ini ファイル内で Pooling=No を設定し、ドライバーを再度読み込みます。 
   - unixODBC < = 2.3.4 (Linux および macOS) の場合、エラー メッセージ、警告、情報メッセージなどの適切な診断情報が返されない場合があります
   - このため、SQLSRV および PDO_SQLSRV ドライバーでは、長いデータ (xml やバイナリなど) を文字列として適切にフェッチできない可能性があります。 回避策として、長いデータをストリームとしてフェッチすることができます。 SQLSRV については、次の例を参照してください。
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>参照  
-[方法: Windows 認証を使用して接続する](../../connect/php/how-to-connect-using-windows-authentication.md)
+[方法:Windows 認証を使用した接続](../../connect/php/how-to-connect-using-windows-authentication.md)
 
 [方法: SQL Server 認証を使用して接続する](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

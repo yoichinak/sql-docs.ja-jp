@@ -1,8 +1,9 @@
 ---
+description: カーソル位置の有意性
 title: カーソル位置の意味 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1ee12680e5d5acd0d4091e0c1864ae51b285a0e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759068"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979353"
 ---
 # <a name="the-significance-of-cursor-location"></a>カーソル位置の有意性
-すべてのカーソルは、一時リソースを使用してデータを保持します。 これらのリソースには、メモリ、ディスクページングファイル、一時ディスクファイル、またはデータベース内の一時的なストレージを使用できます。 これらのリソースがクライアントコンピューターに配置されている場合、カーソルは*クライアント側*カーソルと呼ばれます。 これらのリソースがサーバーに配置されている場合、カーソルは*サーバー側*カーソルと呼ばれます。  
+すべてのカーソルは、一時リソースを使用してデータを保持します。 これらのリソースには、メモリ、ディスクページングファイル、一時ディスクファイル、またはデータベース内の一時的なストレージを使用できます。 これらのリソースがクライアントコンピューターに配置されている場合、カーソルは *クライアント側* カーソルと呼ばれます。 これらのリソースがサーバーに配置されている場合、カーソルは *サーバー側* カーソルと呼ばれます。  
   
 ## <a name="client-side-cursors"></a>クライアント側カーソル  
  ADO では、 **AdUseClient Cursor Locationenum**を使用して、クライアント側のカーソルを呼び出します。 キーセット以外のクライアント側カーソルを使用すると、サーバーは結果セット全体をネットワーク経由でクライアントコンピューターに送信します。 クライアントコンピューターは、カーソルと結果セットで必要とされる一時的なリソースを提供し、管理します。 クライアント側アプリケーションでは、結果セット全体を参照して、必要な行を特定できます。  

@@ -1,4 +1,5 @@
 ---
+description: '[ディメンション テーブルおよびキーの選択] (緩やかに変化するディメンション ウィザード)'
 title: '[ディメンション テーブルおよびキーの選択] (緩やかに変化するディメンション ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48d0d57c66a05a28a41de37b6bea0867fbe2c8e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d49d23a670ae5de5b0084acb90758201cbeff74
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425754"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>[ディメンション テーブルおよびキーの選択] (緩やかに変化するディメンション ウィザード)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919498"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **Connection manager**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして OLE DB 接続マネージャーを作成します。  
   

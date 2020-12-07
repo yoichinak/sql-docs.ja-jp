@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14efcfa864cde1fd932c92c79d802efcdd2118c4
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248131"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243678"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
 この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、地図を背景として、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートのデータを表示するときに使用できるマップ機能について学習できます。 
@@ -23,7 +23,7 @@ ms.locfileid: "87248131"
   
 マップ要素の表示を変化させるには、マップ要素をデータセットの分析データに対応付ける値を持つフィールドを指定します。 色やサイズなどのプロパティをデータの範囲に基づいて変化させるルールを定義することもできます。  
 
-![report-builder-map-final-map-only](../reporting-services/media/report-builder-map-final-map-only.png)
+![レポート ビルダー マップを示すスクリーンショット。](../reporting-services/media/report-builder-map-final-map-only.png)
   
 このチュートリアルでは、New York 州の郡にある店舗の場所を表示するマップ レポートを作成します。  
    
@@ -33,7 +33,7 @@ ms.locfileid: "87248131"
 このチュートリアルの推定所要時間:30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)」を参照してください。 
+このチュートリアルでは、Bing マップの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「 [マップ レポートのサポートを計画する](./report-design/plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。 
 
 その他の要件については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "87248131"
   
     [マップ プレビュー] ペインに、New York の郡マップが表示されます。  
     
-    ![report-builder-map-ny-counties](../reporting-services/media/report-builder-map-ny-counties.png)
+    ![[新しいマップ] ウィザードの [空間データのソースの選択] ステップの [マップ ギャラリー] セクションで [New York] と選択されているスクリーンショット。](../reporting-services/media/report-builder-map-ny-counties.png)
   
 7.  **[次へ]** をクリックします。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "87248131"
   
 12. **[単色マップ]** チェック ボックスがオンになっている場合はオフにします。  
   
-13. **[データ フィールド]** ドロップダウン リストで **#COUNTYNAME**をクリックします。 ウィザードの [マップ プレビュー] ペインに次のアイテムが表示されます。  
+13. **[データ フィールド]** ドロップダウン リストで **#COUNTYNAME** をクリックします。 ウィザードの [マップ プレビュー] ペインに次のアイテムが表示されます。  
   
-    -   " **マップのタイトル**" というテキストを含むタイトル。  
+    -   " **マップのタイトル** " というテキストを含むタイトル。  
   
     -   New York の郡を表示するマップ。各郡は異なる色で表示され、郡の領域に収まる場所に郡の名前が表示されます。  
   
@@ -84,13 +84,13 @@ ms.locfileid: "87248131"
   
     -   キロメートル (km) およびマイル (mi) を表示する距離スケール。  
     
-    ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
+    ![[新しいマップ] ウィザードの [配色テーマとデータの視覚エフェクトを選択] ステップのスクリーンショット。](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
 14. **[完了]** をクリックします。  
   
     デザイン画面にマップが追加されます。  
   
-13. "マップのタイトル" テキストを選択して、「**Sales by Store**」と入力し、Enter キーを押します。  
+13. "マップのタイトル" テキストを選択して、「 **Sales by Store** 」と入力し、Enter キーを押します。  
 
 15. マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 **[マップ レイヤー]** ペインには、レイヤーの種類が **[埋め込み]** である 1 つの多角形レイヤー PolygonLayer1 が表示されます。 各郡は、このレイヤー上の埋め込みマップ要素となります。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "87248131"
 
 17. **[ホーム]** タブで **[実行]** をクリックして、レポートをプレビューします。  
   
-    ![report-builder-map-first-preview](../reporting-services/media/report-builder-map-first-preview.png)
+    ![新しく作成されたレポート ビルダー マップのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-map-first-preview.png)
   
 表示されたレポートには、マップのタイトル、マップ、および距離スケールが表示されています。 郡はマップの多角形レイヤーにあります。 各郡は多角形で、カラー パレットからそれぞれ異なる色が割り当てられていますが、色はデータとは関連付けられていません。 距離スケールには、距離がキロメートル単位とマイル単位の両方で表示されます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "87248131"
   
 2.  マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 ツールバーの **[レイヤーの新規作成]** ボタン ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard") をクリックします。 
 
-    ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
+    ![[マップ レイヤー] ペインの [レイヤーの新規作成] ウィザード アイコンが選択されたスクリーンショット。](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
 3.  **[空間データのソースを選択]** ページで、 **[SQL Server 空間クエリ]** を選択し、 **[次へ]** をクリックします。  
   
@@ -170,15 +170,15 @@ ms.locfileid: "87248131"
 9. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
     この結果セットには、消費者向けの商品を販売している New York 州内の店舗を表す 7 つの列が含まれています。 一覧を次に示します。わかりにくいものには説明を付けています。 
-    *   **StoreKey**:店舗の識別子。  
-    *   **StoreName**。
-    *   **SellingArea**:製品の展示に使用できる面積。範囲は 455 - 1,125 平方フィートです。
-    *   **City**。
-    *   **County**。
-    *   **営業担当者**: 総売上。 
-    *   **SpatialLocation**:緯度と経度による位置。 
+    *   **StoreKey** :店舗の識別子。  
+    *   **StoreName** 。
+    *   **SellingArea** :製品の展示に使用できる面積。範囲は 455 - 1,125 平方フィートです。
+    *   **City** 。
+    *   **County** 。
+    *   **営業担当者** : 総売上。 
+    *   **SpatialLocation** :緯度と経度による位置。 
 
-    ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
+    ![[新しいマップ レイヤー] ウィザードの [クエリのデザイン] ステップのスクリーンショット。](../reporting-services/media/report-builder-map-design-query.png) 
   
 10. **[次へ]** をクリックします。  
   
@@ -204,17 +204,17 @@ ms.locfileid: "87248131"
   
     マップ レイヤーがレポートに追加されます。 凡例には、SellingArea の値に基づくバブルのサイズが表示されます。  
   
- 19. マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 **[マップ レイヤー]** ペインに、空間データ ソースの種類が **DataRegion**である新しいレイヤー PointLayer1 が表示されます。  
+ 19. マップをダブルクリックして **[マップ レイヤー]** ペインを表示します。 **[マップ レイヤー]** ペインに、空間データ ソースの種類が **DataRegion** である新しいレイヤー PointLayer1 が表示されます。  
   
-19. 凡例のタイトルを追加します。 凡例では、 **タイトル**テキストを選択して、「 **Display Area (sq. ft.)** 」と入力し、ENTER キーを押します。  
+19. 凡例のタイトルを追加します。 凡例では、 **タイトル** テキストを選択して、「 **Display Area (sq. ft.)** 」と入力し、ENTER キーを押します。  
   
 21. **[マップ レイヤー]** ペインで、PointLayer1 の横の矢印をクリックし、 **[ポイントのプロパティ]** をクリックします。  
 
-    ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
+    ![[ポイントのプロパティ] オプションが示された [マップ レイヤー] ペインのスクリーンショット。](../reporting-services/media/report-builder-map-point-properties.png)
   
 22. **[フォント]** タブで、スタイルを **[太字]** 、サイズを **[10pt]** にします。
 
-    ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
+    ![[マップ ポイントのプロパティ] ダイアログ ボックスの [Change font, size, and color options]\(フォント、サイズ、色のオプションを変更します\) セクションを示すスクリーンショット。](../reporting-services/media/report-builder-map-point-properties-font.png)
   
 23. **[全般]** タブで、 **[位置]** に **[下詰め]** を選択します。
 
@@ -222,7 +222,7 @@ ms.locfileid: "87248131"
   
 24. **[実行]** をクリックして、レポートをプレビューします。  
 
-    ![report-builder-map-city-names](../reporting-services/media/report-builder-map-city-names.png)
+    ![都市名が太字 10 ポイントのフォントで表示されたレポート ビルダー マップのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-map-city-names.png)
   
     マップには、New York 州にある店舗の場所が表示されます。 各店舗のマーカーのサイズは展示面積に基づいています。 展示面積の 5 つの範囲が自動的に計算されます。
 
@@ -272,16 +272,16 @@ ms.locfileid: "87248131"
   
 14. **[完了]** をクリックします。  
 
-    ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
+    ![レポート ビルダー マップと線レイヤーを示すスクリーンショット。](../reporting-services/media/report-builder-map-line.png)
   
-     マップに、空間データ ソースの種類が **DataRegion**である新しい線レイヤーが表示されます。 この例では、空間データがデータセットから得られますが、線に分析データは関連付けられていません。  
+     マップに、空間データ ソースの種類が **DataRegion** である新しい線レイヤーが表示されます。 この例では、空間データがデータセットから得られますが、線に分析データは関連付けられていません。  
 
 ## <a name="adjust-the-zoom"></a>ズームの調整
 1. New York の州全体が表示されない場合は、ズームを調整できます。 選択したマップで、[プロパティ] ペインに **[MapViewport]** のプロパティが表示されます。 
 
-15. **[ビュー]** セクションを展開し、 **[ビュー]** を展開して、 **[Zoom]** プロパティを表示します。 **125**に設定します。 
+15. **[ビュー]** セクションを展開し、 **[ビュー]** を展開して、 **[Zoom]** プロパティを表示します。 **125** に設定します。 
 
-    ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
+    ![レポート ビルダー マップのズームを調整する方法を示すスクリーンショット。](../reporting-services/media/report-builder-map-zoom.png)
 
       これはズーム比です。 125% で州全体が表示されます。
   
@@ -303,7 +303,7 @@ ms.locfileid: "87248131"
   
 5.  **[全般]** タブの **[種類]** で、 **[航空写真]** を選択します。 航空写真ビューには、テキストは含まれません。  
 
-    ![report-builder-map-bing-aerial](../reporting-services/media/report-builder-map-bing-aerial.png)
+    ![レポート ビルダー マップに追加された Bing Maps の航空写真タイル レイヤーを示すスクリーンショット。](../reporting-services/media/report-builder-map-bing-aerial.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -314,13 +314,13 @@ ms.locfileid: "87248131"
   
 3.  PolygonLayer1 の横の矢印をクリックし、 **[レイヤー データ]** をクリックします。 **[マップの多角形レイヤーのプロパティ]** ダイアログ ボックスが表示されます。  
   
-4.  **[表示]** タブの **[透明度 (パーセント)]** に、「 **30**」と入力します。  
+4.  **[表示]** タブの **[透明度 (パーセント)]** に、「 **30** 」と入力します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
      デザイン画面に郡が半透明で表示されます。  
 
-    ![report-builder-map-transparency](../reporting-services/media/report-builder-map-transparency.png)
+    ![レポート ビルダー マップのレイヤーの透明度を設定する方法を示すスクリーンショット。](../reporting-services/media/report-builder-map-transparency.png)
   
 ## <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6.郡の色を売上に基づいて変化させる  
 レポート プロセッサにより、マップ ウィザードの最後のページで選択したテーマに基づいてカラー パレットから色値が自動的に割り当てられるため、多角形レイヤー上の各郡は異なる色で表示されます。  
@@ -344,13 +344,13 @@ ms.locfileid: "87248131"
   
 8.  **[分析データセットから]** で、[County] をクリックします。  
 
-    ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
+    ![[マップの多角形レイヤーのプロパティ] ダイアログ ボックスの [分析データ] タブを示すスクリーンショット。](../reporting-services/media/report-builder-map-county-colors.png)
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. レポートをプレビューします。  
 
-    ![report-builder-map-county-highlight](../reporting-services/media/report-builder-map-county-highlight.png)
+    ![特定の郡が強調表示されているレポート ビルダー マップのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-map-county-highlight.png)
   
 空間データ ソースおよび分析データセットから対応フィールドを指定することで、レポート プロセッサではマップ要素に基づいて分析データをグループ化できます。 データバインド マップ要素には、指定した値の適切な対応が含まれています。  
   
@@ -377,7 +377,7 @@ ms.locfileid: "87248131"
   
     **[赤]** は低い売上高、 **[黄]** は中程度の売上高、 **[緑]** は高い売上高を表します。 レポート プロセッサでは、これらの値と、 **[分布]** ページで選択したオプションに基づいて、色の範囲が計算されます。  
     
-    ![report-builder-map-county-color-rules](../reporting-services/media/report-builder-map-county-color-rules.png)
+    ![[マップの色ルールのプロパティ] ダイアログ ボックスの [多角形の色のルールを変更します] セクションを示すスクリーンショット。](../reporting-services/media/report-builder-map-county-color-rules.png)
   
 8.  **[分布]** をクリックします。  
   
@@ -395,7 +395,7 @@ ms.locfileid: "87248131"
 
 15. レポートをプレビューします。
 
-    ![report-builder-map-county-color-rule-preview](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
+    ![特定の色ルールが適用されているレポート ビルダー マップの郡のプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-map-county-color-rule-preview.png)
   
     カラー スケールには、赤、橙、黄、緑の 4 色が表示されます。 各色は、郡別の売上に基づいて自動的に計算された売上範囲を表しています。  
   
@@ -418,7 +418,7 @@ ms.locfileid: "87248131"
 
 3. [TextColor] プロパティを変更 **[White]** に変更します。  
 
-    ![report-builder-map-color-scale-title](../reporting-services/media/report-builder-map-color-scale-title.png)
+    ![凡例のタイトルの構成方法を示すスクリーンショット。](../reporting-services/media/report-builder-map-color-scale-title.png)
   
 8.  レポートをプレビューします。  
   
@@ -435,7 +435,7 @@ ms.locfileid: "87248131"
   
 3.  PolygonLayer1 の下向き矢印をクリックし、 **[多角形のプロパティ]** をクリックします。 
 
-     ![report-builder-map-polygon-layer-properties](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
+     ![[多角形のプロパティ] オプションの選択方法を示すスクリーンショット。](../reporting-services/media/report-builder-map-polygon-layer-properties.png)
 
      **[マップの多角形のプロパティ]** ダイアログ ボックスが表示されます。 このダイアログ ボックスで設定した表示オプションは、ルールに基づく表示オプションが適用される前にレイヤー上のすべての多角形に適用されます。  
   
@@ -464,25 +464,25 @@ ms.locfileid: "87248131"
   
 5.  マップ上でポイントを追加する場所をクリックします。 このチュートリアルでは、オネイダ郡内の場所をクリックします。 レイヤー上のクリックした場所に、円で示されるポイントが追加されます。 既定では、ポイントが選択された状態になります。  
 
-    ![report-builder-map-custom-point](../reporting-services/media/report-builder-map-custom-point.png)
+    ![レポート ビルダー マップのカスタム ズームを追加する方法を示すスクリーンショット。](../reporting-services/media/report-builder-map-custom-point.png)
   
 6.  追加したポイントを右クリックし、 **[埋め込みポイントのプロパティ]** をクリックします。  
   
 7.  **[このレイヤーのポイント オプションをオーバーライドする]** を選択します。 ダイアログ ボックスに追加のページが表示されます。 ここで設定したオプションは、レイヤーまたは色ルールの表示オプションよりも優先されます。  
 
-    ![report-builder-map-custom-point-general](../reporting-services/media/report-builder-map-custom-point-general.png)
+    ![[マップの埋め込みポイントのプロパティ] ダイアログ ボックスの [埋め込みポイントのオプションを変更します] セクションを示すスクリーンショット。](../reporting-services/media/report-builder-map-custom-point-general.png)
   
 8.  **[マーカー]** タブで、 **[マーカーの種類]** に **[星]** を選択します。  
 
 10. **[マーカー サイズ]** を **[18pt]** に変更します。
   
-3.  **[ラベル]** タブで、 **[ラベルの文字]** に「 **New Store**」と入力します。  
+3.  **[ラベル]** タブで、 **[ラベルの文字]** に「 **New Store** 」と入力します。  
   
 5.  **[位置]** で **[上]** をクリックします。  
 
 13. **[フォント]** タブで、フォントのサイズを **[10pt]** 、スタイルを **[太字]** にします。
 
-    ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
+    ![[マップの埋め込みポイントのプロパティ] ダイアログ ボックスの [Change font, size, and color options]\(フォント、サイズ、色のオプションを変更します\) セクションを示すスクリーンショット。](../reporting-services/media/report-builder-map-custom-point-font.png)
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -490,7 +490,7 @@ ms.locfileid: "87248131"
   
 店舗の場所の上にラベルが表示されます。  
 
-![report-builder-map-custom-point-new-store](../reporting-services/media/report-builder-map-custom-point-new-store.png)
+![カスタム ポイントの新しい店舗が選択されたレポート ビルダー マップのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-map-custom-point-new-store.png)
   
 ## <a name="8-center-and-resize-the-map"></a><a name="CenterView"></a>8.マップの中心の変更およびサイズの変更   
 このセクションでは、マップの中心を変更する方法、およびズーム レベルを変更する別の方法について説明します。  
@@ -527,7 +527,7 @@ ms.locfileid: "87248131"
   
 1.  デザイン ビューまたはプレビューで、 **[ファイル]** メニューの **[名前を付けて保存]** をクリックします。
  
-3.  **[名前]** に、「 **Store Sales in New York**」と入力します。  
+3.  **[名前]** に、「 **Store Sales in New York** 」と入力します。  
 
 3. ローカル コンピューターまたは [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] サーバーに保存します。
   
@@ -535,7 +535,7 @@ ms.locfileid: "87248131"
 
 レポート サーバーに保存した場合は、レポート サーバーで表示できます。
 
-![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
+![完成したレポート ビルダー マップがポータルに表示されていることを示すスクリーンショット。](../reporting-services/media/report-builder-map-in-portal.png) 
   
 ## <a name="next-steps"></a>次の手順  
 これで、レポートにマップを追加する方法のチュートリアルは終了です。  
@@ -547,5 +547,3 @@ ms.locfileid: "87248131"
 [SQL Server のレポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
-  
-

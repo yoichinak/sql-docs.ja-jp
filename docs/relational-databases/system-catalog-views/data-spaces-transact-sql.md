@@ -1,4 +1,5 @@
 ---
+description: データ領域 (Transact-sql)
 title: データスペース (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - data space catalog views [SQL Server]
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01248e73c56ead5234e625105801f7e293518e54
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 146ad58f2997328b94b758d8e2e3e59f125fdd1d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918041"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809598"
 ---
 # <a name="data-spaces-transact-sql"></a>データ領域 (Transact-sql)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,6 @@ ms.locfileid: "86918041"
 :::row-end:::
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-  
   

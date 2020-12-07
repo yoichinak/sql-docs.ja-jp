@@ -1,4 +1,5 @@
 ---
+description: COL_NAME (Transact-SQL)
 title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7299e1d02130bddac3bd50c7fd8deafd2bdeeb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f34f56eefbf7c1d97a6dd62c2d32a31242f4d6a0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112006"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124881"
 ---
 # <a name="col_name-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87112006"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 COL_NAME ( table_id , column_id )  
 ```  
   
@@ -75,13 +76,13 @@ COL_NAME(OBJECT_ID('dbo.FactResellerSales'), 2) AS SecondColumnName;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 ColumnName          
 ------------   
 BusinessEntityID  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  

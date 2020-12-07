@@ -1,4 +1,5 @@
 ---
+description: 新しいソリューションの作成
 title: 新しいソリューションの作成
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c41f99d32803914b20ffa65dfb22722f62143b0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8653d0b07ee5774acf0cbc22ce4a24a2d727f4b8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999562"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036045"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,5 +42,4 @@ ms.locfileid: "85999562"
   
 ## <a name="see-also"></a>参照  
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
-[ソース管理からソリューションを開く](https://msdn.microsoft.com/library/ms174216.aspx)  
-  
+[ソース管理からソリューションを開く](../../azure-data-studio/source-control.md)  

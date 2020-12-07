@@ -1,4 +1,5 @@
 ---
+description: STContains (geography データ型)
 title: STContains (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0c1b1aa4526479675ec6153ad34b3a1e98671ade
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d3e9b03eac0107792b9b0cdb59359f5ad70b5474
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88459086"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86554735"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれる場合は 1 を返します。それ以外の場合は 0 を返します。 2 つの **geography** インスタンスの SRID が同じでない場合は、**null** を返します。  
   
 ## <a name="examples"></a>例  

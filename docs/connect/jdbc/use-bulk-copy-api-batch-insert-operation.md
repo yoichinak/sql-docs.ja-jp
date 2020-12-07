@@ -1,6 +1,6 @@
 ---
 title: JDBC のバッチ挿入に対する一括コピー API
-description: Microsoft JDBC Driver for SQL Server では、Azure Data Warehouse に対するバッチ挿入操作に一括コピー API を使用することがサポートされています。
+description: Microsoft JDBC Driver for SQL Server では、Azure Data Warehouse に対するバッチ挿入操作に一括コピーを使用することがサポートされています。データベースにデータを読み込むスピードが速くなります。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633992"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943031"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>例
 
-次に示すのは、通常と一括コピー API の両方のシナリオで、1000 行の Azure DW に対するバッチ挿入操作のユース ケースを示すコード例です。
+次に示すのは、通常と一括コピー API の両方のシナリオで、1,000 行の Azure Synapse Analytics (SQL DW) に対するバッチ挿入操作のユース ケースを示すコード例です。
 
 ```java
     public static void main(String[] args) throws Exception

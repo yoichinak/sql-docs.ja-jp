@@ -1,4 +1,5 @@
 ---
+description: 式ビルダー
 title: '[式ビルダー] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ebadab32a4f668cbcc523038634f171782602ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917046"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123286"
 ---
 # <a name="expression-builder"></a>式ビルダー
 
@@ -34,7 +35,7 @@ ms.locfileid: "86917046"
   
 -   **タスク:** 変数内に格納されている電子メール アドレスを挿入することにより、メール送信タスクで使用される [宛先] 行を更新します。または、"売上:" などの文字列と GETDATE 関数から返される現在の日付を連結することにより、[件名] 行を更新します。  
   
--   **変数:** `DATEPART("mm",GETDATE())`などの式を使用して、変数の値を現在の月に設定します。または、式 `"Today's date is " + (DT_WSTR,30)(GETDATE())`を使用して文字列リテラルと現在の日付を連結することにより、文字列の値を設定します。  
+-   **変数:**`DATEPART("mm",GETDATE())`などの式を使用して、変数の値を現在の月に設定します。または、式 `"Today's date is " + (DT_WSTR,30)(GETDATE())`を使用して文字列リテラルと現在の日付を連結することにより、文字列の値を設定します。  
   
 -   **接続マネージャー :** 異なるコード ページ識別子が格納されている変数を使用することにより、フラット ファイル接続マネージャーのコード ページを設定します。または、式に 3 などの正の整数を入力してデータ ファイル内のスキップする行数を指定します。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86917046"
 |**[評価結果]**|式の評価結果を一覧表示します。|  
 |**[式の評価]**|**[式の評価]** をクリックすると、式の評価結果が表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[式] ページ](../../integration-services/expressions/expressions-page.md)   
  [プロパティ式エディター](../../integration-services/expressions/property-expressions-editor.md)   
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   

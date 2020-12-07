@@ -1,4 +1,5 @@
 ---
+description: SMO 接続マネージャー
 title: SMO 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cfa304fa19b8d2f259a0cad77d4c25b5d81aa8be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23a54cf3d07772276dbdf21dd7bf752a35121097
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922908"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91719519"
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
 
@@ -30,7 +31,7 @@ ms.locfileid: "86922908"
 
   SMO 接続マネージャーを使用すると、パッケージは、SQL 管理オブジェクト (SMO) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる転送タスクでは、SMO 接続マネージャーが使用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを転送するログイン転送タスクでは、SMO 接続マネージャーを使用します。  
   
- SMO 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に SMO 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **SMOServer**に設定されます。  
+ SMO 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に SMO 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **SMOServer** に設定されます。  
   
  SMO 接続マネージャーは、次の方法で構成できます。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "86922908"
 ## <a name="configuration-of-the-smo-connection-manager"></a>SMO 接続マネージャーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMO 接続マネージャー エディター](../../integration-services/connection-manager/smo-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [SMO 接続マネージャー エディター]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86922908"
   
  SMO 接続マネージャーの詳細については、「 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **サーバー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
   
@@ -72,7 +73,6 @@ ms.locfileid: "86922908"
  **[接続テスト]**  
  構成されたとおりに接続をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

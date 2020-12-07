@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: b2222c72be6a499e9a60424d1a7cc508904b8f33
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528352"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726653"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>手順 4:PHP を使用して SQL に弾性的に接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-デモ プログラムは、接続の試行時に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス "08" が付くエラー コード) が発生すると再試行されるように設計されています。 しかし、クエリ コマンドの実行中に一時的なエラーが生じると、プログラムによって接続が破棄され、新しい接続が作成された後、クエリ コマンドが再試行されます。 この設計は選択しないことをお勧めします。 デモ プログラムは、使用可能な設計上の柔軟性をいくつか示しています。  
+デモ プログラムは、接続の試行時に一時的なエラー (この[付録](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)に記載されているプレフィックス "08" が付くエラー コード) が発生すると再試行されるように設計されています。 しかし、クエリ コマンドの実行中に一時的なエラーが生じると、プログラムによって接続が破棄され、新しい接続が作成された後、クエリ コマンドが再試行されます。 この設計は選択しないことをお勧めします。 デモ プログラムは、使用可能な設計上の柔軟性をいくつか示しています。  
   
 このコード サンプルの内容の大部分は、例外キャッチのロジックの記述です。   
   

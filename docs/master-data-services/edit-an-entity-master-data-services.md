@@ -1,4 +1,5 @@
 ---
+description: エンティティを編集する (マスター データ サービス)
 title: エンティティを編集する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 484fdb93ac51f353de97333d115aed4591715e9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389548"
 ---
 # <a name="edit-an-entity-master-data-services"></a>エンティティを編集する (マスター データ サービス)
 
@@ -25,18 +26,18 @@ ms.locfileid: "85813335"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、エンティティを編集することができます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-edit-an-entity"></a>エンティティを編集するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
+2.  [ **モデルの管理** ] ページで、グリッドからモデルを選択し、[ **エンティティ**] をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、変更するエンティティの行をグリッドから選択し、 **[編集]** をクリックします。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "85813335"
   
  ![OK 状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "OK 状態のアイコン")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [エンティティ &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  

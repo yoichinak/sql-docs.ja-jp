@@ -1,4 +1,5 @@
 ---
+description: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ''
 ms.date: 08/24/2016
@@ -28,12 +29,12 @@ ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: 1e0a3ee426281799ee535b686596b87fb13d41ae
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: e3ed7051503f4e4242cf75d22cca2fd5017f5c55
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392800"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067415"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 
@@ -69,6 +70,7 @@ CREATE DATABASE ENCRYPTION KEY
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -105,7 +107,7 @@ TDE の使用に関する他の例については、「[Transparent Data Encrypt
   
 次の例では、`AES_256` アルゴリズムを使用してデータベース暗号化キーを作成し、`MyServerCert` という証明書で秘密キーを保護します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DATABASE ENCRYPTION KEY  

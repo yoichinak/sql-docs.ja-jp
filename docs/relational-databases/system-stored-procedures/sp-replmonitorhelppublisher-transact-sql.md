@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublisher (Transact-SQL)
 title: sp_replmonitorhelppublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublisher
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3bb6c758089b6089dfeb6b7a472a496931f6c929
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720183"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543138"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`状態を監視するパブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 NULL の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。 NULL の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
-`[ @refreshpolicy = ] refreshpolicy`内部でのみ使用します。  
+`[ @refreshpolicy = ] refreshpolicy` 内部でのみ使用します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -53,15 +54,15 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 |**文書数**|**int**|パブリッシャーに属しているパブリケーションの数です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replmonitorhelppublisher**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replmonitorhelppublisher** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replmonitorhelppublisher**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

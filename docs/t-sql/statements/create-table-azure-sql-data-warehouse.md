@@ -1,5 +1,6 @@
 ---
-title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
+description: CREATE TABLE (Azure Synapse Analytics)
+title: CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.service: sql-data-warehouse
@@ -11,23 +12,23 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 64cbc15572d8d7316d5d61cc65190960aa496357
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332431"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300206"
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
+# <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で新しいテーブルを作成します。  
 
-テーブルについて、またテーブルの使用方法について理解するには、[SQL Data Warehouse のテーブル](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)に関するページを参照してください。
+テーブルについて、またテーブルの使用方法について理解するには、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] のテーブル](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)に関するページを参照してください。
 
 > [!NOTE]
->  この記事での SQL Data Warehouse に関する説明は、特に明記がない限り、SQL Data Warehouse および Parallel Data Warehouse の両方に適用されます。
+>  この記事の [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に関する解説は、特に記載のない限り、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の両方に適用されます。
 
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -58,14 +59,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
+      | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
@@ -89,11 +90,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | smallint  
     | tinyint  
     | bit  
-    | nvarchar [ ( n | max ) ]  -- max applies only to SQL Data Warehouse 
+    | nvarchar [ ( n | max ) ]  -- max applies only to Azure Synapse Analytics 
     | nchar [ ( n ) ]  
-    | varchar [ ( n | max )  ] -- max applies only to SQL Data Warehouse  
+    | varchar [ ( n | max )  ] -- max applies only to Azure Synapse Analytics  
     | char [ ( n ) ]  
-    | varbinary [ ( n | max ) ] -- max applies only to SQL Data Warehouse  
+    | varbinary [ ( n | max ) ] -- max applies only to Azure Synapse Analytics  
     | binary [ ( n ) ]  
     | uniqueidentifier  
 ```  
@@ -105,10 +106,10 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  新しいテーブルを格納するデータベースの名前です。 既定値は現在のデータベースです。  
   
  *schema_name*  
- テーブルのスキーマです。 "*スキーマ*" の指定は省略可能です。 空白の場合は、既定のスキーマが使用されます。  
+ テーブルのスキーマです。 " *スキーマ* " の指定は省略可能です。 空白の場合は、既定のスキーマが使用されます。  
   
  *table_name*  
- 新しいテーブルの名前です。 ローカルの一時テーブルを作成するには、テーブル名の先頭に # を付けます。  一時テーブルの説明とガイダンスについては、「[SQL Data Warehouse の一時テーブル](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)」を参照してください。 
+ 新しいテーブルの名前です。 ローカルの一時テーブルを作成するには、テーブル名の先頭に # を付けます。  一時テーブルの説明とガイダンスについては、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の一時テーブル](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/)に関するページを参照してください。 
 
  *column_name*  
  テーブルの列の名前です。
@@ -131,7 +132,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-structure-options"></a><a name="TableOptions"></a> テーブル構造のオプション
 
-テーブルの種類を選択する方法の詳細については、「[SQL Data Warehouse でのテーブルのインデックス作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)」を参照してください。
+テーブルの種類を選択する方法の詳細については、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でのテーブルのインデックス作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)に関するページを参照してください。
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
@@ -139,14 +140,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  
  `HEAP` テーブルをヒープとして格納します。 この動作は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の既定の動作です。  
   
- `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
+ `CLUSTERED INDEX` ( *index_column_name* [ ,... *n* ] )  
  1 つまたは複数のキー列を含むクラスター化インデックスとしてテーブルを格納します。 この動作は、行によってデータを格納します。 *index_column_name* を使用して、インデックスに 1 つまたは複数のキー列の名前を指定します。  詳細については、「全般的な解説」の「行ストア テーブル」を参照してください。
  
  `LOCATION = USER_DB` このオプションは非推奨です。 この構文は容認されますが、現在は不要であり、動作にも影響しません。   
   
 ### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> テーブル分散オプション
 
-最適な分散メソッドを選択する方法および分散テーブルを使用する方法を理解するには、「[Azure SQL Data Warehouse での分散テーブルの設計に関するガイダンス](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)」を参照してください。
+最適な分散メソッドを選択する方法および分散テーブルを使用する方法を理解するには、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でテーブルを分散する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)方法に関するページを参照してください。
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* ) *distribution_column_name* に格納された値をハッシュすることにより、各行を 1 つの分散に割り当てます。 これは決定的アルゴリズムであり、常に同じ値が同じ分散にハッシュされることを意味します。  NULL を持つ行はすべて同じディストリビューションに割り当てられるので、ディストリビューション列は NOT NULL として定義する必要があります。
 
@@ -155,9 +156,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 `DISTRIBUTION = REPLICATE` テーブルの 1 つのコピーを各コンピューティング ノードに格納します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、テーブルは各コンピューティング ノード上のディストリビューション データベースに格納されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、テーブルはコンピューティング ノードにまたがる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルグループに格納されます。 この動作は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の既定の動作です。
   
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a>テーブル パーティションのオプション
-テーブル パーティションの使用の詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」を参照してください。
+テーブル パーティションの使用の詳細については、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)に関するページを参照してください。
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,... *n* ] ] ))   
 1 つまたは複数のテーブルのパーティションを作成します。 これらのパーティションは横方向のテーブル スライスであり、テーブルがヒープ、クラスター化インデックス、またはクラスター化列ストア インデックスのいずれで格納されているかに関係なく、行のサブセットに対して操作を適用できます。 ディストリビューション列とは異なり、テーブルのパーティションは、各行が格納されるディストリビューションを決定しません。 代わりに、テーブルのパーティションでは、行をグループ化して、各ディストリビューション内に格納する方法が決定されます。  
 
 | 引数 | 説明 |
@@ -165,28 +166,28 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 |*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] で行をパーティション分割するのに使用する列を指定します。 この列は、どのようなデータ型でもかまいません。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、パーティション列の値が昇順に並べ替えられます。 小さい順に並べる場合は、`RANGE` 指定の `LEFT` から `RIGHT` に並べられます。 |  
 | `RANGE LEFT` | 左側 (値が小さくなっていく) のパーティションに属する境界値を指定します。 既定値は LEFT です。 |
 | `RANGE RIGHT` | 左側 (値が大きくなっていく) のパーティションに属する境界値を指定します。 | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | パーティションの境界値を指定します。 *boundary_value* は定数式です。 NULL にすることはできません。 また、*partition_column_name* のデータ型に一致するか、またはそのデータ型に暗黙的に変換可能である必要があります。 さらに、暗黙的な変換時には切り詰めることができないため、値のサイズおよびスケールは *partition_column_name* のデータ型と一致しません。<br></br><br></br>`PARTITION` 句は指定したが、境界値を指定しない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ではパーティションを 1 つ含むパーティション テーブルが作成されます。 必要に応じて、後でテーブルを 2 つのパーティションに分割できます。<br></br><br></br>境界値を 1 つ指定した場合、生成されるテーブルには 2 つのパーティションが含まれます。境界値よりも小さい値に対するパーティションと、境界値よりも大きい値に対するパーティションです。 非パーティション テーブルにパーティションを移動した場合、非パーティション テーブルはデータを受け取りますが、そのメタデータ内にパーティション境界は設定されません。| 
+| `FOR VALUES` ( *boundary_value* [,... *n* ] ) | パーティションの境界値を指定します。 *boundary_value* は定数式です。 NULL にすることはできません。 また、 *partition_column_name* のデータ型に一致するか、またはそのデータ型に暗黙的に変換可能である必要があります。 さらに、暗黙的な変換時には切り詰めることができないため、値のサイズおよびスケールは *partition_column_name* のデータ型と一致しません。<br></br><br></br>`PARTITION` 句は指定したが、境界値を指定しない場合、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ではパーティションを 1 つ含むパーティション テーブルが作成されます。 必要に応じて、後でテーブルを 2 つのパーティションに分割できます。<br></br><br></br>境界値を 1 つ指定した場合、生成されるテーブルには 2 つのパーティションが含まれます。境界値よりも小さい値に対するパーティションと、境界値よりも大きい値に対するパーティションです。 非パーティション テーブルにパーティションを移動した場合、非パーティション テーブルはデータを受け取りますが、そのメタデータ内にパーティション境界は設定されません。| 
 
  「例」セクションの「[パーティション テーブルの作成](#PartitionedTable)」を参照してください。
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>クラスター化列ストア インデックスの順序付けオプション 
 
-クラスター化列ストア インデックス (CCI) は、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  CCI 内のデータは、列ストアセグメントに圧縮される前に並べ替えられることはありません。  ORDER を指定して CCI を作成すると、データは並べ替えられてからインデックス セグメントに追加されるため、パフォーマンスが向上することがあります。 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)」を参照してください。  
+クラスター化列ストア インデックス (CCI) は、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でテーブルを作成するための既定値です。  CCI 内のデータは、列ストアセグメントに圧縮される前に並べ替えられることはありません。  ORDER を指定して CCI を作成すると、データは並べ替えられてからインデックス セグメントに追加されるため、パフォーマンスが向上することがあります。 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest)」を参照してください。  
 
-順序付けされた CCI は、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
+順序付けされた CCI は、文字列型の列を除く [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされている任意のデータ型の列に作成できます。  
 
-ユーザーは、**sys.index_columns** の **column_store_order_ordinal** 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
+ユーザーは、 **sys.index_columns** の **column_store_order_ordinal** 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
 
-詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。   
+詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。   
 
 ### <a name="data-type"></a><a name="DataTypes"></a> データ型
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、[SQL Data Warehouse でのテーブルのデータ型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)に関するページを参照してください。
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、最も一般的に使用されるデータ型をサポートしています。 以下に、サポートされるデータ型を一覧し、その詳細説明および格納バイトを示します。 データ型とその使用方法をよく理解するには、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] のテーブルのデータ型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)に関するページを参照してください。
 
-データ型変換のテーブルについては、「[CAST および CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/)」の「暗黙的な変換」セクションを参照してください。
+データ型変換のテーブルについては、「[CAST および CONVERT (Transact-SQL)](../functions/cast-and-convert-transact-sql.md)」の「暗黙的な変換」セクションを参照してください。
 
 >[!NOTE]
->詳細については、「[日付と時刻のデータ型および関数&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)」を参照してください。
+>詳細については、「[日付と時刻のデータ型および関数&#40;Transact-SQL&#41;](../functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
 
 `datetimeoffset` [ ( *n* ) ]  
  *n* の既定値は 7 です。  
@@ -225,9 +226,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 | 1 から 24   | 7 桁  | 4 バイト      |  
 | 25 から 53  | 15 桁 | 8 バイト      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 `1`<= *n* <= `24` の場合、*n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、*n* は `53` として処理されます。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、 *n* は次の 2 つの値のいずれかの値として扱われます。 `1`<= *n* <= `24` の場合、 *n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、 *n* は `53` として処理されます。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` データ型は、*n* が `1` から `53` の値をとるすべてのケースにおいて ISO 標準に準拠しています。 倍精度のシノニムは `float(53)` です。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` データ型は、 *n* が `1` から `53` の値をとるすべてのケースにおいて ISO 標準に準拠しています。 倍精度のシノニムは `float(53)` です。  
   
  `real` [ ( *n* ) ]  
  実数の定義は、浮動小数点数と同じです。 `real` の ISO シノニムは、`float(24)` です。  
@@ -239,7 +240,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  小数点の右側と左側に保持できる桁数を合計した、10 進数の最大桁数。 有効桁数の値は、`1` ～ `38` (最大有効桁数) にする必要があります。 既定の有効桁数は `18` です。  
   
  *scale*  
- 小数点の右側にとることのできる 10 進数の最大桁数。 *Scale* は、`0` ～ *precision* とする必要があります。 *scale* を指定できるのは、*precision* が指定されている場合のみです。 既定の scale は`0` です。したがって、`0` <= *scale* <= *precision* となります。 ストレージの最大サイズは有効桁数によって異なります。  
+ 小数点の右側にとることのできる 10 進数の最大桁数。 *Scale* は、`0` ～ *precision* とする必要があります。 *scale* を指定できるのは、 *precision* が指定されている場合のみです。 既定の scale は`0` です。したがって、`0` <= *scale* <= *precision* となります。 ストレージの最大サイズは有効桁数によって異なります。  
   
 | Precision | ストレージのバイト数  |  
 | ---------: |-------------: |  
@@ -273,7 +274,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  可変長の Unicode 文字データ。 *n* 1 ～ 4000 の値を指定できます。 `max` は最大格納サイズが 2^31-1 バイト (2 GB) であることを示します。 記憶域のサイズは、入力文字数の 2 倍のバイト数に 2 バイトを足した値です。 入力データの長さは 0 文字でもかまいません。  
   
  `nchar` [ ( *n* ) ]  
- *n* 文字の長さを持つ、固定長の Unicode 文字データです。 *n* には `1` ～ `4000` の値を指定する必要があります。 ストレージのサイズは、*n* の 2 倍のバイト数です。  
+ *n* 文字の長さを持つ、固定長の Unicode 文字データです。 *n* には `1` ～ `4000` の値を指定する必要があります。 ストレージのサイズは、 *n* の 2 倍のバイト数です。  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` は [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にのみ適用されます。   
  *n* バイトの長さを持つ、可変長の Unicode 以外の文字データです。 *n* には `1` ～ `8000` の値を指定する必要があります。 `max` は最大記憶域サイズが 2^31-1 バイト (2 GB) であることを示します。記憶領域のサイズは、入力されたデータの実際の長さに 2 バイトを加えたものとなります。  
@@ -305,14 +306,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="GeneralRemarks"></a>  
 ## <a name="general-remarks"></a>全般的な解説  
  
-最小値と最大値については、「[SQL Data Warehouse の容量制限](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)」を参照してください。 
+最小値と最大値については、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の容量制限](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)に関するページを参照してください。 
  
 ### <a name="determining-the-number-of-table-partitions"></a>テーブルのパーティションの数を決定する
 各ユーザー定義テーブルは、複数の小さなテーブルに分割され、ディストリビューションと呼ばれる個々の場所に格納されるます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では 60 のディストリビューションが使用されます。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] において、ディストリビューションの数はコンピューティング ノードの数によって異なります。
  
 各ディストリビューションには、すべてのテーブル パーティションが含まれます。 たとえば、60 のディストリビューションと 4 つのテーブル パーティションに加えて 1 つの空のパーティションがある場合は、300 のパーティションが存在することになります (5 x 60= 300)。 テーブルがクラスター化列ストア インデックスである場合、パーティションごとに列ストア インデックスが 1 つ存在することになります。つまり、列ストア インデックスの数は 300 になります。
 
-列ストア インデックスの利点を活用する上で十分な行が各列ストア インデックスに含まれるようにするために、使用するテーブル パーティションの数を少なくすることをお勧めします。 詳細については、「[SQL Data Warehouse でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)」および [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)に関するページを参照してください。  
+列ストア インデックスの利点を活用する上で十分な行が各列ストア インデックスに含まれるようにするために、使用するテーブル パーティションの数を少なくすることをお勧めします。 詳細については、[[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でのテーブルのパーティション分割](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)に関するページと [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)に関するページを参照してください。  
 
 ### <a name="rowstore-table-heap-or-clustered-index"></a>行ストア テーブル (ヒープまたはクラスター化インデックス)
 
@@ -325,8 +326,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 行ストア テーブルを列ストア テーブルに変更するには、テーブル上の既存のインデックスをすべて削除してから、クラスター化列ストア インデックスを作成します。 例については、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
 
 詳細と例については、次の記事をご覧ください。
-- [列ストア インデックスのバージョン管理機能の概要](https://msdn.microsoft.com/library/dn934994/)
-- [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [列ストア インデックスのバージョン管理機能の概要](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
+- [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でテーブルにインデックスを作成する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列ストア インデックスの説明](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
@@ -592,8 +593,7 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>関連項目
  
-[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
-  
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md?view=azure-sqldw-latest) 

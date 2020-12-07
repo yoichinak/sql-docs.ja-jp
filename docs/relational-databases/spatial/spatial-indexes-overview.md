@@ -1,4 +1,5 @@
 ---
+description: 空間インデックスの概要
 title: 空間インデックスの概要 | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ad5b6e9441eb9364ddeac03e13e5fe60542746f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb5375afc7e8a115c9398f7ab567c06cb731eb62
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666987"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006281"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 ( **geometry** や **geography**など) のデータを含むテーブル列です。  
   
 > [!IMPORTANT]  
@@ -129,7 +130,7 @@ ms.locfileid: "85666987"
 >  このテセレーション スキームを明示的に指定するには、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用します。  
   
 ##### <a name="the-bounding-box"></a>境界ボックス  
- 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは 4 つの座標によって定義されます **(** _x-min_ **,** _y-min_ **)** および **(** _x-max_ **,** _y-max_ **)** 。これらの座標は、空間インデックスのプロパティとして格納されます。 各座標の意味は次のとおりです。  
+ 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは 4 つの座標によって定義されます **(**_x-min_**,**_y-min_**)** および **(**_x-max_**,**_y-max_**)**。これらの座標は、空間インデックスのプロパティとして格納されます。 各座標の意味は次のとおりです。  
   
 -   *x-min* は、境界ボックスの左下隅の x 座標です。  
   
@@ -142,11 +143,11 @@ ms.locfileid: "85666987"
 > [!NOTE]  
 >  これらの座標は、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの BOUNDING_BOX 句で指定します。  
   
- 座標 **(** _x-min_ **,** _y-min_ **)** および **(** _x-max_ **,** _y-max_ **)** により、境界ボックスの位置とサイズが決まります。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。  
+ 座標 **(**_x-min_**,**_y-min_**)** および **(**_x-max_**,**_y-max_**)** により、境界ボックスの位置とサイズが決まります。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。  
   
  空間インデックスは、境界ボックスの内側の空間を分解します。 境界ボックスがグリッド階層のレベル 1 のグリッドで満たされ、 幾何オブジェクトをグリッド階層に配置するためにオブジェクトの座標が境界ボックスの座標と比較されます。  
   
- 次の図には、境界ボックスの座標 **(** _x-min_ **,** _y-min_ **)** および **(** _x-max_ **,** _y-max_ **)** によって定義される点が示されています。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。  
+ 次の図には、境界ボックスの座標 **(**_x-min_**,**_y-min_**)** および **(**_x-max_**,**_y-max_**)** によって定義される点が示されています。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。  
   
  ![座標とセル 0 を表示している境界ボックス。](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "座標とセル 0 を表示している境界ボックス。")  
   
@@ -242,7 +243,7 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

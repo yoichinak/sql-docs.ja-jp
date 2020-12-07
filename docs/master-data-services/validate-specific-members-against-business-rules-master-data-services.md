@@ -1,4 +1,5 @@
 ---
+description: ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)
 title: ビジネス ルールに対して特定のメンバーを検証する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ae7e5a0419e57d24a2f2d16b6b3407f2fb75bc77
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1ef5dca9c03c3e0299169f1262163d27055802a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388697"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85812858"
 > [!NOTE]  
 >  ビジネス ルールをモデルのバージョンのすべてのメンバーに適用する場合は、「 [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -48,7 +49,7 @@ ms.locfileid: "85812858"
   
 5.  **[ルールの適用]** をクリックします。 ビジネス ルールは、グリッドに表示されているメンバーにのみ適用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネスルールに対してバージョンを検証する &#40;マスターデータサービス&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: .NET アプリで C# コードを使用して SSIS プロジェクトを配置する
 title: .NET コード (C#) を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921941"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129995"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS プロジェクトを配置する
 
@@ -45,7 +46,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure Portal](https://portal.azure.com/) にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。
@@ -57,20 +58,20 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 ## <a name="create-a-new-visual-studio-project"></a>新しい Visual Studio プロジェクトの作成
 
-1. Visual Studio で、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択します。 
-2. **[新しいプロジェクト]** ダイアログで、 **[Visual C#]** を展開します。
+1. Visual Studio で、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択します。 
+2. **[新しいプロジェクト]** ダイアログで、**[Visual C#]** を展開します。
 3. **[コンソール アプリ]** を選択し、プロジェクト名に *deploy_ssis_project* を入力します。
 4. **[OK]** をクリックして Visual Studio で新しいプロジェクトを開きます。
 
 ## <a name="add-references"></a>参照の追加
-1. ソリューション エクスプローラーで、 **[参照]** フォルダーを右クリックし、 **[参照の追加]** を選択します。 **[参照マネージャー]** ダイアログ ボックスが表示されます。
-2. **[参照マネージャー]** ダイアログ ボックスで、 **[アセンブリ]** を展開して **[拡張機能]** を選択します。
+1. ソリューション エクスプローラーで、**[参照]** フォルダーを右クリックし、**[参照の追加]** を選択します。 **[参照マネージャー]** ダイアログ ボックスが表示されます。
+2. **[参照マネージャー]** ダイアログ ボックスで、**[アセンブリ]** を展開して **[拡張機能]** を選択します。
 3. 次の 2 つの参照を選択して追加します。
     -   Microsoft.SqlServer.Management.Sdk.Sfc
     -   Microsoft.SqlServer.Smo
-4. **[参照]** ボタンをクリックして、参照を **Microsoft.SqlServer.Management.IntegrationServices** に追加します (このアセンブリはグローバル アセンブリ キャッシュ (GAC) にのみインストールされます)。 **[参照するファイルの選択]** ダイアログ ボックスが表示されます。
+4. **[参照]** ボタンをクリックして、参照を **Microsoft.SqlServer.Management.IntegrationServices** に追加します  (このアセンブリはグローバル アセンブリ キャッシュ (GAC) にのみインストールされます)。 **[参照するファイルの選択]** ダイアログ ボックスが表示されます。
 5. **[参照するファイルの選択]** ダイアログ ボックスで、アセンブリを含む GAC フォルダーに移動します。 通常このフォルダーは `C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Management.IntegrationServices\14.0.0.0__89845dcd8080cc91` です。
-6. フォルダー内のアセンブリ (.dll ファイル) を選択し、 **[追加]** をクリックします。
+6. フォルダー内のアセンブリ (.dll ファイル) を選択し、**[追加]** をクリックします。
 7. **[OK]** をクリックして **[参照マネージャー]** ダイアログ ボックスを閉じ、3 つの参照を追加します。 参照があることを確認するには、ソリューション エクスプローラーで **[参照]** リストを確認します。
 
 ## <a name="add-the-c-code"></a>C# コードを追加する 
@@ -128,7 +129,7 @@ namespace deploy_ssis_project
 
 ## <a name="run-the-code"></a>コードの実行
 
-1. アプリケーションを実行するには **F5** キーを押します。
+1. アプリケーションを実行するには、**F5** を押します。
 2. SSMS で、プロジェクトが配置されていることを確認します。
 
 ## <a name="next-steps"></a>次のステップ

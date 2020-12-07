@@ -1,4 +1,5 @@
 ---
+description: dm_cryptographic_provider_algorithms (Transact-sql)
 title: dm_cryptographic_provider_algorithms (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84b7a59ce701118f2c7e1fc28160ebc6d9e8b60d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c3ed45a66cca5e038b63e3eb0d360a8f59a9ee54
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894607"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542332"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>dm_cryptographic_provider_algorithms (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ SELECT * FROM sys.dm_cryptographic_provider_algorithms(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [セキュリティ関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   

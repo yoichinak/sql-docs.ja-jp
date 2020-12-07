@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548004"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392078"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -26,7 +26,7 @@ ms.locfileid: "84548004"
 ## <a name="viewing-log-information"></a>ログ情報の表示  
  ログは、ASCII テキスト ファイルです。 任意のテキスト エディターでファイルを閲覧できます。 レポート サーバーの HTTP ログ ファイルは、IIS における W3C 拡張ログ ファイルに相当し、同様のフィールドが使用されています。そのため、既存の IIS ログ ファイル ビューアーを使用して、レポート サーバーの HTTP ログ ファイルを閲覧することもできます。 次の表に、HTTP ログ ファイルの補足情報を示します。  
   
-|||  
+|ログ ファイル情報|説明|  
 |-|-|  
 |ファイル名|既定では、ファイル名は ReportServerService_HTTP_\<timestamp>.log です。 ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
 |ファイルの場所|このファイルは、\Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles に格納されています。|  

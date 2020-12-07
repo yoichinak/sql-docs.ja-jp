@@ -1,4 +1,5 @@
 ---
+description: インデックスのディスク領域の例
 title: インデックスのディスク領域の例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490972"
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,10 +111,10 @@ ms.locfileid: "85668291"
   
 |インデックス操作|構造の場所と必要なディスク領域|  
 |---------------------|---------------------------------------------------------------------------|  
-|SORT_IN_TEMPDB = ON に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 1018 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
-|SORT_IN_TEMPDB = OFF に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 816 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
-|SORT_IN_TEMPDB = ON に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 1058 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb** (マッピング インデックスを含む): 242 MB*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
-|SORT_IN_TEMPDB = OFF に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 856 MB<br /><br /> \- 既存のテーブルとインデックス: 363 MB*<br /><br /> \- 一時マッピング インデックス: 40 MB\*<br /><br /> \- 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = ON に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 1018 MB<br /><br /> - 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> - 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = OFF に設定されたオフライン インデックス操作|操作中に必要な領域の合計サイズ: 816 MB<br /><br /> - 既存のテーブルとインデックス: 363 MB*<br /><br /> - 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = ON に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 1058 MB<br /><br /> - 既存のテーブルとインデックス: 363 MB\*<br /><br /> -<br />                    **tempdb** (マッピング インデックスを含む): 242 MB*<br /><br /> - 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
+|SORT_IN_TEMPDB = OFF に設定されたオンライン インデックス操作|操作中に必要な領域の合計サイズ: 856 MB<br /><br /> - 既存のテーブルとインデックス: 363 MB*<br /><br /> - 一時マッピング インデックス: 40 MB\*<br /><br /> - 新しいインデックス: 453 MB<br /><br /> 操作の完了後に必要な領域の合計サイズ: 453 MB|  
   
  *この領域は、インデックス操作がコミットされると、割り当てが解除されます。  
   

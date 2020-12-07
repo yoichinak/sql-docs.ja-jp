@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914810"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713780"
 ---
 # <a name="sql-server-profiler"></a>SQL Server プロファイラー
 
@@ -34,11 +34,11 @@ ms.locfileid: "86914810"
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services のワークロードがサポートされています。
 
 > [!NOTE]
-> SQL Server プロファイラーから SQL Azure データベースに接続しようとすると、次のような誤解を招くエラー メッセージが誤ってスローされます。
+> SQL Server プロファイラーから Azure SQL Database に接続しようとすると、次のような誤解を招くエラー メッセージが誤ってスローされます。
 >
 > - SQL Server に対してトレースを実行するには、sysadmin 固定サーバー ロールのメンバーであるか、ALTER TRACE 権限が許可されている必要があります。
 >
-> このメッセージでは、SQL Azure データベース インスタンスが SQL Server プロファイラーでサポートされていないことを説明すべきでした。
+> このメッセージでは、Azure SQL Database が SQL Server プロファイラーでサポートされていないことを説明すべきでした。
 
 ## <a name="where-is-the-profiler"></a>プロファイラーはどこにありますか?
 
@@ -164,7 +164,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [
 |カーソルまで再生する方法について説明します。|[カーソルまでの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを再生する方法について説明します。|[Transact-SQL スクリプトの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |トレース テンプレートの作成方法について説明します。|[トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|トレース テンプレートの変更方法について説明します。|[トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|トレース テンプレートの変更方法について説明します。|[トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)|  
 |グローバル トレース オプションを設定する方法について説明します。|[グローバル トレース オプションの設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |トレース中に値列またはデータ列を検索する方法について説明します。|[トレース中の値列またはデータ列の検索 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |実行中のトレースからテンプレートを作成する方法について説明します。|[実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [
 |トレース テンプレートをエクスポートする方法について説明します。|[トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |トレース テンプレートをインポートする方法について説明します。|[トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |スクリプトをトレースから抽出する方法について説明します。|[トレースからのスクリプトの抽出 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |トレースに表示される列を構成する方法について説明します。|[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の開始方法について説明します。|[SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |トレースとトレース テンプレートを保存する方法について説明します。|[トレースとトレース テンプレートの保存](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

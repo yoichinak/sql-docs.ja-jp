@@ -1,8 +1,9 @@
 ---
+description: ObjectTypeEnum
 title: ObjectTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe7d97909a2d38e548a072245b08110b1d61eb3c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3a0d27f8dbb1758a805ea2de033df1c65af1c894
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943164"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983843"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 権限または所有権を設定するデータベースオブジェクトの種類を指定します。  
@@ -38,11 +39,11 @@ ms.locfileid: "86943164"
 
 :::row:::
     :::column:::
-        [GetObjectOwner メソッド (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
-        [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetObjectOwner メソッド (ADOX)](./getobjectowner-method-adox.md)  
+        [GetPermissions メソッド (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetObjectOwner メソッド](../../../ado/reference/adox-api/setobjectowner-method.md)  
-        [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetObjectOwner メソッド](./setobjectowner-method.md)  
+        [SetPermissions メソッド (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

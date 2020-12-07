@@ -11,16 +11,16 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 93d7520da2d011de53c0dc6d80eea9f131f9a470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfddd7509a8ff9a038cb5ec6bee060deae8d3a09
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718507"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987578"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
-SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
+SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](/sql/linux/)をご覧ください
 
 [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 - SSDT 用の DAX エディター。 (CTP 2.0)
 - エンコードのヒント。これは、大規模なメモリ内表形式モデルのデータ更新を最適化するために使用される高度な機能です。 (1.3 CTP)
 - 表形式モデルでの **1400 互換性レベル**のサポート。 新規の 1400 互換性レベルの表形式モデル プロジェクトを作成するか、既存の表形式モデル プロジェクトを 1400 互換性レベルにアップグレードするには、[SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939) をダウンロードしてインストールします。 (CTP 1.1)
-- 1400 互換性レベルの表形式モデルでの、最新の**データ取得**エクスペリエンス。 [分析サービス チームのブログ](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)を参照してください。 (CTP 1.1)
+- 1400 互換性レベルの表形式モデルでの、最新の**データ取得**エクスペリエンス。 [分析サービス チームのブログ](/archive/blogs/analysisservices/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services)を参照してください。 (CTP 1.1)
 - 不規則階層で空のメンバーを非表示にする、**メンバーを隠す**プロパティ。 (CTP 1.1)
 - 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](/dax/selectcolumns-function-dax) および **DETAILROWS** 関数。 (CTP 1.1)
 - 複数の値を指定するための DAX **IN** 演算子。 (CTP 1.1)
@@ -94,7 +94,7 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services は、SQL Server セットアップでインストールできなくなりました。 Microsoft ダウンロード センターに移動し、[Microsoft SQL Server 2017 Reporting Services をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)してください。 
 - レポートでコメントが使用できるようになり、分析観点の追加や、他のユーザーとの共同作業ができるようになりました。 コメントに添付ファイルを含めることもできます。
-- レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
+- レポート ビルダーと SQL Server Data Tools の最新リリースでは、クエリ デザイナーで必要なフィールドをドラッグ アンド ドロップすることで、サポートされている SQL Server Analysis Services 表形式データ モデルに対するネイティブの DAX クエリを作成できます。 [Reporting Services のブログ](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)を参照してください。
 - 最新のアプリケーションとカスタマイズを開発できるようにするため、SSRS は OpenAPI に完全に対応する RESTful API をサポートするようになっています。 API の完全な仕様とドキュメントは、[swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0) で入手できます。
 
 詳細については、「[What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」 (SQL Server Reporting Services (SSRS) の新機能) を参照してください。
@@ -118,7 +118,7 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 
 ## <a name="next-steps"></a>次のステップ
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
-- 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
+- 「[Linux 上の SQL Server 2017 の新機能](../linux/sql-server-linux-whats-new.md)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

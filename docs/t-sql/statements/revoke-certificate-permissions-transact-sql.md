@@ -1,4 +1,5 @@
 ---
+description: REVOKE (証明書の権限の取り消し) (Transact-SQL)
 title: REVOKE (証明書の権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df89574197ffdb038e4aa5cfe7505c5e4dd751e5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 81641dd0849580169e95a696abd04e68138bcf0a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496618"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (証明書の権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  権限を取り消す証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -82,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   

@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_XML (Transact-SQL)
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
@@ -24,12 +25,12 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397053"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88304907"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
@@ -44,6 +45,8 @@ ms.locfileid: "87397053"
 ```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>解説
 
@@ -61,7 +64,7 @@ SET SHOWPLAN_XML はストアド プロシージャ内では指定できませ�
 SET SHOWPLAN_XML では、情報が XML ドキュメントのセットとして返されます。 SET SHOWPLAN_XML を ON にした後で実行された各バッチの情報は、それぞれ 1 つの出力ドキュメントに反映されます。 各ドキュメントには、バッチ内のステートメントのテキストと実行ステップの詳細が含まれ、 推定コスト、行数、アクセスしたインデックス、実行された演算子の種類、結合順序、および実行プランに関するその他の情報が示されます。
 
 > [!NOTE]
-> **で**[実際の実行プランを含める][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、**[実際の実行プランを含める]** ボタンの選択を解除してください。
 
 ### <a name="location-of-showplan-output"></a>SHOWPLAN 出力の場所
 

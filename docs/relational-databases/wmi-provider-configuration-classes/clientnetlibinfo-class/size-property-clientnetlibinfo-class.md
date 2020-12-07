@@ -1,4 +1,5 @@
 ---
+description: Size プロパティ (ClientNetLibInfo クラス)
 title: Size プロパティ (ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a00019f4d78bc9a6762720b4afcbd506d6fb5498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: becbfa26cab11ce9b43d768a0777d7e0a959611c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881121"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890712"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size プロパティ (ClientNetLibInfo クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,8 @@ object.Size [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリのサイズ (KB 単位) を指定する uint32 値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

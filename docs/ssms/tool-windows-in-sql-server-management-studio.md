@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio のツール ウィンドウ
 title: SQL Server Management Studio のツール ウィンドウ
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b75edb6b6a66c4722bda7c8b63615a1523838206
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236915"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035955"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,5 +39,4 @@ ms.locfileid: "87236915"
 -   特定のデータベースに接続している [SQL エディター] ウィンドウをオブジェクト エクスプローラーから開く。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Management Studio の使用 [SQL Server]](../ssms/use-sql-server-management-studio.md)  
-  
+[SQL Server Management Studio の使用 [SQL Server]](./sql-server-management-studio-ssms.md)  

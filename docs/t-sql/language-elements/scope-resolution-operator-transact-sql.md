@@ -1,4 +1,5 @@
 ---
+description: ':: (スコープ解決) (Transact-SQL)'
 title: ':: (スコープ解決) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6c319d0e7e67605f09954e88434842be9b8ae1df
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072294"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124392"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (スコープ解決) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68072294"
 ## <a name="examples"></a>例  
  次の例は、スコープ解決演算子を使用して `GetRoot()` 型の `hierarchyid` メンバーにアクセスする方法を示します。  
   
-```  
+```sql  
 DECLARE @hid hierarchyid;  
 SELECT @hid = hierarchyid::GetRoot();  
 PRINT @hid.ToString();  

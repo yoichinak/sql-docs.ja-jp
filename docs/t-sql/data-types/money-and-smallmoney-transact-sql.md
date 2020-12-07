@@ -1,4 +1,5 @@
 ---
+description: money と smallmoney (Transact-SQL)
 title: money と smallmoney (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -24,12 +25,12 @@ ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c8cc9b8d7b923dd4ef60f5c90b734fc9deb41b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8218bf8b98cd072dd60f8458c75819761153b634
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008009"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91111278"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money と smallmoney (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86008009"
   
 |データ型|Range|ストレージ|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58<br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
+|**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58 <br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
 |**smallmoney**|- 214,748.3648 ～ 214,748.3647|4 バイト|  
   
 **Money** と **smallmoney** データ型を表している通貨単位の 10,000 の精度はします。 Informatica では、**money** データ型と **smallmoney** データ型の精度は、それらが表している通貨単位の 1/100 です。
@@ -59,22 +60,22 @@ ms.locfileid: "86008009"
 次の例では、変換 **smallmoney** と **money** 値を **varchar** と **10 進** それぞれのデータ型します。
   
 ```sql
-DECLARE @mymoney_sm smallmoney = 3148.29,  
-        @mymoney    money = 3148.29;  
-SELECT  CAST(@mymoney_sm AS varchar) AS 'SM_MONEY varchar',  
-        CAST(@mymoney AS decimal)    AS 'MONEY DECIMAL';  
+DECLARE @mymoney_sm SMALLMONEY = 3148.29,  
+        @mymoney    MONEY = 3148.29;  
+SELECT  CAST(@mymoney_sm AS VARCHAR) AS 'SM_MONEY varchar',  
+        CAST(@mymoney AS DECIMAL)    AS 'MONEY DECIMAL';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 SM_MONEY VARCHAR               MONEY DECIMAL  
 ------------------------------ ----------------------  
 3148.29                        3148    
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 [CAST と CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)

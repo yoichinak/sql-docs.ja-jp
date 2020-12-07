@@ -1,4 +1,5 @@
 ---
+description: SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
 title: SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 452ad0e1fec7ac1f4773a1d6a2491ba903f83884
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915862"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88346398"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
 

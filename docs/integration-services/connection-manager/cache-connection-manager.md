@@ -1,4 +1,5 @@
 ---
+description: キャッシュ接続マネージャー
 title: キャッシュ接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 074aa791a20eed06241aef1087f5ac355f8ea493
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920828"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123711"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
 
@@ -31,7 +32,7 @@ ms.locfileid: "86920828"
  キャッシュ変換を使用して、データ フロー内の接続されているデータ ソースのデータをキャッシュ接続マネージャーに書き込みます。 パッケージ内の参照変換は、データに対する参照を実行します。  
   
 > [!NOTE]  
->  キャッシュ接続マネージャーでは、バイナリ ラージ オブジェクト (BLOB) データ型 DT_TEXT、DT_NTEXT、および DT_IMAGE はサポートされません。 参照データセットに BLOB データ型が含まれている場合、パッケージを実行するとコンポーネントは失敗します。 **[キャッシュ接続マネージャー エディター]** を使用して、列のデータ型を変更できます。 詳細については、「 [キャッシュ接続マネージャー エディター](cache-connection-manager-editor.md)」を参照してください。  
+>  キャッシュ接続マネージャーでは、バイナリ ラージ オブジェクト (BLOB) データ型 DT_TEXT、DT_NTEXT、および DT_IMAGE はサポートされません。 参照データセットに BLOB データ型が含まれている場合、パッケージを実行するとコンポーネントは失敗します。 **[キャッシュ接続マネージャー エディター]** を使用して、列のデータ型を変更できます。 詳細については、「 [キャッシュ接続マネージャー エディター]()」を参照してください。  
   
 > [!NOTE]  
 >  パッケージの保護レベルは、キャッシュ ファイルに適用されません。 キャッシュ ファイルに機密情報が含まれている場合は、アクセス制御リスト (ACL) を使用して、ファイルを格納している場所またはフォルダーへのアクセスを制限します。 特定のアカウントに対してのみアクセスを有効にする必要があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../../integration-services/security/security-overview-integration-services.md#files)」を参照してください。  
@@ -70,7 +71,7 @@ ms.locfileid: "86920828"
 ###  <a name="general-tab"></a><a name="generaltab"></a> [全般] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブを使用すると、ファイルからキャッシュを読み取るか、キャッシュをファイルに保存するかを指定できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **接続マネージャー名**  
  ワークフローにおけるキャッシュ接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -101,7 +102,7 @@ ms.locfileid: "86920828"
 ###  <a name="columns-tab"></a><a name="columnstab"></a> [列] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[列]** タブを使用すると、キャッシュ内の各列のプロパティを構成できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **列**  
  列名を指定します。  
   
@@ -132,5 +133,4 @@ ms.locfileid: "86920828"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
-  
   

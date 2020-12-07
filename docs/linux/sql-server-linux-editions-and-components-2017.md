@@ -22,15 +22,15 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: d1cc1a575ba2159fc995022df97f5f2079b26206
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 11ac66182122cba239634cdf07f4b6683d2479cb
+ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928663"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94674174"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
@@ -210,6 +210,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |平面データ型と測地データ型|はい|はい|はい|はい| 
 |高度な空間的なライブラリ|はい|はい|はい|はい|   
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|   
+
 ## <a name="unsupported-features--services"></a><a name="Unsupported"></a> サポートされていない機能とサービス
 
 次の機能とサービスは、SQL Server 2017 on Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
@@ -225,6 +226,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | Filetable、FILESTREAM |
 | &nbsp; | EXTERNAL_ACCESS 権限または UNSAFE 権限が設定された CLR アセンブリ |
 | &nbsp; | バッファー プール拡張 |
+| &nbsp; | URL へのバックアップ - ページ BLOB <sup>1</sup>|
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
@@ -241,9 +243,11 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | Data Quality Services |
 | &nbsp; | マスター データ サービス |
   
+<sup>1</sup> URL へのバックアップは、[Shared Access Signature](../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) を使用して、ブロック BLOB に対してサポートされています。
+
 ## <a name="next-steps"></a>次のステップ
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+ [SQL Server をインストールする](../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server の製品仕様](../sql-server/index.yml)

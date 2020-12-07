@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469402"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -41,13 +42,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] id`アクセス権を付与するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_id = ] id` アクセス権を付与するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @proxy_name = ] 'proxy_name'`アクセス権を付与するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+`[ @proxy_name = ] 'proxy_name'` アクセス権を付与するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Proxy_id*または*proxy_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @subsystem_id = ] id`アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
+`[ @subsystem_id = ] id` アクセスを許可するサブシステムの id 番号。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX スクリプト<br /><br /> 重要 ActiveX スクリプティングサブシステムは、の将来のバージョンでエージェントから削除される予定** \* \* です。 \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |**3**|オペレーティングシステム (**CmdExec**)|  
@@ -59,19 +60,19 @@ sp_grant_proxy_to_subsystem
 |**9**|Analysis Services クエリ|  
 |"**10**"|Analysis Services コマンド|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
-|**12**|PowerShell スクリプト|  
+|"**12**"|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
+`[ @subsystem_name = ] 'subsystem_name'` アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 次の表に、各サブシステムの値を示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**ActiveScripting**| ActiveX スクリプト|  
 |**CmdExec**|オペレーティングシステム (**CmdExec**)|  
 |**スナップショット**|レプリケーション スナップショット エージェント|  
-|**リーダー**|レプリケーション ログ リーダー エージェント|  
-|**配布**|レプリケーションディストリビューションエージェント|  
-|**マージ**|Replication Merge Agent|  
+|**LogReader**|レプリケーション ログ リーダー エージェント|  
+|**Distribution**|レプリケーションディストリビューションエージェント|  
+|**[マージ]**|Replication Merge Agent|  
 |**QueueReader**|Replication Queue Reader Agent|  
 |**ANALYSISQUERY**|Analysis Services クエリ|  
 |**ANALYSISCOMMAND**|Analysis Services コマンド|  
@@ -79,7 +80,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|PowerShell スクリプト|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サブシステムへのプロキシアクセスを許可しても、プロキシで指定されたプリンシパルのアクセス許可は変更されません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -100,7 +101,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>B: 名前によってサブシステムへのアクセスを許可します。  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前によってサブシステムへのアクセスを許可します。  
  次の例では、 `Catalog application proxy` SSIS パッケージ実行サブシステムへのアクセス権をプロキシに付与します。  
   
 ```sql
@@ -113,7 +114,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server エージェントセキュリティを実装する](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

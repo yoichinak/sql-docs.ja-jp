@@ -1,4 +1,5 @@
 ---
+description: LocalDBFormatMessage 関数
 title: LocalDBFormatMessage 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57c110763c38f1d400d03178568ff955a9c1840b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7be5ebfad2430b1161d5af8c1a61697aacd568c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789485"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544064"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ HRESULT LocalDBFormatMessage(
  [出力] LocalDB エラー メッセージを格納するバッファー。  
   
  *lpcchMessage*  
- [入力/出力]入力時には、 *wszMessage*バッファーのサイズが文字数で格納されます。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
+ [入力/出力]入力時には、 *wszMessage* バッファーのサイズが文字数で格納されます。 出力側では、所定のバッファー サイズが小さすぎる場合、末尾の NULL も含め、必要なバッファー サイズ (単位は文字数) を格納します。 関数を正常に実行できた場合、このメッセージ内の文字数を格納します。ただし、末尾の NULL は除外します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -78,15 +79,15 @@ HRESULT LocalDBFormatMessage(
  メッセージは、要求された言語では用意されていません。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 入力バッファー *wszMessage*が短すぎて、切り捨てが要求されていません。  
+ 入力バッファー *wszMessage* が短すぎて、切り捨てが要求されていません。  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

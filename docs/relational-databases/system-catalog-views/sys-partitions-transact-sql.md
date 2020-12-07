@@ -1,4 +1,5 @@
 ---
+description: sys.partitions (Transact-SQL)
 title: sys. partition (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.partitions catalog view
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a2b7b017a7308628ff8d487d72629d86a04dc1a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0947a58b607d781b05eb5633b0664d7f0da4d107
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397184"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546753"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

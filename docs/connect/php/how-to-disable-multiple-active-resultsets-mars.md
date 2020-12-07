@@ -1,7 +1,8 @@
 ---
-title: '方法: 複数のアクティブな結果セット (MARS) を無効にする | Microsoft Docs'
+title: '方法: 複数のアクティブな結果セット (MARS) を無効にする'
+description: Microsoft Drivers for PHP for SQL Server を使用する場合に複数のアクティブな結果セットのサポートを無効にする方法について説明します
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 11ca08618f0b8d7675e8ec74ec259d4225d44aba
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916348"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080621"
 ---
-# <a name="how-to-disable-multiple-active-resultsets-mars"></a>方法: 複数のアクティブな結果セット (MARS) を無効にする
+# <a name="how-to-disable-multiple-active-resultsets-mars"></a>方法:複数のアクティブな結果セット (MARS) を無効にする
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 複数のアクティブな結果セット (MARS) を有効にしていない SQL Server データ ソースに接続する必要がある場合、MultipleActiveResultSets 接続オプションを使用して、MARS を無効または有効にすることができます。  
@@ -39,7 +40,7 @@ ms.locfileid: "80916348"
   
     接続は、結果が保留中のステートメントがあるために、この操作を処理できません。  他のクエリが接続を使用できるようにするには、すべての結果をフェッチするか、ステートメントをキャンセルまたは解放します。 MultipleActiveResultSets 接続オプションの詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="sqlsrv-example"></a>SQLSRV の例  
 次の例は [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の SQLSRV ドライバーを使用して、MARS サポートを無効にする方法を示しています。  
   
 ```  
@@ -59,7 +60,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="pdo_sqlsrv-example"></a>PDO_SQLSRV の例  
 次の例は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の PDO_SQLSRV ドライバーを使用して、MARS サポートを無効にする方法を示しています。  
   
 ```  

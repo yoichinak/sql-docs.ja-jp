@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729441"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670535"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |バックアップと復元|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD はこれまでどおり非推奨とされます。 BACKUP { DATABASE &#124; LOG } WITH PASSWORD および BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD は廃止されました。|なし|BACKUP DATABASE または LOG WITH PASSWORD<br /><br /> BACKUP DATABASE または LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|互換性レベル|バージョン 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]) からのアップグレード。|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンが[サポート](https://aka.ms/sqllifecycle)対象外になったとき、関連するデータベース互換性レベルには非推奨の印が付きます。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|Database compatibility level 100|108|  
+|互換性レベル|バージョン 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]) からのアップグレード。|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンが[サポート](/lifecycle/products/?products=sql-server)対象外になったとき、関連するデータベース互換性レベルには非推奨の印が付きます。 しかしながら、Microsoft は、アップグレードを簡単にする目的で、サポートされているあらゆるデータベース互換性レベルで認められているアプリケーションのサポートを可能な限り継続します。 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|Database compatibility level 100|108|  
 |データベース オブジェクト|トリガーから結果セットを返す機能|なし|トリガーから結果を返す|12|  
 |暗号化|RC4 または RC4_128 を使用した暗号化は非推奨とされており、次のバージョンで削除される予定です。 RC4 および RC4_128 の暗号化解除は非推奨とされます。|AES など、別の暗号化アルゴリズムを使用してください。|非推奨の暗号化アルゴリズム|253|  
 |ハッシュ アルゴリズム|MD2、MD4、MD5、SHA、および SHA1 の使用は非推奨とされます。|代わりに SHA2_256 または SHA2_512 を使用してください。 以前のアルゴリズムは引き続き機能しますが、Deprecation イベントが発生します。|非推奨のハッシュ アルゴリズム|なし|  
@@ -174,5 +174,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 開発者が **varbinary(50)** を割り当てると、今後のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションの変更が必要になる可能性があります。 これは廃止の問題ではありませんが、アプリケーションの調整と似ているため、このトピックで説明されています。 詳細については、「[sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [SQL Server 2017 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [SQL Server 2016 で廃止されたデータベース エンジンの機能](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [SQL Server 2017 データベース エンジンの非推奨の機能](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

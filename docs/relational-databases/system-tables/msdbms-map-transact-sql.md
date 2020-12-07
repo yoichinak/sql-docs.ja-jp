@@ -1,4 +1,5 @@
 ---
+description: MSdbms_map (Transact-SQL)
 title: MSdbms_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_map system table
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1deb0171bb62c50e43a1d1b072bf79126e79420b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 66896c98c0d02dbb7cf9276f512420688b14be0f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890014"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551017"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_map**テーブルには、ソースデータ型の情報に加えて、ソースとターゲットの DBMS ペアに関する既定の変換先のデータ型情報へのリンクが含まれています。 このテーブルは**msdb**データベースに格納され、異種パブリッシングに使用されます。  
+  **MSdbms_map**テーブルには、ソースデータ型の情報に加えて、ソースとターゲットの DBMS ペアに関する既定の変換先のデータ型情報へのリンクが含まれています。 このテーブルは **msdb** データベースに格納され、異種パブリッシングに使用されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -44,8 +45,8 @@ ms.locfileid: "85890014"
 |**src_nullable**|**bit**|マッピングの変換先列で NULL 値を許容するかどうかを示します。値が NULL の場合、この定義は必要ありません。|  
 |**default_datatype_mapping_id**|**int**|テーブル[MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md)で**map_id**を指定することによって、既定のデータ型マッピングを識別します。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

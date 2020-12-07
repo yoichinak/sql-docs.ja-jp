@@ -1,8 +1,9 @@
 ---
+description: Command (Visual C++ 構文用の ADO)
 title: Command (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e804520e73df93993bc24c2db89191e9391bfdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 62e788877c4f3cd3f4fba7f62b31d02a0d768c2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760488"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975253"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -52,4 +53,4 @@ get_Parameters(ADOParameters **ppvObject)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)

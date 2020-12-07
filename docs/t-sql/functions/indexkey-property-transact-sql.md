@@ -1,4 +1,5 @@
 ---
+description: INDEXKEY_PROPERTY (Transact-SQL)
 title: INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 631a2380d8a491fd495e5d60d52284a476c9aab7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 60247a9c2dcdc038f17edc9637805c62e02fe0d0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110957"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115437"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "87110957"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )  
 ```  
   
@@ -52,7 +52,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  テーブルまたはインデックス付きビューのオブジェクト ID 番号です。 *object_ID* は **int** です。  
   
  *index_ID*  
- インデックスの ID 番号です。 *index_ID* は **int**です。  
+ インデックスの ID 番号です。 *index_ID* は **int** です。  
   
  *key_ID*  
  インデックス キー列の位置です。 *key_ID* is **int**.  
@@ -96,7 +96,7 @@ Column ID   Asc or Desc order
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [INDEX_COL &#40;Transact-SQL&#41;](../../t-sql/functions/index-col-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

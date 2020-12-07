@@ -5,21 +5,21 @@ description: この 4 部構成のチュートリアル シリーズのパート
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
-author: cawrites
-ms.author: chadam
+author: dphansen
+ms.author: davidph
 ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62b4f2d934a8591063e7c14ada914ac3a556866a
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772317"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870295"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>チュートリアル:SQL 機械学習を使用して R でクラスタリング モデルをデプロイする
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この 4 部構成のチュートリアル シリーズのパート 4 では、SQL Server Machine Learning Services またはビッグ データ クラスターを使用して、R で開発されたクラスタリング モデルをデータベースにデプロイします。
@@ -51,7 +51,7 @@ ms.locfileid: "85772317"
 
 ## <a name="prerequisites"></a>前提条件
 
-* このチュートリアル シリーズのパート 4 は、[**パート 1** ](r-clustering-model-introduction.md)の前提条件を満たし、[**パート 2** ](r-clustering-model-build.md)および[**パート 3** ](r-clustering-model-build.md)の手順を完了していることを前提としています。
+* このチュートリアル シリーズのパート 4 は、[**パート 1**](r-clustering-model-introduction.md)の前提条件を満たし、[**パート 2**](r-clustering-model-build.md)および [**パート 3**](r-clustering-model-build.md)の手順を完了していることを前提としています。
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>モデルを生成するストアド プロシージャの作成
 

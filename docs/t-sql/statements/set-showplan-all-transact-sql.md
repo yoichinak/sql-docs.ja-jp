@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_ALL (Transact-SQL)
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6be25893400c5aca52d81c86710042b24979a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34fc7107c1285dbed43a5303984edd2b32d1714d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765708"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540546"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,9 @@ ms.locfileid: "85765708"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET SHOWPLAN_ALL の設定は、解析時ではなく実行時に設定されます。  
   
  `SET SHOWPLAN_ALL` が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、各ステートメントを実行せずに実行情報だけを返します。[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは実行されません。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに実行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する情報です。 たとえば、`SET SHOWPLAN_ALL` が ON のときに CREATE TABLE ステートメントを実行し、その後この同じテーブルを参照する SELECT ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、指定されたテーブルが存在しないことをユーザーに通知するエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_ALL が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではレポートを作成せずに、ステートメントを実行します。  

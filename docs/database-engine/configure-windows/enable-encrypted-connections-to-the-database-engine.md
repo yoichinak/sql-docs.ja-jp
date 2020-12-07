@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772503"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670972"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -74,7 +74,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 > フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、***test1.\*\<your company>\*.com*** および ***test2.\*\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、***virtsql*** という仮想サーバーがあるとします。この場合、***virtsql.\*\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
 
 > [!NOTE]
-> Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)」を参照してください。 
+> Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)」を参照してください。 
 
 ## <a name="certificate-requirements"></a>証明書の要件
 
@@ -84,7 +84,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス アカウントに、TLS 証明書にアクセスするアクセス許可があること。
 
-- 現在のシステム時刻が証明書の **Valid from** プロパティから証明書の Valid to プロパティまでの範囲であること。
+- 現在のシステム時刻が証明書の **[有効期間の開始]** プロパティから証明書の **[有効期間の終了]** プロパティまでの範囲にあること。
 
 - 証明書がサーバー認証に使用されていること。 つまり、証明書の **[拡張キー使用法]** プロパティで **[サーバー認証] (1.3.6.1.5.5.7.3.1)** が指定されている必要があります。
 
@@ -123,6 +123,10 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 9. インポートした証明書を右クリックし、 **[すべてのタスク]** をポイントして、 **[秘密キーの管理]** をクリックします。 **[セキュリティ]** ダイアログ ボックスで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントが使用するユーザー アカウントに読み取りアクセス許可を追加します。  
   
 10. **[証明書のインポート ウィザード]** を完了して証明書をコンピューターに追加し、MMC コンソールを閉じます。 コンピューターへの証明書の追加の詳細については、Windows のマニュアルを参照してください。  
+
+> [!IMPORTANT]
+> 運用環境では、証明機関から信頼された証明書を取得することをお勧めします。    
+> テスト目的のため、自己署名証明書を使用することもできます。 自己署名証明書を作成するには、[Powershell コマンドレット New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) または [certreq コマンド](/windows-server/administration/windows-commands/certreq_1)に関するページを参照してください。
   
 ## <a name="install-across-multiple-servers"></a>複数のサーバーにまたがるインストール
 
@@ -141,9 +145,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 暗号化された接続を強制するサーバーを構成します。
 
 > [!IMPORTANT]
-> SQL Server サービス アカウントは、SQL Server で暗号化を強制するために使用される証明書の読み取りアクセス許可を持っている必要があります。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、SQL Server サービスを再起動できなくなる可能性があります。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で暗号化を強制するために使用される証明書の読み取りアクセス許可が必要です。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動できなくなる可能性があります。
   
-1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[ _\<server instance>_ のプロトコル]** を右クリックします。次に **[プロパティ]** をクリックします。  
+1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックして、 **[プロパティ]** を選択します。  
   
 2. **[ _\<instance name>_ のプロトコル]** の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
   
@@ -168,7 +172,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 ## <a name="use-sql-server-management-studio"></a>SQL Server Management Studio の使用 [SQL Server]
   
-SQL Server Management Studio から接続を暗号化するには:  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] からの接続を暗号化する手順  
 
 1. オブジェクト エクスプローラー ツール バーで **[接続]** をクリックし、 **[データベース エンジン]** をクリックします。  
   
@@ -183,3 +187,4 @@ SQL Server Management Studio から接続を暗号化するには:
 
 + [Microsoft SQL Server の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)     
 + [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell コマンドレット New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

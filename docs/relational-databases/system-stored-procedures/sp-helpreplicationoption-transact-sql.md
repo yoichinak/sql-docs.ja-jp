@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationoption (Transact-sql)
 title: sp_helpreplicationoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 093b718c74d086af10b351d1a87165ef1a659ea2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775740"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526962"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @optname = ] 'option_name'`クエリを実行するレプリケーションオプションの名前を指定します。 *option_name*は**sysname**,、既定値は NULL です。  
+`[ @optname = ] 'option_name'` クエリを実行するレプリケーションオプションの名前を指定します。 *option_name* は **sysname**,、既定値は NULL です。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**パブリケーション**|トランザクションレプリケーションが有効になっている場合は、結果セットが返されます。|  
 |**merge**|結果セットは、マージレプリケーションが有効になっている場合に返されます。|  
@@ -57,15 +58,15 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpreplicationoption**は、特定のサーバーで有効になっているレプリケーションオプションに関する情報を取得するために使用されます。 特定のデータベースに関する情報を取得するには、 **sp_helpreplicationdboption**を使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpreplicationoption** は、特定のサーバーで有効になっているレプリケーションオプションに関する情報を取得するために使用されます。 特定のデータベースに関する情報を取得するには、 **sp_helpreplicationdboption**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限は、既定で**public**ロールに設定されています。  
+ 実行権限は、既定で **public** ロールに設定されています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

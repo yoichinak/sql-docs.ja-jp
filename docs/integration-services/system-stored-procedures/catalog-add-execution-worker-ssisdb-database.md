@@ -1,4 +1,5 @@
 ---
+description: catalog.add_execution_worker (SSISDB データベース)
 title: catalog.add_execution_worker (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -11,12 +12,12 @@ ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffcd20f1895252cc09eca1fc87a055bd5c964a38
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917643"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129950"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB データベース)
 
@@ -66,6 +67,6 @@ Scale Out Worker の worker エージェント ID。 *workeragent_id* は **uniq
 
 - Scale Out に実行がない。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Scale Out でのパッケージの実行](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)。
 

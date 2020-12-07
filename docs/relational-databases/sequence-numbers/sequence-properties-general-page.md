@@ -1,4 +1,5 @@
 ---
+description: '[順序のプロパティ]\([全般] ページ)'
 title: '[順序のプロパティ] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88325843"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85725901"
 |**tinyint**|0 ～ 255|  
 |**smallint**|-32,768 ～ 32,767|  
 |**int**|-2,147,483,648 ～ 2,147,483,647|  
-|**bigint**|-9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807|  
+|**bigint**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
   
 -   **decimal** または **numeric** の場合、小数点以下を含みません。  
   
@@ -86,9 +87,9 @@ ms.locfileid: "85725901"
  CREATE SEQUENCE のオプションの詳細については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- SCHEMA に対する **CREATE SEQUENCE**権限、 **ALTER**権限、または **CONTROL** 権限が必要です。  
+ SCHEMA に対する **CREATE SEQUENCE** 権限、 **ALTER** 権限、または **CONTROL** 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

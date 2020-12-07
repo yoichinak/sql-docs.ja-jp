@@ -1,4 +1,5 @@
 ---
+description: STDisjoint (geometry データ型)
 title: STDisjoint (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 78d120ce4e43427fc54809bf91b54788fd482a36
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 43d6372bbe90146004e205d8ac3678196d76712e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555017"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416898"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555017"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  地点のセットの交点が空である場合、2 つの **geography** インスタンスは連結されていません。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

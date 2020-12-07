@@ -1,4 +1,5 @@
 ---
+description: BottomPercent (MDX)
 title: 下% (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b3ce341526270335564e9f67ccb89612854e098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494984"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -31,13 +32,13 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *パーセント*  
+ *Percentage*  
  返される組の割合を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **下端のパーセント**関数は、指定されたセットに対して評価される指定された数値式の合計を計算し、セットを昇順に並べ替えます。 次に、値の合計の累積パーセントが指定した割合以上になるように、最も小さい値を持つ要素を返します。 この関数は、累積合計が指定した割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  

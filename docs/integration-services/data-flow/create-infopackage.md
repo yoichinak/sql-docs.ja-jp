@@ -1,4 +1,5 @@
 ---
+description: インフォパッケージの作成
 title: インフォパッケージの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f84017f981fb8300e0cd0773981bade40ed5141f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38c7183853dcac7043672d5e4a622362af08c10b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923568"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127282"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
 
@@ -61,7 +62,7 @@ ms.locfileid: "86923568"
  **保存と有効化**  
  新しいインフォパッケージを保存してアクティブ化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

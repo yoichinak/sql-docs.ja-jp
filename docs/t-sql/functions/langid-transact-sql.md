@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LANGID (Transact-SQL)'
 title: '@@LANGID (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6098c5fc8eab31bd567390656d27cc13a5862086
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e6cd2cb8379281733a4fadada57af60780d0f0db
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110934"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128404"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "87110934"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@LANGID  
 ```  
   
@@ -52,7 +53,7 @@ ms.locfileid: "87110934"
 ## <a name="examples"></a>例  
  この例では、現在のセッションで使用する言語を `Italian` に設定し、`@@LANGID` を使用してイタリア語の ID を返します。  
   
-```  
+```sql  
 SET LANGUAGE 'Italian'  
 SELECT @@LANGID AS 'Language ID'  
 ```  

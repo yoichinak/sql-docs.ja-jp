@@ -1,4 +1,5 @@
 ---
+description: RSExecRole を作成する
 title: RSExecRole を作成する | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140475"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935394"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
@@ -208,15 +209,15 @@ ms.locfileid: "67140475"
   
 4.  **[既存のレポート サーバー データベースを選択する]** をクリックします。  
   
-5.  データベース エンジンのサーバー名を入力します。 レポート サーバー データベースを名前付きインスタンスにアタッチした場合は、\<サーバー名>\\<インスタンス名\> の形式でインスタンス名を入力する必要があります。  
+5.  データベース エンジンのサーバー名を入力します。 レポート サーバー データベースを名前付きインスタンスにアタッチした場合は、\<servername>\\<instancename\> の形式でインスタンス名を入力する必要があります。  
   
 6.  **[接続テスト]** をクリックします。 "接続テストに成功しました" というダイアログ ボックスが表示されるはずです。
   
-7.  **[OK]** を選択してダイアログ ボックスを閉じ、 **[次へ]** を選択します。  
+7.  **[OK]** を選択してダイアログ ボックスを閉じ、**[次へ]** を選択します。  
   
 8.  [データベース] で、レポート サーバー データベースを選択します。  
   
-9.  **[次へ]** をクリックし、ウィザードを終了します。  
+9.  **[次へ]** をクリックして、ウィザードを完了します。  
   
 10. **[暗号化キー]** をクリックします。  
   
@@ -265,8 +266,8 @@ GO
 ## <a name="next-steps"></a>次のステップ
 
 [別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
-[Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[ネイティブ モードのレポート サーバー データベースを作成する &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[レポート サーバーの構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,4 +1,5 @@
 ---
+description: MultiPolygon
 title: MultiPolygon | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3f7ad93673d874c6627d495c23a89218fb7d08c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45c8452adf9701776ac65503ecdcdce8f13a5bbd
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640375"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006263"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiPolygon** インスタンスは、0 個以上の **Polygon** インスタンスのコレクションです。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
@@ -94,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [STArea &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STCentroid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)   

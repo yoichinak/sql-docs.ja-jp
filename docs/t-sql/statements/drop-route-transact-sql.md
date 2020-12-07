@@ -1,4 +1,5 @@
 ---
+description: DROP ROUTE (Transact-SQL)
 title: DROP ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - routes [Service Broker], removing
 - removing routes
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85afe80062fafb0da1a9a2a4aaae21302cbc1891
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 112bb3a213fe009ab8ff1a02961bfaecd7da7dce
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485498"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131126"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,6 @@ ms.locfileid: "86485498"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP ROUTE route_name  
 [ ; ]  
 ```  
@@ -60,7 +60,7 @@ DROP ROUTE route_name
 ## <a name="examples"></a>例  
  次の例では、`ExpenseRoute` ルートを削除します。  
   
-```  
+```sql  
 DROP ROUTE ExpenseRoute ;  
 ```  
   

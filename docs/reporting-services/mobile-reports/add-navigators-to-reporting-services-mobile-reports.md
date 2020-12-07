@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 640f8a5b04f9045f905f86ef6d34924ea849bd80
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448201"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907086"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]では、時間または選択したものによって視覚エフェクトのデータをフィルター処理するには、 *ナビゲーター* を追加します。 
@@ -65,13 +65,13 @@ ms.locfileid: "79448201"
 
 1. 視覚エフェクトを選択し、 **[データ]** タブを選択して、 **[データのプロパティ]** ペインでフィールド名の隣の **[オプション]** を選択します。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![カテゴリ列のオプションが展開されているスクリーンショット。[フィルター条件] で [States / Regions]\(州およびリージョン\) オプションが選択されています。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. **[次に基づいてフィルター]** で、選択リストを選択します。
 
 [プレビュー] または [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルでモバイル レポートを表示し、選択リストの値を選択すると、モバイル レポート内の他の視覚エフェクトがフィルター処理されます。
 
-![mobile-report-selection-list-filtering](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
+![モバイル レポートのスクリーンショット。[States / Regions]\(州およびリージョン\) リストで "Washington" が選択され、返された結果に Washington 州の各都市が表示されています。](../../reporting-services/mobile-reports/media/mobile-report-selection-list-filtering.png) 
      
 ## <a name="scorecard-grid"></a>スコアカード グリッド  
   
@@ -96,13 +96,13 @@ ms.locfileid: "79448201"
 
 7. 希望の値インジケーター名を指定し、テーブルからそのソース列を選択して、それをどのように書式設定するか選択します。  
 
-   ![mobile-report-scorecard-grid-data-properties](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
+   ![新しいスコアに使用できるオプションを示すスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid-data-properties.png)
 
 8. データのプロパティを設定した後、 **[Tables FIltered by Selection List (選択リストでフィルター処理されるテーブル)]** で、フィルター対象のテーブルとフィルターに使用する列を選択します。 この列が、選択リストのキー列の値と一致する必要があります。 
 
 [プレビュー] または [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web ポータルでモバイル レポートを表示し、スコアカード グリッドの値を選択すると、モバイル レポート内の他の視覚エフェクトがフィルター処理されます。
 
-![mobile-report-scorecard-grid](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
+![モバイル レポートのスコアカード グリッドのスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-scorecard-grid.png)
     
 ## <a name="set-which-visualizations-are-filtered"></a>フィルター対象の視覚エフェクトを設定する  
   
@@ -112,7 +112,7 @@ ms.locfileid: "79448201"
 
 1. 視覚エフェクトを選択し、 **[データ]** タブを選択して、 **[データのプロパティ]** ペインでフィールド名の隣の **[オプション]** を選択します。
 
-   ![mobile-report-set-selection-list](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
+   ![カテゴリ列のオプションが展開されているもう 1 つのスクリーンショット。[フィルター条件] で [States / Regions]\(州およびリージョン\) オプションが選択されています。](../../reporting-services/mobile-reports/media/mobile-report-set-selection-list.png)
 
 2. **[次に基づいてフィルター]** で、ナビゲーターを選択します。 各視覚エフェクトは、複数のナビゲーターでフィルター処理できます。
   

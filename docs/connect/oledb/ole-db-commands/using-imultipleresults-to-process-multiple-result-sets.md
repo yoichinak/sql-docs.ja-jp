@@ -1,6 +1,6 @@
 ---
 title: IMultipleResults を使用した複数の結果セットの処理 | Microsoft Docs
-description: IMultipleResults を使用した複数の結果セットの処理
+description: コンシューマーで IMultipleResults を使用して、OLE DB Driver for SQL Server のコマンドを実行して返される結果を処理する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], multiple
 - IMultipleResults interface
 - multiple-rowset results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 405acf9e72cac6188c284ef040c4f5b27ac4af7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50849c89b72d1d5d823c707b2ddbf82ef98301e3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004920"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862410"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>IMultipleResults を使用した複数の結果セットの処理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

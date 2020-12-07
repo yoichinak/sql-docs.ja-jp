@@ -1,8 +1,9 @@
 ---
+description: XML レコードセットの保持シナリオ
 title: XML レコードセット永続化シナリオ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 91066d8dd42d1bcd4a11aab093661a9061a7d7d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748304"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978823"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコードセットの保持シナリオ
 このシナリオでは、レコードセットオブジェクトの内容を ASP 応答オブジェクトに直接保存する Active Server Pages (ASP) アプリケーションを作成します。  
@@ -25,7 +26,7 @@ ms.locfileid: "82748304"
 > [!NOTE]
 >  このシナリオでは、サーバーにインターネットインフォメーションサーバー 5.0 (IIS) 以降がインストールされている必要があります。  
   
- 返されたレコードセットは、Internet Explorer の[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)を使用して表示されます。  
+ 返されたレコードセットは、Internet Explorer の [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md)を使用して表示されます。  
   
  このシナリオを作成するには、次の手順を実行する必要があります。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "82748304"
 -   データの受信と表示  
   
 ## <a name="step-1-set-up-the-application"></a>手順 1: アプリケーションをセットアップする  
- スクリプト権限を使用して、"XMLPersist" という名前の IIS 仮想ディレクトリを作成します。 仮想ディレクトリが指すフォルダーに、"XMLResponse .asp" という名前の2つの新しいテキストファイルを作成します。 "default.htm" という名前を付けます。  
+ スクリプト権限を使用して、"XMLPersist" という名前の IIS 仮想ディレクトリを作成します。 仮想ディレクトリが指すフォルダーに、"XMLResponse .asp" という名前の2つの新しいテキストファイルを作成します。 "Default.htm" という名前を付けます。  
   
 ## <a name="step-2-get-the-data"></a>手順 2: データを取得する  
  この手順では、ADO レコードセットを開いてクライアントに送信するための準備を行うコードを記述します。 ファイル XMLResponse .asp をメモ帳などのテキストエディターで開き、次のコードを挿入します。  
@@ -84,12 +85,12 @@ ms.locfileid: "82748304"
 %>  
 ```  
   
- ASP 応答オブジェクトが、レコードセットの[保存方法](../../../ado/reference/ado-api/save-method.md)の送信先として指定されていることに注意してください。 Save メソッドの送信先には、IStream インターフェイスをサポートする任意のオブジェクト[(Ado ストリームオブジェクト (ado) など)](../../../ado/reference/ado-api/stream-object-ado.md)、またはレコードセットを保存する完全なパスを含むファイル名を指定できます。  
+ ASP 応答オブジェクトが、レコードセットの [保存方法](../../reference/ado-api/save-method.md)の送信先として指定されていることに注意してください。 Save メソッドの送信先には、IStream インターフェイスをサポートする任意のオブジェクト [(Ado ストリームオブジェクト (ado) など)](../../reference/ado-api/stream-object-ado.md)、またはレコードセットを保存する完全なパスを含むファイル名を指定できます。  
   
  次の手順に進む前に、XMLResponse .asp を保存して閉じます。 また、adovbs ファイルを既定の ADO ライブラリインストールフォルダーから、XMLResponse .asp ファイルを保存したフォルダーにコピーします。  
   
 ## <a name="step-4-receive-and-display-the-data"></a>手順 4: データを受信して表示する  
- この手順では、レコードセットを取得するために XMLResponse. .asp ファイルをポイントする埋め込みの[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトを含む HTML ファイルを作成します。 メモ帳などのテキストエディターを使用して default.htm を開き、次のコードを追加します。 URL の "sqlserver" をサーバーの名前に置き換えます。  
+ この手順では、レコードセットを取得するために XMLResponse. .asp ファイルをポイントする埋め込みの [DataControl オブジェクト (RDS)](../../reference/rds-api/datacontrol-object-rds.md) オブジェクトを含む HTML ファイルを作成します。 メモ帳などのテキストエディターを使用して default.htm を開き、次のコードを追加します。 URL の "sqlserver" をサーバーの名前に置き換えます。  
   
 ```  
 <HTML>  
@@ -110,8 +111,8 @@ ms.locfileid: "82748304"
 </HTML>  
 ```  
   
- Default.htm ファイルを閉じ、XMLResponse .asp を保存したフォルダーに保存します。 Internet Explorer 4.0 以降を使用して、https://*sqlserver*/XMLPersist/default.htm URL を開き、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 ここで、https:// *sqlserver* /XMLPersist/XMLResponse.asp という URL を開き、結果を確認します。 XML が表示されます。  
+ default.htm ファイルを閉じ、XMLResponse .asp を保存したフォルダーに保存します。 Internet Explorer 4.0 以降を使用して、https://*sqlserver*/xmlpersist/default.htm URL を開き、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 ここで、https:// *sqlserver* /XMLPersist/XMLResponse.asp という URL を開き、結果を確認します。 XML が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)   
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Save メソッド](../../reference/ado-api/save-method.md)   
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

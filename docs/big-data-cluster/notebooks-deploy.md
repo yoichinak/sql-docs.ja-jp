@@ -1,7 +1,7 @@
 ---
 title: '展開: Azure Data Studio ノートブック'
 titleSuffix: SQL Server Big Data Clusters
-description: Azure Data Studio からノートブックを使用して、ビッグ データ クラスターを展開します。
+description: Azure Data Studio からノートブックでコードとドキュメントを使用し、SQL Server ビッグ データ クラスターを展開する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67cbd034cd2b5fc36b9f98bbfb2f8bbc43f1598e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699968"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725843"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
 
@@ -23,7 +23,7 @@ ms.locfileid: "85699968"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、展開ノートブックを含む Azure Data Studio の拡張機能が提供されています。 展開ノートブックには、SQL Server ビッグ データ クラスターを作成するために Azure Data Studio 内で使用できるドキュメントとコードが含まれています。
 
-もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks-guidance.md)は [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download) 内に実装されていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
+もともとは、オープン ソース プロジェクトとして実装され、[ノートブック](../azure-data-studio/notebooks/notebooks-guidance.md)は [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15) 内に実装されていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 
@@ -35,9 +35,9 @@ ms.locfileid: "85699968"
 
 上記に加えて、SQL Server 2019 ビッグ データ クラスターを展開するには、以下も必要になります。
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
-* [Azure CLI (Azure に展開する場合)](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
+* [Azure CLI (Azure に展開する場合)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 ## <a name="launch-the-notebook"></a>ノートブックを起動する
 

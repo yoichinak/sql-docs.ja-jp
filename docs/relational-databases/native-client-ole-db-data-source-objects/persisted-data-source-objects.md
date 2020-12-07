@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client の永続化されたデータソースオブジェクト
 title: 永続化されたデータソースオブジェクト (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 482762127b8daa9d3fad3e4a3fd79a6ad9d179ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381478"
 ---
 # <a name="persisted-data-source-objects-in-sql-server-native-client"></a>SQL Server Native Client の永続化されたデータソースオブジェクト 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87242162"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
 ## <a name="examples"></a>例  
- **A. データ ソースの初期化の保存 :**  
+ **A.データ ソースの初期化の保存:**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
   
@@ -140,7 +141,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 保存されたデータ ソースの初期化の使用 :**  
+ **B.保存されたデータ ソースの初期化の使用:**  
   
  次の例では、保存されたデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを指定する初期化プロパティを追加します。  
   

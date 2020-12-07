@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetInstanceInfo 関数
 title: LocalDBGetInstanceInfo 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5afa31d7b4b3cb814fee3df4154e713f30f7079
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789500"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544060"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  [出力] LocalDB インスタンスについての情報を格納するバッファー。  
   
  *dwInstanceInfoSize*  
- 代入*Instanceinfo*バッファーのサイズを保持します。  
+ 代入 *Instanceinfo* バッファーのサイズを保持します。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -141,7 +142,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

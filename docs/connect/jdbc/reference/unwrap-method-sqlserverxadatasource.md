@@ -1,4 +1,5 @@
 ---
+description: unwrap メソッド (SQLServerXADataSource)
 title: unwrap メソッド (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 373017cd635b8094a00ea19d6291ea5e158af1a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67986047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478445"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap メソッド (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

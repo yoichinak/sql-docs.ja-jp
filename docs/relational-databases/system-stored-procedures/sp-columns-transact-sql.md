@@ -1,4 +1,5 @@
 ---
+description: sp_columns (Transact-SQL)
 title: sp_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0c7a46f76385a724f1aa8622ac85301cdc7e12b6
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180291"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006505"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "88180291"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+-- Syntax for SQL Server, Azure SQL Database, Azure Synapse Analytics, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
      [ , [ @table_owner = ] owner ]   
@@ -90,7 +91,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT および VIEW DEFINITION 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **sp_columns** は、区切られた識別子の要件に従います。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
 ## <a name="examples"></a>例  

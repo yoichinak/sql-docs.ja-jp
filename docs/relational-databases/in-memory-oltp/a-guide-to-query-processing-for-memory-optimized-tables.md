@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2bd48189958a95a54efa128a7b0a9887b4e04b4c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247081"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867418"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,37 +273,32 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Hash Match 操作が集計をサポートしていないことに注意してください。 したがって、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] 内の同じクエリに対するプランが Hash Match 操作を使用しても、ネイティブ コンパイル ストアド プロシージャ内のすべての集計は Stream Aggregate 操作を使用します|  
   
 ## <a name="column-statistics-and-joins"></a>列統計と結合  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、非インデックス キー列に対しても、明示的に作成された場合またはクエリ オプティマイザーによってクエリの述語に応じて作成された場合、統計が作成されます)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、非インデックス キー列に対しても、明示的に作成された場合またはクエリ オプティマイザーによってクエリの述語に応じて作成された場合、統計が作成されます)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
   
- 図 1 の例の場合は、次のようになります。  
+図 1 の例の場合は、次のようになります。  
   
--   Customer でのクラスター化インデックス スキャンは、推定値が 91、実際の値が 91。  
+- Customer でのクラスター化インデックス スキャンは、推定値が 91、実際の値が 91。  
+- CustomerID での非クラスター化インデックス スキャンは、推定値が 830、実際の値が 830。  
+- マージ結合操作は、推定値が 815、実際の値が 830。  
   
--   CustomerID での非クラスター化インデックス スキャンは、推定値が 830、実際の値が 830。  
+インデックス スキャンの推定値は正確です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルの行数を保持します。 テーブル全体の推定およびインデックス スキャンは常に正確です。 結合の推定も非常に正確です。  
   
--   マージ結合操作は、推定値が 815、実際の値が 830。  
+これらの推定が変わると、さまざまなプランの選択肢に対するコストの注意点も変わります。 たとえば、1 個の結合操作の推定値が 1 または少ない行数である場合、Nested Loops 結合を使用する方が低コストです。 次のクエリを考えてみます。  
   
- インデックス スキャンの推定値は正確です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルの行数を保持します。 テーブル全体の推定およびインデックス スキャンは常に正確です。 結合の推定も非常に正確です。  
-  
- これらの推定が変わると、さまざまなプランの選択肢に対するコストの注意点も変わります。 たとえば、1 個の結合操作の推定値が 1 または少ない行数である場合、Nested Loops 結合を使用する方が低コストです。  
-  
- 次に、クエリのプランを示します。  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Customer テーブルで 1 行だけを残してすべての行を削除した後  
+`Customer` テーブルの 1 行を除くすべての行を削除すると、次のクエリ プランが生成されます。  
   
- ![列統計と結合。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "列統計と結合。")  
+![列統計と結合。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "列統計と結合。")  
   
- このクエリ プランについて  
+このクエリ プランについて  
   
--   Hash Match は、Nested Loops 物理結合操作で置き換えられました。  
-  
--   IX_CustomerID でのフル インデックス スキャンは、インデックス シークで置き換えられました。 これにより、スキャンの対象は 5 行となり、フル インデックス スキャンに必要な 830 行ではなくなります。  
+- Hash Match は、Nested Loops 物理結合操作で置き換えられました。  
+- IX_CustomerID でのフル インデックス スキャンは、インデックス シークで置き換えられました。 これにより、スキャンの対象は 5 行となり、フル インデックス スキャンに必要な 830 行ではなくなります。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md)  
   

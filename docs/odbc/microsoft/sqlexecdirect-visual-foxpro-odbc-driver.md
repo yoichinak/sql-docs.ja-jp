@@ -1,4 +1,5 @@
 ---
+description: SQLExecDirect (Visual FoxPro ODBC ドライバー)
 title: SQLExecDirect (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40c0a3404a3e7a9a67b6f71d197343eddb417955
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d12218097caf6d4a2c4a0375f1a8e9542b2ccf59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449184"
 ---
 # <a name="sqlexecdirect-visual-foxpro-odbc-driver"></a>SQLExecDirect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -27,7 +28,7 @@ ms.locfileid: "81298672"
   
  ODBC API の準拠: コアレベル  
   
- 新しい[準備可能 SQL ステートメント](../../odbc/microsoft/visual-foxpro-terminology.md)を実行します。 ステートメントにパラメーターが存在する場合、Visual FoxPro ODBC ドライバーはパラメーターマーカー変数の現在の値を使用します。  
+ 新しい [準備可能 SQL ステートメント](../../odbc/microsoft/visual-foxpro-terminology.md)を実行します。 ステートメントにパラメーターが存在する場合、Visual FoxPro ODBC ドライバーはパラメーターマーカー変数の現在の値を使用します。  
   
  一度に複数の SQL ステートメントを送信するバッチコマンドを作成するには、セミコロン;) () を使用します。バッチ内の各 SQL ステートメントを分離する場合はです。  
   

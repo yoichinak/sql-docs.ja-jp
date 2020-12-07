@@ -1,8 +1,9 @@
 ---
+description: 簡単なコマンドの作成と実行
 title: 単純なコマンドの作成と実行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f40f55f2a7df85078131813015fd584b52c75c2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761138"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991483"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>簡単なコマンドの作成と実行
 単純なコマンドとは、パラメーター化されておらず、永続化が必要ないコマンドです。 簡単なコマンドを作成して実行するには、次の3つの方法があります。  
@@ -32,7 +33,7 @@ ms.locfileid: "82761138"
 ## <a name="using-a-command-object"></a>Command オブジェクトの使用  
  **コマンド**オブジェクトを使用して簡単なコマンドを作成するには、**コマンド**オブジェクトの**CommandText**プロパティに命令を割り当て、 **CommandType**プロパティに適切な値を設定する必要があります。 コマンドを実行するには、開いている接続が**command**オブジェクトの**ActiveConnection**プロパティに割り当てられ、その後に**command**オブジェクトの**Execute**メソッドを呼び出す必要があります。  
   
- 次のコードスニペットは、 **command**オブジェクトを使用してデータソースに対してコマンドを実行する基本的な方法を示しています。 この例では、行を返すコマンドを使用し、コマンド実行の結果を**レコードセット**オブジェクトとして返します。  
+ 次のコードスニペットは、 **command** オブジェクトを使用してデータソースに対してコマンドを実行する基本的な方法を示しています。 この例では、行を返すコマンドを使用し、コマンド実行の結果を **レコードセット** オブジェクトとして返します。  
   
 ```  
     'BeginBasicCmd  

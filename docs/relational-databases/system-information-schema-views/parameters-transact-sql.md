@@ -1,4 +1,5 @@
 ---
+description: パラメーター (Transact-sql)
 title: PARAMETERS (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,21 +17,22 @@ helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ba42e693487fdf2bc9c7cb9565ee2448d6b3f9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 46360eac7080f92f98ba3f081b7cd9ec505f12c9
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000435"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753572"
 ---
 # <a name="parameters-transact-sql"></a>パラメーター (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のデータベース内の、現在のユーザーがアクセスできるユーザー定義の関数またはストアド プロシージャのパラメーターごとに 1 行のデータを返します。 関数の場合は、戻り値情報の行も返します。  
   
- これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
+ これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し **ます。**_view_name_。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,21 +56,20 @@ ms.locfileid: "86000435"
 |**NUMERIC_PRECISION**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|数値データの概数、正確な数値データ、整数データ、または通貨データの有効桁数の基数。 その他の場合は NULL が返されます。|  
 |**NUMERIC_SCALE**|**tinyint**|数値データの概数、正確な数値データ、整数データ、または通貨データの桁数。 その他の場合は NULL が返されます。|  
-|**DATETIME_PRECISION**|**smallint**|パラメーターの型が**datetime**または**smalldatetime**の場合の秒の小数部の有効桁数。 その他の場合は NULL が返されます。|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来利用するために予約されています。|  
-|**INTERVAL_PRECISION**|**smallint**|NULL。 将来利用するために予約されています。|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来利用するために予約されています。|  
+|**DATETIME_PRECISION**|**smallint**|パラメーターの型が **datetime** または **smalldatetime**の場合の秒の小数部の有効桁数。 その他の場合は NULL が返されます。|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL。 将来使用するために予約されています。|  
+|**INTERVAL_PRECISION**|**smallint**|NULL。 将来使用するために予約されています。|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL。 将来使用するために予約されています。|  
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [&#40;Transact-sql&#41;の列](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
-  
   

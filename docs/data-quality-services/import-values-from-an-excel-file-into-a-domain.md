@@ -1,4 +1,5 @@
 ---
+description: 値を Excel ファイルからドメインへインポートする
 title: 値を Excel ファイルからドメインへインポートする
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ f1_keywords:
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ead2196e2eaa48ee1bdd76e1ca18c3e4e11085d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf2b2f9d6b2f3ad72121db25758b2258363d8566
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431334"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
 
 [!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジベースへのドメインのインポートの詳細については、「[ナレッジ検出で Excel ファイルからドメインをインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」を参照してください)。Excel ファイルへのエクスポートはサポートされていません。  
+  このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジベースへのドメインのインポートの詳細については、「 [ナレッジ検出で Excel ファイルからドメインをインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 」を参照してください)。Excel ファイルへのエクスポートはサポートされていません。  
   
  データ値は、次の 2 とおりの方法でインポートできます。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85882808"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a>Excel ファイルからドメインに値をインポートする  
+##  <a name="import-values-from-an-excel-file-into-a-domain"></a><a name="Import"></a> Excel ファイルからドメインに値をインポートする  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -72,10 +73,10 @@ ms.locfileid: "85882808"
   
 14. **[完了]** をクリックしてナレッジ ベースに値を追加します。  
   
-##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a>補足情報: Excel ファイルからドメインに値をインポートした後  
+##  <a name="follow-up-after-importing-values-from-an-excel-file-into-a-domain"></a><a name="FollowUp"></a> 補足情報: Excel ファイルからドメインに値をインポートした後  
  ドメインに値をインポートした後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="importing-synonyms"></a><a name="Synonyms"></a>シノニムのインポート  
+##  <a name="importing-synonyms"></a><a name="Synonyms"></a> シノニムのインポート  
  シノニムのインポートの動作は次のとおりです。  
   
 -   先にすべての値がインポートされてから、シノニムの関連付けが確立されます。  
@@ -90,7 +91,7 @@ ms.locfileid: "85882808"
   
 -   アプリケーションで何かの理由により手動で値を関連付けることができない場合、インポート操作で適用されません。  
   
-##  <a name="how-the-import-works"></a><a name="How"></a>インポートのしくみ  
+##  <a name="how-the-import-works"></a><a name="How"></a> インポートのしくみ  
  インポート操作でインポートされる値を次に示します。  
   
  DQS のインポート操作では、Excel ファイルからのインポートが次のように実行されます。  

@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations 関数
 title: SQLBulkOperations 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421296"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
 **互換性**  
  導入されたバージョン: ODBC 3.0 標準準拠: ODBC  
   
  **まとめ**  
- **Sqlbulkoperations**では、更新、削除、およびブックマークによるフェッチを含む一括挿入操作と一括ブックマーク操作が実行されます。  
+ **Sqlbulkoperations** では、更新、削除、およびブックマークによるフェッチを含む一括挿入操作と一括ブックマーク操作が実行されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +59,7 @@ SQLRETURN SQLBulkOperations(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlbulkoperations**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlbulkoperations**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **Sqlbulkoperations**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlbulkoperations** によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
  SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、単一行操作でエラーが発生した場合は SQL_ERROR が返されます。  
   
@@ -66,45 +67,45 @@ SQLRETURN SQLBulkOperations(
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データの右側の切り捨て|*操作*引数が SQL_FETCH_BY_BOOKMARK、データ型が SQL_C_CHAR または SQL_C_BINARY の列に対して返された文字列またはバイナリデータが、空白以外の文字または NULL 以外のバイナリデータの切り捨てになりました。|  
-|01S01|行にエラーがあります|*操作*の引数が SQL_ADD ましたが、操作の実行中に1つ以上の行でエラーが発生しましたが、少なくとも1つの行が正常に追加されました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (このエラーは、アプリケーションが ODBC 2 で動作している場合にのみ発生します。*x*ドライバー。)|  
+|01S01|行にエラーがあります|*操作*の引数が SQL_ADD ましたが、操作の実行中に1つ以上の行でエラーが発生しましたが、少なくとも1つの行が正常に追加されました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (このエラーは、アプリケーションが ODBC 2 で動作している場合にのみ発生します。*x* ドライバー。)|  
 |01S07|小数部の切り捨て|*操作*引数が SQL_FETCH_BY_BOOKMARK でした。アプリケーションバッファーのデータ型が SQL_C_CHAR または SQL_C_BINARY ではありません。また、1つまたは複数の列のアプリケーションバッファーに返されたデータが切り捨てられました。 (数値 C データ型の場合、数値の小数部は切り捨てられました。 時間、タイムスタンプ、および期間の C データ型については、時間部分が含まれている場合、時間の小数部が切り捨てられました。<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|*操作*引数が SQL_FETCH_BY_BOOKMARK ましたが、結果セット内の列のデータ値を、 **SQLBindCol**の呼び出しの*TargetType*引数で指定されたデータ型に変換できませんでした。<br /><br /> *操作*引数が SQL_UPDATE_BY_BOOKMARK または SQL_ADD でしたが、アプリケーションバッファーのデータ値を結果セットの列のデータ型に変換できませんでした。|  
-|07009|無効な記述子のインデックス|引数*操作*が SQL_ADD ましたが、列が結果セット内の列数より大きい列数でバインドされました。|  
-|21S02|派生テーブルの次数が列の一覧と一致しません|引数の*操作*が SQL_UPDATE_BY_BOOKMARK でした。また、すべての列がバインド解除されたか読み取り専用であったか、またはバインドされた長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE ていたため、列は更新できませんでした。|  
+|07009|無効な記述子のインデックス|引数 *操作* が SQL_ADD ましたが、列が結果セット内の列数より大きい列数でバインドされました。|  
+|21S02|派生テーブルの次数が列の一覧と一致しません|引数の *操作* が SQL_UPDATE_BY_BOOKMARK でした。また、すべての列がバインド解除されたか読み取り専用であったか、またはバインドされた長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE ていたため、列は更新できませんでした。|  
 |22001|文字列データの右側の切り捨て|結果セットの列に文字またはバイナリ値を代入すると、空白以外の文字 (文字の場合) または null 以外 (バイナリの場合) が切り捨てられます。|  
-|22003|数値が有効範囲にありません|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でした。また、結果セット内の列に数値を代入すると、切り捨てられる数値の一部 (小数部分ではなく) が発生します。<br /><br /> 引数*操作*が SQL_FETCH_BY_BOOKMARK ましたが、1つ以上のバインドされた列の数値を返すと、有効桁数が失われた可能性があります。|  
-|22007|無効な datetime 形式|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でしたが、日付またはタイムスタンプの値が結果セットの列に割り当てられたため、年、月、または日のフィールドが範囲外になっています。<br /><br /> 引数の*操作*が SQL_FETCH_BY_BOOKMARK ましたが、1つ以上のバインドされた列の日付またはタイムスタンプの値が返されたため、年、月、または日のフィールドが範囲外になっていました。|  
+|22003|数値が有効範囲にありません|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でした。また、結果セット内の列に数値を代入すると、切り捨てられる数値の一部 (小数部分ではなく) が発生します。<br /><br /> 引数 *操作* が SQL_FETCH_BY_BOOKMARK ましたが、1つ以上のバインドされた列の数値を返すと、有効桁数が失われた可能性があります。|  
+|22007|無効な datetime 形式|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でしたが、日付またはタイムスタンプの値が結果セットの列に割り当てられたため、年、月、または日のフィールドが範囲外になっています。<br /><br /> 引数の *操作* が SQL_FETCH_BY_BOOKMARK ましたが、1つ以上のバインドされた列の日付またはタイムスタンプの値が返されたため、年、月、または日のフィールドが範囲外になっていました。|  
 |22008|日付/時刻フィールドのオーバーフロー|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK で、結果セット内の列に送信されるデータに対する datetime 算術演算の結果が、フィールドの許容範囲外になるか、または Datetimes のグレゴリオ暦の自然なルールに基づいて無効になる結果の datetime フィールド (year、month、day、hour、minute、または second field) が発生しました。<br /><br /> *操作*引数が SQL_FETCH_BY_BOOKMARK ましたが、結果セットから取得されるデータに対する datetime 算術演算のパフォーマンスによって、結果の datetime フィールド (年、月、日、時、分、または2番目のフィールド) がフィールドに許容される値の範囲外になるか、グレゴリオ暦の datetimes の自然なルールに基づいて無効になりました|  
 |22015|間隔フィールドオーバーフロー|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でしたが、真数または interval C 型を interval SQL データ型に割り当てた結果、有効桁数が失われました。<br /><br /> *操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK;interval SQL 型にを割り当てる場合、interval SQL 型の C 型の値は表現されませんでした。<br /><br /> *操作*引数が SQL_FETCH_BY_BOOKMARK ましたが、正確な数値または期間の SQL 型から間隔 C 型に割り当てているため、先頭のフィールドの有効桁数が失われました。<br /><br /> *操作*引数が SQL_FETCH_BY_BOOKMARK でした。間隔 C 型にを割り当てる場合、interval C 型の SQL 型の値は表現されませんでした。|  
-|22018|キャストの指定に無効な文字値があります|*操作*引数が SQL_FETCH_BY_BOOKMARK でした。C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> 引数の*操作*が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でした。SQL 型は、正確な数値、概数、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。列の値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
+|22018|キャストの指定に無効な文字値があります|*操作*引数が SQL_FETCH_BY_BOOKMARK でした。C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> 引数の *操作* が SQL_ADD または SQL_UPDATE_BY_BOOKMARK でした。SQL 型は、正確な数値、概数、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。列の値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
 |23000|整合性制約違反|*操作*引数が SQL_ADD、SQL_DELETE_BY_BOOKMARK、または SQL_UPDATE_BY_BOOKMARK で、整合性制約に違反しました。<br /><br /> *操作*引数が SQL_ADD ましたが、バインドされていない列は not NULL として定義されており、既定値はありません。<br /><br /> *操作*引数が SQL_ADD でした。バインドされた*StrLen_or_IndPtr*バッファーに指定された長さが SQL_COLUMN_IGNORE ましたが、列に既定値がありませんでした。|  
 |24000|カーソル状態が無効|*StatementHandle*は実行状態でしたが、結果セットが*StatementHandle*に関連付けられていませんでした。|  
 |40001|シリアル化エラー|別のトランザクションでリソースのデッドロックが発生したため、トランザクションがロールバックされました。|  
 |40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続に失敗しました。トランザクションの状態を確認できません。|  
 |42000|構文エラーまたはアクセス違反|*操作*引数で要求された操作を実行するために必要な行をドライバーがロックできませんでした。|  
 |44000|WITH CHECK OPTION 違反|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK で、insert または Update が**WITH CHECK OPTION**を指定して作成された表示テーブル (または表示テーブルから派生したテーブル) で実行されました。この方法では、挿入または更新によって影響を受ける1つ以上の行が、表示されるテーブルに存在しなくなります。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 * \* Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
-|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlbulkoperations**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 指定された*StatementHandle*は実行状態ではありませんでした。 最初に**SQLExecDirect**、 **sqlexecute**、またはカタログ関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) ドライバーは ODBC 2 でした。**Sqlbulkoperations**または**sqlfetch**が呼び出される前に、 *StatementHandle*に対して*x*ドライバーおよび**sqlbulkoperations**が呼び出されました。<br /><br /> (DM) **Sqlbulkoperations**は、 *StatementHandle*で**SQLExtendedFetch**が呼び出された後に呼び出されました。|  
-|HY011|属性を今設定することはできません|(DM) ドライバーは ODBC 2 でした。*x*ドライバー、および SQL_ATTR_ROW_STATUS_PTR statement 属性が、 **sqlfetch**または**Sqlfetchscroll**と**sqlbulkoperations**の呼び出しの間に設定されました。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel** または **Sqlcancelhandle** が *StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlbulkoperations** 関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または **Sqlmoreresults** が *StatementHandle* に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 指定された *StatementHandle* は実行状態ではありませんでした。 最初に **SQLExecDirect**、 **sqlexecute**、またはカタログ関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が *StatementHandle* に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または **SQLSetPos** が *StatementHandle* に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) ドライバーは ODBC 2 でした。**Sqlbulkoperations**または**sqlfetch**が呼び出される前に、 *StatementHandle*に対して*x*ドライバーおよび**sqlbulkoperations**が呼び出されました。<br /><br /> (DM) **Sqlbulkoperations**は、 *StatementHandle*で**SQLExtendedFetch**が呼び出された後に呼び出されました。|  
+|HY011|属性を今設定することはできません|(DM) ドライバーは ODBC 2 でした。*x* ドライバー、および SQL_ATTR_ROW_STATUS_PTR statement 属性が、 **sqlfetch** または **Sqlfetchscroll** と **sqlbulkoperations**の呼び出しの間に設定されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
-|HY090|文字列またはバッファーの長さが無効です|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK;データ値が null ポインターではありませんでした。C データ型が SQL_C_BINARY または SQL_C_CHAR;列の長さの値が0未満ですが、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありません。<br /><br /> 長さ/インジケーターバッファーの値が SQL_DATA_AT_EXEC でした。SQL 型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、またはデータソース固有の長いデータ型のいずれかです。また、 **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" でした。<br /><br /> *操作*引数が SQL_ADD、SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_VARIABLE に設定されました。列0は、長さがこの結果セットのブックマークの最大長と等しくないバッファーにバインドされています。 (この長さは IRD の [SQL_DESC_OCTET_LENGTH] フィールドで使用でき、 **SQLDescribeCol**、 **sqlcolattribute**、または**SQLGetDescField**を呼び出すことによって取得できます)。|  
-|HY092|無効な属性識別子|(DM)*操作*引数に指定された値が無効でした。<br /><br /> *操作*引数が SQL_ADD、SQL_UPDATE_BY_BOOKMARK、または SQL_DELETE_BY_BOOKMARK で、SQL_ATTR_CONCURRENCY statement 属性が SQL_CONCUR_READ_ONLY に設定されています。<br /><br /> *操作*引数が SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK、または SQL_UPDATE_BY_BOOKMARK であり、BOOKMARK 列がバインドされていないか、または SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されています。|  
+|HY090|文字列またはバッファーの長さが無効です|*操作*引数が SQL_ADD または SQL_UPDATE_BY_BOOKMARK;データ値が null ポインターではありませんでした。C データ型が SQL_C_BINARY または SQL_C_CHAR;列の長さの値が0未満ですが、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありません。<br /><br /> 長さ/インジケーターバッファーの値が SQL_DATA_AT_EXEC でした。SQL 型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、またはデータソース固有の長いデータ型のいずれかです。また、 **SQLGetInfo** の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" でした。<br /><br /> *操作*引数が SQL_ADD、SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_VARIABLE に設定されました。列0は、長さがこの結果セットのブックマークの最大長と等しくないバッファーにバインドされています。 (この長さは IRD の [SQL_DESC_OCTET_LENGTH] フィールドで使用でき、 **SQLDescribeCol**、 **sqlcolattribute**、または **SQLGetDescField**を呼び出すことによって取得できます)。|  
+|HY092|無効な属性識別子|(DM) *操作* 引数に指定された値が無効でした。<br /><br /> *操作*引数が SQL_ADD、SQL_UPDATE_BY_BOOKMARK、または SQL_DELETE_BY_BOOKMARK で、SQL_ATTR_CONCURRENCY statement 属性が SQL_CONCUR_READ_ONLY に設定されています。<br /><br /> *操作*引数が SQL_DELETE_BY_BOOKMARK、SQL_FETCH_BY_BOOKMARK、または SQL_UPDATE_BY_BOOKMARK であり、BOOKMARK 列がバインドされていないか、または SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されています。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
-|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースは、*操作*引数で要求された操作をサポートしていません。|  
+|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースは、 *操作* 引数で要求された操作をサポートしていません。|  
 |HYT00|タイムアウトに達しました|データソースから結果セットが返される前に、クエリのタイムアウト期間が経過しました。 タイムアウト期間は、SQL_ATTR_QUERY_TIMEOUT の*属性*引数を使用して**SQLSetStmtAttr**によって設定されます。|  
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle* に関連付けられているドライバーでは、関数はサポートされていません。|  
 |IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
-|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
+|IM018|**Sqlcompleteasync** は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して **Sqlcompleteasync** を呼び出す必要があります。|  
   
-## <a name="comments"></a>説明  
+## <a name="comments"></a>コメント  
   
 > [!CAUTION]  
 >  **Sqlbulkoperations**を呼び出すことができるステートメントの状態と、ODBC 2 との互換性を確保するために何を行う必要があるかについては、「」を参照してください。*x*アプリケーション、「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「[ブロックカーソル、スクロール可能なカーソル、および旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)」セクションを参照してください。  
   
- アプリケーションでは、 **Sqlbulkoperations**を使用して、現在のクエリに対応するベーステーブルまたはビューに対して次の操作を実行します。  
+ アプリケーションでは、 **Sqlbulkoperations** を使用して、現在のクエリに対応するベーステーブルまたはビューに対して次の操作を実行します。  
   
 -   新しい行を追加します。  
   
@@ -114,11 +115,11 @@ SQLRETURN SQLBulkOperations(
   
 -   各行がブックマークによって識別される行セットをフェッチします。  
   
- **Sqlbulkoperations**を呼び出した後、ブロックカーソルの位置は未定義です。 アプリケーションでは、カーソル位置を設定するために**Sqlfetchscroll**を呼び出す必要があります。 アプリケーションで**Sqlfetchscroll**を呼び出す必要があるのは、SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE、または SQL_FETCH_BOOKMARK の*fetchorientation*引数を使用した場合のみです。 アプリケーションが SQL_FETCH_PRIOR、SQL_FETCH_NEXT、または SQL_FETCH_RELATIVE の*Fetchorientation*引数を使用して**Sqlfetch**または**sqlfetchscroll**を呼び出すと、カーソルの位置は未定義になります。  
+ **Sqlbulkoperations**を呼び出した後、ブロックカーソルの位置は未定義です。 アプリケーションでは、カーソル位置を設定するために **Sqlfetchscroll** を呼び出す必要があります。 アプリケーションで **Sqlfetchscroll** を呼び出す必要があるのは、SQL_FETCH_FIRST、SQL_FETCH_LAST、SQL_FETCH_ABSOLUTE、または SQL_FETCH_BOOKMARK の *fetchorientation* 引数を使用した場合のみです。 アプリケーションが SQL_FETCH_PRIOR、SQL_FETCH_NEXT、または SQL_FETCH_RELATIVE の*Fetchorientation*引数を使用して**Sqlfetch**または**sqlfetchscroll**を呼び出すと、カーソルの位置は未定義になります。  
   
  **SQLBindCol**への呼び出しで指定された列長/インジケーターバッファーを SQL_COLUMN_IGNORE に設定することによって、 **sqlbulkoperations**の呼び出しによって実行される一括操作では、列を無視できます。  
   
- この関数で一括操作を実行するときに行を無視することはできないため、 **Sqlbulkoperations**を呼び出すときにアプリケーションで SQL_ATTR_ROW_OPERATION_PTR ステートメント属性を設定する必要はありません。  
+ この関数で一括操作を実行するときに行を無視することはできないため、 **Sqlbulkoperations** を呼び出すときにアプリケーションで SQL_ATTR_ROW_OPERATION_PTR ステートメント属性を設定する必要はありません。  
   
  SQL_ATTR_ROWS_FETCHED_PTR statement 属性が指すバッファーには、 **Sqlbulkoperations**の呼び出しによって影響を受ける行の数が含まれます。  
   
@@ -142,7 +143,7 @@ SQLRETURN SQLBulkOperations(
   
 5.  アプリケーションで SQL_ATTR_ROW_STATUS_PTR statement 属性が設定されている場合は、この配列を検査して操作の結果を確認できます。  
   
- SQL_ADD の*操作*引数を使用して**sqlbulkoperations**を呼び出す前に、アプリケーションが列0をバインドした場合、ドライバーは、新しく挿入された行のブックマーク値を使用して、バインドされた列0バッファーを更新します。 これを行うには、ステートメントを実行する前に、アプリケーションで SQL_ATTR_USE_BOOKMARKS ステートメントの属性を SQL_UB_VARIABLE に設定しておく必要があります。 (ODBC 2 では使用できません。*x*ドライバー。)  
+ SQL_ADD の*操作*引数を使用して**sqlbulkoperations**を呼び出す前に、アプリケーションが列0をバインドした場合、ドライバーは、新しく挿入された行のブックマーク値を使用して、バインドされた列0バッファーを更新します。 これを行うには、ステートメントを実行する前に、アプリケーションで SQL_ATTR_USE_BOOKMARKS ステートメントの属性を SQL_UB_VARIABLE に設定しておく必要があります。 (ODBC 2 では使用できません。*x* ドライバー。)  
   
  SQLBulkOperations および Sqlbulkoperations の呼び出しを使用して、SQLBulkOperations によって部分的に長いデータを追加できます。 詳細については、この関数リファレンスで後ほど説明する「一括挿入と更新に長いデータを提供する」を参照してください。  
   
@@ -159,7 +160,7 @@ SQLRETURN SQLBulkOperations(
   
 3.  SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性を、更新する行の数に設定します。  
   
-4.  **SQLBindCol**を呼び出して、更新するデータをバインドします。 データは、SQL_ATTR_ROW_ARRAY_SIZE の値と同じサイズの配列にバインドされます。 また、 **SQLBindCol**を呼び出して、列 0 (ブックマーク列) をバインドします。  
+4.  **SQLBindCol**を呼び出して、更新するデータをバインドします。 データは、SQL_ATTR_ROW_ARRAY_SIZE の値と同じサイズの配列にバインドされます。 また、 **SQLBindCol** を呼び出して、列 0 (ブックマーク列) をバインドします。  
   
 5.  更新対象の行のブックマークを、列0にバインドされた配列にコピーします。  
   
@@ -179,7 +180,7 @@ SQLRETURN SQLBulkOperations(
   
  **Sqlbulkoperations**によって実行される一括更新には、 **sqlbulkoperations**および**sqlbulkoperations**の呼び出しを使用して長いデータを含めることができます。 詳細については、この関数リファレンスで後ほど説明する「一括挿入と更新に長いデータを提供する」を参照してください。  
   
- 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによって更新する前に**sqlfetch**または**sqlfetchscroll**を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは**Sqlfetch**または**sqlfetchscroll**を呼び出してブックマークを取得する必要があります。  
+ 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによって更新する前に **sqlfetch** または **sqlfetchscroll** を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは **Sqlfetch** または **sqlfetchscroll** を呼び出してブックマークを取得する必要があります。  
   
  *操作*引数が SQL_UPDATE_BY_BOOKMARK の**sqlbulkoperations**が、重複する列を含むカーソルで呼び出される場合、この動作はドライバーによって定義されます。 ドライバーによって定義された SQLSTATE を返したり、結果セットに表示される最初の列を更新したり、ドライバー定義のその他の動作を実行したりすることができます。  
   
@@ -192,7 +193,7 @@ SQLRETURN SQLBulkOperations(
   
 3.  SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性を、フェッチする行の数に設定します。  
   
-4.  **SQLBindCol**を呼び出して、フェッチするデータをバインドします。 データは、SQL_ATTR_ROW_ARRAY_SIZE の値と同じサイズの配列にバインドされます。 また、 **SQLBindCol**を呼び出して、列 0 (ブックマーク列) をバインドします。  
+4.  **SQLBindCol**を呼び出して、フェッチするデータをバインドします。 データは、SQL_ATTR_ROW_ARRAY_SIZE の値と同じサイズの配列にバインドされます。 また、 **SQLBindCol** を呼び出して、列 0 (ブックマーク列) をバインドします。  
   
 5.  列0にバインドされた配列へのフェッチに関心のある行のブックマークをコピーします。 (これは、アプリケーションが既にブックマークを取得していることを前提としています)。  
   
@@ -203,7 +204,7 @@ SQLRETURN SQLBulkOperations(
   
 7.  アプリケーションで SQL_ATTR_ROW_STATUS_PTR statement 属性が設定されている場合は、この配列を検査して操作の結果を確認できます。  
   
- 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによってフェッチする前に**sqlfetch**または**sqlfetchscroll**を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは、ブックマークを取得するために、 **Sqlfetch**または**sqlfetchscroll**を1回呼び出す必要があります。  
+ 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによってフェッチする前に **sqlfetch** または **sqlfetchscroll** を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは、ブックマークを取得するために、 **Sqlfetch** または **sqlfetchscroll** を1回呼び出す必要があります。  
   
 ## <a name="performing-bulk-deletes-using-bookmarks"></a>ブックマークを使用した一括削除の実行  
  **Sqlbulkoperations**でブックマークを使用して一括削除を実行する場合、アプリケーションは次の手順を順番に実行します。  
@@ -225,38 +226,38 @@ SQLRETURN SQLBulkOperations(
   
 7.  アプリケーションで SQL_ATTR_ROW_STATUS_PTR statement 属性が設定されている場合は、この配列を検査して操作の結果を確認できます。  
   
- 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによって削除する前に**sqlfetch**または**sqlfetchscroll**を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは、ブックマークを取得するために、 **Sqlfetch**または**sqlfetchscroll**を1回呼び出す必要があります。  
+ 複数のカーソルにまたがってブックマークが保持される場合、アプリケーションは、ブックマークによって削除する前に **sqlfetch** または **sqlfetchscroll** を呼び出す必要はありません。 前のカーソルから格納されているブックマークを使用できます。 ブックマークが複数のカーソルにまたがって保持されていない場合、アプリケーションは、ブックマークを取得するために、 **Sqlfetch** または **sqlfetchscroll** を1回呼び出す必要があります。  
   
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>一括挿入と更新に長いデータを提供する  
  **Sqlbulkoperations**を呼び出すことによって実行される一括挿入および更新のために、長いデータを提供できます。 長いデータを挿入または更新するには、このトピックの「一括挿入の実行」と「ブックマークを使用した一括更新の実行」で説明されている手順に加えて、アプリケーションは次の手順を実行します。  
   
-1.  **SQLBindCol**を使用してデータをバインドする場合、アプリケーションでは、実行時データ列の* \*targetvalueptr*バッファーに、列番号などのアプリケーション定義の値が配置されます。 この値は、後で列を識別するために使用できます。  
+1.  **SQLBindCol**を使用してデータをバインドする場合、アプリケーションでは、実行時データ列の* \* targetvalueptr*バッファーに、列番号などのアプリケーション定義の値が配置されます。 この値は、後で列を識別するために使用できます。  
   
-     アプリケーションは、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロの結果を* \*StrLen_or_IndPtr*バッファーに配置します。 列の SQL データ型が SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長いデータソース固有のデータ型で、ドライバーが**SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報型に対して "Y" を返す場合、 *length*は、パラメーターに送信されるデータのバイト数です。それ以外の場合は、負でない値である必要があり、無視されます。  
+     アプリケーションは、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロの結果を* \* StrLen_or_IndPtr*バッファーに配置します。 列の SQL データ型が SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長いデータソース固有のデータ型で、ドライバーが **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報型に対して "Y" を返す場合、 *length* は、パラメーターに送信されるデータのバイト数です。それ以外の場合は、負でない値である必要があり、無視されます。  
   
 2.  **Sqlbulkoperations**が呼び出されると、実行時データ列がある場合、関数は SQL_NEED_DATA を返し、次の手順3に進みます。 (実行時データ列がない場合、プロセスは完了です)。  
   
-3.  アプリケーションは**sqlparamdata**を呼び出して、処理する最初の実行時データ列の* \*targetvalueptr*バッファーのアドレスを取得します。 **Sqlparamdata**は SQL_NEED_DATA を返します。 アプリケーションは、 * \*targetvalueptr*バッファーからアプリケーション定義の値を取得します。  
+3.  アプリケーションは**Sqlparamdata**を呼び出して、処理する最初の実行時データ列の* \* targetvalueptr*バッファーのアドレスを取得します。 **Sqlparamdata** は SQL_NEED_DATA を返します。 アプリケーションは、 * \* targetvalueptr*バッファーからアプリケーション定義の値を取得します。  
   
     > [!NOTE]  
-    >  実行時データパラメーターは実行時データ列に似ていますが、 **Sqlparamdata**によって返される値はそれぞれ異なっています。  
+    >  実行時データパラメーターは実行時データ列に似ていますが、 **Sqlparamdata** によって返される値はそれぞれ異なっています。  
   
-     実行時データ列は、行が更新されたとき、または**Sqlputdata**で挿入されたときに**sqlputdata**と共にデータが送信される行セット内の列です。 これらは**SQLBindCol**にバインドされています。 **Sqlparamdata**によって返される値は、処理される **targetvalueptr*バッファー内の行のアドレスです。  
+     実行時データ列は、行が更新されたとき、または**Sqlputdata**で挿入されたときに**sqlputdata**と共にデータが送信される行セット内の列です。 これらは **SQLBindCol**にバインドされています。 **Sqlparamdata**によって返される値は、処理される **targetvalueptr*バッファー内の行のアドレスです。  
   
-4.  アプリケーションは**Sqlputdata**を1回以上呼び出して、列のデータを送信します。 **Sqlputdata**に指定されて* \*いる targetvalueptr*バッファーにすべてのデータ値を返すことができない場合は、複数の呼び出しが必要です。文字、バイナリ、またはデータソース固有のデータ型の列に C データを送信する場合、または文字、バイナリ、またはデータソース固有のデータ型を持つ列にバイナリ C データを送信する場合に限り、同じ列に対して複数の**Sqlputdata**を呼び出すことができます。  
+4.  アプリケーションは **Sqlputdata** を1回以上呼び出して、列のデータを送信します。 **Sqlputdata**に指定されている* \* targetvalueptr*バッファーにすべてのデータ値を返すことができない場合は、複数の呼び出しが必要です。文字、バイナリ、またはデータソース固有のデータ型の列に c データを送信する場合、または文字、バイナリ、またはデータソース固有のデータ型を持つ列にバイナリ c データを送信する場合に限り、同じ列に対して複数の**sqlputdata**を呼び出すことができます。  
   
-5.  アプリケーションは**Sqlparamdata**を再度呼び出して、すべてのデータが列に送信されたことを通知します。  
+5.  アプリケーションは **Sqlparamdata** を再度呼び出して、すべてのデータが列に送信されたことを通知します。  
   
-    -   実行時データ列の数が多い場合、 **Sqlparamdata**は SQL_NEED_DATA を返し、処理する次の実行時データ列の*targetvalueptr*バッファーのアドレスを返します。 アプリケーションは、手順4と5を繰り返します。  
+    -   実行時データ列の数が多い場合、 **Sqlparamdata** は SQL_NEED_DATA を返し、処理する次の実行時データ列の *targetvalueptr* バッファーのアドレスを返します。 アプリケーションは、手順4と5を繰り返します。  
   
-    -   実行時データ列がない場合は、プロセスが完了します。 ステートメントが正常に実行された場合、 **Sqlparamdata**は SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返します。実行が失敗した場合は SQL_ERROR を返します。 この時点で、 **Sqlparamdata**は**sqlparamdata**によって返されるすべての SQLSTATE を返すことができます。  
+    -   実行時データ列がない場合は、プロセスが完了します。 ステートメントが正常に実行された場合、 **Sqlparamdata** は SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返します。実行が失敗した場合は SQL_ERROR を返します。 この時点で、 **Sqlparamdata** は **sqlparamdata**によって返されるすべての SQLSTATE を返すことができます。  
   
  操作が取り消された場合、または**Sqlparamdata**が SQL_NEED_DATA 返された後に**sqlparamdata**または**sqlparamdata**でエラーが発生した場合、または実行時データのすべての列についてデータが送信される前に、アプリケーションは **、ステートメントまたは**ステートメントに関連付けられている接続に**対して、** **SQLCancel**、 **SQLGetDiagField**、 **SQLGetDiagRec**、 **sql** ステートメントまたはステートメントに関連付けられている接続に対して他の関数を呼び出すと、関数は SQL_ERROR と SQLSTATE HY010 (関数シーケンスエラー) を返します。  
   
- アプリケーションが**SQLCancel**を呼び出しても、ドライバーが実行時データ列のデータを必要としている場合、ドライバーは操作をキャンセルします。 その後、アプリケーションは**Sqlbulkoperations**を再度呼び出すことができます。取り消すと、カーソルの状態または現在のカーソル位置には影響しません。  
+ アプリケーションが **SQLCancel** を呼び出しても、ドライバーが実行時データ列のデータを必要としている場合、ドライバーは操作をキャンセルします。 その後、アプリケーションは **Sqlbulkoperations** を再度呼び出すことができます。取り消すと、カーソルの状態または現在のカーソル位置には影響しません。  
   
 ## <a name="row-status-array"></a>行の状態の配列  
- 行の状態の配列には、 **Sqlbulkoperations**の呼び出し後に行セット内のデータ行ごとに状態値が格納されます。 ドライバーは、 **Sqlfetch**、 **sqlfetchscroll**、 **SQLSetPos**、または**sqlbulkoperations**の呼び出し後に、この配列の状態値を設定します。 **Sqlbulkoperations**の前に**sqlfetch**または**sqlbulkoperations**が呼び出されていない場合、この配列には、 **sqlbulkoperations**の呼び出しが最初に設定されます。 この配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によってポイントされます。 行ステータス配列内の要素の数は、(SQL_ATTR_ROW_ARRAY_SIZE statement 属性で定義されている) 行セット内の行数と同じである必要があります。 この行の状態の配列の詳細については、「 [Sqlfetch](../../../odbc/reference/syntax/sqlfetch-function.md)」を参照してください。  
+ 行の状態の配列には、 **Sqlbulkoperations**の呼び出し後に行セット内のデータ行ごとに状態値が格納されます。 ドライバーは、 **Sqlfetch**、 **sqlfetchscroll**、 **SQLSetPos**、または **sqlbulkoperations**の呼び出し後に、この配列の状態値を設定します。 **Sqlbulkoperations**の前に**sqlfetch**または**sqlbulkoperations**が呼び出されていない場合、この配列には、 **sqlbulkoperations**の呼び出しが最初に設定されます。 この配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によってポイントされます。 行ステータス配列内の要素の数は、(SQL_ATTR_ROW_ARRAY_SIZE statement 属性で定義されている) 行セット内の行数と同じである必要があります。 この行の状態の配列の詳細については、「 [Sqlfetch](../../../odbc/reference/syntax/sqlfetch-function.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、一度に10行のデータを Customers テーブルからフェッチします。 次に、実行する操作をユーザーに求めるメッセージが表示されます。 ネットワークトラフィックを減らすために、この例では、バインドされた配列にローカルに更新、削除、および挿入を行いますが、行セットデータを超えたオフセットを使用します。 ユーザーが更新、削除、および挿入をデータソースに送信することを選択すると、コードはバインドオフセットを適切に設定し、 **Sqlbulkoperations**を呼び出します。 わかりやすくするために、ユーザーは10を超える更新、削除、または挿入をバッファリングできません。  
@@ -461,6 +462,6 @@ int main() {
 |カーソルの配置、行セット内のデータの更新、または行セット内のデータの更新または削除|[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |ステートメント属性の設定|[SQLSetStmtAttr 関数](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

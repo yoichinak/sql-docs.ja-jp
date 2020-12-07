@@ -6,18 +6,18 @@ ms.date: 01/24/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f430d2be5a9b1af495b296f59c172e16401c01eb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897059"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901120"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
 
@@ -27,8 +27,8 @@ ms.locfileid: "85897059"
 
 > [!IMPORTANT]  
 > 既定では、Windows の **拡張保護** は有効になっていません。 **拡張保護**を有効にする方法の詳細については、次を参照してください。
-> - [Windows 拡張保護 \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
-> - [認証の拡張保護の概要](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
+> - [Windows 拡張保護 \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
+> - [認証の拡張保護の概要](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のサービスの構成方法と **拡張保護**の詳細については、 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752)の最新情報を参照してください。
 
@@ -53,4 +53,3 @@ ms.locfileid: "85897059"
 ## <a name="see-also"></a>参照
 
 [Reporting Services での認証の拡張保護](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-

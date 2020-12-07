@@ -1,4 +1,5 @@
 ---
+description: Balanced Data Distributor (BDD) 変換
 title: Balanced Data Distributor (BDD) 変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b31421a4362fc281141b642ac76d4008df9c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0af6a36d456b52791f2cafccc9c017f644893975
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922484"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194655"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Balanced Data Distributor (BDD) 変換
 
@@ -41,6 +42,5 @@ ms.locfileid: "86922484"
  変換元からデータを読み取るレートが原因で、ボトルネックが SSIS パッケージ内に存在する場合は、BDD コンポーネントはパフォーマンス向上に役立たないことに注意してください。 変換先が並列処理をサポートしていないことが原因でボトルネックが SSIS パッケージ内に存在する場合も、BDD は役に立ちません。ただし、すべての変換を並列実行し、データを変換先に送信する前に、全体結合という変換を使用して、BDD 変換の複数の出力パスから到着した出力データを組み合わせることができます。  
   
 > [!IMPORTANT]  
->  変換の使用方法を示すプレゼンテーションとして、TechNet ライブラリの [Balanced Data Distributor ビデオに関するページ](https://go.microsoft.com/fwlink/?LinkID=226278) を参照してください。  
-  
+>   変換の使用方法を示すプレゼンテーションとして、TechNet ライブラリの [Balanced Data Distributor ビデオに関するページ](/previous-versions/dn912438(v=msdn.10)) を参照してください。  
   

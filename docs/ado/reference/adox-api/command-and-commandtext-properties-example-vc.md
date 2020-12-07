@@ -1,8 +1,9 @@
 ---
+description: Command プロパティおよび CommandText プロパティの例 (VC++)
 title: Command プロパティと CommandText プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35e43b2e9aaba281334af135a44510295f4179e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a726c8156d8ed9dcfa2b10e53190b099f67af98
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984943"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command プロパティおよび CommandText プロパティの例 (VC++)
-次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してプロシージャのテキストを更新する方法を示しています。  
+次のコードは、 [Command](./command-property-adox.md) プロパティを使用してプロシージャのテキストを更新する方法を示しています。  
   
 ```  
 // BeginCommandTextCpp  
@@ -91,4 +92,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)
+ [Command プロパティ (ADOX)](./command-property-adox.md)

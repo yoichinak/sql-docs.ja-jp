@@ -1,4 +1,5 @@
 ---
+description: データ層アプリケーション テーブル - sysdac_history_internal
 title: sysdac_history_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f89db526d638a6e934e8db7ac791875b467e487
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123023"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544647"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>データ層アプリケーション テーブル - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87123023"
 |**dac_object_type**|**tinyint**|アクションの影響を受けるオブジェクトの種類の識別子。<br /><br /> **0** = dacpac<br /><br /> **1** = ログイン<br /><br /> **2** = データベース|  
 |**dac_object_type_name**|**varchar (8)**|アクションによって影響を受けるオブジェクトの種類の名前。<br /><br /> **dacpac** = DAC インスタンス<br /><br /> **ログイン**<br /><br /> **database**|  
 |**action_status**|**tinyint**|アクションの現在のステータスを識別するコード。<br /><br /> **0** = 保留中<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **行わ**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
+|**action_status_name**|**varchar (11)**|アクションの現在のステータス。<br /><br /> **pending**<br /><br /> **ブランド**<br /><br /> **オーバー**|  
 |**必須**|**bit**|DAC 操作をロールバックするときに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって使用されます。|  
 |**dac_object_name_pretran**|**sysname**|アクションを含むトランザクションがコミットされる前のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  
 |**dac_object_name_posttran**|**sysname**|アクションを含んでいるトランザクションをコミットした後のオブジェクトの名前。 データベースおよびログインにのみ使用されます。|  
@@ -52,7 +53,7 @@ ms.locfileid: "87123023"
 |**date_modified**|**datetime**|エントリが最後に変更された日付と時刻。|  
   
 ## <a name="remarks"></a>解説  
- Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と**sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id**割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
+ Dac の配置や削除などの DAC 管理操作では、複数の手順が生成されます。 各アクションには、アクション識別子が割り当てられます。 各ステップには、シーケンス番号と **sysdac_history_internal**内の行が割り当てられます。この場合、ステップの状態が記録されます。 各行は、アクションステップの開始時に作成され、操作の状態を反映するために必要に応じて更新されます。 たとえば、[DAC の配置] アクションを 12 **action_id** 割り当て、 **sysdac_history_internal**の4つの行を取得することができます。  
   
 | action_id | sequence_id | action_type_name | dac_object_type_name |
 | --------- | ----------- | ---------------- | -------------------- |
@@ -73,7 +74,7 @@ WHERE instance_id NOT IN
  アクティブな Dac の行を削除しても、DAC 操作には影響しません。唯一の影響は、DAC の完全な履歴を報告できないことです。  
   
 > [!NOTE]  
->  現時点では、 **sysdac_history_internal**行を削除するためのメカニズムはありません [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
+>  現時点では、 **sysdac_history_internal** 行を削除するためのメカニズムはありません [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。 このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  

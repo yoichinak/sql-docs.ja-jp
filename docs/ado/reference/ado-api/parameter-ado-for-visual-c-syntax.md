@@ -1,8 +1,9 @@
 ---
+description: Parameter (Visual C++ 構文用の ADO)
 title: Parameter (Visual C++ 構文用の ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60d0c572386d31daa2a4ac4e3af1961c4436f399
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b2d502f6071375f7d5a482b2db9753caa15fb086
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990223"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -51,4 +52,4 @@ put_Value(VARIANT val)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter オブジェクト](./parameter-object.md)

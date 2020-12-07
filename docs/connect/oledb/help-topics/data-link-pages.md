@@ -1,6 +1,6 @@
 ---
 title: ユニバーサル データ リンク (UDL) の構成 | Microsoft Docs
-description: Microsoft OLE DB Driver for SQL Server を使用したユニバーサル データ リンク (UDL) の構成
+description: '[接続] タブを使用し、OLE DB Driver for SQL Server を使用してデータに接続する方法を指定する方法について説明します。'
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: c83def9454ab3477e1c08102bb0b7ac66d7e2f65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b691d24bb1d700a63e1ecfc9daca3bbfb5399800
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986652"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727283"
 ---
 # <a name="universal-data-link-udl-configuration"></a>ユニバーサル データ リンク (UDL) の構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ Microsoft OLE DB Driver for SQL Server を使用してデータに接続する�
 
 
 > [!NOTE]  
->  一般的なデータ リンク接続情報については、「[Data Link API の概要](https://go.microsoft.com/fwlink/?linkid=2067432)」を参照してください。
+>  一般的なデータ リンク接続情報については、「[Data Link API の概要](/previous-versions/windows/desktop/ms718102(v=vs.85))」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 - OLE DB ドライバーを使用して [Azure Active Directory に対する認証を行います](../features/using-azure-active-directory.md)。

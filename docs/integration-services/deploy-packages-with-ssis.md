@@ -1,4 +1,5 @@
 ---
+description: SSIS によるパッケージの配置
 title: SSIS によるパッケージの配置 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d82aae4ee0195adca300d16bf9f2a2217c40a38c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916653"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123334"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
 
@@ -36,9 +37,9 @@ ms.locfileid: "86916653"
     
 まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。    
     
-また、配置の前に、パッケージが構成を使用するように更新しておきます。 構成によって、実行時にパッケージやパッケージ オブジェクトのプロパティを更新できます。 このチュートリアルでは、構成を使用して、ログ ファイルとテキスト ファイルの接続文字列、およびパッケージが使用する XML ファイルと XSD ファイルの場所を更新します。 詳細については、「 [パッケージ構成](../integration-services/packages/package-configurations.md) 」および「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。    
+また、配置の前に、パッケージが構成を使用するように更新しておきます。 構成によって、実行時にパッケージやパッケージ オブジェクトのプロパティを更新できます。 このチュートリアルでは、構成を使用して、ログ ファイルとテキスト ファイルの接続文字列、およびパッケージが使用する XML ファイルと XSD ファイルの場所を更新します。 詳細については、「 [パッケージ構成](./packages/legacy-package-deployment-ssis.md) 」および「 [パッケージ構成を作成する](./packages/legacy-package-deployment-ssis.md)」を参照してください。    
     
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージが正常に実行されることを確認したら、パッケージのインストールに使用する配置バンドルを作成します。 配置バンドルは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加したパッケージ ファイルとその他の項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に自動的に含まれるパッケージの依存関係、および構築した配置ユーティリティから構成されます。 詳細については、「 [配置ユーティリティを作成する](../integration-services/packages/create-a-deployment-utility.md)」を参照してください。    
+[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージが正常に実行されることを確認したら、パッケージのインストールに使用する配置バンドルを作成します。 配置バンドルは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加したパッケージ ファイルとその他の項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に自動的に含まれるパッケージの依存関係、および構築した配置ユーティリティから構成されます。 詳細については、「 [配置ユーティリティを作成する](./packages/legacy-package-deployment-ssis.md)」を参照してください。    
     
 配置バンドルをターゲット コンピューターにコピーし、パッケージ インストール ウィザードを実行して、パッケージとパッケージの依存関係をインストールします。 パッケージは msdb SQL Server データベースにインストールされ、サポート ファイルと補助ファイルはファイル システムにインストールされます。 配置されたパッケージは構成を使用するので、新しい値に更新して、パッケージを新しい環境で正常に実行できるようにします。    
     
@@ -66,7 +67,7 @@ ms.locfileid: "86916653"
 
 -   AdventureWorks データベースでテーブルを作成および削除するための権限が必要です。
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)。    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) 。    
     
 ### <a name="on-the-destination-computer"></a>配置先コンピューターの場合
 
@@ -80,22 +81,20 @@ ms.locfileid: "86916653"
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 SSIS をインストールする場合は、「[Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. SSIS をインストールする場合は、「[Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。
     
 -   AdventureWorks データベースでテーブルを作成および削除するための権限と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で SSIS パッケージを実行するための権限が必要です。    
     
--   `sysssispackages` `msdb` システム データベースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの読み取り権限と書き込み権限が必要です。    
+-   `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム データベースの `sysssispackages` テーブルの読み取り権限と書き込み権限が必要です。    
     
 配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。    
         
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン    
-[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[レッスン 1:配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 このレッスンでは、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加して、ETL ソリューションを配置する準備を行います。    
     
-[レッスン 2: SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[レッスン 2:SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 このレッスンでは、配置ユーティリティを構築し、配置バンドルに必要なファイルが含まれていることを確認します。    
     
-[レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
+[レッスン 3:SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
 このレッスンでは、配置バンドルをターゲット コンピューターにコピーし、パッケージをインストールして、パッケージを実行します。    
-    
-

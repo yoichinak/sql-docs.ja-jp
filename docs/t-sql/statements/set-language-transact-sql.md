@@ -1,4 +1,5 @@
 ---
+description: SET LANGUAGE (Transact-SQL)
 title: SET LANGUAGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - options [SQL Server], date
 - default languages
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e845cf7fcf299185947a07a6249167cad652a21
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d16268b8843bd8b6d52e004f5e5334cd7f81d70f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397055"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548947"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -44,11 +45,13 @@ ms.locfileid: "87397055"
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  **[N]** **'** _language_ **'**  |  **@** _language\_var_  
  [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) に格納されている言語の名前を指定します。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 言語を Unicode で指定するには、**N'** _language_ **'** を使用します。 変数として指定する場合、変数のデータ型は **sysname** であることが必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SET LANGUAGE は、解析時ではなく実行時に設定されます。  
   
  SET LANGUAGE では、[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) が暗黙的に設定されます。  

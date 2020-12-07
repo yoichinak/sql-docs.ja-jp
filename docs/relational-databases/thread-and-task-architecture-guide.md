@@ -2,7 +2,7 @@
 title: スレッドおよびタスクのアーキテクチャ ガイド | Microsoft Docs
 description: SQL Server のスレッドとタスクのアーキテクチャについて説明します。これには、タスクのスケジューリング、ホット アド CPU、64 個を超える CPU を搭載したコンピューターの使用に関するベスト プラクティスが含まれます。
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485580"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125080"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -28,19 +36,19 @@ ms.locfileid: "86485580"
 ## <a name="operating-system-task-scheduling"></a>オペレーティング システムのタスクのスケジューリング
 スレッドは、オペレーティング システムによって実行できる処理の最小単位であり、アプリケーションのロジックを複数の同時実行パスに分離することができます。 スレッドは、複雑なアプリケーションに同時に実行できるタスクが多数ある場合に役立ちます。 
 
-オペレーティング システムがアプリケーションのインスタンスを実行するときは、プロセスという単位が作成され、インスタンスを管理します。 プロセスには実行のためのスレッドが 1 つあります。 これは、アプリケーション コードで実行される一連のプログラミング命令です。 たとえば、順番に実行できる 1 つの命令セットで構成される単純なアプリケーションの場合、その命令セットは単一の**タスク**として処理され、実行パス (つまり**スレッド**) はアプリケーション全体で 1 つあるだけです。 より複雑なアプリケーションの場合は、順次ではなく、同時に実行できる複数の**タスク**で構成されていることがあります。 アプリケーションでは、リソースの消費量が多い操作であるタスクごとに個別のプロセスを開始するか、リソースの消費量が比較的少ない個別のスレッドを開始することによって、これを行うことができます。 また、各スレッドは、プロセスに関連付けられた他のスレッドに依存することなく、その実行スケジュールを設定できます。
+オペレーティング システムがアプリケーションのインスタンスを実行するときは、プロセスという単位が作成され、インスタンスを管理します。 プロセスには実行のためのスレッドが 1 つあります。 これは、アプリケーション コードで実行される一連のプログラミング命令です。 たとえば、順番に実行できる 1 つの命令セットで構成される単純なアプリケーションの場合、その命令セットは単一の **タスク** として処理され、実行パス (つまり **スレッド**) はアプリケーション全体で 1 つあるだけです。 より複雑なアプリケーションの場合は、順次ではなく、同時に実行できる複数の **タスク** で構成されていることがあります。 アプリケーションでは、リソースの消費量が多い操作であるタスクごとに個別のプロセスを開始するか、リソースの消費量が比較的少ない個別のスレッドを開始することによって、これを行うことができます。 また、各スレッドは、プロセスに関連付けられた他のスレッドに依存することなく、その実行スケジュールを設定できます。
 
 プロセッサ (CPU) が 1 つしかないコンピューターであっても、スレッドにより、複雑なアプリケーションで CPU をより効率的に使用できるようになります。 CPU が 1 基の場合、一度に実行できるスレッドは 1 つだけです。 あるスレッドが、ディスクの読み書きなど、CPU を使用しない処理を長時間にわたって実行している場合、この処理が終了するまで他のスレッドを実行できます。 処理の終了を待っている間に他のスレッドを実行できるようにすることで、アプリケーションは CPU を最大限に使用できます。 データベース サーバーなど、ディスク I/O が多発するマルチユーザー アプリケーションの場合、特にそのことが当てはまります。 複数の CPU を備えるコンピューターでは、各 CPU で 1 つのスレッドを同時に実行できます。 たとえば、CPU を 8 基搭載したコンピューターは同時に 8 個のスレッドを実行できます。
 
 ## <a name="sql-server-task-scheduling"></a>SQL Server のタスクのスケジューリング
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスコープでは、**要求**がクエリまたはバッチの論理表現になります。 また、要求では、チェックポイントやログ ライターなどのシステム スレッドに必要な操作も表されます。 要求は有効期間を通してさまざまな状態になり、要求の実行に必要なリソースを使用できないときは待機できます ([ロック](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)または[ラッチ](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)など)。 要求の状態の詳細については、「[sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスコープでは、**要求** がクエリまたはバッチの論理表現になります。 また、要求では、チェックポイントやログ ライターなどのシステム スレッドに必要な操作も表されます。 要求は有効期間を通してさまざまな状態になり、要求の実行に必要なリソースを使用できないときは待機できます ([ロック](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks)または[ラッチ](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches)など)。 要求の状態の詳細については、「[sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。
 
-**タスク**は、要求を満たすために完了する必要がある作業の単位を表します。 1 つの要求に 1 つまたは複数のタスクを割り当てることができます。 
--  並列要求には、順次ではなく同時に実行される複数のアクティブなタスクがあります (1 つの**親タスク** (または調整タスク) と複数の**子タスク**から成る)。 並列要求の実行プランには、プランの直列分岐 (並列で実行されない演算子を持つプランの領域) が含まれている場合があります。 親タスクもそれらの順次演算子を実行します。
+**タスク** は、要求を満たすために完了する必要がある作業の単位を表します。 1 つの要求に 1 つまたは複数のタスクを割り当てることができます。 
+-  並列要求には、順次ではなく同時に実行される複数のアクティブなタスクがあります (1 つの **親タスク** (または調整タスク) と複数の **子タスク** から成る)。 並列要求の実行プランには、プランの直列分岐 (並列で実行されない演算子を持つプランの領域) が含まれている場合があります。 親タスクもそれらの順次演算子を実行します。
 -  順次要求では、実行時の特定の時点でアクティブなタスクが 1 つだけ存在します。     
 タスクは、有効期間全体を通してさまざまな状態になります。 タスクの状態の詳細については、「[sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照してください。 SUSPENDED 状態のタスクは、タスクの実行に必要なリソースが使用可能になるのを待機しています。 待機中のタスクの詳細については、「[sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md)」を参照してください。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の**ワーカー スレッド** (ワーカーまたはスレッドとも呼ばれます) は、オペレーティング システムのスレッドを論理的に表現したものです。 **順次要求**を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが生成されて、アクティブなタスクが実行されます (1:1)。 [行モード](../relational-databases/query-processing-architecture-guide.md#execution-modes)で**並列要求**を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが割り当てられ、ワーカーに割り当てられたタスクを実行する子ワーカーが調整されます (この場合も 1:1)。これは**親スレッド** (または調整スレッド) とも呼ばれます。 親スレッドには、関連付けられている親タスクがあります。 親スレッドとは、エンジンがクエリを解析する前から存在している要求のエントリ ポイントです。 親スレッドの主な役割は次のとおりです。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **ワーカー スレッド** (ワーカーまたはスレッドとも呼ばれます) は、オペレーティング システムのスレッドを論理的に表現したものです。 **順次要求** を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが生成されて、アクティブなタスクが実行されます (1:1)。 [行モード](../relational-databases/query-processing-architecture-guide.md#execution-modes)で **並列要求** を実行すると、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] によってワーカーが割り当てられ、ワーカーに割り当てられたタスクを実行する子ワーカーが調整されます (この場合も 1:1)。これは **親スレッド** (または調整スレッド) とも呼ばれます。 親スレッドには、関連付けられている親タスクがあります。 親スレッドとは、エンジンがクエリを解析する前から存在している要求のエントリ ポイントです。 親スレッドの主な役割は次のとおりです。 
 -  並列スキャンを調整します。
 -  子並列ワーカーを開始します。
 -  並列スレッドから行を収集し、クライアントに送信します。
@@ -58,7 +66,15 @@ ms.locfileid: "86485580"
 
 **スケジューラ** (SOS スケジューラとも呼ばれます) では、タスクに代わって作業を実行するために処理時間を必要とするワーカー スレッドが管理されます。 各スケジューラは、個々のプロセッサ (CPU) にマップされます。 ワーカーがスケジューラでアクティブな状態を維持できる時間は、OS クォンタムと呼ばれ、最大 4 ミリ秒です。 クォンタム時間が経過したワーカーは、CPU リソースへのアクセスを必要とする他のワーカーに時間を明け渡し、その状態を変更します。 CPU リソースへのアクセスを最大化するためのワーカー間のこのような連携は、**協調スケジューリング** (または非プリエンプティブ スケジューリング) と呼ばれます。 その後、ワーカーの状態の変化は、そのワーカーに関連付けられたタスクと、タスクに関連付けられた要求に伝達されます。 ワーカーの状態の詳細については、「[sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)」を参照してください。 スケジューラの詳細については、「[sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」を参照してください。 
 
-要約すると、**要求**によって、作業単位を実行するための 1 つ以上の**タスク**が生成される場合があります。 各タスクは、タスクを実行する**ワーカー スレッド**に割り当てられます。 タスクをアクティブに実行するために、各ワーカー スレッドをスケジュールする (**スケジューラ**に配置する) 必要があります。 
+要約すると、**要求** によって、作業単位を実行するための 1 つ以上の **タスク** が生成される場合があります。 各タスクは、タスクを実行する **ワーカー スレッド** に割り当てられます。 タスクをアクティブに実行するために、各ワーカー スレッドをスケジュールする (**スケジューラ** に配置する) 必要があります。 
+
+> [!NOTE]
+> 次のシナリオについて検討してください。   
+> -  ワーカー 1 は長時間実行のタスクです。たとえば、メモリ内ベース テーブルで先行読み取りを利用する読み取りクエリです。 ワーカー 1 は、必要なデータ ページがバッファー プールに既にあることを見つけます。そのため、I/O 操作を待つ目的で一時停止する必要があります。一時停止前にそのクォンタムを完全に使用できます。   
+> -  ワーカー 2 はミリ秒未満の短時間タスクを行います。そのため、そのクォンタムが完全に使用される前に一時停止する必要があります。     
+>
+> このシナリオおよび [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、ワーカー 1 には、全体的クォンタム時間を増やすことで、基本的にスケジューラーを独占することが許可されます。   
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、共同作業スケジューリングには、Large Deficit First (LDF) スケジューリングが含まれます。 LDF スケジューリングにより、クォンタム使用パターンが監視されており、1 つのワーカー スレッドでスケジューラーが独占されることがありません。 同じシナリオで、ワーカー 2 には、ワーカー 1 にクォンタムを増やすことが許可される前に、クォンタムを繰り返し使用することが許可されます。そのため、ワーカー 1 では、好ましくないパターンでスケジューラーを独占することができません。
 
 ### <a name="scheduling-parallel-tasks"></a>並列タスクのスケジューリング
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が MaxDOP 8 で構成され、CPU アフィニティが NUMA ノード 0 と 1 で 24 個の CPU (スケジューラ) 用に構成されているとします。 スケジューラ 0 から 11 は NUMA ノード 0 に属しており、スケジューラ 12 から 23 は NUMA ノード 1 に属しています。 アプリケーションは、次のクエリ (要求) を[!INCLUDE[ssde_md](../includes/ssde_md.md)]に送信します。
@@ -78,11 +94,11 @@ WHERE (h.OrderDate >= '2014-3-28 00:00:00');
 ![並列クエリ プラン](../relational-databases/media/schedule-parallel-query-plan.png)
 
 > [!NOTE]
-> 実行プランがツリーとして考えられる場合、**分岐**は、並列処理演算子 (交換反復子とも呼ばれます) の間にある 1 つ以上の演算子をグループ化するプランの領域になります。 プランの演算子の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。 
+> 実行プランがツリーとして考えられる場合、**分岐** は、並列処理演算子 (交換反復子とも呼ばれます) の間にある 1 つ以上の演算子をグループ化するプランの領域になります。 プランの演算子の詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。 
 
 実行プランには 3 つの分岐がありますが、実行中の任意の時点で、この実行プランで同時に実行できる分岐は 2 つだけです。
-1.  `Sales.SalesOrderHeaderBulk` で*クラスター化インデックス スキャン*が使用される分岐 (結合のビルド入力) は、単独で実行されます。
-2.  その後、*クラスター化インデックス スキャン*が `Sales.SalesOrderDetailBulk` (結合のプローブ入力) で使用される分岐は、*ビットマップ*が作成され、*Hash Match* が同時に実行される分岐と同時に実行されます。
+1.  `Sales.SalesOrderHeaderBulk` で *クラスター化インデックス スキャン* が使用される分岐 (結合のビルド入力) は、単独で実行されます。
+2.  その後、*クラスター化インデックス スキャン* が `Sales.SalesOrderDetailBulk` (結合のプローブ入力) で使用される分岐は、*ビットマップ* が作成され、*Hash Match* が同時に実行される分岐と同時に実行されます。
 
 次のプラン表示 XML では、16 個のワーカー スレッドが予約され、NUMA ノード 0 で使用されています。
 
@@ -150,7 +166,7 @@ ORDER BY parent_task_address, scheduler_id;
 要約すると、並列要求では複数のタスクが生成されます。 各タスクは、単一のワーカー スレッドに割り当てられる必要があります。 各ワーカー スレッドは、単一のスケジューラに割り当てられる必要があります。 そのため、使用中のスケジューラの数は、分岐ごとの並列タスクの数を超えることはできません。この数は、MaxDOP 構成、または MaxDOP クエリ ヒントによって設定されます。 調整スレッドは、MaxDOP の制限に寄与しません。 
 
 ### <a name="allocating-threads-to-a-cpu"></a>CPU へのスレッドの割り当て
-既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスによってそれぞれのスレッドが開始され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスのスレッドは、オペレーティング システムにより、負荷に基づいてコンピューターのプロセッサ (CPU) 間に分散されます。 処理関係がオペレーティング システム レベルで有効な場合、オペレーティング システムによって各スレッドが特定の CPU に割り当てられます。 これに対し、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、ラウンドロビン方式で CPU 間に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ワーカー スレッド**を均等に分散する**スケジューラ**にスレッドを割り当てます。
+既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスによってそれぞれのスレッドが開始され、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスのスレッドは、オペレーティング システムにより、負荷に基づいてコンピューターのプロセッサ (CPU) 間に分散されます。 処理関係がオペレーティング システム レベルで有効な場合、オペレーティング システムによって各スレッドが特定の CPU に割り当てられます。 これに対し、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] では、ラウンドロビン方式で CPU 間に[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ワーカー スレッド** を均等に分散する **スケジューラ** にスレッドを割り当てます。
     
 マルチタスク処理を実行するため、たとえば複数のアプリケーションが CPU の同じセットにアクセスするときなど、オペレーティング システムによってワーカー スレッドが異なる CPU に移動される場合があります。 オペレーティング システムにとっては効率的であっても、この操作で各プロセッサのキャッシュに繰り返しデータが再読み込みされるため、システムの負荷が高くなり、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のパフォーマンスが低下する場合があります。 このような状況では、特定のスレッドに CPU を割り当てると、プロセッサのリロードが回避され、CPU 間でのスレッドの移行が減ることにより (それにより、コンテキストの切り替えが減ります)、パフォーマンスを改善できます。このようなスレッドとプロセッサの間の関連付けは、"プロセッサ アフィニティ" と呼ばれます。 関係 (affinity) が有効な場合、オペレーティング システムにより、各スレッドが特定の CPU に割り当てられます。 
 
@@ -177,9 +193,13 @@ Microsoft Windows では、1 から 31 までの優先度の数値に基づい�
 
 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各インスタンスの優先度は 7 です。優先度が 7 のスレッドは、優先度が通常のスレッドと見なされます。 この既定値により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドには、他のアプリケーションに悪影響を及ぼさずに十分な CPU リソースを得られるだけの高い優先度が与えられます。 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) 構成オプションを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのスレッドの優先度を 13 まで上げることができます。 優先度が 13 のスレッドは、優先度が高いスレッドと見なされます。 この設定により、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドには、他の多数のアプリケーションよりも高い優先度が与えられます。 したがって、通常、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドは、実行可能な状態になると先に実行され、他のアプリケーションのスレッドからの割り込みを受けることはありません。 サーバーで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスだけが実行されていて他のアプリケーションが実行されていない場合は、この方法でパフォーマンスを向上させることができます。 ただし、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でメモリを集中的に消費する操作が発生した場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] スレッドに割り込みをかけるのに十分な優先度が他のアプリケーションに与えられない可能性が高くなります。 
 
 コンピューターで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の複数のインスタンスを実行していて、一部のインスタンスのみに対して priority boost を有効にしている場合、通常の優先度で実行されているすべてのインスタンスのパフォーマンスに悪影響を及ぼすことがあります。 また、priority boost が有効になっていると、サーバー上の他のアプリケーションやコンポーネントのパフォーマンスが低下することがあります。 したがって、このオプションは厳密に管理された条件下でのみ使用することをお勧めします。
+
 
 ## <a name="hot-add-cpu"></a>ホット アド CPU
 ホット アド CPU とは、実行中のシステムに CPU を動的に追加する機能です。 CPU の追加は、物理的には新しいハードウェアの追加、論理的にはオンライン ハードウェア パーティション分割、仮想的には仮想化レイヤーの利用によって行われます。 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 以降の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、ホット アド CPU をサポートしています。
@@ -224,8 +244,8 @@ SQL トレースおよび SQL Profiler は、運用環境で使用しないこ�
 > [!NOTE]
 > Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。
 
-### <a name="setting-the-number-of-tempdb-data-files"></a>TempDB データ ファイルの数の設定
-ファイルの数は、コンピューター上の (論理) プロセッサの数に依存します。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用し、競合が続く場合、競合が許容できるレベルに減少するまでデータ ファイルの数を 4 の倍数分ずつ増やすか、ワークロード/コードを変更します。 また、「[SQL Server の TempDB のパフォーマンスの最適化](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)」で説明されている TempDB に対する他の推奨事項についても留意してください。 
+### <a name="setting-the-number-of-tempdb-data-files"></a>tempdb データ ファイルの数を設定する
+ファイルの数は、コンピューター上の (論理) プロセッサの数に依存します。 一般的なルールとして、論理プロセッサの数が 8 以下の場合、論理プロセッサと同じ数のデータ ファイルを使用します。 論理プロセッサの数が 8 より大きい場合、8 つのデータ ファイルを使用し、競合が続く場合、競合が許容できるレベルに減少するまでデータ ファイルの数を 4 の倍数分ずつ増やすか、ワークロード/コードを変更します。 また、「[SQL Server の tempdb のパフォーマンスの最適化](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server)」で説明されている tempdb に対する他の推奨事項についても留意してください。 
 
 ただし、tempdb のコンカレンシーの必要性を慎重に検討することにより、データベース管理のオーバーヘッドを減らすことができます。 たとえば、64 個の CPU が搭載されているシステムにおいて通常 tempdb を使用するクエリの数が 32 個に限られている場合、tempdb ファイルの数を 64 に増やしてもパフォーマンスは改善されません。
 

@@ -1,4 +1,5 @@
 ---
+description: DBCC DROPCLEANBUFFERS (Transact-SQL)
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -25,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68e9eca249d976398618a63e25b98c02dcf7f806
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6ac3719d3946e07ec3314b586f5abb5a14910133
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394307"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955880"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -41,18 +42,21 @@ ms.locfileid: "87394307"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文
-SQL Server の構文:
 
-```sql
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSOD](../../includes/sssodfull-md.md)] の構文:
+
+```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Azure SQL Warehouse と Parallel Data Warehouse の構文:
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の構文:
 
-```sql  
+```syntaxsql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  WITH NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。 情報メッセージは通常、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では表示されません。  
   
@@ -69,19 +73,13 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>結果セット  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DBCC DROPCLEANBUFFERS では次の結果が返されます。
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
-
-適用対象: SQL Server、Parallel Data Warehouse 
-
-- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
-
-適用対象: Azure SQL Data Warehouse
-
-- DB_OWNER 固定サーバー ロールのメンバーシップが必要です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に対する `sysadmin` 固定サーバー ロールのメンバーシップが必要です。  
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に対する `DB_OWNER` 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

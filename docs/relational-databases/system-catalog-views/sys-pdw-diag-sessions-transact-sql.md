@@ -1,5 +1,6 @@
 ---
-title: pdw_diag_sessions (Transact-sql) |Microsoft Docs
+description: sys.pdw_diag_sessions (Transact-sql)
+title: sys.pdw_diag_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,14 +12,14 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae00a9b691deac38ebe3ea3ad4ed67ca3fd4dbe
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: e8fade6ec60ada411ee78027d01f9616e499f755
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396077"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036752"
 ---
-# <a name="syspdw_diag_sessions-transact-sql"></a>pdw_diag_sessions (Transact-sql)
+# <a name="syspdw_diag_sessions-transact-sql"></a>sys.pdw_diag_sessions (Transact-sql)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   システムで作成されたさまざまな診断セッションに関する情報を保持します。  
@@ -33,6 +34,6 @@ ms.locfileid: "87396077"
 |**database_id**|**int**|診断セッションのスコープであるデータベースの ID。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

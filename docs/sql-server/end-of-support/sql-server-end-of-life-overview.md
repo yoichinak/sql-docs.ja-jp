@@ -1,20 +1,20 @@
 ---
 title: サポート終了のオプション
 description: SQL Server 2005、SQL Server 2008、SQL Server 2008 R2 など、サポート終了に達した SQL Server 製品で使用できるさまざまなオプションについて学習します。
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e465f1e4e8c6cc9e5effb27c1cc97ee7633309eb
+ms.sourcegitcommit: ece151df14dc2610d96cd0d40b370a4653796d74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96297969"
 ---
 # <a name="sql-server-end-of-support-options"></a>SQL Server のサポート終了オプション 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -24,8 +24,8 @@ ms.locfileid: "87112106"
 ## <a name="understanding-the-sql-server-lifecycle"></a>SQL Server のライフサイクルについて
 
 各バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、少なくとも 10 年間のサポートが受けられます。これには、メインストリーム サポートの 5 年間、および延長サポートの 5 年間が含まれます。
--  **メインストリーム サポート**には、機能、パフォーマンス、スケーラビリティ、およびセキュリティ更新プログラムが含まれています。 
--  **延長サポート**には、セキュリティ更新プログラムのみが含まれます。 
+-  **メインストリーム サポート** には、機能、パフォーマンス、スケーラビリティ、およびセキュリティ更新プログラムが含まれています。 
+-  **延長サポート** には、セキュリティ更新プログラムのみが含まれます。 
 
 **サポートの終了** (有効期間の終了とも呼ばれます) は、製品がそのライフサイクルの終了に達したことと、製品でサービスとサポートを利用できなくなったことを示します。 Microsoft ライフサイクルの詳細については、「[Microsoft ライフサイクル ポリシー](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)」を参照してください。
 
@@ -37,7 +37,7 @@ ms.locfileid: "87112106"
 - 現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする。
 - [延長セキュリティ更新プログラムのサブスクリプション](https://www.microsoft.com/cloud-platform/extended-security-updates)を購入する。 
 - [無料の延長セキュリティ更新プログラム](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)を取得するため、ワークロードをそのまま Azure 仮想マシンに移行する。
-- [Azure SQL Database サービス](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)にワークロードを移行する。 
+- [Azure SQL Database サービス](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)にワークロードを移行する。 
 
 アップグレードまたは移行の計画と自動化を行うための情報、ガイダンス、ツールの詳細については、[SQL Server 2005 のサポート終了](https://www.microsoft.com/sql-server/sql-server-2005)と [SQL Server 2008 のサポート終了](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)に関するページをご覧ください。  
 
@@ -80,7 +80,7 @@ ms.locfileid: "87112106"
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 サポートされているバージョンとエディションのアップグレード:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -95,7 +95,7 @@ ms.locfileid: "87112106"
 
 ## <a name="extend-support"></a>サポートを延長する 
 
-アップグレードの準備ができておらず、クラウドに移行する準備ができていない場合は、延長セキュリティ更新プログラムのサブスクリプションを購入して、サポート終了日を過ぎてから最長 3 年間は**重要な**セキュリティ更新プログラムを受け取ることができます。  
+アップグレードの準備ができておらず、クラウドに移行する準備ができていない場合は、延長セキュリティ更新プログラムのサブスクリプションを購入して、サポート終了日を過ぎてから最長 3 年間は **重要な** セキュリティ更新プログラムを受け取ることができます。  
 
 ### <a name="benefits"></a>メリット 
 
@@ -165,7 +165,7 @@ ms.locfileid: "87112106"
 
 - **コスト**: 単一データベースは、ハードウェア、ソフトウェア、およびメンテナンスがオフロードされるため、コスト効率に優れ、秒単位または時間単位の使用量に対して料金をお支払いいただけます。 
 - **柔軟性**: 単一データベースは、開発者の生産性およびソリューションの迅速な市場投入が重要になる場合や、外部アクセスを必要とする場合に、クラウド用に設計されたアプリケーションに特に適しています。  
-- **一般的な機能**:最もよく使用される [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の機能をご利用いただけますが、Azure SQL Database マネージド インスタンスの場合ほど多くはありません。  
+- **一般的な機能**:最もよく使用される [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の機能をご利用いただけますが、SQL Managed Instance の場合ほど多くはありません。  
 - **迅速なデプロイ**:単一データベースをすばやくデプロイできます。 
 - **スケーラビリティ**:ビジネスに合わせ、必要に応じて迅速かつ簡単にスケール アップおよびダウンできるため、コストをさらに節約できるという利点が得られます。 
 - **稼働率**:サービスのコストには、ストレージと高可用性の両方が含まれ、99.995% の稼働率が保証されます。  
@@ -177,7 +177,7 @@ ms.locfileid: "87112106"
 ### <a name="considerations"></a>考慮事項
 
 - **限定された移行オプション**:インスタンス全体ではなく、一度に単一のデータベースのみを移行できます。   
-- **機能の制限**:最もよく使用される [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の機能を利用できますが、単一データベースの機能セットは、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合ほど完全ではありません。 
+- **機能の制限**:最もよく使用される Azure SQL Database の機能を利用できますが、単一データベースの機能セットは、Azure SQL Managed Instance、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合ほど完全ではありません。 
 - **Transact-SQL の相違点**:単一データベースとオンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) の違いがいくつかあります。 
 - **サイズの制限**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサイズが 524 PB であるのに対し、単一データベースの最大データベース サイズは 100 TB となります。 
 - **メンテナンス時間**:正確なメンテナンス時間は保証されませんが、ほぼ透過的です。 
@@ -197,9 +197,9 @@ ms.locfileid: "87112106"
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database マネージド インスタンス
+## <a name="sql-managed-instance"></a>SQL Managed Instance
 
-メンテナンスとコストのオフロードを利用したいが、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の単一データベースの機能セットに制限がありすぎることがわかった場合は、[Azure SQL Database マネージド インスタンス](/azure/sql-database/sql-database-managed-instance)に移動できます。 マネージド インスタンスは、オンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によく似ており、ハードウェア障害や修正プログラムの適用を心配する必要はありません。 マネージド インスタンスは、リフト アンド シフトの準備ができている、共有リソース セットを含むシステムおよびユーザー データベースのコレクションであり、クラウドへのほとんどの移行に使用できます。 このオプションは、最新の安定した [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 機能を使用する必要があり、最小限の変更でクラウドに移行する新しいアプリケーションまたは既存のオンプレミス アプリケーションに最適です。 
+メンテナンスとコストのオフロードを活用したいが、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の単一データベースの機能セットの制限が多すぎると思われる場合は、[SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) に移動できます。 マネージド インスタンスは、オンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によく似ており、ハードウェア障害や修正プログラムの適用を心配する必要はありません。 マネージド インスタンスは、リフト アンド シフトの準備ができている、共有リソース セットを含むシステムおよびユーザー データベースのコレクションであり、クラウドへのほとんどの移行に使用できます。 このオプションは、最新の安定した [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 機能を使用する必要があり、最小限の変更でクラウドに移行する新しいアプリケーションまたは既存のオンプレミス アプリケーションに最適です。 
 
 ### <a name="benefits"></a>メリット
 
@@ -225,10 +225,10 @@ ms.locfileid: "87112106"
 
 ### <a name="resources"></a>リソース
 
-[Azure SQL Database マネージド インスタンスの概要](/azure/sql-database/sql-database-managed-instance)       
+[SQL Managed Instance の概要](/azure/sql-database/sql-database-managed-instance)       
 [Azure SQL オプションの選択](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database 機能の比較](/azure/sql-database/sql-database-features)       
-[SQL Server からマネージド インスタンスに移行する](/azure/sql-database/sql-database-managed-instance-migrate)       
+[SQL Server を Azure SQL Managed Instance に移行する](/azure/sql-database/sql-database-managed-instance-migrate)       
 [より広範な移行プロセス](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 ツール:
@@ -241,7 +241,7 @@ ms.locfileid: "87112106"
 
 ### <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-JSON データを使用し、堅牢なクエリ処理とトランザクション データ処理の組み合わせを必要とする最新のスケーラブルなモバイル アプリケーションや Web アプリケーションには、Azure Cosmos DB をご検討ください。 詳細については、「[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)」を参照してください。 データのインポートの詳細については、[Cosmos DB にデータをインポートする方法](https://docs.microsoft.com/azure/cosmos-db/import-data/)に関するページを参照してください。
+JSON データを使用し、堅牢なクエリ処理とトランザクション データ処理の組み合わせを必要とする最新のスケーラブルなモバイル アプリケーションや Web アプリケーションには、Azure Cosmos DB をご検討ください。 詳細については、「[Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)」を参照してください。 データのインポートの詳細については、[Cosmos DB にデータをインポートする方法](/azure/cosmos-db/import-data/)に関するページを参照してください。
 
 Azure Cosmos DB には、次のような利点があります。
 - ドキュメントにはインデックスが作成されるので、使い慣れた SQL 構文を使用してクエリを実行することができます。
@@ -274,7 +274,7 @@ Azure テーブル ストレージには、次のような利点があります�
 | [SQL Server 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008%20R2) | 2010 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2008](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202008) | 2008 | 2012 | [2019](https://www.microsoft.com/sql-server/sql-server-2008) |
 | [SQL Server 2005](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202005) | 2006 | 2011 | [2016](https://www.microsoft.com/sql-server/sql-server-2005) |
-| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](https://blogs.technet.microsoft.com/cdnitmanagers/2012/12/06/sql-server-2000-end-of-support-april-2013/) |
+| [SQL Server 2000](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202000) | 2000 | 2005 | [2013](/archive/blogs/cdnitmanagers/sql-server-2000-end-of-support-april-2013) |
 
 > [!IMPORTANT]
 > この表と、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ライフサイクルのページが一致しない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] ライフサイクルがこの表よりも優先されます。これは、この表がおおまかな参照としての使用を目的としているためです。  
@@ -286,5 +286,4 @@ Azure テーブル ストレージには、次のような利点があります�
 [延長セキュリティ更新プログラム (ESU) の概要](sql-server-extended-security-updates.md)   
 [Azure にそのまま移行するための無料の延長セキュリティ更新プログラム (ESU)](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)   
 [SQL Server VM の概要](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)   
-[Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)    
-
+[Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)

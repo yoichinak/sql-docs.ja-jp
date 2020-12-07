@@ -12,16 +12,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43dbf8c960e45ab0b9099951b7b03b331170ad53
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895113"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987758"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
 
-SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
+SQL Server 単体テストでは、1 つ以上の Transact\-SQL テスト スクリプトが実行されます。 結果は Transact\-SQL スクリプト内で評価することができ、エラーを返してテストに失敗するには THROW または RAISERROR が使用されます。また、結果を評価するテスト内でテスト条件を定義することもできます。 テスト結果として、[SqlExecutionResult](/previous-versions/sql/sql-server-data-tools/jj856590(v=vs.103)) クラスのインスタンスが返されます。 このクラスのインスタンスには、1 つ以上のデータセット、実行時間、およびスクリプトの影響を受けた行数が含まれます。 この情報すべては、スクリプトの実行中に収集されます。 これらの結果は、テスト条件を使用して評価できます。 SQL Server Data Tools には、定義済みのテスト条件が用意されています。 また、カスタム条件を作成して使用することもできます (「[SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)」をご覧ください)。  
   
 ## <a name="predefined-test-conditions"></a>定義済みテスト条件  
 次の表に、SQL Server 単体テスト デザイナーの [テスト条件] ウィンドウを使用して追加できる定義済みテスト条件を示します。  
@@ -92,7 +92,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
+5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))」を参照してください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   
@@ -122,7 +122,7 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
   
     **[TestConditionName の構成]** ダイアログ ボックスが表示されます。  
   
-5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](https://msdn.microsoft.com/library/aa833420(VS.100).aspx)」を参照してください。  
+5.  テストするデータベースへの接続を指定します。 詳細については、「[データベース接続を作成する](/previous-versions/visualstudio/visual-studio-2010/aa833420(v=vs.100))」を参照してください。  
   
 6.  既定では、テストの Transact\-SQL 本体が編集ウィンドウに表示されます。 必要に応じて、予期する結果を生成するようにコードを変更できます。 たとえば、テストに事前テストのコードがある場合、そのコードを追加することができます。  
   
@@ -144,4 +144,3 @@ SQL Server 単体テストに予期されるスキーマ テスト条件を追�
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストでの Transact-SQL アサーションの使用](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストのスクリプト](../ssdt/scripts-in-sql-server-unit-tests.md)  
-  

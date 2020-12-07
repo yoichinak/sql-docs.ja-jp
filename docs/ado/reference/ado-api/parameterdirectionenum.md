@@ -1,8 +1,9 @@
 ---
+description: ParameterDirectionEnum
 title: Parameterdirection Enum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c109ea1c44fc44a4cdbb585e2c612ebf8c9b2909
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b7422bf0037adc8d756c20c82404a7f3b06ae9e3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242608"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990133"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-[パラメーター](../../../ado/reference/ado-api/parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
+[パラメーター](./parameter-object.md)が入力パラメーター、出力パラメーター、入力パラメーターと出力パラメーターの両方、またはストアドプロシージャからの戻り値を表すかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
@@ -48,9 +49,9 @@ ms.locfileid: "87242608"
 
 :::row:::
     :::column:::
-        [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction プロパティ](./direction-property.md)  
     :::column-end:::
 :::row-end:::

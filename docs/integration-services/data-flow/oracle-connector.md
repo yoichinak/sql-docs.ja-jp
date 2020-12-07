@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Oracle
 title: Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430754"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -55,6 +56,10 @@ SQL Server 2017 以前をターゲットとする SSIS パッケージを実行�
 - [SQL Server 2016:Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014:Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012:Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>制限事項と既知の問題
+
+- ビューは、Oracle ソースの "*テーブルまたはビューの名前*" の一覧には表示されません。 回避するには、SQL コマンドを使用して select * from view を実行するか、詳細エディターでプロパティ [Oracle Source].[TableName] にビューの名前を設定します。
 
 ## <a name="uninstallation"></a>アンインストール
 

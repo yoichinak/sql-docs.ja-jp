@@ -1,4 +1,5 @@
 ---
+description: Teradata 接続マネージャーの使用
 title: Teradata 接続マネージャーの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0aa51c868ae89062320640015ad01ef79134e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0181cb68a68e7788d59f70d25c9b6935478f248
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917758"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425814"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Teradata 接続マネージャーの使用
 
@@ -26,11 +27,11 @@ Teradata 接続マネージャーの `ConnectionManagerType` プロパティを 
 
 ## <a name="configure-the-teradata-connection-manager"></a>Teradata 接続マネージャーの構成
 
-接続マネージャーの構成の変更は、実行時に Integration Services によって解決されます。 Teradata データソースへの接続を追加するには、 **[Teradata 接続マネージャー エディター]** ウィンドウに情報を入力します。
+接続マネージャーの構成の変更は、実行時に Integration Services によって解決されます。 Teradata データソースへの接続を追加するには、**[Teradata 接続マネージャー エディター]** ウィンドウに情報を入力します。
 
 ![[Teradata 接続マネージャーエディター] ウィンドウ](media/teradata-connection-manager.png)
 
-1. **[名前]** ボックスに、接続の名前を入力します。 既定の名前は、 **[Teradata 接続マネージャー]** です。
+1. **[名前]** ボックスに、接続の名前を入力します。 既定の名前は、**[Teradata 接続マネージャー]** です。
 
 1. (省略可能) **[説明]** ボックスに、接続の説明を入力します。
 
@@ -38,8 +39,8 @@ Teradata 接続マネージャーの `ConnectionManagerType` プロパティを 
 
 1. **[認証]** で、次のいずれかの操作を行います。
 
-   - Windows 認証を使用するには、 **[Windows 認証を使用する]** を選択します。
-   - Teradata データベース認証を使用するには、 **[Teradata 認証を使用する]** を選択し、この種類の認証に対して次の資格情報を入力します。
+   - Windows 認証を使用するには、**[Windows 認証を使用する]** を選択します。
+   - Teradata データベース認証を使用するには、**[Teradata 認証を使用する]** を選択し、この種類の認証に対して次の資格情報を入力します。
      - **[メカニズム]** ボックスに、使用するセキュリティ チェック メカニズムを入力します。 有効なメカニズム値には、TD1、TD2、LDAP、KRB5、KRB5C、NTLM、NTLMC があります。
      - **[パラメーター]** ボックスに、入力したセキュリティ チェック メカニズムに必要なパラメーターの種類を入力します。
      - **[ユーザー名]** ボックスに、Teradata データベースへの接続に使用するユーザー名を入力します。  
@@ -52,12 +53,12 @@ Teradata 接続マネージャーの `ConnectionManagerType` プロパティを 
 
 ## <a name="custom-property"></a>カスタム プロパティ
 
-カスタムプロパティ `UseUTF8CharSet` では、UTF-8 文字セットを使用するかどうかを指定します。 既定値は *True*です。
+カスタムプロパティ `UseUTF8CharSet` では、UTF-8 文字セットを使用するかどうかを指定します。 既定値は *True* です。
 
 プロパティを設定するには、次の操作を行います。
 
 1. SQL Server Data Tools (SSDT) を開きます。
-1. **[接続マネージャー]** 領域で、 **[Teradata 接続マネージャー]** を右クリックし、 **[プロパティ]** を選択します。
+1. **[接続マネージャー]** 領域で、**[Teradata 接続マネージャー]** を右クリックし、**[プロパティ]** を選択します。
 1. **[プロパティ]** ウィンドウで、`UseUTF8CharSet` プロパティについて *[True]* または *[False]* を選択します。
 
 ## <a name="troubleshoot-the-teradata-connection-manager"></a>Teradata 接続マネージャーのトラブルシューティング

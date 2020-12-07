@@ -1,4 +1,5 @@
 ---
+description: catalog.grant_permission (SSISDB データベース)
 title: catalog.grant_permission (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4eb835fb8f5d81d5c15ecc0bf3c6911c2dfb05ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 19ad48a806db4f1877ac71f38d71be8f0d2dadc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495427"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB データベース)
 
@@ -40,7 +41,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引数  
  [ @object_type = ] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** _です。_  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint**_ です。_  
   
  [ @object_id = ] *object_id*  
  セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *object_id* は **bigint** です。  

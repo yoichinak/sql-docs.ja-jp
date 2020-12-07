@@ -1,4 +1,5 @@
 ---
+description: カーソル (Transact-SQL)
 title: カーソル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edfa870dd6f2f21f6d2bfdd122365c9913dc342a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706536"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128275"
 ---
 # <a name="cursors-transact-sql"></a>カーソル (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85706536"
   
  [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソル](../../relational-databases/cursors.md)  
   
   

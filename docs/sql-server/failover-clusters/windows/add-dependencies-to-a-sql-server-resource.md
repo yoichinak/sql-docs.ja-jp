@@ -1,4 +1,5 @@
 ---
+description: SQL Server リソースへの依存関係の追加
 title: 依存関係を SQL Server FCI リソースに追加する
 descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
 ms.custom: seo-lt-2019
@@ -6,29 +7,29 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - resource dependencies [SQL Server]
 - failover clustering [SQL Server], dependencies
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 659d9f1b2cb7e8d7d771b260cbeaf6db1a6e1c13
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897358"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127600"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、Always On フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[前提条件](#Prerequisites)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [前提条件](#Prerequisites)  
   
--   **SQL Server リソースに依存関係を追加するには、次のものを使用します:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
+-   **SQL Server リソースに依存関係を追加するために使用するもの:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
@@ -45,11 +46,11 @@ ms.locfileid: "85897358"
   
  さらに次の問題も考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションを使用した FTP: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションで FTP を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでは、FTP サービスを使用するように設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールと同じ物理ディスクのいずれかを、ご利用の FTP サービスで使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでの FTP : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションで FTP を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでは、FTP サービスを使用するようにセットアップされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールと同じ物理ディスクのいずれかを FTP サービスで使用する必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースの依存関係: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループにリソースを追加し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用できるようにするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存している場合は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] エージェント リソースに依存関係を追加することを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はお勧めしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存関係を追加しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターで高い可用性を維持するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースに障害が発生した場合に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループが影響を受けないように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースを構成します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースの依存関係 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループにリソースを追加し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用できるようにするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] エージェント リソースに依存関係を追加することを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はお勧めしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存関係を追加しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターで高い可用性を維持するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースに障害が発生した場合に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループが影響を受けないように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースを構成します。  
   
--   ファイル共有とプリンター リソース: ファイル共有リソースやプリンター クラスター リソースをインストールするときは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
+-   ファイル共有とプリンター リソース : ファイル共有リソースやプリンター クラスター リソースをインストールするときは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
   
 -   MS DTC の考慮事項: オペレーティング システムをインストールし FCI を構成してから、フェールオーバー クラスター マネージャー スナップインを使用して、クラスター内で機能するように [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を構成する必要があります。 MS DTC のクラスター化に失敗しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは中断しませんが、MS DTC が適切に構成されていない場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアプリケーション機能に影響が生じる可能性があります。  
   

@@ -1,4 +1,5 @@
 ---
+description: conversation_groups (Transact-sql)
 title: conversation_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_groups catalog view
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fd779e4d9ecff5346edf20f8dab0ed36e65bdff9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ffea98db7c6d1a2a673b7a8bd8d358578d81d43b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892213"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537478"
 ---
 # <a name="sysconversation_groups-transact-sql"></a>conversation_groups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

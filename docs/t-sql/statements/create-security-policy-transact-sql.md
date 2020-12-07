@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY (Transact-SQL)
 title: CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,15 +26,16 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d21a0588eb508b8a5e75ff8caef7636a530a5ccd
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110676"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688868"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   行レベルのセキュリティのセキュリティ ポリシーを作成します。  
   
@@ -88,7 +90,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  セキュリティ述語の適用先となるターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>解説  
+
+## <a name="remarks"></a>解説
  メモリ最適化テーブルで述語関数を使用する場合、**SCHEMABINDING** を含め、**WITH NATIVE_COMPILATION** コンパイル ヒントを使う必要があります。  
   
  ブロック述語は、対応する DML 操作を実行した後に評価されます。 そのため、READ UNCOMMITTED のクエリでは、ロールバックされる一時的な値を確認できます。  
@@ -119,7 +122,7 @@ ON [dbo].[Customer];
 ### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. 複数のテーブルに影響を及ぼすポリシーを作成する  
  以下の構文は、3 つの異なるテーブルに 3 つのフィルター述部を使用してセキュリティ ポリシーを作成し、そのセキュリティ ポリシーを有効にします。  
   
-```  
+```sql  
 CREATE SECURITY POLICY [FederatedSecurityPolicy]   
 ADD FILTER PREDICATE [rls].[fn_securitypredicate1]([CustomerId])   
     ON [dbo].[Customer],  
@@ -133,7 +136,7 @@ WITH (STATE = ON);
 ### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 複数の種類のセキュリティの述語でポリシーを作成する  
  フィルター述語とブロックの述語の両方を Sales テーブルに追加します。  
   
-```  
+```sql  
 CREATE SECURITY POLICY rls.SecPol  
     ADD FILTER PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales,  
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  

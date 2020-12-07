@@ -1,4 +1,5 @@
 ---
+description: sp_OAMethod (Transact-SQL)
 title: sp_OAMethod (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899314"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526961"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 以前に**sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
+ 以前に **sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *methodname*  
  呼び出す OLE オブジェクトのメソッド名を指定します。  
@@ -50,25 +51,25 @@ sp_OAMethod objecttoken , methodname
  _戻り_  **結果の出力**  
  OLE オブジェクトのメソッドの戻り値です。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
   
- メソッドが単一の値を返す場合は、戻り*値のローカル*変数を指定します。これにより、ローカル変数のメソッドの戻り値が返されます。または、メソッドの戻り値を単一列の単一行の結果セットとしてクライアントに*返す戻り値を指定しない*でください。  
+ メソッドが単一の値を返す場合は、戻り *値のローカル*変数を指定します。これにより、ローカル変数のメソッドの戻り値が返されます。または、メソッドの戻り値を単一列の単一行の結果セットとしてクライアントに *返す戻り値を指定しない*でください。  
   
  メソッドの戻り値が OLE オブジェクトの場合、戻り値は、データ型が**int**のローカル変数で*ある必要が*あります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
   
- メソッドの戻り値が配列の場合、戻り値が指定され*ている場合*は NULL に設定されます。  
+ メソッドの戻り値が配列の場合、戻り値が指定され *ている場合* は NULL に設定されます。  
   
  次のいずれかが発生すると、エラーが発生します。  
   
--   *戻り値が指定*されていますが、メソッドは値を返しません。  
+-   *戻り値が指定* されていますが、メソッドは値を返しません。  
   
 -   メソッドは、3次元以上の配列を返します。  
   
 -   メソッドが出力パラメーターとして配列を返す場合  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`はメソッドパラメーターです。 指定する場合、*パラメーター*は、適切なデータ型の値である必要があります。  
+`[ _@parametername = ] parameter[ OUTPUT ]` はメソッドパラメーターです。 指定する場合、 *パラメーター* は、適切なデータ型の値である必要があります。  
   
- 出力パラメーターの戻り値を取得するには、*パラメーター*を適切なデータ型のローカル変数にする必要があり、**出力**を指定する必要があります。 定数パラメーターが指定されている場合、または**output**が指定されていない場合、出力パラメーターからの戻り値は無視されます。  
+ 出力パラメーターの戻り値を取得するには、 *パラメーター* を適切なデータ型のローカル変数にする必要があり、 **出力** を指定する必要があります。 定数パラメーターが指定されている場合、または **output** が指定されていない場合、出力パラメーターからの戻り値は無視されます。  
   
- 指定する場合、 *parametername*は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@**_Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
+ 指定する場合、 *parametername* は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 名前付きパラメーターの名前である必要があります。 **@**_Parametername_is ローカル変数ではないことに注意 [!INCLUDE[tsql](../../includes/tsql-md.md)] してください。 アットマーク ( **@** ) は削除され、 *parametername*はパラメーター名として OLE オブジェクトに渡されます。 すべての位置指定パラメーターを指定した後に、すべての名前付きパラメーターを指定する必要があります。  
   
  *n*  
  複数のパラメーターを指定できることを示すプレースホルダーです。  
@@ -88,7 +89,7 @@ sp_OAMethod objecttoken , methodname
   
 -   2 次元の配列の場合は、最初の次元の配列の要素数を列数とし、2 番目の次元の配列の要素数を行数とした結果セットとしてクライアントに返します。 つまり、配列は (columns, rows) として返されます。  
   
- プロパティの戻り値またはメソッドの戻り値が配列の場合、 **sp_OAGetProperty**または**sp_OAMethod**によって結果セットがクライアントに返されます。 メソッドの出力パラメーターを配列にすることはできません。これらのプロシージャは、配列内のすべてのデータ値をスキャンし、結果セットのそれぞれの列に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の適切なデータ型とデータ長を決定します。 これらのプロシージャは必要なデータ型とデータ長を使用して、特定の列内のすべてのデータ値を表現します。  
+ プロパティの戻り値またはメソッドの戻り値が配列の場合、 **sp_OAGetProperty** または **sp_OAMethod** によって結果セットがクライアントに返されます。 メソッドの出力パラメーターを配列にすることはできません。これらのプロシージャは、配列内のすべてのデータ値をスキャンし、結果セットのそれぞれの列に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の適切なデータ型とデータ長を決定します。 これらのプロシージャは必要なデータ型とデータ長を使用して、特定の列内のすべてのデータ値を表現します。  
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 列のデータ値のデータ型が異なる場合、列全体のデータ型が次のグラフに基づいて選択されます。  
   
@@ -101,16 +102,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>注釈  
- また、 **sp_OAMethod**を使用してプロパティ値を取得することもできます。  
+## <a name="remarks"></a>解説  
+ また、 **sp_OAMethod** を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-calling-a-method"></a>A. メソッドを呼び出す  
- 次の例では、 `Connect` 以前に作成した**SQLServer**オブジェクトのメソッドを呼び出します。  
+ 次の例では、 `Connect` 以前に作成した **SQLServer** オブジェクトのメソッドを呼び出します。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,8 +123,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>B: プロパティを取得する  
- 次の例では、 `HostName` (以前に作成した**SQLServer**オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
+### <a name="b-getting-a-property"></a>B. プロパティを取得する  
+ 次の例では、 `HostName` (以前に作成した **SQLServer** オブジェクトの) プロパティを取得し、ローカル変数に格納します。  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,8 +137,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

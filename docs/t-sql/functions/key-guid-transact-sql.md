@@ -1,4 +1,5 @@
 ---
+description: KEY_GUID (Transact-SQL)
 title: KEY_GUID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fbddf97fc08ffe0b200b1affa7258cc2746e0ca
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ec78a9cd0dc6c0b08b61e4d1ca79748350bbb6ea
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111946"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115162"
 ---
 # <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +36,7 @@ ms.locfileid: "87111946"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 Key_GUID( 'Key_Name' )  
 ```  
   
@@ -60,7 +60,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="examples"></a>例  
  次の例では、`ABerglundKey1` という対称キーの GUID を返します。  
   
-```  
+```sql  
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   

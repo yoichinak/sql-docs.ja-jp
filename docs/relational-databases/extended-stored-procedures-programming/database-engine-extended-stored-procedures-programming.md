@@ -1,4 +1,5 @@
 ---
+description: データベース エンジン拡張ストアド プロシージャ - プログラミング
 title: 拡張ストアドプロシージャのプログラミング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d205888982349bc58669653aa5ff5cb6d9d902b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c9b17ecfe69eef7f30015cdcef84aaef4790afc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460847"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>データベース エンジン拡張ストアド プロシージャ - プログラミング
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85717667"
 ## <a name="extended-stored-procedures-vs-clr-integration"></a>拡張ストアド プロシージャと CLR 統合  
  以前のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[tsql](../../includes/tsql-md.md)] で表現することが非常に困難であるか記述が不可能なサーバー側ロジックをデータベース アプリケーション開発者が記述するための唯一の方法として、XP (拡張ストアド プロシージャ) が用意されていました。 CLR 統合は、このような拡張ストアド プロシージャの記述に代わる、より堅牢な手段を提供します。 さらに、CLR 統合を使用すると、ストアド プロシージャの形式で記述していたロジックが、テーブル値関数でさらに的確に表現できる場合が多くあります。これにより、関数が生成する結果を SELECT ステートメントの FROM 句に埋め込んでクエリできるようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR&#41; 統合の概要 &#40;共通言語ランタイム](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
  [CLR テーブル値関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   

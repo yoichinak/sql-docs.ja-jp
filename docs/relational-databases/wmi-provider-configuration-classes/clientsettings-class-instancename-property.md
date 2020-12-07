@@ -1,4 +1,5 @@
 ---
+description: ClientSettings クラス - InstanceName プロパティ
 title: InstanceName プロパティ (ClientSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef8e172bf287ff13edf93392261034869e19d455
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1eed5f5bb070ae5de9b582671b30434be477a43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888885"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537839"
 ---
 # <a name="clientsettings-class---instancename-property"></a>ClientSettings クラス - InstanceName プロパティ
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,5 +43,5 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   

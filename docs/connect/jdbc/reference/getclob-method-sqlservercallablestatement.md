@@ -1,4 +1,5 @@
 ---
+description: getClob メソッド (SQLServerCallableStatement)
 title: getClob メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c1824b89-fc2e-4741-b849-7d06108fda97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d24b2f87768f62e1a8990ebae08a09e6bd208862
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 83a69778c3a32d07cf010ceda609baa9b21f53e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436624"
 ---
 # <a name="getclob-method-sqlservercallablestatement"></a>getClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80901368"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の Clob オブジェクトとして取得します。|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|パラメーターに渡された名前を使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の Clob オブジェクトとして取得します。|  

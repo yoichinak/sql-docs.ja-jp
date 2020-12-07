@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243426"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725569"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express のセキュリティ
 
@@ -42,8 +42,8 @@ SQL Server Express の詳細については、次のリソースを参照して�
   
 |リソース|説明|
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition オンライン ブック](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition に関する詳細なドキュメント。|  
-|「[管理者以外のユーザーのためのユーザー インスタンス](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))」 (SQL Server オンライン ブック)|ユーザー インスタンスの作成方法および配置方法について説明します。|  
+|[Microsoft SQL Server 2005 Express Edition オンライン ブック](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition に関する詳細なドキュメント。|  
+|「[管理者以外のユーザーのためのユーザー インスタンス](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))」 (SQL Server オンライン ブック)|ユーザー インスタンスの作成方法および配置方法について説明します。|  
 |[SQL Server Express のユーザー インスタンス](sql-server-express-user-instances.md)|ADO.NET アプリケーションにおけるユーザー インスタンスの機能について説明します。 ユーザー インスタンスを有効にする方法、<xref:Microsoft.Data.SqlClient.SqlConnection> を使ってユーザー インスタンスに接続する方法、ユーザー インスタンスの有効期間、ユーザー インスタンスのシナリオについて情報を提供します。|  
   
 ## <a name="next-steps"></a>次のステップ

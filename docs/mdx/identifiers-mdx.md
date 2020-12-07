@@ -1,4 +1,5 @@
 ---
+description: 識別子 (MDX)
 title: 識別子 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 489829468d9f30d54c7b76c0d1d10cce9142d9d1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891219"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194386"
 ---
 # <a name="identifiers-mdx"></a>識別子 (MDX)
 
@@ -59,7 +60,7 @@ ms.locfileid: "68891219"
   
  ``  
   
- 必須ではありませんが、標準識別子に区切り記号を使用することもできます。 次の MDX ステートメントでは、 `Measures`、 `Product`、および`Style`の標準識別子は、角かっこで正しく区切られています。  
+ 必須ではありませんが、標準識別子に区切り記号を使用することもできます。 次の MDX ステートメントでは、 `Measures` 、 `Product` 、およびの `Style` 標準識別子は、角かっこで正しく区切られています。  
   
  `SELECT [Measures].MEMBERS ON COLUMNS,`  
   
@@ -73,17 +74,17 @@ ms.locfileid: "68891219"
  標準識別子の形式の規則に従わない識別子は、必ず角かっこ ([]) で区切る必要があります。  
   
 > [!NOTE]  
->  区切り記号は識別子のみに使用されます。 キーワードがで[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]予約済みとしてマークされているかどうかにかかわらず、キーワードに区切り記号を使用することはできません。  
+>  区切り記号は識別子のみに使用されます。 キーワードがで予約済みとしてマークされているかどうかにかかわらず、キーワードに区切り記号を使用することはできません [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  区切られた識別子は、次のような場合に使用します。  
   
 -   オブジェクトの名前または名前の一部に予約語を使用する場合。  
   
-     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレード[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]されたデータベースには、以前のバージョンでは予約されていないが予約済みの単語を含む識別子が含まれる場合があります。 オブジェクトの識別子を変更できるようになるまでの間は、区切られた識別子を使ってオブジェクトを参照できます。  
+     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレードされたデータベースには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 以前のバージョンでは予約されていないが予約済みの単語を含む識別子が含まれる場合があります。 オブジェクトの識別子を変更できるようになるまでの間は、区切られた識別子を使ってオブジェクトを参照できます。  
   
 -   オブジェクトの名前に、修飾された識別子として示されていない文字を使用する場合。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]区切られた識別子で現在のコードページ内の任意の文字を使用できるようにします。 しかし、むやみにオブジェクト名に特殊文字を使用すると、MDX ステートメントやスクリプトが読みにくくなり、メンテナンスが困難になります。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 区切られた識別子で現在のコードページ内の任意の文字を使用できるようにします。 しかし、むやみにオブジェクト名に特殊文字を使用すると、MDX ステートメントやスクリプトが読みにくくなり、メンテナンスが困難になります。  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>区切られた識別子の形式の規則  
  区切られた識別子の本体には、現在のコードページ内の文字の任意の組み合わせを含めることができます (区切り文字自体を含む)。 区切られた識別子の本体に区切り記号が含まれている場合、特殊な処理が必要です。  
@@ -93,7 +94,7 @@ ms.locfileid: "68891219"
 -   識別子の本体に右角かっこ (]) が含まれている場合は、2つの右角かっこ (]) を指定する必要があります。  
   
 ### <a name="examples-of-delimited-identifiers"></a>区切られた識別子の例  
- 次の MDX ステートメント`Sales Volume`では、、 `Sales Cube`、および`select`は区切られた識別子です。  
+ 次の MDX ステートメントでは、 `Sales Volume` 、 `Sales Cube` 、および `select` は区切られた識別子です。  
   
  `-- The [Sales Volume] and [Sales Cube] identifiers contain a space.`  
   
@@ -124,7 +125,6 @@ ms.locfileid: "68891219"
   
 ## <a name="see-also"></a>参照  
  [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [MDX 構文の要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

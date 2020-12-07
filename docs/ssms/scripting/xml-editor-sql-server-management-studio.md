@@ -1,11 +1,8 @@
 ---
 title: XML エディター (SQL Server Management Studio)
 description: SQL Server Management Studio XML エディターのビジュアル ツールを使用して、XML スキーマ (XSD)、ADO.NET データセット、および XML ドキュメントを操作する方法について説明します。
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237023"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093567"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
-  
- デザイナーを表示するには、データセット、XML スキーマ、または XML ファイルをプロジェクトに追加するか、次の表に示す種類のファイルを開きます。  
-  
-> [!CAUTION]  
->  スキーマ ビューでは、 **[元に戻す]** コマンドを使用できません。 作業を慎重に計画すると共に、頻繁にファイルを保存してください。  
+
+XML スキーマ、ADO.NET データセット、および XML ドキュメントを操作するためのビジュアルなツールのセットが用意されています。 XML デザイナーは、WC3 (World Wide Web Consortium) で定義されている XML スキーマ定義 (XSD) 言語をサポートします。 デザイナーは、DTD (文書型定義) や XDR (XML-Data Reduced) などのその他の XML スキーマ言語をサポートしません。  
+
+デザイナーを表示するには、データセット、XML スキーマ、または XML ファイルをプロジェクトに追加するか、次の表に示す種類のファイルを開きます。  
+
+> [!CAUTION]
+> スキーマ ビューでは、 **[元に戻す]** コマンドを使用できません。 作業を慎重に計画すると共に、頻繁にファイルを保存してください。  
   
  デザイナーで XML ファイル、XML スキーマ、およびデータセットを操作する場合は、次の 3 つのビュー (またはモード) を使用できます。  
   

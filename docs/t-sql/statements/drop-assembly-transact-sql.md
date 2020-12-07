@@ -1,4 +1,5 @@
 ---
+description: DROP ASSEMBLY (Transact-SQL)
 title: DROP ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - dropping assemblies
 - WITH NO DEPENDENTS option
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 61dc0f3a7af65386d2568f5389674b6d781562e8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 601d7bdff19c6e6d8f4daec58c28c048891bcc82
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484769"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131335"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、アセンブリを削除します。  
   
@@ -73,7 +74,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 ## <a name="examples"></a>例  
  次の例では、アセンブリ `HelloWorld` が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに既に作成されていることを前提としています。  
   
-```  
+```sql  
 DROP ASSEMBLY Helloworld ;  
 ```  
   
@@ -81,6 +82,6 @@ DROP ASSEMBLY Helloworld ;
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [アセンブリに関する情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)  
+ [アセンブリについての情報の取得](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: カーソル ストアド プロシージャ (Transact-SQL)
 title: カーソルストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], cursors
 - server cursors [SQL Server]
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5afec901b570169a7a72dfe39e38026fcc5d0fcf
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ebc70713f5a1f8741a22abae09960a5afe7d0111
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977622"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550089"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>カーソル ストアド プロシージャ (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "86977622"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

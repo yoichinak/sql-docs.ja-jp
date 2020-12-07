@@ -1,4 +1,5 @@
 ---
+description: プロジェクト オプションの設定 (OracleToSQL)
 title: プロジェクトオプションの設定 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492365"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
 SSMA プロジェクトごとに、プロジェクトレベルのオプションを設定できます。 これらのオプションは、オブジェクトの変換、オブジェクトの読み込み、ユーザーインターフェイス、およびデータ移行の設定を指定します。 オブジェクトをに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または移行する前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、構成オプションがプロジェクトに適していることを確認してください。  
@@ -39,7 +40,7 @@ SSMA には、次の5つのプロジェクト設定があります。
   
 また、これらの設定を構成するための4つのモードもあります。  
   
--   既定  
+-   Default  
   
 -   Optimistic  
   
@@ -66,13 +67,13 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **既定のプロジェクトオプションを設定するには**  
   
-1.  [**ツール**] メニューの [**既定のプロジェクト設定**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **既定のプロジェクト設定**] をクリックします。  
   
-2.  [**既定のプロジェクト設定**] ダイアログボックスで、次のいずれかの手順を実行します。  
+2.  [ **既定のプロジェクト設定** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
-    -   [移行**先のバージョン**] ドロップダウンから [設定の表示または変更が必要な移行プロジェクトの種類] を選択し、左側のウィンドウの下部にある [**全般**] をクリックしてから、[変換] または [移行] を選択します。  
+    -   [移行 **先のバージョン** ] ドロップダウンから [設定の表示または変更が必要な移行プロジェクトの種類] を選択し、左側のウィンドウの下部にある [ **全般** ] をクリックしてから、[変換] または [移行] を選択します。  
   
-    -   定義済みのモードを選択するには、[**モード**] ボックスの一覧で [**既定**]、[**オプティミスティック**]、または [**完全**] を選択します。  
+    -   定義済みのモードを選択するには、[ **モード** ] ボックスの一覧で [ **既定**]、[ **オプティミスティック**]、または [ **完全**] を選択します。  
   
     -   カスタム設定を指定するには、新しい設定または値を選択または入力します。  
   
@@ -82,22 +83,22 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 **現在のプロジェクトの設定をカスタマイズするには**  
   
-1.  [**ツール**] メニューの [**プロジェクトの設定**] をクリックします。  
+1.  [ **ツール** ] メニューの [ **プロジェクトの設定**] をクリックします。  
   
-2.  [**プロジェクトの設定**] ダイアログボックスで、次のいずれかの手順を実行します。  
+2.  [ **プロジェクトの設定** ] ダイアログボックスで、次のいずれかの手順を実行します。  
   
-    -   定義済みのモードを選択するには、[**モード**] ボックスの一覧で [**既定**]、[**オプティミスティック**]、または [**完全**] を選択します。  
+    -   定義済みのモードを選択するには、[ **モード** ] ボックスの一覧で [ **既定**]、[ **オプティミスティック**]、または [ **完全**] を選択します。  
   
-    -   カスタムモードを指定するには、[**モード**] ボックスで [**カスタム**] を選択し、適切なプロジェクト設定を選択します。  
+    -   カスタムモードを指定するには、[ **モード** ] ボックスで [ **カスタム**] を選択し、適切なプロジェクト設定を選択します。  
   
 3.  **[OK]** をクリックして設定を保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズする方法については、「 [OracleToSQL&#41;&#40;Oracle SQL Server とデータ型のマッピング](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)」を参照してください。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズする方法については、「 [OracleToSQL&#41;&#40;Oracle SQL Server とデータ型のマッピング ](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)」を参照してください。  
   
--   それ以外の場合は、Oracle データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト定義に変換できます。 詳細については、「 [Oracle スキーマ &#40;OracleToSQL&#41;の変換](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)」を参照してください。  
+-   それ以外の場合は、Oracle データベースオブジェクト定義を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト定義に変換できます。 詳細については、「 [Oracle スキーマ &#40;OracleToSQL&#41;の変換 ](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [Oracle と SQL Server のデータ型のマッピング &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

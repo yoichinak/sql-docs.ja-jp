@@ -4,11 +4,11 @@
   href: installing-ssma-for-db2-db2tosql.md
 - name: 作業の開始
   href: getting-started-with-ssma-for-db2-console-db2tosql.md
-- name: 新機能
+- name: 新着記事
   href: what-s-new-in-ssma-for-db2-db2tosql.md
 - name: GUI の新機能
   href: new-gui-features-in-ssma-for-db2-db2tosql.md
-- name: SSMA for DB2 クライアントのインストール
+- name: DB2 クライアント用の SSMA のインストール
   href: installing-ssma-for-db2-client-db2tosql.md
 - name: ユーザー インターフェイス リファレンス
   href: user-interface-reference-db2tosql.md
@@ -37,7 +37,7 @@
 - name: SQL Server への接続
   href: connect-to-sql-server-db2tosql.md
 - name: SQL Server への接続
-  href: connecting-to-sql-server-db2etosql.md
+  href: connecting-to-sql-server-db2tosql.md
 - name: 評価レポート
   href: assessment-report-db2tosql.md
 - name: DB2 への接続
@@ -109,7 +109,7 @@
       href: global-settings-editor-db2tosql.md
     - name: '[出力ウィンドウ]'
       href: global-settings-output-window-db2tosql.md
-    - name: ログ記録
+    - name: ログの記録
       href: global-settings-logging-db2tosql.md
 - name: 変換メッセージ
   href: messages/toc.yml

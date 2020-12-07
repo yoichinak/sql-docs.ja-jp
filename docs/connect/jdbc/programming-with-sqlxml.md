@@ -1,4 +1,5 @@
 ---
+description: SQLXML でのプログラミング
 title: SQLXML でのプログラミング | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438324"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML でのプログラミング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -99,7 +100,7 @@ ms.locfileid: "69027769"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>アダプティブ バッファリングと SQLXML サポート  
  SQLXML オブジェクトから返されたバイナリ ストリームと文字ストリームは、アダプティブ バッファリング モードまたはフル バッファリング モードに従います。 一方、XML パーサーがストリームではない場合、アダプティブとフルのいずれの設定にも従いません。 アダプティブ バッファリングの使用について詳しくは、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データのサポート](../../connect/jdbc/supporting-xml-data.md)  
   
   

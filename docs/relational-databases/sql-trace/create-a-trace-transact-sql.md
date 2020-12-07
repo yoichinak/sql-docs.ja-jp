@@ -1,4 +1,5 @@
 ---
+description: トレースの作成 (Transact-SQL)
 title: トレースの作成 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d872268d1ae879f46667f133f184264d9c3b8e49
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff2970bf4d450c425f169be7b2bb72c24db7d2d0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751043"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130182"
 ---
 # <a name="create-a-trace-transact-sql"></a>トレースの作成 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +36,13 @@ ms.locfileid: "85751043"
      **sp_trace_setevent** と **sp_trace_setfilter** は、停止状態の既存のトレースに対してのみ実行できます。  
   
     > [!IMPORTANT]  
-    >  通常のストアド プロシージャとは異なり、すべての SQL Server Profiler ストアド プロシージャ (<strong>sp_trace_*xx*</strong>) のパラメーターでは、データ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
+    >  通常のストアド プロシージャとは異なり、すべての SQL Server Profiler ストアド プロシージャ (<strong>sp_trace_ *xx*</strong>) のパラメーターでは、データ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例
+
  [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してトレースを作成するコードを次に示します。 トレースの作成、トレース ファイルの設定、およびトレースの停止の、3 つのセクションで構成されています。 トレースするイベントを追加して、トレースをカスタマイズしてください。 イベントと列の一覧については、「 [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)を使用してトレースを作成するコードを次に示します。  
   
+### <a name="a-create-a-trace"></a>A. トレースを作成する
  次のコードでは、トレースを作成してイベントを追加し、トレースを開始します。  
   
 ```  
@@ -72,7 +75,7 @@ GO
   
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-populate-the-trace-file"></a>B. トレース ファイルを設定する
  トレースが作成および開始されたので、次のコードを実行して、トレースにアクティビティを設定します。  
   
 ```  
@@ -83,7 +86,7 @@ GO
   
 ```  
   
-## <a name="example"></a>例  
+### <a name="c-stop-the-trace"></a>C. トレースを停止する
  トレースは、いつでも停止および再開できます。 この例では次のコードを実行して、トレースを停止し、閉じ、トレース定義を削除します。  
   
 ```  
@@ -99,7 +102,7 @@ EXEC sp_trace_setstatus @TraceID, 2
   
 ```  
   
-## <a name="example"></a>例  
+### <a name="d-examine-the-trace-file"></a>D. トレース ファイルを調べる
  トレース ファイルを調べるには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して SampleTrace.trc ファイルを開きます。  
   
 ## <a name="see-also"></a>参照  

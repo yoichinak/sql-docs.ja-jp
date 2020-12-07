@@ -1,8 +1,9 @@
 ---
+description: DateCreated および DateModified プロパティの例 (VC++)
 title: DateCreated プロパティと DateModified プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63ff7406b192bc8ecb759a5fe234efd1397cf11b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8071fac2ac1497e9b19cb5c5375de3a9dbc725bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759228"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984783"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated および DateModified プロパティの例 (VC++)
-この例では、既存の[テーブル](../../../ado/reference/adox-api/table-object-adox.md)に新しい[列](../../../ado/reference/adox-api/column-object-adox.md)を追加し、新しい**テーブル**を作成することによって、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)プロパティと[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを示します。 この例を実行するには、DateOutput プロシージャが必要です。  
+この例では、既存の[テーブル](./table-object-adox.md)に新しい[列](./column-object-adox.md)を追加し、新しい**テーブル**を作成することによって、 [DateCreated](./datecreated-property-adox.md)プロパティと[DateModified](./datemodified-property-adox.md)プロパティを示します。 この例を実行するには、DateOutput プロシージャが必要です。  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -115,7 +116,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DateCreated プロパティ (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified プロパティ (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [DateCreated プロパティ (ADOX)](./datecreated-property-adox.md)   
+ [DateModified プロパティ (ADOX)](./datemodified-property-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)

@@ -1,4 +1,5 @@
 ---
+description: ToString (geometry データ型)
 title: ToString (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554915"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88305612"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86554915"
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このメソッドは、NULL インスタンスに対して呼び出されたときに、文字列 "Null" を返します。  
   
  NULL 以外のインスタンスでは、このメソッドは `AsTextZM().` を使用することと同じです。  
@@ -56,9 +57,9 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STAsText &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

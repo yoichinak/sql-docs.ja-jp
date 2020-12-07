@@ -1,8 +1,9 @@
 ---
+description: FieldAttributeEnum
 title: FieldAttributeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4b218616ec1514ea8af1c160b155b63fb54c182c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242702"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973173"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの1つまたは複数の属性を指定します。  
@@ -35,10 +36,10 @@ ms.locfileid: "87242702"
 |**adFldIsDefaultStream**|0x20000|レコードによって表されるリソースの既定のストリームがフィールドに格納されていることを示します。 たとえば、既定のストリームは、Web サイトのルートフォルダーの HTML コンテンツにすることができます。これは、ルート URL を指定したときに自動的に提供されます。|  
 |**adFldIsNullable**|0x20|フィールドが null 値を許容することを示します。|  
 |**adFldIsRowURL**|0x10000|レコードによって表されるデータストアからリソースに名前を指定する URL がフィールドに含まれていることを示します。|  
-|**adFldLong**|0x80|フィールドが長いバイナリフィールドであることを示します。 また、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)メソッドと[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッドも使用できることを示します。|  
+|**adFldLong**|0x80|フィールドが長いバイナリフィールドであることを示します。 また、 [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) メソッドと [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) メソッドも使用できることを示します。|  
 |**adFldMayBeNull**|0x40|フィールドから null 値を読み取ることができることを示します。|  
 |**Adfldon Defer**|0x2|フィールドが遅延していることを示します。つまり、フィールド値は、レコード全体ではなく、明示的にアクセスしたときにのみ、データソースから取得されません。|  
-|**adFldNegativeScale**|0x4000|フィールドが負の小数点以下桁数の値をサポートする列の数値を表すことを示します。 小数点以下桁数は、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティによって指定されます。|  
+|**adFldNegativeScale**|0x4000|フィールドが負の小数点以下桁数の値をサポートする列の数値を表すことを示します。 小数点以下桁数は、 [numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md) プロパティによって指定されます。|  
 |**Adflが Wid**|0x100|フィールドには、に書き込むことができず、行 (レコード番号、一意識別子など) を識別する以外に意味のある値を持たない永続的な行識別子が含まれていることを示します。|  
 |**adFldRowVersion**|0x200|更新を追跡するために使用される時間または日付スタンプがフィールドに含まれていることを示します。|  
 |**adFldUnknownUpdatable**|0x8|フィールドに書き込むことができるかどうかをプロバイダーが判断できないことを示します。|  

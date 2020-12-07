@@ -1,8 +1,9 @@
 ---
+description: DeleteRecord メソッドと MoveRecord メソッドの例 (VB)
 title: DeleteRecord メソッドと MoveRecord メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af8f2a1431c8d41393e25638edf1ac83fee16236
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 382a4e103d1a51067344788b7fe1fdca9f5e1fd4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974013"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord メソッドと MoveRecord メソッドの例 (VB)
-この例では、Web フォルダーに発行されたテキストファイルの内容をコピー、移動、編集、および削除する方法を示します。 使用されるその他のプロパティとメソッドには、 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md)、 [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-record.md)、および[Flush](../../../ado/reference/ado-api/flush-method-ado.md)があります。  
+この例では、Web フォルダーに発行されたテキストファイルの内容をコピー、移動、編集、および削除する方法を示します。 使用されるその他のプロパティとメソッドには、 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md)、 [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)、 [Source](../../../ado/reference/ado-api/source-property-ado-record.md)、および [Flush](../../../ado/reference/ado-api/flush-method-ado.md)があります。  
   
 ```  
 'BeginDeleteRecordVB  

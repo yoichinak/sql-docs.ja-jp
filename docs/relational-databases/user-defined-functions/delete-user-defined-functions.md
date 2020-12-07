@@ -1,4 +1,5 @@
 ---
+description: ユーザー定義関数の削除
 title: ユーザー定義関数の削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48d0b41d77f562983b5e6a0ecd19ff3f98551887
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bd339199cb32fc98490a5e2861591cbc2232c061
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722861"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125037"
 ---
 # <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85722861"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ユーザー定義関数を削除するために使用するもの:**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85722861"
   
 #### <a name="to-delete-a-user-defined-function"></a>ユーザー定義関数を削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

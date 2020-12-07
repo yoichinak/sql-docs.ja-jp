@@ -1,4 +1,5 @@
 ---
+description: sp_helpsort (Transact-sql)
 title: sp_helpsort (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a55c2206d8a065f0e34c68ae06f0a1bd6baee462
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750524"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538738"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,8 +46,8 @@ sp_helpsort
 ## <a name="result-sets"></a>結果セット  
  サーバーの既定の照合順序を返します。  
   
-## <a name="remarks"></a>Remarks  
- のインスタンスが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前ののインストールと互換性があるように指定された照合順序でインストールされている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helpsort**は空白の結果を返します。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
+## <a name="remarks"></a>解説  
+ のインスタンスが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前ののインストールと互換性があるように指定された照合順序でインストールされている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helpsort** は空白の結果を返します。 この動作が発生した場合、`SELECT SERVERPROPERTY ('Collation');` のように、SERVERPROPERTY オブジェクトに対してクエリを実行して、照合順序を決定できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -66,9 +67,9 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

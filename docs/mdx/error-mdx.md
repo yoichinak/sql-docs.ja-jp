@@ -1,4 +1,5 @@
 ---
+description: Error (MDX)
 title: エラー (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 91d07c6bbb4eb4731c9a802e47cd8f4c71aa5aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f95ee71586f5571d91221fe8889198a44a1252b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68031229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494925"
 ---
 # <a name="error-mdx"></a>Error (MDX)
 
@@ -31,8 +32,8 @@ Error( [ Error_Text ] )
  *Error_Text*  
  返すエラー メッセージを格納した有効な文字列式です。  
   
-## <a name="examples"></a>使用例  
- 次のクエリは、計算されるメジャー内で**Error**関数を使用する方法を示しています。  
+## <a name="examples"></a>例  
+ 次のクエリは、計算されるメジャー内で **Error** 関数を使用する方法を示しています。  
   
  `WITH MEMBER MEASURES.ERRORDEMO AS ERROR("THIS IS AN ERROR")`  
   

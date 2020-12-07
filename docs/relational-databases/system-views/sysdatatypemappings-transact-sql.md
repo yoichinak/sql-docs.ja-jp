@@ -1,4 +1,5 @@
 ---
+description: sysdatatypemappings (Transact-SQL)
 title: msdb.dbo.sysdatatypemappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae1637f0019979d4f915ddb084c6e90fa4e8274e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad4a6df1ae2dbdd418e133053330095a389bdf24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427534"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Msdb.dbo.sysdatatypemappings**ビューは、SQL Server データベース管理システム (DBMS) の SQL Server データ型とデータ型の間のマッピングを示すために使用されます。 このビューは、 **msdb**データベースに格納されます。  
+  **Msdb.dbo.sysdatatypemappings**ビューは、SQL Server データベース管理システム (DBMS) の SQL Server データ型とデータ型の間のマッピングを示すために使用されます。 このビューは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,8 +55,8 @@ ms.locfileid: "85889128"
 |**データ損失**|**bit**|ソース DBMS とマップ先 DBMS でデータ型をマッピングするときに、データの損失が発生するかどうかを示します。|  
 |**is_default**|**bit**|データ型マッピングが既定で使用されるかどうかを示します。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  

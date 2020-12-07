@@ -1,4 +1,5 @@
 ---
+description: レポート サーバーでカスタム認証またはフォーム認証を構成する
 title: レポート サーバーでカスタム認証またはフォーム認証を構成する | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492625"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
 
@@ -35,7 +36,7 @@ Reporting Services に用意されている拡張可能なアーキテクチャ�
 
 1.  テキスト エディターで RSReportServer.config を開きます。
 
-2.  \<**Authentication**> を検索します。
+2.  \<**Authentication**> を探します。
 
 3.  次の XML 構造をコピーします。
 

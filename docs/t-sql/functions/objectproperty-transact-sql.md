@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY (Transact-SQL)
 title: OBJECTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 657a3c207fb3e6928e183890ae5bc97b19da7387
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111440"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116668"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87111440"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 OBJECTPROPERTY ( id , property )   
 ```  
   
@@ -98,7 +99,7 @@ OBJECTPROPERTY ( id , property )
 |IsForeignKey|任意のスキーマ スコープ オブジェクト|FOREIGN KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexed|テーブル、ビュー|インデックス付きのテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexable|テーブル、ビュー|インデックスを作成できるテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsInlineFunction|Function|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない|  
+|IsInlineFunction|機能|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない|  
 |IsMSShipped|任意のスキーマ スコープ オブジェクト|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に作成されたオブジェクト。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|任意のスキーマ スコープ オブジェクト|PRIMARY KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = 関数ではありません。またはオブジェクト ID が無効です。|  
 |IsProcedure|任意のスキーマ スコープ オブジェクト|プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -106,16 +107,16 @@ OBJECTPROPERTY ( id , property )
 |IsQueue|任意のスキーマ スコープ オブジェクト|Service Broker キュー<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|任意のスキーマ スコープ オブジェクト|レプリケーション プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|任意のスキーマ スコープ オブジェクト|ルールのバインド。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsScalarFunction|Function|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない|  
+|IsScalarFunction|機能|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない|  
 |IsSchemaBound|関数、ビュー|SCHEMABINDING を使用して作成されたスキーマ バインド関数またはビュー。<br /><br /> 1 = スキーマ バインド<br /><br /> 0 = 非スキーマ バインド|  
 |IsSystemTable|テーブル|システム テーブル。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsSystemVerified|Object|SQL Server では、オブジェクトの決定性のプロパティと有効桁数のプロパティを確認できます。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|テーブル|テーブル。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsTableFunction|Function|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない|  
+|IsTableFunction|機能|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない|  
 |IsTrigger|任意のスキーマ スコープ オブジェクト|トリガー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|任意のスキーマ スコープ オブジェクト|UNIQUE 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|テーブル|ユーザー定義テーブル。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|表示|ビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsView|View|ビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|任意のスキーマ スコープ オブジェクト|オブジェクトの所有者。<br /><br /> **注:** スキーマ所有者はオブジェクト所有者である必要はありません。 たとえば、子オブジェクト (*parent_object_id* が NULL でないオブジェクト) では、常に親オブジェクトと同じ所有者 ID が返されます。<br /><br /> NULL 以外 = オブジェクト所有者のデータベース ユーザー ID です。|  
 |SchemaId|任意のスキーマ スコープ オブジェクト| オブジェクトが所属するスキーマのスキーマ ID。| 
 |TableDeleteTrigger|テーブル|テーブルに DELETE トリガーがあります。<br /><br /> >1 = 指定された種類の最初のトリガーの ID。|  
@@ -168,10 +169,10 @@ OBJECTPROPERTY ( id , property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECTPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -189,7 +190,7 @@ GO
 ### <a name="a-verifying-that-an-object-is-a-table"></a>A. オブジェクトがテーブルかどうかを確認する  
  次の例では、`UnitMeasure` が [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのテーブルかどうかをテストします。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 1  
@@ -199,13 +200,12 @@ ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') = 0
 ELSE IF OBJECTPROPERTY (OBJECT_ID(N'Production.UnitMeasure'),'ISTABLE') IS NULL  
    PRINT 'ERROR: UnitMeasure is not a valid object.';  
 GO  
-  
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. スカラー値ユーザー定義関数の決定性を確認する  
- 次の例では、`ufnGetProductDealerPrice`money**値を返すユーザー定義のスカラー値関数である** が決定的であるかどうかをテストします。  
+ 次の例では、**money** 値を返すユーザー定義のスカラー値関数である `ufnGetProductDealerPrice` が決定的であるかどうかをテストします。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID('dbo.ufnGetProductDealerPrice'), 'IsDeterministic');  
@@ -222,7 +222,7 @@ GO
 ### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: 特定のスキーマに属するテーブルを見つける  
  次の例は、dbo スキーマのすべてのテーブルを返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT name, object_id, type_desc  
@@ -237,7 +237,7 @@ GO
 ### <a name="d-verifying-that-an-object-is-a-table"></a>D: オブジェクトがテーブルかどうかを確認する  
  次の例では、`dbo.DimReseller` が [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースのテーブルかどうかをテストします。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1  
@@ -247,7 +247,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

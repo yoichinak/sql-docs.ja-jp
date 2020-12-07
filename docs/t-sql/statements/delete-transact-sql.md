@@ -1,4 +1,5 @@
 ---
+description: DELETE (Transact-SQL)
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -22,15 +23,15 @@ helpviewer_keywords:
 - row removal [SQL Server], DELETE statement
 - deleting data
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc22e2637cb0861c23a8e36bb80fac98ee09219c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7e074f54cb4d31616abced2e0b555c068728ec6c
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485041"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384820"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -80,7 +81,7 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+-- Syntax for Azure Synapse Analytics
 
 [ WITH <common_table_expression> [ ,...n ] ] 
 DELETE [database_name . [ schema ] . | schema. ] table_name  
@@ -127,9 +128,9 @@ DELETE
  FROM *table_source* 句で指定される別名です。行を削除するテーブルまたはビューを表します。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
- テーブルまたはビューがあるサーバー名 (リンクされたサーバー名またはサーバー名として [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用) です。 *server_name* が指定されている場合、*database_name* と *schema_name* が必要です。  
+ テーブルまたはビューがあるサーバー名 (リンクされたサーバー名またはサーバー名として [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 関数を使用) です。 *server_name* が指定されている場合、 *database_name* と *schema_name* が必要です。  
   
  *database_name*  
  データベースの名前。  
@@ -145,11 +146,11 @@ DELETE
  *table_or_view_name* が参照するビューは更新可能であることが条件となります。また、そのビュー定義の FROM 句ではベース テーブルを 1 つだけ参照している必要があります。 更新可能なビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。  
   
  *rowset_function_limited*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+ **適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  プロバイダーの機能によって、[OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 関数、または [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 関数のどちらかです。  
   
- WITH **(** \<table_hint_limited> [... *n*] **)**  
+ WITH **(** \<table_hint_limited> [... *n* ] **)**  
  対象のテーブルに設定可能なテーブル ヒントを 1 つ以上指定します。 キーワード WITH とかっこが必要です。 NOLOCK および READUNCOMMITTED は指定できません。 テーブル ヒントの詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
   
  \<OUTPUT_Clause>  
@@ -186,7 +187,7 @@ DELETE
  *cursor_variable_name*  
  カーソル変数の名前を指定します。 カーソル変数は、更新可能なカーソルを参照する必要があります。  
   
- OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のステートメント処理をカスタマイズするためのオプティマイザー ヒントを示すキーワードです。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
@@ -337,7 +338,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP を使用して削除する行数を制限する  
- DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
+ DELETE ステートメントで TOP ( *n* ) 句を使用した場合、ランダムに選択される ' *n* ' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
   
 ```sql
 DELETE TOP (20)   
@@ -358,9 +359,9 @@ GO
 ```  
   
 ###  <a name="deleting-rows-from-a-remote-table"></a><a name="RemoteTables"></a> リモート テーブルから行を削除する  
- このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../../t-sql/functions/rowset-functions-transact-sql.md)を使用してリモート テーブルを参照し、リモート テーブルから行を削除する方法を示します。 リモート テーブルとは、別のサーバーまたは別の SQL Server インスタンスにあるテーブルのことです。  
+ このセクションの例では、[リンク サーバー](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)または[行セット関数](../functions/opendatasource-transact-sql.md)を使用してリモート テーブルを参照し、リモート テーブルから行を削除する方法を示します。 リモート テーブルとは、別のサーバーまたは別の SQL Server インスタンスにあるテーブルのことです。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
+**適用対象** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. リンク サーバーを使用してリモート テーブルからデータを削除する  
  次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
@@ -405,7 +406,7 @@ GO
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
-WHERE DepartmentID = 17;'  
+WHERE DepartmentID = 17;
 ```  
   
 ###  <a name="capturing-the-results-of-the-delete-statement"></a><a name="CaptureResults"></a> DELETE ステートメントの結果をキャプチャする  
@@ -540,5 +541,3 @@ FROM dbo.Table2
  [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
-  
-

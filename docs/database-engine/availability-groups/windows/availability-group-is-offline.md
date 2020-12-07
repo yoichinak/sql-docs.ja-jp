@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.agdashboard.agp2online.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 7d0c6a3864bec577c1d030da4fc828cd0c095fd9
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 92cd76bfa1c1228c9a83f98350952daeb37fc2f5
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565360"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584732"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性グループがオフライン
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 title: FROM:JOIN、APPLY、PIVOT (T-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/01/2019
@@ -34,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9cc3f414e9e771eb48734a2c8c188d28ac8bc321
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931878"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035863"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
@@ -137,7 +138,7 @@ FROM 句は通常、SELECT ステートメントで必要です。 例外は、�
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -150,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -172,7 +173,9 @@ FROM { <table_source> [ ,...n ] }
     | REDISTRIBUTE  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 \<table_source>  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用する、テーブル、ビュー、テーブル変数、または派生テーブル ソースを指定します。別名を付けて指定することができます。 1 つのステートメント内で 256 個までのテーブル ソースを使用できますが、この上限値は、使用可能なメモリとクエリ内の他の式の複雑さに応じて変化します。 個別のクエリは、256 個までのテーブル ソースをサポートできません。  
   
@@ -201,7 +204,7 @@ FROM { <table_source> [ ,...n ] }
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)」を参照してください。  
+ OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../functions/opendatasource-transact-sql.md)」を参照してください。  
   
  OPENROWSET 関数および OPENQUERY 関数を使用したリモート オブジェクトの指定は、そのオブジェクトにアクセスする OLE DB プロバイダーの機能に依存します。  
   
@@ -267,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  乱数を生成するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される整数の定数式です。 *repeat_seed* は **bigint**です。 *repeat_seed* が指定されていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってランダムに値が割り当てられます。 テーブルに変更が適用されていない場合は、特定の *repeat_seed* 値に対して、サンプル結果は常に同じになります。 *repeat_seed* 式は、0 より大きい整数値に評価される必要があります。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
-**適用対象:** SQL Data Warehouse
+**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  テーブルからのデータのサンプルが返されることを指定します。 サンプルは、概数になる可能性があります。 この句は、SELECT または UPDATE ステートメント内の主テーブルまたは結合テーブルで使用できます。 TABLESAMPLE はビューを使用して指定できません。 
 
  PERCENT  
- *sample_number* で指定した割合の行がテーブルから取得されることを指定します。 PERCENT を指定すると、SQL Data Warehouse は指定された割合の概数を返します。 PERCENT を指定する場合、*sample_number* 式は 0 ～ 100 の値に評価される必要があります。  
+ *sample_number* で指定した割合の行がテーブルから取得されることを指定します。 PERCENT が指定されている場合、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] は指定された割合の概数を返します。 PERCENT を指定する場合、*sample_number* 式は 0 ～ 100 の値に評価される必要があります。  
 
 
 ### <a name="joined-table"></a>結合テーブル 
@@ -896,4 +899,4 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー)
 title: サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471504"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーでは、次の機能がサポートされています。  
@@ -34,7 +35,7 @@ Microsoft Visual FoxPro ODBC ドライバーでは、次の機能がサポート
   
  次の表に、ドライバーによってサポートされる、ODBC SQL の文法レベル別の一覧を示します。  
   
-|Level|要素|Item|  
+|Level|要素|項目|  
 |-----------|--------------|----------|  
 |最小値|データ定義言語 (DDL)|CREATE TABLE および DROP TABLE|  
 ||データ操作言語 (DML)|SELECT、INSERT、UPDATE、および DELETE|  
@@ -53,7 +54,7 @@ Microsoft Visual FoxPro ODBC ドライバーでは、次の機能がサポート
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   
- [INDEX](../../odbc/microsoft/index-command.md)  
+ [化](../../odbc/microsoft/index-command.md)  
   
  [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   

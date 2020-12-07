@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Access ドライバー)
 title: SQLGetInfo (Access Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11e725665171b85f994e45bc071b7cd2d9f01880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421776"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
 >  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **SQLGetInfo**では、SQL_FILE_USAGE 情報の種類がサポートされています。 返される値は、ドライバーがデータソース内のファイルを直接扱う方法を示す16ビット整数です。  
+ **SQLGetInfo** では、SQL_FILE_USAGE 情報の種類がサポートされています。 返される値は、ドライバーがデータソース内のファイルを直接扱う方法を示す16ビット整数です。  
   
 -   SQL_FILE_NOT_SUPPORTED-ドライバーが単一層のドライバーではありません。  
   
@@ -92,7 +93,7 @@ ms.locfileid: "81298592"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ドライバー|バージョン|バージョン番号の形式|  
+|ドライバー|Version|バージョン番号の形式|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  

@@ -1,8 +1,9 @@
 ---
+description: 接続文字列の作成
 title: 接続文字列を作成する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0fcd3b23a6aeaa86b33650acf677dc132e8219d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761148"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991503"
 ---
 # <a name="creating-a-connection-string"></a>接続文字列の作成
 接続文字列は、セミコロンで区切られた引数と値のペアのリスト (パラメーター) で構成されます。 次に例を示します。  
@@ -39,9 +40,9 @@ ms.locfileid: "82761148"
 |*リモートプロバイダー*|クライアント側接続を開くときに使用するプロバイダーの名前を指定します。 (リモートデータサービスのみ)。|  
 |*リモートサーバー*|クライアント側接続を開くときに使用するサーバーのパス名を指定します。 (リモートデータサービスのみ)。|  
   
- その他の引数は、ADO によって処理されることなく、 *provider*引数でという名前のプロバイダーに渡されます。  
+ その他の引数は、ADO によって処理されることなく、 *provider* 引数でという名前のプロバイダーに渡されます。  
   
- HelloData の HelloData アプリケーション[: 単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md)では、次の接続文字列が使用されていました。  
+ HelloData の HelloData アプリケーション [: 単純な ADO アプリケーション](./hellodata-a-simple-ado-application.md) では、次の接続文字列が使用されていました。  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
@@ -50,7 +51,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  この接続文字列では、ado はパラメーターのみを認識し `"Provider=SQLOLEDB"` ます。これにより、ado データソースとして SQL Server の Microsoft OLE DB Provider が指定されます。 残りの引数と値のペアは、そのまま `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` このプロバイダーに渡されます。 このようなパラメーターの型と有効性は、プロバイダー固有です。 接続文字列に渡すことができる有効なパラメーターの詳細については、個々のプロバイダーのドキュメントを参照してください。  
   
- SQL Server ドキュメントの OLE DB プロバイダーに従って、*データソース*パラメーターに "Server" を、 *Initial Catalog*パラメーターに "Database" を使用できます。 したがって、次の接続文字列では、上記と同じ結果が得られます。  
+ SQL Server ドキュメントの OLE DB プロバイダーに従って、 *データソース* パラメーターに "Server" を、 *Initial Catalog* パラメーターに "Database" を使用できます。 したがって、次の接続文字列では、上記と同じ結果が得られます。  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  

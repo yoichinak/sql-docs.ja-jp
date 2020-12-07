@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899411"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543237"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,35 +50,35 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`リンク先のパブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` リンク先のパブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`リンク先のパブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` リンク先のパブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`リンクするパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` リンクするパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @security_mode = ] security_mode`サブスクライバーが即時更新のためにリモートパブリッシャーに接続するために使用するセキュリティモードを示します。 *security_mode*は**int**,、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` サブスクライバーが即時更新のためにリモートパブリッシャーに接続するために使用するセキュリティモードを示します。 *security_mode* は **int**,、これらの値のいずれかを指定できます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、*ログイン*と*パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
+|**0**|では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *ログイン* と *パスワード*として、このストアドプロシージャで指定されたログインで認証を使用します。<br /><br /> 注: 以前のバージョンのでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、このオプションを使用して動的リモートプロシージャ呼び出し (RPC) を指定していました。|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーで変更を行うユーザーのセキュリティコンテキスト (認証または Windows 認証) を使用します。<br /><br /> 注: このアカウントは、十分な特権を持つパブリッシャーにも存在する必要があります。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。|  
 |**2**|**Sp_link_publication**を使用して作成された、既存のユーザー定義のリンクサーバーログインを使用します。|  
   
-`[ @login = ] 'login'`ログインを示します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
+`[ @login = ] 'login'` ログインを示します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
   
-`[ @password = ] 'password'`パスワードを入力します。 *パスワード*は**sysname**,、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
+`[ @password = ] 'password'` パスワードを入力します。 *パスワード* は **sysname**,、既定値は NULL です。 *Security_mode*が**0**の場合は、このパラメーターを指定する必要があります。  
   
-`[ @distributor = ] 'distributor'`ディストリビューターの名前を指定します。 *ディストリビューター*は**sysname**,、既定値は NULL です。  
+`[ @distributor = ] 'distributor'` ディストリビューターの名前を指定します。 *ディストリビューター* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_link_publication**は、トランザクションレプリケーションで即時更新サブスクリプションによって使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_link_publication** は、トランザクションレプリケーションで即時更新サブスクリプションによって使用されます。  
   
- **sp_link_publication**は、プッシュサブスクリプションとプルサブスクリプションの両方に使用できます。 サブスクリプションが作成される前または後に呼び出すことができます。 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルにエントリが挿入または更新されます。  
+ **sp_link_publication** は、プッシュサブスクリプションとプルサブスクリプションの両方に使用できます。 サブスクリプションが作成される前または後に呼び出すことができます。 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルにエントリが挿入または更新されます。  
   
- プッシュサブスクリプションの場合、このエントリは[sp_subscription_cleanup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)によってクリーンアップできます。 プルサブスクリプションの場合、エントリをクリーンアップするには[&#40;transact-sql&#41;を sp_droppullsubscription](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)するか、 [transact-sql &#40;&#41;sp_subscription_cleanup](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)します。 また、セキュリティ上の問題については、 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルのエントリをクリアするために、NULL パスワードを使用して**sp_link_publication**を呼び出すこともできます。  
+ プッシュサブスクリプションの場合、このエントリは [sp_subscription_cleanup &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)によってクリーンアップできます。 プルサブスクリプションの場合、エントリをクリーンアップするには [&#40;transact-sql&#41;を sp_droppullsubscription ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) するか、 [transact-sql &#40;&#41;sp_subscription_cleanup ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)します。 また、セキュリティ上の問題については、 [MSsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)システムテーブルのエントリをクリアするために、NULL パスワードを使用して**sp_link_publication**を呼び出すこともできます。  
   
  即時更新サブスクライバーがパブリッシャーに接続するときに使用される既定のモードでは、Windows 認証を使用した接続は許可されません。 Windows 認証のモードで接続するには、パブリッシャーに対してリンクサーバーを設定する必要があります。また、即時更新サブスクライバーは、サブスクライバーの更新時にこの接続を使用する必要があります。 そのためには、 **sp_link_publication**を*security_mode*2 で実行する必要があり  =  **2**ます。 Windows 認証を使用する場合は、セキュリティアカウントの委任がサポートされている必要があります。  
   
@@ -87,7 +88,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_link_publication**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: Broker:Remote Message Ack イベント クラス
 title: Broker:Remote Message Ack イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb2e8f7fa1f39fffecf72a8eb51fac5bf9bcce51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 101aa4fd73e3481be1f98f4951561a3bf455dfe6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330748"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack イベント クラス
 
@@ -27,7 +28,7 @@ ms.locfileid: "85763008"
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Broker:Remote Message Ack イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |**BigintData1**|**bigint**|受信確認を含むメッセージのシーケンス番号。|52|いいえ|  
@@ -43,7 +44,7 @@ ms.locfileid: "85763008"
 |**IntegerData**|**int**|受信確認を含むメッセージのフラグメント番号。|25|いいえ|  
 |**IntegerData2**|**int**|受信確認の対象となるメッセージのフラグメント番号。|55|いいえ|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**優先順位**|**int**|メッセージ交換の優先度レベル。|5|はい|  

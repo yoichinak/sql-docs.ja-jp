@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 094354c0e5039d70bac0cb4463aa5323b294a3e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680024"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195114"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用したチャンク分析の実行 (SQL Server と RevoScaleR のチュートリアル)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 12 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 12 です。
 
 このチュートリアルでは、**rxDataStep** 関数を利用して、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理します。**rxDataStep** 関数は、データをチャンク単位で読み込み、データの各チャンクに R 関数を順々に適用し、各チャンクをまとめた結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。 すべてのデータが読み込まれると、結果が結合されます。
 
@@ -91,7 +91,7 @@ ms.locfileid: "85680024"
 
     **結果の一部**
 
-    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    | 行 \# |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
     | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
     | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
     | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
@@ -118,4 +118,4 @@ ms.locfileid: "85680024"
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [SQL Server の R チュートリアル](sql-server-r-tutorials.md)
+> [SQL Server の R チュートリアル](./r-tutorials.md)

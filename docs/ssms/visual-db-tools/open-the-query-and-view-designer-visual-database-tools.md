@@ -1,7 +1,6 @@
 ---
 title: クエリおよびビュー デザイナーを開く
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
+description: クエリおよびビュー デザイナーを開く (Visual Database Tools)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,15 +14,19 @@ ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a5a9a1222723e04304356e3e1e8473811cbb642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: ea9bd06205846401d4e6bd65690f0af4e34bdf63
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768143"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067355"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーを開く (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/applies-to-version/sql-asdb.md)]
+
 ビューの定義を開いたり、クエリまたはビューの結果を表示したり、クエリを作成したり開いたりすると、クエリおよびビュー デザイナーが開きます。 クエリおよびビュー デザイナーは、4 つの個別のペインで構成されています。  
   
 -   ダイアグラム ペインには、データ接続で選択したテーブルまたはテーブル値オブジェクトが、グラフィカルに表示されます。 また、テーブル間の結合リレーションシップも示されます。  

@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_get_ddl_history (Transact-sql)
 title: sp_cdc_get_ddl_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b00c56c4324c4e25e9a19dd71d342dfcaafcc76d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891103"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547296"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sp_cdc_get_ddl_history (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>引数  
  [ @capture_instance =] '*capture_instance*'  
- ソーステーブルに関連付けられたキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**であり、NULL にすることはできません。  
+ ソーステーブルに関連付けられたキャプチャインスタンスの名前を指定します。 *capture_instance* は **sysname** であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,8 +62,8 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|DDL の変更に関連付けられているログシーケンス番号 (LSN)。|  
 |ddl_time|**datetime**|DDL の変更に関連付けられた時刻です。|  
   
-## <a name="remarks"></a>注釈  
- ソーステーブルの列の追加や削除、既存の列のデータ型の変更など、ソーステーブルに対する DDL の変更は、 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)テーブルに保持されます。 このストアド プロシージャでは、こうした変更をレポートできます。 cdc.ddl_history のエントリは、キャプチャ プロセスで、ログから DDL トランザクションが読み取られた時点で作成されます。  
+## <a name="remarks"></a>解説  
+ ソーステーブルの列の追加や削除、既存の列のデータ型の変更など、ソーステーブルに対する DDL の変更は、 [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) テーブルに保持されます。 このストアド プロシージャでは、こうした変更をレポートできます。 cdc.ddl_history のエントリは、キャプチャ プロセスで、ログから DDL トランザクションが読み取られた時点で作成されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースのすべてのキャプチャ インスタンスの行を取得するには、db_owner 固定データベース ロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。  
@@ -84,7 +85,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

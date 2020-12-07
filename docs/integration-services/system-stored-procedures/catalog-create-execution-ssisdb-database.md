@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (SSISDB データベース)
 title: catalog.create_execution (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913148"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129870"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB データベース)
 
@@ -73,7 +74,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  実行のインスタンスの一意識別子を返します。 *execution_id* は **bigint** です。  
 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。  
   
  環境参照を指定した場合、*reference_id* パラメーター、ストアド プロシージャは、プロジェクトおよびパッケージ パラメーターをリテラル値や対応する環境変数から参照される値を設定します。 環境参照が指定されている場合は、パッケージの実行中、既定のパラメーター値が使用されます。 特定の実行のインスタンスに使用される値を正確に判断するには、このストアド プロシージャからの *execution_id* 出力パラメーター値を使用して、[execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ビューをクエリします。  
@@ -137,7 +138,7 @@ GO
   
 -   参照先の環境変数が、環境参照 *reference_id* が指定する環境に見つかりません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  

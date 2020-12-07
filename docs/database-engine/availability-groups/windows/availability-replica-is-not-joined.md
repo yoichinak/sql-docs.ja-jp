@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: troubleshooting
 f1_keywords:
 - sql13.swb.agdashboard.arp4joined.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b76cf1afa8ff38fb94d453d09decda2521ab79a3
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d04b8a881ca006264c0258922a045102a23be92b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565330"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584581"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>可用性レプリカが Always On 可用性グループに参加していない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

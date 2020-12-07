@@ -1,4 +1,5 @@
 ---
+description: HAS_DBACCESS (Transact-SQL)
 title: HAS_DBACCESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -25,12 +26,12 @@ ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db54afb7b29ed485a1b08071ece1448915c733b5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d2ba9047673e7f43202ec74f577e039d3b769abe
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "90570618"
 ---
 # <a name="has_dbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87396203"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 HAS_DBACCESS ( 'database_name' )  
 ```  
   
@@ -67,7 +68,7 @@ HAS_DBACCESS ( 'database_name' )
 ## <a name="examples"></a>例  
  次の例では、現在のユーザーが `AdventureWorks2012` データベースにアクセスできるかどうかをテストします。  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorks2012');  
 GO  
 ```  
@@ -75,7 +76,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、現在のユーザーが `AdventureWorksPDW2012` データベースにアクセスできるかどうかをテストします。  
   
-```  
+```sql  
 SELECT HAS_DBACCESS('AdventureWorksPDW2012');  
 GO  
 ```  

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401011"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766761"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Integration Services を使用して並列データウェアハウスにデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server 並列データウェアハウスにデータを読み込む方法について説明します。  
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="basics"></a><a name="Basics"></a>基本  
+## <a name="basics"></a><a name="Basics"></a>方  
 Integration Services は、データの高パフォーマンスの抽出、変換、読み込み (ETL) を行うための SQL Server のコンポーネントであり、一般的にデータウェアハウスの設定と更新に使用されます。  
   
 PDW 変換先アダプターは Integration Services コンポーネントで、Integration Services .dtsx パッケージを使用して PDW にデータを読み込むことができます。 SQL ServerPDW のパッケージワークフローでは、複数のソースからデータを読み込んでマージし、複数の変換先にデータを読み込むことができます。 データの読み込みは、1 つのパッケージと、同時に実行されている複数のパッケージ内の両方で並行して行われます。同じアプライアンス上で最大 10 の読み込みを並行して実行できます。  
@@ -46,20 +46,20 @@ Integration Services の詳細なドキュメントについては、「 [SQL Se
 これらの方法のいずれかを使用して、Integration Services パッケージを実行します。  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>SQL Server 2008 R2 Business Intelligence Development Studio (入札) からの実行  
-[入札] 内からパッケージを実行するには、パッケージを右クリックして [**パッケージの実行**] を選択します。  
+[入札] 内からパッケージを実行するには、パッケージを右クリックして [ **パッケージの実行**] を選択します。  
   
-既定では、入札は64ビットのバイナリを使用してパッケージを実行します。 これは、 **Run64BitRuntime** package プロパティによって決定されます。 このプロパティを設定するには、[**ソリューションエクスプローラー**にアクセスし、プロジェクトを右クリックして、[**プロパティ**] を選択します。 **Integration Services プロパティページ**で、[**構成プロパティ**] にアクセスし、[**デバッグ**] を選択します。 **デバッグオプション**の下に**Run64BitRuntime**プロパティが表示されます。 32ビットランタイムを使用するには、これを**False**に設定します。 64ビットランタイムを使用するには、これを**True**に設定します。  
+既定では、入札は64ビットのバイナリを使用してパッケージを実行します。 これは、 **Run64BitRuntime** package プロパティによって決定されます。 このプロパティを設定するには、[ **ソリューションエクスプローラー**にアクセスし、プロジェクトを右クリックして、[ **プロパティ**] を選択します。 **Integration Services プロパティページ**で、[**構成プロパティ**] にアクセスし、[**デバッグ**] を選択します。 **デバッグオプション**の下に**Run64BitRuntime**プロパティが表示されます。 32ビットランタイムを使用するには、これを **False**に設定します。 64ビットランタイムを使用するには、これを **True**に設定します。  
   
 ### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>SQL Server 2012 から実行 SQL Server Data Tools  
-SQL Server Data Tools 内からパッケージを実行するには、パッケージを右クリックして [**パッケージの実行**] を選択します。  
+SQL Server Data Tools 内からパッケージを実行するには、パッケージを右クリックして [ **パッケージの実行**] を選択します。  
   
 ### <a name="run-from-powershell"></a>PowerShell から実行する  
 **Dtexec**ユーティリティを使用して Windows PowerShell からパッケージを実行するには、次のようにします。`dtexec /FILE <packagePath>`  
   
-たとえば、`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"` のように指定します。  
+たとえば、 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"` と記述します。  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Windows コマンドプロンプトから実行する 
-Windows コマンドプロンプトから、 **dtexec**ユーティリティを使用してパッケージを実行するには、次のようにします。`dtexec /FILE <packagePath>`  
+Windows コマンドプロンプトから、 **dtexec** ユーティリティを使用してパッケージを実行するには、次のようにします。 `dtexec /FILE <packagePath>`  
   
 例: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -149,12 +149,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 ## <a name="locking-behavior"></a><a name="Locks"></a>ロック動作  
 Integration Services を使用してデータを読み込む場合、SQL ServerPDW は行レベルのロックを使用して、変換先テーブルのデータを更新します。 つまり、各行は更新時に読み取り/書き込み用にロックされます。 変換先テーブル内の行は、データがステージング テーブルに読み込まれる間はロックされません。  
   
-## <a name="examples"></a><a name="Examples"></a>使用例  
+## <a name="examples"></a><a name="Examples"></a>例  
   
 ### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. フラットファイルからの単純な読み込み  
 次のチュートリアルでは、Integration Services を使用して SQL Server PDW アプライアンスにフラットファイルデータを読み込む簡単なデータ読み込みについて説明します。  この例では、前に説明したように、Integration Services がクライアントコンピューターに既にインストールされており、SQL Server PDW の宛先がインストールされていることを前提としています。  
   
-この例では、次の DDL `Orders`を含むテーブルに読み込みます。 `Orders`テーブルは、 `LoadExampleDB`データベースの一部です。  
+この例では、 `Orders` 次の DDL を含むテーブルに読み込みます。 テーブルは、 `Orders` データベースの一部です `LoadExampleDB` 。  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-読み込みの準備として、読み込みデータを`exampleLoad.txt`含むフラットファイルを作成します。  
+読み込みの準備として、読み込みデータを含むフラットファイルを作成し `exampleLoad.txt` ます。  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,27 +184,27 @@ id,city,lastUpdateDate,orderDate
   
 まず、次の手順を実行して Integration Services パッケージを作成します。  
   
-1.  \(SQL Server Data Tools SSDT\)で、[**ファイル**]、[**新規作成**]、[**プロジェクト**] の順に選択します。 一覧表示されたオプションから [ **Integration Services プロジェクト**] を選択します。 このプロジェクト`ExampleLoad`に名前を指定し、[ **OK]** をクリックします。  
+1.  SQL Server Data Tools SSDT で、 \( \) [ **ファイル**]、[ **新規作成**]、[ **プロジェクト**] の順に選択します。 一覧表示されたオプションから [ **Integration Services プロジェクト** ] を選択します。 このプロジェクトに名前を指定し `ExampleLoad` 、[ **OK]** をクリックします。  
   
 2.  [**制御フロー** ] タブをクリックし、[**ツールボックス**] から [**データフロータスク**] を [**制御フロー** ] ペインにドラッグします。  
   
-3.  [**データフロー** ] タブをクリックし、[**フラットファイルソース**] を**ツールボックス**から [**データフロー** ] ペインにドラッグします。 先ほど作成したボックスをダブルクリックして、[**フラットファイルソースエディター**] を開きます。  
+3.  [ **データフロー** ] タブをクリックし、[ **フラットファイルソース** ] を **ツールボックス** から [ **データフロー** ] ペインにドラッグします。 先ほど作成したボックスをダブルクリックして、[ **フラットファイルソースエディター**] を開きます。  
   
-4.  [**接続マネージャー** ] をクリックし、[**新規作成**] をクリックします。  
+4.  [ **接続マネージャー** ] をクリックし、[ **新規作成**] をクリックします。  
   
-5.  [**接続マネージャー名**] ボックスに、接続のフレンドリ名を入力します。 この例では`Example Load Flat File CM`、を使用します。  
+5.  [ **接続マネージャー名** ] ボックスに、接続のフレンドリ名を入力します。 この例では、を使用 `Example Load Flat File CM` します。  
   
-6.  [**参照**] をクリック`ExampleLoad.txt`し、ローカルコンピューターからファイルを選択します。  
+6.  [ **参照** ] をクリックし、 `ExampleLoad.txt` ローカルコンピューターからファイルを選択します。  
   
-7.  フラットファイルには列名を持つ行が含まれているため、[**最初のデータ行] ボックスで列名**をクリックします。  
+7.  フラットファイルには列名を持つ行が含まれているため、[ **最初のデータ行] ボックスで列名** をクリックします。  
   
-8.  左側の列**の列をクリックし**、読み込まれるデータをプレビューして、列の名前とデータが正しく解釈されていることを確認します。  
+8.  左側の列 **の列をクリックし** 、読み込まれるデータをプレビューして、列の名前とデータが正しく解釈されていることを確認します。  
   
-9. 左側の列で [**詳細設定**] をクリックします。 各列名をクリックして、データに関連付けられているデータ型を確認します。 読み込まれたデータのデータ型が変換先の列の型と互換性を持つように、ボックスに変更を入力します。  
+9. 左側の列で [ **詳細設定** ] をクリックします。 各列名をクリックして、データに関連付けられているデータ型を確認します。 読み込まれたデータのデータ型が変換先の列の型と互換性を持つように、ボックスに変更を入力します。  
   
 10. [ **OK** ] をクリックして、接続マネージャーを保存します。  
   
-11. [ **OK]** をクリックして、**フラットファイルソースエディター**を終了します。  
+11. [ **OK]** をクリックして、 **フラットファイルソースエディター**を終了します。  
   
 データフローの変換先を指定します。  
   
@@ -212,15 +212,15 @@ id,city,lastUpdateDate,orderDate
   
 2.  先ほど作成したボックスをダブルクリックして、 **SQL Server PDW 変換先エディター**を読み込みます。  
   
-3.  [**接続マネージャー**] の横にある下矢印をクリックします。  
+3.  [ **接続マネージャー**] の横にある下矢印をクリックします。  
   
-4.  [**新しい接続の作成**] を選択します。  
+4.  [ **新しい接続の作成**] を選択します。  
   
-5.  サーバー、ユーザー、パスワード、および宛先データベースの情報を、アプライアンス固有の情報に入力します。 (例を次に示します)。 **[OK]** をクリックします。  
+5.  サーバー、ユーザー、パスワード、および宛先データベースの情報を、アプライアンス固有の情報に入力します。 (例を次に示します)。 次に、 **[OK]** をクリックします  
   
-    [InfiniBand connections] \ (**サーバー名**\) には、「<appliance-name>-name」と入力します。  
+    [InfiniBand connections] \ ( **サーバー名**\) には、「<appliance-name>-name」と入力します。  
   
-    イーサネット接続の場合、[**サーバー名**]: 制御ノードクラスター、コンマ、ポート17001の IP アドレスを入力します。 たとえば、10.192.63.134、17001のようになります。  
+    イーサネット接続の場合、[ **サーバー名**]: 制御ノードクラスター、コンマ、ポート17001の IP アドレスを入力します。 たとえば、10.192.63.134、17001のようになります。  
   
     **ユーザーズ**`user1`  
   
@@ -228,23 +228,23 @@ id,city,lastUpdateDate,orderDate
   
     **転送先データベース:**`LoadExampleDB`  
   
-6.  変換先テーブル`Orders`を選択します。  
+6.  変換先テーブルを選択し `Orders` ます。  
   
-7.  読み込みモードとして [**追加**] を選択し、[ **OK**] をクリックします。  
+7.  読み込みモードとして [ **追加** ] を選択し、[ **OK**] をクリックします。  
   
 転送元から転送先へのデータフローを指定します。  
   
-1.  [**データフロー** ] ペインで、緑色の矢印を [**フラットファイルソース**] ボックスから [ **SQL Server PDW 変換先**] ボックスにドラッグします。  
+1.  [ **データフロー** ] ペインで、緑色の矢印を [ **フラットファイルソース** ] ボックスから [ **SQL Server PDW 変換先** ] ボックスにドラッグします。  
   
-2.  [ **SQL Server PDW 先**] ボックスをダブルクリックして、 **SQL Server PDW 変換先エディター**が再度表示されるようにします。 左側の [マップされていない**入力列**] の下に、フラットファイルの列名が表示されます。 右側の [マップされていない**変換先列**] の下に、コピー先テーブルの列名が表示されます。 [マップされていない**入力列**] と [マップされていない**変換先列**] の列名をドラッグまたはダブルクリックし**て、列**をマップします。 **[OK]** をクリックして設定を保存します。  
+2.  [ **SQL Server PDW 先** ] ボックスをダブルクリックして、 **SQL Server PDW 変換先エディター** が再度表示されるようにします。 左側の [マップされていない **入力列**] の下に、フラットファイルの列名が表示されます。 右側の [マップされていない **変換先列**] の下に、コピー先テーブルの列名が表示されます。 [マップされていない **入力列** ] と [マップされていない **変換先列** ] の列名をドラッグまたはダブルクリックし **て、列** をマップします。 **[OK]** をクリックして設定を保存します。  
   
 3.  [**ファイル**] メニューの [**保存**] をクリックして、パッケージを保存します。  
   
 コンピューター Integration Services でパッケージを実行します。  
   
-1.  Integration Services**ソリューションエクスプローラー** (右の列) で、右クリック`Package.dtsx`して [**実行**] を選択します。  
+1.  Integration Services**ソリューションエクスプローラー** (右の列) で、右クリック `Package.dtsx` して [ **実行**] を選択します。  
   
-2.  パッケージが実行され、進行状況とエラーが [**進行状況**] ウィンドウに表示されます。 SQL クライアントを使用して負荷を確認するか、SQL Server PDW 管理コンソールを使用して負荷を監視します。  
+2.  パッケージが実行され、進行状況とエラーが [ **進行状況** ] ウィンドウに表示されます。 SQL クライアントを使用して負荷を確認するか、SQL Server PDW 管理コンソールを使用して負荷を監視します。  
   
 ## <a name="see-also"></a>参照  
 [SSIS PDW 変換先アダプターを使用するスクリプトタスクを作成する](create-ssis-script-task-using-pdw-destination-adapter.md)  
@@ -253,7 +253,7 @@ id,city,lastUpdateDate,orderDate
 [チュートリアル : ウィザードを使用した基本パッケージの作成](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [はじめに (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [動的パッケージ生成のサンプル](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[並列処理用の SSIS パッケージのデザイン (SQL Server ビデオ)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[並列処理用の SSIS パッケージのデザイン (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Microsoft SQL Server コミュニティの例: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [変更データ キャプチャによる増分読み込みの向上](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩やかに変化するディメンション変換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  

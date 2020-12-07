@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e6ae3d6eaeab58e1352c14ba5ee90b47d500b974
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457704"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125119"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
 
@@ -64,8 +64,8 @@ ms.locfileid: "86457704"
 
 以降の更新プログラムは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以上 (互換性レベルが 120 以上) に含まれています。 レベル 120 以上の CE 更新プログラムには、最新のデータ ウェアハウスおよび OLTP ワークロードで適切に機能する更新された前提条件とアルゴリズムが組み込まれています。 CE 120 以降では、CE 70 の前提条件から次のモデル前提条件が変更されました。
 
--  **非依存性**が**相関関係**になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
--  **単純なコンテインメント**は**ベース コンテインメント**になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
+-  **非依存性** が **相関関係** になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
+-  **単純なコンテインメント** は **ベース コンテインメント** になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
   
 **互換性レベル:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
 
@@ -100,14 +100,14 @@ GO
  
 また、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降の場合は、[クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` になります。
  
- ```sql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
 WHERE OrderAddedDate >= '2016-05-01'
-OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**クエリ ストア:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
+**クエリ ストア:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の **オブジェクト エクスプローラー** で、データベース ノード以下に **クエリ ストア** ノードが表示されます。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -159,7 +159,7 @@ STATE = START;  --STOP;
 GO  
 ```  
   
-[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 向けに拡張されたイベントの詳細については、「[SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)」を参照してください。  
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 向けに拡張されたイベントの詳細については、「[SQL Database の拡張イベント](/azure/azure-sql/database/xevent-db-diff-from-svr)」を参照してください。  
   
 ## <a name="steps-to-assess-the-ce-version"></a>CE のバージョンを評価する手順  
   
@@ -195,11 +195,11 @@ GO
   
     -   **推定される行の数**。  
   
-    -   **I/O の推定コスト**と、行数の予測ではなく、実際のパフォーマンスを含む *推定* プロパティ。  
+    -   **I/O の推定コスト** と、行数の予測ではなく、実際のパフォーマンスを含む *推定* プロパティ。  
   
     -   **論理操作** と **物理操作**。 *並列処理* は有効な値です。  
   
-    -   **実際の実行モード**。 *バッチ* は、 *行*より適切で、有効な値です。  
+    -   **実際の実行モード**。 *バッチ* は、 *行* より適切で、有効な値です。  
   
 9. 行の推定数と行の実際の数とを比較します。 CE は 1% (前後)、または 10% 程度、不正確ですか?  
   
@@ -243,7 +243,7 @@ CE 120 以降で効果の低いクエリ プランが、クエリで生成され
   
 クエリ ストアでは、特定のクエリ プランを使用するようシステムを強制するさまざまな方法を示します。  
   
-- **sp_query_store_force_plan**を実行します。  
+- **sp_query_store_force_plan** を実行します。  
   
 - [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で、 **[クエリ ストア]** ノードを展開し、 **[トップ リソース コンシューマー ノード]** を右クリックして、 **[トップ リソース コンシューマー ノードの表示]** をクリックします。 **[プランの強制]** と **[プランを強制しない]** というラベルのボタンが表示されます。  
   
@@ -290,9 +290,9 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](/previous-versions/dn673537(v=msdn.10))  
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
- [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   
+ [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)

@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorhelpalert (Transact-SQL)
 title: sp_dbmmonitorhelpalert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9483733ddcaca469ea162ff9dba884ef857a9493
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865851"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548167"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,16 +61,16 @@ sp_dbmmonitorhelpalert database_name
  警告に対応するイベント Id の詳細については、「 [&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  警告ごとに、次の列を含む行を返します。  
   
 |列|データ型|説明|  
 |------------|---------------|-----------------|  
-|**alert_id**|**int**|次の表は、各パフォーマンス基準の**alert_id**値と、 **sp_dbmmonitorresults**結果セットに表示されるメトリックの測定単位を示しています。|  
-|**threshold**|**int**|警告のしきい値。 ミラーリングの状態が更新されたときに、このしきい値を超える値が返された場合は、Windows イベントログにエントリが入力されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 しきい値が現在設定されていない場合、値は NULL になります。<br /><br /> **注:** 現在の値を表示するには、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアドプロシージャを実行します。|  
-|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効です。|  
+|**alert_id**|**int**|次の表は、各パフォーマンス基準の **alert_id** 値と、 **sp_dbmmonitorresults** 結果セットに表示されるメトリックの測定単位を示しています。|  
+|**threshold**|**int**|警告のしきい値。 ミラーリングの状態が更新されたときに、このしきい値を超える値が返された場合は、Windows イベントログにエントリが入力されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 しきい値が現在設定されていない場合、値は NULL になります。<br /><br /> **注:** 現在の値を表示するには、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) ストアドプロシージャを実行します。|  
+|**有効**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効です。|  
   
 |[値]|パフォーマンス基準|ユニット|  
 |-----------|------------------------|----------|  
@@ -82,7 +83,7 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにある最も古い未送信のトランザクションのパフォーマンス基準に対し、警告が有効になっているかどうかを示す行を返します。  
   
 ```  
@@ -95,8 +96,8 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012, 1 ;
 EXEC sp_dbmmonitorhelpalert AdventureWorks2012;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

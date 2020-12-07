@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4479093323ceb6bb235fd1adab6eed7d796774af
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197256"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810562"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
 
@@ -68,7 +68,7 @@ ms.locfileid: "86197256"
   
  使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの削除]** の順にクリックします。  
   
- 個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。  
+ 個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;]()」を参照してください。  
   
  ユーティリティの概要  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの数と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティによって管理されるデータ層アプリケーションの数を表示します。  
@@ -96,10 +96,10 @@ ms.locfileid: "86197256"
   
 -   利用可能データなし - データ層アプリケーションによって利用できるデータがありません。データ層アプリケーションを含む SQL Server のマネージド インスタンスがデータを報告していないことが原因です。  
   
- 各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のデータ層アプリケーションが各状態カテゴリに存在するかを示します。 個々のデータ層アプリケーションの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)」を参照してください。  
+ 各正常性パラメーターの詳細な状態は、スライド式インジケーターに一覧表示されます。 スライド式インジケーターの右側にある部分は、何個のデータ層アプリケーションが各状態カテゴリに存在するかを示します。 個々のデータ層アプリケーションの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130))」を参照してください。  
   
  ユーティリティの記憶域使用率の履歴  
- 使用率の履歴は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ 使用率の履歴は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ ダッシュボードの下部にある時間グラフに表示されます。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。  
   
  表示領域の左側にあるオプション ボタンを使用して、グラフ表示の対象期間を変更できます。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "86197256"
   
  リスト ビュー内で列を左右にドラッグすると、列の順番を変更できます。 リスト ビューに列を追加したり、リスト ビューから列を削除したりするには、列見出しを右クリックして、目的の列を選択または選択解除します。 右クリック メニューには、並べ替えオプションもあります。 並べ替えは、列名の上部をクリックして有効にすることもできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのリスト ビューのフィルター オプションにアクセスするには、ユーティリティ エクスプローラーのナビゲーション ペインで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[フィルター]** を選択します。 フィルターの設定が実装されると、ユーティリティ エクスプローラーの **[配置済みのデータ層アプリケーション]** ノードに **[配置済みのデータ層アプリケーション (フィルター選択)]** というラベルが付けられます。 詳細については、「[[フィルターの設定] &#40;オブジェクト エクスプローラーおよびユーティリティ エクスプローラー&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのリスト ビューのフィルター オプションにアクセスするには、ユーティリティ エクスプローラーのナビゲーション ペインで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[フィルター]** を選択します。 フィルターの設定が実装されると、ユーティリティ エクスプローラーの **[配置済みのデータ層アプリケーション]** ノードに **[配置済みのデータ層アプリケーション (フィルター選択)]** というラベルが付けられます。 詳細については、「[[フィルターの設定] &#40;オブジェクト エクスプローラーおよびユーティリティ エクスプローラー&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)」を参照してください。  
   
  既定では、次の列に各データ層アプリケーションに関する正常性状態の情報が表示されます。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "86197256"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、データ層アプリケーションとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -197,7 +197,7 @@ ms.locfileid: "86197256"
 -   [1 年] : 1 か月間隔で表示されます。  
   
  [ストレージの使用率] タブ  
- [ストレージの使用率] タブには、リスト ビューで選択したデータ層アプリケーションに属するデータベース ファイルとログ ファイルに関する記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ [ストレージの使用率] タブには、リスト ビューで選択したデータ層アプリケーションに属するデータベース ファイルとログ ファイルに関する記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。  
   
  表示内容は、ファイル グループまたはボリュームごとにグループ化できます。 ファイル グループ ツリー ビューを使用するには、 **[ファイルのグループ化]** の選択項目で **[ファイル グループ]** オプション ボタンをクリックします。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "86197256"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
  ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
@@ -275,7 +275,7 @@ ms.locfileid: "86197256"
   
  リスト ビュー内で列を左右にドラッグすると、列の順番を変更できます。 リスト ビューに列を追加したり、リスト ビューから列を削除したりするには、列見出しを右クリックして、目的の列を選択または選択解除します。 右クリック メニューには、並べ替えオプションもあります。 並べ替えは、列名の上部をクリックして有効にすることもできます。  
   
- ユーティリティのリスト ビューのフィルター オプションにアクセスするには、ユーティリティ エクスプローラーのナビゲーション ペインで **[マネージド インスタンス]** ノードを右クリックし、 **[フィルター]** を選択します。 フィルターを設定すると、ユーティリティ エクスプローラーの **[マネージド インスタンス]** ノードが **[マネージド インスタンス (フィルター選択)]** という名前になります。 詳細については、「[[フィルターの設定] &#40;オブジェクト エクスプローラーおよびユーティリティ エクスプローラー&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2)」を参照してください。  
+ ユーティリティのリスト ビューのフィルター オプションにアクセスするには、ユーティリティ エクスプローラーのナビゲーション ペインで **[マネージド インスタンス]** ノードを右クリックし、 **[フィルター]** を選択します。 フィルターを設定すると、ユーティリティ エクスプローラーの **[マネージド インスタンス]** ノードが **[マネージド インスタンス (フィルター選択)]** という名前になります。 詳細については、「[[フィルターの設定] &#40;オブジェクト エクスプローラーおよびユーティリティ エクスプローラー&#41;](../../ssms/object/filter-settings-object-explorer-and-utility-explorer.md)」を参照してください。  
   
  既定では、次の列に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各マネージド インスタンスに関する正常性状態の情報が表示されます。  
   
@@ -319,7 +319,7 @@ ms.locfileid: "86197256"
   
 -   [言語]  
   
--   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -337,7 +337,7 @@ ms.locfileid: "86197256"
 -   [1 年] : 1 か月間隔で表示されます。  
   
  [ストレージの使用率] タブ  
- [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、「 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md) 」を参照してください。  
   
  表示内容は、データベースまたはボリュームごとにグループ化できます。 データベース ツリー ビューを使用するには、 **[ファイルのグループ化]** の選択項目で **[データベース]** オプション ボタンをクリックします。 個々のデータベース ファイルの記憶域使用率の状態を表示するには、ツリー ビューでデータベース名の横にあるプラス記号をクリックします。 一覧表示されるデータベース ファイルには、リスト ビューで選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスに属する、すべてのシステム データベースとユーザー データベースが含まれます。  
   
@@ -513,6 +513,5 @@ ms.locfileid: "86197256"
   
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [SQL Server ユーティリティのトラブルシューティング](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

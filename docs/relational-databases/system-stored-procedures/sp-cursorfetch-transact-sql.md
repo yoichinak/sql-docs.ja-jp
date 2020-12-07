@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-sql)
 title: sp_cursorfetch (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868961"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543595"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  データベースから1つ以上の行のバッファーをフェッチします。 このバッファー内の行のグループを、カーソルの*フェッチバッファー*と呼びます。 sp_cursorfetch は、ID = 7 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
+  データベースから1つ以上の行のバッファーをフェッチします。 このバッファー内の行のグループを、カーソルの *フェッチバッファー*と呼びます。 sp_cursorfetch は、ID = 7 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,23 +42,23 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>引数  
  *cursor*  
- によっ*handle*て生成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_cursoropen によって返されるハンドル値です。 *cursor*は、 **int**入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
+ によっ*handle*て生成され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_cursoropen によって返されるハンドル値です。 *cursor* は、 **int** 入力値を必要とする必須パラメーターです。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *fetchtype*  
- フェッチするカーソル バッファーを指定します。 *fetchtype*は省略可能なパラメーターで、次のいずれかの整数入力値を必要とします。  
+ フェッチするカーソル バッファーを指定します。 *fetchtype* は省略可能なパラメーターで、次のいずれかの整数入力値を必要とします。  
   
-|値|名前|説明|  
+|[値]|名前|説明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|*Nrows* rows の最初のバッファーをフェッチします。 *Nrows*が0の場合、カーソルは結果セットの前に配置され、行は返されません。|  
 |0x0002|NEXT|*Nrows* rows の次のバッファーをフェッチします。|  
 |0x0004|前|*Nrows* rows の前のバッファーをフェッチします。<br /><br /> 注: FORWARD_ONLY カーソルに対して PREV を使用すると、FORWARD_ONLY は一方向のスクロールしかサポートされないため、エラーメッセージが返されます。|  
 |0x0008|LAST|*Nrows*行の最後のバッファーをフェッチします。 *Nrows*が0の場合、カーソルは結果セットの後に配置され、行は返されません。<br /><br /> 注: FORWARD_ONLY カーソルに対して LAST を使用するとエラーメッセージが返されます。 FORWARD_ONLY では、1方向のスクロールしかサポートされていないためです。|  
 |0x10|ABSOLUTE|*Rownum*行から始まる*nrows*行のバッファーをフェッチします。<br /><br /> 注: FORWARD_ONLY では、動的カーソルまたは FORWARD_ONLY カーソルに対して ABSOLUTE を使用するとエラーメッセージが返されます。これは、1方向でのスクロールのみがサポートされるためです。|  
-|0x20|RELATIVE|現在のブロックの最初の行の行の*rownum*値として指定された行で始まる*nrows*行のバッファーをフェッチします。 この場合、 *rownum*には負の数を指定できます。<br /><br /> 注: FORWARD_ONLY カーソルに対して相対を使用するとエラーメッセージが返されます。 FORWARD_ONLY では、1方向でのスクロールのみがサポートされているためです。|  
+|0x20|RELATIVE|現在のブロックの最初の行の行の*rownum*値として指定された行で始まる*nrows*行のバッファーをフェッチします。 この場合、 *rownum* には負の数を指定できます。<br /><br /> 注: FORWARD_ONLY カーソルに対して相対を使用するとエラーメッセージが返されます。 FORWARD_ONLY では、1方向でのスクロールのみがサポートされているためです。|  
 |0x80|REFRESH|基になるテーブルのデータをバッファーに再読み込みします。|  
-|0x100|INFO|カーソルに関する情報を取得します。 この情報は、 *rownum*および*nrows*パラメーターを使用して返されます。 したがって、INFO を指定した場合、 *rownum*と*nrows*は出力パラメーターになります。|  
+|0x100|INFO|カーソルに関する情報を取得します。 この情報は、 *rownum* および *nrows* パラメーターを使用して返されます。 したがって、INFO を指定した場合、 *rownum* と *nrows* は出力パラメーターになります。|  
 |0x200|PREV_NOADJUST|PREV と同じように使用されます。 ただし、途中で結果セットの先頭に到達した場合に結果が変わる可能性があります。|  
-|0x400|SKIP_UPDT_CNCY|INFO 以外の*fetchtype*値のいずれかで使用する必要があります。|  
+|0x400|SKIP_UPDT_CNCY|INFO 以外の *fetchtype* 値のいずれかで使用する必要があります。|  
   
 > [!NOTE]  
 >  値0x40 はサポートされていません。  
@@ -65,13 +66,13 @@ sp_cursorfetch cursor
  詳細については、このトピックで後述する「解説」を参照してください。  
   
  *番*  
- は、入力または出力に整数値のみを使用するか、両方とも使用して、ABSOLUTE および INFO *fetchtype*値の行の位置を指定するために使用される省略可能なパラメーターです。 *rownum*は、 *fetchtype*ビット値の相対行オフセットとして機能します。 他のすべての値では、 *rownum*は無視されます。 詳細については、このトピックで後述する「解説」を参照してください。  
+ は、入力または出力に整数値のみを使用するか、両方とも使用して、ABSOLUTE および INFO *fetchtype* 値の行の位置を指定するために使用される省略可能なパラメーターです。 *rownum* は、 *fetchtype* ビット値の相対行オフセットとして機能します。 他のすべての値では、 *rownum*は無視されます。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *nrows*  
- フェッチする行数を指定するために使用される省略可能なパラメーターです。 場合*nrows*が指定されていない、既定値は20行です。 データを返さずに位置を設定するには、値0を指定します。 *Nrows*が*fetchtype* INFO クエリに適用されると、そのクエリ内の行の合計数が返されます。  
+ フェッチする行数を指定するために使用される省略可能なパラメーターです。 場合 *nrows* が指定されていない、既定値は20行です。 データを返さずに位置を設定するには、値0を指定します。 *Nrows*が*fetchtype* INFO クエリに適用されると、そのクエリ内の行の合計数が返されます。  
   
 > [!NOTE]  
->  *nrows*は、REFRESH *fetchtype*ビット値によって無視されます。  
+>  *nrows* は、REFRESH *fetchtype* ビット値によって無視されます。  
 >   
 >  詳細については、このトピックで後述する「解説」を参照してください。  
   
@@ -96,13 +97,13 @@ sp_cursorfetch cursor
 |キーセットと静的カーソルの場合|通常、現在のキーセットのサイズ。<br /><br /> カーソルが非同期に作成され、この時点までに見つかっ*た行がある場合*は **、-m** 。|  
 |動的カーソルの場合|-1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="cursor-parameter"></a>cursor パラメーター  
  フェッチ操作が行われる前は、カーソルの既定の位置が結果セットの最初の行の前になります。  
   
 ## <a name="fetchtype-parameter"></a>fetchtype パラメーター  
- SKIP_UPD_CNCY を除き、 *fetchtype*値は相互に排他的です。  
+ SKIP_UPD_CNCY を除き、 *fetchtype* 値は相互に排他的です。  
   
  SKIP_UPDT_CNCY を指定した場合、行がフェッチまたは更新されるときに timestamp 列の値は keyset テーブルに書き込まれません。 Keyset 行が更新されている場合、timestamp 列の値は前の値のままになります。 行が挿入された場合は timestamp 列の値が未定義になります。  
   
@@ -167,13 +168,13 @@ row 5 contents
 row 6 contents  
 ```  
   
- 次に、 *nrows*値が5の前の sp_cursorfetch では、カーソルが結果セットの最初の行の2行前に論理的に配置されます。 このような場合、カーソルが最初の行で開始されるように調整されて、要求した数の行が返されます。 その結果、通常は、前のフェッチ バッファーに含まれていた行が返されることになります。  
+ 次に、 *nrows* 値が5の前の sp_cursorfetch では、カーソルが結果セットの最初の行の2行前に論理的に配置されます。 このような場合、カーソルが最初の行で開始されるように調整されて、要求した数の行が返されます。 その結果、通常は、前のフェッチ バッファーに含まれていた行が返されることになります。  
   
 > [!NOTE]  
 >  これは、RPC 状態パラメーターが2に設定されている完全なケースです。  
   
-### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>B: PREV_NOADJUST を使用して、PREV よりも小さい行数を返す  
- PREV_NOADJUST は、返された行のブロック内の現在のカーソル位置の行またはその後の行は一切含まれません。 PREV が現在の位置より後の行を返す場合、PREV_NOADJUST は*nrows*で要求された数よりも多くの行を返します。 たとえば、前の例 A の現在位置で PREV を適用した場合、sp_cursorfetch(h2, 4, 1, 5) で次の行がフェッチされます。  
+### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>B. PREV_NOADJUST を使用して、PREV よりも小さい行数を返す  
+ PREV_NOADJUST は、返された行のブロック内の現在のカーソル位置の行またはその後の行は一切含まれません。 PREV が現在の位置より後の行を返す場合、PREV_NOADJUST は *nrows*で要求された数よりも多くの行を返します。 たとえば、前の例 A の現在位置で PREV を適用した場合、sp_cursorfetch(h2, 4, 1, 5) で次の行がフェッチされます。  
   
 ```  
 row1 contents   
@@ -191,7 +192,7 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

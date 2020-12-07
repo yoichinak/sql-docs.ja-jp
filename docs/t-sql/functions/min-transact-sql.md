@@ -1,4 +1,5 @@
 ---
+description: MIN (Transact-SQL)
 title: MIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a22e8ff95677c51faeec59b19e0c6321abb9e77
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 15924f5116261de308a9288935396d24d54b8aa8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115115"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "87112916"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
-  
+```syntaxsql  
 -- Aggregation Function Syntax  
 MIN ( [ ALL | DISTINCT ] expression )  
   
@@ -63,9 +63,9 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
- *式*と同じ値を返します。  
+ *式* と同じ値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  MIN は NULL 値をすべて無視します。  
   
  文字型列の場合は、並べ替え順での最小の値が返されます。  
@@ -77,7 +77,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ### <a name="a-simple-example"></a>A. 簡単な例  
  次の例では、最低 (最小) の税率を返します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
-```  
+```sql  
 SELECT MIN(TaxRate)  
 FROM Sales.SalesTaxRate;  
 GO  
@@ -94,9 +94,9 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 句を使用する  
- 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、`HumanResources.Department` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルの部署ごとに集計値を入力します。  
+ 次の例では、MIN、MAX、AVG、および COUNT 関数を OVER 句と共に使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `HumanResources.Department` テーブルの部署ごとに集計値を入力します。  
   
-```  
+```sql  
 SELECT DISTINCT Name  
        , MIN(Rate) OVER (PARTITION BY edh.DepartmentID) AS MinSalary  
        , MAX(Rate) OVER (PARTITION BY edh.DepartmentID) AS MaxSalary  
@@ -141,7 +141,7 @@ Tool Design                   8.62                  29.8462               23.505
 ### <a name="c-using-min"></a>C. MIN を使用する  
  次の例では、MIN 集計関数を使用して、指定された一連の販売注文の中で最も低額 (最小値) の製品価格を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice)  
@@ -159,7 +159,7 @@ WHERE SalesOrderNumber IN (N'SO43659', N'SO43660', N'SO43664');
 ### <a name="d-using-min-with-over"></a>D. OVER と共に MIN を使用する  
  次の例では、MIN OVER() 分析関数を使用して、各販売注文で最も低額の製品価格を返します。 結果セットは、`SalesOrderID` 列によってパーティション分割されています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT MIN(UnitPrice) OVER(PARTITION BY SalesOrderNumber) AS LeastExpensiveProduct,  

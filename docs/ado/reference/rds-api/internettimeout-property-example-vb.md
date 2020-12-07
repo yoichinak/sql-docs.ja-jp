@@ -1,8 +1,9 @@
 ---
+description: InternetTimeout プロパティの例 (VB)
 title: InternetTimeout プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ae038b3c4b438dfaed1f627c8f257e61a22f782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c4ab5e939c9979f281f1b50f392778cc8b216a6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751953"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721977"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout プロパティの例 (VB)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- この例では、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトと領域[スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクトに存在する[internettimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md)プロパティを示します。 この例では、 **DataControl**オブジェクトを使用して、タイムアウトを20秒に設定します。  
+ この例では、 [DataControl](./datacontrol-object-rds.md)オブジェクトと領域[スペース](./dataspace-object-rds.md)オブジェクトに存在する[internettimeout](./internettimeout-property-rds.md)プロパティを示します。 この例では、 **DataControl** オブジェクトを使用して、タイムアウトを20秒に設定します。  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -76,8 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [InternetTimeout プロパティ (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)   
+ [領域スペースオブジェクト (RDS)](./dataspace-object-rds.md)   
+ [InternetTimeout プロパティ (RDS)](./internettimeout-property-rds.md)

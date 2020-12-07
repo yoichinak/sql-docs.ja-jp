@@ -1,4 +1,5 @@
 ---
+description: java.io.Reader オブジェクトへの setNCharacterStream メソッド - long
 title: java.io.Reader オブジェクトへの setNCharacterStream メソッド - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e954735a06c1ad52112c43ec09e4de9722caa3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5baf0107e4c641782d2808e0fc62be9e1dbc3e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431674"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

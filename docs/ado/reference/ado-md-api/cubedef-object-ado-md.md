@@ -1,8 +1,9 @@
 ---
+description: CubeDef オブジェクト (ADO MD)
 title: CubeDef オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: de22ce013d94b1830ba220c318c06bbe716423bd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764353"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987023"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef オブジェクト (ADO MD)
 多次元スキーマから、関連するディメンションのセットを含むキューブを表します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **CubeDef**オブジェクトのコレクションとプロパティを使用して、次の操作を行うことができます。  
   
--   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
   
--   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを持つキューブを説明する文字列を返します。  
+-   [Description](./description-property-ado-md.md)プロパティを持つキューブを説明する文字列を返します。  
   
--   [ディメンション](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)コレクションを持つキューブを構成するディメンションを返します。  
+-   [ディメンション](./dimensions-collection-ado-md.md)コレクションを持つキューブを構成するディメンションを返します。  
   
--   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef**に関する追加情報を取得します。  
+-   標準の ADO[プロパティ](../ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef**に関する追加情報を取得します。  
   
  **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |Event.manualintervention.createdon|キューブ作成の日付と時刻。|  
@@ -53,11 +54,11 @@ ms.locfileid: "82764353"
   
  ここでは、次のトピックについて説明します。  
   
--   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
+-   [プロパティ、メソッド、およびイベント](./cubedef-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>参照  
- [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef の例 (VBScript)](./cubedef-example-vbscript.md)   
+ [Catalog オブジェクト (ADO MD)](./catalog-object-ado-md.md)   
+ [CubeDefs コレクション (ADO MD)](./cubedefs-collection-ado-md.md)   
+ [Dimensions コレクション (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Properties コレクション (ADO)](../ado-api/properties-collection-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: '&amp; (ビット演算 AND) (SSIS 式)'
 title: '&amp; (ビット演算 AND) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efbf3b36ad21e7800533069e4fafefaa0b77900
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4cb70565c38518c76a614e32a3aad55c939e4a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457302"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (ビット演算 AND) (SSIS 式)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  2 つの整数値の AND 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。  
+  2 つの整数値の AND 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。  
   
  条件はいずれも符号付き整数型であるか、いずれも符号なし整数型である必要があります。  
   
@@ -45,7 +46,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -97,7 +98,7 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [&& (論理 AND) (SSIS 式)](../../integration-services/expressions/logical-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

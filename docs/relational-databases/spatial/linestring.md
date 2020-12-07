@@ -1,4 +1,5 @@
 ---
+description: LineString
 title: LineString | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f739a8344eacaaa3e0057608b79bf60c88d1b29
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751058"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006308"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **LineString** は、一連の点と、それらを結ぶ線分を表す 1 次元のオブジェクトです。  
   
 ## <a name="linestring-instances"></a>LineString インスタンス  
@@ -57,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
-**LineString** インスタンスを有効にするためには、次の条件を満たす必要があります。  
+LineString インスタンスを有効にするためには、次の条件を満たす必要があります。  
   
 1.  **LineString** インスタンスが許容されていること。  
-2.  **LineString** インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。  
+2.  LineString インスタンスが空でない場合は、2 つ以上の異なる点が含まれていること。  
 3.  **LineString** インスタンスは、それ自体を 2 つ以上の連続する点の区間に重ねることはできない。  
   
 次に示す **LineString** インスタンスは有効です。  
@@ -126,7 +127,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STLength &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

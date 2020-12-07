@@ -1,4 +1,5 @@
 ---
+description: Z (geography データ型)
 title: Z (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5f10566504e9f0f982175249f627ddba7106a4d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a07d0999854ac26f275c2f983157b7513b0b141
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416988"
 ---
 # <a name="z-geography-data-type"></a>Z (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86555752"
 ## <a name="return-types"></a>戻り値の型
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>解説  
  **geography** インスタンスが地点ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  

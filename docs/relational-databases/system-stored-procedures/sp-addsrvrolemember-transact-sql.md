@@ -1,4 +1,5 @@
 ---
+description: sp_addsrvrolemember (Transact-SQL)
 title: sp_addsrvrolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec0b94d4423574729d4c92d869a73d04673edac8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876437"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536748"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876437"
   ログインを固定サーバー ロールのメンバーとして追加します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +45,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>引数  
  [ @loginame **=** ] **'**_ログイン_**'**  
- 固定サーバーロールに追加するログインの名前を指定します。 *login*は**sysname**,、既定値はありません。 *ログインに*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
+ 固定サーバーロールに追加するログインの名前を指定します。 *login* は **sysname**,、既定値はありません。 *ログインに* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
  [ @rolename **=** ] **'**_role_**'**  
- ログインを追加する固定サーバーロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
+ ログインを追加する固定サーバーロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
   
 -   [sysadmin]  
   
@@ -80,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="permissions"></a>アクセス許可  
  新しいメンバーを追加するロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Windows ログイン `Corporate\HelenS` を `sysadmin` 固定サーバーロールに追加します。  
   
 ```  
@@ -89,12 +90,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティ関数 &#40;Transact-sql&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Transact-sql&#41;&#40;サーバーの役割を作成する](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

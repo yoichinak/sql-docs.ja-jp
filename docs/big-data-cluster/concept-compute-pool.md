@@ -5,35 +5,60 @@ description: この記事では、SQL Server 2019 ビッグ データ クラス�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7afce300e40f6703cbe4c2d734751aa27256959
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b07b1480412dc8dd67535f58fcc4d223a9e91baa
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730673"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914322"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコンピューティング プールとは
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server ビッグ データ クラスターでの "*SQL Server コンピューティング プール*" の役割について説明します。 コンピューティング プールにより、ビッグ データ クラスター用のスケールアウト コンピューティング リソースが提供されます。 以下のセクションでは、コンピューティング プールのアーキテクチャと機能について説明します。
+この記事では、SQL Server ビッグ データ クラスターでの " *SQL Server コンピューティング プール* " の役割について説明します。 コンピューティング プールにより、SQL Server ビッグ データ クラスター用のスケールアウト コンピューティング リソースが提供されます。 これらは、SQL Server マスター インスタンスから計算作業 (中間結果セット) をオフロードするために使用されます。 以降のセクションでは、コンピューティング プールのアーキテクチャ、機能、使用シナリオについて説明します。
 
 この 5 分間のビデオでは、コンピューティング プールの概要についてもご覧いただけます。
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Compute-Pool/player?WT.mc_id=dataexposed-c9-niner]
 
-
 ## <a name="compute-pool-architecture"></a>コンピューティング プールのアーキテクチャ
 
 コンピューティング プールは、Kubernetes で実行されている 1 つまたは複数のコンピューティング ポッドで構成されます。 これらのポッドの自動化された作成と管理は、[SQL Server マスター インスタンス](concept-master-instance.md)によって調整されます。 各ポッドには、一連の基本サービスと、SQL Server データベース エンジンのインスタンスが含まれています。
 
+![コンピューティング プールのアーキテクチャ](media/concept-compute-pool/compute-pool-architecture.png)
+
 ## <a name="scale-out-groups"></a>スケール アウト グループ
 
-コンピューティング プールは、HDFS、Oracle、MongoDB、Teradata など、さまざまなデータ ソースに対する分散クエリの PolyBase スケールアウト グループとして機能することができます。 Kubernetes でコンピューティング ポッドを使用することにより、ビッグ データ クラスターで PolyBase スケールアウト グループ用のコンピューティング ポッドの作成と構成を自動化できます。
+コンピューティング プールは、SQL Server、Oracle、MongoDB、Teradata、HDFS などのさまざまな外部データ ソースに対する分散クエリの PolyBase スケールアウト グループとして機能することができます。 Kubernetes でコンピューティング ポッドを使用することにより、SQL Server ビッグ データ クラスターで PolyBase スケールアウト グループ用のコンピューティング ポッドの作成と構成を自動化できます。
+
+## <a name="compute-pool-scenarios"></a>コンピューティング プールのシナリオ
+
+コンピューティング プールが使用されるシナリオには、次のものがあります。
+
+- マスター インスタンスに送信されたクエリによって、[記憶域プール](concept-storage-pool.md)内にある 1 つ以上のテーブルが使用される場合。
+
+- マスター インスタンスに送信されたクエリによって、[データ プール](concept-data-pool.md)内にあるラウンド ロビン分散の 1 つ以上のテーブルが使用される場合。
+
+- マスター インスタンスに送信されたクエリによって、SQL Server、Oracle、MongoDB、Teradata の外部データ ソースを含む **パーティション分割された** テーブルが使用される場合。 このシナリオの場合、クエリ ヒント OPTION (FORCE SCALEOUTEXECUTION) を有効にする必要があります。
+
+- マスター インスタンスに送信されたクエリによって、[HDFS の階層](hdfs-tiering.md)内にある 1 つ以上のテーブルが使用される場合。
+
+コンピューティング プールが使用 **されない** シナリオには、次のものがあります。
+
+- マスター インスタンスに送信されたクエリによって、外部の Hadoop HDFS クラスター内にある 1 つ以上のテーブルが使用される場合。
+
+- マスター インスタンスに送信されたクエリによって、Azure Blob Storage 内の 1 つ以上のテーブルが使用される場合。
+
+- マスター インスタンスに送信されたクエリによって、SQL Server、Oracle、MongoDB、Teradata の外部データ ソースを含む **パーティション分割されていない** テーブルが使用される場合。
+
+- クエリ ヒント OPTION (DISABLE SCALEOUTEXECUTION) が有効になっている場合。
+
+- マスター インスタンスに送信されたクエリが、マスター インスタンスに配置されているデータベースに適用される場合。
 
 ## <a name="next-steps"></a>次のステップ
 

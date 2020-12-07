@@ -1,8 +1,9 @@
 ---
+description: MarshalOptions プロパティの例 (VB)
 title: MarshalOptions プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedf7562c1ab0bc5c7582aec7e7409cb18cf256a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 08ac6a07341c37e412a6bc030e37e04a8ff8e787
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754398"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990663"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
-この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
+この例では、 [Marshaloptions](./marshaloptions-property-ado.md) プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -132,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
- [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
+ [MarshalOptions プロパティ (ADO)](./marshaloptions-property-ado.md)   
+ [MarshalOptionsEnum](./marshaloptionsenum.md)

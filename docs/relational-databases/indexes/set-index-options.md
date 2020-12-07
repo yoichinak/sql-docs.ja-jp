@@ -1,4 +1,5 @@
 ---
+description: インデックス オプションの設定
 title: インデックス オプションの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659361"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88499389"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
 
@@ -57,7 +58,7 @@ ms.locfileid: "85659361"
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項
 
 - ALTER INDEX ステートメントに SET 句を使用することによって、次の各オプションが直ちにインデックスに適用されます:ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE。
-- ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築するときは、次の各オプションを設定できます:PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、DROP_EXISTING (CREATE INDEX のみ)。
+- ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築する際には、PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、および DROP_EXISTING (CREATE INDEX のみ) の各オプションを設定できます。
 
 ### <a name="security"></a><a name="Security"></a> セキュリティ
 
@@ -76,7 +77,7 @@ ms.locfileid: "85659361"
 5. 変更するインデックスを選択します。 対応するプロパティがメイン グリッドに表示されます。
 6. 該当するプロパティの設定を変更してインデックスをカスタマイズします。
 7. **[閉じる]** をクリックします。
-8. **ファイル** メニューの **table_name**_を保存_を選びます。
+8. **[ファイル]** メニューの **table_name**_を保存]_ を選びます。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには
 

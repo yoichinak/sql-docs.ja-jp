@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 9b5f4230aacedcff2ecdffedb943ae39097fc1d4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547284"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934992"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>レポート サーバー データベース (SSRS ネイティブ モード)
   レポート サーバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] を使用してメタデータやオブジェクトの定義を格納するステートレス サーバーです。 ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールでは、一時データと永続データが 2 つのデータベースに別々に格納されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定では、データベース名はそれぞれ **ReportServer** と **ReportServerTempDB** になります。  
@@ -37,7 +37,7 @@ ms.locfileid: "84547284"
   
  レポート サーバー データベースへのすべてのアクセスは、レポート サーバー経由で行われる必要があります。 レポート サーバー データベース内のコンテンツにアクセスするには、レポート サーバー管理ツール (Web ポータルや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] など) を使用するか、または URL アクセス、レポート サーバー Web サービス、Windows Management Instrumentation (WMI) プロバイダーなどの、プログラマティック インターフェイスを使用します。  
   
- レポート サーバー データベースへの接続は、通常、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して定義します。 ただし、既定の構成でインストールする場合は、セットアップ時に定義することもできます。 データベースへのレポート サーバーの接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+ レポート サーバー データベースへの接続は、通常、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して定義します。 ただし、既定の構成でインストールする場合は、セットアップ時に定義することもできます。 データベースへのレポート サーバーの接続に関する詳細については、「[レポート サーバー データベース接続の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
   
 ## <a name="report-server-database"></a>レポート サーバー データベース  
  レポート サーバー データベースは、以下のコンテンツを格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。  
@@ -65,9 +65,9 @@ ms.locfileid: "84547284"
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [暗号化されたレポート サーバー データの格納 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [レポート サーバー データベースを管理する &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [レポート サーバー データベースの作成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Reporting Services のバックアップおよび復元操作](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

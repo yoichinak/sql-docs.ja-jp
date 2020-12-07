@@ -1,4 +1,5 @@
 ---
+description: '[インフォソースの作成]'
 title: インフォソースの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a81bf2cef2329853df05eda97e2ce53501369c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4672ce48890af7202445d283d15c2c167550f5a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923548"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127252"
 ---
 # <a name="create-infosource"></a>[インフォソースの作成]
 
@@ -39,7 +40,7 @@ ms.locfileid: "86923548"
   
 4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォソース]** を選択し、 **[作成]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **トランザクション データ**  
  トランザクション データの新しいインフォソースを作成します。  
   

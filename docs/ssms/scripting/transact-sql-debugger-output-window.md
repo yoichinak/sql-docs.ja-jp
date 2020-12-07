@@ -3,7 +3,7 @@ title: '[出力ウィンドウ]'
 description: '[出力] ウィンドウを使用して、SQL Server Management Studio デバッガーなどのツールからのステータス メッセージとその他の出力を表示する方法について説明します。'
 titleSuffix: T-SQL Debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Output Window [Transact-SQL]
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93cf1e703e7a8610ecf2bc8de841c00b7b2b3397
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 744120ac17992b75f63e510414cdfc79e4527a8b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247334"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036149"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL デバッガー - [出力] ウィンドウ
 
@@ -42,4 +42,4 @@ ms.locfileid: "87247334"
  選択されているペインの出力を **出力ペインの一覧**に表示します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)  
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)

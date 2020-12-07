@@ -1,4 +1,5 @@
 ---
+description: KPIStatus (MDX)
 title: KPIStatus (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa07788bc00cc3317024d287f1054a67c6447356
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 645f7d816d2d51ca5124a8b5300029cd57ae93d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483925"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 
@@ -31,7 +32,7 @@ KPIStatus(KPI_Name)
  *KPI_Name*  
  KPI の名前を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  通常、状態の値は、-1 ~ 1 の範囲の正規化された値です。  
   
 ## <a name="example"></a>例  

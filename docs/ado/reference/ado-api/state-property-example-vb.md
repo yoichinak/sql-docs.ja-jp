@@ -1,8 +1,9 @@
 ---
+description: State プロパティの例 (VB)
 title: State プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e03f64c5f5312bc6f3f0409cb5b701e854919b0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8778e5f79f7f733508c680e2922a7005ea9ca26
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759748"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988833"
 ---
 # <a name="state-property-example-vb"></a>State プロパティの例 (VB)
-この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用してメッセージを表示します。  
+この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](./state-property-ado.md) プロパティを使用してメッセージを表示します。  
   
 ```  
 'BeginStateVB  
@@ -108,5 +109,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [State プロパティ (ADO)](./state-property-ado.md)

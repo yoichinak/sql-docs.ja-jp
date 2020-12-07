@@ -1,8 +1,9 @@
 ---
+description: Status プロパティの例 (Field) (VB)
 title: Status プロパティの例 (Field) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23a6ebaa724e06ce4a8283b95e3d7a982c8deef1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759708"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988697"
 ---
 # <a name="status-property-example-field-vb"></a>Status プロパティの例 (Field) (VB)
-次の例では、[インターネット発行プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を使用して、読み取り/書き込みフォルダーからドキュメントを開きます。 [レコード](../../../ado/reference/ado-api/record-object-ado.md)の[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Status](../../../ado/reference/ado-api/status-property-ado-field.md)プロパティは、最初に**adfieldpendinginsert**に設定され、次に**adFieldOk**に更新されます。  
+次の例では、 [インターネット発行プロバイダー](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を使用して、読み取り/書き込みフォルダーからドキュメントを開きます。 [レコード](./record-object-ado.md)の[Field](./field-object.md)オブジェクトの[Status](./status-property-ado-field.md)プロパティは、最初に**adfieldpendinginsert**に設定され、次に**adFieldOk**に更新されます。  
   
 ```  
 'BeginStatusFieldVB  
@@ -85,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- 次のコードは、読み取り専用のドキュメントで開かれている**レコード**から**フィールド**を削除します。 **状態**は**adfieldpendingdelete**に設定されます。 [更新](../../../ado/reference/ado-api/update-method.md)時には、削除は失敗し、**状態**は**Adfieldpendingdelete**プラス**adfieldpermissiondenied**になります。 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)は、保留中の**状態**の設定をクリアします。  
+ 次のコードは、読み取り専用のドキュメントで開かれている**レコード**から**フィールド**を削除します。 **状態** は **adfieldpendingdelete**に設定されます。 [更新](./update-method.md)時には、削除は失敗し、**状態**は**Adfieldpendingdelete**プラス**adfieldpermissiondenied**になります。 [CancelUpdate](./cancelupdate-method-ado.md) は、保留中の **状態** の設定をクリアします。  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status プロパティ (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field オブジェクト](./field-object.md)   
+ [Record オブジェクト (ADO)](./record-object-ado.md)   
+ [Status プロパティ (ADO Field)](./status-property-ado-field.md)

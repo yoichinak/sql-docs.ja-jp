@@ -1,4 +1,5 @@
 ---
+description: 結合の追加と編集
 title: 結合の追加と編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -9,15 +10,16 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
+- sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 166107c908fb83c5fe4fae83f67b9dc4984bbafb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 549970e81b86a8331c2d41afc3b01fab3eb7160b
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726098"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300737"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

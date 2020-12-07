@@ -3,7 +3,7 @@ title: ステータス バー (データベース エンジン クエリ エデ�
 description: データベース エンジン クエリ エディター ウィンドウのステータス バーを色分けして、ウィンドウの接続先のデータベース エンジンのインスタンスを示す方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
@@ -12,12 +12,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 228952530dbf3f4d33c86e0154ef84d1ba928cf4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243761"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036249"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>ステータス バー (データベース エンジン クエリ エディター)
 
@@ -95,6 +95,5 @@ ms.locfileid: "87243761"
 -   残りの接続情報を入力して、 **[接続]** ボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
-  
+ [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)  
   

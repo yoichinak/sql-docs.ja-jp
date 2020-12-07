@@ -1,4 +1,5 @@
 ---
+description: dm_fts_semantic_similarity_population (Transact-sql)
 title: dm_fts_semantic_similarity_population (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a148750db907ebf43d6976d4d574145516e13d65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2857896ffefb5591482a44051081aa1034f3fee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398488"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>dm_fts_semantic_similarity_population (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ ms.locfileid: "85898828"
 |**completion_type**|**int**|この作成が完了した方法の状態。|  
 |**completion_type_description**|**nvarchar(120)**|入力候補の種類の説明。|  
 |**worker_count**|**int**|類似性抽出に関連付けられているワーカースレッドの数|  
-|**status**|**int**|設定の状態。 注: 状態には一時的なものもあります。 次のいずれか:<br /><br /> 3 = 開始<br /><br /> 5 = 正常に処理中<br /><br /> 7 = 処理を停止しました<br /><br /> 11 = 作成が中止されました|  
+|**status**|**int**|設定の状態。 注: 状態には一時的なものもあります。 次のいずれかになります。<br /><br /> 3 = 開始<br /><br /> 5 = 正常に処理中<br /><br /> 7 = 処理を停止しました<br /><br /> 11 = 作成が中止されました|  
 |**status_description**|**nvarchar(120)**|作成の状態の説明。|  
 |**start_time**|**datetime**|作成が開始された時刻。|  
 |**incremental_timestamp**|**timestamp**|完全作成の開始タイムスタンプを表します。 その他のすべての母集団の種類では、この値は作成の進行状況を表す最後にコミットされたチェックポイントです。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、「[セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
+ 詳細については、「 [セマンティック検索の管理と監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
  セマンティックインデックス作成の状態の詳細については、 [dm_fts_index_population &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)を参照してください。  
   
 ## <a name="security"></a>Security  
@@ -67,7 +68,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セマンティック検索の管理および監視](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

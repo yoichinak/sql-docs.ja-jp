@@ -1,6 +1,6 @@
 ---
 title: プログラムによるパスワードの変更 | Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したプログラムによるパスワードの変更
+description: OLE DB Driver for SQL Server では、OLE DB ドライバーのプログラムおよび SQL Server のサイン イン ダイアログ ボックスを使用したパスワードの期限切れの処理がサポートされています。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - expired passwords [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, password expiration
 - modifying passwords
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 186a413fbaf55bc8caae1c2170fd54297b106a3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61134cf281a5e3aa7eab8c2404f2d3dbfac13972
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006959"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727326"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86006959"
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、OLE DB Driver for SQL Server では、OLE DB Driver のプログラムから、または **[SQL Server ログイン]** ダイアログ ボックスでの変更によってパスワードの期限切れを処理することができます。  
   
 > [!NOTE]  
->  可能であれば、実行時にユーザーの資格情報を入力し、それらの資格情報を永続的な形式で保存しないように求めるメッセージが表示されます。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。 パスワードの使用に関する詳細については、「[強力なパスワード](../../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  可能であれば、実行時にユーザーの資格情報を入力し、それらの資格情報を永続的な形式で保存しないように求めるメッセージが表示されます。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。 パスワードの使用に関する詳細については、「[強力なパスワード](../../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server ログイン エラー コード  
  認証の問題により接続できない場合、アプリケーションでは次のいずれかの SQL Server エラー コードを使用して、診断と復旧に役立てることができます。  
@@ -94,5 +94,4 @@ ms.locfileid: "86006959"
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

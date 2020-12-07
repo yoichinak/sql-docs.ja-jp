@@ -11,14 +11,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 244b815a0e670cd0e697c037c62d66cc78159d81
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737720"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129100"
 ---
 # <a name="restore-database-options-page"></a>データベースの復元 ([オプション] ページ)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85737720"
  詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
  **[復元するデータベースへのアクセスを制限する [WITH RESTRICTED_USER]]**  
- 復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin**のメンバーだけに制限します。  
+ 復元するデータベースの使用を、 **db_owner**、 **dbcreator**、または **sysadmin** のメンバーだけに制限します。  
   
  このオプションを選択することは、RESTORE ステートメントで RESTRICTED_USER オプションを使用することと同じです。  
   

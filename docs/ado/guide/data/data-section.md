@@ -1,8 +1,9 @@
 ---
+description: データ セクション
 title: Data Section |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761098"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991453"
 ---
 # <a name="data-section"></a>データ セクション
 データセクションでは、保留中の更新、挿入、または削除と共に、行セットのデータを定義します。 Data セクションには、0個以上の行を含めることができます。 行がスキーマによって定義されている場合にのみ、1つの行セットからデータを格納できます。 また、前述のように、データのない列は省略できます。 Data セクションで属性またはサブ要素が使用されていて、そのコンストラクトが schema セクションで定義されていない場合、そのコンストラクトは警告なしで無視されます。  
   
-## <a name="string"></a>String  
+## <a name="string"></a>文字列型  
  テキストデータ内の予約済み XML 文字は、適切な文字エンティティに置き換える必要があります。 たとえば、"Joe's ガレージ" という会社名では、単一引用符をエンティティに置き換える必要があります。 実際の行は次のようになります。  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 次の文字は XML で予約されており、文字エンティティ {'、"、&、、>} で置き換える必要があり \< ます。  
+ 次の文字は XML で予約されており、文字エンティティ {'、"、&、} で置き換える必要があり \<,> ます。  
   
 ## <a name="binary"></a>Binary  
  バイナリデータは、16進数でエンコードされます (つまり、1バイトが2文字にマップされ、1つの文字がニブルごとに1文字)。  
@@ -85,4 +86,4 @@ ms.locfileid: "82761098"
  更新には常に、元の行データの後に変更された行データが含まれます。 変更された行には、すべての列、または実際に変更された列のみを含めることができます。 前の例では、出荷業者2の行は変更されておらず、電話の列のみが出荷業者3の値を変更したため、変更された行に含まれるのは唯一の列です。 運送会社12、13、14の挿入された行は、1つの rs: insert タグの下にまとめてバッチ処理されます。 削除された行もバッチ処理できますが、これは前の例には示されていません。  
   
 ## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

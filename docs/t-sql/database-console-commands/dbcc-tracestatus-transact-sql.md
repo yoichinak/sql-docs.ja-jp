@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACESTATUS (Transact-SQL)
 title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2ae272f6d60670ffd1f3841e45b5b15fac9cc42d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485533"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126270"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 
 ## <a name="arguments"></a>引数
 *trace#*  
-状態を表示するトレース フラグの番号です。 場合 *trace #* 、-1 が指定されていない場合は、セッションが有効になっているすべてのトレース フラグが表示されます。
+状態を表示するトレース フラグの番号です。 場合 *trace #*、-1 が指定されていない場合は、セッションが有効になっているすべてのトレース フラグが表示されます。
   
 *n*  
 複数のトレース フラグを指定できることを示すプレースホルダーです。

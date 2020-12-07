@@ -1,4 +1,5 @@
 ---
+description: FTP 接続マネージャー
 title: FTP 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 854f975c64f5622c53d04c51651929d83745864a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918945"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91728045"
 ---
 # <a name="ftp-connection-manager"></a>FTP 接続マネージャー
 
@@ -32,7 +33,7 @@ ms.locfileid: "86918945"
   
  FTP 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に FTP 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **FTP**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **FTP** に設定されます。  
   
  FTP 接続マネージャーは、次の方法で構成できます。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "86918945"
 ## <a name="configuration-of-the-ftp-connection-manager"></a>FTP 接続マネージャーの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[FTP 接続マネージャー エディター]](../../integration-services/connection-manager/ftp-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[FTP 接続マネージャー エディター]]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -76,19 +77,19 @@ ms.locfileid: "86918945"
  FTP サーバーの名前を指定します。  
   
  **[サーバー ポート]**  
- 接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21**です。  
+ 接続に使用する FTP サーバーのポート番号を指定します。 このプロパティの既定値は **21** です。  
   
  **ユーザー名**  
- FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous**です。  
+ FTP サーバーにアクセスするために使用するユーザー名を指定します。 このプロパティの既定値は **anonymous** です。  
   
  **パスワード**  
  FTP サーバーにアクセスするために使用するパスワードを指定します。  
   
  **[タイムアウト (秒)]**  
- タスクがタイムアウトするまでの秒数を指定します。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **60**です。  
+ タスクがタイムアウトするまでの秒数を指定します。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **60** です。  
   
  **[パッシブ モードを使用する]**  
- サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード**です。  
+ サーバーまたはクライアントのどちらが接続を開始するかを指定します。 アクティブ モードではサーバーが接続を開始し、パッシブ モードではクライアントが接続を開始します。 このプロパティの既定値は **アクティブ モード** です。  
   
  **再試行**  
  接続を試行する回数を指定します。 値 **0** は、無制限に再試行を行うことを示します。  
@@ -99,8 +100,7 @@ ms.locfileid: "86918945"
  **[接続テスト]**  
  FTP 接続マネージャーを構成した後に、 **[接続テスト]** をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FTP タスク](../../integration-services/control-flow/ftp-task.md)   
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

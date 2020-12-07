@@ -1,4 +1,5 @@
 ---
+description: Unicode
 title: Unicode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9824e76cebabb6f5f84505292801a0094e359f0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a09a2647175d2b19aa44f1458d0ae8c4ef4565c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424434"
 ---
 # <a name="unicode"></a>Unicode
 Unicode では、多くの言語で文字のエンコードを定義します。  
@@ -31,7 +32,7 @@ Unicode では、多くの言語で文字のエンコードを定義します。
   
  現時点では、ODBC でサポートされている唯一の Unicode エンコードは UCS-2 です。これは、16ビット整数 (固定長) を使用して文字を表します。 Unicode では、アプリケーションをさまざまな言語で動作させることができます。  
   
- ODBC 3.5 (またはそれ以降) のドライバーマネージャーでは、Unicode が有効になっています。 これは、関数呼び出しと文字列データ型の2つの主な領域に影響します。 ドライバーマネージャーは、関数の文字列引数と文字列データを、アプリケーションとドライバーの必要に応じてマップします。どちらも、Unicode 対応または ANSI 対応のどちらでもかまいません。 これらの2つの領域については、「 [Unicode 関数の引数](../../../odbc/reference/develop-app/unicode-function-arguments.md)」と「 [unicode データ](../../../odbc/reference/develop-app/unicode-data.md)」で詳しく説明します。  
+ ODBC 3.5 (またはそれ以降) のドライバーマネージャーでは、Unicode が有効になっています。 これは、関数呼び出しと文字列データ型の2つの主な領域に影響します。 ドライバーマネージャーは、関数の文字列引数と文字列データを、アプリケーションとドライバーの必要に応じてマップします。どちらも、Unicode 対応または ANSI 対応のどちらでもかまいません。 これらの2つの領域については、「 [Unicode 関数の引数](../../../odbc/reference/develop-app/unicode-function-arguments.md) 」と「 [unicode データ](../../../odbc/reference/develop-app/unicode-data.md)」で詳しく説明します。  
   
  ODBC 3.5 (またはそれ以降) のドライバーマネージャーでは、unicode アプリケーションと ANSI アプリケーションの両方を使用した Unicode ドライバーの使用がサポートされています。 Ansi アプリケーションでの ANSI ドライバーの使用もサポートしています。 ドライバーマネージャーでは、ANSI ドライバーを使用する Unicode アプリケーションに対して、Unicode から ANSI へのマッピングが制限されています。  
   

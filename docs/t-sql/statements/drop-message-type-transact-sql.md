@@ -1,4 +1,5 @@
 ---
+description: DROP MESSAGE TYPE (Transact-SQL)
 title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - DROP MESSAGE TYPE statement
 - removing message types
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f4bebe01b180c4ea1bc2fe8ee75711529d1df6f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d1e0862a6f03c1dd7527390a36b6de0333f9662
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484678"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380357"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,6 @@ ms.locfileid: "86484678"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  
 ```  
@@ -58,7 +58,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="examples"></a>例  
  次の例では、データベースからメッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を削除します。  
   
-```  
+```sql  
 DROP MESSAGE TYPE [//Adventure-Works.com/Expenses/SubmitExpense] ;  
 ```  
   

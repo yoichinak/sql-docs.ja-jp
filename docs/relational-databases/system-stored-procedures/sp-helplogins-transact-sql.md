@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins (Transact-SQL)
 title: sp_helplogins (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891682"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549633"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @LoginNamePattern = ] 'login'`ログイン名を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン*が存在する必要があります。 *Login*が指定されていない場合は、すべてのログインに関する情報が返されます。  
+`[ @LoginNamePattern = ] 'login'` ログイン名を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン*が存在する必要があります。 *Login*が指定されていない場合は、すべてのログインに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -49,33 +50,33 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ログイン**|**sysname**|ログイン名。|  
-|**SID**|**varbinary (85)**|ログインセキュリティ識別子 (SID)。|  
-|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
+|**LoginName**|**sysname**|ログイン名。|  
+|**SID**|**varbinary(85)**|ログインセキュリティ識別子 (SID)。|  
+|**DefDBName**|**sysname**|のインスタンスに接続するときに、 **loginが** 使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
 |**DefLangName**|**sysname**|**ログイン**で使用される既定の言語。|  
-|**Auser**|**char (5)**|はい = データベースにユーザー名が関連付けられ**ています**。<br /><br /> No =**ログイン**には、関連付けられたユーザー名がありません。|  
-|**ARemote**|**char (7)**|はい =**ログイン**に関連付けられているリモートログインです。<br /><br /> No = **loginlogin**には、関連付けられたログインがありません。|  
+|**Auser**|**char (5)**|はい = データベースにユーザー名が関連付けられ **ています** 。<br /><br /> No = **ログイン** には、関連付けられたユーザー名がありません。|  
+|**ARemote**|**char (7)**|はい = **ログイン** に関連付けられているリモートログインです。<br /><br /> No = **loginlogin** には、関連付けられたログインがありません。|  
   
  2 番目のレポートには、次の表に示すとおり、各ログインにマップされているユーザーに関する情報、およびログインのロール メンバーシップが含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ログイン**|**sysname**|ログイン名。|  
-|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが**使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
-|**ユーザー名**|**sysname**|の場合、このユーザーアカウントは、 **dbname**でに**マップされ**、その**ログイン**が**dbname**のメンバーであるロールです。|  
-|**UserOrAlias**|**char (8)**|MemberOf = **UserName**はロールです。<br /><br /> User = **UserName**はユーザーアカウントです。|  
+|**LoginName**|**sysname**|ログイン名。|  
+|**DBName**|**sysname**|のインスタンスに接続するときに、 **loginが** 使用する既定のデータベース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。|  
+|**UserName**|**sysname**|の場合、このユーザーアカウントは、 **dbname**でに**マップされ**、その**ログイン**が**dbname**のメンバーであるロールです。|  
+|**UserOrAlias**|**char (8)**|MemberOf = **UserName** はロールです。<br /><br /> User = **UserName** はユーザーアカウントです。|  
   
-## <a name="remarks"></a>Remarks  
- ログインを削除する前に、 **sp_helplogins**を使用して、ログインにマップされているユーザーアカウントを特定します。  
+## <a name="remarks"></a>解説  
+ ログインを削除する前に、 **sp_helplogins** を使用して、ログインにマップされているユーザーアカウントを特定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Securityadmin**固定サーバーロールのメンバーシップが必要です。  
   
- 特定のログインにマップされているすべてのユーザーアカウントを識別するには、 **sp_helplogins**サーバー内のすべてのデータベースを確認する必要があります。 このため、サーバー上の各データベースについて、次の条件の少なくとも1つが true である必要があります。  
+ 特定のログインにマップされているすべてのユーザーアカウントを識別するには、 **sp_helplogins** サーバー内のすべてのデータベースを確認する必要があります。 このため、サーバー上の各データベースについて、次の条件の少なくとも1つが true である必要があります。  
   
 -   **Sp_helplogins**を実行しているユーザーには、データベースにアクセスする権限があります。  
   
--   データベースで**guest**ユーザーアカウントが有効になっています。  
+-   データベースで **guest** ユーザーアカウントが有効になっています。  
   
  **Sp_helplogins**がデータベースにアクセスできない場合、 **sp_helplogins**は可能な限り多くの情報を返し、エラーメッセージ15622を表示します。  
   
@@ -100,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

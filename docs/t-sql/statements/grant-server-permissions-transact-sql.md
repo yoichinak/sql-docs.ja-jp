@@ -1,4 +1,5 @@
 ---
+description: GRANT (サーバーの権限の許可) (Transact-SQL)
 title: GRANT (サーバーの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 074ee4f99b752214f8c4bf0938b9f6853316ade7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2606f3a3328fb082c0f57f7db1f84baa712643b0
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484395"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364723"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (サーバーの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,7 +96,7 @@ GRANT permission [ ,...n ]
 |サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
-|ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|ALTER ANY AVAILABILITY GROUP<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |ALTER ANY CONNECTION|CONTROL SERVER|  
 |ALTER ANY CREDENTIAL|CONTROL SERVER|  
 |ALTER ANY DATABASE|CONTROL SERVER|  
@@ -105,38 +106,37 @@ GRANT permission [ ,...n ]
 |ALTER ANY LINKED SERVER|CONTROL SERVER|  
 |ALTER ANY LOGIN|CONTROL SERVER|  
 |ALTER ANY SERVER AUDIT|CONTROL SERVER|  
-|ALTER ANY SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|ALTER ANY SERVER ROLE<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |ALTER RESOURCES|CONTROL SERVER|  
 |ALTER SERVER STATE|CONTROL SERVER|  
 |ALTER SETTINGS|CONTROL SERVER|  
 |ALTER TRACE|CONTROL SERVER|  
 |AUTHENTICATE SERVER|CONTROL SERVER|  
-|CONNECT ANY DATABASE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|CONNECT ANY DATABASE<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY AVAILABILITY GROUP|  
+|CREATE AVAILABILITY GROUP<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
-|CREATE SERVER ROLE<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY SERVER ROLE|  
+|CREATE SERVER ROLE<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|ALTER ANY SERVER ROLE|  
 |CREATE TRACE EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
-|IMPERSONATE ANY LOGIN<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
-|SELECT ALL USER SECURABLES<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|IMPERSONATE ANY LOGIN<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
+|SELECT ALL USER SECURABLES<br /><br /> **適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|CONTROL SERVER|  
 |SHUTDOWN|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>解説  
  次の 3 つのサーバー権限が、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で追加されました。  
   
  **CONNECT ANY DATABASE** 権限  
- 既存のあらゆるデータベースと今後作成されるすべての新規データベースに接続する必要のあるログインに、**CONNECT ANY DATABASE** を付与します。 接続以外の権限はどのデータベースにおいても一切付与されません。 **SELECT ALL USER SECURABLES** または **VIEW SERVER STATE** と組み合わせることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上ですべてのデータやデータベースの状態を確認する監査プロセスが可能になります。  
+ 既存のあらゆるデータベースと今後作成されるすべての新規データベースに接続する必要のあるログインに、 **CONNECT ANY DATABASE** を付与します。 接続以外の権限はどのデータベースにおいても一切付与されません。 **SELECT ALL USER SECURABLES** または **VIEW SERVER STATE** と組み合わせることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス上ですべてのデータやデータベースの状態を確認する監査プロセスが可能になります。  
   
  **IMPERSONATE ANY LOGIN** 権限  
- この権限が付与されていると、中間層プロセスがデータベースに接続するときに、そこに接続するクライアントのアカウントの権限を借用できます。 この権限が拒否されていると、高い特権を持つログインが他のログインの権限を借用するのをブロックできます。 たとえば、**CONTROL SERVER** 権限を持つログインが他のログインの権限を借用するのをブロックできます。  
+ この権限が付与されていると、中間層プロセスがデータベースに接続するときに、そこに接続するクライアントのアカウントの権限を借用できます。 この権限が拒否されていると、高い特権を持つログインが他のログインの権限を借用するのをブロックできます。 たとえば、 **CONTROL SERVER** 権限を持つログインが他のログインの権限を借用するのをブロックできます。  
   
  **SELECT ALL USER SECURABLES** 権限  
  付与されていると、監査担当者などログインが、ユーザーが接続できるすべてのデータベースのデータを表示できます。 この権限が拒否されていると、オブジェクトが **sys** スキーマに含まれている場合を除き、オブジェクトへのアクセスが拒否されます。  
@@ -149,7 +149,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. ログインに権限を許可する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `TerryEminhizer` に `CONTROL SERVER` 権限を許可します。  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -158,7 +158,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. GRANT 権限に関する権限を許可する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `JanethEsteves` に、`ALTER ANY EVENT NOTIFICATION` 権限を許可し、この権限を他のログインに許可する権利を与えます。  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -167,7 +167,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. サーバー ロールに権限を許可する  
  次の例では、`ITDevAdmin` および `ITDevelopers` という名前の 2 つのサーバー ロールを作成します。 ここでは、`ALTER ANY DATABASE` オプションを含めて、`ITDevAdmin` 権限を `WITH GRANT` ユーザー定義サーバー ロールに許可します。これにより、`ITDevAdmin` サーバー ロールは、`ALTER ANY DATABASE` 権限を再割り当てすることができます。 次に、`ITDevelopers` サーバー ロールの `ALTER ANY DATABASE` 権限を使用する権限を `ITDevAdmin` に許可します。  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

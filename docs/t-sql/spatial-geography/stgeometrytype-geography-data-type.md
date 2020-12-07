@@ -1,4 +1,5 @@
 ---
+description: STGeometryType (geography データ型)
 title: STGeometryType (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 957615b665641afd3ffbfbcac8d789a2426b35cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 082c6ede155c04f9ea323db2c345a690a2d39a7d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555407"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445276"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555407"
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `STGeometryType()` によって返される OGC の型名は、**Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon**、**CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString**、**MultiPolygon** および **FullGlobe** です。  
   
 ## <a name="examples"></a>例  
@@ -55,7 +56,7 @@ SET @g = geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -1
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

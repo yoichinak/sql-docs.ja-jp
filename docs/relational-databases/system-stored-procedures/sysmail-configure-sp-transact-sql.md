@@ -1,4 +1,5 @@
 ---
+description: sysmail_configure_sp (Transact-SQL)
 title: sysmail_configure_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_configure_sp
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b16f0e11cc38abbbaf14abd4b21e7334a578c1cb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122407"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538465"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
  パラメーターの説明。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -69,10 +70,10 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |*ProhibitedExtensions*|電子メールへの添付ファイルとして送信できない拡張子のコンマ区切りのリスト。|**exe、dll、vbs、js**|  
 |*Logginglevel.information*|データベース メール ログに記録されるメッセージ。 次の数値のいずれかです。<br /><br /> 1-これは通常モードです。 エラーのみをログに記録します。<br /><br /> 2-これは拡張モードです。 エラー、警告、および情報メッセージをログに記録します。<br /><br /> 3-詳細モードです。 エラー、警告、情報メッセージ、成功メッセージ、および追加の内部メッセージをログに記録します。 トラブルシューティングを行うには、このモードを使用してください。|**2**|  
   
- ストアドプロシージャ**sysmail_configure_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_configure_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  **A. 各アカウントに対して 10 回再試行するようデータベース メールを設定する**  
@@ -96,6 +97,6 @@ EXECUTE msdb.dbo.sysmail_configure_sp
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos による行セットの行の更新
 title: SQLSetPos | を使用した行セットの行の更新Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b1b50007a03ee1973d92acafbe8f2be1022f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471217"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos による行セットの行の更新
 **SQLSetPos**の更新操作により、データソースは、バインドされた各列のアプリケーションバッファーのデータを使用して、テーブルの1つまたは複数の選択した行を更新します (長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE 場合を除きます)。 バインドされていない列は更新されません。  
@@ -36,11 +37,11 @@ ms.locfileid: "81298972"
   
  **SQLSetPos**が返された後、現在の行は更新された行に設定されます。  
   
- 行セットのすべての行を更新するとき (*RowNumber*は 0)、アプリケーションでは、行操作配列の対応する要素 (SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す) を SQL_ROW_IGNORE に設定することにより、特定の行の更新を無効にすることができます。 行の操作の配列は、行の状態の配列に対する要素のサイズと数に対応しています (SQL_ATTR_ROW_STATUS_PTR statement 属性によって示されています)。 正常にフェッチされ、行セットから削除されていない結果セット内の行のみを更新するには、行の操作の配列として行セットをフェッチした関数の行の状態の配列を**SQLSetPos**に使用します。  
+ 行セットのすべての行を更新するとき (*RowNumber* は 0)、アプリケーションでは、行操作配列の対応する要素 (SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す) を SQL_ROW_IGNORE に設定することにより、特定の行の更新を無効にすることができます。 行の操作の配列は、行の状態の配列に対する要素のサイズと数に対応しています (SQL_ATTR_ROW_STATUS_PTR statement 属性によって示されています)。 正常にフェッチされ、行セットから削除されていない結果セット内の行のみを更新するには、行の操作の配列として行セットをフェッチした関数の行の状態の配列を **SQLSetPos**に使用します。  
   
  更新プログラムとしてデータソースに送信されるすべての行について、アプリケーションバッファーに有効な行データが含まれている必要があります。 フェッチによってアプリケーションバッファーがいっぱいになっていて、行の状態配列が保持されている場合は、行の各位置の値を SQL_ROW_DELETED、SQL_ROW_ERROR、または SQL_ROW_NOROW にすることはできません。  
   
- たとえば、次のコードを使用すると、ユーザーは Customers テーブルをスクロールして、新しい行を更新、削除、または追加することができます。 このメソッドは、 **SQLSetPos**を呼び出して新しい行を更新または追加する前に、新しいデータを行セットバッファーに配置します。 行セットバッファーの末尾に余分な行が割り当てられ、新しい行が保持されます。これにより、新しい行のデータがバッファーに配置されても、既存のデータが上書きされるのを防ぐことができます。  
+ たとえば、次のコードを使用すると、ユーザーは Customers テーブルをスクロールして、新しい行を更新、削除、または追加することができます。 このメソッドは、 **SQLSetPos** を呼び出して新しい行を更新または追加する前に、新しいデータを行セットバッファーに配置します。 行セットバッファーの末尾に余分な行が割り当てられ、新しい行が保持されます。これにより、新しい行のデータがバッファーに配置されても、既存のデータが上書きされるのを防ぐことができます。  
   
 ```  
 #define UPDATE_ROW   100  

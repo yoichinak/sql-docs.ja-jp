@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d9581fe8ae3f250d40eeaf21e76c4e1f373e12cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458904"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395343"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でのレポート データの概要
 
@@ -98,9 +98,8 @@ ms.locfileid: "86458904"
 
  以下に、データ接続の作成、外部ソース、データセット、およびクエリからのデータの追加に関連するタスクを示します。  
   
-|||  
+|一般的なタスク|リンク|  
 |-|-|  
-|**一般的なタスク**|**リンク**|  
 |データ接続の作成|[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |データセットとクエリの作成|[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |パブリッシュ後のデータ ソースの管理|[レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)|  

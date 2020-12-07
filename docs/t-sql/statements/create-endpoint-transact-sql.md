@@ -1,4 +1,5 @@
 ---
+description: CREATE ENDPOINT (Transact-SQL)
 title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
@@ -29,14 +30,14 @@ helpviewer_keywords:
 - SERVICE_BROKER option
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 93d44d07f8a6ba1be36e390e85991183fc749c01
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392740"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539852"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 

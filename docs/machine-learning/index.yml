@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 226eb1c5afe9812cf5bcc29de47289b865ac0c3c
+  ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606826"
+  ms.lasthandoff: 09/24/2020
+  ms.locfileid: "91136370"
 landingContent:
 - title: SQL Server での機械学習
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: T-SQL での R の使用
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: R ツールでの Machine Learning Services の使用
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: ビッグ データ クラスターでの ML
+    - text: デシジョン ツリーでスキー レンタルを予測する
+      url: tutorials/r-predictive-model-introduction.md
+    - text: K-Means クラスタリングを使用した顧客の分類
+      url: tutorials/r-clustering-model-introduction.md
+- title: Azure SQL Managed Instance
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL Managed Instance の Machine Learning Services
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Azure SQL Managed Instance と SQL Server の ML の主な相違点
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Azure SQL Managed Instance での ONNX モデルを使用したデプロイと予測
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Azure SQL Database Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge での ONNX を使用した機械学習と AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: SQL Database Edge での ONNX モデルを使用したデプロイと予測
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Azure Data Studio ML 拡張機能
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure Data Studio の Machine Learning 拡張機能とは
+      url: ../azure-data-studio/extensions/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: データベースでのパッケージの管理
+      url: ../azure-data-studio/extensions/machine-learning-extension-manage-packages.md
+    - text: 予測を作成します
+      url: ../azure-data-studio/extensions/machine-learning-extension-predictions.md
+    - text: モデルのインポートまたは表示
+      url: ../azure-data-studio/extensions/machine-learning-extension-import-view-models.md
+- title: SQL Server ビッグ データ クラスター
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: SQL Server での Spark を統合する
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Azure Synapse Analytics での ML
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Azure Synapse Studio ノートブックを作成、開発、管理する
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Azure SQL Database Edge での ML
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Database Edge での ONNX を使用した機械学習と AI
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: SQL Database Edge での ONNX モデルを使用したデプロイと予測
-      url: /azure/sql-database-edge/deploy-onnx

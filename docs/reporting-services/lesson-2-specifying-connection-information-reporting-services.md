@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3000abfed5258f02d47148ce351a6390cb225c7
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258462"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678885"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2: 接続情報の指定 (Reporting Services)
 
 レッスン 1 で、[!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを Tutorial プロジェクトに追加しました。
   
-このレッスンでは、リレーショナル データベースやその他のリソースのデータにアクセスするためにレポートで使用される接続情報である*データ ソース*を定義する必要があります。
+このレッスンでは、リレーショナル データベースやその他のリソースのデータにアクセスするためにレポートで使用される接続情報である *データ ソース* を定義する必要があります。
 
 このレポートの場合、AdventureWorks2016 サンプル データベースをデータ ソースとして追加します。 このチュートリアルでは、このデータベースが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに配置されており、ローカル コンピューターにインストールされているものとします。  
 
@@ -28,7 +28,7 @@ ms.locfileid: "75258462"
 
 1. **[レポート データ]** ウィンドウで、 **[新規作成]**  >  **[データ ソース]** の順にクリックします。 **[レポート データ]** ウィンドウが表示されていない場合は、 **[表示]** メニュー > **[レポート データ]** の順に選択します。
 
-    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+    ![レポート データ ペインのスクリーンショット。[新規作成] > [データ ソース] の順に選択されています。](media/ssrs-table-tutorial-2-new-data-source.png)
 
     **[データ ソースのプロパティ]** ダイアログ ボックスが開き、 **[全般]** セクションが表示されます。
 

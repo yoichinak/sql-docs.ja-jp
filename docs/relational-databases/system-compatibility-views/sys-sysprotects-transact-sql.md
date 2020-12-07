@@ -1,4 +1,5 @@
 ---
+description: sys.sysによる保護 (Transact-sql)
 title: sys.sysによる保護 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bfda1be56b5fc373d0ae1b9e8d5141ac046b717e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 811bdae3c05bbb934a6f135269147c8678fa7654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482066"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysによる保護 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85884471"
 |**欄**|**varbinary(8000)**|これらの SELECT または UPDATE 権限を適用する列のビットマップです。<br /><br /> ビット 0 = すべての列。<br /><br /> ビット 1 = 権限を適用する列<br /><br /> NULL = 情報がありません。|  
 |**権限**|**smallint**|GRANT または DENY 権限を発行したユーザーのユーザー ID です。 ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

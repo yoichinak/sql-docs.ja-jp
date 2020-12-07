@@ -1,4 +1,5 @@
 ---
+description: Change Steps of a SQL Server Agent Master Job
 title: Change Steps of a SQL Server Agent Master Job
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f18e86052d6044741f228c8970e78e680371111e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03ba8e6368933afbafab7ca455955bd9e25c2cc3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749179"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035715"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェントのマスター ジョブのステップに変更を加える方法について説明します。  
   
@@ -48,13 +49,13 @@ ms.locfileid: "85749179"
   
 4.  ステップを変更するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
+5.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  **[編集]** をクリックし、**[ジョブ ステップのプロパティ - _job\_step\_name_]** ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
+6.  **[編集]** をクリックし、 **[ジョブ ステップのプロパティ - _job\_step\_name_]** ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
-8.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、**[OK]** をクリックします。  
+8.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>Transact-SQL の使用  
   
@@ -80,5 +81,4 @@ ms.locfileid: "85749179"
     GO  
     ```  
   
-詳細については、「 [sp_update_jobstep (Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b)」を参照してください。  
-  
+詳細については、「 [sp_update_jobstep (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)」を参照してください。  

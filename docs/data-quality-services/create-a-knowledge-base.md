@@ -1,4 +1,5 @@
 ---
+description: ナレッジ ベースの作成
 title: ナレッジ ベースの作成
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487913"
 ---
 # <a name="create-a-knowledge-base"></a>ナレッジ ベースの作成
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887983"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ナレッジ ベースを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>ナレッジベースの作成  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> ナレッジベースの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85887983"
   
 6.  **[作成]** をクリックします。  
   
-##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>補足情報: ナレッジベースを作成した後  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> 補足情報: ナレッジベースを作成した後  
  ナレッジ ベースを作成した後は、ナレッジ検出を実行するためのウィザード、照合ポリシーを作成するためのウィザード、またはドメイン管理を実行するためのページが表示されます。 ナレッジ検出、ドメイン管理、または照合ポリシーについて詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
   

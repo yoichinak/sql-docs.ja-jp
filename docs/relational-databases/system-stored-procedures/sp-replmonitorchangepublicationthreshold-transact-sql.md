@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749285"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543153"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,24 +46,24 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシュされたデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'`監視しきい値属性を変更するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` 監視しきい値属性を変更するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
+`[ @publication_type = ] publication_type` パブリケーションの種類。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
 |**2**|マージ パブリケーションです。|  
 |NULL (既定値)|レプリケーションは、パブリケーションの種類を特定しようとします。|  
   
-`[ @metric_id = ] metric_id`変更するパブリケーションしきい値の ID を示します。 *metric_id*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+`[ @metric_id = ] metric_id` 変更するパブリケーションしきい値の ID を示します。 *metric_id* は **int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|メトリックの名前|  
+|[値]|メトリックの名前|  
 |-----------|-----------------|  
 |**1**|**expiration** - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
 |**2**|**latency** - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  
@@ -75,24 +75,24 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  *Metric_id*または*thresholdmetricname*のいずれかを指定する必要があります。 *Thresholdmetricname*を指定する場合は、 *metric_id*を NULL にする必要があります。  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`変更するパブリケーションしきい値の名前を指定します。 *thresholdmetricname*は**sysname**,、既定値は NULL です。 *Thresholdmetricname*または*metric_id*のいずれかを指定する必要があります。 *Metric_id*が指定されている場合は、 *thresholdmetricname*を NULL にする必要があります。  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` 変更するパブリケーションしきい値の名前を指定します。 *thresholdmetricname* は **sysname**,、既定値は NULL です。 *Thresholdmetricname*または*metric_id*のいずれかを指定する必要があります。 *Metric_id*が指定されている場合は、 *thresholdmetricname*を NULL にする必要があります。  
   
-`[ @value = ] value`パブリケーションしきい値の新しい値を指定します。 *値*は**int**,、既定値は NULL です。 **Null**の場合、メトリック値は更新されません。  
+`[ @value = ] value` パブリケーションしきい値の新しい値を指定します。 *値* は **int**,、既定値は NULL です。 **Null**の場合、メトリック値は更新されません。  
   
-`[ @shouldalert = ] shouldalert`パブリケーションのしきい値に達したときにアラートを生成するかどうかを示します。 *alert*は**ビット**,、既定値は NULL です。 値**1**は警告が生成されることを意味し、値**0**は警告が生成されないことを意味します。  
+`[ @shouldalert = ] shouldalert` パブリケーションのしきい値に達したときにアラートを生成するかどうかを示します。 *alert* は **ビット**,、既定値は NULL です。 値 **1** は警告が生成されることを意味し、値 **0** は警告が生成されないことを意味します。  
   
-`[ @mode = ] mode`パブリケーションのしきい値メトリックが有効な場合はです。 *モード*は**tinyint**,、既定値は**1**です。 値**1**はこのメトリックの監視が有効になっていることを示し、値**2**はこのメトリックの監視が無効になっていることを意味します。  
+`[ @mode = ] mode` パブリケーションのしきい値メトリックが有効な場合はです。 *モード* は **tinyint**,、既定値は **1**です。 値 **1** はこのメトリックの監視が有効になっていることを示し、値 **2** はこのメトリックの監視が無効になっていることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replmonitorchangepublicationthreshold**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replmonitorchangepublicationthreshold** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replmonitorchangepublicationthreshold**を実行できるのは、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

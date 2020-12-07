@@ -1,4 +1,5 @@
 ---
+description: SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
 title: SharePoint Web アプリケーションのレポート サーバー操作に対するアクセス許可を設定する | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af15f2a0d7116ea82144a42db423de289e771056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492560"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint Web アプリケーションのレポート サーバー操作に対する権限を設定する
   SharePoint 統合モードで動作しているレポート サーバーの場合、レポート、レポート モデル、および共有データ ソースの表示と管理の方法は、SharePoint サイトで定義されたセキュリティ設定で決定されます。 既定の SharePoint グループ、権限レベル、および権限の割り当てを使用している場合は、現在のセキュリティ設定を使用して、レポートやその他のドキュメントを操作できます。  
@@ -49,7 +50,7 @@ ms.locfileid: "65570595"
   
  あらかじめ定義された権限レベルを使用する場合、フル コントロール、デザイン、投稿、読み取り、および制限付きアクセスには既に上記の権限が含まれているので、必要な操作はありません。 ただし、カスタム権限レベルを使用したり、特定のユーザーまたはグループに割り当てた権限を編集したりする場合は、権限を手動で追加する必要があります。  
   
- "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 参照操作におけるエラー: "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました。" パブリッシュ操作におけるエラー: "ユーザー '\<domain>\\<user\>' には、この操作を行うのに必要なアクセス許可が与えられていません。"  
+ "ユーザー情報の参照" 権限があると、レポート サーバーは、アイテムの作成者やそのアイテムを最後に変更したユーザーに関する情報を返すことができます。 この権限がないと、レポート サーバーは次のエラーを返します。 参照操作におけるエラー: "レポート サーバーに SharePoint エラーが発生しました。 ---> System.UnauthorizedAccessException: アクセスは拒否されました。" 発行操作の場合は、"ユーザー '\<domain>\\<user\>' には、この操作を行うのに必要な権限が許可されていません" というエラーが発生します。  
   
 ##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> レポートの表示と管理の権限  
  レポート定義の権限は、レポートが含まれているライブラリのリスト権限によって定義されますが、個々のレポートに対して権限を設定してアクセスを制限することもできます。 次の表に、作業の一覧と、それぞれの作業をサポートする権限を示します。  
@@ -116,7 +117,7 @@ ms.locfileid: "65570595"
   
  共有データ ソースには、個々のユーザーが共有データ ソースを表示または管理できるかどうかを指定するプロパティを設定できます。 共有データ ソースの表示または管理を行う権限は、レポート表示権限とは異なります。 .rsds ファイルを使用するレポートは、.rsds ファイル自体への権限がなくても表示できます。  
   
-|処理手順|権限|  
+|タスク|権限|  
 |-----------|----------------|  
 |共有データ ソースを作成する。|共有データ ソースが含まれているライブラリに対する "**アイテムの追加** "。 ライブラリの [新規作成] メニューから新しい共有データ ソースを作成できます。 そのためには、コンテンツの種類としてレポート データ ソースをライブラリに登録する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。|  
 |共有データ ソースを編集する。|共有データ ソースが含まれているライブラリまたは共有データ ソース自体に対する "**アイテムの編集** "。|  

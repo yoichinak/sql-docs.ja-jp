@@ -1,4 +1,5 @@
 ---
+description: Web 同期のセキュリティ アーキテクチャ
 title: Web 同期のセキュリティ アーキテクチャ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9db611e60deea85ee5d24006f111db425f66924f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868225"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同期のセキュリティ アーキテクチャ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +131,7 @@ ms.locfileid: "85900008"
   
 -   Xmlsub  
   
- また、このアカウントは IIS_WPG グループの一部である必要があります。 詳細については、「[Web 同期用の IIS の構成](../../../relational-databases/replication/configure-iis-for-web-synchronization.md)」の「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナーの権限の設定」を参照してください。  
+ また、このアカウントは IIS_WPG グループの一部である必要があります。 詳細については、「[Web 同期用の IIS の構成](../configure-iis-7-for-web-synchronization.md)」の「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション リスナーの権限の設定」を参照してください。  
   
 |アカウントの種類|アカウントを指定する場所|  
 |---------------------|------------------------------------|  
@@ -139,5 +140,4 @@ ms.locfileid: "85900008"
 ## <a name="see-also"></a>参照  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
-  
   

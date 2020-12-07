@@ -1,4 +1,5 @@
 ---
+description: Web サービス操作の分類 (Master Data Services)
 title: Web サービス操作の分類
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 942fe6319d0cd47bac0fd11037214f0142f13818
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bd6c3db52323385712bb946c63254e11c45cd5f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495049"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
 
@@ -103,7 +104,7 @@ ms.locfileid: "87362979"
 - <xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>
   
 ## <a name="data-import-operations"></a>データ インポートの操作  
- これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「[概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
+ これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースにデータをインポートするために使用されます。 詳細については、「 [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)」を参照してください。  
   
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingClear%2A>
 - <xref:Microsoft.MasterDataServices.ServiceClient.EntityStagingGet%2A>

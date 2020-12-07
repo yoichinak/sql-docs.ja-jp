@@ -10,12 +10,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: fe2d8ff228978270867780e14053c950690f1f22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45965ac8d40496fb2cd18c576ca6bb1228ce855b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510133"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988628"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビューする
 
@@ -53,5 +53,5 @@ ms.locfileid: "79510133"
 
  - [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)
  - [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)
- - [レポートのパブリッシュ](https://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)
+ - [レポートのパブリッシュ](/previous-versions/sql/sql-server-2016/ms159615(v=sql.130))
  - [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)

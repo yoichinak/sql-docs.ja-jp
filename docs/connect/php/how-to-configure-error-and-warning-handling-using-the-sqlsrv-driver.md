@@ -1,7 +1,8 @@
 ---
-title: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する | Microsoft Docs
+title: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
+description: このトピックでは、Microsoft SQLSRV Driver for PHP for SQL Server を使用する場合にエラーと警告を処理するように SQLSRV を構成する方法について説明します
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab941b5813ccd60bb3afcd5ba76718406fb446
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916578"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680707"
 ---
-# <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
+# <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、エラーと警告を処理するために SQLSRV ドライバーを構成する方法について説明します。  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391807"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080642"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 結果セットに名前のない複数の列が含まれている場合は、名前のない最後の列の値が、空の文字列 ("") キーに割り当てられます。  
   
-## <a name="example"></a>例  
+## <a name="associative-array-example"></a>連想配列の例  
 次の例では、結果セットの各行を連想 **配列**として取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="indexed-array-xample"></a>インデックス付き配列の例  
 次の例では、結果セットの各行を数値インデックス配列として取得します。  
   
 この例では、指定日で在庫数 (*StockQty*) が指定値より少ない製品の情報を AdventureWorks データベースの *Purchasing.PurchaseOrderDetail* テーブルから取得します。  

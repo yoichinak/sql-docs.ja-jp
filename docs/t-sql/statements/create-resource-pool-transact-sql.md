@@ -1,4 +1,5 @@
 ---
+description: CREATE RESOURCE POOL (Transact-SQL)
 title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eacfc8eee49f959f0164c9d802cc3f789aed4401
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7d1f5c3bb4101f35db9f76c661466c1dc1fa59ca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392850"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549354"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

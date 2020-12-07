@@ -1,4 +1,5 @@
 ---
+description: MSreplication_monitordata (Transact-SQL)
 title: MSreplication_monitordata (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 49dd84629222b170740a99f95e33b114d9707044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dde16569f96619778a3a3cd6a246f58482b9947d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889449"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540891"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85889449"
 |**agent_name**|**sysname**|レプリケーションエージェントジョブの名前です。|  
 |**job_id**|**uniqueidentifier**|レプリケーションエージェントジョブの GUID。|  
 |**status**|**int**|レプリケーションエージェントの状態。次のいずれかの値を指定できます。<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル<br /><br /> **5** = 再試行中<br /><br /> **6** = 失敗|  
-|**isagentrunningnow**|**bit**|エージェントジョブが現在実行されているかどうかを示すフラグ。値**1**は、ジョブが実行されていることを意味します。|  
+|**isagentrunningnow**|**bit**|エージェントジョブが現在実行されているかどうかを示すフラグ。値 **1** は、ジョブが実行されていることを意味します。|  
 |**warning**|**int**|サブスクリプションによって生成されるしきい値警告です。次の 1 つ以上の値の論理和演算をとります。<br /><br /> **1** = 有効期限-トランザクションパブリケーションへのサブスクリプションが、保有期間の割合として、許容されるしきい値を超える保有期間を超えました。<br /><br /> **2** = 待機時間-トランザクションパブリッシャーからサブスクライバーへのデータのレプリケートにかかった時間が、秒単位のしきい値を超えています。<br /><br /> **4** = mergeexpiration-マージパブリケーションに対するサブスクリプションが、保有期間の割合として許容されるしきい値を超える保有期間を超えました。 8 = mergefastrunduration。高速ネットワーク接続上で、マージ サブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超過しました。<br /><br /> **16** = mergeslowrunduration-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **32** = mergefastrunspeed-高速ネットワーク接続上で、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でのしきい値の比率を維持できませんでした。<br /><br /> **64** = mergeslowrunspeed-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でしきい値を維持できませんでした。|  
 |**last_distsync**|**datetime**|ディストリビューションエージェント実行された最後の日付と時刻。|  
 |**agentstoptime**|**datetime**|エージェントが停止された日時です。|  
@@ -60,11 +61,11 @@ ms.locfileid: "85889449"
 |**average_runspeedPerf**|**int**|マージパブリケーションの平均同期時間|  
 |**mergePerformance**|**int**|サブスクリプションに対するすべての同期と比較した前回の同期のパフォーマンスです。前回の同期の配信速度を前回までのすべての配信速度の平均で割った値に基づいて算出されます。|  
 |**mergelatestsessionrunduration**|**int**|最後に実行されたマージエージェントの実行時間。|  
-|**mergelatestsessionrunspeed**|**float (53)**|マージエージェント実行された最新の配信率です。|  
+|**mergelatestsessionrunspeed**|**float(53)**|マージエージェント実行された最新の配信率です。|  
 |**mergelatestsessionconnectiontype**|**int**|最新のマージエージェントセッションに使用される接続。次のいずれかの値を指定できます。<br /><br /> **1** = ローカルエリアネットワーク (LAN)<br /><br /> **2** = ダイヤルアップネットワーク接続|  
 |**retention_period_unit**|**tinyint**|保有期間を定義するときに使用する単位を指定します。次のいずれかの値をとります。<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

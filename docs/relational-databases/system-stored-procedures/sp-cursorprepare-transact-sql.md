@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepare (Transact-sql)
 title: sp_cursorprepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868817"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539032"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 ## <a name="arguments"></a>引数  
  *prepared_handle*  
- 整数値を返す、SQL Server によって生成される準備済み*ハンドル*識別子。  
+ 整数値を返す、SQL Server によって生成される準備済み *ハンドル* 識別子。  
   
 > [!NOTE]  
 >  その後、カーソルを開くために、 *prepared_handle*が sp_cursorexecute プロシージャに渡されます。 作成されたハンドルは、ログオフするか sp_cursorunprepare プロシージャを使用して明示的に削除するまで存在します。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 変数の*params*定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params*は、 **ntext**、 **nchar**、または**nvarchar**の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
+ パラメーター化されたステートメントを指定します。 変数の *params* 定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params* は、 **ntext**、 **nchar**、または **nvarchar** の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
 > [!NOTE]  
 >  *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、入力値として**ntext**文字列を使用します。  
@@ -59,14 +60,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  *Stmt*値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は**ntext**である必要があります。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*には、次の**int**入力値が必要です。  
+ カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション* には、次の **int** 入力値が必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
+ スクロールオプション。 *scrollopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -88,13 +89,13 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  要求された値は、 *stmt*によって定義されたカーソルに適していない場合があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な値が割り当てられます。  
   
  *ccopt*  
- 同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
+ 同時実行制御オプション。 *ccopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
-|0x0004|**オプティミスティック**(以前は optcc と呼ばれていました)|  
+|0x0004|**オプティミスティック** (以前は optcc と呼ばれていました)|  
 |0x0008|オプティミスティック (以前の OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -106,7 +107,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  *同様 scrollpt,* と同様に、では、要求されたものとは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  RPC 状態パラメーターは、次のいずれかになります。  
   
 |[値]|説明|  
@@ -115,7 +116,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x0001|障害|  
 |1FF6|メタデータを返せませんでした。<br /><br /> 注: これは、ステートメントによって結果セットが生成されないためです。たとえば、INSERT ステートメントや DDL ステートメントなどです。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   Sp_cursorprepare と sp_cursorexecute の使用例を次に示します。
 
 ```sql
@@ -146,7 +147,7 @@ exec sp_cursorclose @p2
   
  { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorunprepare &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   

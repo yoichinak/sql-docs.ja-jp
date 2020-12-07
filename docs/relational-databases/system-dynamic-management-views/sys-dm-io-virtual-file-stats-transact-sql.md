@@ -1,5 +1,6 @@
 ---
-title: dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_io_virtual_file_stats (Transact-sql)
+title: sys.dm_io_virtual_file_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f47083ceb58a7125ad1477c1471c1d9f329472c8
+ms.sourcegitcommit: 773c1203e3c4617606cecb2626f6b2f2c855a53d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396292"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96535296"
 ---
-# <a name="sysdm_io_virtual_file_stats-transact-sql"></a>dm_io_virtual_file_stats (Transact-sql)
+# <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  データファイルとログファイルの i/o 統計を返します。 この動的管理ビューでは、 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)関数が置き換えられます。  
+  データファイルとログファイルの i/o 統計を返します。 この動的管理ビューでは、 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 関数が置き換えられます。  
   
 > [!NOTE]  
->  これをから呼び出すには [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 **dm_pdw_nodes_io_virtual_file_stats**という名前を使用します。 
+>  これをから呼び出すには [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 **sys.dm_pdw_nodes_io_virtual_file_stats** という名前を使用します。 
 
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +48,7 @@ sys.dm_io_virtual_file_stats (
 ```  
 
 ```  
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
@@ -59,7 +60,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  **適用対象:** SQL Server (2008 以降)、Azure SQL Database
 
- データベースの ID です。 *database_id*は int,、既定値はありません。 有効な入力値は、データベースの ID 番号または NULL です。 NULL を指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースが返されます。  
+ データベースの ID です。 *database_id* は int,、既定値はありません。 有効な入力値は、データベースの ID 番号または NULL です。 NULL を指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のすべてのデータベースが返されます。  
   
  組み込み関数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) を指定できます。  
   
@@ -67,18 +68,18 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
 **適用対象:** SQL Server (2008 以降)、Azure SQL Database
  
-ファイルの ID。 *file_id*は int,、既定値はありません。 有効な入力値は、ファイルの ID 番号または NULL です。 NULL を指定すると、データベース上のすべてのファイルが返されます。  
+ファイルの ID。 *file_id* は int,、既定値はありません。 有効な入力値は、ファイルの ID 番号または NULL です。 NULL を指定すると、データベース上のすべてのファイルが返されます。  
   
- 組み込み関数[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)を指定でき、現在のデータベース内のファイルを参照します。  
+ 組み込み関数 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) を指定でき、現在のデータベース内のファイルを参照します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|データベース名。</br></br>SQL Data Warehouse の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
+|**database_name**|**sysname**|**次のものには適用されません:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> データベース名。</br></br>Azure Synapse Analytics の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
 |**database_id**|**smallint**|データベースの ID。|  
 |**file_id**|**smallint**|ファイルの ID。|  
-|**sample_ms**|**bigint**|コンピューターの起動後に経過した時間 (ミリ秒単位)。 この列を使用して、この関数とは異なる出力を比較できます。</br></br>のデータ型は**int**です [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|コンピューターの起動後に経過した時間 (ミリ秒単位)。 この列を使用して、この関数とは異なる出力を比較できます。</br></br>のデータ型は **int** です [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|ファイルに対して発行された読み取りの数。|  
 |**num_of_bytes_read**|**bigint**|ファイルで読み込まれた総バイト数。|  
 |**io_stall_read_ms**|**bigint**|ファイルの読み取りをユーザーが待機した合計時間 (ミリ秒単位)。|  
@@ -88,7 +89,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|ファイルでの i/o の完了をユーザーが待機した合計時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|このファイルのディスクで使用されているバイト数。 スパースファイルの場合、この数は、データベーススナップショットに使用されるディスク上の実際のバイト数です。|  
 |**file_handle**|**varbinary**|このファイルの Windows ファイルハンドル。|  
-|**io_stall_queued_read_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
+|**io_stall_queued_read_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
 |**io_stall_queued_write_ms**|**bigint**|**は、:: からには適用されません** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 。<br /><br />  書き込みの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
@@ -96,7 +97,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 カウンタは、SQL Server (MSSQLSERVER) サービスが開始されるたびに空に初期化されます。
   
 ## <a name="permissions"></a>アクセス許可  
- VIEW SERVER STATE 権限が必要です。 詳細については、「 [transact-sql&#41;&#40;動的管理ビューと関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ VIEW SERVER STATE 権限が必要です。 詳細については、「 [transact-sql&#41;&#40;動的管理ビューと関数 ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>例  
 
@@ -113,7 +114,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Tempdb 内のファイルの統計を返す
 
-**適用対象:** Azure SQL Data Warehouse
+**適用対象:** Azure Synapse Analytics
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 

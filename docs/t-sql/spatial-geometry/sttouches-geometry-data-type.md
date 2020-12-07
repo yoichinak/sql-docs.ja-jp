@@ -1,4 +1,5 @@
 ---
+description: STTouches (geometry データ型)
 title: STTouches (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 40363a9c7f3f7a59f5da35930990c16eedf753f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88454314"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554596"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  2 つの **geometry** インスタンスの地点のセットは交差しているが、内部が交差していない場合、これらのインスタンスは接しています。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
@@ -63,7 +64,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

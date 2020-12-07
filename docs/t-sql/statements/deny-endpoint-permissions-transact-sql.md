@@ -1,4 +1,5 @@
 ---
+description: DENY (エンドポイントの権限の拒否) (Transact-SQL)
 title: DENY (エンドポイントの権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1a6c119e8091cf91269aae8a2c0d3ef3335c489
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 60e788fc63d0a7dd47274e85397f30aa04f95416
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484800"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688638"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY (エンドポイントの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +101,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を拒否する  
  次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;  
 GO  
@@ -109,7 +110,7 @@ GO
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. CASCADE オプションを使用して TAKE OWNERSHIP 権限を拒否する  
  次の例では、エンドポイント `TAKE OWNERSHIP` での `Shipping83` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` と、`PKomosinski` が `TAKE OWNERSHIP` 権限を許可したプリンシパルに対して拒否します。  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON ENDPOINT::Shipping83 TO PKomosinski   
     CASCADE;  

@@ -1,4 +1,5 @@
 ---
+description: スカラー型カタログ ビュー (Transact-SQL)
 title: スカラー型のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - scalar types catalog views
 - catalog views [SQL Server], scalar types
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 925e68bb297e69b5def358bbcf3cfcd820f0aee0
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d7efb66c93e6392ed6955ab91d6694e9fd50c60
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442597"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807155"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>スカラー型カタログ ビュー (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,6 +39,5 @@ ms.locfileid: "87442597"
 
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

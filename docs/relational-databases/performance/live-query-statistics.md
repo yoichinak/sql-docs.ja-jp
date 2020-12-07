@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0d23b18096f1be3feeaddbee6bc2517bcaae8130
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fe6467cbe5cc915b876b9efa6b8afd9ff59e2bbd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457893"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890783"
 ---
 # <a name="live-query-statistics"></a>[ライブ クエリ統計]
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86457893"
   
 > [!WARNING]  
 > この機能は、主にトラブルシューティングの目的で使用されます。 この機能を利用すると、特に [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] で、全体的なクエリ パフォーマンスがやや遅くなることがあります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
-> この機能は [Transact-SQL デバッガー](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)と共に利用できます。  
+> この機能は [Transact-SQL デバッガー](../../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)と共に利用できます。  
   
 ## <a name="to-view-live-query-statistics-for-one-query"></a>1 つのクエリのライブ クエリ統計を表示するには 
   
@@ -79,4 +79,4 @@ ms.locfileid: "86457893"
  [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
- [クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)   
+ [クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)

@@ -1,4 +1,5 @@
 ---
+description: STSymDifference (geometry データ型)
 title: STSymDifference (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6924bec676d8de525e29c8f124774b41edf0a2d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1a419562b8326cbdceee2be888c538e61bbedac3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359628"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554594"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  
@@ -81,7 +82,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

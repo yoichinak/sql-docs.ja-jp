@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクのコーディングおよびデバッグ
 title: スクリプト タスクのコーディングおよびデバッグ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ccf1b65fdbdd5493dd5e62e9e19b90fb72d8746
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a015eacbec51cbcfa514848795016daa45d93637
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915182"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122901"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
 
@@ -38,7 +39,7 @@ ms.locfileid: "86915182"
 ## <a name="script-task-development-environment"></a>スクリプト タスク開発環境  
  スクリプト タスクでは、スクリプト自体の開発環境として、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) が使用されます。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**スクリプト タスク エディター**で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト タスク内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**スクリプト タスク エディター** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト タスク内のコードからその機能を呼び出すことができます。  
   
  スクリプト タスクで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト タスクを使用してもパッケージの配置には影響しません。  
   
@@ -207,7 +208,7 @@ To open Help, press F1.
  参照をマネージド アセンブリに追加するには、 **[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、 **[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または **プロジェクト エクスプローラー** で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話  
  スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト **Dts**、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  
@@ -247,10 +248,9 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>外部リソース  
   
--   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
+-   blogs.msdn.com のブログ「[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations)」(SSIS 2008 インストールおよび R2 インストールでの VSTA のセットアップと構成に関する問題)。  
   
 ## <a name="see-also"></a>参照  
  [スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
  [スクリプト タスク エディターでのスクリプト タスクの構成](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: EXECUTE (Transact-SQL)
 title: EXECUTE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
@@ -31,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ec45204c6144ce51b809c84e5339af6cff9b292f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395314"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124466"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "87395314"
 ## <a name="syntax"></a>構文  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-次のコード ブロックは、SQL Server 2019 の構文を示しています。 または、[SQL Server 2017 以前の構文](execute-transact-sql.md?view=sql-server-2017)を参照してください。 
+次のコード ブロックは、SQL Server 2019 の構文を示しています。 または、[SQL Server 2017 以前の構文](execute-transact-sql.md?view=sql-server-2017&preserve-view=true)を参照してください。 
 
 ```syntaxsql
 -- Syntax for SQL Server 2019
@@ -115,7 +116,7 @@ Execute a pass-through command against a linked server
 
 ::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
 
-次のコード ブロックは、SQL Server 2017 以前の構文を示しています。 または、[SQL Server 2019 の構文](execute-transact-sql.md?view=sql-server-ver15)を参照してください。
+次のコード ブロックは、SQL Server 2017 以前の構文を示しています。 または、[SQL Server 2019 の構文](execute-transact-sql.md?view=sql-server-ver15&preserve-view=true)を参照してください。
 
 
 ```syntaxsql
@@ -253,7 +254,7 @@ Execute a character string
 
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
 [ { EXEC | EXECUTE } ]  
@@ -503,7 +504,7 @@ GO
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースで `spGetWhereUsedProductID` ストアド プロシージャを実行します。 ここでは、製品 ID (`819`) と、`@CheckDate,` 型の値をとる `datetime` の、2 つのパラメーターを引き渡します。  
   
 ```sql    
-DECLARE @CheckDate datetime;  
+DECLARE @CheckDate DATETIME;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
 GO  
@@ -541,7 +542,7 @@ GO
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```sql    
-DECLARE @retstat int;  
+DECLARE @retstat INT;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
@@ -549,7 +550,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
  次の例では、ストアド プロシージャ名を表す変数を作成します。  
   
 ```sql  
-DECLARE @proc_name varchar(30);  
+DECLARE @proc_name VARCHAR(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  
   
@@ -564,15 +565,14 @@ IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL
 GO  
 -- Create the stored procedure.  
 CREATE PROCEDURE dbo.ProcTestDefaults (  
-@p1 smallint = 42,   
-@p2 char(1),   
-@p3 varchar(8) = 'CAR')  
+@p1 SMALLINT = 42,   
+@p2 CHAR(1),   
+@p3 VARCHAR(8) = 'CAR')  
 AS   
    SET NOCOUNT ON;  
    SELECT @p1, @p2, @p3  
 ;  
 GO  
-  
 ```  
   
  `Proc_Test_Defaults` ストアド プロシージャは、多くの組み合わせで実行できます。  
@@ -619,7 +619,7 @@ GO
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースでユーザー定義のスカラー関数 `ufnGetSalesOrderStatusText` を実行します。 ここでは、変数 `@returnstatus` を使用して、関数によって返される値を格納します。 この関数には 1 つの入力パラメーター `@Status` が必要です。 これは **tinyint** データ型として定義されます。  
   
 ```sql    
-DECLARE @returnstatus nvarchar(15);  
+DECLARE @returnstatus NVARCHAR(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
 PRINT @returnstatus;  
@@ -664,7 +664,7 @@ GO
  次の例では、テーブルを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] 文字列を実行し、`AS USER` 句を指定して、ステートメントの実行コンテキストを呼び出し元から `User1` に切り替えます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントの実行時に `User1` の権限がチェックされます。 `User1` はデータベース内のユーザーとして存在し、`Sales` スキーマにテーブルを作成する権限が与えられている必要があります。そうでない場合、ステートメントは失敗します。  
   
 ```sql    
-EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
+EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID INT, SalesName VARCHAR(10));')  
 AS USER = 'User1';  
 GO  
 ```  
@@ -694,13 +694,13 @@ GO
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
-   ([Reporting Level] int NOT NULL,  
-    [ID of Employee] int NOT NULL,  
-    [Employee First Name] nvarchar(50) NOT NULL,  
-    [Employee Last Name] nvarchar(50) NOT NULL,  
-    [Employee ID of Manager] nvarchar(max) NOT NULL,  
-    [Manager First Name] nvarchar(50) NOT NULL,  
-    [Manager Last Name] nvarchar(50) NOT NULL )  
+   ([Reporting Level] INT NOT NULL,  
+    [ID of Employee] INT NOT NULL,  
+    [Employee First Name] NVARCHAR(50) NOT NULL,  
+    [Employee Last Name] NVARCHAR(50) NOT NULL,  
+    [Employee ID of Manager] NVARCHAR(max) NOT NULL,  
+    [Manager First Name] NVARCHAR(50) NOT NULL,  
+    [Manager Last Name] NVARCHAR(50) NOT NULL )  
 );  
   
 ```  
@@ -712,7 +712,7 @@ WITH RESULT SETS
   
 ```sql    
 --Create the procedure  
-CREATE PROC Production.ProductList @ProdName nvarchar(50)  
+CREATE PROC Production.ProductList @ProdName NVARCHAR(50)  
 AS  
 -- First result set  
 SELECT ProductID, Name, ListPrice  
@@ -731,12 +731,12 @@ GO
 EXEC Production.ProductList '%tire%'  
 WITH RESULT SETS   
 (  
-    (ProductID int,   -- first result set definition starts here  
-    Name Name,  
-    ListPrice money)  
+    (ProductID INT,   -- first result set definition starts here  
+    Name NAME,  
+    ListPrice MONEY)  
     ,                 -- comma separates result set definitions  
-    (Name Name,       -- second result set definition starts here  
-    NumberOfOrders int)  
+    (Name NAME,       -- second result set definition starts here  
+    NumberOfOrders INT)  
 );  
   
 ```  
@@ -827,7 +827,7 @@ EXEC ('EXEC (''SELECT * FROM sys.types'')');
  文字列変数の実行:  
   
 ```sql  
-DECLARE @stringVar nvarchar(100);  
+DECLARE @stringVar NVARCHAR(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
@@ -840,8 +840,8 @@ EXEC (@stringVar);
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  
-    @name nvarchar(50),  
-@color nvarchar (15)  
+    @name NVARCHAR(50),  
+@color NVARCHAR(15)  
 AS   
 SELECT ProductKey, EnglishProductName, Color FROM [dbo].[DimProduct]  
 WHERE EnglishProductName LIKE @name  

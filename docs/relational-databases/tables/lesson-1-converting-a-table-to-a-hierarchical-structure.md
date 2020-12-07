@@ -1,4 +1,5 @@
 ---
+description: レッスン 1:テーブルの階層構造への変換
 title: レッスン 1:テーブルの階層構造への変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a56b34301386287ef954edae0528decd4d03fee
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91809484"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>レッスン 1:テーブルの階層構造への変換
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-階層リレーションシップを表すために自己結合を使っているテーブルがある場合、このレッスンの説明に従って、それらのテーブルを階層構造に変換できます。 現在の表示から、 **hierarchyid**を使用した表示に移行するのは比較的簡単です。 移行後は、コンパクトで理解しやすい階層表示が可能になるため、ユーザーはさまざまな方法でインデックスを作成して効率的なクエリを実現できます。  
+階層リレーションシップを表すために自己結合を使っているテーブルがある場合、このレッスンの説明に従って、それらのテーブルを階層構造に変換できます。 現在の表示から、 **hierarchyid** を使用した表示に移行するのは比較的簡単です。 移行後は、コンパクトで理解しやすい階層表示が可能になるため、ユーザーはさまざまな方法でインデックスを作成して効率的なクエリを実現できます。  
   
 このレッスンでは、既存のテーブルを検証した後、 **hierarchyid** 列を含む新しいテーブルを作成し、そのテーブルにソース テーブルのデータを取り込みます。さらに、3 とおりのインデックス作成方法を紹介します。 このレッスンの内容は次のとおりです。  
  
@@ -29,18 +30,18 @@ ms.locfileid: "85757711"
 ## <a name="prerequisites"></a>前提条件  
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
-- [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
+- [AdventureWorks2017 サンプル データベース](../../samples/adventureworks-install-configure.md)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。  
+SSMS でデータベースを復元する手順については、[データベースの復元](../backup-restore/restore-a-database-backup-using-ssms.md)に関するページをご覧ください。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Employee テーブルの現在の構造を確認する
-サンプル Adventureworks2017 (以降) データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **HumanResources.EmployeeDemo** テーブルに対してクエリを実行し、 **hierarchyid** データ型が使用されていないテーブル内のデータ構造を確認します。  
+サンプル Adventureworks2017 (以降) データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo** という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **HumanResources.EmployeeDemo** テーブルに対してクエリを実行し、 **hierarchyid** データ型が使用されていないテーブル内のデータ構造を確認します。  
   
 ### <a name="copy-the-employee-table"></a>Employee テーブルをコピーする  
   
-1.  クエリ エディターのウィンドウで、次のコードを実行し、 **Employee** テーブルから新しいテーブルの **EmployeeDemo**にテーブル構造とデータをコピーします。 元のテーブルは既に hierarchyid を使用しているため、このクエリは従業員のマネージャーを取得するために必然的に階層をフラット化します。 この階層はこのレッスンの中で後ほど再構築します。
+1.  クエリ エディターのウィンドウで、次のコードを実行し、 **Employee** テーブルから新しいテーブルの **EmployeeDemo** にテーブル構造とデータをコピーします。 元のテーブルは既に hierarchyid を使用しているため、このクエリは従業員のマネージャーを取得するために必然的に階層をフラット化します。 この階層はこのレッスンの中で後ほど再構築します。
 
    ```sql  
    USE AdventureWorks2017;  
@@ -94,7 +95,7 @@ SSMS でデータベースを復元する手順については、[データベ�
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>テーブルに既存の階層データを入力する
-ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
+ ここでは、新しいテーブルを作成して、そのテーブルに **EmployeeDemo** テーブルのデータを設定します。 この作業には、次の手順があります。  
   
 -   **hierarchyid** 列を含む新しいテーブルを作成します。 この列を、既存の **EmployeeID** 列や **ManagerID** 列の代わりに使用してもかまいません。 ただし、これらの列は保持する必要があります。 これは、既存のアプリケーションがこれらの列を参照している可能性があるためでもあり、転送後のデータをわかりやすくするためでもあります。 テーブル定義では、 **OrgNode** が主キーであることを指定します。したがって、この列には一意の値を格納する必要があります。 **OrgNode** 列のクラスター化インデックスは、 **OrgNode** シーケンスのデータを格納します。    
 -   各管理者に直属する従業員の数を追跡するために使用する一時テーブルを作成します。 
@@ -102,7 +103,7 @@ SSMS でデータベースを復元する手順については、[データベ�
   
 ### <a name="to-create-a-new-table-named-neworg"></a>NewOrg という名前の新しいテーブルを作成するには  
   
--   クエリ エディター ウィンドウで、次のコードを実行し、 **HumanResources.NewOrg**という名前の新しいテーブルを作成します。  
+-   クエリ エディター ウィンドウで、次のコードを実行し、 **HumanResources.NewOrg** という名前の新しいテーブルを作成します。  
   
     ```sql   
     CREATE TABLE HumanResources.NewOrg  
@@ -223,7 +224,7 @@ SSMS でデータベースを復元する手順については、[データベ�
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>NewOrg テーブルの最適化
-「 **既存の階層データを使用したテーブルの設定** 」の作業で作成した [NewOrd](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) テーブルにはすべての従業員情報が格納されており、その階層構造は **hierarchyid** データ型によって表されています。 ここでは、 **hierarchyid** 列の検索をサポートする新しいインデックスを追加します。  
+「 **既存の階層データを使用したテーブルの設定** 」の作業で作成した [NewOrd]() テーブルにはすべての従業員情報が格納されており、その階層構造は **hierarchyid** データ型によって表されています。 ここでは、 **hierarchyid** 列の検索をサポートする新しいインデックスを追加します。  
   
 
 **hierarchyid** 列 (**OrgNode**) は、 **NewOrg** テーブルの主キーです。 **OrgNode** 列に一意性を持たせるため、このテーブルには作成時に **PK_NewOrg_OrgNode** という名前のクラスター化インデックスが格納されています。 このクラスター化インデックスは、テーブルの深さ優先検索もサポートしています。  
@@ -231,7 +232,7 @@ SSMS でデータベースを復元する手順については、[データベ�
   
 ### <a name="create-index-on-neworg-table-for-efficient-searches"></a>効率的な検索のため NewOrg テーブルにインデックスを付ける  
   
-1.  階層の同じレベルでのクエリを容易にするには、 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) メソッドを使用して、階層内のレベルを格納する計算列を作成します。 次に、レベルと **Hierarchyid**に基づく複合インデックスを作成します。 次のコードを実行すると、計算列と幅優先のインデックスが作成されます。  
+1.  階層の同じレベルでのクエリを容易にするには、 [GetLevel](../../t-sql/data-types/getlevel-database-engine.md) メソッドを使用して、階層内のレベルを格納する計算列を作成します。 次に、レベルと **Hierarchyid** に基づく複合インデックスを作成します。 次のコードを実行すると、計算列と幅優先のインデックスが作成されます。  
   
     ```sql  
     ALTER TABLE HumanResources.NewOrg   
@@ -241,7 +242,7 @@ SSMS でデータベースを復元する手順については、[データベ�
     GO  
     ```  
   
-2.  **EmployeeID** 列に一意のインデックスを作成します。 これは、 **EmployeeID** の番号によって 1 人の従業員を検索する従来の単一参照です。 次のコードを実行すると、 **EmployeeID**のインデックスが作成されます。  
+2.  **EmployeeID** 列に一意のインデックスを作成します。 これは、 **EmployeeID** の番号によって 1 人の従業員を検索する従来の単一参照です。 次のコードを実行すると、 **EmployeeID** のインデックスが作成されます。  
   
     ```sql  
     CREATE UNIQUE INDEX EmpIDs_unq ON HumanResources.NewOrg(EmployeeID) ;  
@@ -289,7 +290,7 @@ SSMS でデータベースを復元する手順については、[データベ�
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID**優先のインデックス: 行は **EmployeeID** の順に格納されます。  
+    **EmployeeID** 優先のインデックス: 行は **EmployeeID** の順に格納されます。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

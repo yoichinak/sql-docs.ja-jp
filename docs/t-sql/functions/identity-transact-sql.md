@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDENTITY (Transact-SQL)'
 title: '@@IDENTITY (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5a41eec147978e3e794c77e4c79336daa780e29
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: eff66d795dce39c21ee6a4354e8f34a62ed15d6c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113438"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128410"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87113438"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@IDENTITY  
 ```  
   
@@ -65,7 +66,7 @@ ms.locfileid: "87113438"
 ## <a name="examples"></a>例  
  次の例では、ID 列 (`LocationID`) のあるテーブルに行を挿入し、`@@IDENTITY` を使用して新しい行で使用する ID 値を表示します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the value of LocationID in the last row in the table.  

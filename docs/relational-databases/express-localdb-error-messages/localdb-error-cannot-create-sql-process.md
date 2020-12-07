@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
 title: LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 66d92652-b46f-46d8-8093-fa9c6fc4e0d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 54ec28bcebdbeed451f000e128958d4b04db9a2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: edc0836fcf1f9fa0feacf965d6b761a5457b5b22
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243673"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506299"
 ---
 # <a name="localdb_error_cannot_create_sql_process"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

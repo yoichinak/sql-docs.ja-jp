@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobsteps (Transact-SQL)
 title: dbo.sysjobsteps (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6b3395a26efaa4d05ebc4a74681c7d7d3e51897b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a2f6fa46b0057680453b443186f6a4828195ab4a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890440"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544579"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって実行されるジョブ内の各ステップに関する情報を格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -41,9 +42,9 @@ ms.locfileid: "85890440"
 |**flags**|**int**|予約済み。|  
 |**additional_parameters**|**ntext**|予約済み。|  
 |**cmdexec_success_code**|**int**|**CmdExec**サブシステムのステップによって返された、成功を示すエラーレベルの値。|  
-|**on_success_action**|**tinyint**|ステップが正常に実行されたときに実行されるアクション。<br /><br /> **1** = (既定値) 正常に終了します。<br /><br /> **2** = 失敗で終了<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む_on_success_step_id_|
+|**on_success_action**|**tinyint**|ステップが正常に実行されたときに実行されるアクション。<br /><br /> **1** = (既定値) 正常に終了します。<br /><br /> **2** = 失敗で終了<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む _on_success_step_id_|
 |**on_success_step_id**|**int**|ステップが正常に実行されたときに実行する次のステップの ID。|  
-|**on_fail_action**|**tinyint**|ステップが正常に実行されなかった場合に実行されるアクション。<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = (既定) エラーで終了します。<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む_on_fail_step_id_|
+|**on_fail_action**|**tinyint**|ステップが正常に実行されなかった場合に実行されるアクション。<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = (既定) エラーで終了します。<br /><br /> **3** = 次の手順に進む<br /><br /> **4** = ステップに進む _on_fail_step_id_|
 |**on_fail_step_id**|**int**|ステップが正常に実行されないときに実行する次のステップの ID。|  
 |**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|**サブシステム**が TSQL の場合に**コマンド**が実行されるデータベースの名前。|  
@@ -60,7 +61,7 @@ ms.locfileid: "85890440"
 |**proxy_id**|**int**|ジョブステップのプロキシ。|  
 |**step_uid**|**uniqueidentifier**|ジョブステップの識別子。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server エージェントテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

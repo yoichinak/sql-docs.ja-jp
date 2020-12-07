@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;SPID (Transact-SQL)'
 title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -24,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9512ad59b9cd3011e302c412f0c84aed043352
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110810"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124601"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87110810"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
@@ -49,13 +50,13 @@ ms.locfileid: "87110810"
 ## <a name="return-types"></a>戻り値の型
  **smallint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  @@SPID は、**sp_who** の出力で、現在のユーザー プロセスを識別する場合に使用できます。  
   
 ## <a name="examples"></a>例  
  次の例では、現在のユーザー プロセスに対応するセッション ID、ログイン名、およびユーザー名を返します。  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -70,7 +71,7 @@ ID     Login Name                     User Name
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、現在のユーザー プロセスに対応する [!INCLUDE[ssDW](../../includes/ssdw-md.md)] セッション ID、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 制御ノード、セッション ID、ログイン名、ユーザー名を返します。  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

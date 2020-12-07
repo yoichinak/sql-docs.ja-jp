@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3a4bada590dc9bea822aadffd102b49e75d10cf
+ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247461"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93043830"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
 このチュートリアルでは、ニュースレターとして機能する、ページ分割されたレポートを作成します。 各ページには、固定テキスト、概要ビジュアル、詳細サンプル セールス データが表示されます。
 
-![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
+![レポート ビルダーの自由形式のレポートのスクリーンショット。](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 このレポートでは、販売区域ごとに情報をまとめて、各区域の販売責任者の名前と売上情報の概要を表示します。 自由形式レポートでは、まず、基盤として一覧データ領域から開始し、画像を使用した装飾用のパネル、データが挿入された固定テキスト、詳細情報を表示するテーブルを追加し、必要に応じて、概要情報を表示する円グラフと縦棒グラフを追加します。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "87247461"
   
 1.  レポート データ ペインで、 **[新規作成]**  >  **[データ ソース]** をクリックします。  
   
-2.  **[名前]** ボックスに、「**ListDataSource**」と入力します。  
+2.  **[名前]** ボックスに、「 **ListDataSource** 」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
-4.  接続の種類が Microsoft SQL Server であることを確認したら **[接続文字列]** ボックスに次のように入力します。**Data Source = \<servername>**  
+4.  接続の種類が Microsoft SQL Server であることを確認したら **[接続文字列]** ボックスに次のように入力します。 **Data Source = \<servername>**  
   
     **\<servername>** には、たとえば Report001 など、SQL Server データベース エンジンのインスタンスがインストールされているコンピューターを指定します。 このレポートのデータは SQL Server のデータベースから抽出されるのではないので、データベース名を含める必要はありません。 指定したサーバー上の既定のデータベースを使用し、クエリが解析されます。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "87247461"
   
 1.  レポート データ ペインで、 **[新規作成]**  >  **[データセット]** をクリックします。  
   
-2.  **[名前]** ボックスに、「**ListDataset**」と入力します。  
+2.  **[名前]** ボックスに、「 **ListDataset** 」と入力します。  
   
-3.  **[レポートに埋め込まれたデータセットを使用します]** をクリックし、データ ソースが **ListDataSource**であることを確認します。  
+3.  **[レポートに埋め込まれたデータセットを使用します]** をクリックし、データ ソースが **ListDataSource** であることを確認します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "87247461"
   
     クエリの結果が、レポートに表示できるデータになります。  
   
-    ![report-builder-free-form-tutorial-data](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
+    ![クエリ デザイナーに表示された、レポート ビルダーの自由形式のレポートに表示できるデータのスクリーンショット。](../reporting-services/media/report-builder-free-form-tutorial-data.png) 
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -132,7 +132,7 @@ ms.locfileid: "87247461"
   
 2.  リスト ボックス内をクリックし、一覧の一番上にあるバーを右クリックし、 **[Tablix のプロパティ]** をクリックします。  
   
-    ![report-builder-free-form-tablix-properties](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
+    ![レポート ビルダーの自由形式のレポート用の [Tablix のプロパティ] オプションを示すスクリーンショット。](../reporting-services/media/report-builder-free-form-tablix-properties.png) 
   
 3.  **[データセット名]** ドロップダウン リストの **[ListDataset]** を選択します。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "87247461"
   
 1.  行グループ ペインで、詳細グループを右クリックし、 **[グループの追加]** をポイントして **[親グループ]** をクリックします。  
   
-    ![report-builder-free-form-add-parent-group](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
+    ![レポート ビルダーの自由形式のレポートに親グループを追加する方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-add-parent-group.png)  
   
 2.  **[グループ化]** 一覧で、次を選択します。 `[Territory].`  
   
@@ -158,7 +158,7 @@ ms.locfileid: "87247461"
   
 4.  一覧の Territory 列を右クリックし、 **[列の削除]** をクリックします。  
   
-    ![report-builder-free-form-delete-columns](../reporting-services/media/report-builder-free-form-delete-columns.png)
+    ![レポート ビルダーの自由形式のレポートから列を削除する方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-delete-columns.png)
   
 5.  **[列のみの削除]** を選択します。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "87247461"
   
 次の画像のように、レポートの左側に、淡い灰色の四角形からなる縦長のグラフィックが追加されています。  
   
-![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
+![薄い灰色の四角形からなる縦長のグラフィックを示すレポート ビルダーのスクリーンショット。](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
 ## <a name="4-add-free-form-text"></a><a name="Text"></a>4.自由形式テキストを追加する  
 テキスト ボックスを追加し、各レポート ページに繰り返し表示される固定テキストとデータ フィールドを表示できます。  
@@ -200,13 +200,13 @@ ms.locfileid: "87247461"
   
 2.  **[挿入]** タブの **[テキスト ボックス]** をクリックします。 先に追加した四角形の内側で、一覧の左上隅をクリックし、ドラッグして幅が約 3.45 インチ、高さが約 5 インチのテキスト ボックスを作成します。  
   
-3.  テキスト ボックスにカーソルを合わせ、「**Newsletter for**」と入力します。 "for" という単語の後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。   
+3.  テキスト ボックスにカーソルを合わせ、「 **Newsletter for** 」と入力します。 "for" という単語の後にスペースを入れ、次の手順で追加するフィールドとテキストを分離します。   
   
     ![ニュースレターの見出しテキストの追加](../reporting-services/media/tutorial-newsletterfor.png "ニュースレターの見出しテキストの追加")  
   
 4.  [レポート データ] ペインの ListDataSet からテキスト ボックスに `[Territory]` フィールドをドラッグし、"Newsletter for " の後に置きます。  
   
-    ![report-builder-free-form-territory-field](../reporting-services/media/report-builder-free-form-territory-field.png)
+    ![レポート ビルダーの自由形式のレポートに [Territory] フィールドをドラッグする方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-territory-field.png)
   
 5.  テキストと `[Territory]` フィールドを選択します。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "87247461"
       *  **10 pt**
       *  **黒**  
  
-20. テキスト ボックスの中にカーソルを置き、意味のないテキストの下に「 **Congratulations on your total sales of**」と入力します。この文章の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。 
+20. テキスト ボックスの中にカーソルを置き、意味のないテキストの下に「 **Congratulations on your total sales of** 」と入力します。この文章の後にスペースを入力し、次の手順で追加するフィールドとテキストを分離します。 
   
 21. Sales フィールドをテキスト ボックスにドラッグし、前の手順で入力したテキストの後に配置し、感嘆符 (!) を入力します。  
 
@@ -267,7 +267,7 @@ ms.locfileid: "87247461"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    ![report-builder-free-form-text-box](../reporting-services/media/report-builder-free-form-text-box.png)
+    ![テキスト ボックスが表示されたレポート ビルダーの自由形式レポートのスクリーンショット。](../reporting-services/media/report-builder-free-form-text-box.png)
  
 29. `[Sum(Sales)]` を選択したまま、 **[ホーム]** タブで **[数値]** グループ、 **[通貨]** の順に選択します。  
   
@@ -275,13 +275,13 @@ ms.locfileid: "87247461"
   
 31. リスト ボックスを選択します。 2 つの両方向矢印を選択し、ページの上部に移動します。  
 
-    ![report-builder-drag-list](../reporting-services/media/report-builder-drag-list.png)
+    ![レポート ビルダーの自由形式のレポートで列をドラッグする方法を示すスクリーンショット。](../reporting-services/media/report-builder-drag-list.png)
   
 32. **[実行]** をクリックして、レポートをプレビューします。  
   
 レポートに静的テキストが表示され、各レポート ページには特定の販売区域についてのデータが含まれています。 売上には通貨の書式が適用されます。  
   
-![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
+![レポート ビルダーの自由形式のレポートのニュースレター ページのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
 ## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5.売上の詳細情報を表示するテーブルを追加する  
 テーブルまたはマトリックスの新規作成ウィザードを使用して、自由形式レポートにテーブルを追加します。 ウィザードの完了後、合計を表示する行を手動で追加します。  
@@ -313,11 +313,11 @@ ms.locfileid: "87247461"
   
 12. テーブルが選択されている状態で、 **[行グループ]** ペインで **[詳細]**  >  **[合計の追加]**  >  **[後]** をクリックします。  
   
-    ![report-builder-free-form-table-totals](../reporting-services/media/report-builder-free-form-table-totals.png)
+    ![レポート ビルダーの自由形式のレポートで合計を追加する方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-table-totals.png)
   
-13. Product 列のセルを選択し、「 **Total**」と入力します。
+13. Product 列のセルを選択し、「 **Total** 」と入力します。
 
-    ![report-builder-free-form-type-total](../reporting-services/media/report-builder-free-form-type-total.png)
+    ![「Total」と入力された Product 列のセルのスクリーンショット。](../reporting-services/media/report-builder-free-form-type-total.png)
 
 12. [SalesDate] フィールドを選択します。 **[ホーム]** タブで **[数値]** を選択し、 **[既定]** を **[日付]** に変更します。
 
@@ -327,7 +327,7 @@ ms.locfileid: "87247461"
   
 レポートに、売上の詳細情報と合計が入力されたテーブルが表示されます。  
   
-![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
+![レポート ビルダーの自由形式のレポートのテーブルのプレビューを示すスクリーンショット。](../reporting-services/media/report-builder-free-form-with-table.png)
    
 ## <a name="6-save-the-report"></a><a name="Save"></a>6.レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。  
@@ -344,7 +344,7 @@ ms.locfileid: "87247461"
   
     "レポート サーバーに接続しています" というメッセージが表示されます。 接続が完了すると、レポート サーバー管理者がレポートの既定の場所として指定したレポート フォルダーのコンテンツが表示されます。  
   
-4.  **[名前]** に表示されている既定の名前を「 **SalesInformationByTerritory**」に変更します。  
+4.  **[名前]** に表示されている既定の名前を「 **SalesInformationByTerritory** 」に変更します。  
   
 5.  **[保存]** をクリックします。  
   
@@ -356,7 +356,7 @@ ms.locfileid: "87247461"
   
 2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
-3.  **[名前]** に表示されている既定の名前を「 **SalesInformationByTerritory**」に変更します。  
+3.  **[名前]** に表示されている既定の名前を「 **SalesInformationByTerritory** 」に変更します。  
   
 4.  **[保存]** をクリックします。  
   
@@ -384,7 +384,7 @@ ms.locfileid: "87247461"
   
 2.  **[挿入]** タブで **[レポート アイテム]**  >   **[四角形]** を選択します。 リスト ボックスの内側にある四角形をテーブルの右にドラッグし、幅が約 2.25 インチ、高さが約 7.9 インチの四角形を作成します。  
   
-3.  しい四角形が選択されている状態で、[プロパティ] ペインで、 **BorderColor LightGrey**、 **BorderStyle Solid**、 **BorderWidth 2 pt**に設定します。 
+3.  しい四角形が選択されている状態で、[プロパティ] ペインで、 **BorderColor LightGrey** 、 **BorderStyle Solid** 、 **BorderWidth 2 pt** に設定します。 
 
 4. 四角形とテーブルの上部を揃えます。  
   
@@ -406,7 +406,7 @@ ms.locfileid: "87247461"
   
 9. 四角形の内側にグラフをドラッグします。  
    
-10. グラフ タイトルを選択し、「**Product Quantities Sold**」と入力します。  
+10. グラフ タイトルを選択し、「 **Product Quantities Sold** 」と入力します。  
   
 12. **[ホーム]** タブで **[フォント]** を選択し、タイトルを次のように設定します。
     * **フォント** **Segoe UI Semibold**
@@ -421,7 +421,7 @@ ms.locfileid: "87247461"
 
 16. 必要に応じて、ドラッグしてグラフ領域を大きくします。
 
-     ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
+     ![レポート ビルダーの自由形式のレポートに追加する円グラフを示すスクリーンショット。](../reporting-services/media/report-builder-free-form-pie.png)
   
 ## <a name="to-add-a-column-chart"></a>縦棒グラフを追加するには  
   
@@ -445,7 +445,7 @@ ms.locfileid: "87247461"
   
 9. 四角形の内側で円グラフの下にグラフをドラッグします。  
    
-10. グラフ タイトルを選択し、「**Product Sales**」と入力します。  
+10. グラフ タイトルを選択し、「 **Product Sales** 」と入力します。  
   
 12. **[ホーム]** タブで **[フォント]** を選択し、タイトルを次のように設定します。
     * **フォント** **Segoe UI Semibold**
@@ -457,7 +457,7 @@ ms.locfileid: "87247461"
     > [!NOTE]  
     > 凡例を削除すると、小さいグラフが読みやすくなります。  
   
-    ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
+    ![レポート ビルダーの自由形式のレポートに追加する縦棒グラフを示すスクリーンショット。](../reporting-services/media/report-builder-free-form-column.png)
 
 12. グラフ軸を選択し、 **[ホーム]** タブで **[数値]** 、 **[通貨]** の順に選択します。
 
@@ -470,13 +470,13 @@ ms.locfileid: "87247461"
   
     プロパティ ペインで **Name** プロパティに四角形の名前が表示されます。  
   
-    ![report-builder-free-form-rectangle-name](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
+    ![レポート ビルダーの自由形式のレポートで Name プロパティを表示する方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-rectangle-name.png) 
   
 2.  円グラフをクリックします。  
   
 3.  **[プロパティ]** ペインで、 **Parent** プロパティに四角形の名前が表示されていることを確認します。  
   
-     ![report-builder-free-form-pie-parent](../reporting-services/media/report-builder-free-form-pie-parent.png) 
+     ![レポート ビルダーの自由形式のレポートで Parent プロパティを表示する方法を示すスクリーンショット。](../reporting-services/media/report-builder-free-form-pie-parent.png) 
   
 4.  縦棒グラフをクリックし、手順 3 を繰り返します。  
   

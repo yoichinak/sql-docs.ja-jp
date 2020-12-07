@@ -1,7 +1,8 @@
 ---
+description: Validate XML with the XML Task
 title: XML タスクを使った XML の検証 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334b50ec74ebd8d67b2598740a0bb8f2c7f48059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01ccacdadefac0943e721c27d11287f28d66382b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913878"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196076"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -27,7 +28,7 @@ ms.locfileid: "86913878"
 
   XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
   
- 次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
+ 次のスクリーン ショットは、**XML タスク エディター**と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
   
  ![XML タスク エディターの XML タスク プロパティ](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")  
   
@@ -120,10 +121,9 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  次に示すのは、前に示したテキストの 2 つ目のサンプル クエリの結果を [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で表示した画面です。  
   
- ![Management Studio で XML エラーをグループ化するクエリ](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Management Studio で XML エラーをグループ化するクエリ")  
+ ![Management Studio で XML エラーをグループ化するクエリ](../../integration-services/control-flow/media/query-for-xml-errors.png "Management Studio で XML エラーをグループ化するクエリ")  
   
 ## <a name="see-also"></a>参照  
  [XML タスク](../../integration-services/control-flow/xml-task.md)   
- [XML タスク エディター ([全般] ページ)](../../integration-services/control-flow/xml-task-editor-general-page.md)  
-  
+ [XML タスク エディター ([全般] ページ)](./xml-task.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - SET STATISTICS IO statement
 - statistical information [SQL Server], disk activity
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0baaa385e86844bed40dfa3f725e11ba298e27c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765694"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "89541298"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,23 +47,25 @@ ms.locfileid: "85765694"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  STATISTICS IO が ON のときは統計情報が表示され、OFF のときは表示されません。   
   
  このオプションを ON に設定した後は、オプションを OFF に設定するまで、すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで統計情報が返されます。  
   
  次の表は、出力アイテムの一覧とその説明です。  
   
-|出力アイテム|意味|  
+|出力アイテム|説明|  
 |-----------------|-------------|  
 |**Table**|テーブルの名前。|  
 |**Scan count**|出力の最終的なデータセットを構築するすべての値を取得するため、リーフ レベルに達した後で任意の方向に開始されたシークまたはスキャンの数。<br /><br /> 使用されているインデックスが主キーの一意なインデックスまたはクラスター化インデックスで、1 つの値のみをシークしている場合、Scan count は 0 になります。 たとえば、「 `WHERE Primary_Key_Column = <value>` 」のように入力します。<br /><br /> 主キーではない列で定義されている一意ではないクラスター化インデックスを使用して 1 つの値を検索する場合、Scan count は 1 になります。 この処理は、検索対象のキー値の重複値を確認するために行われます。 たとえば、「 `WHERE Clustered_Index_Key_Column = <value>` 」のように入力します。<br /><br /> インデックス キーを使用してキー値を特定した後、リーフ レベルで左側または右側に向かって開始された異なるシークまたはスキャンの数が N である場合、Scan count は N になります。|  
 |**logical reads**|データ キャッシュから読み取られたページ数。|  
 |**physical reads**|ディスクから読み取られたページ数。|  
 |**read-ahead reads**|クエリ用のキャッシュに読み取られたページ数。|  
-|**lob logical reads**|データ キャッシュから読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、または列ストア インデックスのページが含まれます。|  
-|**lob physical reads**|ディスクから読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、または列ストア インデックスのページが含まれます。|  
-|**lob read-ahead reads**|クエリ用のキャッシュに読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、または列ストア インデックスのページが含まれます。|
+|**lob logical reads**|データ キャッシュから読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、または列ストア インデックスのページが含まれます。|  
+|**lob physical reads**|ディスクから読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、または列ストア インデックスのページが含まれます。|  
+|**lob read-ahead reads**|クエリ用のキャッシュに読み取られたページ数。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、または列ストア インデックスのページが含まれます。|
 
  SET STATISTICS IO は、解析時ではなく実行時に設定されます。
 

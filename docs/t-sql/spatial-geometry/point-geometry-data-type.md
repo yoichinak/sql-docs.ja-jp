@@ -1,4 +1,5 @@
 ---
+description: Point (geometry データ型)
 title: Point (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 01120cec31bae66a2c9becb9b7e36e9c54c147aa
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f62f8ae1528ca26fa3a2f78ec5132aaa8ed7cf55
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416928"
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

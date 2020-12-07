@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
-ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84638286"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935450"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (レポート サーバーの構成マネージャー)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート サーバー Web サービス、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]、およびスケジュールされたレポート処理とサブスクリプションの配信に使用されるバックグラウンド処理アプリケーションを含んだ単一のサービスとして実装されます。 このトピックでは、サービス アカウントを最初に構成する方法と、Reporting Services 構成ツールを使用してアカウントやパスワードを変更する方法について説明します。  
   
@@ -95,11 +95,11 @@ ms.locfileid: "84638286"
   
 - [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
-- [サービスおよびサービス アカウントのセキュリティ計画ガイド](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
+- [サービスおよびサービス アカウントのセキュリティ計画ガイド](https://www.zubairalexander.com/blog/services-and-service-accounts-security-planning-guide/)。  
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新
 
- レポート サーバー サービスがドメイン アカウントで実行されている場合に、Reporting Services 構成マネージャーでパスワードを更新する前にパスワードの有効期限が切れると、新しいパスワードを指定するまでこのサービスが開始されなくなります。  
+ レポート サーバー サービスがドメイン アカウントで実行されている場合に、レポート サーバーの構成マネージャーでパスワードを更新する前に有効期限が切れると、新しいパスワードを指定するまでこのサービスは開始されません。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービス アカウントのパスワードの有効期限が切れると、レポート サーバーへの接続時に **rsReportServerDatabaseUnavailable** エラーが発生します。 パスワードを再設定すると、このエラーは解決されます。  
   
@@ -115,5 +115,4 @@ ms.locfileid: "84638286"
   
 ## <a name="next-steps"></a>次の手順
 
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [レポート サーバー URL の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [レポート サーバーの構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

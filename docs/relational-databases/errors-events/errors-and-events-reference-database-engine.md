@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ce6e6c625850f1723fe2e0bed6332404a3ef117
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781596"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869470"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>エラーおよびイベント リファレンス (データベース エンジン)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "85781596"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[SQL Server コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42455)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティが管理するニュースグループおよびフォーラムにリンクしています。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティは、回答が得られるという保証はありませんが、問題解決に役立てることができます。|  
-|[SQL Server デベロッパー センター コミュニティ](/sql/sql-server/)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
+|[SQL Server コミュニティ](../../sql-server/index.yml)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティが管理するニュースグループおよびフォーラムにリンクしています。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティは、回答が得られるという保証はありませんが、問題解決に役立てることができます。|  
+|[SQL Server デベロッパー センター コミュニティ](../../sql-server/index.yml)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
 |[Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?linkid=16419)|この Web サイトを利用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート担当者と共にケースを調査できます。|  
-  
   

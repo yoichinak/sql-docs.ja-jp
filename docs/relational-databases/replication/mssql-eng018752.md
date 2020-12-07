@@ -1,4 +1,5 @@
 ---
+description: MSSQL_ENG018752
 title: MSSQL_ENG018752 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1a53f3af13dd707c0ee113401e206039892cde85
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: ed7d71fb9c4e1306826c281806c66db38285e06d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363252"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868628"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "87363252"
   
 -   ログ リーダー エージェントを再起動します。 詳細については、「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。  
   
--   ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動します (クラスター内でオフラインまたはオンラインにします)。 スケジュールされたジョブがその他の **インスタンスから**sp_repldone **、** sp_replcmds **、または** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した可能性がある場合は、これらのインスタンスに対しても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。 詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)」を参照してください。  
+-   ディストリビューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスを再起動します (クラスター内でオフラインまたはオンラインにします)。 スケジュールされたジョブがその他の **インスタンスから**sp_repldone **、** sp_replcmds **、または** sp_replshowcmds [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した可能性がある場合は、これらのインスタンスに対しても [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを再起動します。 詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)」を参照してください。  
   
 -   パブリケーション データベース上のパブリッシャーで [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) を実行してから、ログ リーダー エージェントを再起動します。  
   
@@ -65,5 +66,4 @@ ms.locfileid: "87363252"
 ## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [レプリケーション ログ リーダー エージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
-  
   

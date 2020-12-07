@@ -1,4 +1,5 @@
 ---
+description: 以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
 title: SQL バージョンの日付時刻 (ODBC)
 ms.custom: ''
 ms.date: 12/18/2019
@@ -13,11 +14,12 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b96e7807fd29e417616f2aec406d6a07f37ccf6f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83616c86aec74aa7d30c71d9347722d89f1448e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420616"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>以前のバージョンの SQL Server における、強化された日付型と時刻型の動作 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,11 +45,11 @@ ms.locfileid: "86004346"
 |||SQL_C_TYPE_TIMESTAMP|失敗しました-時刻リテラルが無効です。|OK (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|[OK]|OK (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|[OK]|クライアントでの変換により、値は 1/300 秒単位に丸められます。|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|[OK]|[OK]|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|時刻フィールドは 0 に設定されます。|OK (2)<br /><br /> 時刻フィールドが 0 以外の場合は失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Time(0)|SQL_C_TYPE_TIME|[OK]|[OK]|  
+||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|日付フィールドは現在の日付に設定されます。|OK (2)<br /><br /> 日付は無視されます。 秒の小数部が 0 以外の場合は失敗します。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能します。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|[OK]|[OK]|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
 |||||
 
 ## <a name="key-to-symbols"></a>記号の説明  
@@ -97,7 +99,7 @@ ms.locfileid: "86004346"
 |CREATE_PARAMS|NULL|NULL|NULL|NULL|NULL|NULL|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|検索可能|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -115,4 +117,4 @@ ms.locfileid: "86004346"
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンのサーバー インスタンスに接続している場合、新しいサーバーの型または関連するメタデータ コードおよび記述子フィールドを使用しようとすると、SQL_ERROR が返されます。 "接続しているサーバーのバージョンに対して、SQL データ型が無効です" というメッセージで SQLSTATE HY004 の診断レコード、または、"データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

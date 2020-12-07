@@ -1,4 +1,5 @@
 ---
+description: プログラムによるタスクの追加
 title: プログラムによるタスクの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23f4f68c6856ad86db206d19551c564b5121d67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1a14261bb60eece1497594a6aa70b46748ed8cd1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921328"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123805"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
 
@@ -414,7 +415,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
+ blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)」(EzAPI - SQL Server 2012 用の更新)  
 
 ## <a name="see-also"></a>参照  
  [プログラムによるタスクの接続](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

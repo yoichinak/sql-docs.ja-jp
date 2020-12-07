@@ -1,4 +1,5 @@
 ---
+description: 列ストア インデックス - データ読み込みガイダンス
 title: 列ストア インデックス - データ読み込みガイダンス | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482735"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
 
@@ -52,6 +53,8 @@ ms.locfileid: "86007536"
 -   **ロックの最適化:** 行グループの X ロックは、圧縮された行グループにデータを読み込むときに自動的に取得されます。 ただし、デルタ行グループへの一括読み込みの場合、X ロックは行グループで獲得されますが、X 行グループ ロックはロック階層の一部ではないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は引き続き PAGE/EXTENT をロックします。  
   
 列ストア インデックスに非クラスター化 B ツリー インデックスがある場合、インデックス自体のロックやログの最適化は行われませんが、前述のとおり、クラスター化列ストア インデックスの最適化が適用できます。  
+
+DML (挿入、削除、更新) は並列ではないため、バッチ モード操作ではないことに注意してください。
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>デルタ行グループを最小限にする一括読み込みサイズを計画する
 ほとんどの行が列ストアに圧縮され、デルタ行グループに配置されていないときに、列ストア インデックスは最高のパフォーマンスを発揮します。 行が列ストアに直接移動し、できる限りデルタストアを使用しない読み込みのサイズにすることが最適です。

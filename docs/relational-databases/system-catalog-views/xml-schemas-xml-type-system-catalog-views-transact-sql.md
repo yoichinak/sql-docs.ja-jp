@@ -1,4 +1,5 @@
 ---
+description: XML スキーマ (XML 型システム) のカタログビュー (Transact-sql)
 title: XML スキーマ (XML 型システム) のカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2f4dc329a5872e8c34d1cd302d75c41aa8ba23e1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 64288434142650043cbb8bb864d2cea348eeda28
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442701"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91807154"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML スキーマ (XML 型システム) のカタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87442701"
 
 :::row:::
     :::column:::
-        [column_xml_schema_collection_usage](../../relational-databases/system-catalog-views/sys-column-xml-schema-collection-usages-transact-sql.md)
+        [sys.column_xml_schema_collection_usage](../../relational-databases/system-catalog-views/sys-column-xml-schema-collection-usages-transact-sql.md)
         
         [sys.selective_xml_index_paths](../../relational-databases/system-catalog-views/sys-selective-xml-index-paths-transact-sql.md)
         
@@ -64,6 +65,5 @@ ms.locfileid: "87442701"
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

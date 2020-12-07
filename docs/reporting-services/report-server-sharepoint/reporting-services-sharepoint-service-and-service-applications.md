@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a0f20b28e54c1680546625ae09df649499b2db
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 1d1a544f300e6e49e5355294a1e0f99515482113
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764705"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934646"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services の SharePoint サービスとサービス アプリケーション
 
@@ -29,7 +29,7 @@ ms.locfileid: "83764705"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Reporting Services サービス アプリケーションの作成
 
- SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、Reporting Services サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
+ SharePoint サーバーの全体管理または PowerShell スクリプトを使用して、Reporting Services サービス アプリケーションを作成できます。 SharePoint サーバーの全体管理を使用する方法の詳細については、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../install-windows/install-the-first-report-server-in-sharepoint-mode.md)」の「Reporting Services サービス アプリケーションの作成」セクションを参照してください。 サービス アプリケーションを作成するための PowerShell スクリプトの例は、このトピックの後半の PowerShell のセクションを参照してください。  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>プロキシ グループを使用したサービス アプリケーションの関連付けの変更
 

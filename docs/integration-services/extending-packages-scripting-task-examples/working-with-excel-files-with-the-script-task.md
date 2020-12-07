@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクを使用した Excel ファイルの操作
 title: スクリプト タスクを使用した Excel ファイルの操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430354"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>スクリプト タスクを使用した Excel ファイルの操作
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921088"
   
     -   「**ExcelFile**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelFile]** 変数を選択します。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86921088"
   
     -   「**ExcelFileExists**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelFileExists]** 変数を選択します。  
   
@@ -150,7 +151,7 @@ public class ScriptMain
   
     -   「**ExcelTable**」および「**ExcelFile**」をコンマで区切って入力します **。**  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelTable]** と **[ExcelFile]** の変数を選択します。  
   
@@ -158,7 +159,7 @@ public class ScriptMain
   
     -   「**ExcelTableExists**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで **[ExcelTableExists]** 変数を選択します。  
   
@@ -253,11 +254,11 @@ public class ScriptMain
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelFiles** に変更します。  
   
-2.  **[スクリプト タスク エディター]** を開き、 **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
+2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「**ExcelFolder**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFolder] 変数を選択します。  
   
@@ -265,7 +266,7 @@ public class ScriptMain
   
     -   「**ExcelFiles**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFiles] 変数を選択します。  
   
@@ -328,11 +329,11 @@ public class ScriptMain
   
 1.  パッケージに新しいスクリプト タスクを追加し、その名前を **GetExcelTables** に変更します。  
   
-2.  **[スクリプト タスク エディター]** を開き、 **[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
+2.  **[スクリプト タスク エディター]** を開き、**[スクリプト]** タブで **[ReadOnlyVariables]** をクリックし、次のいずれかの方法でプロパティ値を入力します。  
   
     -   「**ExcelFile**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelFile] 変数を選択します。  
   
@@ -340,7 +341,7 @@ public class ScriptMain
   
     -   「**ExcelTables**」と入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで [ExcelTables] 変数を選択します。  
   
@@ -445,7 +446,7 @@ public class ScriptMain
   
     -   各変数の名前をコンマで区切って入力します。  
   
-         または  
+         - または -  
   
     -   プロパティ フィールドの横にある省略記号 ( **[...]** ) ボタンをクリックし、 **[変数の選択]** ダイアログ ボックスで変数を選択します。  
   
@@ -536,7 +537,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)  
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   

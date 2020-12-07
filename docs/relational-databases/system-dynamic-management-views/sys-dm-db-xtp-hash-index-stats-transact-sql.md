@@ -1,4 +1,5 @@
 ---
+description: dm_db_xtp_hash_index_stats (Transact-sql)
 title: dm_db_xtp_hash_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_hash_index_stats (dynamic management view)
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 5e8b28d292de4d860a8e46f7a679e42d99ac8c88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442564"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542262"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>dm_db_xtp_hash_index_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,11 +42,11 @@ ms.locfileid: "87442564"
 長いチェーン長は、SELECT や INSERT など、個々の行に対するすべての DML 操作のパフォーマンスに大きな影響を与える可能性があります。 チェーンの長さが短く、空のバケット数が多いことは、bucket_count の値が高すぎることを意味します。 これにより、インデックス スキャンのパフォーマンスが低下します。  
   
 > [!WARNING]
-> **dm_db_xtp_hash_index_stats**は、テーブル全体をスキャンします。 そのため、データベースに大きなテーブルがある場合は、 **dm_db_xtp_hash_index_stats**に長時間かかることがあります。  
+> **dm_db_xtp_hash_index_stats** は、テーブル全体をスキャンします。 そのため、データベースに大きなテーブルがある場合は、 **dm_db_xtp_hash_index_stats** に長時間かかることがあります。  
   
-詳細については、「[メモリ最適化テーブルのハッシュインデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」を参照してください。  
+詳細については、「 [メモリ最適化テーブルのハッシュインデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」を参照してください。  
   
-|列名|種類|Description|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|親テーブルのオブジェクト ID。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルの ID。|  
@@ -87,7 +88,7 @@ ms.locfileid: "87442564"
   ORDER BY [table], [index];  
 ``` 
 
-このクエリの結果を解釈する方法の詳細については、「[メモリ最適化テーブルのハッシュインデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)」を参照してください。  
+このクエリの結果を解釈する方法の詳細については、「 [メモリ最適化テーブルのハッシュインデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 」を参照してください。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュインデックスの統計
 

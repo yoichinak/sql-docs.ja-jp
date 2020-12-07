@@ -1,4 +1,5 @@
 ---
+description: DQS データベースのバックアップと復元
 title: DQS データベースのバックアップと復元
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450005"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897565"
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>DQS データベースのバックアップと復元  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> DQS データベースのバックアップと復元  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -74,7 +75,7 @@ ms.locfileid: "85897565"
   
 12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

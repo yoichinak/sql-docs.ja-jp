@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF_BIG (Transact-SQL)
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,25 +21,26 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d79d9417dc980f2a35ced5c0fddea5d1f49b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e5a4e30f949a08ef358c777af61972bcfd59c2ef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112032"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116463"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された *datepart* 境界の数で (符号付き多倍長整数値として) 返します。
   
-[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
 
@@ -88,15 +90,15 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 符号付き **bigint**  
   
 ## <a name="return-value"></a>戻り値  
-**datepart** により設定された境界に表示された、*startdate* と *enddate* の間の *bigint* 差を返します。
+*datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **bigint** 差を返します。
   
-**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 `DATEDIFF`int**を返すため**minute**以上の精度でオーバーフローする可能性がある** とは異なり、`DATEDIFF_BIG` は **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年以上、3 か月、10 日、23 時間、47 分、および 16.8547758 秒です。
+**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **int** を返すため **minute** 以上の精度でオーバーフローする可能性がある `DATEDIFF` とは異なり、`DATEDIFF_BIG` は **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年以上、3 か月、10 日、23 時間、47 分、および 16.8547758 秒です。
   
 *startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF_BIG` は 0 を返します。
   
 `DATEDIFF_BIG` では、戻り値を計算する際に、*startdate* または *enddate* のタイム ゾーン オフセット要素を使用しません。
   
-**smalldatetime** の精度は分単位までなので、*startdate* または *enddate* に `DATEDIFF_BIG`smalldatetime[ 値を使用した場合、](../../t-sql/data-types/smalldatetime-transact-sql.md) では、戻り値で秒とミリ秒が常に 0 に設定されます。
+[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、`DATEDIFF_BIG` では、戻り値で秒とミリ秒が常に 0 に設定されます。
   
 日付データ型の変数に時刻値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している日付要素の値が既定値である `1900-01-01` に設定されます。 時刻データ型または日付データ型の変数に日付値のみが割り当てられている場合、`DATEDIFF_BIG` では、欠落している時刻要素の値が既定値である `00:00:00` に設定されます。 *startdate* または *enddate* のいずれか一方が時刻要素のみで、もう一方が日付要素のみであった場合、`DATEDIFF_BIG` では、欠落している時刻要素と日付要素がそれぞれの既定値に設定されます。
   
@@ -125,7 +127,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
   
 `SET DATEFIRST` を指定しても、`DATEDIFF_BIG` には何の影響もありません。 `DATEDIFF_BIG` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
 
-`DATEDIFF_BIG`enddate**と**startdate*の差として*bigint *の範囲を超える値が返された場合、* は **nanosecond** の精度でオーバーフローする可能性があります。
+*enddate* と *startdate* の差として **bigint** の範囲を超える値が返された場合、`DATEDIFF_BIG` は **nanosecond** の精度でオーバーフローする可能性があります。
   
 ## <a name="examples"></a>例 
   
@@ -206,7 +208,7 @@ SELECT @result
 
 より密接に関連する例については、「[DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)」を参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md)
   

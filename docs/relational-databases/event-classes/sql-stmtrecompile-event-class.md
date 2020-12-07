@@ -1,4 +1,5 @@
 ---
+description: SQL:StmtRecompile イベント クラス
 title: SQL:StmtRecompile イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e9bcf25f84e13ddd7c21ed8752a6ac0bbde6ea0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d46e1d95da0fe802dd2110d3a2c1d5c0768799c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470734"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85790983"
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 1 = システム<br /><br /> 0 = ユーザー|60|はい|  
 |LineNumber|**int**|バッチ内のこのステートメントのシーケンス番号 (該当する場合)。|5|はい|  
 |LoginName|**nvarchar**|このバッチを送信したログインの名前。|11|はい|  
-|LoginSid|**画像**|現在ログインしているユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**image**|現在ログインしているユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NestLevel|**int**|ストアド プロシージャ コールの入れ子レベル。 たとえば、my_proc_a ストアド プロシージャは my_proc_b を呼び出します。 この場合、my_proc_a の NestLevel は 1 で、my_proc_b の NestLevel は 2 です。|29|はい|  
 |NTDomainName|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|接続しているユーザーの Windows ユーザー名。|6|はい|  

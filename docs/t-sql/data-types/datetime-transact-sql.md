@@ -1,4 +1,5 @@
 ---
+description: datetime (Transact-SQL)
 title: datetime (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdd491296c9ba93e12421f46964016c0689a65c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008090"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126302"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "86008090"
   
 |ISO 8601|説明|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|例 :<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> ISO 8601 形式を使用する場合、各要素はこの形式で指定する必要があります。これには、形式にある **T**、コロン (:)、およびピリオド (.) を含みます。<br /><br /> 秒の構成要素を示す角かっこは省略できます。 時の構成要素は 24 時間形式で指定します。<br /><br /> T は、**datetime** 値の時刻の部分の先頭を示します。<br /><br /> ISO 8601 形式を使用する利点は、これが明確な仕様を持つ国際標準であるという点です。 また、この形式は、SET DATEFORMAT や [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) の設定の影響を受けません。|  
+|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|次に例を示します。<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> ISO 8601 形式を使用する場合、各要素はこの形式で指定する必要があります。これには、形式にある **T**、コロン (:)、およびピリオド (.) を含みます。<br /><br /> 秒の構成要素を示す角かっこは省略できます。 時の構成要素は 24 時間形式で指定します。<br /><br /> T は、**datetime** 値の時刻の部分の先頭を示します。<br /><br /> ISO 8601 形式を使用する利点は、これが明確な仕様を持つ国際標準であるという点です。 また、この形式は、SET DATEFORMAT や [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) の設定の影響を受けません。|  
   
 |区切りなし|説明|  
 |---|---|
@@ -187,7 +188,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|Output|  
+|データ型|出力|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -196,7 +197,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

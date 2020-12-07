@@ -1,8 +1,9 @@
 ---
+description: Attributes および Name プロパティの例 (VB)
 title: Attributes と Name プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2740ed58b5592c0f57519de12c9a518af024c3e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762930"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975973"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes および Name プロパティの例 (VB)
-この例では、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトの[Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティの値を表示します。 [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  
+この例では、[接続](./connection-object-ado.md)、[フィールド](./field-object.md)、および[プロパティ](./property-object-ado.md)オブジェクトの[Attributes](./attributes-property-ado.md)プロパティの値を表示します。 [Name](./name-property-ado.md)プロパティを使用して、各**フィールド**と**プロパティ**オブジェクトの名前を表示します。  
   
 ```  
 ' BeginAttributesVB  
@@ -127,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Name プロパティ (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attributes プロパティ (ADO)](./attributes-property-ado.md)   
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Field オブジェクト](./field-object.md)   
+ [Name プロパティ (ADO)](./name-property-ado.md)   
+ [Property オブジェクト (ADO)](./property-object-ado.md)

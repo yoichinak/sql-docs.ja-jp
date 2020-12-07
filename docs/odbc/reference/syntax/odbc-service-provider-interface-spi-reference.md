@@ -1,4 +1,5 @@
 ---
+description: ODBC サービス プロバイダー インターフェイス (SPI) リファレンス
 title: ODBC サービスプロバイダーインターフェイス (SPI) リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9739abd13bf2c4bed1b1b3a31c18c683594705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ef1eea6dd78537169d3394c7d048d1829e8d9a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487355"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC サービス プロバイダー インターフェイス (SPI) リファレンス
 従来、ODBC では、アプリケーションプログラミングインターフェイス (API) が定義されていました。 API 内の関数は、アプリケーションから呼び出すことができ、ドライバーマネージャーとドライバーの両方で実装する必要があります。  
@@ -40,7 +41,7 @@ ms.locfileid: "81298910"
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [ODBC ドライバーでの接続プール認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [ドライバー マネージャーの接続プール](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

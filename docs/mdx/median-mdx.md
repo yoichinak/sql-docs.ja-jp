@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "68033856"
 ---
 # <a name="median-mdx"></a>Median (MDX)
@@ -34,7 +34,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  数値式が指定されている場合は、指定された数値式がセット全体で評価され、その評価から中央値が返されます。 数値式が指定されていない場合、指定されたセットは、セットのメンバーの現在のコンテキストで評価され、評価の中央値を返します。  
   
  中央値とは、順番に並べられた数値のセットの中央に位置する値です  (セット内の数値の合計を、セット内にある数値の数で除算する平均値とは異なります)。 中央値は、セット内の値の少なくとも半数が、その値以下になるような最小の値を選択することによって決まります。 セット内の値の数が奇数の場合、中央値は 1 つの値になります。 セット内の値の数が偶数の場合は、中央に位置する 2 つの値の合計を 2 で除算した値が返されます。  

@@ -1,8 +1,9 @@
 ---
+description: Provider および DefaultDatabase プロパティの例 (VB)
 title: Provider および DefaultDatabase プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fec990e1171ec40c93c9db370adb4be2553d33df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759928"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989933"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider および DefaultDatabase プロパティの例 (VB)
-この例では、異なるプロバイダーを使用する3つの[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
+この例では、異なるプロバイダーを使用する3つの[接続](./connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](./provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](./defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 'BeginProviderVB  
@@ -105,6 +106,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase プロパティ](./defaultdatabase-property.md)   
+ [Provider プロパティ (ADO)](./provider-property-ado.md)

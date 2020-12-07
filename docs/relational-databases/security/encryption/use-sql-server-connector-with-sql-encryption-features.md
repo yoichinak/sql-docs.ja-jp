@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32d0e4ea4ca6457701ae5ed4710d5213b3fe164c
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725946"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679013"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85725946"
  
 資格情報とログインが必要となります。また、データベースに格納されるデータとログを暗号化するためのデータベース暗号化キーを作成する必要があります。 データベースを暗号化するには、データベースに対する **CONTROL** 権限が必要です。 次の図は、Azure Key Vault 使用下における暗号化キーの階層を示したものです。  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Azure Key Vault を使用する場合の暗号化キーの階層を示す図。](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **データベース エンジンが TDE に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報を作成する**  
   
@@ -56,9 +56,9 @@ ms.locfileid: "85725946"
     -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。
   
         > [!IMPORTANT]  
-        >  **クライアント ID**のハイフンは削除してください。  
+        >  **クライアント ID** のハイフンは削除してください。  
   
-    -   `SECRET` 引数の 2 番目の部分を、パート I の**クライアント シークレット**を使って完了します。この例で、パート 1 の**クライアント シークレット**は `ReplaceWithAADClientSecret` です。 
+    -   `SECRET` 引数の 2 番目の部分を、パート I の **クライアント シークレット** を使って完了します。この例で、パート 1 の **クライアント シークレット** は `ReplaceWithAADClientSecret` です。 
   
     -   完成した SECRET 引数の文字列は、ハイフンを含まない文字と数字の長いシーケンスになります。
   
@@ -118,11 +118,11 @@ ms.locfileid: "85725946"
   
      [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用し、オブジェクト エクスプローラーでデータベースに接続して、TDE が有効になっていることを確認します。 データベースを右クリックし、 **[タスク]** をポイントして、 **[データベース暗号化の管理]** をクリックします。  
   
-     ![ekm&#45;tde&#45;object&#45;explorer](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
+     ![[タスク] > [データベース暗号化の管理] が選択されたオブジェクト エクスプローラーを示すスクリーンショット。](../../../relational-databases/security/encryption/media/ekm-tde-object-explorer.png "ekm-tde-object-explorer")  
   
      **[データベース暗号化の管理]** ダイアログ ボックスで、TDE が有効になっていることを確認し、DEK の暗号化に使用されている非対称キーを確認します。  
   
-     ![ekm&#45;tde&#45;dialog&#45;box](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
+     ![[データベース暗号化をオンに設定] オプションが選択され、TDE が有効になっていることを示す黄色のバナーが表示された、[データベース暗号化の管理] ダイアログボックスのスクリーンショット。](../../../relational-databases/security/encryption/media/ekm-tde-dialog-box.png "ekm-tde-dialog-box")  
   
      代わりに、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを実行してもかまいません。 暗号化の状態が "3" である場合、データベースが暗号化済みであることを示します。  
   
@@ -155,9 +155,9 @@ ms.locfileid: "85725946"
     -   `SECRET` 引数の最初の部分を、パート I で使用した Azure Active Directory の **クライアント ID** に置き換えます。この例の **クライアント ID** は `EF5C8E094D2A4A769998D93440D8115D`です。  
   
         > [!IMPORTANT]  
-        >  **クライアント ID**のハイフンは削除してください。  
+        >  **クライアント ID** のハイフンは削除してください。  
   
-    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート I で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない*アルファベットと数字とから成る長い文字列になります。   
+    -   `SECRET` 引数の 2 番目の部分を、パート I で使用した **クライアント シークレット** に置き換えます。この例のパート I で使用した **クライアント シークレット** は `Replace-With-AAD-Client-Secret`です。 完成した `SECRET` 引数は、 *ハイフンを含まない* アルファベットと数字とから成る長い文字列になります。   
   
         ```sql  
         USE master;  
@@ -217,7 +217,7 @@ ms.locfileid: "85725946"
     
     TDE で暗号化されたデータベースのバックアップを復元するには、ターゲットの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスはまず最初に、暗号化に使用された非対称の Key Vault キーのコピーが必要です。 次の方法でこれを実現します。  
     
-    - TDE に使用された元の非対称キーが Key Vault にない場合は、Key Vault キーのバックアップを復元するか、またはローカルの HSM からキーを再インポートします。 **重要:** キーの拇印を、データベースのバックアップに記録された拇印と照合させるには、キーの名前が元の名前と**同じ Key Vault キー名**でなければいけません。
+    - TDE に使用された元の非対称キーが Key Vault にない場合は、Key Vault キーのバックアップを復元するか、またはローカルの HSM からキーを再インポートします。 **重要:** キーの拇印を、データベースのバックアップに記録された拇印と照合させるには、キーの名前が元の名前と **同じ Key Vault キー名** でなければいけません。
     
     - 手順 1 と 2 をターゲットの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに適用します。
     

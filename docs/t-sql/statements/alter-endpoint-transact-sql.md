@@ -1,4 +1,5 @@
 ---
+description: ALTER ENDPOINT (Transact-SQL)
 title: ALTER ENDPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eed0eb24fc38f3ff2856d8b9693265d888d5a8e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2a34119bcffade30270f0a241a5e28367aefc7a2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442720"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538173"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,9 @@ FOR DATABASE_MIRRORING (
   
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
   
 > [!NOTE]  
 >  次の引数は、ALTER ENDPOINT に固有の引数です。 その他の引数の説明については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」を参照してください。  
@@ -110,7 +113,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  **ALTER ENDPOINT** ではペイロードの種類を変更できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ALTER ENDPOINT を使用する場合、更新するパラメーターのみを指定します。 既存のエンドポイントのすべてのプロパティは、明示的に変更しない限り変更されません。  
   
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内部では実行できません。  
@@ -129,7 +132,7 @@ FOR DATABASE_MIRRORING (
   
  詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

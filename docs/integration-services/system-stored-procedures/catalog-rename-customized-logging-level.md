@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_customized_logging_level
 title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2640a8a44472036b564a926a9f613cefead1922c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b6b4770034771049d19e3a1eb3e8c43205aad46
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912956"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129756"
 ---
 # <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
 
@@ -41,7 +42,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  *new_name* は **nvarchar(128)** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

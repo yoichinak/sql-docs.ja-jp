@@ -1,4 +1,5 @@
 ---
+description: catalog.get_project (SSISDB データベース)
 title: catalog.get_project (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9cf4af9eb84c725b8807329713a3cd62e42558a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d26de0736fc41d3b39f0f6c3e149b044c538ba41
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913013"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129777"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (SSISDB データベース)
 

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rollback
 title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_rollback
 - sqlsrv_rollback
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4cde5b4e805b6dc55830c2ad396f181f2e1f642c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68014966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466726"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +127,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[方法: トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)
+[方法:トランザクションを実行する](../../connect/php/how-to-perform-transactions.md)
 
 [Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md) 
   

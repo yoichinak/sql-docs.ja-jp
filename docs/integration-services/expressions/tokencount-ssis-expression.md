@@ -1,4 +1,5 @@
 ---
+description: TOKENCOUNT (SSIS 式)
 title: TOKENCOUNT (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed4642f566000bad133bbbb4a6d3afc57e16e0ab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa242e7ab52115239554af8a74c71f9eea47dd49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391358"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
 
@@ -40,7 +41,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  TOKEN 関数には次の解説が適用されます。  
   
 -   区切り記号には 1 つ以上の区切り文字を含めることができます。  

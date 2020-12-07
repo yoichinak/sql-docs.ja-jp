@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 88d95eb0a2e0805930cb5f01f5af05b8fc6b3f2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399414"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System のワークロード管理タスク
@@ -22,7 +22,7 @@ ms.locfileid: "74399414"
 ## <a name="view-login-members-of-each-resource-class"></a>各リソースクラスのログインメンバーを表示する
 SQL Server PDW で、各リソースクラスのサーバーロールのログインメンバーを表示する方法について説明します。 このクエリを使用して、各ログインによって送信された要求に対して許可されるリソースのクラスを確認します。  
   
-リソースクラスの説明については、「[ワークロード管理](workload-management.md)」を参照してください。  
+リソースクラスの説明については、「 [ワークロード管理](workload-management.md)」を参照してください。  
   
 このクエリは、各リソースクラスのメンバーシップの一覧を表示します。 リソースクラスには、mediumrc、largerc、xlargerc の3つがあります。  
   
@@ -42,16 +42,16 @@ WHERE
   
 ログインがこの一覧にない場合、その要求は既定のリソースを受け取ります。 ログインが複数のリソースクラスのメンバーである場合は、最大のクラスが優先されます。  
   
-リソース割り当ては、[ワークロード管理](workload-management.md)の一覧に表示されます。  
+リソース割り当ては、 [ワークロード管理](workload-management.md)の一覧に表示されます。  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>要求に割り当てられたシステムリソースの変更
-SQL Server PDW 要求が実行されているリソースクラスを判別し、その要求のシステムリソースを変更する方法について説明します。 要求のリソースを変更するには、 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)ステートメントを使用して、要求を送信するログインのリソースクラスのメンバーシップを変更する必要があります。  
+SQL Server PDW 要求が実行されているリソースクラスを判別し、その要求のシステムリソースを変更する方法について説明します。 要求のリソースを変更するには、 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) ステートメントを使用して、要求を送信するログインのリソースクラスのメンバーシップを変更する必要があります。  
   
 ### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>手順 1: 要求を実行しているログインのリソースクラスを特定します。  
 このクエリでは、リソースクラスのサーバーロールメンバーシップのメンバーであるログインが表示されます。 リソースクラスには、 **mediumrc**、 **largerc**、 **xlargerc**の3つがあります。  
   
 > [!IMPORTANT]  
-> このクエリは、 **CONTROL SERVER**権限を持つログインによって実行される必要があります。 **CONTROL SERVER**権限を持たないログインによって実行される場合、このクエリでは、現在のログインのロールメンバーシップのみが返されます。  
+> このクエリは、 **CONTROL SERVER** 権限を持つログインによって実行される必要があります。 **CONTROL SERVER**権限を持たないログインによって実行される場合、このクエリでは、現在のログインのロールメンバーシップのみが返されます。  
   
 ```sql  
 SELECT l.name AS [member], r.name AS [server role]  
@@ -70,7 +70,7 @@ GO
   
 リソースクラスのサーバーロールのメンバーであるログインが存在しない場合、結果のテーブルは空になります。 この場合、クエリによって、次のような名前のログインが返されます。この場合、の要求を送信すると、リソースクラスのシステムリソースよりも小さい既定のシステムリソースが要求によって受信されます。 ログインが複数のリソースクラスのメンバーである場合は、最大のクラスが優先されます。  
   
-各リソースクラスのリソース割り当ての一覧については、「[ワークロード管理](workload-management.md)」を参照してください。  
+各リソースクラスのリソース割り当ての一覧については、「 [ワークロード管理](workload-management.md)」を参照してください。  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>手順 2: 異なるリソースクラスのメンバーシップを持つログインで要求を実行する  
 要求を実行するには、次の2つの方法があります。  
@@ -125,7 +125,7 @@ ALTER SERVER ROLE MediumRC DROP MEMBER Matt;
 ## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>待機中の要求に必要な同時実行スロットの数を表示します
 SQL Server PDW での実行を待機している要求によって必要とされる同時実行スロットの数を確認する方法について説明します。  
   
-詳細については、「[ワークロード管理](workload-management.md)」を参照してください。  
+詳細については、「 [ワークロード管理](workload-management.md)」を参照してください。  
   
 要求は、実行されないまま待機している可能性があります。 要求のトラブルシューティングを行う方法の1つは、要求に必要な同時実行スロットの数を確認することです。  次の例は、待機中の要求ごとに必要な同時実行スロットの数を示しています。  
   

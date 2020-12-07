@@ -1,8 +1,9 @@
 ---
+description: Append および CreateParameter メソッドの例 (VB)
 title: Append および CreateParameter メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d301542b3f5d9bb31478f3636320857a1f514c3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976153"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append および CreateParameter メソッドの例 (VB)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)および[createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
+この例では、 [Append](./append-method-ado.md) および [createparameter](./createparameter-method-ado.md) メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
   
 ```  
 'BeginAppendVB  
@@ -120,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)   
+ [Field オブジェクト](./field-object.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)

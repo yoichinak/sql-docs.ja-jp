@@ -1,6 +1,6 @@
 ---
 title: IBCPSession (OLE DB ドライバー) | Microsoft Docs
-description: IBCPSession インターフェイス (OLE DB)
+description: OLE DB Driver for SQL Server で IBCPSession を使用して SQL Server のファイルベースの一括コピー操作をサポートする方法と、そのメンバーについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - IBCPSession interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fab636f43a8ee4f6e9e0040cf7400cb29e87873b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d00a0bff09785fde1c27b89426ca680b2a0f889
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244563"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861911"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

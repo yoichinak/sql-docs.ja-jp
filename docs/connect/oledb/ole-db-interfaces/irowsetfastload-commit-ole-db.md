@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad::Commit (OLE DB ドライバー) | Microsoft Docs
-description: IRowsetFastLoad::Commit (OLE DB)
+description: OLE DB Driver for SQL Server で、挿入された行のバッチの終わりを IRowsetFastLoad::Commit メソッドでマークし、SQL Server テーブルに書き込む方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Commit method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c932947a77d2170dd1e92c47c19f5ff3959cba9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e0248c160b80203a09f4712d697d1896732033e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860693"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

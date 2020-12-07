@@ -1,4 +1,5 @@
 ---
+description: sys.bandwidth_usage (Azure SQL Database)
 title: bandwidth_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -19,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402528"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -50,13 +51,13 @@ ms.locfileid: "85752924"
   
 ## <a name="permissions"></a>アクセス許可
 
- このビューは、サーバーレベルプリンシパルログインの**master**データベースでのみ使用できます。  
+ このビューは、サーバーレベルプリンシパルログインの **master** データベースでのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ### <a name="external-and-internal-classes"></a>外部クラスと内部クラス
 
- 特定の時点で使用される各データベースについて、bandwidth_usage ビューは、クラスと帯域幅の使用状況の方向を示す行を返します **。** 次の例は、指定されたデータベースに対して公開される可能性があるデータを示しています。 この例では、時刻は 2012-04-21 17:00:00 になっています。これは、ピーク タイムの時間帯における発生時刻です。 データベース名は Db1 です。 この例では、次のように、 **bandwidth_usage**は、受信方向と送信方向、外部クラスと内部クラスの4つの組み合わせすべてに対して行を返しました。  
+ 特定の時点で使用される各データベースについて、bandwidth_usage ビューは、クラスと帯域幅の使用状況の方向を示す行を返します **。** 次の例は、指定されたデータベースに対して公開される可能性があるデータを示しています。 この例では、時刻は 2012-04-21 17:00:00 になっています。これは、ピーク タイムの時間帯における発生時刻です。 データベース名は Db1 です。 この例では、次のように、 **bandwidth_usage** は、受信方向と送信方向、外部クラスと内部クラスの4つの組み合わせすべてに対して行を返しました。  
   
 |time|database_name|方向|class|time_period|数量|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  

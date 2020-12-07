@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policy_categories (Transact-SQL)
 title: syspolicy_policy_categories (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 766aa7e2d60a19c5f6b6093dc72685175d8fbc3b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7d5a115beb4f3f4ec543a8ae4861462cf750648
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419856"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "85900595"
 |name|**sysname**|ポリシーカテゴリの名前。|  
 |mandate_database_subscriptions|**bit**|明示的なサブスクリプションを持たないインスタンス内のすべてのデータベースにポリシーカテゴリを適用するか (1)、明示的なサブスクリプション (0) を使用してポリシーカテゴリをデータベースに適用する必要があるかどうかを示します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  ポリシーベースの管理ポリシーグループの一覧を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

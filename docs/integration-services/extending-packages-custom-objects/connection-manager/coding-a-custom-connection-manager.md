@@ -1,4 +1,5 @@
 ---
+description: カスタム接続マネージャーのコーディング
 title: カスタム接続マネージャーのコーディング | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c53711952ce405befe2575471e676ffd2297b67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 352735b75d99f87b741959b6c53f66937860588f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918155"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123180"
 ---
 # <a name="coding-a-custom-connection-manager"></a>カスタム接続マネージャーのコーディング
 

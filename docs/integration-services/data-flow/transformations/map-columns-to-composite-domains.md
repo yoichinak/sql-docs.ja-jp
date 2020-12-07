@@ -1,4 +1,5 @@
 ---
+description: 複合ドメインへの列のマップ
 title: 複合ドメインへの列のマップ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cc1bddc579ccce64b4068fd2a5235481fc7b7629
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193202"
 ---
 # <a name="map-columns-to-composite-domains"></a>複合ドメインへの列のマップ
 
@@ -38,9 +39,9 @@ ms.locfileid: "86919238"
   
 4.  **[入力列]** フィールドにリストされている列ごとに、 **[ドメイン]** フィールドで単一ドメインを選択します。 複合ドメイン内の単一ドメインのみ選択します。  
   
-5.  必要に応じて、 **[ソースの別名]** 、 **[出力の別名]** 、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
+5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
-6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
+6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](./dqs-cleansing-transformation.md)」をご覧ください。  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>区切られた値を含む列を複合ドメインにマップするには  
   
@@ -52,11 +53,10 @@ ms.locfileid: "86919238"
   
 4.  **[入力列]** フィールドに表示されている列に対して、 **[ドメイン]** フィールドで複合ドメインを選択します。  
   
-5.  必要に応じて、 **[ソースの別名]** 、 **[出力の別名]** 、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
+5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
-6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
+6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](./dqs-cleansing-transformation.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [DQS クレンジング変換](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
   

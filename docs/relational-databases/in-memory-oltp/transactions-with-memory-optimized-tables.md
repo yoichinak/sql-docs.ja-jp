@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868664"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 | エラー コード | 説明 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 現在のトランザクションが開始されてから別のトランザクションで更新された行を更新しようとしました。 | このエラー条件は、2 つの同時実行トランザクションが同時に同じ行を更新または削除しようとした場合に発生します。 2 つのトランザクションのうちの 1 つがこのエラー メッセージを受け取り、そのトランザクションは再試行が必要になります。 <br/><br/>  | 
-| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による [このブログ投稿](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) を参照してください。 |  
+| **41305**| REPEATABLE READ の検証の失敗。 このトランザクションがメモリ最適化テーブルから読み取った行が、このトランザクションのコミット前にコミットした別のトランザクションによって更新されました。 | このエラーは、REPEATABLE READ 分離または SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/>外部キー制約のこのような同時違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、FOREIGN KEY 制約に関係する列のインデックスが存在しない場合も、このエラーが発行する可能性があります。 したがって、メモリ最適化テーブルでは、外部キー列のインデックスを必ず作成するようにしてください。 <br/><br/> 外部キー違反によって発生する検証エラーに関する考慮事項の詳細については、SQL Server Customer Advisory Team による [このブログ投稿](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) を参照してください。 |  
 | **41325** | SERIALIZABLE の検証の失敗。 以前スキャンされた範囲に、現在のトランザクションによって新しい行が挿入されました。 これはファントム行と呼ばれます。 | このエラーは、SERIALIZABLE 分離の使用時に発生することがあります。また、同時実行トランザクションのアクションが PRIMARY KEY、UNIQUE、または FOREIGN KEY 制約の違反を引き起こした場合も発生する可能性があります。 <br/><br/> このような同時制約違反はまれであり、一般的にはアプリケーション ロジックまたはデータ エントリの問題を示しています。 ただし、repeatable read の検証エラーと同様に、関係する列のインデックスが指定されていない FOREIGN KEY 制約が存在する場合も、このエラーが発生する可能性があります。 |  
 | **41301** | 依存関係のエラー: 後でコミットに失敗した別のトランザクションに依存していました。 | このトランザクション (Tx1) は別のトランザクション (Tx2) が書き込んだデータを読み取ることによって、そのトランザクション (Tx2) への依存関係ができましたが、Tx2 は自身の検証またはコミット処理のフェーズでした。 Tx2 はその後コミットに失敗しました。 Tx2 がコミットに失敗する最も一般的な原因は、repeatable read (41305) および serializable (41325) 検証エラーです。まれな原因として、ログ IO エラーがあります。 |
 | **41823** と **41840** | メモリ最適化テーブルとテーブル変数のユーザー データ クォータに到達しました。 | エラー 41823 は SQL Server Express/Web/Standard Edition と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] の単一データベースに適用されます。 エラー 41840 は [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] のエラスティック プールに適用されます。 <br/><br/> ほとんどの場合、これらのエラーは、ユーザー データの最大サイズに到達したことを示します。エラーを解決する方法は、メモリ最適化テーブルからデータを削除することです。 ただし、このエラーが一時的なものに過ぎないことがまれにあります。 そのため、最初にエラーに遭遇したとき、再試行をお勧めします。<br/><br/> この一覧にある他のエラーと同様に、41823 と 41840 はアクティブなトランザクションを中止させます。 |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [データベース エンジンでの行のバージョン管理に基づく分離レベル](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [データベース エンジンでの行のバージョン管理に基づく分離レベル](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)   
+- [トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)

@@ -1,4 +1,5 @@
 ---
+description: CREATE VIEW (Transact-SQL)
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ''
 ms.date: 04/16/2020
@@ -34,15 +35,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b896f7614d5f44802e98b45abb1592d5ed35f1e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 026d00e38a94d50bad94c1e95ae91fa5a370f604
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485235"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990030"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -78,7 +79,7 @@ AS select_statement
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
 AS <select_statement>   
@@ -142,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  ビューに対して実行されるすべてのデータ変更ステートメントについて、*select_statement* 内で設定される条件に従うよう強制します。 ビューを介して行を変更する場合は、WITH CHECK OPTION を使用すると、変更がコミットされた後もビューを介して確実にデータを表示できます。  
   
-> [!NOTE]  
->  ビューの基になるテーブルに対して直接更新が実行された場合は、CHECK OPTION を指定してもビューに対する確認は行われません。  
+> [!NOTE]
+>  CHECK OPTION は、ビューを介して行われた更新にのみ適用されます。 ビューの基になるテーブルに対して直接実行された更新には適用されません。  
   
  ENCRYPTION  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  

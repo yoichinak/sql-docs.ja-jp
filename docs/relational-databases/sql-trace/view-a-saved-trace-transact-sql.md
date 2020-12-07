@@ -1,4 +1,5 @@
 ---
+description: 保存されているトレースの表示 (Transact-SQL)
 title: 保存されているトレースの表示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c2c89535d15850d528949ae7607f950adb49905b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2d709b76d5039560f3f55a720f7f96891aea548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324901"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>保存されているトレースの表示 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85750870"
   
  サーバーの ALTER TRACE  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 30a4403819da8f88ea8fac50f2b3e6c6f62eab3b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522934"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584289"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "87522934"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションにおける FCI 内の**ノード数**および **Always On 可用性グループ**の詳細については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションにおける FCI 内の **ノード数** および **Always On 可用性グループ** の詳細については、「[SQL Server 2012 の各エディションがサポートする機能](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110))」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   
@@ -107,23 +107,23 @@ ms.locfileid: "87522934"
 -   **フェールオーバー クラスター マネージャーを使用して可用性グループを他のノードに移動したり可用性グループをフェールオーバーしたりしないでください。** フェールオーバー クラスターは可用性レプリカの同期状態を認識しないため、そのような操作を行うとダウンタイムが長くなることがあります。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用する必要があります。  
 
   >[!WARNING]
-  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている*フェールオーバー クラスター インスタンス*を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
+  > フェールオーバー クラスター マネージャーを使用して、可用性グループをホストしている *フェールオーバー クラスター インスタンス* を、同じ可用性グループのレプリカを "*すでに*" ホストしているノードに移動すると、可用性グループのレプリカが失われ、それによってターゲット ノード上でオンラインにできなくなる可能性があります。 フェールオーバー クラスターの 1 つのノードでは、同じ可用性グループの複数のレプリカをホストすることはできません。 これがどのように発生し、どのように回復するかの詳細については、ブログ記事の「[Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group)」(可用性グループでレプリカが予想外に削除される) を参照してください。 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   
-     [制限付きセキュリティを使用した SQL Server 用 Windows フェールオーバー クラスタリング (可用性グループまたは FCI) の構成](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [制限付きセキュリティを使用した SQL Server 用 Windows フェールオーバー クラスタリング (可用性グループまたは FCI) の構成](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ホワイト ペーパー:**  
   
-     [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On アーキテクチャ ガイド: フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性および障害復旧ソリューションの構築](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "87522934"
  [AlwaysOn 可用性グループの有効化と無効化 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   

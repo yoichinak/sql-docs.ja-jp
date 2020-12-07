@@ -1,4 +1,5 @@
 ---
+description: SQL Server エージェントのテーブル (Transact-SQL)
 title: SQL Server エージェントテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b6fe3bef09926e430ef05121b202934f0b66d5a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753870"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544452"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server エージェントのテーブル (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

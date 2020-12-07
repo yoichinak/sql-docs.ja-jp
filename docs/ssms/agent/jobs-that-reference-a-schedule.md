@@ -1,4 +1,5 @@
 ---
+description: スケジュールを参照するジョブ
 title: スケジュールを参照するジョブ
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 798cb6414080f11ffc744cedccdfc8ed4f117bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d843e9c816a0d78da0cf2feb5c31c666203a3133
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675095"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92033217"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>スケジュールを参照するジョブ
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このダイアログ ボックスでは、特定のスケジュールを参照するジョブに関する情報を表示できます。  
   
@@ -35,18 +36,17 @@ ms.locfileid: "85675095"
 **[スケジュール]**  
 表示しているスケジュールの名前が表示されます。  
   
-**選択**  
-読み取り専用です。  
+**Selected**  
+読み取り専用。  
   
-**Name**  
+**名前**  
 このスケジュールを使用するジョブの名前です。  
   
-**有効**  
-読み取り専用です。 このジョブが現在有効になっているかどうかを示します。  
+**Enabled**  
+読み取り専用。 このジョブが現在有効になっているかどうかを示します。  
   
 **カテゴリ**  
 ジョブ カテゴリ。  
   
 ## <a name="see-also"></a>参照  
 [スケジュールの作成とジョブへのアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
-  

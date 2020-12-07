@@ -1,4 +1,5 @@
 ---
+description: クエリに関する基本操作の実行 (Visual Database Tools)
 title: クエリに関する基本操作の実行
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 95811ef98c430bf5b2b0373ad4dcd7a862351b11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 33488c5a709ca63bf42107ba0476211036735d36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462750"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>クエリに関する基本操作の実行 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +89,7 @@ SQL コメント、パラメーター一覧、Top の指定などのプロパテ
 [クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)](../../ssms/visual-db-tools/use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
 クエリおよびビュー デザイナーに用意されている、各種言語のデータを簡単に扱える機能について説明します。  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>参照先  
 [クエリおよびビュー デザイナー ツール (Visual Database Tools)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
 クエリおよびビュー デザイナーの特徴および機能について説明します。  
   

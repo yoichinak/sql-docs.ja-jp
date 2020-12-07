@@ -1,4 +1,5 @@
 ---
+description: ODBC とは
 title: ODBC とは | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea0aa81188e5e58d3a66032af38700ece2d4e5b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23badedad64ac836f07e3d9f7832fcfa6c33b0b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428824"
 ---
 # <a name="what-is-odbc"></a>ODBC とは
 ODBC に関する多くの誤解がコンピューティング環境に存在します。 エンドユーザーには、Microsoft® Windows®コントロールパネルのアイコンがあります。 アプリケーションプログラマは、データアクセスルーチンを含むライブラリです。 他の多くの場合は、これまでに発生したすべてのデータベースアクセスの問題に対する回答です。  
   
- まず、ODBC はデータベース API の仕様です。 この API は、1つの DBMS またはオペレーティングシステムから独立しています。このマニュアルでは C を使用していますが、ODBC API は言語に依存しません。 ODBC API は、Open Group と ISO/IEC の CLI 仕様に基づいています。 ODBC 3.*x*はこれらの仕様の両方を完全に実装しています。以前のバージョンの ODBC は、これらの仕様の暫定版に基づいていましたが、完全には実装していませんでした。また、スクロール可能なカーソルなど、画面ベースのデータベースアプリケーションの開発者がよく必要とする機能を追加します。  
+ まず、ODBC はデータベース API の仕様です。 この API は、1つの DBMS またはオペレーティングシステムから独立しています。このマニュアルでは C を使用していますが、ODBC API は言語に依存しません。 ODBC API は、Open Group と ISO/IEC の CLI 仕様に基づいています。 ODBC 3.*x* はこれらの仕様の両方を完全に実装しています。以前のバージョンの ODBC は、これらの仕様の暫定版に基づいていましたが、完全には実装していませんでした。また、スクロール可能なカーソルなど、画面ベースのデータベースアプリケーションの開発者がよく必要とする機能を追加します。  
   
  ODBC API の関数は、DBMS 固有のドライバーの開発者によって実装されています。 アプリケーションは、これらのドライバーの関数を呼び出して、DBMS に依存しない方法でデータにアクセスします。 ドライバーマネージャーは、アプリケーションとドライバー間の通信を管理します。  
   

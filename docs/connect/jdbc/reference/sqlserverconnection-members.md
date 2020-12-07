@@ -1,4 +1,5 @@
 ---
+description: SQLServerConnection のメンバー
 title: SQLServerConnection のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67971722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458284"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "67971722"
   
 ## <a name="fields"></a>フィールド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|スナップショット トランザクションの分離レベルを指定する場合に使用します。|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "67971722"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトについて報告されたすべての警告をクリアします。|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクト用のデータベースと JDBC リソースを、自動的に解放されるまで待たずに直ちに解放します。|  

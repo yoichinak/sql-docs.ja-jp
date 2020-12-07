@@ -1,4 +1,5 @@
 ---
+description: sp_MShasdbaccess (Transact-sql)
 title: sp_MShasdbaccess (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 00ecddd29afe6b8f34c8096c20a6a0b3f51c2269
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: daf8ee0c7ffa976d7062a0e9e0b0be65a19be86d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893497"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538683"
 ---
 # <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_MShasdbaccess
  0 (成功) または 1 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限は、 **public**ロールに与えられています。  
+ 実行権限は、 **public** ロールに与えられています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

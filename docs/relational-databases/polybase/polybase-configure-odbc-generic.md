@@ -1,7 +1,7 @@
 ---
 title: 外部データへのアクセス:ODBC ジェネリック型 - PolyBase
 description: SQL Server で PolyBase を使用すると、ODBC コネクタから互換性のあるデータ ソースに接続できます。 ODBC ドライバーをインストールし、外部テーブルを作成します。
-ms.date: 02/19/2020
+ms.date: 07/16/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,33 +10,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246527"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216687"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>ODBC ジェネリック型の外部データにアクセスするための PolyBase の構成
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 2019 で PolyBase を使用すると、ODBC コネクタから ODBC と互換性のあるデータ ソースに接続できます。
+SQL Server 2019 で PolyBase を使用すると、ODBC コネクタを使用して ODBC と互換性のあるデータ ソースに接続できます。
 
-この記事では、ODBC ドライバーの使用例をいくつか示します。 特定の例については、ODBC プロバイダーにお問い合わせください。 適切な接続文字列のオプションを決定するには、データ ソースの ODBC ドライバーに関するドキュメントを参照してください。 この記事の例は、特定の ODBC ドライバーには適用されない場合があります。
+この記事では、ODBC データ ソースを使用して構成接続を作成する方法について説明します。 提供されるガイダンスでは、例として 1 つの特定の ODBC ドライバーを使用します。 特定の例については、ODBC プロバイダーにお問い合わせください。 適切な接続文字列のオプションを決定するには、データ ソースの ODBC ドライバーに関するドキュメントを参照してください。 この記事の例は、特定の ODBC ドライバーには適用されない場合があります。
 
 ## <a name="prerequisites"></a>前提条件
 
 >[!NOTE]
 >この機能を使用するには、SQL Server on Windows が必要です。
 
-* [PolyBase のインストール](polybase-installation.md)。
+* PolyBase をインストールし、SQL Server インスタンス用に有効にする必要があります ([PolyBase のインストール](polybase-installation.md))。
 
 * データベース スコープ資格情報より前に、[マスター キー](../../t-sql/statements/create-master-key-transact-sql.md)を作成しておく必要があります。
 
 ## <a name="install-the-odbc-driver"></a>ODBC ドライバーをインストールする
 
-まず、各 PolyBase ノードで、接続するデータ ソースの ODBC ドライバーをダウンロードしてインストールします。 ドライバーが適切にインストールされたら、 **[ODBC データ ソースの管理者]** からドライバーを表示してテストできます。
+各 PolyBase ノードで、接続するデータ ソースの ODBC ドライバーをダウンロードしてインストールします。 ドライバーが適切にインストールされたら、 **[ODBC データ ソースの管理者]** からドライバーを表示してテストできます。
 
 ![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
@@ -45,15 +45,14 @@ SQL Server 2019 で PolyBase を使用すると、ODBC コネクタから ODBC �
 > [!IMPORTANT]
 > クエリのパフォーマンスを向上させるために、接続プールを有効にします。 この操作は、 **[ODBC データ ソースの管理者]** から実行できます。
 
-## <a name="create-an-external-table"></a>外部テーブルを作成する
+## <a name="create-dependent-objects-in-sql-server"></a>SQL Server に依存オブジェクトを作成する
 
-ODBC データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、外部テーブルを作成するサンプル コードを示します。
+ODBC データ ソースを使用するには、最初にいくつかのオブジェクトを作成して構成を完了する必要があります。
 
 このセクションでは以下の Transact-SQL コマンドが使用されます。
 
 * [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. ODBC ソースにアクセスするために、データベース スコープ資格情報を作成します。
 
@@ -94,18 +93,44 @@ ODBC データ ソースのデータに対してクエリを実行するには�
     PUSHDOWN = ON,
     CREDENTIAL = credential_name );
     ```
+    
+## <a name="create-an-external-table"></a>外部テーブルを作成する
+
+依存オブジェクトを作成したら、T-SQL を使用して外部テーブルを作成できます。 
+
+このセクションでは以下の Transact-SQL コマンドが使用されます。
+* [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+
+1. 1 つ以上の外部テーブルを作成します。
+
+   外部テーブルを作成します。 `DATA_SOURCE` 引数を使用して上で作成した外部データ ソースを参照し、ソース テーブルを `LOCATION` として指定する必要があります。 すべての列を参照する必要はありませんが、型が正しくマップされていることを確認する必要があります。  
+
+   ```sql
+     CREATE EXTERNAL TABLE <your_table_name>
+     (
+     <col1_name>     DECIMAL(38) NOT NULL,
+     <col2_name>     DECIMAL(38) NOT NULL,
+     <col3_name>     CHAR COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='<sap_table_name>',
+     DATA_SOURCE= <external_data_source_name>
+     )
+     ;
+   ```
+
+   > [!NOTE]
+   > この外部データ ソースを使用するすべての外部テーブルで依存オブジェクトを再利用できることに注意してください。
 
 1. **省略可能:** 外部テーブルの統計を作成します。
 
     クエリのパフォーマンスを最適化するには、外部テーブルの列、特に結合、フィルター、集計に使用される列に統計を作成することをお勧めします。
 
     ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    CREATE STATISTICS statistics_name ON contact (FirstName) WITH FULLSCAN; 
     ```
-
->[!IMPORTANT]
->外部データ ソースを作成したら、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成します。
-
+    
 ## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

@@ -1,6 +1,6 @@
 ---
 title: Linux に SQL Server フルテキスト検索をインストールする
-description: この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。
+description: Linux に SQL Server のフルテキスト検索をインストールする方法について説明します。 フルテキスト検索を使うと、SQL Server テーブル内の文字ベースのデータに対してフルテキスト クエリを実行できます。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895284"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088784"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
 
@@ -94,50 +94,50 @@ sudo zypper update mssql-server-fts
 | ブークモール | 1044 |
 | ポルトガル語 (ブラジル) | 1046 |
 | 英語 (U.K.) | 2057 |
-| Bulgarian | 1026 |
+| ブルガリア語 | 1026 |
 | カタロニア語 | 1027 |
 | 中国語 (中華人民共和国香港特別行政区) | 3076 |
 | 中国語 (中華人民共和国マカオ特別行政区) | 5124 |
 | 中国語 (シンガポール) | 4100 |
-| Croatian | 1050 |
-| Czech | 1029 |
-| Danish | 1030 |
-| Dutch | 1043 |
-| English | 1033 |
-| French | 1036 |
-| German | 1031 |
-| Greek | 1032 |
+| クロアチア語 | 1050 |
+| チェコ語 | 1029 |
+| デンマーク語 | 1030 |
+| オランダ語 | 1043 |
+| 英語 | 1033 |
+| フランス語 | 1036 |
+| ドイツ語 | 1031 |
+| ギリシャ語 | 1032 |
 | グジャラート語 | 1095 |
 | ヘブライ語 | 1037 |
 | ヒンディー語 | 1081 |
 | アイスランド語 | 1039 |
 | インドネシア語 | 1057 |
-| Italian | 1040 |
-| Japanese | 1041 |
+| イタリア語 | 1040 |
+| 日本語 | 1041 |
 | カンナダ語 | 1099 |
-| Korean | 1042 |
-| Latvian | 1062 |
-| Lithuanian | 1063 |
+| 韓国語 | 1042 |
+| ラトビア語 | 1062 |
+| リトアニア語 | 1063 |
 | マレー語 - マレーシア | 1086 |
 | マラヤーラム語 | 1100 |
 | マラーティー語 | 1102 |
-| Polish | 1045 |
-| Portuguese | 2070 |
+| ポーランド語 | 1045 |
+| ポルトガル語 | 2070 |
 | パンジャーブ語 | 1094 |
-| Romanian | 1048 |
-| Russian | 1049 |
+| ルーマニア語 | 1048 |
+| ロシア語 | 1049 |
 | セルビア語 (キリル) | 3098 |
 | セルビア語 (ラテン) | 2074 |
 | 簡体中国語 | 2052 |
-| Slovak | 1051 |
-| Slovenian | 1060 |
-| Spanish | 3082 |
-| Swedish | 1053 |
+| スロバキア語 | 1051 |
+| スロベニア語 | 1060 |
+| スペイン語 | 3082 |
+| スウェーデン語 | 1053 |
 | タミル語 | 1097 |
 | テルグ語 | 1098 |
-| Thai | 1054 |
+| タイ語 | 1054 |
 | Traditional Chinese | 1028 |
-| Turkish | 1055 |
+| トルコ語 | 1055 |
 | ウクライナ語 | 1058 |
 | ウルドゥ語 | 1056 |
 | ベトナム語 | 1066 |

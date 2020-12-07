@@ -1,8 +1,9 @@
 ---
+description: Item プロパティの例 (VB)
 title: Item プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b862f9f3a8479ad6d1eb68060be068e91a66c58
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990743"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
-この例では、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  
+この例では、 [Item](./item-property-ado.md) プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  
   
- データベースに対して発行されたコマンドのパラメーターは、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションからインデックスと名前によってアクセスされます。 返された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のフィールドは、そのオブジェクトの[fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションからインデックスと名前によってアクセスされます。  
+ データベースに対して発行されたコマンドのパラメーターは、 [コマンド](./command-object-ado.md) オブジェクトの [Parameters](./parameters-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。 返された [レコードセット](./recordset-object-ado.md) のフィールドは、そのオブジェクトの [fields](./fields-collection-ado.md) コレクションからインデックスと名前によってアクセスされます。  
   
 ```  
 'BeginItemVB  
@@ -135,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Item プロパティ (ADO)](./item-property-ado.md)   
+ [Parameters コレクション (ADO)](./parameters-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

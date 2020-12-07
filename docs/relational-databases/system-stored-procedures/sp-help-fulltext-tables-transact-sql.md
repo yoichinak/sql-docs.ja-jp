@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_tables (Transact-SQL)
 title: sp_help_fulltext_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 36f8a5d8fb38802f14ac61c18d382e6052241d8a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bcb8ba1c0e4dcd20557ad2291dd9a84912985086
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893726"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538866"
 ---
 # <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85893726"
   フルテキストインデックス作成用に登録されているテーブルの一覧を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、 **fulltext_indexes**カタログビューを使用してください。 詳細については、「 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 **fulltext_indexes** カタログビューを使用してください。 詳細については、「 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`フルテキストカタログの名前を指定します。 *fulltext_catalog_name*は**sysname**,、既定値は NULL です。 *Fulltext_catalog_name*を省略した場合、または NULL の場合は、データベースに関連付けられているすべてのフルテキストインデックス付きテーブルが返されます。 *Fulltext_catalog_name*が指定されていても、 *table_name*が省略されているか、が NULL の場合は、このカタログに関連付けられているフルテキストインデックスが作成されたすべてのテーブルについて、フルテキストインデックス情報が取得されます。 *Fulltext_catalog_name*と*table_name*の両方が指定されている場合*table_name*が*fulltext_catalog_name*に関連付けられていると、行が返されます。それ以外の場合は、エラーが発生します。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` フルテキストカタログの名前を指定します。 *fulltext_catalog_name* は **sysname**,、既定値は NULL です。 *Fulltext_catalog_name*を省略した場合、または NULL の場合は、データベースに関連付けられているすべてのフルテキストインデックス付きテーブルが返されます。 *Fulltext_catalog_name*が指定されていても、 *table_name*が省略されているか、が NULL の場合は、このカタログに関連付けられているフルテキストインデックスが作成されたすべてのテーブルについて、フルテキストインデックス情報が取得されます。 *Fulltext_catalog_name*と*table_name*の両方が指定されている場合*table_name*が*fulltext_catalog_name*に関連付けられていると、行が返されます。それ以外の場合は、エラーが発生します。  
   
-`[ @table_name = ] 'table_name'`フルテキストメタデータを要求する1つまたは2つの要素で構成されるテーブル名を指定します。 *table_name*は**nvarchar (517)** で、既定値は NULL です。 *Table_name*だけを指定した場合は、 *table_name*に関連する行だけが返されます。  
+`[ @table_name = ] 'table_name'` フルテキストメタデータを要求する1つまたは2つの要素で構成されるテーブル名を指定します。 *table_name* は **nvarchar (517)** で、既定値は NULL です。 *Table_name*だけを指定した場合は、 *table_name*に関連する行だけが返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) エラー  
@@ -62,7 +63,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**FULLTEXT_CATALOG_NAME**|**sysname**|フルテキストインデックスデータが存在するフルテキストカタログ。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限は、既定では**public**ロールのメンバーに与えています。  
+ 実行権限は、既定では **public** ロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  次の例では、フルテキスト カタログ `Cat_Desc` に関連付けられた、フルテキスト インデックスが作成されているテーブルの名前を返します。  
@@ -74,9 +75,9 @@ EXEC sp_help_fulltext_tables 'Cat_Desc';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_fulltext_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

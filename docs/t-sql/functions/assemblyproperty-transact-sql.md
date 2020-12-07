@@ -1,4 +1,5 @@
 ---
+description: ASSEMBLYPROPERTY (Transact-SQL)
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 50fd500a3ce7248b60e423df662b5d9eeda2cef5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 722d6c4b2130ad51c2249f083691233524d3834c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113135"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124912"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87113135"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ASSEMBLYPROPERTY('assembly_name', 'property_name')  
 ```  
   
@@ -42,7 +43,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 
 ## <a name="arguments"></a>引数
 *assembly_name*  
-アセンブリの名前です。
+アセンブリの名前。
   
 *property_name*  
 情報を取得するプロパティの名前を指定します。 *property_name* 値は次のいずれかを指定することができます。
@@ -64,7 +65,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>例  
-次の例は、`HelloWorld` アセンブリが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで登録されていることを前提としています。 詳細については、「[Hello World サンプル](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)」を参照してください。
+次の例は、`HelloWorld` アセンブリが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで登録されていることを前提としています。 詳細については、「[Hello World サンプル](/previous-versions/sql/sql-server-2016/ff878250(v=sql.130))」を参照してください。
   
 ```sql
 USE AdventureWorks2012;  
@@ -72,8 +73,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
-  
   

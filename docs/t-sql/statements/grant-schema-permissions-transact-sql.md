@@ -1,4 +1,5 @@
 ---
+description: GRANT (スキーマ権限の許可) (Transact-SQL)
 title: GRANT (スキーマ権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2017
@@ -18,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fbef817bba2cd7b8f682d86300a5348fd0879dfb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484366"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "90570548"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (スキーマ権限の許可) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
  権限を許可するスキーマを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -66,7 +67,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -134,13 +135,13 @@ AS *granting_principal*
   
 ### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>A. スキーマ HumanResources に対する INSERT 権限を、guest に許可する  
   
-```  
+```sql  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
 ### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>B. スキーマ Person に対する SELECT 権限を、データベース ユーザー WilJo に許可する  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   

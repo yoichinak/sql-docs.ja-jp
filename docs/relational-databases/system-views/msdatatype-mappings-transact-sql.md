@@ -1,4 +1,5 @@
 ---
+description: MSdatatype_mappings (Transact-SQL)
 title: MSdatatype_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 16da7db2dcf42ebfa00d634814f27839a3988a71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f67f313d177b5ef22e6cb97b9ab25d5281c860e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463850"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdatatype_mappings**ビューでは、SQL Server データ型が、非 SQL Server データベース管理システム (DBMS) によって使用されるデータ型にマップされます。 このテーブルは、 **msdb**データベースに格納されます。  
+  **MSdatatype_mappings**ビューでは、SQL Server データ型が、非 SQL Server データベース管理システム (DBMS) によって使用されるデータ型にマップされます。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -38,8 +39,8 @@ ms.locfileid: "85889189"
 |**dest_create_params**|**int**|内部使用のみです。|  
 |**dest_nullable**|**bit**|非 SQL Server データ型が NULL 値をサポートしているかどうかを示します。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングの指定](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

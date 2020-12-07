@@ -1,4 +1,5 @@
 ---
+description: 方向パラメーターを使用する
 title: 方向パラメーターを使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb320fbd7b5abbd796964d4215a6cf38b72b5f48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 244bad8f08616efb8a566ce05738228e0c964e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466635"
 ---
 # <a name="using-directional-parameters"></a>方向パラメーターを使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,9 +29,9 @@ PDO_SQLSRV ドライバーを使用するときは、[PDOStatement::bindParam](.
   
 |トピック|説明|  
 |---------|---------------|  
-|[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|ストアド プロシージャを呼び出すときにパラメーターの方向を指定する方法を示します。|  
-|[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|出力パラメーターを含むストアド プロシージャを呼び出す方法、およびその値を取得する方法を示します。|  
-|[方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|入力/出力パラメーターを含むストアド プロシージャを呼び出す方法、およびその値を取得する方法を示します。|  
+|[方法:SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)|ストアド プロシージャを呼び出すときにパラメーターの方向を指定する方法を示します。|  
+|[方法:SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|出力パラメーターを含むストアド プロシージャを呼び出す方法、およびその値を取得する方法を示します。|  
+|[方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|入力/出力パラメーターを含むストアド プロシージャを呼び出す方法、およびその値を取得する方法を示します。|  
   
 ## <a name="see-also"></a>参照  
 [データの取得](../../connect/php/retrieving-data.md)  

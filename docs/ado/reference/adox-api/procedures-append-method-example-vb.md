@@ -1,8 +1,9 @@
 ---
+description: Procedures Append メソッドの例 (VB)
 title: Procedures Append メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b522521da7737f935ac64ab07126cab6b5cd0294
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d757b2df05bd4f376bb7c6744fa75ac5453f83f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763673"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983583"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append メソッドの例 (VB)
-次のコードは、 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドを使用して、基になるデータソースに新しいプロシージャを作成する方法を示しています。  
+次のコードは、 [Command](../ado-api/command-object-ado.md) オブジェクトと [Procedures](./procedures-collection-adox.md) collection [Append](./append-method-adox-procedures.md) メソッドを使用して、基になるデータソースに新しいプロシージャを作成する方法を示しています。  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -74,8 +75,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [プロシージャオブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Append メソッド (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [プロシージャオブジェクト (ADOX)](./procedure-object-adox.md)   
+ [Procedures コレクション (ADOX)](./procedures-collection-adox.md)

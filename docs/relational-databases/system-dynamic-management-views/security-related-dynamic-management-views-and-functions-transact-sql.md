@@ -1,4 +1,5 @@
 ---
+description: セキュリティ関連の動的管理ビューおよび関数 (Transact-sql)
 title: セキュリティ関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -11,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - security dynamic management views
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d4a1ab74b0104f191ae5ba52b79bd983f9e05d71
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27154a0f6711d50f0ce44737bb64c3d7aa82b885
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942157"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546648"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>セキュリティ関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

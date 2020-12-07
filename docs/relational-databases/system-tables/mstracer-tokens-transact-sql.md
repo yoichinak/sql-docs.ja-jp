@@ -1,4 +1,5 @@
 ---
+description: MStracer_tokens (Transact-sql)
 title: MStracer_tokens (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MStracer_tokens system table
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0822c2de02de9ef0a420f0066d058fad200b4a88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c004c7a578e1fd2a21cd44f8149d2f850dec8d1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881467"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547047"
 ---
 # <a name="mstracer_tokens-transact-sql"></a>MStracer_tokens (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85881467"
 |**publisher_commit**|**datetime**|トレーサートークンレコードがパブリッシャーでコミットされた日付と時刻。|  
 |**distributor_commit**|**datetime**|トレーサー トークン レコードがディストリビューター側でコミットされた日付と時刻。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

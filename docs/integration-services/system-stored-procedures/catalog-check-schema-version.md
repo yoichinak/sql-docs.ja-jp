@@ -1,4 +1,5 @@
 ---
+description: catalog.check_schema_version
 title: catalog.check_schema_version | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8b492f69eae6e3ffea4afe6fc61ae64528c80da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f1d04f2a41c247a3de8a66f5b07ee74f5036b5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913590"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129944"
 ---
 # <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
 

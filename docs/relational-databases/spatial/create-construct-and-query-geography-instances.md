@@ -1,4 +1,5 @@
 ---
+description: geography インスタンスの作成、構築、およびクエリ
 title: geography インスタンスの作成、構築、およびクエリ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8dd26e26f4b567918f56187b5be4442b286ffabb
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730809"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130190"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  地理空間データ型の **geography**は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+   地理空間データ型の **geography** は、球体地球座標系のデータを表します。 この型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では .NET 共通言語ランタイム (CLR) のデータ型として実装されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。  
   
  **geography** 型は、各データベースで使用できるように事前に定義されています。 **geography** 型のテーブル列を作成し、システムが提供する他のデータ型を使用するときと同じように **geography** データを操作できます。  
   
@@ -147,7 +148,7 @@ ms.locfileid: "85730809"
  [STGeometryN &#40;geography データ型&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (geography データ型)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点の数  
- 空でないすべての **geography** インスタンスは *点*で構成されています。 これらの点は、 **geography** インスタンスが描画される地球の緯度経度座標を表します。 **geography** データ型には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
+ 空でないすべての **geography** インスタンスは *点* で構成されています。 これらの点は、 **geography** インスタンスが描画される地球の緯度経度座標を表します。 **geography** データ型には、インスタンスの点に対するクエリを実行するための組み込みメソッドが数多く用意されています。  
   
  **インスタンスを構成する点の数を取得するには**  
  [STNumPoints &#40;geography データ型&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)  
@@ -162,7 +163,7 @@ ms.locfileid: "85730809"
  [STEndpoint &#40;geography データ型&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> [ディメンション]  
- 空でない **geography** インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の **geography** インスタンス ( **Point** や **MultiPoint**など) には長さや面積はありません。 1 次元のオブジェクト ( **LineString、CircularString**、 **CompoundCurve**、および **MultiLineString**など) には長さがあります。 2 次元のインスタンス ( **Polygon、CurvePolygon**、および **MultiPolygon**など) には面積と長さがあります。 空のインスタンスは -1 次元としてレポートされます。 **GeometryCollection** ではその内容の最も大きな次元がレポートされます。  
+ 空でない **geography** インスタンスの次元は、0 次元、1 次元、2 次元のいずれかになります。 0 次元の **geography** インスタンス ( **Point** や **MultiPoint** など) には長さや面積はありません。 1 次元のオブジェクト ( **LineString、CircularString**、 **CompoundCurve**、および **MultiLineString** など) には長さがあります。 2 次元のインスタンス ( **Polygon、CurvePolygon**、および **MultiPolygon** など) には面積と長さがあります。 空のインスタンスは -1 次元としてレポートされます。 **GeometryCollection** ではその内容の最も大きな次元がレポートされます。  
   
  **インスタンスの次元を取得するには**  
  [STDimension &#40;geography データ型&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -174,7 +175,7 @@ ms.locfileid: "85730809"
  [STArea &#40;geography データ型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a><a name="empty"></a> 空  
- _空_の **geography** インスタンスには点はありません。 空の **LineString、CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon、CurvePolygon** 、および **MultiPolygon** インスタンスの面積は 0 です。  
+ _空_ の **geography** インスタンスには点はありません。 空の **LineString、CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon、CurvePolygon** 、および **MultiPolygon** インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty &#40;geography データ型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
@@ -270,7 +271,7 @@ SELECT @result = @geog1.STIntersection(@geog2);
 SELECT @result.STAsText();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

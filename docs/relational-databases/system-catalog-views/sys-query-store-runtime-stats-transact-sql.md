@@ -1,4 +1,5 @@
 ---
+description: query_store_runtime_stats (Transact-sql)
 title: query_store_runtime_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: bbd5012eeb5f790daf733b3db23a6f62fa12e26f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823727"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542487"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87823727"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|**Plan_id**、 **execution_type** 、および**runtime_stats_interval_id**のランタイム実行の統計を表す行の識別子。 これは、過去の実行時統計の間隔に対してのみ一意です。 現在アクティブな間隔では、 **plan_id**によって参照されるプランの実行時統計を表す複数の行が**execution_type**によって表される実行の種類と共に存在する場合があります。 通常、1つの行はディスクにフラッシュされる実行時の統計情報を表し、他の行はメモリ内の状態を表します。 したがって、各間隔の実際の状態を取得するには、メトリックを集計し、 **plan_id**、 **execution_type** 、および**runtime_stats_interval_id**でグループ化する必要があります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**runtime_stats_id**|**bigint**|**Plan_id**、 **execution_type** 、および**runtime_stats_interval_id**のランタイム実行の統計を表す行の識別子。 これは、過去の実行時統計の間隔に対してのみ一意です。 現在アクティブな間隔では、 **plan_id**によって参照されるプランの実行時統計を表す複数の行が **execution_type**によって表される実行の種類と共に存在する場合があります。 通常、1つの行はディスクにフラッシュされる実行時の統計情報を表し、他の行はメモリ内の状態を表します。 したがって、各間隔の実際の状態を取得するには、メトリックを集計し、 **plan_id**、 **execution_type** 、および **runtime_stats_interval_id**でグループ化する必要があります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
 |**plan_id**|**bigint**|外部キー。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)に結合します。|  
 |**runtime_stats_interval_id**|**bigint**|外部キー。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)に結合します。|  
 |**execution_type**|**tinyint**|クエリ実行の種類を決定します。<br /><br /> 0-通常の実行 (正常に完了)<br /><br /> 3-クライアントが開始した実行中止<br /><br /> 4-例外が実行を中止しました|  
@@ -48,61 +49,61 @@ ms.locfileid: "87823727"
 |**min_duration**|**bigint**|集計間隔内のクエリプランの最小期間 (マイクロ秒単位で報告されます)。|  
 |**max_duration**|**bigint**|集計間隔内のクエリプランの最大期間 (マイクロ秒単位で報告されます)。|  
 |**stdev_duration**|**float**|集計間隔内のクエリプランの標準偏差 (マイクロ秒単位で報告)。|  
-|**avg_cpu_time**|**float**|集計間隔内のクエリプランの平均 CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_cpu_time**|**bigint**|集計間隔内のクエリプランの最後の CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_cpu_time**|**bigint**|集計間隔内のクエリプランの最小 CPU 時間 (マイクロ秒単位で報告されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_cpu_time**|**bigint**|集計間隔内のクエリプランの最大 CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_cpu_time**|**float**|集計間隔内のクエリプランの CPU 時間の標準偏差 (マイクロ秒単位で報告されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_logical_io_reads**|**float**|集計間隔内のクエリプランに対する論理 i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_logical_io_reads**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_logical_io_reads**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_logical_io_reads**|**bigint**|集計間隔内のクエリプランの論理 i/o 読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_logical_io_reads**|**float**|集計間隔内のクエリプランの標準偏差を読み取る論理 i/o の数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_logical_io_writes**|**float**|集計間隔内のクエリプランに対する論理 i/o 書き込みの平均数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最後の数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最小数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最大数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_logical_io_writes**|**float**|集計間隔内のクエリプランの標準偏差を書き込む論理 i/o の数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_physical_io_reads**|**float**|集計間隔内のクエリプランに対する物理 i/o 読み取りの平均数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_physical_io_reads**|**bigint**|集計間隔内のクエリプランに対する物理 i/o 読み取りの最後の数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_physical_io_reads**|**bigint**|集計間隔内のクエリプランに対する物理 i/o 読み取りの最小数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_physical_io_reads**|**bigint**|集計間隔内のクエリプランの物理 i/o 読み取りの最大数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_physical_io_reads**|**float**|物理 i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります (8 KB ページ読み取り数として表されます)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_clr_time**|**float**|集計間隔内のクエリプランの平均 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_clr_time**|**bigint**|集計間隔内のクエリプランの最後の CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_clr_time**|**bigint**|集計間隔内のクエリプランの最小 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_clr_time**|**bigint**|集計間隔内のクエリプランの最大 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_clr_time**|**float**|集計間隔内のクエリプランの CLR 時間標準偏差 (マイクロ秒単位で報告)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_dop**|**float**|集計間隔内のクエリプランの平均 DOP (並列処理の次数)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_dop**|**bigint**|集計間隔内のクエリプランの最後の DOP (並列処理の次数)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_dop**|**bigint**|集計間隔内のクエリプランの最小 DOP (並列処理の次数)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_dop**|**bigint**|集計間隔内のクエリプランの最大 DOP (並列処理の次数)。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_dop**|**float**|集計間隔内のクエリプランの DOP (並列処理の次数) 標準偏差。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_query_max_used_memory**|**float**|集計間隔内のクエリプランの平均メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最後のメモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最小メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最大メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_query_max_used_memory**|**float**|集計間隔内のクエリプランのメモリ許可標準偏差 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**avg_rowcount**|**float**|集計間隔内のクエリプランで返された行の平均数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_rowcount**|**bigint**|集計間隔内でクエリプランが最後に実行されたときに返された行の数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_rowcount**|**bigint**|集計間隔内のクエリプランに返される行の最小数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**avg_cpu_time**|**float**|集計間隔内のクエリプランの平均 CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_cpu_time**|**bigint**|集計間隔内のクエリプランの最後の CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_cpu_time**|**bigint**|集計間隔内のクエリプランの最小 CPU 時間 (マイクロ秒単位で報告されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_cpu_time**|**bigint**|集計間隔内のクエリプランの最大 CPU 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_cpu_time**|**float**|集計間隔内のクエリプランの CPU 時間の標準偏差 (マイクロ秒単位で報告されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_logical_io_reads**|**float**|集計間隔内のクエリプランに対する論理 i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_logical_io_reads**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_logical_io_reads**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_logical_io_reads**|**bigint**|集計間隔内のクエリプランの論理 i/o 読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_logical_io_reads**|**float**|集計間隔内のクエリプランの標準偏差を読み取る論理 i/o の数。 (読み取られた 8 KB ページの数として表現されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_logical_io_writes**|**float**|集計間隔内のクエリプランに対する論理 i/o 書き込みの平均数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最後の数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最小数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_logical_io_writes**|**bigint**|集計間隔内のクエリプランに対する論理 i/o 書き込みの最大数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_logical_io_writes**|**float**|集計間隔内のクエリプランの標準偏差を書き込む論理 i/o の数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_physical_io_reads**|**float**|集計間隔内のクエリプランに対する物理 i/o 読み取りの平均数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_physical_io_reads**|**bigint**|集計間隔内のクエリプランに対する物理 i/o 読み取りの最後の数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_physical_io_reads**|**bigint**|集計間隔内のクエリプランに対する物理 i/o 読み取りの最小数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_physical_io_reads**|**bigint**|集計間隔内のクエリプランの物理 i/o 読み取りの最大数 (読み取られた 8 KB ページの数として表されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_physical_io_reads**|**float**|物理 i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります (8 KB ページ読み取り数として表されます)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_clr_time**|**float**|集計間隔内のクエリプランの平均 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_clr_time**|**bigint**|集計間隔内のクエリプランの最後の CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_clr_time**|**bigint**|集計間隔内のクエリプランの最小 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_clr_time**|**bigint**|集計間隔内のクエリプランの最大 CLR 時間 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_clr_time**|**float**|集計間隔内のクエリプランの CLR 時間標準偏差 (マイクロ秒単位で報告)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_dop**|**float**|集計間隔内のクエリプランの平均 DOP (並列処理の次数)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_dop**|**bigint**|集計間隔内のクエリプランの最後の DOP (並列処理の次数)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_dop**|**bigint**|集計間隔内のクエリプランの最小 DOP (並列処理の次数)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_dop**|**bigint**|集計間隔内のクエリプランの最大 DOP (並列処理の次数)。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_dop**|**float**|集計間隔内のクエリプランの DOP (並列処理の次数) 標準偏差。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_query_max_used_memory**|**float**|集計間隔内のクエリプランの平均メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最後のメモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最小メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_query_max_used_memory**|**bigint**|集計間隔内のクエリプランの最大メモリ許可 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_query_max_used_memory**|**float**|集計間隔内のクエリプランのメモリ許可標準偏差 (8 KB ページの数として報告されます)。 ネイティブコンパイルメモリ最適化プロシージャを使用するクエリの場合は、常に0になります。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**avg_rowcount**|**float**|集計間隔内のクエリプランで返された行の平均数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_rowcount**|**bigint**|集計間隔内でクエリプランが最後に実行されたときに返された行の数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_rowcount**|**bigint**|集計間隔内のクエリプランに返される行の最小数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
 |**max_rowcount**|**bigint**|集計間隔内のクエリプランで返される行の最大数。|  
 |**stdev_rowcount**|**float**|集計間隔内のクエリプランで返される行の標準偏差の数。|
-|**avg_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログの平均バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**last_log_bytes_used**|**bigint**|集計間隔内で、クエリプランの前回の実行で使用されたデータベースログ内のバイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**min_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログの最小バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**max_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログ内の最大バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
-|**stdev_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログ内のバイト数の標準偏差。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
-|**avg_tempdb_space_used**|**float**|集計間隔内のクエリプランの平均ページ読み取り回数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**last_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**max_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
-|**stdev_page_server_io_reads**|**float**|ページサーバー i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL Database、Azure SQL Managed Instance (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**avg_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログの平均バイト数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**last_log_bytes_used**|**bigint**|集計間隔内で、クエリプランの前回の実行で使用されたデータベースログ内のバイト数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**min_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログの最小バイト数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**max_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログ内の最大バイト数。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|
+|**stdev_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログ内のバイト数の標準偏差。<br/>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は常にゼロ (0) を返します。|  
+|**avg_tempdb_space_used**|**float**|集計間隔内でクエリプランの tempdb で使用されるページ数の平均値 (8 KB ページ単位で表されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|集計間隔内でクエリプランの tempdb に使用されたページの最後の数 (8 KB ページの数で表されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|集計間隔内でクエリプランの tempdb で使用されるページの最小数 (8 KB ページの数で表されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランの tempdb で使用されるページの最大数 (8 KB ページ単位で表されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランの tempdb 標準偏差で使用されるページ数 (8 KB ページ単位で表されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数 (読み取られた 8 KB ページの数として表されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数 (読み取られた 8 KB ページの数として表されます)。<br><br/>**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ハイパースケール</br>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの最小数 (8 KB ページの読み取り数として表されます)。<br><br/>**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ハイパースケール</br>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**max_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最大数 (読み取られた 8 KB ページの数として表されます)。<br><br/>**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ハイパースケール</br>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (ハイパースケール以外) は常にゼロ (0) を返します。|
+|**stdev_page_server_io_reads**|**float**|ページサーバー i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります (8 KB ページ読み取り数として表されます)。<br><br/>**適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ハイパースケール</br>**注:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (ハイパースケール以外) は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
 `VIEW DATABASE STATE` アクセス許可が必要です。  

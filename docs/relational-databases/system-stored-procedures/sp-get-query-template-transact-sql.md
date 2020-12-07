@@ -1,4 +1,5 @@
 ---
+description: sp_get_query_template (Transact-sql)
 title: sp_get_query_template (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881650"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543362"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,19 +52,19 @@ sp_get_query_template
  @parameters  
  は、によってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです @templatetext 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
 -   *Query_text*の定数リテラル値をパラメーター化しません。  
   
--   *query_text*が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
+-   *query_text* が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
   
  Sp_get_query_template がエラーを返す場合、との出力パラメーターの値は変更されません @templatetext @parameters 。  
   
 ## <a name="permissions"></a>アクセス許可  
  public データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、2 つの定数リテラル値が含まれたパラメーター化形式のクエリが返されます。  
   
 ```  
@@ -112,9 +113,9 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 また、アップグレードによって、同じクエリに対して異なる定数リテラルのセットがパラメーター化され、両方の出力パラメーターの結果に適用される間隔が異なる場合もあります。  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

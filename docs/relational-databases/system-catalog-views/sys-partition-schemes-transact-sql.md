@@ -1,4 +1,5 @@
 ---
+description: partition_schemes (Transact-sql)
 title: partition_schemes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,20 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.partition_schemes catalog view
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eeeed94af7f14d35807fbb81b93bea4e12593d5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2782bc554c50b5d4268593f42a3c09dfb8b63590
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397167"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550503"
 ---
 # <a name="syspartition_schemes-transact-sql"></a>partition_schemes (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  パーティション構成であるデータ領域ごとに1行のデータを格納します。**種類**= PS。  
+  パーティション構成であるデータ領域ごとに1行のデータを格納します。 **種類** = PS。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -2,20 +2,20 @@
 title: RHEL:Linux で SQL Server の可用性グループを構成する
 description: SQL Server 用の Red Hat Enterprise Linux (RHEL) の実行時、可用性グループを構成する方法について説明します。
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2eb6198e7d2b776a9c7fefd811f2883675adb83b
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896951"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784892"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 

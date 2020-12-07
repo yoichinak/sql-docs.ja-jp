@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT INDEX (Transact-SQL)
 title: DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - DROP FULLTEXT INDEX statement
 - dropping full-text indexes
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e421f99d3ba6542ed0cd30e4f821d5ac5a48f9f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7883bb6eab65b2877e08c9ad9c0e9c869d4988af
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483999"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131401"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86483999"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
@@ -57,7 +57,7 @@ DROP FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>例  
  次の例では、`JobCandidate` テーブルに存在するフルテキスト インデックスを削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DROP FULLTEXT INDEX ON HumanResources.JobCandidate;  

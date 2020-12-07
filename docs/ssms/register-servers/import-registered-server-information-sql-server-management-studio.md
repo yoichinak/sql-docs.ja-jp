@@ -1,4 +1,5 @@
 ---
+description: 登録済みサーバー情報のインポート (SQL Server Management Studio)
 title: 登録済みサーバーの情報のインポート
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 77ae5807a5a509ecfa83973fe07d34fed1f4dbd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011828"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037565"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
 
@@ -42,8 +43,8 @@ ms.locfileid: "86011828"
   
 3.  **[登録済みサーバーのインポート]** ダイアログ ボックスで、インポートする登録済みサーバーのファイルをクリックし、 **[OK]** をクリックします。  
   
-     **[インポート ファイル]**  
-     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン ( **[...]** ) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
+     **ファイルのインポート**  
+     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン (**[...]**) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
   
      **[インポート先のサーバー グループを選択]**  
      ファイル内の登録済みサーバーのエントリのインポート先のルート ノード、または特定のサーバー グループを選択します。 エクスポート ファイルには、すべての登録済みサーバー、特定のサーバー グループ内の登録済みサーバー、または単独の登録済みサーバーをインポートできます。 インポート機能は再帰的です。たとえば、サーバー グループ A にサーバー グループ B が含まれており、サーバー グループ B にサーバー グループ C および D が含まれている場合、サーバー グループ A をインポートすると、A、B、C、および D 内のすべてのエントリがエクスポートされます。  
@@ -55,8 +56,7 @@ ms.locfileid: "86011828"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するサーバー登録は、パスワードをユーザーごとに格納します。 ユーザーは、サーバー登録をインポートした後、それぞれのサーバーに初めて接続するときにパスワードを入力して、登録済みサーバーの一覧にパスワードを保存する必要があります。 Windows 認証を使用して登録されるサーバーの場合は、この操作は必要ありません。  
   
 ## <a name="see-also"></a>参照  
- [サーバーの登録の変更 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)   
- [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
-  
+ [サーバーの登録の変更 &#40;SQL Server Management Studio&#41;](./change-a-server-s-registration-sql-server-management-studio.md)   
+ [登録済みサーバー情報のエクスポート &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](./create-a-new-registered-server-sql-server-management-studio.md)  
   

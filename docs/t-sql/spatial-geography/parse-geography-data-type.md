@@ -1,4 +1,5 @@
 ---
+description: Parse (geography データ型)
 title: Parse (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f6e2dcc0cf6ade3cb8f4e9c82b81e650ca7622a2
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9ba373a279750e7399881edcc072dc3a086ec5e2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555847"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88360008"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

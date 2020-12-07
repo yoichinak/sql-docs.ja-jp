@@ -1,4 +1,5 @@
 ---
+description: SMALLDATETIMEFROMPARTS (Transact-SQL)
 title: SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,12 +19,12 @@ ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c666dea495f0ca6191457199fe210ab99e09815
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 26552c560277ae7eff9067ab3c33ec1d37a67e84
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379927"
 ---
 # <a name="smalldatetimefromparts-transact-sql"></a>SMALLDATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87396541"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )  
 ```  
   
@@ -66,7 +67,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
   
 ## <a name="examples"></a>例  
   
-```  
+```sql  
 SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result  
 ```  
   

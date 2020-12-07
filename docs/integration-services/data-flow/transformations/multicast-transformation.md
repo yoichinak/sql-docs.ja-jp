@@ -1,4 +1,5 @@
 ---
+description: マルチキャスト変換
 title: マルチキャスト変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c353401a2182461452e086da05d8f4e155a3ac2a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 92dd1a4351c9cfdc1bedb0958e370e382b08ecc0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92197072"
 ---
 # <a name="multicast-transformation"></a>マルチキャスト変換
 
@@ -41,7 +42,7 @@ ms.locfileid: "86919560"
 ## <a name="configuration-of-the-multicast-transformation"></a>マルチキャスト変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
+ プログラムによって設定できるプロパティの詳細については、「 [共通プロパティ](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
@@ -53,11 +54,10 @@ ms.locfileid: "86919560"
  **出力**  
  左側で出力を選択すると、右側の表にプロパティが表示されます。  
   
- **Properties**  
+ **プロパティ**  
  表示されている出力プロパティの **[名前]** および **[説明]** 以外はすべて読み取り専用です。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

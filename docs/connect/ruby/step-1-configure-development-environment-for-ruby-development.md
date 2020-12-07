@@ -1,6 +1,6 @@
 ---
 title: 手順 1:Ruby 用に開発環境を構成する
-description: Ruby 用に開発環境を構成する方法について説明します。
+description: このファースト ステップ ガイドの手順 1 では、Ruby と ODBC Driver for SQL Server を開発環境にインストールします。
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634591"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603363"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>手順 1:Ruby 開発用に開発環境を構成する
 SQL Server 用の Ruby ドライバーを使用してアプリケーションを開発するには、前提条件を使用して開発環境を構成する必要があります。    

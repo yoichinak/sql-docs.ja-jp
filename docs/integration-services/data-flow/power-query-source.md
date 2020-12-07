@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: fc7f3e5ef6561338f6177f1810f6af2b92c7064a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522904"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192687"
 ---
 # <a name="power-query-source-preview"></a>Power Query ソース (プレビュー)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87522904"
 この記事では、SQL Server Integration Services (SSIS) データ フロー内の Power Query ソースのプロパティを構成する方法について説明します。 Power Query は、Excel/Power BI Desktop を使用したさまざまなデータ ソースへの接続とデータの変換を可能にするテクノロジです。 詳細については、「[Power Query - 概要と学習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d)」の記事を参照してください。 Power Query によって生成されたスクリプトをコピーし、SSIS データ フローの Power Query ソースに貼り付けて構成することができます。
   
 > [!NOTE]
-> 現在のプレビュー リリースの場合、Power Query Source は SQL Server 2017/2019 と Azure Data Factory (ADF) の Azure-SSIS Integration Runtime (IR) でのみ使用できます。 SQL Server 2017/2019 用の最新 Power Query Source は[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードし、インストールできます。 Azure-SSIS IR 用の Power Query Source は既にプレインストールされています。 Azure-SSIS IR をプロビジョニングするには、[ADF での SSIS のプロビジョニング](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)に関する記事を参照してください。
+> 現在のプレビュー リリースの場合、Power Query Source は SQL Server 2017/2019 と Azure Data Factory (ADF) の Azure-SSIS Integration Runtime (IR) でのみ使用できます。 SQL Server 2017/2019 用の最新 Power Query Source は[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードし、インストールできます。 Azure-SSIS IR 用の Power Query Source は既にプレインストールされています。 Azure-SSIS IR をプロビジョニングするには、[ADF での SSIS のプロビジョニング](/azure/data-factory/tutorial-deploy-ssis-packages-azure)に関する記事を参照してください。
 
 ## <a name="configure-the-power-query-source"></a>Power Query ソースを構成する
 
@@ -70,7 +70,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ![PQ ソース接続マネージャー エディター (種類)](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-一部のソース (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) では、[Power Query の前提条件](/power-bi/desktop-data-source-prerequisites)に関する記事から取得できる ADO.NET ドライバーを追加でインストールする必要があります。 カスタム セットアップ インターフェイスを使用して Azure-SSIS IR にインストールできます。[Azure-SSIS IR のカスタマイズ](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事を参照してください。
+一部のソース (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) では、[Power Query の前提条件](/power-bi/desktop-data-source-prerequisites)に関する記事から取得できる ADO.NET ドライバーを追加でインストールする必要があります。 カスタム セットアップ インターフェイスを使用して Azure-SSIS IR にインストールできます。[Azure-SSIS IR のカスタマイズ](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)に関する記事を参照してください。
 
 **[データ ソース パス]** では、接続文字列を形成するデータ ソース固有のプロパティを認証情報なしで入力できます。 たとえば、**SQL** データ ソースのパスは、`<Server>;<Database>` 形式になります。 **[編集]** ボタンを選択して、パスを形成するデータ ソース固有のプロパティに値を割り当てることできます。
 
@@ -82,9 +82,9 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ### <a name="current-limitations"></a>現在の制限
 
--   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。**Azure-SSIS IR のカスタマイズ**に関する記事の [ORACLE STANDARD ODBC](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) の例を参照してください。
+-   **Oracle** データ ソースは現時点では Azure-SSIS IR で使用できません。Azure-SSIS IR に Oracle ADO.NET ドライバーをインストールできないためです。代わりに Oracle ODBC ドライバーをインストールし、当面は **ODBC** データ ソースを使用して Oracle に接続してください。**Azure-SSIS IR のカスタマイズ**に関する記事の [ORACLE STANDARD ODBC](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) の例を参照してください。
 
 -   **Web** データ ソースは、現時点ではカスタム セットアップのある Azure-SSIS IR 上では使用できないため、現在のところはカスタム設定のない Azure-SSIS IR 上で使用してください。
 
 ## <a name="next-steps"></a>次のステップ
-Azure-SSIS IR で、ADF パイプラインのファーストクラスのアクティビティとして SSIS パッケージを実行する方法を確認します。 [SSIS パッケージのアクティビティ ランタイムの実行](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)に関する記事を参照してください。
+Azure-SSIS IR で、ADF パイプラインのファーストクラスのアクティビティとして SSIS パッケージを実行する方法を確認します。 [SSIS パッケージのアクティビティ ランタイムの実行](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)に関する記事を参照してください。

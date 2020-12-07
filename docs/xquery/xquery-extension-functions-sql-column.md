@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775408"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038068"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 拡張関数 - sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   「 [Xml 内部のリレーショナルデータのバインド](../t-sql/xml/binding-relational-data-inside-xml-data.md)」で説明されているように、 [xml データ型のメソッド](../t-sql/xml/xml-data-type-methods.md)を使用して XQuery 内にリレーショナル値を公開する場合は、 **sql: column ()** 関数を使用できます。  
   
- たとえば、 [query () メソッド (xml データ型)](../t-sql/xml/query-method-xml-data-type.md)を使用して、 **xml 型の**変数または列に格納されている xml インスタンスに対してクエリを指定します。 場合によっては、クエリで XML 以外の別の列の値を使用して、リレーショナルデータと XML データを結合することが必要になることもあります。 これを行うには、 **sql: column ()** 関数を使用します。  
+ たとえば、 [query () メソッド (xml データ型)](../t-sql/xml/query-method-xml-data-type.md) を使用して、 **xml 型の** 変数または列に格納されている xml インスタンスに対してクエリを指定します。 場合によっては、クエリで XML 以外の別の列の値を使用して、リレーショナルデータと XML データを結合することが必要になることもあります。 これを行うには、 **sql: column ()** 関数を使用します。  
   
  SQL 値は、対応する XQuery 値にマップされ、型は、対応する SQL 型に相当する XQuery 基本データ型になります。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "85775408"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
- XQuery 内の**sql: column ()** 関数で指定された列への参照は、処理される行の列を参照することに注意してください。  
+## <a name="remarks"></a>解説  
+ XQuery 内の **sql: column ()** 関数で指定された列への参照は、処理される行の列を参照することに注意してください。  
   
  では [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、xml インスタンスを参照する**xml**ことができるのは、xml DML insert ステートメントのソース式のコンテキストだけです。それ以外の場合は **、XML**型または CLR ユーザー定義型の列を参照することはできません。  
   
@@ -106,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 次のクエリでは、製品固有の情報を含む XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 Xml は @x **xml**型の変数に割り当てられます。  
+ 次のクエリでは、製品固有の情報を含む XML を構築します。 この情報には、ある特定の製品モデル (ProductModelID=19) に属するすべての製品について、ProductID、ProductName、ProductPrice、および取得可能な場合は ProductModelName が含まれます。 Xml は @x **xml** 型の変数に割り当てられます。  
   
 ```sql
 declare @x xml  
@@ -130,12 +130,11 @@ And P.ProductModelID = 19
 select @x  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [XQuery 拡張関数の SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+## <a name="see-also"></a>参照  
+ [XQuery 拡張関数の SQL Server]()   
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XML データのインスタンスの作成](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml データ型メソッド](../t-sql/xml/xml-data-type-methods.md)   
  [XML データ変更言語 &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

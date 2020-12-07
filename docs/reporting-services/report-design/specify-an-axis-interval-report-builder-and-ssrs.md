@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b5b3ed27226eda1c2db837df0c16079aeef3262
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6b756d7db3a41787da2a9a1a30f1c82b9a72317c
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881155"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907180"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。
@@ -36,24 +36,24 @@ ms.locfileid: "84881155"
 
 この縦棒グラフでは、横軸のラベル間隔が自動に設定されています。
 
-![report-builder-column-chart-preview-x-axis-interval-auto](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
+![レポート ビルダーの縦棒グラフのプレビューのスクリーンショット。X 軸の間隔が [自動] に設定されています。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-auto.png)
   
 1.  カテゴリ軸を右クリックし、 **[横軸のプロパティ]** をクリックします。   
 
-    ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
+    ![レポート ビルダーの縦棒グラフのスクリーンショット。X 軸のラベルを設定する方法が示されています。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2**と入力します。 
+2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2** と入力します。 
 
-     ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
+     ![レポート ビルダーの縦棒グラフのスクリーンショット。X 軸の間隔を "1" に設定する方法が示されています。](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-    以上の操作で、縦棒グラフにすべての横軸のラベルが表示されました。
-
-    ![report-builder-column-chart-preview-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
-  
-    > [!NOTE]  
-    >  軸の間隔を設定すると、ラベルの自動調整機能は無効になります。 軸の間隔に値を指定すると、カテゴリ軸のカテゴリ数によって、予期しないラベル付け動作が発生する場合があります。  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]
+     
+     以上の操作で、縦棒グラフにすべての横軸のラベルが表示されました。
+     
+     ![レポート ビルダーの縦棒グラフのプレビューのスクリーンショット。X 軸のラベルが表示されています。](../../reporting-services/report-design/media/report-builder-column-chart-preview-x-axis-interval-one.png)
+     
+     > [!NOTE]  
+     >  軸の間隔を設定すると、ラベルの自動調整機能は無効になります。 軸の間隔に値を指定すると、カテゴリ軸のカテゴリ数によって、予期しないラベル付け動作が発生する場合があります。  
 
 ## <a name="change-the-label-interval-in-properties-pane"></a>プロパティ ペインでラベルの間隔を変更する
 
@@ -61,15 +61,15 @@ ms.locfileid: "84881155"
 
 1.  レベル デザイン ビューでグラフをクリックし、横軸ラベルを選択します。
 
-3. プロパティ ペインで、LabelInterval を **1**に設定します。
+3. プロパティ ペインで、LabelInterval を **1** に設定します。
 
-    ![report-builder-column-chart-set-label-interval](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![レポート ビルダーの縦棒グラフのスクリーンショット。ラベルの間隔を設定する方法が示されています。](../../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     グラフはデザイン ビューで同じに見えます。 
     
 5.  **[実行]** をクリックして、レポートをプレビューします。
 
-    ![report-builder-column-chart-label-interval-one-preview](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
+    ![レポート ビルダーの縦棒グラフのプレビューのスクリーンショット。ラベルの間隔が "1" と表示されています。](../../reporting-services/media/report-builder-column-chart-label-interval-one-preview.png)
     
     これでグラフにすべてのラベルが表示されました。
   
@@ -87,8 +87,7 @@ ms.locfileid: "84881155"
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](/previous-versions/sql/)   
  [対数スケールの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
  [セカンダリ軸へのデータのプロット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
-  
   

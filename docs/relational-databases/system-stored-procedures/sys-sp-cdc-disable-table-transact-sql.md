@@ -1,4 +1,5 @@
 ---
+description: sp_cdc_disable_table (Transact-sql)
 title: sp_cdc_disable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0819c156cdc3e836028915d89a8d9100eef17c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891162"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541161"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sp_cdc_disable_table (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,31 +47,31 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_schema = ] 'source\_schema'`ソーステーブルが含まれているスキーマの名前を指定します。 *source_schema*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @source_schema = ] 'source\_schema'` ソーステーブルが含まれているスキーマの名前を指定します。 *source_schema* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- *source_schema*は、現在のデータベースに存在している必要があります。  
+ *source_schema* は、現在のデータベースに存在している必要があります。  
   
-`[ @source_name = ] 'source\_name'`変更データキャプチャを無効にするソーステーブルの名前を指定します。 *source_name*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @source_name = ] 'source\_name'` 変更データキャプチャを無効にするソーステーブルの名前を指定します。 *source_name* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- *source_name*は、現在のデータベースに存在している必要があります。  
+ *source_name* は、現在のデータベースに存在している必要があります。  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`指定したソーステーブルに対して無効にするキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**であり、NULL にすることはできません。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 指定したソーステーブルに対して無効にするキャプチャインスタンスの名前を指定します。 *capture_instance* は **sysname** であり、NULL にすることはできません。  
   
- ' All ' を指定した場合、 *source_name*に対して定義されているすべてのキャプチャインスタンスは無効になります。  
+ ' All ' を指定した場合、 *source_name* に対して定義されているすべてのキャプチャインスタンスは無効になります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
 ## <a name="remarks"></a>解説  
- 指定したソーステーブルおよびキャプチャインスタンスに関連付けられている変更データキャプチャの変更テーブルとシステム関数を削除するには、sp_cdc_disable_table によって削除され**ます。** このメソッドは、指定されたキャプチャインスタンスに関連付けられているすべての行を変更データキャプチャのシステムテーブルから削除し、テーブルのエントリの**is_tracked_by_cdc**列を、[テーブルカタログビュー](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)を0に設定します。  
+ 指定したソーステーブルおよびキャプチャインスタンスに関連付けられている変更データキャプチャの変更テーブルとシステム関数を削除するには、sp_cdc_disable_table によって削除され**ます。** このメソッドは、指定されたキャプチャインスタンスに関連付けられているすべての行を変更データキャプチャのシステムテーブルから削除し、テーブルのエントリの **is_tracked_by_cdc** 列を、 [テーブルカタログビュー](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) を0に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、テーブルの変更データキャプチャを無効にし `HumanResources.Employee` ます。  
   
 ```  
@@ -82,7 +83,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

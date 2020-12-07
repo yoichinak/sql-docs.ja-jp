@@ -1,5 +1,6 @@
 ---
-title: updateCharacterStream (java.io.Reader, long) メソッド | Microsoft Docs
+description: updateCharacterStream (java.lang.String, java.io.Reader, long) メソッド
+title: updateCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df135975be0fb9da5092cf049f9a8612f97c07aa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3553de88b391799ff9d5bb348c705ec6426b877
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457994"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>updateCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

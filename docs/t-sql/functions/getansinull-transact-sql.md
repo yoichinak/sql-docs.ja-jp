@@ -1,4 +1,5 @@
 ---
+description: GETANSINULL (Transact-SQL)
 title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b464037ffb914b78dc95edbf33676820e849ca1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 31cf25c3800d4fe35e0ef914db85eb82f58fe85c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111522"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116716"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "87111522"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 GETANSINULL ( [ 'database' ] )  
 ```  
   
@@ -45,7 +45,7 @@ GETANSINULL ( [ 'database' ] )
 
 ## <a name="arguments"></a>引数
  '*database*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 \* データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 * データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -64,7 +64,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` データベースの NULL 値を許容するかどうかの既定の設定が返されます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT GETANSINULL('AdventureWorks2012')  

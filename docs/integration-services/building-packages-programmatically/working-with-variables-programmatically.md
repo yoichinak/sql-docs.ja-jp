@@ -1,4 +1,5 @@
 ---
+description: プログラムでの変数の使用
 title: プログラムでの変数の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922675"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91725173"
 ---
 # <a name="working-with-variables-programmatically"></a>プログラムでの変数の使用
 
@@ -40,17 +41,17 @@ ms.locfileid: "86922675"
   
 -   実行時に Transact-SQL ステートメントのパラメーター値を設定する。  
   
--   Foreach ループのフローを制御する。 詳細については、「[制御フローに列挙を追加する](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)」を参照してください。  
+-   Foreach ループのフローを制御する。 詳細については、「[制御フローに列挙を追加する](../control-flow/foreach-loop-container.md)」を参照してください。  
   
--   式で使用することにより、優先順位制約を制御する。 優先順位制約では、制約定義に変数を含めることができます。 詳細については、「 [優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
+-   式で使用することにより、優先順位制約を制御する。 優先順位制約では、制約定義に変数を含めることができます。 詳細については、「 [優先順位制約に式を追加する](../control-flow/precedence-constraints.md)」を参照してください。  
   
--   For ループ コンテナーの条件付きの繰り返しを制御する。 詳細については、「[制御フローに繰り返しを追加する](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)」を参照してください。  
+-   For ループ コンテナーの条件付きの繰り返しを制御する。 詳細については、「[制御フローに繰り返しを追加する](../control-flow/for-loop-container.md)」を参照してください。  
   
 -   変数値が含まれる式を構築する。  
   
--   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
+-   パッケージ、**Foreach ループ** コンテナー、**For ループ** コンテナー、**シーケンス** コンテナー、タスク ホスト、およびイベント ハンドラーなど、すべての種類のコンテナー用にカスタム変数を作成できます。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../integration-services-ssis-variables.md)」をご覧ください。  
   
-## <a name="scope"></a>スコープ  
+## <a name="scope"></a>Scope  
  各コンテナーには、独自の <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションが含まれています。 新しい変数が作成されると、その親コンテナーのスコープ内に格納されます。 パッケージ コンテナーは、コンテナー階層の最上層にあるため、パッケージ スコープを持つ変数はグローバル変数と同じように機能し、パッケージ内のすべてのコンテナーで使用できます。 また、子コンテナーは、<xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションを介して、親コンテナーの変数コレクションにアクセスできます。アクセスするには、コレクション内の変数名または変数のインデックスのどちらかを使用します。  
   
  変数は上から順にスコープされるため、パッケージ レベルで宣言された変数は、パッケージ内のすべてのコンテナーで使用できます。 したがって、コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションには、コンテナー独自の変数だけでなく、その親コンテナーに属するすべての変数が含まれます。  
@@ -230,10 +231,9 @@ End Module
  式は、[!INCLUDE[ssIS](../../includes/ssis-md.md)] 式の構文を使用する、有効な式である必要があります。 式の構文が提供する演算子や関数のほか、リテラルも変数式で使用できますが、他の変数または列を式で参照することはできません。 詳細については、「 [Integration Services (SSIS) 式](../../integration-services/expressions/integration-services-ssis-expressions.md)に評価されるまでそのワークフローを繰り返します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
- 構成ファイルにカスタム変数を含めると、実行時に変数を更新できます。 つまり、パッケージを実行すると、パッケージにあらかじめ含まれていた変数の値は、構成ファイルの新しい値で置き換えられます。 この置き換え方法を使用すると、異なる変数値が必要な複数のサーバーにパッケージを配置するときに便利です。 たとえば、変数を使用して、**Foreach ループ** コンテナーがそのワークフローを繰り返す回数を指定したり、エラーが発生したときにイベント ハンドラーが送信する電子メールの受信者を一覧表示したり、パッケージが失敗するまでのエラーの発生回数を変更できます。 これらの変数は、各環境の構成ファイルで動的に指定できます。 したがって、構成ファイルでは読み取り/書き込み用の変数のみを使用できます。 詳細については、「 [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)」を参照してください。  
+ 構成ファイルにカスタム変数を含めると、実行時に変数を更新できます。 つまり、パッケージを実行すると、パッケージにあらかじめ含まれていた変数の値は、構成ファイルの新しい値で置き換えられます。 この置き換え方法を使用すると、異なる変数値が必要な複数のサーバーにパッケージを配置するときに便利です。 たとえば、変数を使用して、**Foreach ループ** コンテナーがそのワークフローを繰り返す回数を指定したり、エラーが発生したときにイベント ハンドラーが送信する電子メールの受信者を一覧表示したり、パッケージが失敗するまでのエラーの発生回数を変更できます。 これらの変数は、各環境の構成ファイルで動的に指定できます。 したがって、構成ファイルでは読み取り/書き込み用の変数のみを使用できます。 詳細については、「 [パッケージ構成を作成する](../packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
- [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [パッケージで変数を使用する](../integration-services-ssis-variables.md)  
   

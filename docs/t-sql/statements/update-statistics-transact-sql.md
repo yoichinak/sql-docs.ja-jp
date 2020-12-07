@@ -1,4 +1,5 @@
 ---
+description: UPDATE STATISTICS (Transact-SQL)
 title: UPDATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - UPDATE STATISTICS statement
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aaa7f1a9c3be4eace2790433678e816c6cee9b1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3225978926ade62bd932e41f9d46d8a5bdd8720b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484473"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036875"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ UPDATE STATISTICS table_or_indexed_view_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
     [ ( { statistics_name | index_name } ) ]  
@@ -85,8 +86,10 @@ UPDATE STATISTICS [ schema_name . ] table_name
     ]  
 [;]  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
  *table_or_indexed_view_name*  
@@ -113,7 +116,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  ほとんどのワークロードでは、フル スキャンは必要なく、既定のサンプリングで十分です。  
 ただし、変化するデータ分布の影響を受ける特定のワークロードではサンプル サイズの増加が必要な場合があり、フル スキャンが必要な場合もあります。  
-詳しくは、[CSS SQL Escalation Services に関するブログ](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)をご覧ください。  
+詳しくは、[CSS SQL Escalation Services に関するブログ](/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed)をご覧ください。  
   
  RESAMPLE  
  最新のサンプル レートを使用して各統計を更新します。  
@@ -210,27 +213,27 @@ EXEC sp_updatestats;
 ### <a name="determining-the-last-statistics-update"></a>統計の最終更新日の特定  
  統計の最終更新日を調べるには、 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数を使用します。  
   
-### <a name="pdw--sql-data-warehouse"></a>PDW / SQL Data Warehouse  
- 次の構文は、PDW / SQL Data Warehouse ではサポートされていません  
+### <a name="pdw--azure-synapse-analytics"></a>PDW / Azure Synapse Analytics  
+ 以下の構文は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] / [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされていません  
   
-```syntaxsql
-update statistics t1 (a,b);   
+```sql
+UPDATE STATISTICS t1 (a,b);   
 ```  
   
 ```sql  
-update statistics t1 (a) with sample 10 rows;  
+UPDATE STATISTICS t1 (a) WITH SAMPLE 10 ROWS;  
 ```  
   
 ```sql  
-update statistics t1 (a) with NORECOMPUTE;  
+UPDATE STATISTICS t1 (a) WITH NORECOMPUTE;  
 ```  
   
 ```sql  
-update statistics t1 (a) with INCREMENTAL=ON;  
+UPDATE STATISTICS t1 (a) WITH INCREMENTAL = ON;  
 ```  
   
 ```sql  
-update statistics t1 (a) with stats_stream = 0x01;  
+UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -316,4 +319,4 @@ UPDATE STATISTICS Customer;
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)    
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: getDate (int, java.util.Calendar) メソッド (SQLServerResultSet)
 title: getDate (int, java.util.Calendar) メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8dd9e6920aadec8434bfe7629cad9e1c8a22215d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c16f30668b91f28907231bedb159615af9d51931
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436434"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate (int, java.util.Calendar) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

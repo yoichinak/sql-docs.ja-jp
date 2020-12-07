@@ -1,4 +1,5 @@
 ---
+description: sp_getapplock (Transact-SQL)
 title: sp_getapplock (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f60adc4bdd8e8d3cdfc7f44751854b97a2f7345
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752814"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535861"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,29 +48,29 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引数  
  [ @Resource =] '*resource_name*'  
- ロックリソースを識別する名前を指定する文字列です。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name*は**nvarchar (255)** で、既定値はありません。 リソース文字列が**nvarchar (255)** を超える場合、 **nvarchar (255)** に切り捨てられます。  
+ ロックリソースを識別する名前を指定する文字列です。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は内部的にハッシュされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーに格納できる値に変換されます。 *resource_name* は **nvarchar (255)** で、既定値はありません。 リソース文字列が **nvarchar (255)** を超える場合、 **nvarchar (255)** に切り捨てられます。  
   
- *resource_name*はバイナリ比較されます。したがって、現在のデータベースの照合順序の設定に関係なく、大文字と小文字が区別されます。  
+ *resource_name* はバイナリ比較されます。したがって、現在のデータベースの照合順序の設定に関係なく、大文字と小文字が区別されます。  
   
 > [!NOTE]  
 >  アプリケーション ロックが取得されると、プレーン テキストで抽出できるのは最初の 32 文字のみとなり、残りの部分はハッシュされます。  
   
  [ @LockMode =] '*lock_mode*'  
- 特定のリソースに対して取得されるロックモードを指定します。 *lock_mode*は**varchar (32)** で、既定値はありません。 値には、 **Shared**、 **Update**、 **intentshared**、 **intentshared**、または**exclusive**を指定できます。 詳細については、「[ロックモード](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)」を参照してください。
+ 特定のリソースに対して取得されるロックモードを指定します。 *lock_mode* は **varchar (32)** で、既定値はありません。 値には、 **Shared**、 **Update**、 **intentshared**、 **intentshared**、または **exclusive**を指定できます。 詳細については、「 [ロックモード](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)」を参照してください。
   
  [ @LockOwner =] '*lock_owner*'  
- ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner*は**varchar (32)** です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 *Lock_owner*値が**transaction**、既定で、または明示的に指定されている場合、sp_getapplock はトランザクション内から実行する必要があります。  
+ ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **varchar (32)** です。 この値は **Transaction** (既定値) または **Session** のいずれかです。 *Lock_owner*値が**transaction**、既定で、または明示的に指定されている場合、sp_getapplock はトランザクション内から実行する必要があります。  
   
  [ @LockTimeout =] '*値*'  
  ロックのタイムアウト値をミリ秒単位で指定します。 既定値は、@ によって返される値と同じ @LOCK_TIMEOUT です。 ロック要求がすぐに許可されない場合に、ロックを待機するのではなく-1 のリターンコードを返す必要があることを示すには、0を指定します。  
   
  [ @DbPrincipal =] '*database_principal*'  
- データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーションロールを設定します。 関数を正常に呼び出すには、関数の呼び出し元が*database_principal*、dbo、または db_owner 固定データベースロールのメンバーである必要があります。 既定値はパブリックです。  
+ データベース内のオブジェクトに対する権限を持つユーザー、ロール、またはアプリケーションロールを設定します。 関数を正常に呼び出すには、関数の呼び出し元が *database_principal*、dbo、または db_owner 固定データベースロールのメンバーである必要があります。 既定値はパブリックです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  \>= 0 (成功)、または < 0 (失敗)  
   
-|値|結果|  
+|[値]|結果|  
 |-----------|------------|  
 |0|ロックが同時に許可されました。|  
 |1|互換性のない他のロックが解放されるのを待機してから、ロックが許可されました。|  
@@ -78,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|ロック要求がデッドロックの対象になりました。|  
 |-999|パラメーターの検証またはその他の呼び出しエラーを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  リソースに配置されたロックは、現在のトランザクションまたは現在のセッションのいずれかに関連付けられます。 現在のトランザクションに関連付けられたロックは、トランザクションがコミットまたはロールバックされるときに解放されます。 セッションに関連付けられているロックは、セッションがログアウトされると解放されます。何らかの理由でサーバーがシャットダウンすると、すべてのロックが解放されます。  
   
  sp_getapplock によって作成されるロック リソースは、セッションの現在のデータベースで作成されます。 各ロックリソースは、の結合された値によって識別されます。  
@@ -139,7 +140,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のトランザクションに関連付けられている共有ロックを、`Form1` データベースのリソース `AdventureWorks2012` に設定します。  
   
 ```  
@@ -163,7 +164,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  

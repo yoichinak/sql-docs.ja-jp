@@ -1,4 +1,5 @@
 ---
+description: 更新クエリの作成 (Visual Database Tools)
 title: 更新クエリの作成
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 85dbdecd8b20ff27eb74c4078fca81dcbc39d53e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f750573b4afb02cd06f3ee1a8c17008639910608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462820"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>更新クエリの作成 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ WHERE (pub_id = '0766')
     > [!CAUTION]  
     > クエリおよびビュー デザイナーは、値の長さが更新する列の長さの範囲内であるかどうかをチェックできません。 指定した値が長すぎる場合、予告なしに切り捨てられることがあります。 たとえば、 `name` 列の長さが 20 文字である場合に 25 文字の更新値を指定すると、最後の 5 文字は切り捨てられることがあります。  
   
-5.  更新する行を定義するために、 **[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
+5.  更新する行を定義するために、**[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
     検索条件を指定しない場合は、指定されたテーブルのすべての行が更新されます。  
   

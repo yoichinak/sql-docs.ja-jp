@@ -1,4 +1,5 @@
 ---
+description: 管理データ ウェアハウスのストアド プロシージャ (Transact-SQL)
 title: 管理データウェアハウスのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,15 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1dc4579216af9f47d120f19662de2908cf7f40f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6b8d3b3e735345562cc0cde0e14b3105c8618e73
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394327"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550011"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理データ ウェアハウスのストアド プロシージャ (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

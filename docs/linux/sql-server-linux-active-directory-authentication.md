@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 003001752ee656483d7b4a1820f191aafc044f25
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896963"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115927"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用する
 
@@ -53,9 +53,9 @@ SQL Server Linux ホストを Active Directory ドメイン コントローラ�
 ## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザー (または MSA) を作成して SPN を設定する
 
 > [!NOTE]
-> 以下の手順では、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)を使います。 **Azure** を使用している場合は、先に進む前に **[作成する](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 必要があります。
+> 以下の手順では、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)を使います。 **Azure** を使用している場合は、先に進む前に **[作成する](/azure/virtual-machines/linux/portal-create-fqdn)** 必要があります。
 
-1. ドメイン コントローラーで [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell コマンドを実行して、有効期限がないパスワードを持つ新しい AD ユーザーを作成します。 次の例では `mssql` というアカウント名を使っていますが、任意のアカウント名にすることができます。 アカウントの新しいパスワードを入力するように求められます。
+1. ドメイン コントローラーで [New-ADUser](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617253(v=technet.10)) PowerShell コマンドを実行して、有効期限がないパスワードを持つ新しい AD ユーザーを作成します。 次の例では `mssql` というアカウント名を使っていますが、任意のアカウント名にすることができます。 アカウントの新しいパスワードを入力するように求められます。
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -69,8 +69,8 @@ SQL Server Linux ホストを Active Directory ドメイン コントローラ�
 2. **setspn.exe** ツールを使って、このアカウントの ServicePrincipalName (SPN) を設定します。 SPN は、次の例で指定したとおりに書式設定されている必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホスト コンピューターの完全修飾ドメイン名は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホスト上で `hostname --all-fqdns` を実行することによって確認できます。 別のポート番号を使うように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を構成している場合を除き、TCP ポートは 1433 にする必要があります。
 
    ```PowerShell
-   setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/<fully qualified domain name of host machine>:<tcp port> mssql
+   setspn -A MSSQLSvc/<netbios name of the host machine>:<tcp port> mssql
    ```
 
    > [!NOTE]
@@ -96,11 +96,11 @@ Linux で SQL Server の AD 認証を構成するには、AD アカウント (MS
    ```bash
    kinit user@CONTOSO.COM
    kvno user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
+   kvno MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > SPN がドメインに反映されるまでに数分かかる場合があります (特に、ドメインが大きい場合)。 `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` というエラーが発生する場合は、数分待ってからもう一度やり直してください。</br></br> 上記のコマンドは、サーバーが AD ドメインに参加している場合にのみ機能します。これについては前のセクションで説明しました。
+   > SPN がドメインに反映されるまでに数分かかる場合があります (特に、ドメインが大きい場合)。 `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/<fully qualified domain name of host machine>:<tcp port>@CONTOSO.COM` というエラーが発生する場合は、数分待ってからもう一度やり直してください。</br></br> 上記のコマンドは、サーバーが AD ドメインに参加している場合にのみ機能します。これについては前のセクションで説明しました。
 
 1. [**ktpass**](/windows-server/administration/windows-commands/ktpass) を使用し、各 SPN の keytab エントリを追加します。その際、Windows コンピューターのコマンド プロンプトで次のコマンドを使用します。
 

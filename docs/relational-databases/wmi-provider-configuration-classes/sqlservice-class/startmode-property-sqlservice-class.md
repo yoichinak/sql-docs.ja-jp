@@ -1,4 +1,5 @@
 ---
+description: StartMode プロパティ (SqlService クラス)
 title: StartMode プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f662597bf67837678690928810875f62e5d75e04
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888323"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542786"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -53,15 +54,15 @@ object.StartMode [= value]
  自動  
  値 = 2。 システムの起動時にサービス コントロール マネージャーによって自動的に開始されるサービスです。  
   
- 手動  
- 値 = 3。 プロセスが**Startservice**メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
+ マニュアル  
+ 値 = 3。 プロセスが **Startservice** メソッドを呼び出すときに、コンピューターマネージャーによって開始されるサービス。  
   
  無効  
  値 = 4。 サービスを開始できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

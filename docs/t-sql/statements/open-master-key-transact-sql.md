@@ -1,4 +1,5 @@
 ---
+description: OPEN MASTER KEY (Transact-SQL)
 title: OPEN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb4ebb2171035977ca746ecd175844fc2ba93739
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 299b7222db1ed5adcbf51f06aab18ce56e7531da
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485153"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067466"
 ---
 # <a name="open-master-key-transact-sql"></a>OPEN MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,18 +46,19 @@ ms.locfileid: "86485153"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'   
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
- '*password*'  
+ ' *password* '  
  データベース マスター キーを暗号化するときに使用するパスワードを指定します。  
   
-## <a name="remarks"></a>解説  
- データベース マスター キーがサービス マスター キーで暗号化された場合、データベース マスター キーは、暗号化解除または暗号化の必要が生じたときに、自動的に開かれます。 この場合、**OPEN MASTER KEY** ステートメントを使う必要はありません。  
+## <a name="remarks"></a>注釈  
+ データベース マスター キーがサービス マスター キーで暗号化された場合、データベース マスター キーは、暗号化解除または暗号化の必要が生じたときに、自動的に開かれます。 この場合、 **OPEN MASTER KEY** ステートメントを使う必要はありません。  
   
  データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
@@ -70,7 +72,7 @@ OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
 ## <a name="examples"></a>例  
  次の例では、パスワードにより暗号化された `AdventureWorks2012` データベースのデータベース マスター キーを開きます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO  
@@ -79,7 +81,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、パスワードで暗号化されているデータベース マスターを開きます。  
   
-```  
+```sql  
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO  
@@ -87,7 +89,7 @@ CLOSE MASTER KEY;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
  [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   

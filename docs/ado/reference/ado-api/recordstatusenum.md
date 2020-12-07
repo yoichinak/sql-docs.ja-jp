@@ -1,8 +1,9 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e4d2ad74187ef6be146be04f63e634bbdf3de9f5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756756"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989673"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-バッチ更新やその他の一括操作に関して、レコードの[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)を指定します。  
+バッチ更新やその他の一括操作に関して、レコードの [状態](./status-property-ado-recordset.md) を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|操作が取り消されたため、レコードが保存されなかったことを示します。|  
 |**adRecCantRelease**|0x400|既存のレコードがロックされていたため、新しいレコードが保存されなかったことを示します。|  
@@ -73,4 +74,4 @@ ms.locfileid: "82756756"
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>適用対象  
- [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status プロパティ (ADO Recordset)](./status-property-ado-recordset.md)

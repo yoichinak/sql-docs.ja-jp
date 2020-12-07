@@ -1,4 +1,5 @@
 ---
+description: sys. tables (Transact-sql)
 title: sys. tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -17,14 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13e37cd873b3158fcde41f0e3b5836a27d370f6e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d87bd3ec1361cbe3c038ff57bdde31c5593a4dbb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002700"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544013"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,11 +58,11 @@ ms.locfileid: "86002700"
 |temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
-|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
+|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
 |is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
-|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />容量 <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
+|history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />INFINITE <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフノードテーブルです。 <br /><br />0 = これはグラフノードテーブルではありません。 |  
 |is_edge|**bit**|**適用対象**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = これはグラフのエッジテーブルです。 <br /><br />0 = これは、グラフのエッジテーブルではありません。 |  
 
@@ -109,8 +111,8 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

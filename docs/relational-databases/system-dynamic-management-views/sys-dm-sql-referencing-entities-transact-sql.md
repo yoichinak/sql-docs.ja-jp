@@ -1,4 +1,5 @@
 ---
+description: dm_sql_referencing_entities (Transact-sql)
 title: dm_sql_referencing_entities (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,20 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 9855ef4c747c411476df5700f4a61f43f31de299
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943064"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550200"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>dm_sql_referencing_entities (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  別のユーザー定義エンティティを名前で参照する、現在のデータベース内のエンティティごとに1行のデータを返します。 2つのエンティティ間の依存関係は、*参照先*エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照*元エンティティ*と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) が指定されている場合、この関数は、定義内でその型を名前で参照する各ユーザー定義エンティティを返します。 関数は、指定されたエンティティを参照する可能性がある他のデータベース内のエンティティを返しません。 この関数は、サーバーレベルの DDL トリガーを参照元エンティティとして返すために、master データベースのコンテキストで実行する必要があります。  
+  別のユーザー定義エンティティを名前で参照する、現在のデータベース内のエンティティごとに1行のデータを返します。 2つのエンティティ間の依存関係は、 *参照先*エンティティと呼ばれる1つのエンティティが、別のエンティティの永続化された SQL 式 (参照 *元エンティティ*と呼ばれます) で名前によって表示される場合に作成されます。 たとえば、参照先エンティティとしてユーザー定義型 (UDT) が指定されている場合、この関数は、定義内でその型を名前で参照する各ユーザー定義エンティティを返します。 関数は、指定されたエンティティを参照する可能性がある他のデータベース内のエンティティを返しません。 この関数は、サーバーレベルの DDL トリガーを参照元エンティティとして返すために、master データベースのコンテキストで実行する必要があります。  
   
  この動的管理関数に参照先エンティティを指定すると、現在のデータベース内で、そのエンティティを参照する次の種類のエンティティをレポートできます。  
   
@@ -60,13 +61,13 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- `schema_name.referenced_entity_name`参照先エンティティの名前を指定します。  
+ `schema_name.referenced_entity_name` 参照先エンティティの名前を指定します。  
   
  `schema_name`参照先クラスが PARTITION_FUNCTION である場合を除き、 は必須です。  
   
  `schema_name.referenced_entity_name`**nvarchar (517)** です。  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`は、参照先エンティティのクラスです。 ステートメントごとに1つのクラスのみを指定できます。  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` は、参照先エンティティのクラスです。 ステートメントごとに1つのクラスのみを指定できます。  
   
  `<referenced_class>`**nvarchar**(60) です。  
   
@@ -94,20 +95,20 @@ sys.dm_sql_referencing_entities (
   
  指定された参照先エンティティが番号付きストアドプロシージャの場合、エラーを返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
   
 |エンティティの種類|参照元エンティティ|参照先エンティティ|  
 |-----------------|------------------------|-----------------------|  
-|テーブル|はい*|はい|  
-|表示|はい|[はい]|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|[はい]|  
-|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|○|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|[はい]|  
-|CLR ユーザー定義関数|いいえ|○|  
+|Table|はい*|はい|  
+|View|はい|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ**|はい|はい|  
+|CLR ストアド プロシージャ (CLR stored procedure)|いいえ|はい|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数|はい|はい|  
+|CLR ユーザー定義関数|いいえ|はい|  
 |CLR トリガー (DML および DDL)|いいえ|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガー|はい|いいえ|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]データベースレベルの DDL トリガー|はい|いいえ|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] データベースレベルの DDL トリガー|はい|いいえ|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー レベルの DDL トリガー|はい|いいえ|  
 |拡張ストアド プロシージャ|いいえ|はい|  
 |キュー|いいえ|はい|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |XML スキーマ コレクション|いいえ|はい|  
 |パーティション関数|いいえ|はい|  
   
- \*テーブルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算列、check 制約、または DEFAULT 制約の定義でモジュール、ユーザー定義型、または XML スキーマコレクションを参照している場合にのみ、参照元エンティティとして追跡されます。  
+ \* テーブルは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 計算列、check 制約、または DEFAULT 制約の定義でモジュール、ユーザー定義型、または XML スキーマコレクションを参照している場合にのみ、参照元エンティティとして追跡されます。  
   
  ** 1 より大きな整数値を持つ番号付きストアド プロシージャは、参照元エンティティとしても、参照先エンティティとしても追跡されません。  
   

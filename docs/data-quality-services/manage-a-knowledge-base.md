@@ -1,4 +1,5 @@
 ---
+description: ナレッジ ベースの管理
 title: ナレッジ ベースの管理
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462084"
 ---
 # <a name="manage-a-knowledge-base"></a>ナレッジ ベースの管理
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882746"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  ナレッジ ベースを開くには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールを所有している必要があります。  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>ナレッジベースの管理  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> ナレッジベースの管理  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882746"
   
         8.  **[作成日]**: 作成された日付  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>補足情報: ナレッジベースを管理した後  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> 補足情報: ナレッジベースを管理した後  
  ナレッジ ベースを管理した後の次の手順は、ナレッジ ベースに対して実行したアクションによって異なります。  
   
 -   ナレッジ ベースを開いた場合は、選択したアクティビティで続行します。  

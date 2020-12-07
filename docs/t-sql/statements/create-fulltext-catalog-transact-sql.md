@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT CATALOG (Transact-SQL)
 title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - CREATE FULLTEXT CATALOG statement
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d335faa965f3cd03cffcdece6f5e782ada8a59c5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf2427b873fdaea461681689057ff11c98fc20e7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392910"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124089"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,10 +79,10 @@ CREATE FULLTEXT CATALOG catalog_name
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。  
   
- ACCENT_SENSITIVITY = {ON|OFF}  
+ ACCENT_SENSITIVITY = {ON|OFF}   
  カタログのフルテキスト インデックス作成でアクセントを区別するかどうかを指定します。 このプロパティを変更すると、インデックスの再構築が必要になります。 既定では、データベースの照合順序の指定に従って、アクセントの区別が決定されます。 データベースの照合順序を表示するには、**sys.databases** カタログ ビューを使います。  
   
- フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、**catalog_name** に対して、FULLTEXTCATALOGPROPERTY 関数を *accentsensitivity* プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
+ フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
   
  AS DEFAULT  
  カタログが既定のカタログであることを指定します。 フルテキスト カタログを明示的に指定せずにフルテキスト インデックスを作成するときには、既定のカタログが使用されます。 既存のフルテキスト カタログが既に AS DEFAULT となっている場合、この新しいカタログを AS DEFAULT として設定すると、新しいカタログが既定のフルテキスト カタログになります。  
@@ -99,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* には、指定したフルテキスト カタログの TAKE OWNERSHIP 権限も与えられている必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -117,7 +118,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

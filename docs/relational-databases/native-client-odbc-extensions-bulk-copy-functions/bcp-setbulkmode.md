@@ -1,4 +1,5 @@
 ---
+description: bcp_setbulkmode
 title: bcp_setbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee05749a46103e268b0bdc1aaf9c89a729753171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 43302565cd49cc176b0ad3808398b28b86c57a39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494099"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +44,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *プロパティ*  
+ *property*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -60,10 +62,10 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  bcp_setbulkmode を使用すると、クエリまたはテーブルのいずれかから一括コピーできます。 Bcp_setbulkmode を使用してクエリステートメントを一括コピーする場合は、BCP_HINT で bcp_control を呼び出す前に、このステートメントを呼び出す必要があります。  
   
- bcp_setbulkmode は[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
+ bcp_setbulkmode は [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) と [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
@@ -71,8 +73,8 @@ RETCODE bcp_setbulkmode (
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP.EXE の-c オプションに対応し、 **Sqlcharacter**に設定された**BCP_FMT_TYPE**プロパティで bcp_setcolfmt します。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP.EXE の-w オプションと、 **Sqlnchar**に設定された**BCP_FMT_TYPE**プロパティの bcp_setcolfmt に対応します。|  
-|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> 列の型が文字列の場合 (既定値は文字列でない場合は既定)、BCP.EXE および**BCP_FMT_TYPE** bcp_setcolfmt の-N オプションは**sqlnchar**に設定されます。|  
-|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと、既定値に設定された**BCP_FMT_TYPE**プロパティの bcp_setcolfmt に対応します。|  
+|BCP_OUT_NATIVE_TEXT_MODE|文字型以外にネイティブ型を指定し、文字型に Unicode を指定します。<br /><br /> 列の型が文字列の場合 (既定値は文字列でない場合は既定)、BCP.EXE および **BCP_FMT_TYPE** bcp_setcolfmt の-N オプションは **sqlnchar** に設定されます。|  
+|BCP_OUT_NATIVE_MODE|ネイティブ データベース型を指定します。<br /><br /> BCP.EXE の-n オプションと、既定値に設定された **BCP_FMT_TYPE** プロパティの bcp_setcolfmt に対応します。|  
   
  Bcp_setcolfmt、bcp_control、および bcp_readfmt を含む関数呼び出しのシーケンスと共に bcp_setbulkmode を使用しないでください。 たとえば、bcp_control (BCPTEXTFILE) および bcp_setbulkmode を呼び出すことはできません。  
   

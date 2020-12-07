@@ -7,17 +7,16 @@ ms.date: 01/21/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 67d5a323cfdbdb7eb765430ba264ff0bde2074f5
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723983"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870480"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Python ツールを使用して SQL Server 上にパッケージをインストールする
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 この記事では、標準の Python ツールを使用して、新しい Python パッケージを SQL Server Machine Learning Services のインスタンスにインストールする方法について説明します。 一般に、新しいパッケージをインストールするプロセスは、標準の Python 環境のプロセスと似ています。 ただし、サーバーからインターネットに接続できない場合は、いくつかの追加の手順が必要です。
 
@@ -52,7 +51,7 @@ ms.locfileid: "85723983"
 
 スクリプトで使用できる新しい Python パッケージを SQL Server にインストールするには、Machine Learning Services のインスタンスにパッケージをインストールします。 Machine Learning Services のインスタンスが複数ある場合は、各インスタンスにパッケージを追加する必要があります。
 
-次の例でインストールされるパッケージは [CNTK](https://docs.microsoft.com/cognitive-toolkit/) です。これは、さまざまな種類のニューラル ネットワークのカスタマイズ、トレーニング、および共有をサポートする Microsoft のディープ ラーニング用フレームワークです。
+次の例でインストールされるパッケージは [CNTK](/cognitive-toolkit/) です。これは、さまざまな種類のニューラル ネットワークのカスタマイズ、トレーニング、および共有をサポートする Microsoft のディープ ラーニング用フレームワークです。
 
 ### <a name="for-offline-install-download-the-python-package"></a>オフライン インストールの場合は、Python パッケージをダウンロードします
 
@@ -63,7 +62,7 @@ ms.locfileid: "85723983"
 > [!IMPORTANT]
 > 必ず Windows バージョンのパッケージを入手します。 ファイルの末尾が .gz の場合は、正しいバージョンではない可能性があります。
 
-複数のプラットフォーム用の CNTK フレームワークと複数のバージョンの Python のダウンロードの詳細については、「[マシン上で CNTK をセットアップする](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)」を参照してください。
+複数のプラットフォーム用の CNTK フレームワークと複数のバージョンの Python のダウンロードの詳細については、「[マシン上で CNTK をセットアップする](/cognitive-toolkit/Setup-CNTK-on-your-machine)」を参照してください。
 
 ### <a name="locate-the-python-library"></a>Python ライブラリを見つける
 
@@ -123,5 +122,5 @@ import cntk
 ## <a name="see-also"></a>参照
 
 + [Python パッケージ情報の取得](python-package-information.md)
-+ [SQL Server Machine Learning Services 用の Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
++ [SQL Server Machine Learning Services 用の Python のチュートリアル](../tutorials/python-tutorials.md)
 + [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)。

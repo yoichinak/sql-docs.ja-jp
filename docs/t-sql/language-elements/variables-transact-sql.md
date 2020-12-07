@@ -1,4 +1,5 @@
 ---
+description: 変数 (Transact-SQL)
 title: 変数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -13,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000724"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92196150"
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,10 +31,9 @@ Transact-SQL ローカル変数は、特定の型の単一データ値を保持�
 * ストアド プロシージャのリターン コードや関数の戻り値によって返されるデータ値を保存する場合。
 
 > [!NOTE]
-> 一部の Transact-SQL システム関数の名前には、2 つの "*アット*" マーク (\@\@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、\@\@ 関数がグローバル変数と呼ばれていましたが、これらは変数ではなく、変数とは違った動作をします。 \@\@ 関数はシステム関数であり、構文の用法は関数の規則に従います。
-
-> [!NOTE]
-> 変数はビューで使用できません。
+> - 一部の Transact-SQL システム関数の名前には、2 つの "*アット*" マーク (\@\@) で始まるものがあります。 初期のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、\@\@ 関数がグローバル変数と呼ばれていましたが、\@\@ 関数は変数ではなく、変数とは違った動作をします。 \@\@ 関数はシステム関数であり、構文の用法は関数の規則に従います。
+> - ビューで変数を使用することはできません。
+> - 変数への変更は、トランザクションのロールバックの影響を受けません。
 
 次のスクリプトは小さなテスト テーブルを作成し、そのテーブルに 26 行を設定する例です。 このスクリプトでは変数を使用して次の 3 つのことを行います。 
 
@@ -43,12 +43,12 @@ Transact-SQL ローカル変数は、特定の型の単一データ値を保持�
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ DECLARE ステートメントでは、次の手順で Transact-SQL 変数が初�
 
 たとえば、次の **DECLARE** ステートメントでは、int データ型の **\@mycounter** という名前のローカル変数が作成されます。  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次の **DECLARE** ステートメントでは、 **\@LastName**、 **\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
+たとえば、次の **DECLARE** ステートメントでは、**\@LastName**、**\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 変数のスコープは、その変数を参照できる Transact-SQL ステートメントの範囲になります。 変数のスコープは、その変数が宣言された時点で始まり、変数が宣言されたバッチやストアド プロシージャが終了した時点で終了します。 たとえば、次のスクリプトでは変数が宣言されたバッチと変数を参照するバッチが異なるため、構文エラーが発生します。  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 変数にはローカル スコープがあり、その変数が定義されたバッチまたはプロシージャ内でのみ参照されます。 次の例では、sp_executesql の実行のために作成された入れ子になったスコープでは、より上位のスコープで宣言された変数にはアクセスできないので、エラーが返されます。  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ SET ステートメントを使用して変数に値を代入するには、変�
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ GO
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ SELECT ステートメントが複数の行を返すときに、変数がスカ�
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

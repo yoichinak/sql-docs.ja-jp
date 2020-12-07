@@ -1,4 +1,5 @@
 ---
+description: セマンティック検索による類似および関連したドキュメントの取得
 title: セマンティック検索による類似および関連したドキュメントの取得
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 42dc892fcf33a052105ccbfaeea6fbaf09a41895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b0df002c1d170061d6db8b6ee1ba53611e869603
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498598"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>セマンティック検索による類似および関連したドキュメントの取得
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85730181"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> 例: 他のドキュメントとの類似性が高い上位のドキュメントを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *\@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  
@@ -60,7 +61,7 @@ GO
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="example-find-the-top-key-phrases-that-are-similar-between-documents"></a><a name="HowToSimilarPhrases"></a> 例: ドキュメント間で類似性が高い上位のキー フレーズを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブル内の指定された候補間で最も類似スコアが高い 5 つのキー フレーズを取得します。  
   
 ```sql  

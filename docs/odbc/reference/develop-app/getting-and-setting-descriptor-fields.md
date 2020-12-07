@@ -1,4 +1,5 @@
 ---
+description: 記述子フィールドの取得と設定
 title: 記述子フィールドの取得と設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 783dc26316032dd8441b72fea04d2c03596e791e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d0baff0ccf3cbd5c498fca72510fa6904c8b5f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476674"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>記述子フィールドの取得と設定
 ここでは、記述子フィールドの値を取得または設定するためにアプリケーションで使用できるメソッドについて説明します。  

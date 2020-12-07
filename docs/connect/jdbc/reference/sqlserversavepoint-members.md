@@ -1,4 +1,5 @@
 ---
+description: SQLServerSavepoint のメンバー
 title: SQLServerSavepoint のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462614"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927029"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|渡された接続と名前に基づいて、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927029"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|セーブポイント ラベルの名前を取得します。|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|セーブポイントの ID を取得します。|  

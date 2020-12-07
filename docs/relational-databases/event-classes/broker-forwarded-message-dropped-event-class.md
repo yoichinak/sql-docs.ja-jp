@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped イベント クラス
 title: Broker:Forwarded Message Dropped イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409868"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped イベント クラス
 
@@ -27,7 +28,7 @@ ms.locfileid: "85715410"
   
 ## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BigintData1|**bigint**|メッセージのシーケンス番号。|52|いいえ|  
@@ -43,7 +44,7 @@ ms.locfileid: "85715410"
 |HostName|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IndexID|**int**|転送されるメッセージに残っているホップの数。|24|いいえ|  
 |IntegerData|**int**|転送されるメッセージのフラグメント番号。|25|いいえ|  
-|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |ObjectId|**int**|転送されるメッセージの有効期限の値。|22|いいえ|  
@@ -63,7 +64,7 @@ ms.locfileid: "85715410"
   
  このイベントの TextData 列に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がメッセージを削除した理由の説明が格納されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -1,8 +1,9 @@
 ---
+description: Name プロパティ (ADOX)
 title: Name プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: dd3a9fd328ce332c409d613ad468b96f0b94d31e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942724"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983913"
 ---
 # <a name="name-property-adox"></a>Name プロパティ (ADOX)
 オブジェクトの名前を示します。  
@@ -54,37 +55,37 @@ ms.locfileid: "86942724"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  **文字列**値を設定または返します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  名前はコレクション内で一意である必要はありません。  
   
- **Name**プロパティは、[列](../../../ado/reference/adox-api/column-object-adox.md)、[グループ](../../../ado/reference/adox-api/group-object-adox.md)、[キー](../../../ado/reference/adox-api/key-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、および[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトに対して読み取り/書き込みが可能です。 **Name**プロパティは、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)、[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)、および[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトでは読み取り専用です。  
+ **Name**プロパティは、[列](./column-object-adox.md)、[グループ](./group-object-adox.md)、[キー](./key-object-adox.md)、[インデックス](./index-object-adox.md)、[テーブル](./table-object-adox.md)、および[ユーザー](./user-object-adox.md)オブジェクトに対して読み取り/書き込みが可能です。 **Name**プロパティは、[カタログ](./catalog-object-adox.md)、[プロシージャ](./procedure-object-adox.md)、および[ビュー](./view-object-adox.md)オブジェクトでは読み取り専用です。  
   
- 読み取り/書き込みオブジェクト (**列**、**グループ**、**キー**、**インデックス**、**テーブル**、**ユーザー**オブジェクト) の場合、既定値は空の文字列 ("") になります。  
+ 読み取り/書き込みオブジェクト (**列**、 **グループ**、 **キー**、 **インデックス**、 **テーブル** 、 **ユーザー** オブジェクト) の場合、既定値は空の文字列 ("") になります。  
   
 > [!NOTE]
->  キーの場合、このプロパティは既にコレクションに追加されている**キー**オブジェクトに対して読み取り専用になります。 テーブルの場合、このプロパティは、既にコレクションに追加されている**テーブル**オブジェクトに対しては読み取り専用です。  
+>  キーの場合、このプロパティは既にコレクションに追加されている **キー** オブジェクトに対して読み取り専用になります。 テーブルの場合、このプロパティは、既にコレクションに追加されている **テーブル** オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
 
 :::row:::
     :::column:::
-        [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
-        [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
-        [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+        [Column オブジェクト (ADOX)](./column-object-adox.md)  
+        [Group オブジェクト (ADOX)](./group-object-adox.md)  
+        [Index オブジェクト (ADOX)](./index-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
-        [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
-        [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Key オブジェクト (ADOX)](./key-object-adox.md)  
+        [Procedure オブジェクト (ADOX)](./procedure-object-adox.md)  
+        [Property オブジェクト (ADO)](../ado-api/property-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
-        [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
-        [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [Table オブジェクト (ADOX)](./table-object-adox.md)  
+        [User オブジェクト (ADOX)](./user-object-adox.md)  
+        [View オブジェクト (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Columns および Tables Append メソッド、Name プロパティの例 (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog プロパティの例 (VB)](./parentcatalog-property-example-vb.md)

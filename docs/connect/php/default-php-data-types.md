@@ -1,7 +1,8 @@
 ---
-title: 既定の PHP のデータ型 | Microsoft Docs
+title: 既定の PHP データ型
+description: このトピックでは、Microsoft SQLSRV Driver for PHP for SQL Server の使用時の既定の全 PHP データ型とそれに対応する SQL Server データ型をリストアップします
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928026"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680793"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
   
 このトピックでは、SQLSRV ドライバーを使用するときの既定のデータ型について説明します。  
   
-次の表では、SQL Server のデータ型 (サーバーから取得されるデータ型)、PHP の既定のデータ型 (データが変換されるデータ型)、およびストリームと文字列の既定のエンコードを示します。 サーバーからデータを取得するときにデータ型を指定する方法の詳細については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+次の表では、SQL Server のデータ型 (サーバーから取得されるデータ型)、PHP の既定のデータ型 (データが変換されるデータ型)、およびストリームと文字列の既定のエンコードを示します。 サーバーからデータを取得するときにデータ型を指定する方法の詳細については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
-|SQL Server の型|PHP の既定の型|既定のエンコード|  
+|SQL Server 型|PHP の既定の型|既定のエンコード|  
 |-------------------|--------------------|--------------------|  
 |bigint|String|8 ビット文字<sup>1</sup>|  
 |binary|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
@@ -43,8 +44,8 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |datetimeoffset<sup>4</sup>|Datetime|適用なし|  
 |decimal|String|8 ビット文字<sup>1</sup>|  
 |float|Float|8 ビット文字<sup>1</sup>|  
-|geography|Stream|バイナリ<sup>3</sup>|  
-|geometry|Stream|バイナリ<sup>3</sup>|  
+|geography|STREAM|バイナリ<sup>3</sup>|  
+|geometry|STREAM|バイナリ<sup>3</sup>|  
 |image<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |INT|Integer|8 ビット文字<sup>1</sup>|  
 |money|String|8 ビット文字<sup>1</sup>|  
@@ -77,7 +78,7 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
   
 3.  データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。  
 
-4.  日付と時刻の型は、文字列として取得できます。 詳細については、「[SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」をご覧ください。  
+4.  日付と時刻の型は、文字列として取得できます。 詳細については、「 [方法: SQLSRV ドライバーを利用し、日付/時刻型を取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)」を参照してください。  
 
 5.  これは、varbinary(max) 型にマップされる従来の型です。
 
@@ -98,12 +99,12 @@ SQL Server 2008 の新しいデータ型で、列の外部に存在するもの 
 |機能|PHP のサポート|  
 |-----------|---------------|  
 |テーブル値パラメーター|いいえ|  
-|スパース列|部分的|  
+|スパース列|Partial|  
 |Null ビット圧縮|はい|  
 |大きな CLR ユーザー定義型 (UDT)|はい|  
 |サービス プリンシパル名|いいえ|  
 |MERGE|はい|  
-|FILESTREAM|部分的|  
+|FILESTREAM|Partial|  
   
 部分的な型のサポートとは、その列の型をプログラムでクエリできないことを意味します。  
   

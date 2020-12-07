@@ -1,4 +1,5 @@
 ---
+description: TopSum (DMX)
 title: TopSum (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970239"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726082"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,11 +34,11 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>戻り値の型  
  \<table expression>  
   
-## <a name="remarks"></a>注釈  
- **TopSum**関数は、各行の引数の評価値に基づいて、順位の降順で最上位行を返し \<rank expression> ます。これは、値の合計が、引数で指定された指定された合計値以上であることを \<rank expression> 示し \<sum> ます。 **TopSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>解説  
+ **TopSum**関数は、各行の引数の評価値に基づいて、順位の降順で最上位行を返し \<rank expression> ます。これは、値の合計が、引数で指定された指定された合計値以上であることを \<rank expression> 示し \<sum> ます。 **TopSum** は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
- 次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -50,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -86,7 +87,7 @@ NATURAL PREDICTION JOIN
   
  **TopSum**関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションを使用して、列 $SUPPORT、$PROBABILTY、および $ADJUSTED 確率を返します。 この例では、$PROBABILITY を使用して、少なくとも50% の確率に合計する行を返します。  
   
- 3番目の引数、 **TopSum**関数は、ターゲットの合計を double として指定します。 合計で50% の確率の上位製品の行を取得するには、「.5」と入力します。  
+ 3番目の引数、 **TopSum** 関数は、ターゲットの合計を double として指定します。 合計で50% の確率の上位製品の行を取得するには、「.5」と入力します。  
   
  結果の例:  
   
@@ -96,11 +97,10 @@ NATURAL PREDICTION JOIN
 |Water Bottle|2866|0.19...|0.17...|  
 |Patch kit|2113|0.14...|0.13...|  
   
- **メモ**この例は、 **TopSum**の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
+ **メモ** この例は、 **TopSum**の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
   
 ## <a name="see-also"></a>参照  
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
- [DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)  
-  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;TopPercent ](../dmx/toppercent-dmx.md)  
   

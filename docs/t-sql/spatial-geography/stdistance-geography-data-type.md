@@ -1,4 +1,5 @@
 ---
+description: STDistance (geography データ型)
 title: STDistance (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a20279a70d2e68e1cb4b34eb36ffe7de633518a4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555157"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416998"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86555157"
   
  CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  この結果は、空間データの [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) によって定義された測定単位で表されます。
 **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に *null* を返します。  
   

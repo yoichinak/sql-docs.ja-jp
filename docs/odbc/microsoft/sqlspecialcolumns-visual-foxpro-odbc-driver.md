@@ -1,4 +1,5 @@
 ---
+description: SQLSpecialColumns (Visual FoxPro ODBC ドライバー)
 title: Sql特殊列 (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96b439674c8bda3494b4cefd0c1118602b537cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e83568c8370b56decb7c3f7c90cda443b88a72a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421606"
 ---
 # <a name="sqlspecialcolumns-visual-foxpro-odbc-driver"></a>SQLSpecialColumns (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -29,6 +30,6 @@ ms.locfileid: "81299382"
   
  テーブル内の行を一意に識別する最適な列のセットを取得します。  
   
- Visual FoxPro ODBC ドライバーは、FoxPro テーブルの主キーを構成する列を返します。 (「 [Sqlprimarykeys](../../odbc/microsoft/sqlprimarykeys-visual-foxpro-odbc-driver.md)」を参照してください)。*Fcoltype*を SQL_ROWVER に設定して呼び出された場合、列は返されません。 **Sql特殊列**は、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)であるデータソースに対してのみ機能します。  
+ Visual FoxPro ODBC ドライバーは、FoxPro テーブルの主キーを構成する列を返します。 (「 [Sqlprimarykeys](../../odbc/microsoft/sqlprimarykeys-visual-foxpro-odbc-driver.md)」を参照してください)。 *Fcoltype* を SQL_ROWVER に設定して呼び出された場合、列は返されません。 **Sql特殊列** は、 [データベース](../../odbc/microsoft/visual-foxpro-terminology.md)であるデータソースに対してのみ機能します。  
   
  詳細については、 *ODBC プログラマーリファレンス*の「 [sqlの列](../../odbc/reference/syntax/sqlspecialcolumns-function.md)」を参照してください。

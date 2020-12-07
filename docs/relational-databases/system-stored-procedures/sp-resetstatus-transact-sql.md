@@ -1,4 +1,5 @@
 ---
+description: sp_resetstatus (Transact-SQL)
 title: sp_resetstatus (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_resetstatus
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 34808ef5647512e7e17d5c9a04dc99ea89cd5637
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f76738491704d04b033126f88750670eec230a38
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899264"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541551"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85899264"
   問題のあるデータベースの状態をリセットします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER database](../../t-sql/statements/alter-database-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [ALTER database](../../t-sql/statements/alter-database-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +44,7 @@ sp_resetstatus [ @dbname = ] 'database'
   
 ## <a name="arguments"></a>引数  
  [ @dbname =] '*データベース*'  
- リセットするデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。  
+ リセットするデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -63,8 +64,8 @@ sp_resetstatus [ @dbname = ] 'database'
 EXEC sp_resetstatus 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

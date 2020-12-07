@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_job (Transact-sql)
 title: sp_add_maintenance_plan_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474632"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,27 +45,27 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_id = ] 'plan_id'`メンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**で、有効な id である必要があります。  
+`[ @plan_id = ] 'plan_id'` メンテナンスプランの ID を指定します。 *plan_id* は **uniqueidentifier**で、有効な id である必要があります。  
   
-`[ @job_id = ] 'job_id'`メンテナンスプランに関連付けられるジョブの ID を指定します。 *job_id*は**uniqueidentifier**で、有効な id である必要があります。 ジョブまたはジョブを作成するには**sp_add_job**を実行するか、SQL Server Management Studio を使用します。  
+`[ @job_id = ] 'job_id'` メンテナンスプランに関連付けられるジョブの ID を指定します。 *job_id* は **uniqueidentifier**で、有効な id である必要があります。 ジョブまたはジョブを作成するには **sp_add_job**を実行するか、SQL Server Management Studio を使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_add_maintenance_plan_job**は、 **msdb**データベースから実行する必要があります。  
+ **sp_add_maintenance_plan_job** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_maintenance_plan_job**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、 **sp_add_maintenance_plan_job**を使用して作成されたメンテナンスプランにジョブ "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" を追加します。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

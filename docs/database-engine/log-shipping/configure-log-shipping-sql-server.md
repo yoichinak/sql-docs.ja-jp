@@ -11,14 +11,14 @@ helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 711f16dc52a25f03fabcd59dd63e13e5d075ba05
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696265"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125716"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "85696265"
   
 17. **[復元]** タブの **[バックアップ復元時のデータベース状態]** で、 **[復旧モードなし]** または **[スタンバイ モード]** を選択します。  
     > [!IMPORTANT]  
-    > **スタンバイ モード**は、プライマリ サーバーとセカンダリ サーバーのバージョンが同じである場合にのみ使用できるオプションです。 セカンダリ サーバーのメジャー バージョンがプライマリ サーバーよりも新しい場合は、 **[復旧モードなし]** しか選択できません
+    > **スタンバイ モード** は、プライマリ サーバーとセカンダリ サーバーのバージョンが同じである場合にのみ使用できるオプションです。 セカンダリ サーバーのメジャー バージョンがプライマリ サーバーよりも新しい場合は、 **[復旧モードなし]** しか選択できません
   
 18. **[スタンバイ モード]** を選択する場合は、復元操作の進行中にセカンダリ データベースからユーザーを切断するかどうかを選択します。  
   

@@ -1,4 +1,5 @@
 ---
+description: getTypeInfo メソッド (SQLServerDatabaseMetaData)
 title: getTypeInfo メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67978517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434014"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  getTypeInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|種類|説明|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|データ型の名前です。|  
 |DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|データ型の作成パラメーターの記述です。|  
 |NULLABLE|**short**|列に null 値を含めることができるかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|データ型の大文字と小文字を区別するかどうかを示します。 大文字と小文字を区別する場合は "**true**"、区別しない場合は "**false**" です。|  
-|SEARCHABLE|**short**|列を SQL の WHERE 句で使用できるかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|検索可能|**short**|列を SQL の WHERE 句で使用できるかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|データ型の符号を示します。 符号なしの場合は "**true**"、符号ありの場合は "**false**" です。|  
 |FIXED_PREC_SCALE|**boolean**|データ型に money 値を指定できるかどうかを示します。 money 型の場合は "**true**"、それ以外の場合は "**false**" です。|  
 |AUTO_INCREMENT|**boolean**|データ型を自動インクリメントできるかどうかを示します。 自動インクリメントできる場合は "**true**"、それ以外の場合は "**false**" です。|  

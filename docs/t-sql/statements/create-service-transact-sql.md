@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVICE (Transact-SQL)
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf0a57dd61d3679f5d1d2888299b3759c1feca54
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484553"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131264"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,12 +53,12 @@ CREATE SERVICE service_name
  作成するサービスの名前を指定します。 新しいサービスは現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *service_name* は、有効な **sysname** でなければなりません。  
   
 > [!NOTE]  
-> *service_name* にキーワード ANY を使用するサービスは作成しないでください。 `ANY` でサービス名に `CREATE BROKER PRIORITY` を指定した場合、優先度はすべてのサービスに適用されます。 これは、名前が ANY であるサービスに限定されません。  
+> *service_name* にキーワード ANY を使用するサービスは作成しないでください。 `CREATE BROKER PRIORITY` でサービス名に `ANY` を指定した場合、優先度はすべてのサービスに適用されます。 これは、名前が ANY であるサービスに限定されません。  
   
  AUTHORIZATION *owner_name*  
  サービスの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  サービス用のメッセージを受信するキューを指定します。 キューはサービスと同じデータベース内に存在する必要があります。 *schema_name* を指定しない場合は、ステートメントを実行するユーザーに既定のスキーマが使用されます。  
   
  *contract_name*  
@@ -83,7 +84,7 @@ CREATE SERVICE service_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-service-with-one-contract"></a>A. 1 つのコントラクトでサービスを作成する  
- 次の例では、`//Adventure-Works.com/Expenses` スキーマの `ExpenseQueue` キューにサービス `dbo` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従う必要があります。  
+ 次の例では、`dbo` スキーマの `ExpenseQueue` キューにサービス `//Adventure-Works.com/Expenses` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従う必要があります。  
   
 ```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  

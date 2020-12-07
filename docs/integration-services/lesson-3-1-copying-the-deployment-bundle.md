@@ -1,4 +1,5 @@
 ---
+description: レッスン 3-1 - 配置バンドルのコピー
 title: '手順 1: 配置バンドルのコピー | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eac15d46e1530d0a742a3161e0622233c05ac3da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8f3f026833037c66581ffa95e2e1a736b07091c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918154"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88390318"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>レッスン 3-1 - 配置バンドルのコピー
 
@@ -32,12 +33,12 @@ ms.locfileid: "86918154"
   
     既定の場所を使用した場合、配置バンドルは Deployment Tutorial フォルダーの Bin\Deployment フォルダーにあります。  
   
-2.  Deployment フォルダーを右クリックし、 **[コピー]** をクリックします。  
+2.  Deployment フォルダーを右クリックし、[ **コピー**] をクリックします。  
   
-3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、 **[貼り付け]** をクリックします。  
+3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、**[貼り付け]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 2: パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+[手順 2:パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
   
   

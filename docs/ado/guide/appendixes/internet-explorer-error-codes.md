@@ -1,8 +1,9 @@
 ---
+description: リモートデータサービスの Internet Explorer のエラーコード
 title: Internet Explorer のエラーコード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b50d56cca411af0a9a6a3999cdc1d891da2569f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9a45a80374d323d8c9efde3833eae2b23ef323a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760508"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991123"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>リモートデータサービスの Internet Explorer のエラーコード
 次の表に、リモートデータサービスの使用に関連する Microsoft® Internet Explorer のエラーコードを示します。 小さい2バイトの正の10進変換、完全なエラーコードの負の10進変換、および16進数の値が表示されます。

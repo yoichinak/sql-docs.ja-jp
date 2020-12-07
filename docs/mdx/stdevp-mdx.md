@@ -1,4 +1,5 @@
 ---
+description: StdevP (MDX)
 title: StdevP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b634f6bf6edf71f235458beb35e118165d126e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386928"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
@@ -34,7 +35,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **StdevP**関数は、バイアスをかける母集団の公式を使用し、 [Stdev](../mdx/stdev-mdx.md)関数はバイアスをかける母集団の公式を使用します。  
   
 ## <a name="example"></a>例  

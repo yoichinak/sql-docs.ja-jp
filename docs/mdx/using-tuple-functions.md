@@ -1,4 +1,5 @@
 ---
+description: 組関数の使用
 title: 組関数の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d858fa6e67712a6ab93608dae20a15dca629c01e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500495"
 ---
 # <a name="using-tuple-functions"></a>組関数の使用
 
@@ -22,7 +23,7 @@ ms.locfileid: "68037980"
   
  組関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
- Mdx には3つの組関数があります。[現在 &#40;mdx&#41;](../mdx/current-mdx.md)、 [Item &#40;組&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md) 、 [strtotuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)です。 次のクエリの例では、それぞれの使用方法を示しています。  
+ Mdx には3つの組関数があります。 [現在 &#40;mdx&#41;](../mdx/current-mdx.md)、 [Item &#40;組&#41; &#40;Mdx&#41;](../mdx/item-tuple-mdx.md) 、 [strtotuple &#40;mdx&#41;](../mdx/strtotuple-mdx.md)です。 次のクエリの例では、それぞれの使用方法を示しています。  
   
  `WITH`  
   

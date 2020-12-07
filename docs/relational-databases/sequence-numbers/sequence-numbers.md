@@ -1,4 +1,5 @@
 ---
+description: シーケンス番号
 title: シーケンス番号 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490462"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85725911"
  
  シーケンス番号は、現在のトランザクションの範囲外で生成されます。 シーケンス番号を使用しているトランザクションがコミットまたはロールバックされるかどうかにかかわらず、シーケンス番号は使用されます。 重複の検証は、レコードが完全に設定された後にのみ実行されます。 このため、いくつかのケースでは作成中に同じ番号が複数のレコードに使用されますが、その後重複していると識別されることになります。 このようになったときに他の autonumber 値が後に続くレコードに適用された場合、autonumber 値の間にギャップが生じることがあります。
   
-## <a name="typical-use"></a>一般的な使用方法  
+## <a name="typical-use"></a>一般的な用途  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
   
 ```  
@@ -271,7 +272,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. シーケンス番号をリセットする  
- 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました ( `AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
+ 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました  ( `AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

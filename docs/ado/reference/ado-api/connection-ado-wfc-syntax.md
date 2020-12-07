@@ -1,8 +1,9 @@
 ---
+description: Connection (ADO - WFC 構文)
 title: Connection (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25153814172cd0298d2aca5e9499803e17cbfa60
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974939"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは AdoEnums を使用して変更されます。 **NORECORDS**。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
+ **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは**AdoEnums.Executeoptions**を使用して変更されます。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
   
 ```  
 public void open()   
@@ -86,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO/WFC イベントの詳細については、「[言語別の Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
+ ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -110,4 +111,4 @@ public void removeOnWillExecute(ConnectionEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)

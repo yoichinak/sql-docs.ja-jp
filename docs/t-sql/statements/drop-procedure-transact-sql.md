@@ -1,4 +1,5 @@
 ---
+description: DROP PROCEDURE (Transact-SQL)
 title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], removing
 - removing procedure groups
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97f61aa00ba7242f6d02920fda91949adbff1c6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 786606c99cf2fe4cdfcd5343e203784353b8c863
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484124"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131184"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
 ```  
@@ -57,7 +58,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、プロシージャを削除します。  
   
@@ -70,10 +71,10 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="best-practices"></a>ベスト プラクティス  
  ストアド プロシージャを削除する前に、依存オブジェクトを確認し、それらのオブジェクトを適切に修正します。 ストアド プロシージャを削除すると、これらのオブジェクトが更新されていない場合、依存オブジェクトとスクリプトがエラーになることがあります。 詳細については、「[ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  既存のプロシージャの一覧を表示するには、**sys.objects** カタログ ビューに対してクエリを実行します。 プロシージャの定義を表示するには、**sys.sql_modules** カタログ ビューに対してクエリを実行します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  プロシージャの **CONTROL** 権限か、プロシージャが属しているスキーマに対する **ALTER** 権限、または **db_ddladmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -81,20 +82,20 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースから `dbo.uspMyProc` ストアド プロシージャを削除します。  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  次の例では、現在のデータベースからいくつかのストアド プロシージャを削除します。  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  次の例では、削除、 `dbo.uspMyProc` ストアド プロシージャが存在するが、プロシージャが存在しない場合のエラーは発生しません。 この構文はで新しい [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]です。  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

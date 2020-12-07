@@ -1,4 +1,5 @@
 ---
+description: DROP SECURITY POLICY (Transact-SQL)
 title: DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f267dd39e02fa30614788ace04b803b55d1cd8fd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cbf0c127a47fc18f3b2a56dd303ac60565689ddb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112773"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379752"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   セキュリティ ポリシーを削除します。  
   
@@ -52,14 +54,14 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意でなければなりません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER ANY SECURITY POLICY 権限と ALTER 権限が必要です。  
   
 ## <a name="example"></a>例  
   
-```  
+```sql  
 DROP SECURITY POLICY secPolicy;  
 ```  
   

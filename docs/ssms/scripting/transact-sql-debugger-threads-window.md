@@ -3,7 +3,7 @@ title: '[スレッド] ウィンドウ'
 description: '[スレッド] ウィンドウについて説明します。これには、デバッグ中のデータベース エンジン スレッドに関する情報が表示されます。 情報はデバッグ モードでのみ表示されます。'
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: da80bf7a847e6724eaad79d2efd86a0b095b6b52
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248029"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036146"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL デバッガー - [スレッド] ウィンドウ
 
@@ -63,7 +63,7 @@ ms.locfileid: "87248029"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーはこの機能をサポートしていません。  
   
 ## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)   
+ [Transact-SQL デバッガー](./transact-sql-debugger.md)   
+ [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)  
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)

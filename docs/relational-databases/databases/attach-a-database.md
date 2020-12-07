@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789580"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194404"
 ---
 # <a name="attach-a-database"></a>データベースのインポート
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85789580"
 バックアップおよび回復でのデタッチとアタッチの使用は推奨されません。 トランザクション ログのバックアップが存在しないだけでなく、ファイルが誤って削除される可能性があります。
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
-ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。 データベースのデタッチおよびアタッチ時に設定されるファイル アクセス許可の詳細については、 [オンライン ブックの「](https://technet.microsoft.com/library/ms189128.aspx) データ ファイルとログ ファイルのセキュリティ保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 」を参照してください。この記事は旧バージョンを対象としたものですが、本バージョンにも有効です。 
+ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。 データベースのデタッチおよびアタッチ時に設定されるファイル アクセス許可の詳細については、 [オンライン ブックの「](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) データ ファイルとログ ファイルのセキュリティ保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 」を参照してください。この記事は旧バージョンを対象としたものですが、本バージョンにも有効です。 
   
 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。 データベースのアタッチ、およびデータベースのアタッチ時にメタデータに対して行われる変更の詳細については、「 [データベースのデタッチとアタッチ (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)」を参照してください。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "85789580"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  `FOR ATTACH` 句を含む [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを使用します。  
+3.  `FOR ATTACH` 句を含む [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) ステートメントを使用します。  
   
      次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのファイルをアタッチし、データベースの名前を `MyAdventureWorks`に変更します。  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>参照  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[データベースを別のサーバーで使用できるようにするときのメタデータの管理](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)  
-  
   

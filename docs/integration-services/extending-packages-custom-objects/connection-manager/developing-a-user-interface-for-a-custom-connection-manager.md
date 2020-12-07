@@ -1,4 +1,5 @@
 ---
+description: カスタム接続マネージャー用ユーザー インターフェイスの開発
 title: カスタム接続マネージャー用ユーザー インターフェイスの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81ddd87771738659b99d29cda2e4ee35d92ff01d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ada6905f267506128be16b2d2a60a6f0ba8fb3a8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903798"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123154"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>カスタム接続マネージャー用ユーザー インターフェイスの開発
 

@@ -1,4 +1,5 @@
 ---
+description: '[パッケージのプロパティ] ダイアログ ボックス'
 title: '[パッケージのプロパティ] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/26/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c30ffbbeab823935db503d4e420df6b3c95f312
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2294c3b934aaef7691849b34f53cc6f4dc76d28d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88351528"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
 
@@ -54,14 +55,14 @@ ms.locfileid: "86922632"
   
  **[全般]** ページに表示されるすべてのプロパティは読み取り専用です。  
   
- **Name**  
+ **名前**  
  パッケージの名前が表示されます。  
   
  **識別子**  
  パッケージ ID を一覧表示します。  
   
  **エントリ ポイント**  
- 値 **True** は、パッケージが直接起動されることを示します。 値 **False** は、パッケージ実行タスクを使用して、パッケージが別のパッケージによって起動されることを示します。 既定値は **True**です。  
+ 値 **True** は、パッケージが直接起動されることを示します。 値 **False** は、パッケージ実行タスクを使用して、パッケージが別のパッケージによって起動されることを示します。 既定値は **True** です。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で親パッケージと子パッケージの両方に対してこのプロパティを設定するには、ソリューション エクスプローラーでパッケージを右クリックし、 **[エントリ ポイント パッケージ]** をクリックします。  
   

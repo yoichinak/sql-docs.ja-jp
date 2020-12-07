@@ -1,4 +1,5 @@
 ---
+description: REVOKE (エンドポイントの権限の取り消し) (Transact-SQL)
 title: REVOKE (エンドポイントの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a46b6ac4a1d4296a43b858d206111f98097a36bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 79fe7ab839ddb8d4d44d71fd0039121b8ed3552a
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484891"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497771"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (エンドポイントの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,6 @@ ms.locfileid: "86484891"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
     { FROM | TO } <server_principal> [ ,...n ]  
@@ -108,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. エンドポイントの VIEW DEFINITION 権限を取り消す  
  次の例では、エンドポイント `Mirror7` での `VIEW DEFINITION` アクセス許可を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` から取り消します。  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;  
 GO  
@@ -117,7 +117,7 @@ GO
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE オプションを指定して TAKE OWNERSHIP 権限を取り消す  
  次の例では、エンドポイント `Shipping83` での `TAKE OWNERSHIP` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー `PKomosinski` と、`PKomosinski` が `Shipping83` の `TAKE OWNERSHIP` 権限を許可したすべてのプリンシパルから取り消します。  
   
-```  
+```sql  
 USE master;  
 REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski   
     CASCADE;  

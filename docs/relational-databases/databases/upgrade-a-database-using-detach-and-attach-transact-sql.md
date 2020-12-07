@@ -1,4 +1,5 @@
 ---
+description: デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
 title: デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487110"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85694726"
   
     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]** をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> 補足情報: SQL Server データベースのアップグレード後  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a>補足情報: SQL Server データベースのアップグレード後  
 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)を使用します。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> アップグレード後のデータベース互換性レベル  

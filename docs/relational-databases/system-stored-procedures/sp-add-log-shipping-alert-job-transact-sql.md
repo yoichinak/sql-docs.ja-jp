@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_alert_job (Transact-SQL)
 title: sp_add_log_shipping_alert_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b5c872f0346cce50ff27e442991efa5e5f4e4391
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464713"
 ---
 # <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このストアドプロシージャは、このサーバーで警告ジョブが作成されたかどうかを確認します。 警告ジョブが存在しない場合、このストアドプロシージャは警告ジョブを作成し、そのジョブ ID を**log_shipping_monitor_alert**テーブルに追加します。 警告ジョブは、既定で有効になっており、2分ごとに1回のスケジュールで実行されます。  
+  このストアドプロシージャは、このサーバーで警告ジョブが作成されたかどうかを確認します。 警告ジョブが存在しない場合、このストアドプロシージャは警告ジョブを作成し、そのジョブ ID を **log_shipping_monitor_alert** テーブルに追加します。 警告ジョブは、既定で有効になっており、2分ごとに1回のスケジュールで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +50,13 @@ sp_add_log_shipping_alert_job
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_alert_job**は、監視サーバーの**master**データベースから実行する必要があります。  
+ **sp_add_log_shipping_alert_job** は、監視サーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例では、 **sp_add_log_shipping_alert_job**を実行して警告ジョブ ID を作成します。  
+## <a name="examples"></a>例  
+ この例では、 **sp_add_log_shipping_alert_job** を実行して警告ジョブ ID を作成します。  
   
 ```  
 USE master  

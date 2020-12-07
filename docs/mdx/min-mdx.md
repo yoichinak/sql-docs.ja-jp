@@ -1,4 +1,5 @@
 ---
+description: Min (MDX)
 title: Min (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93abf0f98b04994f028379b8bd576deff4b7ea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68114381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483815"
 ---
 # <a name="min-mdx"></a>Min (MDX)
 
@@ -34,7 +35,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  数値式を指定した場合、この数値式がセットに対して評価されてから、その評価で得られる最小値が返されます。 数値式が指定されていない場合、指定されたセットは、セットのメンバーの現在のコンテキストで評価され、その評価からの最小値を返します。  
   
 > [!NOTE]  

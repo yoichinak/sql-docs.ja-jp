@@ -1,4 +1,5 @@
 ---
+description: 集計クエリにおける列の使用 (Visual Database Tools)
 title: 集計クエリにおける列の使用
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: acd777cfd536c60f1eb7e7b81e65e55f9fb6bb1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468319"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>集計クエリにおける列の使用 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-集計クエリを作成する場合、 [クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
+ 集計クエリを作成する場合、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  
   
 ## <a name="using-group-by"></a>GROUP BY の使用  
 クエリおよびビュー デザイナーは、次のガイドラインに従って列を処理します。  

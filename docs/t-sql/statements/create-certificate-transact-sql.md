@@ -1,4 +1,5 @@
 ---
+description: CREATE CERTIFICATE (Transact-SQL)
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -27,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 3d4799b962fd1c8b6084443f5d83fa171fe4b0a1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392720"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124142"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -111,6 +112,7 @@ CREATE CERTIFICATE certificate_name
 <date_options> ::=  
     START_DATE ='datetime' | EXPIRY_DATE ='datetime'  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -166,7 +168,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。 既定値は ON です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  証明書は、X.509 標準に準拠したデータベース レベルのセキュリティ保護可能なリソースであり、X.509 V1 フィールドをサポートします。 `CREATE CERTIFICATE` では、ファイル、バイナリ定数、またはアセンブリから証明書を読み込むことができます。 このステートメントでは、キー ペアを生成して自己署名証明書を作成することもできます。  
   
  秘密キーは、暗号化された形式で 2500 バイト以下でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される秘密キーの長さは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは 1024 ビット、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降は 2048 ビットです。 外部ソースからインポートされる秘密キーの最小の長さは 384 ビットで、最大の長さは 4,096 ビットです。 インポートされる秘密キーの長さは、64 ビットの整数倍であることが必要です。 TDE に使用される証明書では、秘密キーのサイズが 3456 ビットに制限されています。  
@@ -254,7 +256,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   

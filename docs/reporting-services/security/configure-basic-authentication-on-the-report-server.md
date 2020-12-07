@@ -1,4 +1,5 @@
 ---
+description: レポート サーバーで基本認証を構成する
 title: レポート サーバーで基本認証を構成する | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492642"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>レポート サーバーで基本認証を構成する
   Reporting Services は、既定では、ネゴシエート認証および NTLM 認証を指定する要求を受け入れます。 基本認証を使用するクライアント アプリケーションやブラウザーが配置に含まれる場合は、サポートされる種類の一覧に基本認証を追加する必要があります。 また、レポート ビルダーを使用する場合は、レポート ビルダーのファイルへの匿名アクセスを有効にする必要もあります。  
@@ -36,9 +37,9 @@ ms.locfileid: "81625871"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     このファイルは、*drive>:\<:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
+     このファイルは、 *\<drive>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer にあります。  
   
-2.  \<**Authentication**> を検索します。  
+2.  \<**Authentication**> を探します。  
   
 3.  次に示す XML 構造の中でニーズに最も合うものをコピーします。 最初の XML 構造には、次のセクションで説明するすべての要素を指定するためのプレースホルダーが含まれています。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "81625871"
   
      **Custom** は他の認証の種類と併用できないので注意してください。  
   
-5.  \<**Realm**> または \<**DefaultDomain**> の空の値を、現在の環境で有効な値に置き換えます。  
+5.  \<**Realm**> または \<**DefaultDomain**> の空の値を、ご利用の環境での有効な値に置き換えます。  
   
 6.  ファイルを保存します。  
   

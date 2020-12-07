@@ -1,4 +1,5 @@
 ---
+description: insert (XML DML)
 title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73d68149950542082127e4132db529ad18cbc03d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393070"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112506"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,13 +31,11 @@ ms.locfileid: "86393070"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
-insert   
-      Expression1 (  
-                 {as first | as last} into | after | before  
-                                    Expression2  
-                )  
+```syntaxsql 
+insert Expression1 (  
+{AS first | AS last} INTO | AFTER | BEFORE  
+Expression2  
+)  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -62,10 +61,10 @@ insert
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. ドキュメントへの要素ノードの挿入  
  次の例は、ドキュメントに要素を挿入する方法を示します。 まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、いくつかの **insert** XML DML ステートメントを使用して、要素ノードをドキュメントに挿入する方法を示します。 それぞれの挿入後、SELECT ステートメントによって結果が表示されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;         
+DECLARE @myDoc XML;         
 SET @myDoc = '<Root>         
     <ProductDescription ProductID="1" ProductName="Road Bike">         
         <Features>         
@@ -75,30 +74,30 @@ SET @myDoc = '<Root>
 SELECT @myDoc;     
 -- insert first feature child (no need to specify as first or as last)         
 SET @myDoc.modify('         
-insert <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
-into (/Root/ProductDescription/Features)[1]') ;  
+INSERT <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
+INTO (/Root/ProductDescription/Features)[1]') ;  
 SELECT @myDoc ;        
 -- insert second feature. We want this to be the first in sequence so use 'as first'         
-set @myDoc.modify('         
-insert <Warranty>1 year parts and labor</Warranty>          
-as first         
-into (/Root/ProductDescription/Features)[1]         
+SET @myDoc.modify('         
+INSERT <Warranty>1 year parts and labor</Warranty>          
+AS first         
+INTO (/Root/ProductDescription/Features)[1]         
 ')  ;       
 SELECT @myDoc  ;       
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-insert <Material>Aluminium</Material>          
-as last         
-into (/Root/ProductDescription/Features)[1]         
+INSERT <Material>Aluminium</Material>          
+AS last         
+INTO (/Root/ProductDescription/Features)[1]         
 ')         
 SELECT @myDoc ;        
 -- Add fourth feature - this time as a sibling (and not a child)         
 -- 'after' keyword is used (instead of as first or as last child)         
 SELECT @myDoc  ;       
-set @myDoc.modify('         
-insert <BikeFrame>Strong long lasting</BikeFrame>   
-after (/Root/ProductDescription/Features/Material)[1]         
+SET @myDoc.modify('         
+INSERT <BikeFrame>Strong long lasting</BikeFrame>   
+AFTER (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
 SELECT @myDoc;  
 GO  
@@ -109,10 +108,10 @@ GO
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>B. ドキュメントへの複数の要素の挿入  
  次の例では、まず、ドキュメントが **xml** 型の変数に代入されます。 次に、製品の機能を表す 2 つの要素のシーケンスが **xml** 型の 2 番目の変数に代入されます。 その後、このシーケンスが最初の変数に挿入されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = N'<Root>             
 <ProductDescription ProductID="1" ProductName="Road Bike">             
     <Features> </Features>             
@@ -132,10 +131,10 @@ GO
 ### <a name="c-inserting-attributes-into-a-document"></a>C. ドキュメントへの属性の挿入  
  次の例では、ドキュメントに属性を挿入する方法を示します。 まず、ドキュメントが **xml** 型の変数に代入されます。 次に、一連の **insert** XML DML ステートメントを使用して、ドキュメントに属性が挿入されます。 各属性の挿入後、SELECT ステートメントによって結果が表示されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml ;            
+DECLARE @myDoc XML;            
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -143,15 +142,15 @@ SET @myDoc =
         <step>Manufacturing step 2 at this work center</step>             
     </Location>             
 </Root>' ;  
-SELECT @myDoc  ;          
+SELECT @myDoc;          
 -- insert LaborHours attribute             
 SET @myDoc.modify('             
 insert attribute LaborHours {".5" }             
-into (/Root/Location[@LocationID=10])[1] ') ;           
-SELECT @myDoc  ;          
+into (/Root/Location[@LocationID=10])[1] ');           
+SELECT @myDoc;          
 -- insert MachineHours attribute but its value is retrived from a sql variable @Hrs             
-DECLARE @Hrs float ;            
-SET @Hrs =.2   ;          
+DECLARE @Hrs FLOAT;            
+SET @Hrs =.2;          
 SET @myDoc.modify('             
 insert attribute MachineHours {sql:variable("@Hrs") }             
 into   (/Root/Location[@LocationID=10])[1] ');            
@@ -163,7 +162,7 @@ insert (
            attribute SetupHours {".5" },             
            attribute SomeOtherAtt {".2"}             
         )             
-into (/Root/Location[@LocationID=10])[1] ');             
+INTO (/Root/Location[@LocationID=10])[1] ');             
 SELECT @myDoc;  
 GO  
 ```  
@@ -171,10 +170,10 @@ GO
 ### <a name="d-inserting-a-comment-node"></a>D. コメント ノードの挿入  
  次のクエリでは、まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、XML DML を使用して、最初の <`step`> 要素の後にコメント ノードを挿入します。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -193,10 +192,10 @@ GO
 ### <a name="e-inserting-a-processing-instruction"></a>E. 処理命令の挿入  
  次のクエリでは、まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、XML DML キーワードを使用して、ドキュメントの先頭に処理命令が挿入されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>   
     <Location LocationID="10" >   
@@ -215,10 +214,10 @@ GO
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA セクションを使用したデータの挿入  
  < や > など、XML では無効な文字が含まれるテキストを挿入するときは、次のクエリに示すように、CDATA セクションを使用してデータを挿入できます。 クエリでは CDATA セクションが指定されていますが、無効な文字はエンティティに変換され、テキスト ノードとして追加されます。 たとえば、`<` は `&lt;` として保存されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <ProductDescription ProductID="1" ProductName="Road Bike">             
@@ -246,10 +245,10 @@ GO
 ### <a name="g-inserting-text-node"></a>G. テキスト ノードの挿入  
  次のクエリでは、まず、XML ドキュメントが **xml** 型の変数に代入されます。 次に、XML DML が使用され、<`Root`> 要素の最初の子としてテキスト ノードが挿入されます。 テキスト コンストラクターを使用して、テキストを指定します。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -258,7 +257,7 @@ SET @myDoc = '<Root>
 </ProductDescription>  
 </Root>'  
 SELECT @myDoc;  
-set @myDoc.modify('  
+SET @myDoc.modify('  
  insert text{"Product Catalog Description"}   
  as first into (/Root)[1]  
 ');  
@@ -268,11 +267,11 @@ SELECT @myDoc;
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. 型指定されていない xml 列への新しい要素の挿入  
  次の例では、XML DML を適用して、**xml** 型の列に格納された XML インスタンスを更新します。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-CREATE TABLE T (i int, x xml);  
-go  
+CREATE TABLE T (i INT, x XML);  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
     <ProductDescription ProductID="1" ProductName="Road Bike">  
         <Features>  
@@ -281,7 +280,7 @@ INSERT INTO T VALUES(1,'<Root>
         </Features>  
     </ProductDescription>  
 </Root>');  
-go  
+GO  
 -- insert a new element  
 UPDATE T  
 SET x.modify('insert <Material>Aluminium</Material> as first  
@@ -292,7 +291,7 @@ GO
   
  この場合も、<`Material`> 要素ノードが挿入されるときは、パス式が 1 つのターゲットを返す必要があります。 これは、式の最後に [1] を追加することにより、明示的に指定します。  
   
-```  
+```sql
 -- check the update  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T;  
@@ -302,10 +301,10 @@ GO
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. IF 条件ステートメントに基づいた挿入  
  次の例では、**insert** XML DML ステートメント内の Expression1 の一部に IF 条件が指定されます。 条件が True の場合、<`WorkCenter`> 要素に属性が追加されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -326,10 +325,10 @@ GO
   
  次の例も同様ですが、条件が True の場合に **insert** XML DML ステートメントによってドキュメントに要素が挿入されます。 つまり、<`WorkCenter`> 要素に含まれる <`step`> 子要素が 2 つ以下の場合に挿入されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -364,13 +363,14 @@ GO
   
  この例では、まず、型指定された **xml** 列を含むテーブル (T) を AdventureWorks データベースに作成します。 次に、製造手順の XML インスタンスを ProductModel テーブルの Instructions 列からテーブル T にコピーします。続いて、テーブル T の XML に挿入が適用されます。  
   
-```  
+```sql
 USE AdventureWorks;  
 GO            
 DROP TABLE T;  
 GO             
-CREATE TABLE T(ProductModelID int primary key,    
-Instructions xml (Production.ManuInstructionsSchemaCollection));  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,    
+  Instructions XML (Production.ManuInstructionsSchemaCollection));  
 GO  
 INSERT T              
     SELECT ProductModelID, Instructions             
@@ -383,7 +383,7 @@ FROM T;
 --1) insert a new manu. Location. The <Root> specified as              
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
-set Instructions.modify('   
+SET Instructions.modify('   
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   

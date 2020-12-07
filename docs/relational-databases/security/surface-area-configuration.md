@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ad0881cbc1c00bdebdd9244b56007ed51a66b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f439f07e8bdc374e5457c946e3b57120b0c6b0c8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736990"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869158"
 ---
 # <a name="surface-area-configuration"></a>セキュリティ構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85736990"
  **の** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]プロパティを変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のプロパティ設定を使用します。 **[定期的なイベントおよびレポート配信]** プロパティと **[Web サービスおよび HTTP アクセス]** プロパティを変更するには、 **RSReportServer.config** 構成ファイルを編集します。  
   
 ## <a name="command-prompt-options"></a>コマンド プロンプト オプション  
- **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用して、セキュリティ構成ポリシーを呼び出します。 詳細については、「 [データベース エンジン コマンドレットの使用](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)」を参照してください。  
+ **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用して、セキュリティ構成ポリシーを呼び出します。 詳細については、「 [データベース エンジン コマンドレットの使用](../../powershell/sql-server-powershell.md)」を参照してください。  
   
 ## <a name="soap-and-service-broker-endpoints"></a>SOAP および Service Broker のエンドポイント  
  エンドポイントを無効にするには、ポリシー ベースの管理を使用します。 エンドポイントのプロパティを作成および変更するには、[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md) および [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md) を使用します。  
@@ -76,5 +76,4 @@ ms.locfileid: "85736990"
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: PredictAdjustedProbability (DMX)
 title: PredictAdjustedProbability (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e923e96aec1f001818f5dcff300de0d13af2f5a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426184"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,8 +34,8 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>注釈  
- 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を**INCLUDE_NULL**に設定します。  
+## <a name="remarks"></a>解説  
+ 予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 欠落している状態バケットを含めるには、 \<predicted state> を **INCLUDE_NULL**に設定します。  
   
  欠損状態の調整済みの確率を返すには、を \<predicted state> NULL に設定します。  
   
@@ -59,7 +60,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

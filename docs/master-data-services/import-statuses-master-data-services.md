@@ -1,4 +1,5 @@
 ---
+description: インポート状態 (マスター データ サービス)
 title: インポート状態
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 40cc57e3d8ba66c36c52906f5d134325178a37e4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 718565fb0da60062c211493f5578b44c392c3a3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388368"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85812958"
 |消去用のキューに登録済み|バッチ処理が完了しており、消去されます。|4|  
 |クリア|バッチ処理が消去されました。|5|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

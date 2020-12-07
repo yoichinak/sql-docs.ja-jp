@@ -1,4 +1,5 @@
 ---
+description: '[サブスクライバーのプロパティ]'
 title: '[サブスクライバーのプロパティ] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,16 +16,16 @@ ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9aa569f9e96dea8bbc5788ec1de0a47ed4e67628
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 366740d950e249d6ad18e97af3094208d4d849fd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110479"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88493895"
 ---
 # <a name="subscriber-properties"></a>[サブスクライバーのプロパティ]
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  **[サブスクライバーのプロパティ]** ダイアログ ボックスには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] を実行しているサブスクライバーに関連する情報が表示されます。  
+  **[サブスクライバーのプロパティ]** ダイアログ ボックスには、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサブスクライバーに関連する情報が表示されます。  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

@@ -1,4 +1,5 @@
 ---
+description: スクロール可能なカーソルとトランザクション分離
 title: スクロール可能なカーソルとトランザクション分離 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7e40278bd209132736aee2788b5648ffa84a44e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 790b2d0c4d80c821645c3a4360d1295cc55a8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476504"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクション分離
 次の表に、変更の可視性を制御する要因を示します。  
@@ -39,7 +40,7 @@ ms.locfileid: "81304223"
   
 |カーソルのタイプ \ アクション|セルフ|独自<br /><br /> Txn|他<br /><br /> Txn<br /><br /> (RU [a])|他<br /><br /> Txn<br /><br /> (RC [a])|他<br /><br /> Txn<br /><br /> (RR [a])|他<br /><br /> Txn<br /><br /> (S [a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|Static|||||||  
+|静的|||||||  
 |挿入|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |更新|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |削除|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  

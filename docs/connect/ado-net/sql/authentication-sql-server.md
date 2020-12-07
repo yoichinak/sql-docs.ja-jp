@@ -1,6 +1,6 @@
 ---
 title: SQL Server での認証
-description: SQL Server でのログインと認証について説明し、その他のリソースへのリンクを提供します。
+description: ADO.NET の使用時の SQL Server のログインと認証、および追加リソースの検索場所について説明します。
 ms.date: 09/26/2019
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c12f3adacbf26cfe70e2f5993db0ace84460404
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8bdcc51fad2bbc14499b60a1986bec5d2bcb6a1e
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928930"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603488"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 

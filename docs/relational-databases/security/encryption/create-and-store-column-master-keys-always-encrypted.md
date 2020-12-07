@@ -12,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10f95ba72bbb57481d5753e4a26d2fde3ecf1f16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c08fb0c0fc82d252e87847562957705e03e30512
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765050"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867823"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Always Encrypted の列マスター キーを作成して保存する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して自己署名証明書を作成する
 
 詳しくは、「[SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)」をご覧ください。
-SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格納するためのチュートリアルは、「 [Always Encrypted - データベース暗号化を使用して SQL Database で機密データを保護し、Windows 証明書ストアで暗号化キーを格納する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)」を参照してください。
+SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格納するためのチュートリアルは、「 [Always Encrypted - データベース暗号化を使用して SQL Database で機密データを保護し、Windows 証明書ストアで暗号化キーを格納する](/azure/azure-sql/database/always-encrypted-certificate-store-configure)」を参照してください。
 
 
 ### <a name="making-certificates-available-to-applications-and-users"></a>証明書をアプリケーションとユーザーが使用できるようにする
@@ -104,7 +104,7 @@ SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格�
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure Key Vault で列マスター キーを作成する
 
-Azure Key Vault は、暗号化キーやシークレットの保護に役立ちます。特に、アプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納には便利なオプションです。 [Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)でキーを作成するには、 [Azure サブスクリプション](https://azure.microsoft.com/free/) および Azure Key Vault が必要です。
+Azure Key Vault は、暗号化キーやシークレットの保護に役立ちます。特に、アプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納には便利なオプションです。 [Azure Key Vault](/azure/key-vault/general/overview)でキーを作成するには、 [Azure サブスクリプション](https://azure.microsoft.com/free/) および Azure Key Vault が必要です。
 
 ### <a name="using-powershell"></a>PowerShell の使用
 
@@ -128,7 +128,7 @@ $akvKey = Add-AzKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination H
 ### <a name="using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用
 
 SSMS を使用して Azure Key Vault で列マスター キーを作成する方法について詳しくは、「[SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)」をご覧ください。
-SSMS を使用し、Azure Key Vault に Always Encrypted キーを格納するためのチュートリアルは、「 [Always Encrypted - データベース暗号化を使用して SQL Database で機密データを保護し、Windows 証明書ストアで暗号化キーを格納する](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault)」を参照してください。
+SSMS を使用し、Azure Key Vault に Always Encrypted キーを格納するためのチュートリアルは、「 [Always Encrypted - データベース暗号化を使用して SQL Database で機密データを保護し、Windows 証明書ストアで暗号化キーを格納する](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)」を参照してください。
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Azure Key Vault のキーをアプリケーションとユーザーが使用できるようにする
 
@@ -138,7 +138,7 @@ Azure Key Vault に格納されている列マスター キーで保護されて
 
 #### <a name="using-powershell"></a>PowerShell の使用
 
-Azure Key Vault 内の実際のキーへのユーザーおよびアプリケーションによるアクセスを有効にするには、コンテナーのアクセス ポリシーを設定する必要があります ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))。
+Azure Key Vault 内の実際のキーへのユーザーおよびアプリケーションによるアクセスを有効にするには、コンテナーのアクセス ポリシーを設定する必要があります ([Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))。
 
 ```
 $vaultName = "<vault name>"
@@ -227,4 +227,4 @@ HSM のドキュメントを参照してください。
   
 ## <a name="see-also"></a>参照 
 - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+- [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

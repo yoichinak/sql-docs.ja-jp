@@ -1,7 +1,8 @@
 ---
-title: PDO::getAttribute | Microsoft Docs
+title: PDO::getAttribute
+description: SQL Server 用 Microsoft PDO_SQLSRV Driver for PHP の PDO::getAttribute 関数の API リファレンス。
 ms.custom: ''
-ms.date: 07/13/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 33cddaa2718c53b9df684aaee7183722d6ae81c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f1f3e189441109a61aeda6b6b39a16aefe940797
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919356"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646742"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,10 +39,10 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="remarks"></a>解説  
 次の表に、サポートされる属性の一覧を示します。  
   
-|Attribute|処理を行った機能|サポートされる値|説明|  
+|属性|処理を行った機能|サポートされている値|説明|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|列名に必要な大文字/小文字の使い分けを指定します。 PDO::CASE_LOWER は、列名を強制的に小文字にします。PDO::CASE_NATURAL は、列名をデータベースによって返されたままの状態にします。PDO::CASE_UPPER は、列名を強制的に大文字にします。<br /><br />既定値は、PDO::CASE_NATURAL です。<br /><br />この属性は、PDO::setAttribute を使用して設定することもできます。|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|文字列の配列|ドライバーおよび関連するライブラリのバージョンを記述します。 次の要素の配列を返します: ODBC のバージョン (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブ クライアント DLL の名前とバージョン、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョン (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|文字列の配列|ドライバーおよび関連するライブラリのバージョンを記述します。 次の要素を含む配列を返します。ODBC のバージョン (*MajorVer*.*MinorVer*)、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client DLL の名前とバージョン、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] バージョン (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
 |PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|PDO::PARAM_STR_CHAR に設定されていない場合、PDO::PARAM_STR_NATL が返されます。|
 |PDO::ATTR_DRIVER_NAME|PDO|String|常に "sqlsrv" を返します。|  
 |PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|String|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のバージョンを示します (*MajorVer*.*MinorVer*.*BuildNumber*.*Revision*)|  
@@ -54,7 +55,7 @@ mixed PDO::getAttribute ( $attribute )
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|クエリの直接実行または準備された実行を指定します。 詳細については、「 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|ドライバーがサーバーとの通信に使用する文字セット エンコーディングを指定します。<br /><br />既定値は PDO::SQLSRV_ENCODING_UTF8 です。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|数値の SQL 型 (bit、integer、smallint、tinyint、float、または real) の列からの数値フェッチを処理します。<br /><br />接続オプション フラグ ATTR_STRINGIFY_FETCHES がオンの場合、SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がオンであっても、戻り値は文字列となります。<br /><br />バインド列の戻された PDO 型が PDO_PARAM_INT の場合、整数列からの戻り値は、SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がオフであっても int となります。|  
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|整数 (integer)|クエリのタイムアウト (秒単位) を設定します。<br /><br />既定値は 0 であり、ドライバーは結果をいつまでも待ちます。<br /><br />負の数値は許可できません。|  
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|整数|クエリのタイムアウト (秒単位) を設定します。<br /><br />既定値は 0 であり、ドライバーは結果をいつまでも待ちます。<br /><br />負の数値は許可できません。|  
 
   
 一部の定義済み属性は PDO で処理されますが、他の属性はドライバーで処理する必要があります。 すべてのカスタム属性および接続オプションはドライバーによって処理され、サポートされていない属性または接続オプションは null を返します。  

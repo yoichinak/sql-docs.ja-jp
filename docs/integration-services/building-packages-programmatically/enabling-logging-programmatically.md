@@ -1,4 +1,5 @@
 ---
+description: プログラムによるログ記録の有効化
 title: プログラムによるログ記録の有効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 297b5730db79d1a47295a2e454f6bd3433c56d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922715"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130689"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
 

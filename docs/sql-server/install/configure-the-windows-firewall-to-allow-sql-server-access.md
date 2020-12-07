@@ -21,14 +21,14 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 1459c50d87f2f7ccc58e20bd7e21d27ace700f66
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238482"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96120839"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "87238482"
 > [!NOTE]  
 >  この記事では、ファイアウォール構成の概要について説明し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。 ファイアウォールの詳細および管理ファイアウォール情報については、[Windows ファイアウォール セキュリティ展開ガイド](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)などのファイアウォールのマニュアルを参照してください。  
   
- **Windows ファイアウォール**の管理に慣れており、構成すべきファイアウォール設定を理解しているユーザーは、より高度な記事にそのまま進むことができます。  
+ **Windows ファイアウォール** の管理に慣れており、構成すべきファイアウォール設定を理解しているユーザーは、より高度な記事にそのまま進むことができます。  
   
 -   [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
 -   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
@@ -68,7 +68,7 @@ ms.locfileid: "87238482"
 >  ファイアウォールをオンにすると、ファイルとプリンターの共有やリモート デスクトップ接続など、このコンピューターにアクセスする他のプログラムに影響を与えます。 管理者はファイアウォール設定を調整する前に、コンピューターで実行されているすべてのアプリケーションについて検討する必要があります。  
   
 ##  <a name="programs-to-configure-the-firewall"></a><a name="BKMK_programs"></a> ファイアウォールを構成するためのプログラム  
-**Microsoft 管理コンソール**または **netsh** のいずれかを使用して Windows ファイアウォール設定を構成します。  
+**Microsoft 管理コンソール** または **netsh** のいずれかを使用して Windows ファイアウォール設定を構成します。  
 
 -  **Microsoft 管理コンソール (MMC)**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "87238482"
   
 -   **netsh**  
   
-     **netsh.exe** ツールを使用して、管理者はコマンド プロンプトまたはバッチ ファイルで Windows ベースのコンピューターの構成および監視を行うことができます **。** **netsh** ツールを使用すれば、入力したコンテキスト コマンドを適切なヘルパーに渡し、ヘルパーによってコマンドを実行できます。 ヘルパーは、1 つ以上のサービス、ユーティリティ、またはプロトコルの構成、監視、サポートを行って **netsh** ツールの機能を拡張するダイナミック リンク ライブラリ (.dll) ファイルです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしているすべてのオペレーティング システムには、ファイアウォール ヘルパーが組み込まれています。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] には、 **advfirewall**という高度なファイアウォール ヘルパーも組み込まれています。 **netsh** の使い方については、このトピックでは詳しく説明しません。 ただし、このトピックで説明する構成オプションの多くは、 **netsh**を使用して構成できます。 たとえば、コマンド プロンプトで次のスクリプトを実行すると、TCP ポート 1433 を開くことができます。  
+     **netsh.exe** ツールを使用して、管理者はコマンド プロンプトまたはバッチ ファイルで Windows ベースのコンピューターの構成および監視を行うことができます **。** **netsh** ツールを使用すれば、入力したコンテキスト コマンドを適切なヘルパーに渡し、ヘルパーによってコマンドを実行できます。 ヘルパーは、1 つ以上のサービス、ユーティリティ、またはプロトコルの構成、監視、サポートを行って **netsh** ツールの機能を拡張するダイナミック リンク ライブラリ (.dll) ファイルです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしているすべてのオペレーティング システムには、ファイアウォール ヘルパーが組み込まれています。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] には、 **advfirewall** という高度なファイアウォール ヘルパーも組み込まれています。 **netsh** の使い方については、このトピックでは詳しく説明しません。 ただし、このトピックで説明する構成オプションの多くは、 **netsh** を使用して構成できます。 たとえば、コマンド プロンプトで次のスクリプトを実行すると、TCP ポート 1433 を開くことができます。  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -88,7 +88,7 @@ ms.locfileid: "87238482"
     netsh advfirewall firewall add rule name = SQLPort dir = in protocol = tcp action = allow localport = 1433 remoteip = localsubnet profile = DOMAIN  
     ```  
   
-     **netsh**の詳細については、次のリンクを参照してください。  
+     **netsh** の詳細については、次のリンクを参照してください。  
   
     -   [Netsh コマンドの構文、コンテキスト、および書式設定](/windows-server/networking/technologies/netsh/netsh-contexts)    
     -   ["netsh firewall" コンテキストの代わりに "netsh advfirewall firewall" コンテキストを使用して、Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する方法](https://support.microsoft.com/kb/947709)    
@@ -127,20 +127,20 @@ ms.locfileid: "87238482"
   
  固定ポートでリッスンするように名前付きインスタンスを構成する代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **(** ) などの [!INCLUDE[ssDE](../../includes/ssde-md.md)]プログラムを対象としてファイアウォールで例外を作成することもできます。 この方法が有効な場合もありますが、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用しているときは、 **[受信の規則]** ページの **[ローカル ポート]** 列にポート番号が表示されません。 そのため、どのポートが開いているかを調べるのが難しくなる可能性があります。 もう 1 つの注意事項は、Service Pack または累積された更新によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行可能ファイルへのパスが変更され、ファイアウォールのルールが無効になる可能性があるということです。  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>セキュリティが強化された Windows Defender ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
   
-1. [スタート] メニューから「*wf.msc*」と入力します。 **[セキュリティが強化された Windows ファイアウォール]** を選択します。
+1. [スタート] メニューから「*wf.msc*」と入力します。 Enter キーを押すか、検索結果の wf .msc を選択し、**セキュリティが強化された Windows Defender ファイアウォール** を開きます。
 1. 左側のウィンドウで、 **[受信の規則]** を選択します。
-1. 右側のウィンドウで、 **[アクション]** の **[新しい規則]** を選択します。**新規の受信の規則ウィザード**が開きます。
+1. 右側のウィンドウで、 **[アクション]** の **[新しい規則]** を選択します。**新規の受信の規則ウィザード** が開きます。
 1. **[規則の種類]** で  **[プログラム]** を選択します。 **[次へ]** を選択します。
 1. **[プログラム]** で **[このプログラムのパス]** を選択します。 **[参照]** を選択して SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    **[次へ]** を選択します。
 
-1. **[操作]** で、 **[接続を許可する]** をクリックします。  
-1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]** を選択します。
+1. **[操作]** で、 **[接続を許可する]** を選択します。 **[次へ]** を選択します。
+1. **[プロファイル]** で 3 つのプロフィールすべてを含めます。 **[次へ]** を選択します。
 1. **[名前]** に規則の名前を入力します。 **[完了]** を選択します。
 
 エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。 

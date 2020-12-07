@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYPASSPHRASE (Transact-SQL)
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5fc109c89fb32e42c97b5454bd67d41238d63835
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f8e11d7e9f36d6619c626d9387cce766fbce5b0d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112478"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124751"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,6 @@ ms.locfileid: "87112478"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 EncryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'cleartext' | @cleartext }  
   [ , { add_authenticator | @add_authenticator }  
@@ -73,7 +73,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 最大サイズが 8,000 バイトです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  パス フレーズは空白を含むパスワードです。 パスフレーズを使用する利点は、比較的長い文字列を覚えるよりも意味のある句や文を覚える方が簡単だというところにあります。  
   
  この関数では、パスワードの複雑さはチェックされません。  
@@ -81,15 +81,15 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="examples"></a>例  
  次の例では、`SalesCreditCard` テーブルのレコードを更新し、認証子として主キーを使用して、列 `CardNumber_EncryptedbyPassphrase` に格納されるクレジット カードの番号を暗証化します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create a column in which to store the encrypted data.  
 ALTER TABLE Sales.CreditCard   
-    ADD CardNumber_EncryptedbyPassphrase varbinary(256);   
+    ADD CardNumber_EncryptedbyPassphrase VARBINARY(256);   
 GO  
 -- First get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
     = 'A little learning is a dangerous thing!';  
   
@@ -102,7 +102,7 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

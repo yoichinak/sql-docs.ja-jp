@@ -1,4 +1,5 @@
 ---
+description: SCHEMA_ID (Transact-SQL)
 title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f609a350f179d1a552b5067ac3a2979de3006c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2cd9fc9bc52a69fb5200abaf2bd5f678fe4a1f73
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112846"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379958"
 ---
 # <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87112846"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SCHEMA_ID ( [ schema_name ] )   
 ```  
   
@@ -48,7 +49,7 @@ SCHEMA_ID ( [ schema_name ] )
   
 |期間|定義|  
 |----------|----------------|  
-|*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
+|*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname** です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -62,17 +63,17 @@ SCHEMA_ID ( [ schema_name ] )
   
 ### <a name="a-returning-the-default-schema-id-of-a-caller"></a>A. 呼び出し元の既定のスキーマ ID を返す  
   
-```  
+```sql  
 SELECT SCHEMA_ID();  
 ```  
   
 ### <a name="b-returning-the-schema-id-of-a-named-schema"></a>B. 名前付きスキーマのスキーマ ID を返す  
   
-```  
+```sql  
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
  [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  

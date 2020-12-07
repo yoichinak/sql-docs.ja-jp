@@ -1,8 +1,9 @@
 ---
+description: 階層レコードセットの作成
 title: 造詣階層レコードセット |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991283"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
-次の例では、データシェイプの文法を使用して、親、子、および孫**レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
+次の例では、データシェイプの文法を使用して、親、子、および孫 **レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
   
- 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「[データシェイプの必須プロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)」を参照してください。  
+ 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「 [データシェイプの必須プロバイダー](./required-providers-for-data-shaping.md)」を参照してください。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -55,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  **レコードセット**が作成されるとすぐに、データセットの設定、操作、またはファイルへの保存を行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [データシェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
- [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)
+ [階層レコードセット内の行へのアクセス](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [仮形の文法](./formal-shape-grammar.md)   
+ [データシェイプに必要なプロバイダー](./required-providers-for-data-shaping.md)   
+ [Shape APPEND 句](./shape-append-clause.md)   
+ [一般的な Shape コマンド](./shape-commands-in-general.md)

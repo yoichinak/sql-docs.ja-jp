@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f7fbd6decf193fa695066a8133ec37e74d7e959
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727609"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810776"
 ---
 # <a name="clr-integration---overview"></a>CLR 統合 - 概要
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85727609"
  計算や複雑な実行ロジックには、[!INCLUDE[tsql](../../includes/tsql-md.md)] よりもマネージド コードが適しています。また、マネージド コードでは、文字列処理や正規表現など、多数の複雑なタスクが幅広くサポートされています。 .NET Framework ライブラリの機能を使用すると、数千もの事前にビルドされたクラスやルーチンにアクセスすることができます。 このようなクラスやルーチンには、任意のストアド プロシージャ、トリガー、またはユーザー定義関数から簡単にアクセスできます。 BCL (基本クラス ライブラリ) には、文字列操作、高度な算術演算、ファイル アクセス、暗号化などの機能を提供するクラスがあります。  
   
 > [!NOTE]  
->  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、「[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
+>  これらのクラスの多くは、SQL Server の CLR コード内から使用できますが、サーバー側での使用が適していないクラス (ウィンドウ関連のクラスなど) にはアクセスできません。 詳細については、「 [サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
   
  マネージド コードの利点の 1 つはタイプ セーフであることです。つまり、コードから各データ型へのアクセスは、正しく定義された許容される方法に限られます。 CLR は、マネージド コードが実行される前に、そのコードが安全であることを確認します。 たとえば、事前に書き込まれていないメモリからの読み取りが行われないように、コードがチェックされます。 また、CLR は、コードからアンマネージ メモリの操作が行われないようにする際にも役立ちます。  
   
@@ -59,10 +59,9 @@ ms.locfileid: "85727609"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>拡張ストアド プロシージャとマネージド コードの選択  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでは実行不可能な機能を実行するために、拡張ストアド プロシージャを構築できます。 ただし、拡張ストアド プロシージャでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性を侵害する可能性があります。一方、マネージド コードは、タイプ セーフなので、SQL Server プロセスの整合性を侵害することはありません。 さらに、CLR のマネージド コードと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間では、メモリ管理、スレッドやファイバーのスケジュール設定、同期サービスが、より密接に統合されます。 CLR 統合を使用すると、拡張ストアド プロシージャを使用するよりも安全に、[!INCLUDE[tsql](../../includes/tsql-md.md)] では記述できないタスクを実行するのに必要なストアド プロシージャを記述することができます。 CLR 統合と拡張ストアドプロシージャの詳細については、「 [Clr 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
- [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
+ [CLR 統合のアーキテクチャ](./clr-integration-architecture-clr-hosted-environment.md)   
  [CLR データベースオブジェクトからのデータアクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [CLR 統合の概要](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
-  
   

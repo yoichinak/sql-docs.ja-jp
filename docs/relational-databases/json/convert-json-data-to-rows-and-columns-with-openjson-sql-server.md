@@ -1,4 +1,5 @@
 ---
+description: OPENJSON を使用して JSON データを解析して変換する (SQL Server)
 title: OPENJSON で JSON データを解析し、変換する
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 496e49a866bb477139078b0797c6390b42df3192
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c92c89d86f14f108e1d21643da7b578d6a2f800
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88499360"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを解析して変換する (SQL Server)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "86009594"
   
 ## <a name="option-1---openjson-with-the-default-output"></a>オプション 1 - 既定の出力を使用する OPENJSON
 結果の明示的なスキーマ (つまり **OPENJSON** の後の **WITH** 句) を指定せずに **OPENJSON** 関数を使用すると、関数は、次の 3 つの列を含むテーブルを返します。
-1.  入力オブジェクトのプロパティの**名前** (または入力配列の要素のインデックス)。
-2.  プロパティまたは配列要素の**値**。
+1.  入力オブジェクトのプロパティの **名前** (または入力配列の要素のインデックス)。
+2.  プロパティまたは配列要素の **値**。
 3.  **型** (たとえば、文字列、数値、ブール値、配列、オブジェクト)。
 
 **OPENJSON** は、JSON オブジェクトの各プロパティ、または配列の各要素を、個別の行として返します。  
@@ -58,7 +59,7 @@ FROM OPENJSON(@json);
 |key|value|type|  
 |---------|-----------|----------|  
 |name|John|1|  
-|姓|Doe|1|  
+|surname|Doe|1|  
 |age|45|2|  
 |スキル|["SQL","C#","MVC"]|4|
 
@@ -135,7 +136,7 @@ WITH (
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON には、互換性レベル 130 が必要
 
-**OPENJSON** 関数は、 **互換性レベル 130**でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、SQL Server は **OPENJSON** 関数を見つけて実行することができません。 他の組込み JSON 関数は、すべての互換性レベルで使用できます。
+**OPENJSON** 関数は、 **互換性レベル 130** でのみ使用できます。 データベースの互換性レベルが 130 よりも低い場合、SQL Server は **OPENJSON** 関数を見つけて実行することができません。 他の組込み JSON 関数は、すべての互換性レベルで使用できます。
 
 `sys.databases` ビューまたはデータベース プロパティで互換性レベルを確認できます。
 

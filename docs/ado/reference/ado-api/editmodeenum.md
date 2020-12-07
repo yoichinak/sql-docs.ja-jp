@@ -1,8 +1,9 @@
 ---
+description: EditModeEnum
 title: EditModeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4e16cbdddf39ba6abb03f93c35b2c2243d1bd71
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e10479aca06eab4a7aa5215f0016dd1f82eab1c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765563"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973853"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 レコードの編集状態を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|編集操作が実行中でないことを示します。|  
 |**adEditInProgress**|1|現在のレコードのデータが変更されていても保存されていないことを示します。|  

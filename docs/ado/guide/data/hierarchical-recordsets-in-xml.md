@@ -1,8 +1,9 @@
 ---
+description: XML での階層レコードセット
 title: XML 内の階層的なレコードセット |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762743"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980533"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
 ADO を使用すると、階層的なレコードセットオブジェクトを XML に永続化できます。 階層的なレコードセットオブジェクトを使用すると、親レコードセット内のフィールドの値は別のレコードセットになります。 このようなフィールドは、属性ではなく XML ストリームの子要素として表されます。  
@@ -125,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   子レコードが複数の親レコードを参照している場合は、レコードセットを再び開くと、子レコードセットに重複するレコードが含まれることがあります。 ただし、これらの重複は、ユーザーが基になる子行セットを直接操作している場合にのみ表示されます。 子レコードセット内を移動するためにチャプターが使用されている場合 (ADO 間を移動する唯一の方法)、重複は表示されません。  
   
 ## <a name="see-also"></a>参照  
- [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [レコードを XML 形式で保持する](./persisting-records-in-xml-format.md)

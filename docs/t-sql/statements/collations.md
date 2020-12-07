@@ -1,4 +1,5 @@
 ---
+description: COLLATE (Transact-SQL)
 title: COLLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/30/2019
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380875"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126204"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -56,7 +57,7 @@ COLLATE { <collation_name> | database_default }
 
 ## <a name="remarks"></a>解説
 
-COLLATE 句は、さまざまなレベルで指定できます。 コーディネートは次のとおりです。
+COLLATE 句は、さまざまなレベルで指定できます。 これらには、次のものが含まれます。
 
 1. データベースの作成または変更
 
@@ -154,7 +155,7 @@ Chiapas
 
 **COLLATE** を使用するその他の例については、「[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)
@@ -163,4 +164,4 @@ Chiapas
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [table データ型](../../t-sql/data-types/table-transact-sql.md)
+- [テーブル データ型](../../t-sql/data-types/table-transact-sql.md)

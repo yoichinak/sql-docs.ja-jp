@@ -1,6 +1,7 @@
 ---
-title: Excel 用 MDS アドインでのデータ品質照合 | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Excel 用 MDS アドインでのデータ品質照合
+title: データ品質照合
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13b02667ef1ded9c18b070e69ed63b7bb15db5cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257664"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、新しいデータと既に MDS で管理されているデータを比較することは、重複するデータや不正確なデータの追加を避けるために役立ちます。  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68092398"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [概要:Excel からデータをインポートする&#40;MDS アドインの Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概要: Excel からのデータのインポート (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [データ照合](../../data-quality-services/data-matching.md)  
   

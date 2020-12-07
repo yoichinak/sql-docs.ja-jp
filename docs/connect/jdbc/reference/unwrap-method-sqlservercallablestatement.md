@@ -1,4 +1,5 @@
 ---
+description: unwrap メソッド (SQLServerCallableStatement)
 title: unwrap メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2909870e0aaa5bdd7db86a567fb11915ede2428
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462407"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8444f4c3421f41cb94cdd716b1c2017f506b80c2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91114712"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,14 +34,13 @@ ms.locfileid: "86554747"
   既存の **text**、**ntext**、または **image** フィールドを更新します。 **text**、**ntext**、または **image** 型の列の一部だけを適切に変更するには、UPDATETEXT を使用します。 **text**、**ntext**、または **image** 型のフィールド全体を更新して置き換えるには、WRITETEXT を使用します。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と **UPDATE** ステートメントの [.](../../t-sql/queries/update-transact-sql.md)WRITE 句を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、large-value データ型と [UPDATE](../../t-sql/queries/update-transact-sql.md) ステートメントの **.** WRITE 句を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  
      { NULL | delete_length }  
@@ -68,7 +68,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  更新の開始位置を 0 を起点として指定します。 **text** または **image** 型の列の場合、*insert_offset* には、既存の列の開始位置から新しいデータの開始位置までにスキップするバイト数を指定します。 **Ntext** 列の場合、*insert_offset* は文字数です (各 **ntext** 文字は 2 バイトを使用します)。 この 0 を起点とした開始位置から始まる既存の **text**、**ntext**、または **image** 型の各データは、新しいデータの分だけ右に移動します。 値 0 を指定した場合、新しいデータは既存のデータの先頭に挿入されます。 NULL の場合、新しいデータは既存のデータの最後に追加されます。  
   
  *delete_length*  
- 既存の**text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の *text* 型または **image** 型の列で、**insert_offset** の位置から終わりまでのすべてのデータが削除されます。  
+ 既存の **text**、**ntext**、または **image** 型の列で、*insert_offset* で指定した位置から後にある、削除するデータの長さを指定します。 *delete_length* 値は、**text** および **image** 型の列ではバイト単位で指定され、**ntext** 型の列では文字数で指定されます。 各 **ntext** 文字は 2 バイトを使用します。 値 0 を指定した場合、データは削除されません。 NULL の場合、既存の **text** 型または **image** 型の列で、*insert_offset* の位置から終わりまでのすべてのデータが削除されます。  
   
  WITH LOG  
  ログ記録は、データベースで有効になっている復旧モデルによって異なります。  
@@ -85,7 +85,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  *scr_text_ptr* 値は *dest_text_ptr* 値と同じにすることはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  新しく挿入するデータには、1 つの *inserted_data* 定数、テーブル名、列名、またはテキスト ポインターを使用できます。  
   
 |更新アクション|UPDATETEXT パラメーター|  
@@ -109,12 +109,12 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  この例を実行するには、pubs データベースをインストールする必要があります。  
   
-```  
+```sql  
 USE pubs;  
 GO  
 ALTER DATABASE pubs SET RECOVERY SIMPLE;  
 GO  
-DECLARE @ptrval binary(16);  
+DECLARE @ptrval BINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr, publishers p  
       WHERE p.pub_id = pr.pub_id   
@@ -125,7 +125,7 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: DENY (サーバー プリンシパルの権限の拒否) (Transact-SQL)
 title: DENY (サーバー プリンシパルの権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4ae4a7c20902299362e1001246d76364cbbb368b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5b58e181d5defd9ecdd7d4581fe42d0565f8830f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483623"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688624"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY (サーバー プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +130,7 @@ GO
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>B. CASCADE を指定して VIEW DEFINITION 権限を拒否する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `VIEW DEFINITION` の `EricKurjan` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `RMeyyappan` に対して拒否します。 ここでは `CASCADE` オプションを使用して、`VIEW DEFINITION` がこの権限を許可したプリンシパルに対しても、`EricKurjan` の `RMeyyappan` 権限を拒否することを指定します。  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -139,7 +140,7 @@ GO
 ### <a name="c-denying-view-definition-permission-on-a-server-role"></a>C. サーバー ロールの VIEW DEFINITION 権限を拒否する  
  次の例では、`Sales` サーバー ロールの `VIEW DEFINITION` 権限を、`Auditors` サーバー ロールに対して拒否します。  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bdded00e9f4cc9fb5048bf242c0333cb88f186f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728035"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778521"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
@@ -210,6 +210,6 @@ Spark History Server には、次の既知の問題があります。
 
 ## <a name="next-steps"></a>次のステップ
 
-* [SQL Server ビッグ データ クラスターの概要](../big-data-cluster/deploy-get-started.md)
+* [SQL Server ビッグ データ クラスターの概要](./deploy-get-started.md)
 * Spark の設定を構成する
 * [Spark の設定を構成する](/azure/hdinsight/spark/apache-spark-settings/)

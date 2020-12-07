@@ -1,4 +1,5 @@
 ---
+description: dm_repl_schemas (Transact-sql)
 title: dm_repl_schemas (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 76fbd6947090d90cadf814ac1af04995acff0782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45ca3d11d1299e2fa308e823f196251066fb6202
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898715"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536915"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>dm_repl_schemas (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,11 +84,11 @@ ms.locfileid: "85898715"
 ## <a name="permissions"></a>アクセス許可  
  **Dm_repl_schemas**を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [レプリケーション関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

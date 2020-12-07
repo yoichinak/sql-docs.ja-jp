@@ -1,4 +1,5 @@
 ---
+description: soap_endpoints (Transact-sql)
 title: soap_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.soap_endpoints catalog view
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46f42c185a1be2cbf8742a14cc7d897f19430ca1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: daba746b3bbaf198160855e6caa85fb3d7b4fd1d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901175"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539503"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>soap_endpoints (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85901175"
 |**default_database**|**sysname**|DATABASE = オプションで指定された既定のデータベースの名前。<br /><br /> NULL = DEFAULT が指定されています。|  
 |**default_namespace**|**nvarchar (384)**|NAMESPACE = オプションで指定された既定の名前空間 `https://tempuri.org` 。代わりに default が指定された場合は。|  
 |**default_result_schema**|**tinyint**|SCHEMA = オプションの既定値。<br /><br /> 0 = NONE<br /><br /> 1 = 標準|  
-|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = オプションの既定値の説明。<br /><br /> なし<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = オプションの既定値の説明。<br /><br /> NONE<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = CHARACTER_SET = SQL オプションが指定されました。<br /><br /> 1 = CHARACTER_SET = XML オプションが指定されました。|  
 |**is_session_enabled**|**bit**|0 は、SESSION = DISABLE オプションが指定されていることを示します。<br /><br /> 1 = SESSION = ENABLED オプションが指定されました。|  
 |**session_timeout**|**int**|SESSION_TIMEOUT = オプションで指定された値。|  
@@ -52,8 +53,8 @@ ms.locfileid: "85901175"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

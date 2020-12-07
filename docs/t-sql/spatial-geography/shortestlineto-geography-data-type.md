@@ -1,4 +1,5 @@
 ---
+description: ShortestLineTo (geography データ型)
 title: ShortestLineTo (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 167db7fb7dd3dc03c4b1a1f6b819af2b8e09150d
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a68db46f790d16f8472fdb5850c10eb7a6de9399
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555827"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88417008"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

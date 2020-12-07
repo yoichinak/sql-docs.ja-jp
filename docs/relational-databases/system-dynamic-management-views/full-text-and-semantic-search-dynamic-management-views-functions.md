@@ -1,4 +1,5 @@
 ---
+description: フルテキストおよびセマンティック検索の動的管理ビュー-関数
 title: フルテキスト検索とセマンティック検索の動的管理ビュー-Functions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21b65e4d9f12457c0291c5b43b24924b94c289f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f2d7a48bfbccf174b26a08ec3a887f44247a457
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894672"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834291"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>フルテキストおよびセマンティック検索の動的管理ビュー-関数
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,8 +68,7 @@ ms.locfileid: "85894672"
  [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  関連付けられたセマンティックインデックスを持つ各テーブルの各類似性インデックスについて、ドキュメントの類似性のインデックスの作成に関するステータス情報の1行を返します。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   

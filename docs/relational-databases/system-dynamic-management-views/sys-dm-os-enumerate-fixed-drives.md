@@ -1,4 +1,5 @@
 ---
+description: dm_os_enumerate_fixed_drives (Transact-sql)
 title: dm_os_enumerate_fixed_drives (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -14,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_enumerate_fixed_drives dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c8b243a269454bb1480051f50ab52d83d5fde80b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c35d783b8db1abe5803a34dd1a4c401444897207
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898775"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539317"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>dm_os_enumerate_fixed_drives (Transact-sql)
 
@@ -42,7 +43,7 @@ SQL Server 2019 で導入されました。
 
 ユーザーは、サーバーに対する権限を持っている必要があり `VIEW SERVER STATE` ます。
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I/o 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

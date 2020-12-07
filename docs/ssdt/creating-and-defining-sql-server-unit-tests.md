@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518752"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988218"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>SQL Server の単体テストの作成と定義
 
@@ -43,9 +43,8 @@ SQL Server の単体テストおよび Transact\-SQL スクリプトを任意の
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
 作成した SQL Server の単体テストは、[テスト ビュー] ウィンドウまたは SQL Server 単体テスト デザイナーから実行したり、Team Foundation ビルドを使用して実行したりできます。  
   
-[シナリオ: データベース単体テストのカスタム条件の定義](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[シナリオ: データベース単体テストのカスタム条件の定義](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 カスタムのテスト条件を作成すると、既定のテスト条件で検証できない動作をテストできます。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_PRECISION (Transact-SQL)'
 title: '@@MAX_PRECISION (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de80639e43418afdca44afd781cb28d48477ff8b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 31b1c96a3cb6ab0a0a957ebcbff2d49776d658c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112410"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115146"
 ---
 # <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "87112410"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 @@MAX_PRECISION  
 ```  
   
@@ -52,7 +52,7 @@ ms.locfileid: "87112410"
   
 ## <a name="examples"></a>例  
   
-```  
+```sql  
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   

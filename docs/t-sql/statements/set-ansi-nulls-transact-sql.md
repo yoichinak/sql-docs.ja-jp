@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULLS (Transact-SQL)
 title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2020
@@ -22,15 +23,15 @@ helpviewer_keywords:
 - null values [SQL Server], comparison operators
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 5a00bccbb5de02e49579bf7ada5ef13e96e57ed9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8a18c0ff3422bc26046eca195dcd8f8ada41c9eb
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397074"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328108"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,19 +42,19 @@ ms.locfileid: "87397074"
 
 ## <a name="syntax"></a>構文
 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] および [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] の構文
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_NULLS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] および [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] の構文
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
-
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
 ANSI_NULLS が ON の場合、WHERE *column_name* = **NULL** を使用する SELECT ステートメントを実行すると、*column_name* に NULL 値が指定されていても、0 行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 以外の値が指定されていても、0 行が返されます。  
   
 ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE *column_name* = **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 値を持つ行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、列に NULL 以外の値を持つ行が返されます。 また、WHERE *column_name* <> *XYZ_value* を使用する SELECT ステートメントでは、*XYZ_value* 以外の非 NULL 値を持つすべての行が返されます。  

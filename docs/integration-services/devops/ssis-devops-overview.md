@@ -9,20 +9,20 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 597792aa200edf6dcb9cfe49c95ab5e1befa0c55
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823484"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92343654"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps ツール
+# <a name="sql-server-integration-services-ssis-devops-tools-azure-devops-extension"></a>SQL Server Integration Services (SSIS) DevOps ツール Azure DevOps 拡張機能
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 拡張機能は **Azure DevOps** Marketplace で入手できます。
 
-**Azure DevOps** 組織がない場合、まず、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) に新規登録し、[次の手順](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)で **SSIS DevOps ツール**拡張機能を追加します。
+**Azure DevOps** 組織がない場合、まず、 [Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops) に新規登録し、 [次の手順](/azure/devops/marketplace/overview?tabs=browser&view=azure-devops#add-an-extension)で **SSIS DevOps ツール** 拡張機能を追加します。
 
-**SSIS DevOps ツール**には、**SSIS Build** タスク、**SSIS Deploy** リリース タスク、および **SSIS Catalog Configuration タスク**が含まれています。
+**SSIS DevOps ツール** には、 **SSIS Build** タスク、 **SSIS Deploy** リリース タスク、および **SSIS Catalog Configuration タスク** が含まれています。
 
 - **[SSIS Build](#ssis-build-task)** タスクでは、プロジェクト デプロイ モデルまたはパッケージ デプロイ モデルでの dtproj ファイルのビルドがサポートされます。
 
@@ -50,7 +50,7 @@ ms.locfileid: "87823484"
 
 ビルドするプロジェクト フォルダーまたはファイルのパス。 フォルダー パスが指定されている場合、SSIS Build タスクでは、このフォルダーの下にあるすべての dtproj ファイルが繰り返し検索され、すべてビルドされます。
 
-プロジェクト パスを "*空*" にすることはできません。 **.** として設定して、 リポジトリのルート フォルダーからビルドします。
+プロジェクト パスを " *空* " にすることはできません。 **.** として設定して、 リポジトリのルート フォルダーからビルドします。
 
 #### <a name="project-configuration"></a>プロジェクトの構成
 
@@ -58,13 +58,13 @@ ms.locfileid: "87823484"
 
 #### <a name="output-path"></a>[出力パス]
 
-[ビルド成果物の公開タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops)によってビルド成果物として公開できるビルド結果を保存するための個別フォルダーのパス。
+[ビルド成果物の公開タスク](/azure/devops/pipelines/tasks/utility/publish-build-artifacts?view=azure-devops)によってビルド成果物として公開できるビルド結果を保存するための個別フォルダーのパス。
 
 ### <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 
 - SSIS Build タスクは Visual Studio と、ビルド エージェントで必須となる SSIS デザイナーに依存します。 そのため、パイプラインで SSIS Build タスクを実行するには、Microsoft によってホストされるエージェントに **vs2017-win2016** を選択するか、自己ホスト エージェントに Visual Studio と SSIS デザイナー (VS2017 + SSDT2017 または VS2019 + SSIS Projects 拡張機能) をインストールする必要があります。
 
-- 面倒な設定の要らないコンポーネント (SSIS Azure Feature Pack やその他のサードパーティ コンポーネント) を利用して SSIS プロジェクトをビルドするには、パイプライン エージェントが実行されているコンピューターにそのようなコンポーネントをインストールする必要があります。  Microsoft によってホストされるエージェントの場合、[PowerShell Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)または [Command Line Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)を追加してコンポーネントをダウンロードし、インストールしてから SSIS Build タスクを実行できます。 次に示すのは、Azure Feature Pack をインストールするための PowerShell のサンプル スクリプトです。 
+- 面倒な設定の要らないコンポーネント (SSIS Azure Feature Pack やその他のサードパーティ コンポーネント) を利用して SSIS プロジェクトをビルドするには、パイプライン エージェントが実行されているコンピューターにそのようなコンポーネントをインストールする必要があります。  Microsoft によってホストされるエージェントの場合、[PowerShell Script タスク](/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)または [Command Line Script タスク](/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)を追加してコンポーネントをダウンロードし、インストールしてから SSIS Build タスクを実行できます。 次に示すのは、Azure Feature Pack をインストールするための PowerShell のサンプル スクリプトです。 
 
 ```powershell
 wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
@@ -90,8 +90,8 @@ cat log.txt
 
 デプロイ先の種類。 SSIS Deploy タスクでは現在、2 つの種類がサポートされています。
 
-- *ファイル システム*:SSISDeploymentManifest ファイルとその関連ファイルを指定のファイル システムにデプロイします。 オンプレミスと Azure ファイル共有の両方がサポートされています。
-- *SSISDB*:オンプレミスの SQL Server または Azure-SSIS Integration Runtime でホストできる指定の SSIS カタログに ISPAC ファイルをデプロイします。
+- *ファイル システム* :SSISDeploymentManifest ファイルとその関連ファイルを指定のファイル システムにデプロイします。 オンプレミスと Azure ファイル共有の両方がサポートされています。
+- *SSISDB* :オンプレミスの SQL Server または Azure-SSIS Integration Runtime でホストできる指定の SSIS カタログに ISPAC ファイルをデプロイします。
 
 #### <a name="destination-server"></a>[転送先サーバー]
 
@@ -172,7 +172,7 @@ SSIS カタログ構成 JSON ファイルのソース。 [ファイル パス] �
 
 SSIS カタログ構成 JSON ファイルのパス。 このプロパティは、構成ファイル ソースとして [ファイル パス] を選択した場合にのみ表示されます。
 
-構成 JSON ファイルで[パイプライン変数](/azure/devops/pipelines/process/variables)を使用するには、このタスクの前に [File Transform タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution)」を参照してください。
+構成 JSON ファイルで[パイプライン変数](/azure/devops/pipelines/process/variables)を使用するには、このタスクの前に [File Transform タスク](/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops)を追加して、構成値をパイプライン変数に置き換える必要があります。 詳細については、「[JSON 変数置換](/azure/devops/pipelines/tasks/transforms-variable-substitution?tabs=Classic&view=azure-devops#json-variable-substitution)」を参照してください。
 
 #### <a name="inline-configuration-json"></a>インライン構成 JSON
 
@@ -290,7 +290,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 
 |プロパティ  |説明  |Notes  |
 |---------|---------|---------|
-|フォルダー  |フォルダー オブジェクトの配列。 各オブジェクトには、カタログ フォルダーの構成情報が含まれています。|フォルダー オブジェクトのスキーマについては、「*フォルダー属性*」を参照してください。|
+|フォルダー  |フォルダー オブジェクトの配列。 各オブジェクトには、カタログ フォルダーの構成情報が含まれています。|フォルダー オブジェクトのスキーマについては、「 *フォルダー属性* 」を参照してください。|
 
 ##### <a name="folder-attributes"></a>フォルダー属性
 
@@ -298,25 +298,25 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |---------|---------|---------|
 |name  |カタログ フォルダーの名前。|フォルダーが存在しない場合は作成されます。|
 |description|カタログ フォルダーの説明。|*null* の値はスキップされます。|
-|projects|プロジェクト オブジェクトの配列。 各オブジェクトには、プロジェクトの構成情報が含まれています。|プロジェクト オブジェクトのスキーマについては、「*プロジェクト属性*」を参照してください。|
-|環境|環境オブジェクトの配列。 各オブジェクトには、環境の構成情報が含まれています。|環境オブジェクトのスキーマについては、「*環境属性*」を参照してください。|
+|projects|プロジェクト オブジェクトの配列。 各オブジェクトには、プロジェクトの構成情報が含まれています。|プロジェクト オブジェクトのスキーマについては、「 *プロジェクト属性* 」を参照してください。|
+|環境|環境オブジェクトの配列。 各オブジェクトには、環境の構成情報が含まれています。|環境オブジェクトのスキーマについては、「 *環境属性* 」を参照してください。|
 
 ##### <a name="project-attributes"></a>プロジェクト属性
 
 |プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|プロジェクトの名前。 |プロジェクトが親フォルダーに存在しない場合、プロジェクト オブジェクトはスキップされます。|
-|parameters|パラメーター オブジェクトの配列です。 各オブジェクトには、パラメーターの構成情報が含まれています。|パラメーター オブジェクトのスキーマについては、「*パラメーター属性*」を参照してください。|
-|references|参照オブジェクトの配列。 各オブジェクトは、ターゲット プロジェクトへの環境参照を表します。|参照オブジェクトのスキーマについては、「*参照属性*」を参照してください。|
+|parameters|パラメーター オブジェクトの配列です。 各オブジェクトには、パラメーターの構成情報が含まれています。|パラメーター オブジェクトのスキーマについては、「 *パラメーター属性* 」を参照してください。|
+|references|参照オブジェクトの配列。 各オブジェクトは、ターゲット プロジェクトへの環境参照を表します。|参照オブジェクトのスキーマについては、「 *参照属性* 」を参照してください。|
 
 ##### <a name="parameter-attributes"></a>パラメーター属性
 
 |プロパティ  |説明  |メモ  |
 |---------|---------|---------|
 |name|パラメーターの名前。|<li>パラメーターには、プロジェクト パラメーターまたはパッケージ パラメーターを使用できます。 <li>存在しない場合は、パラメーターはスキップされます。 <li>パラメーターが接続マネージャー プロパティの場合、名前は **CM.\<Connection Manager Name>.\<Property Name>** の形式である必要があります。 |
-|container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、*container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、*container* は、拡張子が **.dtsx** のパッケージ名である必要があります。|
-|value|パラメーターの値。|<li>*valueType* が *referenced* の場合: 値は *string* 型の環境変数への参照です。 <li> *valueType* が *literal* の場合: この属性では、任意の有効な "*ブール値*"、"*数値*"、および "*文字列*" の JSON 値がサポートされます。 <li> 値は、ターゲット パラメーターの型に変換されます。 変換できない場合はエラーが発生します。<li> *null* の値は無効です。 タスクではこのパラメーター オブジェクトがスキップされ、警告が示されます。|
-|valueType|パラメーター値の型。|有効な型は次のとおりです。 <br> *literal*: *value* 属性はリテラル値を表します。 <br> *referenced*: *value* 属性は、環境変数への参照を表します。|
+|container|パラメーターのコンテナー。|<li>パラメーターがプロジェクト パラメーターの場合、 *container* はプロジェクト名である必要があります。 <li>パッケージ パラメーターの場合、 *container* は、拡張子が **.dtsx** のパッケージ名である必要があります。|
+|value|パラメーターの値。|<li>*valueType* が *referenced* の場合: 値は *string* 型の環境変数への参照です。 <li> *valueType* が *literal* の場合: この属性では、任意の有効な " *ブール値* "、" *数値* "、および " *文字列* " の JSON 値がサポートされます。 <li> 値は、ターゲット パラメーターの型に変換されます。 変換できない場合はエラーが発生します。<li> *null* の値は無効です。 タスクではこのパラメーター オブジェクトがスキップされ、警告が示されます。|
+|valueType|パラメーター値の型。|有効な型は次のとおりです。 <br> *literal* : *value* 属性はリテラル値を表します。 <br> *referenced* : *value* 属性は、環境変数への参照を表します。|
 
 ##### <a name="reference-attributes"></a>参照属性
 
@@ -331,7 +331,7 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |---------|---------|---------|
 |name|環境の名前。|環境が存在しない場合は作成されます。|
 |description|環境の説明。|*null* の値はスキップされます。|
-|variables|変数オブジェクトの配列。|各オブジェクトには、環境変数の構成情報が含まれています。変数オブジェクトのスキーマについては、「*変数属性*」を参照してください。|
+|variables|変数オブジェクトの配列。|各オブジェクトには、環境変数の構成情報が含まれています。変数オブジェクトのスキーマについては、「 *変数属性* 」を参照してください。|
 
 ##### <a name="variable-attributes"></a>変数属性
 
@@ -344,6 +344,12 @@ SSIS カタログ構成のインライン JSON。 このプロパティは、構
 |sensitive|環境変数の値が機微であるかどうか。|有効な入力は次のとおりです。 <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-103"></a>バージョン 1.0.3
+
+リリース日:2020 年 10 月 21 日
+
+- SSIS Deploy タスクと SSIS Catalog Configuration タスクに接続文字列サフィックスを指定できます。
 
 ### <a name="version-102"></a>バージョン 1.0.2
 

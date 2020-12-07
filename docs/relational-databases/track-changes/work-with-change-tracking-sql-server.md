@@ -1,4 +1,5 @@
 ---
+description: 変更の追跡のしくみ (SQL Server)
 title: 変更の追跡のしくみ
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -22,12 +23,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766503222750e991cb24bcdffebbc6bcdee28954
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28719dc4bc770e2fbb58bc7f6e70b68a84895127
+ms.sourcegitcommit: 275fd02d60d26f4e66f6fc45a1638c2e7cedede7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731553"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94447128"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "85731553"
  この関数を使用すると、現在のバージョンを取得して、次回の変更クエリの際に使用できます。 このバージョンは、最後にコミットされたトランザクションのバージョンを表します。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION() function  
- この関数を使用すると、クライアントの有効な最小バージョン (CHANGETABLE() から有効な結果を取得するために最低限必要なバージョン) を取得できます。 クライアントは、この関数から返される値に対して最終同期バージョンをチェックする必要があります。 最終同期バージョンがこの関数から返されたバージョンより小さいと、クライアントは CHANGETABLE() から有効な結果を取得できないため、再初期化が必要になります。  
+ この関数を使用すると、クライアントの有効な最小バージョン (CHANGETABLE() から有効な結果を取得するために最低限必要なバージョン) を取得できます。 クライアントで、この関数によって返される値に対して最終同期バージョンをチェックする必要があります。 最終同期バージョンがこの関数から返されたバージョンより小さいと、クライアントは CHANGETABLE() から有効な結果を取得できないため、再初期化が必要になります。  
   
 ### <a name="obtaining-initial-data"></a>初期データの取得  
  アプリケーションで初めて変更を取得する前に、クエリを送信して初期データおよび同期バージョンを取得する必要があります。 アプリケーションで適切なデータをテーブルから直接取得してから、CHANGE_TRACKING_CURRENT_VERSION() を使用して初期バージョンを取得する必要があります。 このバージョンは、初めて変更を取得するときに CHANGETABLE(CHANGES …) に渡されます。  
@@ -155,7 +156,7 @@ END
 ```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  

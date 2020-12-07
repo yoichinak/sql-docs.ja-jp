@@ -4,19 +4,19 @@ description: このチュートリアルでは、SQL Server の言語拡張を�
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 669903c59b3fd732418ba5fec94c963675679ea7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21d981c75881d0d971b0f27757015792237f12e3
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722536"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870145"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 このチュートリアルでは、[SQL Server の言語拡張](../language-extensions-overview.md)を使用し、SQL Server から 2 つの列 (ID とテキスト) と、正規表現の入力パラメーターを受け取る Java クラスを作成する方法について説明します。 このクラスでは、SQL Server に 2 つの列 (ID とテキスト) を返します。
 
@@ -26,7 +26,7 @@ Java クラスに送信されるテキスト列内の指定のテキストが、
 
 ## <a name="prerequisites"></a>前提条件
 
-+ [Windows](../install/install-sql-server-language-extensions-on-windows.md) または [Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
++ [Windows](../install/windows-java.md) または [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
 
 + T-SQL 実行用の SQL Server Management Studio または Azure Data Studio。
 
@@ -216,11 +216,11 @@ GO
 
 Java コードを実行するユーザーには、その特定の言語を外部スクリプトから実行する許可を付与する必要があります。
 
-詳しくは、「[CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)」をご覧ください。
+詳しくは、「[CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)」をご覧ください。
 
 ## <a name="create-external-libraries"></a>外部ライブラリの作成
 
-お使いの `.jar` ファイル用の外部ライブラリを作成するには、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) を使用します。 SQL Server は `.jar` ファイルにアクセスできるため、**classpath** に特別なアクセス許可を設定する必要はありません。
+お使いの `.jar` ファイル用の外部ライブラリを作成するには、[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) を使用します。 SQL Server は `.jar` ファイルにアクセスできるため、**classpath** に特別なアクセス許可を設定する必要はありません。
 
 このサンプルでは、2 つの外部ライブラリを作成します。 1 つは SDK 用で、もう 1 つは RegEx Java コード用です。
 
@@ -255,7 +255,7 @@ Java コードを実行するユーザーには、その特定の言語を外部
 > [!NOTE]
 > 前の手順で外部ライブラリを使用している場合は、この手順を省略してください。 外部ライブラリは、ご自分の `.jar` ファイルから作成することをお勧めします。
 
-外部ライブラリを使用しない場合は、必要なアクセス許可を設定する必要があります。 スクリプトの実行は、プロセス ID がお使いのコードにアクセスできる場合にのみ成功します。 アクセス許可の設定の詳細については、[インストール ガイド](../install/install-sql-server-language-extensions-on-windows.md)を参照してください。
+外部ライブラリを使用しない場合は、必要なアクセス許可を設定する必要があります。 スクリプトの実行は、プロセス ID がお使いのコードにアクセスできる場合にのみ成功します。 アクセス許可の設定の詳細については、[インストール ガイド](../install/windows-java.md)を参照してください。
 
 ### <a name="on-linux"></a>Linux の場合
 
@@ -277,7 +277,7 @@ Java コードを実行するユーザーには、その特定の言語を外部
 6. 「**ALL APPLICATION PACKAGES**」と入力し、名前を確認し、[OK] をクリックして追加します。 
     名前が解決されない場合は、[場所] の手順を再実行します。 SID は、お使いのコンピューターに対してローカルです。
 
-両方のセキュリティ ID に、フォルダーおよび **pkg** サブ フォルダーに対する**読み取りと実行**のアクセス許可があることを確認します。
+両方のセキュリティ ID に、フォルダーおよび **pkg** サブ フォルダーに対する **読み取りと実行** のアクセス許可があることを確認します。
 
 <a name="call-method"></a>
 
@@ -321,7 +321,7 @@ GO
 
 + クラスをコンパイルするときに、**pkg** サブ フォルダーには、3 つのクラスのすべてのコンパイル済みコードが含まれている必要があります。
 
-+ 外部ライブラリを使用していない場合は、外部プロセスを実行しているセキュリティ ID にご自分のコードに対する読み取りおよび実行のアクセス許可があることを確かめるために、**ルート**から **pkg** サブ フォルダーまでの*各*フォルダーのアクセス許可を確認します。
++ 外部ライブラリを使用していない場合は、外部プロセスを実行しているセキュリティ ID にご自分のコードに対する読み取りおよび実行のアクセス許可があることを確かめるために、**ルート** から **pkg** サブ フォルダーまでの *各* フォルダーのアクセス許可を確認します。
 
 ## <a name="next-steps"></a>次のステップ
 

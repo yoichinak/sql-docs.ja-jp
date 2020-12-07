@@ -1,8 +1,9 @@
 ---
+description: DeleteRule プロパティ (ADOX)
 title: DeleteRule プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 132989235a5cf9f2a6a7ce13f25a394cab45d88a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763893"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984613"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule プロパティ (ADOX)
 主キーが削除されたときに実行されるアクションを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- [Ruleenum](../../../ado/reference/adox-api/ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は**adRINone**です。  
+ [Ruleenum](./ruleenum.md)定数のいずれかを指定できる**Long 型**の値を設定して返します。 既定値は **adRINone**です。  
   
-## <a name="remarks"></a>Remarks  
- このプロパティは、既にコレクションに追加されている[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクトに対しては読み取り専用です。  
+## <a name="remarks"></a>解説  
+ このプロパティは、既にコレクションに追加されている [キー](./key-object-adox.md) オブジェクトに対しては読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key オブジェクト (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [DeleteRule プロパティの例 (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+ [DeleteRule プロパティの例 (VB)](./deleterule-property-example-vb.md)

@@ -1,4 +1,5 @@
 ---
+description: イベントの監視と応答
 title: イベントの監視と応答
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,18 +23,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1a7ca692b7720906ead843b4579d7d023a4797e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c9d22743c0559c7b766595b24bbfaf02e54f6d9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715727"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038839"
 ---
 # <a name="monitor-and-respond-to-events"></a>イベントの監視と応答
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、 *からのメッセージ、特定のパフォーマンス条件、WMI (Windows Management Instrumentation) イベントなどの*イベント [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を監視したり、イベントに自動的に応答したりできます。  
   
@@ -75,4 +76,3 @@ ms.locfileid: "85715727"
   
 ## <a name="see-also"></a>参照  
 [sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
-  

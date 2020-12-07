@@ -1,4 +1,5 @@
 ---
+description: トランザクション - 可用性グループとデータベース ミラーリング
 title: 'トランザクション: 可用性グループとデータベース ミラーリング'
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10e0f4355f3415708e5783595b048f7ae3b540d0
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900698"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94583754"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ SQL Server 2017 では、可用性グループのデータベースに対して�
 
 詳細については、次を参照してください。
 
-- [DTC 管理ガイド](https://msdn.microsoft.com/library/ms681291.aspx)
-- [DTC 開発者ガイド](https://msdn.microsoft.com/library/ms679938.aspx)
-- [DTC プログラマ リファレンス](https://msdn.microsoft.com/library/ms686108.aspx)
+- [DTC 管理ガイド](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [DTC 開発者ガイド](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [DTC プログラマ リファレンス](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前: 同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
 
@@ -58,7 +59,7 @@ Microsoft 分散トランザクション コーディネーター (MSDTC また�
 
 SQL Server 2016 では、トランザクションの 1 つ以上のデータベースが可用性グループに含まれる場合、分散トランザクションを使用する機能を導入します。 SQL Server 2016 より前の分散トランザクションでは、可用性グループのデータベースはサポートされていませんでした。 SQL Server 2016 では、データベースごとにリソース マネージャーを登録できます。 この新機能を使用すると、分散トランザクションでデータベースを可用性グループに含めることができます。
   
- 次の要件が満たされる必要があります。  
+ 次の要件を満たす必要があります。  
   
 -   可用性グループは、Windows Server 2012 R2 以降で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
   
@@ -91,6 +92,5 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 >  この記事で承認されていない DTC とデータベース ミラーリングの使用や DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
 ## <a name="next-steps"></a>次のステップ  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
+ [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   

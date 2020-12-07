@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689673"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934271"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
@@ -90,7 +90,6 @@ ms.locfileid: "83689673"
 ## <a name="see-also"></a>参照  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: '[結果の詳細ビュー] ダイアログ ボックス'
 title: '[結果の詳細ビュー] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716842"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88380738"
 ---
 # <a name="results-detailed-view-dialog-box"></a>[結果の詳細ビュー] ダイアログ ボックス
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,21 +36,21 @@ ms.locfileid: "85716842"
  モデル化されるファセットのプロパティ。  
   
  **[オペレーター]**  
- 式の演算子。 **=** 、 **Like**などがあります。  
+ 式の演算子。 **=** 、 **Like** などがあります。  
   
- **予期された値**  
+ **必要な値**  
  プロパティ式が成功するために必要なフィールドの値。  
   
  **[実際の値]**  
  ポリシーによって検出されたフィールドの値。  
   
- **[ポリシーの説明]**  
+ **ポリシーの説明**  
  ポリシーの説明。  
   
  **追加のヘルプ**  
  ハイパーリンクをクリックすると、このポリシーに関連する Web ページが開きます。 追加のヘルプ ハイパーリンクは、ポリシーの作成時に構成され、空白である場合や使用できない場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ポリシー管理] ノード &#40;オブジェクト エクスプローラー&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

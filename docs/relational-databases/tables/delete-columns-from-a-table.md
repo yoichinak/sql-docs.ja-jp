@@ -1,4 +1,5 @@
 ---
+description: テーブルからの列の削除
 title: テーブルからの列の削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2017
@@ -16,12 +17,12 @@ ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfb2aa26ccc46d7aca0b7b0a599552401f79741
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396552"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128717"
 ---
 # <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
 
@@ -38,7 +39,7 @@ ms.locfileid: "87396552"
 
    [制限事項と制約事項](#Restrictions)
 
-   [セキュリティ](#Security)
+   [Security](#Security)
 
 - **テーブルから列を削除する方法:**
 
@@ -64,18 +65,18 @@ CHECK 制約がある列を削除することはできません。 最初に制�
 
 ### <a name="to-delete-columns-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用して列を削除するには
 
-1. **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
-2. **オブジェクト エクスプローラー**で、列を削除するテーブルを探し、展開して列名を表示します。
-3. 削除する列を右クリックして、 **[削除]** を選びます。
+1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
+2. **オブジェクト エクスプローラー** で、列を削除するテーブルを探し、展開して列名を表示します。
+3. 削除する列を右クリックして、**[削除]** を選びます。
 4. **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。
 
 列に制約またはその他の依存関係が含まれている場合は、 **[オブジェクトの削除]** ダイアログ ボックスにエラー メッセージが表示されます。 参照制約を削除することによって、エラーを解決します。
 
 ### <a name="to-delete-columns-by-using-table-designer"></a>テーブル デザイナーを使用して列を削除するには
 
-1. **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[デザイン]** をクリックします。
+1. **オブジェクト エクスプローラー** で、列を削除するテーブルを右クリックし、 **[デザイン]** をクリックします。
 2. 削除する列を右クリックし、ショートカット メニューの **[列の削除]** をクリックします。
-3. 列にリレーションシップ (FOREIGN KEY または PRIMARY KEY) が適用されている場合は、選択した列および列のリレーションシップの削除を確認するメッセージが表示されます。 **[はい]** を選択します。
+3. 列にリレーションシップ (FOREIGN KEY または PRIMARY KEY) が適用されている場合は、選択した列および列のリレーションシップの削除を確認するメッセージが表示されます。 **[はい]** をクリックします。
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 

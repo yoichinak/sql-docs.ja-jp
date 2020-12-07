@@ -1,4 +1,5 @@
 ---
+description: ODBC コンポーネントのインストール
 title: ODBC コンポーネントのインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbd0a6aeba8073ce14b08b8635396b1f231895fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0250cc51b76cbda9c1091ebe1d696c2e569c037f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499748"
 ---
 # <a name="installing-odbc-components"></a>ODBC コンポーネントのインストール
 > [!NOTE]  
@@ -42,6 +43,6 @@ ms.locfileid: "81298982"
   
  ODBC 3.5 以降で Unicode がサポートされているため、ODBC で OLE DB コンポーネントを使用するには、いくつか考慮する必要があります。 1.1 バージョンの ODBC 用 OLE DB Provider は、ODBC 3.0 内の特定の Unicode 仕様に書き込まれました。 Odbc 3.5 ではこれらの仕様が変更されているため、ODBC 3.5 以降を使用する場合は、バージョン1.5 以降のプロバイダーが必要です。 このセクションでは、次のトピックを扱います。  
   
--   [インストール コンポーネント](../../../odbc/reference/install/installation-components.md)  
+-   [インストールコンポーネント](../../../odbc/reference/install/installation-components.md)  
   
 -   [使用状況のカウント](../../../odbc/reference/install/usage-counting.md)

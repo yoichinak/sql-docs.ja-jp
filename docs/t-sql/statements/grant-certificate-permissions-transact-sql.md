@@ -1,4 +1,5 @@
 ---
+description: GRANT (証明書の権限の許可) (Transact-SQL)
 title: GRANT (証明書の権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95efb94cd955a822ac9b07cce0b20063283d35f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0236a6ac037233446a1b6a2103daaa260875c064
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88478806"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (証明書の権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ GRANT permission  [ ,...n ]
  権限を許可する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -65,7 +66,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  

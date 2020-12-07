@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPReadFmt (OLE DB ドライバー) | Microsoft Docs
-description: フォーマット ファイルからのデータの読み取りに IBCPSession::BCPReadFmt を使用する (OLE DB)
+description: OLE DB Driver for SQL Server の BCPReadFmt メソッドは、データ ファイルのデータ形式を指定するフォーマット ファイルからデータを読み取ります。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPReadFmt method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e8df0e8b64795414734c93512a17951f8867c3a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ee5dd620981f2e41c20dd6a51c52c0b3d536a126
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244611"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081781"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPReadFmt(
  メソッドが成功しました。  
   
  E_FAIL  
- プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) インターフェイスを使用してください。  
+ プロバイダー固有のエラーが発生しました。詳細を確認するには、[ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md) インターフェイスを使用してください。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  
@@ -66,5 +66,4 @@ HRESULT BCPReadFmt(
 ## <a name="see-also"></a>参照  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../oledb/features/performing-bulk-copy-operations.md)  
-  
   

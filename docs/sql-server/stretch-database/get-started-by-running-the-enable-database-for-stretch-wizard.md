@@ -1,4 +1,5 @@
 ---
+description: まずはデータベースのストレッチの有効化ウィザードを実行する
 title: まずはデータベースのストレッチの有効化ウィザードを実行する
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9356ae3c4783df003233c4db7ab4bbaf9501a2d
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843798"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523953"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>まずはデータベースのストレッチの有効化ウィザードを実行する
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Stretch Database のデータベースを構成するには、データベースのストレッチの有効化ウィザードを実行します。  この記事では、入力する必要がある情報と、ウィザードで必要な選択について説明します。  
@@ -65,34 +66,34 @@ ms.locfileid: "73843798"
 |列|説明|  
 |------------|-----------------|  
 |(タイトルなし)|選択したテーブルの Stretch を有効にするにはこの列のチェック ボックスを選択します。|  
-|**Name**|データベースのテーブル名を指します。|  
+|**名前**|データベースのテーブル名を指します。|  
 |(タイトルなし)|この列には、選択したテーブルで Stretch を無効にはしない警告記号が表示される場合があります。 また、たとえば、テーブルでサポートされていないデータ型が使用されているなど、選択したテーブルで Stretch を有効化しないブロックの問題が表示される場合もあります。 ツールヒントの詳細な情報を表示するには、記号の上にマウス ポインターを移動します。 詳細については、「 [Stretch Database の制限事項](../../sql-server/stretch-database/limitations-for-stretch-database.md)」を参照してください。|  
 |**ストレッチ済み**|テーブルが既に Stretch 用に有効であるかどうかを示します。|  
-|**移行**|テーブル全体を移行 ( **[テーブル全体]** ) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
+|**移行**|テーブル全体を移行 ([ **テーブル全体** ]) することも、表の既存の列にフィルターを指定することもできます。 移行する行を選択するのに、別のフィルター関数を使用する場合、ウィザードを終了した後、ALTER TABLE ステートメントを実行してフィルター関数を指定します。 フィルター関数の詳細については、「[フィルター関数を使用して、移行する行を選択する](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)」を参照してください。 この関数の適用方法の詳細については、「[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」または「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。|  
 |**行数**|テーブルの行数を指定します。|  
 |**[サイズ (KB)]**|テーブルのサイズを KB で指定します。|  
   
 ## <a name="optionally-provide-a-row-filter"></a>オプションで行フィルターを指定する  
- 移行する行を選択するフィルター機能を指定する場合に、 **[テーブルの選択]** ページで次の処理を行います。  
+ 移行する行を選択するフィルター機能を指定する場合に、[ **テーブルの選択** ] ページで次の処理を行います。  
   
-1.  **[拡張するテーブルを選択します。]** リスト内のテーブルの行で、 **[テーブル全体]** をクリックします。 **[拡張する行の選択]** ダイアログ ボックスが開きます。  
+1.  [ **拡張するテーブルを選択します。** ] リスト内のテーブルの行で、[ **テーブル全体** ] をクリックします。 [ **拡張する行の選択** ] ダイアログ ボックスが開きます。  
   
      ![日付ベースのフィルター述語を定義する](../../sql-server/stretch-database/media/stretch-wizard-2a.png "日付ベースのフィルター述語を定義する")  
   
-2.  **[拡張する行の選択]** ダイアログ ボックスで **[行の選択]** を選択します。  
+2.  [ **拡張する行の選択** ] ダイアログ ボックスで [ **行の選択** ] を選択します。  
   
-3.  **[名前]** フィールドに、フィルター関数の名前を指定します。  
+3.  [ **名前** ] フィールドに、フィルター関数の名前を指定します。  
   
 4.  **Where** 句には、テーブルから列、演算子を選択し、値を指定します。  
   
-5.  **[確認]** をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって **[成功]** がレポートされます。  
+5.  [ **確認** ] をクリックして、関数をテストします。 関数によって、テーブルから結果が返される場合、つまり、条件を満たす移行する行がある場合、テストによって [ **成功** ] がレポートされます。  
 
 > [!NOTE] 
 > フィルター クエリを表示するテキストボックスは読み取り専用です。 テキストボックスのクエリは編集できません。
   
-6.  終了 をクリックして  **テーブルの選択** 画面に戻ります。  
+6.  [終了] をクリックして [ **テーブルの選択** ] 画面に戻ります。  
 
-フィルター関数は、ウィザードを終了した場合にのみ、SQL Server に作成されます。 それまでは、 **[テーブルの選択]** ページに戻って、フィルター関数を変更したり、名前を変更したりすることができます。
+フィルター関数は、ウィザードを終了した場合にのみ、SQL Server に作成されます。 それまでは、[ **テーブルの選択** ] ページに戻って、フィルター関数を変更したり、名前を変更したりすることができます。
 
 ![フィルター述語を定義した後の [テーブルの選択] ページ](../../sql-server/stretch-database/media/stretch-wizard-2b.png "フィルター述語を定義した後の [テーブルの選択] ページ")
 
@@ -115,7 +116,7 @@ ms.locfileid: "73843798"
   
 3.  Stretch Database で使用する Azure リージョンを選択します。
     -   新しいサーバーを作成すると、このリージョンにサーバーが作成されます。  
-    -   選択したリージョンに既にサーバーがある場合、 **[既存のサーバー]** を選択すると、それらがウィザードにリストされます。
+    -   選択したリージョンに既にサーバーがある場合、[ **既存のサーバー** ] を選択すると、それらがウィザードにリストされます。
   
      待機時間を最小限に抑えるには、SQL Server が配置されている Azure リージョンを選択してください。 リージョンの詳細については、「 [Azure のリージョン](https://azure.microsoft.com/regions/)」を参照してください。  
   
@@ -148,11 +149,11 @@ ms.locfileid: "73843798"
   
  データベースにマスター キーが既に存在する場合は、そのパスワードを入力します。  
   
- ![Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ")  
+ ![Stretch Database ウィザードの [セキュリティで保護された資格情報] ページを示すスクリーンショット。[パスワード] テキストボックスが空になっています。](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ")  
   
  データベースにマスター キーがない場合は、強力なパスワードを入力してデータベース マスター キーを作成します。  
   
- ![Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ")  
+ ![Stretch Database ウィザードの [セキュリティで保護された資格情報] ページを示すスクリーンショット。[新しいパスワード] テキストボックスと [パスワードの確認] テキストボックスが入力されています。](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database ウィザードの [セキュリティで保護された資格情報] ページ")  
   
  データベースのマスター キーを作成する方法については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」と「[データベース マスター キーの作成](../../relational-databases/security/encryption/create-a-database-master-key.md)」をご覧ください。 ウィザードが作成する資格情報の詳細については、「[データベース スコープ ベースの資格情報を作成する &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。  
   

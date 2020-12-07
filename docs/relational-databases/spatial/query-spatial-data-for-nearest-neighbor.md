@@ -1,4 +1,5 @@
 ---
+description: 空間データに対するニアレスト ネイバーのクエリ
 title: 空間データに対するニアレスト ネイバーのクエリ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 675ff1891d8bcb459ba21d330176eae44a629fe3
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725894"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006606"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>空間データに対するニアレスト ネイバーのクエリ
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   空間データで使用される一般的なクエリの 1 つに、ニアレスト ネイバー クエリがあります。 ニアレスト ネイバー クエリは、特定の空間オブジェクトに最も近い空間オブジェクトを検索するために使用されます。 たとえば、Web サイトのストア ロケーターは、多くの場合、顧客の場所に最も近い店舗の場所を検索する必要があります。  
   
  ニアレスト ネイバー クエリは、さまざまな有効なクエリ形式で記述できますが、空間インデックスを使用するニアレスト ネイバー クエリでは、次の構文を使用する必要があります。  
@@ -75,7 +76,7 @@ SELECT TOP ( number )
   
  ニアレスト ネイバー クエリで使用されるインデックスでは、新しい空間インデックス テセレーションを使用することをお勧めします。 空間インデックス テセレーションの詳細については、「 [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)である必要があります。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1  
  次のコード例は、空間インデックスを使用できるニアレスト ネイバー クエリを示します。 次の例では、 `Person.Address` データベースにある `AdventureWorks2016` テーブルを使用しています。  
   
 ```sql  
@@ -89,7 +90,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  列 SpatialLocation にインデックスを作成して、ニアレスト ネイバー クエリが空間インデックスを使用する方法を確認します。 空間インデックスの作成の詳細については、「 [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2  
  次のコード例は、空間インデックスを使用できないニアレスト ネイバー クエリを示します。  
   
 ```sql  
@@ -102,7 +103,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  このクエリは、構文で指定した形式の **を使用する** WHERE `STDistance()` 句がないため、空間インデックスを使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

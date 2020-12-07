@@ -1,4 +1,5 @@
 ---
+description: カスタム オブジェクトを使用したパッケージの拡張
 title: カスタム オブジェクトを使用したパッケージの拡張 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430574"
 ---
 # <a name="extending-packages-with-custom-objects"></a>カスタム オブジェクトを使用したパッケージの拡張
 
@@ -54,7 +55,7 @@ ms.locfileid: "86902579"
  カスタム データ フローの変換元、変換、変換先のプログラム方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
  事前に定義されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -64,7 +65,7 @@ ms.locfileid: "86902579"
  [プログラムによるパッケージの作成](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをプログラムで作成、構成、実行、読み込み、保存、および管理する方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプティング ソリューションとカスタム オブジェクトとの比較](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Scans イベント カテゴリ
 title: Scans イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ee3196894bbb3c5455d7598a6535a4969ed78d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a65f7e767313e6bd66a11a3ef71c914cb26cf67
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727382"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88330278"
 ---
 # <a name="scans-event-category"></a>Scans イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

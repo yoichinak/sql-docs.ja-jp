@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b33827f37d02edf783c4688c9ad08cd4673706e7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898077"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670887"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server エラー ログ (Always On 可用性グループ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85898077"
 -   プライマリ レプリカとセカンダリ レプリカの間での可用性データベースの接続状態    
 -   可用性グループのエンドポイントの状態    
 -   可用性グループのリスナーの状態    
--   SQL Server リソース DLL (WSFC クラスターで実行されている) と SQL Server インスタンスの間のリース ステータス (詳細については、「[How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください)。    
+-   SQL Server リソース DLL (WSFC クラスターで実行されている) と SQL Server インスタンスの間のリース ステータス (詳細については、「[How It Works: SQL Server Always On lease timeout](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください)。    
 -   可用性グループのエラー イベント  
 
 次の現象は、SQL Server エラー ログで確認する必要があります。  
@@ -38,5 +38,4 @@ ms.locfileid: "85898077"
 -   不確定な状態の可用性グループ  
   
 詳細については、「[SQL Server エラー ログの表示 &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)」を参照してください。  
-  
   

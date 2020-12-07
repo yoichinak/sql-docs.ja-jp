@@ -1,4 +1,5 @@
 ---
+description: CDC デザイナー コンソールの概要
 title: CDC デザイナー コンソールの概要 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a00271fd569f65b0adb94bba4d035d4fc3f3849f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921277"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384881"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
 
@@ -27,7 +28,7 @@ ms.locfileid: "86921277"
 ## <a name="installation"></a>インストール  
  ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。  
   
- MicrosoftÂ® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ MicrosoftÂ® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://www.microsoft.com/download/details.aspx?id=56833)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ## <a name="supported-windows-environments"></a>サポートされている Windows 環境  
  CDC デザイナー コンソールは、次の Windows 環境で実行できます。  

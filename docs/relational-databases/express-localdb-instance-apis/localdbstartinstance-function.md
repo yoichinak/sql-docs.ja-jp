@@ -1,4 +1,5 @@
 ---
+description: LocalDBStartInstance 関数
 title: LocalDBStartInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b228c97280a2152f14a2ea97d9b1ac56c567afdd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 723f63b2b41b04b76c62f8cb3bc58ae917519b72
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765224"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544024"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ HRESULT LocalDBStartInstance(
  [出力] LocalDB インスタンスへの接続文字列を格納するバッファー。  
   
  *lpcchSqlConnection*  
- [入力/出力]入力時には、末尾の null を含め、 *wszSqlConnection*バッファーのサイズを文字数で格納します。 出力時に、指定されたバッファーサイズが小さすぎる場合、には、末尾の null を含め、必要なバッファーサイズが文字数で格納されます。  
+ [入力/出力]入力時には、末尾の null を含め、 *wszSqlConnection* バッファーのサイズを文字数で格納します。 出力時に、指定されたバッファーサイズが小さすぎる場合、には、末尾の null を含め、必要なバッファーサイズが文字数で格納されます。  
   
 ## <a name="returns"></a>戻り値  
  S_OK  
@@ -69,7 +70,7 @@ HRESULT LocalDBStartInstance(
  インスタンスは存在しません。  
   
  [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../../relational-databases/express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
- 指定されたバッファー *wszSqlConnection*が小さすぎます。  
+ 指定されたバッファー *wszSqlConnection* が小さすぎます。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](../../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md)  
  同期ロックを取得しようとしているときにタイムアウトが発生しました。  
@@ -116,7 +117,7 @@ HRESULT LocalDBStartInstance(
   
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

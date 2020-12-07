@@ -1,4 +1,5 @@
 ---
+description: StrToSet (MDX)
 title: StrToSet (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386778"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -31,17 +32,17 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  *Set_Specification*  
  直接的または間接的にセットを指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
- **StrToSet**関数は、文字列式で指定されたセットを返します。 通常、 **StrToSet**関数はユーザー定義関数と共に使用して、セットの指定を外部関数から mdx ステートメントに返すか、mdx クエリがパラメーター化されたときに使用します。  
+## <a name="remarks"></a>解説  
+ **StrToSet**関数は、文字列式で指定されたセットを返します。 通常、 **StrToSet** 関数はユーザー定義関数と共に使用して、セットの指定を外部関数から mdx ステートメントに返すか、mdx クエリがパラメーター化されたときに使用します。  
   
--   制約付きフラグを使用する場合、セットの指定には、修飾または非修飾メンバー名、または中かっこ{}で囲まれた修飾メンバー名または非修飾メンバー名を含む組のセットを含める必要があります。 このフラグは、指定された文字列を使用してインジェクション攻撃のリスクを軽減するために使用されます。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列が指定されると、"STRTOSET 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
+-   制約付きフラグを使用する場合、セットの指定には、修飾または非修飾メンバー名、または中かっこで囲まれた修飾メンバー名または非修飾メンバー名を含む組のセットを含める必要があり {} ます。 このフラグは、指定された文字列を使用してインジェクション攻撃のリスクを軽減するために使用されます。 修飾されているメンバー名または修飾されていないメンバー名に直接解決できない文字列が指定されると、"STRTOSET 関数の CONSTRAINED フラグによって設定された制限に違反しました。" というエラーが表示されます。  
   
 -   CONSTRAINED フラグを使用しない場合、セットを返す有効な多次元式 (MDX) 式に解決されるセットの指定を指定できます。  
   
 -   セットとメンバーの違いについて理解を深めるには、「Set 式の使用」および「メンバー式の使用」を参照してください。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 **StrToSet**関数を使用して州の属性階層のメンバーのセットを返します。 セットの指定には、有効な MDX セット式が用意されています。  
+## <a name="examples"></a>例  
+ 次の例では、 **StrToSet** 関数を使用して州の属性階層のメンバーのセットを返します。 セットの指定には、有効な MDX セット式が用意されています。  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members')  

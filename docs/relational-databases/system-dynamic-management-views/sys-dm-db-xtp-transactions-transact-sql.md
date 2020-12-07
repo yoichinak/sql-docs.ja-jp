@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_transactions (Transact-SQL)
 title: dm_db_xtp_transactions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_transactions dynamic management view
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 01f918c14409cdb23c017aaadb6432f18b25e67f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442874"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534336"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87442874"
 |session_id|**smallint**|このトランザクションを実行しているセッションのセッション識別子。 sys.dm_exec_sessions と結合されます。|  
 |begin_tsn|**bigint**|トランザクションの開始トランザクションのシリアル番号。|  
 |end_tsn|**bigint**|トランザクションの終了トランザクションのシリアル番号。|  
-|state|**int**|トランザクションの状態。<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|状態|**int**|トランザクションの状態。<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|トランザクションの状態の説明。|  
 |結果|**int**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> 0 - IN PROGRESS<br /><br /> 1-成功<br /><br /> 2-エラー<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5-検証に失敗しました (SR)<br /><br /> 6-ロールバック|  
 |result_desc|**nvarchar**|このトランザクションの結果。 有効な値を次に示します。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> コミットの依存関係<br /><br /> 検証に失敗しました (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
@@ -64,7 +65,7 @@ ms.locfileid: "87442874"
 |commit_dependency_total_attempt_count|**int**|内部でのみ使用されます|  
 |scan_area|**int**|内部でのみ使用されます|  
 |scan_area_desc|**nvarchar**|内部でのみ使用されます|  
-|scan_location|**int**|内部使用のみ。|  
+|scan_location|**int**|内部使用のみです。|  
 |dependent_1_address|**varbinary (8)**|内部でのみ使用されます|  
 |dependent_2_address|**varbinary (8)**|内部でのみ使用されます|  
 |dependent_3_address|**varbinary (8)**|内部でのみ使用されます|  

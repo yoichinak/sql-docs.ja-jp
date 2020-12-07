@@ -1,8 +1,9 @@
 ---
+description: Move メソッドの例 (VC++)
 title: Move メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 400af9af904820e05da2de3a1a0aabd3f3458ca8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 32f9ab33c3beac21ae82e2a5e4cf5dd9447d6844
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990563"
 ---
 # <a name="move-method-example-vc"></a>Move メソッドの例 (VC++)
-この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
+この例では、 [Move](./move-method-ado.md) メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
 ## <a name="example"></a>例  
   
@@ -241,7 +242,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Record 1 of 23  
@@ -258,4 +259,4 @@ Enter number of records to Move
 ```  
   
 ## <a name="see-also"></a>参照  
- [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
+ [Move メソッド (ADO)](./move-method-ado.md)

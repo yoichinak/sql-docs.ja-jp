@@ -1,4 +1,5 @@
 ---
+description: 'レッスン 2: データベース オブジェクトに対するアクセス許可の構成'
 title: チュートリアル:db オブジェクトに対するアクセス許可の構成
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15986ee3b8407a62fc4ed40a49c043921fe34588
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244754"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92035854"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2: データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,11 +30,11 @@ ms.locfileid: "75244754"
 ## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
-- **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**: [Docker で SQL Server 2017 をダウンロードする](../linux/quickstart-install-connect-docker.md)。
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -44,10 +45,10 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   
 ### <a name="create-a-new-windows-account"></a>新しい Windows アカウントの作成  
   
-1.  **[スタート]** ボタン、 **[ファイル名を指定して実行]** の順にクリックし、 **[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、 **[OK]** をクリックします。コンピューターの管理プログラムが開きます。 
-2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、 **[ユーザー]** を右クリックして、 **[新しいユーザー]** をクリックします。    
-3.  **[ユーザー名]** ボックスに、「 **Mary**」と入力します。    
-4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、 **[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
+1.  [ **スタート**] ボタン、[ **ファイル名を指定して実行**] の順にクリックし、[ **名前** ] ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、[ **OK** ] をクリックします。コンピューターの管理プログラムが開きます。 
+2.  [ **システム ツール**] の [ **ローカル ユーザーとグループ**] を展開し、[ **ユーザー**] を右クリックして、[ **新しいユーザー**] をクリックします。    
+3.  [ **ユーザー名** ] ボックスに、「 **Mary**」と入力します。    
+4.  [ **パスワード** ] および [ **パスワードの確認入力** ] ボックスに強力なパスワードを入力し、[ **作成** ] をクリックして、新しいローカルの Windows ユーザーを作成します。  
   
 ### <a name="create-a-sql-login"></a>SQL ログインの作成  
 
@@ -110,4 +111,3 @@ Mary にアクセス権を与えるには、 **TestData** データベースに�
 詳細については、次の記事に進んでください
 > [!div class="nextstepaction"]
 >[次の手順](lesson-3-deleting-database-objects.md)
-  

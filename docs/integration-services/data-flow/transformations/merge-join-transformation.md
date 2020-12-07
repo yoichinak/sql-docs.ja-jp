@@ -1,4 +1,5 @@
 ---
+description: Merge Join Transformation
 title: マージ結合変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8aaed0cb230867a7eb7b7ad640e9535975dd34d9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fab9313b76527744a53af64203794f7ec1b696d6
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906274"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477655"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
 
@@ -73,7 +74,7 @@ ms.locfileid: "86906274"
 >  マージ結合変換では、入力データが並べ替えられている必要があります。 この重要な要件の詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **[結合の種類]**  
+ **結合の種類**  
  内部結合、左外部結合、または完全結合を使用するかどうかを指定します。  
   
  **[入力の入れ替え]**  

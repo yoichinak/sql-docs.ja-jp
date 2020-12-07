@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b06c0cc9b3b50510282c620ff86aa1a478fae419
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728491"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129330"
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728491"
 > 証明書または非対称キーをバックアップすることが非常に重要であり、これらを使用して暗号化したバックアップ ファイルとは別の場所に保存することをお勧めします。 証明書または非対称キーがないと、バックアップ ファイルが使用不可能になり、バックアップを復元することができません。  
   
  **暗号化されたバックアップの復元:** SQL Server の復元では、復元時に暗号化パラメーターを指定する必要はありません。 ただし、バックアップ ファイルの暗号化に使用された証明書または非対称キーを復元先のインスタンスで使用できる必要があります。 復元を実行するユーザー アカウントには、証明書またはキーに対する **VIEW DEFINITION** 権限が必要です。 暗号化されたバックアップを別のインスタンスに復元する場合は、そのインスタンスで証明書を使用できるようにする必要があります。  
-  
- TDE で暗号化されたデータベースからバックアップを復元する場合、復元先のインスタンスで TDE の証明書を使用できる必要があります。  
+暗号化されたデータベースを新しい場所に復元する手順は次のようになります。
+
+1. 以前のデータベースで [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)
+1. 新しい場所のマスター データベースで [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)
+1. 新しいサーバー上の場所にインポートされた古いデータベースのバックアップ証明書から [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
+1. [データベースを新しい場所に復元する (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ TDE で暗号化されたデータベースからバックアップを復元する場合、復元先のインスタンスで TDE の証明書を使用できる必要があります。 詳細については、「 [別の SQL Server への TDE で保護されたデータベースの移動](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)」を参照してください。
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 利点  
   

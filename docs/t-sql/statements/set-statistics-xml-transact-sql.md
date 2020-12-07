@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS XML (Transact-SQL)
 title: SET STATISTICS XML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11d55d52b04436b4e1628c961114535c313c0d1e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88304861"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,9 @@ ms.locfileid: "85765663"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET STATISTICS XML は、解析時ではなく実行時に設定されます。  
   
  SET STATISTICS XML が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各ステートメントの実行に関する情報がステートメントの実行後に返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに実行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する情報です。 SET STATISTICS XML 以外のステートメントを同時にバッチで実行することもできます。  
@@ -60,7 +63,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 前者ではテキスト形式の出力が生成され、後者では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
   
 > [!NOTE]  
->  **で**[実際の実行プランを含める][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、**[実際の実行プランを含める]** ボタンの選択を解除してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS XML を使用して出力を表示するには、ユーザーに次の権限が必要です。  

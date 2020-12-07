@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescField 関数
 title: SQLSetDescField 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421136"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 関数
 
@@ -32,7 +33,7 @@ ms.locfileid: "81299552"
  導入されたバージョン: ODBC 3.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLSetDescField**は、記述子レコードの1つのフィールドの値を設定します。  
+ **SQLSetDescField** は、記述子レコードの1つのフィールドの値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,17 +54,17 @@ SQLRETURN SQLSetDescField(
  代入アプリケーションが設定を行うフィールドを含む記述子レコードを示します。 記述子レコードは0から番号が付けられ、レコード番号0はブックマークレコードになります。 *Recnumber*引数は、ヘッダーフィールドでは無視されます。  
   
  *FieldIdentifier*  
- 代入値が設定される記述子のフィールドを示します。 詳細については、「コメント」セクションの「*FieldIdentifier*引数」を参照してください。  
+ 代入値が設定される記述子のフィールドを示します。 詳細については、「コメント」セクションの「*FieldIdentifier* 引数」を参照してください。  
   
  *ValuePtr*  
  代入記述子情報を格納しているバッファーへのポインター、または整数値。 データ型は、 *FieldIdentifier*の値によって異なります。 *Valueptr*が整数値の場合、 *FieldIdentifier*引数の値に応じて、8バイト (sqllen)、4バイト (SQLINTEGER)、または2バイト (sqlsmallint) と見なすことができます。  
   
  *BufferLength*  
- 代入*FieldIdentifier*が ODBC で定義されたフィールドであり、 *valueptr*が文字列またはバイナリバッファーを指している場合、この引数は **valueptr*の長さである必要があります。 文字列データの場合、この引数には文字列のバイト数を含める必要があります。  
+ 代入 *FieldIdentifier* が ODBC で定義されたフィールドであり、 *valueptr* が文字列またはバイナリバッファーを指している場合、この引数は **valueptr*の長さである必要があります。 文字列データの場合、この引数には文字列のバイト数を含める必要があります。  
   
  *FieldIdentifier*が ODBC で定義されたフィールドであり、 *valueptr*が整数の場合、 *bufferlength*は無視されます。  
   
- *FieldIdentifier*がドライバーによって定義されたフィールドである場合、アプリケーションは、 *bufferlength*引数を設定することによって、ドライバーマネージャーに対してフィールドの性質を示します。 *Bufferlength*には次の値を指定できます。  
+ *FieldIdentifier*がドライバーによって定義されたフィールドである場合、アプリケーションは、 *bufferlength*引数を設定することによって、ドライバーマネージャーに対してフィールドの性質を示します。 *Bufferlength* には次の値を指定できます。  
   
 -   *Valueptr*が文字列へのポインターである場合、 *bufferlength*は文字列または SQL_NTS の長さになります。  
   
@@ -77,44 +78,44 @@ SQLRETURN SQLSetDescField(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLSetDescField**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_DESC で、*記述子ハンドル*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetDescField**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **SQLSetDescField**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *handletype*が SQL_HANDLE_DESC で、*記述子ハンドル*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetDescField** によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
 |SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプションの値が変更されました|ドライバーは、 * \*valueptr*に指定された値 ( *valueptr*がポインターの場合) または*valueptr*の値 ( *valueptr*が整数値の場合) をサポートしていなかったか* \*、または valueptr が実装*の動作条件により無効だったため、ドライバーは同様の値に置き換えられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
-|07009|無効な記述子のインデックス|*FieldIdentifier*引数がレコードフィールドで、 *recnumber*引数が0で、*記述子 handle*引数が IPD ハンドルを参照しています。<br /><br /> *Recnumber*引数が0未満で、*記述子ハンドル*引数が、APD またはが参照されています。<br /><br /> *Recnumber*引数が、データソースがサポートできる列またはパラメーターの最大数を超えています。また、*記述子ハンドル*引数が APD またはを参照しています。<br /><br /> (DM) *FieldIdentifier*引数が SQL_DESC_COUNT、 * \*valueptr*引数が0未満でした。<br /><br /> *Recnumber*引数が0で、*記述子ハンドル*引数が暗黙的に割り当てられた APD を参照しています。 (明示的に割り当てられたアプリケーション記述子が APD であるか、または実行時まで適用されるかが不明であるため、明示的に割り当てられたアプリケーション記述子では、このエラーは発生しません)。|  
+|01S02|オプションの値が変更されました|ドライバーは、 * \* valueptr*に指定された値 ( *valueptr*がポインターの場合) または*valueptr*の値 ( *valueptr*が整数値の場合) をサポートしていなかったか、または valueptr が実装の動作条件により無効だったため、ドライバーは同様の値に置き換えられました。 * \* * (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07009|無効な記述子のインデックス|*FieldIdentifier*引数がレコードフィールドで、 *recnumber*引数が0で、*記述子 handle*引数が IPD ハンドルを参照しています。<br /><br /> *Recnumber*引数が0未満で、*記述子ハンドル*引数が、APD またはが参照されています。<br /><br /> *Recnumber*引数が、データソースがサポートできる列またはパラメーターの最大数を超えています。また、*記述子ハンドル*引数が APD またはを参照しています。<br /><br /> (DM) *FieldIdentifier*引数が SQL_DESC_COUNT、 * \* valueptr*引数が0未満でした。<br /><br /> *Recnumber*引数が0で、*記述子ハンドル*引数が暗黙的に割り当てられた APD を参照しています。 (明示的に割り当てられたアプリケーション記述子が APD であるか、または実行時まで適用されるかが不明であるため、明示的に割り当てられたアプリケーション記述子では、このエラーは発生しません)。|  
 |08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
 |22001|文字列データ、右側が切り捨てられました|*FieldIdentifier*引数が SQL_DESC_NAME ましたが、 *bufferlength*引数の値が SQL_MAX_IDENTIFIER_LEN を超えています。|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 * \* Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンスエラー|(DM)*記述子ハンドル*は*StatementHandle*に関連付けられていました。このハンドルは非同期に実行される関数 (この関数ではありません) が呼び出され、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が、*記述子ハンドル*が関連付けられて SQL_NEED_DATA 返された*StatementHandle*に対して呼び出されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) 実行中の非同期関数が、*記述子ハンドル*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLSetDescField**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**が、*記述子ハンドル*に関連付けられたステートメントハンドルの1つに対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) *記述子ハンドル* は *StatementHandle* に関連付けられていました。このハンドルは非同期に実行される関数 (この関数ではありません) が呼び出され、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が、*記述子ハンドル*が関連付けられて SQL_NEED_DATA 返された*StatementHandle*に対して呼び出されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) 実行中の非同期関数が、 *記述子ハンドル*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLSetDescField** 関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または **sqlmoreresults** が、 *記述子ハンドル* に関連付けられたステートメントハンドルの1つに対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
 |HY016|実装行記述子を変更できません|*記述子ハンドル*引数が IRD に関連付けられましたが、 *FieldIdentifier*引数が SQL_DESC_ARRAY_STATUS_PTR でも SQL_DESC_ROWS_PROCESSED_PTR でもありませんでした。|  
 |HY021|不整合な記述子情報|SQL_DESC_TYPE フィールドと SQL_DESC_DATETIME_INTERVAL_CODE フィールドは、有効な ODBC SQL 型または有効なドライバー固有の SQL 型 (IPDs の場合) または有効な ODBC C 型 (APDs または ARDs の場合) を形成しません。<br /><br /> 整合性チェック中にチェックされた記述子情報が一致しませんでした。 ( **SQLSetDescRec**の「整合性チェック」を参照してください)。|  
-|HY090|文字列またはバッファーの長さが無効です|(DM) * \*valueptr*は文字列であり、 *bufferlength*は0未満ですが SQL_NTS と等しくありませんでした。<br /><br /> (DM) ドライバーは ODBC*2.x ドライバーでし*たが、記述子は、その*columnnumber*引数が0に設定されており、引数*bufferlength*に指定された値が4ではありませんでした。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) * \* valueptr*は文字列であり、 *bufferlength*は0未満ですが SQL_NTS と等しくありませんでした。<br /><br /> (DM) ドライバーは ODBC*2.x ドライバーでし* たが、記述子は、その *columnnumber* 引数が0に設定されており、引数 *bufferlength* に指定された値が4ではありませんでした。|  
 |HY091|無効な記述子フィールド識別子|*FieldIdentifier*引数に指定された値が ODBC 定義のフィールドではなく、実装定義の値ではありませんでした。<br /><br /> *FieldIdentifier*引数が、*記述子ハンドル*引数に対して無効でした。<br /><br /> *FieldIdentifier*引数は、読み取り専用の ODBC 定義フィールドでした。|  
-|HY092|属性またはオプションの識別子が無効です|Valueptr の値は、 *FieldIdentifier*引数に対して無効です。 * \**<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、 *valueptr*が SQL_NAMED でした。|  
+|HY092|属性またはオプションの識別子が無効です|* \* Valueptr*の値は、 *FieldIdentifier*引数に対して無効です。<br /><br /> *FieldIdentifier*引数が SQL_DESC_UNNAMED、 *valueptr*が SQL_NAMED でした。|  
 |HY105|パラメーターの型が無効です|(DM) SQL_DESC_PARAMETER_TYPE フィールドに指定された値が無効でした。 (詳細については、 **SQLBindParameter**の「*inputoutputtype*引数」セクションを参照してください)。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [ODBC 3.8 の新機能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)」を参照してください。|  
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM)*記述子ハンドル*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *記述子ハンドル* に関連付けられているドライバーでは、関数はサポートされていません。|  
   
-## <a name="comments"></a>説明  
- アプリケーションでは、 **SQLSetDescField**を呼び出して、任意の記述子フィールドを一度に1つずつ設定できます。 **SQLSetDescField**を呼び出すと、1つの記述子に1つのフィールドが設定されます。 フィールドを設定できる場合は、この関数を呼び出して任意の記述子の型の任意のフィールドを設定できます。 (このセクションの後半の表を参照してください)。  
+## <a name="comments"></a>コメント  
+ アプリケーションでは、 **SQLSetDescField** を呼び出して、任意の記述子フィールドを一度に1つずつ設定できます。 **SQLSetDescField**を呼び出すと、1つの記述子に1つのフィールドが設定されます。 フィールドを設定できる場合は、この関数を呼び出して任意の記述子の型の任意のフィールドを設定できます。 (このセクションの後半の表を参照してください)。  
   
 > [!NOTE]  
 >  **SQLSetDescField**の呼び出しが失敗した場合、 *recnumber*引数によって識別される記述子レコードの内容は未定義になります。  
   
- 関数の1回の呼び出しで複数の記述子フィールドを設定するために、他の関数を呼び出すことができます。 **SQLSetDescRec**関数は、列またはパラメーター (SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE、SQL_DESC_OCTET_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_INDICATOR_PTR フィールド) にバインドされたデータ型およびバッファーに影響を与えるさまざまなフィールドを設定します。 **SQLBindCol**または**SQLBindParameter**を使用すると、列またはパラメーターのバインドを完全に指定できます。 これらの関数は、1つの関数呼び出しを使用して、特定の記述子フィールドのグループを設定します。  
+ 関数の1回の呼び出しで複数の記述子フィールドを設定するために、他の関数を呼び出すことができます。 **SQLSetDescRec**関数は、列またはパラメーター (SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE、SQL_DESC_OCTET_LENGTH、SQL_DESC_PRECISION、SQL_DESC_SCALE、SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_INDICATOR_PTR フィールド) にバインドされたデータ型およびバッファーに影響を与えるさまざまなフィールドを設定します。 **SQLBindCol** または **SQLBindParameter** を使用すると、列またはパラメーターのバインドを完全に指定できます。 これらの関数は、1つの関数呼び出しを使用して、特定の記述子フィールドのグループを設定します。  
   
- **SQLSetDescField**は、バインドポインター (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、または SQL_DESC_OCTET_LENGTH_PTR) にオフセットを追加することによって、バインドバッファーを変更するために呼び出すことができます。 これにより、 **SQLBindCol**または**SQLBindParameter**を呼び出さずにバインドバッファーが変更されます。これにより、アプリケーションは、他のフィールド (SQL_DESC_DATA_TYPE など) を変更せずに SQL_DESC_DATA_PTR を変更できます。  
+ **SQLSetDescField** は、バインドポインター (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、または SQL_DESC_OCTET_LENGTH_PTR) にオフセットを追加することによって、バインドバッファーを変更するために呼び出すことができます。 これにより、 **SQLBindCol** または **SQLBindParameter**を呼び出さずにバインドバッファーが変更されます。これにより、アプリケーションは、他のフィールド (SQL_DESC_DATA_TYPE など) を変更せずに SQL_DESC_DATA_PTR を変更できます。  
   
- アプリケーションが**SQLSetDescField**を呼び出して、SQL_DESC_COUNT または遅延フィールド SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR、または SQL_DESC_INDICATOR_PTR 以外のフィールドを設定すると、レコードはバインド解除されます。  
+ アプリケーションが **SQLSetDescField** を呼び出して、SQL_DESC_COUNT または遅延フィールド SQL_DESC_DATA_PTR、SQL_DESC_OCTET_LENGTH_PTR、または SQL_DESC_INDICATOR_PTR 以外のフィールドを設定すると、レコードはバインド解除されます。  
   
- 記述子ヘッダーフィールドは、適切な*FieldIdentifier*を使用して**SQLSetDescField**を呼び出すことによって設定されます。 多くのヘッダーフィールドはステートメント属性でもあるため、 **SQLSetStmtAttr**を呼び出すことによって設定することもできます。 これにより、アプリケーションは最初に記述子ハンドルを取得せずに記述子フィールドを設定できます。 ヘッダーフィールドを設定するために**SQLSetDescField**が呼び出された場合、 *recnumber*引数は無視されます。  
+ 記述子ヘッダーフィールドは、適切な*FieldIdentifier*を使用して**SQLSetDescField**を呼び出すことによって設定されます。 多くのヘッダーフィールドはステートメント属性でもあるため、 **SQLSetStmtAttr**を呼び出すことによって設定することもできます。 これにより、アプリケーションは最初に記述子ハンドルを取得せずに記述子フィールドを設定できます。 ヘッダーフィールドを設定するために **SQLSetDescField** が呼び出された場合、 *recnumber* 引数は無視されます。  
   
- 0の*値*は、ブックマークフィールドを設定するために使用されます。  
+ 0の *値* は、ブックマークフィールドを設定するために使用されます。  
   
 > [!NOTE]  
 >  **SQLSetDescField**を呼び出してブックマークフィールドを設定する前に、ステートメント属性 SQL_ATTR_USE_BOOKMARKS を常に設定する必要があります。 必須ではありませんが、強くお勧めします。  
@@ -139,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  ヘッダーフィールドの初期化については、次の表で説明します。  
   
-|ヘッダーフィールド名|Type|R/W|Default|  
+|ヘッダーフィールド名|種類|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|APD: R IRD: R IPD: R|SQL_DESC_ALLOC_AUTO: 暗黙的または SQL_DESC_ALLOC_USER (明示的の場合)<br /><br /> APD: 暗黙的または SQL_DESC_ALLOC_USER を明示的に SQL_DESC_ALLOC_AUTO<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN 向け|APD: r/w IRD: 未使用の IPD: 未使用|APD: [1]: [1] IRD: 未使用の IPD: 使用されていません|  
@@ -153,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  レコードフィールドの初期化は、次の表に示すようになります。  
   
-|レコードフィールド名|Type|R/W|Default|  
+|レコードフィールド名|種類|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|APD: 未使用の IRD: R IPD: 使用しない|APD: 未使用の IRD: D IPD: 未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR|APD: 未使用の IRD: R IPD: 使用しない|APD: 未使用の IRD: D IPD: 未使用|  
@@ -192,7 +193,7 @@ SQLRETURN SQLSetDescField(
   
  [1] これらのフィールドは、ドライバーによって IPD が自動的に設定される場合にのみ定義されます。 定義されていない場合は未定義です。 アプリケーションでこれらのフィールドを設定しようとすると、SQLSTATE HY091 (無効な記述子フィールド識別子) が返されます。  
   
- [2] IPD の SQL_DESC_DATA_PTR フィールドは、整合性チェックを強制するように設定できます。 後続の**SQLGetDescField**または**Sqlgetdescrec**の呼び出しでは、ドライバーは SQL_DESC_DATA_PTR がに設定されている値を返す必要はありません。  
+ [2] IPD の SQL_DESC_DATA_PTR フィールドは、整合性チェックを強制するように設定できます。 後続の **SQLGetDescField** または **Sqlgetdescrec**の呼び出しでは、ドライバーは SQL_DESC_DATA_PTR がに設定されている値を返す必要はありません。  
   
 ## <a name="fieldidentifier-argument"></a>FieldIdentifier 引数  
  *FieldIdentifier*引数は、設定される記述子フィールドを示します。 記述子には、次のセクション「ヘッダーフィールド」で説明されているヘッダーフィールドと0個以上の*記述子レコード*で構成される記述子*ヘッダー*が含まれています。これについては、「ヘッダーフィールド」セクションに記載されているレコードフィールドを参照してください。  
@@ -210,17 +211,17 @@ SQLRETURN SQLSetDescField(
   
  このフィールドの既定値は1です。 SQL_DESC_ARRAY_SIZE が1より大きい場合は、APD またはの配列を SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR します。 各配列のカーディナリティは、このフィールドの値と同じです。  
   
- このフィールドは、SQL_ATTR_ROW_ARRAY_SIZE 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。 APD のこのフィールドは、SQL_ATTR_PARAMSET_SIZE 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ このフィールドは、SQL_ATTR_ROW_ARRAY_SIZE 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。 APD のこのフィールドは、SQL_ATTR_PARAMSET_SIZE 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
  **SQL_DESC_ARRAY_STATUS_PTR [すべて]**  
  各記述子の種類に対して、この SQLUS悪意のある * ヘッダーフィールドは、SQLUS悪意のある値の配列を指します。 これらの配列には次の名前が付けられます。 row status array (IRD)、parameter status array (IPD)、row operation array ()、および parameter operation array (APD)。  
   
- IRD では、このヘッダーフィールドは、 **Sqlbulkoperations**、 **sqlfetch**、 **sqlbulkoperations**、または**SQLSetPos**の呼び出し後の状態値を含む行ステータス配列を指します。 配列には、行セット内の行と同じ数の要素があります。 アプリケーションで Sqlusマルウェアの配列を割り当て、このフィールドを配列を指すように設定する必要があります。 既定では、このフィールドは null ポインターに設定されます。 ドライバーは、SQL_DESC_ARRAY_STATUS_PTR フィールドが null ポインターに設定されていない限り、配列に値を設定します。この場合、状態値は生成されず、配列には設定されません。  
+ IRD では、このヘッダーフィールドは、 **Sqlbulkoperations**、 **sqlfetch**、 **sqlbulkoperations**、または **SQLSetPos**の呼び出し後の状態値を含む行ステータス配列を指します。 配列には、行セット内の行と同じ数の要素があります。 アプリケーションで Sqlusマルウェアの配列を割り当て、このフィールドを配列を指すように設定する必要があります。 既定では、このフィールドは null ポインターに設定されます。 ドライバーは、SQL_DESC_ARRAY_STATUS_PTR フィールドが null ポインターに設定されていない限り、配列に値を設定します。この場合、状態値は生成されず、配列には設定されません。  
   
 > [!CAUTION]  
 >  IRD の SQL_DESC_ARRAY_STATUS_PTR フィールドが指す行ステータス配列の要素をアプリケーションで設定した場合、ドライバーの動作は未定義です。  
   
- 配列には、 **Sqlbulkoperations**、 **sqlfetch**、 **sqlbulkoperations**、または**SQLSetPos**の呼び出しが最初に設定されます。 呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、このフィールドが指す配列の内容は未定義になります。 配列内の要素には、次の値を含めることができます。  
+ 配列には、 **Sqlbulkoperations**、 **sqlfetch**、 **sqlbulkoperations**、または **SQLSetPos**の呼び出しが最初に設定されます。 呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、このフィールドが指す配列の内容は未定義になります。 配列内の要素には、次の値を含めることができます。  
   
 -   SQL_ROW_SUCCESS: 行は正常にフェッチされましたが、最後にフェッチされてから変更されていません。  
   
@@ -232,15 +233,15 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_ROW_DELETED: 行は最後にフェッチされてから削除されています。  
   
--   SQL_ROW_ADDED: 行は**Sqlbulkoperations**によって挿入されました。 行が再度フェッチされると、その状態は SQL_ROW_SUCCESS になります。  
+-   SQL_ROW_ADDED: 行は **Sqlbulkoperations**によって挿入されました。 行が再度フェッチされると、その状態は SQL_ROW_SUCCESS になります。  
   
 -   SQL_ROW_NOROW: 行セットは結果セットの末尾に重なっていますが、行の状態配列のこの要素にこれする行は返されませんでした。  
   
- IRD のこのフィールドは、SQL_ATTR_ROW_STATUS_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ IRD のこのフィールドは、SQL_ATTR_ROW_STATUS_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
  IRD の SQL_DESC_ARRAY_STATUS_PTR フィールドは、SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返された後にのみ有効です。 リターンコードがこれらのいずれでもない場合、SQL_DESC_ROWS_PROCESSED_PTR が指す位置は定義されていません。  
   
- IPD では、このヘッダーフィールドは、 **Sqlexecute**または**SQLExecDirect**の呼び出し後のパラメーター値の各セットの状態情報を含むパラメーター状態配列を指します。 **Sqlexecute**または**SQLExecDirect**の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、このフィールドが指す配列の内容は未定義になります。 アプリケーションで Sqlusマルウェアの配列を割り当て、このフィールドを配列を指すように設定する必要があります。 ドライバーは、SQL_DESC_ARRAY_STATUS_PTR フィールドが null ポインターに設定されていない限り、配列に値を設定します。この場合、状態値は生成されず、配列には設定されません。 配列内の要素には、次の値を含めることができます。  
+ IPD では、このヘッダーフィールドは、 **Sqlexecute** または **SQLExecDirect**の呼び出し後のパラメーター値の各セットの状態情報を含むパラメーター状態配列を指します。 **Sqlexecute**または**SQLExecDirect**の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、このフィールドが指す配列の内容は未定義になります。 アプリケーションで Sqlusマルウェアの配列を割り当て、このフィールドを配列を指すように設定する必要があります。 ドライバーは、SQL_DESC_ARRAY_STATUS_PTR フィールドが null ポインターに設定されていない限り、配列に値を設定します。この場合、状態値は生成されず、配列には設定されません。 配列内の要素には、次の値を含めることができます。  
   
 -   SQL_PARAM_SUCCESS: このパラメーターのセットに対して SQL ステートメントが正常に実行されました。  
   
@@ -252,43 +253,43 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_PARAM_DIAG_UNAVAILABLE: 診断情報が使用できません。 この例として、ドライバーがパラメーターの配列をモノリシック単位として扱う場合に、このレベルのエラー情報は生成されません。  
   
- IPD のこのフィールドは、SQL_ATTR_PARAM_STATUS_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ IPD のこのフィールドは、SQL_ATTR_PARAM_STATUS_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
- このヘッダーフィールドは、この行が**SQLSetPos**操作で無視されるかどうかを示すために、アプリケーションによって設定できる値の行操作配列を指しています。 配列内の要素には、次の値を含めることができます。  
+ このヘッダーフィールドは、この行が **SQLSetPos** 操作で無視されるかどうかを示すために、アプリケーションによって設定できる値の行操作配列を指しています。 配列内の要素には、次の値を含めることができます。  
   
--   SQL_ROW_PROCEED: 行は**SQLSetPos**を使用して bulk 操作に含まれています。 (この設定では、行に対して操作が実行されることは保証されません。 行の SQL_ROW_ERROR 状態が IRD 行の状態配列にある場合、ドライバーは行で操作を実行できない可能性があります)。  
+-   SQL_ROW_PROCEED: 行は **SQLSetPos**を使用して bulk 操作に含まれています。 (この設定では、行に対して操作が実行されることは保証されません。 行の SQL_ROW_ERROR 状態が IRD 行の状態配列にある場合、ドライバーは行で操作を実行できない可能性があります)。  
   
--   SQL_ROW_IGNORE: 行は**SQLSetPos**を使用して一括操作から除外されます。  
+-   SQL_ROW_IGNORE: 行は **SQLSetPos**を使用して一括操作から除外されます。  
   
  配列の要素が設定されていない場合は、すべての行が一括操作に含まれます。 SQL_DESC_ARRAY_STATUS_PTR フィールドの値が null ポインターの場合、すべての行が一括操作に含まれます。この解釈は、ポインターが有効な配列を指し、配列のすべての要素が SQL_ROW_PROCEED されている場合と同じです。 配列内の要素が SQL_ROW_IGNORE に設定されている場合、無視された行の行状態配列の値は変更されません。  
   
- このフィールドは、SQL_ATTR_ROW_OPERATION_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ このフィールドは、SQL_ATTR_ROW_OPERATION_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
- APD では、このヘッダーフィールドは、 **Sqlexecute**または**SQLExecDirect**が呼び出されたときにこの一連のパラメーターを無視するかどうかを示すために、アプリケーションによって設定できる値のパラメーター操作配列を指します。 配列内の要素には、次の値を含めることができます。  
+ APD では、このヘッダーフィールドは、 **Sqlexecute** または **SQLExecDirect** が呼び出されたときにこの一連のパラメーターを無視するかどうかを示すために、アプリケーションによって設定できる値のパラメーター操作配列を指します。 配列内の要素には、次の値を含めることができます。  
   
--   SQL_PARAM_PROCEED: パラメーターのセットは、 **Sqlexecute**または**SQLExecDirect**の呼び出しに含まれています。  
+-   SQL_PARAM_PROCEED: パラメーターのセットは、 **Sqlexecute** または **SQLExecDirect** の呼び出しに含まれています。  
   
--   SQL_PARAM_IGNORE: パラメーターのセットは、 **Sqlexecute**または**SQLExecDirect**呼び出しから除外されます。  
+-   SQL_PARAM_IGNORE: パラメーターのセットは、 **Sqlexecute** または **SQLExecDirect** 呼び出しから除外されます。  
   
- 配列の要素が設定されていない場合は、配列内のすべてのパラメーターセットが**Sqlexecute**または**SQLExecDirect**の呼び出しで使用されます。 APD の [SQL_DESC_ARRAY_STATUS_PTR] フィールドの値が null ポインターの場合は、すべてのパラメーターのセットが使用されます。この解釈は、ポインターが有効な配列を指し、配列のすべての要素が SQL_PARAM_PROCEED されている場合と同じです。  
+ 配列の要素が設定されていない場合は、配列内のすべてのパラメーターセットが **Sqlexecute** または **SQLExecDirect** の呼び出しで使用されます。 APD の [SQL_DESC_ARRAY_STATUS_PTR] フィールドの値が null ポインターの場合は、すべてのパラメーターのセットが使用されます。この解釈は、ポインターが有効な配列を指し、配列のすべての要素が SQL_PARAM_PROCEED されている場合と同じです。  
   
- APD のこのフィールドは、SQL_ATTR_PARAM_OPERATION_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ APD のこのフィールドは、SQL_ATTR_PARAM_OPERATION_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
  **SQL_DESC_BIND_OFFSET_PTR [アプリケーション記述子]**  
  この SQLLEN * ヘッダーフィールドは、バインドオフセットを指します。 既定では、null ポインターに設定されています。 このフィールドが null ポインターではない場合、ドライバーはポインターを逆参照し、フェッチ時に null 以外の値を持つ各遅延フィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR) に逆参照値を追加し、バインド時に新しいポインター値を使用します。  
   
  バインドオフセットは、常に、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR の各フィールドの値に直接追加されます。 オフセットが別の値に変更された場合でも、新しい値は各記述子フィールドの値に直接追加されます。 新しいオフセットは、フィールド値に前のオフセットと共に追加されることはありません。  
   
- このフィールドは*遅延フィールド*です。設定時には使用されませんが、データバッファーのアドレスを決定する必要がある場合は、後でドライバーによって使用されます。  
+ このフィールドは *遅延フィールド*です。設定時には使用されませんが、データバッファーのアドレスを決定する必要がある場合は、後でドライバーによって使用されます。  
   
- このフィールドは、SQL_ATTR_ROW_BIND_OFFSET_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。 このフィールドは、SQL_ATTR_PARAM_BIND_OFFSET_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ このフィールドは、SQL_ATTR_ROW_BIND_OFFSET_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。 このフィールドは、SQL_ATTR_PARAM_BIND_OFFSET_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
- 詳細については、 [Sqlfetchscroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)と[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)での行方向のバインドの説明を参照してください。  
+ 詳細については、 [Sqlfetchscroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) と [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)での行方向のバインドの説明を参照してください。  
   
  **SQL_DESC_BIND_TYPE [アプリケーション記述子]**  
  この SQLUINTEGER header フィールドは、列またはパラメーターのバインドに使用されるバインドの向きを設定します。  
   
- ARDs では、このフィールドは、関連付けられているステートメントハンドルで**Sqlfetchscroll**または**sqlfetch**が呼び出されたときのバインドの方向を指定します。  
+ ARDs では、このフィールドは、関連付けられているステートメントハンドルで **Sqlfetchscroll** または **sqlfetch** が呼び出されたときのバインドの方向を指定します。  
   
  列に対して列方向のバインドを選択する場合、このフィールドは SQL_BIND_BY_COLUMN (既定) に設定されます。  
   
@@ -303,20 +304,20 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_COUNT [すべて]**  
  この SQLSMALLINT ヘッダーフィールドは、データを格納する最大番号のレコードの1から始まるインデックスを指定します。 ドライバーは、記述子のデータ構造を設定するときに、SQL_DESC_COUNT フィールドを設定して、重要なレコード数を表示する必要もあります。 アプリケーションがこのデータ構造のインスタンスを割り当てる場合、領域を確保するためのレコード数を指定する必要はありません。 アプリケーションがレコードの内容を指定すると、ドライバーは必要な操作を行い、記述子ハンドルが適切なサイズのデータ構造を参照するようにします。  
   
- SQL_DESC_COUNT は、バインドされているすべてのデータ列 (フィールドが APD にある場合) またはバインドされているすべてのパラメーター (フィールドが内にある場合) のカウントではなく、最も番号が大きいレコードの数です。 最も番号が大きい列またはパラメーターがバインド解除されている場合、SQL_DESC_COUNT は、次に大きい番号の列またはパラメーターの番号に変更されます。 列またはパラメーターの番号が最も大きい列数よりも小さい場合、 **SQLBindCol**は、 *targetvalueptr*引数が null ポインターに設定された状態で、または*parametervalueptr*引数が null ポインターに設定された**SQLBindParameter**を呼び出すことによって SQL_DESC_COUNT、変更されません。 追加の列またはパラメーターが、データを含む最も番号の大きいレコードよりも大きい数値にバインドされている場合、ドライバーは [SQL_DESC_COUNT] フィールドの値を自動的に増やします。 SQL_UNBIND オプションを指定して**SQLFreeStmt**を呼び出すことによってすべての列のバインドが解除された場合 SQL_DESC_COUNT、IRD とのフィールドは0に設定されます。 SQL_RESET_PARAMS オプションを指定して**SQLFreeStmt**を呼び出すと、APD と IPD の SQL_DESC_COUNT フィールドが0に設定されます。  
+ SQL_DESC_COUNT は、バインドされているすべてのデータ列 (フィールドが APD にある場合) またはバインドされているすべてのパラメーター (フィールドが内にある場合) のカウントではなく、最も番号が大きいレコードの数です。 最も番号が大きい列またはパラメーターがバインド解除されている場合、SQL_DESC_COUNT は、次に大きい番号の列またはパラメーターの番号に変更されます。 列またはパラメーターの番号が最も大きい列数よりも小さい場合、 **SQLBindCol**は、 *targetvalueptr*引数が null ポインターに設定された状態で、または*parametervalueptr*引数が null ポインターに設定された**SQLBindParameter**を呼び出すことによって SQL_DESC_COUNT、変更されません。 追加の列またはパラメーターが、データを含む最も番号の大きいレコードよりも大きい数値にバインドされている場合、ドライバーは [SQL_DESC_COUNT] フィールドの値を自動的に増やします。 SQL_UNBIND オプションを指定して **SQLFreeStmt** を呼び出すことによってすべての列のバインドが解除された場合 SQL_DESC_COUNT、IRD とのフィールドは0に設定されます。 SQL_RESET_PARAMS オプションを指定して **SQLFreeStmt** を呼び出すと、APD と IPD の SQL_DESC_COUNT フィールドが0に設定されます。  
   
  SQL_DESC_COUNT の値は、 **SQLSetDescField**を呼び出すことによって、アプリケーションによって明示的に設定できます。 SQL_DESC_COUNT の値が明示的に減少した場合、SQL_DESC_COUNT の新しい値よりも大きい数値を持つすべてのレコードが実質的に削除されます。 SQL_DESC_COUNT の値が明示的に0に設定されていて、フィールドがである場合、バインドされたブックマーク列を除くすべてのデータバッファーが解放されます。  
   
  このフィールドのレコード数には、バインドされたブックマーク列は含まれません。 ブックマーク列をバインド解除する唯一の方法は、SQL_DESC_DATA_PTR フィールドを null ポインターに設定することです。  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [実装記述子]**  
- IRD では、この SQLULEN \* header フィールドは、 **Sqlfetch**または**sqlulen**の呼び出しの後にフェッチされた行の数を含むバッファー、または**sqlulen**または**SQLSetPos**の呼び出しによって実行される一括操作の影響を受ける行の数 (エラー行を含む) を指します。  
+ IRD では、この SQLULEN \* header フィールドは、 **sqlfetch** または **sqlulen**の呼び出しの後にフェッチされた行の数を含むバッファー、または **sqlulen** または **SQLSetPos**の呼び出しによって実行される一括操作の影響を受ける行の数 (エラー行を含む) を指します。  
   
  IPD では、この SQLUINTEGER * ヘッダーフィールドは、エラーセットを含む、処理されたパラメーターのセットの数を格納しているバッファーを指します。 Null ポインターの場合、数値は返されません。  
   
- SQL_DESC_ROWS_PROCESSED_PTR は、 **Sqlfetch**または**SQLFETCHSCROLL** (IRD フィールドの場合) または**Sqlfetch**、 **SQLExecDirect**、 **sqlparamdata** (IPD フィールドの場合) の呼び出し後に、SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返された後にのみ有効です。 このフィールドが指すバッファーに入力する呼び出しが SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返さない場合、SQL_NO_DATA を返さない限り、バッファーの内容は未定義になります。この場合、バッファー内の値は0に設定されます。  
+ SQL_DESC_ROWS_PROCESSED_PTR は、 **Sqlfetch** または **SQLFETCHSCROLL** (IRD フィールドの場合) または **Sqlfetch**、 **SQLExecDirect**、 **sqlparamdata** (IPD フィールドの場合) の呼び出し後に、SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返された後にのみ有効です。 このフィールドが指すバッファーに入力する呼び出しが SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返さない場合、SQL_NO_DATA を返さない限り、バッファーの内容は未定義になります。この場合、バッファー内の値は0に設定されます。  
   
- このフィールドは、SQL_ATTR_ROWS_FETCHED_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。 APD のこのフィールドは、SQL_ATTR_PARAMS_PROCESSED_PTR 属性を指定して**SQLSetStmtAttr**を呼び出すことによって設定することもできます。  
+ このフィールドは、SQL_ATTR_ROWS_FETCHED_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。 APD のこのフィールドは、SQL_ATTR_PARAMS_PROCESSED_PTR 属性を指定して **SQLSetStmtAttr** を呼び出すことによって設定することもできます。  
   
  このフィールドが指すバッファーは、アプリケーションによって割り当てられます。 これは、ドライバーによって設定される遅延出力バッファーです。 既定では、null ポインターに設定されています。  
   
@@ -341,20 +342,20 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_CONCISE_TYPE [すべて]**  
  この SQLSMALLINT ヘッダーフィールドは、datetime データ型および interval データ型を含む、すべてのデータ型の簡潔なデータ型を指定します。  
   
- SQL_DESC_CONCISE_TYPE、SQL_DESC_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE の各フィールドの値は相互に依存しています。 いずれかのフィールドが設定されるたびに、もう一方も設定する必要があります。 SQL_DESC_CONCISE_TYPE は、 **SQLBindCol** 、 **SQLBindParameter**、または**SQLSetDescField**への呼び出しによって設定できます。 SQL_DESC_TYPE は、 **SQLSetDescField**または**SQLSetDescRec**の呼び出しによって設定できます。  
+ SQL_DESC_CONCISE_TYPE、SQL_DESC_TYPE、および SQL_DESC_DATETIME_INTERVAL_CODE の各フィールドの値は相互に依存しています。 いずれかのフィールドが設定されるたびに、もう一方も設定する必要があります。 SQL_DESC_CONCISE_TYPE は、 **SQLBindCol** 、 **SQLBindParameter**、または **SQLSetDescField**への呼び出しによって設定できます。 SQL_DESC_TYPE は、 **SQLSetDescField** または **SQLSetDescRec**の呼び出しによって設定できます。  
   
  SQL_DESC_CONCISE_TYPE が interval データ型または datetime データ型以外の簡潔なデータ型に設定されている場合、SQL_DESC_TYPE フィールドは同じ値に設定され、SQL_DESC_DATETIME_INTERVAL_CODE フィールドは0に設定されます。  
   
  SQL_DESC_CONCISE_TYPE が簡潔な datetime または interval データ型に設定されている場合、SQL_DESC_TYPE フィールドは対応する詳細な種類 (SQL_DATETIME または SQL_INTERVAL) に設定され、SQL_DESC_DATETIME_INTERVAL_CODE フィールドは適切なサブコードに設定されます。  
   
  **SQL_DESC_DATA_PTR [アプリケーション記述子と IPDs]**  
- この SQLPOINTER レコードフィールドは、パラメーター値 (APDs の場合) または列の値 (ARDs の場合) が含まれる変数を指します。 このフィールドは*遅延フィールド*です。 設定時には使用されませんが、後でデータを取得するためにドライバーによって使用されます。  
+ この SQLPOINTER レコードフィールドは、パラメーター値 (APDs の場合) または列の値 (ARDs の場合) が含まれる変数を指します。 このフィールドは *遅延フィールド*です。 設定時には使用されませんが、後でデータを取得するためにドライバーによって使用されます。  
   
  **SQLBindCol**への呼び出しで*targetvalueptr*引数が null ポインターである場合、または**SQLSetDescField**または**SQLSetDescRec**への呼び出しによって null ポインターに設定されている場合 SQL_DESC_DATA_PTR は、SQL_DESC_DATA_PTR フィールドで指定された列がバインド解除されます。 SQL_DESC_DATA_PTR フィールドが null ポインターに設定されている場合、他のフィールドは影響を受けません。  
   
- このフィールドが指すバッファーをいっぱいにする**Sqlfetch**または**sqlfetchscroll**の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。  
+ このフィールドが指すバッファーをいっぱいにする **Sqlfetch** または **sqlfetchscroll** の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。  
   
- APD、、または IPD の SQL_DESC_DATA_PTR フィールドが設定されている場合、ドライバーは、SQL_DESC_TYPE フィールドの値に有効な ODBC C データ型またはドライバー固有のデータ型のいずれかが含まれていること、およびデータ型に影響する他のすべてのフィールドが一致していることを確認します。 IPD の [SQL_DESC_DATA_PTR] フィールドを使用するのは、整合性チェックを要求することだけです。 具体的には、アプリケーションで IPD の SQL_DESC_DATA_PTR フィールドを設定した後、このフィールドで**SQLGetDescField**を呼び出すと、必ずしも設定された値が返されるとは限りません。 詳細については、「 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)」の「整合性チェック」を参照してください。  
+ APD、、または IPD の SQL_DESC_DATA_PTR フィールドが設定されている場合、ドライバーは、SQL_DESC_TYPE フィールドの値に有効な ODBC C データ型またはドライバー固有のデータ型のいずれかが含まれていること、およびデータ型に影響する他のすべてのフィールドが一致していることを確認します。 IPD の [SQL_DESC_DATA_PTR] フィールドを使用するのは、整合性チェックを要求することだけです。 具体的には、アプリケーションで IPD の SQL_DESC_DATA_PTR フィールドを設定した後、このフィールドで **SQLGetDescField** を呼び出すと、必ずしも設定された値が返されるとは限りません。 詳細については、「 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)」の「整合性チェック」を参照してください。  
   
  **SQL_DESC_DATETIME_INTERVAL_CODE [すべて]**  
  この SQLSMALLINT レコードフィールドには、SQL_DESC_TYPE フィールドが SQL_DATETIME または SQL_INTERVAL ときの、特定の datetime データ型または interval データ型のサブコードが含まれています。 これは、SQL データ型と C データ型の両方に当てはまります。 このコードは、"TYPE" または "C_TYPE" (datetime 型の場合)、または "INTERVAL" または "C_INTERVAL" (interval 型の場合) に置き換えられた "code" を使用して、データ型名で構成されます。  
@@ -387,7 +388,7 @@ SQLRETURN SQLSetDescField(
 |SQL_INTERVAL_YEAR/SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH/SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
- データ間隔およびこのフィールドの詳細については、「[データ型の識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)」を参照してください。  
+ データ間隔およびこのフィールドの詳細については、「 [データ型の識別子と記述子](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)」を参照してください。  
   
  **SQL_DESC_DATETIME_INTERVAL_PRECISION [すべて]**  
  この SQLINTEGER レコードフィールドには、SQL_DESC_TYPE フィールドが SQL_INTERVAL 場合の間隔を表す有効桁数が含まれます。 SQL_DESC_DATETIME_INTERVAL_CODE フィールドが interval データ型に設定されている場合、このフィールドは既定の間隔の有効桁数に設定されます。  
@@ -401,13 +402,13 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_INDICATOR_PTR [アプリケーション記述子]**  
  ARDs では、この SQLLEN * レコードフィールドはインジケーター変数を指しています。 この変数には、列の値が NULL の場合に SQL_NULL_DATA が含まれます。 APDs では、インジケーター変数を SQL_NULL_DATA に設定して NULL 動的引数を指定します。 それ以外の場合、変数は0になります (SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の値が同じポインターである場合を除く)。  
   
- の SQL_DESC_INDICATOR_PTR フィールドが null ポインターの場合、ドライバーは、列が NULL かどうかに関する情報を返すことはできません。 列が NULL で SQL_DESC_INDICATOR_PTR が null ポインターである場合は、 **Sqlfetch**または**sqlfetchscroll**の呼び出し後にドライバーがバッファーを設定しようとすると、SQLSTATE 22002 (必要に応じて指定されていないインジケーター変数) が返されます。 **Sqlfetch**または**sqlfetchscroll**への呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。  
+ の SQL_DESC_INDICATOR_PTR フィールドが null ポインターの場合、ドライバーは、列が NULL かどうかに関する情報を返すことはできません。 列が NULL で SQL_DESC_INDICATOR_PTR が null ポインターである場合は、 **Sqlfetch** または **sqlfetchscroll**の呼び出し後にドライバーがバッファーを設定しようとすると、SQLSTATE 22002 (必要に応じて指定されていないインジケーター変数) が返されます。 **Sqlfetch**または**sqlfetchscroll**への呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。  
   
  SQL_DESC_INDICATOR_PTR フィールドは、SQL_DESC_OCTET_LENGTH_PTR が指すフィールドが設定されているかどうかを判断します。 列のデータ値が NULL の場合、ドライバーは、インジケーター変数を SQL_NULL_DATA に設定します。 SQL_DESC_OCTET_LENGTH_PTR によってポイントされているフィールドは設定されません。 フェッチ中に NULL 値が検出されなかった場合、SQL_DESC_INDICATOR_PTR が指すバッファーは0に設定され、SQL_DESC_OCTET_LENGTH_PTR が指すバッファーはデータの長さに設定されます。  
   
  APD の SQL_DESC_INDICATOR_PTR フィールドが null ポインターの場合、アプリケーションはこの記述子レコードを使用して NULL 引数を指定することはできません。  
   
- このフィールドは*遅延フィールド*です。このフィールドは、設定時には使用されませんが、後でドライバーによって使用されます (ARDs の場合)。または、null 値を許容するかどうかを指定します (apds の場合)。  
+ このフィールドは *遅延フィールド*です。このフィールドは、設定時には使用されませんが、後でドライバーによって使用されます (ARDs の場合)。または、null 値を許容するかどうかを指定します (apds の場合)。  
   
  **SQL_DESC_LABEL [IRDs]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、列のラベルまたはタイトルが含まれています。 列にラベルがない場合、この変数には列名が格納されます。 列に名前が付けられていない場合、ラベルが付いていない場合、この変数には空の文字列が含まれます。  
@@ -415,7 +416,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_LENGTH [すべて]**  
  この SQLULEN レコードフィールドは、文字の文字列の最大長または実際の長さ (バイト単位) か、バイナリデータ型です。 固定長データ型の場合は最大長、可変長データ型の場合は実際の長さです。 この値は、文字列を終了する null 終了文字を常に除外します。 型が SQL_TYPE_DATE、SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP、または SQL interval データ型のいずれかである値の場合、このフィールドには datetime または interval 値の文字列形式の文字数が含まれます。  
   
- このフィールドの値は、ODBC 2.x で定義*されて*いる "length" の値とは異なる場合があります。 詳細については、「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
+ このフィールドの値は、ODBC 2.x で定義*されて*いる "length" の値とは異なる場合があります。 詳細については、「 [付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、ドライバーがこのデータ型のリテラルのプレフィックスとして認識する文字または文字が含まれています。 この変数には、リテラルプレフィックスが適用されないデータ型の空の文字列が含まれています。  
@@ -429,7 +430,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_NAME [実装記述子]**  
  行記述子のこの SQLCHAR * レコードフィールドには、列の別名 (該当する場合) が含まれています。 列の別名が適用されない場合は、列名が返されます。 どちらの場合も、ドライバーは SQL_DESC_NAME フィールドを設定するときに、SQL_DESC_UNNAMED フィールドを SQL_NAMED に設定します。 列名または列の別名がない場合、ドライバーは SQL_DESC_NAME フィールドに空の文字列を返し、SQL_DESC_UNNAMED フィールドを SQL_UNNAMED に設定します。  
   
- アプリケーションでは、IPD の SQL_DESC_NAME フィールドをパラメーター名または別名に設定して、ストアドプロシージャパラメーターを名前で指定できます。 (詳細については、「[名前によるパラメーターのバインド (名前付きパラメーター)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)」を参照してください)。IRD の SQL_DESC_NAME フィールドは読み取り専用フィールドです。アプリケーションが設定を試みた場合、SQLSTATE HY091 (無効な記述子フィールド識別子) が返されます。  
+ アプリケーションでは、IPD の SQL_DESC_NAME フィールドをパラメーター名または別名に設定して、ストアドプロシージャパラメーターを名前で指定できます。 (詳細については、「 [名前によるパラメーターのバインド (名前付きパラメーター)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)」を参照してください)。IRD の SQL_DESC_NAME フィールドは読み取り専用フィールドです。アプリケーションが設定を試みた場合、SQLSTATE HY091 (無効な記述子フィールド識別子) が返されます。  
   
  IPDs では、ドライバーが名前付きパラメーターをサポートしていない場合、このフィールドは定義されません。 ドライバーが名前付きパラメーターをサポートしていて、パラメーターを記述できる場合は、このフィールドにパラメーター名が返されます。  
   
@@ -451,7 +452,7 @@ SQLRETURN SQLSetDescField(
   
  の OCTET_LENGTH_PTR フィールドが null ポインターの場合、ドライバーは列の長さの情報を返しません。 APD の SQL_DESC_OCTET_LENGTH_PTR フィールドが null ポインターの場合、ドライバーは、文字列とバイナリ値が null で終わることを前提としています。 (バイナリ値は null で終わることはできませんが、切り捨てを避けるために長さを指定する必要があります)。  
   
- このフィールドが指すバッファーをいっぱいにする**Sqlfetch**または**sqlfetchscroll**の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。 このフィールドは*遅延フィールド*です。 この値は、設定時には使用されませんが、後でドライバーによって使用され、データのオクテット長を決定または示すことができます。  
+ このフィールドが指すバッファーをいっぱいにする **Sqlfetch** または **sqlfetchscroll** の呼び出しで SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されなかった場合、バッファーの内容は未定義になります。 このフィールドは *遅延フィールド*です。 この値は、設定時には使用されませんが、後でドライバーによって使用され、データのオクテット長を決定または示すことができます。  
   
  **SQL_DESC_PARAMETER_TYPE [IPDs]**  
  この SQLSMALLINT レコードフィールドは、入力パラメーターに対して SQL_PARAM_INPUT に設定されます。入力パラメーターまたは出力パラメーターの場合は SQL_PARAM_INPUT_OUTPUT、出力パラメーターの場合は SQL_PARAM_OUTPUT、入出力ストリームパラメーターの場合は SQL_PARAM_INPUT_OUTPUT_STREAM、出力ストリームパラメーターの場合は SQL_PARAM_OUTPUT_STREAM です。 既定では SQL_PARAM_INPUT に設定されています。  
@@ -461,15 +462,15 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_PRECISION [すべて]**  
  この SQLSMALLINT レコードフィールドには、正確な数値型の数字の数、概数型の仮数部のビット数 (binary precision)、または SQL_TYPE_TIME、SQL_TYPE_TIMESTAMP、または SQL_INTERVAL_SECOND データ型の秒の小数部の桁数が含まれています。 このフィールドは、他のすべてのデータ型には定義されていません。  
   
- このフィールドの値は、ODBC 2.x で定義*されて*いる "有効桁数" の値とは異なる場合があります。 詳細については、「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
+ このフィールドの値は、ODBC 2.x で定義*されて*いる "有効桁数" の値とは異なる場合があります。 詳細については、「 [付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
   
  **SQL_DESC_ROWVER [実装記述子]**  
- この SQLSMALLINTrecord フィールドは、行が更新されたときに、DBMS によって列が自動的に変更されるかどうかを示します (たとえば、SQL Server の "timestamp" 型の列)。 このレコードフィールドの値は、列が行のバージョン管理列である場合は SQL_TRUE に、それ以外の場合は SQL_FALSE に設定されます。 この列属性は、列が自動的に更新されるかどうかを判断するために、IdentifierType SQL_ROWVER を指定して**Sqlの列**を呼び出す場合と似ています。  
+ この SQLSMALLINTrecord フィールドは、行が更新されたときに、DBMS によって列が自動的に変更されるかどうかを示します (たとえば、SQL Server の "timestamp" 型の列)。 このレコードフィールドの値は、列が行のバージョン管理列である場合は SQL_TRUE に、それ以外の場合は SQL_FALSE に設定されます。 この列属性は、列が自動的に更新されるかどうかを判断するために、IdentifierType SQL_ROWVER を指定して **Sqlの列** を呼び出す場合と似ています。  
   
  **SQL_DESC_SCALE [すべて]**  
  この SQLSMALLINT レコードフィールドには、decimal データ型と numeric データ型に対して定義された小数点以下桁数が含まれています。 フィールドは、他のすべてのデータ型に対して定義されていません。  
   
- このフィールドの値は、ODBC 2.x で定義*されて*いる "scale" の値とは異なる場合があります。 詳細については、「[付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
+ このフィールドの値は、ODBC 2.x で定義*されて*いる "scale" の値とは異なる場合があります。 詳細については、「 [付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)」を参照してください。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、列を含むベーステーブルのスキーマ名が格納されます。 列が式である場合、または列がビューの一部である場合、戻り値はドライバーに依存します。 データソースでスキーマがサポートされていない場合、またはスキーマ名を特定できない場合、この変数には空の文字列が含まれます。  
@@ -483,7 +484,7 @@ SQLRETURN SQLSetDescField(
   
 -   **WHERE**句で列を使用できるかどうかを SQL_PRED_BASIC します。ただし、の**よう**にすべての比較演算子を使用できます。 (これは、ODBC 2.x の SQL_EXCEPT_LIKE 値と*同じです)。*  
   
--   任意の比較演算子を持つ**where**句で列を使用できるかどうかを SQL_PRED_SEARCHABLE します。  
+-   任意の比較演算子を持つ **where** 句で列を使用できるかどうかを SQL_PRED_SEARCHABLE します。  
   
  **SQL_DESC_TABLE_NAME [IRDs]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、この列を含むベーステーブルの名前が含まれています。 列が式である場合、または列がビューの一部である場合、戻り値はドライバーに依存します。  
@@ -493,7 +494,7 @@ SQLRETURN SQLSetDescField(
   
  このフィールドに SQL_DATETIME または SQL_INTERVAL が含まれている場合は、SQL_DESC_DATETIME_INTERVAL_CODE フィールドに簡潔な型の適切なサブコードが含まれている必要があります。 Datetime データ型の場合、SQL_DESC_TYPE には SQL_DATETIME が含まれ、SQL_DESC_DATETIME_INTERVAL_CODE フィールドには特定の datetime データ型のサブコードが含まれます。 Interval データ型の場合、SQL_DESC_TYPE には SQL_INTERVAL が含まれ、SQL_DESC_DATETIME_INTERVAL_CODE フィールドには特定の interval データ型のサブコードが含まれます。  
   
- SQL_DESC_TYPE フィールドと SQL_DESC_CONCISE_TYPE フィールドの値は相互に依存しています。 いずれかのフィールドが設定されるたびに、もう一方も設定する必要があります。 SQL_DESC_TYPE は、 **SQLSetDescField**または**SQLSetDescRec**の呼び出しによって設定できます。 SQL_DESC_CONCISE_TYPE は、 **SQLBindCol** 、 **SQLBindParameter**、または**SQLSetDescField**への呼び出しによって設定できます。  
+ SQL_DESC_TYPE フィールドと SQL_DESC_CONCISE_TYPE フィールドの値は相互に依存しています。 いずれかのフィールドが設定されるたびに、もう一方も設定する必要があります。 SQL_DESC_TYPE は、 **SQLSetDescField** または **SQLSetDescRec**の呼び出しによって設定できます。 SQL_DESC_CONCISE_TYPE は、 **SQLBindCol** 、 **SQLBindParameter**、または **SQLSetDescField**への呼び出しによって設定できます。  
   
  SQL_DESC_TYPE が interval データ型または datetime データ型以外の簡潔なデータ型に設定されている場合、SQL_DESC_CONCISE_TYPE フィールドは同じ値に設定され、SQL_DESC_DATETIME_INTERVAL_CODE フィールドは0に設定されます。  
   
@@ -509,7 +510,7 @@ SQLRETURN SQLSetDescField(
 |SQL_FLOAT、SQL_C_FLOAT|SQL_DESC_PRECISION は、SQL_FLOAT の実装で定義された既定の有効桁数に設定されます。|  
 |SQL_INTERVAL|SQL_DESC_DATETIME_INTERVAL_CODE が INTERVAL データ型に設定されている場合、SQL_DESC_DATETIME_INTERVAL_PRECISION は 2 (既定の間隔の有効桁数) に設定されます。 間隔に秒の部分がある場合、SQL_DESC_PRECISION は 6 (既定の間隔 (秒) の有効桁数) に設定されます。|  
   
- アプリケーションが**SQLSetDescRec**を呼び出すのではなく、記述子のフィールドを設定するために**SQLSetDescField**を呼び出す場合、アプリケーションは最初にデータ型を宣言する必要があります。 この場合、前の表に示されている他のフィールドが暗黙的に設定されます。 暗黙的に設定された値のいずれかが受け入れられない場合、アプリケーションは**SQLSetDescField**または**SQLSetDescRec**を呼び出して、許容できない値を明示的に設定できます。  
+ アプリケーションが**SQLSetDescRec**を呼び出すのではなく、記述子のフィールドを設定するために**SQLSetDescField**を呼び出す場合、アプリケーションは最初にデータ型を宣言する必要があります。 この場合、前の表に示されている他のフィールドが暗黙的に設定されます。 暗黙的に設定された値のいずれかが受け入れられない場合、アプリケーションは **SQLSetDescField** または **SQLSetDescRec** を呼び出して、許容できない値を明示的に設定できます。  
   
  **SQL_DESC_TYPE_NAME [実装記述子]**  
  この読み取り専用の SQLCHAR * レコードフィールドには、データソースに依存する型の名前 (たとえば、"CHAR"、"VARCHAR" など) が含まれています。 データ型名が不明な場合、この変数には空の文字列が含まれます。  
@@ -534,7 +535,7 @@ SQLRETURN SQLSetDescField(
  SQL_DESC_UPDATABLE は、ベーステーブルの列ではなく、結果セットの列の更新可能性について説明します。 この結果セット列の基になるベーステーブルの列の更新可能性は、このフィールドの値と異なる場合があります。 列を更新できるかどうかは、データ型、ユーザー権限、および結果セット自体の定義に基づいて決まります。 列が更新可能かどうかが不明な場合は、SQL_ATTR_READWRITE_UNKNOWN が返されます。  
   
 ## <a name="consistency-checks"></a>整合性チェック  
- アプリケーションが APD または IPD の SQL_DESC_DATA_PTR フィールドに値を渡すたびに、ドライバーによって整合性チェックが自動的に実行されます。 いずれかのフィールドが他のフィールドと矛盾している場合、 **SQLSetDescField**は SQLSTATE HY021 (矛盾した記述子情報) を返します。 詳細については、 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)の「整合性チェック」を参照してください。  
+ アプリケーションが APD または IPD の SQL_DESC_DATA_PTR フィールドに値を渡すたびに、ドライバーによって整合性チェックが自動的に実行されます。 いずれかのフィールドが他のフィールドと矛盾している場合、 **SQLSetDescField** は SQLSTATE HY021 (矛盾した記述子情報) を返します。 詳細については、 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)の「整合性チェック」を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   
@@ -546,6 +547,6 @@ SQLRETURN SQLSetDescField(
 |複数の記述子フィールドの取得|[SQLGetDescRec 関数](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |複数の記述子フィールドの設定|[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)

@@ -1,8 +1,9 @@
 ---
+description: Command (ADO - WFC 構文)
 title: Command (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a79d343458969fcfdc72979f1b413f9b2a8742
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760448"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975243"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -44,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは AdoEnums を使用して変更されます。 **NORECORDS**。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
+ **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは**AdoEnums.Executeoptions**を使用して変更されます。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
   
 ### <a name="properties"></a>プロパティ  
   
@@ -70,4 +71,4 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)

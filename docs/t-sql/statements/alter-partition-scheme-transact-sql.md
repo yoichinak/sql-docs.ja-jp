@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION SCHEME (Transact-SQL)
 title: ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ca48f836b6d14b85d3f8d0286fd31e60c403afe
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381256"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124257"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -42,7 +43,6 @@ ms.locfileid: "86381256"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER PARTITION SCHEME partition_scheme_name   
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
@@ -78,7 +78,7 @@ NEXT USED [ filegroup_name ] [ ; ]
 ## <a name="examples"></a>例  
  次の例では、パーティション構成 `MyRangePS1` およびファイル グループ `test5fg` が現在のデータベースに存在することを前提としています。  
   
-```  
+```sql  
 ALTER PARTITION SCHEME MyRangePS1  
 NEXT USED test5fg;  
 ```  

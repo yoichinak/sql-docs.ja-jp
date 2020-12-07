@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクによるインストールされたプリンターの検索
 title: スクリプト タスクによるインストールされたプリンターの検索 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb51bfe4ae9edb47203419f63a22ee61c12f71f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9311883463a4c7ca1b065ab31dcdd84c1cac0ce6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923827"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122980"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>スクリプト タスクによるインストールされたプリンターの検索
 

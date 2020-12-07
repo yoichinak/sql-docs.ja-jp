@@ -1,4 +1,5 @@
 ---
+description: メンバー関数の使用
 title: メンバー関数を使用する |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54f600eb020472f93067f7b9fe1e867f2730d670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cec35f8d09d671b3b426ff5ac9e18797df716ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491409"
 ---
 # <a name="using-member-functions"></a>メンバー関数の使用
 
 
   メンバー関数は、メンバーを返す多次元式 (MDX) 関数です。 メンバー関数は、組関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
- MDX の多くのメンバー関数の中で最も重要なのは**Currentmember**関数です。これは、階層の現在のメンバーを決定するために使用されます。 次のクエリは、**親**、**先祖**、および**prevmember**関数と共に使用する方法を示しています。  
+ MDX の多くのメンバー関数の中で最も重要なのは **Currentmember** 関数です。これは、階層の現在のメンバーを決定するために使用されます。 次のクエリは、 **親**、 **先祖**、および **prevmember** 関数と共に使用する方法を示しています。  
   
  `WITH`  
   

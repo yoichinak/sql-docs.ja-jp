@@ -1,4 +1,5 @@
 ---
+description: (剰余) (SSIS 式)
 title: (剰余) (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14ea6b261c63b06d5e6b3fbeb77822c0d3c6836f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457210"
 ---
 # <a name="modulo-ssis-expression"></a>(剰余) (SSIS 式)
 
@@ -46,7 +47,7 @@ dividend % divisor
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  両方の式は、符号付きまたは符号なし整数データ型に評価される必要があります。  
   
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
@@ -78,7 +79,7 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

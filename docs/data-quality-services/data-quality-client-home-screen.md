@@ -1,4 +1,5 @@
 ---
+description: Data Quality Client のホーム画面
 title: Data Quality Client のホーム画面
 ms.date: 02/29/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaca3245731102ad667f8507761f57da0adb1437
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462414"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
 
@@ -58,12 +59,12 @@ ms.locfileid: "85899118"
  **アクティビティの監視**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
- **Configuration**  
+ **構成**  
  参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS のナレッジベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [DQS&#41;&#40;データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)   
+ [DQS&#41;&#40;データ品質プロジェクト ](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../data-quality-services/dqs-administration.md)  
   
   

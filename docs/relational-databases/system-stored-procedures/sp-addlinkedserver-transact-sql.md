@@ -1,4 +1,5 @@
 ---
+description: sp_addlinkedserver (Transact-sql)
 title: sp_addlinkedserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedserver
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 401fd85dec1370f81845b77de6e078ea18269891
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81cc7901dd6e9bfab24e0fb3d926173353978f40
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823334"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548372"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,10 +48,10 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 作成するリンク サーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
 [ @srvproduct =] * \' product_name \' *          
-リンクサーバーとして追加する OLE DB データソースの製品名を指定します。 *product_name*は**nvarchar (** 128 **)**,、既定値は NULL です。 **SQL Server**の場合、 *provider_name*、 *data_source*、*場所*、 *provider_string*、および*カタログ*を指定する必要はありません。  
+リンクサーバーとして追加する OLE DB データソースの製品名を指定します。 *product_name* は **nvarchar (** 128 **)**,、既定値は NULL です。 **SQL Server**の場合、 *provider_name*、 *data_source*、*場所*、 *provider_string*、および*カタログ*を指定する必要はありません。  
   
 [ @provider =] * \' provider_name \' *          
-このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を指定します。 *provider_name*は、現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (128)**,、既定値は NULL です。ただし、 *provider_name*を省略した場合、SQLNCLI が使用されます。 
+このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を指定します。 *provider_name* は、現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name* は **nvarchar (128)**,、既定値は NULL です。ただし、 *provider_name* を省略した場合、SQLNCLI が使用されます。 
 
 > [!NOTE]
 > SQLNCLI を使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] すると、Native Client OLE DB プロバイダーの最新バージョンにリダイレクトされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 OLE DB プロバイダーは、指定の PROGID を使用してレジストリに登録されることが想定されています。
@@ -59,21 +60,21 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > 以前の Microsoft OLE DB Provider for SQL Server (SQLOLEDB) と SQL Server Native Client OLE DB プロバイダー (SQLNCLI) は非推奨のままであり、新しい開発作業にはどちらの使用もお勧めできません。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
   
 [ @datasrc =] * \' data_source \' *          
- OLE DB プロバイダーによって解釈されるデータソースの名前を指定します。 *data_source*は**nvarchar (** 4000 **)** です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_DATASOURCE プロパティとして*data_source*が渡されます。  
+ OLE DB プロバイダーによって解釈されるデータソースの名前を指定します。 *data_source* は **nvarchar (** 4000 **)** です。 OLE DB プロバイダーを初期化するために、DBPROP_INIT_DATASOURCE プロパティとして*data_source*が渡されます。  
   
 [ @location =] * \' 場所 \' *          
- OLE DB プロバイダーで認識されるデータベースの場所を指定します。 *場所*は**nvarchar (** 4000 **)**,、既定値は NULL です。 *location*は、OLE DB プロバイダーを初期化するために DBPROP_INIT_LOCATION プロパティとして渡されます。  
+ OLE DB プロバイダーで認識されるデータベースの場所を指定します。 *場所* は **nvarchar (** 4000 **)**,、既定値は NULL です。 *location* は、OLE DB プロバイダーを初期化するために DBPROP_INIT_LOCATION プロパティとして渡されます。  
   
 [ @provstr =] * \' provider_string \' *          
- 一意なデータ ソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string*は**nvarchar (** 4000 **)**,、既定値は NULL です。 *provstr*は、IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定され、OLE DB プロバイダーを初期化します。  
+ 一意なデータ ソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string* は **nvarchar (** 4000 **)**,、既定値は NULL です。 *provstr* は、IDataInitialize に渡されるか、DBPROP_INIT_PROVIDERSTRING プロパティとして設定され、OLE DB プロバイダーを初期化します。  
   
- Native Client OLE DB プロバイダーに対してリンクサーバーを作成する場合は、server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キーワードを server =*servername*instancename として使用してインスタンスを指定し、 \\ *instancename*の特定のインスタンスを指定でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *servername*は、が実行されているコンピューターの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *instancename*は、ユーザーが接続するの特定のインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ Native Client OLE DB プロバイダーに対してリンクサーバーを作成する場合は、server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キーワードを server =*servername*instancename として使用してインスタンスを指定し、 \\ *instancename*の特定のインスタンスを指定でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *servername* は、が実行されているコンピューターの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *instancename* は、ユーザーが接続するの特定のインスタンスの名前です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!NOTE]
 > ミラー化されたデータベースにアクセスするには、接続文字列にデータベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースは、 ** \@ provstr**または** \@ catalog**パラメーターで指定できます。 必要に応じて、接続文字列でフェールオーバーパートナー名を指定することもできます。  
   
 [ @catalog =] * \' カタログ \' *       
- OLE DB プロバイダーへの接続が確立されるときに使用するカタログを指定します。 *catalog*の**sysname**,、既定値は NULL です。 *カタログ*は、OLE DB プロバイダーを初期化するために DBPROP_INIT_CATALOG プロパティとして渡されます。 のインスタンスに対してリンクサーバーが定義されている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、catalog は、リンクサーバーがマップされている既定のデータベースを参照します。  
+ OLE DB プロバイダーへの接続が確立されるときに使用するカタログを指定します。 *catalog* の **sysname**,、既定値は NULL です。 *カタログ* は、OLE DB プロバイダーを初期化するために DBPROP_INIT_CATALOG プロパティとして渡されます。 のインスタンスに対してリンクサーバーが定義されている場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、catalog は、リンクサーバーがマップされている既定のデータベースを参照します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -82,7 +83,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  [なし] :  
   
 ## <a name="remarks"></a>解説  
- 次の表に、OLE DB を使用してアクセスできるデータソース用にリンクサーバーを設定する方法を示します。 リンクサーバーは、特定のデータソースに対して複数の方法で設定できます。1つのデータソースの種類に対して複数の行を指定できます。 このテーブルには、リンクサーバーの設定に使用される**sp_addlinkedserver**パラメーター値も表示されます。  
+ 次の表に、OLE DB を使用してアクセスできるデータソース用にリンクサーバーを設定する方法を示します。 リンクサーバーは、特定のデータソースに対して複数の方法で設定できます。1つのデータソースの種類に対して複数の行を指定できます。 このテーブルには、リンクサーバーの設定に使用される **sp_addlinkedserver** パラメーター値も表示されます。  
   
 |リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
@@ -93,11 +94,11 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet データベースファイルの完全なパス||||  
 |ODBC データ ソース (ODBC data source)|Microsoft OLE DB Provider for ODBC|Any|**MSDASQL**|ODBC データソースのシステム DSN||||  
 |ODBC データ ソース (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC|Any|**MSDASQL**|||ODBC 接続文字列||  
-|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)]インデックスサービスの OLE DB プロバイダー|Any|**MSIDXS**|インデックスサービスのカタログ名||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
-|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)]DB2 の OLE DB Provider|Any|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 のドキュメントを参照してください。|DB2 データベースのカタログ名|  
+|ファイル システム|[!INCLUDE[msCoName](../../includes/msconame-md.md)] インデックスサービスの OLE DB プロバイダー|Any|**MSIDXS**|インデックスサービスのカタログ名||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ワークシート|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel ファイルのフル パス||Excel 5.0||  
+|IBM DB2 データベース|[!INCLUDE[msCoName](../../includes/msconame-md.md)] DB2 の OLE DB Provider|Any|**DB2OLEDB**|||[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Provider FOR DB2 のドキュメントを参照してください。|DB2 データベースのカタログ名|  
   
- <sup>1</sup>リンクサーバーを設定するこの方法では、リンクサーバーの名前がのリモートインスタンスのネットワーク名と同じになり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Data_source*を使用してサーバーを指定します。  
+ <sup>1</sup> リンクサーバーを設定するこの方法では、リンクサーバーの名前がのリモートインスタンスのネットワーク名と同じになり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Data_source*を使用してサーバーを指定します。  
   
  <sup>2</sup> "任意" は、製品名を任意の名前にすることを示します。  
   
@@ -107,7 +108,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
  クラスター環境では OLE DB データソースを指すようにファイル名を指定する場合は、汎用名前付け規則名 (UNC) または共有ドライブを使用して場所を指定します。  
   
- **sp_addlinkedserver**は、ユーザー定義のトランザクション内では実行できません。  
+ **sp_addlinkedserver** は、ユーザー定義のトランザクション内では実行できません。  
   
 > [!IMPORTANT]
 > **Sp_addlinkedserver**を使用してリンクサーバーを作成すると、すべてのローカルログインに対して既定の自己マッピングが追加されます。 以外のプロバイダーの場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証されたログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスアカウントでプロバイダーにアクセスできる可能性があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 管理者は、を使用してグローバルマッピングを削除することを検討する必要があり `sp_droplinkedsrvlogin <linkedserver_name>, NULL` ます。  
@@ -156,7 +157,7 @@ EXEC sp_addlinkedserver
  Microsoft Jet OLEDB プロバイダーは、2002-2003 形式を使用する Microsoft Access データベースに接続します。 次の例では、`SEATTLE Mktg` というリンク サーバーを作成します。  
   
 > [!NOTE]  
-> この例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
+> この例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Access とサンプルの **northwind** データベースの両方がインストールされており、 **northwind** データベースが c:\msoffice\access\samples に存在することを前提としています。  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -170,7 +171,7 @@ GO
  Microsoft.ACE.OLEDB.12.0 プロバイダーは、2007 形式を使用する Microsoft Access データベースに接続します。 次の例では、`SEATTLE Mktg` というリンク サーバーを作成します。  
   
 > [!NOTE]  
-> この例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
+> この例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Access とサンプルの **northwind** データベースの両方がインストールされており、 **northwind** データベースが c:\msoffice\access\samples に存在することを前提としています。  
   
 ```sql  
 EXEC sp_addlinkedserver   
@@ -182,7 +183,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>C. Data_source パラメーターを使用して Microsoft OLE DB Provider for ODBC を使用する  
- 次の例では、 `SEATTLE Payroll` [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB PROVIDER for ODBC ( `MSDASQL` ) および*data_source*パラメーターを使用するという名前のリンクサーバーを作成します。  
+ 次の例では、 `SEATTLE Payroll` [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB PROVIDER for ODBC ( `MSDASQL` ) および *data_source* パラメーターを使用するという名前のリンクサーバーを作成します。  
   
 > [!NOTE]  
 > リンク サーバーを使用する前には、指定した ODBC データ ソース名をサーバーのシステム DSN として定義する必要があります。  
@@ -329,9 +330,9 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [システム テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

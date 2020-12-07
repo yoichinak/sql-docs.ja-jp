@@ -1,4 +1,5 @@
 ---
+description: OLE DB テーブル値パラメーターの型のサポート (Native Client OLE DB プロバイダー)
 title: テーブル値パラメーターの型のサポート (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd9c434ea94c2861f0031aadc2ead229b31d743f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6852ac833d45f132d514f9e707e6a3c2103c82b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482600"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>OLE DB テーブル値パラメーターの型のサポート (Native Client OLE DB プロバイダー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ CoType RowsetTVP
 ## <a name="methods"></a>メソッド  
  テーブル値パラメーターをサポートする OLE DB メソッドの詳細については、「[OLE DB テーブル値パラメーターの型のサポート (メソッド)](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)」を参照してください。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、「[OLE DB テーブル値パラメーターの型のサポート (プロパティ)](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

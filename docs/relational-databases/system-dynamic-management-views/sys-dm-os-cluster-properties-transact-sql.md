@@ -1,4 +1,5 @@
 ---
+description: dm_os_cluster_properties (Transact-sql)
 title: dm_os_cluster_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1da39966fe7c11a4c4685d40b6cc762e14bf2b2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f90e54197387bf0bd64bf5c890ab3a044883bbd9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754208"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550248"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>dm_os_cluster_properties (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85754208"
 ## <a name="permissions"></a>アクセス許可  
  フェールオーバークラスターインスタンスに対する VIEW SERVER STATE 権限が必要です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、sys.dm_os_cluster_properties を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースのプロパティ設定を返します。  
   
 ```  

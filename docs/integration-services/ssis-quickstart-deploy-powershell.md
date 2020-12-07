@@ -1,4 +1,5 @@
 ---
+description: PowerShell を使用して SSIS プロジェクトを配置する
 title: PowerShell を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2d9a8e6cc8d071ee6f4c4d7557a437d7806f3d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fba08ada042e526f4f6321f328d67a55dd149b2e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921930"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129984"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell を使用して SSIS プロジェクトを配置する
 
@@ -40,8 +41,8 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure portal](https://portal.azure.com/) にサインインする
-2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
+1. [Azure portal](https://portal.azure.com/) にサインインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。

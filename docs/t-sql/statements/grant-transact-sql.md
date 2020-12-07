@@ -1,4 +1,5 @@
 ---
+description: GRANT (Transact-SQL)
 title: GRANT (Transact-SQL)
 ms.custom: ''
 ms.date: 06/12/2017
@@ -25,12 +26,12 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b89b170d50e23c14cf08da78597e83c674050de0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 424ff170c28087d0d6d43e153b92583d517baae1
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483813"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226809"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 
@@ -53,7 +54,7 @@ GRANT { ALL [ PRIVILEGES ] }
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 GRANT
     <permission> [ ,...n ]  

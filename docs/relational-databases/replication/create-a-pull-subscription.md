@@ -18,12 +18,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 4f2cf1f98203b89e25fa3b6c5d165c40798163df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca2d2b650e8691e34445a4b239fb6eff71b25557
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773929"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869105"
 ---
 # <a name="create-a-pull-subscription"></a>プル サブスクリプションの作成
 
@@ -308,7 +308,7 @@ GO
     -   (省略可) ディストリビューターへの接続時に **true** allow_pull <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> を指定します。 **false** (既定値) を指定した場合、サブスクリプションはプログラムによってのみ同期できます。また、このオブジェクトに <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> プロパティからアクセスする場合は、<xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> のプロパティを別途指定する必要があります。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
   
         > [!NOTE]  
-        >  SQL Server エージェントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 Express のサブスクライバーに対して値 **true** を指定しても、エージェント ジョブは作成されません。 ただし、サブスクリプション関連の重要なメタデータについてはサブスクライバーに保存されます。  
+        >  SQL Server エージェントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。 Express のサブスクライバーに対して値 **true** を指定しても、エージェント ジョブは作成されません。 ただし、サブスクリプション関連の重要なメタデータについてはサブスクライバーに保存されます。  
   
     -   (省略可) SQL Server 認証を使ってディストリビューターに接続する場合は、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> ) フィールドを設定します。  
   
@@ -1136,5 +1136,4 @@ End Try
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

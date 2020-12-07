@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_session_targets (Azure SQL Database)
 title: database_event_session_targets (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -8,18 +9,19 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67bb763d2896ef2156c442d82c29440d2cf4451b
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 680cac9474fd63806c046ffeede22e83c04773c5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472641"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537398"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   イベント セッションのイベント ターゲットごとに 1 行のデータを返します。  
   
@@ -38,10 +40,10 @@ ms.locfileid: "87472641"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-|ソース|ターゲット|リレーションシップ|  
+|From|終了|リレーションシップ|  
 |-|-|-|  
 |database_event_session_targets。 event_session_id|database_event_sessions。 event_session_id|多対一|  
   

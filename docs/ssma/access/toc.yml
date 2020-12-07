@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: SQL Server への接続
   href: connecting-to-sql-server-accesstosql.md
-- name: Azure SQL DB での Access データの移行
+- name: Azure SQL Database への Access データの移行
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: プロジェクトの作成と管理
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: SSMA コンソールのコマンド ライン オプション
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database に接続する
   href: connect-to-azure-sql-db-accesstosql.md
 - name: 評価レポート
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: サーバー接続ファイルの作成
   href: creating-the-server-connection-files-accesstosql.md
-- name: Azure SQL DB への Access アプリケーションのリンク
+- name: Azure SQL Database への Access アプリケーションのリンク
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: 変数値ファイルの作成
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: Access インベントリのエクスポート
   href: exporting-an-access-inventory-accesstosql.md
-- name: Azure SQL DB への Access データベースの移行
+- name: Azure SQL Database への Access データベースの移行
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: ソースとターゲットのデータベースのマッピング
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: ショートカット キー
   href: shortcut-keys-accesstosql.md
-- name: Azure SQL DB への接続
+- name: Azure SQL Database への接続
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: 変換と移行のオプションの設定
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: 変換
       href: project-settings-conversion-accesstosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL データベース
       href: project-settings-azure-sql-db-accesstosql.md
     - name: 型のマッピング
       href: project-settings-type-mapping-accesstosql.md

@@ -6,16 +6,16 @@ ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 467014114a17d6cafacdaf44f1f7a2c60042721a
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897686"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96127659"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターへのクライアント ツールのインストール
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +48,11 @@ ms.locfileid: "85897686"
   
 2.  基本的な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理ツールだけをインストールするには、次のコマンドを実行します: Setup.exe/q/Action=Install Features=SSMS これにより、[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]、sqlcmd ユーティリティ、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell プロバイダーに対する [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] サポートがインストールされます。  
   
-3.  完全な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理ツールをインストールするには、次のコマンドを実行します: Setup.exe/q/Action=Install /Features=ADV_SSMS 機能のパラメーター値に関する詳細については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+3.  完全な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理ツールをインストールするには、次のコマンドを実行します: Setup.exe/q/Action=Install /Features=ADV_SSMS 機能のパラメーター値に関する詳細については、「 [コマンド プロンプトからの SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
 ### <a name="uninstalling-ssnoversion-client-tools"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアント ツールのアンインストール  
  クライアント ツールは、コントロール パネルの [プログラムの追加と削除] に **[[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]]** と表示されるので、そこで削除できます。 [ノードの削除] を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスをフェールオーバー クラスターからアンインストールする場合、クライアント コンポーネントは一緒にアンインストールされません。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

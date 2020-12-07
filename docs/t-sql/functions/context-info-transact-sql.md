@@ -1,4 +1,5 @@
 ---
+description: CONTEXT_INFO  (Transact-SQL)
 title: CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,23 +22,23 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b53dab8d51f251721b205b4da4171ca91188e97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0a6ff9b888601403029ef8c830dd8dd674aa1f10
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112524"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128527"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-この関数は、現在のセッションまたはバッチに設定された、または **SET CONTEXT_INFO** ステートメントを使用して派生した [context_info](../../t-sql/statements/set-context-info-transact-sql.md) 値を返します。
+この関数は、現在のセッションまたはバッチに設定された、または [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) ステートメントを使用して派生した **context_info** 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CONTEXT_INFO()  
 ```  
 
@@ -48,7 +49,7 @@ CONTEXT_INFO()
   
 **Context_info** は設定されませんでした: 場合
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
--   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.を返します。  
+-   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は一意のセッション固有 GUID を返します。  
   
 ## <a name="remarks"></a>解説  
 複数のアクティブな結果セット (MARS) 機能によって、アプリケーションは複数のバッチまたは要求を同じ接続上で同時に実行できます。 `CONTEXT_INFO` 関数が SET ステートメントと同じバッチで実行される場合、MARS 接続バッチの 1 つで SET CONTEXT_INFO を実行すると、`CONTEXT_INFO` 関数は新しいコンテキスト値を返します。 `CONTEXT_INFO` 関数が他の 1 つ以上の接続バッチで実行されている場合、SET ステートメントを実行したバッチの完了後にバッチが開始されない限り、`CONTEXT_FUNCTION` は新しい値を返しません。
@@ -69,7 +70,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

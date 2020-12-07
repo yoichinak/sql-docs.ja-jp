@@ -1,4 +1,5 @@
 ---
+description: 属性グループ名を変更する (マスター データ サービス)
 title: 属性グループ名を変更する
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bb4fd11dca83f752e778b55117d098e3e070d441
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461941"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>属性グループ名を変更する (マスター データ サービス)
 
@@ -25,18 +26,18 @@ ms.locfileid: "85813543"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループ名を変更できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-an-attribute-group-name"></a>属性グループ名を変更するには  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  [**モデルの管理**] ページで、グリッドからモデルを選択し、[**エンティティ**] をクリックします。  
+2.  [ **モデルの管理** ] ページで、グリッドからモデルを選択し、[ **エンティティ**] をクリックします。  
   
 3.  **[Manage Entity]** (エンティティの管理) ページで、属性グループを編集するエンティティの行をグリッドから選択します。  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85813543"
   
 8.  **[グループの保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性グループ &#40;マスターデータサービス&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [属性グループ &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
  [属性グループを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  

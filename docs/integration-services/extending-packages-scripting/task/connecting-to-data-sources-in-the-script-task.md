@@ -1,4 +1,5 @@
 ---
+description: スクリプト タスクでのデータ ソースへの接続
 title: スクリプト タスクでのデータ ソースへの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6820c80e8b497d24d7cbc9ff022fd772bd7f96e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1dc8024520e561ec9c89081c665c8172a1fb9441
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915081"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122967"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>スクリプト タスクでのデータ ソースへの接続
 
@@ -90,8 +91,7 @@ ms.locfileid: "86915081"
         }
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [接続マネージャーを作成する](../../connection-manager/integration-services-ssis-connections.md)  
   

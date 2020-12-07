@@ -1,5 +1,6 @@
 ---
-title: エンティティの作成 (Excel 用 MDS アドイン) | Microsoft Docs
+description: エンティティの作成 (Excel 用 MDS アドイン)
+title: エンティティを作成する
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bae68b9b241f14af1267eaf84e32dc97a39b8ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257699"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>エンティティの作成 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、新しいエンティティを作成してデータを格納することができます。 エンティティを作成する場合、少なくとも、格納するデータのサンプリングを読み込む必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** および **[エクスプローラー]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   エンティティの作成先となる既存のモデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](../../master-data-services/create-a-model-master-data-services.md)」を参照してください。  
   
@@ -68,7 +69,7 @@ ms.locfileid: "68092461"
   
 10. **[コード]** ボックスの一覧から、一意の識別子または自動的に生成されたコードを含む列を選択します。  
   
-11. 任意。 **[名前]** ボックスの一覧から、各メンバーの名前を含む列を選択します。  
+11. 省略可能。 **[名前]** ボックスの一覧から、各メンバーの名前を含む列を選択します。  
   
 12. **[OK]** をクリックします。 エンティティが正常に作成されると、新しいヘッダー行が表示され、セルが強調表示されます。シート名は、エンティティ名と一致するように更新されます。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68092461"
   
 -   想定していたデータ型として属性が作成されたことを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

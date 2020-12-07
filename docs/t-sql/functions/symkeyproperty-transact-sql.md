@@ -1,4 +1,5 @@
 ---
+description: SYMKEYPROPERTY (Transact-SQL)
 title: SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c7314bbddfcc7cdd86a3dc0e4000119ff7aab8a2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 321440dd7f9f895f4bbebb7b5d6fa361ac416bce
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380857"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "87111814"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
@@ -56,7 +56,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="examples"></a>例  
  次の例では、Key_ID が 256 の対称キーのアルゴリズムを返します。  
   
-```  
+```sql  
 SELECT SYMKEYPROPERTY(256, 'algorithm_desc') AS Algorithm ;  
 GO  
 ```  

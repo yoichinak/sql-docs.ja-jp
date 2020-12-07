@@ -1,4 +1,5 @@
 ---
+description: UPDATE - トリガー関数 (Transact-SQL)
 title: UPDATE() (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 05820d6b375329e3746cfb4ea64ba05d64dc3cf3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379437"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "87113264"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
-  
+```syntaxsql
 UPDATE ( column )   
 ```  
   
@@ -53,7 +53,7 @@ UPDATE ( column )
  INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 この列の[データ型](../../t-sql/data-types/data-types-transact-sql.md)は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートしているものであれば、どのようなデータ型でもかまいません。 ただし、計算列を使用することはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
- Boolean  
+ ブール型  
   
 ## <a name="remarks"></a>解説  
  INSERT または UPDATE が成功するかどうかにかかわらず、UPDATE() は TRUE を返します。  

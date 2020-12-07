@@ -1,5 +1,6 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
+description: COLUMNS_UPDATED (Transact-SQL)
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
@@ -20,14 +21,15 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc2c16fb026bb64a304c1582b59ee7ffa09f35d6
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732617"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124866"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 この関数は、テーブルまたはビューの挿入または更新された列を示す **varbinary** ビット パターンを返します。 `COLUMNS_UPDATED` は [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT または UPDATE トリガーの内部のどこでも使用でき、そのトリガーが特定の動作を実行すべきかどうかをテストすることができます。
@@ -36,10 +38,12 @@ ms.locfileid: "85732617"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
@@ -48,11 +52,11 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` は、左から右に順序付けられた 1 つまたは複数のバイトを返します。 各バイトの右端のビットは、最下位ビットです。 左端のバイトの右端のビットがテーブル内の最初のテーブル列を表し、右から 2 番目のビットは 2 番目の列を、それ以下のビットも同様の順で列を表します。 トリガーが作成されるテーブルに列が 9 個以上ある場合、`COLUMNS_UPDATED` は複数のバイトを返します。最下位バイトが左端になります。 INSERT 動作では、列には明示的な値または暗黙的な (NULL) 値が挿入されるので、`COLUMNS_UPDATED` は、すべての列に対して TRUE を返します。
   
-特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル **t1** に、列 **C1**、**C2**、**C3**、**C4**、および **C5** があるとします。 列 **C2**、**C3**、および **C4** がすべて正常に更新されている (テーブル **t1** に UPDATE トリガーがある場合) かどうかを検証するには、 **& 14** を使用した構文に従います。 列 **C2** が更新されているかどうかだけをテストするには、 **& 2** を指定します。 実際の例については、[例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) と[例 B](#b-using-columns_updated-to-test-more-than-eight-columns) を参照してください。
+特定の列に対する更新または挿入をテストするには、テスト対象列のビットごとの演算子および整数ビットマスクを使用した構文に従います。 たとえば、テーブル **t1** に、列 **C1**、**C2**、**C3**、**C4**、および **C5** があるとします。 列 **C2**、**C3**、および **C4** がすべて正常に更新されている (テーブル **t1** に UPDATE トリガーがある場合) かどうかを検証するには、**& 14** を使用した構文に従います。 列 **C2** が更新されているかどうかだけをテストするには、**& 2** を指定します。 実際の例については、[例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) と[例 B](#b-using-columns_updated-to-test-more-than-eight-columns) を参照してください。
   
 `COLUMNS_UPDATED` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT または UPDATE トリガーの内部のどこでも使用できます。
   
-INFORMATION_SCHEMA.COLUMNS ビューの ORDINAL_POSITION 列には、`COLUMNS_UPDATED` から返される列のビット パターンとの互換性がありません。 `COLUMNS_UPDATED` と互換性のあるビット パターンを取得するには、次の例に示すように、`ColumnID` ビューに対してクエリを実行する際に、`COLUMNPROPERTY` システム関数の `INFORMATION_SCHEMA.COLUMNS` プロパティを参照します。
+INFORMATION_SCHEMA.COLUMNS ビューの ORDINAL_POSITION 列には、`COLUMNS_UPDATED` から返される列のビット パターンとの互換性がありません。 `COLUMNS_UPDATED` と互換性のあるビット パターンを取得するには、次の例に示すように、`INFORMATION_SCHEMA.COLUMNS` ビューに対してクエリを実行する際に、`COLUMNPROPERTY` システム関数の `ColumnID` プロパティを参照します。
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -90,24 +94,24 @@ IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
    DROP TABLE auditEmployeeData;  
 GO  
 CREATE TABLE dbo.employeeData (  
-   emp_id int NOT NULL PRIMARY KEY,  
-   emp_bankAccountNumber char (10) NOT NULL,  
-   emp_salary int NOT NULL,  
-   emp_SSN char (11) NOT NULL,  
-   emp_lname nchar (32) NOT NULL,  
-   emp_fname nchar (32) NOT NULL,  
-   emp_manager int NOT NULL  
+   emp_id INT NOT NULL PRIMARY KEY,  
+   emp_bankAccountNumber CHAR (10) NOT NULL,  
+   emp_salary INT NOT NULL,  
+   emp_SSN CHAR (11) NOT NULL,  
+   emp_lname NCHAR (32) NOT NULL,  
+   emp_fname NCHAR (32) NOT NULL,  
+   emp_manager INT NOT NULL  
    );  
 GO  
 CREATE TABLE dbo.auditEmployeeData (  
    audit_log_id uniqueidentifier DEFAULT NEWID() PRIMARY KEY,  
-   audit_log_type char (3) NOT NULL,  
-   audit_emp_id int NOT NULL,  
-   audit_emp_bankAccountNumber char (10) NULL,  
-   audit_emp_salary int NULL,  
-   audit_emp_SSN char (11) NULL,  
+   audit_log_type CHAR (3) NOT NULL,  
+   audit_emp_id INT NOT NULL,  
+   audit_emp_bankAccountNumber CHAR (10) NULL,  
+   audit_emp_salary INT NULL,  
+   audit_emp_SSN CHAR (11) NULL,  
    audit_user sysname DEFAULT SUSER_SNAME(),  
-   audit_changed datetime DEFAULT GETDATE()  
+   audit_changed DATETIME DEFAULT GETDATE()  
    );  
 GO  
 CREATE TRIGGER dbo.updEmployeeData   
@@ -184,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. COLUMNS_UPDATED を使用して、9 列以上をテストする  
-最初の 8 つのテーブル列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 この例では、`3` テーブルの列 `5`、`9`、および `AdventureWorks2012.Person.Person` に影響を与える更新をテストしています。
+最初の 8 つのテーブル列以外の列に影響を与える更新をテストするには、`SUBSTRING` 関数を使用して、`COLUMNS_UPDATED` から返された正しいビットをテストします。 この例では、`AdventureWorks2012.Person.Person` テーブルの列 `3`、`5`、および `9` に影響を与える更新をテストしています。
   
 ```sql
 USE AdventureWorks2012;  
@@ -206,7 +210,7 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [ビットごとの演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
 [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)

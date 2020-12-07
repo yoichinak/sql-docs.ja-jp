@@ -1,4 +1,5 @@
 ---
+description: MONTH (Transact-SQL)
 title: MONTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,17 +26,17 @@ ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aac54d65864111a4b6685fc54b9bdc8fc654594d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ffe1565499230f86bbf2bde44afb8d2b6bdb9e1f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110873"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88310278"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定された*日付*の月を表す整数を返します。  
+  指定された *日付* の月を表す整数を返します。  
   
  すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
@@ -59,7 +60,7 @@ MONTH ( date )
 ## <a name="return-value"></a>戻り値  
  MONTH は [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**month**、*date*) と同じ値を返します。  
   
- *日付*に時刻部分のみが含まれている場合、戻り値は 1、基本の月です。  
+ *日付* に時刻部分のみが含まれている場合、戻り値は 1、基本の月です。  
   
 ## <a name="examples"></a>例  
  次のステートメントでは、`4` が返されます。 これは月の数値です。  

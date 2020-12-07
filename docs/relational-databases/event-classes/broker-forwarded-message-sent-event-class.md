@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Sent イベント クラス
 title: Broker:Forwarded Message Sent イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d058aef1e3083e361e733af72e83ccdcd867bd87
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5558faa578a76f32e2bd0fdfc2e7906603a0116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330868"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent イベント クラス
 
@@ -27,7 +28,7 @@ ms.locfileid: "85763019"
   
 ## <a name="brokerforwarded-message-sent-event-class-data-columns"></a>Broker:Forwarded Message Sent イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BigintData1|**bigint**|メッセージのシーケンス番号。|52|いいえ|  
@@ -42,7 +43,7 @@ ms.locfileid: "85763019"
 |IndexID|**int**|転送されるメッセージに残っているホップの数。|24|いいえ|  
 |IntegerData|**int**|転送されるメッセージのフラグメント番号。|25|いいえ|  
 |IsSystem|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|LoginSid|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |NTUserName|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |ObjectId|**int**|メッセージが転送されたときの、その転送メッセージの有効期限の値。|22|いいえ|  

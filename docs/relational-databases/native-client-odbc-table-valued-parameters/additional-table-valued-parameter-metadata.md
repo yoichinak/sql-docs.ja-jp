@@ -1,4 +1,5 @@
 ---
+description: テーブル値パラメーターの追加メタデータ
 title: 追加のテーブル値パラメーターのメタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1aed8844cffc6ccfb6608e4077f792dcf8651e6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9e5f1e73c57c607ce4b223de9f5fec67ff41da9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486771"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +50,7 @@ ms.locfileid: "86004599"
   
  WVarchar 列は、ODBC 仕様では Varchar として定義されていますが、実際には、最近のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーでは、WVarchar として返されます。 この変更は、ODBC 3.5 仕様に Unicode のサポートが追加されたときに行われましたが、明示されていませんでした。  
   
- アプリケーションでは、テーブル値パラメーターの追加のメタデータを取得するために、SQLColumns および SQLPrimaryKeys カタログ関数を使用します。 これらの関数がテーブル値パラメーターのために呼び出される前に、アプリケーションでは、ステートメント属性 SQL_SOPT_SS_NAME_SCOPE を SQL_SS_NAME_SCOPE_TABLE_TYPE に設定する必要があります。 この値は、アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていることを示します。 その後、アプリケーションはテーブル値パラメーターの TYPE_NAME を*TableName*パラメーターとして渡します。 SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、 *CatalogName*パラメーターと*SchemaName*パラメーターでそれぞれ使用され、テーブル値パラメーターのカタログとスキーマを識別します。 テーブル値パラメーターのメタデータの取得が完了すると、アプリケーションによって、SQL_SOPT_SS_NAME_SCOPE は既定値 SQL_SS_NAME_SCOPE_TABLE に設定し直す必要があります。  
+ アプリケーションでは、テーブル値パラメーターの追加のメタデータを取得するために、SQLColumns および SQLPrimaryKeys カタログ関数を使用します。 これらの関数がテーブル値パラメーターのために呼び出される前に、アプリケーションでは、ステートメント属性 SQL_SOPT_SS_NAME_SCOPE を SQL_SS_NAME_SCOPE_TABLE_TYPE に設定する必要があります。 この値は、アプリケーションが実際のテーブルではなくテーブル型のメタデータを必要としていることを示します。 その後、アプリケーションはテーブル値パラメーターの TYPE_NAME を *TableName* パラメーターとして渡します。 SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME は、 *CatalogName* パラメーターと *SchemaName* パラメーターでそれぞれ使用され、テーブル値パラメーターのカタログとスキーマを識別します。 テーブル値パラメーターのメタデータの取得が完了すると、アプリケーションによって、SQL_SOPT_SS_NAME_SCOPE は既定値 SQL_SS_NAME_SCOPE_TABLE に設定し直す必要があります。  
   
  SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されると、リンク サーバーへのクエリは失敗します。 サーバーコンポーネントを含むカタログを使用した SQLColumns または Sqlprimarykey の呼び出しは失敗します。  
   

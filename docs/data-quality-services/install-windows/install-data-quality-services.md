@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services のインストール
 title: Data Quality Services のインストール
 ms.date: 09/11/2017
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7558b68c6cdc286d2152f1dee8d4ae325d699ed1
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942699"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724638"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
 [!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) には、との2つのコンポーネントが含まれてい **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** ます。  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、との2つのコンポーネントが含まれてい **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** ます。  
   
 |DQS コンポーネント|説明|  
 |-------------------|-----------------|  
@@ -45,7 +46,7 @@ ms.locfileid: "85942699"
 > [!NOTE]  
 >  コマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] とクライアントをインストールするコマンドライン オプションの詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 」の「 [機能パラメーター](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
-##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>インストール前の作業  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a> インストール前の作業  
  DQS をインストールする前に、コンピューターが最小システム要件を満たしていることを確認します。 次の表は、DQS コンポーネントの最小システム要件に関する情報を示しています。  
   
 |DQS コンポーネント|最小システム要件|  
@@ -67,10 +68,10 @@ ms.locfileid: "85942699"
   
 |ページ|アクション|  
 |----------|------------|  
-|特徴選択|選択:<br /><br /> **[データベース エンジン サービス]** の下の **[Data Quality Services]** を選択して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。 <br />**[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 *のインストールを完了*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] するには、SQL Server セットアップを完了した後で、このファイルを実行する必要があります。 また、使用する前に、いくつかの追加の手順を実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を構成する必要があります。 詳細については、「 [インストール後の作業](#PostInstallationTasks)」を参照してください。<br /><br /> **[Data Quality Client]** を選択して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。<br /><br /> しない**管理ツール-** [**管理ツール-基本] の**下にある [インストール] を実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。 これにより、グラフィカル ユーザー インターフェイスを使用して SQL Server のインスタンスを管理できるようになり、次のセクションで示すインストール後の追加の作業の実行が容易になります。|  
+|特徴選択|選択:<br /><br /> **[データベース エンジン サービス]** の下の **[Data Quality Services]** を選択して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。 <br />**[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 *のインストールを完了*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] するには、SQL Server セットアップを完了した後で、このファイルを実行する必要があります。 また、使用する前に、いくつかの追加の手順を実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を構成する必要があります。 詳細については、「 [インストール後の作業](#PostInstallationTasks)」を参照してください。<br /><br /> **[Data Quality Client]** を選択して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]をインストールします。<br /><br /> しない **管理ツール-** [ **管理ツール-基本] の** 下にある [インストール] を実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。 これにより、グラフィカル ユーザー インターフェイスを使用して SQL Server のインスタンスを管理できるようになり、次のセクションで示すインストール後の追加の作業の実行が容易になります。|  
 |データベース エンジンの構成|**[現在のユーザーの追加]** をクリックして、ユーザー Windows アカウントを sysadmin 固定サーバー ロールに追加します。 これは、後で DQSInstaller.exe ファイルを実行して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するために必要です。|  
   
-##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>インストール後の作業  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a> インストール後の作業  
  SQL Server のインストール ウィザードを完了した後で、このセクションで説明する追加手順を実行して、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行し、構成して、使用する必要があります。  
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するには、DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。  
@@ -113,15 +114,14 @@ ms.locfileid: "85942699"
      詳細については、「  
                     [DQS 操作のデータにアクセス](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)します。  
   
-## <a name="see-also"></a>関連項目  
- [ビデオ: DQS をインストールして構成する](https://go.microsoft.com/fwlink/?LinkId=238241)   
+## <a name="see-also"></a>参照  
+ [ビデオ: DQS をインストールして構成する](/previous-versions/dn912438(v=msdn.10))   
  [.NET Framework の更新後に SQLCLR アセンブリをアップグレードする](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [DQSInstaller.exeを使用した DQS ナレッジベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [DQSInstaller.exeを使用した DQS ナレッジベースのエクスポートとインポート ](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services のアップグレード](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)   
  [ビジネスインテリジェンス機能のインストール SQL Server](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [アンインストール SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [DQS のインストールおよび構成に関する問題のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
   

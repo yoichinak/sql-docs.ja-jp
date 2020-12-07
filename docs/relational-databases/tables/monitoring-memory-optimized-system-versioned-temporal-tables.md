@@ -1,4 +1,5 @@
 ---
+description: システムでバージョン管理されたメモリ最適化テンポラル テーブルの監視
 title: システムでバージョン管理されたメモリ最適化テンポラル テーブルの監視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6e00ccde6b0b0788c9007a26cb922ccfcecdc21
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: add320eaae050b84184b5db11b5e09083b910000
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555897"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548869"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>システムでバージョン管理されたメモリ最適化テンポラル テーブルの監視
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 既存のビューを使用して、システムでバージョン管理されたすべてのメモリ最適化テーブルについてのメモリ使用量の詳細と概要を追跡できます。
 

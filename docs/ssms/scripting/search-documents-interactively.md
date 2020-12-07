@@ -4,7 +4,7 @@ description: '[検索と置換] ダイアログ ボックスを使用して 1 �
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: a97a33dadae8f9039a6c5a0ca935decfb1e24b4a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122834"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036377"
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "87122834"
  **[すべて置換]** をクリックすると、 **[次を検索]** によってスキップした検索結果も含め、すべての検索結果が置換されます。 **[すべて置換]** を取り消すには、ファイルを閉じる前に **[編集]** メニューの **[元に戻す]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [アクティブ ドキュメントのインクリメンタル検索](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
- [結果一覧を使用してドキュメントを検索する方法](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [アクティブ ドキュメントのインクリメンタル検索](./search-an-active-document-incrementally.md)   
+ [検索と置換](./search-and-replace.md)   
+ [結果一覧を使用してドキュメントを検索する方法](./search-documents-using-results-lists.md)   
+ [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)  
   

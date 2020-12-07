@@ -1,4 +1,5 @@
 ---
+description: sys.filetable_system_defined_objects (Transact-SQL)
 title: filetable_system_defined_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetable_system_defined_objects catalog view
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0232a635267dc97f53f67309fb59d06651d918ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a437e9d701870192fc4ea4d5f3352b5bbb063e98
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786441"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539648"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85786441"
 |**object_id**|**int**|FileTable に関連するシステム定義のオブジェクトのオブジェクト ID。<br /><br /> は、 **sys. オブジェクト**内のオブジェクトを参照します。|  
 |**parent_object_id**|**int**|親 FileTable のオブジェクト ID。<br /><br /> は、 **sys. オブジェクト**内のオブジェクトを参照します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FileTable の作成、変更、および削除](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  
   

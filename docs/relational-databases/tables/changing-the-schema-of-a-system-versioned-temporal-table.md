@@ -1,4 +1,5 @@
 ---
+description: システム バージョン管理されたテンポラル テーブルのスキーマを変更する
 title: システム バージョン管理されたテンポラル テーブルのスキーマを変更する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2016
@@ -8,17 +9,18 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8b266ae9ac0acb9ff6a4ac357cf3fa3eaabf770
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a433fbfe50e2a673ab29595729f7c8b83f9444ae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555907"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538217"
 ---
 # <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルのスキーマを変更する
+
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 

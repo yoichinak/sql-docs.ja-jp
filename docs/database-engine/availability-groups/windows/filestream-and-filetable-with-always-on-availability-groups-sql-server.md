@@ -6,21 +6,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - FileTables [SQL Server], Availability Groups
 - FILESTREAM [SQL Server], Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b98c555c9110981159cc3344d0adadd874bae7e0
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 952d6f2043ed9b271a735f034844d40787af5a87
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522914"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584232"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 可用性グループで FILESTREAM と FileTable を使用する
 

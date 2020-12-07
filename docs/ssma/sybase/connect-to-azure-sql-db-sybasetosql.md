@@ -1,4 +1,5 @@
 ---
+description: Azure SQL Database への接続 (SybaseToSQL)
 title: Azure SQL Database への接続 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,26 +10,26 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492315"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Azure SQL Database への接続 (SybaseToSQL)
 [Azure SQL Database への接続] ダイアログボックスを使用して、移行する Azure SQL Database データベースに接続します。  
   
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **Azure SQL Database に接続**] を選択します。 以前に接続している場合、コマンドは**Azure SQL Database に再接続します。**  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **Azure SQL Database に接続**] を選択します。 以前に接続している場合、コマンドは **Azure SQL Database に再接続します。**  
   
 ## <a name="options"></a>オプション  
 **[サーバー名]**  
   
 Azure SQL Database に接続するためのサーバー名を選択または入力します。  
   
-**データベース**  
+**[データベース]**  
   
-データベース名を選択、入力、または**参照**します。  
+データベース名を選択、入力、または **参照** します。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase は、Azure SQL Database の master データベースへの接続をサポートしていません。  

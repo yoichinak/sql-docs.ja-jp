@@ -1,4 +1,5 @@
 ---
+description: データマイニング拡張機能 (DMX) の構文表記規則
 title: データマイニング拡張機能 (DMX) 構文規則 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dab02107467b75aa418592ce640d88d3789e6cff
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f6b96a09cdf676d48b29253256b22615f50dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491546"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>データマイニング拡張機能 (DMX) の構文表記規則
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86971750"
 |`[ ]` (角かっこ)|省略可能な構文項目が含まれています。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目が含まれています。 中かっこは入力しないでください。|  
 |, ...|コンマの前の項目を任意の回数繰り返すことを示します。 項目はコンマで区切られます。|  
-|\<label>::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる場所は、など、山かっこで囲まれたラベルで示され \<label> ます。|  
+|\<label> ::=|構文のブロックの名前を示します。 この表記規則は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付ける際に使用します。 構文のブロックを使用できる場所は、など、山かっこで囲まれたラベルで示され \<label> ます。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)  

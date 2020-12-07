@@ -1,4 +1,5 @@
 ---
+description: + (加算) (SSIS)
 title: + (加算) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c08a7b40d0bc6f83a8b1ffb7adeaf882841a82a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b2d71a9f059276d654ccf0cd5776532c86e3fb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484448"
 ---
 # <a name="-add-ssis"></a>+ (加算) (SSIS)
 
@@ -43,7 +44,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -65,7 +66,7 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

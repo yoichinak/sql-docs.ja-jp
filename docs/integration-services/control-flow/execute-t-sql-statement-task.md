@@ -1,4 +1,5 @@
 ---
+description: T-SQL ステートメントの実行タスク
 title: T-SQL ステートメントの実行タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fcd3dabd40c77adde95234276cf4b6ddff46cb42
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 060fa6ad9faae0fa6159eba2591623af57a41c5b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917918"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123520"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL ステートメントの実行タスク
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  T-SQL ステートメントの実行タスクは、Transact-SQL ステートメントを実行します。 詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../../t-sql/transact-sql-reference-database-engine.md)」および「[Integration Services (SSIS) のクエリ](../../integration-services/integration-services-ssis-queries.md)」を参照してください。  
+  T-SQL ステートメントの実行タスクは、Transact-SQL ステートメントを実行します。 詳細については、「[Transact-SQL リファレンス (データベース エンジン)](../../t-sql/language-reference.md)」および「[Integration Services (SSIS) のクエリ](../../integration-services/integration-services-ssis-queries.md)」を参照してください。  
   
  このタスクは、SQL 実行タスクと同様です。 ただし、T-SQL ステートメントの実行タスクでは、SQL 言語の Transact-SQL バージョンのみがサポートされるため、このタスクを使用して、SQL 言語の他の仕様の言語によるステートメントをサーバーで実行することはできません。 パラメーター化クエリの実行、クエリ結果の変数への保存、またはプロパティ式の使用が必要な場合は、T-SQL ステートメントの実行タスクではなく、SQL 実行タスクを使用する必要があります。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md)」を参照してください。  
   
@@ -41,11 +42,10 @@ ms.locfileid: "86917918"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)   
  [Integration Services パッケージで MERGE を実行する](../../integration-services/control-flow/merge-in-integration-services-packages.md)  
-  
   

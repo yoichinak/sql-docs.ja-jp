@@ -1,4 +1,5 @@
 ---
+description: setClob メソッド (SQLServerCallableStatement)
 title: setClob メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a32812645671428fb2b6f6ad3f254093581e28f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2513471513dc7073c30b399e7b513e237f3e1229
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432114"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>setClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80924616"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[setClob メソッド &#40;java.lang.String, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-sql-clob.md)|指定されたパラメーターを、指定された Clob オブジェクトに設定します。|  
 |[setClob メソッド &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-java-lang-string-java-io-reader.md)|指定されたパラメーターを、指定された Reader オブジェクトに設定します。|  

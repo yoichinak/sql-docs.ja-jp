@@ -1,4 +1,5 @@
 ---
+description: インデックスの FILL FACTOR の指定
 title: インデックスの FILL FACTOR の指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -14,12 +15,12 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4badf632e87404b0c3496564abec6ca9a56e3747
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b14aaaceadcc5cabeb8fad667879cae60e2d1331
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909522"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88499341"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "67909522"
   
      [パフォーマンスに関する考慮事項](#Performance)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してインデックスの FILL FACTOR を指定するには:**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "67909522"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]** を選択します。  
+3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、**[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "67909522"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **ファイル** メニューの **table_name**_を保存_を選びます。  
+8.  **[ファイル]** メニューの **table_name**_を保存]_ を選びます。  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用してインデックスの FILL FACTOR を指定するには  
   
@@ -106,7 +107,7 @@ ms.locfileid: "67909522"
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>既存のインデックスの FILL FACTOR を指定するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -125,7 +126,7 @@ ms.locfileid: "67909522"
   
 #### <a name="another-way-to-specify-a-fill-factor-in-an-index"></a>別の方法でインデックスの FILL FACTOR を指定する  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

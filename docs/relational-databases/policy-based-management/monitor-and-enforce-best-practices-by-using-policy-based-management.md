@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785088"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892162"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  ポリシー ベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベスト プラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  
+  ポリシー ベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベスト プラクティスを監視できます。  ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)」を参照してください。  ベスト プラクティス ポリシーとしてインポートできる一連の[サンプル ポリシー ファイル](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)が用意されており、それを使用してインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価できます。
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
- 次の表に、インストールした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されているポリシーと、各ポリシーで評価するベスト プラクティス ルールに関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)」を参照してください。  
+ 次の表に、一連の[サンプル ポリシー](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)に含まれているポリシー一覧と、各ポリシーで評価するベスト プラクティス ルールを示しています。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)」を参照してください。  
   
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  
 |非対称キーの暗号化アルゴリズム|[非対称キー暗号化の強度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|バックアップ ファイルとデータ ファイルの場所|[バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する](../backup-restore/backup-devices-sql-server.md)|  
 |データ ファイルとログ ファイルの場所|[別々のドライブへのデータ ファイルとログ ファイルの配置](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |データベースの自動終了|[AUTO_CLOSE データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |データベースの自動圧縮|[AUTO_SHRINK データベース オプションを OFF に設定](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|データベースの照合順序|[ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |データベースのページ検証|[PAGE_VERIFY データベース オプションを CHECKSUM に設定](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |データベースのページの状態|[問題のあるページを含むデータベースの整合性のチェック](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |guest の権限|[ユーザー データベースに対する guest の権限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "85785088"
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理ファセットの操作](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

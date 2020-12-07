@@ -1,4 +1,5 @@
 ---
+description: semanticsimilaritydetailstable (Transact-sql)
 title: semanticsimilaritydetailstable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4b264f5276ad9d9f411fcdd14550130eb412a1b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474586"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  **テーブル**  
  フルテキスト インデックスとセマンティック インデックスが有効になっているテーブルの名前を指定します。  
   
@@ -74,12 +75,12 @@ SEMANTICSIMILARITYDETAILSTABLE
 |Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**キーフレーズ**|**NVARCHAR**|ソースドキュメントと一致したドキュメントとの類似性に貢献するキーフレーズ。|  
-|**学生**|**本当の**|2つのドキュメント間で類似している他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
+|**スコア**|**本当の**|2つのドキュメント間で類似している他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、「[セマンティック検索による類似および関連ドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」を参照してください。  
+ 詳細については、「 [セマンティック検索による類似および関連ドキュメントの検索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)」を参照してください。  
   
-## <a name="metadata"></a>Metadata  
+## <a name="metadata"></a>メタデータ  
  セマンティック類似性の抽出と作成の詳細と状態については、次の動的管理ビューに対してクエリを実行します。  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
@@ -91,8 +92,8 @@ SEMANTICSIMILARITYDETAILSTABLE
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、AdventureWorks2012 サンプルデータベースの**humanresources.employee**テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 @CandidateId変数と @MatchedID 変数は、フルテキストインデックスのキー列の値を表します。  
+## <a name="examples"></a>例  
+ 次の例では、AdventureWorks2012 サンプルデータベースの **humanresources.employee** テーブル内の指定された候補との間に最も高い類似性スコアを持つ5つのキーフレーズを取得します。 @CandidateId変数と @MatchedID 変数は、フルテキストインデックスのキー列の値を表します。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

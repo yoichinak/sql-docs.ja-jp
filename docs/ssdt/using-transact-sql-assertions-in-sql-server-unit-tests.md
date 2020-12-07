@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898980"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987748"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
 
@@ -79,11 +79,10 @@ Transact\-SQL スクリプトで RAISERROR ステートメントを使用する�
   
 @ErrorState は、1 から 127 の任意の整数です。 この整数を使用すると、コード内の別の場所で発生した 1 つのエラーの複数の出現を区別できます。  
   
-詳しくは、「[RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。  
+詳しくは、「[RAISERROR (Transact-SQL)](../t-sql/language-elements/raiserror-transact-sql.md)」をご覧ください。 SQL Server の単体テストでの RAISERROR の使用例については、「[単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストでのテスト条件の使用](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [方法:  SQL Server の単体テストを開いて編集する](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
-  

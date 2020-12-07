@@ -1,4 +1,5 @@
 ---
+description: sys.traces (Transact-SQL)
 title: sys. トレース (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,24 +18,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3f8edc61622c2748208a62d2bdaeb66650a78840
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 31de0333847573b46872cfa5a3441dd92820151f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897704"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544953"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  システム上で現在実行中のトレースは、の**トレース**カタログビューに含まれています。 このビューは、 **fn_trace_getinfo**関数の代わりとして使用されます。  
+  システム上で現在実行中のトレースは、の **トレース** カタログビューに含まれています。 このビューは、 **fn_trace_getinfo** 関数の代わりとして使用されます。  
   
  サポートされているトレースイベントの完全な一覧については、「 [SQL Server イベントクラスのリファレンス](../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに拡張イベントカタログビューを使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントカタログビューを使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -60,8 +61,8 @@ ms.locfileid: "85897704"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
  [trace_events &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   

@@ -1,8 +1,9 @@
 ---
+description: SaveToFile メソッド
 title: SaveToFile メソッド |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6aa3269e73f9823eb47dddeb039b62e3affdd3c6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989293"
 ---
 # <a name="savetofile-method"></a>SaveToFile メソッド
-[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)のバイナリコンテンツをファイルに保存します。  
+[ストリーム](./stream-object-ado.md)のバイナリコンテンツをファイルに保存します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +39,21 @@ Stream.SaveToFile FileName, SaveOptions
  **ストリーム**の内容の保存先となるファイルの完全修飾名を含む**文字列**値です。 任意の有効なローカルの場所、または UNC 値を使用してアクセスできる任意の場所に保存できます。  
   
  *System.xml.linq.saveoptions>*  
- 新しいファイルがまだ存在しない場合に、新しいファイルを**SaveToFile**によって作成するかどうかを指定する[Saveoptionsenum](../../../ado/reference/ado-api/saveoptionsenum.md)値。 既定値は**adSaveCreateNotExists**です。 これらのオプションを使用すると、指定したファイルが存在しない場合にエラーが発生するように指定できます。 また、 **SaveToFile**が既存のファイルの現在の内容を上書きするように指定することもできます。  
+ 新しいファイルがまだ存在しない場合に、新しいファイルを**SaveToFile**によって作成するかどうかを指定する[Saveoptionsenum](./saveoptionsenum.md)値。 既定値は **adSaveCreateNotExists**です。 これらのオプションを使用すると、指定したファイルが存在しない場合にエラーが発生するように指定できます。 また、 **SaveToFile** が既存のファイルの現在の内容を上書きするように指定することもできます。  
   
 > [!NOTE]
->  既存のファイルを上書きする場合 ( **adSaveCreateOverwrite**が設定されている場合)、 **SaveToFile**は新しい[EOS](../../../ado/reference/ado-api/eos-property.md)の後にある元の既存のファイルからすべてのバイトを切り捨てます。  
+>  既存のファイルを上書きする場合 ( **adSaveCreateOverwrite** が設定されている場合)、 **SaveToFile** は新しい [EOS](./eos-property.md)の後にある元の既存のファイルからすべてのバイトを切り捨てます。  
   
-## <a name="remarks"></a>Remarks  
- **SaveToFile**は、**ストリーム**オブジェクトの内容をローカルファイルにコピーするために使用できます。 **ストリーム**オブジェクトの内容またはプロパティに変更はありません。 **ストリーム**オブジェクトは、 **SaveToFile**を呼び出す前に開いている必要があります。  
+## <a name="remarks"></a>解説  
+ **SaveToFile** は、 **ストリーム** オブジェクトの内容をローカルファイルにコピーするために使用できます。 **ストリーム**オブジェクトの内容またはプロパティに変更はありません。 **ストリーム**オブジェクトは、 **SaveToFile**を呼び出す前に開いている必要があります。  
   
- このメソッドは、**ストリーム**オブジェクトと基になるソースとの関連付けを変更しません。 **ストリーム**オブジェクトは、開いたときにソースであった元の URL または**レコード**と関連付けられたままになります。  
+ このメソッドは、 **ストリーム** オブジェクトと基になるソースとの関連付けを変更しません。 **ストリーム**オブジェクトは、開いたときにソースであった元の URL または**レコード**と関連付けられたままになります。  
   
- **SaveToFile**操作の後、ストリーム内の現在位置 ([位置](../../../ado/reference/ado-api/position-property-ado.md)) がストリームの先頭 (0) に設定されます。  
+ **SaveToFile**操作の後、ストリーム内の現在位置 ([位置](./position-property-ado.md)) がストリームの先頭 (0) に設定されます。  
   
 ## <a name="applies-to"></a>適用対象  
- [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream オブジェクト (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
- [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Save メソッド](../../../ado/reference/ado-api/save-method.md)
+ [Open メソッド (ADO Stream)](./open-method-ado-stream.md)   
+ [Save メソッド](./save-method.md)

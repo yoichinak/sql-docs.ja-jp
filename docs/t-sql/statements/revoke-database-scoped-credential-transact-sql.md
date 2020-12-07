@@ -1,4 +1,5 @@
 ---
+description: REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)
 title: REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0469f4f03430433135c827bb8f6e6fa9ed5dcc4a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8bc8760b678391b2bee7cf96d6e1b0e1e0c317a6
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485123"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496583"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -60,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  権限を取り消すデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -85,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -103,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベース スコープの資格情報は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、データベース スコープの資格情報で取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
 |データベース スコープの資格情報の権限|権限が含まれるデータベース スコープの資格情報の権限|権限が含まれるデータベース権限|  

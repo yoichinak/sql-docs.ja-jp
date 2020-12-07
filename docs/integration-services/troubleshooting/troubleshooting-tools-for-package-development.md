@@ -1,4 +1,5 @@
 ---
+description: パッケージ開発のトラブルシューティング ツール
 title: パッケージ開発のトラブルシューティング ツール | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 652ebe1e842acd6b51b53f229bed09b60ab0fe41
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495143"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
 
@@ -49,7 +50,7 @@ ms.locfileid: "86913747"
   
 -   **実行時まで無効なパッケージ要素の DelayValidation プロパティを構成する**。 デザイン時には構成が有効でないパッケージ要素の **DelayValidation** を **True** に設定すると、検証エラーが発生するのを防ぐことができます。 たとえば、SQL 実行タスクが実行時に作成するまで存在しないテーブルを、データ フロー タスクで使用する場合があります。 **DelayValidation** プロパティはパッケージ ベル、またはパッケージに含まれている個別のタスクやコンテナーのレベルで有効にできます。 実行時に同じ検証エラーが発生するのを防ぐため、パッケージを配置するときは、同一パッケージ内の要素についてこのプロパティを **True** に設定しておく必要があります。  
   
-     **DelayValidation** プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **false**。 ただし、このプロパティの値が **false**の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。  
+     **DelayValidation** プロパティはデータ フロー タスク上で設定できますが、個別のデータ フロー コンポーネントでは設定できません。 個別のデータ フロー コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> プロパティを **false**。 ただし、このプロパティの値が **false** の場合、コンポーネントは外部データ ソースのメタデータに変更が加えられても認識しません。  
   
  検証の発生時に、パッケージによって使用されるデータベース オブジェクトがロックされている場合、検証プロセスが応答しなくなる可能性があります。 このような状況では、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーも応答しなくなります。 検証を再開するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の関連するセッションを閉じます。 また、このセクションで説明した設定を使用することによって、この問題を回避することもできます。  
   

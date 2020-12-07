@@ -27,14 +27,14 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 884477b0b1d62d7616448645cb740cc99e329c53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a7b746b8bd323b7037a7a477b33596b554aed096
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669772"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130355"
 ---
 # <a name="recovery-models-sql-server"></a>復旧モデル (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,6 @@ ms.locfileid: "85669772"
  [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [管理タスクの自動化 &#40;SQL Server エージェント&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
+ [管理タスクの自動化 &#40;SQL Server エージェント&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
-  
   

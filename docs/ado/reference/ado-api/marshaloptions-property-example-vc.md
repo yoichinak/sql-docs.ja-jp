@@ -1,8 +1,9 @@
 ---
+description: MarshalOptions プロパティの例 (VC++)
 title: MarshalOptions プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92d6939f067563c00890ad2481c86c39bc9bfa49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be0ff00fa2f4afd5e003ce37d45b3631512812e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990653"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions プロパティの例 (VC++)
-この例では、 [Marshaloptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
+この例では、 [Marshaloptions](./marshaloptions-property-ado.md) プロパティを使用して、サーバーに送信される行を指定します。すべての行または変更された行のみが返されます。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -245,4 +246,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions プロパティ (ADO)](./marshaloptions-property-ado.md)

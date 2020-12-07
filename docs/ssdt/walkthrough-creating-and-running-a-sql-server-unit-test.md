@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882923"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987938"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル:SQL Server の単体テストの作成と実行
 
@@ -40,7 +40,7 @@ ms.locfileid: "85882923"
 単体テストのいずれかによってストアド プロシージャ内のエラーが検出されたら、そのエラーを修正してテストを再実行します。  
   
 ## <a name="prerequisites"></a>前提条件  
-このチュートリアルを完了するには、データベースを作成および配置するための権限があるデータベース サーバー (LocalDB データベース) に接続できる必要があります。 詳しくは、「[Visual Studio のデータベース機能に必要なアクセス許可](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)」をご覧ください。  
+このチュートリアルを完了するには、データベースを作成および配置するための権限があるデータベース サーバー (LocalDB データベース) に接続できる必要があります。 詳しくは、「[Visual Studio のデータベース機能に必要なアクセス許可](/previous-versions/visualstudio/visual-studio-2010/aa833413(v=vs.100))」をご覧ください。  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>データベース スキーマを含むスクリプトを作成する  
   
@@ -992,4 +992,3 @@ ms.locfileid: "85882923"
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [方法: 空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [方法: SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: State プロパティ (SqlService クラス)
 title: State プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5273d7dd27753b62a22520f2d1aa1f9a28dc8b5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a6613da3ef7bcb0405bfa7c89551a08ad5994d0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880590"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537638"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,11 +64,11 @@ object.State [= value]
  一時停止保留中。 サービスは一時停止を待機しています。  
   
  7  
- 一時停止。 サービスは一時停止しています。  
+ 一時停止。 サービスは一時中断されています。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

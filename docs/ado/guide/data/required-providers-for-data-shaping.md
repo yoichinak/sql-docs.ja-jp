@@ -1,8 +1,9 @@
 ---
+description: データ シェイプに必要なプロバイダー
 title: データシェイプの必須プロバイダー |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd2829c49adb318ae80eeefd2ec2913fd8620d2b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760948"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979803"
 ---
 # <a name="required-providers-for-data-shaping"></a>データ シェイプに必要なプロバイダー
-通常、データシェイプには2つのプロバイダーが必要です。 サービスプロバイダー、 [OLE DB 用のデータ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)はデータの整形機能を提供し、SQL Server の OLE DB プロバイダーなどのデータプロバイダーが、整形された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を設定するためのデータ行を提供します。  
+通常、データシェイプには2つのプロバイダーが必要です。 サービスプロバイダー、 [OLE DB 用のデータ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)はデータの整形機能を提供し、SQL Server の OLE DB プロバイダーなどのデータプロバイダーが、整形された [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を設定するためのデータ行を提供します。  
   
- サービスプロバイダーの名前 (MSDataShape) は、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティの値、または接続文字列キーワード "provider = MSDataShape;" の値として指定できます。  
+ サービスプロバイダーの名前 (MSDataShape) は、 [接続](../../../ado/reference/ado-api/connection-object-ado.md) オブジェクト [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md) プロパティの値、または接続文字列キーワード "provider = MSDataShape;" の値として指定できます。  
   
  データプロバイダーの名前は**Data Provider**動的プロパティの値として指定できます。このプロパティは、OLE DB 用のデータシェイプサービスまたは接続文字列キーワード "**Data Provider =** _Provider_" によって**接続**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。  
   

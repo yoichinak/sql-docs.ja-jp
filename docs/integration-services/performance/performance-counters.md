@@ -1,4 +1,5 @@
 ---
+description: パフォーマンス カウンター
 title: パフォーマンス カウンター | Microsoft Docs
 ms.custom: supportability
 ms.date: 08/27/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918310"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192452"
 ---
 # <a name="performance-counters"></a>パフォーマンス カウンター
 
@@ -75,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   codeplex.com のツール ( [Business Intelligence Development Studio のための SSIS パフォーマンス ビジュアライゼーション (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626))  
   
--   msdn.microsoft.com のビデオ ( [社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=150497))  
+-   msdn.microsoft.com のビデオ ( [社内の SSIS パッケージのパフォーマンスの測定と理解 (SQL Server ビデオ)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)))  
   
 -   support.microsoft.com のサポート技術情報 ( [Windows Server 2008 へのアップグレード後にパフォーマンス モニターで SSIS パフォーマンス カウンターが使用できなくなる](https://go.microsoft.com/fwlink/?LinkId=235319))  
 
@@ -121,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  [パフォーマンス ログと警告] サービスは、Administrators グループのメンバーであるローカル アカウントまたはドメイン アカウントを使用して起動する必要があります。  
 
 ## <a name="see-also"></a>参照  
- [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md) [Integration Services パッケージによって記録されたイベント](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md) [Integration Services パッケージによって記録されたイベント](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

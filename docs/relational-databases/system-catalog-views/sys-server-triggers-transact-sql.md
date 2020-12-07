@@ -1,4 +1,5 @@
 ---
+description: server_triggers (Transact-sql)
 title: server_triggers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7ce21b1c997a1530212f9a0317632f665c9ef503
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6850c9d406dd461f967d8297dcd5a49fdb5c3993
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884464"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545045"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>server_triggers (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  TR または TA の object_type を持つ、すべてのサーバーレベルの DDL トリガーのセットを格納します。 CLR トリガーの場合は、アセンブリを**master**データベースに読み込む必要があります。 すべてのサーバーレベルの DDL トリガー名は、1つのグローバルスコープに存在します。  
+  TR または TA の object_type を持つ、すべてのサーバーレベルの DDL トリガーのセットを格納します。 CLR トリガーの場合は、アセンブリを **master** データベースに読み込む必要があります。 すべてのサーバーレベルの DDL トリガー名は、1つのグローバルスコープに存在します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +49,7 @@ ms.locfileid: "85884464"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

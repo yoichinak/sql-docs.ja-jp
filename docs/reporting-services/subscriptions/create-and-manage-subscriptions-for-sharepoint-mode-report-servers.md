@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 289483df5c80b4524a281e62b4d63147b6f61bb0
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742259"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986848"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -160,6 +160,6 @@ ms.locfileid: "80742259"
  [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services での SharePoint ライブラリへの配信](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [電子メール配信用のレポート サーバーの構成 (レポート サーバー構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   
   

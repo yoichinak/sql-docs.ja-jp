@@ -1,4 +1,5 @@
 ---
+description: 標準のプログラミング インターフェイス
 title: 標準プログラミングインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7767f113d0f70569ce253f0200cd35cb83915a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fd0e9e3901ea6b3dcf9a09366b13fe532f1198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448885"
 ---
 # <a name="standard-programming-interface"></a>標準のプログラミング インターフェイス
 プログラミングインターフェイスは、標準化のための最も明確な候補と考えられます。 実際、ODBC を開発しているときは、embedded SQL および SQL モジュールの標準が ANSI および ISO によって既に提供されています。 データベース CLI の標準は存在しませんが、SQL アクセスグループ (データベースベンダーの業界コンソーシアム) は、データベースを作成するかどうかを検討していました。ODBC の各部分は、後で作業の基礎になりました。  

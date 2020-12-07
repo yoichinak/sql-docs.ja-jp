@@ -1,4 +1,5 @@
 ---
+description: データベースからの DAC の抽出
 title: データベースからの DAC の抽出 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781689"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195693"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85781689"
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 以降のインスタンスに存在するデータベースから DAC を抽出できます。 DAC から配置されたデータベースに対して抽出プロセスが実行された場合、データベース内のオブジェクトの定義のみが抽出されます。 プロセスは **msdb** (**の** マスター [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) で登録された DAC を参照しません。 抽出プロセスは、データベース エンジンの現在のインスタンスの DAC 定義を登録しません。 DAC の登録の詳細については、「 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)」を参照してください。  
   
 ##  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- DAC を抽出できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。 DAC でサポートされていないオブジェクトまたは包含ユーザーがデータベースに存在する場合は、DAC を抽出できません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)」を参照してください。  
+ DAC を抽出できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 以降のデータベースに限られます。 DAC でサポートされていないオブジェクトまたは包含ユーザーがデータベースに存在する場合は、DAC を抽出できません。 DAC でサポートされるオブジェクトの種類の詳細については、「 [DAC Support For SQL Server Objects and Versions](/previous-versions/sql/sql-server-2012/ee210549(v=sql.110))」を参照してください。  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  DAC を抽出するには、少なくとも ALTER ANY LOGIN 権限とデータベース スコープの VIEW DEFINITION 権限、および **sys.sql_expression_dependencies**に対する SELECT 権限が必要です。 DAC を抽出できるのは、DAC を抽出するデータベースの database_owner 固定データベース ロールのメンバーでもある、securityadmin 固定サーバー ロールのメンバーです。 sysadmin 固定サーバー ロールのメンバーまたは **sa** という組み込みの SQL Server システム管理者アカウントも DAC を抽出できます。  
@@ -66,7 +67,7 @@ ms.locfileid: "85781689"
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]** : **[方法の選択]** ページに進みます。  
+ **[次へ >]**: **[方法の選択]** ページに進みます。  
   
  **[キャンセル]** : データベースからデータ層アプリケーションを抽出せずにウィザードを終了します。  
   
@@ -101,11 +102,11 @@ ms.locfileid: "85781689"
   
  **[概要]** : 選択したオプションの概要が **[DAC のプロパティ]** の下に表示されます。 検証の結果は **[DAC オブジェクト]** の下に表示されます。 検証の結果には、次の 3 種類があります。  
   
--   **[DAC に正常に含まれるオブジェクト]** : これらのオブジェクトとその依存関係はサポートされており、DAC に正常に含めることができます。  
+-   **[DAC に正常に含まれるオブジェクト]**: これらのオブジェクトとその依存関係はサポートされており、DAC に正常に含めることができます。  
   
--   **[DAC に含まれるオブジェクト (警告あり)]** : これらのオブジェクトはサポートされていますが、DAC でサポートされていない他のオブジェクトに依存しています。  
+-   **[DAC に含まれるオブジェクト (警告あり)]**: これらのオブジェクトはサポートされていますが、DAC でサポートされていない他のオブジェクトに依存しています。  
   
--   **[DAC に含まれないオブジェクト]** : これらのオブジェクトはサポートされていないため、DAC を正常に抽出する前にデータベースから削除する必要があります。  
+-   **[DAC に含まれないオブジェクト]**: これらのオブジェクトはサポートされていないため、DAC を正常に抽出する前にデータベースから削除する必要があります。  
   
  検証プロセスでは、複数レベルで依存関係の確認が行われます。 たとえば、あるストアド プロシージャがサポートされていない CLR データ型を使用するテーブルに依存している場合、そのストアド プロシージャは **[DAC に含まれるオブジェクト (警告あり)]** の下に表示されます。  
   
@@ -160,7 +161,6 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
   

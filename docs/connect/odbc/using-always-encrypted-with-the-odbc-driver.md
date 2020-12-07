@@ -2,19 +2,19 @@
 title: ODBC ドライバーで Always Encrypted を使用する
 description: Always Encrypted と Microsoft ODBC Driver for SQL Server を使用して ODBC アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886299"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727393"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Always Encrypted を使用すると、クライアント アプリケーショ�
 パラメーターの暗号化と、結果セットの暗号化された列の暗号化解除を有効にするには、`ColumnEncryption` 接続文字列キーワードの値を **[有効]** に設定するのが最も簡単な方法です。 Always Encrypted を有効にする接続文字列の例を次に示します。
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定が存在する場合は、それによってオーバーライドされる) を使用して有効にすることも、`SQL_COPT_SS_COLUMN_ENCRYPTION` 接続前属性を使用してプログラムで有効にすることもできます。 それを次のように設定すると、接続文字列または DSN に設定されている値はオーバーライドされます。
@@ -63,7 +63,7 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 > [!NOTE]
 > Linux および macOS 上でセキュア エンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
 
-バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
+バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -309,6 +309,8 @@ Always Encrypted はクライアント側暗号化テクノロジであるため
 
 既定では、接続に対して Always Encrypted が有効になっている場合、ドライバーは、各パラメーター化クエリに対して [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) を呼び出し、クエリ ステートメント (パラメーター値を除く) を SQL Server に渡します。 このストアド プロシージャでは、クエリ ステートメントを分析して、パラメーターを暗号化する必要があるかどうかが判断され、必要がある場合は、ドライバーでパラメーターを暗号化できるようにするため、パラメーターごとに暗号化関連の情報が返されます。 上記の動作により、クライアント アプリケーションに対する高度な透明性が確保されます。暗号化された列をターゲットとする値がパラメーターでドライバーに渡される限り、アプリケーション (およびアプリケーション開発者) は、暗号化された列にどのクエリがアクセスするかを認識する必要はありません。
 
+バージョン 17.6 以降、ドライバーは、準備されたステートメントの暗号化メタデータをキャッシュし、`SQLExecute` への後続の呼び出しで、暗号化メタデータを取得するための追加のラウンドトリップを不要にすることによって、パフォーマンスを高めます。
+
 ### <a name="per-statement-always-encrypted-behavior"></a>ステートメントごとの Always Encrypted 動作
 
 パラメーター化クエリに対して暗号化メタデータを取得することによるパフォーマンスへの影響を制御するには、接続に対して Always Encrypted 動作が有効にされている場合、個々のクエリに対する Always Encrypted 動作を変更することができます。 これにより、暗号化された列をターゲットとするパラメーターを含むことがわかっているクエリに対してのみ `sys.sp_describe_parameter_encryption` が確実に呼び出されるようにすることができます。 ただし、これにより、暗号化の透明度が損なわれることに注意してください。データベース内の別の列を暗号化する場合は、スキーマの変更に合わせてアプリケーション コードの変更が必要になる可能性があります。
@@ -330,6 +332,8 @@ Always Encrypted を有効にした接続から作成された新しいステー
 - 暗号化されたどの列にもアクセスしないステートメント上で、`SQL_SOPT_SS_COLUMN_ENCRYPTION` 属性を `SQL_CE_DISABLED` に設定します。 これにより、`sys.sp_describe_parameter_encryption` の呼び出しと、結果セット内の値の暗号化解除の試みとが両方とも無効にされます。
     
 - 暗号化を必要とするパラメーターは何も含まれていないものの、暗号化された列からデータを取得するステートメント上で、`SQL_SOPT_SS_COLUMN_ENCRYPTION` 属性を `SQL_CE_RESULTSETONLY` に設定します。 これにより、`sys.sp_describe_parameter_encryption` の呼び出しとパラメーターの暗号化が無効にされます。 暗号化された列を含む結果は、引き続き暗号化が解除されたままです。
+
+- 複数回実行されるクエリに、準備されたステートメントを使用します。`SQLPrepare` でクエリを準備し、ステートメント ハンドルを保存すると、クエリを実行するたびに `SQLExecute` でステートメントが再使用されます。 これは、暗号化された列がない場合でも、パフォーマンス向上のために推奨されるアプローチであり、キャッシュされたメタデータをドライバーで利用できるようにします。
 
 ## <a name="always-encrypted-security-settings"></a>Always Encrypted のセキュリティ設定
 
@@ -379,7 +383,7 @@ ODBC Driver for SQL Server には、次の組み込みのキーストア プロ�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](/archive/blogs/kv/azure-key-vault-step-by-step)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)に関するページを参照してください。
+Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](/archive/blogs/kv/azure-key-vault-step-by-step)、[Key Vault の概要](/azure/key-vault/general/overview)、および [Azure Key Vault での列マスター キーの作成](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)に関するページを参照してください。
 
 > [!NOTE]
 > ODBC ドライバーでは、Azure Active Directory に対する直接の AKV 認証のみがサポートされます。 AKV に対する Azure Active Directory 認証を使用しており、Active Directory 構成によって、Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
@@ -391,11 +395,11 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 - クライアント ID /シークレット - この方法では、資格情報はアプリケーションクライアント ID とアプリケーション シークレットです。
 
-- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
+- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
 
 ドライバーが AKV に格納されている CMK を列暗号化に使用できるようにするには、次の接続文字列限定のキーワードを使用します。
 
-|[資格情報の種類]| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|[資格情報の種類]|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|Password|
 |クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|Secret|
@@ -408,13 +412,13 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 **クライアント ID/シークレット**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **ユーザー名/パスワード**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **マネージド ID (システム割り当て)**
@@ -596,7 +600,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 次の表は、暗号化された列を操作するときのアクションの要約を示しています。
 
-|`ColumnEncryption`|BCP の方向|説明|
+|<code>ColumnEncryption</code>|BCP の方向|説明|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (クライアントへ)|暗号化テキストを取得します。 観察対象のデータ型は **varbinary(max)** です。|
 |`Enabled`|OUT (クライアントへ)|プレーンテキストを取得します。 ドライバーでは、列データが暗号化解除されます。|
@@ -623,7 +627,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="connection-attributes"></a>接続属性
 
-|名前|Type|説明|  
+|名前|種類|説明|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *type*、*data* 文字列のポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブを使用して有効にします|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|
@@ -641,7 +645,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 |IPD フィールド|サイズ/型|Default value|説明|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 バイト)|0|0 (既定値) の場合: このパラメーターを暗号化するかどうかは、暗号化メタデータの可用性によって決まります。<br><br>ゼロ以外の場合: このパラメーターで暗号化メタデータが使用可能な場合、それは暗号化されます。 それ以外の場合、要求は次のエラーで失敗します: [CE300] [Microsoft][ODBC Driver 13 for SQL Server]必須の暗号化がパラメーターに指定されましたが、サーバーから暗号化メタデータが提供されませんでした。|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 バイト)|0|0 (既定値) の場合: このパラメーターを暗号化するかどうかは、暗号化メタデータの可用性によって決まります。<br><br>ゼロ以外の場合: このパラメーターで暗号化メタデータが使用可能な場合、それは暗号化されます。 それ以外の場合、要求は次のエラーで失敗します: [CE300] [Microsoft][ODBC Driver 17 for SQL Server]必須の暗号化がパラメーターに指定されましたが、サーバーから暗号化メタデータが提供されませんでした。|
 
 ### <a name="bcp_control-options"></a>bcp_control オプション
 

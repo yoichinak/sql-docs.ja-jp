@@ -1,4 +1,5 @@
 ---
+description: dm_db_xtp_nonclustered_index_stats (Transact-sql)
 title: dm_db_xtp_nonclustered_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_nonclustered_index_stats
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7631a10e909eb0adae9d38b89c06632e2d013c2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8c48807db007bd5d622283fd07c3aed8aec0198a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442461"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542211"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>dm_db_xtp_nonclustered_index_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: DQS セキュリティ
 title: DQS セキュリティ
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 55eb89febb9d4db79946a13b7d876d3391ab2516
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c576147845d5e6c2186def8eb79b7424f332a40
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895361"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725325"
 ---
 # <a name="dqs-security"></a>DQS セキュリティ
 
@@ -40,6 +41,5 @@ ms.locfileid: "85895361"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|SQL Server Management Studio を使用してユーザーを作成し、DQS ロールを付与する方法について説明します。|[SSMS による DQS ユーザーの管理](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
-  
+|SQL Server Management Studio を使用してユーザーを作成し、DQS ロールを付与する方法について説明します。|[SSMS による DQS ユーザーの管理](./data-quality-services-features-and-tasks.md)|  
   

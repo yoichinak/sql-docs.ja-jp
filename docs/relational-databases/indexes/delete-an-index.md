@@ -1,4 +1,5 @@
 ---
+description: インデックスの削除
 title: インデックスの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7337617c8c6bc2e904d5b258fec1d666f63a0ded
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9279f22be324858e2a71ea523cab000c8f7253cf
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107200"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125165"
 ---
 # <a name="delete-an-index"></a>インデックスの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68107200"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してインデックスを削除するには:**  
   
@@ -85,13 +86,13 @@ ms.locfileid: "68107200"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **ファイル** メニューの **table_name**_を保存_を選びます。  
+8.  **[ファイル]** メニューの **table_name**_を保存]_ を選びます。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-an-index"></a>インデックスを削除するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

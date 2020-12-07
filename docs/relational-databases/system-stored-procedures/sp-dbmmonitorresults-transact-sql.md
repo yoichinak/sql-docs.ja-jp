@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorresults (Transact-SQL)
 title: sp_dbmmonitorresults (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f623f377bf850f5c247c770f7cc38358cf4dabb2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865669"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543566"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = データベースの状態を更新しません。 結果は最新 2 行のみから計算されます。行の古さは状態テーブルが更新された日時を基に判断されます。  
   
- 1 = 結果を計算する前に**sp_dbmmonitorupdate**を呼び出すことによって、データベースの状態を更新します。 ただし、状態テーブルが過去15秒以内に更新された場合、またはユーザーが**sysadmin**固定サーバーロールのメンバーでない場合、 **sp_dbmmonitorresults**は状態を更新せずに実行します。  
+ 1 = 結果を計算する前に **sp_dbmmonitorupdate** を呼び出すことによって、データベースの状態を更新します。 ただし、状態テーブルが過去15秒以内に更新された場合、またはユーザーが **sysadmin** 固定サーバーロールのメンバーでない場合、 **sp_dbmmonitorresults** は状態を更新せずに実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  指定されたデータベースについて、要求された履歴の状態の行数を返します。 各行には、次の情報が含まれています。  
@@ -99,8 +100,8 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|ミラーデータベースが現在キャッチされているプリンシパルのおおよそのシステムクロック時間。 この値はプリンシパル サーバー インスタンスでのみ意味を持ちます。|  
 |**local_time**|**datetime**|この行が更新されたときのローカル サーバー インスタンスのシステム クロック時間。|  
   
-## <a name="remarks"></a>Remarks  
- **sp_dbmmonitorresults**は、 **msdb**データベースのコンテキストでのみ実行できます。  
+## <a name="remarks"></a>解説  
+ **sp_dbmmonitorresults** は、 **msdb** データベースのコンテキストでのみ実行できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、または**msdb**データベースの**dbm_monitor**固定データベースロールのメンバーシップが必要です。 **Dbm_monitor**ロールを使用すると、そのメンバーはデータベースミラーリングの状態を表示できますが、更新はできませんが、データベースミラーリングイベントを表示または構成することはできません。  
@@ -108,7 +109,7 @@ sp_dbmmonitorresults database_name
 > [!NOTE]  
 >  **Sp_dbmmonitorupdate**を初めて実行すると、 **dbm_monitor**の固定データベースロールが**msdb**データベースに作成されます。 **Sysadmin**固定サーバーロールのメンバーは、任意のユーザーを**dbm_monitor**固定データベースロールに追加できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベースの状態を更新せずに、前の2時間に記録された行を返します。  
   
 ```  
@@ -116,8 +117,8 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

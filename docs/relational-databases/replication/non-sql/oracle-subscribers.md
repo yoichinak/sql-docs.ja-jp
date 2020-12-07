@@ -1,4 +1,5 @@
 ---
+description: Oracle サブスクライバー
 title: Oracle サブスクライバー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883042"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88455604"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "85883042"
   
     -   パブリッシュされたテーブルに空の文字列が列値として挿入されないようにする。  
   
-    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 ( **-SkipErrors1400**) を指定します。  
+    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 (**-SkipErrors1400**) を指定します。  
   
     -   生成されたテーブルの作成スクリプトを変更して、空の文字列が関連付けられている文字型の列から NOT NULL 属性を削除する。さらに、 @creation_script sp_addarticle [の](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)パラメーターを使用して、アーティクルのカスタム作成スクリプトとして変更済みスクリプトを指定する。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "85883042"
 |**geography**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
-|**画像**|BLOB|  
+|**image**|BLOB|  
 |**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
@@ -143,7 +144,7 @@ ms.locfileid: "85883042"
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
   

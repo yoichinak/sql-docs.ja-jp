@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations を使ったブックマークによる行の削除
 title: SQLBulkOperations を使用したブックマークによる行の削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b6a4c1b24ee276c86175392eb45ac5ce0aa45e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7dcb96180cdcee5987d8a1cbafeae117ec82bba0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424684"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の削除
-ブックマークを使用して行を削除すると、 **Sqlbulkoperations**によって、テーブルの選択した1つ以上の行がデータソースによって削除されます。 行は、バインドされたブックマーク列のブックマークによって識別されます。  
+ブックマークを使用して行を削除すると、 **Sqlbulkoperations** によって、テーブルの選択した1つ以上の行がデータソースによって削除されます。 行は、バインドされたブックマーク列のブックマークによって識別されます。  
   
  **Sqlbulkoperations**でブックマークを使用して行を削除する場合、アプリケーションは次の処理を実行します。  
   

@@ -1,4 +1,5 @@
 ---
+description: getCharacterStream メソッド (SQLServerResultSet)
 title: getCharacterStream メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3f7e37f19a871f248687a62553390e01861d1e8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a390718fec6727d98c455cbaa1f32b0866076b47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436744"
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>getCharacterStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80907568"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getCharacterStream (int)](../../../connect/jdbc/reference/getcharacterstream-method-int.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列インデックスの値が、java.io.Reader オブジェクトとして取得されます。|  
 |[getCharacterStream (java.lang.String)](../../../connect/jdbc/reference/getcharacterstream-method-java-lang-string.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列名の値を、java.io.Reader オブジェクトとして取得します。|  

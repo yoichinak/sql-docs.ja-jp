@@ -1,4 +1,5 @@
 ---
+description: ALTER MASTER KEY (Transact-SQL)
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: fasttrack-edit
 ms.date: 02/21/2019
@@ -27,12 +28,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a069116263c0c03131cf26c950de7726830e08c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8c59acf58ce6816ebdcb7bf04fcb81df7c125693
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395516"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024424"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -80,7 +81,7 @@ ALTER MASTER KEY <alter_option>
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>
 
@@ -95,6 +96,8 @@ ALTER MASTER KEY <alter_option>
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -116,7 +119,7 @@ ADD ENCRYPTION BY SERVICE MASTER KEY を指定すると、マスター キーの
 
 データベースに対する CONTROL 権限が必要です。 データベース マスター キーがパスワードで暗号化されている場合は、パスワードの情報も必要です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次の例では、`AdventureWorks` の新しいデータベースのマスター キーを作成し、暗号化階層でこのマスター キーの下位にあるキーを再暗号化します。
 

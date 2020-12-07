@@ -1,4 +1,5 @@
 ---
+description: STMPointFromWKB (geography データ型)
 title: STMPointFromWKB (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8056e60488ee156e86ca0462dfb436ad6d22bd7a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d8580b97571feb2b93c88d5e229a86490a08cd02
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555778"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88467421"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

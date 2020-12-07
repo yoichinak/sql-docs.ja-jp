@@ -1,5 +1,6 @@
 ---
-title: 'ステップ 3: Ruby を使用した SQL への接続を概念実証する | Microsoft Docs'
+title: 手順 3:Ruby を使用した SQL への接続を概念実証する
+description: 手順 3 は概念実証であり、Ruby を使用して SQL Server に接続する方法がわかります。 基本的な例で、データの選択と挿入が示されます。
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263786"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603318"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>ステップ 3: Ruby を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>手順 3:Ruby を使用した SQL への接続を概念実証する
 
 この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1--connect"></a>手順 1: 接続する  
+## <a name="step-1--connect"></a>手順 1:接続する  
   
 [TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) 関数を使用して SQL データベースに接続します。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "85263786"
     database: 'AdventureWorks', azure:true  
 ```  
   
-## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行する  
+## <a name="step-2--execute-a-query"></a>手順 2:クエリを実行する  
   
 次のコードをコピーして、空のファイルに貼り付けます。 test.rb という名前を付けます。 次に、次のコマンドを入力してコマンド プロンプトからこれを実行します。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85263786"
     end  
 ```  
   
-## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入する  
+## <a name="step-3--insert-a-row"></a>手順 3:行を挿入する  
   
 この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
   

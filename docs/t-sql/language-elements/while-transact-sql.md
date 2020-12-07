@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a78db68519a0c4aa3a47f1ebaf27e7122a4ca598
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915318"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191367"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ WHILE Boolean_expression
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Azure Synapse Analytics and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
      { sql_statement | statement_block | BREAK }  
@@ -59,7 +60,7 @@ WHILE Boolean_expression
 
 ## <a name="arguments"></a>引数
  *Boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) または **FALSE** を返す**式**です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
+ **TRUE** または **FALSE** を返す[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 ブール式が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  {*sql_statement* | *statement_block*}  
  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
@@ -70,7 +71,7 @@ WHILE Boolean_expression
  CONTINUE  
  CONTINUE キーワード以降のすべてのステートメントを無視し、WHILE ループを再開します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  2 つ以上の WHILE ループを入れ子にする場合、内側の BREAK が終了すると、1 つ外側のループに出ます。 まず、この内側ループの終了の後にあるステートメントがすべて実行され、次にこの外側のループの実行が再開されます。  
   
 ## <a name="examples"></a>例  
@@ -78,7 +79,7 @@ WHILE Boolean_expression
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>A. BREAK と CONTINUE を、入れ子にされた IF...ELSE および WHILE と組み合わせて使用する  
  次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 最高価格が `$500` 以下の場合は、`WHILE` ループが再開し、再び価格を倍にします。 このループは、最高価格が `$500` を超えるまで価格を倍増し続け、その後 `WHILE` ループから抜け出してメッセージを出力します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
@@ -97,9 +98,9 @@ PRINT 'Too much for the market to bear';
 ### <a name="b-using-while-in-a-cursor"></a>B. カーソルで WHILE を使用する  
  次の例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
   
-```  
-DECLARE @EmployeeID as nvarchar(256)
-DECLARE @Title as nvarchar(50)
+```sql  
+DECLARE @EmployeeID as NVARCHAR(256)
+DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
@@ -122,7 +123,7 @@ GO
 ### <a name="c-simple-while-loop"></a>C: 単純な While ループ  
  次の例では、製品の平均表示価格が `$300` を下回る場合、`WHILE` ループが価格を倍にして、最高価格を選択します。 最高価格が `$500` 以下の場合は、`WHILE` ループが再開し、再び価格を倍にします。 このループは、最高価格が `$500` を超えるまで価格を倍増し続け、その後 `WHILE` ループから抜け出します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
@@ -133,10 +134,9 @@ BEGIN
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  
-  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

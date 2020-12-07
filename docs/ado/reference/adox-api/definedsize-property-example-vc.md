@@ -1,8 +1,9 @@
 ---
+description: DefinedSize プロパティの例 (VC++)
 title: "\"持つサイズ\" プロパティの例 (VC + +) |Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 534161539b19681779d50ec2a91e56c996c305bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759178"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984633"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (VC++)
-この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の "値の[サイズ](../../../ado/reference/adox-api/definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の FirstName[フィールド](../../../ado/reference/ado-api/field-object.md)の値が変更されます。 既定では、"定義された**サイズ**" プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
+この例では、[列](./column-object-adox.md)の "値の[サイズ](./definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../ado-api/recordset-object-ado.md)の FirstName[フィールド](../ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +164,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DefinedSize プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [DefinedSize プロパティ (ADOX)](./definedsize-property-adox.md)

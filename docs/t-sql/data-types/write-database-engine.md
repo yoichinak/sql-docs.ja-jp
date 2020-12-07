@@ -1,4 +1,5 @@
 ---
+description: Write (データベース エンジン)
 title: Write (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: eb08d6f4d10a5cdf0047022185e24828b3ae37b5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554787"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037455"
 ---
 # <a name="write-database-engine"></a>Write (データベース エンジン)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-書き込み のバイナリ表現を書き込みます **SqlHierarchyId** を渡されたに **BinaryWriter**です。 書き込み [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して呼び出すことができない です。 代わりに、CAST または CONVERT を使用してください。
+書き込み のバイナリ表現を書き込みます **SqlHierarchyId** を渡されたに **BinaryWriter** です。 書き込み [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して呼び出すことができない です。 代わりに、CAST または CONVERT を使用してください。
   
 ## <a name="syntax"></a>構文  
   
-```sql
-void Write( BinaryWriter w )   
+```csharp
+void Write( BinaryWriter w )
 ```  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -45,22 +46,20 @@ void Write( BinaryWriter w )
 **CLR の戻り値の型: void**
   
 ## <a name="remarks"></a>解説  
-書き込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合など**からデータを読み込むときに、 hierarchyid** 列です。 Write は、**hierarchyid** と **varbinary**間で変換が行われる場合も呼び出されます。
+書き込み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合など **からデータを読み込むときに、 hierarchyid** 列です。 Write は、**hierarchyid** と **varbinary** 間で変換が行われる場合も呼び出されます。
   
 ## <a name="examples"></a>例  
   
-```sql
+```csharp
 MemoryStream stream = new MemoryStream();  
 BinaryWriter bw = new BinaryWriter(stream);  
 hid.Write(bw);  
 byte[] encoding = stream.ToArray();  
-  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Read &#40;データベース エンジン&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)
   

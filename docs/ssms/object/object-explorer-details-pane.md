@@ -1,4 +1,5 @@
 ---
+description: '[オブジェクト エクスプローラーの詳細] ペイン'
 title: '[オブジェクト エクスプローラーの詳細] ペイン'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 846c2707e5fe04e080460241e41df0ebf7ec8329
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001918"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037191"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86001918"
 |アイコン|アクション|  
 |--------|----------|  
 |**戻る**|[オブジェクト エクスプローラーの詳細] に表示されている前の項目に移動します。 前の表示が検索操作の結果である場合は、検索を再実行します。|  
-|**進む**|**[戻る]** 操作を選択した後に次の画面に移動します。|  
+|**次へ**|**[戻る]** 操作を選択した後に次の画面に移動します。|  
 |**Up**|親のオブジェクトまたはフォルダーに移動します。|  
 |**Synchronize**|[オブジェクト エクスプローラーの詳細] で選択されているオブジェクトに、オブジェクト エクスプローラーのフォーカスを設定します。|  
 |**Assert**|利用できる場合、構成可能なオブジェクトのサブセットが表示されます。|  
@@ -88,7 +89,7 @@ ms.locfileid: "86001918"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
 ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](../scripting/search-text-with-wildcards.md)」を参照してください。  
   
 検索範囲  
   
@@ -100,4 +101,3 @@ ms.locfileid: "86001918"
   
 ## <a name="see-also"></a>参照  
 [[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  
-  

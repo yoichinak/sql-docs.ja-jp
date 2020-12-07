@@ -1,4 +1,5 @@
 ---
+description: STSrid (geometry データ型)
 title: STSrid (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ee8dcb533b2949a671fc8d90e9d3d20a89688cd7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7f66e25e09d02e506da762909ec80ff7a98114e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554952"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88454252"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ SET @g.STSrid = 23;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STX &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [Geometry インスタンスの OGC メソッド](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

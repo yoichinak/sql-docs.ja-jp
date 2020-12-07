@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_package (SSISDB データベース)
 title: catalog.validate_package (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34a5d09a65238ff469877138bf3de5e23cf46836
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912738"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129495"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB データベース)
 

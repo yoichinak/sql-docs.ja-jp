@@ -1,4 +1,5 @@
 ---
+description: 属性の適合性
 title: 属性の準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2880a35f4bdc997cc037cdd0d60720267ff4a58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c58dfe7f8c4219d134cd1662ce8d57b9c76de6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476904"
 ---
 # <a name="attribute-conformance"></a>属性の適合性
 次の表は、各 ODBC 環境属性の準拠レベルを示しています。これは適切に定義されています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -36,7 +37,7 @@ ms.locfileid: "81306403"
   
  次の表は、各 ODBC 接続属性が適切に定義されている場合の準拠レベルを示しています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|コア|  
 |SQL_ATTR_ASYNC_ENABLE|レベル 1/レベル 2 [1]|  
@@ -55,13 +56,13 @@ ms.locfileid: "81306403"
 |SQL_ATTR_TRANSLATE_OPTION|コア|  
 |SQL_ATTR_TXN_ISOLATION|レベル 1/レベル 2 [2]|  
   
- [1] 接続レベルの非同期性 (レベル1に必要) をサポートするアプリケーションは、 **SQLSetConnectAttr**を呼び出して、この属性を SQL_TRUE に設定することをサポートしている必要があります。**SQLSetStmtAttr**を使用して、属性を既定値以外の値に設定することはできません。 ステートメントレベルの非同期性 (レベル2に必要) をサポートするアプリケーションでは、いずれかの関数を使用して、この属性を SQL_TRUE に設定することをサポートする必要があります。  
+ [1] 接続レベルの非同期性 (レベル1に必要) をサポートするアプリケーションは、 **SQLSetConnectAttr**を呼び出して、この属性を SQL_TRUE に設定することをサポートしている必要があります。 **SQLSetStmtAttr**を使用して、属性を既定値以外の値に設定することはできません。 ステートメントレベルの非同期性 (レベル2に必要) をサポートするアプリケーションでは、いずれかの関数を使用して、この属性を SQL_TRUE に設定することをサポートする必要があります。  
   
- [2] レベル1のインターフェイスに準拠するには、ドライバーによって定義された既定値 (SQL_DEFAULT_TXN_ISOLATION オプションを指定して**SQLGetInfo**を呼び出すことによって使用可能) に加えて、ドライバーが1つの値をサポートしている必要があります。 レベル2のインターフェイス準拠の場合、ドライバーは SQL_TXN_SERIALIZABLE もサポートする必要があります。  
+ [2] レベル1のインターフェイスに準拠するには、ドライバーによって定義された既定値 (SQL_DEFAULT_TXN_ISOLATION オプションを指定して **SQLGetInfo** を呼び出すことによって使用可能) に加えて、ドライバーが1つの値をサポートしている必要があります。 レベル2のインターフェイス準拠の場合、ドライバーは SQL_TXN_SERIALIZABLE もサポートする必要があります。  
   
  次の表は、各 ODBC ステートメント属性の準拠レベルを示しています。これは適切に定義されています。  
   
-|関数|一致レベル|  
+|機能|一致レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|コア|  
 |SQL_ATTR_APP_ROW_DESC|コア|  
@@ -97,7 +98,7 @@ ms.locfileid: "81306403"
 |SQL_ATTR_SIMULATE_CURSOR|[レベル 2]|  
 |SQL_ATTR_USE_BOOKMARKS|[レベル 2]|  
   
- [1] 接続レベルの非同期性 (レベル1に必要) をサポートするアプリケーションは、 **SQLSetConnectAttr**を呼び出して、この属性を SQL_TRUE に設定することをサポートしている必要があります。**SQLSetStmtAttr**を使用して、属性を既定値以外の値に設定することはできません。 ステートメントレベルの非同期性 (レベル2に必要) をサポートするアプリケーションでは、いずれかの関数を使用して、この属性を SQL_TRUE に設定することをサポートする必要があります。  
+ [1] 接続レベルの非同期性 (レベル1に必要) をサポートするアプリケーションは、 **SQLSetConnectAttr**を呼び出して、この属性を SQL_TRUE に設定することをサポートしている必要があります。 **SQLSetStmtAttr**を使用して、属性を既定値以外の値に設定することはできません。 ステートメントレベルの非同期性 (レベル2に必要) をサポートするアプリケーションでは、いずれかの関数を使用して、この属性を SQL_TRUE に設定することをサポートする必要があります。  
   
  [2] レベル2のインターフェイスに準拠するには、ドライバーが SQL_CONCUR_READ_ONLY とその他の少なくとも1つの値をサポートしている必要があります。  
   

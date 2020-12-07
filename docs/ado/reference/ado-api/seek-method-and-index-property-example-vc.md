@@ -1,8 +1,9 @@
 ---
+description: Seek メソッドおよび Index プロパティの例 (VC++)
 title: Seek メソッドおよび Index プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b1e9f5822260259e34761cc8cb05d80b962fed2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765413"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989193"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek メソッドおよび Index プロパティの例 (VC++)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Seek](../../../ado/reference/ado-api/seek-method.md)メソッドと[Index](../../../ado/reference/ado-api/index-property.md)プロパティを指定された***従業員 ID***と共に使用して、Nwind データベースの***Employees***テーブルで従業員の名前を検索します。  
+この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Seek](./seek-method.md) メソッドと [Index](./index-property.md) プロパティを指定された ***従業員 ID***と共に使用して、Nwind データベースの ***Employees*** テーブルで従業員の名前を検索します。  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -226,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Index プロパティ](../../../ado/reference/ado-api/index-property.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
+ [Index プロパティ](./index-property.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Seek メソッド](./seek-method.md)

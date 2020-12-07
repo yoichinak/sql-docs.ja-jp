@@ -1,4 +1,5 @@
 ---
+description: READTEXT (Transact-SQL)
 title: READTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b9ee26c8fcda094228e7bc5a26a4173c8a8d69b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: eb8409640e89724a0e5b369ca7a6ee83122551ca
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554767"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115916"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,6 @@ ms.locfileid: "86554767"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
   
@@ -76,10 +76,10 @@ READTEXT 権限は、特に指定のない限り指定されたテーブルで S
 > [!NOTE]  
 >  この例を実行するには、[**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) サンプル データベースをインストールする必要があります。  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(pr_info)   
    FROM pub_info pr INNER JOIN publishers p  
       ON pr.pub_id = p.pub_id   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription (Transact-sql)
 title: sp_helpsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736941"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543264"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`関連付けられているパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、既定値はです **%** 。この場合、このサーバーのすべてのサブスクリプション情報が返されます。  
+`[ @publication = ] 'publication'` 関連付けられているパブリケーションの名前を指定します。 *publication* のデータ型は **sysname**で、既定値はです **%** 。この場合、このサーバーのすべてのサブスクリプション情報が返されます。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとサブスクライバーのすべてのサブスクリプション情報が返されます。 **All**の場合、パブリケーションの完全なサブスクリプションに対して1つのエントリのみが返されます。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとサブスクライバーのすべてのサブスクリプション情報が返されます。 **All**の場合、パブリケーションの完全なサブスクリプションに対して1つのエントリのみが返されます。  
   
-`[ @subscriber = ] 'subscriber'`サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*のデータ型は**sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとアーティクルのすべてのサブスクリプション情報が返されます。  
+`[ @subscriber = ] 'subscriber'` サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー* のデータ型は **sysname**で、既定値はです **%** 。これにより、選択したパブリケーションとアーティクルのすべてのサブスクリプション情報が返されます。  
   
-`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**で、既定値は **%** です。  
+`[ @destination_db = ] 'destination_db'` 転送先データベースの名前を指定します。 *destination_db* は **sysname**で、既定値は **%** です。  
   
-`[ @found = ] 'found'OUTPUT`は、行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーターで、既定値は23456です。  
+`[ @found = ] 'found'OUTPUT` は、行を返すことを示すフラグです。 *見つかった*は **int** と出力パラメーターで、既定値は23456です。  
   
- **1**は、パブリケーションが見つかったことを示します。  
+ **1** は、パブリケーションが見つかったことを示します。  
   
- **0**は、パブリケーションが見つからないことを示します。  
+ **0** は、パブリケーションが見つからないことを示します。  
   
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は現在のサーバーの名前です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は現在のサーバーの名前です。  
   
 > [!NOTE]  
 >  Oracle パブリッシャーの場合を除き、*パブリッシャー*を指定することはできません。  
@@ -73,15 +74,15 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**同期の種類**|**tinyint**|サブスクリプションの同期の種類:<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
 |**サブスクリプションの種類**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
 |**full subscription**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**サブスクリプション名**|**nvarchar(255)**|サブスクリプションの名前。|  
+|**サブスクリプション名**|**nvarchar (255)**|サブスクリプションの名前。|  
 |**更新モード**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
 |**distribution job id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
 |**loopback_detection**|**bit**|ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 返送します。<br /><br /> **1** = を返しません。<br /><br /> 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。<br /><br /> **0**の場合、エージェントはパブリッシャーで実行されます。<br /><br /> **1**の場合、エージェントはサブスクライバーで実行されます。|  
-|**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)テーブルに一覧表示されている現在の offload_server が使用されます。|  
+|**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) テーブルに一覧表示されている現在の offload_server が使用されます。|  
 |**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
-|**dts_package_location**|**int**|DTS パッケージの場所 (サブスクリプションに割り当てられている場合)。 パッケージがある場合、値**0**は**ディストリビューター**でのパッケージの場所を指定します。 値**1**は**サブスクライバー**を指定します。|  
-|**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は認証を意味し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**dts_package_location**|**int**|DTS パッケージの場所 (サブスクリプションに割り当てられている場合)。 パッケージがある場合、値 **0** は **ディストリビューター**でのパッケージの場所を指定します。 値 **1** は **サブスクライバー**を指定します。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1** は Windows 認証を、 **0** は認証を意味し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
 |**subscriber_password**||実際のサブスクライバーパスワードは返されません。 結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**" 文字列によってマスクされます。|  
 |**job_login**|**sysname**|ディストリビューションエージェントの実行に使用する Windows アカウントの名前。|  
@@ -95,15 +96,15 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**subscriber_catalog**|**sysname**|OLE DB プロバイダーに接続するときに使用するカタログ。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helpsubscription** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限は、既定で**public**ロールに設定されています。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 すべてのサブスクリプションに関する情報は、パブリッシャーの**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの固定データベースロール**db_owner**のメンバーに返されます。  
+ 実行権限は、既定で **public** ロールに設定されています。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 すべてのサブスクリプションに関する情報は、パブリッシャーの **sysadmin** 固定サーバーロールのメンバー、またはパブリケーションデータベースの固定データベースロール **db_owner** のメンバーに返されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

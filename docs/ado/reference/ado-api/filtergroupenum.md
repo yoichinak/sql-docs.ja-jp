@@ -1,8 +1,9 @@
 ---
+description: FilterGroupEnum
 title: FilterGroupEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d9fdf420ee3b550bebfe394bf6722623307384a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764513"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972993"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)からフィルター選択するレコードのグループを指定します。  
+レコード [セット](./recordset-object-ado.md)からフィルター選択するレコードのグループを指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|最後の[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)、または[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)呼び出しの影響を受けたレコードのみを表示するためのフィルター。|  
+|**adFilterAffectedRecords**|2|最後の [Delete](./delete-method-ado-recordset.md)、 [Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)、または [CancelBatch](./cancelbatch-method-ado.md) 呼び出しの影響を受けたレコードのみを表示するためのフィルター。|  
 |**Adfilter衝突レコード**|5|前回のバッチ更新に失敗したレコードを表示するためのフィルター。|  
 |**adFilterFetchedRecords**|3|現在のキャッシュ内のレコードを表示するためのフィルター。つまり、データベースからレコードを取得するための最後の呼び出しの結果です。|  
 |**adFilterNone**|0|現在のフィルターを削除し、表示するすべてのレコードを復元します。|  
@@ -45,4 +46,4 @@ ms.locfileid: "82764513"
 |AdoEnums のフィルター|  
   
 ## <a name="applies-to"></a>適用対象  
- [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)
+ [Filter プロパティ](./filter-property.md)

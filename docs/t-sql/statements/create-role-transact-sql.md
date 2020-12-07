@@ -1,4 +1,5 @@
 ---
+description: CREATE ROLE (Transact-SQL)
 title: CREATE ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -27,12 +28,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 234fe7a9d26c91bc5b390997f56c9dcb050561aa
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 1c74406db7ea8d05b6c01fb31ef3f6f0a6d1976a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392860"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124063"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86392860"
   
 ## <a name="syntax"></a>構文  
   
-```sql  
+```syntaxsql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
@@ -56,7 +57,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  新しいロールを所有するデータベース ユーザーまたはロールを指定します。 ユーザーを指定しない場合、ロールは CREATE ROLE を実行するユーザーが所有します。 ロールの所有者、または所有するロールのメンバーは、ロールのメンバーを追加または削除できます。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ロールはデータベース レベルのセキュリティ保護可能なリソースです。 ロールを作成した後は、GRANT、DENY、REVOKE を使って、ロールのデータベース レベルの権限を構成します。 データベース ロールにメンバーを追加するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。 詳しくは、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。  
   
  データベース ロールは、sys.database_role_members および sys.database_principals カタログ ビューで確認できます。  

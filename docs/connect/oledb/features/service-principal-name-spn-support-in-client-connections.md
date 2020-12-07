@@ -1,6 +1,6 @@
 ---
 title: クライアント接続でのサービス プリンシパル名 (SPN) のサポート | Microsoft Docs
-description: クライアント接続でのサービス プリンシパル名 (SPN) のサポート
+description: SQL Server によるクライアント接続でのサービス プリンシパル名のサポート方法について説明します。 最も一般的な使用シナリオを確認します。
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007262"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727300"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -40,9 +41,9 @@ ms.locfileid: "86007262"
   
  Kerberos の詳細については、次の記事を参照してください。  
   
--   [Windows を対象とした Kerberos に関する技術的補足](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Windows を対象とした Kerberos に関する技術的補足](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>使用法  
  次の表では、セキュリティで保護された認証をクライアント アプリケーションで使用するための、最も一般的なシナリオについて説明します。  
@@ -50,7 +51,7 @@ ms.locfileid: "86007262"
 |シナリオ|説明|  
 |--------------|-----------------|  
 |レガシ アプリケーションで SPN が指定されない。|この互換性のシナリオでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で作成されたアプリケーションの動作が変更されないことが保証されます。 SPN が指定されていない場合、アプリケーションは生成された SPN を使用し、どの認証方法が使用されるかは認識しません。|  
-|現在のバージョンの OLE DB Driver for SQL Server を使用するクライアント アプリケーションで、接続文字列に含まれる SPN が、ドメイン ユーザー アカウント、コンピューター アカウント、インスタンス固有の SPN、またはユーザー定義文字列として指定される。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが接続に使用するアカウントを指定できます。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するための SPN を指定できます。 この目的で使用できる既定の SPN が、すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに 2 つずつ生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するために使用される SPN を指定できます。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
+|現在のバージョンの OLE DB Driver for SQL Server を使用するクライアント アプリケーションで、接続文字列に含まれる SPN が、ドメイン ユーザー アカウント、コンピューター アカウント、インスタンス固有の SPN、またはユーザー定義文字列として指定される。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが接続に使用するアカウントを指定できます。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するための SPN を指定できます。 この目的で使用できる既定の SPN が、すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに 2 つずつ生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するために使用される SPN を指定できます。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
 |OLE DB アプリケーションで、SPN がプリンシパル サーバーまたはフェールオーバー パートナー サーバーのデータ ソース初期化プロパティとして指定される。|**SSPROP_INIT_SERVER_SPN** プロパティ セット内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、接続用の SPN を指定できます。<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、フェールオーバー パートナー サーバーの SPN を指定できます。|   
 |ユーザーが、サーバーまたはフェールオーバー パートナー サーバーの SPN を、OLE DB の **[データ リンク]** または **[ログイン]** ダイアログ ボックスで指定する。|SPN は、 **[データ リンク]** または **[ログイン]** ダイアログ ボックスで指定できます。|   
 |OLE DB アプリケーションで、接続の確立に使用された認証方法が特定される。|接続が正常に開いている場合、アプリケーションでは **SSPROP_AUTHENTICATION_METHOD** プロパティ セット内の接続プロパティ **DBPROPSET_SQLSERVERDATASOURCEINFO** をクエリして、使用された認証方法を特定できます。 値には **NTLM** や **Kerberos**がありますが、その他の値もあります。|  
@@ -109,4 +110,3 @@ ms.locfileid: "86007262"
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

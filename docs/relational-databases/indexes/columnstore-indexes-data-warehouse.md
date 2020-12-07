@@ -1,4 +1,5 @@
 ---
+description: 列ストア インデックス - データ ウェアハウス
 title: 列ストア インデックス - データ ウェアハウス | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2017
@@ -11,19 +12,19 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3ffd31c536952780f487504fae715797bd07028d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494218"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   列ストア インデックスは、パーティション分割と共に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウスの構築に不可欠な機能です。  
   
-## <a name="whats-new"></a>新機能  
+## <a name="whats-new"></a>新着情報  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、列ストアのパフォーマンスを向上させるために、次の機能が導入されています。  
   
 -   AlwaysOn で、読み取り可能なセカンダリ レプリカで列ストア インデックスのクエリをサポートします。  
@@ -124,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>スナップショット分離と Read Committed スナップショット分離  
- 列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 この非ブロッキング動作によって、複雑なトランザクションがデッドロックする可能性も大幅に減少します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
+ 列ストア インデックスのクエリに対し、トランザクションの一貫性を保証するにはスナップショット分離 (SI) を使用し、ステートメント レベルの一貫性を保証するには Read Committed スナップショット分離 (RCSI) を使用します。 これにより、データ ライターをブロックすることなくクエリを実行できるようになります。 また、ブロック不可の動作は、複雑なトランザクションのデッドロックの可能性を大幅に軽減します。 詳細については、MSDN の「 [SQL Server でのスナップショット分離](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [列ストア インデックスの設計ガイダンス](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

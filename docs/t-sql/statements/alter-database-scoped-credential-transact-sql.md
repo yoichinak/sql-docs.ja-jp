@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 title: ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
@@ -17,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6a4729b105715f3978bd80e6c13b53024fd7cb49
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 00cfd711ce130fa9c90c11000a6853082494e9bd
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302044"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124297"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86302044"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -45,11 +45,11 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  変更対象のデータベース スコープ資格情報の名前を指定します。  
   
- IDENTITY **='***identity_name***'**  
- サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
+ IDENTITY **='** _identity_name_*_'_*  
+ サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
     
   
- SECRET **='***secret***'**  
+ SECRET **='** _secret_*_'_*  
  送信の認証に必要なシークレットを指定します。 "*シークレット*" は、Azure BLOB ストレージからファイルをインポートするために必要です。 "*シークレット*" は、他の目的では省略可能な場合があります。   
 > [!WARNING]
 >  SAS キーの値は '?' (疑問符) で始まる可能性があります。 SAS キーを使用する場合は、先頭の '?' を削除する必要があります。 そうしないと、作業がブロックされる可能性があります。    
@@ -69,7 +69,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. データベース スコープ資格情報のパスワードを変更する  
  次の例では、`Saddles` というデータベース スコープの資格情報に格納されているシークレットを変更します。 データベース スコープの資格情報には、Windows ログインが含まれています。`RettigB` とそのパスワードです。 新しいパスワードには、SECRET 句を使用して、データベース スコープの資格情報が追加されます。  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -78,7 +78,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 資格情報からパスワードを削除する  
  次の例では、`Frames` というデータベース スコープ資格情報からパスワードを削除します。 データベース スコープの資格情報には、Windows ログインが含まれています。`Aboulrus8` とパスワードです。 ステートメントを実行すると、SECRET オプションが指定されていないので、データベース スコープ資格情報のパスワードは NULL になります。  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  
@@ -90,5 +90,4 @@ GO
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
-  
   

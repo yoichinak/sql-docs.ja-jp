@@ -1,4 +1,5 @@
 ---
+description: データ変換の変換を使用してデータ型を変換する
 title: データ変換の変換を使用してデータ型を変換する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9cb9eeaab778b314d8084ec739a1364d40e19c3b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55585698aaeddc5147455bda61b14eac695071fe
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920648"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123420"
 ---
 # <a name="convert-data-type-with-data-conversion-transformation"></a>データ変換の変換を使用してデータ型を変換する
 
@@ -49,7 +50,7 @@ ms.locfileid: "86920648"
   
 8.  **[データ型]** 一覧で、列の新しいデータ型を選択します。 既定のデータ型は、入力列のデータ型です。  
   
-9. 選択したデータ型によっては、必要に応じて **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** 、および **[コード ページ]** 列の値を更新します。  
+9. 選択したデータ型によっては、必要に応じて **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]**、および **[コード ページ]** 列の値を更新します。  
   
 10. エラー出力を構成するには、 **[エラー出力の構成]** をクリックします。 詳細については、「 [データ フローのデバッグ](../../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
   

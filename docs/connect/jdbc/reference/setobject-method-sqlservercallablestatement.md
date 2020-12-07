@@ -1,4 +1,5 @@
 ---
+description: setObject メソッド (SQLServerCallableStatement)
 title: setObject メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3aa1ff07ad7efee98232d2dab3ebf0cb6cbae681
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 649d74846247e3ab1f5825aef7f0282af96815bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458512"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>setObject メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80920807"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[setObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object.md)|渡されたオブジェクトを使用して、指定されたパラメーターの値が設定されます。|  
 |[setObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int.md)|渡されたオブジェクトと変換先の型を使用して、指定されたパラメーターの値を設定します。|  

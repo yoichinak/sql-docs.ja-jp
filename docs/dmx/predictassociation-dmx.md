@@ -1,4 +1,5 @@
 ---
+description: PredictAssociation (DMX)
 title: PredictAssociation (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b94af0ab8da71e5bf978852fd884d46b460715bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426154"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,15 +36,15 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>戻り値の型  
  \<table expression>  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  **PredictAssociation**関数のオプションには、EXCLUDE_NULL、INCLUDE_NULL、包含、排他 (既定)、INPUT_ONLY、INCLUDE_STATISTICS、および INCLUDE_NODE_ID があります。  
   
 > [!NOTE]  
 >  包含、排他、INPUT_ONLY、INCLUDE_STATISTICS はテーブル列参照にのみ適用され、EXCLUDE_NULL と INCLUDE_NULL はスカラー列参照にのみ適用されます。  
   
- INCLUDE_STATISTICS は **$Probability**と **$AdjustedProbability**だけを返します。  
+ INCLUDE_STATISTICS は **$Probability** と **$AdjustedProbability**だけを返します。  
   
- 数値パラメーター *n*を指定した場合、 **PredictAssociation**関数は確率に基づいて、最も可能性の高い上位 n の値を返します。  
+ 数値パラメーター *n* を指定した場合、 **PredictAssociation** 関数は確率に基づいて、最も可能性の高い上位 n の値を返します。  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
@@ -52,7 +53,7 @@ PredictAssociation(colref, [$AdjustedProbability], n)
  **$AdjustedProbability**を含めた場合、ステートメントは、 **$AdjustedProbability**に基づいて上位*n*の値を返します。  
   
 ## <a name="examples"></a>例  
- 次の例では、 **PredictAssociation**関数を使用して、一緒に販売される可能性が最も高い Adventure works データベースの4つの製品を返します。  
+ 次の例では、 **PredictAssociation** 関数を使用して、一緒に販売される可能性が最も高い Adventure works データベースの4つの製品を返します。  
   
 ```  
 SELECT  
@@ -78,7 +79,7 @@ SHAPE {
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

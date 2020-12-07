@@ -1,4 +1,5 @@
 ---
+description: ODBC 3.x ドライバーの作成
 title: ODBC 3.x ドライバーの記述 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421346"
 ---
 # <a name="writing-odbc-3x-drivers"></a>ODBC 3.x ドライバーの作成
-次の表は、ODBC 3 での関数のサポートを示しています。*x*ドライバーと odbc アプリケーション、および odbc 3 に対して関数が呼び出されたときにドライバーマネージャーによって実行されるマッピング。*x*ドライバー。  
+次の表は、ODBC 3 での関数のサポートを示しています。*x* ドライバーと odbc アプリケーション、および odbc 3 に対して関数が呼び出されたときにドライバーマネージャーによって実行されるマッピング。*x* ドライバー。  
   
-|関数|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> driver?|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> 適用?|マップ/サポート<br /><br /> ODBC 3.*x*<br /><br /> ドライバーマネージャーから<br /><br /> ODBC 3.*x*ドライバーですか?|  
+|機能|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> driver?|サポートされています<br /><br /> による<br /><br /> ODBC 3.*x*<br /><br /> 適用?|マップ/サポート<br /><br /> ODBC 3.*x*<br /><br /> ドライバーマネージャーから<br /><br /> ODBC 3.*x* ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|いいえ|いいえ [1]|はい|  
 |**SQLAllocEnv**|いいえ|いいえ [1]|はい|  
@@ -105,14 +106,14 @@ ms.locfileid: "81300362"
 |**SQLTables**|はい|はい|いいえ|  
 |**SQLTransact**|いいえ|いいえ [1]|はい|  
   
- [1] ODBC 3 では、この関数は非推奨とされます。*x*。 ODBC 3.*x*アプリケーションでは、この関数を使用しないでください。 ただし、Open Group または ISO CLI 準拠アプリケーションでは、この関数を呼び出すことができます。  
+ [1] ODBC 3 では、この関数は非推奨とされます。*x*。 ODBC 3.*x* アプリケーションでは、この関数を使用しないでください。 ただし、Open Group または ISO CLI 準拠アプリケーションでは、この関数を呼び出すことができます。  
   
  [2] ODBC 3.*x*アプリケーションでは、 **SQLBindParam**ではなく**SQLBindParameter**を使用する必要があります。 ただし、Open Group または ISO CLI 準拠アプリケーションでは、この関数を呼び出すことができます。  
   
- [3] ドライバーライターは ODBC 2 に注意する必要があります。*x*列属性 SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、および SQL_COLUMN_LENGTH は、 **sqlcolattribute**でサポートされている必要があります。  
+ [3] ドライバーライターは ODBC 2 に注意する必要があります。*x* 列属性 SQL_COLUMN_PRECISION、SQL_COLUMN_SCALE、および SQL_COLUMN_LENGTH は、 **sqlcolattribute**でサポートされている必要があります。  
   
- [4] 異なるドライバーに属する接続間で記述子をコピーするときに、ドライバーマネージャーによって**Sqlcopydesc**が部分的に実装されます。 ドライバーは、2つの接続の間で**Sqlcopydesc**をサポートするために必要です。 ドライバーマネージャーによってのみ実装されている**Sqldrivers**などの関数は、この一覧には表示されません。  
+ [4] 異なるドライバーに属する接続間で記述子をコピーするときに、ドライバーマネージャーによって   **Sqlcopydesc** が部分的に実装されます。 ドライバーは、2つの接続の間で **Sqlcopydesc** をサポートするために必要です。 ドライバーマネージャーによってのみ実装されている **Sqldrivers**などの関数は、この一覧には表示されません。  
   
  [5] 特定の状況下で、ドライバーがこの機能をサポートする必要がある場合があります。 詳細については、この関数のリファレンスページを参照してください。  
   
- [6] ドライバーがサポートする関数のセットが接続への接続によって異なる場合、ドライバーは**Sqlgetfunctions**のサポートを選択できます。
+ [6] ドライバーがサポートする関数のセットが接続への接続によって異なる場合、ドライバーは **Sqlgetfunctions** のサポートを選択できます。

@@ -1,4 +1,5 @@
 ---
+description: スクリプティング ソリューションとカスタム オブジェクトとの比較
 title: スクリプティング ソリューションとカスタム オブジェクトとの比較 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c57c208eb0e8c359d25b85766a738d72e591696
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0e862da85c7c3c2e2255bbd522045b507b5d471
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430314"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>スクリプティング ソリューションとカスタム オブジェクトとの比較
 
@@ -39,7 +40,7 @@ ms.locfileid: "86917853"
   
 -   将来的に実装方法を変更する場合は、カスタム オブジェクトの使用を検討します。 カスタム オブジェクトは、親パッケージとは別に開発および配置できますが、スクリプト ソリューションを更新する場合は、パッケージ全体を再配置する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム オブジェクトを使用したパッケージの拡張](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
   
   

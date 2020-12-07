@@ -1,4 +1,5 @@
 ---
+description: catalog.extended_operation_info (SSISDB データベース)
 title: catalog.extended_operation_info (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dfc87963af1a7d55a8368b31d1ed94ccdc04b717
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422076"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (SSISDB データベース)
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912557"
 |object_name|**nvarchar(260)**|オブジェクトの名前。|  
 |object_type|**smallint**|操作の影響を受けるオブジェクトの種類。 オブジェクトは、フォルダー (`10`)、プロジェクト (`20`)、パッケージ (`30`)、環境 (`40`)、または実行のインスタンス (`50`) です。|  
 |reference_id|**bigint**|操作で使用される参照の一意の ID。|  
-|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作のステータス。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |start_time|**datetimeoffset(7)**|操作が開始された日時。|  
 |end_time|**datetimeoffset(7)**|操作が終了した日時。|  
   

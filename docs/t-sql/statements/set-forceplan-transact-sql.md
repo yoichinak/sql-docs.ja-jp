@@ -1,4 +1,5 @@
 ---
+description: SET FORCEPLAN (Transact-SQL)
 title: SET FORCEPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - query optimizer [SQL Server], optimizing process
 - overriding query optimizer process
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c04f734da57a20c576759e5db082c6021ad89e8a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547655"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765807"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックをオーバーライドします。 SELECT ステートメントから返されるデータは、この設定とは関係なく同じです。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
   
  クエリ内でクエリ オプティマイザー ヒントを使用することによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT ステートメントの処理方法を変更することもできます。  
@@ -55,7 +58,7 @@ SET FORCEPLAN { ON | OFF }
  SET FORCEPLAN の実行権限は、既定ですべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>例  
- 次の例では、4 つのテーブルの結合を実行します。 `SHOWPLAN_TEXT` が ON に設定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ON に設定された後、`SET FORCE_PLAN` は、クエリの処理方法がどのように変更されたかに関する情報を返します。  
+ 次の例では、4 つのテーブルの結合を実行します。 `SHOWPLAN_TEXT` が ON に設定されているので、`SET FORCE_PLAN` が ON に設定された後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリの処理方法がどのように変更されたかに関する情報を返します。  
   
 ```sql
 USE AdventureWorks2012;  

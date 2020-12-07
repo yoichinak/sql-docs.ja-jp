@@ -1,4 +1,5 @@
 ---
+description: データ コレクターのビュー (Transact-SQL)
 title: データコレクタービュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - data collector view
 - data collector [SQL Server], views
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 69ae9f64a47283d001fbb6a210f530034b21f228
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ba8bb14fbcd308c764db1693802d660f729fed1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918048"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546872"
 ---
 # <a name="data-collector-views-transact-sql"></a>データ コレクターのビュー (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  データコレクターには、データコレクターの構成に関する情報を表示するための次のビューが用意されています。これには、コレクター型のプロパティ、コレクションセット、コレクションセットの項目、およびコレクションセットの実行時に取得される実行の統計情報が表示されます。 これらのビューは、 **msdb**データベースにあり、基になるテーブルの抽象レイヤーも提供します。 この抽象化により、テーブルへの直接アクセスを防止しながら、関連付けられているアプリケーションに影響を与えることなくテーブルを変更できるようにすることで、セキュリティが強化されます。  
+  データコレクターには、データコレクターの構成に関する情報を表示するための次のビューが用意されています。これには、コレクター型のプロパティ、コレクションセット、コレクションセットの項目、およびコレクションセットの実行時に取得される実行の統計情報が表示されます。 これらのビューは、 **msdb** データベースにあり、基になるテーブルの抽象レイヤーも提供します。 この抽象化により、テーブルへの直接アクセスを防止しながら、関連付けられているアプリケーションに影響を与えることなくテーブルを変更できるようにすることで、セキュリティが強化されます。  
 
 :::row:::
     :::column:::

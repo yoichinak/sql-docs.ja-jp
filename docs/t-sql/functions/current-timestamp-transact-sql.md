@@ -1,4 +1,5 @@
 ---
+description: CURRENT_TIMESTAMP (Transact-SQL)
 title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -31,12 +32,12 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1777a033358b350c676fbb79aa81677f0907bbd0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 68e7005ef80135613fcc3b9e707f599f5ec866be
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112138"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128573"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,13 +49,13 @@ ms.locfileid: "87112138"
   
 この関数には、等価な ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md)です。
   
-[ の日付と時刻のデータ型と関数については、](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型と関数[!INCLUDE[tsql](../../includes/tsql-md.md)]に関するページで概要をご覧ください。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のデータ型と関数については、[日付と時刻のデータ型と関数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)に関するページで概要をご覧ください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CURRENT_TIMESTAMP  
 ```  
   
@@ -67,7 +68,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>解説  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]datetime`CURRENT_TIMESTAMP` 式を参照できる場所であれば、**ステートメントは** を参照できます。
+**datetime** 式を参照できる場所であれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは `CURRENT_TIMESTAMP` を参照できます。
   
 `CURRENT_TIMESTAMP` は非決定論的関数です。 この列を参照するビューと式には、インデックスを付けることができません。
   
@@ -139,7 +140,7 @@ GETUTCDATE()       20:18:45.3470000
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

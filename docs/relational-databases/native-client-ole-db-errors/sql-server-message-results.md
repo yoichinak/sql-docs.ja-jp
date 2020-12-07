@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client メッセージの結果
 title: SQL Server メッセージの結果 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e28ec51b3802858c7565be8ac7262574d86bcb5f
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 9806bc940e6065a0a4c68dda74fcdf9f8a1bc4b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475721"
 ---
 # <a name="sql-server-native-client-message-results"></a>SQL Server Native Client メッセージの結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

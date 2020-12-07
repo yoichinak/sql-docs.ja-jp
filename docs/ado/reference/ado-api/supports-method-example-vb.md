@@ -1,8 +1,9 @@
 ---
+description: Supports メソッドの例 (VB)
 title: Supports メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 749137891e00e52f0ed2e321c689e8f4ae923f73
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765383"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988363"
 ---
 # <a name="supports-method-example-vb"></a>Supports メソッドの例 (VB)
-この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この手順を実行するには、DisplaySupport プロシージャが必要です。  
+この例では、 [サポート](./supports-method.md) メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この手順を実行するには、DisplaySupport プロシージャが必要です。  
   
 ```  
 'BeginSupportsVB  
@@ -162,5 +163,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Supports メソッド](./supports-method.md)

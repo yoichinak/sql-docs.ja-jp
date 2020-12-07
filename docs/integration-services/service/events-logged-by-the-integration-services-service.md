@@ -1,4 +1,5 @@
 ---
+description: Integration Services サービスによってログに記録されるイベント
 title: Integration Services サービスによってログに記録されるイベント | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1a3d0272916814eb8ba9234217d6e7978c8a925e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487695"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
 
@@ -35,7 +36,7 @@ ms.locfileid: "86922036"
 ## <a name="service-status-messages"></a>サービスの状態メッセージ
  インストールで [ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ] を選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスがインストールおよび起動され、スタートアップの種類が自動に設定されます。  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが開始されました。|サービスが開始されました。|  
@@ -46,7 +47,7 @@ ms.locfileid: "86922036"
 ## <a name="settings-file-messages"></a>設定ファイルのメッセージ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの設定は、変更可能な XML ファイルに格納されています。 詳細については、「[Integration Services サービス (SSIS サービス)](../../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス: %n構成ファイルを指定するレジストリ設定がありません。 %n既定の構成ファイルを読み込もうとしています。|構成ファイルのパスを含むレジストリ エントリが存在しないか、空です。|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス構成ファイルが存在しません。%n既定の設定を使用して読み込んでいます。|指定した場所に構成ファイル自体が存在しません。|  
@@ -54,7 +55,7 @@ ms.locfileid: "86922036"
   
 ## <a name="other-messages"></a>その他のメッセージ  
   
-|イベント ID|シンボル名|Text|メモ|  
+|イベント ID|シンボル名|Text|Notes|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービス: 実行中のパッケージを停止しています。%nパッケージ インスタンス ID: %1%nパッケージ ID: %2%nパッケージ名: %3%nパッケージの説明: %4%nパッケージ|実行中のパッケージをサービスが停止しようとしています。 実行中のパッケージは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で監視および停止できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でパッケージを管理する方法については、「[パッケージの管理 &#40;SSIS サービス&#41;](../../integration-services/service/package-management-ssis-service.md)」を参照してください。|  
 
@@ -81,7 +82,7 @@ ms.locfileid: "86922036"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows イベント ビューアーで Integration Services のサービス イベントを表示するには  
   
-1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** 、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
 2.  **[イベント ビューアー]** をクリックします。  
   

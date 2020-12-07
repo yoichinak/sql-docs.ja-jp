@@ -1,4 +1,5 @@
 ---
+description: レッスン 1-3:OLE DB 接続マネージャーを追加し、構成する
 title: 手順 3:OLE DB 接続マネージャーを追加し、構成する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65ddfa851cce882d4106408ea99700d2cc57457c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33eeb6e462c096505fc4fbd1088e7f5b36b37618
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917417"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88449696"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>レッスン 1-3:OLE DB 接続マネージャーを追加し、構成する
 
@@ -29,11 +30,11 @@ ms.locfileid: "86917417"
   
 ## <a name="add-and-configure-an-ole-db-connection-manager"></a>OLE DB 接続マネージャーを追加し、構成する
 
-1. **[ソリューション エクスプローラー]** ウィンドウで **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** を選択します。
+1. **[ソリューション エクスプローラー]** ウィンドウで **[接続マネージャー]** を右クリックし、**[新しい接続マネージャー]** を選択します。
 
-1. **[SSIS 接続マネージャーの追加]** ダイアログで **[OLEDB]** 、 **[追加]** の順に選択します。
+1. **[SSIS 接続マネージャーの追加]** ダイアログで **[OLEDB]**、**[追加]** の順に選択します。
     
-2. **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]** を選択します。  
+2. **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、**[新規作成]** を選択します。  
   
 3. **[サーバー名]** に「 **localhost**」と入力します。  
   

@@ -1,4 +1,5 @@
 ---
+description: 外部メタデータの実装
 title: 外部メタデータの実装 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 76296ff7dc7c5084a2c62613182c4d3e0fa6f80b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919670"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484200"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
 

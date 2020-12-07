@@ -1,4 +1,5 @@
 ---
+description: 接続済みのサーバーの登録 (SQL Server Management Studio)
 title: 接続済みサーバーの登録
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: ecc063b1dabf0ea1c2b440ae8848fb10418cdfda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5b9c676b9c9bdef3f7172da60406239ba50f8c86
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011806"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037557"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>接続済みのサーバーの登録 (SQL Server Management Studio)
 
@@ -84,4 +85,4 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
 
 ## <a name="see-also"></a>参照
 
-[新しい登録済みサーバーの作成 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
+[新しい登録済みサーバーの作成 (SQL Server Management Studio)](./create-a-new-registered-server-sql-server-management-studio.md)

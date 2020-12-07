@@ -1,4 +1,5 @@
 ---
+description: データの変更の準備ができているかどうかを判断する
 title: 変更データの準備ができているかどうかを判断する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921699"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130642"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
 
@@ -83,14 +84,14 @@ ms.locfileid: "86921699"
   
     2.  **[EvalExpression]** に「 `@DataReady == 0`」と入力します。  
   
-         この式が **False**と評価されると、実行がループの外に移り、増分読み込みが開始されます。  
+         この式が **False** と評価されると、実行がループの外に移り、増分読み込みが開始されます。  
   
 ## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>変更データのクエリを実行する SQL 実行タスクの構成  
  For ループ コンテナー内に SQL 実行タスクを追加します。 このタスクでは、変更データ キャプチャ プロセスがデータベースに保持しているテーブルに対してクエリを実行します。 このクエリの結果は、変更データが準備できているかどうかを示す状態値です。  
   
  次の表の 1 列目は、サンプルの Transact-SQL クエリによって SQL 実行タスクから返される値を示しています。 2 列目は、その他のコンポーネントがこれらの値に応答する方法を示しています。  
   
-|戻り値|意味|Response|  
+|戻り値|説明|Response|  
 |------------------|-------------|--------------|  
 |0|変更データが準備できていないことを示します。<br /><br /> 選択した間隔の終了時点より後に変更データ キャプチャ レコードがありません。|遅延を実装するコンポーネントから実行が継続されます。 その後、制御が For ループ コンテナーに戻り、返される値が 0 である限り引き続きコンテナーによって SQL 実行タスクがチェックされます。|  
 |1|間隔全体にわたって変更データがキャプチャされていないか、変更データが削除されていることを示します。 これは、エラー状態として扱われます。<br /><br /> 選択した間隔の開始時点より前に変更データ キャプチャ レコードがありません。|エラーをログに記録するオプションのコンポーネントから実行が継続されます。|  
@@ -177,7 +178,7 @@ ms.locfileid: "86921699"
   
     3.  **[式]** に「 `@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
   
 4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、 **[User::DelaySeconds]** 整数変数を一覧から選択します。  
   
@@ -191,7 +192,7 @@ ms.locfileid: "86921699"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \- - または -  
+         \- または  
   
     -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でプログラミングしている場合は、次のコード行を入力します。  
   
@@ -223,7 +224,7 @@ ms.locfileid: "86921699"
   
     3.  **[式]** に「 `@DataReady == 0`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -269,7 +270,7 @@ ms.locfileid: "86921699"
   
     3.  **[式]** に「 `@DataReady == 1 || @DataReady == 5`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   

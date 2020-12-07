@@ -1,8 +1,9 @@
 ---
+description: UpdateBatch および CancelBatch メソッドの例 (VB)
 title: UpdateBatch および CancelBatch メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3145309ec2fadab882d62e8c044a3ceb5a962ab8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe9d475ac047dc137c74a4ac75ce33c526db15bc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759478"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988073"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch および CancelBatch メソッドの例 (VB)
-この例では、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッドと共に、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドを示します。  
+この例では、 [CancelBatch](./cancelbatch-method-ado.md)メソッドと共に、 [UpdateBatch](./updatebatch-method.md)メソッドを示します。  
   
 ```  
 'BeginUpdateBatchVB  
@@ -124,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)
+ [CancelBatch メソッド (ADO)](./cancelbatch-method-ado.md)   
+ [UpdateBatch メソッド](./updatebatch-method.md)

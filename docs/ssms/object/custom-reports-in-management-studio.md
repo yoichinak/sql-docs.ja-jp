@@ -1,7 +1,6 @@
 ---
+description: Management Studio におけるカスタム レポート
 title: Management Studio におけるカスタム レポート
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -9,17 +8,20 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.summary.new.custom.report.f1
+- sql13.swb.summary.render.custom.report.f1
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 515bb92125c48f963bc6d6c2dfa0836bcb9ef14e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 3ace61294d7cfff1079638f260f88aaa8f7d0034
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001988"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300776"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86001988"
   
 -   オブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** を左クリックします。 **[ファイルを開く]** ダイアログ ボックスで .rdl ファイルを含むフォルダーを見つけ、適切なレポート ファイルを開きます。  
   
--   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]** 、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
+-   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]**、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
   
 ## <a name="limitations"></a>制限事項  
 カスタム レポートを操作する場合は、次の制限事項に注意してください。  

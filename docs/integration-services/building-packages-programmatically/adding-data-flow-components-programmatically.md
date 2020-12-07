@@ -1,4 +1,5 @@
 ---
+description: プログラムによるデータ フロー コンポーネントの追加
 title: プログラムによるデータ フロー コンポーネントの追加| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a293e7d3151341753cdf1228f7a3d6958a8e3b3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917258"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130716"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
 
@@ -39,7 +40,7 @@ ms.locfileid: "86917258"
 ## <a name="adding-a-managed-component"></a>マネージド コンポーネントの追加  
  CLSID または PROGID を使用して、いずれかのマネージド データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
   
- **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、 **[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
+ **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
  組み込みマネージド データ フロー コンポーネントの要素は次のとおりです。  
   
@@ -284,7 +285,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
+ blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042)」(EzAPI - SQL Server 2012 用の更新)  
 
 ## <a name="see-also"></a>参照  
  [プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

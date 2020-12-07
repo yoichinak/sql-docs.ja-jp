@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631942"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727473"
 ---
 # <a name="using-table-valued-parameters"></a>テーブル値パラメーターの使用
 
@@ -35,8 +35,8 @@ ms.locfileid: "81631942"
   
 | リソース                                                                                                             | 説明                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| SQL Server オンライン ブックの[テーブル値パラメーター (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=98363) | テーブル値パラメーターを作成して使用する方法について説明します                             |
-| SQL Server オンライン ブックの「[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkId=98364)」                  | テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します |
+| SQL Server オンライン ブックの[テーブル値パラメーター (データベース エンジン)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) | テーブル値パラメーターを作成して使用する方法について説明します                             |
+| SQL Server オンライン ブックの「[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))」                  | テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します |
 | CodePlex の「[Microsoft SQL Server データベース エンジン](https://go.microsoft.com/fwlink/?LinkId=120507)」セクション        | SQL Server の機能の使用方法を示すサンプルがあります  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>以前のバージョンの SQL Server で複数の行を渡す  
@@ -53,7 +53,7 @@ SQL Server 2008 にテーブル値パラメーターが導入されるまでは�
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーターの型の作成  
 
-テーブル値パラメーターは、Transact-SQL の `CREATE TYPE` ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、SQL Server オンライン ブックの「[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)」を参照してください。  
+テーブル値パラメーターは、Transact-SQL の `CREATE TYPE` ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、SQL Server オンライン ブックの「[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))」を参照してください。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ pStmt.execute();
 
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーの概要](overview-of-the-jdbc-driver.md)  
+[JDBC ドライバーの概要](overview-of-the-jdbc-driver.md)

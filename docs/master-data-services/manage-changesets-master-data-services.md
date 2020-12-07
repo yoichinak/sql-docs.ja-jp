@@ -1,4 +1,5 @@
 ---
+description: 変更セットの管理 (マスター データ サービス)
 title: 変更セットの管理
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e411c1f7dd09db1e0387535ffef665924193ee9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 852396b6c3eb77141e964f1ba72d141153a0badb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471916"
 ---
 # <a name="manage-changesets-master-data-services"></a>変更セットの管理 (マスター データ サービス)
 
@@ -23,9 +24,9 @@ ms.locfileid: "85811727"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、すべての変更をモデルとバージョンごとに管理できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
   
--   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
 -   少なくとも、エンティティまたはその属性のいずれかに対する読み取りアクセス権が必要です。  
   

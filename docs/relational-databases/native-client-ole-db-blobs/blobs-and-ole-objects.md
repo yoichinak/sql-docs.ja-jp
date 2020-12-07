@@ -1,4 +1,5 @@
 ---
+description: Blob と OLE オブジェクト (Native Client OLE DB プロバイダー)
 title: Blob と OLE オブジェクト (Native Client OLE DB プロバイダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d8ca3c194be1b13bad029a45040daa2f7e61108
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c9ab95bece59c6ecb2ed3c2df4aeb0b90ec52605
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381204"
 ---
 # <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>SQL Server Native Client の Blob と OLE オブジェクト
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87242302"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、コンシューマーがデータ変更のためにバインドされたアクセサーにインターフェイスポインターを提供するときに、コンシューマーが実装した**IStorage**インターフェイスを使用できます。  
   
- 大きな値のデータ型の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **IROWSET**および DDL インターフェイスの型サイズの想定を確認します。 最大サイズが無制限に設定された**varchar**、 **nvarchar**、および**varbinary**データ型の列は、スキーマ行セットと列データ型を返すインターフェイスによって islong として表されます。  
+ 大きな値のデータ型の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **IROWSET** および DDL インターフェイスの型サイズの想定を確認します。 最大サイズが無制限に設定された **varchar**、 **nvarchar**、および **varbinary** データ型の列は、スキーマ行セットと列データ型を返すインターフェイスによって islong として表されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーは、 **varchar (max)**、 **varbinary (max)** 、 **nvarchar (max)** 型をそれぞれ DBTYPE_STR、DBTYPE_BYTES および DBTYPE_WSTR として公開します。  
   
@@ -67,6 +68,6 @@ ms.locfileid: "87242302"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [大きな値をとるデータ型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.revoke_permission (SSISDB データベース)
 title: catalog.revoke_permission (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7fd01336eca5b0717af288322a496c5b082b5b97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5386c10a85d548a59e68b33009d5ed46e95d85d0
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912918"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243655"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB データベース)
 
@@ -40,7 +41,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引数  
  [ @object_type = ] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** _です。_  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。 *object_type* は **smallint**_です。_  
   
  [ @object_id = ] *object_id*  
  セキュリティ保護可能なオブジェクトの一意識別子 (ID)。 *object_id* は **bigint** です。  
@@ -65,9 +66,6 @@ catalog.revoke_permission [ @object_type = ] object_type
  5 (その他のエラー)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
-  
-## <a name="remarks"></a>解説  
  なし  
   
 ## <a name="permissions"></a>アクセス許可  

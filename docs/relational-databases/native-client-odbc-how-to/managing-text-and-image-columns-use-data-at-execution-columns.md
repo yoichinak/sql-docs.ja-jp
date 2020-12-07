@@ -1,4 +1,5 @@
 ---
+description: text 列と image 列の管理 - 実行時データの使用
 title: 実行時データ列の使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e89af069c7255396d797047c805fe5ae80a9882
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009402"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868923"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>text 列と image 列の管理 - 実行時データの使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,20 +33,20 @@ ms.locfileid: "86009402"
   
     -   4 番目のパラメーターとして、プログラム定義の列 ID を指定します。  
   
-2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
+2.  [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
   
 3.  実行時データの各列に対して次の操作を行います。  
   
-    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
   
     -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
   
-4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
 
 ## <a name="example"></a>例  
  このサンプルでは、SQLGetData を使用して SQL_LONG 型の可変長文字データを読み取る方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384) のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -186,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

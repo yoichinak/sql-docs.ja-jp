@@ -1,4 +1,5 @@
 ---
+description: CURRENT_REQUEST_ID (Transact-SQL)
 title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4eb54d5762466b19f83c1e03ce3194e1d996b19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9a5628ef19aa267e326e3164d0a1f3ad95d88e23
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112062"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115265"
 ---
 # <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87112062"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CURRENT_REQUEST_ID()  
 ```  
 
@@ -45,7 +46,7 @@ CURRENT_REQUEST_ID()
 ## <a name="remarks"></a>解説  
 現在のセッションに関する正確な情報を確認するには、@@SPID を使用します。 現在の要求に関する正確な情報を確認するには、CURRENT_REQUEST_ID() を使用します。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
   
   

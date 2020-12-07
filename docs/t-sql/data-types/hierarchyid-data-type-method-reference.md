@@ -1,4 +1,5 @@
 ---
+description: hierarchyid データ型メソッド リファレンス
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9968e1537901de729406c5b0ddc21857e74b886
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037498"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85738216"
 値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。
   
 -   非常にコンパクト  
-     *n* 個のノードを持つツリー内の、1 つのノードを表すために必要な平均ビット数は、平均ファンアウト (ノードあたりの子の平均数) によって決まります。 ファンアウトが小さい場合 (0 ～ 7)、サイズは約 6\*logA*n* ビットです (A は平均ファンアウト)。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
+     *n* 個のノードを持つツリー内の、1 つのノードを表すために必要な平均ビット数は、平均ファンアウト (ノードあたりの子の平均数) によって決まります。 ファンアウトが小さい場合 (0 ～ 7)、サイズは約 6\*logA *n* ビットです (A は平均ファンアウト)。 平均ファンアウトが 6 レベルで、100,000 人から成る組織階層の場合、1 つのノードには約 38 ビットが必要です。 格納時には、これが 40 ビット (5 バイト) に切り上げられます。  
 -   深さ優先順で比較  
      **a** と **b** の 2 つの **hierarchyid** 値がある場合、**a<b** は、ツリーの深さ優先検査において a が b の前に来ることを意味します。 インデックス **hierarchyid** に深さ優先順では、データ型があり、深さ優先検査で近接ノードは互いに近い格納します。 たとえば、あるレコードの子は、そのレコードに隣接して格納されます。 詳しくは、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」をご覧ください。  
 -   任意の挿入および削除のサポート  
@@ -55,7 +56,7 @@ ms.locfileid: "85738216"
   
 -   /0.1/0.2/  
   
-ノードは、任意の位置に挿入できます。 **/1/2/** の後ろで、かつ **/1/3/** の前に挿入されたノードは、 **/1/2.5/** として表されます。 0 の前に挿入されたノードの論理表現は、負の値となります。 たとえば、 **/1/1/** の前に位置するノードは、 **/1/-1/** として表されます。 ノードに先頭のゼロを付けることはできません。 たとえば、 **/1/1.1/** は有効ですが、 **/1/1.01/** は無効です。 エラーを回避するには、[GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) メソッドを使用してノードを挿入します。
+ノードは、任意の位置に挿入できます。 **/1/2/** の後ろで、かつ **/1/3/** の前に挿入されたノードは、**/1/2.5/** として表されます。 0 の前に挿入されたノードの論理表現は、負の値となります。 たとえば、**/1/1/** の前に位置するノードは、**/1/-1/** として表されます。 ノードに先頭のゼロを付けることはできません。 たとえば、**/1/1.1/** は有効ですが、**/1/1.01/** は無効です。 エラーを回避するには、[GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) メソッドを使用してノードを挿入します。
   
 ## <a name="data-type-conversion"></a>データ型の変換
 **hierarchyid** データ型は、次のように他のデータ型に変換できます。
@@ -90,8 +91,7 @@ ms.locfileid: "85738216"
 -   列フィルターでは、NULL 値が許容されない **hierarchyid** 列を除外できません。パブリッシャー側の **hierarchyid** 列には既定値がないので、サブスクライバーからの挿入は失敗します。  
 -   行のフィルター選択は、フィルターに **hierarchyid** 列が含まれない限りサポートされます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
-  
+[hierarchyid データ型メソッド リファレンス]()
   

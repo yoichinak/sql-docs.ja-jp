@@ -1,4 +1,5 @@
 ---
+description: PRINT (Transact-SQL)
 title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 058c87be49d3089d699b0abbafb0d500f3cb9580
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9cde37d6a90b82bb43095e1138116cd98ae198f9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92191445"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87396871"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 PRINT msg_str | @local_variable | string_expr  
 ```  
   
@@ -55,7 +56,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  文字列を返す式を指定します。 連結したリテラル値、関数、および変数を含むことができます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  メッセージ文字列は、Unicode 以外の文字列の場合は 8,000 バイトまで指定でき、Unicode 文字列の場合は 4,000 バイトまで指定できます。 これより長い文字列は切り詰められます。 **Varchar (max)** と **nvarchar (max)** データ型は、**varchar(8000)** および **nvarchar(4000)** ではなくなったデータ型に切り詰められます。  
   
  RAISERROR を使用してメッセージを返すこともできます。 RAISERROR には、PRINT にはない次のような利点があります。  
@@ -71,7 +72,7 @@ PRINT msg_str | @local_variable | string_expr
 ### <a name="a-conditionally-executing-print-if-exists"></a>A. 条件付きで PRINT を実行する (IF EXISTS)  
  次の例では、`PRINT` ステートメントを使用して条件に応じてメッセージを返します。  
   
-```  
+```sql  
 IF @@OPTIONS & 512 <> 0  
     PRINT N'This user has SET NOCOUNT turned ON.';  
 ELSE  
@@ -82,19 +83,19 @@ GO
 ### <a name="b-building-and-displaying-a-string"></a>B. 文字列を構築して表示する  
  次の例では、`GETDATE` 関数の結果を `nvarchar` データ型に変換し、リテラル テキストと連結して `PRINT` で返します。  
   
-```  
+```sql  
 -- Build the message text by concatenating  
 -- strings and expressions.  
 PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 GO  
 -- This example shows building the message text  
 -- in a variable and then passing it to PRINT.  
 -- This was required in SQL Server 7.0 or earlier.  
-DECLARE @PrintMessage nvarchar(50);  
+DECLARE @PrintMessage NVARCHAR(50);  
 SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
+    + RTRIM(CAST(GETDATE() AS NVARCHAR(30)))  
     + N'.';  
 PRINT @PrintMessage;  
 GO  
@@ -105,7 +106,7 @@ GO
 ### <a name="c-conditionally-executing-print"></a>C. 条件付きで PRINT を実行する  
  次の例では、`PRINT` ステートメントを使用して条件に応じてメッセージを返します。  
   
-```  
+```sql  
 IF DB_ID() = 1  
     PRINT N'The current database is master.';  
 ELSE  

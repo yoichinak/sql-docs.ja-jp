@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ad3a09d742e18a3f9ab7ed304433fc1b59ce1fc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c17541ff08f136b3c8c26418117df63c71b9195b
+ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247421"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93243811"
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]** を選択します。  
+レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])** 、 **[管理]** と選択し、 **[キャッシュ]** または **[履歴スナップショット]** を選択します。  
   
 > [!NOTE]
 > SQL Server エージェント サービスを開始する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "87247421"
   
 スナップショットを作成するには、次のようにします。  
   
-![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
+![[Company Sales の編集] ダイアログ ボックスの [キャッシュ] 画面を示すスクリーンショット。1、2、3 の数字が中に記されている 3 つのマゼンタの丸は、スクリーンショットの下に記載されている 3 つの手順を指しています。](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
 1.  **[キャッシュ]** ページで、 **[常に事前生成されたスナップショットに対してこのレポートを実行する]** を選択して、スナップショットを作成するためのオプションを有効にします。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "87247421"
   
 履歴スナップショットを生成するには、レポートが自動的に実行されるようにする必要があります (つまり、保存されている資格情報を使用する必要があります。また、パラメーター化されたレポートには、すべてのパラメーターの既定のパラメーター値を含める必要があります)。 レポート ヒストリの生成は、手動またはスケジュールに設定した操作によって行うことができます。 レポート ヒストリの作成方法は、レポートのヒストリ プロパティによって決まります。  
   
-![ssRSWebPortal-historysnapshots1](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
+![[Company Sales の編集] ダイアログ ボックスの [履歴スナップショット] 画面を示すスクリーンショット。1、2、3 の数字が中に記されている 3 つのマゼンタの丸は、スクリーンショットの下に記載されている 3 つの手順を指しています。](../reporting-services/media/ssrswebportal-historysnapshots1.png)  
    
 1.  履歴スナップショットを作成するには、 **[新しい履歴スナップショット]** を選択します。 レポートが処理され、一覧にエントリが追加されます。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "87247421"
   
 **[スケジュールと設定]** には、スケジュールを設定し作成したスナップショットの保有期間を制御するオプションが用意されています。  
   
-![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
+![[スケジュール] セクションと [詳細] セクションを示すスクリーンショット。](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-必要に応じて、スナップショットを作成するスケジュールを設定できます。 他のユーザーによる新しいスナップショットの作成を防ぐこともできます。 **[ユーザーが手動でスナップショットを作成することを許可する]** をオフにすると、 **新しい履歴スナップショットの作成ボタン**が無効になります。  
+必要に応じて、スナップショットを作成するスケジュールを設定できます。 他のユーザーによる新しいスナップショットの作成を防ぐこともできます。 **[ユーザーが手動でスナップショットを作成することを許可する]** をオフにすると、 **新しい履歴スナップショットの作成ボタン** が無効になります。  
   
 スナップショットの保有方法を定義することもできます。  
   

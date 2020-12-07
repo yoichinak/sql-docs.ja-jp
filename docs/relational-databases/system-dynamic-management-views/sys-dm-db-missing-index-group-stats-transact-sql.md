@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_missing_index_group_stats (Transact-SQL)
 title: dm_db_missing_index_group_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e90b4b972786db7e5edf2459a9f5a081f42f3ef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718820"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89518055"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85718820"
 |**avg_total_system_cost**|**float**|グループ内のインデックスによって削減できたシステム クエリの平均コスト。|  
 |**avg_system_impact**|**float**|この欠落インデックス グループが実装されていた場合のシステム クエリへの効果の平均パーセンテージ (%)。 この値は、この欠落インデックス グループが実装されていた場合に減少したクエリ コストの平均パーセンテージを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sys.dm_db_missing_index_group_stats** で返される情報は、クエリがコンパイルまたは再コンパイルされるたびに更新されるのではなく、クエリが実行されるたびに更新されます。 使用状況の統計は保存されません。統計が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 使用状況の統計をサーバーの再利用後も保持する場合は、データベース管理者が欠落インデックスの情報のバックアップ コピーを定期的に作成する必要があります。  
 
   >[!NOTE]
@@ -61,10 +62,10 @@ ms.locfileid: "85718820"
 ## <a name="permissions"></a>アクセス許可  
  この動的管理ビューをクエリするには、VIEW SERVER STATE 権限、または VIEW SERVER STATE が暗黙的に与えられる権限が許可されている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、**sys.dm_db_missing_index_group_stats** 動的管理ビューの使い方を示したものです。  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A: ユーザークエリの予測向上率が高い10個の欠落インデックスを検索する  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. ユーザークエリの予測向上率が高い10個の欠落インデックスを検索する  
  次のクエリでは、ユーザー クエリで最も高い累積のパフォーマンス向上を見込むことができる、上位 10 個の不足しているインデックスを降順で特定します。  
   
 ```  
@@ -73,7 +74,7 @@ FROM sys.dm_db_missing_index_group_stats
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
 ```  
   
-### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B: 特定の欠落インデックス グループについて、個別の欠落インデックスとその列の詳細を検索する  
+### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. 特定の欠落インデックス グループについて、個別の欠落インデックスとその列の詳細を検索する  
  次のクエリでは、特定の欠落インデックス グループを構成しているインデックスを特定し、その列の詳細を表示します。 この例では、欠落インデックス グループのハンドルを 24 としています。  
   
 ```  
@@ -88,7 +89,7 @@ WHERE migs.group_handle = 24;
   
  このクエリを実行すると、インデックスが欠落しているデータベース、スキーマ、テーブルの名前が返されます。 また、インデックス キーに使用される列の名前も返されます。 CREATE INDEX DDL ステートメントを記述して欠落インデックスを実装する場合は、CREATE INDEX ステートメントの ON 句で最初に等値列を指定し、次に非等値列を指定し \<*table_name*> ます。 付加列は、CREATE INDEX ステートメントの INCLUDE 句で指定します。 等値の列の有効な順序を決定するには、選択度の最も高い列を左の先頭に指定し、選択度が高い順に並べます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   

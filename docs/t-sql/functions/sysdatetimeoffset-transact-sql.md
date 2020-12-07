@@ -1,4 +1,5 @@
 ---
+description: SYSDATETIMEOFFSET (Transact-SQL)
 title: SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -30,17 +31,17 @@ ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cbfeb1f6f9891d9896369e6e2d765481a569ce0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e5599ad413dbdc6720a35d9ce86e37aa6b4a2add
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112804"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380007"
 ---
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **のインスタンスを実行しているコンピューターの日付と時刻を含む**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 タイム ゾーン オフセットが含まれます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているコンピューターの日付と時刻を含む **datetimeoffset(7)** 値を返します。 タイム ゾーン オフセットが含まれます。  
   
  すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "87112804"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SYSDATETIMEOFFSET ( )  
 ```  
 
@@ -71,7 +72,7 @@ SYSDATETIMEOFFSET ( )
 ### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>A. 日付および時刻の関数から返される形式を表示する  
  次の例では、日付と時刻関数から返されるさまざまな形式を示します。  
   
-```  
+```sql
 SELECT SYSDATETIME() AS [SYSDATETIME()]  
     ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
     ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
@@ -94,7 +95,7 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-converting-date-and-time-to-date"></a>B. 日付と時刻を日付に変換する  
  次の例では、日付と時刻の値を `date` に変換する方法を示します。  
   
-```  
+```sql
 SELECT CONVERT (date, SYSDATETIME())  
     ,CONVERT (date, SYSDATETIMEOFFSET())  
     ,CONVERT (date, SYSUTCDATETIME())  
@@ -117,7 +118,7 @@ SELECT CONVERT (date, SYSDATETIME())
 ### <a name="c-converting-date-and-time-to-times"></a>C. 日付と時刻を時刻に変換する  
  次の例では、日付と時刻の値を `time` に変換する方法を示します。  
   
-```  
+```sql
 SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
     ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
     ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  
@@ -137,7 +138,7 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   

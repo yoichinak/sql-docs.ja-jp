@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client でのテーブル値パラメーターの行セットの作成
 title: テーブル値パラメーターの行セットの作成 (Native Client OLE DB プロバイダー)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482577"
 ---
 # <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>SQL Server Native Client でのテーブル値パラメーターの行セットの作成
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87331968"
   
  コンシューマーは集計の場合、制御している IUnknown と共に *pUnkOuter* パラメーターを渡します。  
   
- テーブル値パラメーターの行セットオブジェクトのプロパティは読み取り専用であるため、コンシューマーは*rgPropertySets*のプロパティを設定する必要はありません。  
+ テーブル値パラメーターの行セットオブジェクトのプロパティは読み取り専用であるため、コンシューマーは *rgPropertySets*のプロパティを設定する必要はありません。  
   
  各 DBCOLUMNDESC 構造体の *rgPropertySets* メンバーの場合、コンシューマーは列ごとに追加のプロパティを指定できます。 これらのプロパティは、DBPROPSET_SQLSERVERCOLUMN プロパティ セットに属しています。 これらのプロパティによって、列ごとに計算の設定と既定の設定を指定できます。 また、NULL 値の許容や ID など、列の既存のプロパティもサポートされます。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "87331968"
   
  このシナリオでは、プロバイダーがコンシューマーに代わって、テーブル値パラメーターの行セット オブジェクトに関する型情報をサーバーから取得します。  
   
- *pTableID* パラメーターおよび *pUnkOuter* パラメーターは、静的なシナリオと同様に設定します。 次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、サーバーから型情報 (列の情報と制約) を取得し、 *ppRowset*パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
+ *pTableID* パラメーターおよび *pUnkOuter* パラメーターは、静的なシナリオと同様に設定します。 次に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、サーバーから型情報 (列の情報と制約) を取得し、 *ppRowset* パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

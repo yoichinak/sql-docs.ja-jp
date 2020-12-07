@@ -1,4 +1,5 @@
 ---
+description: カーソル オプションの設定 (ODBC)
 title: カーソルオプションの設定 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,16 +14,17 @@ ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b97e8b52d985aeb9ba97f95e39c5e94d3188fa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d1cf4610efc2ea021b8cd9260f463af079d28dc9
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009449"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364851"
 ---
 # <a name="set-cursor-options-odbc"></a>カーソル オプションの設定 (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  カーソルオプションを設定するには、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)を呼び出して、カーソルの動作を制御するステートメントオプションを設定または[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)に取得します。  
+  カーソルオプションを設定するには、 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出して、カーソルの動作を制御するステートメントオプションを設定または [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) に取得します。  
   
 |*属性*|指定内容|  
 |-----------------|---------------|  
@@ -36,7 +38,10 @@ ms.locfileid: "86009449"
   
  使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-set-a-dynamic-cursor"></a>A. 動的カーソルを設定する
+
  次のサンプルでは、ステートメント ハンドルを割り当て、行のバージョンに基づくオプティミスティック コンカレンシーを使用する動的カーソルを種類として設定してから、SELECT を実行します。  
   
 ```  
@@ -46,7 +51,7 @@ retcode = SQLSetStmtAttr(hstmt1, SQL_ATTR_CONCURRENCY, SQLPOINTER)SQL_CONCUR_ROW
 retcode = SQLExecDirect(hstmt1, SELECT au_lname FROM authors", SQL_NTS);  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-set-a-scrollable-sensitive-cursor"></a>B. スクロール可能で機密性の高いカーソルを設定する
  次のサンプルでは、ステートメント ハンドルを割り当て、スクロール可能な反映型カーソルを設定してから、SELECT を実行します。  
   
 ```  

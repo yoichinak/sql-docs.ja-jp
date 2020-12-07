@@ -1,4 +1,5 @@
 ---
+description: 機能領域の権限を割り当てる (マスター データ サービス)
 title: 機能領域の権限を割り当てる
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0f7e4e7bc0118849f452d4bccbb7d07706a4c411
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fe973a6b5c67a9550a9c7cf687c4be0060be9da4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456807"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>機能領域の権限を割り当てる (マスター データ サービス)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85812798"
 
   機能領域の権限を割り当てて、ユーザーまたはグループに [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -51,7 +52,7 @@ ms.locfileid: "85812798"
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル管理者 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   

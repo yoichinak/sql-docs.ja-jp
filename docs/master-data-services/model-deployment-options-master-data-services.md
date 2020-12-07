@@ -1,4 +1,5 @@
 ---
+description: モデル配置オプション (マスター データ サービス)
 title: モデル配置オプション
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4de75b7f5cc65fa3d7a080f3317630a9af4d53a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6b2c29038934034c39ea7699328504d418989d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471920"
 ---
 # <a name="model-deployment-options-master-data-services"></a>モデル配置オプション (マスター データ サービス)
 
@@ -35,13 +36,13 @@ ms.locfileid: "85813268"
   
  次の表は、システム管理のモデル配置ウィザードまたは MDSModelDeploy ツールのいずれかを使用してモデルを配置する際に何を選択すればよいかを決定するのに役立ちます。  
   
-|オプション|説明|メモ|  
+|オプション|説明|Notes|  
 |------------|-----------------|-----------|  
 |新規|一意の名前を持つ新しいモデルを作成します。 すべてのモデル オブジェクトに新しい識別子が作成されます。|新しい識別子を持つ新しいモデルを作成した場合、後でモデル配置ツールを使用してモデルに更新を適用することはできません。 Web アプリケーションのウィザードを使用してモデル パッケージを配置ときに、同じ名前または ID を持つモデルが既に存在している場合、選択できるのは新しいモデルの作成のみです。|  
 |複製|パッケージ内のモデルの正確な複製である新しいモデルを作成します。 このオプションは、名前または識別子が同じモデルがターゲット環境内に存在しない場合にのみ機能します。 複数の環境に同じモデルがあり、複製したモデルを後で更新する場合は、"複製" を使用します。|これは、Web アプリケーションのウィザードの既定の動作です。 同じ名前または ID を持つモデルが既に存在する場合は、代わりに新しいモデルを作成するよう求められます。|  
 |更新|パッケージ内のモデルを使用して、既存のモデルを更新します。 両方のモデルの識別子が同じである必要があります。 このオプションは、以前に複製したモデルを更新するために使用します。|以前に複製したモデルのみを更新できます (名前と ID が一致する必要があります)。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDSModelDeploy を使用してモデルの配置パッケージを配置する](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   
  [ウィザードを使用してモデルの配置パッケージを配置する](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)   
  [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  

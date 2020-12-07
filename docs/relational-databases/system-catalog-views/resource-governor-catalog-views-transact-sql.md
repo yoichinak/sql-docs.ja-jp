@@ -1,4 +1,5 @@
 ---
+description: Resource Governor カタログビュー (Transact-sql)
 title: Resource Governor カタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - Resource Governor, catalog views
 - catalog views [SQL Server]
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e8fb39de4ea879fa3713761ff43d8ae31f854f9b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a84ea64495c35954f1a7b0fc25cffe52b54e159
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442847"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539720"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>Resource Governor カタログビュー (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

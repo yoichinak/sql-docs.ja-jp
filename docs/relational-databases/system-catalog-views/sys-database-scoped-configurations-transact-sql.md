@@ -1,6 +1,6 @@
 ---
-description: database_scoped_configurations (Transact-sql)
-title: database_scoped_configurations (Transact-sql) |Microsoft Docs
+description: sys.database_scoped_configurations (Transact-sql)
+title: sys.database_scoped_configurations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -15,18 +15,20 @@ f1_keywords:
 - sys.database_scoped_configurations_TSQL
 helpviewer_keywords:
 - sys.database_scoped_configurations catalog view
+dev_langs:
+- TSQL
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 6edd7864c127ea068e3017c7aa26ad5be86a4c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad4e9036670f90f126ad9c1f693de43ff9660517
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323248"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364654"
 ---
-# <a name="sysdatabase_scoped_configurations-transact-sql"></a>database_scoped_configurations (Transact-sql)
+# <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys.database_scoped_configurations (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -39,15 +41,14 @@ ms.locfileid: "88323248"
 |**value**|**sqlvariant**|プライマリレプリカのこの構成オプションに設定された値。|
 |**value_for_secondary**|**sqlvariant**|セカンダリレプリカのこの構成オプションに設定された値。|
 |**is_value_default**|**bit** |値が既定値に設定されているかどうかを指定します。|
-|**dw_compatibility_level**|**int**|データベースの互換性レベル (プレビュー)。  既定値 = 0 (自動)|
 
 ## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 ロール **public** のメンバーシップが必要です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Value_for_secondary**の値として NULL が返された場合、セカンダリがプライマリに設定されていることを意味します。
+**Value_for_secondary** の値として NULL が返された場合、セカンダリがプライマリに設定されていることを意味します。
  
 データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
 

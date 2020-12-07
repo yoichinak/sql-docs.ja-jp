@@ -1,4 +1,5 @@
 ---
+description: sp_helplogreader_agent (Transact-sql)
 title: sp_helplogreader_agent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b83ce376482210c99179ea501f2c1e4c07fb0bf6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888a6f8266d53e0297ffe3fe42dbfba11a4929f9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891664"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541746"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -53,16 +54,16 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**job_password**|**sysname**|セキュリティ上の理由から、の値 **\*\*\*\*\*\*\*\*\*\*** は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helplogreader_agent**は、トランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helplogreader_agent** は、トランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helplogreader_agent**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーションのセキュリティ設定を表示および変更する](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>参照  
+ [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addlogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_changelogreader_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)  
   

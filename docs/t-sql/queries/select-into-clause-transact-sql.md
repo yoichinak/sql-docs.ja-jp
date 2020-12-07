@@ -1,4 +1,5 @@
 ---
+description: SELECT - INTO 句 (Transact-SQL)
 title: INTO 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/23/2017
@@ -29,12 +30,12 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36bd2fd7e30c3b32486ec489c93d298c5b827977
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 76045b2b1a1e982d0576f5d5c37998534ae2f1ee
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555241"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115106"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 [ INTO new_table ]
 [ ON filegroup ]
 ```  

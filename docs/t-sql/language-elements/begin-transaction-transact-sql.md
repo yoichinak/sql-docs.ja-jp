@@ -1,4 +1,5 @@
 ---
+description: BEGIN TRANSACTION (Transact-SQL)
 title: BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -30,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 338f096584e6f48b2f70fdd5e37402e275f1e725
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b40f7e725c4f0a413963e772a741b56aabb65140
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394628"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124560"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
+--Applies to Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -116,7 +117,7 @@ BEGIN TRANSACTION では、ステートメントを実行する接続のロー�
   
  BEGIN TRAN *new_name* WITH MARK は、マークが付いていない既存のトランザクション内で入れ子にできます。 この場合、トランザクションに既に割り当てられている名前に関係なく、*new_name* がトランザクションのマーク名になります。 次の例では、`M2` がマーク名になります。  
   
-```  
+```sql  
 BEGIN TRAN T1;  
 UPDATE table1 ...;  
 BEGIN TRAN M2 WITH MARK;  
@@ -147,11 +148,11 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 明示的なトランザクションを使用します。
-**適用対象:** SQL Server (2008 以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、Parallel Data Warehouse
 
 この例では、AdventureWorks を使用します。 
 
-```
+```sql
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -159,13 +160,12 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. トランザクションのロールバック
-**適用対象:** SQL Server (2008 以降)、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse
+**適用対象:** SQL Server (2008 以降)、Azure SQL Database、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、Parallel Data Warehouse
 
 次の例では、トランザクションのロールバックの効果を示します。 この例で ROLLBACK ステートメントがロールバックされます、INSERT ステートメントでは、作成されたテーブルはそのまま残ります。
 
-```
- 
-CREATE TABLE ValueTable (id int);  
+```sql
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -178,7 +178,7 @@ ROLLBACK;
 
 次の例では、トランザクションの名前を指定する方法を示します。  
   
-```  
+```sql
 DECLARE @TranName VARCHAR(20);  
 SELECT @TranName = 'MyTransaction';  
   
@@ -196,7 +196,7 @@ GO
 
 次の例では、トランザクションにマークを付ける方法を示します。 トランザクション `CandidateDelete` にマークが付けられています。  
   
-```  
+```sql  
 BEGIN TRANSACTION CandidateDelete  
     WITH MARK N'Deleting a Job Candidate';  
 GO  

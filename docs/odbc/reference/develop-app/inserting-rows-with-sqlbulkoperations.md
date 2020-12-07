@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations による行の挿入
 title: SQLBulkOperations を使用した行の挿入 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a6fa384292f02026b8390aa92525144dce6f549b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36f04a393d2053389f823c33a55050f24dd87020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424634"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations による行の挿入
 **Sqlbulkoperations**を使用したデータの挿入は、バインドされたアプリケーションバッファーのデータを使用するため、 **sqlbulkoperations**でデータを更新することと似ています。  
@@ -34,4 +35,4 @@ ms.locfileid: "81300112"
   
 3.  *操作*引数が SQL_ADD に設定された**sqlbulkoperations**を呼び出します。  
   
- **Sqlbulkoperations**が戻ると、現在の行は変更されません。 ブックマーク列 (列 0) がバインドされている場合、 **Sqlbulkoperations**は、その列にバインドされている行セットバッファー内の挿入された行のブックマークを返します。
+ **Sqlbulkoperations**が戻ると、現在の行は変更されません。 ブックマーク列 (列 0) がバインドされている場合、 **Sqlbulkoperations** は、その列にバインドされている行セットバッファー内の挿入された行のブックマークを返します。

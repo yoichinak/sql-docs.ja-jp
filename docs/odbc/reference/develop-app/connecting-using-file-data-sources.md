@@ -1,4 +1,5 @@
 ---
+description: ファイル データ ソースを使用した接続
 title: ファイルデータソースを使用した接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c752fc3b09c06c68dcc216cacac63744dc3101b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ab210a77d1d6516b6b54ba25767d859ff9102fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476764"
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイル データ ソースを使用した接続
-ファイルデータソースの接続情報は、dsn ファイルに格納されます。 このため、接続文字列は、1人のユーザーが繰り返し使用することも、適切なドライバーがインストールされていれば複数のユーザー間で共有することもできます。 このファイルには、ドライバー名 (または unshareable file データソースの場合は別のデータソース名) と、必要に応じて**SQLDriverConnect**で使用できる接続文字列が含まれています。 ドライバーマネージャーは、 **SQLDriverConnect**への呼び出し用の接続文字列を、dsn ファイル内のキーワードから作成します。  
+ファイルデータソースの接続情報は、dsn ファイルに格納されます。 このため、接続文字列は、1人のユーザーが繰り返し使用することも、適切なドライバーがインストールされていれば複数のユーザー間で共有することもできます。 このファイルには、ドライバー名 (または unshareable file データソースの場合は別のデータソース名) と、必要に応じて **SQLDriverConnect**で使用できる接続文字列が含まれています。 ドライバーマネージャーは、 **SQLDriverConnect** への呼び出し用の接続文字列を、dsn ファイル内のキーワードから作成します。  
   
- ファイルデータソースを使用すると、アプリケーションで接続オプションを指定できます。 **SQLDriverConnect**で使用する接続文字列を作成する必要はありません。 通常、ファイルデータソースは**SAVEFILE**キーワードを指定することによって作成されます。これにより、ドライバーマネージャーは**SQLDriverConnect**の呼び出しによって作成された出力接続文字列を、dsn ファイルに保存します。 この接続文字列は、 **FILEDSN**キーワードを使用して**SQLDriverConnect**を呼び出すことによって、繰り返し使用できます。 これにより、接続プロセスが効率化され、接続文字列の永続的なソースが提供されます。  
+ ファイルデータソースを使用すると、アプリケーションで接続オプションを指定できます。 **SQLDriverConnect**で使用する接続文字列を作成する必要はありません。 通常、ファイルデータソースは **SAVEFILE** キーワードを指定することによって作成されます。これにより、ドライバーマネージャーは **SQLDriverConnect** の呼び出しによって作成された出力接続文字列を、dsn ファイルに保存します。 この接続文字列は、 **FILEDSN**キーワードを使用して**SQLDriverConnect**を呼び出すことによって、繰り返し使用できます。 これにより、接続プロセスが効率化され、接続文字列の永続的なソースが提供されます。  
   
- ファイルデータソースは、インストーラー DLL で**Sqlcreatedatasource**を呼び出すことによっても作成できます。 **SQLWriteFileDSN**を呼び出すことによって、dsn ファイルに情報を書き込むことができます。また、 **SQLReadFileDSN**を呼び出して、dsn ファイルから読み取ることもできます。これらの関数はどちらも、インストーラー DLL に含まれています。 インストーラー DLL の詳細については、「[データソースの構成](../../../odbc/reference/install/configuring-data-sources.md)」を参照してください。  
+ ファイルデータソースは、インストーラー DLL で **Sqlcreatedatasource** を呼び出すことによっても作成できます。 **SQLWriteFileDSN**を呼び出すことによって、dsn ファイルに情報を書き込むことができます。また、 **SQLReadFileDSN**を呼び出して、dsn ファイルから読み取ることもできます。これらの関数はどちらも、インストーラー DLL に含まれています。 インストーラー DLL の詳細については、「 [データソースの構成](../../../odbc/reference/install/configuring-data-sources.md)」を参照してください。  
   
  接続情報に使用されるキーワードは、dsn ファイルの [ODBC] セクションにあります。 [ODBC] セクションで共有可能な dsn ファイルの最小情報は、DRIVER キーワードです。  
   
@@ -45,7 +46,7 @@ UID = Larry
 DATABASE = MyDB  
 ```  
   
- ファイルデータソースが unshareable の場合、dsn ファイルには**dsn**キーワードだけが含まれます。 ドライバーマネージャーは、unshareable file データソース内の情報を送信すると、 **DSN**キーワードによって示されるデータソースに必要に応じて接続します。 Unshareable ファイルには、次のキーワードが含まれています。  
+ ファイルデータソースが unshareable の場合、dsn ファイルには **dsn** キーワードだけが含まれます。 ドライバーマネージャーは、unshareable file データソース内の情報を送信すると、 **DSN** キーワードによって示されるデータソースに必要に応じて接続します。 Unshareable ファイルには、次のキーワードが含まれています。  
   
 ```  
 DSN = MyDataSource  

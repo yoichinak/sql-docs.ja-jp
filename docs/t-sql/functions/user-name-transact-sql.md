@@ -1,4 +1,5 @@
 ---
+description: USER_NAME (Transact-SQL)
 title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,23 +25,23 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd303885ba4849932687248b2ae26c78d92b3a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "90570672"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  指定した ID 番号から、データベース ユーザー名を返します。  
+  指定した識別番号から、データベース ユーザー名を返します。  
   
  ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -53,7 +54,7 @@ USER_NAME ( [ id ] )
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *id* を省略した場合は、現在のコンテキストの現在のユーザーであると見なされます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 EXECUTE AS ステートメントの実行後に *id* を指定せずに USER_NAME を呼び出した場合、USER_NAME では権限を借用したユーザーの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、USER_NAME はグループではなく Windows プリンシパルの名前を返します。  
  
 > [!NOTE]
@@ -64,7 +65,7 @@ USER_NAME ( [ id ] )
 ### <a name="a-using-user_name"></a>A. USER_NAME を使用する  
  次の例では、ユーザー ID `13` のユーザー名を返します。  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -72,7 +73,7 @@ GO
 ### <a name="b-using-user_name-without-an-id"></a>B. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -89,7 +90,7 @@ dbo
 ### <a name="c-using-user_name-in-the-where-clause"></a>C. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -107,7 +108,7 @@ dbo
 ### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. EXECUTE AS での権限借用中に USER_NAME を呼び出す  
  次の例では、権限借用中の `USER_NAME` の動作を示します。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -133,7 +134,7 @@ DBO
 ### <a name="e-using-user_name-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -147,7 +148,7 @@ User7
 ### <a name="f-using-user_name-in-the-where-clause"></a>F. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

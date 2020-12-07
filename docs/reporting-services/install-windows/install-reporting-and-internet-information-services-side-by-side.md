@@ -1,4 +1,5 @@
 ---
+description: Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
 title: Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472684"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール
 
@@ -39,7 +40,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
  次の表は、一連の URL 予約の例を、最も明示的なものから順に列挙したものです。  
   
-|例|Request|  
+|例|要求|  
 |-------------|-------------|  
 |`https://123.234.345.456:80/reports`|`https://123.234.345.456/reports` または (ドメイン名サービスが、IP アドレスを対応するホスト名に解決できる場合) `https://\<computername>/reports` に送信されたすべての要求が受信されます。|  
 |`https://+:80/reports`|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
@@ -54,8 +55,8 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 |Application|URL 予約|説明|受信する要求|  
 |-----------------|---------------------|-----------------|---------------------|  
-|レポート サーバー|`https://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
-|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<コンピューター名>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。|  
+|レポート サーバー|`https://+:80/ReportServer`|厳密なワイルドカード、ポート 80、レポート サーバーの仮想ディレクトリ|レポート サーバーの仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<computername>/reportserver に対するすべての要求が、レポート サーバー Web サービスによって受信されます。|  
+|Web ポータル|`https://+:80/Reports`|厳密なワイルドカード、ポート 80、Reports という仮想ディレクトリ|reports という仮想ディレクトリを指定するすべての要求をポート 80 で受信します。 https://\<computername>/reports に対するすべての要求が [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] によって受信されます。|  
 |IIS|`https://*:80/`|弱いワイルドカード、ポート 80|まだ他のアプリケーションによって受信されていない残りの要求をすべてポート 80 で受信します。|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>IIS 8.0、8.5 での SQL Server Reporting Services のサイド バイ サイド配置
@@ -66,7 +67,7 @@ SQL Server Reporting Services (SSRS) とインターネット インフォメー
   
 -   レポート サーバー インスタンスを既定の構成でインストール。URL 予約でポート 80 を指定し、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションで仮想ディレクトリ名 "Reports" を使用。  
   
- この構成では、 https://\<コンピューター名>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
+ この構成では、 https://\<computername>:80/reports に送信された要求は、[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] によって受信されます。 レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新旧のバージョンをサイド バイ サイド配置で実行した場合、前述したルーティングの問題が発生する可能性があります。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのバージョンでは、レポート サーバーと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] アプリケーションの仮想ディレクトリ名として "ReportServer" と "Reports" が使用されているため、IIS には "reports" と "reportserver" という仮想ディレクトリが高い確率で存在していると考えられるためです。  
   

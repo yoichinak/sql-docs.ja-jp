@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) 用の Azure Feature Pack
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
 ms.date: 12/24/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94d4a9121f32d1703ba7e64692ab235ee6eb04de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916578"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92678918"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -115,13 +116,13 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 4. **[システム変数]** セクションで **[新規]** を選択します。
 5. **[変数名]** に「`JAVA_HOME`」と入力します。
 6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
-   **[OK]** を選択すると、**変数の値**が自動的に入力されます。
+   **[OK]** を選択すると、 **変数の値** が自動的に入力されます。
 7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
 8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
 9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
 
 > [!TIP]
-> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space** " というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
 >
 >![jvm ヒープ](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -129,7 +130,7 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime で Zulu の OpenJDK を設定する
 
-これは、Azure-SSIS Integration Runtime の[カスタム セットアップ インターフェイス](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)経由で行う必要があります。
+これは、Azure-SSIS Integration Runtime の[カスタム セットアップ インターフェイス](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)経由で行う必要があります。
 `zulu8.33.0.1-jdk8.0.192-win_x64.zip` が使用されているとします。
 BLOB コンテナーは次のように構成できます。
 
@@ -148,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space** " というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~
@@ -179,18 +180,18 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 5.  Azure HDInsight Blob Download Task を使用して、Azure Blob ストレージから Pig/Hive の出力データをダウンロードします。
 
-![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
+![SSIS Azure コネクタのビッグ データのシナリオを示すスクリーンショット。](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
 ## <a name="scenario-managing-data-in-the-cloud"></a>シナリオ:クラウド内のデータ管理
  SSIS パッケージ内の Azure Blob Destination を使用して、出力データを Azure Blob ストレージに書き込みむか、または Azure Blob Source を使用して、Azure Blob ストレージからデータを読み取ります。
 
-![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
+![OLE DB ソースから Azure Blob Destination へのデータ フローを示すスクリーンショット。](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)
  
- ![SSIS-AzureConnector-CloudArchive-2](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
+ ![Azure BLOB Source から OLE DB 変換先へのデータ フローを示すスクリーンショット。](../integration-services/media/ssis-azureconnector-cloudarchive-2.png)
 
  Azure Blob 列挙子とともに Foreach ループ コンテナーを使用して、複数の BLOB ファイルのデータを処理します。
 
-![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
+![制御フローで Foreach ループ コンテナーを示すスクリーンショット。](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
 
 ## <a name="release-notes"></a>リリース ノート
 
@@ -231,4 +232,4 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 #### <a name="bugfixes"></a>バグ修正
 
 1. 特定のケースで、"配列と互換性のない型の要素にアクセスしようとしました" というエラー メッセージと共に発生する Data Lake Storage Gen2 の接続障害がテストされます
-1. Azure ストレージ エミュレーターのサポートが再開されます
+1. Azure Storage エミュレーターのサポートが再開されます

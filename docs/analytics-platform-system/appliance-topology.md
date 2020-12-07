@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e16e1cd972b6374a5b3d17eef5a406b57b1d3c41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95c5e20097ceb25f8c0897201fd88505dfb29642
+ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401384"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93235179"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>アプライアンストポロジ-分析プラットフォームシステム
 分析プラットフォームシステム全体の概要情報を表示します。  
   
 このページには、現在のアプライアンスのすべてのホストとファブリックノードの、イーサネットと Infiniband の IP アドレスを含む読み取り専用のバージョンが一覧表示されます。  
   
-![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
+![アプライアンストポロジを示す [Microsoft Analytics Platform System Configuration Manager] ダイアログボックスのスクリーンショット。](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>参照  
-[Configuration Manager &#40;Analytics Platform System&#41;を起動します。](launch-the-configuration-manager.md)  
+[Configuration Manager &#40;Analytics Platform System&#41;を起動します。 ](launch-the-configuration-manager.md)  
   

@@ -30,12 +30,12 @@ ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4458702bc53bdec44bd5f690568bcbd06db6b12
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c43f3522612e88a8f17ca6587fd8ffa06795e68b
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484583"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216707"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,6 +44,8 @@ ms.locfileid: "86484583"
 
 > [!NOTE]
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。
+
+Azure SQL Database (Azure SQL Managed Instance を除く) と Azure Synapse Analytics は UTC に従います。 UTC 以外のタイム ゾーンの日付と時刻情報を解釈する必要がある場合、Azure SQL Database または Azure Synapse Analytics で [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) を使用します。
 
  すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
 

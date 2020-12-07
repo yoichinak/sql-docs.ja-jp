@@ -1,7 +1,7 @@
 ---
 title: 'Spark ジョブを実行する: Azure Toolkit for IntelliJ'
 titleSuffix: SQL Server Big Data Clusters
-description: SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを送信します。
+description: ローカル Jar または Py ファイルを送信することで、SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを送信する方法について説明します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726733"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778541"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の IntelliJ で Spark ジョブを送信する
 
@@ -28,7 +28,7 @@ ms.locfileid: "85726733"
 - SQL Server ビッグ データ クラスター。
 - Oracle Java Development Kit。 [Oracle Web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)からインストールできます。
 - IntelliJ IDEA。 [JetBrains Web サイト](https://www.jetbrains.com/idea/download/)からインストールできます。
-- Azure Toolkit for IntelliJ 拡張機能。 インストール手順については、「[Azure Toolkit for IntelliJ のインストール](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)」を参照してください。
+- Azure Toolkit for IntelliJ 拡張機能。 インストール手順については、「[Azure Toolkit for IntelliJ のインストール](/azure/azure-toolkit-for-intellij-installation)」を参照してください。
 
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのリンク
 1. IntelliJ IDEA ツールを開きます。
@@ -118,7 +118,7 @@ SQL Server ビッグ データ クラスターをリンクした後は、それ�
       ![Spark の [Submission]\(送信\) ダイアログ ボックスの Jar ファイルの意味](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > 参照されている JAR と参照されているファイルをアップロードするには、以下を参照してください。[リソースをクラスターにアップロードする方法](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > 参照されている JAR と参照されているファイルをアップロードするには、以下を参照してください。[リソースをクラスターにアップロードする方法](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **アップロード パス**:Jar または Scala プロジェクトのリソース送信の保存場所を指定できます。 サポートされているストレージの種類はいくつかあります。 **[Use Spark interactive session to upload]\(Spark 対話型セッションを使用してアップロードする\)** と **[Use WebHDFS to upload]\(WebHDFS を使用してアップロードする\)** です。
     

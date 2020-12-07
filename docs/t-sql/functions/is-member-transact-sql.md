@@ -1,4 +1,5 @@
 ---
+description: IS_MEMBER (Transact-SQL)
 title: IS_MEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -27,12 +28,12 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1344b307aca66f5850cfc2806899814f53495e61
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: af211f32eb566d402a2b9dfbe3773e12fde6c01a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110989"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116352"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,6 @@ ms.locfileid: "87110989"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
@@ -54,7 +54,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *group* **'**  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
- 確認する Windows グループの名前です。*Domain*\\*Group* という形式にする必要があります。 *グループ* は **sysname**です。  
+ 確認する Windows グループの名前です。*Domain*\\*Group* という形式にする必要があります。 *グループ* は **sysname** です。  
   
  **'** *role* **'**  
  名前を指定します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] チェックされるロールです。 *ロール* は **sysname** 、データベース ロールまたはユーザー定義のロールがサーバーの役割ではないの固定を含めることができます。  
@@ -85,7 +85,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="examples"></a>例  
  次の例は、現在のユーザーがデータベース ロールまたは Windows ドメイン グループのメンバーであるかどうかを確認します。  
   
-```  
+```sql  
 -- Test membership in db_owner and print appropriate message.  
 IF IS_MEMBER ('db_owner') = 1  
    PRINT 'Current user is a member of the db_owner role'  

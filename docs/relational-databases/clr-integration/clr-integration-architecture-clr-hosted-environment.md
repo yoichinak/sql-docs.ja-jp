@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f0bdba9e6d1e91560f78ea3eb91c8cf8aa419b5d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934395"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809541"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合のアーキテクチャ - CLR ホスト環境
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87934395"
   
  このようにスレッド処理、スケジュール設定、およびメモリ管理のモデルが異なるため、数千の同時実行ユーザー セッションをサポートするまで規模が拡大された RDBMS (リレーショナル データベース管理システム) では統合が課題になります。 アーキテクチャでは、スレッド処理、メモリ、および同期プリミティブの API (アプリケーション プログラミング インターフェイス) を直接呼び出すユーザー コードによってシステムのスケーラビリティが損なわれないことを保証する必要があります。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>セキュリティ  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 この手法は、マネージプログラミング言語 (Transact-sql などの管理されていない言語とは異なります) では、このようなリソースにアクセスするための Api を提供することが重要になります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)」を参照してください。  
   
 ###### <a name="performance"></a>パフォーマンス  
@@ -78,7 +78,7 @@ ms.locfileid: "87934395"
  タイプ セーフなコードとは、メモリ構造にアクセスする際に適切に定義された方法のみを使用するコードのことです。 たとえば、有効なオブジェクト参照を例として考えると、タイプ セーフなコードでは、実際のフィールド メンバーに対応してメモリの固定オフセット位置にアクセスできます。 一方、オブジェクトに属するメモリの範囲の内外を問わず、任意のオフセット位置でメモリにアクセスするコードは、タイプ セーフではありません。 アセンブリを CLR に読み込むと、JIT (Just-In-Time) コンパイルを使用して MSIL にコンパイルされる前に、ランタイムによって、コードのタイプ セーフティを判断するためにそのコードを調べる検証フェーズが実行されます。 この検証に正常に合格するコードを、検証可能なタイプ セーフなコードと呼びます。  
   
 ###### <a name="application-domains"></a>アプリケーション ドメイン  
- CLR では、マネージド コード アセンブリを読み込み、実行できるホスト プロセス内の実行領域として、アプリケーション ドメインの概念がサポートされます。 アプリケーション ドメインの境界でアセンブリどうしが分離されます。 アセンブリは、静的変数やデータ メンバーの可視性、およびコードを動的に呼び出す機能に関して分離されます。 また、アプリケーション ドメインはコードのロードとアンロード用のメカニズムでもあります。 アプリケーション ドメインをアンロードしないと、コードをメモリからアンロードできません。 詳細については、「[アプリケーションドメインと CLR 統合のセキュリティ](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014)」を参照してください。  
+ CLR では、マネージド コード アセンブリを読み込み、実行できるホスト プロセス内の実行領域として、アプリケーション ドメインの概念がサポートされます。 アプリケーション ドメインの境界でアセンブリどうしが分離されます。 アセンブリは、静的変数やデータ メンバーの可視性、およびコードを動的に呼び出す機能に関して分離されます。 また、アプリケーション ドメインはコードのロードとアンロード用のメカニズムでもあります。 アプリケーション ドメインをアンロードしないと、コードをメモリからアンロードできません。 詳細については、「 [アプリケーションドメインと CLR 統合のセキュリティ](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014)」を参照してください。  
   
 ###### <a name="code-access-security-cas"></a>コード アクセス セキュリティ (CAS)  
  CLR セキュリティ システムには、マネージド コードに権限を割り当てて、そのコードで実行できる操作の種類を制御する方法が用意されています。 コード アクセス権限は、コード ID (アセンブリの署名やコードの作成元など) に基づいて割り当てられます。  
@@ -98,7 +98,7 @@ ms.locfileid: "87934395"
   
 -   ExternalProcessMgmt。ホスト プロセスを制御する方法が API で公開されるかどうかを示します。  
   
- これらの属性を例として考えると、ホストされている環境で禁止される必要がある SharedState 属性などの HPA の一覧をホストで指定できます。 この場合、CLR では禁止一覧の HPA で注釈が付けられている API がユーザー コードから呼び出されることを拒否します。 詳細については、「[ホスト保護属性と CLR 統合プログラミング](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)」を参照してください。  
+ これらの属性を例として考えると、ホストされている環境で禁止される必要がある SharedState 属性などの HPA の一覧をホストで指定できます。 この場合、CLR では禁止一覧の HPA で注釈が付けられている API がユーザー コードから呼び出されることを拒否します。 詳細については、「 [ホスト保護属性と CLR 統合プログラミング](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)」を参照してください。  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server と CLR の連携方法  
  ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR のスレッド処理、スケジュール設定、同期、およびメモリ管理のモデルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に統合されている様式について説明します。 特に、スケーラビリティ、信頼性、およびセキュリティの目標に照らし合わせて、この統合について解説します。 基本的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、CLR が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部でホストされているときに CLR のオペレーティング システムとして機能します。 CLR は、スレッド処理、スケジュール設定、同期、およびメモリ管理用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって実装される低レベルのルーチンを呼び出します。 これらのルーチンは、エンジンの他の部分で使用されるものと同じプリミティブです [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 このアプローチを使用すると、スケーラビリティ、信頼性、およびセキュリティに関するいくつかの利点が得られます。  
@@ -174,10 +174,9 @@ Thread.EndThreadAffinity();
   
  このような考慮事項を考えると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するクラスの静的変数や静的なデータ メンバーを使用することはお勧めしません。 SAFE アセンブリと EXTERNAL_ACCESS アセンブリの場合、CREATE ASSEMBLY を使用するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアセンブリのメタデータが調べられ、静的なデータ メンバーや変数の使用が検出された場合はこのようなアセンブリを作成できません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **Sharedstate**、 **Synchronization**、 **externalprocessmgmt**の各ホスト保護属性で注釈が付けられた .NET Framework api の呼び出しも許可されません。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Sharedstate**、 **Synchronization**、 **externalprocessmgmt** の各ホスト保護属性で注釈が付けられた .NET Framework api の呼び出しも許可されません。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
-  
   

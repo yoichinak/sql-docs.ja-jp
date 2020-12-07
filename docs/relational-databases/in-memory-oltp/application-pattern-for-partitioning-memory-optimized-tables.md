@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57c6a851f192e9166fef872a9531a73339177238
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730425"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867368"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730425"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] では、比較的新しいデータでパフォーマンス リソースをふんだんに利用するアプリケーション設計パターンがサポートされます。 このパターンは、現在のデータが、以前のデータよりもはるかに頻繁に読み取られるか更新される場合に適用できます。 ここでは、現在のデータが "*アクティブ*" または "*ホット*" で、古いデータが "*コールド*" であるとします。
 
-基本的には、"*ホット*" データをメモリ最適化テーブルに格納します。 場合によっては週または月単位で、"*コールド*" になった古いデータがパーティション テーブルに移動されます。 パーティション テーブルのデータは、メモリ内ではなく、ディスクまたは他のハード ドライブに格納されています。
+基本的には、"*ホット*" データをメモリ最適化テーブルに格納します。 "*コールド*" になった古いデータは、週または月単位でパーティション テーブルに移動されます。 パーティション テーブルのデータは、メモリ内ではなく、ディスクまたは他のハード ドライブに格納されています。
 
 通常、この設計では **datetime** キーを使用して、ホット データとコールド データを効率的に区別するために移動プロセスを有効にします。
 
@@ -298,4 +298,4 @@ GO
 
 ## <a name="see-also"></a>参照
 
-[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md)

@@ -1,4 +1,5 @@
 ---
+description: FLOOR (SSIS 式)
 title: FLOOR (SSIS 式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f0161fe842ad8271d04a69b9cb2726db3403314
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae36dec51176fd1e3d9b50f0c2697e9e17121412
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425544"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
 
@@ -41,7 +42,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  引数の式の数値データ型です。 結果は、 *numeric_expression*と同じデータ型の、計算値の整数部分になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  引数が NULL の場合、FLOOR は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -63,7 +64,7 @@ FLOOR(-123.45)
 FLOOR(0.00)  
 ```  
   
- 0\.00 を返します。  
+ 0.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [CEILING (SSIS 式)](../../integration-services/expressions/ceiling-ssis-expression.md)   

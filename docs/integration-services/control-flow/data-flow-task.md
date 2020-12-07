@@ -1,4 +1,5 @@
 ---
+description: '[データ フロー タスク]'
 title: データ フロー タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919868"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725962"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
 
@@ -107,7 +108,7 @@ ms.locfileid: "86919868"
   
  プロパティを **[プロパティ]** ウィンドウで設定する方法の詳細については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>プログラムによるデータ フロー タスクの構成  
  プログラムによってデータ フロー タスクをパッケージに追加して、データ フローのプロパティを設定する方法の詳細については、次のトピックを参照してください。  
@@ -115,9 +116,8 @@ ms.locfileid: "86919868"
 -   [プログラムによるデータ フロー タスクの追加](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
-  
+ technet.microsoft.com のビデオ「 [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10))」  
   

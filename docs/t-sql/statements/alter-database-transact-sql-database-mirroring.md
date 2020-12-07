@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE データベース ミラーリング (Transact-SQL)
 title: ALTER DATABASE データベース ミラーリング (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - ALTER DATABASE statement, database mirroring
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eb2c9c381bc02c043e253aa66f43001f48ebd9e4
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05d2abb4b471722b035fda1b0101b8111285f1f1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301811"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541455"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) データベース ミラーリング
 

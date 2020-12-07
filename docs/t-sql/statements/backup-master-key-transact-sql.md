@@ -1,4 +1,5 @@
 ---
+description: BACKUP MASTER KEY (Transact-SQL)
 title: BACKUP MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 536195389a6a2015fd365f4ec5c33e724655707d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8c7d0bd39ebda34677469a45687fd78f0e4124cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380925"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126199"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,7 @@ ms.locfileid: "86380925"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 BACKUP MASTER KEY TO FILE = 'path_to_file'   
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
@@ -55,7 +55,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='*password*'  
  ファイル内のマスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
  マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
@@ -66,7 +66,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` マスター キーのバックアップを作成します。 このマスター キーはサービス マスター キーによって暗号化されているので、マスター キーを開くときにはパスワードを指定する必要があります。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'sfj5300osdVdgwdfkli7';  
 BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'   

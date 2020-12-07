@@ -1,4 +1,5 @@
 ---
+description: '[構成] ダイアログ ボックス'
 title: '[構成] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a7166ecf231a49e566bbecb7390abe33e61853
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdbcc9b0a03b0afefe56152dc6b29c7ae59ea4cc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922674"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130681"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
 
@@ -85,7 +86,7 @@ ms.locfileid: "86922674"
   
  環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
   
- **Environment**  
+ **環境**  
  環境を一覧表示します。  
   
  **環境フォルダー**  

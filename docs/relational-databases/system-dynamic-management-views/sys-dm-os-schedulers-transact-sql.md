@@ -1,4 +1,5 @@
 ---
+description: dm_os_schedulers (Transact-sql)
 title: dm_os_schedulers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -17,19 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ffb03f426977b982c79df26ede26a777a9a98aeb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012045"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543910"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>dm_os_schedulers (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 スケジューラの詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 スケジューラの詳細については、「 [スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。  
   
 > [!NOTE]  
 >  またはからこれを呼び出すに [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] は [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 、 **dm_pdw_nodes_os_schedulers**という名前を使用します。  
@@ -39,8 +41,8 @@ ms.locfileid: "86012045"
 |scheduler_address|**varbinary (8)**|スケジューラのメモリアドレス。 NULL 値は許可されません。|  
 |parent_node_id|**int**|スケジューラが属しているノードの ID。親ノードとも呼ばれます。 これは非均質メモリ アクセス (NUMA) ノードを表します。 NULL 値は許可されません。|  
 |scheduler_id|**int**|スケジューラの ID。 通常のクエリを実行するために使用されるすべてのスケジューラには、1048576未満の ID 番号が付けられています。 Id が1048576以上のスケジューラは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、専用管理者接続スケジューラなど、によって内部的に使用されます。 NULL 値は許可されません。|  
-|cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は、の場合とは関係がないことを示していません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 追加のアフィニティ情報については[、「sys. dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 」を参照してください。|  
-|状態|**nvarchar(60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> -非表示 (オンライン)<br />-非表示 (オフライン)<br />-オンラインで表示<br />-オフラインで表示<br />-オンラインで表示 (DAC)<br />-HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示のスケジューラは、の内部の要求を処理するために使用され [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 表示されるスケジューラは、ユーザー要求を処理するために使用されます。<br /><br /> オフラインスケジューラは、関係マスクでオフラインになっているプロセッサにマップされるため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で実行されていることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
+|cpu_id|**smallint**|スケジューラに割り当てられた CPU ID。<br /><br /> NULL 値は許可されません。<br /><br /> **注:** 255 は、の場合とは関係がないことを示していません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 追加のアフィニティ情報については [、「sys. dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 」を参照してください。|  
+|status|**nvarchar(60)**|スケジューラの状態。 次の値のいずれかです。<br /><br /> -非表示 (オンライン)<br />-非表示 (オフライン)<br />-オンラインで表示<br />-オフラインで表示<br />-オンラインで表示 (DAC)<br />-HOT_ADDED<br /><br /> NULL 値は許可されません。<br /><br /> 非表示のスケジューラは、の内部の要求を処理するために使用され [!INCLUDE[ssDE](../../includes/ssde-md.md)] ます。 表示されるスケジューラは、ユーザー要求を処理するために使用されます。<br /><br /> オフラインスケジューラは、関係マスクでオフラインになっているプロセッサにマップされるため、要求の処理には使用されません。 ONLINE スケジューラは、関係マスクでオンラインになっているプロセッサにマップされ、スレッドの処理に使用されます。<br /><br /> DAC は、スケジューラが専用管理者接続で実行されていることを示します。<br /><br /> HOT ADDED は、スケジューラがホット アド CPU イベントに応答して追加されたことを示します。|  
 |is_online|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーで使用可能なプロセッサの一部だけを使用するようにが構成されている場合、この構成では、一部のスケジューラが関係マスクに含まれていないプロセッサにマップされていることを意味します。 この場合、この列は0を返します。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
 |preemptive_switches_count|**int**|このスケジューラのワーカーがプリエンプティブモードに切り替えた回数。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。|  
@@ -52,7 +54,7 @@ ms.locfileid: "86012045"
 |active_workers_count|**int**|アクティブなワーカーの数。 アクティブなワーカーはプリエンプティブではなく、タスクが関連付けられており、実行中、実行可能、または中断されている必要があります。 NULL 値は許可されません。|  
 |work_queue_count|**bigint**|保留中のキュー内のタスクの数。 保留キュー内のタスクは、ワーカーによる取得を待機しています。 NULL 値は許可されません。|  
 |pending_disk_io_count|**int**|完了を待機している保留中の i/o の数。 各スケジューラには、コンテキスト切り替えが行われるたびに完了したかどうかを確認するためにチェックされる保留中の i/o の一覧があります。 要求が挿入されると、カウントがインクリメントされます。 要求が完了すると、カウントは 1 減ります。 この数は、I/O の状態を示すわけではありません。 NULL 値は許可されません。|  
-|load_factor|**int**|このスケジューラで認識されている負荷を示す内部値。 この値は、新しいタスクをこのスケジューラまたは別のスケジューラに配置する必要があるかどうかを判断するために使用されます。 この値は、スケジューラが均等に読み込まれていないと思われる場合にデバッグのために役立ちます。 ルーティングの決定は、スケジューラの負荷に基づいて行われます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ノードとスケジューラの占有率も使用して、リソースを取得するための最適な場所を決定します。 タスクがエンキューされると、占有率が増加します。 タスクが完了すると、占有率は減少します。 占有率を利用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS で負荷を効率よく分散できます。 NULL 値は許可されません。|  
+|load_factor|**int**|このスケジューラで認識されている負荷を示す内部値。 この値は、新しいタスクをこのスケジューラまたは別のスケジューラに配置する必要があるかどうかを判断するために使用されます。 この値は、スケジューラが均等に読み込まれていないと思われる場合にデバッグのために役立ちます。 ルーティングの決定は、スケジューラの負荷に基づいて行われます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノードとスケジューラの占有率も使用して、リソースを取得するための最適な場所を決定します。 タスクがエンキューされると、占有率が増加します。 タスクが完了すると、占有率は減少します。 占有率を利用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OS で負荷を効率よく分散できます。 NULL 値は許可されません。|  
 |yield_count|**int**|このスケジューラの進行状況を示すために使用される内部値。 この値は、スケジューラモニターによって使用され、スケジューラのワーカーが時間内に他のワーカーに応答していないかどうかを判断します。 この値は、ワーカーまたはタスクが新しいワーカーに移行されたことを示すものではありません。 NULL 値は許可されません。|  
 |last_timer_activity|**bigint**|前回、スケジューラのタイマー キューがスケジューラにより確認された時間 (CPU ティック単位)。 NULL 値は許可されません。|  
 |failed_to_create_worker|**bit**|このスケジューラで新しいワーカーを作成できなかった場合は、1に設定します。 これは通常、メモリ制約が原因で発生します。 NULL 値が許可されます。|  
@@ -64,7 +66,7 @@ ms.locfileid: "86012045"
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)][サービスレベル目標](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)に基づく調整を示します。は、Azure 以外のバージョンのでは常に0になり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値が許可されます。|
 |total_scheduler_delay_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降 <br><br> 1つのワーカーが切り替えを行ってから、もう1つの切り替えが切り替わるまでの時間。 プリエンプティブなワーカーが次の非プリエンプティブワーカーのスケジュール設定を遅らせた場合、または他のプロセスからの OS スケジューリングスレッドによって発生する場合があります。 NULL 値は許可されません。|
 |ideal_workers_limit|**int**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降 <br><br> スケジューラに最適なワーカーの数。 現在のワーカーが負荷分散されたタスクの負荷によって制限を超過した場合、アイドル状態になると、そのワーカーは切り捨てられます。 NULL 値は許可されません。|
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   
@@ -130,13 +132,13 @@ active_workers_count work_queue_count
   
 -   出力には、23個のアクティブなタスクがあります。 これらのタスクには、によって開始されたリソース管理タスクに加えて、ユーザー要求が含まれ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 タスクの例とし [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、リソースモニター (numa ノードごとに1つ)、LAZY WRITER (numa ノードごとに1つ)、ロックモニター、チェックポイント、ログライターなどがあります。  
   
--   NUMA ノード `0` は CPU `1` にマップされており、NUMA ノード `1` は CPU `0` にマップされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は通常、ノード0以外の NUMA ノードで開始されます。  
+-   NUMA ノード `0` は CPU `1` にマップされており、NUMA ノード `1` は CPU `0` にマップされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は通常、ノード0以外の NUMA ノードで開始されます。  
   
 -   ここでは `runnable_tasks_count` に `0` が返されており、これはアクティブに実行中のタスクが存在しないことを意味します。 ただし、アクティブなセッションが存在する場合もあります。  
   
 -   `255`DAC を表す Scheduler には `3` worker が関連付けられています。 これらのワーカーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に割り当てられ、変更されることはありません。 これらのワーカーは、DAC クエリのみを処理するために使用されます。 このスケジューラの2つのタスクは、接続マネージャーとアイドル状態のワーカーを表します。  
   
--   `active_workers_count`タスクが関連付けられ、非プリエンプティブモードで実行されているすべてのワーカーを表します。 ネットワークリスナーなどの一部のタスクは、プリエンプティブスケジューリングで実行されます。  
+-   `active_workers_count` タスクが関連付けられ、非プリエンプティブモードで実行されているすべてのワーカーを表します。 ネットワークリスナーなどの一部のタスクは、プリエンプティブスケジューリングで実行されます。  
   
 -   非表示のスケジューラは、一般的なユーザー要求を処理しません。 ただし、DAC スケジューラは例外です。 この DAC スケジューラには、要求を処理するためのスレッドが 1 つあります。  
   

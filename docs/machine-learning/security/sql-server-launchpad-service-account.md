@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5ce304db442ab9e4c1fd283cb43eed83829710b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9a089bb123698a8a06c92bb1a95e8b2c3956907
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772388"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193042"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad のサービスの構成
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] は外部スクリプトを管理および実行するサービスで、フルテキスト インデックス作成およびクエリ サービスが、フルテキスト クエリを処理するために別のホストを起動する方法に似ています。
 
@@ -27,16 +27,16 @@ ms.locfileid: "85772388"
 
 既定では、SQL Server Launchpad は **NT Service\MSSQLLaunchpad** で実行されるように構成されています。これは、外部スクリプトの実行に必要なすべてのアクセス許可によりプロビジョニングされています。 このアカウントからアクセス許可を削除すると、Launchpad が起動に失敗するか、外部スクリプトを実行するはずの SQL Server インスタンスにアクセスできなくなる可能性があります。
 
-サービス アカウントを変更する場合は、必ず [[ローカル セキュリティ ポリシー] コンソール](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)を使用してください。
+サービス アカウントを変更する場合は、必ず [[ローカル セキュリティ ポリシー] コンソール](/windows/security/threat-protection/security-policy-settings/how-to-configure-security-policy-settings)を使用してください。
 
 このアカウントに必要なアクセス許可を次の表に示します。
 
 | グループ ポリシー設定 | 定数名 |
 |----------------------|---------------|
-| [プロセスのメモリ クォータの増加](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
-| [走査チェックのバイパス](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
-| [サービスとしてログオン](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
-| [プロセス レベル トークンを置き換える](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
+| [プロセスのメモリ クォータの増加](/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [走査チェックのバイパス](/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [サービスとしてログオン](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [プロセス レベル トークンを置き換える](/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 SQL Server サービスの実行に必要なアクセス許可の詳細については、「[Configure Windows Service Accounts and Permissions (Windows サービス アカウントとアクセス許可の構成)](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。
 

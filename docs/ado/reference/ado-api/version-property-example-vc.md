@@ -1,8 +1,9 @@
 ---
+description: Version プロパティの例 (VC++)
 title: Version プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec19a5f4968613bbf85137485f9256937499a354
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987893"
 ---
 # <a name="version-property-example-vc"></a>Version プロパティの例 (VC++)
-この例では、 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[version](../../../ado/reference/ado-api/version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
+この例では、 [Connection](./connection-object-ado.md)オブジェクトの[version](./version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
   
 -   現在の DBMS の名前とバージョン。  
   
@@ -35,7 +36,7 @@ ms.locfileid: "82758598"
 -   ODBC ドライバーの名前とバージョン。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -135,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [Version プロパティ (ADO)](./version-property-ado.md)

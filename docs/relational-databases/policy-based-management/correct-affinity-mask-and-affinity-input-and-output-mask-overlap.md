@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/01/2020
 ms.locfileid: "85654716"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>affinity mask と affinity I/O mask の重複の修正
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   このルールでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに、affinity mask オプションと affinity I/O mask オプションの両方が割り当てられたプロセッサが 1 つ以上あるかどうかを確認します。 複数のプロセッサが搭載されたコンピューターでは、affinity mask オプションと affinity I/O mask オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用される CPU を指定します。 affinity mask と affinity I/O mask の両方で CPU を有効にすると、プロセッサが過剰に使用されるため、パフォーマンスが低下する可能性があります。  
   

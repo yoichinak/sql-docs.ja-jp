@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922247"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725508"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922247"
   
  [ISQLServerConnection インターフェイス](../../connect/jdbc/reference/isqlserverconnection-interface.md)を使用すると、クライアント接続 ID をプログラムで取得できます。 接続 ID は接続関連の例外にも含まれます。  
   
- 接続エラーが発生する場合、サーバーの Built In Diagnostics (BID) トレース情報および接続リング バッファーに含まれるクライアント接続 ID を使用すると、クライアント接続をサーバー上の接続に関連付けることができます。 サーバー上の BID トレースの詳細については、「[SQL Server 2008 でのデータ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 データ アクセスのトレースに関する記事には、データ アクセスのトレースに関する情報も含まれていますが、これは [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には当てはまりません。[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用してデータ アクセスのトレースを実行する方法については、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」を参照してください。  
+ 接続エラーが発生する場合、サーバーの Built In Diagnostics (BID) トレース情報および接続リング バッファーに含まれるクライアント接続 ID を使用すると、クライアント接続をサーバー上の接続に関連付けることができます。 サーバー上の BID トレースの詳細については、「[SQL Server 2008 でのデータ アクセスのトレース](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))」を参照してください。 データ アクセスのトレースに関する記事には、データ アクセスのトレースに関する情報も含まれていますが、これは [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には当てはまりません。[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用してデータ アクセスのトレースを実行する方法については、「[ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)」を参照してください。  
   
  JDBC Driver からは、スレッド固有のアクティビティ ID も送信されます。 アクティビティ ID は、TRACK_CAUSAILITY オプションを有効にしてセッションを開始した場合、拡張イベント セッションでキャプチャされます。 アクティブな接続に関するパフォーマンスの問題については、クライアントのトレース (ActivityID フィールド) からアクティビティ ID を取得し、このアクティビティ ID を拡張イベント出力で探すことができます。 拡張イベント内のアクティビティ ID とは、16 バイトの GUID (クライアント接続 ID の GUID とは異なる) の後に 4 バイトのシーケンス番号が付いたものです。 このシーケンス番号は、スレッド内の要求順序を表しています。 ActivityId は、SQL バッチ ステートメントおよび RPC 要求用に送信されます。 ActivityId をサーバーに送信できるようにするには、まず Logging.Properties ファイル内で次のキー/値ペアを指定する必要があります。  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

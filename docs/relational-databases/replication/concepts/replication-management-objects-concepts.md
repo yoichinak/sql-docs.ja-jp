@@ -1,4 +1,5 @@
 ---
+description: Replication Management Objects Concepts
 title: レプリケーション管理オブジェクトの概念 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915839"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88490650"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "86915839"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "86915839"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   

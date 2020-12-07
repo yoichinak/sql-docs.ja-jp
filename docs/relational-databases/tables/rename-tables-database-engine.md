@@ -1,4 +1,5 @@
 ---
+description: テーブル名の変更 (データベース エンジン)
 title: テーブル名の変更 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/23/2018
@@ -15,19 +16,20 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df3898847b0470b93e89ffdad46682bc9475f5b1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87a05942a1061db1f074266d0b5df3b1797f5e73
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011844"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128661"
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 SQL Server または Azure SQL Database のテーブル名を変更します。
 
-Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名前を変更するには、[RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。 
+Azure Synapse Analytics または Parallel Data Warehouse でテーブルの名前を変更するには、t-sql [RENAME OBJECT](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。 
   
 > [!CAUTION]  
 >  テーブル名の変更については、十分に検討してください。 そのテーブルを参照するクエリ、ビュー、ユーザー定義関数、ストアド プロシージャ、またはプログラムが存在する場合、テーブル名を変更すると、各オブジェクトが無効になります。  
@@ -38,7 +40,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **テーブル名を変更する方法:**  
   
@@ -68,13 +70,13 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
 4.  この操作を取り消すには、このフィールド外に移動する前に Esc キーを押します。  
   
-5.  **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-rename-a-table"></a>テーブル名を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

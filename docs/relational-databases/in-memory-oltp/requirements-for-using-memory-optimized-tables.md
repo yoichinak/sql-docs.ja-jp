@@ -9,19 +9,19 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: afb7af65cca7d2ee33a2fde38d77b6236320514b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867052"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Azure DB でのインメモリ OLTP の使用については、「 [SQL Database でのインメモリ (プレビュー) の使用](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)」を参照してください。  
+  Azure DB でのインメモリ OLTP の使用については、「 [SQL Database でのインメモリ (プレビュー) の使用](/azure/azure-sql/in-memory-oltp-overview)」を参照してください。  
   
  インメモリ OLTP を使用する場合、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に加え、以下も要件です。  
   
@@ -59,4 +59,3 @@ ms.locfileid: "85722367"
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
  [データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)  
  [メモリ アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)
-  

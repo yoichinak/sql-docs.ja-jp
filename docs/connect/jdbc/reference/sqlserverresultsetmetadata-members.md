@@ -1,4 +1,5 @@
 ---
+description: SQLServerResultSetMetaData のメンバー
 title: SQLServerResultSetMetaData のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1010b3d45bcca0c7b719e0a91d007f3acbc0f684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462654"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "67970520"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls、columnNullable、columnNullableUnknown|  
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|指定した列が含まれるテーブルのカタログ名を取得します。|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。|  

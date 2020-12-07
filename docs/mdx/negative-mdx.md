@@ -1,4 +1,5 @@
 ---
+description: '- 低下MDX'
 title: '- 低下(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8550e75d4f0807263678fc7badec8c8a0be52cfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483737"
 ---
 # <a name="--negative-mdx"></a>- (負号) (MDX)
 
@@ -34,7 +35,7 @@ ms.locfileid: "68088372"
 ## <a name="return-value"></a>戻り値  
  指定されているパラメーターのデータ型を持つ負の値です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この演算子の使用例を次に示します。  
   
 ```  
@@ -52,7 +53,7 @@ WHERE
     {[Measures].[Resell Cost as Negative]}  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

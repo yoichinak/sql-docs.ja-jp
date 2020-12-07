@@ -1,4 +1,5 @@
 ---
+description: DML トリガーの作成
 title: DML トリガーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2017
@@ -19,12 +20,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6248223fd2901a02e7aed494ea6a8a305e1f56ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757673"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125059"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,9 +48,9 @@ ms.locfileid: "85757673"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
+2.  **[データベース]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader** テーブルの順に展開します。  
   
 3.  **[トリガー]** を右クリックし、 **[新しいトリガー]** をクリックします。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85757673"
   
 6.  **[OK]** をクリックします。  
   
-7.  **クエリ エディター**で、コメント `-- Insert statements for trigger here` を次のステートメントに置き換えます。  
+7.  **クエリ エディター** で、コメント `-- Insert statements for trigger here` を次のステートメントに置き換えます。  
   
     ```sql  
     IF @@ROWCOUNT = 1  
@@ -103,7 +104,7 @@ ms.locfileid: "85757673"
   
 ###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
 2.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   

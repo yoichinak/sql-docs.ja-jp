@@ -1,4 +1,5 @@
 ---
+description: IsNull (geometry データ型)
 title: IsNull (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555674"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88497053"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86555674"
   
 
 ## <a name="see-also"></a>参照  
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

@@ -3,7 +3,7 @@ title: 構文ペアの自動照合
 description: クエリ エディター (区切り記号の照合)、XMLA クエリ エディター (中かっこの照合)、MDX と DMX (かっこの照合) での構文ペアの自動照合について学習します。
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
@@ -12,12 +12,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0bf089cd4cc48a04afd867a3e8b805eb9097e8c2
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920948"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88902077"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

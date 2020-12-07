@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS PROFILE (Transact-SQL)
 title: SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - STATISTICS PROFILE option
 - statistical information [SQL Server], profiles
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 66b4376a41630a45679d2587c7ef8ff920d8f5ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1596dc3d6c191ea823c8382aa93a520e784be115
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765686"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541226"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765686"
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  STATISTICS PROFILE が ON の場合、クエリを実行すると、それぞれ通常の結果セットに加えて、クエリ実行のプロファイルを示す追加の結果セットが返されます。  
   
  追加の結果セットには、クエリに関する SHOWPLAN_ALL 列と次の追加列が含まれます。  

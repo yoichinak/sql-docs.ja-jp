@@ -1,4 +1,5 @@
 ---
+description: TYPEPROPERTY (Transact-SQL)
 title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a504fb547e89a348d1fe6b5f6168f81fd0d7656
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0d97d422cb5f3ca7c248b3c3175eb172a5180be
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379469"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87110712"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TYPEPROPERTY (type , property)  
 ```  
   
@@ -70,7 +71,7 @@ TYPEPROPERTY (type , property)
 ### <a name="a-identifying-the-owner-of-a-data-type"></a>A. データ型の所有者を特定する  
  次の例では、データ型の所有者を返します。  
   
-```  
+```sql
 SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id, name, system_type_id, user_type_id, schema_id  
 FROM sys.types;  
 ```  
@@ -78,7 +79,7 @@ FROM sys.types;
 ### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>B. tinyint データ型の有効桁数を返す  
  次の例では、`tinyint` データ型の有効桁数を返します。  
   
-```  
+```sql
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   

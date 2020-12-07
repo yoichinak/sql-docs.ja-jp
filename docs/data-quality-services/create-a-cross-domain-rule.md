@@ -1,4 +1,5 @@
 ---
+description: クロス ドメイン ルールの作成
 title: クロス ドメイン ルールの作成
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3124e5d844e3b0e1adc2053b0d62bdb000591f9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900473"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728026"
 ---
 # <a name="create-a-cross-domain-rule"></a>クロス ドメイン ルールの作成
 
@@ -43,7 +44,7 @@ ms.locfileid: "85900473"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  クロス ドメイン ルールを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="create-cross-domain-rules"></a><a name="Create"></a>クロスドメインルールの作成  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> クロスドメインルールの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -78,7 +79,7 @@ ms.locfileid: "85900473"
   
 9. 以下のテストの手順に進みます。  
   
-##  <a name="test-cross-domain-rules"></a><a name="Test"></a>クロスドメインルールのテスト  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> クロスドメインルールのテスト  
   
 1.  次の手順に従ってクロス ドメイン ルールをテストします。  
   
@@ -90,13 +91,12 @@ ms.locfileid: "85900473"
   
     4.  **[ドメイン ルールの新しいテスト用語を追加]** アイコンをもう一度クリックして、別の一連のテスト値を追加します。  
   
-    5.  [**すべての用語でドメインルールをテスト**する] アイコンをクリックします。 一連のテスト値が有効な場合は、その行の **[有効性]** 列にチェック マークが表示されます。 一連のテスト値が有効でない場合は、その行の [有効性] 列に感嘆符付きの三角形が表示されます。  
+    5.  [ **すべての用語でドメインルールをテスト** する] アイコンをクリックします。 一連のテスト値が有効な場合は、その行の **[有効性]** 列にチェック マークが表示されます。 一連のテスト値が有効でない場合は、その行の [有効性] 列に感嘆符付きの三角形が表示されます。  
   
     6.  テストが完了したら、 **[複合ドメイン ルールのテスト]** ダイアログ ボックスの **[閉じる]** をクリックします。  
   
-2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+2.  クロス ドメイン ルールが完成したら、 **[完了]** をクリックし、「 [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a>補足情報: クロスドメインルールを作成した後  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> 補足情報: クロスドメインルールを作成した後  
  クロス ドメイン ルールを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
-  
   

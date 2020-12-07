@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472668"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542997"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  トレースに対して、イベントまたはイベント列を追加または削除します。 **sp_trace_setevent**は、停止している既存のトレースに対してのみ実行できます (*状態*は**0**)。 このストアドプロシージャが存在しないトレースまたは*状態*が**0**以外のトレースで実行されると、エラーが返されます。  
+  トレースに対して、イベントまたはイベント列を追加または削除します。 **sp_trace_setevent** は、停止している既存のトレースに対してのみ実行できます (*状態* は **0**)。 このストアドプロシージャが存在しないトレースまたは *状態* が **0**以外のトレースで実行されると、エラーが返されます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @traceid = ] trace_id`変更するトレースの ID を指定します。 *trace_id*は**int**,、既定値はありません。 ユーザーは、この*trace_id*値を採用して、トレースの識別、変更、および制御を行います。  
+`[ @traceid = ] trace_id` 変更するトレースの ID を指定します。 *trace_id* は **int**,、既定値はありません。 ユーザーは、この *trace_id* 値を採用して、トレースの識別、変更、および制御を行います。  
   
-`[ @eventid = ] event_id`有効にするイベントの ID を設定します。 *event_id*は**int**,、既定値はありません。  
+`[ @eventid = ] event_id` 有効にするイベントの ID を設定します。 *event_id* は **int**,、既定値はありません。  
   
  次の表は、トレースに対して追加または削除できるイベントの一覧です。  
   
@@ -118,7 +119,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|[!INCLUDE[tsql](../../includes/tsql-md.md)]ODBC、OLE DB、または db-library によってステートメントで以前に開かれたカーソルは閉じられます。|  
 |79|列の統計情報がありません|オプティマイザーに有効な列の統計が利用できません。|  
 |80|Missing Join Predicate|結合述語がないクエリが実行されています。 クエリの終了に時間がかかる可能性があります。|  
-|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ使用量の増加または減少は、1メガバイト (MB) または最大サーバーメモリの5% のどちらか大きい方になります。|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ使用量の増加または減少は、1メガバイト (MB) または最大サーバーメモリの5% のどちらか大きい方になります。|  
 |82-91|ユーザーが構成可能 (0-9)|ユーザーが定義したイベントデータ。|  
 |92|データファイルの自動拡張|データファイルがサーバーによって自動的に拡張されたことを示します。|  
 |93|Log File Auto Grow|ログ ファイルがサーバーによって自動的に拡張されたことを示します。|  
@@ -133,13 +134,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |102|監査データベーススコープ GDR|データベースに対する権限の許可などのデータベース限定の操作時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のユーザーがステートメント権限の GRANT、DENY、REVOKE を実行するたびに発生します。|  
 |103|Audit Object GDR イベント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のユーザーがオブジェクト権限の GRANT、DENY、REVOKE を実行するたびに発生します。|  
 |104|Audit AddLogin イベント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sp_addlogin**と**sp_droplogin**について、ログインが追加または削除されたときに発生します。|  
-|105|Audit Login GDR Event|Windows ログイン権限が追加または削除されたときに発生します。**sp_grantlogin**、 **sp_revokelogin**、 **sp_denylogin**。|  
-|106|Audit Login Change Property Event|パスワード以外のログインのプロパティが変更された場合に発生します。**sp_defaultdb**と**sp_defaultlanguage**の場合。|  
+|105|Audit Login GDR Event|Windows ログイン権限が追加または削除されたときに発生します。 **sp_grantlogin**、 **sp_revokelogin**、 **sp_denylogin**。|  
+|106|Audit Login Change Property Event|パスワード以外のログインのプロパティが変更された場合に発生します。 **sp_defaultdb** と **sp_defaultlanguage**の場合。|  
 |107|Audit Login Change Password イベント|ログインパスワードが変更されたときに発生し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。<br /><br /> パスワードは記録されません。|  
-|108|Audit Add Login to Server Role イベント|固定サーバーロールに対してログインが追加または削除されたときに発生します。**sp_addsrvrolemember**の場合は、 **sp_dropsrvrolemember**の場合はです。|  
-|109|Audit Add DB User Event|データベースユーザー (Windows または) としてデータベースに対してログインが追加または削除されたときに発生し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および**sp_dropuser**です。|  
-|110|Audit Add Member to DB ロールイベント|データベースに対してデータベースユーザー (固定またはユーザー定義) としてログインが追加または削除されたときに発生します。**sp_addrolemember**、 **sp_droprolemember**、 **sp_changegroup**。|  
-|111|Audit Add Role イベント|データベースにデータベースユーザーとしてログインが追加または削除されたときに発生します。**sp_addrole**と**sp_droprole**の場合。|  
+|108|Audit Add Login to Server Role イベント|固定サーバーロールに対してログインが追加または削除されたときに発生します。 **sp_addsrvrolemember**の場合は、 **sp_dropsrvrolemember**の場合はです。|  
+|109|Audit Add DB User Event|データベースユーザー (Windows または) としてデータベースに対してログインが追加または削除されたときに発生し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**、および **sp_dropuser**です。|  
+|110|Audit Add Member to DB ロールイベント|データベースに対してデータベースユーザー (固定またはユーザー定義) としてログインが追加または削除されたときに発生します。 **sp_addrolemember**、 **sp_droprolemember**、 **sp_changegroup**。|  
+|111|Audit Add Role イベント|データベースにデータベースユーザーとしてログインが追加または削除されたときに発生します。 **sp_addrole** と **sp_droprole**の場合。|  
 |112|Audit App Role Change Password Event|アプリケーションロールのパスワードが変更されたときに発生します。|  
 |113|Audit Statement Permission Event|CREATE TABLE などのステートメント権限が使用されたときに発生します。|  
 |114|Audit Schema Object Access Event|SELECT などのオブジェクト権限が使用されたときに、それが成功したかどうかに関係なく発生します。|  
@@ -148,14 +149,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |117|Audit Change Audit Event|監査トレースが変更されたときに発生します。|  
 |118|Audit Object Derived Permission Event|CREATE、ALTER、および DROP オブジェクトコマンドが発行されたときに発生します。|  
 |119|OLEDB 呼び出しイベント|分散クエリとリモート ストアド プロシージャに対して、OLE DB プロバイダー呼び出しが行われたときに発生します。|  
-|120|OLEDB QueryInterface Event|分散クエリとリモートストアドプロシージャに対して OLE DB **QueryInterface**呼び出しが行われたときに発生します。|  
+|120|OLEDB QueryInterface Event|分散クエリとリモートストアドプロシージャに対して OLE DB **QueryInterface** 呼び出しが行われたときに発生します。|  
 |121|OLEDB DataRead Event|OLE DB プロバイダーに対して、データ要求の呼び出しが行われたときに発生します。|  
-|122|Showplan XML|SQL ステートメントの実行時に発生します。 プラン表示操作を識別するには、このイベントを含めます。 各イベントは、整形式の XML ドキュメントに格納されます。 このイベントの**バイナリ**列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
+|122|Showplan XML|SQL ステートメントの実行時に発生します。 プラン表示操作を識別するには、このイベントを含めます。 各イベントは、整形式の XML ドキュメントに格納されます。 このイベントの **バイナリ** 列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
 |123|SQL: FullTextQuery|フルテキスト クエリが実行されたときに発生します。|  
 |124|Broker:Conversation|メッセージ交換の進行状況を報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] します。|  
 |125|廃止に関するお知らせ|の将来のバージョンで削除される予定の機能を使用すると発生し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |126|Deprecation Final Support|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の次の主要なリリースで削除される予定の機能を使用したときに発生します。|  
-|127|交換書き込みイベント|並列クエリプランの通信バッファーが**tempdb**データベースに一時的に書き込まれたときに発生します。|  
+|127|交換書き込みイベント|並列クエリプランの通信バッファーが **tempdb** データベースに一時的に書き込まれたときに発生します。|  
 |128|Audit Database Management イベント|データベースが作成、変更、または削除されたときに発生します。|  
 |129|Audit Database Object Management イベント|CREATE、ALTER、または DROP ステートメントがスキーマなどのデータベースオブジェクトで実行されるときに発生します。|  
 |130|Audit Database Principal Management Event|ユーザーなどのプリンシパルがデータベースで作成、変更、または削除されるときに発生します。|  
@@ -173,7 +174,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |142|Broker:Transmission|トランスポート層でエラーが発生したことを示し [!INCLUDE[ssSB](../../includes/sssb-md.md)] ます。 エラー番号と状態の値で、エラーの原因を確認できます。|  
 |143|Broker: キューが無効です|キューに連続して5つのトランザクションロールバックがあったため、有害メッセージが検出されたことを示し [!INCLUDE[ssSB](../../includes/sssb-md.md)] ます。 イベントには、有害メッセージを含むキューのデータベース ID とキュー ID が含まれます。|  
 |144-145|予約済み||  
-|146|Showplan XML Statistics Profile|SQL ステートメントの実行時に発生します。 Showplan 操作を識別し、コンパイル時の完全なデータを表示します。 このイベントの**バイナリ**列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
+|146|Showplan XML Statistics Profile|SQL ステートメントの実行時に発生します。 Showplan 操作を識別し、コンパイル時の完全なデータを表示します。 このイベントの **バイナリ** 列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
 |148|Deadlock Graph|試行がデッドロックの一部であり、デッドロックの対象として選択されたために、ロックを取得しようとしたときに発生します。 デッドロックについての XML の説明が提供されます。|  
 |149|Broker: リモートメッセージの受信確認|[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージの受信確認が送信または受信されたときに発生します。|  
 |150|トレースファイルの終了|トレースファイルのロールオーバー中にトレースファイルが閉じたときに発生します。|  
@@ -194,7 +195,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |165|Performance statistics|コンパイル済みのクエリプランが初めてキャッシュされたとき、再コンパイルされたとき、またはプランキャッシュから削除されたときに発生します。|  
 |166|SQL:StmtRecompile|ステートメントレベルの再コンパイルが発生したときに発生します。|  
 |167|データベースミラーリングの状態の変更|ミラー化データベースの状態が変更されたときに発生します。|  
-|168|Showplan XML For Query Compile|SQL ステートメントのコンパイル時に発生します。 コンパイル時の完全なデータが表示されます。 このイベントの**バイナリ**列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
+|168|Showplan XML For Query Compile|SQL ステートメントのコンパイル時に発生します。 コンパイル時の完全なデータが表示されます。 このイベントの **バイナリ** 列には、エンコードされたプラン表示が含まれていることに注意してください。 トレースを開いて Showplan を表示するには、SQL Server プロファイラーを使用します。|  
 |169|Showplan All For Query Compile|SQL ステートメントのコンパイル時に発生します。 コンパイル時の完全なデータを表示します。 プラン表示演算子を識別するために使用します。|  
 |170|Audit Server Scope GDR イベント|ログインの作成など、サーバースコープの権限に対して grant、deny、または revoke イベントが発生したことを示します。|  
 |171|Audit Server Object GDR イベント|テーブルや関数などのスキーマオブジェクトに対して grant、deny、または revoke イベントが発生したことを示します。|  
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|SQL Server でプラン ガイドを含むクエリまたはバッチの実行プランを生成できなかったことを示します。 プランガイドを適用せずにこのクエリまたはバッチの実行プランを生成しようとしました SQL Server。 無効なプランガイドがこの問題の原因である可能性があります。 プランガイドを検証するには、fn_validate_plan_guide システム関数を使用します。|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`イベントに対して追加する列の ID を指定します。 *column_id*は**int**,、既定値はありません。  
+`[ @columnid = ] column_id` イベントに対して追加する列の ID を指定します。 *column_id* は **int**,、既定値はありません。  
   
  次の表に、イベントに追加できる列を示します。  
   
@@ -244,7 +245,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|トレースでキャプチャされるイベントクラスに依存するテキスト値。|  
 |2|**BinaryData**|トレースでキャプチャされたイベント クラスに依存するバイナリ値。|  
-|3|**DatabaseID**|USE *database*ステートメントで指定されたデータベースの ID、または特定の接続に対して use *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。<br /><br /> データベースの値は、DB_ID 関数を使用して決定できます。|  
+|3|**DatabaseID**|USE *database* ステートメントで指定されたデータベースの ID、または特定の接続に対して use *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。<br /><br /> データベースの値は、DB_ID 関数を使用して決定できます。|  
 |4|**TransactionID**|システムによって割り当てられたトランザクション ID。|  
 |5|**LineNumber**|エラーを含む行の番号が格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SP:StmtStarting **のような**ステートメントを含むイベントの場合、 **LineNumber** にはストアド プロシージャまたはバッチでのステートメントの行番号が格納されます。|  
 |6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザー名。|  
@@ -252,16 +253,16 @@ sp_trace_setevent [ @traceid = ] trace_id
 |8|**HostName**|要求を生成したクライアント コンピューターの名前。|  
 |9|**ClientProcessID**|クライアントアプリケーションが実行されているプロセスにクライアントコンピューターによって割り当てられた ID。|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|  
-|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントのログイン名。|  
+|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのログイン名。|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントに関連付けられているプロセスにによって割り当てられたサーバープロセス ID。|  
 |13|**期間**|イベントにかかった経過時間 (マイクロ秒)。 このデータ列は、Hash Warning イベントによって設定されません。|  
 |14|**StartTime**|イベントの開始時刻 (取得できた場合)。|  
-|15|**EndTime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting**などの開始イベント クラスについては、この列に値が格納されません。 また、 **Hash Warning**イベントによって設定されることもありません。|  
-|16|**Reads**|イベントの代わりにサーバーによって実行される、論理ディスク読み取り回数。 この列は、 **Lock: Released**イベントによって設定されません。|  
+|15|**EndTime**|イベントの終了時刻。 **SQL:BatchStarting** や **SP:Starting**などの開始イベント クラスについては、この列に値が格納されません。 また、 **Hash Warning** イベントによって設定されることもありません。|  
+|16|**Reads**|イベントの代わりにサーバーによって実行される、論理ディスク読み取り回数。 この列は、 **Lock: Released** イベントによって設定されません。|  
 |17|**Writes**|イベントの代わりにサーバーによって実行される、物理ディスクの書き込み回数。|  
 |18|**CPU**|イベントに使用された CPU 時間 (ミリ秒単位)。|  
 |19|**アクセス許可**|アクセス許可のビットマップを表します。セキュリティ監査によって使用されます。|  
-|20|**Severity**|例外の重大度レベル。|  
+|20|**重大度**|例外の重大度レベル。|  
 |21|**EventSubClass**|イベント サブクラスの種類。 すべてのイベント クラスに対して、このデータ列が作成されるわけではありません。|  
 |22|**Exchange Spill**|システムによって割り当てられたオブジェクト ID。|  
 |23|**Success**|アクセス許可の使用が成功しました。監査に使用されます。<br /><br /> **1** = 成功**0** = 失敗|  
@@ -271,12 +272,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|記録されるイベント クラスの種類。|  
 |28|**ObjectType**|テーブル、関数、ストアドプロシージャなどのオブジェクトの型。|  
 |29|**NestLevel**|このストアドプロシージャが実行されている入れ子レベルです。 「 [@ @NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)」を参照してください。|  
-|30|**状態**|サーバーの状態 (エラーが発生した場合)。|  
+|30|**State**|サーバーの状態 (エラーが発生した場合)。|  
 |31|**Error**|エラー番号。|  
-|32|**モード**|取得したロックのロックモード。 この列は、 **Lock: Released**イベントによって設定されません。|  
-|33|**扱え**|イベントで参照されているオブジェクトのハンドル。|  
+|32|**モード**|取得したロックのロックモード。 この列は、 **Lock: Released** イベントによって設定されません。|  
+|33|**Handle**|イベントで参照されているオブジェクトのハンドル。|  
 |34|**ObjectName**|アクセスされるオブジェクトの名前。|  
-|35|**DatabaseName**|USE *database*ステートメントで指定されたデータベースの名前。|  
+|35|**DatabaseName**|USE *database* ステートメントで指定されたデータベースの名前。|  
 |36|**FileName**|変更されたファイル名の論理名。|  
 |37|**OwnerName**|参照先オブジェクトの所有者名。|  
 |38|**RoleName**|ステートメントの対象となっているデータベースまたはサーバー全体のロールの名前。|  
@@ -293,22 +294,22 @@ sp_trace_setevent [ @traceid = ] trace_id
 |49|**RequestID**|ステートメントが含まれている要求の ID。|  
 |50|**XactSequence**|現在のトランザクションを記述するトークン。|  
 |51|**EventSequence**|このイベントのシーケンス番号。|  
-|52|**BigintData1**|**bigint**値。トレースでキャプチャされたイベントクラスに依存します。|  
-|53|**BigintData2**|**bigint**値。トレースでキャプチャされたイベントクラスに依存します。|  
+|52|**BigintData1**|**bigint** 値。トレースでキャプチャされたイベントクラスに依存します。|  
+|53|**BigintData2**|**bigint** 値。トレースでキャプチャされたイベントクラスに依存します。|  
 |54|**GUID**|トレースでキャプチャされたイベント クラスに依存する GUID 値。|  
 |55|**IntegerData2**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
 |56|**ObjectID2**|関連するオブジェクトまたはエンティティの ID (使用可能な場合)。|  
-|57|**Type**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
+|57|**型**|トレースでキャプチャされたイベントクラスに依存する整数値。|  
 |58|**OwnerID**|ロックを所有するオブジェクトの種類。 ロック イベントの場合にのみ該当します。|  
 |59|**ParentName**|オブジェクトが存在するスキーマの名前。|  
 |60|**IsSystem**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> **1** = システム<br /><br /> **0** = ユーザー。|  
-|61|**影**|ストアド プロシージャ内またはバッチ内のステートメントの開始オフセット。|  
+|61|**Offset**|ストアド プロシージャ内またはバッチ内のステートメントの開始オフセット。|  
 |62|**SourceDatabaseID**|オブジェクトのソースが存在するデータベースの ID。|  
-|63|**SqlHandle**|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値は、 **dm_exec_sql_text ()** に渡すことによって、関連付けられている sql テキストを取得できます。|  
+|63|**SqlHandle**|64 ビット ハッシュ。アドホック クエリやデータベースのテキスト、および SQL オブジェクトのオブジェクト ID に基づいています。 この値を **sys.dm_exec_sql_text()** に渡して、関連付けられている SQL テキストを取得できます。|  
 |64|**SessionLoginName**|セッションを開始したユーザーのログイン名。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に **Login1** を使用して接続し、 **Login2**としてステートメントを実行した場合、 **SessionLoginName** には **Login1**が表示され、 **LoginName** には **Login2**が表示されます。 このデータ列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|  
   
  **[ @on =]** *on*  
- このイベントを ON (1) にするか OFF (0) にするかを指定します。 *の*は**ビット**,、既定値はありません。  
+ このイベントを ON (1) にするか OFF (0) にするかを指定します。 *の* は **ビット**,、既定値はありません。  
   
  *On*が**1**に設定されていて*column_id*が NULL の場合、イベントは on に設定され、すべての列がクリアされます。 *Column_id*が null でない場合は、そのイベントに対して列が ON に設定されます。  
   
@@ -316,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  次の表は、と** \@ columnid**の間の相互作用を示しています。 ** \@ **  
   
-|\@代わっ|\@columnid|結果|  
+|\@on|\@columnid|結果|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|イベントは ON になります。<br /><br /> すべての列が消去されます。|  
 ||NOT NULL|指定されたイベントに対して列が有効になっています。|  
@@ -335,11 +336,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|指定した列は無効です。|  
 |9|指定されたトレースハンドルは無効です。|  
 |11|指定された列は内部で使用されているため、削除できません。|  
-|13|メモリ不足。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
+|13|メモリが不足しています。 指定されたアクションを実行するのに十分なメモリがない場合に返されます。|  
 |16|関数は、このトレースに対して無効です。|  
   
-## <a name="remarks"></a>Remarks  
- **sp_trace_setevent**では、以前のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くが実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の代わりに**sp_trace_setevent**を使用します。  
+## <a name="remarks"></a>解説  
+ **sp_trace_setevent** では、以前のバージョンので使用できる拡張ストアドプロシージャによって以前に実行された操作の多くが実行され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 次の代わりに **sp_trace_setevent** を使用します。  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +348,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- ユーザーは、各イベントに追加された各列に対して**sp_trace_setevent**を実行する必要があります。 実行のたびに、 ** \@ on**が**1**に設定されている場合、 **sp_trace_setevent**は、指定されたイベントをトレースのイベントの一覧に追加します。 ** \@ On**が**0**に設定されている場合、 **sp_trace_setevent**は指定したイベントを一覧から削除します。  
+ ユーザーは、各イベントに追加された各列に対して **sp_trace_setevent** を実行する必要があります。 実行のたびに、 ** \@ on**が**1**に設定されている場合、 **sp_trace_setevent**は、指定されたイベントをトレースのイベントの一覧に追加します。 ** \@ On**が**0**に設定されている場合、 **sp_trace_setevent**は指定したイベントを一覧から削除します。  
   
  すべての SQL トレースストアドプロシージャ (**sp_trace_xx**) のパラメーターは厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
@@ -358,7 +359,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>参照  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server イベント クラスの参照](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL トレース (SQL Trace)](../../relational-databases/sql-trace/sql-trace.md)  

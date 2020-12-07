@@ -1,4 +1,5 @@
 ---
+description: LinRegSlope (MDX)
 title: LinRegSlope (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d43d2ccc961e465c5430c525fd6178d74e29ca9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5443718e83084285983f3d22ff99d5931f82bad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429814"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
 
@@ -37,14 +38,14 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  有効な数値式です。通常は、X 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  最小二乗法を使用する線形回帰では、回帰直線の式 (つまり、一連の点に最適な線) が計算されます。 回帰直線の式は次のようになります。ここで、は傾き、b は切片です。  
   
  y = ax+b  
   
  **Linregslope**関数は、y 軸の値を取得するために、最初の数値式に対して指定されたセットを評価します。 次に、2 番目の数値式が指定されている場合は、指定されているセット式をその数値式に対して評価し、X 軸の値を取得します。 2番目の数値式が指定されていない場合、関数は、指定されたセット内のセルの現在のコンテキストを x 軸の値として使用します。 X 軸の引数を指定しないことは、時間ディメンションでよく使用されます。  
   
- 一連の点を取得した後、 **Linregslope**関数は回帰直線の傾き (前の式の) を返します。  
+ 一連の点を取得した後、 **Linregslope** 関数は回帰直線の傾き (前の式の) を返します。  
   
 > [!NOTE]  
 >  **Linregslope**関数は、空のセル、またはテキストや論理値を含むセルを無視します。 ただし、この関数には0の値を持つセルが含まれています。  

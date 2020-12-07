@@ -1,4 +1,5 @@
 ---
+description: HDFS ファイル ソース
 title: HDFS ファイル ソース | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477806"
 ---
 # <a name="hdfs-file-source"></a>HDFS ファイル ソース
 
@@ -30,7 +31,7 @@ ms.locfileid: "86920278"
   
  ![HDFS ファイル ソース エディター](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS ファイル ソース エディター")  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[Hadoop ファイル ソース エディター]** ダイアログ ボックスの **[全般]** タブで、次のオプションを構成します。  
   
 |フィールド|説明|  
@@ -38,7 +39,7 @@ ms.locfileid: "86920278"
 |**Hadoop 接続**|既存の Hadoop 接続マネージャーを指定するか、新しい Hadoop 接続マネージャーを作成します。 この接続マネージャーは、HDFS ファイルがホストされる場所を示します。|  
 |**ファイル パス**|HDFS ファイルの名前を指定します。|  
 |**ファイル形式**|HDFS ファイルの形式を指定します。 使用できるオプションは [テキスト] と [Avro] です (ODBC ソースはサポートされません)。|  
-|**列区切り文字**|テキスト形式を選択した場合は、列区切り文字を指定します。|  
+|**Column delimiter character (列区切り文字)**|テキスト形式を選択した場合は、列区切り文字を指定します。|  
 |**先頭データ行を列名として使用する**|テキスト形式を選択した場合は、ファイルの最初の行に列の名前が含まれるかどうかを示します。|  
   
  これらのオプションを構成した後、 **[列]** タブを選択し、データ フローのソース列を変換先列にマップします。  

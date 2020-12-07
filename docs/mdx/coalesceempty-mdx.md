@@ -1,4 +1,5 @@
 ---
+description: CoalesceEmpty (MDX)
 title: CoalesceEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fd02400d6b560e1cc0b21908b788a257f56b26c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487585"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -44,8 +45,8 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  有効な文字列式です。通常は、最初の文字列式によって返される NULL 値に置き換えられる、指定された文字列値です。  
   
-## <a name="remarks"></a>Remarks  
- 1つ以上の数値式が指定されている場合、 **CoalesceEmpty**関数は、空でない値に解決できる最初の数値式 (左から右) の数値を返します。 指定されている数値式に、空でない値に解決される式がない場合、この関数は、空のセル値を返します。 通常、2番目の数値式の値は、最初の数値式によって返される NULL 値に置き換えられる数値です。  
+## <a name="remarks"></a>解説  
+ 1つ以上の数値式が指定されている場合、 **CoalesceEmpty** 関数は、空でない値に解決できる最初の数値式 (左から右) の数値を返します。 指定されている数値式に、空でない値に解決される式がない場合、この関数は、空のセル値を返します。 通常、2番目の数値式の値は、最初の数値式によって返される NULL 値に置き換えられる数値です。  
   
  1つ以上の文字列式が指定されている場合、関数は、空でない値に解決できる最初の文字列式 (左から右) の文字列値を返します。 指定された文字列式のいずれも空でない値に解決できない場合、関数は空のセル値を返します。 通常、2番目の文字列式の値の値は、最初の文字列式から返された NULL を置き換える文字列値です。  
   
@@ -54,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  空のセルの詳細については、OLE DB のドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、 **Adventure works**キューブに対してクエリを実行します。 この例では、各製品の注文数量と、カテゴリ別の注文数量の割合を返します。 **CoalesceEmpty**関数は、計算されるメンバーの書式を設定するときに、null 値がゼロ (0) として表されるようにします。  
+ 次の例では、 **Adventure works** キューブに対してクエリを実行します。 この例では、各製品の注文数量と、カテゴリ別の注文数量の割合を返します。 **CoalesceEmpty**関数は、計算されるメンバーの書式を設定するときに、null 値がゼロ (0) として表されるようにします。  
   
 ```  
 WITH   

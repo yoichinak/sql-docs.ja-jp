@@ -1,4 +1,5 @@
 ---
+description: テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
 title: テーブル以外のアイテムを使用したクエリの作成
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 2495d18fa283b8eecaec238fb4779068358c4df0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e33f45c9fc5e3219db2731922d0f1c83ff751084
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004218"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037526"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -142,5 +143,4 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「 [ユーザー定義関数](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4)」を参照してください。  
-  
+"VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)」を参照してください。  

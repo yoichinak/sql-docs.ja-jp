@@ -1,4 +1,5 @@
 ---
+description: 構造化照会言語 (SQL) (Structured Query Language) (SQL)
 title: 構造化照会言語 (SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428974"
 ---
 # <a name="structured-query-language-sql"></a>構造化照会言語 (SQL) (Structured Query Language) (SQL)
 一般的な DBMS では、データの格納、アクセス、変更を、整理された効率的な方法で行うことができます。 当初、Dbms のユーザーはプログラマでした。 格納されているデータにアクセスするには、COBOL などのプログラミング言語でプログラムを作成する必要があります。 これらのプログラムは、技術面以外のユーザーにわかりやすいインターフェイスを提示するように記述されていますが、データ自体へのアクセスには知識の豊富なプログラマのサービスが必要でした。 データへのカジュアルアクセスは実用的ではありませんでした。  

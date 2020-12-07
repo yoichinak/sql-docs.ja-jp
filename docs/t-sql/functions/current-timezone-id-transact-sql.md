@@ -1,4 +1,5 @@
 ---
+description: CURRENT_TIMEZONE_ID (Transact-SQL)
 title: CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2020
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 936b4f0ea8353b71b26808f1911890149057b234
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988840"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036862"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -42,7 +43,7 @@ ms.locfileid: "87988840"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CURRENT_TIMEZONE_ID ( )  
 ```
   
@@ -71,6 +72,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>関連項目
 
-[SQL Managed Instance のタイム ゾーン](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance のタイム ゾーン](/azure/sql-database/sql-database-managed-instance-timezone)
 
-[CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)
+[CURRENT_TIMEZONE()](./current-timezone-transact-sql.md)

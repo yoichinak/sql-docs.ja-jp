@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
-description: カテゴリでグループ化された一連の縦棒で数値を表現する棒グラフを含めた、Reporting Services のページ分割されたレポートを作成する方法を説明します。
+description: レポート ビルダーのウィザードを使用して、Reporting Services のページ分割されたレポート内に横棒グラフを作成する方法について説明します。
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9b18950488cb0fed336feb3df61e5a4e66b56603
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245699"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521122"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
 このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
@@ -27,7 +27,7 @@ ms.locfileid: "87245699"
   
 次の図は、ここで作成する横棒グラフを示しています。このグラフでは、2014 年と 2015 年の上位 5 人の販売員の売上を 2015 年の売上が高い順に示します。  
   
-![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
+![レポート ビルダーの横棒グラフのスクリーンショット。](../reporting-services/media/report-builder-bar-chart.png) 
   
  
 > [!NOTE]  
@@ -248,7 +248,7 @@ ms.locfileid: "87245699"
   
 6.  **[式]** に「 **[Sum(SalesYear2015)]** 」と入力します。 基になる式 `=Sum(Fields!SalesYear2015.Value)`が作成され、この式は **[fx]** ボタンをクリックすると表示できます。  
   
-7.  データ型が **Text**であることを確認します。  
+7.  データ型が **Text** であることを確認します。  
   
 8.  **[演算子]** で、ドロップダウン リストから **[上位 N]** を選択します。  
   

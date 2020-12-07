@@ -1,6 +1,6 @@
 ---
 title: 結果の処理 (OLE DB ドライバー)
-description: 結果の処理
+description: OLE DB Driver for SQL Server のコンシューマーでコマンドまたはプロバイダーによって生成された行セット内のデータを取得してアクセスする方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB, processing results
 - rowsets [SQL Server], results processing
 - results [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4455ccc2a44567cfe7ed0709966810b145a5ff6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3cea6c2ef9cfdab250966cbd809be44e6506e4dc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244824"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861534"
 ---
 # <a name="processing-results"></a>結果の処理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

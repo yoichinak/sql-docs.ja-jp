@@ -10,7 +10,7 @@
   href: sql-server-linux-convert-from-oracle.md
 - name: 著作権情報
   href: legal-notice-ssma-for-oracle.md
-- name: SSMA for Oracle クライアントのインストール
+- name: Oracle クライアントの SSMA のインストール
   href: installing-ssma-for-oracle-client-oracletosql.md
 - name: SSMA GUI の新機能
   href: new-gui-features-in-ssma-for-oracle-oracletosql.md

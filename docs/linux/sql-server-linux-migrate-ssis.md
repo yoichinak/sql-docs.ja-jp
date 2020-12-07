@@ -1,6 +1,6 @@
 ---
 title: SSIS で Linux 上のデータの抽出、変換、読み込みを行う
-description: この記事では、Linux コンピューターの SQL Server Integration Services (SSIS) について説明します。
+description: Linux で SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 また、SSIS の機能に関する詳細情報の入手先についても説明します。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882717"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115845"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>SSIS で Linux 上のデータの抽出、変換、読み込みを行う
 
@@ -21,7 +21,7 @@ ms.locfileid: "85882717"
 
 この記事では、Linux で SQL Server Integration Services (SSIS) パッケージを実行する方法について説明します。 SSIS では、複数のソースやフォーマットからデータを抽出し、データを変換し、クレンジングし、データを複数の宛先に読み込むことで複雑なデータ統合問題を解決します。 
 
-Linux で実行されている SSIS パッケージは、Windows オンプレミス、クラウド、Linux、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure SQL Data Warehouse、ODBC データ ソース、フラット ファイル、その他のデータ ソース (ADO.NET ソース、XML ファイル、OData サービス) にも接続できます。
+Linux で実行されている SSIS パッケージは、Windows オンプレミス、クラウド、Linux、または Docker で実行されている Microsoft SQL Server に接続できます。 Azure SQL Database、Azure Synapse Analytics、ODBC データ ソース、フラット ファイル、その他のデータ ソース (ADO.NET ソース、XML ファイル、OData サービス) にも接続できます。
 
 SSIS の機能に関する詳細は、「[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)」を参照してください。
 
@@ -94,7 +94,7 @@ Linux の SSIS の詳細については、次のブログ投稿を参照して�
 
 ## <a name="more-info-about-ssis"></a>SSIS に関する詳細情報
 
-Microsoft SQL Server Integration Services (SSIS) は、データ ウェアハウスの ETL (抽出、変換、読み込み) パッケージなど、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。 詳細については、「 [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services)」を参照してください。
+Microsoft SQL Server Integration Services (SSIS) は、データ ウェアハウスの ETL (抽出、変換、読み込み) パッケージなど、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。 詳細については、「 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)」を参照してください。
 
 SSIS には次の機能があります。
 - Windows でパッケージをビルドし、デバッグするためのグラフィカル ツールとウィザード
@@ -113,5 +113,5 @@ SSIS の詳細については、次の記事を参照してください。
 ## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
 -   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
 -   [ssis-conf を使用して SQL Server Integration Services on Linux を構成する](sql-server-linux-configure-ssis.md)
--   [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [Linux での SSIS に関する制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
 -   [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

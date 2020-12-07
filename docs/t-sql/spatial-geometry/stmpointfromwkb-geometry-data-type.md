@@ -1,4 +1,5 @@
 ---
+description: STMPointFromWKB (geometry データ型)
 title: STMPointFromWKB (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f538896347f5ca9148b422d992450314a6cde50f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a80aba8159be4697861ee9d80bcf2a18f7c59c8a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552805"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445004"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

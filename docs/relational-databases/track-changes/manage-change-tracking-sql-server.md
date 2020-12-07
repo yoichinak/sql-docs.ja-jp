@@ -1,4 +1,5 @@
 ---
+description: 変更の追跡の管理 (SQL Server)
 title: 変更の追跡の管理
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -16,12 +17,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c965816a7eca3d0a512f87cdf556b4f194b20e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463788"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85725357"
   
  また、 [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) カタログ ビューには、ユーザー テーブルの変更の追跡を有効にしたときに作成された内部テーブルが表示されます。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  [変更追跡関数](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)を使用して変更追跡情報にアクセスするには、プリンシパルに次の権限が必要です。  
   
 -   少なくともクエリ対象テーブルへの変更の追跡対象テーブルの主キー列に対する SELECT 権限。  
@@ -54,7 +55,7 @@ ms.locfileid: "85725357"
 ## <a name="understanding-change-tracking-overhead"></a>変更の追跡のオーバーヘッドについて  
  テーブルの変更の追跡を有効にすると、一部の管理操作が影響を受けます。 次の表に、考慮する必要がある操作と影響を示します。  
   
-|操作|変更の追跡が有効になっている場合|  
+|Operation|変更の追跡が有効になっている場合|  
 |---------------|-------------------------------------|  
 |DROP TABLE|削除するテーブルのすべての変更追跡情報が削除されます。|  
 |ALTER TABLE DROP CONSTRAINT|PRIMARY KEY 制約を削除しようとすると失敗します。 PRIMARY KEY 制約を削除する前に、変更の追跡を無効にする必要があります。|  

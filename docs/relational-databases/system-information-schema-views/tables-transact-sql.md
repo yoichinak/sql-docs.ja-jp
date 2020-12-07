@@ -1,4 +1,5 @@
 ---
+description: テーブル (Transact-sql)
 title: TABLES (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/20/2019
@@ -16,21 +17,22 @@ helpviewer_keywords:
 - TABLES view
 - INFORMATION_SCHEMA.TABLES view
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15899e19f6bf578e3a4c1c9cd5db7ee40af289b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 244be615f5748a480a224f3cc7b1eb41cbc13a2f
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999031"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753590"
 ---
 # <a name="tables-transact-sql"></a>テーブル (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   現在のユーザーが権限を持っている現在のデータベース内のテーブルまたはビューごとに1行のデータを返します。  
   
- これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し**ます。**_view_name_。  
+ これらのビューから情報を取得するには、INFORMATION_SCHEMA の完全修飾名を指定し **ます。**_view_name_。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,9 +42,8 @@ ms.locfileid: "85999031"
 |**TABLE_TYPE**|**varchar (** 10 **)**|テーブルの型。 VIEW または BASE TABLE のいずれかです。|  
   
 ## <a name="see-also"></a>参照  
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)   
  [情報スキーマビュー &#40;Transact-sql&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
-  
   

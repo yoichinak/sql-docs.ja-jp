@@ -1,4 +1,5 @@
 ---
+description: スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
 title: スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac2db997c49df1ef482ab6b9dba5647426eb7bb3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3193a0801e5e9babf187ea88782a1c71f5216f3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913445"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125629"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
 
 [!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、 **[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
+  スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>作成するコンポーネントの種類の選択  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、 **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、**[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。  
   
  スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
@@ -73,7 +74,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
  このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 たとえば、**CustomerOutput** という名前の出力を作成した場合、BufferWrapper プロジェクト アイテムには、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した **CustomerOutput** クラスが含まれます。**CustomerOutput** クラスには、作成された各出力列用の型指定されたアクセサー プロパティが含まれます。  
   
- 出力列は、 **[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、 **[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、 **[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
+ 出力列は、**[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、**[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、**[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
   
  特定の種類のデータ フロー コンポーネントの入力および出力を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。  
   
@@ -95,7 +96,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  スクリプト コンポーネントで 2 つの同期出力のうちのいずれかに行を送信する例については、「[スクリプト コンポーネントによる同期変換の作成](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)」を参照してください。  
   
 ### <a name="object-names-in-generated-script"></a>生成されたスクリプトのオブジェクト名  
- スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの **UppercaseLetter**、**LowercaseLetter**、**TitlecaseLetter**、**ModifierLetter**、**OtherLetter**、または **DecimalDigitLetter** に属していない文字が含まれている場合、使用できない文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と **[First Name]** という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
+ スクリプト コンポーネントは、入力と出力の名前を解析し、入力と出力内の列の名前を解析します。次に、これらの名前に基づいて、BufferWrapper プロジェクト アイテムにクラスとプロパティを生成します。 見つかった名前に、Unicode カテゴリの **UppercaseLetter**、**LowercaseLetter**、**TitlecaseLetter**、**ModifierLetter**、**OtherLetter**、または **DecimalDigitLetter** に属していない文字が含まれている場合、使用できない文字は生成された名前から削除されます。 たとえば、スペースは削除されるため、**FirstName** と [**First Name**] という名前の 2 つの入力列は、どちらも列名 **FirstName** を持つと解釈され、予期しない結果が生じます。 このような状況を防ぐには、スクリプト コンポーネントで使用される入力と出力の名前、および入力と出力の列の名前には、このセクションで一覧表示されている Unicode カテゴリに属する文字のみが含まれるようにする必要があります。  
   
 ### <a name="script-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [スクリプト] ページ  
  **[スクリプト変換エディター]** の **[スクリプト]** ページでは、スクリプト タスクに一意の名前および説明を割り当てます。 また、次のプロパティの値を割り当てることができます。  

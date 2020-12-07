@@ -1,4 +1,5 @@
 ---
+description: InstanceName プロパティ (ServerSettings クラス)
 title: InstanceName プロパティ (ServerSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d708164b39345fb48f9069ff86afed0e14ad7c28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3fb2e7bcae656714d95463829fdd1fc8e472db5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888583"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544386"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName プロパティ (ServerSettings クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

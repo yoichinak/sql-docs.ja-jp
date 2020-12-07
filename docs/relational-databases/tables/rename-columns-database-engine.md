@@ -1,4 +1,5 @@
 ---
+description: 列名の変更 (データベース エンジン)
 title: 列名の変更 (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -15,16 +16,17 @@ ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1d24cbf22eb8c188237931daa49e50cdc0648ee
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18ed629f6a9d02c0068a20fc1da3e8d5c4375dc2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011104"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645801"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブル列の名前を変更することができます。
 
@@ -66,7 +68,7 @@ ms.locfileid: "86011104"
 
 1. **オブジェクト エクスプローラー**で、列の名前を変更するテーブルを右クリックし、 **[デザイン]** をクリックします。
 2. **[列名]** の下の変更する名前を選択して、新しい名前を入力します。
-3. **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。
+3. **[ファイル]** メニューの **[** _<テーブル名>_ を保存] をクリックします。
 
 > [!NOTE]
 > **[列のプロパティ]** タブで列の名前を変更することもできます。名前を変更する列を選択して、 **[名前]** に新しい値を入力します。

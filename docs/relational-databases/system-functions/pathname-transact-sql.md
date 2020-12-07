@@ -1,4 +1,5 @@
 ---
+description: PathName (Transact-SQL)
 title: PathName (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489736"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,27 +41,27 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>引数  
  *column_name*  
- **Varbinary (max)** FILESTREAM 列の列名を指定します。 *column_name*は列名である必要があります。 式を指定したり、CAST ステートメントまたは CONVERT ステートメントの結果を指定したりすることはできません。  
+ **Varbinary (max)** FILESTREAM 列の列名を指定します。 *column_name* は列名である必要があります。 式を指定したり、CAST ステートメントまたは CONVERT ステートメントの結果を指定したりすることはできません。  
   
- 他のデータ型の列、または FILESTREAM ストレージ属性を持たない**varbinary (max)** 列のパス名を要求すると、クエリのコンパイル時エラーが発生します。  
+ 他のデータ型の列、または FILESTREAM ストレージ属性を持たない **varbinary (max)** 列のパス名を要求すると、クエリのコンパイル時エラーが発生します。  
   
  *\@オプション*  
- パスのサーバーコンポーネントをどのように書式設定するかを定義する整数[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 * \@ オプション*には、次のいずれかの値を指定できます。 既定値は 0 です。  
+ パスのサーバーコンポーネントをどのように書式設定するかを定義する整数 [式](../../t-sql/language-elements/expressions-transact-sql.md) です。 * \@ オプション*には、次のいずれかの値を指定できます。 既定値は 0 です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
-|1|次の例のように、変換せずにサーバー名を返します。`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|完全なサーバーパスを返します。次に例を示します。`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1|次の例のように、変換せずにサーバー名を返します。 `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|2|完全なサーバーパスを返します。次に例を示します。 `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  Always On 可用性グループでのサーバー名の返される方法を定義するビット値。  
   
  データベースが Always On 可用性グループに属していない場合、この引数の値は無視されます。 コンピューター名は、常にパスで使用されます。  
   
- データベースが Always On 可用性グループに属している場合、 *use_replica_computer_name*の値は**PathName**関数の出力に次のように影響します。  
+ データベースが Always On 可用性グループに属している場合、 *use_replica_computer_name* の値は **PathName** 関数の出力に次のように影響します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
 |0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
@@ -72,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>戻り値  
  返される値は、BLOB の完全修飾論理パスまたは NETBIOS パスです。 PathName は IP アドレスを返しません。 FILESTREAM BLOB が作成されていない場合は、NULL が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ROWGUID 列は、PathName を呼び出すすべてのクエリに表示される必要があります。  
   
  FILESTREAM BLOB は、[!INCLUDE[tsql](../../includes/tsql-md.md)] でのみ作成できます。  
@@ -91,7 +92,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B: テーブル内の FILESTREAM Blob のパスを表示する  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. テーブル内の FILESTREAM Blob のパスを表示する  
  次の例では、3つの FILESTREAM Blob のパスを作成して表示します。  
   
 ```sql  
@@ -147,8 +148,8 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [バイナリラージオブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-sql&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream による FILESTREAM データへのアクセス](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

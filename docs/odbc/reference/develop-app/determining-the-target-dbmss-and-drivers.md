@@ -1,4 +1,5 @@
 ---
+description: ターゲット DBMS とドライバーの決定
 title: ターゲット Dbms とドライバーの決定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429324"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>ターゲット DBMS とドライバーの決定
 次に考慮すべき事項は、アプリケーションの対象となる Dbms と、それらの Dbms をサポートする利用可能なドライバーは何ですか。 汎用アプリケーションは相互運用性が高い傾向があるため、ターゲット Dbms の問題は、カスタムアプリケーションと垂直アプリケーションに最も適しています。 ただし、ドライバーは、速度、品質、機能サポート、および可用性に大きく異なるため、ターゲットドライバーの問題はすべてのアプリケーションに適用されます。 また、ドライバーをアプリケーションと共に再配布する場合は、ライセンスプランのコストと可用性を考慮する必要があります。  

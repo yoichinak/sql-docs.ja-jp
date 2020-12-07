@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_histogram (Transact-SQL)
 title: dm_db_stats_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: af4e3e3739475ff3beac61802606499874fdff58
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046887"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117002"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` に似ています。
 
@@ -44,7 +45,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- 統計のプロパティが要求された、現在のデータベース内にあるオブジェクトの ID です。 *object_id*は**int**です。  
+ 統計のプロパティが要求された、現在のデータベース内にあるオブジェクトの ID です。 *object_id* は **int**です。  
   
  *stats_id*  
  指定された *object_id*の統計情報の ID です。 統計 ID は、 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 動的管理ビューから取得できます。 *stats_id* は **int**です。  
@@ -76,7 +77,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  次の図は、6 つの区間があるヒストグラムを示しています。 最初の上限境界値の左側にある領域が最初の区間です。  
   
- ![ヒストグラム](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "ヒストグラム")  
+ ![ヒストグラム](../../relational-databases/system-dynamic-management-views/media/histogram-2.svg "ヒストグラム")  
   
  ヒストグラムの各区間は、以下のように表されます。  
   

@@ -1,8 +1,9 @@
 ---
+description: Execute、Requery、および Clear メソッドの例 (VB)
 title: Execute、Requery、および Clear メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ac9a84c9b4780ad149d3c614b9e3c52494ace8b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c98f60ad44be5a0348298a29f9e09033b5c68897
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760168"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973433"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute、Requery、および Clear メソッドの例 (VB)
-この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 (**エラー**コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの**Connection**オブジェクトを使用してアクセスします)。この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 (**エラー**コレクションには、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティの**Connection**オブジェクトを使用してアクセスします)。この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  
   
 ```  
 'BeginExecuteVB  

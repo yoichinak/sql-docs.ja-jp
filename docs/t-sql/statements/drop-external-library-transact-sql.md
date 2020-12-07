@@ -1,7 +1,8 @@
 ---
+description: DROP EXTERNAL LIBRARY (Transact-SQL)
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -17,15 +18,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ef517db66d5506a47f5d4b3b07c69ac2b3db9e61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98ce649f2b0c2f1d9788deddecfa5294c0325230
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766382"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91378577"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 既存のパッケージ ライブラリを削除します。 パッケージ ライブラリは、R、Python、Java などのサポートされる外部ランタイムで使用されます。
 
@@ -41,7 +42,7 @@ ms.locfileid: "85766382"
 
 ## <a name="syntax"></a>構文
 
-```sql
+```syntaxsql
 DROP EXTERNAL LIBRARY library_name
 [ AUTHORIZATION owner_name ];
 ```
@@ -68,9 +69,13 @@ DROP EXTERNAL LIBRARY library_name
 
 ステートメントが成功した場合は、情報メッセージが返されます。
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説
 
 SQL Server の他の `DROP` とは異なり、このステートメントは、省略可能な承認句の指定をサポートします。 これにより、**dbo** または **db_owner** ロールのユーザーが、データベース内の正規のユーザーによってアップロードされたパッケージ ライブラリを削除することができます。
+
+SQL インスタンスには、"*システム パッケージ*" という多数のパッケージが事前にインストールされています。 ユーザーがシステム パッケージを追加、更新、または削除することはできません。
 
 ## <a name="examples"></a>例
 

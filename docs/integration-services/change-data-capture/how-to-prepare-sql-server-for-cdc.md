@@ -1,4 +1,5 @@
 ---
+description: CDC 用に SQL Server を準備する方法
 title: CDC 用に SQL Server を準備する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e6284b25d8aaf119ed7077e9304fefd590a9f4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f445a638f07ff6f524fc624f63cbc9bd6b29750
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916558"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496205"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC 用に SQL Server を準備する方法
 

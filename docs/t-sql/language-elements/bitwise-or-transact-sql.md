@@ -1,4 +1,5 @@
 ---
+description: '| (ビット演算子 OR) (Transact-SQL)'
 title: '| (ビット演算子 OR) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97bc42320852484c81959dc7530c53c79104cab3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4fd5e667671d2042abe1220ff219a63bde380e0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923784"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128310"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (ビット演算子 OR) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86923784"
   
 ## <a name="syntax"></a>構文  
   
-```   
+```syntaxsql   
 expression | expression  
 ```  
   
@@ -47,10 +48,10 @@ expression | expression
 
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- 整数データ型に分類されるデータ型、または **bit**、または **binary** または **varbinary** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
+ 整数データ型に分類されるデータ型、または **bit**、または **binary** または **varbinary** データ型の有効な [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式* は、ビットごとの演算に対して 2 進数として扱われます。  
   
 > [!NOTE]  
->  ビットごとの演算では、1 つの*式*のみが **binary** または **varbinary** データ型のいずれかになります。  
+>  ビットごとの演算では、1 つの *式* のみが **binary** または **varbinary** データ型のいずれかになります。  
   
 ## <a name="result-types"></a>戻り値の型  
  入力値が **int** の場合は **int**、入力値が **smallint** の場合は **smallint**、入力値が **tinyint** の場合は **tinyint** を返します。  
@@ -58,7 +59,7 @@ expression | expression
 ## <a name="remarks"></a>解説  
  ビットごとの | 演算子は、2 つの式の対応するビットを対象にビットごとの論理和演算を実行します。 入力式の中で現在処理の対象にあるビットについて、いずれかのビットまたは両方のビットが 1 の値を持つ場合、結果セットのビットは 1 に設定されます。入力式のビットが両方とも 1 の値を持たない場合、結果セットのビットは 0 に設定されます。  
   
- 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この例では、**smallint**_expression_ は **int** に変換されます。  
+ 左側の式と右側の式が異なる整数型の場合 (たとえば、左側の *式* が **smallint** 型で、右側の *式* が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この例では、**smallint**_expression_ は **int** に変換されます。  
   
 ## <a name="examples"></a>例  
  この例では、元の値を示すために **int** データ型を使用するテーブルを作成し、このテーブルに 1 行挿入します。  
@@ -74,7 +75,7 @@ GO
   
  このクエリは、**a_int_value** 列と **b_int_value** 列との間でビットごとの論理和演算を実行します。  
   
-```  
+```sql  
 SELECT a_int_value | b_int_value  
 FROM bitwise;  
 GO  

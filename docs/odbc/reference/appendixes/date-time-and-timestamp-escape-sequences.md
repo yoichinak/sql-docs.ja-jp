@@ -1,4 +1,5 @@
 ---
+description: 日付、時刻、およびタイムスタンプ エスケープ シーケンス
 title: 日付、時刻、およびタイムスタンプエスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2b9b62fae23932d1072ea319e1305a0853ca2d6
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 1bd70c005d2fa7ae4972605c45793f2a0836f849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483305"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日付、時刻、およびタイムスタンプ エスケープ シーケンス
 ODBC では、日付、時刻、およびタイムスタンプリテラルのエスケープシーケンスを定義します。 これらのエスケープシーケンスの構文は次のとおりです。  
@@ -81,5 +82,5 @@ minutes-value ::= digit digit
 seconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 日付、時刻、およびタイムスタンプのリテラルエスケープシーケンスは、日付、時刻、およびタイムスタンプデータ型がデータソースでサポートされている場合にサポートされます。 アプリケーションは、これらのデータ型がサポートされているかどうかを判断するために**SQLGetTypeInfo**を呼び出す必要があります。
+## <a name="remarks"></a>解説  
+ 日付、時刻、およびタイムスタンプのリテラルエスケープシーケンスは、日付、時刻、およびタイムスタンプデータ型がデータソースでサポートされている場合にサポートされます。 アプリケーションは、これらのデータ型がサポートされているかどうかを判断するために **SQLGetTypeInfo** を呼び出す必要があります。

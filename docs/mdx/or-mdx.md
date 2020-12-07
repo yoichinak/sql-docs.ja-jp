@@ -1,4 +1,5 @@
 ---
+description: OR (MDX)
 title: OR (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5ea3e65dd9bad768ef829858d42d6e4adea7a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471754"
 ---
 # <a name="or-mdx"></a>OR (MDX)
 
@@ -37,8 +38,8 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>戻り値  
  いずれかまたは両方の引数が**true**に評価される場合に**True**を返すブール値です。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>Remarks  
- **Or**演算子は、演算子が論理和を実行する前に、両方の引数をブール値 (0 の場合は**false**、それ以外の場合は**true**) として処理します。 次の表は、 **or**演算子が論理和をどのように実行するかを示しています。  
+## <a name="remarks"></a>解説  
+ **Or**演算子は、演算子が論理和を実行する前に、両方の引数をブール値 (0 の場合は**false**、それ以外の場合は**true**) として処理します。 次の表は、 **or** 演算子が論理和をどのように実行するかを示しています。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  

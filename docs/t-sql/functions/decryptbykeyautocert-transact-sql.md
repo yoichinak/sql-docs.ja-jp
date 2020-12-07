@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEYAUTOCERT (Transact-SQL)
 title: DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 34a6cda1b3c783b13feace96200a601a1f0de074
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e45c856ee8ce1942840f47f5878de57525426c94
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112722"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96116322"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "87112722"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -80,7 +80,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ## <a name="examples"></a>例  
 この例では、`DECRYPTBYKEYAUTOCERT` が復号コードを簡略化するしくみを確認できます。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  

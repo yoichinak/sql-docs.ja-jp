@@ -1,4 +1,5 @@
 ---
+description: STPointOnSurface (geometry データ型)
 title: STPointOnSurface (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 50e842f2fdba29cbc5349566201449e4e4533ad9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 41b91f03aef83bd8a952531cc419869204b3f5e4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88497015"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

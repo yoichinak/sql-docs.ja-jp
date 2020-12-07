@@ -1,4 +1,5 @@
 ---
+description: modify() メソッド (xml データ型)
 title: modify() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52a2766833d6ab4349c3f6b000f35e9d686396bd
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8f374a9a935a0bc0e4c015fb3eff4e87a2be4e20
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393090"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117171"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,8 +29,7 @@ ms.locfileid: "86393090"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 modify (XML_DML)  
 ```  
   

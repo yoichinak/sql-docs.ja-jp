@@ -1,4 +1,5 @@
 ---
+description: SecurityCertificate クラス
 title: SecurityCertificate クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SecurityCertificate class
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2153724ef3e8a7ea31c2b99c344c6f824318a982
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 32c3c144c18ad86cbf1992424e1ee02fee97df08
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545260"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85888807"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [暗号化階層](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

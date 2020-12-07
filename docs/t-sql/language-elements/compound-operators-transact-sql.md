@@ -1,4 +1,5 @@
 ---
+description: 複合演算子 (Transact-SQL)
 title: 複合演算子 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fe313e317a2d57bbb8547f66ccac6f44eaad264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2daa8d7b168266ac56d1047eca2aa9408ebfe25
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922964"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196672"
 ---
 # <a name="compound-operators-transact-sql"></a>複合演算子 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +43,7 @@ ms.locfileid: "86922964"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 expression operator expression  
 ```  
   
@@ -62,39 +62,38 @@ expression operator expression
 ## <a name="examples"></a>例  
  複合演算の例を次に示します。  
   
-```  
-DECLARE @x1 int = 27;  
+```sql  
+DECLARE @x1 INT = 27;  
 SET @x1 += 2 ;  
 SELECT @x1 AS Added_2;  
   
-DECLARE @x2 int = 27;  
+DECLARE @x2 INT = 27;  
 SET @x2 -= 2 ;  
 SELECT @x2 AS Subtracted_2;  
   
-DECLARE @x3 int = 27;  
+DECLARE @x3 INT = 27;  
 SET @x3 *= 2 ;  
 SELECT @x3 AS Multiplied_by_2;  
   
-DECLARE @x4 int = 27;  
+DECLARE @x4 INT = 27;  
 SET @x4 /= 2 ;  
 SELECT @x4 AS Divided_by_2;  
   
-DECLARE @x5 int = 27;  
+DECLARE @x5 INT = 27;  
 SET @x5 %= 2 ;  
 SELECT @x5 AS Modulo_of_27_divided_by_2;  
   
-DECLARE @x6 int = 9;  
+DECLARE @x6 INT = 9;  
 SET @x6 &= 13 ;  
 SELECT @x6 AS Bitwise_AND;  
   
-DECLARE @x7 int = 27;  
+DECLARE @x7 INT = 27;  
 SET @x7 ^= 2 ;  
 SELECT @x7 AS Bitwise_Exclusive_OR;  
   
-DECLARE @x8 int = 27;  
+DECLARE @x8 INT = 27;  
 SET @x8 |= 2 ;  
 SELECT @x8 AS Bitwise_OR;  
-  
 ```  
   
 ## <a name="see-also"></a>参照  

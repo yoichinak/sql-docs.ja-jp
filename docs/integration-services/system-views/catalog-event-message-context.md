@@ -1,4 +1,5 @@
 ---
+description: catalog.event_message_context
 title: catalog.event_message_context | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efba3eecba580293397848a52bce40980f42987f
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: e8728d1ddbc8ae7643d0ee660266357d42125c89
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472203"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129474"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
@@ -45,10 +46,10 @@ ms.locfileid: "87472203"
 |-|-|-|  
 |10|タスク|エラーが発生したときのタスクの状態。|  
 |20|パイプライン|パイプライン コンポーネント (ソース、変換先、または変換コンポーネント) でのエラー。|  
-|30|Sequence|シーケンスの状態。|  
+|30|シーケンス|シーケンスの状態。|  
 |40|For ループ|For ループの状態。|  
 |50|Foreach ループ|Foreach ループの状態。|  
-|60|Package|エラーが発生したときのパッケージの状態。|  
+|60|パッケージ|エラーが発生したときのパッケージの状態。|  
 |70|変数|変数の値|  
 |80|[ODBC 入力元エディター]|接続マネージャーのプロパティ。|  
   

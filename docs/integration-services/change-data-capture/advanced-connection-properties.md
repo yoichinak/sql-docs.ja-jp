@@ -1,4 +1,5 @@
 ---
+description: 高度な接続プロパティ
 title: 高度な接続プロパティ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 925b7155af44d77dc33506c0ff4d574be9970eb4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd7ed8863356ff3e6b67d456628bd3dbc1ab6a5b
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916568"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123752"
 ---
 # <a name="advanced-connection-properties"></a>高度な接続プロパティ
 
@@ -37,6 +38,6 @@ ms.locfileid: "86916568"
   
 ## <a name="see-also"></a>参照  
  [CDC デザイナー コンソールへのアクセス](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [インスタンスの作成のための SQL Server 接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [インスタンスの作成のための SQL サーバー接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   

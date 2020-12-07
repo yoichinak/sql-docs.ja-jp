@@ -4,7 +4,7 @@ description: SQL Server Management Studio の SQL Server に接続されてい�
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_accessdenied
@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718425"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039084"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL デバッガーを実行する前にファイアウォール規則を構成します。
 
@@ -170,8 +170,8 @@ ms.locfileid: "85718425"
 
 ## <a name="see-also"></a>参照
 
-- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Transact-SQL デバッガーの実行](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Transact-SQL デバッガー](./transact-sql-debugger.md)
+- [Transact-SQL デバッガーの実行](./run-the-transact-sql-debugger.md)
+- [Transact-SQL コードのステップ実行](./step-through-transact-sql-code.md)
+- [Transact-SQL デバッガー情報](./transact-sql-debugger-information.md)
+- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)

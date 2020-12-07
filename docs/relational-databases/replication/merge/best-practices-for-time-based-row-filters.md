@@ -1,4 +1,5 @@
 ---
+description: 時間ベースの行フィルターの推奨事項
 title: 時間ベースの行フィルターの推奨事項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad3264079a3bf4c28a9e1420cf17ed1018510c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470284"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  この方法を使用すると、 **GETDATE()** などの時間ベースの方法を使用した場合の欠点を補い、パーティションに対してフィルターが評価されるタイミングを決める問題を回避できます。 **Events** テーブルの次の例を考えてみましょう。  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
+|**イベント ID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
 |2|夕食|112|2006-10-10|0|  
@@ -82,7 +83,7 @@ GO
   
  1 行目では、 **Replicate** 列を **0**に再設定しています。2 行目では、今後 7 日以内に発生するイベントの列を **1** に設定しています。 この [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントが 2006 年 10 月 7 日に実行されると、テーブルが次のように更新されます。  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
+|**イベント ID**|**EventName**|**EventCoordID**|**EventDate**|**[レプリケート]**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
 |2|夕食|112|2006-10-10|1|  

@@ -1,7 +1,8 @@
 ---
-title: PDO::lastInsertId | Microsoft Docs
+title: PDO::lastInsertId
+description: SQL Server 用 Microsoft PDO_SQLSRV Driver for PHP の PDO::lastInsertId 関数の API リファレンス。
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 854446b0a505dd2f8a2dc44c4f3eca70158e20be
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919159"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726803"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合、`lastInsertId` は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)を参照してください)。
+データベースのテーブルに最後に挿入された行の識別子を返します。 このテーブルには、IDENTITY NOT NULL 列が必要です。 シーケンス名が指定されている場合、`lastInsertId` は、指定されたシーケンス名に対して最後に挿入されたシーケンス番号を返します (シーケンス番号の詳細については、[こちら](../../relational-databases/sequence-numbers/sequence-numbers.md)を参照してください)。
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +41,8 @@ $*name*: シーケンス名を指定できる省略可能な文字列。
 ## <a name="remarks"></a>解説  
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
 バージョン 2.0 からバージョン 4.3 までは、省略可能なパラメーターはテーブル名で、戻り値は、指定されたテーブルに最後に追加された行の ID になります。
-5\.0 以降では、省略可能なパラメーターはシーケンス名と見なされ、戻り値は、指定されたシーケンス名に対して最後に追加されたシーケンスになります。
-4\.3 以降のバージョンでテーブル名が指定されている場合、`lastInsertId` は空の文字列を返します。
+5.0 以降では、省略可能なパラメーターはシーケンス名と見なされ、戻り値は、指定されたシーケンス名に対して最後に追加されたシーケンスになります。
+4.3 以降のバージョンでテーブル名が指定されている場合、`lastInsertId` は空の文字列を返します。
 シーケンスは SQL Server 2012 以降でのみサポートされます。
   
 ## <a name="example"></a>例
@@ -154,4 +155,3 @@ Last sequence number when a table name is supplied =
 [PDO クラス](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

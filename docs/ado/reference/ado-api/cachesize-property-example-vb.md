@@ -1,8 +1,9 @@
 ---
+description: CacheSize プロパティの例 (VB)
 title: CacheSize プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166f18abc1adac56640374ef6e0ce5405e7fdc54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b83269332001846a5481908977af9e954585eba5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758898"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975673"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize プロパティの例 (VB)
-この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。  
+この例では、 [CacheSize](./cachesize-property-ado.md) プロパティを使用して、30レコードキャッシュなしで実行された操作のパフォーマンスの違いを示します。  
   
 ```  
 'BeginCacheSizeVB  
@@ -120,5 +121,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize プロパティ (ADO)](./cachesize-property-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

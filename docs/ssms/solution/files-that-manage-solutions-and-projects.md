@@ -1,4 +1,5 @@
 ---
+description: ソリューションとプロジェクトを管理するためのファイル
 title: ソリューションとプロジェクトを管理するためのファイル
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bec1f5859162d2438d2db137ef0637fc4900b32b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 367b305c8866f922192b2b67bc5beda9daa8d372
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000840"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036035"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>ソリューションとプロジェクトを管理するためのファイル
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,5 +57,4 @@ ms.locfileid: "86000840"
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
 [ソリューション (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [プロジェクト (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
-[ソリューション エクスプローラーのソース管理](https://msdn.microsoft.com/library/ms173879.aspx)  
-  
+[ソリューション エクスプローラーのソース管理](./solution-explorer.md)  

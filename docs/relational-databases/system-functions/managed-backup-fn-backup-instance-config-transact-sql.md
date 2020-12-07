@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 fn_backup_instance_config (Transact-sql)
 title: managed_backup。 fn_backup_instance_config (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ec61c7797a707b3c0d6dd41c0d2e36fb4cc0a945
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: a65649b7b565475eebd69bcadf4ac28bef707d7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419566"
 ---
 # <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup。 fn_backup_instance_config (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,8 +44,8 @@ ms.locfileid: "86052780"
 managed_backup.fn_backup_db_config ()  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
- なし  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
+ None  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -54,13 +56,13 @@ managed_backup.fn_backup_db_config ()
 |retention_days|INT|インスタンス レベルで設定されている既定の保有期間。|  
 |storage_url|NVARCHAR (1024)|インスタンス レベルで設定されている既定のストレージ アカウントの URL。|  
 |encryption_algorithm|SYSNAME|暗号化アルゴリズムの名前。 暗号化が指定されていない場合、は NULL に設定されます。|  
-|encryptor_type|NVARCHAR (32)|使用される暗号化機能の種類 (証明書または非対称キー)。 暗号化機能が指定されていない場合、は NULL に設定されます。|  
+|encryptor_type|NVARCHAR (32)|使用される暗号化の種類:証明書キーまたは非対称キー。 暗号化機能が指定されていない場合、は NULL に設定されます。|  
 |encryptor_name|SYSNAME|証明書または非対称キーの名前。 名前が指定されていない場合は、NULL に設定されます。|  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- **ALTER ANY CREDENTIAL**権限を持つ**db_backupoperator**データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION**権限を拒否することはできません。  
+ **ALTER ANY CREDENTIAL**権限を持つ**db_backupoperator**データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION** 権限を拒否することはできません。  
   
 ## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 実行されるインスタンスの既定の構成設定が返されます。  

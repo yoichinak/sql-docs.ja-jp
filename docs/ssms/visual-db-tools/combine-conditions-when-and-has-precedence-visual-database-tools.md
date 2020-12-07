@@ -1,4 +1,5 @@
 ---
+description: AND が優先する場合の条件を結合する (Visual Database Tools)
 title: AND が優先する場合に条件を結合する
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468482"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
 
@@ -33,7 +34,7 @@ AND で条件を結合するには、クエリに対して列を 2 回 (各条�
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-    または  
+    - または -  
   
 -   職務レベルが 200 の従業員  
   
@@ -65,4 +66,4 @@ AND で条件を結合するには、クエリに対して列を 2 回 (各条�
 [OR が優先する場合の条件の結合](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [抽出条件ペインで検索条件を組み合わせる場合の規則](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [検索値を入力するときのルール](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[検索条件を指定する](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)
+[検索条件の指定](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

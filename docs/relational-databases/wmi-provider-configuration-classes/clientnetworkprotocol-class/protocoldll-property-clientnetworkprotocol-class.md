@@ -1,4 +1,5 @@
 ---
+description: ProtocolDLL プロパティ (ClientNetworkProtocol クラス)
 title: ProtocolDLL プロパティ (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -15,18 +16,18 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e93c5ed625cd5c81f9b3f7bea73c203ae590c7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54d992dd3d9b3604644f985f9e7db5f523b553f9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889003"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889030"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL プロパティ (ClientNetworkProtocol クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [クライアントプロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)によって指定されたネットワークプロトコルに必要な .dll ファイルの名前を取得します。  
+  [クライアントプロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)によって指定されたネットワークプロトコルに必要な .dll ファイルの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +38,13 @@ object.ProtocolDLL [= value]
   
 ## <a name="parts"></a>指定項目  
  *object*  
- クライアントによって使用されるネットワークプロトコルを表す[Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
+ クライアントによって使用されるネットワークプロトコルを表す [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) オブジェクト [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク プロトコルに必要なプロトコル .dll ファイルを指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [クライアントのネットワーク プロトコルと Net-Library の構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアントのネットワーク プロトコルと Net-Library の構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

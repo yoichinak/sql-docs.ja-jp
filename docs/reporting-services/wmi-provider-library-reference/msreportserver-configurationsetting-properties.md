@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting プロパティ
 title: MSReportServer_ConfigurationSetting プロパティ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634c5065730ea58905f89ac0454cdda53552a126
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94b199ce85b8f4d9fdea8d377ac0798a3e72f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454464"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>MSReportServer_ConfigurationSetting プロパティ
   MSReportServer_ConfigurationSetting クラスは、レポート サーバー インスタンスのインストールおよび実行時のパラメーターを表します。 これらの設定は、RSReportServer.config 構成ファイルに格納されます。  
   
 ## <a name="public-properties"></a>パブリック プロパティ  
   
-|||  
+|プロパティ|説明|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスとの通信にレポート サーバーが使用する接続プール サイズを返します。 読み取り専用です。|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続するためにレポート サーバーが使用するログオン アカウントを指定します。 読み取り専用です。|  

@@ -1,4 +1,5 @@
 ---
+description: ^ (ビット演算排他的 OR) (SSIS 式)
 title: ^ (ビット演算排他的 OR) (SSIS 式)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e9e58118ab2922f73b5c4dbb1047f12ab02c7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8887ddc1b7b7fab04a510d856f22e90723858f51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425584"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (ビット演算排他的 OR) (SSIS 式)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  2 つの整数値の排他的 OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 両方のビットが 0、また両方のビットが 1 の場合、対応する結果ビットは 0 に設定されます。  
+  2 つの整数値の排他的 OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 一方のビットが 0 でもう一方のビットが 1 の場合、対応する結果のビットは 1 に設定されます。 両方のビットが 0、また両方のビットが 1 の場合、対応する結果ビットは 0 に設定されます。  
   
  どちらの条件も符号付き整数データ型か、または、どちらの条件も符号なし整数データ型である必要があります。  
   
@@ -44,7 +45,7 @@ integer_expression1 ^ integer_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  

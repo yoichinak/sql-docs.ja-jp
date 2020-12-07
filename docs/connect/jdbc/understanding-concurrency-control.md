@@ -1,5 +1,6 @@
 ---
-title: コンカレンシー制御について | Microsoft Docs
+title: コンカレンシー制御について
+description: SQL Server 用 JDBC Driver でマルチユーザー アプリケーションを開発するときのコンカレンシー制御とデータベース整合性の維持方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 520abf20b52f15458ac36d7a2e617a04970eb66a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9350c62c29acce5e56d60cfcd1fa854a7e2414cd
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925338"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435304"
 ---
 # <a name="understanding-concurrency-control"></a>コンカレンシー制御について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "80925338"
 |ステートメントが TYPE_SCROLL_INSENSITIVE を使用して作成されている|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、静的スナップショット カーソルを作成します。 このカーソルは、他のユーザーによる行の更新からカーソルを保護するために、基になるテーブル行から切り離されています。|TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC、または TYPE_FORWARD_ONLY を CONCUR_UPDATABLE と共に使用し、静的カーソルが作成されないようにします。|  
 |テーブル デザインにより KEYSET カーソルまたは DYNAMIC カーソルが使用できなくなっている|基になるテーブルに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が行を一意に識別できる一意キーがありません。|一意キーをテーブルに追加し、各行を一意に識別できるようにします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーによる結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

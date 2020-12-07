@@ -1,4 +1,5 @@
 ---
+description: APPROX_COUNT_DISTINCT (Transact-SQL)
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -14,12 +15,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08beac97cd70045f073be53cfeb93e9d1e4ad67f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4e980e97adc29cda45dbedb0640f46d0a444c4b2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113149"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119486"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -31,9 +32,7 @@ ms.locfileid: "87113149"
   
 ## <a name="syntax"></a>構文  
   
-```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
-
+```syntaxsql
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   
@@ -41,7 +40,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 ## <a name="arguments"></a>引数
 *式 (expression)*  
-**image**、**sql_variant**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 
+**image**、**sql_variant**、**ntext**、**text** を除く、任意の型の [式](../../t-sql/language-elements/expressions-transact-sql.md)です。 
 
 ## <a name="return-types"></a>戻り値の型
  **bigint**  
@@ -98,6 +97,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

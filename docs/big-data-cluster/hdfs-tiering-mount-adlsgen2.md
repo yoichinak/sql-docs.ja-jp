@@ -1,7 +1,7 @@
 ---
 title: HDFS の階層制御の ADLS Gen2 のマウント
 titleSuffix: How to mount ADLS Gen2
-description: この記事では、外部の Azure Data Lake Storage ファイル システムを SQL Server 2019 ビッグ データ クラスター上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
+description: この記事では、Azure Data Lake Storage Gen2 データ ソースを使用して HDFS 階層を構成する方法の例を示します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4bfb894112f071cc7a628146265ede17b3f0a14
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730647"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521039"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -43,11 +43,11 @@ ms.locfileid: "85730647"
 
 OAuth 資格情報を使用してマウントするには、次の手順に従う必要があります。
 
-1. [Azure portal](https://portal.azure.com) にアクセスします
+1. [Azure portal](https://portal.azure.com) に移動します
 1. [Azure Active Directory] に移動します。 このサービスは、左側のナビゲーション バーに表示されています。
 1. 右のナビゲーション バーで [アプリの登録] を選択し、新しい登録を作成します
 1. Web アプリケーションを作成し、ウィザードに従います。 **ここで作成したアプリの名前を忘れないでください**。 この名前を承認されたユーザーとして ADLS アカウントに追加する必要があります。 また、アプリを選択したときの [概要] のアプリケーション クライアント ID も記録しておきます。
-1. Web アプリケーションが作成されたら、[Certificates&secrets]\(証明書とシークレット\) に移動し、**新しいクライアント シークレット**を作成して、キーの期間を選択します。 シークレットを**追加**します。
+1. Web アプリケーションが作成されたら、[Certificates&secrets]\(証明書とシークレット\) に移動し、**新しいクライアント シークレット** を作成して、キーの期間を選択します。 シークレットを **追加** します。
 1. [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **OAuth トークン エンドポイント (v2) の URL を記録しておきます**
 1. ここまでで、OAuth に関する次の内容をメモしておく必要があります。
 
@@ -69,7 +69,7 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
 
 ビッグ データ クラスターにアクセスできるクライアント マシンでコマンド プロンプトを開きます。 次の形式を使用して環境変数を設定します。資格情報はコンマ区切りの一覧にする必要があります。 Windows では 'set' コマンドが使用されます。 Linux を使用している場合は、代わりに 'export' を使用してください。
 
-資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに**注意してください**。 以下の書式設定は、読みやすくするためのものです。
+資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに **注意してください**。 以下の書式設定は、読みやすくするためのものです。
 
 ```console
    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
@@ -92,7 +92,7 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 
 1. ビッグ データ クラスターにアクセスできるクライアント マシンでコマンド プロンプトを開きます。 次の形式を使用して環境変数を設定します。 資格情報はコンマ区切りの一覧にする必要があります。 Windows では 'set' コマンドが使用されます。 Linux を使用している場合は、代わりに 'export' を使用してください。
 
-資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに**注意してください**。 以下の書式設定は、読みやすくするためのものです。
+資格情報を指定するときは、コンマ "," の間の改行または空白文字を削除する必要があることに **注意してください**。 以下の書式設定は、読みやすくするためのものです。
 
 ```console
 set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,

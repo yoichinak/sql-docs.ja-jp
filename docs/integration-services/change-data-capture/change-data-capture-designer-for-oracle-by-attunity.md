@@ -1,4 +1,5 @@
 ---
+description: Attunity の Change Data Capture Designer for Oracle
 title: Attunity の Change Data Capture Designer for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fd8252fab91afb8b9a457f0c05f76bb8b77ecf78
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918682"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255719"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
 
@@ -32,7 +33,11 @@ ms.locfileid: "86918682"
   
 -   CDC インスタンス プロパティ エディター: このダイアログ ボックスを使用して、既存の Oracle CDC Service インスタンスを編集します。 CDC インスタンス プロパティの編集の詳細については、「 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)」を参照してください。  
   
- MicrosoftÂ® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ 対応する SQL Server バージョンの Microsoft Change Data Capture Designer for Oracle by Attunity を以下のリンクからダウンロードしてください。
+
+- [Microsoft SQL Server 2016 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303) 
   
 ## <a name="in-this-documentation"></a>このドキュメントの内容  
   
@@ -50,16 +55,16 @@ ms.locfileid: "86918682"
   
 -   [Change Data Capture Designer for Oracle by Attunity 操作ガイド](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [インスタンスの作成のための SQL Server 接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [インスタンスの作成のための SQL サーバー接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
 -   [高度な接続プロパティ](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [スクリプトを実行するための Oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Oracle の補足ログ スクリプト](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [CDC インスタンス配置スクリプト](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [CDC デザイナーで使用する SQL Server 接続に必要なアクセス許可](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [CDC デザイナーで使用する SQL Server 接続に必要な権限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

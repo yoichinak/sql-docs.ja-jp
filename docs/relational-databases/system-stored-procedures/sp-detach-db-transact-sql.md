@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-sql)
 title: sp_detach_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6829fff1f535a0e0d55b8dd849c67b0b197c4e48
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861115"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810852"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'database_name'`デタッチするデータベースの名前を指定します。 *database_name*は**sysname**値で、既定値は NULL です。  
+`[ @dbname = ] 'database_name'` デタッチするデータベースの名前を指定します。 *database_name* は **sysname** 値で、既定値は NULL です。  
   
-`[ @skipchecks = ] 'skipchecks'`更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks*は**nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true**を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false**を指定します。  
+`[ @skipchecks = ] 'skipchecks'` 更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks* は **nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true**を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false**を指定します。  
   
  既定では、UPDATE STATISTICS は、テーブルとインデックスのデータに関する情報を更新するために実行されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile*は**nvarchar (10)** 値、既定値は**true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または**true**の場合、フルテキスト関連のメタデータが保持されます。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile* は **nvarchar (10)** 値、既定値は **true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または **true**の場合、フルテキスト関連のメタデータが保持されます。  
   
 > [!IMPORTANT]
 >  ** \@ Keepfulltextindexfile**パラメーターは、将来のバージョンのでは削除される予定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
@@ -63,12 +64,12 @@ sp_detach_db [ @dbname= ] 'database_name'
  なし  
   
 ## <a name="remarks"></a>解説  
- データベースをデタッチすると、そのすべてのメタデータが削除されます。 データベースが任意のログインアカウントの既定のデータベースであった場合、 **master**が既定のデータベースになります。  
+ データベースをデタッチすると、そのすべてのメタデータが削除されます。 データベースが任意のログインアカウントの既定のデータベースであった場合、 **master** が既定のデータベースになります。  
   
 > [!NOTE]  
->  すべてのログインアカウントの既定のデータベースを表示する方法の詳細については、「 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)」を参照してください。 必要なアクセス許可がある場合は、 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md)を使用して、新しい既定のデータベースをログインに割り当てることができます。  
+>  すべてのログインアカウントの既定のデータベースを表示する方法の詳細については、「 [sp_helplogins &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)」を参照してください。 必要なアクセス許可がある場合は、 [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) を使用して、新しい既定のデータベースをログインに割り当てることができます。  
   
-## <a name="restrictions"></a>制限事項  
+## <a name="restrictions"></a>制限  
  次のいずれかに該当する場合、データベースをデタッチすることはできません。  
   
 -   データベースは現在使用されています。 詳細については、このトピックで後述する「排他アクセスの取得」を参照してください。  
@@ -100,7 +101,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="obtaining-exclusive-access"></a>排他アクセスの取得  
  データベースをデタッチするには、データベースへの排他アクセスが必要です。 デタッチするデータベースが使用中の場合は、デタッチする前に、データベースを SINGLE_USER モードに設定して、排他アクセスを取得します。
 
- データベースを SINGLE_USER に設定する前に、AUTO_UPDATE_STATISTICS_ASYNC オプションが OFF に設定されていることを確認します。 このオプションが ON に設定されていると、統計の更新に使用されるバックグラウンド スレッドによってデータベースへの接続が使用されるため、シングル ユーザー モードではデータベースにアクセスできなくなります。 詳細については、「[データベースをシングルユーザーモードに設定する](../databases/set-a-database-to-single-user-mode.md)」を参照してください。
+ データベースを SINGLE_USER に設定する前に、AUTO_UPDATE_STATISTICS_ASYNC オプションが OFF に設定されていることを確認します。 このオプションが ON に設定されていると、統計の更新に使用されるバックグラウンド スレッドによってデータベースへの接続が使用されるため、シングル ユーザー モードではデータベースにアクセスできなくなります。 詳細については、「 [データベースをシングルユーザーモードに設定する](../databases/set-a-database-to-single-user-mode.md)」を参照してください。
 
  たとえば、次のステートメントは、 `ALTER DATABASE` すべての現在のユーザーがデータベースから切断された後に、データベースへの排他アクセスを取得し [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ます。  
   
@@ -112,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*です。 詳細については、「 [ALTER DATABASE &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
+>  現在のユーザーをデータベースから直ちに、または指定された秒数内に強制的に戻すには、ROLLBACK オプションを使用します。 ALTER DATABASE *database_name* SET SINGLE_USER WITH rollback *rollback_option*です。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ## <a name="reattaching-a-database"></a>データベースの再アタッチ  
  デタッチされたファイルはそのまま残り、CREATE DATABASE (FOR ATTACH または FOR ATTACH_REBUILD_LOG オプション) を使用して再アタッチできます。 ファイルを別のサーバーに移動し、そこにアタッチすることもできます。  
@@ -120,8 +121,8 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの**db_owner**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks チェック*を true に設定してデータベースをデタッチします。  
+## <a name="examples"></a>例  
+ 次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks チェック* を true に設定してデータベースをデタッチします。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -137,7 +138,6 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [データベースのデタッチ](../../relational-databases/databases/detach-a-database.md)  
-  
   

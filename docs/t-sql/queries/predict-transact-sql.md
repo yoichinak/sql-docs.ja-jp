@@ -1,4 +1,5 @@
 ---
+description: PREDICT (Transact-SQL)
 title: PREDICT (Transact-SQL)
 titleSuffix: SQL machine learning
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a21506caf12537eb8acab96c97fa53c62b7fadf
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918608"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116283"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -173,7 +174,7 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -181,11 +182,11 @@ FROM PREDICT(MODEL = @model,
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+DECLARE @model VARBINARY(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
 
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
-    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+    DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 ::: moniker-end
@@ -206,7 +207,7 @@ CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
-             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+             DATA = dbo.mytable AS d) WITH (Score FLOAT) AS p;
 ```
 
 :::moniker-end
@@ -216,11 +217,11 @@ FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
 予測の一般的なユース ケースは、入力データ用のスコアを生成してから、予測した値をテーブルに挿入する方法です。 次の例では、呼び出し元のアプリケーションがストアド プロシージャを使用して予測値を含む行をテーブルに挿入することを前提としています。
 
 ```sql
-DECLARE @model varbinary(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
+DECLARE @model VARBINARY(max) = (SELECT model FROM scoring_model WHERE model_name = 'ScoringModelV1');
 
 INSERT INTO loan_applications (c1, c2, c3, c4, score)
 SELECT d.c1, d.c2, d.c3, d.c4, p.score
-FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score float) AS p;
+FROM PREDICT(MODEL = @model, DATA = dbo.mytable AS d) WITH(score FLOAT) AS p;
 ```
 
 - `PREDICT` の結果は、PredictionResults という名前のテーブルに格納されます。 

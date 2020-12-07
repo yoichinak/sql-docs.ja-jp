@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_primary_database (Transact-SQL)
 title: sp_change_log_shipping_primary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474510"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,29 +51,29 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
+`[ @database = ] 'database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
   
-`[ @backup_directory = ] 'backup_directory'`プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory*は**nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
+`[ @backup_directory = ] 'backup_directory'` プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
-`[ @backup_share = ] 'backup_share'`プライマリサーバー上のバックアップディレクトリへのネットワークパスを示します。 *backup_share*は**nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
+`[ @backup_share = ] 'backup_share'` プライマリサーバー上のバックアップディレクトリへのネットワークパスを示します。 *backup_share* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
-`[ @backup_retention_period = ] 'backup_retention_period'`プライマリサーバー上のバックアップディレクトリにログバックアップファイルを保持する時間を分単位で示します。 *backup_retention_period*は**int**,、既定値はありません、NULL にすることはできません。  
+`[ @backup_retention_period = ] 'backup_retention_period'` プライマリサーバー上のバックアップディレクトリにログバックアップファイルを保持する時間を分単位で示します。 *backup_retention_period* は **int**,、既定値はありません、NULL にすることはできません。  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`監視サーバーへの接続に使用されるセキュリティモード。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 監視サーバーへの接続に使用されるセキュリティモード。  
   
  1 = Windows 認証。  
   
  0 = SQL Server 認証。  
   
- *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
+ *monitor_server_security_mode* は **ビット** であり、NULL にすることはできません。  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`監視サーバーへのアクセスに使用するアカウントのユーザー名を示します。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 監視サーバーへのアクセスに使用するアカウントのユーザー名を示します。  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
   
-`[ @backup_threshold = ] 'backup_threshold'`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold*は**int**,、既定値は60分です。  
+`[ @backup_threshold = ] 'backup_threshold'`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
   
-`[ @threshold_alert = ] 'threshold_alert'`バックアップのしきい値を超えたときに発生するアラート。 *threshold_alert*は**int**であり、NULL にすることはできません。  
+`[ @threshold_alert = ] 'threshold_alert'` バックアップのしきい値を超えたときに発生するアラート。 *threshold_alert* は **int** であり、NULL にすることはできません。  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。  
   
@@ -80,17 +81,17 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = 無効です。  
   
- *threshold_alert_enabled*は**ビット**であり、NULL にすることはできません。  
+ *threshold_alert_enabled* は **ビット** であり、NULL にすることはできません。  
   
-`[ @history_retention_period = ] 'history_retention_period'`履歴を保持する時間の長さを分単位で指定します。 *history_retention_period*は**int**です。値が指定されていない場合は、14420が使用されます。  
+`[ @history_retention_period = ] 'history_retention_period'` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int**です。値が指定されていない場合は、14420が使用されます。  
   
-`[ @backup_compression = ] backup_compression_option`ログ配布構成で[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを指定します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
+`[ @backup_compression = ] backup_compression_option` ログ配布構成で [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを指定します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
  0 = 無効です。 ログ バックアップは圧縮されません。  
   
  1 = 有効。 ログバックアップは常に圧縮します。  
   
- 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
+ 2 = [ビューの設定 [] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -99,19 +100,19 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_change_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
+ **sp_change_log_shipping_primary_database** は、プライマリサーバーの **master** データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  必要に応じて、 **log_shipping_primary_database**レコードの設定を変更します。  
+1.  必要に応じて、 **log_shipping_primary_database** レコードの設定を変更します。  
   
-2.  必要に応じて、指定された引数を使用して、プライマリサーバー上の**log_shipping_monitor_primary**のローカルレコードを変更します。  
+2.  必要に応じて、指定された引数を使用して、プライマリサーバー上の **log_shipping_monitor_primary** のローカルレコードを変更します。  
   
-3.  監視サーバーがプライマリサーバーと異なる場合は、必要に応じて、指定された引数を使用して、監視サーバー上の**log_shipping_monitor_primary**のレコードを変更します。  
+3.  監視サーバーがプライマリサーバーと異なる場合は、必要に応じて、指定された引数を使用して、監視サーバー上の **log_shipping_monitor_primary** のレコードを変更します。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例では、 **sp_change_log_shipping_primary_database**を使用して、プライマリデータベースに関連付けられている設定を更新する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
+## <a name="examples"></a>例  
+ この例では、 **sp_change_log_shipping_primary_database** を使用して、プライマリデータベースに関連付けられている設定を更新する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   

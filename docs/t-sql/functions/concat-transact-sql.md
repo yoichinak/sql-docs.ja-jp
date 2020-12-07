@@ -1,4 +1,5 @@
 ---
+description: CONCAT (Transact-SQL)
 title: CONCAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 43b05f32ecaf1cb1554180fce9b1591dc02c7358
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394267"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118947"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>引数
 *string_value*  
-他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value*引数が必要です *。*
+他の値に連結する文字列値です。 `CONCAT` 関数では、2 個以上、254 個未満の *string_value* 引数が必要です *。*
   
 ## <a name="return-types"></a>戻り値の型  
 *string_value*  
@@ -53,7 +54,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   
-|入力型|出力型と長さ|  
+|入力の種類|出力型と長さ|  
 |---|---|
 |1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />or<br><br />`nvarchar(max)`|**nvarchar(max)**|  
 |2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />or<br><br />**varchar(max)**|**varchar(max)** 。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
@@ -76,7 +77,7 @@ SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 -------------------------  
 Happy Birthday 11/25  
@@ -88,9 +89,9 @@ Happy Birthday 11/25
   
 ```sql
 CREATE TABLE #temp (  
-    emp_name nvarchar(200) NOT NULL,  
-    emp_middlename nvarchar(200) NULL,  
-    emp_lastname nvarchar(200) NOT NULL  
+    emp_name NVARCHAR(200) NOT NULL,  
+    emp_middlename NVARCHAR(200) NULL,  
+    emp_lastname NVARCHAR(200) NOT NULL  
 );  
 INSERT INTO #temp VALUES( 'Name', NULL, 'Lastname' );  
 SELECT CONCAT( emp_name, emp_middlename, emp_lastname ) AS Result  
@@ -99,7 +100,7 @@ FROM #temp;
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 Result  
 ------------------  
 NameLastname  

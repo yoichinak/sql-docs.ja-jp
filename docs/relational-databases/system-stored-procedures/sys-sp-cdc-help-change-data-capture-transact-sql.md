@@ -1,5 +1,6 @@
 ---
-title: sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_help_change_data_capture (Transact-sql)
+title: sys.sp_cdc_help_change_data_capture (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891089"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809824"
 ---
-# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sp_cdc_help_change_data_capture (Transact-sql)
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+  現在のデータベースで変更データキャプチャが有効になっている各テーブルについて、変更データキャプチャの構成を返します。 各ソーステーブルに対して最大で2つの行を返すことができます。キャプチャインスタンスごとに1つの行です。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,16 +47,16 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>引数  
  [ @source_schema =] '*source_schema*'  
- ソーステーブルが属しているスキーマの名前を指定します。 *source_schema*は**sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
+ ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
   
- NULL 以外の場合は、 *source_schema*が現在のデータベースに存在している必要があります。  
+ NULL 以外の場合は、 *source_schema* が現在のデータベースに存在している必要があります。  
   
  *Source_schema*が null 以外の場合、 *source_name*も null 以外である必要があります。  
   
  [ @source_name =] '*source_name*'  
- ソーステーブルの名前を指定します。 *source_name*は**sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
+ ソーステーブルの名前を指定します。 *source_name* は **sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
   
- NULL 以外の場合は、 *source_name*が現在のデータベースに存在している必要があります。  
+ NULL 以外の場合は、 *source_name* が現在のデータベースに存在している必要があります。  
   
  *Source_name*が null 以外の場合、 *source_schema*も null 以外である必要があります。  
   
@@ -102,7 +103,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B: すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B. すべてのテーブルについて変更データ キャプチャの構成情報を取得する  
  次の例では、呼び出し元がアクセスを許可されている変更データを含む、データベース内のすべての有効なテーブルの構成情報を返します。  
   
 ```  
@@ -111,5 +112,4 @@ GO
 EXECUTE sys.sp_cdc_help_change_data_capture;  
 GO  
 ```  
-  
   

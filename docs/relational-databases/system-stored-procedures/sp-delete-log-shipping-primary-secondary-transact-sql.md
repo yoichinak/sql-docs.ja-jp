@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_secondary (Transact-sql)
 title: sp_delete_log_shipping_primary_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9c714d2f43ecf53f048f57dcb049bfd8acd0f2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72d76081ac46d55bbb60843403b22a9ed4a9f9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447307"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @primary_database = ] 'primary_database'`プライマリサーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_server = ] 'secondary_server'`セカンダリサーバーの名前を指定します。 *secondary_server*は**sysname**であり、既定値はありません。  
+`[ @secondary_server = ] 'secondary_server'` セカンダリサーバーの名前を指定します。 *secondary_server* は **sysname**であり、既定値はありません。  
   
-`[ @secondary_database = ] 'secondary_database'`セカンダリデータベースの名前を指定します。 *secondary_database*は**sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,13 +55,13 @@ sp_delete_log_shipping_primary_secondary
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
- **sp_delete_log_shipping_primary_secondary**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、セカンダリデータベースのエントリをプライマリサーバーの**log_shipping_primary_secondaries**から削除します。  
+## <a name="remarks"></a>解説  
+ **sp_delete_log_shipping_primary_secondary** は、プライマリサーバーの **master** データベースから実行する必要があります。 このストアドプロシージャは、セカンダリデータベースのエントリをプライマリサーバーの **log_shipping_primary_secondaries** から削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、セカンダリ `sp_delete_log_shipping_primary_secondary` データベースをセカンダリサーバーから削除するためにが使用されてい `LogShipAdventureWorks` `FLATIRON` ます。  
   
 ```  

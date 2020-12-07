@@ -1,4 +1,5 @@
 ---
+description: DROP PARTITION FUNCTION (Transact-SQL)
 title: DROP PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - dropping partition functions
 - removing partition functions
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ae5aa5282e80b251f3a52479f8a7dc3437fd9a52
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4491f35570a4f60d2a3deb9e4c3271c34f699369
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483973"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131173"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86483973"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
   
@@ -63,7 +63,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="examples"></a>例  
  次の例では、パーティション関数 `myRangePF` が現在のデータベースで作成されたことを前提としています。  
   
-```  
+```sql 
 DROP PARTITION FUNCTION myRangePF;  
 ```  
   

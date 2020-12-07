@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -9,22 +10,22 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67774a985646e9058bb5e2600f50c043498ea96d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 006a0577292ba825a3d28cd63cc573ac35cc5771
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248628"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300425"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 データベース内の既存の外部言語拡張機能の内容を変更します。
 
 ## <a name="syntax"></a>構文
 
-```text
+```syntaxsql
 ALTER EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]
 {
@@ -106,13 +107,15 @@ ALTER EXTERNAL LANGUAGE language_name
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>解説
 
-現在、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
+現在、 **PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
 ## <a name="permissions"></a>アクセス許可
 
-`ALTER ANY EXTERNAL LANGUAGE` アクセス許可が必要です。 既定では、**db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部言語を変更するためのアクセス許可があります。 他のすべてのユーザーについては、[GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) ステートメントを使用し、特権として ALTER ANY EXTERNAL LANGUAGE を指定して、アクセス許可を明示的に付与する必要があります。
+`ALTER ANY EXTERNAL LANGUAGE` アクセス許可が必要です。 既定では、 **db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部言語を変更するためのアクセス許可があります。 他のすべてのユーザーについては、[GRANT](./grant-database-permissions-transact-sql.md) ステートメントを使用し、特権として ALTER ANY EXTERNAL LANGUAGE を指定して、アクセス許可を明示的に付与する必要があります。
 
 ## <a name="examples"></a>例
 
@@ -131,4 +134,4 @@ GO
 [CREATE EXTERNAL LANGUAGE (Transact-SQL)](create-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

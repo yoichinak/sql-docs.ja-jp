@@ -1,4 +1,5 @@
 ---
+description: MSlogreader_agents (Transact-sql)
 title: MSlogreader_agents (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c0d858466dd0477cd41f0eafdde5b214583b2938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc52c520b1759839ee75d066895ba9ac19c1c6c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889930"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547112"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85889930"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

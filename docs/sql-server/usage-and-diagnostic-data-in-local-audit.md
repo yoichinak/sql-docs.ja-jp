@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bd75bde9e125ffc99f1af6f382aa91d2f1e0caf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812635"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987278"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
@@ -78,12 +78,12 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
   >[!NOTE] 
   >監査機能や修正プログラムによって SQL Server に問題が発生する可能性を防ぐには、SQL Server インストール パス以外のローカル監査のディレクトリ パスを構成してください。
 
-  ||設計上の決定|推奨|  
-  |------|-----------------|----------|  
-  |![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|空き領域 |データベース数が約 10 個で中程度のワークロードの場合、インスタンスごとにデータベースあたり約 2 MB のディスク領域で計画を立てます。|  
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|別のディレクトリ | 各インスタンス用にディレクトリを作成します。 たとえば、`MSSQLSERVER` という SQL Server インスタンス用には *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* を使用します。 こうすることでファイルの管理が簡単になります。
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|別のディレクトリ |サービスごとに別のフォルダーを使用します。 たとえば、1 つのインスタンス名について、データベース エンジン用に 1 つのフォルダーを用意します。 Analysis Services のインスタンスで同じインスタンス名を使用する場合は、Analysis Services 用に別のフォルダーを作成します。 データベース エンジンと Analysis Services の両インスタンスを同じフォルダーに構成すると、すべてのローカル監査で両インスタンスのログが同じログ ファイルに出力されます。| 
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する|SQL Server CEIP サービス ログオン アカウントに対する **フォルダーの内容の一覧表示**、**読み取り**、および**書き込み**の各アクセス権を有効にします|
+|設計上の決定|推奨|  
+|-----------------|----------|  
+|空き領域 |データベース数が約 10 個で中程度のワークロードの場合、インスタンスごとにデータベースあたり約 2 MB のディスク領域で計画を立てます。|  
+|別のディレクトリ | 各インスタンス用にディレクトリを作成します。 たとえば、`MSSQLSERVER` という SQL Server インスタンス用には *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* を使用します。 こうすることでファイルの管理が簡単になります。
+|別のディレクトリ |サービスごとに別のフォルダーを使用します。 たとえば、1 つのインスタンス名について、データベース エンジン用に 1 つのフォルダーを用意します。 Analysis Services のインスタンスで同じインスタンス名を使用する場合は、Analysis Services 用に別のフォルダーを作成します。 データベース エンジンと Analysis Services の両インスタンスを同じフォルダーに構成すると、すべてのローカル監査で両インスタンスのログが同じログ ファイルに出力されます。| 
+|SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する|SQL Server CEIP サービス ログオン アカウントに対する **フォルダーの内容の一覧表示**、**読み取り**、および**書き込み**の各アクセス権を有効にします|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>SQL Server CEIP サービス ログオン アカウントにアクセス許可を付与する
@@ -96,9 +96,9 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
 
 1. **[追加]** を選択し、SQL Server CEIP サービスの資格情報を入力します。 たとえば、「 `NT Service\SQLTELEMETRY` 」のように指定します。
 
-1. **[名前の確認]** を選択して入力した名前を検証し、 **[OK]** を選択します。
+1. **[名前の確認]** を選択して入力した名前を検証し、**[OK]** を選択します。
 
-1. **[権限]** ダイアログ ボックスで、SQL Server CEIP サービスのログオン アカウントを選択し、 **[フォルダーの内容の一覧表示]** 、 **[読み取り]** 、 **[書き込み]** を選択します。
+1. **[権限]** ダイアログ ボックスで、SQL Server CEIP サービスのログオン アカウントを選択し、**[フォルダーの内容の一覧表示]**、**[読み取り]**、**[書き込み]** を選択します。
 
 1. **[OK]** を選択すると、権限の変更が直ちに適用されます。 
   
@@ -129,7 +129,7 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
    | &nbsp; | &nbsp; |
 
-1. CPE パスを右クリックし、 **[新規]** を選択します。 **[文字列値]** を選択します。
+1. CPE パスを右クリックし、**[新規]** を選択します。 **[文字列値]** を選択します。
 
 1. 新しいレジストリ キーに `UserRequestedLocalAuditDirectory`と名前を付けます。 
  
@@ -141,22 +141,22 @@ SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server D
 
 1. 目的の CPE [パス](#create-a-registry-key-setting-to-configure-local-audit-target-directory)に移動します。 
 
-1. **[UserRequestedLocalAuditDirectory]** を右クリックし、 *[変更]* を選択します。 
+1. **[UserRequestedLocalAuditDirectory]** を右クリックし、*[変更]* を選択します。 
 
-1. ローカル監査を有効にするには、ローカル監査のパスを入力します (例: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* )。
+1. ローカル監査を有効にするには、ローカル監査のパスを入力します (例: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*)。
  
-    ローカル監査を無効にするには、 **[UserRequestedLocalAuditDirectory]** の値を空にします。
+    ローカル監査を無効にするには、**[UserRequestedLocalAuditDirectory]** の値を空にします。
 
 1. **regedit**を閉じます。 
 
 SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ちに認識されます。 SQL Server CEIP サービスを開始するには、システム管理者、または Windows サービスを開始または停止するアクセス権を持つユーザーが、次の手順を実行します。 
 
-1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、 **[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、 **[OK]** を選択して**サービス** コンソールを起動します。  
+1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、**[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、**[OK]** を選択して**サービス** コンソールを起動します。  
 
 1. 目的のサービスに移動します。 
 
-    - データベース エンジンの場合、「**SQL Server CEIP サービス (*Your-Instance-Name*)** 」を使用します。     
-    - Analysis Services の場合、「**SQL Server Analysis Services CEIP (*Your-Instance-Name*)** 」を使用します。
+    - データベース エンジンの場合、「**SQL Server CEIP サービス (*Your-Instance-Name*)**」を使用します。     
+    - Analysis Services の場合、「**SQL Server Analysis Services CEIP (*Your-Instance-Name*)**」を使用します。
     - Integration Services の場合、 
         - SQL 2016 の場合、「*SQL Server Integration Services CEIP サービス 13.0*」を使用します。
         - SQL 2017 の場合、「*SQL Server Integration Services CEIP サービス 14.0*」を使用します。
@@ -214,7 +214,7 @@ SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ち�
 |querySetVersion | クエリ定義グループのバージョン | 1.0.0.0 
 |traceName | トレースのカテゴリ: (SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | クエリの識別子 | SQLServerProperties.002 
-|data   | T-SQL クエリ、XE セッション、またはアプリケーションの出力として queryIdentifier で収集された情報の出力 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor":"13","SqlVersionMinor":"0","SqlVersionBuild":"2161","ProductBuildType": "","ProductLevel":"RTM","ProductUpdateLevel":"CU2","ProductUpdateReference":"KB3182270","ProductRevision":"3","SQLEditionId": "-1534726760","IsClustered":"0","IsHadrEnabled":"0","SqlAdvAInstalled":"0","PacketReceived":"1210","Version":"Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|data   | T-SQL クエリ、XE セッション、またはアプリケーションの出力として queryIdentifier で収集された情報の出力 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |query| 該当する場合、データを生成した queryIdentifier に関連する T-SQL クエリ定義。        このコンポーネントは、SQL Server CEIP サービスでアップロードされません。 ユーザー専用の参照コンポーネントとしてローカル監査に含まれています。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | 次のトレース カテゴリのクエリを実行するためにかかる期間: (SQLServerXeQueries、SQLServerPeriodicQueries) |  0 
  
@@ -333,7 +333,7 @@ UserRequestedLocalAuditDirectory レジストリ キー エントリを削除し
 
 **この JSON 出力を読み取るために使用できるクライアントまたはツールはありますか?**
 出力は、メモ帳、Visual Studio、JSON リーダーなど任意のツールで読み取ることができます。
-また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
+また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](/archive/blogs/sqlserverstorageengine/bulk-importing-json-files-into-sql-server)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)
@@ -380,4 +380,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
 ## <a name="see-also"></a>関連項目
-[Local audit for SSMS usage and diagnostic data collection (SSMS の使用状況および診断データの収集のローカル監査)](../ssms/sql-server-management-studio-telemetry-ssms.md)
+[SSMS の使用状況および診断データの収集のローカル監査](../ssms/sql-server-management-studio-telemetry-ssms.md)

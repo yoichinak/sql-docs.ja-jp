@@ -1,4 +1,5 @@
 ---
+description: EXPLAIN (Transact-SQL)
 title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -10,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71ac57d30ac4509bc146645ee3a70cbd2e609137
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395157"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196776"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 EXPLAIN を使用して、どの操作でデータ移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
+  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 EXPLAIN を使用して、どの操作でデータ移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] に適用されます。
   
 ## <a name="syntax"></a>構文  
   
@@ -29,6 +30,8 @@ ms.locfileid: "87395157"
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数
 
@@ -36,13 +39,13 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  EXPLAIN を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
 
-"*WITH_RECOMMENDATIONS* " (プレビュー)
+*WITH_RECOMMENDATIONS* 
 
 SQL ステートメントのパフォーマンスを最適化するための推奨事項と共にクエリ プランを返します。  
   
 ## <a name="permissions"></a>アクセス許可
 
- **SHOWPLAN** アクセス許可と、*SQL_statement* を実行するためのアクセス許可が必要です。 「[アクセス許可:GRANT、DENY、REVOKE &#40;Azure SQL Data Warehouse、並列データ ウェアハウス&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)」を参照してください。  
+ **SHOWPLAN** アクセス許可と、*SQL_statement* を実行するためのアクセス許可が必要です。 「[アクセス許可:GRANT、DENY、REVOKE &#40;Azure Synapse Analytics、Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)」を参照してください。  
   
 ## <a name="return-value"></a>戻り値
 
@@ -96,7 +99,7 @@ SQL ステートメントのパフォーマンスを最適化するための推�
   
  この例で送信されたコマンド次のとおりです。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXPLAIN   
@@ -614,12 +617,12 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 ```
 
 ## <a name="see-also"></a>関連項目
-[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse (Azure SQL Data Warehouse でサポートされるシステム ビュー)](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse (Azure SQL Data Warehouse でサポートされる T-SQL ステートメント)](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](../database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md?view=azure-sqldw-latest)   
+[Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure Synapse Analytics でサポートされているシステム ビュー](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure Synapse Analytics でサポートされている T-SQL ステートメント](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

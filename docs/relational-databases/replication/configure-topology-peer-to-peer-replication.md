@@ -1,4 +1,5 @@
 ---
+description: '[トポロジの構成] (ピア ツー ピア レプリケーション)'
 title: トポロジの構成 (ピア ツー ピア レプリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06e271f8f75fea1cf98c9d8f9697cbfe49c412e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 632cdd88b0f56b0518789f1887b13facaed07e1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455638"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85773978"
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
 |![トポロジの最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジの最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
 |![情報が完全なノード](../../relational-databases/replication/media/p2pwizard-complete.gif "情報が完全なノード")|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのインスタンスを実行しており、レプリケーションに含まれている情報が完全なノード。 構成オプションを指定するには、ノードを右クリックします。|  
-|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> \- ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> \- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]** をクリックします。|  
+|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> - ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]** をクリックします。|  
 |矢印の付いた灰色の線|2 つのノード間の接続。 接続を追加するには、接続するノードのいずれかを右クリックします。 接続を削除するには、接続を右クリックします。<br /><br /> 線に付いている矢印が単一の場合、レプリケーションに含まれているいずれかのノードの情報が不完全です。|  
   
 ### <a name="options-for-the-design-surface"></a>デザイン画面のオプション  

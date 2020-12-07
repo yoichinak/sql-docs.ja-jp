@@ -1,4 +1,5 @@
 ---
+description: IS NULL (Transact-SQL)
 title: IS NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -32,12 +33,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327c641ff7d5ec9fabf67f2d8f1f9cf7231e7e49
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116294"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86555875"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 expression IS [ NOT ] NULL  
 ```  
   
@@ -65,9 +66,9 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- *式*の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  
+ *式* の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  
   
- *式*の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
+ *式* の値が NULL の場合、IS NOT NULL では FALSE が返されます。それ以外の場合は TRUE が返されます。  
   
 ## <a name="remarks"></a>解説  
  式が NULL かどうかを判定するには、= や != などの比較演算子の代わりに、IS NULL または IS NOT NULL を使用してください。 比較演算子では、引数のいずれかまたは両方が NULL の場合、UNKNOWN が返されます。  
@@ -75,7 +76,7 @@ expression IS [ NOT ] NULL
 ## <a name="examples"></a>例  
  次の例では、重量が `10` ポンド未満または色が不明の全製品の名前と重量、または `NULL` を返します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight, Color  
@@ -88,7 +89,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、ミドルネームのイニシャルがあるすべての従業員のフル ネームを返します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, MiddleName  

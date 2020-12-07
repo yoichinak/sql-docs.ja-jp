@@ -1,4 +1,5 @@
 ---
+description: レポートの生成 (MySQLToSQL)
 title: レポートの生成 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 58cc5fc2f06419293b58fa6a38d6d75a8f750897
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935534"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987888"
 ---
 # <a name="generating-reports-mysqltosql"></a>レポートの生成 (MySQLToSQL)
 コマンドを使用して実行される特定のアクティビティのレポートは、SSMA コンソールのオブジェクトツリーレベルで生成されます。  
   
 レポートを生成するには、次の手順に従います。  
   
-1.  [**書き込みの概要-レポート先**] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+1.  [ **書き込みの概要-レポート先** ] パラメーターを指定します。 関連するレポートは、ファイル名 (指定されている場合) または指定したフォルダーに格納されます。 次の表で説明するように、ファイル名はシステムで定義されています。 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
     Reports vis vis コマンドは次のとおりです。  
   
-    |法. いいえ。|command|レポート タイトル|  
+    |法. いいえ。|コマンド|レポート タイトル|  
     |-|-|-|  
     |1|生成-評価-レポート|AssessmentReport &lt; n &gt;XML|  
     |2|変換-スキーマ|SchemaConversionReport &lt; n &gt;XML|  
@@ -39,7 +40,7 @@ ms.locfileid: "87935534"
     > [!IMPORTANT]  
     > 出力レポートは、評価レポートとは異なります。 前者は、実行中のコマンドのパフォーマンスに関するレポートです。後者は、プログラムで使用するための XML レポートです。  
   
-    出力レポートのコマンドオプション (Sl から)。 いいえ。 2-4) 「 [SSMA コンソール &#40;MySQLToSQL&#41;の実行](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)」を参照してください。  
+    出力レポートのコマンドオプション (Sl から)。 いいえ。 2-4) 「 [SSMA コンソール &#40;MySQLToSQL&#41;の実行 ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) 」を参照してください。  
   
 2.  レポートの詳細設定を使用して、出力レポートに必要な詳細の範囲を指定します。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87935534"
 ```  
   
 ### <a name="synchronize-target"></a>同期-ターゲット:  
-コマンド**synchronize-target**には、同期操作のエラーレポートの場所を指定する "**レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+コマンド **synchronize-target** には、同期操作のエラーレポートの場所を指定する " **レポートエラー-エラー-** パラメーター" があります。 次に、名前を指定してファイルを**Target同期し &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -110,7 +111,7 @@ ms.locfileid: "87935534"
 -   失敗-スクリプト  
   
 ### <a name="refresh-from-database"></a>データベースからの更新:  
-[**データベースからの更新**] コマンドには、[**レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
+[ **データベースからの更新** ] コマンドには、[ **レポート-エラー-** ] パラメーターがあります。これにより、更新操作のエラーレポートの場所が指定されます。 次に、Sourcedbrefreshreport n という名前のファイルを作成し** &lt; &gt; ます。XML**は、指定した場所に作成されます。ここで、 ** &lt; n &gt; **は、同じコマンドを実行するたびに数字で増加する一意のファイル番号です。  
   
 **注:** フォルダーパスが指定されている場合、' report-errors-to ' パラメーターは、コマンド ' synchronize-target ' の省略可能な属性になります。  
   
@@ -140,5 +141,4 @@ ms.locfileid: "87935534"
 -   失敗-スクリプト  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[SSMA コンソールの実行 (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

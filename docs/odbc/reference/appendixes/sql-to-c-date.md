@@ -1,4 +1,5 @@
 ---
+description: 'SQL から C へ: Date'
 title: 'SQL から C へ: Date |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bab301c7a4bc55289006df1c9df5498629f317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456518"
 ---
 # <a name="sql-to-c-date"></a>SQL から C へ: Date
 Date ODBC SQL データ型の識別子は次のとおりです。  
@@ -36,10 +37,10 @@ Date ODBC SQL データ型の識別子は次のとおりです。
 |SQL_C_TYPE_DATE|なし [a]|データ|6 [c]|該当なし|  
 |SQL_C_TYPE_TIMESTAMP|なし [a]|データ [b]|16 [c]|該当なし|  
   
- [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [a] この変換では、 *Bufferlength* の値は無視されます。 ドライバーは、**Targetvalueptr* のサイズが C データ型のサイズであることを前提としています。  
   
  [b] タイムスタンプ構造の時刻フィールドが0に設定されています。  
   
  [c] これは、対応する C データ型のサイズです。  
   
- SQL データを文字 C データに変換すると、結果の文字列は "*yyyy*-*mm*-*dd*" の形式になります。 この形式は、Windows®の国設定の影響を受けません。
+ SQL データを文字 C データに変換すると、結果の文字列は "*yyyy* - *mm* - *dd*" の形式になります。 この形式は、Windows®の国設定の影響を受けません。

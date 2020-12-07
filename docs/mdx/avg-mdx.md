@@ -1,4 +1,5 @@
 ---
+description: Avg (MDX)
 title: Avg (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477064"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -34,22 +35,22 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- 空の組のセットまたは空のセットを指定した場合、 **Avg**関数は空の値を返します。  
+## <a name="remarks"></a>解説  
+ 空の組のセットまたは空のセットを指定した場合、 **Avg** 関数は空の値を返します。  
   
  **Avg**関数は、指定されたセット内のセルの空でない値の平均を計算します。最初に、指定したセット内のセルの値の合計を計算し、次に、指定されたセット内の空でないセルの数で計算された合計を除算します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの平均値が計算される際、NULL 値は無視されます。  
   
- 特定の数値式 (通常はメジャー) が指定されていない場合、 **Avg**関数は、現在のクエリコンテキスト内で各メジャーの平均を計算します。 特定のメジャーが指定されている場合、 **Avg**関数はまずセットに対してメジャーを評価し、次に関数は、指定されたメジャーに基づいて平均を計算します。  
+ 特定の数値式 (通常はメジャー) が指定されていない場合、 **Avg** 関数は、現在のクエリコンテキスト内で各メジャーの平均を計算します。 特定のメジャーが指定されている場合、 **Avg** 関数はまずセットに対してメジャーを評価し、次に関数は、指定されたメジャーに基づいて平均を計算します。  
   
 > [!NOTE]  
->  計算されるメンバーのステートメントで**currentmember**関数を使用する場合は、数値式を指定する必要があります。これは、このようなクエリコンテキストの現在の座標に既定のメジャーが存在しないためです。  
+>  計算されるメンバーのステートメントで **currentmember** 関数を使用する場合は、数値式を指定する必要があります。これは、このようなクエリコンテキストの現在の座標に既定のメジャーが存在しないためです。  
   
- 空のセルを強制的に含めるには、アプリケーションで[CoalesceEmpty](../mdx/coalesceempty-mdx.md)関数を使用するか、空の値にゼロ (0) の値を指定する有効な*Numeric_Expression*を指定する必要があります。 空のセルの詳細については、OLE DB のドキュメントを参照してください。  
+ 空のセルを強制的に含めるには、アプリケーションで [CoalesceEmpty](../mdx/coalesceempty-mdx.md) 関数を使用するか、空の値にゼロ (0) の値を指定する有効な *Numeric_Expression* を指定する必要があります。 空のセルの詳細については、OLE DB のドキュメントを参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定されたセットに対するメジャーの平均値を返しています。 指定されたメジャーは、指定されたセットのメンバーの既定のメジャーであるか、または指定されたメジャーであることに注意してください。  
   
  `WITH SET [NW Region] AS`  
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- 次の例では、 **Adventure works**キューブ`Measures.[Gross Profit Margin]`から、2003会計年度の各月の日付に対して計算された、メジャーの日次平均を返します。 **Avg**関数は、 `[Ship Date].[Fiscal Time]`階層の各月に含まれる日数のセットから平均を計算します。 最初のバージョンの計算では、平均値から売上を記録しなかった日を除く Avg の既定の動作が示されています。2番目のバージョンでは、売上のない日を平均に含める方法を示しています。  
+ 次の例では、 `Measures.[Gross Profit Margin]` **Adventure works** キューブから、2003会計年度の各月の日付に対して計算された、メジャーの日次平均を返します。 **Avg**関数は、階層の各月に含まれる日数のセットから平均を計算し `[Ship Date].[Fiscal Time]` ます。 最初のバージョンの計算では、平均値から売上を記録しなかった日を除く Avg の既定の動作が示されています。2番目のバージョンでは、売上のない日を平均に含める方法を示しています。  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- 次の例では、 **Adventure works**キューブ`Measures.[Gross Profit Margin]`から、2003会計年度の各半期の日をまたいで計算された、メジャーの日次平均を返します。  
+ 次の例では、 `Measures.[Gross Profit Margin]` **Adventure works** キューブから、2003会計年度の各半期の日をまたいで計算された、メジャーの日次平均を返します。  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

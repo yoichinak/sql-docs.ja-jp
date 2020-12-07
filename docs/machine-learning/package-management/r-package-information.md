@@ -8,18 +8,17 @@ ms.date: 05/27/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bbc530a84ca09ce5e2797bc770e50a20fc5113e
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723943"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869971"
 ---
 # <a name="get-r-package-information"></a>R パッケージ情報の取得
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 この記事では、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)にインストールされている R パッケージに関する情報を取得する方法について説明します。 R スクリプトの例では、インストール パスやバージョンなどのパッケージ情報を一覧表示する方法を示しています。
@@ -80,8 +79,8 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
 
 ::: moniker-end
 
@@ -91,10 +90,10 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R に機械学習アルゴリズムを追加します。 | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R に機械学習アルゴリズムを追加します。 | 
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
 
 ::: moniker-end
 
@@ -104,10 +103,10 @@ GO
 
 |パッケージ | Version | 説明 |
 |---------|---------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R に機械学習アルゴリズムを追加します。 |
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
+| [RevoScaleR](/r-server/r-reference/revoscaler/revoscaler)  | 9.4.7 | リモートでの計算のコンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析での rx 関数の並列実行で使用します。 |
+| [sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | ストアド プロシージャに R スクリプトを含めるために使用します。 |
+| [MicrosoftML](/r-server/r-reference/microsoftml/microsoftml-package)| 9.4.7 | R に機械学習アルゴリズムを追加します。 |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R で MDX ステートメントを記述するために使用します。 |
 
 ::: moniker-end
 

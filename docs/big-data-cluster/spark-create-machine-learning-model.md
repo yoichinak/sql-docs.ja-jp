@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: be8a2e43c120f154cf998e49027c5025bd4feac4
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 3ccd54d4e5e73da6492de753084ffa924341b63a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438084"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725733"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で Spark の機械学習モデルを作成、エクスポート、およびスコア付けする
 
@@ -52,7 +52,7 @@ ms.locfileid: "86438084"
 
    このノートブックには、サンプルのこのセクションに必要なコマンドを含むセルが含まれています。
 
-1. Azure Data Studio でノートブックを開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、[SQL Server でノートブックを使用する方法](../azure-data-studio/notebooks-guidance.md)に関するページを参照してください。
+1. Azure Data Studio でノートブックを開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、[SQL Server でノートブックを使用する方法](../azure-data-studio/notebooks/notebooks-guidance.md)に関するページを参照してください。
 
 データはまず Spark に読み取られ、トレーニング データ セットとテスト データ セットに分割されます。 次に、トレーニング データを使用してパイプライン モデルをトレーニングします。 最後に、モデルを MLeap バンドルにエクスポートします。
 

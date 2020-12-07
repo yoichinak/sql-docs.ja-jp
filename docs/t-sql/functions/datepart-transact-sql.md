@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbd5be9b5c350819dc8b1b86ca9eff8bfb205259
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bbd0ad445399fe45ddf704d0037bb7ee31a53b2c
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113561"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96118213"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "87113561"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DATEPART ( datepart , date )  
 ```  
   
@@ -54,7 +54,7 @@ DATEPART ( datepart , date )
 
 ## <a name="arguments"></a>引数
 *datepart*  
-`DATEPART` によって**整数**が返される *date* 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
+`DATEPART` によって **整数** が返される *date* 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
 
 > [!NOTE]
 > `DATEPART` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。
@@ -124,7 +124,7 @@ DATEPART ( datepart , date )
   
 任意の年の 1 月 1 日が、**week** _datepart_ の開始番号と定義されます。 次に例を示します。
 
-DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
+DATEPART (**wk**, 'Jan 1, *xxx* x') = 1
 
 この *xxxx* は任意の年です。
   
@@ -183,7 +183,7 @@ SELECT DATEPART (tzoffset, '2007-05-10  00:00:01.1234567 +05:10');
 ## <a name="default-returned-for-a-datepart-that-is-not-in-a-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に指定した *datepart* がない場合、リテラルが *date* に指定されている場合にのみ、`DATEPART` はその *datepart* の既定値を返します。
   
-など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。このステートメントは `1900, 1, 1, 1, 2` を返します。
+など、既定の年-月-日の任意の **日付** データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。このステートメントは `1900, 1, 1, 1, 2` を返します。
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  

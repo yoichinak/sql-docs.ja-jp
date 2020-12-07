@@ -1,4 +1,5 @@
 ---
+description: イベント通知の実装
 title: イベント通知の実装 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d957711571c65aa6eb8bf185f5bffb8e1a05c7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764949"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679003"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  イベント通知を受け取る対象サービスは、この既存のコントラクトに従う必要があります。  
   
- **通知先サービスを作成するには**:  
+ **通知先サービスを作成するには** :  
   
 1.  メッセージを受信するキューを作成します。  
   
     > [!NOTE]  
-    >  キューでは、 `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
+    >  キューでは、 `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`で定義されているメッセージ型が受信されます。  
   
 2.  このキューにイベント通知コントラクトを参照するサービスを作成します。  
   
@@ -59,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  
@@ -97,7 +98,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [イベント通知に関する情報の取得](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

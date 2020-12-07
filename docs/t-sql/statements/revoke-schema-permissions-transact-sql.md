@@ -1,4 +1,5 @@
 ---
+description: REVOKE (スキーマ権限の取り消し) (Transact-SQL)
 title: REVOKE (スキーマ権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 514b903576110c324a1ec703ecd17f54a2188ac3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5eb65bd0e66b332ab2c53dd00cb01a63979d8bb3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484518"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496565"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE (スキーマ権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  権限を取り消すスキーマを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -82,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 >  このプリンシパルによって権限が許可または拒否されている他のプリンシパルからも、同じ権限が取り消されることを示します。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、スキーマで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含むより一般的な権限と共に示します。  
   
 |スキーマ権限|権限が含まれるスキーマ権限|権限が含まれるデータベース権限|  

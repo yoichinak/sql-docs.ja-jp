@@ -1,4 +1,5 @@
 ---
+description: Oracle のテーブルおよび列の選択
 title: Oracle のテーブルおよび列の選択 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 042536288541a1c019772d97c3fd19a4e659c4dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923908"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457649"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle のテーブルおよび列の選択
 
@@ -30,17 +31,17 @@ ms.locfileid: "86923908"
  **テーブルの一覧**  
  テーブルの一覧には、次の 3 列が含まれています。  
   
--   **[Oracle テーブル名]** : テーブル スキーマを含むテーブルの名前です。  
+-   **[Oracle テーブル名]**: テーブル スキーマを含むテーブルの名前です。  
   
--   **[キャプチャ インスタンス]** : インスタンス固有の変更データ キャプチャ オブジェクトを識別するために使用されるキャプチャ インスタンスの名前です。 キャプチャ インスタンスは NULL にできません。  
+-   **[キャプチャ インスタンス]**: インスタンス固有の変更データ キャプチャ オブジェクトを識別するために使用されるキャプチャ インスタンスの名前です。 キャプチャ インスタンスは NULL にできません。  
   
      指定しない場合、ソース スキーマ名とソース テーブル名に基づき、 `<schema-name>_<table-name>`形式の名前が付けられます。 キャプチャ インスタンス名は 100 文字を超えることはできず、データベース内で一意である必要があります。  
   
-     この列のセルをクリックすると、 **capture_instance**を手動で編集できます。  
+     この列のセルをクリックすると、 **capture_instance** を手動で編集できます。  
   
--   **[セキュリティ ロール]** : 変更データへのアクセスを制御するために使用されるデータベースのゲーティング ロールの名前です。  
+-   **[セキュリティ ロール]**: 変更データへのアクセスを制御するために使用されるデータベースのゲーティング ロールの名前です。  
   
-     この列のセルをクリックすると、 **security_role**を手動で編集できます。  
+     この列のセルをクリックすると、 **security_role** を手動で編集できます。  
   
  **テーブルの追加**  
  **[テーブルの追加]** をクリックすると、 [変更をキャプチャするための Oracle テーブルの選択](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)を行うことができる [テーブル選択] ダイアログ ボックスが開きます。  

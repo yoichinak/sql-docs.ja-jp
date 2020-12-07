@@ -1,4 +1,5 @@
 ---
+description: MSreplmonthresholdmetrics (Transact-sql)
 title: MSreplmonthresholdmetrics (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSreplmonthresholdmetrics system table
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ad67ea6744256e3bcc041c736fbe6fe516773b11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 63006d1f481ba512a78ee73208c39206d0d19ff9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889410"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89524321"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSreplmonthresholdmetrics**テーブルは、レプリケーションを監視するために提供されるメトリックを定義します。 このテーブルは、 **msdb**データベースに格納されます。  
+  **MSreplmonthresholdmetrics**テーブルは、レプリケーションを監視するために提供されるメトリックを定義します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +41,7 @@ ms.locfileid: "85889410"
 |**min_value**|**sql_variant**|範囲指定されたレプリケーションパフォーマンスメトリックの最小値。|  
 |**max_value**|**sql_variant**|範囲指定されたレプリケーションパフォーマンスメトリックの最大値です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

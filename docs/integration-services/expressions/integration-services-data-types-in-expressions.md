@@ -1,4 +1,5 @@
 ---
+description: 式における Integration Services データ型
 title: 式における Integration Services データ型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914578"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196423"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
 
@@ -125,7 +126,7 @@ ms.locfileid: "86914578"
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
--   文字列関数に渡される引数は、次の文字データ型に評価される必要があります。DT_STR または DT_WSTR。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
+-   文字列関数に渡される引数は、DT_STR または DT_WSTR の文字データ型に評価される必要があります。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
   
 -   日付と時刻の関数に渡される引数は、有効な日付に評価される必要があります。 たとえば、DAY(GETDATE()) などの場合です。 DATEADD などの一部の関数では、さらに、関数が日付に追加する日数を指定するために整数の引数が必要となります。  
   
@@ -134,12 +135,11 @@ ms.locfileid: "86914578"
  演算や関数の結果のデータ型は、多くの場合、定義済みのものです。 つまり、引数のデータ型、または式エバリュエーターが結果をキャストするデータ型として定義されています。 たとえば、論理 OR 演算子 (||) の結果は常にブール型で、ABS 関数の結果は引数と同じ数値データ型になります。また、乗算の結果は、結果を失うことなく保持可能な最小の数値データ型になります。 結果のデータ型については、「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/operators-ssis-expression.md)」と「[ &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
   
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
-  
   

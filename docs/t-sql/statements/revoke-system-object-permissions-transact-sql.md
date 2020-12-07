@@ -1,4 +1,5 @@
 ---
+description: REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
 title: REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 16c9bf98a0210a172da9eed533f511128099a291
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c7485325af023c264193fcc8ce8a449553dcb0b9
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483717"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91498043"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,6 @@ ms.locfileid: "86483717"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal   
 ```  
   
@@ -66,9 +66,9 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`EXECUTE` に対する `sp_addlinkedserver` 権限を、`public` から取り消します。  
+ 次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
   
-```  
+```sql  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  
 GO  
 ```  

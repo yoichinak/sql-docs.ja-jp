@@ -1,4 +1,5 @@
 ---
+description: CASE ステートメント (MDX)
 title: CASE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a5907eb58fa102c46fa22af97116c4fad0f217a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466504"
 ---
 # <a name="case-statement-mdx"></a>CASE ステートメント (MDX)
 
@@ -59,13 +60,13 @@ END
  *Boolean_expression*  
  スカラー値に評価される MDX 式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ELSE 句がなく、すべての WHEN 句が false と評価された場合、結果は空のセルになります。  
   
 ## <a name="simple-case-expression"></a>単純 Case 式  
- MDX では、 *input_expression*をスカラー値に解決することで、単純 case 式を評価します。 このスカラー値は、 *when_expression*のスカラー値と比較されます。 2つのスカラー値が一致する場合、CASE ステートメントは*when_true_expression*の値を返します。 2 つのスカラー値が一致しなかった場合は、次の WHEN 句が評価されます。 すべての WHEN 句が false と評価された場合、ELSE 句の*else_result_expression*の値 (存在する場合) が返されます。  
+ MDX では、 *input_expression* をスカラー値に解決することで、単純 case 式を評価します。 このスカラー値は、 *when_expression*のスカラー値と比較されます。 2つのスカラー値が一致する場合、CASE ステートメントは *when_true_expression*の値を返します。 2 つのスカラー値が一致しなかった場合は、次の WHEN 句が評価されます。 すべての WHEN 句が false と評価された場合、ELSE 句の *else_result_expression* の値 (存在する場合) が返されます。  
   
- 次の例では、再販業者の注文数メジャーを複数の WHEN 句に対して評価し、各年の再販業者の注文数メジャーの値に基づいて結果を返します。 WHEN 句の*when_expression*で指定されたスカラー値と一致しない再販業者の注文数の値については、 *else_result_expression*のスカラー値が返されます。  
+ 次の例では、再販業者の注文数メジャーを複数の WHEN 句に対して評価し、各年の再販業者の注文数メジャーの値に基づいて結果を返します。 WHEN 句の *when_expression* で指定されたスカラー値と一致しない再販業者の注文数の値については、 *else_result_expression* のスカラー値が返されます。  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -88,7 +89,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>検索 case 式  
  Case 式を使用してより複雑な評価を実行するには、検索 case 式を使用します。 検索式の 1 つである検索 case 式を使用すると、入力式が一定範囲内の値であるかどうかを評価できます。 MDX では、CASE ステートメントでこれらの句が出現する順序で WHEN 句が評価されます。  
   
- 次の例では、複数の WHEN 句のそれぞれに対して、指定された*Boolean_expression*に対して再販業者の注文数メジャーが評価されます。 年ごとの Reseller Order Count メジャーの値に基づいて、結果が返されます。 句は表示される順序で評価されるため、6より大きい値には、各値を明示的に指定しなくても、"非常に大きい" 値を簡単に割り当てることができます。 WHEN 句で指定されていない再販業者の注文数の値については、 *else_result_expression*のスカラー値が返されます。  
+ 次の例では、複数の WHEN 句のそれぞれに対して、指定された *Boolean_expression* に対して再販業者の注文数メジャーが評価されます。 年ごとの Reseller Order Count メジャーの値に基づいて、結果が返されます。 句は表示される順序で評価されるため、6より大きい値には、各値を明示的に指定しなくても、"非常に大きい" 値を簡単に割り当てることができます。 WHEN 句で指定されていない再販業者の注文数の値については、 *else_result_expression* のスカラー値が返されます。  
   
 ```  
 WITH MEMBER [Measures].x AS   

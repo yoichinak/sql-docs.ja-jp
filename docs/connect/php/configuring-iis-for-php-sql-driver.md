@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3033e557ea1e70402a6647cc36558cba26bd10b5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7ab31be628d4c93f0e4331e3d63d47c4924a6fa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728396"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726884"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP に対する IIS の構成
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,16 +28,16 @@ ms.locfileid: "81728396"
 ## <a name="tutorials"></a>チュートリアル  
 次のリンクは、PHP 用の FastCGI の設定、および IIS 6.0 と IIS 7.0 での PHP アプリケーションのホストに関するチュートリアルに対するものです。  
   
--   [PHP での FastCGI](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
--   [IIS 7.0 で PHP アプリケーションをホストするための FastCGI の使用](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
--   [IIS 6.0 で PHP アプリケーションをホストするための FastCGI の使用](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
--   [IIS 6.0 用の FastCGI 拡張機能の構成](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
+-   [PHP での FastCGI](/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
+-   [IIS 7.0 で PHP アプリケーションをホストするための FastCGI の使用](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
+-   [IIS 6.0 で PHP アプリケーションをホストするための FastCGI の使用](/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
+-   [IIS 6.0 用の FastCGI 拡張機能の構成](/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>ビデオ プレゼンテーション  
 次のリンクは、PHP 用の FastCGI の設定、および IIS 7.0 機能を使用した PHP アプリケーションのホストに関するビデオ プレゼンテーションに対するものです。  
   
--   [PHP 用の FastCGI の設定](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
--   [Microsoft インターネット インフォメーション サービス 7 での PHP とのパーティー](https://docs.microsoft.com/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
+-   [PHP 用の FastCGI の設定](/iis/application-frameworks/running-php-applications-on-iis/set-up-fastcgi-for-php)  
+-   [Microsoft インターネット インフォメーション サービス 7 での PHP とのパーティー](/iis/application-frameworks/running-php-applications-on-iis/mix08-partying-with-php-on-microsoft-internet-information-services-7-and-above)  
   
 ## <a name="support-resources"></a>サポート リソース  
 次のフォーラムでは、IIS での FastCGI に対するコミュニティ サポートが提供されます。  
@@ -53,4 +53,3 @@ ms.locfileid: "81728396"
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  

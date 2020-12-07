@@ -1,4 +1,5 @@
 ---
+description: CurrentMember (MDX)
 title: CurrentMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892923"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196046"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -31,14 +32,14 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  階層を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  階層メンバーのセットに対する反復処理の間、反復の各ステップにおいては、処理対象のメンバーが現在のメンバーになります。 **Currentmember**関数は、そのメンバーを返します。  
   
 > [!IMPORTANT]  
->  表示可能な階層がディメンション内に 1 つしかない場合は、ディメンション名がその 1 つしかない階層に解決されるため、その階層はディメンション名でも階層名でも参照できます。 たとえば、は`Measures.CurrentMember` 、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
+>  表示可能な階層がディメンション内に 1 つしかない場合は、ディメンション名がその 1 つしかない階層に解決されるため、その階層はディメンション名でも階層名でも参照できます。 たとえば、 `Measures.CurrentMember` は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
   
-## <a name="examples"></a>使用例  
- 次のクエリでは、 **Currentmember**を使用して、列、行、およびスライス軸の階層から現在のメンバーを検索する方法を示しています。  
+## <a name="examples"></a>例  
+ 次のクエリでは、 **Currentmember** を使用して、列、行、およびスライス軸の階層から現在のメンバーを検索する方法を示しています。  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -74,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 現在のメンバーは、クエリの軸で使用される階層で変更されます。 そのため、軸で使用されていない、同じディメンションの他の階層の現在のメンバーも変更される可能性があります。この動作は "自動存在" と呼ばれます。詳細については、「 [MDX &#40;Analysis Services&#41;の主要な概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)」を参照してください。 たとえば、次のクエリでは、Date ディメンションの Calendar Year 階層の現在のメンバーが Calendar 階層の現在のメンバーとどのように変化するかを示しています。これは、後者が Rows 軸に表示されるときです。  
+ 現在のメンバーは、クエリの軸で使用される階層で変更されます。 そのため、軸で使用されていない、同じディメンションの他の階層の現在のメンバーも変更される可能性があります。この動作は "自動存在" と呼ばれます。詳細については、「 [MDX &#40;Analysis Services&#41;の主要な概念 ](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)」を参照してください。 たとえば、次のクエリでは、Date ディメンションの Calendar Year 階層の現在のメンバーが Calendar 階層の現在のメンバーとどのように変化するかを示しています。これは、後者が Rows 軸に表示されるときです。  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -92,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **Currentmember**は、使用されているクエリのコンテキストを計算に認識させるために非常に重要です。 次の例では、 **Adventure works**キューブから、各製品の注文数量と、カテゴリおよびモデル別の注文数量の割合を返します。 **Currentmember**関数は、計算時に使用される注文数量を含む製品を識別します。  
+ **Currentmember** は、使用されているクエリのコンテキストを計算に認識させるために非常に重要です。 次の例では、 **Adventure works** キューブから、各製品の注文数量と、カテゴリおよびモデル別の注文数量の割合を返します。 **Currentmember**関数は、計算時に使用される注文数量を含む製品を識別します。  
   
 ```  
 WITH   
@@ -118,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

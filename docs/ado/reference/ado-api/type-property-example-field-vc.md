@@ -1,8 +1,9 @@
 ---
+description: Type プロパティの例 (Field) (VC++)
 title: Type プロパティの例 (Field) (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 64493bab591d4f7a34a5e189a88189664156b63d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765333"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988253"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
-この例では、 ***Employees***テーブル内のすべての[Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
+この例では、 ***Employees***テーブル内のすべての[Field](./field-object.md)オブジェクトの**type**プロパティの値に対応する定数の名前を表示することによって、 [type](./type-property-ado.md)プロパティを示します。 このプロシージャを実行するには、FieldType 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -171,5 +172,5 @@ void PrintComError(_com_error &e) {
  **名前: hire_date**  
  **種類: adDBTimeStamp**   
 ## <a name="see-also"></a>参照  
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field オブジェクト](./field-object.md)   
+ [Type プロパティ (ADO)](./type-property-ado.md)

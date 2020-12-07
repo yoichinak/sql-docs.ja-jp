@@ -1,4 +1,5 @@
 ---
+description: JSON パス式 (SQL Server)
 title: JSON パス式
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8be99986e6ca9ded5bb28e53b5c3ae166e8b86b3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715367"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88490952"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85715367"
 2.  [パス](#PATH) 自体。  
 
 ##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
- 必要に応じて、パス式の先頭に **lax** または **strict**キーワードを指定してパス モードを宣言します。 既定値は **lax**です。  
+ 必要に応じて、パス式の先頭に **lax** または **strict** キーワードを指定してパス モードを宣言します。 既定値は **lax** です。  
   
 -   **lax** モードでは、パス式にエラーが含まれている場合、関数は空の値を返します。 たとえば、値 **$.name** を要求するときに JSON テキストに **name** キーが含まれていない場合、関数は null を返しますが、エラーは発生しません。  
   
@@ -65,7 +66,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info');
   
 -   プロパティのパスは、パス ステップのセットです。 パス ステップには、次の要素と演算子を含めることができます。  
   
-    -   キー名。 たとえば、`$.name` や `$."first name"`す。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
+    -   キー名。 たとえば、`$.name` と`$."first name"` です。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
   
     -   配列の要素。 たとえば、「 `$.product[3]` 」のように入力します。 配列は 0 から始まります。  
   

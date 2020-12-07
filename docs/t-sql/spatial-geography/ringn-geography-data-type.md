@@ -1,4 +1,5 @@
 ---
+description: RingN (geography データ型)
 title: RingN (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 420fe265e6871fe02d4f3dc62936b5de9d0da3de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 58325135db25b79d7c38fb3447f6b7e5bfd8c89a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88417018"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,11 +32,10 @@ ms.locfileid: "86555837"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
-.RingN (expression )  
-```  
-  
+```syntaxsql
+.RingN (expression )
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数

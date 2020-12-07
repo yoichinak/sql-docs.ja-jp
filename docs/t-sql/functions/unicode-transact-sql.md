@@ -1,4 +1,5 @@
 ---
+description: UNICODE (Transact-SQL)
 title: UNICODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f6500371f5a3cc854c823118f70306255b13d45
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ae4305acd245c6d7576698d27dc7ce339d57063b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379493"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>解説  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、UNICODE 関数で 000000 ～ 00FFFF の範囲の UCS-2 コードポイントが返されます。これにより、Unicode Basic Multilingual Plane (BMP) で 65,535 文字を表現できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用すると、UNICODE では 000000 から 10FFFF の範囲の UTF-16 コードポイントが返されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]の Unicode サポートの詳細については、[照合順序および Unicode サポートに関するページ](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)を参照してください。 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、UNICODE 関数で 000000 ～ 00FFFF の範囲の UCS-2 コードポイントが返されます。これにより、Unicode Basic Multilingual Plane (BMP) で 65,535 文字を表現できます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序を使用すると、UNICODE では 000000 から 10FFFF の範囲の UTF-16 コードポイントが返されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]の Unicode サポートの詳細については、[照合順序および Unicode サポートに関するページ](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)を参照してください。 
   
 ## <a name="examples"></a>例  
   
@@ -58,7 +59,7 @@ UNICODE ( 'ncharacter_expression' )
  次の例では、`UNICODE` と `NCHAR` の各関数を使用して、文字列 `Åkergatan` 24 の先頭文字を表す UNICODE 値と実際の先頭文字 `Å` を出力します。  
   
 ```sql  
-DECLARE @nstring nchar(12);  
+DECLARE @nstring NCHAR(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
 ```  
@@ -77,7 +78,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(12);  
+DECLARE @position INT, @nstring NCHAR(12);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  
@@ -91,12 +92,13 @@ SET @nstring = N'Åkergatan 24';
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
+
+BEGIN;  
+   SELECT @position AS [position],   
+      SUBSTRING(@nstring, @position, 1) AS [character],  
+      UNICODE(SUBSTRING(@nstring, @position, 1)) AS [code_point];  
+   SET @position = @position + 1;  
+END; 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

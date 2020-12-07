@@ -1,4 +1,5 @@
 ---
+description: '! (論理 Not) (SSIS 式)'
 title: '! (論理 Not) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1643daac9dab5b1027a0df8fec56ccd190e5980a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484405"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
 
@@ -45,14 +46,14 @@ ms.locfileid: "86914493"
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表は、! 操作を完了するための次の手順について引き続き調査中です。  
   
 |元のブール式|! 演算子の適用後 operator|  
 |---------------------------------|------------------------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |NULL|NULL|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="expression-examples"></a>式の例  
  **Color** 列の値が "red" の場合、この例は FALSE に評価されます。  
@@ -67,7 +68,7 @@ ms.locfileid: "86914493"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

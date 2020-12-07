@@ -1,4 +1,5 @@
 ---
+description: bcp_control
 title: bcp_control |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d9db77c73f9fe6ccefec961a76a74af2c3d343a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f84f1afbc1ede59e170e3fa4d17c9b921d2d1674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499220"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,14 +55,14 @@ RETCODE bcp_control (
  バッチごとの行数を指定します。 既定値は 0 です。既定値を指定すると、データを抽出するときはテーブル内のすべての行が抽出されることを示し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときはユーザー データ ファイル内のすべての行がコピーされることを示します。 1 より小さい値を指定すると、BCPBATCH は既定値にリセットされます。  
   
  BCPDELAYREADFMT  
- ブール値を true に設定すると、 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)が実行時に読み込まれます。 False (既定値) の場合、bcp_readfmt はすぐにフォーマットファイルを読み取ります。 BCPDELAYREADFMT が true で bcp_columns または bcp_setcolfmt を呼び出すと、シーケンスエラーが発生します。  
+ ブール値を true に設定すると、 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) が実行時に読み込まれます。 False (既定値) の場合、bcp_readfmt はすぐにフォーマットファイルを読み取ります。 BCPDELAYREADFMT が true で bcp_columns または bcp_setcolfmt を呼び出すと、シーケンスエラーが発生します。  
   
  `bcp_control(hdbc,` `, (void *)FALSE)` Bcpdelayreadfmt および bcp_writefmt を呼び出した後に bcpdelayreadfmt を呼び出した場合も、シーケンスエラーが発生し `bcp_control(hdbc,` `, (void *)TRUE)` ます。  
   
  詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
  BCPFILECP  
- *Ivalue*には、データファイルのコードページの番号が含まれています。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。  
+ *Ivalue* には、データファイルのコードページの番号が含まれています。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。  
   
  BCPFILE_ACP を指定すると、ファイル内のデータには、クライアントの Microsoft Windows&#xAE; コード ページが使用されます。  
   
@@ -69,7 +71,7 @@ RETCODE bcp_control (
  BCPFILE_RAW を指定すると、ファイル内のデータには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコード ページが使用されます。  
   
  BCPFILEFMT  
- データ ファイル形式のバージョン番号を指定します。 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] )、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] )、100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] )、または 120 () [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 たとえば、サーバーのテキスト列から取得したデータを、以降の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーの**varchar (max)** 列にインポートするには、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 80 を指定する必要があります。 同様に、 **varchar (max)** 列からデータをエクスポートするときに80を指定した場合は、テキスト列が形式で保存され、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーのテキスト列にインポートできるのと同じように保存され [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。  
+ データ ファイル形式のバージョン番号を指定します。 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] )、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] )、100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] )、または 120 () [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 たとえば、サーバーのテキスト列から取得したデータを、以降の [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーの **varchar (max)** 列にインポートするには、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 80 を指定する必要があります。 同様に、 **varchar (max)** 列からデータをエクスポートするときに80を指定した場合は、テキスト列が形式で保存され、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーのテキスト列にインポートできるのと同じように保存され [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。  
   
  BCPFIRST   
  ファイルまたはテーブルにコピーする最初のデータ行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。  
@@ -90,7 +92,7 @@ RETCODE bcp_control (
 >  XML フォーマット ファイルがサポートされるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールした場合だけです。  
   
  BCPHINTS  
- *Ivalue*には、sqltchar 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理のヒントの詳細については、「 [Bcp ユーティリティ](../../tools/bcp-utility.md)」を参照してください。  
+ *Ivalue* には、sqltchar 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理のヒントの詳細については、「 [Bcp ユーティリティ](../../tools/bcp-utility.md)」を参照してください。  
   
  BCPKEEPIDENTITY  
  *Ivalue*が TRUE の場合、一括コピー関数は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] id 制約で定義された列に対して指定されたデータ値を挿入するように指定します。 入力ファイルには ID 列の値を指定する必要があります。 このオプションを設定しないと、挿入される行に対して新しい ID 値が生成されます。 ファイル内に存在する ID 列用のデータはすべて無視されます。  
@@ -112,9 +114,9 @@ RETCODE bcp_control (
  一括コピー操作が失敗するまでに発生してもかまわないエラーの数です。 既定値は10です。1未満の値を指定すると、このオプションが既定値にリセットされます。 一括コピーでは、最大 65,535 個のエラーが許容されます。 このオプションに 65,535 を超える値を設定しようとすると、65,535 が設定されます。  
   
  BCPODBC  
- TRUE の場合、文字形式で保存される**datetime**と**smalldatetime**の値が、ODBC タイムスタンプエスケープシーケンスのプレフィックスとサフィックスを使用するように指定します。 BCPODBC.BCP オプションは DB_OUT にのみ適用されます。  
+ TRUE の場合、文字形式で保存される **datetime** と **smalldatetime** の値が、ODBC タイムスタンプエスケープシーケンスのプレフィックスとサフィックスを使用するように指定します。 BCPODBC.BCP オプションは DB_OUT にのみ適用されます。  
   
- FALSE の場合、1997年1月1日を表す**datetime**値は、1997-01-01 00:00: 00.000 という文字列に変換されます。 TRUE の場合、同じ**datetime**値は {ts ' 1997-01-01 00:00: 00.000 '} と表されます。  
+ FALSE の場合、1997年1月1日を表す **datetime** 値は、1997-01-01 00:00: 00.000 という文字列に変換されます。 TRUE の場合、同じ **datetime** 値は {ts ' 1997-01-01 00:00: 00.000 '} と表されます。  
   
  BCPROWCOUNT  
  現在 (または最後) の BCP 操作で処理された行数を返します。  
@@ -126,12 +128,12 @@ RETCODE bcp_control (
  TRUE の場合、入力ファイルが Unicode ファイルであることを指定します。  
   
  *iValue*  
- 指定した*eOption*の値を指定します。 *Ivalue*は、後で64ビット値に拡張できるように void ポインターにキャストされた整数 (longlong) 値です。  
+ 指定した *eOption*の値を指定します。 *Ivalue* は、後で64ビット値に拡張できるように void ポインターにキャストされた整数 (longlong) 値です。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  この関数では、一括コピー操作のさまざまな制御パラメーターを設定します。たとえば、一括コピーが取り消されるまでに発生してもかまわないエラーの数、データ ファイルから最初にコピーする行番号や最後にコピーする行番号、バッチ サイズなどを設定します。  
   
  また、この関数は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から SELECT ステートメントの結果セットを一括コピーするときに、その SELECT ステートメントを指定するためにも使用します。 *EOption*を BCPHINTS に設定し、 *ivalue*を SET ステートメントを含む sqltchar 文字列へのポインターを持つように設定します。  

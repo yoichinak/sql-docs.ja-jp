@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE (Transact-SQL)
 title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - ALTER SERVICE statement
 - services [Service Broker], modifying
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ed739b0994f6637729c2edf6a2f2da26097fbe44
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6a9ed30e92358d269fa4d6c0e270bd4a16e3bdb
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380965"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126252"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "86380965"
   
 ## <a name="syntax"></a>構文  
   
-```syntaxsql
-  
+```syntaxsql 
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
    [ ( < opt_arg > [ , ...n ] ) ]  
@@ -54,7 +54,7 @@ ALTER SERVICE service_name
  *service_name*  
  変更するサービス名を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  このサービス用の新しいキューを指定します。 このサービス用のすべてのメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって現在のキューから新しいキューに移動されます。  
   
  ADD CONTRACT *contract_name*  
@@ -63,7 +63,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  このサービスで公開されるコントラクト セットから削除するコントラクトを指定します。 このコントラクトを使用するサービスとのメッセージ交換が存在する場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってエラー メッセージが送信されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ALTER SERVICE ステートメントによってサービスからコントラクトが削除されると、サービスは、このコントラクトを使用するメッセージ交換の対象から除外されます。 したがって、[!INCLUDE[ssSB](../../includes/sssb-md.md)] では削除対象のコントラクトを使用するサービスとの新しいメッセージ交換は許可されません。 このコントラクトを使用する既存のメッセージ交換に影響はありません。  
   
  サービスの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
@@ -76,7 +76,7 @@ ALTER SERVICE service_name
 ### <a name="a-changing-the-queue-for-a-service"></a>A. サービスのキューを変更する  
  次の例では、キュー `//Adventure-Works.com/Expenses` を使用するよう、`NewQueue` サービスを変更します。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE NewQueue ;  
 ```  
@@ -84,7 +84,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="b-adding-a-new-contract-to-the-service"></a>B. サービスに新しいコントラクトを追加する  
  次の例では、コントラクト `//Adventure-Works.com/Expenses` のダイアログを許可するよう、`//Adventure-Works.com/Expenses` サービスを変更します。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
@@ -92,7 +92,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="c-adding-a-new-contract-to-the-service-dropping-existing-contract"></a>C. サービスに新しいコントラクトを追加し、既存のコントラクトを削除する  
  次の例では、コントラクト `//Adventure-Works.com/Expenses` のダイアログを許可し、コントラクト `//Adventure-Works.com/Expenses/ExpenseProcessing` のダイアログを禁止するよう、`//Adventure-Works.com/Expenses/ExpenseSubmission` サービスを変更します。  
   
-```  
+```sql  
 ALTER SERVICE [//Adventure-Works.com/Expenses]  
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseProcessing],   
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  

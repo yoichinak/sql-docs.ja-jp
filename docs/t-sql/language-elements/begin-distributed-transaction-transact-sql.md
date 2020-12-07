@@ -1,4 +1,5 @@
 ---
+description: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 757e838efe95130f745cf8966789cab4432bc0d5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923412"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124527"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,6 @@ ms.locfileid: "86923412"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   
 [ ; ]  
@@ -87,7 +87,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスが動作しているコンピューターに現在 MS DTC がインストールされていない場合、この例を実行するとエラー メッセージが出力されます。 MS DTC のインストールの詳細については、Microsoft 分散トランザクション コーディネーターのマニュアルを参照してください。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BEGIN DISTRIBUTED TRANSACTION;  

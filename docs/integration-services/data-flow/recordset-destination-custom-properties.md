@@ -1,4 +1,5 @@
 ---
+description: レコードセット変換先のカスタム プロパティ
 title: レコードセット変換先のカスタム プロパティ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec0279c86306de3fff135b3d56b137a67dba7afa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916017"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194165"
 ---
 # <a name="recordset-destination-custom-properties"></a>レコードセット変換先のカスタム プロパティ
 
@@ -35,6 +36,5 @@ ms.locfileid: "86916017"
  詳細については、「 [レコードセット先](../../integration-services/data-flow/recordset-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   

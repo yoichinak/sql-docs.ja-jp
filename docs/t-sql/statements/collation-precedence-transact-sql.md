@@ -1,4 +1,5 @@
 ---
+description: 照合順序の優先順位
 title: 照合順序の優先順位 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -23,15 +24,15 @@ helpviewer_keywords:
 - collation coercion rules
 - rules [SQL Server], collations
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 13a960ed74fe9947d82e6dee3701ce1ba6af7648
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111205"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124159"
 ---
 # <a name="collation-precedence"></a>照合順序の優先順位
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -233,7 +234,7 @@ CAST、CONVERT、および COLLATE の各関数は、**char**、**varchar**、**
         CHARINDEX
     :::column-end:::
     :::column:::
-        [REPLACE]
+        REPLACE
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -270,10 +271,10 @@ CAST、CONVERT、および COLLATE の各関数は、**char**、**varchar**、**
 :::row-end:::
 :::row:::
     :::column:::
-        [LOWER]
+        LOWER
     :::column-end:::
     :::column:::
-        [SUBSTRING]
+        SUBSTRING
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -281,7 +282,7 @@ CAST、CONVERT、および COLLATE の各関数は、**char**、**varchar**、**
         PATINDEX
     :::column-end:::
     :::column:::
-        [UPPER]
+        UPPER
     :::column-end:::
 :::row-end:::
   

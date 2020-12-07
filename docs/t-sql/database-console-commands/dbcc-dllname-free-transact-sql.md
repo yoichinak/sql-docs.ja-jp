@@ -1,4 +1,5 @@
 ---
+description: DBCC dllname (FREE) (Transact-SQL)
 title: DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 8982362644fa1115a50ab6058cfb4bcb56d501fc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0fd6d497ed6738d6ef290645df9bcad18ca6df32
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484313"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116927"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86484313"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-```sql
+```syntaxsql
 DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]  
 ```  
   

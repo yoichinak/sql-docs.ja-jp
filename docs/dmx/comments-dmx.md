@@ -1,4 +1,5 @@
 ---
+description: コメント (DMX)
 title: コメント (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8069241656de868ae2165fa7348b549c8e3308e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431124"
 ---
 # <a name="comments-dmx"></a>コメント (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,13 +29,13 @@ ms.locfileid: "86969903"
   
 -   ステートメント内またはスクリプト内のコメント長には制限がありません。 1つまたは複数の行からコメントを作成できます。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の種類のコメント文字がサポートされています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、次の種類のコメント文字がサポートされています。  
   
--   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]二重スラッシュから行末までのすべてをコメントの一部として評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ &#40;コメント](../dmx/double-slash-comment-dmx.md)」を参照してください。  
+-   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 二重スラッシュから行末までのすべてをコメントの一部として評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ &#40;コメント ](../dmx/double-slash-comment-dmx.md)」を参照してください。  
   
--   **--(二重ハイフン)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、二重ハイフンから行末までのすべてを評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、「 [--&#40;コメント&#41; &#40;DMX&#41; の概要](../dmx/comment-dmx-summary.md)」を参照してください。  
+-   **--(二重ハイフン)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、二重ハイフンから行末までのすべてを評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、「 [--&#40;コメント&#41; &#40;DMX&#41; の概要](../dmx/comment-dmx-summary.md)」を参照してください。  
   
--   **/\*... \*/(スラッシュとアスタリスクの文字のペア)。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、開いているコメントのペア (/*) から終了コメントのペア (/) までのすべてを評価し \* ます。 複数行のコメントを作成するには、コメントを開始コメント文字のペア (/) で開始し、コメント \* を終了コメント文字のペア (/) で終了し \* ます。 コメントの行に他のコメント文字を含めることはできません。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ (Star) &#40;コメント](../dmx/slash-star-comment-dmx.md)」を参照してください。  
+-   **/\* ... \*/(スラッシュとアスタリスクの文字のペア)。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、開いているコメントのペア (/*) から終了コメントのペア (/) までのすべてを評価し \* ます。 複数行のコメントを作成するには、コメントを開始コメント文字のペア (/) で開始し、コメント \* を終了コメント文字のペア (/) で終了し \* ます。 コメントの行に他のコメント文字を含めることはできません。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ (Star) &#40;コメント ](../dmx/slash-star-comment-dmx.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -43,7 +44,7 @@ ms.locfileid: "86969903"
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

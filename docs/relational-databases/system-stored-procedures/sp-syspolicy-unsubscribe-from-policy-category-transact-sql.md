@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-sql)
 title: sp_syspolicy_unsubscribe_from_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469155"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,20 +40,20 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @policy_category = ] 'policy_category'`削除するポリシーカテゴリのサブスクリプションの名前を指定します。 *policy_category*は**sysname**であり、必須です。  
+`[ @policy_category = ] 'policy_category'` 削除するポリシーカテゴリのサブスクリプションの名前を指定します。 *policy_category* は **sysname**であり、必須です。  
   
  *Policy_category*の値を取得するには、msdb.dbo.syspolicy_policy_categories システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sp_syspolicy_unsubscribe_from_policy_category は、ポリシー カテゴリのサブスクリプションを削除するデータベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定したデータベースの 'Finance' ポリシーのカテゴリに対するサブスクリプションを削除します。  
   
 ```  
@@ -63,8 +64,8 @@ EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Fina
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_subscribe_to_policy_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

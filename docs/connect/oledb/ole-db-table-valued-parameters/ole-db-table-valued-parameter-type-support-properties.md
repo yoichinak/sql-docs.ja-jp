@@ -1,6 +1,6 @@
 ---
 title: OLE DB テーブル値パラメーターの型のサポート (プロパティ) | Microsoft Docs
-description: OLE DB テーブル値パラメーターの型のサポート (プロパティ)
+description: OLE DB Driver for SQL Server のテーブル値パラメーター行セット オブジェクトに関連付けられている OLE DB のプロパティとプロパティ セットについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 476c45419d57d71f48028dc6b103e41e2d8dfa9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24a7c544bc713a571c22d137dcd0554ff01cc864
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008729"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859888"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

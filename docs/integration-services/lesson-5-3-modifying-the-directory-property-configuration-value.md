@@ -1,4 +1,5 @@
 ---
+description: レッスン 5-3:Directory プロパティの構成値の変更
 title: 手順 3:Directory プロパティの構成値の変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a609b6c5edc5518904432cc199e5e624fb114ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88345698"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>レッスン 5-3:Directory プロパティの構成値の変更
 

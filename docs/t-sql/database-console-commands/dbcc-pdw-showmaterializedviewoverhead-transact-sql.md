@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 062c77adf6c7be83e3e2e38ed6947b0d362b690c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395888"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036861"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +26,7 @@ ms.locfileid: "87395888"
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 内の具体化されたビュー用に維持される、ベース テーブル内の増分変更の数が表示されます。 オーバーヘッド比率は、TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) として計算されます。
 
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文
 
@@ -33,6 +34,8 @@ ms.locfileid: "87395888"
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -44,9 +47,9 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 
 ## <a name="remarks"></a>解説
 
-ベース テーブルでのデータ変更によって具体化されたビューを更新し続けるため、データ ウェアハウス エンジンにより影響を受ける各ビューに追跡行が追加され、変更が反映されます。 具体化されたビューからの選択には、クラスター化列ストア インデックスのスキャンと増分変更の適用が含まれます。  追跡行 (TOTAL_ROWS - BASE_VIEW_ROWS) は、ユーザーが具体化されたビューを再構築するまで削除されません。  
+ベース テーブルでのデータ変更によって具体化されたビューを更新し続けるため、データ ウェアハウス エンジンにより影響を受ける各ビューに追跡行が追加され、変更が反映されます。 具体化されたビューからの選択には、クラスター化列ストア インデックスのスキャンと増分変更の適用が含まれます。追跡行 (TOTAL_ROWS - BASE_VIEW_ROWS) は、ユーザーが具体化されたビューを再構築するまで削除されません。  
 
-overhead_ratio は、TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS) として計算されます。  高い場合は、SELECT のパフォーマンスが低下します。  ユーザーは、具体化されたビューを再構築して、オーバーヘッドの比率を下げることができます。
+overhead_ratio は、TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS) として計算されます。  高い場合は、SELECT のパフォーマンスが低下します。ユーザーは、具体化されたビューを再構築して、オーバーヘッドの比率を下げることができます。
 
 ## <a name="permissions"></a>アクセス許可  
   
@@ -72,7 +75,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
 
 テーブルを作成する
 ```sql
-CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+CREATE TABLE t1 (c1 INT NOT NULL, c2 INT NOT NULL, c3 INT NOT NULL)
 ```
 t1 に 5 行を挿入
 ```sql
@@ -84,11 +87,11 @@ INSERT INTO t1 VALUES (5, 5, 5)
 ```
 具体化されたビュー MV1 の作成
 ```sql
-CREATE materialized view MV1 
+CREATE MATERIALIZED VIEW MV1 
 WITH (DISTRIBUTION = HASH(c1))  
 AS
-SELECT c1, count(*) total_number 
-FROM dbo.t1 where c1 < 3
+SELECT c1, COUNT(*) total_number 
+FROM dbo.t1 WHERE c1 < 3
 GROUP BY c1  
 ```
 具体化されたビューから選択すると、2 つの行が返されます。
@@ -110,7 +113,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 
 ベース テーブルを更新します。  このクエリにより、同じ行の同じ列が 100 回同じ値に更新されます。  具体化されたビューの内容は変更されません。
 ```sql
-DECLARE @p int
+DECLARE @p INT
 SELECT @p = 1
 WHILE (@p < 101)
 BEGIN
@@ -136,7 +139,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1") からの出力を次に示し
 
 ```sql
 ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
-go
+GO
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
 出力
@@ -148,12 +151,12 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ## <a name="see-also"></a>関連項目
 
 [具体化されたビューを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
-[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
-[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
-[EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
-[System views supported in Azure SQL Data Warehouse (Azure SQL Data Warehouse でサポートされるシステム ビュー)](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
-[T-SQL statements supported in Azure SQL Data Warehouse (Azure SQL Data Warehouse でサポートされる T-SQL ステートメント)](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)
+[CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](../statements/create-materialized-view-as-select-transact-sql.md?view=azure-sqldw-latest)   
+[ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](../statements/alter-materialized-view-transact-sql.md?view=azure-sqldw-latest)   
+[EXPLAIN &#40;Transact-SQL&#41;](../queries/explain-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md?view=azure-sqldw-latest)   
+[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md?view=azure-sqldw-latest)   
+[Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Azure Synapse Analytics でサポートされているシステム ビュー](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Azure Synapse Analytics でサポートされている T-SQL ステートメント](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

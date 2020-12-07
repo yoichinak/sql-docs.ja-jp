@@ -1,4 +1,5 @@
 ---
+description: SQLMoreResults
 title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,23 +15,24 @@ ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f07ca0aa93fd7b415f2ada75331c7c9bdd0dce15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bd979ea2b0ae43b8e97df2ad6acf692ba9f24a3a
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000343"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810970"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  **Sqlmoreresults**を使用すると、アプリケーションは複数の結果行セットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
+  **Sqlmoreresults** を使用すると、アプリケーションは複数の結果行セットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
   
 > [!NOTE]  
 >  COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のサーバー バージョンの接続している場合にのみサポートされます。  
   
  開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、「 [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)」を参照してください。  
   
- 結果セットでフェッチされていないデータ行を使用して**Sqlmoreresults**が呼び出されると、その行は失われ、次の結果行セットの行データが使用可能になります。  
+ 結果セットでフェッチされていないデータ行を使用して **Sqlmoreresults** が呼び出されると、その行は失われ、次の結果行セットの行データが使用可能になります。  
   
 ## <a name="examples"></a>例  
   
@@ -162,7 +164,6 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQLMoreResults 関数](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 関数](../../odbc/reference/syntax/sqlmoreresults-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

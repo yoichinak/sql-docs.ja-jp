@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88363378"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,13 +53,13 @@ PATINDEX ( '%pattern%' , expression )
  > 従来の正規表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でネイティブにサポートされていませんが、さまざまなワイルドカード表現を使用すると、同様の複雑なパターン マッチングを実現することができます。 ワイルドカード構文の詳細については、ドキュメント「[文字列演算子](../../t-sql/language-elements/string-operators-transact-sql.md)」を参照してください。
   
  *式 (expression)*  
- [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
+ [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式* は文字列データ型に分類されます。  
   
 ## <a name="return-types"></a>戻り値の型  
-**expression** が *varchar(max)* または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
+*expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
-## <a name="remarks"></a>解説  
-*pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
+## <a name="remarks"></a>注釈  
+*pattern* または *式* が NULL の場合、PATINDEX は NULL を返します。  
  
 PATINDEX の開始位置は 1 です。
  
@@ -67,12 +68,12 @@ PATINDEX では、入力の照合順序に基づいて比較が行われます�
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
 SC の照合順序を使用する場合、戻り値では、*expression* パラメーターの UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
+0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡単な PATINDEX の例  
- 次の例では、文字 `interesting data` の開始位置の短い文字列 (`ter`) を確認します。  
+ 次の例では、文字 `ter` の開始位置の短い文字列 (`interesting data`) を確認します。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -87,7 +88,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX でパターンを使用する  
-次の例では、`ensure` データベースの `DocumentSummary` テーブルにある `Document` 列の特定の行で、パターン [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] が始まる位置を検出します。  
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ensure` テーブルにある `DocumentSummary` 列の特定の行で、パターン `Document` が始まる位置を検出します。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  
@@ -174,7 +175,7 @@ position
 22
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  

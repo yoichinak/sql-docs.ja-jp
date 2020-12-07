@@ -1,8 +1,9 @@
 ---
+description: Append および CreateParameter メソッドの例 (JScript)
 title: Append および CreateParameter メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048a54ab758304bbfef50ffb1eaa98254b4fd496
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3b4de61bfa05e1dfa5fef778773105b93aeb0c5f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747007"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976133"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append および CreateParameter メソッドの例 (JScript)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)および[createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Appendjs**として保存します。  
+この例では、 [Append](./append-method-ado.md) および [createparameter](./createparameter-method-ado.md) メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Appendjs**として保存します。  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -142,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)   
+ [Field オブジェクト](./field-object.md)   
+ [Fields コレクション (ADO)](./fields-collection-ado.md)   
+ [Parameter オブジェクト](./parameter-object.md)

@@ -1,4 +1,5 @@
 ---
+description: テンポラル テーブルでのパーティション分割
 title: テンポラル テーブルでのパーティション分割 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/26/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 313714b8-4ad1-4c14-93a3-7f628a334a51
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc76e2a2aaee2d3bc8474c8cec06b7ee85a31971
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0af4a041580d59cc77d5605dc1df72ca8b823f0c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555887"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548853"
 ---
 # <a name="partitioning-with-temporal-tables"></a>テンポラル テーブルでのパーティション分割
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 パーティション分割は、現在のテーブルと履歴テーブルで個別に使用できます。 ただし、システム バージョン管理を行わずに、パーティション分割を使用してデータのコンテンツを変更することはできません。
 

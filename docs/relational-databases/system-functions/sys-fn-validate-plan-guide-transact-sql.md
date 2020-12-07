@@ -1,4 +1,5 @@
 ---
+description: sys.fn_validate_plan_guide (Transact-SQL)
 title: fn_validate_plan_guide (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396898"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>引数  
  *plan_guide_id*  
- [Plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)カタログビューで報告されるプランガイドの ID を示します。 *plan_guide_id*は**int**で、既定値はありません。  
+ [Plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)カタログビューで報告されるプランガイドの ID を示します。 *plan_guide_id* は **int** で、既定値はありません。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -52,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|エラーメッセージの ID。|  
 |severity|**tinyint**|メッセージの重大度レベル (1 ~ 25)。|  
-|state|**smallint**|エラーが発生したコード内の場所を示すエラーの状態番号です。|  
+|状態|**smallint**|エラーが発生したコード内の場所を示すエラーの状態番号です。|  
 |message|**nvarchar(2048)**|エラーのメッセージテキスト。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -74,7 +75,7 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B: データベースに変更を実装する前のプランガイド検証のテスト  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. データベースに変更を実装する前のプランガイド検証のテスト  
  次の例では、明示的なトランザクションを使用してインデックスを削除します。 関数は、 `sys.fn_validate_plan_guide` このアクションによってデータベース内のプランガイドが無効になるかどうかを判断するために実行されます。 この関数の結果に基づいて、`DROP INDEX` ステートメントがコミットされるか、トランザクションがロールバックされます。トランザクションがロールバックされた場合は、インデックスは削除されません。  
   
 ```sql  
@@ -92,7 +93,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プランガイド](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: データベースの整合性確認タスク
 title: データベースの整合性確認タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1bcdd5c54db4695e3b8d7b97d10d6de0ba8f9226
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: af37de7c5192cb0fe2f113205b5569430e507acc
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923065"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123595"
 ---
 # <a name="check-database-integrity-task"></a>データベースの整合性確認タスク
 
@@ -44,6 +45,5 @@ ms.locfileid: "86923065"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

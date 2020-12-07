@@ -9,20 +9,20 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 01/04/2020
-ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: ee2e8a95155cd235210acecee2a5ca15b5ae79c8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531161"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935267"
 ---
-# <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
+# <a name="configure-a-report-server-database-connection-report-server-configuration-manager"></a>レポート サーバー データベース接続の構成 (レポート サーバーの構成マネージャー)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-レポート サーバーの各インスタンスには、サーバーの管理対象であるレポート、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する実行手順については、「[ネイティブ モードのレポート サーバー データベース &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。
+レポート サーバーの各インスタンスには、サーバーの管理対象であるレポート、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する詳細な手順については、「[ネイティブ モードのレポート サーバー データベースを作成する &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。
 
 レポート サーバー データベース接続を構成する必要があるのは、次の状況です。  
 
@@ -30,13 +30,13 @@ ms.locfileid: "80531161"
 
 - 別のレポート サーバー データベースを使用するようにレポート サーバーを構成する。  
 
-- データベース接続に使用するユーザー アカウントまたはパスワードを変更する。 データベース接続を更新する必要があるのは、アカウント情報が RSReportServer.config ファイルに保存されている場合だけです。 接続にサービス アカウントを使用している (資格情報の種類として Windows 統合セキュリティを使用する) 場合は、パスワードが保存されないので、接続情報を更新する必要はありません。 アカウント変更の詳細については、「 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+- データベース接続に使用するユーザー アカウントまたはパスワードを変更する。 データベース接続を更新する必要があるのは、アカウント情報が RSReportServer.config ファイルに保存されている場合だけです。 接続にサービス アカウントを使用している (資格情報の種類として Windows 統合セキュリティを使用する) 場合は、パスワードが保存されないので、接続情報を更新する必要はありません。 アカウントの変更に関する詳細については、「[レポート サーバー サービス アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
 
-- レポート サーバー スケールアウト配置を構成する。 スケールアウト配置を構成するには、レポート サーバー データベースへの複数の接続を作成する必要があります。 この複数段階に分かれた操作の実行方法の詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+- レポート サーバー スケールアウト配置を構成する。 スケールアウト配置を構成するには、レポート サーバー データベースへの複数の接続を作成する必要があります。 この複数段階に分かれた操作の実行方法の詳細については、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関するページを参照してください。  
 
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Reporting Services によるデータベース エンジンへの接続方法
 
-レポート サーバーからレポート サーバー データベースへのアクセスは、資格情報や接続情報に依存します。また、そのデータベースを使用するレポート サーバー インスタンスに対して有効な暗号化キーにも依存します。 機密データの保存や取得には、有効な暗号化キーが必要です。 暗号化キーは、最初にデータベースを構成したときに自動的に作成されます。 レポート サーバー サービス ID を変更する場合、キーの作成後にキーを更新する必要があります。 暗号化キーを使用した作業の詳細については、「[暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」を参照してください。  
+レポート サーバーからレポート サーバー データベースへのアクセスは、資格情報や接続情報に依存します。また、そのデータベースを使用するレポート サーバー インスタンスに対して有効な暗号化キーにも依存します。 機密データの保存や取得には、有効な暗号化キーが必要です。 暗号化キーは、最初にデータベースを構成したときに自動的に作成されます。 レポート サーバー サービス ID を変更する場合、キーの作成後にキーを更新する必要があります。 暗号化キーを使用した作業の詳細については、「[暗号化キーの構成と管理 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」を参照してください。  
 
 レポート サーバー データベースは、レポート サーバーのみがアクセスする内部コンポーネントです。 レポート サーバー データベースに対して指定した資格情報および接続情報は、レポート サーバーによって排他的に使用されます。 レポートを要求するユーザーに、レポート サーバー データベースに対するデータベース権限やデータベース ログインは不要です。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "80531161"
 
 - レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。  
 
-- レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、「[レポート サーバー データベースの作成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」を参照してください。  
+- レポート サーバー データベースの名前。 接続を初めて作成する場合、新しいレポート サーバー データベースを作成することも、既存のデータベースを選択することもできます。 詳細については、「[レポート サーバー データベースの作成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)」を参照してください。  
 
 - 資格情報の種類。 サービス アカウント、Windows ドメイン アカウント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用できます。  
 
@@ -102,7 +102,7 @@ ms.locfileid: "80531161"
 
 Windows 統合セキュリティを使用すると、レポート サーバー サービス アカウント経由で接続できます。 レポート サーバー サービス アカウントには、レポート サーバー データベースへのログイン権限が与えられます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合、セットアップは、Windows 統合セキュリティを既定の資格情報の種類として選択します。  
 
-サービス アカウントは信頼されたアカウントであり、レポート サーバー データベース接続の管理に対するメンテナンスが軽減されます。 サービス アカウントでは Windows 統合セキュリティを使用して接続を行うため、資格情報の格納は不要です。 ただし、後でサービス アカウントのパスワードまたは ID を変更する場合 (たとえば、ビルトイン アカウントからドメイン アカウントに切り替える場合など) は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して変更を行ってください。 このツールを使用すると、データベース権限が自動的に更新され、変更したアカウント情報が使用されるようになります。 詳細については、 [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
+サービス アカウントは信頼されたアカウントであり、レポート サーバー データベース接続の管理に対するメンテナンスが軽減されます。 サービス アカウントでは Windows 統合セキュリティを使用して接続を行うため、資格情報の格納は不要です。 ただし、後でサービス アカウントのパスワードまたは ID を変更する場合 (たとえば、ビルトイン アカウントからドメイン アカウントに切り替える場合など) は、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して変更を行ってください。 このツールを使用すると、データベース権限が自動的に更新され、変更したアカウント情報が使用されるようになります。 詳細については、「[レポート サーバー サービス アカウントの構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
 
 サービス アカウントを使用するようにデータベース接続を構成するとき、レポート サーバー データベースがリモート コンピューター上にある場合には、アカウントにネットワーク アクセス許可が必要になります。 レポート サーバー データベースが別のドメインつまりファイアウォールの背後にある場合や、ドメイン セキュリティではなくワークグループ セキュリティを使用している場合は、サービス アカウントを使用しないでください。 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウントを使用してください。  
 
@@ -134,7 +134,7 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>複数のレポート サーバーで同じレポート サーバー データベースを使用するための構成
 
-複数のレポート サーバーで同じレポート サーバー データベースを使用するように構成できます。 この配置構成はスケールアウト配置と呼ばれます。 サーバー クラスター内で複数のレポート サーバーを実行する場合は、この構成が前提条件となります。 ただし、この構成は、サービス アプリケーションを分割する場合や、新しいレポート サーバー インスタンスのインストールと設定をテストして既存のレポート サーバーのインストールと比較する場合にも使用できます。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
+複数のレポート サーバーで同じレポート サーバー データベースを使用するように構成できます。 この配置構成はスケールアウト配置と呼ばれます。 サーバー クラスター内で複数のレポート サーバーを実行する場合は、この構成が前提条件となります。 ただし、この構成は、サービス アプリケーションを分割する場合や、新しいレポート サーバー インスタンスのインストールと設定をテストして既存のレポート サーバーのインストールと比較する場合にも使用できます。 詳細については、[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;レポート サーバーの構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) に関する記事を参照してください。  
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7d05c7c6b049958f2f6280f3ee8ed2ae56ce325d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b067b668cfdf0dc42596d7fb6858240ad8d944e9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650846"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867710"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure BLOB ストレージのデータに一括アクセスする例
 
@@ -40,7 +40,7 @@ SQL Server から Azure BLOB ストレージに一括アクセスする場合、
 下のすべての例で、Shared Access Signature を参照するデータベース スコープ資格情報が必要です。
 
 > [!IMPORTANT]
-> 外部データ ソースは、`SHARED ACCESS SIGNATURE` ID を使用するデータベース スコープ資格情報で作成する必要があります。 ストレージ アカウントの Shared Access Signature を作成するには、Azure ポータルのストレージ アカウント プロパティに関するページで **Shared Access Signature** プロパティを参照してください。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 資格情報の詳細については、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープ資格情報を作成する) を参照してください。
+> 外部データ ソースは、`SHARED ACCESS SIGNATURE` ID を使用するデータベース スコープ資格情報で作成する必要があります。 ストレージ アカウントの Shared Access Signature を作成するには、Azure ポータルのストレージ アカウント プロパティに関するページで **Shared Access Signature** プロパティを参照してください。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 資格情報の詳細については、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープ資格情報を作成する) を参照してください。
 
 `IDENTITY` (`SHARED ACCESS SIGNATURE` に設定します) を利用してデータベース スコープ資格情報を作成します。 BLOB ストレージ アカウントに対して生成された SAS トークンを使用します。 SAS トークンの先頭に `?` がないこと、読み込む必要があるオブジェクトに対して少なくとも読み取りアクセス許可があること、有効期間が有効であることを確認します (すべての日付は UTC 時刻です)。
 

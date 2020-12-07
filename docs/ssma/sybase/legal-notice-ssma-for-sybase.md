@@ -1,4 +1,5 @@
 ---
+description: 法的通知 (SSMA for Sybase)
 title: 法的通知 (SSMA for Sybase) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d768560eed48d70bf8d0d9ef7339fed9a231844
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c98c029db0ec72991d45b433fa8654fe4a5ae116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497678"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法的通知 (SSMA for Sybase)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

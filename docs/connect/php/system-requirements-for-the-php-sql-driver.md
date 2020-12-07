@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP のシステム要件
 description: Microsoft Drivers for PHP for SQL Server では、さまざまな PHP バージョン、オペレーティング システム、SQL Server バージョンがサポートされています。
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635699"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540466"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
 
@@ -47,30 +46,18 @@ PHP が実行されるコンピューター上に、正しいバージョンの 
 
 64 ビット版の Windows にドライバーの Windows バージョンをダウンロードする場合は、ODBC 64 ビット インストーラーによって、32 ビットと 64 ビットの ODBC ドライバーの両方がインストールされます。 Windows の 32 ビット版を使用する場合は、ODBC x86 インストーラーを使用します。 Windows 以外のプラットフォームでは、64 ビット版のドライバーのみを使用できます。
 
-|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; ODBC ドライバーのバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP ドライバー バージョン &#8594;<br />&#8595; ODBC ドライバーのバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC ドライバー 17 以降 |Y|Y|Y|Y| | | |
-|ODBC ドライバー 13.1|Y|Y|Y|Y|Y|Y| |
-|ODBC ドライバー 13  | | | | | |Y| |
-|ODBC ドライバー 11  |Y|Y|Y|Y|Y|Y|Y|
+|ODBC ドライバー 17 以降 |はい|はい|はい|はい|   |   |   |
+|ODBC ドライバー 13.1|はい|はい|はい|はい|はい|はい|   |
+|ODBC ドライバー 13  |   |   |   |   |   |はい|   |
+|ODBC ドライバー 11  |はい|はい|はい|はい|はい|はい|はい|
 
 SQLSRV ドライバーを使用している場合、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によって使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server のバージョンに関する情報が [sqlsrv_client_info](sqlsrv-client-info.md) によって返されます。 PDO_SQLSRV ドライバーを使用している場合、[PDO::getAttribute](pdo-getattribute.md) を使用して、バージョンを確認できます。
 
 ## <a name="sql-server"></a>SQL Server
 
-Azure SQL Database での PHP の使用の詳細については、「[Microsoft Azure SQL Database への接続](connecting-to-microsoft-azure-sql-database.md)」を参照してください。
-
-|PHP for SQL Server ドライバーのバージョン &#8594;<br />&#8595; SQL Server のバージョン|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database (すべてのデプロイ オプション)        |Y|Y|Y|Y| | | |
-|Azure SQL Synapse  |Y|Y|Y|Y| | | |
-|SQL Server 2019           |Y|Y|Y|Y| | | |
-|SQL Server 2017           |Y|Y|Y|Y| | | |
-|SQL Server 2016           |Y|Y|Y|Y|Y| | |
-|SQL Server 2014           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2        | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008           | | | | |Y|Y|Y|
+サポートされている SQL Server バージョンの詳細については、[サポートされるデータベース バージョン](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility)に関する記事をご覧ください。
 
 ## <a name="operating-systems"></a>オペレーティング システム
 

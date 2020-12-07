@@ -1,4 +1,5 @@
 ---
+description: 数値、文字列、ブール型リテラル
 title: リテラル (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477519"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>数値、文字列、ブール型リテラル
 
@@ -102,9 +103,9 @@ ms.locfileid: "86918628"
   
 |エスケープ シーケンス|説明|  
 |---------------------|-----------------|  
-|\a|アラート:|  
+|\a|警告|  
 |\b|バックスペース|  
-|\f|改ページ|  
+|\f|フォーム フィード|  
 |\n|改行|  
 |\r|キャリッジ リターン|  
 |\t|水平タブ|  

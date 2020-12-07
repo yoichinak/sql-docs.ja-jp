@@ -1,4 +1,5 @@
 ---
+description: setBytes メソッド (SQLServerPreparedStatement)
 title: setBytes メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 52e99ef9-b786-4a14-bfc5-4162e46aafbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ee09103be4fbe31e0ebcbda22e882dcc31556c4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55b264f3128d414957c9fb2ff319893dbebd548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432314"
 ---
 # <a name="setbytes-method-sqlserverpreparedstatement"></a>setBytes メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public final void setBytes(int n,
   
  *x*  
   
- バイトの配列です。  
+ バイト配列。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

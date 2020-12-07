@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - partition functions [SQL Server], modifying
 - partitioned tables [SQL Server], merging
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d405c656af3265d09340ceeef42ac0423efd6a85
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381276"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128104"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,15 +71,15 @@ ALTER PARTITION SCHEME ステートメントでは、新しいパーティショ
 すべてのパーティションを同じファイル グループ内に作成した場合、最初に、そのグループが自動的に NEXT USED ファイル グループに割り当てられます。 ただし、分割操作が実行された後は、選択された NEXT USED ファイルグループはなくなります。 ALTER PARTITION SCHEME を使用してファイルグループを NEXT USED ファイルグループとして明示的に割り当てないと、その後の分割操作が失敗します。  
   
 > [!NOTE]  
->  列ストア インデックスに関する制限:テーブルに列ストア インデックスが存在するときは、空のパーティションのみを分割できます。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります。  
+>  列ストア インデックスに関する制限: テーブルに列ストア インデックスが存在する場合は、空のパーティションのみを分割できます。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります。  
   
 MERGE [ RANGE ( *boundary_value*) ]  
-パーティションを削除し、そのパーティションに存在する任意の値を残りの 1 つのパーティションにマージします。 RANGE (*boundary_value*) は、既存の境界値である必要があります。ここに、削除したパーティションの値がマージされます。 この引数は、最初に *boundary_value* を保持していたファイルグループを、残りのパーティションがそれを使用しない場合、または NEXT USED プロパティでマークしない場合を除き、パーティション構成から削除します。 マージされたパーティションは、最初に *boundary_value* を保持していなかったファイル グループに存在します。 *boundary_value* は定数式であり、変数 (ユーザー定義型変数を含む) または関数 (ユーザー定義関数を含む) を参照できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式は参照できません。 *boundary_value* は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 また、明示的な変換中に、値のサイズおよびスケールが対応する *input_parameter_type* のものと一致しない方法で *boundary_value* を切り詰めることはできません。  
+パーティションを削除し、そのパーティションに存在する任意の値を残りの 1 つのパーティションにマージします。 RANGE (*boundary_value*) は、削除するパーティションの既存の境界値である必要があります。 この引数は、最初に *boundary_value* を保持していたファイルグループを、残りのパーティションがそれを使用しない場合、または NEXT USED プロパティでマークしない場合を除き、パーティション構成から削除します。 マージされたパーティションは、最初に *boundary_value* を保持していなかったファイル グループに存在します。 *boundary_value* は定数式であり、変数 (ユーザー定義型変数を含む) または関数 (ユーザー定義関数を含む) を参照できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式は参照できません。 *boundary_value* は、対応するパーティション分割列のデータ型と一致するか、パーティション分割列のデータ型に暗黙的に変換される必要があります。 また、明示的な変換中に、値のサイズおよびスケールが対応する *input_parameter_type* のものと一致しない方法で *boundary_value* を切り詰めることはできません。  
   
 > [!NOTE]  
 >  列ストア インデックスに関する制限:列ストア インデックスを含む 2 つの空でないパーティションをマージすることはできません。 この操作を実行する前に、列ストア インデックスを削除するか無効にする必要があります  
   
-## <a name="best-practices"></a>ベスト プラクティス  
+## <a name="best-practices"></a>推奨する運用方法  
 空のパーティションは、常にパーティションの範囲の両端に保持します。 パーティションの分割やパーティションのマージによりデータ移動が発生しないように、パーティションを両端に保持します。 パーティションの分割は最初に発生し、パーティションのマージは最後に発生します。 設定されたパーティションが分割またはマージされないようにします。 データが入力されているパーティションの分割やマージは効率的でなくなることがあります。 非効率になる理由は、分割やマージによりログの生成が最大で 4 倍になり、大量のロックが発生する場合があるためです。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -150,7 +151,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
 [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   

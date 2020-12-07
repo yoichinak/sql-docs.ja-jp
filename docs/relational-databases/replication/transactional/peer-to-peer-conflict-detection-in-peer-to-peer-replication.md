@@ -1,4 +1,5 @@
 ---
+description: ピア ツー ピア - ピア ツー ピア レプリケーションにおける競合検出
 title: ピア ツー ピア レプリケーションにおける競合検出 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da4d35ec8647ba799986cc696a89718870dfb253
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eacc75c7f2a5a5ba7993e7f3d574b749b86acd2e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887769"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130973"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア - ピア ツー ピア レプリケーションにおける競合検出
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -93,7 +94,7 @@ ms.locfileid: "85887769"
   
     3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
-    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 を参照してください。  
+    4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。  
   
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  

@@ -1,4 +1,5 @@
 ---
+description: SQLFreeHandle 関数
 title: SQLFreeHandle 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491273"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
 **互換性**  
  導入されたバージョン: ODBC 3.0 標準準拠: ISO 92  
   
  **まとめ**  
- **Sqlfreehandle**は、特定の環境、接続、ステートメント、または記述子ハンドルに関連付けられているリソースを解放します。  
+ **Sqlfreehandle** は、特定の環境、接続、ステートメント、または記述子ハンドルに関連付けられているリソースを解放します。  
   
 > [!NOTE]
->  この関数は、ハンドルを解放するためのジェネリック関数です。 これは、 **SQLFreeConnect** (接続ハンドルを解放するため) および**sqlfreeenv** (環境ハンドルを解放するため) という ODBC 2.0 関数を置き換えます。 **SQLFreeConnect**と**sqlfreeenv**はどちらも ODBC 3.x で非推奨とさ*れます。* また、 **Sqlfreehandle**は、ステートメントハンドルを解放するために、ODBC 2.0 関数**SQLFreeStmt** (SQL_DROP*オプション*) を置き換えます。 詳細については、「コメント」を参照してください。 Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については、「[アプリケーションの下位互換性のための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)」を参照してください。  
+>  この関数は、ハンドルを解放するためのジェネリック関数です。 これは、 **SQLFreeConnect** (接続ハンドルを解放するため) および **sqlfreeenv** (環境ハンドルを解放するため) という ODBC 2.0 関数を置き換えます。 **SQLFreeConnect**と**sqlfreeenv**はどちらも ODBC 3.x で非推奨とさ*れます。* また、 **Sqlfreehandle**は、ステートメントハンドルを解放するために、ODBC 2.0 関数**SQLFreeStmt** (SQL_DROP*オプション*) を置き換えます。 詳細については、「コメント」を参照してください。 Odbc*2.x アプリケーションが* odbc*2.x ドライバーで* 動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については、「 [アプリケーションの下位互換性のための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,7 +49,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>引数  
  *HandleType*  
- 代入**Sqlfreehandle**によって解放されるハンドルの型。 次のいずれかの値を指定する必要があります。  
+ 代入 **Sqlfreehandle**によって解放されるハンドルの型。 次のいずれかの値を指定する必要があります。  
   
 -   SQL_HANDLE_DBC  
   
@@ -64,7 +65,7 @@ SQLRETURN SQLFreeHandle(
   
  *Handletype*がこれらの値のいずれでもない場合、 **sqlfreehandle**は SQL_INVALID_HANDLE を返します。  
   
- *Handle*  
+ *扱え*  
  代入解放するハンドル。  
   
 ## <a name="returns"></a>戻り値  
@@ -73,48 +74,48 @@ SQLRETURN SQLFreeHandle(
  **Sqlfreehandle**が SQL_ERROR を返す場合、ハンドルは引き続き有効です。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlfreehandle**によって SQL_ERROR が返された場合、 **sqlfreehandle**が解放しようとしたハンドルの診断データ構造から、関連する SQLSTATE 値を取得できますが、それはできませんでした。 次の表に、 **Sqlfreehandle**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+ **Sqlfreehandle**によって SQL_ERROR が返された場合、 **sqlfreehandle**が解放しようとしたハンドルの診断データ構造から、関連する SQLSTATE 値を取得できますが、それはできませんでした。 次の表に、 **Sqlfreehandle** によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
 |SQLSTATE|エラー|説明|  
 |--------------|-----------|-----------------|  
-|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 * \* Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンスエラー|(DM) *Handletype*引数が SQL_HANDLE_ENV ましたが、少なくとも1つの接続が割り当てられた状態または接続状態でした。 SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、SQL_HANDLE_DBC の*Handletype*を持つ**sqldisconnect**および**sqlfreehandle**を各接続に対して呼び出す必要があります。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_DBC ました。この関数は、接続のために**sqldisconnect**を呼び出す前に呼び出されました。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_DBC でした。 非同期的に実行する関数が*ハンドル*を使用して呼び出されましたが、この関数が呼び出されたときに関数がまだ実行されていました。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_STMT でした。 **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、 **SQLSetPos**がステートメントハンドルを使用して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_STMT でした。 非同期的に実行する関数がステートメントハンドルまたは関連付けられた接続ハンドルで呼び出されましたが、この関数が呼び出されたときに関数がまだ実行されていました。<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_DESC でした。 関連付けられた接続ハンドルで非同期に実行する関数が呼び出されました。関数は、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlfreehandle**が呼び出される前に、すべての子会社ハンドルとその他のリソースが解放されませんでした。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**sqlmoreresults**が*ハンドル*に関連付けられているいずれかのステートメントハンドルに対して呼び出されました。 *handletype*が SQL_HANDLE_STMT に設定されているか、SQL_PARAM_DATA_AVAILABLE SQL_HANDLE_DESC 返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) *Handletype* 引数が SQL_HANDLE_ENV ましたが、少なくとも1つの接続が割り当てられた状態または接続状態でした。 SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、SQL_HANDLE_DBC の*Handletype*を持つ**sqldisconnect**および**sqlfreehandle**を各接続に対して呼び出す必要があります。<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_DBC ました。この関数は、接続のために **sqldisconnect** を呼び出す前に呼び出されました。<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_DBC でした。 非同期的に実行する関数が *ハンドル* を使用して呼び出されましたが、この関数が呼び出されたときに関数がまだ実行されていました。<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_STMT でした。 **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、 **SQLSetPos** がステートメントハンドルを使用して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_STMT でした。 非同期的に実行する関数がステートメントハンドルまたは関連付けられた接続ハンドルで呼び出されましたが、この関数が呼び出されたときに関数がまだ実行されていました。<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_DESC でした。 関連付けられた接続ハンドルで非同期に実行する関数が呼び出されました。関数は、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlfreehandle** が呼び出される前に、すべての子会社ハンドルとその他のリソースが解放されませんでした。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または **sqlmoreresults** が *ハンドル* に関連付けられているいずれかのステートメントハンドルに対して呼び出されました。 *handletype* が SQL_HANDLE_STMT に設定されているか、SQL_PARAM_DATA_AVAILABLE SQL_HANDLE_DESC 返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
 |HY013|メモリ管理エラー|*Handletype*引数が SQL_HANDLE_STMT または SQL_HANDLE_DESC でした。基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
-|HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM)*ハンドル*引数が、自動的に割り当てられた記述子のハンドルに設定されました。|  
+|HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM) *ハンドル* 引数が、自動的に割り当てられた記述子のハンドルに設定されました。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM) *Handletype*引数が SQL_HANDLE_DESC、ドライバーは ODBC*2.x ドライバーでした。*<br /><br /> (DM) *Handletype*引数が SQL_HANDLE_STMT、ドライバーが有効な ODBC ドライバーではありませんでした。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *Handletype*引数が SQL_HANDLE_DESC、ドライバーは ODBC*2.x ドライバーでした。*<br /><br /> (DM) *Handletype* 引数が SQL_HANDLE_STMT、ドライバーが有効な ODBC ドライバーではありませんでした。|  
   
-## <a name="comments"></a>説明  
- **Sqlfreehandle**は、次のセクションで説明するように、環境、接続、ステートメント、および記述子のハンドルを解放するために使用されます。 ハンドルに関する一般的な情報については、「[ハンドル](../../../odbc/reference/develop-app/handles.md)」を参照してください。  
+## <a name="comments"></a>コメント  
+ **Sqlfreehandle** は、次のセクションで説明するように、環境、接続、ステートメント、および記述子のハンドルを解放するために使用されます。 ハンドルに関する一般的な情報については、「 [ハンドル](../../../odbc/reference/develop-app/handles.md)」を参照してください。  
   
  アプリケーションが解放された後でハンドルを使用することはできません。ドライバーマネージャーは、関数呼び出しのハンドルの有効性を確認しません。  
   
 ## <a name="freeing-an-environment-handle"></a>環境ハンドルの解放  
- SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、アプリケーションは、環境で割り当てられたすべての接続に対して*handletype* SQL_HANDLE_DBC を指定して**sqlfreehandle**を呼び出す必要があります。 それ以外の場合、 **Sqlfreehandle**を呼び出すと SQL_ERROR が返され、環境とアクティブな接続が有効なままになります。 詳細については、「[環境ハンドル](../../../odbc/reference/develop-app/environment-handles.md)と[環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)」を参照してください。  
+ SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、アプリケーションは、環境で割り当てられたすべての接続に対して*handletype* SQL_HANDLE_DBC を指定して**sqlfreehandle**を呼び出す必要があります。 それ以外の場合、 **Sqlfreehandle** を呼び出すと SQL_ERROR が返され、環境とアクティブな接続が有効なままになります。 詳細については、「 [環境ハンドル](../../../odbc/reference/develop-app/environment-handles.md) と [環境ハンドルの割り当て](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)」を参照してください。  
   
  環境が共有環境の場合、SQL_HANDLE_ENV の*Handletype*を使用して**sqlfreehandle**を呼び出すアプリケーションは、呼び出し後に環境にアクセスできなくなりますが、環境のリソースは必ずしも解放されません。 **Sqlfreehandle**を呼び出すと、環境の参照カウントが減少します。 参照カウントは、ドライバーマネージャーによって管理されます。 0にならない場合、共有環境は別のコンポーネントによって使用されているため、解放されません。 参照カウントが0になると、共有環境のリソースが解放されます。  
   
 ## <a name="freeing-a-connection-handle"></a>接続ハンドルの解放  
- SQL_HANDLE_DBC の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、アプリケーションはこのハンドルに接続されている場合に、接続に対して**sqldisconnect**を呼び出す必要があり*ます。* それ以外の場合、 **Sqlfreehandle**を呼び出すと SQL_ERROR が返され、接続は有効なままになります。  
+ SQL_HANDLE_DBC の*Handletype*を使用して**sqlfreehandle**を呼び出す前に、アプリケーションはこのハンドルに接続されている場合に、接続に対して**sqldisconnect**を呼び出す必要があり*ます。* それ以外の場合、 **Sqlfreehandle** を呼び出すと SQL_ERROR が返され、接続は有効なままになります。  
   
- 詳細については、「[接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md)と[データソースまたはドライバーからの切断](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)」を参照してください。  
+ 詳細については、「 [接続ハンドル](../../../odbc/reference/develop-app/connection-handles.md) と [データソースまたはドライバーからの切断](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)」を参照してください。  
   
 ## <a name="freeing-a-statement-handle"></a>ステートメント ハンドルの解放  
- *Handletype*が SQL_HANDLE_STMT の**sqlfreehandle**を呼び出すと、SQL_HANDLE_STMT の*Handletype*を使用して**SQLAllocHandle**への呼び出しによって割り当てられたすべてのリソースが解放されます。 アプリケーションが**Sqlfreehandle**を呼び出して、保留中の結果を含むステートメントを解放すると、保留中の結果が削除されます。 アプリケーションがステートメントハンドルを解放すると、ドライバーによって自動的に割り当てられた4つの記述子が解放されます。 詳細については[、「ステートメント](../../../odbc/reference/develop-app/statement-handles.md)ハンドルおよび[ステートメントハンドルの解放](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)」を参照してください。  
+ *Handletype*が SQL_HANDLE_STMT の**sqlfreehandle**を呼び出すと、SQL_HANDLE_STMT の*Handletype*を使用して**SQLAllocHandle**への呼び出しによって割り当てられたすべてのリソースが解放されます。 アプリケーションが **Sqlfreehandle** を呼び出して、保留中の結果を含むステートメントを解放すると、保留中の結果が削除されます。 アプリケーションがステートメントハンドルを解放すると、ドライバーによって自動的に割り当てられた4つの記述子が解放されます。 詳細については [、「ステートメント](../../../odbc/reference/develop-app/statement-handles.md) ハンドルおよび [ステートメントハンドルの解放](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)」を参照してください。  
   
- 接続で開かれているステートメントと記述子が**Sqldisconnect**によって自動的に削除されることに注意してください。  
+ 接続で開かれているステートメントと記述子が **Sqldisconnect** によって自動的に削除されることに注意してください。  
   
 ## <a name="freeing-a-descriptor-handle"></a>記述子ハンドルの解放  
  SQL_HANDLE_DESC の*Handletype*を使用して**sqlfreehandle**を呼び出すと、*ハンドル*内の記述子ハンドルが解放されます。 **Sqlfreehandle**を呼び出すと、*ハンドル*の任意の記述子レコードのポインターフィールド (SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR) によって参照される可能性のあるアプリケーションによって割り当てられたメモリは解放されません。 ポインターフィールドではないフィールドのドライバーによって割り当てられたメモリは、ハンドルが解放されると解放されます。 ユーザーが割り当てた記述子ハンドルを解放すると、解放されたハンドルに関連付けられていたすべてのステートメントが、自動的に割り当てられた記述子ハンドルに戻されます。  
   
 > [!NOTE]
->  ODBC 2.x*ドライバーは*、記述子ハンドルの割り当てをサポートしていないのと同様に、記述子ハンドルの解放をサポートしていません。  
+>  ODBC 2.x*ドライバーは* 、記述子ハンドルの割り当てをサポートしていないのと同様に、記述子ハンドルの解放をサポートしていません。  
   
- 接続で開かれているステートメントと記述子が**Sqldisconnect**によって自動的に削除されることに注意してください。 アプリケーションがステートメントハンドルを解放すると、ドライバーは、そのハンドルに関連付けられている自動的に生成されたすべての記述子を解放します。  
+ 接続で開かれているステートメントと記述子が **Sqldisconnect** によって自動的に削除されることに注意してください。 アプリケーションがステートメントハンドルを解放すると、ドライバーは、そのハンドルに関連付けられている自動的に生成されたすべての記述子を解放します。  
   
- 記述子の詳細については、「[記述子](../../../odbc/reference/develop-app/descriptors.md)」を参照してください。  
+ 記述子の詳細については、「 [記述子](../../../odbc/reference/develop-app/descriptors.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
  その他のコードサンプルについては、「 [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) and [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)」を参照してください。  
@@ -181,7 +182,7 @@ int main() {
 |ステートメント処理の取り消し|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |カーソル名の設定|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC のサンプル プログラム](../../../odbc/reference/sample-odbc-program.md)

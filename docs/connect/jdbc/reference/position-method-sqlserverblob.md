@@ -1,4 +1,5 @@
 ---
+description: position メソッド (SQLServerBlob)
 title: position メソッド (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 66201b28d6f52801fe776ff6d6e5a392be586272
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a0104fe50c2e1b1c1fea8458cb1709304d172e07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433004"
 ---
 # <a name="position-method-sqlserverblob"></a>position メソッド (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80914190"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[position (java.sql.Blob, long)](../../../connect/jdbc/reference/position-method-java-sql-blob-long.md)|渡されたパターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  
 |[position (byte&#91;&#93;, long)](../../../connect/jdbc/reference/position-method-byte-long.md)|渡された **byte** 配列パターンと開始インデックスに基づいて、BLOB 内の指定されたパターンの位置を返します。|  

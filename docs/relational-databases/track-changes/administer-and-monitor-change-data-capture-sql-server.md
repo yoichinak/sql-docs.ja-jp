@@ -1,4 +1,5 @@
 ---
+description: 変更データ キャプチャの管理と監視 (SQL Server)
 title: 変更データ キャプチャの管理と監視
 ms.date: 01/02/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889169"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128644"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 
@@ -172,7 +173,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]** 、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
+3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]**、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、**[データ コレクション セットの開始]** をクリックします。  
   
 4. 手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
 
@@ -181,7 +182,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 累積更新プログラムまたはサービス パックをインスタンスに適用する場合、再起動時に、インスタンスがスクリプト アップグレード モードになることがあります。 このモードでは、SQL Server が内部 CDC テーブルを分析し、アップグレードする手順を行うため、キャプチャ テーブルのインデックスなどのオブジェクトが再作成されることがあります。 関連するデータの量によっては、この手順にいくらかの時間がかかったり、または有効にされている CDC データベースのトランザクション ログの使用率が高くなったりする可能性があります。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

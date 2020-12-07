@@ -1,4 +1,5 @@
 ---
+description: ODBC ドライバー マネージャーによって生成されたイベント
 title: ODBC ドライバーマネージャー | によって生成されるイベントMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2259867b2291299b5bed35536637a7968118e87b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482925"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC ドライバー マネージャーによって生成されたイベント
 > [!IMPORTANT]  
 >  Visual Studio Analyzer のサポートは、Windows 8 以降で削除されました (Visual Studio Analyzer 以前のバージョンの Visual Studio にのみ含まれていました)。 別のトラブルシューティングメカニズムについては、BID トレースを使用します。  
   
- ODBC ドライバーマネージャーによって生成されたイベントは、[Visual Studio Analyzer の開始] ボタンをクリックしたときに登録されます。 ツール自体には、システム定義のイベントと、カスタムイベントを作成する機能が用意されています。 イベントの詳細については、Visual Studio スイートのドキュメント内の*Visual Studio Analyzer リファレンスガイド*を参照してください。  
+ ODBC ドライバーマネージャーによって生成されたイベントは、[Visual Studio Analyzer の開始] ボタンをクリックしたときに登録されます。 ツール自体には、システム定義のイベントと、カスタムイベントを作成する機能が用意されています。 イベントの詳細については、Visual Studio スイートのドキュメント内の *Visual Studio Analyzer リファレンスガイド* を参照してください。  
   
 |Visual Studio Analyzer イベント|説明|  
 |----------------------------------|-----------------|  
-|**Call (英語の可能性あり)**|すべての ODBC API エントリに生成されます。|  
+|**Call**|すべての ODBC API エントリに生成されます。|  
 |**ReturnException**|リターンコードが SQL_ERROR 場合は、すべての ODBC API が戻るたびに生成されます。|  
 |**ReturnNormal**|リターンコードが SQL_ERROR されていない場合に、すべての ODBC API が戻るたびに生成されます。|  
 |**接続の開始**|接続が開始されたことを示します。ODBC ドライバーマネージャーがドライバーの接続 Api を呼び出したときに生成されます。|  
 |**接続の完了**|接続が完了したことを示します。ドライバーの接続 Api が ODBC ドライバーマネージャーに戻るときに生成されます。|  
-|**切断の開始**|ODBC ドライバーマネージャーがドライバーの**Sqldisconnect**関数を呼び出したときに生成されます。|  
-|**切断の完了**|ドライバーの**Sqldisconnect**関数が ODBC ドライバーマネージャーに戻るときに生成されます。|  
-|**QuerySend**|ODBC ドライバーマネージャーが、ドライバーの**SQLPrepare**、 **sqlexecute**、 **SQLExecDirect**関数、および**sqlexecute**や**sqlexecute**などのカタログ関数を呼び出すときに生成されます。|  
+|**切断の開始**|ODBC ドライバーマネージャーがドライバーの **Sqldisconnect** 関数を呼び出したときに生成されます。|  
+|**切断の完了**|ドライバーの **Sqldisconnect** 関数が ODBC ドライバーマネージャーに戻るときに生成されます。|  
+|**QuerySend**|ODBC ドライバーマネージャーが、ドライバーの **SQLPrepare**、 **sqlexecute**、 **SQLExecDirect** 関数、および **sqlexecute** や **sqlexecute**などのカタログ関数を呼び出すときに生成されます。|  
 |**QueryResult**|クエリが関係する関数に対して、ドライバーが ODBC ドライバーマネージャーに結果セットを返すときに生成されます。|  
-|**TransactionStart**|アプリケーションが SQL_ATTR_AUTOCOMMIT の値を SQL_AUTOCOMMIT_OFF に設定したとき、またはアプリケーションが**SQLEndTran**を正常に呼び出した後に生成されます。|  
-|**TransactionCommit**|アプリケーションが**SQLEndTran**を呼び出してローカルトランザクションをコミットするときに生成されます。|  
-|**TransactionRollback**|アプリケーションが**SQLEndTran**を呼び出してローカルトランザクションをロールバックするときに生成されます。|  
+|**TransactionStart**|アプリケーションが SQL_ATTR_AUTOCOMMIT の値を SQL_AUTOCOMMIT_OFF に設定したとき、またはアプリケーションが **SQLEndTran**を正常に呼び出した後に生成されます。|  
+|**TransactionCommit**|アプリケーションが **SQLEndTran** を呼び出してローカルトランザクションをコミットするときに生成されます。|  
+|**TransactionRollback**|アプリケーションが **SQLEndTran** を呼び出してローカルトランザクションをロールバックするときに生成されます。|  
 |**目次**|アプリケーションが分散トランザクションコーディネーター (DTC) に参加したときに生成されます。|  
 |**LeaveDTC**|アプリケーションが分散トランザクションコーディネーター (DTC) を離れるときに生成されます。|

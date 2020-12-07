@@ -1,4 +1,5 @@
 ---
+description: sys.fn_translate_permissions (Transact-SQL)
 title: fn_translate_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1069d5b76d6ee404ddd2e671eb6a7b63396424ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481765"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引数  
- *レベル*  
- 権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル*は**nvarchar (60)** です。  
+ *level*  
+ 権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル* は **nvarchar (60)** です。  
   
  *perms*  
- 権限列に返されるビットマスクを指定します。 *perms*は**varbinary (16)** です。  
+ 権限列に返されるビットマスクを指定します。 *perms* は **varbinary (16)** です。  
   
 ## <a name="returns"></a>戻り値  
  **テーブル**  
   
-## <a name="remarks"></a>Remarks  
- SQL トレースの**permissions**列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions**は、このビットマスクを権限名のテーブルに変換します。  
+## <a name="remarks"></a>解説  
+ SQL トレースの **permissions** 列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions** は、このビットマスクを権限名のテーブルに変換します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -68,9 +69,9 @@ SELECT '0010' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0010)
 SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011);  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [server_permissions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

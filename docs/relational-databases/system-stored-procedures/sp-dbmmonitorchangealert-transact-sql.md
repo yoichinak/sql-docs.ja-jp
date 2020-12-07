@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorchangealert (Transact-sql)
 title: sp_dbmmonitorchangealert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 889b418cff5add6c2891146af169fb3e97f61be5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866619"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539033"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,9 +66,9 @@ sp_dbmmonitorchangealert database_name
  警告のしきい値。 ミラーリングの状態が更新されたときに、このしきい値を超える値が返された場合は、Windows イベントログにエントリが入力されます。 この値は、パフォーマンスメトリックに応じて、KB、分、またはミリ秒を表します。  
   
 > [!NOTE]  
->  現在の値を表示するには、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアドプロシージャを実行します。  
+>  現在の値を表示するには、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) ストアドプロシージャを実行します。  
   
- *enabled*  
+ *有効*  
  警告が有効になっていますか?  
   
  0 = 警告は無効です。  
@@ -78,7 +79,7 @@ sp_dbmmonitorchangealert database_name
 >  保有期間は常に有効になります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -86,7 +87,7 @@ sp_dbmmonitorchangealert database_name
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースについて、各パフォーマンス基準のしきい値と保有期間を設定します。 次の表に、この例で使用する値を示します。  
   
 |*alert_id*|パフォーマンス基準|警告しきい値|警告が有効になっていますか?|  
@@ -106,7 +107,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorhelpalert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   

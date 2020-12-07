@@ -1,4 +1,5 @@
 ---
+description: '[プロジェクトのプロパティ] ダイアログ ボックス'
 title: '[プロジェクトのプロパティ] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922610"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88351608"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
 
@@ -54,7 +55,7 @@ ms.locfileid: "86922610"
 ##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> [全般] ページのオプションの設定  
  プロジェクトのプロパティを表示するには、[全般] ページを使用します。  
   
- **Name**  
+ **名前**  
  プロジェクト名を一覧表示します。  
   
  **識別子**  
@@ -75,7 +76,7 @@ ms.locfileid: "86922610"
  参照  
  **[参照]** をクリックすると、 **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、権限を設定するユーザーおよびロールを選択できます。  
   
- **Name**  
+ **名前**  
  ユーザーまたはロールの名前を一覧表示します。  
   
  **Type**  

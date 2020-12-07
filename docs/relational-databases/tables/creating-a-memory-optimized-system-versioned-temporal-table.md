@@ -1,4 +1,5 @@
 ---
+description: メモリ最適化のためのシステム バージョン管理されたテンポラル テーブルを作成する
 title: メモリ最適化のためのシステム バージョン管理されたテンポラル テーブルを作成する | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2016
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e852dcc87d5660889f30ad6d528ca08d53059913
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3e22e010e8345f634bbf8dfd05788f7c71b15153
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554849"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545456"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>メモリ最適化のためのシステム バージョン管理されたテンポラル テーブルを作成する
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 ディスク ベースの履歴テーブルの作成と同様、メモリ最適化されたテンポラル テーブルはさまざまな方法で作成できます。
 
@@ -86,7 +89,7 @@ WITH
 ;
 ```
 
-## <a name="see"></a>参照先
+## <a name="see"></a>解決方法については、
 
 - [メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [メモリ最適化およびシステム バージョン管理されたテンポラル テーブルの使用](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)

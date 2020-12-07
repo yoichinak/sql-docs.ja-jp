@@ -1,4 +1,5 @@
 ---
+description: データ フロー コンポーネント用ユーザー インターフェイスの開発
 title: データ フロー コンポーネント用ユーザー インターフェイスの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916211"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123151"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
 
@@ -43,9 +44,9 @@ ms.locfileid: "86916211"
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> プロパティは、型の完全修飾名を示すコンマ区切り形式の文字列です。 次の一覧は、型を識別する要素を順に示したものです。  
   
--   種類の名前。  
+-   型名  
   
--   アセンブリ名  
+-   [アセンブリ名]  
   
 -   ファイル バージョン  
   

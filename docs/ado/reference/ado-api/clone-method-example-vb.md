@@ -1,8 +1,9 @@
 ---
+description: Clone メソッドの例 (VB)
 title: Clone メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d42d0d9fb4cfc0a46c703e9f7f8be213d5a1a0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 69e8e90ce21e222d6552d42c8d2e2c9add5643e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749027"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975423"
 ---
 # <a name="clone-method-example-vb"></a>Clone メソッドの例 (VB)
-この例では、 [Clone](../../../ado/reference/ado-api/clone-method-ado.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
+この例では、 [Clone](./clone-method-ado.md) メソッドを使用して [レコードセット](./recordset-object-ado.md) のコピーを作成し、ユーザーが各コピーのレコードポインターを個別に配置できるようにします。  
   
 ```  
 'BeginCloneVB  
@@ -128,5 +129,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone メソッド (ADO)](./clone-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

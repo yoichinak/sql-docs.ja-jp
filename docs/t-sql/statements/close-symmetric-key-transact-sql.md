@@ -1,4 +1,5 @@
 ---
+description: CLOSE SYMMETRIC KEY (Transact-SQL)
 title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f14d291cf70bcefb13404805aa717f2087695ce6
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 39b9fdbb63a515f74640ff1e4c18366652584980
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380895"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688798"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  閉じる対称キーの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 CLOSE ALL SYMMETRIC KEYS では、[OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントによって現在のセッションで開いていた任意のデータベースのマスター キーが閉じられます。  開いているキーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -59,7 +60,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ### <a name="a-closing-a-symmetric-key"></a>A. 対称キーを閉じる  
  次の例では、対称キー `ShippingSymKey04` を閉じます。  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
 GO  
 ```  
@@ -67,7 +68,7 @@ GO
 ### <a name="b-closing-all-symmetric-keys"></a>B. すべての対称キーを閉じる  
  次の例では、現在のセッションで開いているすべての対称キーと、明示的に開かれたデータベースのマスター キーを閉じます。  
   
-```  
+```sql  
 CLOSE ALL SYMMETRIC KEYS;  
 GO  
 ```  

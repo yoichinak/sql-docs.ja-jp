@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2455a2d6ccf3c17c1cd60e159ce429af681dca4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827656"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541715"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  登録されているワードブレーカー、フィルター、およびプロトコルハンドラーの情報を返します。 **sp_help_fulltext_system_components**は、指定されたコンポーネントを使用したデータベースとフルテキストカタログの識別子の一覧も返します。  
+  登録されているワードブレーカー、フィルター、およびプロトコルハンドラーの情報を返します。 **sp_help_fulltext_system_components** は、指定されたコンポーネントを使用したデータベースとフルテキストカタログの識別子の一覧も返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  すべてのフルテキスト コンポーネントについての情報を返します。  
   
-`[ @component_type = ] component_type`コンポーネントの種類を指定します。 *component_type*には、次のいずれかを指定できます。  
+`[ @component_type = ] component_type` コンポーネントの種類を指定します。 *component_type* には、次のいずれかを指定できます。  
   
 -   **wordbreaker**  
   
@@ -55,9 +56,9 @@ sp_help_fulltext_system_components
   
 -   **fullpath**  
   
- 完全なパスが指定されている場合は、コンポーネント DLL への完全パスで*param*も指定する必要があります。指定しない場合、エラーメッセージが返されます。  
+ 完全なパスが指定されている場合は、コンポーネント DLL への完全パスで *param* も指定する必要があります。指定しない場合、エラーメッセージが返されます。  
   
-`[ @param = ] param`コンポーネントの種類に応じて、次のいずれかになります。ロケール識別子 (LCID)、"." プレフィックスが付いたファイル拡張子、プロトコルハンドラーの完全なコンポーネント名、またはコンポーネント DLL への完全パスです。  
+`[ @param = ] param` コンポーネントの種類に応じて、次のいずれかになります。ロケール識別子 (LCID)、"." プレフィックスが付いたファイル拡張子、プロトコルハンドラーの完全なコンポーネント名、またはコンポーネント DLL への完全パスです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) エラー  
@@ -67,10 +68,10 @@ sp_help_fulltext_system_components
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれかです。<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componenttype**|**sysname**|コンポーネントの種類。 次のいずれか:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
-|**fullpath**|**nvarchar(256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin**固定サーバーロールのメンバーではありません。|  
+|**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL = 呼び出し元は、 **serveradmin** 固定サーバーロールのメンバーではありません。|  
 |**version**|**nvarchar(30)**|コンポーネントのバージョン。|  
 |**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
   
@@ -84,7 +85,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>アクセス許可  
  **Public**ロールのメンバーシップが必要です。ただし、ユーザーは、VIEW DEFINITION 権限を持つフルテキストカタログに関する情報のみを表示できます。 **Serveradmin**固定サーバーロールのメンバーだけが、 **fullpath**列の値を参照できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この方法は、アップグレードを準備するときに特に重要です。 特定のデータベース内でストアドプロシージャを実行し、その出力を使用して、アップグレードによって特定のカタログが影響を受けるかどうかを判断します。  
   
 ## <a name="examples"></a>例  
@@ -137,8 +138,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [登録済みのフィルターとワードブレーカーを表示または変更する](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
- [検索用のワードブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [検索用のフィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

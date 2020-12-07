@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401003"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>並列データウェアハウスでのロック動作
@@ -27,7 +27,7 @@ SQL Server PDW は、次の4つのロックモードをサポートします。
 排他的  
 排他ロックは、排他ロックを保持しているトランザクションが完了するまで、ロックされたオブジェクトへの書き込みまたは読み取りを禁止します。 排他ロックが有効になっている間は、どのモードでも他のロックは許可されません。 たとえば、DROP TABLE と CREATE DATABASE は排他ロックを使用します。  
   
-Shared  
+共有  
 共有ロックでは、影響を受けるオブジェクトの排他ロックの開始は禁止されていますが、他のすべてのロックモードは許可されています。 たとえば、SELECT ステートメントを実行すると、共有ロックが開始されるため、複数のクエリで選択したデータに同時にアクセスできますが、読み取り中のレコードに対する更新は、SELECT ステートメントが完了するまで行われません。  
   
 ExclusiveUpdate  
@@ -40,7 +40,7 @@ SharedUpdate ロックでは、排他的ロックモードと ExclusiveUpdate �
   
 ロックは、データベース、スキーマ、オブジェクト (テーブル、ビュー、またはプロシージャ)、アプリケーション (内部で使用)、EXTERNALDATASOURCE、EXTERNALFILEFORMAT、および SCHEMARESOLUTION (スキーマオブジェクトまたはデータベースユーザーの作成、変更、または削除中に取得されたデータベースレベルのロック) によって保持されます。 これらのオブジェクトクラスは、 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)の object_type 列に表示されます。  
   
-## <a name="general-remarks"></a><a name="Remarks"></a>全般的な解説  
+## <a name="general-remarks"></a><a name="Remarks"></a>一般的な解説  
 ロックは、データベース、テーブル、またはビューに適用できます。  
   
 SQL Server PDW は、構成可能な分離レベルを実装していません。 ANSI 規格で定義されている READ_UNCOMMITTED 分離レベルをサポートしています。 ただし、読み取り操作は READ_UNCOMMITTED で実行されるため、実際に発生するブロッキング操作はほとんどなく、システム内で競合が発生する可能性があります。  
@@ -48,7 +48,7 @@ SQL Server PDW は、構成可能な分離レベルを実装していません�
 SQL Server PDW は、基になる SQL Server エンジンに依存して、ロックと同時実行制御を実装します。 操作によって、基になる SQL Server が同じノード内でデッドロックが発生した場合、SQL Server PDW は SQL Server デッドロック検出機能を利用し、ブロックステートメントの1つを終了します。  
   
 > [!NOTE]  
-> SQL Server では、ロックが新しいロック要求によってブロックされるのを待機しているステートメントは許可されません。 SQL Server PDW がこのプロセスを完全に実装していません。 SQL Server PDW では、新しい共有ロックの継続的な要求によって、排他ロックに対する以前の (待機中の) 要求がブロックされることがあります。 たとえば、 **UPDATE**ステートメント (排他ロックを必要とする) は、一連の**SELECT**ステートメントに対して許可されている共有ロックによってブロックされることがあります。 ブロックされたプロセス ( [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) dvm を確認することで識別) を解決するには、排他ロックが満たされるまで新しい要求の送信を停止します。  
+> SQL Server では、ロックが新しいロック要求によってブロックされるのを待機しているステートメントは許可されません。 SQL Server PDW がこのプロセスを完全に実装していません。 SQL Server PDW では、新しい共有ロックの継続的な要求によって、排他ロックに対する以前の (待機中の) 要求がブロックされることがあります。 たとえば、 **UPDATE** ステートメント (排他ロックを必要とする) は、一連の **SELECT** ステートメントに対して許可されている共有ロックによってブロックされることがあります。 ブロックされたプロセス ( [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md) dvm を確認することで識別) を解決するには、排他ロックが満たされるまで新しい要求の送信を停止します。  
   
 ## <a name="lock-definition-table"></a>定義テーブルのロック  
 SQL Server では、次の種類のロックがサポートされています。 すべてのロックの種類をコントロールノードで使用できるわけではありませんが、コンピューティングノードでは発生する可能性があります。  

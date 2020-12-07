@@ -1,4 +1,5 @@
 ---
+description: replace value of (XML DML)
 title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393050"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116546"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86393050"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 replace value of Expression1   
 with Expression2  
 ```  
@@ -52,7 +53,7 @@ with Expression2
 次の例では、まず、ドキュメント インスタンスが **xml** 型の変数に代入されます。 次に、**replace value of** XML DML ステートメントで、ドキュメント内の値が更新されます。  
   
 ```sql
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours="1.1"  
@@ -66,13 +67,13 @@ SELECT @myDoc;
 -- update text in the first manufacturing step  
 SET @myDoc.modify('  
   replace value of (/Root/Location/step[1]/text())[1]  
-  with     "new text describing the manu step"  
+  with "new text describing the manu step"  
 ');  
 SELECT @myDoc;  
 -- update attribute value  
 SET @myDoc.modify('  
   replace value of (/Root/Location/@LaborHours)[1]  
-  with     "100.0"  
+  with "100.0"  
 ');  
 SELECT @myDoc;  
 ```  
@@ -83,7 +84,7 @@ SELECT @myDoc;
 次の例に示すように、**replace value of XML DML** ステートメントの Expression2 に **if** 式を指定できます。 Expression1 では、最初のワーク センターの LaborHours 属性を更新することを示します。 Expression2 では、**if** 式を使用して LaborHours 属性の新しい値を決定します。  
   
 ```sql
-DECLARE @myDoc xml  
+DECLARE @myDoc XML  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours=".1"  
@@ -110,10 +111,10 @@ SELECT @myDoc
 次の例では、列に格納されている XML を更新します。  
   
 ```sql
-drop table T  
-go  
-CREATE TABLE T (i int, x xml)  
-go  
+DROP TABLE T  
+GO  
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -142,52 +143,53 @@ FROM T
 この例では、まず、型指定された XML 列を含むテーブル (T) を AdventureWorks データベースに作成します。 次に、製造手順の XML インスタンスを ProductModel テーブルの Instructions 列からテーブル T にコピーします。続いて、テーブル T の XML に挿入が適用されます。  
   
 ```sql
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,   
+  Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID=7  
+GO
 --insert a new location - <Location 1000/>.   
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
   as first  
-  into   (/MI:root)[1]  
+  into (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
-go  
+GO  
+SELECT Instructions  
+FROM T  
+GO  
 -- Now replace manu. tool in location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
-  with   "screwdriver"  
+  with "screwdriver"  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- Now replace value of lot size  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
-  with   500 cast as xs:decimal ?  
+  with 500 cast as xs:decimal ?  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 ```  
   
 LotSize 値を置換するときの **cast** の使い方に注意してください。 この処理は、値を特定の型にする必要がある場合に必要です。 この例では、値を 500 にした場合、明示的にキャストする必要はありません。  

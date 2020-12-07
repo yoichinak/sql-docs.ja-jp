@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Microsoft Docs
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479758"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   TRY...CATCH 構造の CATCH ブロックが実行された原因となるエラーの状態番号を返します。  
@@ -43,7 +45,9 @@ ms.locfileid: "87393983"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>戻り値の型  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="return-value"></a>戻り値  
@@ -52,7 +56,7 @@ ERROR_STATE ( )
  CATCH ブロックの範囲外で呼び出された場合は NULL を返します。  
   
 ## <a name="remarks"></a>解説  
- エラー メッセージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のコード内の複数の場所で生成される場合があります。 たとえば、異なる複数の条件で "1105" エラーが生成されることがあります。 エラーを生成するそれぞれの条件によって、一意の状態コードが割り当てられます。  
+ エラー メッセージが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のコード内の複数の場所で生成される場合があります。 たとえば、異なる複数の条件で "1105" エラーが生成されることがあります。 エラーを生成するそれぞれの条件によって、一意の状態コードが割り当てられます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報などの既知の問題のデータベースを参照する際には、この状態番号を使用して、データベースに登録されている問題が、実際に発生したエラーと同じものかどうかを確認できます。 たとえば、技術情報の資料で取り上げられている 1105 エラー メッセージの状態番号が 2 で、実際の 1105 エラー メッセージの状態番号が 3 だった場合、そのエラーは、その資料で報告されているものとは別の原因で発生したと考えられます。  
   

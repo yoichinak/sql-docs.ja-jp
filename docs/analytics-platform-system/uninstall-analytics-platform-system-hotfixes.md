@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399761"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムのアンインストール 
@@ -36,7 +36,7 @@ ms.locfileid: "74399761"
   
 2.  [管理者として実行] オプションを使用して、コマンドプロンプトを開きます。  
   
-3.  ディレクトリをに`C:\PDWINST\Patches\<kbarticle>\media`変更*<kbarticle>* します。には、アンインストールする修正プログラムのサポート技術情報の記事番号を指定します。  
+3.  ディレクトリをに変更し `C:\PDWINST\Patches\<kbarticle>\media` *<kbarticle>* ます。には、アンインストールする修正プログラムのサポート技術情報の記事番号を指定します。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -49,8 +49,8 @@ ms.locfileid: "74399761"
     ```  
   
 ## <a name="see-also"></a>参照  
-[Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します](download-and-apply-microsoft-updates.md)  
+[Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します ](download-and-apply-microsoft-updates.md)  
 [Microsoft 更新プログラムのアンインストール &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します](apply-analytics-platform-system-hotfixes.md)  
+[Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します ](apply-analytics-platform-system-hotfixes.md)  
 [ソフトウェアサービス &#40;Analytics Platform System&#41;](software-servicing.md)  
   

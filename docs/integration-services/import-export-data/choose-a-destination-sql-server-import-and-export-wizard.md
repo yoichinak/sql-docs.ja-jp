@@ -1,4 +1,5 @@
 ---
+description: '[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)'
 title: 変換先の選択 (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0b5484de65a497df68ca4d87f6a67ec3581728c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f452ba87ccb9ac1b0552f600b554f23742d909c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425294"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86923083"
 
 -   **変換先で ODBC ドライバーを使用している場合は**、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 ODBC ドライバーは、変換先のドロップダウン リストに記載されていません。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
+-   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます  (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
 
 ## <a name="my-destination-isnt-in-the-list"></a>変換先がリストに表示されない
 -   Microsoft またはサード パーティから**データ プロバイダーをダウンロードする必要があります**。 **[変換先]** のリストに表示される、使用できるデータ プロバイダーのリストに含まれているのは、コンピューターにインストールされているプロバイダーのみです。 使用できる変換先の詳細については、「[使用できるデータ ソースと変換先](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
@@ -53,7 +54,7 @@ ms.locfileid: "86923083"
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 ## <a name="after-you-choose-a-destination"></a>変換先の選択後
-変換先を選択した後、 **[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
+変換先を選択した後、**[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
 
 よく使われる変換先に接続するには、次のいずれかのページをご覧ください。
 -   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
@@ -61,17 +62,17 @@ ms.locfileid: "86923083"
 -   [フラット ファイル (テキスト ファイル) への接続](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel への接続](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Access への接続](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [ODBC への接続](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [Azure Blob Storage への接続](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [ODBC に接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Azure Blob Storage に接続する](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL への接続](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [MySQL への接続](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 この一覧にない変換先に接続する方法については、「[The Connection Strings Reference](https://www.connectionstrings.com/)」(接続文字列リファレンス) をご覧ください。 このサード パーティのサイトには、接続文字列のサンプルと、データ プロバイダーおよび必要な接続情報に関する詳細な情報が記載されています。
 
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  データの変換先とデータへの接続方法を指定した後、次のページは、 **[テーブルのコピーまたはクエリの指定]** です。 このページでは、テーブル全体をコピーするか、特定の行のみをコピーするかを指定します。 詳細については、「 [テーブルのコピーまたはクエリの指定](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)」を参照してください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

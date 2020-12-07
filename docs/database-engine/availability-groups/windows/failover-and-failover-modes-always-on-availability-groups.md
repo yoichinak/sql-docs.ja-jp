@@ -13,22 +13,22 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7cd148979886048bad16bc706d19b020d114377f
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395057"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584254"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
+  一般的に、可用性グループのコンテキスト内で、可用性レプリカのプライマリ ロールとセカンダリ ロールが *フェールオーバー* と呼ばれるプロセスで交換されることがあります。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータが保持されます。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 つまり、可用性グループはセカンダリ レプリカのいずれか (現在の " *フェールオーバー ターゲット*") にフェールオーバーされます。  
   
 > [!NOTE]  
->  データベース レベルの問題 (データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生しても、可用性グループのフェールオーバーは行われません。  
+>   [データベース レベルの正常性検出](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)を構成していない限り、データベース レベルの問題 (データ ファイルの損失、データベースの削除、トランザクション ログの破損による障害が疑われる場合など) が発生しても、可用性グループのフェールオーバーは行われません。  
   
  フェールオーバーによってフェールオーバー ターゲットがプライマリ ロールを引き継ぎ、そのデータベースを復旧し、新しいプライマリ データベースとしてオンラインにします。 元のプライマリ レプリカは使用可能になるとセカンダリ ロールに切り替わり、そのデータベースがセカンダリ データベースになります。 場合によっては、複数のエラーに対する対応として、または管理目的のために、これらのロールを何度も交代できます (または、別のフェールオーバー ターゲットに切り替えることができます)。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "87395057"
   
 -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターにクォーラムがある。 詳細については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)」を参照してください。  
   
--   プライマリ レプリカが使用できなくなり、柔軟なフェールオーバー ポリシーにより定義されたフェールオーバー条件レベルが満たされている。 フェールオーバー条件レベルの詳細については、「 [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)と呼ばれるプロセスで交換されることがあります。  
+-   プライマリ レプリカが使用できなくなり、柔軟なフェールオーバー ポリシーにより定義されたフェールオーバー条件レベルが満たされている。 フェールオーバー条件レベルの詳細については、「 [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md)と呼ばれるプロセスで交換されることがあります。  
   
 ###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> 自動フェールオーバーの動作  
  自動フェールオーバーにより、次の一連の操作が開始されます。  
@@ -269,7 +269,7 @@ ms.locfileid: "87395057"
   
  たとえば、3 つのノードで可用性グループをホストする WSFC クラスターについて考えてみます。ノード A はプライマリ レプリカをホストし、ノード B とノード C はそれぞれセカンダリ レプリカをホストします。 ノード C は、ローカル セカンダリ レプリカが SYNCHRONIZED 状態の間に WSFC クラスターから切断されます。  ただし、ノード A とノード B では正常なクォーラムが保持され、可用性グループはオンラインのままになります。 ノード A では、プライマリ レプリカが引き続き更新を受け入れ、ノード B では、セカンダリ レプリカが引き続きプライマリ レプリカと同期されます。 ノード C のセカンダリ レプリカは同期されなくなり、プライマリ レプリカからしだいに遅れが生じます。 ただし、ノード C は切断されているため、レプリカは誤って SYNCHRONIZED 状態のままになります。  
   
- ノード A でクォーラムが失われた後に強制された場合は、WSFC クラスター上の可用性グループの同期の状態は正しい状態になる必要があります。つまり、ノード C のセカンダリ レプリカは UNSYNCHRONIZED 状態として示される必要があります。 ただし、ノード C でクォーラムが強制された場合、可用性グループの同期は正しくなくなります。 クラスターの同期の状態は、ノード C が切断された時点まで戻ります。つまり、ノード C のセカンダリ レプリカは*誤って* SYNCHRONIZED 状態として示されます。 計画的な手動フェールオーバーはデータの安全性を保証するため、クォーラムの強制後に可用性グループをオンラインに戻すために使用することはできません。  
+ ノード A でクォーラムが失われた後に強制された場合は、WSFC クラスター上の可用性グループの同期の状態は正しい状態になる必要があります。つまり、ノード C のセカンダリ レプリカは UNSYNCHRONIZED 状態として示される必要があります。 ただし、ノード C でクォーラムが強制された場合、可用性グループの同期は正しくなくなります。 クラスターの同期の状態は、ノード C が切断された時点まで戻ります。つまり、ノード C のセカンダリ レプリカは *誤って* SYNCHRONIZED 状態として示されます。 計画的な手動フェールオーバーはデータの安全性を保証するため、クォーラムの強制後に可用性グループをオンラインに戻すために使用することはできません。  
   
 ###  <a name="tracking-potential-data-loss"></a><a name="TrackPotentialDataLoss"></a> データ損失の可能性の追跡  
  WSFC クラスターに正常なクォーラムがある場合、データベースのデータが損失する現在の可能性を推測することができます。 特定のセカンダリ レプリカの場合、データ損失の現在の可能性は、ローカル セカンダリ データベースが対応するプライマリ データベースにどの程度遅れているかによって決まります。 遅延の程度は時間の経過と共に変化するため、非同期のセカンダリ データベースについてデータ損失の可能性を定期的に追跡することをお勧めします。 遅延を追跡するには、次のように、各プライマリ データベースとそのセカンダリ データベースの最後にコミットした LSN および最終コミット時間を比較する必要があります。  
@@ -348,9 +348,9 @@ ms.locfileid: "87395057"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -358,6 +358,5 @@ ms.locfileid: "87395057"
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [AlwaysOn 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
-  
+ [可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md)  
   

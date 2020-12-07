@@ -1,4 +1,5 @@
 ---
+description: SET FIPS_FLAGGER (Transact-SQL)
 title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - FIPS 127-2 standard
 - FIPS_FLAGGER option
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: baec8662d21347340eede171bb8dcf3966f54a7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484676"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540598"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,15 +57,15 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|ISO 中間レベルの準拠性の標準チェック。|  
 |OFF|標準チェックなし。|  
   
-## <a name="remarks"></a>解説  
- `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `SET` ステートメント ブロックに `IF...ELSE` ステートメントが指定されていたとしても、`SET` ステートメント ブロックは解析されるので、`IF...ELSE` ステートメントは有効になります。  
+## <a name="remarks"></a>注釈  
+ `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `IF...ELSE` ステートメント ブロックに `SET` ステートメントが指定されていたとしても、`IF...ELSE` ステートメント ブロックは解析されるので、`SET` ステートメントは有効になります。  
   
  `SET FIPS_FLAGGER` がストアド プロシージャで設定された場合、`SET FIPS_FLAGGER` の値は、制御がストアド プロシージャから返された後、元に戻されます。 したがって、動的 SQL に指定されている `SET FIPS_FLAGGER` ステートメントは、動的 SQL ステートメントの後にあるステートメントにまったく影響しません。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

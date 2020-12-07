@@ -1,4 +1,5 @@
 ---
+description: 移行後の検証および最適化ガイド
 title: 移行後の検証および最適化ガイド | Microsoft Docs
 ms.date: 01/09/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01b629b65c7f8ab1571aa53a944a8525bd09a0b0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914446"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "93235459"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 
@@ -37,13 +38,13 @@ ms.locfileid: "86914446"
 
 これは、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 以降、すべてのクエリ オプティマイザーの変更が最新の[データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` のデータベース オプションを最新のものに変更した時点で発生するためです。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で導入されたクエリ オプティマイザーの変更の詳細については、「[Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))」(SQL Server 2014 のカーディナリティ推定を使用したクエリ プランの最適化) を参照してください。
 
 ### <a name="steps-to-resolve"></a>解決手順
 
 [データベース互換性レベル](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)をソース バージョンに変更して、次の図に示すように推奨されるアップグレードのワークフローに従います。
 
-![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
+![推奨されるアップグレード ワークフローを示す図。](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 このトピックの詳細については、「[SQL Server 2016 へのアップグレード中にパフォーマンスの安定性を維持する](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。
 
@@ -66,7 +67,7 @@ ms.locfileid: "86914446"
 5.  `DISABLE_PARAMETER_SNIFFING` ヒントを使うようにクエリを書き直します。 `OPTION(RECOMPILE)`、`WITH RECOMPILE`、または `OPTIMIZE FOR <value>` が使われていない場合はパラメーター スニッフィングを完全に無効にすることで、ローカル変数の手法を使う場合と同じ効果があります。
 
 > [!TIP] 
-> これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプラン分析機能を利用します。 詳細については、[こちら](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)をご覧ください。
+> これが問題かどうかをすばやく識別するには、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のプラン分析機能を利用します。 詳細については、[こちら](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier)をご覧ください。
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> 欠落したインデックス
 
@@ -93,7 +94,7 @@ ms.locfileid: "86914446"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コンパイル時に認識されている情報のみを考慮することができます。 ワークロードが実行時にのみ認識できる述語に依存する場合は、不適切なプランの選択が増える可能性があります。 高品質のプランでは、述語は **SARGable** (**S**earch **Arg**ument**able**: 検索引数化可能 ) である必要があります。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コンパイル時に認識されている情報のみを考慮することができます。 ワークロードが実行時にのみ認識できる述語に依存する場合は、不適切なプランの選択が増える可能性があります。 高品質のプランでは、述語は **SARGable** (**S** earch **Arg** ument **able**: 検索引数化可能 ) である必要があります。
 
 SARGable ではない述語の例を次に示します。
 -   VARCHAR から NVARCHAR、INT から VARCHAR のような暗黙的なデータ変換。 実際の実行プランで実行時の CONVERT_IMPLICIT 警告を探します。 型を変換すると、精度が失われるをこともあります。
@@ -165,8 +166,8 @@ SARGable ではない述語の例を次に示します。
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> その他の情報
 
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[メモリ最適化テーブル](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[メモリ最適化テーブル](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [ユーザー定義関数](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[テーブル変数と行の推定 - パート 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[テーブル変数と行の推定 - パート 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[テーブル変数と行の推定 - パート 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[テーブル変数と行の推定 - パート 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [実行プランのキャッシュと再利用](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

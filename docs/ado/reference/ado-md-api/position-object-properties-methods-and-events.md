@@ -1,8 +1,9 @@
 ---
+description: Position オブジェクトのプロパティ、メソッド、およびイベント
 title: Position オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 165b3f68bb1aa59fe9b97d1cc9609572aff0a6fb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc246b6b6c547e77b9372233d8c552e57ac5f25c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758588"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986143"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
- [Members コレクション](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Members コレクション](./members-collection-ado-md.md)  
   
- [Ordinal プロパティ (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
+ [Ordinal プロパティ (Position)](./ordinal-property-ado-md-position.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [Position オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Position オブジェクト (ADO MD)](./position-object-ado-md.md)

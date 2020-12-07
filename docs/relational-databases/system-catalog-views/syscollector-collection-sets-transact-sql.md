@@ -1,4 +1,5 @@
 ---
+description: syscollector_collection_sets (Transact-SQL)
 title: syscollector_collection_sets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e03a5f7ef7ee05e91b3a3b36798c2cb23a883005
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896783"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537932"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,12 +53,12 @@ ms.locfileid: "85896783"
 ## <a name="permissions"></a>アクセス許可  
  dc_operator、dc_proxy に対する SELECT 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  データ コレクター API で変更または削除が許可されるコレクション セットは、ユーザーが作成したコレクション セットのみです。 システムが提供するコレクション セットは変更または削除できません。 ただし、システム コレクション セットを有効または無効にしたり、その構成を変更することはできます。  
   
-## <a name="see-also"></a>関連項目  
- [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [データコレクタービュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

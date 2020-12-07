@@ -1,4 +1,5 @@
 ---
+description: sp_enum_proxy_for_subsystem (Transact-sql)
 title: sp_enum_proxy_for_subsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489441"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-sql)
 
@@ -43,16 +44,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] proxy_id`情報を一覧表示するプロキシの識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
+`[ @proxy_id = ] proxy_id` 情報を一覧表示するプロキシの識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
   
-`[ @proxy_name = ] 'proxy_name'`情報を一覧表示するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
+`[ @proxy_name = ] 'proxy_name'` 情報を一覧表示するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
   
-`[ @subsystem_id = ] subsystem_id`情報を一覧表示するサブシステムの識別番号を指定します。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
+`[ @subsystem_id = ] subsystem_id` 情報を一覧表示するサブシステムの識別番号を指定します。 *Subsystem_id*は**int**,、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
   
-`[ @subsystem_name = ] 'subsystem_name'`情報を一覧表示するサブシステムの名前。 *Subsystem_name*は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
+`[ @subsystem_name = ] 'subsystem_name'` 情報を一覧表示するサブシステムの名前。 *Subsystem_name*は**sysname**で、既定値は NULL です。 *Subsystem_id*または*subsystem_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -64,17 +65,17 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|プロキシの名前。|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
- パラメーターが指定されていない場合、 **sp_enum_proxy_for_subsystem**は、すべてのサブシステムについて、インスタンス内のすべてのプロキシに関する情報を一覧表示します。  
+## <a name="remarks"></a>解説  
+ パラメーターが指定されていない場合、 **sp_enum_proxy_for_subsystem** は、すべてのサブシステムについて、インスタンス内のすべてのプロキシに関する情報を一覧表示します。  
   
- プロキシ id またはプロキシ名を指定すると、 **sp_enum_proxy_for_subsystem**はプロキシがアクセスできるサブシステムの一覧を表示します。 サブシステム id またはサブシステムの名前を指定すると、 **sp_enum_proxy_for_subsystem**そのサブシステムへのアクセス権を持つプロキシが一覧表示されます。  
+ プロキシ id またはプロキシ名を指定すると、 **sp_enum_proxy_for_subsystem** はプロキシがアクセスできるサブシステムの一覧を表示します。 サブシステム id またはサブシステムの名前を指定すると、 **sp_enum_proxy_for_subsystem** そのサブシステムへのアクセス権を持つプロキシが一覧表示されます。  
   
  プロキシ情報とサブシステム情報の両方を指定すると、指定したプロキシが指定したサブシステムにアクセスできる場合は、結果セットから行が返されます。  
   
- このストアドプロシージャは**msdb**にあります。  
+ このストアドプロシージャは **msdb**にあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
   
@@ -89,7 +90,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B: プロキシが特定のサブシステムにアクセスできるかどうかを判断する  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. プロキシが特定のサブシステムにアクセスできるかどうかを判断する  
  次の例では、プロキシが `Catalog application proxy` サブシステムにアクセスできる場合に行を返し `ActiveScripting` ます。 それ以外の場合、この例では空の結果セットが返されます。  
   
 ```sql
@@ -102,7 +103,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_grant_proxy_to_subsystem &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

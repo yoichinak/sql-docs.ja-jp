@@ -1,8 +1,9 @@
 ---
+description: GetRows メソッドの例 (VC++)
 title: GetRows メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e336538cf0694cb2dc7048bf516717860d2123e7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760008"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990883"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows メソッドの例 (VC++)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または、 **getrows**が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
+この例では、 [GetRows](./getrows-method-ado.md) メソッドを使用して、 [レコードセット](./recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または、 **getrows**が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -235,7 +236,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 2 record(s) found.  
@@ -244,6 +245,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>参照  
- [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF、EOF プロパティ (ADO)](./bof-eof-properties-ado.md)   
+ [GetRows メソッド (ADO)](./getrows-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

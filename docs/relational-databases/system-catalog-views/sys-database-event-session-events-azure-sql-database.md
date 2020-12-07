@@ -9,18 +9,18 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: f4c9eb0a-173c-4c66-8dd8-6f7176b2657f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4cc0cee2b7acea6bbe465f0fc3cef9f40954e0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d116c44d686398f4cb76d3443f10c8a85309727f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323358"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542586"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   イベント セッションのイベントごとに行を返します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88323358"
 ## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| ソース | 終了 | リレーションシップ |
+| From | 終了 | リレーションシップ |
 | ---- | -- | ------------ |
 |database_event_session_events。 event_session_id|database_event_sessions。 event_session_id|多対一|  
   

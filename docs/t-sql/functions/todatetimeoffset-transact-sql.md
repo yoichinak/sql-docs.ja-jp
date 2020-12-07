@@ -1,4 +1,5 @@
 ---
+description: TODATETIMEOFFSET (Transact-SQL)
 title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -24,12 +25,12 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 897ecb64fff2d9ab765ba5a5a20be96c05dd5a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 204cdfe73791ef1cf7e6d3b66ed20735b61e9b09
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110734"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380457"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87110734"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 TODATETIMEOFFSET ( expression , time_zone )  
 ```  
   
@@ -48,10 +49,10 @@ TODATETIMEOFFSET ( expression , time_zone )
 
 ## <a name="arguments"></a>引数
  *式 (expression)*  
- [datetime2](../../t-sql/language-elements/expressions-transact-sql.md) 値に解決される[式](../../t-sql/data-types/datetime2-transact-sql.md)です。  
+ [datetime2](../../t-sql/data-types/datetime2-transact-sql.md) 値に解決される[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
 > [!NOTE]  
->  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar**です。  
+>  型の式をすることはできません **テキスト**, 、**ntext**, 、または **イメージ** に、これらの型を暗黙的に変換できないため **varchar** または **nvarchar** です。  
   
  *time_zone*  
  タイム ゾーン オフセットを表す式です。たとえば、分単位で表す式 (整数の場合) は -120、時間と分単位で表す式 (文字列の場合) は '+13:00' です。 範囲は +14 ～ -14 (時間) です。 式は、指定された time_zone のローカル時刻で解釈されます。  
@@ -68,7 +69,7 @@ TODATETIMEOFFSET ( expression , time_zone )
  次の例では、現在の日付と時刻のゾーン オフセットを、タイム ゾーン `-07:00` に変更します。  
   
 ```sql  
-DECLARE @todaysDateTime datetime2;  
+DECLARE @todaysDateTime DATETIME2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
@@ -90,7 +91,7 @@ SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
 -- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [日付と時刻のデータ型および関数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: ISO オプションの効果
 title: ISO オプションの効果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,11 +18,12 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 743d58eee394d0ff0b6303aa5de34ae32fed4cb4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d7903ef171ecda557c723edc2d73381a2db8fa41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486852"
 ---
 # <a name="effects-of-iso-options"></a>ISO オプションの効果
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,12 +40,12 @@ ms.locfileid: "86001403"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続しているときは、4 番目の SET オプションの CONCAT_NULL_YIELDS_NULL も有効になります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データソースに AnsiNPW = NO が指定されている場合、または[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)または[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)のいずれかで、Native Client ODBC ドライバーでこれらのオプションが設定されていません。  
   
- 前に説明した ISO オプションと同様に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、QuotedID = NO がデータソースで指定されている場合、または**SQLDriverConnect**または**SQLBrowseConnect**のいずれかで指定されている場合、QUOTED_IDENTIFIER オプションは有効になりません。  
+ 前に説明した ISO オプションと同様に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC ドライバーでは、QuotedID = NO がデータソースで指定されている場合、または **SQLDriverConnect** または **SQLBrowseConnect**のいずれかで指定されている場合、QUOTED_IDENTIFIER オプションは有効になりません。  
   
  ドライバーが SET オプションの現在の状態を確認できるようにするために、ODBC アプリケーションでは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] SET ステートメントを使用して SET オプションを設定しないようにします。 これらのオプションを設定する場合は、データ ソースまたは接続オプションのみを使用するようにします。 アプリケーションが SET ステートメントを実行した場合、ドライバーは不正な SQL ステートメントを生成する可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;のステートメントの実行](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
+ [ODBC&#41;&#40;のステートメントの実行 ](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)   
  [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)  
   

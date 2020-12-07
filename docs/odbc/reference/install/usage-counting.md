@@ -1,4 +1,5 @@
 ---
+description: 使用状況のカウント
 title: 使用量カウント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e8c02aae51c47b13970a1824e3c0c9c417eb5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499695"
 ---
 # <a name="usage-counting"></a>使用状況のカウント
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "81296022"
 > [!NOTE]  
 >  Microsoft® WindowsNT®/windows2000 では、ファイルの使用量のカウントは省略可能です。  
   
- ファイルの使用回数は、セットアッププログラムによって、 **Sqlinstalldrivermanager**、 **sqlinstalldrivermanager**、 **SQLInstallTranslatorEx**、 **sqlinstalldrivermanager**、 **sqlremovedriver**、または**sqlremovetranslator**を呼び出した後に保持されます。  
+ ファイルの使用回数は、セットアッププログラムによって、 **Sqlinstalldrivermanager**、 **sqlinstalldrivermanager**、 **SQLInstallTranslatorEx**、 **sqlinstalldrivermanager**、 **sqlremovedriver**、または **sqlremovetranslator**を呼び出した後に保持されます。  
   
  コンポーネントが最初にインストールされると、セットアッププログラムまたはインストーラー DLL によって、システムにまだ存在しないコンポーネント内のファイルごとに、次のキーの下に値が作成されます。  
   
@@ -59,11 +60,11 @@ ms.locfileid: "81296022"
   
  次の表に、[ファイルの使用状況のカウント] の値の形式を示します。  
   
-|名前|データの種類|データ|  
+|名前|データ型|データ|  
 |----------|---------------|----------|  
 |*完全パス*|REG_DWORD|*count*|  
   
- たとえば、Informix 用のドライバーで Infrmx32 ファイルと Infrmx32 ファイルを使用し、このドライバーが2回インストールされているとします。 Informix ドライバーの SharedDlls サブキーの下の値は、次のようになります。  
+ たとえば、Informix 用のドライバーで Infrmx32.dll と Infrmx32 ファイルを使用し、このドライバーが2回インストールされているとします。 Informix ドライバーの SharedDlls サブキーの下の値は、次のようになります。  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

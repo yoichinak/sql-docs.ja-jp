@@ -1,4 +1,5 @@
 ---
+description: ClientSettingsGeneralFlag クラス
 title: ClientSettingsGeneralFlag クラス
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - ClientSettingsGeneralFlag class
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba3e3a6eaafc85b01d007d1c51cc2a043fa1c1ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: be425aa9234355f695b08297f2088a9760cdeae5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888843"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891272"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag クラス
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "85888843"
   
 -   フラグ値の表示および変更  
   
-## <a name="see-also"></a>関連項目  
- [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+## <a name="see-also"></a>参照  
+ [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

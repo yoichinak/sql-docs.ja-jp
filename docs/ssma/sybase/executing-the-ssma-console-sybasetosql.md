@@ -1,4 +1,5 @@
 ---
+description: SSMA コンソールの実行 (SybaseToSQL)
 title: SSMA コンソールの実行 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372238"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソールの実行 (SybaseToSQL)
 Microsoft では、SSMA アクティビティを実行および制御するための、堅牢なスクリプトファイルコマンドのセットを提供しています。 以降のセクションでも同じことが説明されています。  
@@ -37,9 +38,9 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
 ### <a name="create-new-project"></a>create-new-project  
 このコマンドにより、新しい SSMA プロジェクトが作成されます。  
   
--   `project-folder`作成するプロジェクトのフォルダーを示します。  
+-   `project-folder` 作成するプロジェクトのフォルダーを示します。  
   
--   `project-name`プロジェクトの名前を示します。 {string}  
+-   `project-name` プロジェクトの名前を示します。 {string}  
   
 -   `overwrite-if-exists`省略可能な属性既存のプロジェクトを上書きするかどうかを示します。 演算  
   
@@ -59,16 +60,16 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
    project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
-既定では、属性 ' overwrite-exists ' は**false**です。  
+既定では、属性 ' overwrite-exists ' は **false** です。  
   
-既定では、属性 ' プロジェクトの種類 ' は**sql server-2008**です。  
+既定では、属性 ' プロジェクトの種類 ' は **sql server-2008** です。  
   
 ### <a name="open-project"></a>プロジェクトを開く  
 このコマンドを実行すると、プロジェクトが開きます。
 
--   `project-folder`作成するプロジェクトのフォルダーを示します。 指定されたフォルダーが存在しない場合、コマンドは失敗します。  {string}  
+-   `project-folder` 作成するプロジェクトのフォルダーを示します。 指定されたフォルダーが存在しない場合、コマンドは失敗します。  {string}  
   
--   `project-name`プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドは失敗します。  {string}  
+-   `project-name` プロジェクトの名前を示します。 指定されたプロジェクトが存在しない場合、コマンドは失敗します。  {string}  
   
 **構文の例:**  
   
@@ -103,14 +104,14 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   if-modified="<save/error/ignore>"   (optional)  
 />  
 ```  
-属性 ' if-modified ' は省略可能です。既定では**無視**されます。  
+属性 ' if-modified ' は省略可能です。既定では **無視** されます。  
   
 ## <a name="database-connection-commands"></a>データベース接続コマンド  
 データベース接続コマンドを使用すると、データベースに接続できます。  
   
 > [!NOTE]  
-> - UI の**参照**機能は、コンソールではサポートされていません。  
-> - 「スクリプトファイルの作成」の詳細については、「 [SybaseToSQL&#41;&#40;スクリプトファイルの作成](../../ssma/sybase/creating-script-files-sybasetosql.md)」を参照してください。  
+> - UI の **参照** 機能は、コンソールではサポートされていません。  
+> - 「スクリプトファイルの作成」の詳細については、「 [SybaseToSQL&#41;&#40;スクリプトファイルの作成 ](../../ssma/sybase/creating-script-files-sybasetosql.md)」を参照してください。  
   
 ### <a name="connect-source-database"></a>接続ソース-データベース  
 このコマンドは、ソースデータベースへの接続を実行し、ソースデータベースの高レベルのメタデータを読み込みますが、すべてのメタデータを読み込みません。
@@ -189,25 +190,25 @@ Microsoft では、SSMA アクティビティを実行および制御するた�
   
 コマンドの実行中にソースデータベースサーバーに接続できなかった場合も、コンソールアプリケーションが終了します。  
   
--   `conversion-report-folder:`評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
   
--   `object-name:`評価レポートの生成の対象となるオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` 評価レポートの生成の対象となるオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `conversion-report-overwrite:`評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
   
     **既定値:** false。 (省略可能な属性)  
   
--   `write-summary-report-to:`レポートが生成されるパスを指定します。  
+-   `write-summary-report-to:` レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、AssessmentReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、AssessmentReport n という名前でファイルを指定し ** &lt; &gt; ます。XML** が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
-    -   `report-errors`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `report-errors` (= "true/false"、既定値は "false" (省略可能な属性)  
   
-    -   `verbose`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `verbose` (= "true/false"、既定値は "false" (省略可能な属性)  
   
 **構文の例:**  
   
@@ -255,25 +256,25 @@ or
   
 このコマンドを実行する前に転送元または転送先のデータベース接続が実行されない場合、またはコマンドの実行中に転送元または転送先のデータベースサーバーへの接続に失敗した場合は、エラーが生成され、コンソールアプリケーションが終了します。  
   
--   `conversion-report-folder:`評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
+-   `conversion-report-folder:` 評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
   
--   `object-name:`スキーマを変換する際に考慮するソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` スキーマを変換する際に考慮するソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `conversion-report-overwrite:`評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
+-   `conversion-report-overwrite:` 評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
   
     **既定値:** false。 (省略可能な属性)  
   
--   `write-summary-report-to:`概要レポートが生成されるパスを指定します。  
+-   `write-summary-report-to:` 概要レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、SchemaConversionReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、SchemaConversionReport n という名前でファイルを指定し ** &lt; &gt; ます。XML** が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
-    -   `report-errors`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `report-errors` (= "true/false"、既定値は "false" (省略可能な属性)  
   
-    -   `verbose`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `verbose` (= "true/false"、既定値は "false" (省略可能な属性)  
   
 **構文の例:**  
   
@@ -314,19 +315,19 @@ or
 ### <a name="migrate-data"></a>データの移行  
 このコマンドは、ソースデータをターゲットに移行します。  
   
--   `object-name:`データの移行の対象となるソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` データの移行の対象となるソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `write-summary-report-to:`レポートが生成されるパスを指定します。  
+-   `write-summary-report-to:` レポートが生成されるパスを指定します。  
   
-    フォルダーパスのみが指定されている場合は、DataMigrationReport n という名前でファイルを指定し** &lt; &gt; ます。XML**が作成されます。 (省略可能な属性)  
+    フォルダーパスのみが指定されている場合は、DataMigrationReport n という名前でファイルを指定し ** &lt; &gt; ます。XML** が作成されます。 (省略可能な属性)  
   
     レポートの作成には、次の2つのサブカテゴリがあります。  
   
-    -   `report-errors`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `report-errors` (= "true/false"、既定値は "false" (省略可能な属性)  
   
-    -   `verbose`(= "true/false"、既定値は "false" (省略可能な属性)  
+    -   `verbose` (= "true/false"、既定値は "false" (省略可能な属性)  
   
 **構文の例:**  
   
@@ -374,9 +375,9 @@ or
 ### <a name="map-schema"></a>マップ-スキーマ  
 このコマンドは、転送元データベースから送信先スキーマへのスキーママッピングを提供します。  
   
--   `source-schema`移行する送信元スキーマを指定します。  
+-   `source-schema` 移行する送信元スキーマを指定します。  
   
--   `sql-server-schema`送信元スキーマの移行先となるターゲットスキーマを指定します。  
+-   `sql-server-schema` 送信元スキーマの移行先となるターゲットスキーマを指定します。  
   
 **構文の例:**  
   
@@ -399,11 +400,11 @@ sql-server-schema="<target-schema>"/>
   
 このコマンドを実行する前にターゲットデータベース接続が実行されなかった場合、またはターゲットデータベースサーバーへの接続がコマンドの実行中に失敗した場合は、エラーが生成され、コンソールアプリケーションが終了します。  
   
--   `object-name:`ターゲットデータベースとの同期を検討するターゲットオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` ターゲットデータベースとの同期を検討するターゲットオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `on-error:`同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー発生時に使用可能なオプション:  
+-   `on-error:` 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー発生時に使用可能なオプション:  
   
     -   レポート-合計-警告  
   
@@ -411,7 +412,7 @@ sql-server-schema="<target-schema>"/>
   
     -   失敗-スクリプト  
   
--   `report-errors-to:`同期操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを**TargetSynchronizationReport.XML** ] が作成されます。  
+-   `report-errors-to:` 同期操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを **TargetSynchronizationReport.XML** ] が作成されます。  
   
 **構文の例:**  
   
@@ -460,11 +461,11 @@ or
   
 このコマンドでは、コマンドラインパラメーターとして1つまたは複数のメタベースノードが必要です。  
   
--   `object-name:`ソースデータベースからの更新の対象となるソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` ソースデータベースからの更新の対象となるソースオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で指定したオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で指定したオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `on-error:`更新エラーを警告またはエラーとして呼び出すかどうかを指定します。 エラー発生時に使用可能なオプション:  
+-   `on-error:` 更新エラーを警告またはエラーとして呼び出すかどうかを指定します。 エラー発生時に使用可能なオプション:  
   
     -   レポート-合計-警告  
   
@@ -472,7 +473,7 @@ or
   
     -   失敗-スクリプト  
   
--   `report-errors-to:`更新操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを**SourceDBRefreshReport.XML** ] が作成されます。  
+-   `report-errors-to:` 更新操作のエラーレポートの場所を指定します (省略可能)。 フォルダーのパスのみを指定した場合は、[名前でファイルを **SourceDBRefreshReport.XML** ] が作成されます。  
   
 **構文の例:**  
   
@@ -518,15 +519,15 @@ or
   
 このコマンドでは、コマンドラインパラメーターとして1つまたは複数のメタベースノードが必要です。  
   
--   `object-name:`スクリプトを保存するオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
+-   `object-name:` スクリプトを保存するオブジェクトを指定します (個々のオブジェクト名またはグループオブジェクト名をサポートします)。  
   
--   `object-type:`オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
+-   `object-type:` オブジェクト名属性で out と呼ばれるオブジェクトの種類を指定します (object カテゴリが指定されている場合、オブジェクトの種類は "category" になります)。  
   
--   `metabase:`ソースまたはターゲットのメタベースかどうかを指定します。  
+-   `metabase:` ソースまたはターゲットのメタベースかどうかを指定します。  
   
--   `destination:`スクリプトを保存するパスまたはフォルダーを指定します。 ファイル名が指定されていない場合は、(object_name 属性値) out という形式のファイル名が指定されます。
+-   `destination:` スクリプトを保存するパスまたはフォルダーを指定します。 ファイル名が指定されていない場合は、(object_name 属性値) out という形式のファイル名が指定されます。
   
--   `overwrite:`True の場合、同じファイル名を上書きします (存在する場合)。 値 (true/false) を指定できます。  
+-   `overwrite:` True の場合、同じファイル名を上書きします (存在する場合)。 値 (true/false) を指定できます。  
   
 **構文の例:**  
   
@@ -564,25 +565,25 @@ or
 ### <a name="convert-sql-statement"></a>convert-sql ステートメント
 このコマンドは、SQL ステートメントを変換します。  
   
--   `context`スキーマ名を指定します。  
+-   `context` スキーマ名を指定します。  
   
--   `destination`出力をファイルに格納するかどうかを指定します。  
+-   `destination` 出力をファイルに格納するかどうかを指定します。  
   
     この属性が指定されていない場合は、変換後の T-sql ステートメントがコンソールに表示されます。 (省略可能な属性)  
   
--   `conversion-report-folder`評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
+-   `conversion-report-folder` 評価レポートを格納できるフォルダーを指定します。 (省略可能な属性)  
   
--   `conversion-report-overwrite`評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
+-   `conversion-report-overwrite` 評価レポートフォルダが既に存在する場合に上書きするかどうかを指定します。  
   
     **既定値:** false。 (省略可能な属性)  
   
--   `write-converted-sql-to`変換された T-sql を格納するファイル (またはフォルダー) のパスを指定します。 フォルダーパスが属性と共に指定されている場合 `sql-files` 、各ソースファイルには、指定されたフォルダーの下に作成される対応するターゲット t-sql ファイルがあります。 フォルダーパスが属性と共に指定されている場合、変換された `sql` t-sql は、指定したフォルダーの下に、Result という名前のファイルに書き込まれます。  
+-   `write-converted-sql-to` 変換された T-sql を格納するファイル (またはフォルダー) のパスを指定します。 フォルダーパスが属性と共に指定されている場合 `sql-files` 、各ソースファイルには、指定されたフォルダーの下に作成される対応するターゲット t-sql ファイルがあります。 フォルダーパスが属性と共に指定されている場合、変換された `sql` t-sql は、指定したフォルダーの下に、Result という名前のファイルに書き込まれます。  
   
--   `sql`変換する Sybase sql ステートメントを指定します。1つ以上のステートメントを ";" で区切ることができます。  
+-   `sql` 変換する Sybase sql ステートメントを指定します。1つ以上のステートメントを ";" で区切ることができます。  
   
--   `sql-files`T-sql コードに変換する必要がある sql ファイルのパスを指定します。  
+-   `sql-files` T-sql コードに変換する必要がある sql ファイルのパスを指定します。  
   
--   `write-summary-report-to`概要レポートが生成されるパスを指定します。 フォルダーパスのみが指定されている場合は、[名前でファイルを**ConvertSQLReport.XML** ] が作成されます。 (省略可能な属性)  
+-   `write-summary-report-to` 概要レポートが生成されるパスを指定します。 フォルダーパスのみが指定されている場合は、[名前でファイルを **ConvertSQLReport.XML** ] が作成されます。 (省略可能な属性)  
   
     概要レポートの作成には、次の2つのサブカテゴリがあります。  
   
@@ -660,16 +661,16 @@ or
 />  
 ```  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
 コマンドラインオプションの詳細については、 [SSMA コンソールのコマンドラインオプション](../access/command-line-options-in-ssma-console-accesstosql.md)に関する情報を参照してください。  
   
 サンプルコンソールスクリプトファイルの詳細については、「 [Working Basetosql &#40;サンプルコンソールスクリプトファイルの操作](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)」を参照してください&#41;  
   
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)」を参照してください。  
+-   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの [管理 &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)」を参照してください。  
   
--   レポートを生成する方法については、「 [SybaseToSQL&#41;&#40;レポートの生成](../../ssma/sybase/generating-reports-sybasetosql.md)」を参照してください。  
+-   レポートを生成する方法については、「 [SybaseToSQL&#41;&#40;レポートの生成 ](../../ssma/sybase/generating-reports-sybasetosql.md)」を参照してください。  
   
--   コンソールでの問題のトラブルシューティングについては、「 [&#40;SybaseToSQL&#41;のトラブルシューティング](../../ssma/sybase/troubleshooting-sybasetosql.md)」を参照してください。  
+-   コンソールでの問題のトラブルシューティングについては、「 [&#40;SybaseToSQL&#41;のトラブルシューティング ](../../ssma/sybase/troubleshooting-sybasetosql.md)」を参照してください。  
   

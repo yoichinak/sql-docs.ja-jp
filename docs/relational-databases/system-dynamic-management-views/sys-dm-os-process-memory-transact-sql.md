@@ -1,4 +1,5 @@
 ---
+description: dm_os_process_memory (Transact-sql)
 title: dm_os_process_memory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_process_memory dynamic management view
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dfc95a68ca765db74e143e5efd7233d312387f7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4234894d907a383902a00a659e954ccfea2ff74c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396316"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539319"
 ---
 # <a name="sysdm_os_process_memory-transact-sql"></a>dm_os_process_memory (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "87396316"
 |**available_commit_limit_kb**|**bigint**|プロセスによってコミット可能なメモリの量を示します。 NULL 値は許可されません。|  
 |**process_physical_memory_low**|**bit**|プロセスが物理メモリの不足の通知に応答していることを示します。 NULL 値は許可されません。|  
 |**process_virtual_memory_low**|**bit**|仮想メモリ不足の状態が検出されたことを示します。 NULL 値は許可されません。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
  で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、サーバーに対する VIEW SERVER STATE 権限が必要です。  

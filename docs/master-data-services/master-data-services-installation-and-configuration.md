@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823757"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129422"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -74,7 +74,7 @@ ms.locfileid: "87823757"
   
      ![Windows Server 2012 タスクバーのサーバーマネージャーのアイコン](../master-data-services/media/mds-windowsservertaskbar-servermanagericon.png "Windows Server 2012 タスクバーのサーバーマネージャーのアイコン")  
   
-5.  **サーバー マネージャー**で、 **[管理]** メニューの **[役割と機能の追加]** をクリックします。  
+5.  **サーバー マネージャー** で、 **[管理]** メニューの **[役割と機能の追加]** をクリックします。  
    
      ![[サーバー管理] の [役割と機能の追加] メニューコマンド](../master-data-services/media/mds-servermanagerdashboard-addrolesfeaturesmenu.png "[サーバー管理] の [役割と機能の追加] メニューコマンド")  
   
@@ -110,12 +110,12 @@ ms.locfileid: "87823757"
   
  セットアップを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「[インストール ウィザードからの SQL Server 2016 のインストール (セットアップ)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。  
   
- コマンド プロンプトを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「 [コマンド プロンプトから SQL Server 2016 をインストール](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。  
+ コマンド プロンプトを使用した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールの詳細については、「 [コマンド プロンプトから SQL Server 2016 をインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。 コマンド プロンプトを使用する場合、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は機能パラメーターとして使用できるようになります。  
   
  インストール前のタスクに関する追加情報へのリンクの簡単な説明については、「 [マスター データ サービスをインストールする](../master-data-services/install-windows/install-master-data-services.md)」を参照してください。  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> データベースと Web サイトを設定する  
- **を使用してデータベースと web サイトを設定するには[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **を使用してデータベースと web サイトを設定するには [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -128,21 +128,21 @@ ms.locfileid: "87823757"
   
 2.  **[データベースの作成]** をクリックして、 **データベースの作成ウィザード** で **[次へ]** をクリックします。  
   
-3.  [**データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
+3.  [ **データベースサーバー** ] ページで、SQL Server インスタンスを指定します。 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス**の値をマネージインスタンスのホストに設定します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server Managed Instance のサポートを追加します。 **SQL Server インスタンス** の値をマネージインスタンスのホストに設定します。 たとえば、「 `xxxxxx.xxxxxx.database.windows.net` 」のように入力します。
 
-4. 認証の**種類**を選択し、[**接続のテスト**] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
+4. 認証の **種類** を選択し、[ **接続のテスト** ] をクリックして、選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
 
     >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]でマネージインスタンスに接続するには、次のいずれかの認証の種類を使用します。
     >
-    >- Azure Active Directory 統合認証:**現在のユーザー– Active Directory 統合**
+    >- Azure Active Directory 統合認証: **現在のユーザー– Active Directory 統合**
     >- SQL Server 認証: **SQL Server アカウント**。
     >
     >SQL Managed Instance では、ユーザーは固定サーバーロールのメンバーである必要があり `sysadmin` ます。
 
     > [!NOTE]  
-    >  認証の種類として [**現在のユーザー-統合セキュリティ**] を選択すると、[**ユーザー名**] ボックスは読み取り専用になり、コンピューターにログオンしている Windows ユーザーアカウントの名前が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
+    >  認証の種類として [ **現在のユーザー-統合セキュリティ** ] を選択すると、[ **ユーザー名** ] ボックスは読み取り専用になり、コンピューターにログオンしている Windows ユーザーアカウントの名前が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
@@ -160,9 +160,9 @@ ms.locfileid: "87823757"
 
 7. データベースが作成され、構成されたら、**[完了]** をクリックします。  
   
-     **データベースの作成ウィザード**の設定の詳細については、「[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
+     **データベースの作成ウィザード** の設定の詳細については、「[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-7.  の [**データベースの構成**] ページで、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] [データベースの**選択**] をクリックします。  
+7.  の [ **データベースの構成** ] ページで、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] [データベースの **選択**] をクリックします。  
   
 8.  **[接続]** をクリックして、手順 7 で作成した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、**[OK]** をクリックします。 
 
@@ -183,7 +183,7 @@ ms.locfileid: "87823757"
   
 11. **[アプリケーション プール]** セクションで、次のいずれかを実行します。  
   
-    -   **管理者アカウント**データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]** をクリックします。  
+    -   **管理者アカウント** データベースに対して、手順 5 で入力したのと同じユーザー名を入力し、パスワードを入力して、 **[OK]** をクリックします。  
   
          **もしくは**  
   
@@ -194,6 +194,9 @@ ms.locfileid: "87823757"
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
      **[Web アプリケーションの作成]** ダイアログ ボックスの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
+
+    > [!NOTE] 
+    >  ドメインが [2020 ldap チャネルバインドと Windows の ldap 署名要件を](https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)実装している場合。 "Active Directory で資格情報を検証できませんでした。" という問題が表示されます。 ドメインアカウントを使用してアプリケーションプールを作成する場合。 回避策として、ドメインユーザーではなく、 **ローカルコンピューターユーザー** を使用します。 これにより、Active Directory による資格情報のチェックを省略できます。 Web アプリケーションを作成した後、 **インターネットインフォメーションサービス (IIS) マネージャー** で id をドメインユーザーに変更できます。
   
 12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、 **[アプリケーションとデータベースの関連付け]** セクションで  **[選択]** をクリックします。  
   
@@ -294,5 +297,4 @@ ms.locfileid: "87823757"
  [マスターデータマネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
  [[データベースの構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービス &#40;MDS&#41; の新機能](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

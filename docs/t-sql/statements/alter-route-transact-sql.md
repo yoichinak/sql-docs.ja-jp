@@ -1,4 +1,5 @@
 ---
+description: ALTER ROUTE (Transact-SQL)
 title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - removing routes
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 67428f9b61dbca0798ee868b9e89a4bf8fe25332
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823707"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688218"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,6 @@ ms.locfileid: "87823707"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -70,7 +70,7 @@ WITH
  BROKER_INSTANCE **='** _broker\_instance_ **'**  
  発信先サービスをホストするデータベースを指定します。 *broker_instance* パラメーターは、リモート データベース用のブローカー インスタンス識別子である必要があります。これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -94,7 +94,7 @@ WHERE database_id = DB_ID();
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -118,7 +118,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssSB](../../includes/sssb-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -150,7 +150,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-changing-the-service-for-a-route"></a>A. ルートのサービスを変更する  
  次の例では、`ExpenseRoute` ルートが示すサービスを、リモート サービス `//Adventure-Works.com/Expenses` に変更します。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -159,7 +159,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="b-changing-the-target-database-for-a-route"></a>B. ルートのターゲット データベースを変更する  
  次の例では、`ExpenseRoute` ルートの対象データベースを、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` によって指定されるデータベースに変更します。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -168,7 +168,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="c-changing-the-address-for-a-route"></a>C. ルートのアドレスを変更する  
  次の例では、IP アドレスが `ExpenseRoute` のホストで、`1234` ルートのネットワーク アドレスが TCP ポート `10.2.19.72` に変更されます。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -177,7 +177,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="d-changing-the-database-and-address-for-a-route"></a>D. ルートのデータベースとアドレスを変更する  
  次の例では、`ExpenseRoute` ルートのネットワーク アドレスを、DNS 名 `1234` のホスト、TCP ポート `www.Adventure-Works.com` に変更します。 また、対象データベースを、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89B1E317` によって指定されるデータベースに変更します。  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

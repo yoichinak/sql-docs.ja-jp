@@ -1,4 +1,5 @@
 ---
+description: 構成関数 (Transact-SQL)
 title: 構成関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bd661144614ee335f540691258c22913b5f57d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 904e63d757f71c442e829e68e42d111cc3452186
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459833"
 ---
 # <a name="configuration-functions-transact-sql"></a>構成関数 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,6 +48,6 @@ ms.locfileid: "85732577"
 
 構成関数はすべて非決定的な方法で動作します。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)

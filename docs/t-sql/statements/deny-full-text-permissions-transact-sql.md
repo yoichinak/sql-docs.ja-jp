@@ -1,4 +1,5 @@
 ---
+description: DENY (フルテキストの権限の拒否) (Transact-SQL)
 title: DENY (フルテキストの権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484827"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131233"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY (フルテキストの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ DENY permission [ ,...n ] ON
  権限を拒否するフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を拒否するプリンシパルを指定します。 次のいずれか:  
+ 権限を拒否するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -82,7 +83,7 @@ DENY permission [ ,...n ] ON
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
  *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -126,7 +127,7 @@ DENY permission [ ,...n ] ON
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト カタログに対する CONTROL 権限が必要です。 AS オプションを使用する場合、指定するプリンシパルはフルテキスト カタログを所有している必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

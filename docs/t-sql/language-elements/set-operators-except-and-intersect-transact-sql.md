@@ -1,4 +1,5 @@
 ---
+description: セット演算子 - EXCEPT および INTERSECT (Transact-SQL)
 title: EXCEPT および INTERSECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918806"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128215"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>セット演算子 - EXCEPT および INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +85,7 @@ EXCEPT または INTERSECT で返される結果セットの列で NULL 値が�
   
 EXCEPT または INTERSECT を他の演算子と共に 1 つの式で使用する場合、評価は次の優先順で行われます。  
   
-1.  かっこで囲まれた式  
+1.  かっこで囲んだ式  
   
 2.  INTERSECT 演算子  
   
@@ -101,7 +102,7 @@ EXCEPT と INTERSECT は分散クエリで使用できますが、この場合�
 EXCEPT 演算が、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のグラフィカル プラン表示機能を使用して表示される場合、この演算は [left anti semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示され、INTERSECT 演算は [left semi join](../../relational-databases/showplan-logical-and-physical-operators-reference.md) として表示されます。  
   
 ## <a name="examples"></a>例  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`Production.Product` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`Production.Product` テーブルからすべての値を返します。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -151,7 +152,7 @@ FROM Production.Product ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`FactInternetSales` および `INTERSECT` の結果と比較するため、`EXCEPT` テーブルからすべての値を返します。  
+次の例は、`INTERSECT` 演算子と `EXCEPT` 演算子の使用方法を示しています。 最初のクエリでは、`INTERSECT` および `EXCEPT` の結果と比較するため、`FactInternetSales` テーブルからすべての値を返します。  
   
 ```sql  
 -- Uses AdventureWorks  

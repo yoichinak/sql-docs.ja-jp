@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW ソース エディター] ([列] ページ)'
 title: '[SAP BW ソース エディター] ([列] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60b888d1a17d56c41b586a0ffa0d2b869aa2ab4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dab03a43269739bbf77101f8ded9dac68ff2b8f3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495765"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>[SAP BW ソース エディター] ([列] ページ)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86923230"
   
 3.  **[SAP BW 変換元エディター]** で、 **[列]** をクリックして **[列]** ページを開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 > [!NOTE]  
 >  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  

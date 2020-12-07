@@ -1,4 +1,5 @@
 ---
+description: FILE_IDEX (Transact-SQL)
 title: FILE_IDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63bfdc72ea7a8a71c0f96292902356b3a07702ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3ca433b6e802ce492b0ff464fc300d9f7e569964
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112468"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128455"
 ---
 # <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87112468"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -53,8 +54,8 @@ FILE_IDEX ( file_name )
   
 エラー時は **NULL**  
   
-## <a name="remarks"></a>解説  
-*file_name* は、**sys.master_files** カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューの [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 列に表示される論理ファイル名に対応します。  
+## <a name="remarks"></a>注釈  
+*file_name* は、[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) カタログ ビューまたは [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューの **name** 列に表示される論理ファイル名に対応します。  
   
 `FILE_IDEX` は、SELECT リスト、WHERE 句、または式の使用がサポートされるあらゆる場所で使用します。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
@@ -105,7 +106,7 @@ SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))
 AS 'File_ID';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

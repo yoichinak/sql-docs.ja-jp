@@ -1,8 +1,9 @@
 ---
+description: ConnectionString、ConnectionTimeout、State プロパティの例 (VB)
 title: 接続プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762653"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974793"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VB)
-この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを使用して[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
+この例では、 [ConnectionString](./connectionstring-property-ado.md) プロパティを使用して [接続](./connection-object-ado.md) オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](./connectiontimeout-property-ado.md) プロパティを使用して接続タイムアウト期間を設定し、 [state](./state-property-ado.md) プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes** または **INTEGRATED Security = SSPI** を指定する必要があります。  
   
 ```  
 'BeginConnectionStringVB  
@@ -127,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>参照  
- [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Connection オブジェクト (ADO)](./connection-object-ado.md)   
+ [ConnectionString プロパティ (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout プロパティ (ADO)](./connectiontimeout-property-ado.md)   
+ [State プロパティ (ADO)](./state-property-ado.md)

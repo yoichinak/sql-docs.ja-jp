@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare
+description: SQL Server 用 Microsoft SQLSRV Driver for PHP の sqlsrv_prepare 関数の API リファレンス。
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef36e929b44517a6e4688346d72923a0a2f897ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925497"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081271"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: 作成されたステートメントに対応する Transact-SQL 式です。  
   
-*$params* (省略可能): パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
+*$params* [省略可能]: パラメーター化されたクエリのパラメーターに対応する値の**配列**です。 配列の各要素には、次のいずれかを指定できます。
   
 -   リテラル値。  
   
@@ -61,13 +62,13 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |要素|説明|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
-    |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
+    |*$direction*[オプション]|パラメーターの方向を示すために使用する次の **SQLSRV_PARAM_\*** 定数のいずれか: **SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
     |*$phpType*[オプション]|戻り値の PHP データ型を指定する **SQLSRV_PHPTYPE_\*** 定数。|  
     |*$sqlType*[オプション]|入力値の SQL Server データ型を指定する **SQLSRV_SQLTYPE_\*** 定数。|  
   
-*$options* (省略可能): <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
+*$options* [省略可能]: <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
 
-|Key|サポートされている値|説明|  
+|キー|サポートされている値|説明|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 10240 KB です。 詳細については、「[Specifying a Cursor Type and Selecting Rows (カーソルの種類の指定と行の選択)](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|
 |小数点以下表示桁数|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、FormatDecimals が **true** 場合にのみ機能します。|
@@ -87,9 +88,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 大量の情報の書き込みと読み取りを行う別の手法については、「 [Batches of SQL Statements (SQL ステートメントのバッチ)](../../odbc/reference/develop-app/batches-of-sql-statements.md) 」と「 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
-詳細については、「 [方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
+詳細については、「[SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example-1"></a>例 1  
 次の例では、ステートメントを準備して実行します。 このステートメントを実行すると (「[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照)、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルのフィールドが更新されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -136,7 +137,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example-2"></a>例 2  
 次の例では、ステートメントを準備し、異なるパラメーター値で再実行する方法を示します。 この例では、AdventureWorks データベースの *Sales.SalesOrderDetail* テーブルの *OrderQty* 列を更新します。 更新されたら、更新プログラムが成功したことを確認するため、データベースが照会されます。 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
@@ -222,9 +223,9 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 値を [10 進数列または数値列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
+> 値を [10 進数列または数値列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
-## <a name="example"></a>例  
+## <a name="example-3"></a>例 3  
 このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```
@@ -252,7 +253,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>参照  
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)
+[方法: パラメーター化クエリを実行する](../../connect/php/how-to-perform-parameterized-queries.md)」を参照してください。
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 
@@ -263,4 +264,3 @@ sqlsrv_close($conn);
 [データの取得](../../connect/php/retrieving-data.md)
 
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
-

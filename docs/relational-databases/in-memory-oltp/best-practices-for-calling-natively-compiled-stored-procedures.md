@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc9fffa0c2b916163e0b9e8698cdf1f7df59667a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb8f9d6d75250660e5f2cd38c5054ef40726c310
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723390"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867321"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの呼び出しに関するベスト プラクティス
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "85723390"
   
 -   頻繁に実行されます。  
   
--   非常に高速であることが求められます。  
+-   高速であると想定されています。  
   
- ネイティブ コンパイル ストアド プロシージャを使用することに伴うパフォーマンス上の利点は、プロシージャによって処理される行の数と論理の量に従って大きくなります。 たとえば、次の 1 つ以上を使用している場合は、ネイティブ コンパイル ストアド プロシージャのパフォーマンスが向上します。  
+ ネイティブ コンパイル ストアド プロシージャを使用することに伴うパフォーマンス上の利点は、プロシージャによって処理される行の数と論理の量に従って大きくなります。 たとえば、次の 1 つ以上のコンポーネントを使用している場合は、ネイティブ コンパイル ストアド プロシージャのパフォーマンスが向上します。  
   
 -   集計。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85723390"
   
  単一行のみを処理する必要がある場合は、ネイティブ コンパイル ストアド プロシージャを使用しても、パフォーマンス上の利点が得られるとは限りません。  
   
- サーバーによるパラメーター名のマップと型の変換を回避するには:  
+ サーバーがパラメーター名のマップと型変換をする必要がないようにするには、必ず次のようにします。  
   
 -   プロシージャに渡されるパラメーターの型をプロシージャ定義の型に一致させます。  
   
@@ -55,4 +55,4 @@ ms.locfileid: "85723390"
  - 既定値: **reason=default** 
   
 ## <a name="see-also"></a>参照  
- [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+ [ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)

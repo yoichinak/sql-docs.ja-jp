@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380561"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +40,7 @@ ms.locfileid: "87112208"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -61,7 +61,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  署名付きデータが変更されていない場合は 1、変更されている場合は 0 が返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **VerifySignedBycert** 指定された証明書の公開キーを使用して、データの署名を復号化し、データの新しく計算された MD5 ハッシュを復号化された値と比較します。 値が一致すると、その署名が有効であることが確認されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -72,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>A. 署名付きデータが変更されていないことを確認する  
  次の例では、`Signed_Data` 内の情報が、`Shipping04` という証明書を使用して署名された後に変更されているかどうかをテストします。 署名は `DataSignature` に格納されています。 証明書 `Shipping04` を `Cert_ID` に渡すと、データベース内の証明書の ID が返されます。 `VerifySignedByCert` で 1 が返された場合、署名は正しいことになります。 `VerifySignedByCert` で 0 が返された場合、`Signed_Data` 内のデータは、`DataSignature` の生成に使用されたデータではありません。 この場合、`Signed_Data` は署名された後に変更されたか、`Signed_Data` は別の証明書を使用して署名されています。  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. 有効な署名が含まれるレコードのみを返す  
  次のクエリでは、証明書 `Shipping04` を使用して署名された後、変更されていないレコードだけを返します。  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   
@@ -91,7 +91,7 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

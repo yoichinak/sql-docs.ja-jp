@@ -1,4 +1,5 @@
 ---
+description: sp_markpendingschemachange (Transact-SQL)
 title: sp_markpendingschemachange (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cea2f7c8f9ce6040f4335428e2c5e97b52a3e591
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b5b207c4d36e820e6635bd9c8a2e99cdb7e4829
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899349"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541692"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,24 +41,24 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @schemaversion = ] schemaversion`保留中のスキーマ変更を識別します。 *schemaversion*は**int**,、既定値は**0**です。 [Sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)を使用して、パブリケーションの保留中のスキーマ変更を一覧表示します。  
+`[ @schemaversion = ] schemaversion` 保留中のスキーマ変更を識別します。 *schemaversion* は **int**,、既定値は **0**です。 [Sp_enumeratependingschemachanges &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)を使用して、パブリケーションの保留中のスキーマ変更を一覧表示します。  
   
-`[ @status = ] 'status'`保留中のスキーマ変更をスキップするかどうかを指定します。 *状態*は**nvarchar (10)** で、既定値は**アクティブ**です。 *Status*の値が**スキップ**された場合、選択したスキーマの変更はレプリケートされません。  
+`[ @status = ] 'status'` 保留中のスキーマ変更をスキップするかどうかを指定します。 *状態* は **nvarchar (10)** で、既定値は **アクティブ**です。 *Status*の値が**スキップ**された場合、選択したスキーマの変更はレプリケートされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
- **sp_markpendingschemachange**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_markpendingschemachange** は、マージレプリケーションで使用します。  
   
- **sp_markpendingschemachange**は、マージレプリケーションのサポートを目的としたストアドプロシージャであり、再初期化などの他の是正措置が状況を修正できなかった場合、またはパフォーマンスの面でコストが高すぎる場合にのみ使用してください。  
+ **sp_markpendingschemachange** は、マージレプリケーションのサポートを目的としたストアドプロシージャであり、再初期化などの他の是正措置が状況を修正できなかった場合、またはパフォーマンスの面でコストが高すぎる場合にのみ使用してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_markpendingschemachange**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sysmergeschemachange &#40;Transact-sql&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

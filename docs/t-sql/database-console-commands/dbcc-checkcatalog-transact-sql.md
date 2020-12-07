@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKCATALOG (Transact-SQL)
 title: DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0a19aa7e89494d27d073c1305a75c531cf3ffda0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: fe40df4a8593b3ae00bb6733d30a4091a6179ef5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485100"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119663"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86485100"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DBCC CHECKCATALOG   
 [   
     (   

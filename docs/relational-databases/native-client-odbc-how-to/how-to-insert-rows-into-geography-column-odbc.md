@@ -1,4 +1,5 @@
 ---
+description: Geography 列に行を挿入する方法 (ODBC)
 title: Geography 列に行を挿入する方法 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a952f0442f41ede8c2151a580fb4ad19b516d1cf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eb225cdb2a1407ecc4941823471bd569c6d9b943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470470"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +28,7 @@ ms.locfileid: "86009410"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 空間ストレージの詳細については、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
+ 空間ストレージの詳細については、「 [空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  1つ目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) コードリストは、このサンプルで使用するテーブルを作成します。  

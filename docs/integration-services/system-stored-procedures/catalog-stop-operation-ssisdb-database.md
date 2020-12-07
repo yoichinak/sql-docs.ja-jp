@@ -1,4 +1,5 @@
 ---
+description: catalog.stop_operation (SSISDB データベース)
 title: catalog.stop_operation (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ab0e358eef9ec7739b8cb9ed20c28f4fdb5a498
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c77113417a108632aab150e75011399f9ad3a752
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912808"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129582"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB データベース)
 

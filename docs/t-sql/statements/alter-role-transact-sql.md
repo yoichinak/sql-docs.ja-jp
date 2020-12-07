@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4bf7faa22088fd00c646a5760923e7e6a64a9eac
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395495"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124240"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ ALTER ROLE  role_name
   
  
 ```syntaxsql
--- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for SQL Server 2008, Azure Synapse Analytics and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
 ALTER ROLE role_name   
@@ -63,14 +64,16 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *role_name*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  変更するデータベース ロールを指定します。  
   
  ADD MEMBER *database_principal*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  データベース ロールのメンバーシップにデータベース プリンシパルを追加することを指定します。  
   
@@ -79,7 +82,7 @@ ALTER ROLE role_name
 -   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
 DROP MEMBER *database_principal*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  データベース ロールのメンバーシップからデータベース プリンシパルを削除することを指定します。  
   
@@ -88,7 +91,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* には固定データベース ロールまたはサーバー プリンシパルは指定できません。  
   
 WITH NAME = *new_name*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  ユーザー定義データベース ロールの名前を変更することを指定します。 データベース内に存在しない新しい名前を指定してください。  
   
@@ -118,7 +121,7 @@ WITH NAME = *new_name*
 ## <a name="examples"></a>例  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. データベース ロールの名前の変更  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2008 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  次の例では、ロール `buyers` の名前を `purchasing` に変更します。   この例では、[AdventureWorks](https://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   
@@ -127,7 +130,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. ロール メンバーの追加または削除  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用対象:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (2012 以降)、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  この例では、`Sales` という名前のデータベース ロールを作成します。 メンバーシップに Barry という名前のデータベース ユーザーを追加してから、メンバー Barry を削除する方法を示します。   この例では、[AdventureWorks](https://msftdbprodsamples.codeplex.com/) サンプル データベースで実行できます。
   
@@ -137,7 +140,7 @@ ALTER ROLE Sales ADD MEMBER Barry;
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

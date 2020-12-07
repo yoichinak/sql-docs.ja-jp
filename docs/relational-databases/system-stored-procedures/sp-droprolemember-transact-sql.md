@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180102"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006514"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -32,7 +33,7 @@ ms.locfileid: "88180102"
   現在のデータベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロールからセキュリティ アカウントを削除します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,17 +46,19 @@ sp_droprolemember [ @rolename = ] 'role' ,
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse と並列データウェアハウスの両方の構文
+### <a name="syntax-for-both-azure-synapse-analytics-and-parallel-data-warehouse"></a>Azure Synapse Analytics と Parallel Data Warehouse の両方の構文
 
 ```syntaxsql  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'`メンバーを削除するロールの名前を指定します。 *role*の型は**sysname**で、既定値はありません。 *ロール*は現在のデータベースに存在している必要があります。  
+`[ @rolename = ] 'role'` メンバーを削除するロールの名前を指定します。 *role* の型は **sysname**で、既定値はありません。 *ロール* は現在のデータベースに存在している必要があります。  
   
-`[ @membername = ] 'security_account'`ロールから削除するセキュリティアカウントの名前を指定します。 *security_account*は**sysname**であり、既定値はありません。 *security_account*には、データベースユーザー、別のデータベースロール、windows ログイン、または windows グループを指定できます。 *security_account*は、現在のデータベースに存在している必要があります。  
+`[ @membername = ] 'security_account'` ロールから削除するセキュリティアカウントの名前を指定します。 *security_account* は **sysname**であり、既定値はありません。 *security_account* には、データベースユーザー、別のデータベースロール、windows ログイン、または windows グループを指定できます。 *security_account* は、現在のデータベースに存在している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -84,10 +87,10 @@ EXEC sp_droprolemember 'Sales', 'Jonb';
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
-## <a name="see-also"></a>参照  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

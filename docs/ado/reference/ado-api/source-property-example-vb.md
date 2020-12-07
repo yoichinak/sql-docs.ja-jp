@@ -1,8 +1,9 @@
 ---
+description: Source プロパティの例 (VB)
 title: Source プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b39c80d1cb61a4b99d6d909dae47b4a922af834e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759798"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988883"
 ---
 # <a name="source-property-example-vb"></a>Source プロパティの例 (VB)
-この例では、さまざまなデータソースに基づいて3つの[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを開くことによって、 [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを示します。  
+この例では、さまざまなデータソースに基づいて3つの[レコードセット](./recordset-object-ado.md)オブジェクトを開くことによって、 [Source](./source-property-ado-recordset.md)プロパティを示します。  
   
 ```  
 'BeginSourceVB  
@@ -127,5 +128,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Source プロパティ (ADO Recordset)](./source-property-ado-recordset.md)

@@ -1,4 +1,5 @@
 ---
+description: OLE オートメーションストアドプロシージャ (Transact-sql)
 title: OLE オートメーションストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], OLE Automation
 - OLE Automation [SQL Server], stored procedures
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c768306710201fb62be3d352cacf90bb1f1e0fe
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae6119639e67cd073e90baec7db430ab3451af7d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977534"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548442"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>OLE オートメーションストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86977534"
 :::row-end:::
 
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)  
   
   

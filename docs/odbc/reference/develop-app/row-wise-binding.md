@@ -1,4 +1,5 @@
 ---
+description: 行方向のバインド
 title: 行方向のバインド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465622"
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用する場合、アプリケーションは、データが返される各列に対して1つまたは2つ (場合によっては3つの要素) を含む構造体を定義します。 最初の要素はデータ値を保持し、2番目の要素は長さ/インジケーターバッファーを保持します。 SQL_DESC_INDICATOR_PTR と SQL_DESC_OCTET_LENGTH_PTR の記述子フィールドを異なる値に設定することにより、インジケーターと長さの値を別々のバッファーに格納できます。この処理が完了すると、構造体に3番目の要素が含まれます。 次に、アプリケーションはこれらの構造体の配列を割り当てます。これには、行セット内の行と同じ数の要素が含まれます。  

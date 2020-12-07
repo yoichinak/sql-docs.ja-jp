@@ -1,12 +1,12 @@
 ---
-title: フェールオーバー クラスターのノードを追加または削除する
-description: この記事では、既存の SQL Server フェールオーバー クラスター インスタンスでノードを追加または削除する方法について説明します。
+title: フェールオーバー クラスター インスタンスのノードを追加または削除する
+description: この記事では、既存の SQL Server Always On フェールオーバー クラスター インスタンスでノードを追加または削除する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - adding nodes
 - nodes [Faillover Clustering], removing
@@ -16,37 +16,39 @@ helpviewer_keywords:
 - cluster maintenance [SQL Server]
 - removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5c65c099af7ffc6346aaf0e73a26c5ee7e16f7ce
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900508"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121307"
 ---
-# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)
+# <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>フェールオーバー クラスター インスタンスでのノードの追加または削除 (セットアップ)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  次の手順を使用すると、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでノードを管理できます。  
+
+ 次の手順を使用すると、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでノードを管理できます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを更新または削除するには、フェールオーバー クラスターのすべてのノードでサービスとしてログインする権限を持つローカル管理者である必要があります。 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI を更新または削除するには、基礎となる Windows Server フェールオーバー クラスター (WSFC) のすべてのノードでサービスとしてログインする権限を持つローカル管理者である必要があります。 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。  
   
- 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 セットアップは、アクティブなノードでは実行しないでください。  
+ 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI にノードを追加するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 セットアップは、アクティブなノードでは実行しないでください。  
   
- 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターからノードを削除するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスから削除するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。  
+ 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI からノードを削除するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスから削除するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。  
   
  ノードを追加または削除するための手順を表示するには、次のいずれかの操作を選択します。  
   
--   [既存の SQL Server フェールオーバー クラスターにノードを追加する](#Add)  
+-   [既存の Always On フェールオーバー クラスター インスタンスにノードを追加する](#Add)  
   
--   [既存の SQL Server フェールオーバー クラスターからノードを削除する](#Remove)  
+-   [既存の Always On フェールオーバー クラスター インスタンスからノードを削除する](#Remove)  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール場所に使用されているオペレーティング システムのドライブ文字は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに追加されるすべてのノードで一致している必要があります。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール場所に使用されているオペレーティング システムのドライブ文字は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加されるすべてのノードで一致している必要があります。  
   
 ##  <a name="add-node"></a><a name="Add"></a> ノードの追加  
   
-#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster-instance"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスにノードを追加するには  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "85900508"
   
 8.  [クラスター ノードの構成] ページで、ドロップダウン ボックスを使用して、このセットアップ操作で変更する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの名前を指定します。  
   
-9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスターのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバー構成 - サービス アカウント](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
+9. [サーバーの構成 - サービス アカウント] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 フェールオーバー クラスター インスタンスのインストールでは、アクティブ ノードに指定された設定に基づいて、アカウント名とスタートアップの種類に関する情報がこのページにあらかじめ設定されます。 各アカウントのパスワードを入力する必要があります。 詳細については、「 [サーバー構成 - サービス アカウント](../../../database-engine/install-windows/install-sql-server.md) 」および「 [Windows サービス アカウントと権限の構成](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。  
   
      **セキュリティに関する注意:** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "85900508"
   
 ##  <a name="remove-node"></a><a name="Remove"></a> ノードの削除  
   
-#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターからノードを削除するには  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster-instance"></a>既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスからノードを削除するには  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
@@ -106,5 +108,4 @@ ms.locfileid: "85900508"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

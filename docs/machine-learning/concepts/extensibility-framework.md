@@ -7,18 +7,17 @@ ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: b7be2d8a11a63c1330e721f893e0ec3e945d8b5d
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406295"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870030"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張アーキテクチャ 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、SQL server Machine Learning Services で外部 Python スクリプトまたは外部 R スクリプトを実行するための機能拡張フレームワークのアーキテクチャについて説明します。 このスクリプトは、言語ランタイム環境でコア データベース エンジンの拡張機能として実行されます。
 
@@ -46,17 +45,17 @@ ms.locfileid: "86406295"
 
 このアーキテクチャは、外部スクリプトが SQL Server とは別のプロセスで実行されるが、コンポーネントによって SQL Server のデータと操作に対する要求のチェーンが内部で管理されるように設計されています。 SQL Server のバージョンに応じて、サポートされている言語拡張機能には、[R](extension-r.md)、[Python](extension-python.md)、および Java や .NET などのサードパーティ言語が含まれます。
 
-  ***Windows のコンポーネント アーキテクチャ:***
+  ***Windows のコンポーネント アーキテクチャ:** _
   
   ![Windows のコンポーネント アーキテクチャ](../media/generic-architecture-windows.png "コンポーネント アーキテクチャ")
   
-  ***Linux のコンポーネント アーキテクチャ:***
+  _*_Linux のコンポーネント アーキテクチャ:_*_
 
   ![Linux のコンポーネント アーキテクチャ](../media/generic-architecture-linux.png "コンポーネント アーキテクチャ")
   
-コンポーネントには**スタート パッド** サービスが含まれています。これは、インタープリターとライブラリを読み込むための外部ランタイムおよびライブラリ固有のロジックを呼び出すために使用されます。 ランチャーにより、言語ランタイムと独自のモジュールが読み込まれます。 たとえば、コードに RevoScaleR 関数が含まれている場合、RevoScaleR インタープリターが読み込まれます。 **BxlServer** および **SQL サテライト**により、SQL Server との通信とデータ転送が管理されます。 
+コンポーネントには _ *スタート パッド** サービスが含まれています。これは、インタープリターとライブラリを読み込むための外部ランタイムおよびライブラリ固有のロジックを呼び出すために使用されます。 ランチャーにより、言語ランタイムと独自のモジュールが読み込まれます。 たとえば、コードに RevoScaleR 関数が含まれている場合、RevoScaleR インタープリターが読み込まれます。 **BxlServer** および **SQL サテライト** により、SQL Server との通信とデータ転送が管理されます。 
 
-Linux の場合、SQL では**スタート パッド** サービスを使用して、ユーザーごとに個別のスタート パッド プロセスとの通信が行われます。
+Linux の場合、SQL では **スタート パッド** サービスを使用して、ユーザーごとに個別のスタート パッド プロセスとの通信が行われます。
 
 <a name="launchpad"></a>
 
@@ -81,11 +80,11 @@ Linux では、1 つのデータベース エンジン インスタンスのみ�
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer と SQL サテライト
 
-**BxlServer** は、SQL Server と言語ランタイムの間の通信を管理する、Microsoft によって提供されている実行可能ファイルです。 これにより、外部スクリプト セッションの格納に使用される Windows ジョブ オブジェクト (Windows の場合) また名前空間 (Linux の場合) が作成されます。 また、外部スクリプト ジョブごとにセキュリティで保護された作業フォルダーが準備され、SQL サテライトを使用して外部ランタイムと SQL Server の間のデータ転送が管理されます。 ジョブの実行中に[プロセス エクスプローラー](https://technet.microsoft.com/sysinternals/processexplorer.aspx)を実行すると、BxlServer の 1 つまたは複数のインスタンスが表示される場合があります。
+**BxlServer** は、SQL Server と言語ランタイムの間の通信を管理する、Microsoft によって提供されている実行可能ファイルです。 これにより、外部スクリプト セッションの格納に使用される Windows ジョブ オブジェクト (Windows の場合) また名前空間 (Linux の場合) が作成されます。 また、外部スクリプト ジョブごとにセキュリティで保護された作業フォルダーが準備され、SQL サテライトを使用して外部ランタイムと SQL Server の間のデータ転送が管理されます。 ジョブの実行中に[プロセス エクスプローラー](/sysinternals/downloads/process-explorer)を実行すると、BxlServer の 1 つまたは複数のインスタンスが表示される場合があります。
 
 実際には BxlServer は、SQL Server と連携してデータの転送とタスクの管理を行う言語ランタイム環境に付随するものです。 BXL とは、バイナリ交換言語の略で、SQL Server と外部プロセスの間でデータを効率的に移動するために使用されるデータ形式を指します。 BxlServer は、Microsoft R Client や Microsoft R Server などの関連製品の重要な部分でもあります。
 
-**SQL サテライト**は、データベース エンジンに含まれる機能拡張 API で、C または C++ を使用して実装された外部コードまたは外部ランタイムをサポートしています。
+**SQL サテライト** は、データベース エンジンに含まれる機能拡張 API で、C または C++ を使用して実装された外部コードまたは外部ランタイムをサポートしています。
 
 BxlServer は、次のタスクに SQL サテライトを使用します。
 
@@ -139,7 +138,7 @@ SQL サテライトは、Windows 拡張イベント (xEvent) を使用して監�
 
 + **その他のプロトコル**
 
-  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
+  "チャンク" で動作するか、またはリモート クライアントにデータを転送する必要のあるプロセスでは、[XDF ファイル形式](/machine-learning-server/r/concept-what-is-xdf)も使用できます。 実際のデータ転送は、エンコードされた BLOB を使用して行われます。
 
 ## <a name="see-also"></a>参照
 

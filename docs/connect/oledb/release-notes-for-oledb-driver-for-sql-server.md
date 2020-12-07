@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2e957fdb91720c46f5065f4b671c14b757a7cb0f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011917"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726935"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
@@ -49,8 +49,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
-| [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) インターフェイスのさまざまなバグを修正しました | マルチバイトのコード ページに影響を与えるいくつかのバグにより、読み取り操作の完了前にインターフェイスでストリームの末尾が報告されました。|
-| [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました | `SSPROP_IRowsetFastLoad` プロパティが有効になっている場合の [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました。 |
+| [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) インターフェイスのさまざまなバグを修正しました | マルチバイトのコード ページに影響を与えるいくつかのバグにより、読み取り操作の完了前にインターフェイスでストリームの末尾が報告されました。|
+| [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました | `SSPROP_IRowsetFastLoad` プロパティが有効になっている場合の [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) インターフェイスのメモリ リークを修正しました。 |
 | `sql_variant` データ型と非 ASCII 文字列に関連するシナリオのバグを修正しました | `sql_variant` データ型と非 ASCII 文字列に関連する特定のシナリオを実行すると、データが破損する可能性があります。 詳細については、次の情報を参照してください。[既知の問題](ole-db-data-types/ssvariant-structure.md#known-issues)。 |
 | [UDL 構成ダイアログ](help-topics/data-link-pages.md)の *[テスト接続]* ボタンの問題を修正しました | [UDL 構成ダイアログ](help-topics/data-link-pages.md)の *[テスト接続]* ボタンで、 *[すべて]* タブで設定された初期化プロパティを利用できるようになりました。 |
 | `SSPROP_INIT_PACKETSIZE` プロパティの既定値の処理を修正しました | `SSPROP_INIT_PACKETSIZE` プロパティが `0` の既定値に設定されている場合の予期しないエラーを修正しました。 このプロパティの詳細については、「[初期化プロパティと承認プロパティ](ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。 |
@@ -82,7 +82,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
-| [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) のインデックスの削除ロジックが修正されました。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が同じでない場合、主キー インデックスを削除できません。 |
+| [IIndexDefinition::DropIndex](/previous-versions/windows/desktop/ms722733(v=vs.85)) のインデックスの削除ロジックが修正されました。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が同じでない場合、主キー インデックスを削除できません。 |
 | &nbsp; | &nbsp; |
 
 以前のバージョンの OLE DB Driver をダウンロードするには、次のセクションのダウンロード リンクをクリックします。
@@ -120,7 +120,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
-| マルチスレッド アパートメント (MTA) で対話しない Azure Active Directory 認証を修正しました。 | マルチスレッド (MTA) として以前に初期化されたアパートメントで OLE DB Driver 18.2.1 が COM 同時実行モデルを誤って変更しようとします。 その結果、[IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) インターフェイスを呼び出す前に 2 回以上 [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) または [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) に呼び出しを行うアプリケーションで、いずれかの Azure Active Directory 認証モードを使用するとドライバーが接続に失敗します。 |
+| マルチスレッド アパートメント (MTA) で対話しない Azure Active Directory 認証を修正しました。 | マルチスレッド (MTA) として以前に初期化されたアパートメントで OLE DB Driver 18.2.1 が COM 同時実行モデルを誤って変更しようとします。 その結果、[IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) インターフェイスを呼び出す前に 2 回以上 [CoInitialize](/windows/win32/api/objbase/nf-objbase-coinitialize) または [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) に呼び出しを行うアプリケーションで、いずれかの Azure Active Directory 認証モードを使用するとドライバーが接続に失敗します。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1821"></a>18.2.1

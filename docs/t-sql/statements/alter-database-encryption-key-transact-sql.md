@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 title: ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.date: 04/16/2018
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 7d33e0b284720befaa4e159fc2db00493f405a33
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c7de14be6abefddb76813b44bc22013b2f6f1d47
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394724"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067504"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
@@ -65,6 +66,7 @@ ALTER DATABASE ENCRYPTION KEY
     }  
 [ ; ]  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -91,7 +93,7 @@ ALTER DATABASE ENCRYPTION KEY
 ## <a name="examples"></a>例  
  次の例では、`AES_256` アルゴリズムを使用するようにデータベース暗号化キーを変更します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 ALTER DATABASE ENCRYPTION KEY  

@@ -1,4 +1,5 @@
 ---
+description: Always Encrypted を使用したデータベースのエクスポートとインポート
 title: Always Encrypted を使用したデータベースのエクスポートとインポート | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e19404372f3729343e41f3880dbf7d8b3e3ad35a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627393"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127735"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Always Encrypted を使用したデータベースのエクスポートとインポート 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,8 +34,8 @@ BACPAC をデータベースにインポートすると、BACPAC からの暗号
 データベースのエクスポートおよびインポート方法の詳細については、以下をご覧ください。
 - [データ層アプリケーションのエクスポート](../../data-tier-applications/export-a-data-tier-application.md)
 - [BACPAC ファイルのインポートによる新しいユーザー データベースの作成](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Azure SQL データベースを BACPAC ファイルにエクスポートする](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [BACPAC ファイルを Azure SQL Database のデータベースにインポートする](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Azure SQL データベースを BACPAC ファイルにエクスポートする](/azure/sql-database/sql-database-export)
+- [BACPAC ファイルを Azure SQL Database のデータベースにインポートする](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>暗号化された列を含むデータベースを移行するためのアクセス許可

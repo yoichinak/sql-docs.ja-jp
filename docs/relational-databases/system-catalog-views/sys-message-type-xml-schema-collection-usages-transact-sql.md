@@ -1,4 +1,5 @@
 ---
+description: sys.message_type_xml_schema_collection_usages (Transact-SQL)
 title: message_type_xml_schema_collection_usages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.message_type_xml_schema_collection_usages catalog view
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86e8ffb085c16a5d8445f4bbfec67b98af62d5ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13af427df514fe0f6a8b614fb4f03a61e5fa88ee
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883843"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539627"
 ---
 # <a name="sysmessage_type_xml_schema_collection_usages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

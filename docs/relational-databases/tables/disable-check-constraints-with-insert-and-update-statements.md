@@ -1,4 +1,5 @@
 ---
+description: INSERT ステートメントまたは UPDATE ステートメントによる CHECK 制約の無効化
 title: INSERT ステートメントまたは UPDATE ステートメントによる CHECK 制約の無効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 550076bbd091a69e7835d2fd6732d361c6edc740
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d5511ebc4161cb9793039f46a69dfb44413019c2
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394437"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130870"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>INSERT ステートメントまたは UPDATE ステートメントによる CHECK 制約の無効化
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "87394437"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **INSERT ステートメントおよび UPDATE ステートメントの実行中に CHECK 制約を無効にする方法:**  
   
@@ -51,11 +52,11 @@ ms.locfileid: "87394437"
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>INSERT ステートメントおよび UPDATE ステートメントの実行中に CHECK 制約を無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、制約が設定されているテーブルを展開し、 **[制約]** フォルダーを展開します。  
+1.  **オブジェクト エクスプローラー** で、制約が設定されているテーブルを展開し、 **[制約]** フォルダーを展開します。  
   
 2.  制約を右クリックし、 **[変更]** をクリックします。  
   
-3.  **テーブル デザイナー**の下にあるグリッドで、 **[INSERT および UPDATE に適用]** をクリックし、ドロップダウン メニューの **[いいえ]** をクリックします。  
+3.  **テーブル デザイナー** の下にあるグリッドで、 **[INSERT および UPDATE に適用]** をクリックし、ドロップダウン メニューの **[いいえ]** をクリックします。  
   
 4.  **[閉じる]** をクリックします。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "87394437"
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>INSERT ステートメントおよび UPDATE ステートメントの実行中に CHECK 制約を無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

@@ -8,14 +8,14 @@ ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3f098dc361d4e30a82dee198bb8203d19b412613
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659474"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125432"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server バックアップ アプリケーション - ボリューム シャドウ コピー サービス (VSS) と SQL ライター
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ VSS では、次の協調するコンポーネントのアクティビティの�
 
 VSS によって、これらのパーティ間の調整が行われます。 
 
-![調整](media/sql-server-vss-writer-backup-guide/coordinations.png)
+![VSS によって、これらのパーティ間の調整がどのように行われるかを示す図。](media/sql-server-vss-writer-backup-guide/coordinations.png)
 
 この図では、一般的な VSS スナップショット アクティビティに参加するすべてのコンポーネントが示されています。 このようなシナリオでは、SQL Server (SQL ライターを含む) は、いずれかのライター ボックスのライターとして機能します。  そのようなライターとしては、他に Exchange Server などがあります。
 
@@ -236,7 +236,7 @@ SQL Server におけるコンポーネント セット構造の唯一の拡張�
 このドキュメントの最後には、ライター メタデータ ドキュメントの例が記載されています。
 
 ### <a name="backup-discovery"></a>バックアップの検出
-このフェーズでは、リクエスターにより、ライター メタデータ ドキュメントが調べられ、バックアップの必要なコンポーネントごとに**バックアップ コンポーネント ドキュメント**が作成されて設定されます。 また、このドキュメントの一部として、必要なバックアップ オプションとパラメーターが指定されます。 SQL ライターでは、バックアップする必要がある各データベース インスタンスは個別のコンポーネントになります。
+このフェーズでは、リクエスターにより、ライター メタデータ ドキュメントが調べられ、バックアップの必要なコンポーネントごとに **バックアップ コンポーネント ドキュメント** が作成されて設定されます。 また、このドキュメントの一部として、必要なバックアップ オプションとパラメーターが指定されます。 SQL ライターでは、バックアップする必要がある各データベース インスタンスは個別のコンポーネントになります。
 
 #### <a name="backup-components-document"></a>バックアップ コンポーネント ドキュメント
 これは、復元操作またはバックアップ操作を設定する過程で、リクエスターによって (**IVssBackupComponents** インターフェイスを使用して) 作成される XML ドキュメントです。 バックアップ コンポーネント ドキュメントには、1 つ以上のライターから取得された、バックアップ操作または復元操作に明示的に含まれるコンポーネントのリストが含まれています。 暗黙的に含まれるコンポーネントの情報は含まれていません。 これに対し、ライター メタデータ ドキュメントには、バックアップに参加することができるライター コンポーネントのみが含まれます。 バックアップ コンポーネント ドキュメントの詳細な構造については、VSS API のドキュメントをご覧ください。

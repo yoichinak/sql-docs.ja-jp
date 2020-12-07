@@ -1,4 +1,5 @@
 ---
+description: '[列のプロパティ] ([全般] ページ)'
 title: '[列のプロパティ] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c1c009106bb4beb956b049e7acab43b187d082
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 75a8df34472bd8e29b7d4422612ccc6977a70dda
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395121"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128738"
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -27,9 +28,9 @@ ms.locfileid: "87395121"
   
  このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **Name**  
- 列の名前です。  
+ 列の名前。  
   
  **[データ型]**  
  列が保持できるデータ型です。 データ型がユーザー定義データ型である場合は、ユーザー定義データ型が表示されます。 データ型がユーザー定義データ型でない場合は、システム データ型が表示されます。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
@@ -49,7 +50,7 @@ ms.locfileid: "87395121"
  **[計算されたテキスト]**  
  列テキストの計算に使用されたステートメントを示します。 詳細については、「 [テーブルの計算列の指定](../../relational-databases/tables/specify-computed-columns-in-a-table.md)」を参照してください。  
   
- **[ID]**  
+ **ID**  
  列がテーブルの ID 列であるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[IDENTITY シード]**  

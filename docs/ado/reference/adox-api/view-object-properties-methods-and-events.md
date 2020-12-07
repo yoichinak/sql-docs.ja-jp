@@ -1,8 +1,9 @@
 ---
+description: View オブジェクトのプロパティ、メソッド、およびイベント
 title: オブジェクトのプロパティ、メソッド、およびイベントを表示します。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fef8ff76af497b311cab231d77cd7dd0832ff75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa3655079f6d7b9db3753296ac87d835e7e045c6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753158"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982973"
 ---
 # <a name="view-object-properties-methods-and-events"></a>View オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>プロパティ  
- [Command プロパティ](../../../ado/reference/adox-api/command-property-adox.md)  
+ [Command プロパティ](./command-property-adox.md)  
   
- [DateCreated プロパティ](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated プロパティ](./datecreated-property-adox.md)  
   
- [DateModified プロパティ](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified プロパティ](./datemodified-property-adox.md)  
   
- [Name プロパティ](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name プロパティ](./name-property-adox.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>イベント  
  [なし] :  
   
 ## <a name="see-also"></a>参照  
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [View オブジェクト (ADOX)](./view-object-adox.md)

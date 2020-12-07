@@ -1,4 +1,5 @@
 ---
+description: メンバー リビジョン履歴 (マスター データ サービス)
 title: メンバー リビジョン履歴
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 16928202fa2007ecdd2566f7ef215b2ffc09ff4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388689"
 ---
 # <a name="member-revision-history-master-data-services"></a>メンバー リビジョン履歴 (マスター データ サービス)
 
@@ -70,7 +71,7 @@ ms.locfileid: "85812717"
 |----------------------|-----------|  
 |メンバー リビジョン履歴のロールバック|[メンバー リビジョン履歴のロールバック (マスター データ サービス)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [システム設定 (マスター データ サービス)](../master-data-services/system-settings-master-data-services.md)  
   

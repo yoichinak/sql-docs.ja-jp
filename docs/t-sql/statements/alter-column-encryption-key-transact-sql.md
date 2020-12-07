@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a90e0e787abdaedb4cde1a3461349fcd521c6cf9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110249"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646392"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   データベースで、暗号化された値を追加または削除する列暗号化キーを変更します。 列暗号化キーは、対応する列マスター キーのローテーションで最大 2 つの値を持つことができます。 列暗号化キーは、[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) を使用して列を暗号化するときに使用されます。 列暗号化キーの値を追加する前に、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを使用して、値の暗号化に使用された列マスター キーを定義する必要があります。  
   
@@ -60,8 +62,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  このステートメントでは、プレーンテキストの CEK 値を渡さないでください。 そうすれば、この機能の利点が得られます。  
-  
-## <a name="remarks"></a>解説  
+
+## <a name="remarks"></a>解説
 通常、列暗号化キーは、暗号化された値を 1 つだけ使用して作成されます。 列マスター キーを回転する必要がある場合 (現在の列マスター キーを新しい列マスター キーと置き換える必要がある場合)、新しい列マスター キーで暗号化された新しい値の列暗号化キーを追加できます。 このワークフローにより、クライアント アプリケーションが新しい列マスター キーを使用できるようになるまでの間、クライアント アプリケーションが列暗号化キーを使用して暗号化されたデータにアクセスできるようになります。 新しいマスター キーにアクセスできないクライアント アプリケーションでも、Always Encrypted が有効にされたドライバーは、古い列マスター キーで暗号化された列暗号化キー値を使用して機密データにアクセスできます。 Always Encrypted でサポートされる暗号化アルゴリズムでは、プレーンテキスト値が 256 ビットである必要があります。 
  
 SQL Server Management Studio (SSMS) や PowerShell などのツールを使って、列マスター キーをローテーションすることをお勧めします。 「[SQL Server Management Studio を使用した Always Encrypted キーの交換](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用して Always Encrypted キーをローテーションする](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)」をご覧ください。

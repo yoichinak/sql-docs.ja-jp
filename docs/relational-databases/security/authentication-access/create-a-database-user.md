@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c18c98192c2806f0b946e5025127151c68009682
+ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005692"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94521179"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "86005692"
 ##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> ユーザーの種類について  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] は、データベース ユーザーを作成するときに 6 つのオプションを表示します。 次の図に、6 つのオプションを緑色のボックスに示し、それらが何を表すかを示します。  
   
- ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
+ ![さまざまな種類のユーザーについて説明する図。](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
 ### <a name="selecting-the-type-of-user"></a>ユーザーの種類の選択  
  **ログインまたはログインにマップされていないユーザー**  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を初めて使用する場合は、作成するユーザーの種類を決定するのが難しい可能性があります。 まず、データベースにアクセスする必要があるユーザーまたはグループがログインを持っているかどうかを確認します。 master データベース内のログインは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を管理するユーザー、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで複数またはすべてのデータベースにアクセスする必要があるユーザーにとっては一般的です。 ここでは、 **ログインを持つ SQL ユーザー**を作成します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインの作成方法の詳細については、「 [ログインの作成](../../../relational-databases/security/authentication-access/create-a-login.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を初めて使用する場合は、作成するユーザーの種類を決定するのが難しい可能性があります。 まず、データベースにアクセスする必要があるユーザーまたはグループがログインを持っているかどうかを確認します。 master データベース内のログインは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を管理するユーザー、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで複数またはすべてのデータベースにアクセスする必要があるユーザーにとっては一般的です。 ここでは、 **ログインを持つ SQL ユーザー** を作成します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインの作成方法の詳細については、「 [ログインの作成](../../../relational-databases/security/authentication-access/create-a-login.md)」を参照してください。  
   
- データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー**を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+ データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー** を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
 > **重要:** 包含データベース ユーザーとして接続するときには、接続文字列の一部としてデータベースの名前を指定する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でデータベースを指定するには、 **[接続先]** ダイアログ ボックスで **[オプション]** をクリックし、 **[接続プロパティ]** タブをクリックします。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "86005692"
   
 ##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> T-SQL を使用してユーザーを作成する  
     
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  **[標準]** ツール バーの **[新しいクエリ]** をクリックします。  
   

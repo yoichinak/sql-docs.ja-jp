@@ -1,4 +1,5 @@
 ---
+description: '[Web アプリケーションの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)'
 title: '[Web アプリケーションの作成] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f32becd4f98ec714102bbe38f7b15049b730508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500665"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>[Web アプリケーションの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85812019"
 |**パスワード**|指定したユーザー アカウントのパスワードを入力します。|  
 |**[パスワードの確認入力]**|指定したユーザー アカウントのパスワードを再入力します。 **[パスワード]** フィールドと **[パスワードの確認入力]** フィールドには、同じパスワードを入力する必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[Web 構成] ページ &#40;マスターデータサービス構成マネージャー&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md) [Web アプリケーションの要件 &#40;マスター データ サービス&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
  [マスター データ マネージャー Web アプリケーションの作成 &#40;マスター データ サービス&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  

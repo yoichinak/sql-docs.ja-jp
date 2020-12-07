@@ -1,4 +1,5 @@
 ---
+description: datetime データ型の C から SQL への変換
 title: C から SQL への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,19 +14,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: e6fa65cd3bdfd8b6054be31f91eef811d7db4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420656"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   このトピックでは、C 型から日付型または時刻型に変換する際に考慮すべき問題を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC では、秒の小数部の切り捨てがエラーとして処理されます。一方、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime2 (6)** から**datetime2 (2)** に進むと丸めが発生します。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute** または **sqlexecutedirect** が呼び出されると、サーバーからエラーが返されます。 特に、ODBC では、秒の小数部の切り捨てがエラーとして処理されます。一方、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime2 (6)** から **datetime2 (2)** に進むと丸めが発生します。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
 | - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
@@ -92,6 +93,6 @@ ms.locfileid: "87332417"
 -   **N/A**: 既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 動作と以前の動作が維持されます。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

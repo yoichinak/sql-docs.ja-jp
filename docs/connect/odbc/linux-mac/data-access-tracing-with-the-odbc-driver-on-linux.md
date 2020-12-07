@@ -1,7 +1,8 @@
 ---
-title: Linux と macOS での ODBC ドライバーによるデータ アクセスのトレース | Microsoft Docs
+title: Linux と macOS での ODBC ドライバーによるデータ アクセスのトレース
+description: Microsoft ODBC Driver for SQL Server を使用した Linux および macOS でのトレースを有効にして、アプリケーションの動作のトラブルシューティングを行うときに、ログ ファイルを出力できるようにする方法について説明します。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6abf282656681d3f798215282adb784b29c3846
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69f55104ed73f4d6468de3dcacca54d05cf0ac9a
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921990"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288207"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux と macOS での ODBC ドライバーによるデータ アクセスのトレース
 
@@ -38,13 +39,13 @@ TraceFile=/home/myappuser/odbctrace.log
 
 アプリケーションのトレースが終了した後、`odbcinst.ini` ファイルから `Trace=Yes` を削除してトレースのパフォーマンスが低下しないようにし、不要なトレース ファイルが削除されたことを確認します。
 
-トレースは、`odbcinst.ini` 内のドライバーを使用するすべてのアプリケーションに適用されます。 すべてのアプリケーションをトレースしない (ユーザーごとの機密情報の公開を避けるためなど) 場合は、`ODBCSYSINI` 環境変数を使用して、プライベート `odbcinst.ini` の場所を指定することにより、個々のアプリケーション インスタンスをトレースできます。 次に例を示します。
+トレースは、`odbcinst.ini` 内のドライバーを使用するすべてのアプリケーションに適用されます。 すべてのアプリケーションをトレースしない (ユーザーごとの機密情報の公開を避けるためなど) 場合は、`ODBCSYSINI` 環境変数を使用して、プライベート `odbcinst.ini` の場所を指定することにより、個々のアプリケーション インスタンスをトレースできます。 たとえば、次のように入力します。
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-この場合、`/home/myappuser/odbcinst.ini` の `[ODBC Driver 13 for SQL Server]` セクションに `Trace=Yes` を追加できます。
+この場合、`/home/myappuser/odbcinst.ini` の `[ODBC Driver 17 for SQL Server]` セクションに `Trace=Yes` を追加できます。
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>ドライバーが使用している odbc.ini ファイルを特定する
 

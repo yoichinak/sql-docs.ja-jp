@@ -1,4 +1,5 @@
 ---
+description: データベースメンテナンスプランのテーブル (Transact-sql)
 title: データベースメンテナンスプランのテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], system tables
 - system tables [SQL Server], database maintenance plans
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5abffa4b260d63d203dce9510c599d2187901620
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762615"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547222"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>データベースメンテナンスプランのテーブル (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85762615"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  アップグレードされたデータベースメンテナンスプランごとに1行のデータを格納します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

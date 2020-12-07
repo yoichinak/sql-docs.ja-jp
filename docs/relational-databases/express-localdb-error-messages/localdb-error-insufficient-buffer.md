@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_INSUFFICIENT_BUFFER
 title: LOCALDB_ERROR_INSUFFICIENT_BUFFER |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cdb7c78a8301ec11ddd54329c4c68943ea66afd2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5c0315eb0d4318fd7e6c82ad19676af37e0391d8
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245201"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506200"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

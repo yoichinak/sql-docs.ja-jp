@@ -1,4 +1,5 @@
 ---
+description: MSagent_parameters (Transact-sql)
 title: MSagent_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,27 +16,27 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_parameters system table
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9070fd9ee8b3e1bb9a32f5a28ccf189496e6b38b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f462e59611b33d35762ad0941e871c196990f2c5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890084"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544541"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSagent_parameters**テーブルには、エージェントプロファイルに関連付けられているパラメーターが含まれています。 パラメーター名は、エージェントでサポートされている名前と同じです。 このテーブルは、 **msdb**データベースに格納されます。  
+  **MSagent_parameters**テーブルには、エージェントプロファイルに関連付けられているパラメーターが含まれています。 パラメーター名は、エージェントでサポートされている名前と同じです。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|**MSagent_profiles**テーブルのプロファイル ID。|  
 |**parameter_name**|**sysname**|パラメーターの名前。|  
-|**value**|**nvarchar(255)**|パラメーターの値。|  
+|**value**|**nvarchar (255)**|パラメーターの値。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

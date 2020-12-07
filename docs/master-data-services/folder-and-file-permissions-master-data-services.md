@@ -1,4 +1,5 @@
 ---
+description: フォルダーとファイルの権限 (マスター データ サービス)
 title: フォルダーとファイルの権限
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0d06fb6aaacdac159ab9241209c862e22758e999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388828"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
 
@@ -39,7 +40,7 @@ ms.locfileid: "85811507"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特別な権限|  
 |SYSTEM|特別な権限|  
-|Administrators|特別な権限|  
+|管理者|特別な権限|  
 |ユーザー|読み取りと実行、フォルダー内容の一覧表示、読み取り|  
 |TrustedInstaller|フォルダー内容の一覧表示、特別な権限|  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85811507"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
-|Administrators|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
+|管理者|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
 |MDS_ServiceAccounts|変更、読み取りと実行、フォルダー内容の一覧表示、読み取り、書き込み|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 権限  
@@ -59,12 +60,12 @@ ms.locfileid: "85811507"
 |グループ名またはアカウント名|アクセス許可|  
 |---------------------------|-----------------|  
 |SYSTEM|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
-|Administrators|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
+|管理者|フル コントロール、変更、読み取りと実行、読み取り、書き込み|  
 |MDS_ServiceAccounts|読み取りと実行、読み取り|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config ファイルのコンテンツの詳細については、「[Web 設定リファレンス (マスター データ サービス)](../master-data-services/web-configuration-reference-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスのインストール](../master-data-services/install-windows/install-master-data-services.md)  
   
   

@@ -1,7 +1,8 @@
 ---
+description: セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2020
+ms.date: 11/17/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,25 +11,27 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: d97d32ba50255181ae21cf0a1ac1cd079092b122
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: 39d03c4ddcf7edc7d0df1176c9aed1b92f9af9d5
+ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217760"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "96123979"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-[!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
+[!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
 この例は、暗号化された列にアクセスするときの Azure Key Vault プロバイダーの使用を示しています。
 
 [!code-csharp [Azure Key Vault Provider with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample.cs#1)]
 
 > [!NOTE]
-> セキュア エンクレーブを使用する Always Encrypted は、Windows でのみサポートされています。
+> - セキュリティで保護されたエンクレーブを使用する Always Encrypted を .NET Standard アプリケーションで使用するには、**Microsoft.Data.SqlClient** バージョン 2.1.0 以降が必要です。 サポートされている .NET Standard のバージョンは 2.1 以降です。 
+>
+> - セキュリティで保護されたエンクレーブを使用する Always Encrypted を Linux と macOS で使用するには、**Microsoft.Data.SqlClient** バージョン 2.1.0 以降が必要です。
 
 ## <a name="see-also"></a>参照
 

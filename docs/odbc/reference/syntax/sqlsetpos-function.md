@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos 関数
 title: SQLSetPos 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 55741fba1dca898e087f4a992dfd7affbf3bcfcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491232"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0 標準準拠: ODBC  
   
  **まとめ**  
- **SQLSetPos**は、行セット内のカーソル位置を設定し、アプリケーションが行セット内のデータを更新したり、結果セット内のデータを更新または削除したりできるようにします。  
+ **SQLSetPos** は、行セット内のカーソル位置を設定し、アプリケーションが行セット内のデータを更新したり、結果セット内のデータを更新または削除したりできるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +51,7 @@ SQLRETURN SQLSetPos(
  代入ステートメントハンドル。  
   
  *RowNumber*  
- 代入*操作*引数で指定された操作を実行する行セット内の行の位置。 *RowNumber*が0の場合、操作は行セットのすべての行に適用されます。  
+ 代入 *操作* 引数で指定された操作を実行する行セット内の行の位置。 *RowNumber*が0の場合、操作は行セットのすべての行に適用されます。  
   
  詳細については、「コメント」を参照してください。  
   
@@ -60,12 +61,12 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  *操作*引数の SQL_ADD 値は *、ODBC 3.x*では非推奨とされました。 ODBC *3.x ドライバーは*、旧バージョンとの互換性のために SQL_ADD をサポートする必要があります。 この機能は、SQL_ADD*操作*を伴う**sqlbulkoperations**の呼び出しに置き換えられました。 *Odbc 2.x アプリケーションが*odbc 2.x ドライバーで動作する場合、ドライバーマネージャーは、操作を実行する**sqlSQL_ADD bulkoperation** *への*呼び出しを、SQL_ADD の*操作*によって**SQLSetPos**に*マップします*。  
+>  *操作*引数の SQL_ADD 値は *、ODBC 3.x*では非推奨とされました。 ODBC *3.x ドライバーは* 、旧バージョンとの互換性のために SQL_ADD をサポートする必要があります。 この機能は、SQL_ADD*操作*を伴う**sqlbulkoperations**の呼び出しに置き換えられました。 *Odbc 2.x アプリケーションが*odbc 2.x ドライバーで動作する場合、ドライバーマネージャーは、操作を実行する**sqlSQL_ADD bulkoperation** *への*呼び出しを、SQL_ADD の*操作*によって**SQLSetPos**に*マップします*。  
   
  詳細については、「コメント」を参照してください。  
   
  *LockType*  
- 代入*操作*引数で指定された操作を実行した後に、行をロックする方法を指定します。  
+ 代入 *操作* 引数で指定された操作を実行した後に、行をロックする方法を指定します。  
   
  SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
   
@@ -75,8 +76,8 @@ SQLRETURN SQLSetPos(
   
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NEED_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
-## <a name="diagnostics"></a>Diagnostics  
- **SQLSetPos**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetPos**によって一般的に返される SQLSTATE 値を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
+## <a name="diagnostics"></a>診断  
+ **SQLSetPos**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **SQLSetPos** によって一般的に返される SQLSTATE 値を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
  SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生した場合に SQL_SUCCESS_WITH_INFO が返され、単一行操作でエラーが発生した場合は SQL_ERROR が返されます。  
   
@@ -88,37 +89,37 @@ SQLRETURN SQLSetPos(
 |01S01|行にエラーがあります|*RowNumber*引数が0で、*操作*引数で指定された操作の実行中に1つ以上の行でエラーが発生しました。<br /><br /> (SQL_SUCCESS_WITH_INFO は、1行の操作でエラーが発生した場合にエラーが発生した場合に返されます。これは、複数行の操作のすべての行ではなく、SQL_ERROR が返されます)。<br /><br /> (この SQLSTATE は、ドライバー*が ODBC 2.x*ドライバーであり、カーソルライブラリが使用されていない場合に、 **SQLExtendedFetch**の後に**SQLSetPos**が呼び出されたときにのみ返されます)。|  
 |01S07|小数部の切り捨て|*操作*引数が SQL_REFRESH でした。アプリケーションバッファーのデータ型が SQL_C_CHAR または SQL_C_BINARY ではありません。また、1つまたは複数の列のアプリケーションバッファーに返されたデータが切り捨てられました。 数値データ型の場合、数値の小数部は切り捨てられました。 時間、タイムスタンプ、および期間のデータ型については、時刻の部分が切り捨てられました。<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|結果セットの列のデータ値を、 **SQLBindCol**の呼び出しで*TargetType*によって指定されたデータ型に変換できませんでした。|  
-|07009|無効な記述子のインデックス|引数*操作*が SQL_REFRESH または SQL_UPDATE でしたが、列が結果セット内の列数より大きい列数でバインドされています。|  
-|21S02|派生テーブルの次数が列の一覧と一致しません|引数の*操作*が SQL_UPDATE ましたが、列が更新可能ではありませんでした。すべての列がバインド解除されたか、読み取り専用であったか、またはバインドされた長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE でした。|  
+|07009|無効な記述子のインデックス|引数 *操作* が SQL_REFRESH または SQL_UPDATE でしたが、列が結果セット内の列数より大きい列数でバインドされています。|  
+|21S02|派生テーブルの次数が列の一覧と一致しません|引数の *操作* が SQL_UPDATE ましたが、列が更新可能ではありませんでした。すべての列がバインド解除されたか、読み取り専用であったか、またはバインドされた長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE でした。|  
 |22001|文字列データ、右切り捨て|*操作*引数が SQL_UPDATE ましたが、列への文字またはバイナリ値の割り当てにより、空白以外の文字 (文字の場合) または null 以外 (バイナリ) の文字またはバイトが切り捨てられました。|  
-|22003|数値が有効範囲にありません|引数*操作*が SQL_UPDATE ましたが、結果セット内の列に数値を代入すると、切り捨てられる数値の一部 (小数部分ではなく) が発生しました。<br /><br /> 引数*操作*が SQL_REFRESH ましたが、1つ以上のバインドされた列の数値を返すと、有効桁数が失われた可能性があります。|  
-|22007|無効な datetime 形式|引数の*操作*が SQL_UPDATE ましたが、日付またはタイムスタンプの値が結果セットの列に割り当てられ、年、月、または日のフィールドが範囲外になっています。<br /><br /> 引数の*操作*が SQL_REFRESH ましたが、1つ以上のバインドされた列の日付またはタイムスタンプの値が返されたため、年、月、または日のフィールドが範囲外になっていました。|  
+|22003|数値が有効範囲にありません|引数 *操作* が SQL_UPDATE ましたが、結果セット内の列に数値を代入すると、切り捨てられる数値の一部 (小数部分ではなく) が発生しました。<br /><br /> 引数 *操作* が SQL_REFRESH ましたが、1つ以上のバインドされた列の数値を返すと、有効桁数が失われた可能性があります。|  
+|22007|無効な datetime 形式|引数の *操作* が SQL_UPDATE ましたが、日付またはタイムスタンプの値が結果セットの列に割り当てられ、年、月、または日のフィールドが範囲外になっています。<br /><br /> 引数の *操作* が SQL_REFRESH ましたが、1つ以上のバインドされた列の日付またはタイムスタンプの値が返されたため、年、月、または日のフィールドが範囲外になっていました。|  
 |22008|日付/時刻フィールドのオーバーフロー|*操作*の引数が SQL_UPDATE ましたが、結果セット内の列に送信されるデータに対する datetime 算術演算のパフォーマンスにより、結果の datetime フィールド (年、月、日、時、分、または2番目のフィールド) がフィールドに許容される値の範囲を超えているか、Datetimes のグレゴリオ暦の自然なルールに基づいて無効に<br /><br /> *操作*引数が SQL_REFRESH ましたが、結果セットから取得されるデータに対する datetime 算術演算のパフォーマンスによって、結果の datetime フィールド (年、月、日、時、分、または2番目のフィールド) がフィールドに許容される値の範囲外であるか、Datetimes のグレゴリオ暦の自然なルールに基づいて無効になりました|  
 |22015|間隔フィールドオーバーフロー|*操作*引数が SQL_UPDATE ましたが、正確な数値または間隔 C 型を interval SQL データ型に割り当てているため、有効桁数が失われました。<br /><br /> *操作*引数が SQL_UPDATE でした。interval SQL 型にを割り当てる場合、interval SQL 型の C 型の値は表現されませんでした。<br /><br /> *操作*引数が SQL_REFRESH ましたが、正確な数値または期間の SQL 型から間隔 C 型に割り当てているため、先頭のフィールドの有効桁数が失われました。<br /><br /> *操作*引数が更新されました SQL_。間隔 C 型にを割り当てる場合、interval C 型の SQL 型の値は表現されませんでした。|  
-|22018|キャストの指定に無効な文字値があります|*操作*引数が SQL_REFRESH でした。C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> 引数の*操作*が SQL_UPDATE でした。SQL 型は、正確な数値、概数、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。列の値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
-|23000|整合性制約違反|引数の*操作*が SQL_DELETE か SQL_UPDATE で、整合性の制約に違反しました。|  
-|24000|カーソル状態が無効|*StatementHandle*は実行状態でしたが、結果セットが*StatementHandle*に関連付けられていませんでした。<br /><br /> (DM) *StatementHandle*でカーソルが開いていましたが、 **sqlfetch**または**sqlfetchscroll**は呼び出されませんでした。<br /><br /> *StatementHandle*でカーソルが開かれましたが、 **Sqlfetch**または**sqlfetchscroll**が呼び出されましたが、カーソルが結果セットの先頭より前、または結果セットの末尾の後に配置されました。<br /><br /> 引数の*操作*が SQL_DELETE、SQL_REFRESH、または SQL_UPDATE であり、カーソルが結果セットの先頭より前、または結果セットの末尾の後に配置されました。|  
+|22018|キャストの指定に無効な文字値があります|*操作*引数が SQL_REFRESH でした。C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> 引数の *操作* が SQL_UPDATE でした。SQL 型は、正確な数値、概数、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。列の値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
+|23000|整合性制約違反|引数の *操作* が SQL_DELETE か SQL_UPDATE で、整合性の制約に違反しました。|  
+|24000|カーソル状態が無効|*StatementHandle*は実行状態でしたが、結果セットが*StatementHandle*に関連付けられていませんでした。<br /><br /> (DM) *StatementHandle*でカーソルが開いていましたが、 **sqlfetch** または **sqlfetchscroll** は呼び出されませんでした。<br /><br /> *StatementHandle*でカーソルが開かれましたが、 **Sqlfetch**または**sqlfetchscroll**が呼び出されましたが、カーソルが結果セットの先頭より前、または結果セットの末尾の後に配置されました。<br /><br /> 引数の *操作* が SQL_DELETE、SQL_REFRESH、または SQL_UPDATE であり、カーソルが結果セットの先頭より前、または結果セットの末尾の後に配置されました。|  
 |40001|シリアル化エラー|リソースが別のトランザクションでデッドロックしているため、トランザクションがロールバックされました。|  
 |40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続に失敗しました。トランザクションの状態を確認できません。|  
-|42000|構文エラーまたはアクセス違反|ドライバーは、引数*操作*で要求された操作を実行するために必要に応じて行をロックできませんでした。<br /><br /> ドライバーは、引数*LockType*に要求された行をロックできませんでした。|  
+|42000|構文エラーまたはアクセス違反|ドライバーは、引数 *操作*で要求された操作を実行するために必要に応じて行をロックできませんでした。<br /><br /> ドライバーは、引数 *LockType*に要求された行をロックできませんでした。|  
 |44000|WITH CHECK OPTION 違反|*操作*引数が SQL_UPDATE ましたが、更新は、表示されているテーブルまたは表示されているテーブルから派生したテーブルに対して実行されました。**この場合、** 更新によって影響を受ける1つ以上の行が表示されているテーブルに存在しなくなります。|  
 |HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 * \* Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出された後、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
-|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、SQLSetPos 関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 指定された*StatementHandle*は実行状態ではありませんでした。 最初に**SQLExecDirect**、 **sqlexecute**、またはカタログ関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) ドライバー*は ODBC 2.x*ドライバーで、 **sqlfetch**が呼び出された後に*StatementHandle*に対して**SQLSetPos**が呼び出されました。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel** または **Sqlcancelhandle** が *StatementHandle*で呼び出された後、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、SQLSetPos 関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 指定された *StatementHandle* は実行状態ではありませんでした。 最初に **SQLExecDirect**、 **sqlexecute**、またはカタログ関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が *StatementHandle* に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos** が *StatementHandle* に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) ドライバー*は ODBC 2.x*ドライバーで、 **sqlfetch**が呼び出された後に*StatementHandle*に対して**SQLSetPos**が呼び出されました。|  
 |HY011|属性を今設定することはできません|(DM) ドライバー*は ODBC 2.x*ドライバーでした。SQL_ATTR_ROW_STATUS_PTR statement 属性が設定されました。次に、 **Sqlfetch**、 **sqlfetchscroll**、または**SQLExtendedFetch**が呼び出される前に**SQLSetPos**が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
-|HY090|文字列またはバッファーの長さが無効です|*操作*引数が SQL_UPDATE、データ値が null ポインター、列の長さの値が0、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありませんでした。<br /><br /> *操作*引数が SQL_UPDATE でした。データ値が null ポインターではありませんでした。C データ型が SQL_C_BINARY または SQL_C_CHAR;列の長さの値が0未満で、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありませんでした。<br /><br /> 長さ/インジケーターバッファーの値が SQL_DATA_AT_EXEC でした。SQL 型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、またはデータソース固有の長いデータ型のいずれかです。また、 **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" でした。|  
-|HY092|無効な属性識別子|(DM)*操作*引数に指定された値が無効でした。<br /><br /> (DM) *LockType*引数に指定された値が無効でした。<br /><br /> *操作*引数が SQL_UPDATE または SQL_DELETE で、SQL_ATTR_CONCURRENCY statement 属性が SQL_ATTR_CONCUR_READ_ONLY でした。|  
-|HY107|行の値が有効範囲にありません|引数*RowNumber*に指定された値が、行セット内の行数を超えています。|  
-|HY109|カーソル位置が無効です|*StatementHandle*に関連付けられているカーソルは順方向専用として定義されているため、カーソルを行セット内に配置できませんでした。 **SQLSetStmtAttr**の SQL_ATTR_CURSOR_TYPE 属性の説明を参照してください。<br /><br /> *操作*引数が SQL_UPDATE、SQL_DELETE、または SQL_REFRESH であり、 *RowNumber*引数によって識別される行が削除されたか、またはフェッチされませんでした。<br /><br /> (DM) *RowNumber*引数が0で、*操作*引数が SQL_POSITION でした。<br /><br /> **SQLSetPos**は**sqlbulkoperations**が呼び出された後、 **Sqlbulkoperations**または**sqlfetch**が呼び出される前に呼び出されました。|  
+|HY090|文字列またはバッファーの長さが無効です|*操作*引数が SQL_UPDATE、データ値が null ポインター、列の長さの値が0、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありませんでした。<br /><br /> *操作*引数が SQL_UPDATE でした。データ値が null ポインターではありませんでした。C データ型が SQL_C_BINARY または SQL_C_CHAR;列の長さの値が0未満で、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NTS、SQL_NULL_DATA、または SQL_LEN_DATA_AT_EXEC_OFFSET 以下ではありませんでした。<br /><br /> 長さ/インジケーターバッファーの値が SQL_DATA_AT_EXEC でした。SQL 型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、またはデータソース固有の長いデータ型のいずれかです。また、 **SQLGetInfo** の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" でした。|  
+|HY092|無効な属性識別子|(DM) *操作* 引数に指定された値が無効でした。<br /><br /> (DM) *LockType* 引数に指定された値が無効でした。<br /><br /> *操作*引数が SQL_UPDATE または SQL_DELETE で、SQL_ATTR_CONCURRENCY statement 属性が SQL_ATTR_CONCUR_READ_ONLY でした。|  
+|HY107|行の値が有効範囲にありません|引数 *RowNumber* に指定された値が、行セット内の行数を超えています。|  
+|HY109|カーソル位置が無効です|*StatementHandle*に関連付けられているカーソルは順方向専用として定義されているため、カーソルを行セット内に配置できませんでした。 **SQLSetStmtAttr**の SQL_ATTR_CURSOR_TYPE 属性の説明を参照してください。<br /><br /> *操作*引数が SQL_UPDATE、SQL_DELETE、または SQL_REFRESH であり、 *RowNumber*引数によって識別される行が削除されたか、またはフェッチされませんでした。<br /><br /> (DM) *RowNumber* 引数が0で、 *操作* 引数が SQL_POSITION でした。<br /><br /> **SQLSetPos** は **sqlbulkoperations** が呼び出された後、 **Sqlbulkoperations** または **sqlfetch** が呼び出される前に呼び出されました。|  
 |HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
-|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースが、*操作*引数または*LockType*引数で要求された操作をサポートしていません。|  
+|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースが、 *操作* 引数または *LockType* 引数で要求された操作をサポートしていません。|  
 |HYT00|タイムアウトに達しました|データソースから結果セットが返される前に、クエリのタイムアウト期間が経過しました。 タイムアウト期間は、SQL_ATTR_QUERY_TIMEOUT の*属性*を使用して**SQLSetStmtAttr**によって設定されます。|  
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
-|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle* に関連付けられているドライバーでは、関数はサポートされていません。|  
 |IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
-|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
+|IM018|**Sqlcompleteasync** は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して **Sqlcompleteasync** を呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
   
@@ -126,10 +127,10 @@ SQLRETURN SQLSetPos(
 >  **SQLSetPos**を呼び出すことができるステートメントの状態と *、ODBC 2.x*アプリケーションとの互換性を確保するために必要な操作の詳細については、「[ブロックカーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)」を参照してください。  
   
 ## <a name="rownumber-argument"></a>RowNumber 引数  
- *RowNumber*引数は、*操作*引数で指定された操作を実行する行セット内の行の番号を指定します。 *RowNumber*が0の場合、操作は行セットのすべての行に適用されます。 *RowNumber*には、0から行セット内の行数までの値を指定する必要があります。  
+ *RowNumber*引数は、*操作*引数で指定された操作を実行する行セット内の行の番号を指定します。 *RowNumber*が0の場合、操作は行セットのすべての行に適用されます。 *RowNumber* には、0から行セット内の行数までの値を指定する必要があります。  
   
 > [!NOTE]  
->  C 言語では、配列は0から始まるので、 *RowNumber*引数は1から始まるものです。 たとえば、行セットの5番目の行を更新する場合、アプリケーションは配列インデックス4の行セットバッファーを変更しますが、 *RowNumber*は5に指定します。  
+>  C 言語では、配列は0から始まるので、 *RowNumber* 引数は1から始まるものです。 たとえば、行セットの5番目の行を更新する場合、アプリケーションは配列インデックス4の行セットバッファーを変更しますが、 *RowNumber* は5に指定します。  
   
  すべての操作は、 *RowNumber*によって指定された行にカーソルを置きます。 次の操作にはカーソル位置が必要です。  
   
@@ -137,48 +138,48 @@ SQLRETURN SQLSetPos(
   
 -   **SQLGetData**を呼び出します。  
   
--   SQL_DELETE、SQL_REFRESH、および SQL_UPDATE オプションを使用して**SQLSetPos**を呼び出します。  
+-   SQL_DELETE、SQL_REFRESH、および SQL_UPDATE オプションを使用して **SQLSetPos** を呼び出します。  
   
  たとえば、RowNumber が 2 SQL_DELETE の*操作*で**SQLSetPos**を呼び出す場合、 *RowNumber*が2の場合、カーソルは行セットの2番目の行に配置され、その行は削除されます。 2番目の行の実装行ステータス配列 (SQL_ATTR_ROW_STATUS_PTR statement 属性が指す) のエントリが SQL_ROW_DELETED に変更されます。  
   
- アプリケーションで**SQLSetPos**を呼び出すと、カーソル位置を指定できます。 通常、位置指定の update または delete ステートメントを実行する前、または**SQLGetData**を呼び出す前にカーソルを配置するには、SQL_POSITION または SQL_REFRESH 操作を使用して**SQLSetPos**を呼び出します。  
+ アプリケーションで **SQLSetPos**を呼び出すと、カーソル位置を指定できます。 通常、位置指定の update または delete ステートメントを実行する前、または**SQLGetData**を呼び出す前にカーソルを配置するには、SQL_POSITION または SQL_REFRESH 操作を使用して**SQLSetPos**を呼び出します。  
   
 ## <a name="operation-argument"></a>Operation 引数  
- *Operation*引数は、次の操作をサポートしています。 アプリケーションでは、データソースでサポートされているオプションを判別するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 の情報の種類 (カーソルの種類によって異なります) を使用して**SQLGetInfo**を呼び出します。  
+ *Operation*引数は、次の操作をサポートしています。 アプリケーションでは、データソースでサポートされているオプションを判別するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 の情報の種類 (カーソルの種類によって異なります) を使用して **SQLGetInfo** を呼び出します。  
   
 |*操作*<br /><br /> 引数|操作|  
 |------------------------------|---------------|  
-|SQL_POSITION|このドライバーは、 *RowNumber*によって指定された行にカーソルを置きます。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行ステータス配列の内容は、SQL_POSITION*操作*では無視されます。|  
-|SQL_REFRESH|ドライバーは、 *RowNumber*によって指定された行にカーソルを置いて、その行の行セットバッファー内のデータを更新します。 ドライバーが行セットバッファー内のデータを返す方法の詳細については、 **SQLBindCol**の行方向と列方向のバインドに関する記述を参照してください。<br /><br /> **SQLSetPos**は、SQL_REFRESH*操作*によって、現在フェッチされている行セット内の行の状態と内容を更新します。 これには、ブックマークの更新も含まれます。 バッファー内のデータは更新されますが、refetched されていないため、行セットのメンバーシップは固定されています。 これは、SQL_FETCH_RELATIVE の*Fetchorientation*を使用して**sqlfetchscroll**を呼び出すことによって実行される更新とは異なります。また、 *RowNumber*が0に等しい場合は、追加されたデータを表示し、削除されたデータをドライバーとカーソルによってサポートされている場合は削除されたデータを削除します。<br /><br /> **SQLSetPos**を正常に更新すると、SQL_ROW_DELETED の行の状態は変更されません。 行セット内の削除された行は、次のフェッチまで削除済みとしてマークされ続けます。 カーソルでパッキングがサポートされている場合、次のフェッチ時に行が非表示になります (以降の**Sqlfetch**または**sqlfetchscroll**は、削除された行を返しません)。<br /><br /> 追加された行は、 **SQLSetPos**を使用した更新が実行されるときには表示されません。 この動作は、 **Sqlfetchscroll**と*FetchType*の SQL_FETCH_RELATIVE と、 *RowNumber*が0に等しい場合とで異なります。これにより、現在の行セットも更新されますが、これらの操作がカーソルによってサポートされている場合は、追加されたレコードを表示するか、削除されたレコードをパックします。<br /><br /> **SQLSetPos**を使用して正常に更新すると、SQL_ROW_ADDED の行の状態が SQL_ROW_SUCCESS に変更されます (行の状態の配列が存在する場合)。<br /><br /> **SQLSetPos**を使用して正常に更新すると、SQL_ROW_UPDATED の行の状態が行の新しい状態に変わります (行の状態の配列が存在する場合)。<br /><br /> 行の**SQLSetPos**操作でエラーが発生した場合、行の状態は SQL_ROW_ERROR (行の状態の配列が存在する場合) に設定されます。<br /><br /> SQL_CONCUR_ROWVER または SQL_CONCUR_VALUES の SQL_ATTR_CONCURRENCY statement 属性で開かれたカーソルについては、 **SQLSetPos**を使用して更新すると、データソースで使用されるオプティミスティック同時実行制御の値が更新され、行が変更されたことが検出される可能性があります。 この場合、カーソルの同時実行を確実にするために使用される行のバージョンまたは値は、サーバーから行セットバッファーが更新されるたびに更新されます。 このエラーは、更新された行ごとに発生します。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行ステータス配列の内容は、SQL_REFRESH*操作*では無視されます。|  
+|SQL_POSITION|このドライバーは、 *RowNumber*によって指定された行にカーソルを置きます。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行ステータス配列の内容は、SQL_POSITION *操作*では無視されます。|  
+|SQL_REFRESH|ドライバーは、 *RowNumber* によって指定された行にカーソルを置いて、その行の行セットバッファー内のデータを更新します。 ドライバーが行セットバッファー内のデータを返す方法の詳細については、 **SQLBindCol**の行方向と列方向のバインドに関する記述を参照してください。<br /><br /> **SQLSetPos** は、SQL_REFRESH *操作* によって、現在フェッチされている行セット内の行の状態と内容を更新します。 これには、ブックマークの更新も含まれます。 バッファー内のデータは更新されますが、refetched されていないため、行セットのメンバーシップは固定されています。 これは、SQL_FETCH_RELATIVE の*Fetchorientation*を使用して**sqlfetchscroll**を呼び出すことによって実行される更新とは異なります。また、 *RowNumber*が0に等しい場合は、追加されたデータを表示し、削除されたデータをドライバーとカーソルによってサポートされている場合は削除されたデータを削除します。<br /><br /> **SQLSetPos**を正常に更新すると、SQL_ROW_DELETED の行の状態は変更されません。 行セット内の削除された行は、次のフェッチまで削除済みとしてマークされ続けます。 カーソルでパッキングがサポートされている場合、次のフェッチ時に行が非表示になります (以降の **Sqlfetch** または **sqlfetchscroll** は、削除された行を返しません)。<br /><br /> 追加された行は、 **SQLSetPos** を使用した更新が実行されるときには表示されません。 この動作は、 **Sqlfetchscroll** と *FetchType* の SQL_FETCH_RELATIVE と、 *RowNumber* が0に等しい場合とで異なります。これにより、現在の行セットも更新されますが、これらの操作がカーソルによってサポートされている場合は、追加されたレコードを表示するか、削除されたレコードをパックします。<br /><br /> **SQLSetPos**を使用して正常に更新すると、SQL_ROW_ADDED の行の状態が SQL_ROW_SUCCESS に変更されます (行の状態の配列が存在する場合)。<br /><br /> **SQLSetPos**を使用して正常に更新すると、SQL_ROW_UPDATED の行の状態が行の新しい状態に変わります (行の状態の配列が存在する場合)。<br /><br /> 行の **SQLSetPos** 操作でエラーが発生した場合、行の状態は SQL_ROW_ERROR (行の状態の配列が存在する場合) に設定されます。<br /><br /> SQL_CONCUR_ROWVER または SQL_CONCUR_VALUES の SQL_ATTR_CONCURRENCY statement 属性で開かれたカーソルについては、 **SQLSetPos** を使用して更新すると、データソースで使用されるオプティミスティック同時実行制御の値が更新され、行が変更されたことが検出される可能性があります。 この場合、カーソルの同時実行を確実にするために使用される行のバージョンまたは値は、サーバーから行セットバッファーが更新されるたびに更新されます。 このエラーは、更新された行ごとに発生します。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行ステータス配列の内容は、SQL_REFRESH *操作*では無視されます。|  
 |SQL_UPDATE|ドライバーは、 *RowNumber*によって指定された行にカーソルを置き、行セットバッファーの値 ( **SQLBindCol**の*targetvalueptr*引数) を使用してデータの基になる行を更新します。 長さ/インジケーターバッファー ( **SQLBindCol**の*StrLen_or_IndPtr*引数) からデータの長さを取得します。 列の長さが SQL_COLUMN_IGNORE 場合、列は更新されません。 行を更新すると、ドライバーは行の状態の配列の対応する要素を SQL_ROW_UPDATED または SQL_ROW_SUCCESS_WITH_INFO に変更します (行の状態の配列が存在する場合)。<br /><br /> この動作は、ドライバーによって定義されます。これは、SQL_UPDATE の*操作*引数を持つ**SQLSetPos**が、重複する列を含むカーソルで呼び出された場合に発生します。 ドライバーがドライバーで定義した SQLSTATE を返すことができます。また、結果セットに表示される最初の列を更新したり、ドライバーによって定義されたその他の動作を実行したりすることができます。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行演算配列は、一括更新中に現在の行セットの行を無視することを示すために使用できます。 詳細については、後の「状態と操作の配列」を参照してください。|  
-|SQL_DELETE|ドライバーは、 *RowNumber*によって指定された行にカーソルを置いて、データの基になる行を削除します。 行の状態配列の対応する要素を SQL_ROW_DELETED に変更します。 行が削除された後、行に対しては、update ステートメントと delete ステートメントが配置され、 **SQLGetData**を呼び出すことができます。また、*操作*が SQL_POSITION 以外に設定されている場合は、 **SQLSetPos**を呼び出すことができます。 パッキングをサポートするドライバーでは、データソースから新しいデータを取得するときに、行がカーソルから削除されます。<br /><br /> 行が表示されたままであるかどうかは、カーソルの種類によって異なります。 たとえば、削除された行は静的カーソルやキーセットドリブンカーソルに対して表示されますが、動的カーソルには見えません。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行演算配列は、一括削除中に現在の行セットの行を無視することを示すために使用できます。 詳細については、後の「状態と操作の配列」を参照してください。|  
+|SQL_DELETE|ドライバーは、 *RowNumber* によって指定された行にカーソルを置いて、データの基になる行を削除します。 行の状態配列の対応する要素を SQL_ROW_DELETED に変更します。 行が削除された後、行に対しては、update ステートメントと delete ステートメントが配置され、 **SQLGetData**を呼び出すことができます。また、*操作*が SQL_POSITION 以外に設定されている場合は、 **SQLSetPos**を呼び出すことができます。 パッキングをサポートするドライバーでは、データソースから新しいデータを取得するときに、行がカーソルから削除されます。<br /><br /> 行が表示されたままであるかどうかは、カーソルの種類によって異なります。 たとえば、削除された行は静的カーソルやキーセットドリブンカーソルに対して表示されますが、動的カーソルには見えません。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR statement 属性が指す行演算配列は、一括削除中に現在の行セットの行を無視することを示すために使用できます。 詳細については、後の「状態と操作の配列」を参照してください。|  
   
 ## <a name="locktype-argument"></a>LockType 引数  
- *LockType*引数は、アプリケーションで同時実行を制御する方法を提供します。 ほとんどの場合、同時実行レベルとトランザクションをサポートするデータソースでは、 *LockType*引数の SQL_LOCK_NO_CHANGE 値のみがサポートされます。 *LockType*引数は、一般にファイルベースのサポートにのみ使用されます。  
+ *LockType*引数は、アプリケーションで同時実行を制御する方法を提供します。 ほとんどの場合、同時実行レベルとトランザクションをサポートするデータソースでは、 *LockType* 引数の SQL_LOCK_NO_CHANGE 値のみがサポートされます。 *LockType*引数は、一般にファイルベースのサポートにのみ使用されます。  
   
- *LockType*引数は、 **SQLSetPos**が実行された後の行のロック状態を指定します。 ドライバーが、要求された操作を実行するために、または*LockType*引数を満たすために行をロックできない場合は、SQL_ERROR と SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。  
+ *LockType*引数は、 **SQLSetPos**が実行された後の行のロック状態を指定します。 ドライバーが、要求された操作を実行するために、または *LockType* 引数を満たすために行をロックできない場合は、SQL_ERROR と SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。  
   
- 1つのステートメントに対して*LockType*引数が指定されていますが、このロックは、接続上のすべてのステートメントに対して同じ特権を accords します。 特に、ある接続で1つのステートメントによって取得されたロックを、同じ接続上の別のステートメントによってロック解除することができます。  
+ 1つのステートメントに対して *LockType* 引数が指定されていますが、このロックは、接続上のすべてのステートメントに対して同じ特権を accords します。 特に、ある接続で1つのステートメントによって取得されたロックを、同じ接続上の別のステートメントによってロック解除することができます。  
   
  **Sqlsetpos**によってロックされている行は、アプリケーションが、 *LockType*が SQL_LOCK_UNLOCK に設定されている行に対して**sqlsetpos**を呼び出すか、またはアプリケーションが SQL_CLOSE オプションを使用してステートメントまたは**SQLFreeStmt**の**sqlfreehandle**を呼び出すまでロックされたままになります。 トランザクションをサポートするドライバーの場合、アプリケーションが**SQLEndTran**を呼び出して、接続のトランザクションをコミットまたはロールバックするときに、接続のトランザクションをコミットまたはロールバックするときにロックが**解除され**ます (トランザクションのコミットまたはロールバック時にカーソルが閉じられた場合は、 **SQLGetInfo**によって返される情報の種類 SQL_CURSOR_COMMIT_BEHAVIOR と SQL_CURSOR_ROLLBACK_BEHAVIOR)。  
   
- *LockType*引数では、次の種類のロックがサポートされています。 アプリケーションでは、データソースでサポートされているロックを特定するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 の情報の種類 (カーソルの種類によって異なります) を使用して**SQLGetInfo**を呼び出します。  
+ *LockType*引数では、次の種類のロックがサポートされています。 アプリケーションでは、データソースでサポートされているロックを特定するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 の情報の種類 (カーソルの種類によって異なります) を使用して **SQLGetInfo** を呼び出します。  
   
-|*LockType*引数|ロックの種類|  
+|*LockType* 引数|ロックの種類|  
 |-------------------------|---------------|  
-|SQL_LOCK_NO_CHANGE|ドライバーまたはデータソースは、 **SQLSetPos**が呼び出される前と同じロックまたはロック解除された状態になっていることを確認します。 この値の*LockType*を使用すると、行レベルの明示的ロックをサポートしていないデータソースで、現在の同時実行レベルとトランザクション分離レベルで必要なロックを使用できます。|  
+|SQL_LOCK_NO_CHANGE|ドライバーまたはデータソースは、 **SQLSetPos** が呼び出される前と同じロックまたはロック解除された状態になっていることを確認します。 この値の *LockType* を使用すると、行レベルの明示的ロックをサポートしていないデータソースで、現在の同時実行レベルとトランザクション分離レベルで必要なロックを使用できます。|  
 |SQL_LOCK_EXCLUSIVE|ドライバーまたはデータソースは、行を排他的にロックします。 別の接続または別のアプリケーションのステートメントを使用して、行のロックを取得することはできません。|  
 |SQL_LOCK_UNLOCK|ドライバーまたはデータソースによって行のロックが解除されます。|  
   
  ドライバーが SQL_LOCK_EXCLUSIVE をサポートしていても SQL_LOCK_UNLOCK をサポートしていない場合は、前の段落で説明した関数呼び出しのいずれかが発生するまで、ロックされている行がロックされたままになります。  
   
- ドライバーが SQL_LOCK_EXCLUSIVE をサポートしていても SQL_LOCK_UNLOCK をサポートしていない場合は、アプリケーションがステートメントまたは**SQLFreeStmt**の**sqlfreehandle**を SQL_CLOSE オプションで呼び出すまで、ロックされている行がロックされたままになります。 ドライバーがトランザクションをサポートし、トランザクションのコミットまたはロールバック時にカーソルを閉じると、アプリケーションは**SQLEndTran**を呼び出します。  
+ ドライバーが SQL_LOCK_EXCLUSIVE をサポートしていても SQL_LOCK_UNLOCK をサポートしていない場合は、アプリケーションがステートメントまたは**SQLFreeStmt**の**sqlfreehandle**を SQL_CLOSE オプションで呼び出すまで、ロックされている行がロックされたままになります。 ドライバーがトランザクションをサポートし、トランザクションのコミットまたはロールバック時にカーソルを閉じると、アプリケーションは **SQLEndTran**を呼び出します。  
   
  **SQLSetPos**の update 操作と delete 操作の場合、アプリケーションは次のように*LockType*引数を使用します。  
   
 -   取得した行が変更されないことを保証するために、アプリケーションは、 *Operation*を SQL_REFRESH に設定し、 *LockType*を SQL_LOCK_EXCLUSIVE に設定して**SQLSetPos**を呼び出します。  
   
--   アプリケーションで*LockType*が SQL_LOCK_NO_CHANGE に設定されている場合、ドライバーは、アプリケーションが SQL_ATTR_CONCURRENCY statement 属性に SQL_CONCUR_LOCK を指定した場合にのみ、更新操作または削除操作が成功することを保証します。  
+-   アプリケーションで *LockType* が SQL_LOCK_NO_CHANGE に設定されている場合、ドライバーは、アプリケーションが SQL_ATTR_CONCURRENCY statement 属性に SQL_CONCUR_LOCK を指定した場合にのみ、更新操作または削除操作が成功することを保証します。  
   
 -   アプリケーションで、SQL_ATTR_CONCURRENCY statement 属性の SQL_CONCUR_ROWVER または SQL_CONCUR_VALUES が指定されている場合、ドライバーは行のバージョンまたは値を比較し、アプリケーションが行をフェッチした後に行が変更された場合は操作を拒否します。  
   
@@ -191,14 +192,14 @@ SQLRETURN SQLSetPos(
   
 -   行の状態の配列 (IRD および SQL_ATTR_ROW_STATUS_ARRAY statement 属性の SQL_DESC_ARRAY_STATUS_PTR フィールドによって示される) には、行セット内の各データ行の状態値が含まれています。 ドライバーは、 **Sqlfetch**、 **sqlfetchscroll**、 **sqlbulkoperations**、 **SQLSetPos**の呼び出し後に、この配列の状態値を設定します。 この配列は、SQL_ATTR_ROW_STATUS_PTR statement 属性によってポイントされます。  
   
--   行の操作の配列 ("_" と "SQL_ATTR_ROW_OPERATION_ARRAY statement" 属性の SQL_DESC_ARRAY_STATUS_PTR フィールドによって示される) には、一括操作の**SQLSetPos**の呼び出しが無視されるか、実行されるかを示す、行セットの各行の値が含まれます。 配列の各要素は、SQL_ROW_PROCEED (既定値) または SQL_ROW_IGNORE に設定されます。 この配列は、SQL_ATTR_ROW_OPERATION_PTR statement 属性によってポイントされます。  
+-   行の操作の配列 ("_" と "SQL_ATTR_ROW_OPERATION_ARRAY statement" 属性の SQL_DESC_ARRAY_STATUS_PTR フィールドによって示される) には、一括操作の **SQLSetPos** の呼び出しが無視されるか、実行されるかを示す、行セットの各行の値が含まれます。 配列の各要素は、SQL_ROW_PROCEED (既定値) または SQL_ROW_IGNORE に設定されます。 この配列は、SQL_ATTR_ROW_OPERATION_PTR statement 属性によってポイントされます。  
   
  状態と操作の配列内の要素の数は、SQL_ATTR_ROW_ARRAY_SIZE statement 属性で定義されているように、行セット内の行数と同じである必要があります。  
   
  行の状態の配列の詳細については、「 [Sqlfetch](../../../odbc/reference/syntax/sqlfetch-function.md)」を参照してください。 行操作配列の詳細については、このセクションの後の「一括操作での行の無視」を参照してください。  
   
 ## <a name="using-sqlsetpos"></a>SQLSetPos の使用  
- アプリケーションは**SQLSetPos**を呼び出す前に、次の一連の手順を実行する必要があります。  
+ アプリケーションは **SQLSetPos**を呼び出す前に、次の一連の手順を実行する必要があります。  
   
 1.  アプリケーションで、*操作*を SQL_UPDATE に設定して**SQLSetPos**を呼び出す場合は、各列に対して**SQLBindCol** (または**SQLSetDescRec**) を呼び出して、列のデータと長さのデータ型とバインドバッファーを指定します。  
   
@@ -206,7 +207,7 @@ SQLRETURN SQLSetPos(
   
 3.  結果セットを作成するには、 **SQLExecDirect**、 **sqlexecute**、または catalog 関数を呼び出します。  
   
-4.  データを取得するには、 **Sqlfetch**または**sqlfetchscroll**を呼び出します。  
+4.  データを取得するには、 **Sqlfetch** または **sqlfetchscroll** を呼び出します。  
   
  **Sqlsetpos**の使用方法の詳細については、「 [sqlsetpos を使用したデータの更新](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)」を参照してください。  
   
@@ -216,7 +217,7 @@ SQLRETURN SQLSetPos(
  データが削除されると、ドライバーは実装行の状態配列の値を変更して、適切な行を SQL_ROW_DELETED (または SQL_ROW_ERROR) に変更します。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>SQLSetPos を使用したデータの更新  
- アプリケーションは、バインドされたデータバッファーまたは**Sqlputdata**の1つ以上の呼び出しに列の値を渡すことができます。 データが**Sqlputdata**で渡される列は、*実行時データ**列*と呼ばれます。 これらは、SQL_LONGVARBINARY 列および SQL_LONGVARCHAR 列のデータを送信するために一般的に使用され、他の列と混在させることができます。  
+ アプリケーションは、バインドされたデータバッファーまたは **Sqlputdata**の1つ以上の呼び出しに列の値を渡すことができます。 データが**Sqlputdata**で渡される列は、*実行時データ**列*と呼ばれます。 これらは、SQL_LONGVARBINARY 列および SQL_LONGVARCHAR 列のデータを送信するために一般的に使用され、他の列と混在させることができます。  
   
 #### <a name="to-update-data-with-sqlsetpos-an-application"></a>SQLSetPos を使用してデータを更新するには、次のようにします。  
   
@@ -226,7 +227,7 @@ SQLRETURN SQLSetPos(
   
     -   実行時データ列の場合、アプリケーションは、列番号などのアプリケーション定義の値を* \* targetvalueptr*バッファーに配置します。 この値は、後で列を識別するために使用できます。  
   
-         アプリケーションは、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロの結果を **StrLen_or_IndPtr*バッファーに配置します。 列の SQL データ型が SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長いデータソース固有のデータ型で、ドライバーが**SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報型に対して "Y" を返す場合、 *length*は、パラメーターに送信されるデータのバイト数です。それ以外の場合は、負でない値である必要があり、無視されます。  
+         アプリケーションは、SQL_LEN_DATA_AT_EXEC (*長さ*) マクロの結果を **StrLen_or_IndPtr* バッファーに配置します。 列の SQL データ型が SQL_LONGVARBINARY、SQL_LONGVARCHAR、または長いデータソース固有のデータ型で、ドライバーが **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報型に対して "Y" を返す場合、 *length* は、パラメーターに送信されるデータのバイト数です。それ以外の場合は、負でない値である必要があり、無視されます。  
   
 2.  *操作*の引数を SQL_UPDATE に設定して**SQLSetPos**を呼び出し、データ行を更新します。  
   
@@ -234,30 +235,30 @@ SQLRETURN SQLSetPos(
   
     -   実行時データ列がある場合、関数は SQL_NEED_DATA を返し、手順3に進みます。  
   
-3.  **Sqlparamdata**を呼び出して、処理する最初の実行時データ列の* \* targetvalueptr*バッファーのアドレスを取得します。 **Sqlparamdata**は SQL_NEED_DATA を返します。 アプリケーションは、 * \* targetvalueptr*バッファーからアプリケーション定義の値を取得します。  
+3.  **Sqlparamdata**を呼び出して、処理する最初の実行時データ列の* \* targetvalueptr*バッファーのアドレスを取得します。 **Sqlparamdata** は SQL_NEED_DATA を返します。 アプリケーションは、 * \* targetvalueptr*バッファーからアプリケーション定義の値を取得します。  
   
     > [!NOTE]  
-    >  実行時データパラメーターは実行時データ列に似ていますが、 **Sqlparamdata**によって返される値はそれぞれ異なっています。  
+    >  実行時データパラメーターは実行時データ列に似ていますが、 **Sqlparamdata** によって返される値はそれぞれ異なっています。  
   
     > [!NOTE]  
     >  実行時データパラメーターは、 **SQLExecDirect**または**sqlexecute**を使用してステートメントを実行するときに、 **sqlputdata**を使用してデータを送信する SQL ステートメントのパラメーターです。 **SQLBindParameter**にバインドされているか、 **SQLSetDescRec**で記述子を設定します。 **Sqlparamdata**によって返される値は、 *parametervalueptr*引数の**SQLBindParameter**に渡される32ビット値です。  
   
     > [!NOTE]  
-    >  実行時データ列は、行が**SQLSetPos**で更新されたときに**sqlputdata**を使用してデータが送信される行セット内の列です。 これらは**SQLBindCol**にバインドされています。 **Sqlparamdata**によって返される値は、処理される **targetvalueptr*バッファー内の行のアドレスです。  
+    >  実行時データ列は、行が**SQLSetPos**で更新されたときに**sqlputdata**を使用してデータが送信される行セット内の列です。 これらは **SQLBindCol**にバインドされています。 **Sqlparamdata**によって返される値は、処理される **targetvalueptr*バッファー内の行のアドレスです。  
   
 4.  **Sqlputdata**を1回以上呼び出して、列のデータを送信します。 **Sqlputdata**に指定されている* \* targetvalueptr*バッファーにすべてのデータ値を返すことができない場合は、複数の呼び出しが必要です。文字、バイナリ、またはデータソース固有のデータ型の列に c データを送信する場合、または文字、バイナリ、またはデータソース固有のデータ型を持つ列にバイナリ c データを送信する場合に限り、同じ列に対して複数の**sqlputdata**を呼び出すことができます。  
   
 5.  **Sqlparamdata**を再度呼び出して、すべてのデータが列に送信されたことを通知します。  
   
-    -   実行時データ列の数が多い場合、 **Sqlparamdata**は SQL_NEED_DATA を返し、処理する次の実行時データ列の*targetvalueptr*バッファーのアドレスを返します。 アプリケーションは、手順4と5を繰り返します。  
+    -   実行時データ列の数が多い場合、 **Sqlparamdata** は SQL_NEED_DATA を返し、処理する次の実行時データ列の *targetvalueptr* バッファーのアドレスを返します。 アプリケーションは、手順4と5を繰り返します。  
   
-    -   実行時データ列がない場合は、プロセスが完了します。 ステートメントが正常に実行された場合、 **Sqlparamdata**は SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返します。実行が失敗した場合は SQL_ERROR を返します。 この時点で、 **Sqlparamdata**は**SQLSetPos**で返すことができる SQLSTATE を返すことができます。  
+    -   実行時データ列がない場合は、プロセスが完了します。 ステートメントが正常に実行された場合、 **Sqlparamdata** は SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返します。実行が失敗した場合は SQL_ERROR を返します。 この時点で、 **Sqlparamdata** は **SQLSetPos**で返すことができる SQLSTATE を返すことができます。  
   
  データが更新されている場合、ドライバーは実装行の状態配列の値を変更して、適切な行を SQL_ROW_UPDATED します。  
   
  操作が取り消された場合、または**Sqlparamdata**または**sqlparamdata**でエラーが発生した場合、 **SQLSetPos**が SQL_NEED_DATA し、実行中のすべてのデータ列に対してデータが送信される前に、アプリケーションはステートメントまたはステートメントに関連付けられている接続の**SQLCancel**、 **SQLGetDiagField**、 **SQLGetDiagRec**、 **sqlparamdata**、 **sqlparamdata**、または**sql** ステートメントまたはステートメントに関連付けられている接続に対して他の関数を呼び出すと、関数は SQL_ERROR と SQLSTATE HY010 (関数シーケンスエラー) を返します。  
   
- アプリケーションが**SQLCancel**を呼び出しても、ドライバーが実行時データ列のデータを必要としている場合、ドライバーは操作をキャンセルします。 その後、アプリケーションは**SQLSetPos**を再度呼び出すことができます。取り消すと、カーソルの状態または現在のカーソル位置には影響しません。  
+ アプリケーションが **SQLCancel** を呼び出しても、ドライバーが実行時データ列のデータを必要としている場合、ドライバーは操作をキャンセルします。 その後、アプリケーションは **SQLSetPos** を再度呼び出すことができます。取り消すと、カーソルの状態または現在のカーソル位置には影響しません。  
   
  カーソルに関連付けられているクエリ仕様の選択リストに同じ列への複数の参照が含まれている場合、エラーが生成されたか、ドライバーが重複した参照を無視し、要求された操作を実行した場合、ドライバーが定義されます。  
   
@@ -283,7 +284,7 @@ SQLRETURN SQLSetPos(
 ## <a name="ignoring-a-row-in-a-bulk-operation"></a>一括操作での行の無視  
  行操作の配列を使用して、 **SQLSetPos**を使用した一括操作中に、現在の行セットの行を無視することを示すことができます。 一括操作中に1つ以上の行を無視するようにドライバーに指示するには、アプリケーションで次の手順を実行する必要があります。  
   
-1.  **SQLSetStmtAttr**を呼び出して、Sqlus悪意 lints の配列を指すように SQL_ATTR_ROW_OPERATION_PTR statement 属性を設定します。 このフィールドは、SQL_DESC_ARRAY_STATUS_PTR **SQLSetDescField**を呼び出して設定することもできます。このフィールドでは、アプリケーションが記述子ハンドルを取得する必要があります。  
+1.  **SQLSetStmtAttr**を呼び出して、Sqlus悪意 lints の配列を指すように SQL_ATTR_ROW_OPERATION_PTR statement 属性を設定します。 このフィールドは、SQL_DESC_ARRAY_STATUS_PTR **SQLSetDescField** を呼び出して設定することもできます。このフィールドでは、アプリケーションが記述子ハンドルを取得する必要があります。  
   
 2.  行操作配列の各要素を次の2つの値のいずれかに設定します。  
   
@@ -305,7 +306,7 @@ SQLRETURN SQLSetPos(
   
 -   ヘッダーファイルでは、SQL_ROW_PROCEED は0として定義されます。 アプリケーションでは、すべての行を処理するために、行操作配列を0に初期化できます。  
   
--   行操作配列の要素番号 "n" が SQL_ROW_IGNORE に設定されていて、 **sqlsetpos**が呼び出されて一括更新または削除操作を実行する場合、行セットの n 番目の行は**SQLSetPos**の呼び出し後も変更されません。  
+-   行操作配列の要素番号 "n" が SQL_ROW_IGNORE に設定されていて、 **sqlsetpos** が呼び出されて一括更新または削除操作を実行する場合、行セットの n 番目の行は **SQLSetPos**の呼び出し後も変更されません。  
   
 -   アプリケーションでは、読み取り専用の列を自動的に SQL_ROW_IGNORE に設定する必要があります。  
   
@@ -313,7 +314,7 @@ SQLRETURN SQLSetPos(
  1つ以上の読み取り専用列に対する更新によって生成された不要な処理診断を回避するために、アプリケーションでは、バインドされた長さ/インジケーターバッファーの値を SQL_COLUMN_IGNORE に設定できます。 詳細については、「 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
- 次の例では、ユーザーが ORDERS テーブルを参照して注文ステータスを更新できるようにします。 カーソルは、行セットサイズが20のキーセットドリブンであり、オプティミスティック同時実行制御を使用して行バージョンを比較しています。 各行セットがフェッチされると、アプリケーションによって出力され、ユーザーは注文の状態を選択して更新できるようになります。 アプリケーションは**SQLSetPos**を使用して、選択された行にカーソルを置き、行の位置指定更新を実行します。 (わかりやすくするために、エラー処理は省略されています)。  
+ 次の例では、ユーザーが ORDERS テーブルを参照して注文ステータスを更新できるようにします。 カーソルは、行セットサイズが20のキーセットドリブンであり、オプティミスティック同時実行制御を使用して行バージョンを比較しています。 各行セットがフェッチされると、アプリケーションによって出力され、ユーザーは注文の状態を選択して更新できるようになります。 アプリケーションは **SQLSetPos** を使用して、選択された行にカーソルを置き、行の位置指定更新を実行します。 (わかりやすくするために、エラー処理は省略されています)。  
   
 ```cpp  
 #define ROWS 20  
@@ -363,7 +364,7 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- その他の例については、「配置された[Update および Delete ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)」および「 [SQLSetPos による行セットの行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)」を参照してください。  
+ その他の例については、「配置された [Update および Delete ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) 」および「 [SQLSetPos による行セットの行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)」を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

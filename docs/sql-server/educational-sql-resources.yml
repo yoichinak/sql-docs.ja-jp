@@ -9,21 +9,39 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 01/07/2020
-  ms.openlocfilehash: a200d33dc0c8a17ce93139b9c7ccd60cdf3c4f01
-  ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+  ms.openlocfilehash: d365573f99f0462a26d3c144476c32b4dc47773b
+  ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/04/2020
-  ms.locfileid: "84423176"
+  ms.lasthandoff: 10/13/2020
+  ms.locfileid: "91988548"
 landingContent:
+- title: SQL について
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 初心者向け Azure SQL
+      url: https://aka.ms/azuresql4beginners
+    - text: Azure SQL の基礎
+      url: /learn/paths/azure-sql-fundamentals/
+    - text: Azure SQL のハンズオン ラボ
+      url: https://aka.ms/asqlworkshop
+    - text: Azure SQL の短期集中講座
+      url: https://aka.ms/azuresqlbootcamp
+    - text: LinkedIn Learning
+      url: https://www.linkedin.com/learning/topics/sql-server
+    - text: Pluralsight
+      url: https://www.pluralsight.com/browse/data-professional/sql-server
+    - text: Channel 9
+      url: https://channel9.msdn.com/Tags/sql+server
 - title: SQL Server
   linkLists:
   - linkListType: learn
     links:
     - text: SQL Server をアップグレードする
-      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+      url: /learn/modules/introduction-upgrading-sql-server/
     - text: クエリ調整アシスタントを使用する
-      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+      url: /learn/modules/use-sql-server-query-tuning-assistant/
     - text: SQL Server ワークショップ
       url: https://aka.ms/sqlworkshops
   - linkListType: quickstart
@@ -31,7 +49,7 @@ landingContent:
     - text: Azure Data Studio を使用した接続とクエリ
       url: ../azure-data-studio/quickstart-sql-server.md
     - text: SSMS を使用した接続とクエリ
-      url: ../ssms/tutorials/connect-query-sql-server.md
+      url: ../ssms/quickstarts/connect-query-sql-server.md
     - text: Transact-SQL (T-SQL) の記述
       url: ../t-sql/tutorial-writing-transact-sql-statements.md
     - text: 拡張イベント
@@ -97,13 +115,13 @@ landingContent:
   - linkListType: learn
     links:
     - text: データ ストレージ アプローチを選択する
-      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+      url: /learn/modules/choose-storage-approach-in-azure/
     - text: セキュリティで保護された SQL Database
-      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+      url: /learn/modules/secure-your-azure-sql-database/
     - text: 地理的に分散されたアプリ
-      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+      url: /learn/modules/design-a-geographically-distributed-application/
     - text: SQL Database のクエリを実行する ASP.NET アプリ
-      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+      url: /learn/modules/develop-app-that-queries-azure-sql/
   - linkListType: quickstart
     links:
     - text: ポータルまたはコードを使用して DB を作成する
@@ -124,30 +142,18 @@ landingContent:
       url: /azure/sql-database/sql-database-active-geo-replication-portal
     - text: セキュリティを構成する
       url: /azure/sql-database/sql-database-security-tutorial
-- title: その他のリソース
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Microsoft Learn
-      url: https://docs.microsoft.com/learn/
-    - text: LinkedIn Learning
-      url: https://www.linkedin.com/learning/topics/sql-server
-    - text: Pluralsight
-      url: https://www.pluralsight.com/browse/data-professional/sql-server
-    - text: Channel 9
-      url: https://channel9.msdn.com/Tags/sql+server
 - title: Linux 上の SQL Server
   linkLists:
   - linkListType: learn
     links:
     - text: はじめに
-      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      url: /learn/modules/introduction-sql-server-linux/
     - text: 配置
-      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+      url: /learn/modules/deploy-sql-server-linux/
     - text: 自動調整
-      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+      url: /learn/modules/automatically-tune-sql-server-linux/
     - text: Containers
-      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+      url: /learn/modules/run-sql-server-2017-linux-containers/
   - linkListType: quickstart
     links:
     - text: Red Hat

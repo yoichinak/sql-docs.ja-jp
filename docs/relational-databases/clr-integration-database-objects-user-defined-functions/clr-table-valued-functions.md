@@ -1,5 +1,5 @@
 ---
-title: CLR テーブル値関数 |Microsoft Docs
+title: CLR Table-Valued Functions |Microsoft Docs
 description: テーブル値関数はテーブルを返します。 SQL Server CLR 統合では、テーブル値関数をマネージコードで記述できます。
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca80594050e73bf20ecfd589f18a5eca43e4dbde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4295ca970e503ad1785846d63e5ed479923f4303
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727896"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125282"
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   テーブル値関数とは、テーブルを返すユーザー定義関数です。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル値関数の機能が拡張され、テーブル値関数をどのマネージド言語でも定義できるようになりました。 データは、 **IEnumerable**または**IEnumerator**オブジェクトを使用してテーブル値関数から返されます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル値関数の機能が拡張され、テーブル値関数をどのマネージド言語でも定義できるようになりました。 データは、 **IEnumerable** または **IEnumerator** オブジェクトを使用してテーブル値関数から返されます。  
   
 > [!NOTE]  
->  テーブル値関数の場合、返されるテーブル型の列には、タイムスタンプ列または Unicode 以外の文字列データ型の列 ( **char**、 **varchar**、 **text**など) を含めることはできません。 NOT NULL 制約はサポートされません。  
+>  テーブル値関数の場合、返されるテーブル型の列には、タイムスタンプ列または Unicode 以外の文字列データ型の列 ( **char**、 **varchar**、 **text** など) を含めることはできません。 NOT NULL 制約はサポートされません。  
   
- CLR テーブル値関数の詳細については、「 [SQL SERVER clr テーブル値関数に](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)ついて」を参照してください。  
+ CLR Table-Valued 関数の詳細については、「 [clr テーブル値関数 SQL Server の概要](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)MSSQLTips」を参照してください。  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL と CLR のテーブル値関数の違い  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のテーブル値関数は、関数の呼び出し結果を具体化して中間テーブルを作成します。 TVF では中間テーブルを使用するため、結果に対する制約や一意インデックスがサポートされます。 これらの機能は、大量の結果が返される場合に非常に有用です。  
   
- 一方、CLR のテーブル値関数は同じことをストリーミングで実現します。 結果セット全体を 1 つのテーブルに具体化する必要はありません。 マネージ関数によって返される**IEnumerable**オブジェクトは、テーブル値関数を呼び出すクエリの実行プランによって直接呼び出され、結果は増分的な方法で使用されます。 このストリーミング モデルでは、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 返される行をメモリ内で一括して具体化する必要がないので、返される行数が多い場合にもストリーミングが適しています。 たとえば、マネージド テーブル値関数を使用して、テキスト ファイルを解析し、テキストの各行を 1 つのテーブル行にして返すことができます。  
+ 一方、CLR のテーブル値関数は同じことをストリーミングで実現します。 結果セット全体を 1 つのテーブルに具体化する必要はありません。 マネージ関数によって返される **IEnumerable** オブジェクトは、テーブル値関数を呼び出すクエリの実行プランによって直接呼び出され、結果は増分的な方法で使用されます。 このストリーミング モデルでは、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 返される行をメモリ内で一括して具体化する必要がないので、返される行数が多い場合にもストリーミングが適しています。 たとえば、マネージド テーブル値関数を使用して、テキスト ファイルを解析し、テキストの各行を 1 つのテーブル行にして返すことができます。  
   
 ## <a name="implementing-table-valued-functions"></a>テーブル値関数の実装  
- テーブル値関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリのクラスのメソッドとして実装します。 テーブル値関数のコードでは、 **IEnumerable**インターフェイスを実装する必要があります。 **IEnumerable**インターフェイスは .NET Framework で定義されています。 .NET Framework 内の配列とコレクションを表す型は、既に**IEnumerable**インターフェイスを実装しています。 このため、コレクションまたは配列を結果セットに変換するテーブル値関数を簡単に記述できます。  
+ テーブル値関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリのクラスのメソッドとして実装します。 テーブル値関数のコードでは、 **IEnumerable** インターフェイスを実装する必要があります。 **IEnumerable** インターフェイスは .NET Framework で定義されています。 .NET Framework 内の配列とコレクションを表す型は、既に **IEnumerable** インターフェイスを実装しています。 このため、コレクションまたは配列を結果セットに変換するテーブル値関数を簡単に記述できます。  
   
 ## <a name="table-valued-parameters"></a>テーブル値パラメーター  
  テーブル値パラメーターとは、プロシージャや関数に渡されるユーザー定義のテーブル型です。テーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../includes/tsql-md.md)] との統合も緊密です。 テーブル値パラメーターを使用するとパフォーマンスが向上する可能性もあります。 さらに、サーバーへのラウンド トリップの回数を減らすのにも有用です。 スカラー パラメーターのリストを使用するなどしてサーバーに複数の要求を送信する代わりに、データをテーブル値パラメーターとしてサーバーに送信できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプロセスで実行されているマネージド ストアド プロシージャやマネージド関数にユーザー定義のテーブル型をテーブル値パラメーターとして渡したり、戻り値として受け取ったりすることはできません。 テーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL のテーブル値関数の定義  
- CLR テーブル値関数を定義するための構文は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXTERNAL NAME**句を追加することで、テーブル値関数の構文に似ています。 次に例を示します。  
+ CLR テーブル値関数を定義するための構文は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXTERNAL NAME** 句を追加することで、テーブル値関数の構文に似ています。 次に例を示します。  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -79,7 +79,7 @@ select * from table t cross apply function(t.column);
   
 -   外部データから生成した場合。 たとえば、イベント ログを読み取り、テーブルとして公開するテーブル値関数などです。  
   
- **メモ**テーブル値関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **fillrow**メソッドではなく、 **initmethod**メソッドのクエリを通じてのみデータアクセスを実行できます。 **Initmethod**は、クエリが実行された場合は、 **sqlfunction. "属性の読み取り"** プロパティでマークする必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ **メモ** テーブル値関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **fillrow** メソッドではなく、 **initmethod** メソッドのクエリを通じてのみデータアクセスを実行できます。 **Initmethod** は、クエリが実行された場合は、 **sqlfunction. "属性の読み取り"** プロパティでマークする必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
 ## <a name="a-sample-table-valued-function"></a>テーブル値関数のサンプル  
  次のテーブル値関数は、システム イベント ログから情報を返します。 読み取るイベント ログの名前を含んだ文字列引数を 1 つ受け取ります。  
@@ -99,7 +99,8 @@ public class TabularEventLog
     [SqlFunction(FillRowMethodName = "FillRow")]  
     public static IEnumerable InitMethod(String logname)  
     {  
-        return new EventLog(logname).Entries;    }  
+        return new EventLog(logname).Entries;
+    }  
   
     public static void FillRow(Object obj, out SqlDateTime timeWritten, out SqlChars message, out SqlChars category, out long instanceId)  
     {  

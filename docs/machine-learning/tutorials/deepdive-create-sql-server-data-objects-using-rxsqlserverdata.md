@@ -1,6 +1,6 @@
 ---
 title: RxSqlServerData オブジェクトを作成する
-description: RevoScaleR チュートリアル 2:SQL Server 上で R 言語を使用してデータ オブジェクトを作成する方法。
+description: SQL Server で RevoScaleR 関数を使用する方法について説明します。 このチュートリアルは、データベースの作成の続きであり、テーブルの追加とデータの読み込みについて説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728615"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196286"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData を使用した SQL Server のデータ オブジェクトを作成する (SQL Server および RevoScaleR チュートリアル)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 2 です。
+これは、SQL Server で [RevoScaleR 関数](/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 2 です。
 
 このチュートリアルは、データベースの作成の続きであり、テーブルの追加とデータの読み込みについて説明します。 [チュートリアル 2 ](deepdive-work-with-sql-server-data-using-r.md)で、DBA がデータベースを作成してログインした場合、RStudio などの R IDE または **Rgui** などの組み込みツールを使用してテーブルを追加できます。
 
@@ -103,7 +103,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルが作成されましたので、それらのテーブルには、適切な **Rx** 関数を使用してデータを読み込むことができます。
 
-**RevoScaleR** パッケージには、データソースの種類に固有の関数が含まれています。 テキスト データの場合は、[RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) を使用して、データ ソース オブジェクトを生成します。 その他に、Hadoop データや ODBC データなどからデータ ソース オブジェクトを作成するための関数もあります。
+**RevoScaleR** パッケージには、データソースの種類に固有の関数が含まれています。 テキスト データの場合は、[RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) を使用して、データ ソース オブジェクトを生成します。 その他に、Hadoop データや ODBC データなどからデータ ソース オブジェクトを作成するための関数もあります。
 
 > [!NOTE]
 > このセクションでは、データベースに対する **Execute DDL** アクセス許可が必要です。
@@ -116,7 +116,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    **rxGetOption** の呼び出しに注意してください。これは、**RevoScaleR** の [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) に関連付けられている GET メソッドです。 このユーティリティを使用して、既定の共有ディレクトリや計算で使用するプロセッサ (コア) の数などの、ローカルおよびリモートのコンピューティング コンテキストに関連するオプションを設定し一覧表示します。
+    **rxGetOption** の呼び出しに注意してください。これは、**RevoScaleR** の [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions) に関連付けられている GET メソッドです。 このユーティリティを使用して、既定の共有ディレクトリや計算で使用するプロセッサ (コア) の数などの、ローカルおよびリモートのコンピューティング コンテキストに関連するオプションを設定し一覧表示します。
     
     この特定の呼び出しによって、コードを実行している場所に関係なく、正しいライブラリからサンプルを取得します。 たとえば、SQL Server で関数を実行し、開発用コンピューターでパスがどのように違うかを確認してください。
   
@@ -137,7 +137,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
   
     ローカル ワークスペースには R データ オブジェクトが作成されているが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはテーブルが作成されていないのがわかります。 また、テキスト ファイルから R 変数に読み込まれたデータもありません。
   
-4. [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して、データを挿入します。
+4. [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) 関数を呼び出して、データを挿入します。
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -145,7 +145,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
     
     接続文字列に問題がなければ、しばらくすると、次のような結果が表示されます。
   
-    *合計書き込み行数:10000、合計時間:0.466* *読み取られた行:10000、処理された行数の合計:10000、合計チャンク時間:0.577 秒*
+    *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
 5. テーブルの一覧を更新します。 各変数に適切なデータ型が格納されていること、また各変数が正常にインポートされたことを確認するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でテーブルを右クリックして、 **[上位 1000 行の選択]** を選択してもかまいません。
 
@@ -188,7 +188,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
 
 ## <a name="more-about-rxdatastep"></a>rxDataStep に関する詳細情報
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) は、R データ フレームに対して複数の変換を実行できる強力な関数です。 rxDataStep を使用して、変換先に必要な表現 (この場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) にデータを変換することもできます。
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) は、R データ フレームに対して複数の変換を実行できる強力な関数です。 rxDataStep を使用して、変換先に必要な表現 (この場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) にデータを変換することもできます。
 
 必要に応じて、**rxDataStep** への引数で R 関数を使用して、データの変換を指定できます。 これらの操作の例については、このチュートリアルで後述します。
 

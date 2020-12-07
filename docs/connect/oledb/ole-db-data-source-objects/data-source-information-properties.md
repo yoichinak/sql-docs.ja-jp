@@ -1,6 +1,6 @@
 ---
 title: データソース情報のプロパティ (OLE DB ドライバー) | Microsoft Docs
-description: データ ソース情報のプロパティ
+description: OLE DB Driver for SQL Server のプロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO に含まれるデータ ソース情報のプロパティについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data source properties [OLE DB]
 - information properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e68103f98e9a1de3902206876cd95c48b22ff7cb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 866d4edb2aaece799a25f5f95d176b3702cbb476
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977789"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862433"
 ---
 # <a name="data-source-information-properties"></a>データ ソース情報のプロパティ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

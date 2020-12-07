@@ -1,4 +1,5 @@
 ---
+description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 420e2bc398bbaa75c21130b2f9b8e8024d33fd83
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411418"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127742"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

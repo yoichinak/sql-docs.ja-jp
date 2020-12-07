@@ -1,8 +1,9 @@
 ---
+description: 'Command (Visual C++ 構文インデックス #import)'
 title: 'Command (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfde0a07bee9f169fea3c0041afe0ac4d490a292
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4ef0aaa3819f60a2dd0488ce57868db09c8b1f1d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760458"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975213"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Command (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -60,4 +61,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)

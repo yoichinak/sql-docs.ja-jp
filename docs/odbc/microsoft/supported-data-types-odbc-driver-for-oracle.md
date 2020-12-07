@@ -1,4 +1,5 @@
 ---
+description: サポートされるデータ型 (ODBC Driver for Oracle)
 title: サポートされるデータ型 (ODBC Driver for Oracle) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d53cdb9a270149866b2a480496f39adcb20e4d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471514"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>サポートされるデータ型 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -26,7 +27,7 @@ ms.locfileid: "81301117"
   
  ODBC Driver for Oracle は、Oracle 7.3 のすべてのデータ型をサポートしています。ただし、ここに記載されている新しい Oracle8 データ型はサポートされていません。  
   
-|データの種類|Oracle 7.3|Oracle8|  
+|データ型|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|該当なし|サポートされていません|  
 |BLOB|該当なし|サポートされていません|  
@@ -46,4 +47,4 @@ ms.locfileid: "81301117"
 |MLSLABEL|サポートされていません。|サポートされていません。|  
   
 > [!NOTE]  
->  許容される VARCHAR 列のサイズの詳細については、このガイドの「 [Varchar 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md)」を参照してください。
+>  許容される VARCHAR 列のサイズの詳細については、このガイドの「 [Varchar 列のサイズ](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) 」を参照してください。

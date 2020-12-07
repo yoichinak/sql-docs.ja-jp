@@ -1,8 +1,9 @@
 ---
+description: OLE DB Provider for Internet Publishing
 title: OLE DB Provider for Internet Publishing |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759058"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979363"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>OLE DB Provider for Internet Publishing
-ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)および[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトは、Microsoft OLE DB Provider For Internet Publishing (internet publishing provider) と共に使用して、microsoft FrontPage によって提供される Web フォルダーやファイルなどのリソースにアクセスしたり操作したりすることができます。 ADO では、**レコード**、**ストリーム**、または[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のソースを URL に指定できます。 その後、リソースのアップロード、ダウンロード、移動、コピー、削除、またはリソースプロパティの直接操作を行うことができます。  
+ADO [レコード](../../../ado/reference/ado-api/record-object-ado.md) および [ストリーム](../../../ado/reference/ado-api/stream-object-ado.md) オブジェクトは、Microsoft OLE DB Provider For Internet Publishing (internet publishing provider) と共に使用して、microsoft FrontPage によって提供される Web フォルダーやファイルなどのリソースにアクセスしたり操作したりすることができます。 ADO では、 **レコード**、 **ストリーム**、または [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) のソースを URL に指定できます。 その後、リソースのアップロード、ダウンロード、移動、コピー、削除、またはリソースプロパティの直接操作を行うことができます。  
   
- インターネット発行プロバイダーで**レコード**と**ストリーム**を使用するコード例については、「[インターネット発行のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)」を参照してください。  
+ インターネット発行プロバイダーで **レコード** と **ストリーム** を使用するコード例については、「 [インターネット発行のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)」を参照してください。  
   
  インターネット公開プロバイダーは、Microsoft Windows 2000 と共にインストールされます。 以前のバージョンのインターネット発行プロバイダーは、Microsoft Office 2000 および Microsoft Internet Explorer 5.0 でも使用できます。  
   
@@ -38,7 +39,7 @@ ADO[レコード](../../../ado/reference/ado-api/record-object-ado.md)および[
     objConn.Open "URL=https://servername"  
     ```  
   
--   接続文字列の*Provider*キーワードに対して、Msdaipp を指定します。 次に例を示します。  
+-   接続文字列の *Provider* キーワードに対して、Msdaipp を指定します。 次に例を示します。  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  

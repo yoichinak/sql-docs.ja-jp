@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_secondary (Transact-sql)
 title: log_shipping_monitor_secondary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_secondary system table
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 31ea0a1a0bd9c7895f1c705cfebd69cfa8ff4193
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 823295ed5746abcf0e02fca4680a196c8687bc86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890174"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538300"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ログ配布構成のセカンダリデータベースごとに1つの監視レコードを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  ログ配布構成のセカンダリデータベースごとに1つの監視レコードを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
  履歴と監視に関連するテーブルは、プライマリサーバーとセカンダリサーバーでも使用されます。  
   
@@ -50,8 +51,8 @@ ms.locfileid: "85890174"
 |**last_restored_latency**|**int**|ログバックアップがプライマリで作成されてからセカンダリに復元されるまでの経過時間 (分単位)。<br /><br /> 初期値が NULL です。|  
 |**history_retention_period**|**int**|指定されたセカンダリデータベースのログ配布履歴レコードが保持されてから削除されるまでの時間 (分単位)。|  
   
-## <a name="remarks"></a>Remarks  
- リモート監視サーバーに格納されているだけでなく、セカンダリサーバーに関連する情報は、セカンダリサーバーの**log_shipping_monitor_secondary**テーブルにも格納されます。  
+## <a name="remarks"></a>解説  
+ リモート監視サーバーに格納されているだけでなく、セカンダリサーバーに関連する情報は、セカンダリサーバーの **log_shipping_monitor_secondary** テーブルにも格納されます。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

@@ -1,4 +1,5 @@
 ---
+description: 属性値の変更に基づいてアクションを開始する (マスター データ サービス)
 title: 属性値の変更に基づいてアクションを開始する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d1f1833bd90afeebf9a655384510bd952a7b4ae1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f1dda8e8683ab06cddc3c30b79d0bbb370f4f230
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388448"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>属性値の変更に基づいてアクションを開始する (マスター データ サービス)
 
@@ -26,12 +27,12 @@ ms.locfileid: "85811742"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性値に対する変更に基づいてアクションを開始するビジネス ルールを作成します。 たとえば、特定の属性値が変更されたときに、値の変更、通知の送信、または外部ワークフローの開始を行うことができます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   属性は、変更の追跡グループに含まれている必要があります。 詳細については、「 [変更の追跡グループに属性を追加する (マスター データ サービス)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 」を参照してください。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "85811742"
   
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Change Tracking グループ &#40;マスターデータサービスに属性を追加&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   

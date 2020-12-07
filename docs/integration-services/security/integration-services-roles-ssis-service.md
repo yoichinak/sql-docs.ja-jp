@@ -1,4 +1,5 @@
 ---
+description: Integration Services のロール (SSIS サービス)
 title: Integration Services のロール (SSIS サービス) | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86ebb4c5420b1fa7abcbae00a190f11023b73b0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd1ad3437f02b0c0df834d3a16365140d9638798
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487754"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
 
@@ -120,7 +121,7 @@ ms.locfileid: "86922088"
   
 4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定し、認証モードを選択します。 ピリオド (.)、(local)、または **localhost** を使用すると、ローカル サーバーを指定できます。  
   
-5.  **[接続]** をクリックします。  
+5.  **[Connect]** をクリックします。  
   
 6.  [データベース]、[システム データベース]、[msdb]、[セキュリティ]、[ロール] を順に展開します。  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86922088"
   
  **sysssispackages** テーブルの **ownersid** 列には、パッケージを作成したユーザーの一意なセキュリティ識別子が表示されます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[パッケージ名]**  
  パッケージの名前を指定します。  
   

@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE (Transact-SQL)
 title: DROP TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -34,15 +35,15 @@ helpviewer_keywords:
 - dropping constraints
 - dropping permissions
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab3e6728560c563b5b3ecf4de03fd9359070f19e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485453"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131085"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.ta
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
@@ -76,7 +77,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。 Azure SQL Database では、4 つの要素で構成された名前はサポートされません。  
   
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、テーブルを削除します。  
   
@@ -86,7 +87,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  削除するテーブル名を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  DROP TABLE を使用して、FOREIGN KEY 制約によって参照されているテーブルを削除することはできません。 まず、参照している FOREIGN KEY 制約または参照テーブルを削除する必要があります。 参照しているテーブルと、主キーを格納しているテーブルの両方を同じ DROP TABLE ステートメントで削除する場合には、参照しているテーブルを先に指定する必要があります。  
   
  任意のデータベースから、複数のテーブルを削除することができます。 削除するテーブルが、同時に削除される別のテーブルの主キーを参照している場合には、外部キーを持つ参照元のテーブルを、参照されている主キーを持つテーブルよりも前に指定する必要があります。  
@@ -110,22 +111,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### <a name="a-dropping-a-table-in-the-current-database"></a>A. 現在のデータベース内のテーブルを削除する  
  次の例では、現在のデータベースから、`ProductVendor1` テーブルとそのデータおよびインデックスを削除します。  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. 他のデータベースのテーブルを削除する  
- 次の例では、`SalesPerson2` データベースにある [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
+ 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースにある `SalesPerson2` テーブルを削除します。 この例は、サーバー インスタンス上にあるどのデータベースからでも実行できます。  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 一時テーブルを削除する  
- 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、**以降で使用できる**IF EXISTS[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 構文は使用しません。  
+ 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で使用できる **IF EXISTS** 構文は使用しません。  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,17 +138,16 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS を使用してテーブルを削除する  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  次の例では、T1 のという名前のテーブルを作成します。 2 番目のステートメントで、テーブルを削除します。 3 番目のステートメントでは、テーブルがすでに削除されているため、何も操作が実行されませんが、エラーは発生しません。  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

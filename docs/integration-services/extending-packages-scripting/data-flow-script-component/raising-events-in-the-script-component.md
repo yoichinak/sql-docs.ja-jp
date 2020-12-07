@@ -1,4 +1,5 @@
 ---
+description: スクリプト コンポーネントでのイベントの発生
 title: スクリプト コンポーネントでのイベントの発生 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 489806f32a35ed4ca72bd2628951e8c6d7e623b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 812a2db47243f48d13dd2adf6f5b8098046f1c40
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193072"
 ---
 # <a name="raising-events-in-the-script-component"></a>スクリプト コンポーネントでのイベントの発生
 
@@ -48,6 +49,5 @@ ms.locfileid: "86915975"
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [パッケージにイベント ハンドラーを追加する](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
-  
+ [パッケージにイベント ハンドラーを追加する](../../integration-services-ssis-event-handlers.md)  
   

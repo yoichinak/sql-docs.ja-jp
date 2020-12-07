@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c790f63ddec2a30d1381459b37b4cfdf9088389
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 22d4a311d38d32fad4910960007223edbe2f9b70
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255585"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364464"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>レポート ビルダー関数 - LookupSet 関数
   名前と値のペアを含むデータセットから、指定された名前に対応する一連の値を返します  
@@ -31,19 +31,19 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (**Variant**) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
+ ( **Variant** ) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
   
  *destination_expression*  
- (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!CustomerID.Value` 」のように入力します。  
+ ( **Variant** ) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!CustomerID.Value` 」のように入力します。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!PhoneNumber.Value` 」のように入力します。  
+ ( **Variant** ) *source_expression* = *destination_expression* であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!PhoneNumber.Value` 」のように入力します。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"ContactInformation" のように指定します。  
   
 ## <a name="return"></a>戻り値  
- **VariantArray**を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
+ **VariantArray** を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
   
 ## <a name="remarks"></a>解説  
  指定したデータセットで、名前と値のペアについて 1 対多のリレーションシップが存在する場合、 **LookupSet** を使用して一連の値を取得します。 たとえば、テーブル内の顧客識別子に対して **LookupSet** を使用して、データ領域にバインドされていないデータセットから、顧客に関連付けられている電話番号をすべて取得することができます。  
@@ -58,7 +58,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   結果式の一連の値を返します。  
   
- 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) を使用します。 一連の値に対して **Lookup** を呼び出すには、[Multilookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) を使用します。  
+ 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md) を使用します。 一連の値に対して **Lookup** を呼び出すには、 [Multilookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md) を使用します。  
   
  次の制限事項が適用されます。  
   
@@ -86,16 +86,18 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」および「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
-## <a name="example"></a>例  
- 次の例では、販売区域の識別子である TerritoryGroupID を含むデータセットにテーブルがバインドされているとします。 別のデータセットである "Stores" には、販売区域の全店舗の一覧が含まれ、販売区域識別子 ID と、店舗名を表す StoreName が含まれています。  
+## <a name="examples"></a>例
+
+ 次の例では、販売区域の識別子である TerritoryGroupID を含むデータセットにテーブルがバインドされていると仮定しています。 別のデータセットである "Stores" には、販売区域の全店舗の一覧が含まれ、販売区域識別子 ID と、店舗名を表す StoreName が含まれています。  
   
+### <a name="a-use-lookupset"></a>A. LookupSet を使用する  
  次の式では、"Stores" という名前のデータセットの各行に対して **LookupSet** を実行し、TerritoryGroupID の値を ID と比較します。 一致するたびに、その行の StoreName フィールドの値が結果セットに追加されます。  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-use-join-to-create-a-result-list"></a>B. Join を使用して結果リストを作成する 
  **LookupSet** はオブジェクトのコレクションを返すため、結果式をテキスト ボックスに直接表示することはできません。 コレクション内の各オブジェクトの値を文字列として連結することはできます。  
   
  一連のオブジェクトから区切り記号付きの文字列を作成するには、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数である **Join** を使用します。 コンマを区切り記号として使用し、オブジェクトを 1 行に結合します。 レンダラーによっては、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の改行 (`vbCrLF`) を区切り記号として使用し、各値を新しい 1 つの行に表示することもできます。  
@@ -106,7 +108,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
 ```  
   
-## <a name="example"></a>例  
+### <a name="c-add-code-to-generate-html"></a>C. HTML を生成するコードを追加する
  数回しか表示されないテキスト ボックスでは、テキスト ボックスの値を表示する HTML を生成するカスタム コードを追加してもよいでしょう。 テキスト ボックス内に HTML を生成すると追加の処理が必要になるため、数千回も表示されるようなテキスト ボックスの場合、この方法はお勧めできません。  
   
  次の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数をレポート定義の Code ブロックにコピーします。 **MakeList** では、 *result_expression* で返されたオブジェクト配列を受け取り、HTML タグを使用して、順序指定されないリストを生成します。 **Length** は、オブジェクト配列内の項目数を返します。  
@@ -138,7 +140,7 @@ Function Length(ByVal items as Object()) as Integer
 End Function  
 ```  
   
-## <a name="example"></a>例  
+### <a name="d-call-the-function"></a>D. 関数を呼び出す
  HTML を生成するには、関数を呼び出す必要があります。 次の式をテキスト ボックスの Value プロパティに貼り付け、テキストのマークアップの種類を HTML に設定します。 詳細については、「[レポートへの HTML の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)」を参照してください。  
   
 ```  

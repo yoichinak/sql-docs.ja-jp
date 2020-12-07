@@ -1,4 +1,5 @@
 ---
+description: addBatch メソッド (SQLServerPreparedStatement)
 title: addBatch メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1d52927c2cde518910a32a7ca9dfb609f8c1a2b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d890003a4126ddcdaac64933ee885401b6a3cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438254"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80922994"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[addBatch ()](../../../connect/jdbc/reference/addbatch-method.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトへのコマンド バッチにパラメーターのセットを追加します。|  
 |[addBatch (java.lang.String)](../../../connect/jdbc/reference/addbatch-method-java-lang-string.md)|渡された SQL コマンドを、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) オブジェクトの現在のコマンド一覧に追加します。|  

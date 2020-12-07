@@ -1,4 +1,5 @@
 ---
+description: dm_server_registry (Transact-sql)
 title: dm_server_registry (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e4de0271647e20a56942e17b8ba52520d1a169f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48fc4cbb0967e757308d876a68d3580bcf72c4c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898629"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89530579"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>dm_server_registry (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "85898629"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|registry_key|**nvarchar(256)**|レジストリキーの名前。 NULL 値が許可されます。|  
-|value_name|**nvarchar(256)**|キー値の名前。 これは、レジストリエディターの [**名前**] 列に表示される項目です。 NULL 値が許可されます。|  
-|value_data|**sql_variant**|キー データの値。 これは、指定されたエントリのレジストリエディターの**データ**列に表示される値です。 NULL 値が許可されます。|  
+|registry_key|**nvarchar (256)**|レジストリキーの名前。 NULL 値が許可されます。|  
+|value_name|**nvarchar (256)**|キー値の名前。 これは、レジストリエディターの [ **名前** ] 列に表示される項目です。 NULL 値が許可されます。|  
+|value_data|**sql_variant**|キー データの値。 これは、指定されたエントリのレジストリエディターの **データ** 列に表示される値です。 NULL 値が許可されます。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -52,7 +53,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>B: SQL Server エージェントのレジストリ キーの値を表示します。  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>B. SQL Server エージェントのレジストリ キーの値を表示します。  
  次の例では、SQL Server の現在のインスタンスについて SQL Server エージェントのレジストリ キーの値を返します。  
   
 ```  
@@ -61,7 +62,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SQLAgent%';  
 ```  
   
-### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>C: SQL Server のインスタンスの現在のバージョンを表示します。  
+### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>C. SQL Server のインスタンスの現在のバージョンを表示します。  
  次の例では、SQL Server の現在のインスタンスのバージョンを返します。  
   
 ```  
@@ -70,7 +71,7 @@ FROM sys.dm_server_registry
 WHERE value_name = N'CurrentVersion';  
 ```  
   
-### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D: スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを表示します。  
+### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを表示します。  
  次の例では、スタートアップ中に SQL Server のインスタンスに渡されるパラメーターを返します。  
   
 ```  
@@ -88,7 +89,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [dm_server_services &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

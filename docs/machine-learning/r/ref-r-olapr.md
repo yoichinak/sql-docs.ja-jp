@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 844489b4c9f3e0e92848ebb1c9cb3b725ac5fedd
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: f34a6d26e48c1a77d7e289b197495d707bb9fd12
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406165"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956873"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR (SQL Server Machine Learning Services の R パッケージ)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **olapR** は、Microsoft が提供する R パッケージであり、SQL Server Analysis Services OLAP キューブに対する MDX クエリに使用されます。 関数はすべての MDX 操作をサポートするわけではありませんが、ディメンションに対してスライス、ダイス、ドリルダウン、ロールアップ、およびピボットを行うクエリを作成できます。 このパッケージは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) と [SQL Server 2016 R Services](sql-server-r-services.md) に含まれています。
 
@@ -36,7 +36,7 @@ library(olapR)
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**olapr** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
+**olapr** パッケージは、複数の Microsoft 製品で配布されていますが、このパッケージを SQL Server または別の製品のどちらで取得しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](/machine-learning-server/r-reference/olapr/olapr)は Microsoft Machine Learning Server の [R リファレンス](/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="availability-and-location"></a>可用性と場所
 

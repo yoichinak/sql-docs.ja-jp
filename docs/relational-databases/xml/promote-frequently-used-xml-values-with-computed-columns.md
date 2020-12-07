@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772092"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891942"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージド クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
   
 > [!NOTE]  
->  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)」を参照してください。  
+>  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](../clr-integration/clr-integration-architecture-clr-hosted-environment.md)」を参照してください。  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>参照  
  [計算列での XML の使用](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   

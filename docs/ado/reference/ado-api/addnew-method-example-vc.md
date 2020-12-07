@@ -1,8 +1,9 @@
 ---
+description: AddNew メソッドの例 (VC++)
 title: AddNew メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d47003a392ade09b1ba4d83c5dccfb1538364f1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d53033550d087844c429230c036aa1bf11e144a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760608"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976693"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew メソッドの例 (VC++)
-この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを使用して、指定した名前の新しいレコードを作成します。  
+この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。  
   
 ```  
 // BeginAddNewCpp.cpp  
@@ -214,5 +215,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew メソッド (ADO)](./addnew-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

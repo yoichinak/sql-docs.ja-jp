@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - DRILLTHROUGH
 title: ドリルスルーステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891203"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196186"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
 
@@ -41,17 +42,17 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  ディメンションの属性とメジャーのコンマ区切りの一覧です。  
   
-## <a name="remarks"></a>Remarks  
- ドリルスルーとは、エンドユーザーがキューブから1つのセルを選択し、より詳細な情報を取得するためにそのセルのソースデータから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンドユーザーがドリルスルーを行うには、クライアントアプリケーションがこの機能をサポートしている必要があります。 で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、ROLAP パーティションまたはディメンションに対してクエリを実行しない限り、結果は MOLAP ストレージから直接取得されます。  
+## <a name="remarks"></a>注釈  
+ ドリルスルーとは、エンドユーザーがキューブから1つのセルを選択し、より詳細な情報を取得するためにそのセルのソースデータから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンドユーザーがドリルスルーを行うには、クライアントアプリケーションがこの機能をサポートしている必要があります。 では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ROLAP パーティションまたはディメンションに対してクエリを実行しない限り、結果は MOLAP ストレージから直接取得されます。  
   
 > [!IMPORTANT]  
 >  ドリルスルーのセキュリティは、キューブで定義された全般的なセキュリティ オプションに基づいています。 ユーザーが MDX を使用して一部のデータを取得できない場合、ドリルスルーでも同じ方法でユーザーが制限されます。  
   
  対象のセルは、MDX ステートメントによって指定します。 **MAXROWS**引数で指定された値は、結果の行セットによって返される行の最大数を示します。  
   
- 既定では、返される行の最大数は1万行です。 つまり、 **MAXROWS**を指定しないままにした場合、1万行以下になります。 この値がシナリオに対して小さすぎる場合は、 **MAXROWS**をなどのより大きい数値に設定`MAXROWS 20000`できます。 全体が少なすぎる場合は、 **OLAP\Query\DefaultDrillthroughMaxRows**サーバーのプロパティを変更することで、既定値を増やすことができます。 このプロパティの変更の詳細については、「 [Analysis Services のサーバープロパティ](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)」を参照してください。  
+ 既定では、返される行の最大数は1万行です。 つまり、 **MAXROWS** を指定しないままにした場合、1万行以下になります。 この値がシナリオに対して小さすぎる場合は、 **MAXROWS** をなどのより大きい数値に設定でき `MAXROWS 20000` ます。 全体が少なすぎる場合は、 **OLAP\Query\DefaultDrillthroughMaxRows** サーバーのプロパティを変更することで、既定値を増やすことができます。 このプロパティの変更の詳細については、「 [Analysis Services のサーバープロパティ](/analysis-services/server-properties/server-properties-in-analysis-services)」を参照してください。  
   
- 特に指定しない限り、返される列には、多対多ディメンション以外の、指定したメジャーのメジャーグループに関連付けられているすべてのディメンションのすべての粒度属性が含まれます。 ディメンションとメジャーグループを区別するために、キューブディメンションの前に $ が付きます。 **RETURN**句は、ドリルスルークエリによって返される列を指定するために使用します。 次の関数は、 **RETURN**句によって1つの属性またはメジャーに適用できます。  
+ 特に指定しない限り、返される列には、多対多ディメンション以外の、指定したメジャーのメジャーグループに関連付けられているすべてのディメンションのすべての粒度属性が含まれます。 ディメンションとメジャーグループを区別するために、キューブディメンションの前に $ が付きます。 **RETURN**句は、ドリルスルークエリによって返される列を指定するために使用します。 次の関数は、 **RETURN** 句によって1つの属性またはメジャーに適用できます。  
   
  Name(attribute_name)  
  指定された属性メンバーの名前を返します。  
@@ -97,6 +98,5 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
+ [Mdx&#41;&#40;MDX データ操作ステートメント ](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

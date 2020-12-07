@@ -1,4 +1,5 @@
 ---
+description: 除算演算子の参照
 title: 8060(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0d6947e1e0b4dc45d56980b734c2de98d8ad24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484025"
 ---
 # <a name="divide---mdx-operator-reference"></a>除算演算子の参照
 
@@ -37,12 +38,12 @@ Dividend / Divisor
 ## <a name="return-value"></a>戻り値  
  優先順位の高いパラメーターのデータ型を持つ値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **/(除算)** 演算子によって返される実際の値は、最初の式が2番目の式で除算された商を表します。  
   
  両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 *除数*が null 値に評価される場合、演算子はエラーを発生させます。 *除数*と*被除数*の両方が null 値に評価される場合、演算子は null 値を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この演算子の使用例を次に示します。  
   
 ```  

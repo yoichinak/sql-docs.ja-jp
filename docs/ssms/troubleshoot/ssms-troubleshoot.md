@@ -1,4 +1,5 @@
 ---
+description: SQL Server Management Studio (SSMS) がクラッシュした後に診断データを取得する
 title: SSMS でのシステムの応答停止またはクラッシュのトラブルシューティング
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -7,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.reviewer: dnethi
+ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091298"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035908"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SQL Server Management Studio (SSMS) がクラッシュした後に診断データを取得する
 
@@ -27,7 +28,7 @@ SQL Server Management Studio (SSMS) が応答停止またはクラッシュし�
 
 診断情報を取得して SSMS のクラッシュまたは応答停止のトラブルシューティングを行うには、以下の手順を行います。
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
+1. [ProcDump](/sysinternals/downloads/procdump) をダウンロードします。
 
 2. ダウンロードしたものをフォルダーに解凍します。
 
@@ -61,7 +62,7 @@ OutOfMemoryException がスローされるとき、SSMS の完全メモリ ダ�
 
 SSMS から OutOfMemoryException の問題を解決するための診断情報を取得するには、以下の手順を行います。
 
-1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
+1. [ProcDump](/sysinternals/downloads/procdump) をダウンロードします。
 
 2. ダウンロードしたものをフォルダーに解凍します。
 

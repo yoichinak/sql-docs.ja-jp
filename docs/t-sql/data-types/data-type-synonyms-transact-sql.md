@@ -1,4 +1,5 @@
 ---
+description: データ型のシノニム (Transact-SQL)
 title: データ型のシノニム (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732865"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126292"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +35,17 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** _n_ **)**|**char(n)**|  
-|**character varying(** _n_ **)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(** n **)** ] for _n_ = 1-7|**real**|  
-|**float**[ **(** n **)** ] for _n_ = 8-15|**float**|  
+|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
+|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(** _n_ **)**|**nchar(n)**|  
-|**national char(** _n_ **)**|**nchar(n)**|  
-|**national character varying(** _n_ **)**|**nvarchar(n)**|  
-|**national char varying(** _n_ **)**|**nvarchar(n)**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   

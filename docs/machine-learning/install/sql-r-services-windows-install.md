@@ -4,34 +4,35 @@ titleSuffix: ''
 description: Windows に SQL Server 2016 R Services をインストールする方法について説明します。 R Services を使用すると、データベース内で R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1aa6fee67871e705f915f72a178ee4d0e4c562e6
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246421"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956771"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Windows に SQL Server 2016 R Services をインストールする方法について説明します。 R Services を使用すると、データベース内で R スクリプトを実行できます。
 
 > [!NOTE]
-> SQL Server 2017 以降で、R は Python と共に [Machine Learning Services](../sql-server-machine-learning-services.md) に含まれています。 R を使用したい場合、SQL Server 2017 以降をお持ちの場合は、[SQL Server Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)に関するページを参照してこの機能を追加してください。
+> SQL Server 2017 以降で、R は Python と共に [Machine Learning Services](../sql-server-machine-learning-services.md) に含まれています。 R が必要な場合、SQL Server 2017 以降をお持ちの場合は、[SQL Server Machine Learning Services のインストール](sql-machine-learning-services-windows-install.md)に関するページを参照して、この機能を追加してください。
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
 + データベース エンジンのインスタンスが必要です。 R だけをインストールすることはできませんが、既存のインスタンスに段階的に追加することはできます。
 
-+ ビジネス継続性のために、R Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに R Services をインストールし、パッケージを構成する必要があります。
++ ビジネス継続性のために、R Services では [Always On 可用性グループ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)がサポートされています。 各ノードに R Services をインストールし、パッケージを構成する必要があります。
 
 + SQL Server Always On フェールオーバー クラスター インスタンス (FCI) に R Services をインストールしないでください。 R プロセスを分離に使用されるセキュリティ上のメカニズムは、SQL Server Always On フェールオーバー クラスター インスタンス (FCI) 環境との互換性がありません。
 
@@ -90,7 +91,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
     + データベース エンジン サービス
     + R Services (データベース内)
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。
 
 ## <a name="set-environment-variables"></a>環境変数の設定
 
@@ -109,7 +110,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 ##  <a name="enable-script-execution"></a>スクリプトの実行を有効にする
 
-1. [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) または [Azure Data Studio](../../azure-data-studio/what-is.md) を開きます。
+1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) または [Azure Data Studio](../../azure-data-studio/what-is.md) を開きます。
 
 1. R Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリ ウィンドウを開き、次のコマンドを実行します。
 
@@ -180,7 +181,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server 2016 初回リリース、SQL Server 2016 SP 1、または SQL Server 2016 SP 2。
 
-1. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+1. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 1. 最新の Service Pack (ベースライン インスタンスとしてまだインストールされていない) と累積更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出されます。
 
@@ -188,7 +189,10 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 1. ウィザードを続行し、R ディストリビューションのライセンス条項に同意します。
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> SQL Server 2016 SP2 の累積的な更新プログラム (CU) 14 以降には、より新しいバージョンの R ランタイムが含まれています。 詳細については、[既定の言語ランタイム バージョンの変更](change-default-language-runtime-version.md)に関するページを参照してください。
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>追加構成
 
@@ -201,7 +205,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 * [SQL Server Machine Learning Services のファイアウォール構成](../../machine-learning/security/firewall-configuration.md)。
 * [追加のネットワーク プロトコルの有効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 * [リモート接続の有効化](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)。
-* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)。
+* ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](/windows/desktop/fileio/managing-disk-quotas)。
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>
@@ -212,7 +216,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 * [データベース ユーザーとしての SQLRUserGroup の追加](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> リストされたすべての変更が必要となるとは限りません。すべて不必要な場合もあります。 必要となるかどうかは、SQL Server をインストールしたセキュリティ スキーマと、ユーザーをどのようにデータベースに接続して外部スクリプトを実行させるかによって異なります。 その他のトラブルシューティングのヒントについては、こちらを参照してください: [アップグレードとインストールに関してよく寄せられる質問](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> リストされたすべての変更が必要となるとは限りません。すべて不必要な場合もあります。 必要となるかどうかは、SQL Server をインストールしたセキュリティ スキーマと、ユーザーをどのようにデータベースに接続して外部スクリプトを実行させるかによって異なります。 インストールに関するその他のガイダンスについては、次を参照してください。[SQL Server Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>推奨される最適化
 

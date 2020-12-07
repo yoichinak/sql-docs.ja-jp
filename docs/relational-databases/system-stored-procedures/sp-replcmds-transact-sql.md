@@ -1,4 +1,5 @@
 ---
+description: sp_replcmds (Transact-sql)
 title: sp_replcmds (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec1209e23885026c4f64994d5b0605e36e6fde5d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645643"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538615"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @maxtrans = ] maxtrans`情報を返すトランザクションの数を指定します。 *maxtrans*は**int**,、既定値は**1**,、ディストリビューションを待機している次のトランザクションを指定します。  
+`[ @maxtrans = ] maxtrans` 情報を返すトランザクションの数を指定します。 *maxtrans* は **int**,、既定値は **1**,、ディストリビューションを待機している次のトランザクションを指定します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -61,24 +62,24 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
 |**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。|  
   
-## <a name="remarks"></a>Remarks  
- **sp_replcmds**は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replcmds** は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
   
- レプリケーションでは、指定されたデータベース内の**sp_replcmds**を実行する最初のクライアントがログリーダーとして扱われます。  
+ レプリケーションでは、指定されたデータベース内の **sp_replcmds** を実行する最初のクライアントがログリーダーとして扱われます。  
   
  このプロシージャでは、所有者によって修飾されたテーブルのコマンドを生成したり、テーブル名を修飾したりすることはできません (既定)。 修飾されたテーブル名を追加すると、あるデータベースの特定のユーザーが所有するテーブルから、別のデータベースの同じユーザーが所有するテーブルにデータをレプリケートできます。  
   
 > [!NOTE]  
 >  レプリケーション元データベースのテーブル名は、所有者名により限定されるので、レプリケーション先データベースのテーブルの所有者も同じ所有者名である必要があります。  
   
- クライアントが同じデータベース内で**sp_replcmds**を実行しようとすると、最初のクライアントが切断されるまで、エラー18752が発生します。 最初のクライアントが切断されると、別のクライアントが**sp_replcmds**を実行し、新しいログリーダーになります。  
+ クライアントが同じデータベース内で **sp_replcmds** を実行しようとすると、最初のクライアントが切断されるまで、エラー18752が発生します。 最初のクライアントが切断されると、別のクライアントが **sp_replcmds**を実行し、新しいログリーダーになります。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] テキストポインターが同じトランザクションで取得されなかったために**sp_replcmds**がテキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの両方に警告メッセージ番号18759が追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replcmds**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーメッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: f6aef5ff65ee10c01cecd012eb1f35d5b2aab136
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823780"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195174"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージの実行スケジュールを設定する
 
@@ -44,13 +44,13 @@ SQL Server Management Studio (SSMS) では、SSIS カタログ データベー�
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> SQL Database エラスティック ジョブを使用してパッケージをスケジュールする
 
-SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
+SQL Database のエラスティック ジョブに関する詳細については、「[スケールアウトされたクラウド データベースの管理](/azure/sql-database/sql-database-elastic-jobs-overview)」を参照してください。
 
 ### <a name="prerequisites"></a>前提条件
 
 エラスティック ジョブを使用して、Azure SQL Database サーバー上の SSISDB カタログ データベースに格納されている SSIS パッケージをスケジュール設定するには、事前に次の作業を行う必要があります。
 
-1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
+1.  Elastic Database ジョブ コンポーネントをインストールして構成します。 詳細については、「[Elastic Database ジョブのインストールの概要](/azure/sql-database/sql-database-elastic-jobs-service-installation)」を参照してください。
 
 2. ジョブで SSIS カタログ データベースにコマンドを送信するために使用できるデータベース スコープの資格情報を作成します。 詳細については、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープの資格情報を作成する (Transact-SQL)) を参照してください。
 
@@ -59,33 +59,33 @@ SQL Database のエラスティック ジョブに関する詳細については
 次の例に示されているスクリプトと同じような Transact-SQL スクリプトを使用して、ジョブを作成します。
 
 ```sql
--- Create Elastic Jobs target groupÂ 
-EXECÂ jobs.sp_add_target_group 'TargetGroup'Â 
+-- Create Elastic Jobs target group
+EXEC jobs.sp_add_target_group 'TargetGroup'
 
--- Add Elastic Jobs target group memberÂ 
-EXECÂ jobs.sp_add_target_group_memberÂ @target_group_name='TargetGroup',Â 
-    @target_type='SqlDatabase',Â @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB'Â 
+-- Add Elastic Jobs target group member
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup',
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
 
 -- Add a job to schedule SSIS package execution
-EXECÂ jobs.sp_add_jobÂ @job_name='ExecutePackageJob',Â @description='Description',Â 
-    @schedule_interval_type='Minutes',Â @schedule_interval_count=60
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXECÂ jobs.sp_add_jobstepÂ @job_name='ExecutePackageJob',Â 
-    @command=N'DECLAREÂ @exe_idÂ bigintÂ 
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1,Â 
-            @execution_id=@exe_idÂ OUTPUT       Â 
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0',Â 
-    @credential_name='YourDBScopedCredentials',Â 
-    @target_group_name='TargetGroup'Â 
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
 
--- Enable the job scheduleÂ 
-EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
-    @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
 ## <a name="schedule-a-package-with-sql-server-agent-on-premises"></a><a name="agent"></a> オンプレミス SQL Server エージェントを使用してパッケージのスケジュールを設定する
@@ -145,17 +145,17 @@ SQL Server エージェントの詳細については、「[パッケージに�
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE @return_valueÂ int,Â @exe_idÂ bigintÂ 
+    DECLARE @return_value int, @exe_id bigint 
 
-    EXEC @return_valueÂ =Â [YourLinkedServer].[SSISDB].[catalog].[create_execution]Â 
-        @folder_name=N'folderName',Â @project_name=N'projectName',Â 
-        @package_name=N'packageName',Â @use32bitruntime=0,Â @runincluster=1,Â @useanyworker=1,
-        @execution_id=@exe_idÂ OUTPUTÂ 
+    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
+        @folder_name=N'folderName', @project_name=N'projectName', 
+        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
+        @execution_id=@exe_id OUTPUT 
 
     EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
         @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution]Â @execution_id=@exe_id
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
     ```
 
 6.  ジョブの構成とスケジュール設定を完了します。
@@ -166,17 +166,17 @@ SSIS パッケージを実行する Azure Data Factory パイプラインの実�
 
 Data Factory パイプラインをスケジュールするには、次のトリガーの 1 つを使用します。
 
-- [スケジュール トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [スケジュール トリガー](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [タンブリング ウィンドウ トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [タンブリング ウィンドウ トリガー](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [イベントベース トリガー](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [イベントベース トリガー](/azure/data-factory/how-to-create-event-trigger)
 
 Data Factory パイプラインの一部として SSIS パッケージを実行するには、次のアクティビティのいずれかを使用します。
 
-- [SSIS パッケージの実行アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
+- [SSIS パッケージの実行アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
 
-- [ストアド プロシージャ アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
+- [ストアド プロシージャ アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>次のステップ
 

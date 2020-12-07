@@ -1,4 +1,5 @@
 ---
+description: カスタム タスクでのデータ ソースへの接続
 title: カスタム タスクでのデータ ソースへの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0aae0f18eae8d982adb933cf3d7d720e26ece9ab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2b325cb8ac36c5bf1ce9b267e9cba64d1249dff2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916371"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195244"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>カスタム タスクでのデータ ソースへの接続
 
@@ -141,6 +142,5 @@ End Function
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [接続マネージャーを作成する](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
-  
+ [接続マネージャーを作成する](../../connection-manager/integration-services-ssis-connections.md)  
   

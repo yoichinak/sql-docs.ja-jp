@@ -1,4 +1,5 @@
 ---
+description: '[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)'
 title: '[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)'
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,26 +14,26 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 5031cafdcb62d840d26950682d3490e5f252ee72
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123073"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037245"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] ([接続プロパティ] ページ) (データベース エンジン)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 このタブを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde_md.md)] を**登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde_md.md)]のみがこのダイアログ ボックスに表示されます。  
   
-**[データベースへの接続]**  
+**データベースへの接続**  
 接続するデータベースを一覧から選択します。 **[<default>]** を選択した場合、サーバーの既定のデータベースに接続されます。 **[<Browse server>]** を選択した場合は、サーバーを参照して接続先データベースを指定できます。  
   
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] を通じて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスに接続する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、 **[サーバーへの接続]** ダイアログ ボックスの **[接続プロパティ]** タブでデータベースを指定する必要があります。 **[暗号化接続]** チェック ボックスがオンになっていることを確認してください。  
   
 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **master**に接続されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] に接続する場合、ユーザー データベースを指定すると、オブジェクト エクスプローラーにそのデータベースとそのオブジェクトのみが表示されます。 **master** に接続すると、すべてのデータベースを表示できるようになります。 詳しくは、[Microsoft Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)に関する記事をご覧ください。  
   
-**[ネットワーク プロトコル]**  
+**ネットワーク プロトコル**  
 一覧からプロトコルを選択します。 使用できるクライアント プロトコルは、[コンピューターの管理] の [クライアント ネットワーク構成] を使用して設定されます。  
   
 **[ネットワーク パケット サイズ]**  
@@ -44,7 +45,7 @@ ms.locfileid: "87123073"
 **[実行タイムアウト]**  
 タスクの実行がサーバーで完了するまで待機する秒数を入力します。 既定値は 0 秒です。つまり、タイムアウトはありません。  
   
-**[暗号化接続]**  
+**接続を暗号化する**  
 接続の暗号化を強制します。  
   
 **[作成した色を使用する]**  
@@ -75,5 +76,4 @@ ms.locfileid: "87123073"
 **登録済みサーバー**に設定を保存します。  
   
 ## <a name="see-also"></a>参照  
-[[接続プロパティ] ダイアログ ボックス](../../ssms/f1-help/connection-properties-dialog-box.md)  
-  
+[[接続プロパティ] ダイアログ ボックス]()  

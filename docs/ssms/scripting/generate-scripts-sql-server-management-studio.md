@@ -3,7 +3,7 @@ title: スクリプトの生成
 description: スクリプトの生成とパブリッシュ ウィザードを使用して、複数のオブジェクトの Transact-SQL スクリプトを作成する方法と、オブジェクト エクスプローラーの [スクリプト化] メニューを使用して、個々のオブジェクトまたは複数のオブジェクトのスクリプトを生成する方法について説明します。
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123133"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039006"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
 
@@ -25,7 +25,7 @@ ms.locfileid: "87123133"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 複数のオブジェクト用のスクリプトは、**スクリプトの生成とパブリッシュ ウィザード**を使用して作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]** メニューを使用して生成することもできます。
 
-SQL Server Management Studio (SSMS) を使用してさまざまなオブジェクトのスクリプトを作成する方法の詳細なチュートリアルについては、[チュートリアル:SSMS でのスクリプトの作成](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)に関するページをご覧ください。
+SQL Server Management Studio (SSMS) を使用してさまざまなオブジェクトのスクリプトを作成する方法の詳細なチュートリアルについては、[チュートリアル:SSMS でのスクリプトの作成](../tutorials/scripting-ssms.md)に関するページをご覧ください。
 
 ## <a name="before-you-begin"></a>はじめに
 
@@ -33,7 +33,7 @@ SQL Server Management Studio (SSMS) を使用してさまざまなオブジェ�
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> スクリプトの生成とパブリッシュ ウィザード
 
-**スクリプトの生成とパブリッシュ ウィザード** を使用し、多数のオブジェクトの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを作成できます。 このウィザードでは、データベース内の全オブジェクトのスクリプトを生成することも、選択したオブジェクトのサブセットのスクリプトを生成することもできます。 ウィザードには、権限、照合順序、制約、その他を含めるかどうかなど、スクリプトのさまざまなオプションがあります。 ウィザードの使用方法の詳細については、「 [スクリプトの生成とパブリッシュ ウィザード](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)」を参照してください。
+**スクリプトの生成とパブリッシュ ウィザード** を使用し、多数のオブジェクトの [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを作成できます。 このウィザードでは、データベース内の全オブジェクトのスクリプトを生成することも、選択したオブジェクトのサブセットのスクリプトを生成することもできます。 ウィザードには、権限、照合順序、制約、その他を含めるかどうかなど、スクリプトのさまざまなオプションがあります。 ウィザードの使用方法の詳細については、「 [スクリプトの生成とパブリッシュ ウィザード](./generate-and-publish-scripts-wizard.md)」を参照してください。
   
 ### <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> オブジェクト エクスプローラーの [スクリプト化] メニュー
 
@@ -67,7 +67,7 @@ SQL Server Management Studio (SSMS) を使用してさまざまなオブジェ�
 
 4. **F7** キーを押すか、 **[表示]** メニューの **[オブジェクト エクスプローラーの詳細]** をクリックして、 **[オブジェクト エクスプローラーの詳細]** ペインを開きます。
 
-    ![オブジェクト エクスプローラー](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![[View] メニュー](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. スクリプトを作成するオブジェクトのいずれかを左クリックします。
 
@@ -75,4 +75,4 @@ SQL Server Management Studio (SSMS) を使用してさまざまなオブジェ�
 
 7. 選択したオブジェクトのいずれかを右クリックし、 **[\<object type> をスクリプト化]** を選択します。
 
-    ![オブジェクト エクスプローラー](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![詳細](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

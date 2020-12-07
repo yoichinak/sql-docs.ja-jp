@@ -1,4 +1,5 @@
 ---
+description: 失敗した SQL Server のインストールの修復
 title: 失敗した SQL Server のインストールの修復 | Microsoft Docs
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
@@ -8,15 +9,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7524ea73ce04db70b75df3b8a4306c7304f475de
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900315"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125814"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>失敗した SQL Server のインストールの修復
 
@@ -48,7 +49,7 @@ ms.locfileid: "85900315"
   
 - 修復は個々のクラスター ノードで実行する必要があります。 
   
-- 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、 **[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。 
+- 準備操作に失敗した後でフェールオーバー クラスター ノードを修復するには、**[ノードの削除]** を使用してから準備手順をもう一度実行します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。 
   
 ## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>インストール センターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の失敗したインストールを修復する 
   
@@ -81,6 +82,5 @@ ms.locfileid: "85900315"
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
- [インストール方法に関する記事](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [インストール方法に関する記事](/previous-versions/sql/)  
   

@@ -3,21 +3,21 @@ title: リソース プールの作成
 description: SQL Server Machine Learning Services で、Python および R のワークロードを管理するためにリソース プールを作成して使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902324"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283763"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のリソース プールを作成する
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server Machine Learning Services で、Python および R のワークロードを管理するためにリソース プールを作成して使用する方法について説明します。 
 
@@ -57,7 +57,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     |-|-|-|-|-|-|
     |2|既定値 (default)|100|20|0|2|
  
-3.  これらのサーバーの既定の設定では、外部ランタイムが大半のタスクを完了するにはリソース不足になる可能性があります。 これを変更するには、サーバーのリソース使用率を次のように変更する必要があります。
+3.  これらのサーバーの既定の設定では、外部ランタイムが大半のタスクを完了するにはリソース不足になる可能性があります。 リソースを改善するには、サーバーのリソース使用率を次のように変更する必要があります。
   
     -   データベース エンジンが使用できるコンピューターの最大メモリを減らす
   
@@ -71,7 +71,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  同様に、次のステートメントを実行して、外部プロセスによるメモリの使用量をコンピューター リソース全体の **40%** に制限します。
+2. 次のステートメントを実行して、外部プロセスによるメモリの使用量をコンピューター リソース全体の **40%** に制限します。
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -88,11 +88,11 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>ユーザー定義の外部リソース プールを作成する
   
-1.  リソース ガバナーの構成に対する変更はサーバー全体に適用され、サーバーの既定のプールを使用するワークロードだけではなく、外部プールを使用するワークロードにも影響します。
+1.  リソース ガバナーの構成に対するすべての変更は、サーバー全体に適用されます。 この変更は、サーバーの既定のプールを使用するワークロードだけではなく、外部プールを使用するワークロードにも影響します。
   
-     そのため、優先するワークロードを細かく制御するために、新しいユーザー定義の外部リソース プールを作成できます。 さらに、分類子関数を定義して、外部リソース プールに割り当てる必要があります。 **EXTERNAL** キーワードは新規のキーワードです。
+     優先するワークロードを細かく制御するために、新しいユーザー定義の外部リソース プールを作成できます。 分類子関数を定義して、外部リソース プールに割り当てます。 **EXTERNAL** キーワードは新規のキーワードです。
   
-     新しい "*ユーザー定義の外部リソース プール*" の作成から始めます。 次の例では、プールに **ds_ep** という名前を付けています。
+     新しい*ユーザー定義の外部リソース プール*を作成します。 次の例では、プールに **ds_ep** という名前を付けています。
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -105,12 +105,13 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     ```
   
      要求は、要求を分類することができない場合、またはその他の分類エラーが発生した場合は、既定のグループに割り当てられます。
-  
-     詳細については、「[Resource Governor Workload Group (リソース ガバナー ワークロード グループ)](../../relational-databases/resource-governor/resource-governor-workload-group.md)」と「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41; (ワークロード グループの作成 (TRANSACT-SQL))](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。
+
+ 
+詳細については、「[Resource Governor Workload Group (リソース ガバナー ワークロード グループ)](../../relational-databases/resource-governor/resource-governor-workload-group.md)」と「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41; (ワークロード グループの作成 (TRANSACT-SQL))](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。
   
 ## <a name="create-a-classification-function-for-machine-learning"></a>機械学習用の分類子関数を作成する
   
-分類子関数は、受信タスクを検査して、タスクが現在のリソース プールを使用して実行できるかどうかを決定します。 分類子関数の条件を満たしていないタスクは、サーバーの既定のリソース プールに割り当てられます。
+分類子関数は、受信タスクを検査します。 タスクが現在のリソース プールを使用して実行できるものかどうかを判定します。 分類子関数の条件を満たしていないタスクは、サーバーの既定のリソース プールに割り当てられます。
   
 1. リソース ガバナーが分類子関数を使用してリソース プールを決定するように指定することから始めます。 分類子関数のプレースホルダーとして **null** を割り当てることができます。
   
@@ -149,7 +150,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>新しいリソース プールとアフィニティを確認する
 
-変更が加えられたことを確認するには、これらのインスタンス リソース プールに関連付けられている各ワークロード グループのサーバー メモリと CPU の構成を確認する必要があります。
+各ワークロードグループのサーバー メモリの構成と CPU を確認します。 以下を参照して、インスタンス リソースの変更が行われたことを確認します。
 
 + [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー用の既定のプール
 + 外部プロセス用の既定のリソース プール
@@ -165,8 +166,8 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|内部|Medium|25|0|0|0|0|1|2|
-    |2|既定値 (default)|Medium|25|0|0|0|0|2|2|
+    |1|internal|Medium|25|0|0|0|0|1|2|
+    |2|default|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
 2.  新しいカタログ ビュー [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) を使用して、すべての外部リソース プールを表示します。
@@ -179,7 +180,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     
     |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
-    |2|既定値 (default)|100|20|0|2|
+    |2|default|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      詳細については、「[Resource Governor Catalog Views &#40;Transact-SQL&#41; (リソース ガバナーのカタログ ビュー (Transact-SQL))](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)」を参照してください。
@@ -190,7 +191,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     ここでは、プールは、AUTO のアフィニティで作成されたため、情報は表示されません。 詳細については、「 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)」を参照してください。
+     プールが AUTO のアフィニティで作成されたため、情報は表示されません。 詳細については、「 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -1,6 +1,6 @@
 ---
 title: ISQLServerErrorInfo::GetErrorInfo (OLE DB ドライバー) | Microsoft Docs
-description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
+description: ISQLServerErrorInfo::GetErrorInfo メソッドから OLE DB Driver for SQL Server SSERRORINFO 構造体のポインターと SQL Server エラーの詳細が返されるしくみについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - GetErrorInfo method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 89a6bab95fa43deb3536e25a7cb99610413b1848
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b365238ad6941bf82c8b130e56313313d9e814fa
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244455"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081551"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +90,5 @@ SSERRORINFO;
  構造体内のポインターは、*ppErrorStrings* 引数に返される文字列内のアドレスを指します。  
   
 ## <a name="see-also"></a>参照  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
-  
   

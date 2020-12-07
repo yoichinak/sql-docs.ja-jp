@@ -1,6 +1,7 @@
 ---
+description: ネイティブ モードのレポート サーバーでの TLS 接続の構成
 title: ネイティブ モードのレポート サーバーでの TLS 接続の構成 | Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 09/27/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -10,15 +11,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886499"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934768"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの TLS 接続の構成
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 トランスポート層セキュリティ (TLS) は、以前は Secure Sockets Layer (SSL) と呼ばれていました。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 トランスポート層セキュリティ (TLS) は、以前は Secure Sockets Layer (SSL) と呼ばれていました。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、[SharePoint 2010 Web アプリケーションで TLS を有効にする方法](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)に関するページを参照してください。  
@@ -82,12 +86,12 @@ ms.locfileid: "82886499"
   
  TLS バインドは Microsoft Windows の共有リソースです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーや、IIS マネージャーなどのその他のツールを使用して行われた変更は、同じコンピューター上の他のアプリケーションに影響を与えます。 バインドを編集するには、バインドを作成するときに使用したものと同じツールを使用することをお勧めします。  たとえば、Configuration Manager を使用して TLS バインドを作成した場合は、Configuration Manager を使用してバインドのライフ サイクルを管理することをお勧めします。 IIS マネージャーを使用してバインドを作成した場合は、IIS マネージャーを使用してバインドのライフ サイクルを管理することをお勧めします。 コンピューターに IIS をインストールしてから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールする場合は、IIS で TLS 構成を確認してから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を構成してください。  
   
- Reporting Services Configuration Manager を使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対する TLS バインドを削除すると、インターネット インフォメーション サービス (IIS) が実行されているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して、TLS が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** このレジストリ キーが削除されると、IIS の TLS バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに TLS が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。 問題を解決するには、IIS マネージャーを使用して、Web サイトの TLS バインドを復元します。 今後この問題を防ぐためには、IIS マネージャーを使って TLS バインドを削除してから、IIS マネージャーを使って目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) を参照してください。  
+ レポート サーバー構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に対する TLS バインドを削除すると、インターネット インフォメーション サービス (IIS) が実行されているサーバーまたは別の HTTP.SYS サーバー上の Web サイトに対して、TLS が機能しなくなる場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーによって、次のレジストリ キーが削除されます。**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** このレジストリ キーが削除されると、IIS の TLS バインドも削除されます。 このバインドがない場合、HTTPS プロトコルに TLS が提供されません。 この問題を診断するには、IIS マネージャーまたは HTTPCFG.exe コマンド ライン ユーティリティを使用します。 問題を解決するには、IIS マネージャーを使用して、Web サイトの TLS バインドを復元します。 今後この問題を防ぐためには、IIS マネージャーを使って TLS バインドを削除してから、IIS マネージャーを使って目的の Web サイトのバインドを復元します。 詳細については、サポート技術情報の記事の [SSL バインドを削除すると SSL が機能しなくなる問題に関するページ (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n) を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

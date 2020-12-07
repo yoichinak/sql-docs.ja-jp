@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332259"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -218,7 +218,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  バックアップの完了時、バックアップに対して RESTORE VERIFYONLY を実行します。  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  レポートまたはバックアップ ファイルを削除する時期であるかどうかを判断するための期間を指定します。 *number* は整数値で、続けてスペースを含めずに時間単位を指定します。 次は有効な例です。  
   
 -   **12weeks**  

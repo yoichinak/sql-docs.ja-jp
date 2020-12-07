@@ -1,4 +1,5 @@
 ---
+description: データ コレクターのプロパティの構成
 title: データ コレクターのプロパティの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 630bbbdfe62e19897ce625af92b1c16069443abe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19d0107e21e71c8330e3990d4fe937e030ecd0e7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733879"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128842"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>データ コレクターのプロパティの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

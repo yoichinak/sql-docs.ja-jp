@@ -1,4 +1,5 @@
 ---
+description: DQS のスペル チェックの使用
 title: DQS のスペル チェックの使用
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466640"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
 
@@ -40,7 +41,7 @@ ms.locfileid: "85883288"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  スペル チェックを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="enable-the-speller"></a><a name="Enable"></a>スペルチェックを有効にする  
+##  <a name="enable-the-speller"></a><a name="Enable"></a> スペルチェックを有効にする  
   
 1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]でスペル チェックを有効にするには、 **ドメイン管理** アクティビティでナレッジ ベースを開き、目的のドメインを選択して、 **[ドメインのプロパティ]** ページで **[スペル チェックを有効にする]** をクリックします。 **[言語]** で、スペル チェックで使用する言語を選択します。  
   
@@ -66,10 +67,10 @@ ms.locfileid: "85883288"
   
 6.  値を辞書に追加する場合は、 **[辞書に追加]** をクリックします。 値に表示されていた赤い下線が消えます。  
   
-##  <a name="follow-up-after-using-the-speller"></a><a name="FollowUp"></a>補足情報: スペルチェックを使用した後  
+##  <a name="follow-up-after-using-the-speller"></a><a name="FollowUp"></a> 補足情報: スペルチェックを使用した後  
  スペル チェックを実行した後、ドメインのアクティビティを完了してスペル チェックの修正案を反映します。 ナレッジ検出、ドメイン管理、または照合ポリシーのアクティビティで、スペル チェックの分析結果をナレッジ ベースで使用できるようにするには、ナレッジ ベースを発行します。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="how-the-speller-works"></a><a name="How"></a>スペルチェックの動作  
+##  <a name="how-the-speller-works"></a><a name="How"></a> スペルチェックの動作  
  DQS のスペル チェックでは、誤りの可能性がある文字列の値全体に赤い下線が表示されます。 たとえば、"New York" のスペルが誤って "Neu York" になっている場合、"Neu" だけでなく "Neu York" 全体に赤い下線が表示されます。 値を右クリックすると、値全体に対する修正案が表示されます。 また、修正案が 6 つ以上ある場合は、 **[詳しいヒント]** をクリックできます。 いずれかの修正案を選択したり、元の値に対して表示されるように値を辞書 (ユーザー アカウント レベル) に追加したりできます。 辞書に追加した値はすべてのドメインに適用されます。 ドメインで修正が行われるのは、修正案を明示的に指定した場合だけです。 スペル チェックのコンテキスト メニューから修正案を選択すると、値の種類が "エラー" になり (最初から "エラー" の場合はそのまま)、 選択した修正案が修正列に追加されます。 値の **種類** が " **適切** " であっても、スペル チェックでは、まだ誤りの可能性がある値として表示されることがあります。  
   
  値に対する修正案は、 **"値"** テーブルの **[値]** 列と **[次に修正]** 列の両方に表示されます。 **[値]** 列で修正案を選択すると、値の種類が " **エラー**" に設定され、修正案が手動で挿入した場合と同様に **[次に修正]** 列にコピーされます。 既存の修正があった場合は修正案になります。 **クレンジング** アクティビティの **[結果の管理と表示]** ページで、 **[次に修正]** 列から修正案を選択すると、現在選択されている値がその修正案に置き換えられ、現在選択されている値が修正案になります。 **クレンジング** アクティビティの **[結果の管理と表示]** ページでは、レコード レベルの提案は行われません (下のグリッドには表示されません)。  

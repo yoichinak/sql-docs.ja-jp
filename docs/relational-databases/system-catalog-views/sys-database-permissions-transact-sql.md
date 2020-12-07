@@ -1,4 +1,5 @@
 ---
+description: database_permissions (Transact-sql)
 title: database_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
@@ -20,11 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469978"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>database_permissions (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,10 +38,10 @@ ms.locfileid: "86011977"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />16 = サービスコントラクト-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />17 = サービス-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />18 = リモートサービスバインド-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />19 = ルート: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />23 = フルテキストカタログ: 以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />24 = 対称キー-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />25 = 証明書-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />26 = 非対称キー-以降**に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。|  
+|**class**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: 以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />16 = サービスコントラクト-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />17 = サービス-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />18 = リモートサービスバインド-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />19 = ルート: 以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />23 = フルテキストカタログ: 以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />24 = 対称キー-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />25 = 証明書-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。<br />26 = 非対称キー-以降 **に適用さ** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] れます。|  
 |**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id**は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> >0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
-|**minor_id**|**int**|権限が存在することを示すセカンダリ ID。クラスに従って解釈されます。 多くの場合、オブジェクトのクラスに使用できるサブカテゴリがないため、 **minor_id**は0になります。 それ以外の場合は、テーブルの列 ID です。|  
+|**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id** は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> >0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
+|**minor_id**|**int**|権限が存在することを示すセカンダリ ID。クラスに従って解釈されます。 多くの場合、オブジェクトのクラスに使用できるサブカテゴリがないため、 **minor_id** は0になります。 それ以外の場合は、テーブルの列 ID です。|  
 |**grantee_principal_id**|**int**|権限が許可されるデータベースプリンシパル ID。|  
 |**grantor_principal_id**|**int**|これらのアクセス許可の権限の許可のあるデータベースプリンシパル ID。|  
 |**type**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
@@ -108,7 +110,7 @@ ms.locfileid: "86011977"
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|DELETE|データベース、オブジェクト、スキーマ|  
+|DL|Del|データベース、オブジェクト、スキーマ|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|User|  
@@ -123,7 +125,7 @@ ms.locfileid: "86011977"
 |UP|UPDATE|データベース、オブジェクト、スキーマ|  
 |VW|VIEW DEFINITION|APPLICATION ROLE、ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、REMOTE SERVICE BINDING、ROLE、ROUTE、SCHEMA、SERVICE、SYMMETRIC KEY、TYPE、USER、XML SCHEMA COLLECTION|  
 |VWCK |列の暗号化キーの定義を表示します。|DATABASE |  
-|VWCM |任意の列のマスター_キーの定義の表示]|DATABASE |  
+|VWCM |任意の列のマスター_キーの定義の表示|DATABASE |  
 |VWCT|VIEW CHANGE TRACKING|テーブル、スキーマ|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
@@ -167,8 +169,8 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>参照  
  [Securables](../../relational-databases/security/securables.md)   
- [権限の階層 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

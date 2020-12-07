@@ -1,4 +1,5 @@
 ---
+description: 診断メッセージ
 title: 診断メッセージ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be63e9d78960e40ac5e9ee016d2cfd868d99a922
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d788a8bb23b7b63ae65a6fcf8c119110b5e6557
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461514"
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 各 SQLSTATE で診断メッセージが返されます。 同じ SQLSTATE が多くの場合、多数の異なるメッセージと共に返されます。 たとえば、SQL 構文のほとんどのエラーに対して、SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージによって記述される可能性があります。  

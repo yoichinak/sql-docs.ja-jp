@@ -1,4 +1,5 @@
 ---
+description: Oracle CDC Service
 title: Oracle CDC Service | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38a8f0ac868968015ead8031a0a5aad37b89078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496143"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
 
@@ -90,14 +91,14 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [高可用性のサポート](../../integration-services/change-data-capture/high-availability-support.md)  
   
--   [CDC Service で使用する SQL Server 接続に必要なアクセス許可](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+-   [CDC Service で使用する SQL Server 接続に必要な権限](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
 -   [ユーザー ロール](../../integration-services/change-data-capture/user-roles.md)  
   
--   [Oracle CDC Service を使用する](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+-   [Oracle CDC Service の使用](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>参照  
  [ローカルの CDC Service を管理する方法](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Oracle CDC Service の管理](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

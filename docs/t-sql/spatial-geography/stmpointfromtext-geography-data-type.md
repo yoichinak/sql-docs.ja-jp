@@ -1,4 +1,5 @@
 ---
+description: STMPointFromText (geography データ型)
 title: STMPointFromText (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d62eedfd8b1457bbd0352f5593ee956a1b4e63c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d7b06ff31cd94422abfbbc559e569cfb2f610eae
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555780"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88467434"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

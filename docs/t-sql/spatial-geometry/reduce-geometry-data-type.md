@@ -1,4 +1,5 @@
 ---
+description: Reduce (geometry データ型)
 title: Reduce (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 16ac1ced9d2bfbfa8de4b2c8cc577aeb83d15be0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 704df574cc67a4321faea90795b248adb2859123
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445095"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +82,7 @@ SELECT @g.Reduce(.75).ToString();
  SELECT @g.Reduce(16).ToString();
  ```  
   
- この例の結果は、次のようになります。  
+ この例を実行すると、次の出力が生成されます。  
   
  ```
  CIRCULARSTRING (0 0, 8 8, 16 0, 20 -4, 24 0) 

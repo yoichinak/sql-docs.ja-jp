@@ -1,4 +1,5 @@
 ---
+description: sp_helpremotelogin (Transact-sql)
 title: sp_helpremotelogin (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899509"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547986"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +45,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>引数  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- リモート ログイン情報を返すリモート サーバーを指定します。 *remoteserver*は**sysname**,、既定値は NULL です。 場合*remoteserver*が指定されていない、ローカルサーバーで定義されているすべてのリモートサーバーに関する情報が返されます。  
+ リモート ログイン情報を返すリモート サーバーを指定します。 *remoteserver* は **sysname**,、既定値は NULL です。 場合 *remoteserver* が指定されていない、ローカルサーバーで定義されているすべてのリモートサーバーに関する情報が返されます。  
   
  [ @remotename **=** ] **'***remote_name***'**  
- リモートサーバー上の特定のリモートログインを指定します。 *remote_name*は**sysname**,、既定値は NULL です。 *Remote_name*が指定されていない場合は、 *remoteserver*に対して定義されたすべてのリモートユーザーに関する情報が返されます。  
+ リモートサーバー上の特定のリモートログインを指定します。 *remote_name* は **sysname**,、既定値は NULL です。 *Remote_name*が指定されていない場合は、 *remoteserver*に対して定義されたすべてのリモートユーザーに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,7 +62,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|local_user_name にマップされているリモート サーバー上のログイン。|  
 |options|**sysname**|Trusted = リモートログインは、リモートサーバーからローカルサーバーに接続するときにパスワードを入力する必要はありません。<br /><br /> 信頼されていない (または空白) = リモートサーバーからローカルサーバーに接続するときに、リモートログインにパスワードの入力が求められます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  ローカル サーバーで定義されているリモート サーバーの名前を表示するには、sp_helpserver を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -76,17 +77,17 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 EXEC sp_helpremotelogin 'Accounts';  
 ```  
   
-### <a name="b-reporting-help-on-all-remote-users"></a>B: すべてのリモート ユーザーに関するヘルプをレポートする  
+### <a name="b-reporting-help-on-all-remote-users"></a>B. すべてのリモート ユーザーに関するヘルプをレポートする  
  次の例では、ローカルサーバーに認識されているすべてのリモートサーバー上のすべてのリモートユーザーに関する情報を表示します。  
   
 ```  
 EXEC sp_helpremotelogin;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: レポートとリソースの保護
 title: レポートとリソースの保護 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454494"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  
@@ -51,7 +52,7 @@ ms.locfileid: "65570627"
   
 2.  レポート サーバーにパブリッシュされたレポートやその他の方法で公開されたレポートのレポート パラメーターの値が、Web ページの URL から制御できる状態になっている。  
   
-3.  攻撃者が Web ページまたはレポート サーバーへのリンクを作成し、"javascript:\<悪意のあるスクリプト>" という形式でパラメーターの値を指定したうえで、そのリンクをおびき寄せによる攻撃で他のユーザーに送信する。  
+3.  攻撃者が Web ページまたはレポート サーバーへのリンクを作成し、"javascript:\<malicious script here>" という形式でパラメーターの値を指定したうえで、そのリンクをおびき寄せによる攻撃で他のユーザーに送信する。  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>パブリッシュされたレポートまたはドキュメント内のハイパーリンクによるスクリプト インジェクション攻撃の緩和  
  レポートには、レポート アイテムまたはレポート アイテムの一部の Action プロパティの値を使用して、ハイパーリンクが埋め込まれることがあります。 ハイパーリンクは、レポートの処理時に外部データ ソースから取得されるデータにバインドできます。 悪意のあるユーザーによって基になるデータが変更された場合、このハイパーリンクには、スクリプティング攻撃のリスクが生じます。 パブリッシュまたはエクスポートされたレポート内のリンクをユーザーがクリックすると、悪意のあるスクリプトが実行される可能性があります。  

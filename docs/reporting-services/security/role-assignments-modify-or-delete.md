@@ -1,4 +1,5 @@
 ---
+description: ロールの割り当てを変更または削除する (SSRS Web ポータル)
 title: ロールの割り当てを変更または削除する (SSRS Web ポータル) | Microsoft Docs
 ms.date: 05/07/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: defe3952f9fd3c5c4eb4453c2071820cb44a3fb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480654"
 ---
 # <a name="role-assignments---modify-or-delete"></a>ロールの割り当て - 変更または削除
 
@@ -41,9 +42,9 @@ ms.locfileid: "65570644"
 
 3. 変更または削除するロールの割り当てを探します。
 
-4. 特定のユーザーまたはグループに対してロールを追加または削除するには、 **[編集]** を選択します。
+4. 特定のユーザーまたはグループに対してロールを追加または削除するには、**[編集]** を選択します。
 
-5. ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、 **[削除]** を選択します。
+5. ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、**[削除]** を選択します。
 
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>アイテム ロールの割り当てを変更または削除するには
 
@@ -51,15 +52,15 @@ ms.locfileid: "65570644"
 
 2. アイテムの上にマウス ポインターを移動し、下矢印を選択します。
 
-3. ドロップダウン メニューで、 **[セキュリティ]** を選択します。
+3. ドロップダウン メニューで、**[セキュリティ]** を選択します。
 
 4. 変更または削除するロールの割り当てを探します。
 
-5. 特定のユーザーまたはグループに対してロールを追加または削除するには、 **[編集]** を選択します。
+5. 特定のユーザーまたはグループに対してロールを追加または削除するには、**[編集]** を選択します。
 
-6. ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、 **[削除]** を選択します。
+6. ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、**[削除]** を選択します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [ロールの割り当て](../../reporting-services/security/role-assignments.md)  

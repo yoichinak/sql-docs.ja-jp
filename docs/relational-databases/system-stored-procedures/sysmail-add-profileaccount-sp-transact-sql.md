@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 209240de58b09e48c4d35f145640f1edf97f1c4a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891005"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538538"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id`アカウントを追加するプロファイル id。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` アカウントを追加するプロファイル id。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'`アカウントを追加するプロファイル名を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` アカウントを追加するプロファイル名を指定します。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @account_id = ] account_id`プロファイルに追加するアカウント id。 *account_id*は**int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_id = ] account_id` プロファイルに追加するアカウント id。 *account_id* は **int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
   
-`[ @account_name = ] 'account_name'`プロファイルに追加するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_name = ] 'account_name'` プロファイルに追加するアカウントの名前。 *account_name* は **sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
   
-`[ @sequence_number = ] sequence_number`プロファイル内のアカウントのシーケンス番号。 *sequence_number*は**int**,、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順序が決まります。  
+`[ @sequence_number = ] sequence_number` プロファイル内のアカウントのシーケンス番号。 *sequence_number* は **int**,、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順序が決まります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  プロファイルとアカウントの両方が既に存在している必要があります。 両方またはいずれかが存在しないと、このストアド プロシージャはエラーを返します。  
   
  このストアドプロシージャは、指定されたプロファイルに既に関連付けられているアカウントのシーケンス番号を変更しないことに注意してください。 アカウントのシーケンス番号の更新の詳細については、「 [sysmail_update_profileaccount_sp &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)」を参照してください。  
@@ -63,10 +64,10 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  同じシーケンス番号を持つアカウントが複数存在する場合、データベースメールは、指定された電子メールメッセージに対してこれらのアカウントのいずれかのみを使用します。 この場合、そのシーケンス番号に対してどのアカウントが使用されるか、またメッセージごとに同じアカウントが使用されるかついては、データベース メールでは保証されません。  
   
- ストアドプロシージャ**sysmail_add_profileaccount_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_add_profileaccount_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  次の例では、プロファイルを `AdventureWorks Administrator` アカウントに関連付け `Audit Account` ます。 監査アカウントのシーケンス番号は1です。  
@@ -78,10 +79,10 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
     @sequence_number = 1 ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

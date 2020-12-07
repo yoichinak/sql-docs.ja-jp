@@ -1,4 +1,5 @@
 ---
+description: 'SQL から C へ: Timestamp'
 title: 'SQL から C へ: Timestamp |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429544"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
 
@@ -38,7 +39,7 @@ Timestamp ODBC SQL データ型の識別子は次のとおりです。
 |SQL_C_TYPE_TIME|タイムスタンプの秒部分の小数部がゼロ [a]<br /><br /> タイムスタンプの秒の小数部が0以外の場合 [a]|データ [d]<br /><br /> 切り捨てられたデータ [d], [e]|6 [f]<br /><br /> 6 [f]|該当なし<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|タイムスタンプの秒の小数部が切り捨てられない [a]<br /><br /> タイムスタンプの秒部分の小数部が切り捨てられる [a]|データ [e]<br /><br /> 切り捨てられたデータ [e]|16 [f]<br /><br /> 16 [f]|該当なし<br /><br /> 01S07|  
 
- [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [a] この変換では、 *Bufferlength* の値は無視されます。 ドライバーは、**Targetvalueptr* のサイズが C データ型のサイズであることを前提としています。  
   
  [b] タイムスタンプの秒の小数部は切り捨てられます。  
   
@@ -50,4 +51,4 @@ Timestamp ODBC SQL データ型の識別子は次のとおりです。
   
  [f] これは、対応する C データ型のサイズです。  
 
-Timestamp SQL データが文字 C データに変換されると、結果の文字列は "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] "形式。秒の小数部には最大9桁まで使用できます。 この形式は、Windows®の国設定の影響を受けません。 (小数点と秒の小数部を除き、タイムスタンプの SQL データ型の有効桁数に関係なく、形式全体を使用する必要があります)。
+Timestamp SQL データが文字 C データに変換されると、結果の文字列は "*yyyy* - *mm* - *dd* *hh*:*mm*:*ss*[.*f...*] "形式。秒の小数部には最大9桁まで使用できます。 この形式は、Windows®の国設定の影響を受けません。 (小数点と秒の小数部を除き、タイムスタンプの SQL データ型の有効桁数に関係なく、形式全体を使用する必要があります)。

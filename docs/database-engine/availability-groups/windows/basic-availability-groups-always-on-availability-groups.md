@@ -6,16 +6,16 @@ ms.date: 02/01/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 851d6a801a83f8e66bbab3da2f1836a0bbdccf21
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 88704561006f0beff14ae69fff2b79c14ef3114b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435223"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584621"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>単一データベース用の基本的な Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: LOG (Transact-SQL)
 title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -20,12 +21,12 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb06ff97c4972507e63b8990c9d70c8598e8e2c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112432"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88468022"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ LOG ( float_expression )
 
 ## <a name="arguments"></a>引数
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。  
+ **float** 型、または暗黙的に **float** 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
  *base*  
  対数の底を設定するオプションの整数引数です。  
@@ -62,17 +63,17 @@ LOG ( float_expression )
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  既定では、 を持つ **LOG()** 自然対数を返します。 以降で [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 、対数の底を別の値に変更するには、(省略可能) を使用して *基本* パラメーター。  
   
- 自然対数は **e** を底とする対数です。ここで、**e** は 2.718281828 にほぼ等しい無理定数です。  
+ 自然対数は **e** を底とする対数です。ここで、**e** は、2.718281828 にほぼ等しい無理定数です。  
   
- 数値の指数の自然対数は、その数値自体になります。つまり LOG( EXP( *n* ) ) = *n* です。 また、数値の自然対数の指数は、その数値自体になります。つまり EXP( LOG( *n* ) ) = *n* です。  
+ 数値の指数の自然対数は、その数値自体になります。LOG( EXP( *n* ) ) = *n*。 また、数値の自然対数の指数は、その数値自体になります。EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 数値の自然対数を計算する  
- 次の例では、指定された `LOG`float**式の** を計算します。  
+ 次の例では、指定された **float** 式の `LOG` を計算します。  
   
 ```sql  
 DECLARE @var FLOAT = 10;  
@@ -108,7 +109,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 数値の自然対数を計算する  
- 次の例では、指定された `LOG`float**式の** を計算します。  
+ 次の例では、指定された **float** 式の `LOG` を計算します。  
   
 ```sql  
 SELECT LOG(10);  

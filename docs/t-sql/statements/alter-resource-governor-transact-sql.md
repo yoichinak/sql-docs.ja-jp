@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE GOVERNOR (Transact-SQL)
 title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381136"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124249"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ ALTER RESOURCE GOVERNOR
   
  キューに登録される I/O 操作のディスク ボリュームごとの最大数を設定します。 これらの I/O 操作では、任意のサイズの読み取りや書き込みを行うことができます。  MAX_OUTSTANDING_IO_PER_VOLUME の最大値は 100 です。 これはパーセントではありません。 この設定は、ディスク ボリュームの IO 特性に合わせて IO リソース管理をチューニングするために設計されています。 さまざまな値をテストし、ストレージ サブシステムの最大値を識別するために IOMeter、[DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223)、SQLIO (非推奨) などの調整ツールの使用を検討することをお勧めします。 この設定では、システム レベルの安全性チェックが提供され、他のプールで MAX_IOPS_PER_VOLUME が無制限に設定されている場合でも、SQL Server でリソース プールの最小 IOPS を満たすことができます。 MAX_IOPS_PER_VOLUME の詳細については、「[CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ALTER RESOURCE GOVERNOR DISABLE、ALTER RESOURCE GOVERNOR RECONFIGURE、および ALTER RESOURCE GOVERNOR RESET STATISTICS は、ユーザー トランザクション内で使用できません。  
   
  RECONFIGURE パラメーターはリソース ガバナー構文の一部であり、個別の DDL ステートメントである [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) とは異なります。  
@@ -116,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. Resource Governor を起動する  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最初のインストール時には、リソース ガバナーは無効になっています。 Resource Governor を起動する例を次に示します。 このステートメントを実行した後、Resource Governor が実行され、定義済みのワークロード グループとリソース プールを使用できるようになります。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. 新しいセッションを既定のグループに割り当てる  
  次の例では、Resource Governor 構成から既存の分類関数を削除することによって、すべての新しいセッションを既定のワークロード グループに割り当てます。 関数が分類関数として指定されていない場合、新しいセッションはすべて既定のワークロード グループに割り当てられます。 この変更は新しいセッションにのみ適用されます。 既存のセッションは影響を受けません。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -132,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 分類関数を作成して登録する  
  次の例では、`dbo.rgclassifier_v1` という名前の分類子関数を作成します。 この関数によって、ユーザー名またはアプリケーション名に基づいてすべての新しいセッションが分類され、セッションの要求とクエリが、指定されたワークロード グループに割り当てられます。 指定されたユーザー名またはアプリケーション名にマップされていないセッションは、既定のワークロード グループに割り当てられます。 次に分類関数が登録され、構成の変更が適用されます。  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -177,19 +178,19 @@ GO
 ### <a name="d-resetting-statistics"></a>D. 統計をリセットする  
  次の例では、すべてのワークロード グループとリソース プールの統計をリセットします。  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME オプションを設定する  
  次の例では、MAX_OUTSTANDING_IO_PER_VOLUME オプションが 20 に設定されます。  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

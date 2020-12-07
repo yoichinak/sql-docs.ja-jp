@@ -1,4 +1,5 @@
 ---
+description: COMMIT TRANSACTION (Transact-SQL)
 title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
@@ -29,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 252fdfd8accd33d8081b7f0770eec3264391a278
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395400"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124492"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ COMMIT [ { TRAN | TRANSACTION }  [ transaction_name | @tran_name_variable ] ] [ 
 ```  
  
 ```syntaxsql
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse Database
+-- Applies to Azure Synapse Analytics and Parallel Data Warehouse Database
   
 COMMIT [ TRAN | TRANSACTION ] 
 [ ; ]  
@@ -64,26 +65,26 @@ COMMIT [ TRAN | TRANSACTION ]
 
 ## <a name="arguments"></a>引数
  *transaction_name*  
- **適用対象:** SQL Server および Azure SQL Database
+ **適用対象:** SQL Server と Azure SQL Database
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では無視されます。 *transaction_name* には前の BEGIN TRANSACTION により割り当てられるトランザクション名を指定します。 *transaction_name* は識別子の規則に従っている必要があります。ただし、32 文字を超えることはできません。 *transaction_name* は、入れ子にされたどの BEGIN TRANSACTION と COMMIT TRANSACTION が関連しているかをプログラマが把握しやすくします。  
   
  *\@tran_name_variable*  
- **適用対象:** SQL Server および Azure SQL Database  
+ **適用対象:** SQL Server と Azure SQL Database  
  
 有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、char、varchar、nchar、または nvarchar データ型を使用して宣言する必要があります。 変数に 32 文字を超える文字が渡された場合は、32 文字だけが使用され、残りの文字は切り捨てられます。  
   
  DELAYED_DURABILITY  
- **適用対象:** SQL Server および Azure SQL Database   
+ **適用対象:** SQL Server と Azure SQL Database   
 
  このトランザクションを遅延持続性でコミットすることを要求するオプション。 データベースが `DELAYED_DURABILITY = DISABLED` または `DELAYED_DURABILITY = FORCED` によって変更されている場合、要求は無視されます。 詳しくは、「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラマは、このトランザクションで参照されるすべてのデータが論理的に正しいことを確認した上で COMMIT TRANSACTION を実行する必要があります。  
   
  コミットされるトランザクションが [!INCLUDE[tsql](../../includes/tsql-md.md)] 分散トランザクションの場合、COMMIT TRANSACTION では MS DTC が起動され、2 フェーズ コミット プロトコルによって、トランザクションに参加しているすべてのサーバーがコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の同じインスタンス上にある 2 つ以上のデータベースがローカル トランザクションの対象となっている場合、インスタンスでは内部の 2 フェーズ コミットを使用して、トランザクションに参加しているすべてのデータベースをコミットします。  
   
- 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 *では*transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)] は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
+ 入れ子にされたトランザクションで使用する場合は、入れ子内のトランザクションをコミットしてもリソースは解放されず、修正も永久保存されません。 データ修正が永久保存され、リソースが解放されるのは、入れ子の外側のトランザクションをコミットした場合だけです。 @@TRANCOUNT が 1 より大きい場合に発行される各 COMMIT TRANSACTION では、@@TRANCOUNT が単純に 1 ずつ減らされます。 最終的に @@TRANCOUNT が 0 になると、外側のトランザクション全体がコミットされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では *transaction_name* は無視されるので、入れ子内に完了していないトランザクションがあるとき、外側のトランザクションの名前を参照する COMMIT TRANSACTION を実行しても、@@TRANCOUNT が 1 減少されるだけです。  
   
  @@TRANCOUNT が 0 のときに COMMIT TRANSACTION を実行すると、対応する BEGIN TRANSACTION がないためエラーが発生します。  
   
@@ -97,11 +98,11 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-committing-a-transaction"></a>A. トランザクションをコミットする  
-**適用対象:** SQL Server、Azure SQL Database、Azure SQL Data Warehouse、Parallel Data Warehouse   
+**適用対象:** SQL Server、Azure SQL Database、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
 
 次の例では、ジョブ候補を削除します。 AdventureWorks を使用します。 
   
-```   
+```sql   
 BEGIN TRANSACTION;   
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;   
@@ -109,21 +110,21 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. 入れ子になったトランザクションをコミットする  
-**適用対象:** SQL Server および Azure SQL Database    
+**適用対象:** SQL Server と Azure SQL Database    
 
 次の例では、テーブルを作成し、3 レベルの入れ子にされたトランザクションを生成してから、入れ子になったトランザクションをコミットします。 各 `COMMIT TRANSACTION` ステートメントには *transaction_name* パラメーターがありますが、`COMMIT TRANSACTION` ステートメントと `BEGIN TRANSACTION` ステートメントの間には関連はありません。 *transaction_name* パラメーターは、プログラマが `@@TRANCOUNT` を 0 まで減らすための正しいコミット数を指定できます。これにより、外側のトランザクションをコミットできます。 
   
-```   
+```sql   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
     DROP TABLE TestTran;  
 GO  
-CREATE TABLE TestTran (Cola int PRIMARY KEY, Colb char(3));  
+CREATE TABLE TestTran (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 -- This statement sets @@TRANCOUNT to 1.  
 BEGIN TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after BEGIN OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 INSERT INTO TestTran VALUES (1, 'aaa');  
  
@@ -131,7 +132,7 @@ INSERT INTO TestTran VALUES (1, 'aaa');
 BEGIN TRANSACTION Inner1;  
  
 PRINT N'Transaction count after BEGIN Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (2, 'bbb');  
   
@@ -139,7 +140,7 @@ INSERT INTO TestTran VALUES (2, 'bbb');
 BEGIN TRANSACTION Inner2;  
   
 PRINT N'Transaction count after BEGIN Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 INSERT INTO TestTran VALUES (3, 'ccc');  
   
@@ -148,21 +149,21 @@ INSERT INTO TestTran VALUES (3, 'ccc');
 COMMIT TRANSACTION Inner2;  
  
 PRINT N'Transaction count after COMMIT Inner2 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
  
 -- This statement decrements @@TRANCOUNT to 1.  
 -- Nothing is committed.  
 COMMIT TRANSACTION Inner1;  
  
 PRINT N'Transaction count after COMMIT Inner1 = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
   
 -- This statement decrements @@TRANCOUNT to 0 and  
 -- commits outer transaction OuterTran.  
 COMMIT TRANSACTION OuterTran;  
   
 PRINT N'Transaction count after COMMIT OuterTran = '  
-    + CAST(@@TRANCOUNT AS nvarchar(10));  
+    + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 ```  
   
 ## <a name="see-also"></a>参照  

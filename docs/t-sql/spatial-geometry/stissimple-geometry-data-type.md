@@ -1,4 +1,5 @@
 ---
+description: STIsSimple (geometry データ型)
 title: STIsSimple (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 24f50da4302c152588ddf573368054cc58b995c9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 51e9f38a40b26ab4ff50c371519ed50e85ae984d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472464"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555565"
   
  CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  単純であると見なされるには、**geometry** インスタンスが次の要件をすべて満たしている必要があります。  
   
 -   インスタンスの各図形が終点以外で自己交差していてはいけない。  

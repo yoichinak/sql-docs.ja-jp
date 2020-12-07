@@ -1,4 +1,5 @@
 ---
+description: getAsciiStream メソッド (SQLServerCallableStatement)
 title: getAsciiStream メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c105ec15bfeb5aa3413759147c5e16662c0b8d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73d5ed4a025afd8a3a4a653f438ccd6392471dbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437404"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>getAsciiStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80925417"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を **ASCII** 文字のストリームとして取得します。|  
 |[getAsciiStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|パラメーターに渡された名前を使用して、指定されたパラメーターの値を **ASCII** 文字のストリームとして取得します。|  

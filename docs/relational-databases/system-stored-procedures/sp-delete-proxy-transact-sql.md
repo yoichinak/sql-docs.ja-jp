@@ -1,4 +1,5 @@
 ---
+description: sp_delete_proxy (Transact-sql)
 title: sp_delete_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccc9d7639bbe7f929a28b249e6767d0d703a0068
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862531"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529145"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] id`削除するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。  
+`[ @proxy_id = ] id` 削除するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。  
   
-`[ @proxy_name = ] 'proxy_name'`削除するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'` 削除するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -58,7 +59,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sp_delete_proxy**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、プロキシを削除し `Catalog application proxy` ます。  
   
 ```  
@@ -70,7 +71,7 @@ EXEC dbo.sp_delete_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

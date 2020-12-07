@@ -1,7 +1,7 @@
 ---
 title: ODBC Driver for SQL Server のダウンロード
 description: SQL Server や Azure SQL Database に接続するネイティブ コード アプリケーションを開発するには、Microsoft ODBC Driver for SQL Server をダウンロードします。
-ms.date: 04/24/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250dc0014e7ab38bf669608e9f509e273e7a9928
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b1f77ce4eb0b329fdb6911bd38f6e120e4ff7d3d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012555"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727533"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server のダウンロード
 
@@ -27,28 +27,28 @@ Microsoft ODBC Driver for SQL Server は、ネイティブ コード API を使�
 
 Microsoft ODBC Driver 17 for SQL Server の再頒布可能インストーラーでは、新しい SQL Server 機能を利用するために実行時に必要なクライアント コンポーネントがインストールされます。 必要に応じて、ODBC API を使用するアプリケーションの開発に必要なヘッダー ファイルをインストールします。 バージョン 17.4.2 以降のインストーラーには、Microsoft Active Directory 認証ライブラリ (ADAL.dll) も含まれていてインストールされます。
 
-最新の一般提供 (GA) バージョンは、バージョン 17.5.2 です。 以前のバージョンの Microsoft ODBC Driver 17 for SQL Server がインストールされている場合は、17.5.2 をインストールすると 17.5.2 にアップグレードされます。
+最新の一般提供 (GA) バージョンはバージョン 17.6.1 です。 以前のバージョンの Microsoft ODBC Driver 17 for SQL Server がインストールされている場合は、17.6.1 をインストールすると 17.6.1 にアップグレードされます。
 
-**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft ODBC Driver 17 for SQL Server (x64) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2120137)**  
-**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft ODBC Driver 17 for SQL Server (x86) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2120140)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft ODBC Driver 17 for SQL Server (x64) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2137027)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft ODBC Driver 17 for SQL Server (x86) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2137028)**  
 
 ### <a name="version-information"></a>バージョン情報
 
-- リリース番号:17.5.2.1
-- リリース日:2020 年 3 月 6 日
+- リリース番号:17.6.1.1
+- リリース日:2020 年 7 月 31 日
 
 > [!Note]
-> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadmsodbcsqlenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版]()をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
 
 ## <a name="available-languages"></a>使用できる言語
 
 Microsoft ODBC Driver for SQL Server のこのリリースは、次の言語でインストールできます。
 
-Microsoft ODBC Driver 17.5.2 for SQL Server (x64):  
-[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)
+Microsoft ODBC Driver 17.6.1 for SQL Server (x64):  
+[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)
 
-Microsoft ODBC Driver 17.5.2 for SQL Server (x86):  
-[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)
+Microsoft ODBC Driver 17.6.1 for SQL Server (x86):  
+[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
 
 ### <a name="release-notes-for-windows"></a>Windows 用リリース ノート
 
@@ -71,6 +71,7 @@ Microsoft ODBC Driver for SQL Server は、関連するインストール手順�
 
 ### <a name="alpine"></a>Alpine
 
+- [17.6.1.1 Alpine パッケージ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk) ([PGP 署名](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.sig))
 - [17.5.2.2 Alpine パッケージ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([PGP 署名](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
 - [17.5.2.1 Alpine パッケージ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([PGP 署名](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
 - [17.5.1.1 Alpine パッケージ](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk) ([PGP 署名](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
@@ -96,7 +97,7 @@ Microsoft ODBC Driver for SQL Server は、関連するインストール手順�
 
 ### <a name="ubuntu"></a>Ubuntu
 
-- [Ubuntu 19.10 .deb パッケージ](https://packages.microsoft.com/ubuntu/19.10/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 20.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/20.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 18.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 16.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
 - [Ubuntu 14.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)

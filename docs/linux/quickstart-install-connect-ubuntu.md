@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 95581e7cfd8fbddd80aff1f4086d7f44e5812159
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438114"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115963"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート:Ubuntu に SQL Server をインストールし、データベースを作成する
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -47,17 +47,17 @@ ms.locfileid: "86438114"
 
 Ubuntu 16.04 または 18.04 マシンには、**少なくとも 2 GB** のメモリが必要です。
 
-ご自分のマシンに Ubuntu 18.04 をインストールするには、<http://releases.ubuntu.com/bionic/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
+ご自分のマシンに Ubuntu 18.04 をインストールするには、<http://releases.ubuntu.com/bionic/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
 
 > [!NOTE]
-> 現時点では、Windows 10 用の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) はインストール先としてサポートされていません。
+> 現時点では、Windows 10 用の [Windows Subsystem for Linux](/windows/wsl/about) はインストール先としてサポートされていません。
 
 他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 
 > [!NOTE]
 > Ubuntu 18.04 は SQL Server 2017 CU20 以降でサポートされています。 この記事に記載されている手順を Ubuntu 18.04 で使用する場合は、`16.04` ではなく、正しい[リポジトリ パス](sql-server-linux-change-repo.md) `18.04` を使用するようにしてください。
 >
-> それより前のバージョンで SQL Server を実行している場合は、[変更](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/)することで構成できます。
+> それより前のバージョンで SQL Server を実行している場合は、[変更](/archive/blogs/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts)することで構成できます。
 
 ::: moniker-end
 
@@ -66,10 +66,10 @@ Ubuntu 16.04 または 18.04 マシンには、**少なくとも 2 GB** のメ�
 
 Ubuntu 16.04 または 18.04 マシンには、**少なくとも 2 GB** のメモリが必要です。
 
-ご自分のマシンに Ubuntu 18.04 をインストールするには、<http://releases.ubuntu.com/bionic/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
+ご自分のマシンに Ubuntu 18.04 をインストールするには、<http://releases.ubuntu.com/bionic/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
 
 > [!NOTE]
-> 現時点では、Windows 10 用の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) はインストール先としてサポートされていません。
+> 現時点では、Windows 10 用の [Windows Subsystem for Linux](/windows/wsl/about) はインストール先としてサポートされていません。
 
 他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 

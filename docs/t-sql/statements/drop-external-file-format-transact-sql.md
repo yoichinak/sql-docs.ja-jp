@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL FILE FORMAT (Transact-SQL)
 title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -10,18 +11,18 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cf9009b-59f9-4aac-bef1-dcf2cf0708b2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a18bb7c90e241b42a627ec1753642942c412ff77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: bb834d242fc8adf261b9752f1b9630009796e49b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632845"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540686"
 ---
 # <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   PolyBase 外部ファイルの形式を削除します。  
   
@@ -42,7 +43,7 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
 ## <a name="metadata"></a>メタデータ  
  外部ファイル形式の一覧を表示するには、[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) システム ビューを使用します。  
   
-```  
+```sql  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
@@ -59,7 +60,7 @@ SELECT * FROM sys.external_file_formats;
   
 ### <a name="a-using-basic-syntax"></a>A. 基本的な構文を使用します  
   
-```  
+```sql  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   

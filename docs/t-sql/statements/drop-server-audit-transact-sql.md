@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT (Transact-SQL)
 title: DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27c5ed03b27772ca0ae66539258f2e8677470a6b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883670"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379705"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +35,13 @@ ms.locfileid: "85883670"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP SERVER AUDIT audit_name  
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  監査を変更する場合は、監査の状態を OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査を有効にしているときに DROP AUDIT を実行すると、MSG_NEED_AUDIT_DISABLED エラー メッセージが表示されます。  
   
  DROP SERVER AUDIT では監査のメタデータが削除されますが、コマンドの発行前に収集された監査データは削除されません。  
@@ -52,7 +54,7 @@ DROP SERVER AUDIT audit_name
 ## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit` という監査を削除します。  
   
-```  
+```sql  
 ALTER SERVER AUDIT HIPAA_Audit  
 STATE = OFF;  
 GO  
@@ -60,7 +62,7 @@ DROP SERVER AUDIT HIPAA_Audit;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

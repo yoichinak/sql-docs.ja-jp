@@ -1,4 +1,5 @@
 ---
+description: setNCharacterStream メソッド (SQLServerPreparedStatement)
 title: java.io.Reader オブジェクトへの setNCharacterStream メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b5e2bfc6762bee8369fc6d3e6634d6e979793a4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bd27a1795e8554740b8e096c7a67f9964cb900c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431624"
 ---
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>setNCharacterStream メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80924446"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[setNCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  
 |[setNCharacterStream &#40;int, java.io.Reader, long&#41; メソッド](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|指定されたパラメーターを、指定された java.io.Reader オブジェクトに設定します。|  

@@ -1,4 +1,5 @@
 ---
+description: sp_dropdevice (Transact-sql)
 title: sp_dropdevice (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], deleting
 - sp_dropdevice
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9be64080f6e1c56daa0901dbdc174c83d40cf541
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: de658ea419fe2fe6fcdfbbdd2b335cf5abb12e2e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859993"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543506"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**に一覧表示されるデータベースデバイスまたはバックアップデバイスの論理名を指定します。 *デバイス*は**sysname**で、既定値はありません。  
+`[ @logicalname = ] 'device'`**master.dbo.sysdevices.name**に一覧表示されるデータベースデバイスまたはバックアップデバイスの論理名を指定します。 *デバイス* は **sysname**で、既定値はありません。  
   
-`[ @delfile = ] 'delfile'`物理バックアップデバイスファイルを削除するかどうかを指定します。 *delfile*は**varchar (7)** です。 **Delfile**として指定した場合は、物理バックアップデバイスのディスクファイルが削除されます。  
+`[ @delfile = ] 'delfile'` 物理バックアップデバイスファイルを削除するかどうかを指定します。 *delfile* は **varchar (7)** です。 **Delfile**として指定した場合は、物理バックアップデバイスのディスクファイルが削除されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,12 +53,12 @@ sp_dropdevice [ @logicalname = ] 'device'
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_dropdevice**をトランザクション内で使用することはできません。  
+ **sp_dropdevice** をトランザクション内で使用することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **diskadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、テープ ダンプ デバイス `tapedump1` を[!INCLUDE[ssDE](../../includes/ssde-md.md)]から削除します。  
   
 ```  

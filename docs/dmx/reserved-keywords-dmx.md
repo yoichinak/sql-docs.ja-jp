@@ -1,4 +1,5 @@
 ---
+description: 予約されているキーワード (DMX)
 title: 予約済みキーワード (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fa446f07b81707c9476b133a430281057c476dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487748"
 ---
 # <a name="reserved-keywords-dmx"></a>予約されているキーワード (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86970638"
   
  データベース内のオブジェクトに名前を付ける場合は、予約済みキーワードの使用を回避する名前付け規則を使用することをお勧めします。  
   
- データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、「 [DMX&#41;&#40;識別子](../dmx/identifiers-dmx.md)」を参照してください。  
+ データベースに予約されたキーワードと一致する名前が含まれている場合、これらのオブジェクトを参照するときに区切られた識別子を使用する必要があります。 詳細については、「 [DMX&#41;&#40;識別子 ](../dmx/identifiers-dmx.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   

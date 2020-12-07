@@ -1,4 +1,5 @@
 ---
+description: DROP INDEX (選択的 XML インデックス)
 title: DROP INDEX (選択的 XML インデックス) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -14,12 +15,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0520dab52c67d0b4c48abcffc1dd87ad18e222cc
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766313"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380387"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選択的 XML インデックス)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ DROP INDEX index_name ON <object>
 ## <a name="example"></a>例  
  DROP INDEX ステートメントの例を次に示します。  
   
-```  
+```sql  
 DROP INDEX sxi_index ON tbl;  
 ```  
   

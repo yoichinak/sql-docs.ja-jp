@@ -1,4 +1,5 @@
 ---
+description: DBCC INPUTBUFFER (Transact-SQL)
 title: DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7b36dd3a0392a4054aa110e625f1ea5703f25b80
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a76fab0c7e0b7e15beb0eb094de4aa66e1644b2e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484275"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119581"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -105,14 +106,14 @@ SELECT @@spid;
 次の例では、前の接続で長いトランザクションが実行されている間に、2 番目の接続で `DBCC INPUTBUFFER` を実行します。
   
 ```sql
-CREATE TABLE dbo.T1 (Col1 int, Col2 char(3));  
+CREATE TABLE dbo.T1 (Col1 INT, Col2 CHAR(3));  
 GO  
-DECLARE @i int = 0;  
+DECLARE @i INT = 0;  
 BEGIN TRAN  
 SET @i = 0;  
 WHILE (@i < 100000)  
 BEGIN  
-INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS char(3)));  
+INSERT INTO dbo.T1 VALUES (@i, CAST(@i AS CHAR(3)));  
 SET @i += 1;  
 END;  
 COMMIT TRAN;  

@@ -1,4 +1,5 @@
 ---
+description: '[CDC インスタンス配置スクリプト]'
 title: '[CDC インスタンス配置スクリプト] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e5b1872c23d28a59ae0a9ac762c470fc297ee0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b53daf02f3fae88f2ab9dd17e7be14373a774d45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484755"
 ---
 # <a name="cdc-instance-deployment-script"></a>[CDC インスタンス配置スクリプト]
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921194"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 スクリプトを含むファイルを他の任意のサーバーにコピーして、そのサーバーで実行できます。  
   
- **Copy** に設定する必要があります  
+ **コピー**  
  スクリプトをクリップボードにコピーします。 その後、スクリプトを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または任意のテキスト エディターに貼り付けて、後でスクリプトを実行できます。  
   
 ## <a name="see-also"></a>参照  

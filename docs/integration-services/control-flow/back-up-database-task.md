@@ -1,4 +1,5 @@
 ---
+description: データベースのバックアップ タスク
 title: データベースのバックアップ タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d10f1ceab3ddb56ae8edbd06b2226fad2646c586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 63e02be4fe2c7fdd1c0293cd5e76dcb9e0adca22
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918881"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123603"
 ---
 # <a name="back-up-database-task"></a>データベースのバックアップ タスク
 
@@ -37,11 +38,11 @@ ms.locfileid: "86918881"
 ## <a name="supported-recover-models-and-backup-types"></a>サポートされている復旧モデルとバックアップの種類  
  次の表に、データベースのバックアップ タスクがサポートする復旧モデルとバックアップの種類を示します。  
   
-|復旧モデル|データベース|データベースの差分|[トランザクション ログ]|ファイルまたはファイルの差分|  
+|復旧モデル|データベース|データベースの差分|トランザクション ログ|ファイルまたはファイルの差分|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|シンプル|必須|省略可能|サポートされていません|サポートされていません|  
-|[完全]|必須|省略可能|必須|省略可能|  
-|一括ログ|必須|省略可能|必須|省略可能|  
+|シンプル|必須|オプション|サポートされていません|サポートされていません|  
+|[完全]|必須|オプション|必須|オプション|  
+|一括ログ|必須|オプション|必須|オプション|  
   
  データベースのバックアップ タスクは、Transact-SQL BACKUP ステートメントをカプセル化します。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
@@ -54,6 +55,5 @@ ms.locfileid: "86918881"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

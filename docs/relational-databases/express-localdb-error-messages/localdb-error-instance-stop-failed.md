@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_INSTANCE_STOP_FAILED
 title: LOCALDB_ERROR_INSTANCE_STOP_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e7989ab7372d6e2137dd2530a7ac27bbc0c8db0f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9d1edf7badcc31385913e3cf7e2bd795d19075ec
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246054"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506216"
 ---
 # <a name="localdb_error_instance_stop_failed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

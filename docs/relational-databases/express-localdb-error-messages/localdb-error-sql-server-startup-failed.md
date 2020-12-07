@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 title: LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5787ae12a495288944cf1bd2edc82bef0668a9a3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4bd756aee6c83a64c91eae1ec2fb9fc1f8b39d32
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245987"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506149"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

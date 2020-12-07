@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue (MDX)
 title: 電卓 Ationpass Value (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425044"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -49,15 +50,15 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  このフラグが設定されている場合、ストレージエンジンによって読み込まれた値を除き、すべての値が null になります。 このフラグが設定されていない場合は、何の計算も適用されずに値が集計されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  数値式が指定されると、この関数は、指定された計算パス内で指定されている (さらに、必要に応じてアクセス フラグとアクセス フラグ修飾子で修飾されている) MDX 数値式を評価し、数値を返します。  
   
  文字列式が指定されている場合、関数は、指定された計算パスで指定された MDX 文字列式を評価し、必要に応じてアクセスフラグとアクセスフラグ修飾子で修飾することによって、文字列値を返し*ます。*  
   
- での[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]自動再帰解決を使用すると、この関数はあまり実用的ではありません。  
+ での自動再帰解決を使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、この関数はあまり実用的ではありません。  
   
 > [!NOTE]  
->  MDX スクリプト内では、管理者のみが計算**Ationpass value**関数を使用できます。 この関数を含む MDX スクリプトが、管理者特権を持たないロールのコンテキストで実行されている場合、エラーが発生します。  
+>  MDX スクリプト内では、管理者のみが計算 **Ationpass value** 関数を使用できます。 この関数を含む MDX スクリプトが、管理者特権を持たないロールのコンテキストで実行されている場合、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  [計算 Ationcurrentpass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   

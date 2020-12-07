@@ -1,6 +1,6 @@
 ---
 title: SQL Server テーブルの削除 (OLE DB ドライバー) |Microsoft Docs
-description: OLE DB Driver for SQL Server を使用し、SQL Server テーブルを削除する
+description: OLE DB Driver for SQL Server の ITableDefinition::DropTable 関数を使用し、データベースから SQL Server テーブルを削除する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, tables
 - removing tables
 - dropping tables
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6a913e3fa3d57c8f2e7a51f2b1d5b177361c43ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3bdcc2b2b96c2cd1d9af0bbf7d31457eed71381
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859409"
 ---
 # <a name="dropping-a-sql-server-table"></a>SQL Server テーブルの削除
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

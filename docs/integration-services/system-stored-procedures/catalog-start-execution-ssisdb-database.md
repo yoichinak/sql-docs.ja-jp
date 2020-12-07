@@ -1,4 +1,5 @@
 ---
+description: catalog.start_execution (SSISDB データベース)
 title: catalog.start_execution (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a8c645595d7ce8a6fd8506952b47cfd9d7139a4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1a69ba2746d688f1d134546370514f826f9cee3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912781"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129621"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
 
@@ -39,7 +40,7 @@ catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] r
  [@retry_count =] *retry_count*  
  実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターは省略可能です。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。 実行のインスタンスが作成された後、インスタンスが起動する前に、対応するプロジェクトが再配置される場合があります。 この場合、実行のインスタンスは古いプロジェクトを参照します。 この無効な参照により、ストアド プロシージャが失敗します。  
   
 > [!NOTE]  

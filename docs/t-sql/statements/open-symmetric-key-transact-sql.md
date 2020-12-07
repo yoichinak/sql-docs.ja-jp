@@ -1,4 +1,5 @@
 ---
+description: OPEN SYMMETRIC KEY (Transact-SQL)
 title: OPEN SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0855dd1c7e57827d99bdeaa78813fa54b75e2fb8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: aead1bff6950305af650040bffb65d92a436f769
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484513"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498089"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "86484513"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   
 <decryption_mechanism> ::=  
@@ -69,7 +69,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  対称キーの保護に使用されているパスワードを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  開いている対称キーは、セキュリティ コンテキストではなくセッションにバインドされており、 明示的に閉じられるか、セッションが終了するまで引き続き使用できます。 対称キーを開いてからコンテキストを切り替えた場合、キーは開かれたままになり、権限を借用したコンテキストでも使用できます。 開いている対称キーに関する情報は、[sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) カタログ ビューで確認できます。  
   
  対称キーが別のキーで暗号化された場合は、そのキーを最初に開く必要があります。  
@@ -85,7 +85,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
 -   DECRYPTION BY CERTIFICATE:証明書に対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
--   DECRYPTION BY ASYMMETRIC KEY:非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
+-   DECRYPTION BY ASYMMETRIC KEY の場合は、非対称キーに対する CONTROL 権限と、秘密キーを暗号化したパスワードの情報が必要です。  
   
 -   DECRYPTION BY PASSWORD の場合は、対称キーの暗号化に使用されたパスワードの 1 つについての情報が必要です。  
   
@@ -94,7 +94,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>A. 証明書を使用して対称キーを開く  
  次の例では、対称キー `SymKeyMarketing3` を開き、証明書 `MarketingCert9` の秘密キーを使って暗号化を解除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 OPEN SYMMETRIC KEY SymKeyMarketing3   
     DECRYPTION BY CERTIFICATE MarketingCert9;  
@@ -104,7 +104,7 @@ GO
 ### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. 別の対称キーを使用して対称キーを開く  
  次の例では、対称キー `MarketingKey11` を開き、対称キー `HarnpadoungsatayaSE3` を使って暗号化を解除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- First open the symmetric key that you want for decryption.  
 OPEN SYMMETRIC KEY HarnpadoungsatayaSE3   
@@ -115,7 +115,7 @@ OPEN SYMMETRIC KEY MarketingKey11
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   

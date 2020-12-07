@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
+ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773652"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92914311"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのマスター インスタンスとは
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスターでの *SQL Server マスター インスタンス*の役割について説明します。 マスター インスタンスとは、ビッグ データ クラスターで実行される、接続、スケールアウト クエリ、メタデータとユーザー データベース、機械学習サービスを管理する SQL Server のインスタンスです。
+この記事では、SQL Server ビッグ データ クラスターでの " *SQL Server マスター インスタンス* " の役割について説明します。 マスター インスタンスとは、SQL Server ビッグ データ クラスターで実行される、接続、スケールアウト クエリ、メタデータとユーザー データベース、機械学習サービスを管理する SQL Server のインスタンスです。
 
 SQL Server マスター インスタンスには、次の機能があります。
 
@@ -36,8 +36,8 @@ SQL Server マスター インスタンスには、[コンピューティング 
 
 SQL マスター インスタンスには、標準の SQL Server システム データベースに加えて、次のものも含まれます。
 
-- HDFS テーブルのメタデータを格納するメタデータ データベース
-- データ プレーンのシャード マップ
+- HDFS テーブルのメタデータを格納するメタデータ データベース。
+- データ プレーンのシャード マップ。
 - クラスター データ プレーンへのアクセスを提供する外部テーブルの詳細情報
 - ユーザー データベースで定義されている PolyBase 外部データ ソースと外部テーブル
 
@@ -51,9 +51,9 @@ Machine Learning Services は、SQL Server ビッグ データ クラスター�
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>ビッグ データ クラスターでの Machine Learning Services の利点
 
-SQL Server 2019 を使用すると、通常はエンタープライズ データベースに格納されているディメンション データにビッグ データを簡単に結合できます。 ビッグ データの価値は、組織の一部で管理されているだけでなく、レポート、ダッシュボード、アプリケーションに取り込むことも行われた場合に、大幅に増加します。 同時に、データ科学者は引き続き Spark/HDFS エコシステム ツールを使用して、SQL Server マスター インスタンス内のデータと、SQL Server マスター インスタンスを "_経由して_" アクセス可能な外部データ ソースに、リアルタイムで簡単にアクセスできます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を使用すると、通常はエンタープライズ データベースに格納されているディメンション データにビッグ データを簡単に結合できます。 ビッグ データの価値は、組織の一部で管理されているだけでなく、レポート、ダッシュボード、アプリケーションに取り込むことも行われた場合に、大幅に増加します。 同時に、データ科学者は引き続き Spark/HDFS エコシステム ツールを使用して、SQL Server マスター インスタンス内のデータと、SQL Server マスター インスタンスを " _経由して_ " アクセス可能な外部データ ソースに、リアルタイムで簡単にアクセスできます。
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を使用すると、エンタープライズ データ レイクでさらに多くのことを行うことができます。 SQL Server 開発者とアナリストは次のことができます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、エンタープライズ データ レイクでさらに多くのことを行うことができます。 SQL Server 開発者とアナリストは次のことができます。
 
 * エンタープライズ データ レイクにあるデータを消費するアプリケーションを構築する。
 * Transact-SQL クエリを使用して、すべてのデータについて推論する。

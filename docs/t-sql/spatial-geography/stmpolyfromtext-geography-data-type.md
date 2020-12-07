@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromText (geography データ型)
 title: STMPolyFromText (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: acd6437e3a87b13559be460358ca83d6a45630cd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a040f71699425fb1030cc435d6b4d356d844e408
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555770"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88305868"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

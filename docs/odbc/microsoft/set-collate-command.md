@@ -1,4 +1,5 @@
 ---
+description: SET COLLATE コマンド
 title: COLLATE コマンドの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466384"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成および並べ替え操作での文字フィールドの照合順序を指定します。  
@@ -33,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  照合順序を指定します。 次の表では、使用可能な照合順序のオプションについて説明します。  
   
-|オプション|言語|  
+|オプション|Language|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
 |GENERAL|英語、フランス語、ドイツ語、スペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
@@ -56,7 +57,7 @@ SET COLLATE TO "SWEFIN"
   
  コンピューターは、既定の照合順序のオプションであり、ユーザーが慣れているシーケンス Xbase です。 文字は、現在のコードページに表示される順序で並べ替えられます。  
   
- 米国および西ヨーロッパのユーザーには、[全般] を使用することをお勧めします。 文字は、現在のコードページに表示される順序で並べ替えられます。 2.5 より前のバージョンの FoxPro では、文字フィールドを一貫したケースに変換するために**UPPER**() 関数または**LOWER**() 関数を使用してインデックスが作成されている可能性があります。 2.5 より後のバージョンの FoxPro では、代わりに一般照合順序のシーケンスオプションを指定し、 **UPPER**() 変換を省略できます。  
+ 米国および西ヨーロッパのユーザーには、[全般] を使用することをお勧めします。 文字は、現在のコードページに表示される順序で並べ替えられます。 2.5 より前のバージョンの FoxPro では、文字フィールドを一貫したケースに変換するために **UPPER**() 関数または **LOWER**() 関数を使用してインデックスが作成されている可能性があります。 2.5 より後のバージョンの FoxPro では、代わりに一般照合順序のシーケンスオプションを指定し、 **UPPER**() 変換を省略できます。  
   
  [コンピューター] 以外の照合順序のオプションを指定した場合に、idx ファイルを作成すると、常に compact. idx が作成されます。  
   
@@ -68,10 +69,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  COLLATE を設定すると、サポートされている言語のいずれかで、アクセントが付いた文字を含むテーブルを並べ替えることができます。 [部単位で印刷] の設定を変更しても、以前に開いたインデックスの照合順序には影響しません。 Visual FoxPro では、既存のインデックスが自動的に保持されるため、同じフィールドであっても、さまざまな種類のインデックスを柔軟に作成できます。  
   
  たとえば、[COLLATE] を [全般] に設定してインデックスを作成し、[COLLATE の設定] 設定を後でスペイン語に変更した場合、インデックスには一般的な照合順序が保持されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

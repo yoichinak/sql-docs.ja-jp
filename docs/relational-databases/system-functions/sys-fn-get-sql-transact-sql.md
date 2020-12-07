@@ -1,4 +1,5 @@
 ---
+description: fn_get_sql (Transact-sql)
 title: fn_get_sql (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a20cd13526bcee06e4f4ce3aa93c52a9fd156456
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427804"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>fn_get_sql (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>引数  
  *SqlHandle*  
- ハンドル値を指定します。 *Sqlhandle*は**varbinary (64)** で、既定値はありません。  
+ ハンドル値を指定します。 *Sqlhandle* は **varbinary (64)** で、既定値はありません。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
@@ -63,16 +64,16 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
 |text|**text**|SQL ステートメントのテキストを入力します。 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="remarks"></a>Remarks  
- 有効な SQL ハンドルを取得するには、 [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)動的管理ビューの sql_handle 列を使用します。  
+## <a name="remarks"></a>解説  
+ 有効な SQL ハンドルを取得するには、 [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 動的管理ビューの sql_handle 列を使用します。  
   
- キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq**l**は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  
+ キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq**l** は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  
   
  では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 一括コピーステートメントや、8 KB を超える文字列リテラルを含むステートメントなど、一部のステートメントをキャッシュすることはできません。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
- 結果セットの**テキスト**列は、パスワードを含む可能性のあるテキストに対してフィルター処理されます。 監視されていないセキュリティ関連のストアドプロシージャの詳細については、「[トレースのフィルター選択](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
+ 結果セットの **テキスト** 列は、パスワードを含む可能性のあるテキストに対してフィルター処理されます。 監視されていないセキュリティ関連のストアドプロシージャの詳細については、「 [トレースのフィルター選択](../../relational-databases/sql-trace/filter-a-trace.md)」を参照してください。  
   
- Fn_get_sql 関数は、 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)コマンドに似た情報を返します。 次に示すのは、fn_get_sql 関数を使用できる場合の例です。 DBCC INPUTBUFFER を指定することはできません。  
+ Fn_get_sql 関数は、 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) コマンドに似た情報を返します。 次に示すのは、fn_get_sql 関数を使用できる場合の例です。 DBCC INPUTBUFFER を指定することはできません。  
   
 -   イベントの文字数が 255 文字を超える場合。  
   
@@ -81,7 +82,7 @@ sys.fn_get_sql ( SqlHandle )
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  データベース管理者は、次の例のように fn_get_sql 関数を使用して、問題があるプロセスを診断できます。 この場合、まず問題があるセッション ID を特定した後、そのセッションに対する SQL ハンドルを取得します。次にそのハンドルで fn_get_sql を呼び出した後、開始オフセットと終了オフセットを使用して、問題があるセッション ID の SQL ステートメントを確認します。  
   
 ```  
@@ -93,7 +94,7 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DBCC INPUTBUFFER &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
  [sys.sysプロセス &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  

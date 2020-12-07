@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
@@ -12,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0895a01f3110c90172ab763ebd0991c259da985d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 67eea4a666519ec5a9dd1dce7e1e33e3c8da4831
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484603"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722443"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -30,22 +31,25 @@ ms.locfileid: "86484603"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-Azure SQL Data Warehouse の構文:
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] の構文:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
-[;]  
+[ ; ]  
 ```  
-Azure 並列データ ウェアハウスの構文:
+
+[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の構文:
   
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
-[;]  
+[ ; ]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
 
 ## <a name="arguments"></a>引数  
  *distribution_id*  
- クエリ プランを実行しているディストリビューションの識別子です。 これは整数であり、NULL にすることはできません。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] をターゲットとする場合に使用されます。  
+ クエリ プランを実行しているディストリビューションの識別子です。 これは整数であり、NULL にすることはできません。 値は 1 から 60 までの範囲でなければなりません [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] をターゲットとする場合に使用されます。  
   
  *pdw_node_id*  
  クエリ プランを実行しているノードの識別子です。 これは整数であり、NULL にすることはできません。 アプライアンスをターゲットとする場合に使用されます。  
@@ -87,7 +91,7 @@ SELECT [sql_spid], [pdw_node_id], [request_id], [dms_step_index], [type], [start
 FROM sys.dm_pdw_dms_workers   
 WHERE [status] <> 'StepComplete' and [status] <> 'StepError'  
 AND pdw_node_id = 201001   
-order by request_id, [dms_step_index], [distribution_id];  
+ORDER BY request_id, [dms_step_index], [distribution_id];  
 ```  
   
 上記のクエリの結果に基づき、DBCC PDW_SHOWEXECUTIONPLAN へのパラメーターとして、sql_spid と pdw_node_id を使用します。 たとえば、次のコマンドでは、pdw_node_id 201001 と sql_spid 375 の実行プランが表示されます。

@@ -1,4 +1,5 @@
 ---
+description: '[フィルターの設定]'
 title: フィルターの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58750ffba9d8eb19c02ceb4870fda0ddffeb5a7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74ddf2a67970c290d427e777184eba74af28a3d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486678"
 ---
 # <a name="filter-settings"></a>[フィルターの設定]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85653133"
  フィルター選択する列の名前を選択します。 1 つ以上の列をフィルター処理の基にすることができます。  
   
  **[オペレーター]**  
- フィルターで使用する演算子 (たとえば、 **[次の値以下]** ) を選択します。  
+ フィルターで使用する演算子 (たとえば、 **[次の値以下]**) を選択します。  
   
  **[値 1]** および **[値 2]**  
  フィルターの値を入力または選択します。 ほとんどの演算子は **[値 1]** 列に値を入力するだけで済みますが、 **[次の値の間]** と **[次の値の範囲外]** の操作は、 **[値 2]** 列にも値を入力する必要があります。  

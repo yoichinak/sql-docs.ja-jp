@@ -1,4 +1,5 @@
 ---
+description: プロジェクトを作成する
 title: プロジェクトを作成する
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 41737a8e6c68c27266feec1be69abee28413d287
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e3bc58b9f702478bdef96535bc7c784d9e410df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497360"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -35,7 +36,7 @@ ms.locfileid: "85999554"
     **テンプレート**  
     **[テンプレート]** ボックスで、テンプレートを選択します。 **[テンプレート]** ボックスの下に、選択したプロジェクト テンプレートの簡単な説明が表示されます。  
   
-    **Name**  
+    **名前**  
     作成するスクリプト プロジェクトの名前を入力します。 **[場所]** フィールドに表示された場所に、プロジェクトと同じ名前のフォルダーも作成されます。 プロジェクトによっては、ソース ファイルなどのサポート ファイルが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって作成され、新しいプロジェクト フォルダーに追加されます。  
   
     > [!NOTE]  
@@ -71,13 +72,13 @@ ms.locfileid: "85999554"
   
     -   Microsoft Windows や MS-DOS で予約されている名前 ("nul"、"aux"、"con"、"com1"、"lpt1" など)  
   
-    **Location**  
+    **場所**  
     プロジェクトを作成する場所を入力するか、一覧から場所を選択します。  
   
     **[参照]**  
     **[プロジェクトの場所]** ダイアログ ボックスを表示します。ここで、プロジェクトを保存する新しいディレクトリを指定できます。  
   
-    **ソリューション**  
+    **解決方法**  
     ソリューション エクスプローラーでソリューションを作成するには、 **[新しいソリューションを作成する]** を選択します。 ソリューション エクスプローラーで現在開いているソリューションに新しいプロジェクトを追加するには、 **[ソリューションに追加]** を選択します。  
   
     **[ソリューションのディレクトリを作成]**  

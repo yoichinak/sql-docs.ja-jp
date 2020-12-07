@@ -1,4 +1,5 @@
 ---
+description: '[列統計プロファイル要求] のオプション (データ プロファイル タスク)'
 title: '[列統計プロファイル要求] のオプション (データ プロファイル タスク) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4704a619f6c8230ff811dc4d7e25d1bdf031297
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 106b5de2807fe41c85d83129a6f285630fd2ab86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477921"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>[列統計プロファイル要求] のオプション (データ プロファイル タスク)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86913243"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列統計プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   

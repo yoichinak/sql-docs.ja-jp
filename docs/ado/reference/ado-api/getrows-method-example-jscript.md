@@ -1,8 +1,9 @@
 ---
+description: GetRows メソッドの例 (JScript)
 title: GetRows メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 33918b473c2c1c556a29dfcfd7f8cfde4cc8e5a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760028"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990903"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows メソッドの例 (JScript)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から*Custiomers*テーブルのすべての行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **GetRowsJS**として保存します。  
+この例では、 [GetRows](./getrows-method-ado.md)メソッドを使用して、[レコードセット](./recordset-object-ado.md)から*Custiomers*テーブルのすべての行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な数の行を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または別のユーザーによって削除されたレコードを**getrows**が取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **GetRowsJS**として保存します。  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -159,5 +160,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetRows メソッド (ADO)](./getrows-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

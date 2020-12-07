@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_XEVENT_FAILED
 title: LOCALDB_ERROR_XEVENT_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fb992edcd84ab87d30eb954e11cac14acf41704
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2474613653e2c2ee52a5aeea30dfe2a472dab253
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246292"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506069"
 ---
 # <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

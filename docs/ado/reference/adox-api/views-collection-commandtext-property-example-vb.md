@@ -1,8 +1,9 @@
 ---
+description: Views コレクションおよび CommandText プロパティの例 (VB)
 title: Views Collection、CommandText プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2c125f77f2ba93f10e8ba855a0105cfb42ca415
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da3685ba69f34fce5a97d0621917883f0e16e6b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746526"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982863"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Views コレクションおよび CommandText プロパティの例 (VB)
-次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してビューのテキストを更新する方法を示しています。  
+次のコードは、 [Command](./command-property-adox.md) プロパティを使用してビューのテキストを更新する方法を示しています。  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -77,8 +78,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Command プロパティ (ADOX)](./command-property-adox.md)   
+ [View オブジェクト (ADOX)](./view-object-adox.md)   
+ [Views コレクション (ADOX)](./views-collection-adox.md)

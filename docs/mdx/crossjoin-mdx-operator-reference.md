@@ -1,4 +1,5 @@
 ---
+description: Crossjoin-MDX 演算子リファレンス
 title: '* Crossjoin(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c957b72736fa8038f01175e3c65898a85704a56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413148"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 演算子リファレンス
 
@@ -34,10 +35,10 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>戻り値  
  指定された両方のパラメーターのクロス積を含むセット。  
   
-## <a name="remarks"></a>Remarks  
- (Crossjoin) 演算子は、機能的には[Crossjoin](../mdx/crossjoin-mdx.md)関数と同等です。 ** \* **  
+## <a name="remarks"></a>解説  
+ ** \* (Crossjoin)** 演算子は、機能的には[Crossjoin](../mdx/crossjoin-mdx.md)関数と同等です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この演算子の使用例を次に示します。  
   
 ```  

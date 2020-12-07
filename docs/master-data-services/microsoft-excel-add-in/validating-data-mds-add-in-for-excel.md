@@ -1,5 +1,6 @@
 ---
-title: データの検証 (Excel 用 MDS アドイン) | Microsoft Docs
+description: データの検証 (Excel 用 MDS アドイン)
+title: データの検証
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b878dcc17cf5ea23b1c5eccca58cdab39cfb7524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257893"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>データの検証 (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でデータをパブリッシュするときに、以下の 2 種類の検証が実行されます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "68074368"
  どちらの場合も、有効なデータが MDS リポジトリにパブリッシュされます。 無効なデータは強調表示され、エラーの詳細は状態列で確認できます。  
   
 ## <a name="when-validation-occurs"></a>検証が実行されるタイミング  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、新しいデータまたは変更されたデータをパブリッシュするとき、またはビジネス ルールを手動で適用するときに、検証が実行されます。  
+ では、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 新しいデータまたは変更されたデータをパブリッシュするとき、またはビジネスルールを手動で適用するときに、検証が行われます。  
   
  ビジネス ルールの検証に失敗しても、データは MDS リポジトリにパブリッシュされます。 入力の検証が失敗した場合は、データはリポジトリにパブリッシュされません。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68074368"
   
  その他の状態については、「[検証状態 (マスター データ サービス)](../../master-data-services/validation-statuses-master-data-services.md)」を参照してください。  
   
-|状態|説明|  
+|Status|説明|  
 |------------|-----------------|  
 |検証に失敗しました|行内の 1 つ以上の値で、MDS 管理者によって定義されたビジネス ルールに対する検証が失敗しました。|  
 |検証に成功しました|行内のすべての値は、ビジネス ルールに対する検証にパスしました。|  
@@ -47,9 +48,9 @@ ms.locfileid: "68074368"
 ## <a name="input-statuses"></a>入力状態  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で考えられる入力状態は、次のとおりです。  
   
-|状態|説明|  
+|Status|説明|  
 |------------|-----------------|  
-|Error|行内の 1 つまたは複数の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
+|エラー|行内の 1 つまたは複数の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
 |新しい行|行内の値は、まだ MDS リポジトリにパブリッシュされていません。|  
 |[読み取り専用]|ログインしているユーザーは、行内の 1 つ以上の値に対して読み取り専用の権限を持っていて、値は更新されません。|  
 |変更なし|行の値は、ワークシート内で変更されていません。 これは、リポジトリ内の値が変更されていないという意味ではありません。シート内の最新のデータを取得するには、 **[接続と読み込み]** グループで、 **[読み込みまたは更新]** をクリックします。<br /><br /> これは、各行の既定の設定です。|  
@@ -63,6 +64,6 @@ ms.locfileid: "68074368"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [概要:Excel からデータをインポートする&#40;MDS アドインの Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概要: Excel からのデータのインポート (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

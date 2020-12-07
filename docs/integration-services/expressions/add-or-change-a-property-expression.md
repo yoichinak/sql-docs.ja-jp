@@ -1,4 +1,5 @@
 ---
+description: プロパティ式を追加または変更する
 title: プロパティ式を追加または変更する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9959b1b8c4628ec171b82b895f648c44037218c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ef6580fb5a6983412343137e5cdf9e0d4ecbcf0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923543"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123322"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
 
@@ -47,7 +48,7 @@ ms.locfileid: "86923543"
   
     -   **[式]** 列で直接プロパティ式を入力するか変更し、 **[OK]** をクリックします。  
   
-         または  
+         - または -  
   
     -   プロパティの式の行の省略記号 [...] をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "86923543"
   
     -   システム変数およびユーザー定義変数にアクセスするには、 **[変数]** を展開します。  
   
-    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 式言語で提供される関数、キャスト、および演算子にアクセスするには、 **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開します。  
+    -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 式言語で提供される関数、キャスト、および演算子にアクセスするには、 **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開します。  
   
     -   **[式ビルダー]** で式を作成または変更するには、変数、列、関数、演算子、およびキャストを **[式]** ボックスにドラッグするか、または式をボックスに入力します。  
   

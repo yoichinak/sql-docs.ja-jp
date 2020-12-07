@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-sql)
 title: sp_helppullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729206"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535185"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`リモートサーバーの名前を指定します。 *publisher*のデータ型は**sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーの情報が返されます。  
+`[ @publisher = ] 'publisher'` リモートサーバーの名前を指定します。 *publisher* のデータ型は **sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーの情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値はです。これにより、 **%** すべてのパブリッシャーデータベースが返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**で、既定値はです。これにより、 **%** すべてのパブリッシャーデータベースが返されます。  
   
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション*は**sysname**で、既定値はです。これにより、 **%** すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0**のプルサブスクリプションのみが返されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *パブリケーション* は **sysname**で、既定値はです。これにより、 **%** すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0** のプルサブスクリプションのみが返されます。  
   
-`[ @show_push = ] 'show_push'`すべてのプッシュサブスクリプションを返すかどうかを指定します。 *show_push*は**nvarchar (5)**,、既定値は FALSE の場合、プッシュサブスクリプションは返されません。  
+`[ @show_push = ] 'show_push'` すべてのプッシュサブスクリプションを返すかどうかを指定します。 *show_push*は **nvarchar (5)**,、既定値は FALSE の場合、プッシュサブスクリプションは返されません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -58,7 +59,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
 |**サブスクリプションの種類**|**int**|パブリケーションへのサブスクリプションの種類。|  
 |**ディストリビューションエージェント**|**nvarchar (100)**|サブスクリプションを処理ディストリビューションエージェント。|  
-|**publication description**|**nvarchar(255)**|パブリケーションの説明です。|  
+|**publication description**|**nvarchar (255)**|パブリケーションの説明です。|  
 |**最終更新時刻**|**date**|サブスクリプション情報が更新された時刻。 ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh: mi: sss. mmm です。 ' yyyy ' は年、' mm ' は月、' dd ' は日、' hh ' は時間、' mi ' は分、' sss ' は秒、' mmm ' はミリ秒です。|  
 |**サブスクリプション名**|**varchar (386)**|サブスクリプションの名前。|  
 |**最後のトランザクションのタイムスタンプ**|**varbinary(16)**|最後にレプリケートされたトランザクションのタイムスタンプ。|  
@@ -70,7 +71,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|スナップショット エージェントを実行するたびに、同期ファイルを作成または再作成するかどうかを示します。|  
 |**パブリッシャーログイン**|**sysname**|パブリッシャーで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**パブリッシャーのパスワード**|**nvarchar (524)**|認証のためにパブリッシャーで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**パブリッシャーの security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、*パブリッシャー*は、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
+|**パブリッシャーの security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な **sysservers** エントリを使用してリモートプロシージャコール (RPC) を実行します。また、 *パブリッシャー* は、 **sysservers** テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターで認証に使用されるログイン ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**distributor_password**|**nvarchar (524)**|認証のためにディストリビューターで使用されるパスワード (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -79,8 +80,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**ftp_port**|**int**|これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_login**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**ftp_password**|**nvarchar (524)**|これは旧バージョンとの互換性のためにだけ用意されています。|  
-|**alt_snapshot_folder**|**nvarchar(255)**|場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
-|**working_directory**|**nvarchar(255)**|該当するオプションが指定され、ファイル転送プロトコル (FTP) を使ってスナップショット ファイルを転送する場合の、転送先ディレクトリの完全修飾パス。|  
+|**alt_snapshot_folder**|**nvarchar (255)**|場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
+|**working_directory**|**nvarchar (255)**|該当するオプションが指定され、ファイル転送プロトコル (FTP) を使ってスナップショット ファイルを転送する場合の、転送先ディレクトリの完全修飾パス。|  
 |**use_ftp**|**bit**|サブスクリプションは、インターネット経由でパブリケーションをサブスクライブしています。また、FTP アドレスのプロパティが構成されています。 **0**の場合、サブスクリプションは FTP を使用していません。 **1**の場合、サブスクリプションは FTP を使用しています。|  
 |**publication_type**|**int**|パブリケーションのレプリケーションの種類。<br /><br /> **0** = トランザクションレプリケーション<br /><br /> **1** = スナップショットレプリケーション<br /><br /> **2** = マージレプリケーション|  
 |**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
@@ -94,15 +95,15 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**job_password**|**sysname**|セキュリティ上の理由から、値 " **\*\*\*\*\*\*\*\*\*\*** " は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helppullsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_helppullsubscription** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_helppullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

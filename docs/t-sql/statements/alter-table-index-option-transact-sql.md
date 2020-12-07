@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE index_option (Transact-SQL)
 title: " | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/26/2019
@@ -12,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - index_option
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2dc1a526006b9c31613b8d21e8733b9684afc345
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2d3aedcafe6917084474d5cc7f33d35f651aa39f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541452"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

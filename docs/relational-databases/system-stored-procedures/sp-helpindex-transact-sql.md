@@ -1,4 +1,5 @@
 ---
+description: sp_helpindex (Transact-SQL)
 title: sp_helpindex (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpindex
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43bf9b75af8cc43af8c45e4cc2fe4f9d4e66e595
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eba692ae14a1632a59c3a56c0f7ac68072dee7eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549608"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'name'`ユーザー定義テーブルまたはビューの修飾名または修飾され名を指定します。 引用符は、テーブルまたはビューの修飾名を指定したときにのみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *名前*は**nvarchar (776)**,、既定値はありません。  
+`[ @objname = ] 'name'` ユーザー定義テーブルまたはビューの修飾名または修飾され名を指定します。 引用符は、テーブルまたはビューの修飾名を指定したときにのみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *名前* は **nvarchar (776)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,10 +56,10 @@ sp_helpindex [ @objname = ] 'name'
   
  降順のインデックス付き列は、名前の後にマイナス記号 (-) を付けて結果セットに一覧表示されます。既定の昇順のインデックス列は、名前だけで一覧表示されます。  
   
-## <a name="remarks"></a>Remarks  
- UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、その情報は**index_description**列に含まれます。  
+## <a name="remarks"></a>解説  
+ UPDATE STATISTICS の NORECOMPUTE オプションを使用してインデックスが設定されている場合、その情報は **index_description** 列に含まれます。  
   
- **sp_helpindex**は、順序付け可能インデックス列のみを公開します。そのため、XML インデックスや空間インデックスに関する情報は公開されません。  
+ **sp_helpindex** は、順序付け可能インデックス列のみを公開します。そのため、XML インデックスや空間インデックスに関する情報は公開されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -73,11 +74,11 @@ EXEC sp_helpindex N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [SQL&#41;&#40;Transact-sql のインデックス](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   

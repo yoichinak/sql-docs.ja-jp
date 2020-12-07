@@ -1,4 +1,5 @@
 ---
+description: deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 title: deletesAreDetected メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8aeb74dd819817d743d5929cb2f1e6e74bb77339
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67955129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437914"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 

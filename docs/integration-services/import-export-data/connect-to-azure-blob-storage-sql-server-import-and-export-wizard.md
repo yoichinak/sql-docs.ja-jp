@@ -1,4 +1,5 @@
 ---
+description: Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード)
 title: Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914104"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042408"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage に接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -47,11 +48,11 @@ ms.locfileid: "86914104"
 **アカウント キー**  
 Azure ストレージ アカウントのキーを入力します。  
   
- **HTTPS の使用**  
+ **HTTPS を使用する**  
  ストレージ アカウントへの接続に HTTP または HTTPS のどちらを使用するかを指定します。  
   
  **ローカル開発者アカウントの使用**  
- ローカル コンピューター上のストレージ エミュレーターを使用するかどうかを指定します。  
+ ローカル コンピューター上の Azure Storage エミュレーターを使用するかどうかを指定します。  
   
  **BLOB コンテナーの名前**  
  指定されたストレージ アカウントで利用できるストレージ コンテナーの一覧から選択します。  
@@ -59,7 +60,7 @@ Azure ストレージ アカウントのキーを入力します。
  **BLOB ファイル形式**  
  テキスト ファイル形式または Avro ファイル形式を選択します。  
   
- **列区切り文字**  
+ **Column delimiter character (列区切り文字)**  
  テキスト形式を選択した場合は、列区切り文字を入力します。  
   
  **先頭行を列名として使用する**  

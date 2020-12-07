@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 title: sp_xtp_bind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 436d04ea81df4b25646b4b56d8ac59ffc9fa3b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442445"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540414"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -145,7 +146,7 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 -   `database_name` で指定するデータベースと `resource_pool_name` で指定するリソース プールはどちらも、バインドする前に存在している必要があります。  
   

@@ -4,7 +4,7 @@ description: プロジェクト、ソリューション、またはファイル 
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122826"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036376"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +65,8 @@ ms.locfileid: "87122826"
  既定では、[検索結果 1] ウィンドウに置換情報が表示されます。 置換項目を確認するには、[検索結果 1] ウィンドウ内の各項目をダブルクリックします。  
   
 ## <a name="see-also"></a>参照  
- [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
- [ドキュメントの対話形式の検索](../../relational-databases/scripting/search-documents-interactively.md)   
- [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [検索と置換](./search-and-replace.md)   
+ [ドキュメントの対話形式の検索](./search-documents-interactively.md)   
+ [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)  
   

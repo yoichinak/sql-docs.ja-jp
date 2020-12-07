@@ -1,4 +1,5 @@
 ---
+description: Point (geography データ型)
 title: Point (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 04db3c6617669010f63e173415de0ebf6b7a3dca
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 47df12a85a22251a9cd962834e8e2a97170a4528
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556164"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038327"
 ---
 # <a name="point-geography-data-type"></a>Point (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Point ( Lat, Long, SRID )
  生成される **Point** の x 座標を表す **float** 式です。 有効な経度と緯度の値の詳細については、「[Point](../../relational-databases/spatial/point.md)」をご覧ください。  
   
  *SRID*  
- 返される **geography** インスタンスの [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) を表す **int** 式です。  
+ 返される **geography** インスタンスの [Spatial Reference Identifier](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) を表す **int** 式です。  
   
 > [!NOTE]  
 >  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  
@@ -67,4 +68,4 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>参照  
- [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
+ [拡張された静的な地理メソッド](../../t-sql/spatial-geography/extended-static-geography-methods.md)

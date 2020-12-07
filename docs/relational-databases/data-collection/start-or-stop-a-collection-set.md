@@ -1,4 +1,5 @@
 ---
+description: コレクション セットの開始または停止
 title: コレクション セットの開始または停止 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8c9a4b009c562e3af594aa7adbe081f46a37f32a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1d62c72e43d9495874881ba3c029640626f129c8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758110"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88471451"
 ---
 # <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85758110"
   
      [Recommendations (推奨事項)](#Recommendations)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **コレクション セットを開始または停止する方法:**  
   

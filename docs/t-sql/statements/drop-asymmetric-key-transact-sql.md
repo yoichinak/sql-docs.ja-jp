@@ -1,4 +1,5 @@
 ---
+description: DROP ASYMMETRIC KEY (Transact-SQL)
 title: DROP ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9f0ab3341c71500c915b39bb69c28542751ed9b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 6ae0f615c3d59228618a7e04d637997b999cb123
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484733"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380217"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +40,7 @@ ms.locfileid: "86484733"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]  
 ```  
   
@@ -66,7 +66,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
 ## <a name="examples"></a>例  
  次の例では、非対称キー `MirandaXAsymKey6` をデータベース `AdventureWorks2012` から削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  

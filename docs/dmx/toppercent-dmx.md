@@ -1,4 +1,5 @@
 ---
+description: TopPercent (DMX)
 title: TopPercent (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f1193e43a00fc4c20487a92e8df3a9f705fa4490
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970240"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726093"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,11 +34,11 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>戻り値の型  
  \<table expression>  
   
-## <a name="remarks"></a>注釈  
- **TopPercent**関数は、各行の引数の評価値に基づいて、順位の降順で最上位の行を返し \<rank expression> ます。これは、値の合計 \<rank expression> が引数で指定された指定の割合以上になるようにするためです \<percent> 。 **TopPercent**は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>解説  
+ **TopPercent**関数は、各行の引数の評価値に基づいて、順位の降順で最上位の行を返し \<rank expression> ます。これは、値の合計 \<rank expression> が引数で指定された指定の割合以上になるようにするためです \<percent> 。 **TopPercent** は、指定された割合の値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>例  
- 次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
+ 次の例では、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -50,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -97,14 +98,13 @@ NATURAL PREDICTION JOIN
 |Patch kit|2113|0.14...|0.13...|  
 |Mountain Tire Tube|1992|0.133...|0.12...|  
   
- **メモ**この例は、TopPercent の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
+ **メモ** この例は、TopPercent の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
   
 > [!WARNING]  
->  TOPPERCENT との MDX 関数では、割合の計算に使用される値に負の数値が含まれている場合、予期しない結果が発生する可能性があります。 この動作は、DMX 関数には影響しません。 詳細については、「 [&#41;&#40;MDX の割合](../mdx/bottompercent-mdx.md)」を参照してください。  
+>  TOPPERCENT との MDX 関数では、割合の計算に使用される値に負の数値が含まれている場合、予期しない結果が発生する可能性があります。 この動作は、DMX 関数には影響しません。 詳細については、「 [&#41;&#40;MDX の割合 ](../mdx/bottompercent-mdx.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
-  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   

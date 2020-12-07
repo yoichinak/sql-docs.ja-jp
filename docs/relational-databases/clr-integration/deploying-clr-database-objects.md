@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88f297829a13c1b7d132230aebab76b9f546704d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756304"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192612"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85756304"
  すべてのコンパイラ エラーおよび警告が解決されていることを確認してください。 これで、Visual Studio または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを使用して、CLR ルーチンを含むアセンブリを [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースに登録できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、「[クライアントプロトコルを構成する](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーで TCP/IP プロトコルを有効にする方法の詳細については、「 [クライアントプロトコルを構成する](../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Visual Studio を使用してアセンブリを配置するには  
   
@@ -58,7 +58,7 @@ ms.locfileid: "85756304"
   
  `vbc /target:library C:\helloworld.vb`  
   
- これらのコマンドは、 **/target**オプションを使用してライブラリ DLL のビルドを指定し、Visual C# または Visual Basic コンパイラを起動します。  
+ これらのコマンドは、 **/target** オプションを使用してライブラリ DLL のビルドを指定し、Visual C# または Visual Basic コンパイラを起動します。  
   
 1.  アセンブリをテスト サーバーに配置する前に、すべてのビルド エラーおよび警告を解決します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85756304"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- でのさまざまな種類の管理されたデータベースオブジェクトの作成の詳細について [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、「 [Clr ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」、「Clr[ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」、「clr ユーザー定義[型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」、「Clr[ストアドプロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)」、および「 [clr トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)」を参照してください。  
+ でのさまざまな種類のマネージデータベースオブジェクトの作成の詳細につい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ては、「 [Clr User-Defined 関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」、「clr [User-Defined 集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)」、「 [clr User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」、「Clr [ストアドプロシージャ](/dotnet/framework/data/adonet/sql/clr-stored-procedures)」、および「 [clr トリガー](/dotnet/framework/data/adonet/sql/clr-triggers)」を参照してください。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>実稼働サーバーへのアセンブリの配置  
  CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージデータベースオブジェクトのデバッグの詳細については、「 [CLR データベースオブジェクトのデバッグ](../../relational-databases/clr-integration/debugging-clr-database-objects.md)」を参照してください。  
@@ -87,26 +87,25 @@ ms.locfileid: "85756304"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を開き、配置するマネージド アセンブリまたはデータベース オブジェクトを登録する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。  
   
-2.  **オブジェクトエクスプローラー**で、 **\<server name>** [**データベース**] ツリーを展開します。 マネージデータベースオブジェクトが登録されているデータベースを右クリックし、[**タスク**]、[**スクリプトの生成**] の順に選択します。 スクリプト作成ウィザードが開きます。  
+2.  **オブジェクトエクスプローラー**で、 **\<server name>** [**データベース**] ツリーを展開します。 マネージデータベースオブジェクトが登録されているデータベースを右クリックし、[ **タスク**]、[ **スクリプトの生成**] の順に選択します。 スクリプト作成ウィザードが開きます。  
   
-3.  リストボックスからデータベースを選択し、[**次へ**] をクリックします。  
+3.  リストボックスからデータベースを選択し、[ **次へ**] をクリックします。  
   
-4.  [**スクリプトオプションの選択**] ウィンドウで [**次へ**] をクリックするか、オプションを変更して [**次へ**] をクリックします。  
+4.  [ **スクリプトオプションの選択** ] ウィンドウで [ **次へ**] をクリックするか、オプションを変更して [ **次へ**] をクリックします。  
   
-5.  [**オブジェクトの種類の選択**] ペインで、配置するデータベースオブジェクトの種類を選択します。 **[次へ]** をクリックします。  
+5.  [ **オブジェクトの種類の選択** ] ペインで、配置するデータベースオブジェクトの種類を選択します。 **[次へ]** をクリックします。  
   
-6.  [**オブジェクトの種類の選択**] ペインで選択したオブジェクトの種類ごとに、 **[選択 \<type> ** ] ペインが表示されます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1つまたは複数のオブジェクトを選択し、[**次へ**] をクリックします。  
+6.  [**オブジェクトの種類の選択**] ペインで選択したオブジェクトの種類ごとに、 **[選択 \<type> ** ] ペインが表示されます。 このペインでは、指定したデータベースに登録されているデータベース オブジェクトの種類のすべてのインスタンスから、いずれかのオブジェクトを選択できます。 1つまたは複数のオブジェクトを選択し、[ **次へ**] をクリックします。  
   
-7.  必要なデータベースオブジェクトの種類がすべて選択されると、[**出力オプション**] ウィンドウが表示されます。 [**スクリプトをファイルに**作成] を選択し、スクリプトのファイルパスを指定します。 **[次へ]** を選択します。 選択内容を確認し、[**完了**] をクリックします。 配置スクリプトが指定したファイル パスに保存されます。  
+7.  必要なデータベースオブジェクトの種類がすべて選択されると、[ **出力オプション** ] ウィンドウが表示されます。 [ **スクリプトをファイルに** 作成] を選択し、スクリプトのファイルパスを指定します。 **[次へ]** を選択します。 選択内容を確認し、[ **完了**] をクリックします。 配置スクリプトが指定したファイル パスに保存されます。  
   
 ## <a name="post-deployment-scripts"></a>配置後スクリプト  
  配置後スクリプトの実行が可能です。  
   
- 配置後スクリプトを追加するには、Visual Studio のプロジェクト ディレクトリに postdeployscript.sql というファイルを追加します。 たとえば、**ソリューションエクスプローラー**でプロジェクトを右クリックし、[**既存項目の追加**] を選択します。 ファイルは、Test Scripts フォルダーではなく、プロジェクトのルートに追加してください。  
+ 配置後スクリプトを追加するには、Visual Studio のプロジェクト ディレクトリに postdeployscript.sql というファイルを追加します。 たとえば、 **ソリューションエクスプローラー** でプロジェクトを右クリックし、[ **既存項目の追加**] を選択します。 ファイルは、Test Scripts フォルダーではなく、プロジェクトのルートに追加してください。  
   
  [配置] をクリックすると、プロジェクトの配置後に、このスクリプトが Visual Studio によって実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 98ac18629fc8765c314abd799364fd542e25c5da
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301942"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128120"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,6 @@ ms.locfileid: "86301942"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     [ FOR SERVER AUDIT audit_name ]  
@@ -52,7 +52,6 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
       <action_specification>[ ,...n ] ON [ class :: ] securable   
      BY principal [ ,...n ]   
 }  
-  
 ```  
   
 
@@ -86,7 +85,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。 監査仕様の状態の変更はユーザー トランザクション外部で実行する必要があります。また、状態が ON から OFF に遷移中の場合、同じステートメントで他の変更を行うことはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 データベース監査仕様を変更する場合は、監査仕様の状態のオプションを OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査仕様を有効にしているときに ALTER DATABASE AUDIT SPECIFICATION を実行すると、エラー メッセージが表示されます。 詳細については、「 [tempdb Database](../../relational-databases/databases/tempdb-database.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -97,7 +96,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>例  
  次の例では、`HIPAA_Audit_DB_Specification` ユーザーによる `SELECT` ステートメントを監査する、`dbo` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査の `HIPAA_Audit` というデータベース監査仕様を変更します。  
   
-```  
+```sql  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
@@ -109,7 +108,7 @@ GO
   
  監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

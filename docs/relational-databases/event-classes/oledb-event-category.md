@@ -1,4 +1,5 @@
 ---
+description: OLEDB イベント カテゴリ
 title: OLEDB イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca046bacc1a0dff03ddab4d0fc64004c50dc307c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8535123c46bc7249704808762b9b5d59c773976f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726227"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88424224"
 ---
 # <a name="oledb-event-category"></a>OLEDB イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

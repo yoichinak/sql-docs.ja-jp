@@ -1,4 +1,5 @@
 ---
+description: ドライバー アプリケーションの作成
 title: アプリケーションの作成
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,18 +25,19 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d11d28460905bcf1581aeaa56777b72f987f8452
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009769"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890804"
 ---
 # <a name="creating-a-driver-application"></a>ドライバー アプリケーションの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC アーキテクチャには、次の機能を実行する 4 つのコンポーネントがあります。  
   
-|コンポーネント|関数|  
+|コンポーネント|機能|  
 |---------------|--------------|  
 |Application|ODBC 関数を呼び出して ODBC データ ソースと通信し、SQL ステートメントを送信して、結果セットを処理します。|  
 |ドライバー マネージャー|アプリケーションと、そのアプリケーションで使用されるすべての ODBC ドライバー間の通信を管理します。|  
@@ -68,7 +70,7 @@ ms.locfileid: "86009769"
   
 -   一括コピー操作の実行  
   
--   大規模データ (**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** の各列) 操作の管理  
+-   大規模データ (**varchar (max)**、 **nvarchar (max)**、および **varbinary (max)** の各列) 操作の管理  
   
 -   データベース ミラーリングが構成されているときにフェールオーバーを容易にするための再接続ロジックの使用  
   
@@ -78,19 +80,19 @@ ms.locfileid: "86009769"
   
  Native Client ODBC ドライバーを含む多くの ODBC ドライバーには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ドライバー固有の odbc 拡張機能が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバー固有の拡張機能を利用するには、アプリケーションに sqlncli ヘッダーファイルを含める必要があります。 このヘッダー ファイルには、次の要素が含まれています。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の接続属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の接続属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有のステートメント属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有のステートメント属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の列属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の列属性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有のデータ型  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有のユーザー定義データ型  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー固有の[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー固有の [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) 型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーの診断フィールド。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの診断フィールド。  
   
 -   診断に役立つ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の動的関数コード  
   
@@ -109,7 +111,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細については、 [ODBC プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)を参照してください。  
+ アプリケーションで複数の ODBC 呼び出しが同時に未処理状態になる必要があるかどうかというデザイン上の決定を、アプリケーションのビルド処理の初期段階で行います。 複数の同時実行 ODBC 呼び出しをサポートするには 2 つの方法があり、このセクションの残りのトピックで説明されています。 詳細については、 [ODBC プログラマーズリファレンス](../../../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -119,5 +121,4 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-  
   

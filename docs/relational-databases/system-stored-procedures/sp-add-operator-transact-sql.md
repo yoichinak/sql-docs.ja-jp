@@ -1,4 +1,5 @@
 ---
+description: sp_add_operator (Transact-SQL)
 title: sp_add_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2b67e5754fdc0124d105d99954361535933c88b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878695"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539241"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント () 文字を含めることはできません **%** 。 *名前*は**sysname**,、既定値はありません。  
+`[ @name = ] 'name'` オペレーター (通知受信者) の名前。 この名前は一意である必要があり、パーセント () 文字を含めることはできません **%** 。 *名前* は **sysname**,、既定値はありません。  
   
-`[ @enabled = ] enabled`オペレーターの現在の状態を示します。 *有効*になっているは**tinyint**,、既定値は**1** (有効) です。 **0**の場合、オペレーターは無効になり、通知を受信しません。  
+`[ @enabled = ] enabled` オペレーターの現在の状態を示します。 *有効* になっているは **tinyint**,、既定値は **1** (有効) です。 **0**の場合、オペレーターは無効になり、通知を受信しません。  
   
-`[ @email_address = ] 'email_address'`オペレーターの電子メールアドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**,、既定値は NULL です。  
+`[ @email_address = ] 'email_address'` オペレーターの電子メールアドレス。 この文字列はメール システムに直接渡されます。 *email_address* は **nvarchar (100)**,、既定値は NULL です。  
   
  *Email_address*には、物理電子メールアドレスまたはエイリアスを指定できます。 次に例を示します。  
   
@@ -65,21 +66,21 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  データベース メールには電子メール アドレスを使用する必要があります。  
   
-`[ @pager_address = ] 'pager_address'`オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**nvarchar (100)**,、既定値は NULL です。  
+`[ @pager_address = ] 'pager_address'` オペレーターのポケットベルアドレス。 この文字列はメール システムに直接渡されます。 *pager_address* は **nvarchar (100)**,、既定値は NULL です。  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]月曜日から金曜日までの平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]月曜日から金曜日までの平日に、指定したオペレーターにエージェントがポケットベルによる通知を送信するまでの時間。 *weekday_pager_start_time*は **int**,、既定値は **090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`月曜日から金曜日までの平日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *weekday_pager_end_time*は**int**,、既定値は 18万,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` 月曜日から金曜日までの平日に、 **SQLServerAgent** サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *weekday_pager_end_time*は **int**,、既定値は 18万,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @saturday_pager_start_time = ] saturday_pager_start_time`土曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信するまでの時間。 *saturday_pager_start_time*は**int**,、既定値は 090000,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` 土曜日に、 **SQLServerAgent** サービスが、指定されたオペレーターにポケットベルによる通知を送信するまでの時間。 *saturday_pager_start_time* は **int**,、既定値は 090000,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time`土曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *saturday_pager_end_time*は**int**,、既定値は**18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` 土曜日に、 **SQLServerAgent** サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *saturday_pager_end_time*は **int**,、既定値は **18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @sunday_pager_start_time = ] sunday_pager_start_time`日曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信するまでの時間。 *sunday_pager_start_time*は**int**,、既定値は**090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` 日曜日に、 **SQLServerAgent** サービスが、指定されたオペレーターにポケットベルによる通知を送信するまでの時間。 *sunday_pager_start_time*は **int**,、既定値は **090000**,、9:00 A.M. を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time`日曜日に、 **SQLServerAgent**サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *sunday_pager_end_time*は**int**,、既定値は**18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` 日曜日に、 **SQLServerAgent** サービスが、指定されたオペレーターにポケットベルによる通知を送信しなくなる時刻。 *sunday_pager_end_time*は **int**,、既定値は **18万**,、6:00 pm を示す を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
-`[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合、操作がページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **62**になります。 次の表は、各曜日の値を示しています。  
+`[ @pager_days = ] pager_days` ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は **tinyint**,、既定値は **0** の場合、操作がページを受信できないことを示します。 有効な値は **0** ~ **127**です。 *pager_days*は、必要な日数の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2** + **4** + **8** + **16** + **32**  =  **62**になります。 次の表は、各曜日の値を示しています。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -91,18 +92,18 @@ sp_add_operator [ @name = ] 'name'
 |**32**|金曜日|  
 |**64**|土曜日|  
   
-`[ @netsend_address = ] 'netsend_address'`ネットワークメッセージの送信先オペレーターのネットワークアドレス。 *netsend_address*は**nvarchar (100)**,、既定値は NULL です。  
+`[ @netsend_address = ] 'netsend_address'` ネットワークメッセージの送信先オペレーターのネットワークアドレス。 *netsend_address*は **nvarchar (100)**,、既定値は NULL です。  
   
-`[ @category_name = ] 'category'`この演算子のカテゴリの名前。 *category*は**sysname**,、既定値は NULL です。  
+`[ @category_name = ] 'category'` この演算子のカテゴリの名前。 *category* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_operator**は、 **msdb**データベースから実行する必要があります。  
+ **sp_add_operator** は、 **msdb** データベースから実行する必要があります。  
   
  ページングは電子メールシステムでサポートされています。ページングを使用する場合は、電子メールとポケットベルの機能が必要です。  
   
@@ -111,7 +112,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_add_operator**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`danwi` に対してオペレーター情報を設定します。 オペレーターは有効になっています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、月曜日から金曜日の午前 8 時から午後 5 時まで、 ポケットベルによる通知を送信します。  
   
 ```  
@@ -129,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_delete_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

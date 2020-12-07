@@ -1,4 +1,5 @@
 ---
+description: PERCENTILE_CONT (Transact-SQL)
 title: PERCENTILE_CONT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2015
@@ -19,12 +20,12 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5d32b6d0c737df791022f0bc7814a627a2ba1b78
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395811"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380767"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ PERCENTILE_CONT ( numeric_literal )
 ### <a name="a-basic-syntax-example"></a>A. 基本構文例  
  次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
   
 SELECT DISTINCT Name AS DepartmentName  
@@ -99,7 +100,7 @@ Human Resources        17.427850    16.5865
 ### <a name="b-basic-syntax-example"></a>B. 基本構文例  
  次の例では、PERCENTILE_CONT と PERCENTILE_DISC を使用して、各部門の従業員給与の中央値を検索します。 これらの関数は同じ値を返さない可能性があります。 PERCENTILE_CONT ではデータセットに存在するかどうかに関係なく適切な値が挿入され、PERCENTILE_DISC では常にセットから実際の値を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT DepartmentName  
@@ -107,8 +108,7 @@ SELECT DISTINCT DepartmentName
     OVER (PARTITION BY DepartmentName) AS MedianCont  
 ,PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY BaseRate)  
     OVER (PARTITION BY DepartmentName) AS MedianDisc  
-FROM dbo.DimEmployee;  
-  
+FROM dbo.DimEmployee; 
 ```  
   
  次に結果セットの一部を示します。  

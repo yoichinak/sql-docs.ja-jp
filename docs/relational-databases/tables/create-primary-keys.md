@@ -1,4 +1,5 @@
 ---
+description: 主キーの作成
 title: 主キーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,17 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c45f661afff669e64dae6c800d19a57635aebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5f636cfad5425ec24a41984ddf3b650439b5c13a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002180"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646363"
 ---
 # <a name="create-primary-keys"></a>主キーの作成
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを定義できます。 主キーを作成すると、指定に従って対応する一意なクラスター化または非クラスター化インデックスが自動的に作成されます。
 
@@ -101,7 +103,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 

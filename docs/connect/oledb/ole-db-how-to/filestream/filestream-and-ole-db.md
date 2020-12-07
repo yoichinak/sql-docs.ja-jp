@@ -1,6 +1,6 @@
 ---
 title: FILESTREAM と OLE DB (OLE DB ドライバー) |Microsoft Docs
-description: FILESTREAM と OLE DB
+description: このセクションの 4 つの例では、OLE DB Driver for SQL Server を filestream 機能と共に使用する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b341202b0941fb718bb03eb43e082a3b5af7633e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf54843d4f033220ecada31291e83d3d39977c07
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244769"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860590"
 ---
 # <a name="filestream-and-ole-db"></a>FILESTREAM と OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

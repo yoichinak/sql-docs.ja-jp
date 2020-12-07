@@ -1,4 +1,5 @@
 ---
+description: updateBlob メソッド (SQLServerResultSet)
 title: updateBlob メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee17a330526c099394145b95b127091ccc1f7fee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 31cf98c8237267915a137bdba720ac586795ff2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462296"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80924768"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|指定された列を java.sql.Blob 値で更新します。|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|指定された入力ストリームを使用して、指定された列を更新します。|  

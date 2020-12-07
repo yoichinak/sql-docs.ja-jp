@@ -1,4 +1,5 @@
 ---
+description: Kerberos 相互認証の取得
 title: 相互 Kerberos 認証を取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,11 +12,12 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5beea9eaea1f38cafadf0ad4d7ecf2f516b3c22d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b2bc6879cae551ce462db0df1c00b51a25da432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470433"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Kerberos 相互認証の取得
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +26,7 @@ ms.locfileid: "86009435"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、「[クライアント接続でのサービスプリンシパル名 &#40;SPN&#41; サポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
+ 詳細については、「 [クライアント接続でのサービスプリンシパル名 &#40;SPN&#41; サポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  

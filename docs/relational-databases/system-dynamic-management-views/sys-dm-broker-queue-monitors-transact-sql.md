@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_queue_monitors (Transact-SQL)
 title: dm_broker_queue_monitors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1df4b4387d79cc6e8b2dc59b7a5a00f61a6d07f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15090a3b52be40dba3735bb0b10ef185efe5de2b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894595"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551310"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85894595"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|モニターが監視するキューを含むデータベースのオブジェクト識別子。 NULLABLE.|  
 |**queue_id**|**int**|モニターが監視するキューのオブジェクト識別子。 NULLABLE.|  
-|**状態**|**nvarchar(32)**|モニターの状態。 NULLABLE. これは、次のいずれかになります。<br /><br /> **稼動**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**状態**|**nvarchar(32)**|モニターの状態。 NULLABLE. これは、次のいずれかになります。<br /><br /> **INACTIVE**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|キューからの受信によって空の結果が返された最後の時刻。 NULLABLE.|  
 |**last_activated_time**|**datetime**|キュー モニターによってストアド プロシージャがアクティブ化された前回の時刻。 NULLABLE.|  
 |**tasks_waiting**|**int**|このキューの RECEIVE ステートメント内で現在待機しているセッションの数。 NULLABLE.<br /><br /> 注: この数には、キューモニターがセッションを開始したかどうかに関係なく、receive ステートメントを実行するすべてのセッションが含まれます。 これは、RECEIVE と共に WAITFOR を使用する場合に該当します。 基本的に、これらのタスクは、メッセージがキューに到着するのを待機しています。|  
@@ -74,8 +75,8 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Service Broker 関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

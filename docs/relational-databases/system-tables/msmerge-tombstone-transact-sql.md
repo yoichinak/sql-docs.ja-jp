@@ -1,4 +1,5 @@
 ---
+description: MSmerge_tombstone (Transact-SQL)
 title: MSmerge_tombstone (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e46010c61b8646763e3ca8e07e46e6d62864965d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dc137583386c4b098960d762484ef526f2f95f14
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545563"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889702"
 |**logical_record_parent_rowguid**|**uniqueidentifier**|削除された行が属する論理レコードを識別します。|  
 |**logical_record_lineage**|**Varbinary (501)**|この行が属する論理レコードの削除履歴を保持するために使用されるサブスクライバーのニックネームとバージョン番号のペアです。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

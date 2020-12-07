@@ -1,4 +1,5 @@
 ---
+description: STCurveToLine (geography データ型)
 title: STCurveToLine (geography データベース型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2d0c930d7963cfe6ec712a72e1c2d0d3496f1007
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2c8674e1e7ccafd59fa550fca690553050f68ffb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552484"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88479310"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -7,37 +7,38 @@ ms.date: 06/04/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3f7c61420dc1b85f7f40854dce9931d25aef895
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723975"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870495"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils で新しい R パッケージをインストールする
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
+この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[SQL Server 上の Machine Learning Services](../sql-server-machine-learning-services.md) および [ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
 
 > [!NOTE]
-> この記事で説明されている **sqlmlutils** パッケージは SQL Server 2019 以降で R パッケージを追加するために使用されます。 SQL Server 2017 以前の場合は、「[R ツールを使用してパッケージをインストールする](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017)」を参照してください。
+> この記事で説明されている **sqlmlutils** パッケージは SQL Server 2019 以降で R パッケージを追加するために使用されます。 SQL Server 2017 以前の場合は、「[R ツールを使用してパッケージをインストールする](./install-r-packages-standard-tools.md?view=sql-server-2017)」を参照してください。
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
+この記事では、[**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) パッケージの関数を使用して、[Azure SQL Managed Instance の Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) T-SQL ステートメントを使用してデータベース内で実行されている R スクリプトで使用できます。
 ::: moniker-end
 
 ## <a name="prerequisites"></a>前提条件
 
 - [R](https://www.r-project.org) と [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) を、SQL Server への接続に使用するクライアント コンピューターに インストールします。 スクリプトの実行には任意の R IDE を使用できますが、この記事では RStudio を想定しています。
 
-- SQL Server への接続に使用するクライアント コンピューターに [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) をインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio を想定しています。
+- SQL Server への接続に使用するクライアント コンピューターに [Azure Data Studio](../../azure-data-studio/what-is.md) をインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio を想定しています。
 
 ### <a name="other-considerations"></a>その他の考慮事項
+
+- パッケージのインストールは、**sqlmlutils** に渡す接続情報で指定する SQL インスタンス、データベース、ユーザーに固有のものです。 パッケージを複数の SQL インスタンスまたはデータベースで使用する場合や、別のユーザーに対してパッケージを使用する場合は、それぞれにパッケージをインストールする必要があります。 例外として、`dbo` のメンバーによってパッケージがインストールされた場合、そのパッケージは *パブリック* であり、すべてのユーザーと共有することができます。 ユーザーがパブリック パッケージの新しいバージョンをインストールした場合、パブリック パッケージは影響を受けませんが、そのユーザーは新しいバージョンにアクセスできます。
 
 - SQL Server で実行されている R スクリプトでは、既定のインスタンス ライブラリにインストールされているパッケージのみを使用できます。 SQL Server では、外部ライブラリからパッケージを読み込むことはできません。これには同じコンピューター上にある外部ライブラリや、 他の Microsoft 製品と共にインストールされた R ライブラリも含まれます。
 
@@ -58,7 +59,7 @@ ms.locfileid: "85723975"
 
 1. 最新の **sqlmlutils** ファイル (Windows の場合は `.zip`、Linux の場合は `.tar.gz`) を https://github.com/Microsoft/sqlmlutils/tree/master/R/dist からクライアント コンピューターにダウンロードします。 このファイルは展開しないでください。
 
-1. **コマンド プロンプト**を開き、次のコマンドを実行して、パッケージ **RODBCext** および **sqlmlutils** をインストールします。 ダウンロードした **sqlmlutils** ファイルのパスに置き換えます。 **RODBCext** パッケージはオンラインで、インストールされています。
+1. **コマンド プロンプト** を開き、次のコマンドを実行して、パッケージ **RODBCext** および **sqlmlutils** をインストールします。 ダウンロードした **sqlmlutils** ファイルのパスに置き換えます。 **RODBCext** パッケージはオンラインで、インストールされています。
 
    ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
@@ -257,7 +258,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 ## <a name="remove-the-package"></a>パッケージを削除する
 
-**glue** パッケージを削除する場合は、次の R スクリプトを実行します。 先ほど定義したものと同じ**接続**変数を使用します。
+**glue** パッケージを削除する場合は、次の R スクリプトを実行します。 先ほど定義したものと同じ **接続** 変数を使用します。
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")

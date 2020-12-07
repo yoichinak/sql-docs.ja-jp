@@ -1,4 +1,5 @@
 ---
+description: XACT_STATE (Transact-SQL)
 title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc7a0495a9289d538e71397e96b9393e91c542e0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 44f63b352efb2bf5b74c4d2c750703e77567fe73
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112584"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670162"
 ---
 # <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,19 +40,21 @@ ms.locfileid: "87112584"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 XACT_STATE()  
 ```  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="return-type"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  XACT_STATE では次の値が返されます。  
   
-|戻り値|意味|  
+|戻り値|説明|  
 |------------------|-------------|  
 |1|現在の要求にアクティブなユーザー トランザクションが存在する。 要求では、データ書き込み、トランザクションのコミットなど、任意の操作を実行できます。|  
 |0|現在の要求にアクティブなユーザー トランザクションが存在しない。|  
@@ -62,7 +65,7 @@ XACT_STATE()
 ## <a name="examples"></a>例  
  次の例では、`XACT_STATE` 構造の `CATCH` ブロックで `TRY...CATCH` を使用し、トランザクションをコミットまたはロールバックするかどうかを確認します。 ここでは `SET XACT_ABORT` が `ON` に設定されているため、制約違反エラーによってトランザクションはコミットできない状態になります。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

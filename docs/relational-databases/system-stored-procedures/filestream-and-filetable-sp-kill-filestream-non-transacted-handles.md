@@ -1,4 +1,5 @@
 ---
+description: sp_kill_filestream_non_transacted_handles (Transact-sql)
 title: sp_kill_filestream_non_transacted_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fdceccb1d11ce8818e9f26e46adf6b698e493cd4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898153"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550090"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +50,10 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  *Handle_id*の値に NULL を渡すと、 *table_name*によって指定された FileTable のすべての開いている非トランザクションハンドルを閉じることができます。 既定値は NULL です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-set"></a>結果セット  
- [なし] :  
+ なし。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  **Sp_kill_filestream_non_transacted_handles**に必要な*handle_id*は、他の**kill**コマンドで使用されている session_id または作業単位とは関係がありません。  
@@ -60,15 +61,15 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ## <a name="metadata"></a>Metadata  
- 開いている非トランザクションファイルハンドルの詳細については、動的管理ビューの[dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)を参照してください。  
+ 開いている非トランザクションファイルハンドルの詳細については、動的管理ビューの [dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)を参照してください。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  **Dm_FILESTREAM_non_transacted_handles**動的管理ビューからファイルハンドルを取得し、 **sp_kill_filestream_non_transacted_handles**を実行するには、 **VIEW DATABASE STATE**権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例は、 **sp_kill_filestream_non_transacted_handles**を呼び出して、FileTable データの非トランザクションファイルハンドルを閉じる方法を示しています。  
+## <a name="examples"></a>例  
+ 次の例は、 **sp_kill_filestream_non_transacted_handles** を呼び出して、FileTable データの非トランザクションファイルハンドルを閉じる方法を示しています。  
   
 ```sql  
 -- Close all open handles in the current database.  
@@ -81,7 +82,7 @@ sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable'
 sp_kill_filestream_non_transacted_handles @table_name = 'myFileTable', @handle_id = 0xFFFAAADD  
 ```  
   
- 次の例では、スクリプトを使用して*handle_id*を取得し、それを閉じる方法を示します。  
+ 次の例では、スクリプトを使用して *handle_id* を取得し、それを閉じる方法を示します。  
   
 ```sql  
 DECLARE @handle_id varbinary(16);  

@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMNSTORE INDEX (Transact-SQL)
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -26,15 +27,15 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1421ba7d2f03ecdf6f8a687e4e6d662702fe464a
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396270"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300435"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -102,7 +103,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
@@ -111,7 +112,9 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 [;]  
 
 ```
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
 
 一部のオプションは、すべてのデータベース エンジンのバージョンで使用できません。 次の表では、CLUSTERED COLUMNSTORE インデックスおよび NONCLUSTERED COLUMNSTORE インデックスに導入されているオプションのバージョンを示します。
 
@@ -133,7 +136,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 テーブルに既にクラスター化列ストア インデックスがある場合、既存のインデックスとして、同じ名前を指定するか、DROP EXISTING オプションを使用して新しい名前を指定します。  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*
 
 クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。 順序付けされたクラスター化列ストア インデックスに変換するには、、既存のインデックスがクラスター化列ストア インデックスである必要があります。
   
@@ -164,7 +167,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    詳細については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 」と「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
  
 ###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
-   ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が*遅延*によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間および更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
+   ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が *遅延* によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間および更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
    既定値は、0 分です。  
    
 ```sql
@@ -200,7 +203,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    *partition_scheme_name* **(** _column_name_ **)**  
    テーブルのパーティション構成を指定します。 このパーティション構成は既にデータベースに存在している必要があります。 パーティション構成を作成するには、「[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)」をご覧ください。  
  
-   *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、有効桁数に一致する必要があります。  
+   *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、 *partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、有効桁数に一致する必要があります。  
 
    *filegroup_name*  
    クラスター化列ストア インデックスを格納するファイル グループを指定します。 位置の指定がなく、テーブルがパーティション分割されていない場合は、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。  
@@ -216,11 +219,11 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    インデックスの名前を指定します。 *index_name* はテーブル内で一意にする必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,** ... *n* ] **)**  
     格納する列を指定します。 非クラスター化列ストア インデックスの列の上限は、1024 です。  
    各列のデータ型は、列ストア インデックスでサポートされているものである必要があります。 サポートされるデータ型の一覧については、「[制限事項と制約事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)」を参照してください。  
 
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
+ON [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
    インデックスが含まれているテーブルの 1 部、2 部、または 3 部構成の名前を指定します。  
 
 #### <a name="with-options"></a>WITH オプション
@@ -240,7 +243,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    詳細については、「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
   
 > [!NOTE]
->  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
+>  並列インデックス操作は、[!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。  
   
 ###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
 - `ON` の場合、インデックスの新しいコピーが構築されている間、列ストア インデックスはオンラインのままで、利用可能です。
@@ -279,7 +282,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 *partition_scheme_name* **(** _column_name_ **)**  
    ファイル グループを定義するパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) を実行し、パーティション構成がデータベース内に存在するようにする必要があります。 
-   *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、有効桁数に一致する必要があります。 *column_name* は、インデックス定義で指定されている列に限定されません。 列ストア インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、まだ指定されていない場合、パーティション分割列がインデックスの列として追加されます。  
+   *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、 *partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、有効桁数に一致する必要があります。 *column_name* は、インデックス定義で指定されている列に限定されません。 列ストア インデックスをパーティション分割するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、まだ指定されていない場合、パーティション分割列がインデックスの列として追加されます。  
    *partition_scheme_name* または *filegroup* が指定されないまま、テーブルがパーティション分割されると、インデックスは基になるテーブルと同じパーティション分割列を使用して、同じパーティション構造に配置されます。  
    パーティション テーブルの列ストア インデックスは、パーティション固定にする必要があります。  
    インデックスのパーティション分割の詳細については、「[パーティション テーブルとパーティション インデックス](../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。  
@@ -298,7 +301,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ##  <a name="general-remarks"></a><a name="GenRemarks"></a> 全般的な解説  
 列ストア インデックスは一時テーブルに作成できます。 テーブルが削除されるかセッションが終了すると、インデックスも削除されます。  
 
-順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
+順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でサポートされている任意のデータ型の列に作成できます。  
  
 ## <a name="filtered-indexes"></a>フィルター選択されたインデックス  
 フィルター選択されたインデックスは、最適化された非クラスター化インデックスであり、テーブルから選択する行の少ないクエリに適しています。 フィルター選択されたインデックスは、フィルター述語を使用してテーブル内の一部のデータにインデックスを作成します。 フィルター選択されたインデックスを適切に設計すると、クエリのパフォーマンスを向上させ、ストレージ コストとメンテナンス コストを削減することができます。  
@@ -389,7 +392,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
  **列ストア インデックスと同時に使用できない機能:**  
 -   計算列。 SQL Server 2017 以降、クラスター化列ストア インデックスに、保存されない計算列を含めることができます。 ただし、SQL Server 2017 では、クラスター化列ストア インデックスに、保存される計算列を含めることができません。計算列で非クラスター化インデックスを作成することはできません。 
--   ページと行の圧縮、**vardecimal** ストレージ形式 (列ストア インデックスは既に別の形式で圧縮されているため)。  
+-   ページと行の圧縮、 **vardecimal** ストレージ形式 (列ストア インデックスは既に別の形式で圧縮されているため)。  
 -   レプリケーション  
 -   Filestream
 
@@ -423,10 +426,10 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 ```sql  
 CREATE TABLE SimpleTable(  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;  
 GO  
@@ -437,10 +440,10 @@ GO
   
 ```sql  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -459,10 +462,10 @@ GO
 ```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
   
 --Create two nonclustered indexes for use with this example  
@@ -491,10 +494,10 @@ GO
     ```sql  
     --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
-        ProductKey [int] NOT NULL,  
-        OrderDateKey [int] NOT NULL,  
-         DueDateKey [int] NOT NULL,  
-         ShipDateKey [int] NOT NULL )  
+        ProductKey [INT] NOT NULL,  
+        OrderDateKey [INT] NOT NULL,  
+         DueDateKey [INT] NOT NULL,  
+         ShipDateKey [INT] NOT NULL )  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -608,10 +611,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```sql  
 CREATE TABLE SimpleTable  
-(ProductKey [int] NOT NULL,   
-OrderDateKey [int] NOT NULL,   
-DueDateKey [int] NOT NULL,   
-ShipDateKey [int] NOT NULL);  
+(ProductKey [INT] NOT NULL,   
+OrderDateKey [INT] NOT NULL,   
+DueDateKey [INT] NOT NULL,   
+ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -779,5 +782,3 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( PRODUCTKEY,SHIPDATE );
 WITH (DROP_EXISTING = ON)
 ```
-
-

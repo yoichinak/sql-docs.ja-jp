@@ -1,4 +1,5 @@
 ---
+description: STGeomFromWKB (geography データ型)
 title: STGeomFromWKB (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 72bf7a6921f486ff202d73cf3678072b5ddb9039
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3f31d1af11761ca358a1cbbb844733b9fc32c985
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555377"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88467459"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

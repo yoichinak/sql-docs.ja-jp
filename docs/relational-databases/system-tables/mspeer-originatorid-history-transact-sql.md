@@ -1,4 +1,5 @@
 ---
+description: MSpeer_originatorid_history (Transact-SQL)
 title: MSpeer_originatorid_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_originatorid_history
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d54a534ac63dee6e07220327c5b4890f08deefb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05ba5720a45bc8d448fe1ed24d6bdc950dcf290d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889653"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545523"
 ---
 # <a name="mspeer_originatorid_history-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  トポロジに定義された発信元 ID ごとに 1 行のデータを格納します。 これには、アクティブではなくなったノードの ID が含まれています。 このテーブルは、競合検出の対象とする新しいノードを構成する際、指定した発信元 ID が既に使用されていないかどうかを確認するために使用されます。 このテーブルは、パブリケーションデータベースに格納されます。 競合検出の詳細については、「[ピアツーピアレプリケーションでの競合の検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+  トポロジに定義された発信元 ID ごとに 1 行のデータを格納します。 これには、アクティブではなくなったノードの ID が含まれています。 このテーブルは、競合検出の対象とする新しいノードを構成する際、指定した発信元 ID が既に使用されていないかどうかを確認するために使用されます。 このテーブルは、パブリケーションデータベースに格納されます。 競合検出の詳細については、「 [ピアツーピアレプリケーションでの競合の検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +40,7 @@ ms.locfileid: "85889653"
 |originator_version|**int**|パブリッシャーのバージョン番号を識別します。|  
 |inserted_date|**datetime**|発信元 ID の行がこのテーブルに挿入された日付と時刻。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

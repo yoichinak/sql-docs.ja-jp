@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_server_diagnostics_log_configurations
 title: sys. dm_os_server_diagnostics_log_configurations |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - dm_os_server_diagnostics_log_configurations
 - sys.dm_os_server_diagnostics_log_configurations
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 797cdece07651499a9b770ba59972792805828a5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 39857dde100327e32f3702c6fd6aa28a86023a07
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395231"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542163"
 ---
 # <a name="sysdm_os_server_diagnostics_log_configurations"></a>sys.dm_os_server_diagnostics_log_configurations
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

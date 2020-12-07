@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67a423a34d0b641e15daf5828748d572e504e329
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 36bc03b94c42d8cf660039eb04c73ce88cf18223
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547902"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934956"
 ---
 # <a name="cache-a-report-report-manager"></a>レポートのキャッシュ (レポート マネージャー)
   パフォーマンスを向上させる方法の 1 つに、レポートのキャッシュ プロパティを構成するという方法があります。 レポートをキャッシュに格納した場合、表示されたレポートのコピーが短時間、保存されます。 レポートを要求した 1 人目のユーザーは、すべての処理が完了しないとレポートを閲覧できませんが、 それ以降、同じレポートを要求したユーザーは、キャッシュの保持時間内であれば、処理が既に完了しているため、すぐにレポートを閲覧できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "84547902"
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>キャッシュされたレポートの有効期限をスケジュールするには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../web-portal-ssrs-native-mode.md) を開始します。  
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 キャッシュ プロパティを設定するレポートに移動し、アイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
@@ -50,5 +50,4 @@ ms.locfileid: "84547902"
 ## <a name="see-also"></a>参照  
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
-  
   

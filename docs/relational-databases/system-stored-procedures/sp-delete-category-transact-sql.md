@@ -1,4 +1,5 @@
 ---
+description: sp_delete_category (Transact-sql)
 title: sp_delete_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdeb258bf7a61e5cfa4bafe796729f7c445e8cde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864350"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541833"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'`カテゴリのクラス。 *クラス*は**varchar (8)**,、既定値はありませんが、次のいずれかの値を持つ必要があります。  
+`[ @class = ] 'class'` カテゴリのクラス。 *クラス* は **varchar (8)**,、既定値はありませんが、次のいずれかの値を持つ必要があります。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -48,23 +49,23 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**アラート**|アラートカテゴリを削除します。|  
 |**OPERATOR**|オペレーター カテゴリを削除します。|  
   
-`[ @name = ] 'name'`削除するカテゴリの名前。 *名前*は**sysname**,、既定値はありません。  
+`[ @name = ] 'name'` 削除するカテゴリの名前。 *名前* は **sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_delete_category**は、 **msdb**データベースから実行する必要があります。  
+ **sp_delete_category** は、 **msdb** データベースから実行する必要があります。  
   
  カテゴリを削除すると、そのカテゴリのすべてのジョブ、警告、または演算子が、クラスの既定のカテゴリに recategorizes ます。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdminJobs` というジョブ カテゴリを削除します。  
   
 ```  

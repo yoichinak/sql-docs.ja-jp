@@ -1,4 +1,5 @@
 ---
+description: 明示的なスキーマで OPENJSON を使用する (SQL Server)
 title: 明示的なスキーマで OPENJSON を使用する
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66cbabd4b762f65a63a11294b495256824243173
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 405e0c00a34f5143f6acda4b3d50e7c083bec045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424124"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>明示的なスキーマで OPENJSON を使用する (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ WITH ( k1 int,
 |k1|k2|col3|col4|col5|array_element|  
 |--------|--------|----------|----------|----------|--------------------|  
 |11|*NULL*|"text"|*NULL*|*NULL*|{"k1": 11、"k2": null の場合、"k3":"text"}|  
-|21|テキスト「2」|*NULL*|テキスト「4」|{「データ」:"テキスト"が 4}|{"k1": true,"k2":"text2"、"k4": {「データ」: テキスト「4」}}|  
+|21|テキスト「2」|*NULL*|テキスト「4」|{「データ」:"テキスト"が 4]}|{"k1": true,"k2":"text2"、"k4": {「データ」: テキスト「4」}}|  
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31 日"k2": 32}|  
 |41|*NULL*|*NULL*|false|{「データ」: false}|{"k1": 41、"k2": null の場合、"k4": {「データ」: false}}|  
   

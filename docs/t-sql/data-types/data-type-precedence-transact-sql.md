@@ -1,4 +1,5 @@
 ---
+description: データ型の優先順位 (Transact-SQL)
 title: データ型の優先順位 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70030353"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124969"
 ---
 # <a name="data-type-precedence-transact-sql"></a>データ型の優先順位 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "70030353"
 1. **bit**  
 1. **ntext**  
 1. **text**  
-1. **画像**  
+1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
 1. **nvarchar** (**nvarchar(max)** など)  
@@ -63,7 +64,7 @@ ms.locfileid: "70030353"
 1. **varbinary** (**varbinary(max)** など)  
 1. **binary** (最低)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

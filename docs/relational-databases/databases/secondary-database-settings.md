@@ -1,4 +1,5 @@
 ---
+description: '[セカンダリ データベースの設定]'
 title: '[セカンダリ データベースの設定] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88471133"
 ---
 # <a name="secondary-database-settings"></a>[セカンダリ データベースの設定]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85759016"
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[セカンダリ サーバー インスタンス]**  
  ログ配布構成において、現在、セカンダリ サーバーとして構成されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前が表示されます。  
   

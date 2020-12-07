@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725721"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543225"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +38,14 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @session_id = ] session_id`エージェントセッションを指定します。 *session_id*は**int**で、既定値はありません。  
+`[ @session_id = ] session_id` エージェントセッションを指定します。 *session_id* は **int** で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|同期セッションのフェーズです。次のいずれかの値をとります。<br /><br /> **0** = 初期化行または集計行<br /><br /> **1** = アップロード<br /><br /> **2** = ダウンロード|  
-|**ArticleName**|**sysname**|同期するアーティクルの名前を指定します。 **ArticleName**には、アーティクルの詳細を表さない結果セット内の行の概要情報も含まれています。|  
+|**ArticleName**|**sysname**|同期するアーティクルの名前を指定します。 **ArticleName** には、アーティクルの詳細を表さない結果セット内の行の概要情報も含まれています。|  
 |**PercentComplete**|**decimal**|現在実行中のセッションまたは失敗したセッションに関する特定のアーティクル詳細行で適用された合計変更のパーセントを示します。|  
 |**RelativeCost**|**decimal**|セッションの合計同期時間に対する割合として、アーティクルの同期に要した時間を示します。|  
 |**期間**|**int**|エージェント セッションの長さです。|  
@@ -59,17 +59,17 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**SchemaChanges**|**int**|セッションでのスキーマ変更の数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_replmonitorhelpmergesessiondetail**は、マージレプリケーションの監視に使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_replmonitorhelpmergesessiondetail** は、マージレプリケーションの監視に使用されます。  
   
- サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesessiondetail**は、最後の5つのマージエージェントセッションに関する詳細情報のみを返します。  
+ サブスクライバーで実行された場合、 **sp_replmonitorhelpmergesessiondetail** は、最後の5つのマージエージェントセッションに関する詳細情報のみを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replmonitorhelpmergesessiondetail**を実行できるのは、ディストリビューター側のディストリビューションデータベースまたはサブスクライバー側のサブスクリプションデータベースで、 **db_owner**または**replmonitor**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN (Transact-SQL)
 title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0b2d327df39cb0c3a891fc5f4bc624619e7964e8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918779"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92195454"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86918779"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 SHUTDOWN [ WITH NOWAIT ]   
 ```  
   

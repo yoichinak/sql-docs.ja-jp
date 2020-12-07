@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (geometry データ型)
 title: BufferWithCurves (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b1249cafc3fd10cdded36ed7d73f190c38d02f5d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442339"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115906"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442339"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>引数  
  *distance*  
  バッファーを形成するポイントの、**geometry** インスタンスからの最大距離を示す **float** を指定します。  
   
-## <a name="return-types"></a>戻り値の型  
+## <a name="return-types"></a>戻り値の型
 SQL Server 戻り値の型: **geometry**  
   
  CLR 戻り値の型: **SqlGeometry**  
@@ -52,17 +54,17 @@ SQL Server 戻り値の型: **geometry**
   
 -   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の図には、このメソッドによって返される geometry インスタンスの例を示しています。  
   
- ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
+ ![このメソッドによって返される geometry インスタンスの例を示すスクリーンショット。](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
   
  次の表に、さまざまな distance 値に対して返される結果を示します。  
   
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることもあります。|  
+|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります|  
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   
@@ -157,5 +159,5 @@ SQL Server 戻り値の型: **geometry**
  最初の 2 つの **SELECT** ステートメントでは、*distance* が (1 1) と (1 4) の 2 つの地点の距離の 1/2 以下であるため、`GeometryCollection` インスタンスが返されます。 3 番目の **SELECT** ステートメントでは、(1 1) と (1 4) の 2 つの地点のバッファーに格納されたインスタンスが重なるため、`CurvePolygon` インスタンスが返されます。  
   
 ## <a name="see-also"></a>参照  
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

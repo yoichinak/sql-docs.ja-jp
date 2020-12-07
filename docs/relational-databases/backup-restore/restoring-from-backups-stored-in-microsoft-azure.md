@@ -9,14 +9,14 @@ ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9b36628be4fbb72b48136f56c9403207f5e03dd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 5329181957e09e169caae74f9611a2426f377f7b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759102"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125503"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure に格納されたバックアップからの復元
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "85759102"
 -   復元タスクは、SQL Server Management Studio を使用してデータベースを復元するために使用されます。 現在、バックアップ メディアのページには、Azure Blob Storage サービスに格納されたバックアップ ファイルを表示するための **[URL]** オプションがあります。 また、ストレージ アカウントへの認証に使用する SQL 資格情報を指定することも必要です。 その後、 **[復元するバックアップ セット]** グリッドには、Azure Blob Storage 内の使用可能なバックアップが表示されます。 詳細については、「[SQL Server Management Studio を使用した Microsoft Azure Storage からの復元](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)」を参照してください。  
   
 ### <a name="optimizing-restores"></a>復元の最適化  
- 復元の書き込み時間を短縮するには、SQL Server ユーザー アカウントに **[ボリュームの保守タスクを実行]** ユーザー権利を追加します。 詳細については、「 [データベース ファイルの初期化](https://go.microsoft.com/fwlink/?LinkId=271622)」をご覧ください。 ファイルの瞬時初期化が有効な状態で復元が依然として低速な場合は、データベースをバックアップしたときに使用したインスタンスに対応するログ ファイルのサイズに注目します。 ログのサイズが非常に大きい場合 (数 GB) は、復元が低速であることが予期されます。 ログ ファイルの処理に長い時間が費やされるために、復元中はログ ファイルのサイズを 0 にする必要があります。  
+ 復元の書き込み時間を短縮するには、SQL Server ユーザー アカウントに **[ボリュームの保守タスクを実行]** ユーザー権利を追加します。 詳細については、「 [データベース ファイルの初期化](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105))」をご覧ください。 ファイルの瞬時初期化が有効な状態で復元が依然として低速な場合は、データベースをバックアップしたときに使用したインスタンスに対応するログ ファイルのサイズに注目します。 ログのサイズが非常に大きい場合 (数 GB) は、復元が低速であることが予期されます。 ログ ファイルの処理に長い時間が費やされるために、復元中はログ ファイルのサイズを 0 にする必要があります。  
   
- 復元時間を短縮するには、圧縮されたバックアップを使用することをお勧めします。  バックアップ サイズが 25 GB を超える場合は、 [AzCopy ユーティリティ](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) を使用してローカル ドライブにダウンロードしてから復元を実行します。 バックアップに関するその他のベスト プラクティスと推奨事項については、「 [SQL Server Backup to URL のベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)」を参照してください。  
+ 復元時間を短縮するには、圧縮されたバックアップを使用することをお勧めします。  バックアップ サイズが 25 GB を超える場合は、 [AzCopy ユーティリティ](/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) を使用してローカル ドライブにダウンロードしてから復元を実行します。 バックアップに関するその他のベスト プラクティスと推奨事項については、「 [SQL Server Backup to URL のベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)」を参照してください。  
   
  復元を実行するときに詳細ログを生成するために、トレース フラグ 3051 を有効にすることもできます。 このログ ファイルはログ ディレクトリに配置され、次の形式を使用して名前が付けられます: BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 このログ ファイルには、問題の診断に役に立つタイミングも含め、Azure Storage への各ラウンド トリップが記録されます。  
   
@@ -57,5 +57,4 @@ ms.locfileid: "85759102"
 -   [ファイル復元 &#40; 完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
   
 -   [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

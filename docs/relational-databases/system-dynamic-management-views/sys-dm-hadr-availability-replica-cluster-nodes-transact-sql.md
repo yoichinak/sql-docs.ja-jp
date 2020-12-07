@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 title: dm_hadr_availability_replica_cluster_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_nodes dynamic management view
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: af53caea682e698954af86b64349dd7b2b9e814c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a63fea89f2457a3b2e033b9cbfef3def46afe0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648547"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550264"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_nodes-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,17 +37,17 @@ ms.locfileid: "85648547"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**group_name**|**nvarchar(256)**|可用性グループの名前。|  
-|**replica_server_name**|**nvarchar(256)**|レプリカをホストするのインスタンスの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**node_name**|**nvarchar(256)**|クラスターノードの名前。|  
+|**group_name**|**nvarchar (256)**|可用性グループの名前。|  
+|**replica_server_name**|**nvarchar (256)**|レプリカをホストするのインスタンスの名前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**node_name**|**nvarchar (256)**|クラスターノードの名前。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 可用性グループ &#40;SQL Server の概要&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;可用性グループの監視 ](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

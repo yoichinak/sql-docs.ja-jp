@@ -1,4 +1,5 @@
 ---
+description: メッセージの使用
 title: Messages | を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -13,18 +14,19 @@ ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d79ac396f480100319bec8ea6a9c82bd984bce5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8fae0c31778304c9bca4b9680451e9574ecf29dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498504"
 ---
 # <a name="using-messages"></a>メッセージの使用
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  SMO では、システムメッセージは、 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **サーバー**オブジェクトに属するオブジェクトによって表されます。 システムメッセージは変更できないため、 **Systemmessage**オブジェクトのプロパティは読み取り専用です。  
+  SMO では、システムメッセージは、 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> **サーバー** オブジェクトに属するオブジェクトによって表されます。 システムメッセージは変更できないため、 **Systemmessage** オブジェクトのプロパティは読み取り専用です。  
   
- SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいユーザー定義メッセージを作成するには、新しい**Userdefinedmessage**オブジェクトをインスタンス化し、適切なプロパティを設定します。  
+ SMO では、プログラム上では <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> オブジェクトを使用してユーザー定義メッセージを表現します。 既存のユーザー定義メッセージは、コレクションを反復処理することで検索することができます。 新しいユーザー定義メッセージを作成するには、新しい **Userdefinedmessage** オブジェクトをインスタンス化し、適切なプロパティを設定します。  
   
 ## <a name="examples"></a>例  
  次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  

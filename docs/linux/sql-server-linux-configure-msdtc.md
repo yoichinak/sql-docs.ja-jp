@@ -1,18 +1,18 @@
 ---
 title: Linux で MSDTC を構成する方法
-description: この記事では、Linux で MSDTC を構成する手順について説明します。
+description: この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4f323e1649e022487ca9505ac5a6a949087b00f
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900110"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115515"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
@@ -36,15 +36,17 @@ MSDTC では、mssql-conf ユーティリティ用に次の 2 つの構成パラ
 
 これらの設定やその他の関連する MSDTC 設定について詳しくは、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 
-## <a name="supported-msdtc-configurations"></a>サポートされている MSDTC 構成
+## <a name="supported-transaction-standards"></a>サポートされているトランザクション標準
 
 サポートされている MSDTC 構成は次のとおりです。
 
-- ODBC プロバイダーのための SQL Server on Linux に対する OLE-TX 分散トランザクション。
+| トランザクション標準 | データ ソース | ODBC ドライバー | JDBC ドライバー|
+|---|---|---|---|
+| OLE-TX トランザクション | Linux 上の SQL Server | はい | いいえ|
+| XA 分散トランザクション | XA をサポートする SQL Server、その他の ODBC、JDBC データ ソース | はい (SDK バージョン 17.3 以降が必要) | はい |
+| リンク サーバー上の分散トランザクション | SQL Server | はい | いいえ
 
-- JDBC および ODBC プロバイダーを使用する SQL Server on Linux に対する XA 分散トランザクション。 XA トランザクションを ODBC プロバイダーを使用して実行するには、Microsoft ODBC Driver for SQL Server バージョン 17.3 以降を使用する必要があります。 詳細については、「[XA トランザクションについて](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)」を参照してください。
-
-- リンクサーバー上の分散トランザクション。
+詳細については、「[XA トランザクションについて](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)」を参照してください。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTCの 構成手順
 
@@ -78,7 +80,7 @@ MSDTC の通信と機能を構成するには、3 つの手順を実行します
    sudo systemctl restart mssql-server
    ```
 
-## <a name="configure-the-firewall"></a>ファイアウォールの構成
+## <a name="configure-the-firewall"></a>ファイアウォールを構成する
 
 2 番目の手順では、**servertcpport** とポート 135 での通信を許可するようにファイアウォールを構成します。  これにより、RPC エンドポイント マッピング プロセスと MSDTC プロセスが、他のトランザクション マネージャーやコーディネーターと外部で通信できるようになります。 このための実際の手順は、Linux ディストリビューションとファイアウォールによって異なります。 
 
@@ -157,7 +159,7 @@ sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
 sudo firewall-cmd --reload
 ```
 
-## <a name="verify"></a>Verify (英語の可能性あり)
+## <a name="verify"></a>確認
 
 この時点で、SQL Server は分散トランザクションに参加できるようになっています。 SQL Server がリッスンしていることを確認するには、**netstat** コマンドを実行します (RHEL を使用しているときは、場合によっては最初に **net-tools** パッケージをインストールする必要があります)。
 
@@ -202,8 +204,8 @@ Windows オペレーティング システム上のクライアントが SQL Ser
 
 | オペレーティング システム | 最小バージョン | OS ビルド |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows Server](/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5926b71c2626ddea858190b6a135151abaa28586
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485145"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497799"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "86485145"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -165,7 +164,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーから取り消す  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` から取り消します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -174,7 +173,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、WITH GRANT OPTION で権限が許可されたユーザーから取り消す  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ロール `VIEW DEFINITION` に対する `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` から取り消します。 ユーザー `JinghaoLiu` には、`WITH GRANT OPTION` を指定して `VIEW DEFINITION` 権限が許可されているため、`CASCADE` オプションを指定します。  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -186,7 +185,7 @@ GO
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

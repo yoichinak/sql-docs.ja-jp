@@ -1,4 +1,5 @@
 ---
+description: nodes() メソッド (xml データ型)
 title: nodes() メソッド (xml データ型)
 ms.custom: ''
 ms.date: 07/26/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4e0bb9fd57a5e31ada020b84a55cac0608b5d569
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393060"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116607"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +35,7 @@ ms.locfileid: "86393060"
   
 ## <a name="syntax"></a>構文  
   
-```sql
-  
+```syntaxsql
 nodes (XQuery) as Table(Column)  
 ```  
   
@@ -52,12 +52,12 @@ XQuery 式の文字列リテラルです。 このクエリ式でノードが構
 たとえば、次のテーブルがあるとします。  
   
 ```sql
-T (ProductModelID int, Instructions xml)  
+T (ProductModelID INT, Instructions XML)  
 ```  
   
 次の製造手順ドキュメントがこのテーブルに格納されます。 記載しているのはドキュメントの一部のみです。 このドキュメントには 3 つの製造場所が含まれていることに注意してください。  
   
-```sql
+```
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -75,7 +75,7 @@ T (ProductModelID int, Instructions xml)
   
 クエリ式 `/root/Location` を指定して `nodes()` メソッドを呼び出すと、次のように 3 つの行を持つ行セットが返されます。各行には元の XML ドキュメントの論理コピーが格納されており、いずれかの `<Location>` ノードがコンテキスト アイテムに設定されます。  
   
-```sql
+```
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -94,13 +94,13 @@ ModelID      Instructions
   
 ```sql
 SELECT T2.Loc.query('.')  
-FROM   T  
-CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
+FROM T  
+CROSS APPLY Instructions.nodes('/root/Location') AS T2(Loc)   
 ```  
   
 以下に結果を示します。  
   
-```sql
+```
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -128,7 +128,7 @@ USE AdventureWorks;
 GO  
   
 CREATE FUNCTION XTest()  
-RETURNS xml  
+RETURNS XML  
 AS  
 BEGIN  
 RETURN '<document/>';  
@@ -153,7 +153,7 @@ GO
 その後、次のクエリを実行すると、各行のコンテキスト ノードが返されます。  
   
 ```sql
-DECLARE @x xml   
+DECLARE @x XML   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -166,7 +166,7 @@ GO
   
 次の例の結果では、クエリのメソッドでコンテキスト アイテムとそのコンテンツが返されます。  
   
-```sql
+```
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -177,12 +177,12 @@ GO
 ```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
-go  
+GO  
 ```  
   
 以下に結果を示します。  
   
-```sql
+```
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -234,7 +234,7 @@ go
   
   次に結果の一部を示します。  
   
-    ```sql
+    ```
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -256,22 +256,22 @@ go
 - `nodes()` は `T1 (Locations)` 行セットに適用され、`T2 (steps)` 行セットを返します。 この行セットには、`/root/Location/step` 要素をコンテキスト アイテムとして、元の製造手順ドキュメントの論理コピーが格納されています。  
   
 ```sql
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-./MI:step ') as T2(steps)         
+./MI:step ') AS T2(steps)         
 WHERE ProductModelID=7         
 GO         
 ```  
   
 以下に結果を示します。  
   
-```sql
+```
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -287,13 +287,13 @@ ProductModelID LocID Step
   
 ```sql
 WITH XMLNAMESPACES (  
-   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS MI)  
   
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         

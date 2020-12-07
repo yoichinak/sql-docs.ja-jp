@@ -1,4 +1,5 @@
 ---
+description: DQS クレンジング変換
 title: DQS クレンジング変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919380"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123392"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919380"
   
 -   列が、互換性のあるデータ型のドメインにマップされている。  
   
- また、変換には、低レベルのエラーを処理するように構成するエラー出力も含まれます。 エラー出力を構成するには、 **DQS クレンジング変換エディター**を使用します。  
+ また、変換には、低レベルのエラーを処理するように構成するエラー出力も含まれます。 エラー出力を構成するには、 **DQS クレンジング変換エディター** を使用します。  
   
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) をデータ フローに含めて、重複部分と考えられるデータ行を特定することができます。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "86919380"
   
 -   [Data Quality Client で Integration Services プロジェクトを開く](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [クレンジング プロジェクトの値をドメインにインポートする](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [ドメインへのクレンジング プロジェクトの値のインポート](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [データ ソースにデータ品質ルールを適用する](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
@@ -90,7 +91,7 @@ ms.locfileid: "86919380"
  **[データ品質ナレッジ ベース]**  
  接続されたデータ ソースの既存の DQS ナレッジ ベースを選択します。 DQS サポート技術情報の詳細については、「 [DQS のナレッジ ベースとドメイン](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)」を参照してください。  
   
- **[暗号化接続]**  
+ **接続を暗号化する**  
  DQS サーバーと [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の間のデータ転送を暗号化するために、接続を暗号化するかどうかを指定します。  
   
  **[使用できるドメイン]**  
@@ -105,9 +106,9 @@ ms.locfileid: "86919380"
   
  有効な値は次のとおりです。  
   
--   **[エラー コンポーネント]** : 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
+-   **[エラー コンポーネント]**: 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
   
--   **[行のリダイレクト]** : 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
+-   **[行のリダイレクト]**: 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
   
 ###  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> [マッピング] タブのオプションの設定  
  複合ドメインに列をマップする方法については、「 [複合ドメインへの列のマップ](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)」を参照してください。  
@@ -127,7 +128,7 @@ ms.locfileid: "86919380"
  列名を変更するフィールドをクリックしてください。  
   
  **[出力の別名]**  
- **DQS クレンジング変換**によって出力された列を一覧表示します。 この列には、元の列値または修正後の値が含まれます。  
+ **DQS クレンジング変換** によって出力された列を一覧表示します。 この列には、元の列値または修正後の値が含まれます。  
   
  列名を変更するフィールドをクリックしてください。  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86919380"
  **[信頼度]**  
  修正されたデータの信頼レベルを含めるかどうかを示します。 信頼レベルは、DQS の修正または候補に対する確実性の度合いを示します。 信頼レベルの詳細については、「 [データ クレンジング](../../../data-quality-services/data-cleansing.md)」を参照してください。  
   
- **Reason**  
+ **理由**  
  データ修正の理由を含めるかどうかを示します。  
   
  **[追加されたデータ]**  

@@ -1,8 +1,9 @@
 ---
+description: 'ADO イベントのインスタンス化: JScript'
 title: 'ADO イベントのインスタンス化: JScript |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: b37e5957-7f00-4d62-b0f1-929fec996f4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc6f0219bef22ca040f2ed3e441b4400fe711b3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ddf960846e2d17c4686d340c60e9ff05bec1cb43
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991693"
 ---
 # <a name="ado-event-instantiation-jscript"></a>ADO イベントのインスタンス化: JScript
 Microsoft® JScript®では ADO イベントはサポートされていません。

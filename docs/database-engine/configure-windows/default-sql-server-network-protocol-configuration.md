@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d5463ac163271cf14f5b52167559bc8f3f53d805
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772579"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671115"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>SQL Server の既定のネットワーク プロトコル構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85772579"
 > インスタンスが [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] フェールオーバー クラスター上で動作している場合、このインスタンスは [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] セットアップの実行時に [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 用に指定された各 IP アドレスのポート上でリッスンします。
  
 >[!NOTE]
-> コマンド プロンプト引数を指定して [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールする場合は、 `TCPENABLED` パラメーターおよび `NPENABLED` パラメーターを使用して、有効にするプロトコルを指定できます。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。
+> コマンド プロンプト引数を指定して [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールする場合は、 `TCPENABLED` パラメーターおよび `NPENABLED` パラメーターを使用して、有効にするプロトコルを指定できます。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../install-windows/install-sql-server-from-the-command-prompt.md)」を参照してください。
 
 ## <a name="creating-a-connection-string"></a>接続文字列の作成
 
@@ -72,7 +72,4 @@ ms.locfileid: "85772579"
 
 [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 
-[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)  
-
-
-
+[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)

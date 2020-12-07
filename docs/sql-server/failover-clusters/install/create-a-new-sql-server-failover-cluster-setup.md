@@ -1,12 +1,12 @@
 ---
-title: 新しいフェールオーバー クラスターを作成する
-description: この記事では、セットアップ プログラムを使用して SQL Server フェールオーバー クラスターをインストールまたはアップグレードする方法、または既存のクラスターにノードを追加する方法について説明します。
+title: 新しいフェールオーバー クラスター インスタンスの作成
+description: この記事では、セットアップ プログラムを使用して SQL Server Always On フェールオーバー クラスター インスタンスをインストールまたはアップグレードする方法、または既存のフェールオーバー クラスター インスタンスにノードを追加する方法について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - adding nodes
 - failover clustering [SQL Server], creating clusters
@@ -15,59 +15,61 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0f99d649dfda393c5371039976321c4bf54be684
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897719"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121232"
 ---
-# <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
+# <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>新しい Always On フェールオーバー クラスター インスタンスを作成する (セットアップ)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
+
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) をインストールまたはアップグレードするには、基になる Windows Server フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスにノードを追加するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。 他のノードを管理するアクティブなノードでは、セットアップを実行しないでください。  
   
- ノードがクラスター化される方法に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターは次のように構成されます。  
+ ノードがクラスター化される方法に応じて、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスは次のように構成されます。  
   
 -   ノードが同じサブネットまたは同じサブネットのセットにある場合 - IP アドレス リソースの依存関係が AND に設定されます。  
   
--   ノードが異なるサブネット上にある場合 - IP アドレス リソースの依存関係が OR に設定されます。この構成は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター構成と呼ばれます。 詳細については、「 [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
+-   ノードが異なるサブネット上にある場合 - IP アドレス リソースの依存関係が OR に設定されます。この構成は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター インスタンス構成と呼ばれます。 詳細については、「 [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターには、次のインストール オプションがあります。  
   
- **オプション 1: ノードの追加を伴う統合インストール**  
+ **オプション 1: ノードの追加を伴う統合インストール**   
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 統合フェールオーバー クラスター インストールは、次の手順で構成されています。  
   
--   単一ノードの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを作成および構成します。 ノードの構成が正常に完了すると、完全に機能するフェールオーバー クラスター インスタンスが完成します。 フェールオーバー クラスターには 1 つのノードしかないので、この時点では高可用性は備わっていません。  
+-   単一ノードの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを作成および構成します。 ノードの構成が正常に完了すると、完全に機能するフェールオーバー クラスター インスタンスが完成します。 フェールオーバー クラスター インスタンスには 1 つのノードしかないので、この時点では高可用性は備わっていません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに追加する各ノードで、セットアップを実行し、ノードの追加機能を使用して、ノードを追加します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加する各ノードで、[ノードの追加] 機能を使用してセットアップを実行し、そのノードを追加します。  
   
-    -   追加するノードに追加サブネットまたは異なるサブネットがある場合は、セットアップで追加の IP アドレスを指定できます。 追加するノードが別のサブネット上にある場合は、IP アドレス リソース依存関係が OR に変更されることも確認する必要があります。 ノードの追加操作時に発生する可能性のあるさまざまなシナリオの詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
+    -   追加するノードに追加サブネットまたは異なるサブネットがある場合は、セットアップで追加の IP アドレスを指定できます。 追加するノードが別のサブネット上にある場合は、IP アドレス リソース依存関係が OR に変更されることも確認する必要があります。 ノードの追加操作中に発生する可能性のあるさまざまなシナリオの詳細については、[Always On フェールオーバー クラスター インスタンスでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)に関するページを参照してください。  
   
  **オプション 2: 高度/エンタープライズ インストール**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 高度/エンタープライズ フェールオーバー クラスター インストールは、次の手順で構成されています。  
   
--   新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となる各ノードで、「 [準備](#prepare)」セクションに記載されたフェールオーバー クラスター セットアップの準備手順を実行します。 1 つのノードでフェールオーバー クラスター セットアップの準備が完了すると、指定したすべての設定を含む Configuration.ini ファイルが作成されます。 他のノードで準備を行うときには、同じ手順を実行する代わりに、最初のノードから自動生成された Configuration.ini ファイルを、セットアップ コマンド 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは操作できません。  
+-   新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となる各ノードで、「 [準備](#prepare)」セクションに記載されたフェールオーバー クラスター セットアップの準備手順を実行します。 1 つのノードでフェールオーバー クラスター セットアップの準備が完了すると、指定したすべての設定を含む Configuration.ini ファイルが作成されます。 準備する追加のノードでは、次の手順を実行する代わりに、最初のノードから自動生成された Configuration.ini ファイルを、セットアップ コマンド ラインへの入力として指定できます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。 この手順ではノードのクラスター化の準備を行いますが、この手順が終了しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは操作できません。  
   
--   ノードをクラスタリング用に準備した後、準備されたいずれかのノードでセットアップを実行します。 この手順で、フェールオーバー クラスター インスタンスを構成し、完了します。 この手順が終了すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスが操作できるようになり、そのインスタンスに対して事前に準備されたすべてのノードが、新しく作成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの実行可能な所有者となります。  
+-   ノードをクラスタリング用に準備した後、準備されたいずれかのノードでセットアップを実行します。 この手順で、フェールオーバー クラスター インスタンスを構成し、完了します。 この手順が終了すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスが操作できるようになり、そのインスタンスに対して事前に準備されたすべてのノードが、新しく作成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの実行可能な所有者となります。  
   
-     複数のサブネット上のノードをクラスター化している場合、セットアップによって、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で準備されたフェールオーバー クラスター インスタンスを持つすべてのノードのすべてのサブネットの和集合が検出されます。 サブネットに複数の IP アドレスを指定することができます。 準備された各ノードは、少なくとも 1 つの IP アドレスを持つ実行可能な所有者であることが必要となります。  
+     複数のサブネットにまたがるフェールオーバー クラスター インスタンスを作成する場合、セットアップによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で準備されたフェールオーバー クラスター インスタンスを持つすべてのノードのすべてのサブネットの和集合が検出されます。 サブネットに複数の IP アドレスを指定することができます。 準備された各ノードは、少なくとも 1 つの IP アドレスを持つ実行可能な所有者であることが必要となります。  
   
      サブネットに指定された各 IP アドレスが、準備されたすべてのノードでサポートされている場合、依存関係は AND に設定されます。  
   
      サブネットに指定された各 IP アドレスが、準備されたすべてのノードでサポートされていない場合、依存関係は OR に設定されます。 詳細については、「 [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
   
     > [!NOTE]  
-    >  フェールオーバー クラスターの実行機能には、基になる Windows フェールオーバー クラスターが必要です。 Windows フェールオーバー クラスターが存在しない場合、セットアップはエラーとなって終了します。  
+    >  フェールオーバー クラスターを完了するには、基になる Windows Server フェールオーバー クラスターが存在している必要があります。 Windows Server フェールオーバー クラスターが存在しない場合、セットアップはエラーとなって終了します。  
   
- 既存のフェールオーバー クラスター インスタンスにノードを追加する方法と、既存のフェールオーバー クラスター インスタンスからノードを削除する方法の詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除&#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
+ 既存のフェールオーバー クラスター インスタンスに対してノードの追加または削除を行う方法の詳細については、[Always On フェールオーバー クラスター インスタンスでのノードの追加または削除&#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md) に関する記事を参照してください。  
   
  リモート インストールの詳細については、「[サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」をご覧ください。  
   
- Windows フェールオーバー クラスターへの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインストールの詳細については、「 [SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548)」をご覧ください。  
+ WSFC での [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインストールの詳細については、「[SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548)」をご覧ください。  
   
 ## <a name="prerequisites"></a>前提条件  
  作業を開始する前に、次の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピックを参照してください。  
@@ -81,9 +83,9 @@ ms.locfileid: "85897719"
 -   [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する前に、クラスター アドミニストレーター内の共有ドライブの場所をメモしてください。 この情報は、新しいフェールオーバー クラスターを作成するときに必要になります。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行する前に、クラスター アドミニストレーター内の共有ドライブの場所をメモしてください。 この情報は、新しいフェールオーバー クラスター インスタンスを作成するときに必要になります。  
   
-### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>ノードの追加を伴う統合インストールを使用して新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールするには  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-instance-using-integrated-install-with-add-node"></a>[ノードの追加] で統合インストールを使用して、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスをインストールするには  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。 必須コンポーネントをインストールする方法の詳細については、「 [フェールオーバー クラスタリングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」をご覧ください。  
   
@@ -124,10 +126,10 @@ ms.locfileid: "85897719"
   
 11. [インスタンスの構成] ページで、既定のインスタンスまたは名前付きインスタンスをインストールするかどうかを指定します。 詳細については、「 [Instance Configuration](../../install/instance-configuration.md)」を参照してください。  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ネットワーク名]** : 新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 これは、ネットワーク上でフェールオーバー クラスターを識別するために使用される名前です。  
+     **[[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ネットワーク名]** : 新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのネットワーク名を指定します。 これは、ネットワーク上でフェールオーバー クラスター インスタンスを識別するために使用される名前です。  
   
     > [!NOTE]  
-    >  このネットワーク名は、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターでは、仮想 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名と呼ばれていました。  
+    >  このネットワーク名は、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは、仮想 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名と呼ばれていました。  
   
      **[インスタンス ID]** : 既定では、インスタンス名がインスタンス ID として使用されます。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのインストール ディレクトリとレジストリ キーを識別するために使用されます。 これは、既定のインスタンスの場合も名前付きインスタンスの場合も同様です。 既定のインスタンスの場合、インスタンス名とインスタンス ID は、MSSQLSERVER になります。 既定以外のインスタンス ID を使用するには、 **[インスタンス ID]** ボックスを選択して、値を指定します。  
   
@@ -138,13 +140,13 @@ ms.locfileid: "85897719"
   
      **検出された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [インスタンスとこのコンピューターの機能]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。 **[次へ]** をクリックして次に進みます。  
   
-12. [クラスター リソース グループ] ページを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仮想サーバー リソースが配置されるクラスター リソース グループ名を指定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスター リソース グループ名を指定するには、2 つのオプションがあります。  
+12. [クラスターリソースグループ] ページを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仮想サーバー リソースが配置されるクラスター リソース グループまたはロールの名前を指定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスター リソース グループ名を指定するには、2 つのオプションがあります。  
   
     -   ドロップダウン リストを使用して、使用する既存のグループを指定します。  
   
     -   作成する新しいグループの名前を入力します。 "使用可能記憶域" という名前はグループ名として有効ではないことに注意してください。  
   
-13. [クラスター ディスクの選択] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの共有クラスター ディスク リソースを選択します。 クラスター ディスクは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データが配置される場所です。 複数のディスクを指定できます。 [使用可能な共有ディスク] グリッドには、使用可能なディスクの一覧、各ディスクが共有ディスクに適しているかどうか、および各ディスク リソースの説明が表示されます。 **[次へ]** をクリックして次に進みます。  
+13. [クラスター ディスクの選択] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの共有クラスター ディスク リソースを選択します。 クラスター ディスクは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データが配置される場所です。 複数のディスクを指定できます。 [使用可能な共有ディスク] グリッドには、使用可能なディスクの一覧、各ディスクが共有ディスクに適しているかどうか、および各ディスク リソースの説明が表示されます。 **[次へ]** をクリックして次に進みます。  
   
     > [!NOTE]  
     >  最初のドライブはすべてのデータベースの既定のドライブとして使用されますが、これは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 構成ページで変更できます。  
@@ -192,7 +194,7 @@ ms.locfileid: "85897719"
 20. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスターの共有クラスター ディスク上に配置されるようにしてください。  
+    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスター インスタンスの共有クラスター ディスク上に配置されるようにしてください。  
   
     > [!NOTE]  
     >  サーバー メッセージ ブロック (SMB) ファイル サーバーをデータ ディレクトリとして指定するには、 **\Servername\ShareName** ... の形式で \\既定のデータ ルート ディレクトリ\\をファイル共有に指定します。  
@@ -206,9 +208,9 @@ ms.locfileid: "85897719"
 23. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスターの共有クラスター ディスク上に配置されるようにしてください。  
+    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスター インスタンスの共有クラスター ディスク上に配置されるようにしてください。  
    
-24. 作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 フェールオーバー クラスター インストールの場合、このオプションは未構成の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールに設定されます。 インストールの完了後に、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスを構成する必要があります。  
+24. 作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 フェールオーバー クラスター インスタンスのインストールの場合、このオプションは未構成の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールに設定されます。 インストールの完了後に、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスを構成する必要があります。  
   
  
 25. システム構成チェッカーによって別のルール セットが実行され、構成と指定した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能が検証されます。  
@@ -221,16 +223,16 @@ ms.locfileid: "85897719"
   
 29. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-30. 作成した単一ノードのフェールオーバーにノードを追加するには、追加する各ノードでセットアップを実行し、AddNode 操作の手順に従います。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
+30. 作成した単一ノードのフェールオーバーにノードを追加するには、追加する各ノードでセットアップを実行し、AddNode 操作の手順に従います。 詳細については、[Always On フェールオーバー クラスター インスタンスでのノードの追加または削除 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md) に関するページを参照してください。  
   
     > [!NOTE]  
     >  複数のノードを追加する場合には、構成ファイルを使用してインストールを配置できます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。  
     >   
-    >  インストールする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター内のすべてのノードで一致している必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに新しいノードを追加する場合は、エディションが既存のフェールオーバー クラスターのエディションと一致するように指定してください。  
+    >  インストールする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス内のすべてのノードで一致している必要があります。 既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに新しいノードを追加する場合は、エディションが既存のフェールオーバー クラスター インスタンスのエディションと一致するように指定してください。  
   
 ##  <a name="prepare"></a><a name="prepare"></a> 準備  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>高度/エンタープライズ フェールオーバー クラスターのインストール手順 1: 準備  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-1-prepare"></a>高度/エンタープライズ フェールオーバー クラスター インスタンスのインストール手順 1: 準備  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。 必須コンポーネントをインストールする方法の詳細については、「 [フェールオーバー クラスタリングをインストールする前に](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」をご覧ください。 必須コンポーネントがインストールされていない場合は、インストールするように求められます。  
   
@@ -251,7 +253,7 @@ ms.locfileid: "85897719"
 8.  [プロダクト キー] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の無償のエディションをインストールするかどうか、または SQL Server の製品版の PID キーを持っているかどうかをクリックして指定します。 詳細については、「 [SQL Server 2016 のエディションとコンポーネント](../../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
     > [!NOTE]  
-    >  同じフェールオーバー クラスターに対して準備するすべてのノードで、同じプロダクト キーを指定する必要があります。  
+    >  同じフェールオーバー クラスター インスタンスに対して準備するすべてのノードで、同じプロダクト キーを指定する必要があります。  
   
 9. [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
@@ -272,7 +274,7 @@ ms.locfileid: "85897719"
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の標準的なスタンドアロン インスタンスでは、既定のインスタンスの場合も名前付きインスタンスの場合も、 **[インスタンス ID]** ボックスの値として既定値以外は使用しないでください。  
   
     > [!IMPORTANT]  
-    >  フェールオーバー クラスターに対して準備されるすべてのノードに対して同じインスタンス ID を使用してください。  
+    >  フェールオーバー クラスター インスタンスに対して準備されるすべてのノードに対して同じインスタンス ID を使用してください。  
   
      **[インスタンス ルート ディレクトリ]** : 既定では、インスタンス ルート ディレクトリは、C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\ になります。 既定以外のルート ディレクトリを指定するには、表示されたフィールドを使用するか、参照ボタンをクリックしてインストール フォルダーを検索します。  
   
@@ -304,7 +306,7 @@ ms.locfileid: "85897719"
   
 17. **[サーバーの構成 - FILESTREAM]** ページを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対する FILESTREAM を有効にします。  **[次へ]** をクリックして次に進みます。  
   
-18. 作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 フェールオーバー クラスター インストールの場合、このオプションは未構成の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールに設定されます。 インストールの完了後に、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスを構成する必要があります。  
+18. 作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールの種類を指定するには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [の構成] ページを使用します。 フェールオーバー クラスター インスタンスのインストールの場合、このオプションは未構成の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] インストールに設定されます。 インストールの完了後に、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービスを構成する必要があります。  
    
 19. [エラー レポート] ページで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] に送信する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立つ情報を指定します。 既定では、エラー レポートのオプションは有効になっています。  
   
@@ -318,11 +320,11 @@ ms.locfileid: "85897719"
   
 23. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-24. 前の手順を繰り返して、フェールオーバー クラスターの他のノードを準備します。 自動生成された構成ファイルを使用して他のノードの準備を行うこともできます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。  
+24. 前の手順を繰り返して、フェールオーバー クラスター インスタンスの他のノードを準備します。 自動生成された構成ファイルを使用して他のノードの準備を行うこともできます。 詳細については、「 [構成ファイルを使用した SQL Server 2016 のインストール](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)」を参照してください。  
   
 ## <a name="complete"></a>完了  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>高度/エンタープライズ フェールオーバー クラスターのインストール手順 2: 完了  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-2-complete"></a>高度/エンタープライズ フェールオーバー クラスター インスタンスのインストール手順 2: 完了  
   
 1.  [準備手順](#prepare)に示されたとおりにすべてのノードの準備を終えたら、準備したノードのいずれかでセットアップを実行します。可能であれば、共有ディスクを所有するノードで実行します。 **インストール センターの** [詳細設定] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ページで、 **[高度なクラスター構成の完了]** をクリックします。  
   
@@ -336,10 +338,10 @@ ms.locfileid: "85897719"
   
      続行するには、 **[次へ]** をクリックします。  
   
-6.  [クラスター ノードの構成] ページを使用して、クラスタリングに対して準備されたインスタンス名を選択し、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 これは、ネットワーク上でフェールオーバー クラスターを識別するために使用される名前です。  
+6.  [クラスター ノードの構成] ページを使用して、クラスタリングに対して準備されたインスタンス名を選択し、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのネットワーク名を指定します。 これは、ネットワーク上でフェールオーバー クラスター インスタンスを識別するために使用される名前です。  
   
     > [!NOTE]  
-    >  このネットワーク名は、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターでは、仮想 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名と呼ばれていました。  
+    >  このネットワーク名は、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスでは、仮想 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 名と呼ばれていました。  
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップによって、構成を検証するために選択した機能に基づく別のルール セットが実行されます。  
   
@@ -349,14 +351,14 @@ ms.locfileid: "85897719"
   
     -   作成する新しいグループの名前を入力します。 "使用可能記憶域" という名前はグループ名として有効ではないことに注意してください。  
   
-9. [クラスター ディスクの選択] ページで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの共有クラスター ディスク リソースを選択します。 クラスター ディスクは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データが配置される場所です。 複数のディスクを指定できます。 [使用可能な共有ディスク] グリッドには、使用可能なディスクの一覧、各ディスクが共有ディスクに適しているかどうか、および各ディスク リソースの説明が表示されます。 **[次へ]** をクリックして次に進みます。  
+9. [クラスター ディスクの選択] ページで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの共有クラスター ディスク リソースを選択します。 クラスター ディスクは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データが配置される場所です。 複数のディスクを指定できます。 [使用可能な共有ディスク] グリッドには、使用可能なディスクの一覧、各ディスクが共有ディスクに適しているかどうか、および各ディスク リソースの説明が表示されます。 **[次へ]** をクリックして次に進みます。  
   
     > [!NOTE]  
     >  最初のドライブはすべてのデータベースの既定のドライブとして使用されますが、これは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] または [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 構成ページで変更できます。  
   
 10. [クラスター ネットワークの構成] ページで、次のように、フェールオーバー クラスター インスタンスのネットワーク リソースを指定します。  
   
-    -   **[ネットワークの設定]** : フェールオーバー クラスター インスタンスのすべてのノードおよびサブネットについて IP の種類と IP アドレスを指定します。 マルチサブネット フェールオーバー クラスターの場合は複数の IP アドレスを指定できますが、サポートされる IP アドレスは、1 つのサブネットにつき 1 つだけです。 準備の対象となるすべてのノードは、少なくとも 1 つの IP アドレスを所有している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター内に複数のサブネットが存在する場合、IP アドレス リソースの依存関係を OR に設定するように求められます。  
+    -   **[ネットワークの設定]** : フェールオーバー クラスター インスタンスのすべてのノードおよびサブネットについて IP の種類と IP アドレスを指定します。 マルチサブネット フェールオーバー クラスター インスタンスの場合は複数の IP アドレスを指定できますが、サポートされる IP アドレスは、1 つのサブネットにつき 1 つだけです。 準備の対象となるすべてのノードは、少なくとも 1 つの IP アドレスを所有している必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス内に複数のサブネットが存在する場合、IP アドレス リソースの依存関係を OR に設定するように求められます。  
   
      **[次へ]** をクリックして次に進みます。  
   
@@ -375,7 +377,7 @@ ms.locfileid: "85897719"
 13. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [の構成 - データ ディレクトリ] ページを使用して、既定以外のインストール ディレクトリを指定します。 既定のディレクトリにインストールする場合は、 **[次へ]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスターの共有クラスター ディスク上に配置されるようにしてください。  
+    >  既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 データ ディレクトリは、フェールオーバー クラスター インスタンスの共有クラスター ディスク上に配置されるようにしてください。  
   
   
 14. [[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の構成 - アカウントの準備] ページを使用して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の管理者権限を持つユーザーまたはアカウントを指定します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のシステム管理者を少なくとも 1 人指定する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行しているアカウントを追加するには、 **[現在のユーザーの追加]** をクリックします。 システム管理者の一覧に対してアカウントを追加または削除するには、 **[追加]** または **[削除]** をクリックし、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の管理者権限を持つユーザー、グループ、またはコンピューターの一覧を編集します。  
@@ -394,7 +396,7 @@ ms.locfileid: "85897719"
   
 18. インストール中は、セットアップの進行に合わせてインストールの進行状況を監視できるように、[インストールの進行状況] ページに状態が表示されます。  
   
-19. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 この手順により、同じフェールオーバー クラスターに対して準備されたすべてのノードが、完成した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの一部となります。  
+19. インストールが終了すると、 **[完了]** ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール プロセスを完了するには、 **[閉じる]** をクリックします。 この手順により、同じフェールオーバー クラスター インスタンスに対して準備されたすべてのノードが、完成した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの一部となります。  
   
 ## <a name="next-steps"></a>次の手順  
  **新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール内容の構成**: システムのセキュリティを向上させるため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、主要なサービスと機能を個別にインストールし、有効化できるようになっています。 詳細については、「 [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)」を参照してください。  

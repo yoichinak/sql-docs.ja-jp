@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812968"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197026"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>テーブルからのデータのインポート (マスター データ サービス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "85812968"
   
 -   Stg にデータを挿入する権限が必要です。 \<name>_Leaf、stg。 \<name>_Consolidated、stg。 \<name>データベースのテーブルを _Relationship [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] します。  
   
--   データベースで stg. udp_ \<name> _Leaf、stg udp \_ \<name> _Consolidated、または stg. udp \_ \<name> _Relationship ストアドプロシージャ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のいずれかを実行する権限が必要です。  
+-   \<name>データベースで stg.udp_ _Leaf、stg udp \_ \<name> _Consolidated、または stg. udp \_ \<name> _Relationship ストアドプロシージャ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のいずれかを実行する権限が必要です。  
   
 -   モデルのステータスが **[コミット済み]** でないことが必須です。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812968"
   
 2.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース エンジン インスタンスに接続します。  
   
-     詳細については、「 [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)」を参照してください。  
+     詳細については、「 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)」を参照してください。  
   
 3.  [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインポートおよびエクスポート] ウィザードを使用して、データをステージング テーブルにインポートします。  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812968"
      マスター データ マネージャーで、モデルの **[エクスプ ローラー]** 機能領域に移動してから、データを検証するビジネス ルールを適用します。 詳細については、「[ビジネス ルールに対して特定のメンバーを検証する (マスター データ サービス)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)」を参照してください。 データの検証にはストアド プロシージャを使用することもできます。 詳細については、「 [検証ストアド プロシージャ (マスター データ サービス)](../master-data-services/validation-stored-procedure-master-data-services.md)」を参照してください。  
   
      ステージング テーブルからデータを読み込む場合、ビジネス ルールに対してデータが自動的に検証されることはありません。 検証とその実施タイミングの詳細については、「[検証 (マスター データ サービス)](../master-data-services/validation-master-data-services.md)」を参照してください。  
-  
   

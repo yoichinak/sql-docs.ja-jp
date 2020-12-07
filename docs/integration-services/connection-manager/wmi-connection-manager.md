@@ -1,4 +1,5 @@
 ---
+description: WMI 接続マネージャー
 title: WMI 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efcca67f53415d34cd8522fa4a59a4ddd2dab79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf98d6204a9c7794d9024e9289d81b2886e7cc53
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918250"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91725927"
 ---
 # <a name="wmi-connection-manager"></a>WMI 接続マネージャー
 
@@ -30,7 +31,7 @@ ms.locfileid: "86918250"
 
   WMI 接続マネージャーを使用すると、パッケージは Windows Management Instrumentation (WMI) を使用して、企業環境の情報を管理できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、WMI 接続マネージャーが使用されます。  
   
- WMI 接続マネージャーをパッケージに追加すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に WMI 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **WMI**に設定されます。  
+ WMI 接続マネージャーをパッケージに追加すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に WMI 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **WMI** に設定されます。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>WMI 接続マネージャーの構成  
  WMI 接続マネージャーは、次の方法で構成できます。  
@@ -43,7 +44,7 @@ ms.locfileid: "86918250"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[WMI 接続マネージャー エディター]](../../integration-services/connection-manager/wmi-connection-manager-editor.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [[WMI 接続マネージャー エディター]]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "86918250"
  WMI 接続マネージャーの詳細については、「 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **Name**  
+ **名前**  
  接続マネージャーの一意な名前を指定します。  
   
  **説明**  
@@ -79,4 +80,4 @@ ms.locfileid: "86918250"
   
 ## <a name="see-also"></a>参照  
  [Web サービス タスク](../../integration-services/control-flow/web-service-task.md)   
- [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)

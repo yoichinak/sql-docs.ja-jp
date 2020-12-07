@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 fn_get_health_status (Transact-sql)
 title: managed_backup。 fn_get_health_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419556"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup。 fn_get_health_status (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86053438"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  [@begin_time]  
  エラーの集計数を計算する期間の開始時刻。  @begin_timeパラメーターは DATETIME です。 既定値は NULL です。 値が NULL の場合、この関数は現在の時刻の 30 分前に報告されたイベントから処理します。  
   
@@ -61,13 +63,13 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|で構成されたすべてのデータベースをバックアップエージェントがスキャンする回数 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 。|  
 |number_of_retention_loops|INT|保有期間を評価するためにデータベースがスキャンされた回数。|  
   
-## <a name="best-practices"></a>ベスト プラクティス  
- これらの集計数は、システムの正常性を監視するために使用できます。 たとえば、number_ of_retention_loops 列が30分間0の場合、リテンション期間の管理に時間がかかったり、正常に機能しなくなったりする可能性があります。 0以外のエラー列は問題を示している可能性があり、拡張イベントログをチェックして問題の詳細を確認する必要があります。 または、ストアドプロシージャ**managed_backup. sp_get_backup_diagnostics**を使用して、拡張イベントの一覧を取得し、エラーの詳細を確認します。  
+## <a name="best-practices"></a>推奨する運用方法  
+ これらの集計数は、システムの正常性を監視するために使用できます。 たとえば、number_ of_retention_loops 列が30分間0の場合、リテンション期間の管理に時間がかかったり、正常に機能しなくなったりする可能性があります。 0以外のエラー列は問題を示している可能性があり、拡張イベントログをチェックして問題の詳細を確認する必要があります。 または、ストアドプロシージャ **managed_backup. sp_get_backup_diagnostics** を使用して、拡張イベントの一覧を取得し、エラーの詳細を確認します。  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 関数に対する**SELECT**権限が必要です。  
+ 関数に対する **SELECT** 権限が必要です。  
   
 ## <a name="examples"></a>例  
   

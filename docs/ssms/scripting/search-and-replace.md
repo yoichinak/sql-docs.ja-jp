@@ -4,7 +4,7 @@ description: テキストを検索および置換する 4 つの異なる方法�
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +29,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ff7b10b5c4613032049d71365b49b9b147ce90a
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 3b1a75530245a3f3727fc47dee817b6a40416439
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122842"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036389"
 ---
 # <a name="search-and-replace"></a>検索と置換
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +51,9 @@ ms.locfileid: "87122842"
  一般に、グラフィカル ビューを持つ項目の検索はできません。  
   
 ## <a name="see-also"></a>参照  
- [アクティブ ドキュメントのインクリメンタル検索](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [ドキュメントの対話形式の検索](../../relational-databases/scripting/search-documents-interactively.md)   
- [結果一覧を使用してドキュメントを検索する方法](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [アクティブ ドキュメントのインクリメンタル検索](./search-an-active-document-incrementally.md)   
+ [ドキュメントの対話形式の検索](./search-documents-interactively.md)   
+ [結果一覧を使用してドキュメントを検索する方法](./search-documents-using-results-lists.md)   
+ [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)  
   

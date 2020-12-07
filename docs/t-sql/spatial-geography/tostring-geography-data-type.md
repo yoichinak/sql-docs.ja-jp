@@ -1,4 +1,5 @@
 ---
+description: ToString (geography データ型)
 title: ToString (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1bec7db7fd26068276ff481619c57c99948a73c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 491c548960fde425b8f2c021d69dce94b95a7b21
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555773"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472587"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86555773"
   
  CLR の戻り値の型: **SqlString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このメソッドは、NULL インスタンスで呼び出されたときに文字列 "Null" を返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、サーバー上で使用可能な結果セットが **FullGlobe** インスタンスに拡張されています。 このメソッドは、`AsTextZM()` と同じ値を返します。  
   
  このメソッドは正確ではありません。  

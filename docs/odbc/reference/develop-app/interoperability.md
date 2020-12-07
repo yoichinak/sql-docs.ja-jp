@@ -1,4 +1,5 @@
 ---
+description: 相互運用性
 title: 相互運用性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a404ee6de56cbd8b5605eca640fdf0e065f16d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476614"
 ---
 # <a name="interoperability"></a>相互運用性
-*相互運用性*とは、1つのアプリケーションがさまざまな dbms で動作する機能です。 ジェネリックで相互運用可能なアプリケーションを作成する必要があるのは、ODBC の開発につながる主な要因の1つでした。 ただし、相互運用性は、"相互運用不可能" から "完全に相互運用可能" になる単純なパスではありません。 パスには多くの分岐があり、それぞれの機能、速度、コードの複雑さ、および開発時間の間にトレードオフが必要です。  
+*相互運用性* とは、1つのアプリケーションがさまざまな dbms で動作する機能です。 ジェネリックで相互運用可能なアプリケーションを作成する必要があるのは、ODBC の開発につながる主な要因の1つでした。 ただし、相互運用性は、"相互運用不可能" から "完全に相互運用可能" になる単純なパスではありません。 パスには多くの分岐があり、それぞれの機能、速度、コードの複雑さ、および開発時間の間にトレードオフが必要です。  
   
  相互運用可能なアプリケーションを作成するプロセスは、次のいくつかの手順に従います。  
   

@@ -1,4 +1,5 @@
 ---
+description: Web 同期用の IIS 7 の構成
 title: Web 同期用の IIS 7 の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77029691f3409da713b0c7f4390d21502961bd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475605"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

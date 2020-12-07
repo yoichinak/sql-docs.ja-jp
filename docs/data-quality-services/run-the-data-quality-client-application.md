@@ -1,4 +1,5 @@
 ---
+description: Data Quality Client アプリケーションの実行
 title: Data Quality Client アプリケーションの実行
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466668"
 ---
 # <a name="run-the-data-quality-client-application"></a>Data Quality Client アプリケーションの実行
 
@@ -40,7 +41,7 @@ ms.locfileid: "85883345"
   
 1.  **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をポイントして、**[[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]]**、**[Data Quality Services]**、**[Data Quality Client]** の順にクリックします。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで、次の操作を実行します。  
+2.  **[サーバーに接続]** ダイアログで次の操作を行います。  
   
     1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを接続するサーバーを指定します。 **[(ローカル)]** を選択し、ローカル コンピューター上の [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] に接続します。 下矢印をクリックして、 **\<Browse network for more servers>** 別のサーバーに接続する (またはローカルサーバーに名前で接続する) こともできます。 **[サーバーの参照]** ダイアログ ボックスが表示されます。 **[ローカル サーバー]** タブまたは **[ネットワーク サーバー]** タブでサーバーを選択できます。  
   

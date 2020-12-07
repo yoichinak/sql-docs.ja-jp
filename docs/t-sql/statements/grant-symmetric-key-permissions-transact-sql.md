@@ -1,4 +1,5 @@
 ---
+description: GRANT (対称キーの権限の許可) (Transact-SQL)
 title: GRANT (対称キーの権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1c8c5bdcd35de844bce5cb93647452b92621d9e2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ac4d0a1f93cdda3bcc93569772795fe8141d5248
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485433"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498242"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT (対称キーの権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,6 @@ ms.locfileid: "86485433"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 GRANT permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]  
@@ -130,7 +130,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>例  
  次の例では、対称キー `SamInventory42` の `ALTER` 権限を、データベース ユーザー `HamidS` に対して許可します。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GRANT ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;  
 GO  

@@ -1,8 +1,9 @@
 ---
+description: Connection Close メソッド、Table Type プロパティの例 (VC++)
 title: Connection Close メソッド、Table Type プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa016c166bc2459c61c34a5ca40f8c1444811782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f49a6456e9d2a461be1e4f51f3030da2b1ff015
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759278"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984853"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close メソッド、Table Type プロパティの例 (VC++)
-[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**に設定する場合は、カタログを "閉じる" 必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマオブジェクトから作成されたオブジェクトは孤立します。 キャッシュされたオブジェクトのプロパティは引き続き使用できますが、プロバイダーの呼び出しを必要とするプロパティを読み取ろうとすると失敗します。  
+[ActiveConnection](./activeconnection-property-adox.md)プロパティを**Nothing**に設定する場合は、カタログを "閉じる" 必要があります。 関連付けられたコレクションは空になります。 カタログ内のスキーマオブジェクトから作成されたオブジェクトは孤立します。 キャッシュされたオブジェクトのプロパティは引き続き使用できますが、プロバイダーの呼び出しを必要とするプロパティを読み取ろうとすると失敗します。  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -143,4 +144,4 @@ void CloseConnectionX() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection プロパティ (ADOX)](./activeconnection-property-adox.md)

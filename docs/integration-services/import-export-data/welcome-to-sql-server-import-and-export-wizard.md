@@ -1,4 +1,5 @@
 ---
+description: '[SQL Server インポートおよびエクスポート ウィザードへようこそ]'
 title: SQL Server インポートおよびエクスポート ウィザードへようこそ | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346208"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922865"
 **[次回からこの開始ページを表示しない]**  
  次回ウィザードを実行するときに、ようこそページをスキップします。  
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  次のページは、 **[データ ソースの選択]** です。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。 詳細については、「 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」を参照してください。
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a> 関連タスクとコンテンツ  
@@ -54,7 +55,7 @@ ms.locfileid: "86922865"
 
 -   **ウィザードのしくみについては、以下を参照してください。**
 
-    -   **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+    -   **ウィザードの詳細については、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
     -   **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」をご覧ください。 ウィザードのページごとに別のドキュメント ページもあります。
 

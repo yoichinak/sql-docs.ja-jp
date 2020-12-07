@@ -1,4 +1,5 @@
 ---
+description: SetValue メソッド (ServerSettingsGeneralFlag クラス)
 title: SetValue メソッド (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b95664e8bb14ef5e66d76e7bb06140a0736a070b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 87d6daffaee3454dbb53decaf15aafe9750e1800
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888566"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517362"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue メソッド (ServerSettingsGeneralFlag クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +49,9 @@ object.SetValue(Value)
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **uint32** 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: GROUPING (Transact-SQL)
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2019
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b19bc2719abf59c0ab347c677b172ac9797a00d4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1bc82a8f0afe1b2758a7c78a88b4813b7d103b4e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396358"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114801"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,8 +39,7 @@ ms.locfileid: "87396358"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 GROUPING ( <column_expression> )  
 ```  
   
@@ -58,7 +58,7 @@ GROUPING ( <column_expression> )
 ## <a name="examples"></a>例  
  次の例では、`SalesQuota` をグループ化し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SaleYTD` 額を集計します。 `GROUPING` 関数は、`SalesQuota` 列に適用されます。  
   
-```  
+```sql 
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
 FROM Sales.SalesPerson  
 GROUP BY SalesQuota WITH ROLLUP;  

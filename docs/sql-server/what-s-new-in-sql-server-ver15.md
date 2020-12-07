@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923411"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864315"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -262,7 +262,7 @@ ms.locfileid: "86923411"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-|Azure SQL Database Managed Instance データベースのサポート| マネージド インスタンス上で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。|
+|Azure SQL Managed Instance データベースのサポート| Azure SQL Managed Instance で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。|
 |新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
 | &nbsp; | &nbsp; |
 

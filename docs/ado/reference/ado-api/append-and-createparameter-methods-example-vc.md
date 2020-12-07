@@ -1,8 +1,9 @@
 ---
+description: Append および CreateParameter メソッドの例 (VC + +)
 title: Append および CreateParameter メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 18807c13606404718180421177f0175ffef6d822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746982"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976103"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append および CreateParameter メソッドの例 (VC + +)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)および[createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
+この例では、 [Append](./append-method-ado.md) および [createparameter](./createparameter-method-ado.md) メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。  
   
 ## <a name="example"></a>例  
   
@@ -194,7 +195,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Authors with 25 percent royalty  
@@ -203,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [Append メソッド (ADO)](./append-method-ado.md)   
+ [CreateParameter メソッド (ADO)](./createparameter-method-ado.md)

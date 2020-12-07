@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Reporting Services 構成マネージャー (ネイティブ モード)
+    - name: レポート サーバー構成マネージャー (ネイティブ モード)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
+        - name: レポート サーバー サービス アカウントの構成
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: レポート サーバー URL の構成 (SSRS 構成マネージャー)
+        - name: レポート サーバーの URL の構成
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: URL の予約と登録について (SSRS 構成マネージャー)
+            - name: URL の予約と登録について
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: URL の構成 (SSRS 構成マネージャー)
+            - name: URL の構成
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: URL 予約の構文 (SSRS 構成マネージャー)
+            - name: URL 予約構文
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: 構成ファイル内の URL (SSRS 構成マネージャー)
+            - name: 構成ファイル内の URL
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
+            - name: レポート サーバーの複数インスタンス配置における URL 予約
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: データベースの作成
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: 電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: 自動実行アカウントの構成 (SSRS 構成マネージャー)
+        - name: 自動実行アカウントの構成
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: SSRS 暗号化キー - 暗号化キーの管理
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: サブスクリプション設定とファイル共有アカウント (構成マネージャー)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
+        - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Power BI 統合
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: SharePoint リストの接続の種類
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: SQL Azure の接続の種類
+        - name: Azure SQL の接続の種類
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: OLE DB の接続の種類
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
@@ -1467,7 +1467,7 @@
 - name: リレーショナル データベース
   items:
     - name: ログイン、ユーザー、スキーマを管理する方法
-      href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      href: ../relational-databases/security/authentication-access/create-a-login.md
     - name: 動的なデータ マスキング
       href: ../relational-databases/security/dynamic-data-masking.md
     - name: SQL Server Express LocalDB リファレンス

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - deleting remote logins
 - dropping remote logins
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a436ed47730ef98287eef10d5342df4334782690
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900324"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125831"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
 
@@ -56,9 +56,9 @@ ms.locfileid: "85900324"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
     ```sql
-    sp_dropserver <old_name>;  
+    EXEC sp_dropserver '<old_name>';  
     GO  
-    sp_addserver <new_name>, local;  
+    EXEC sp_addserver '<new_name>', local;  
     GO  
     ```  
   
@@ -67,9 +67,9 @@ ms.locfileid: "85900324"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをホストする名前変更されたコンピューターの場合は、次のプロシージャを実行します。  
   
     ```sql
-    sp_dropserver <old_name\instancename>;  
+    EXEC sp_dropserver '<old_name\instancename>';  
     GO  
-    sp_addserver <new_name\instancename>, local;  
+    EXEC sp_addserver '<new_name\instancename>', local;  
     GO  
     ```  
   
@@ -98,22 +98,21 @@ ms.locfileid: "85900324"
 -   既定のインスタンスの場合は、次のプロシージャを実行します。  
   
     ```sql
-    sp_dropremotelogin old_name;  
+    EXEC sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   名前付きインスタンスの場合は、次のプロシージャを実行します。  
   
     ```sql
-    sp_dropremotelogin old_name\instancename;  
+    EXEC sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   
  **リンク サーバー構成** - リンク サーバー構成はコンピューター名の変更操作の影響を受けます。 **sp_addlinkedserver** または **sp_setnetname** を使用してコンピューターの名前参照を更新します。 詳細については、「[sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)」または「[sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)」を参照してください。  
   
- **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](https://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
+ **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL Server のインストール](../../database-engine/install-windows/install-sql-server.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: sys. route (Transact-sql)
 title: sys. route (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -17,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.routes catalog view
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b15dc8ebf9bbe9616ada47627a638b7d34d7c278
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 822015a37a5443850b041c36d30026861590f268
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862899"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550429"
 ---
 # <a name="sysroutes-transact-sql"></a>sys. route (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

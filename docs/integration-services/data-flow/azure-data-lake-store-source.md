@@ -1,4 +1,5 @@
 ---
+description: Azure Data Lake Store Source
 title: Azure Data Lake Store Source | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2091b4f19d5110e34c61ea7776214b740fc38f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38de021617ed0454048a3d8cd7f0c5732d09861f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919793"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127337"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
 
@@ -47,4 +48,4 @@ ms.locfileid: "86919793"
 
 ## <a name="text-qualifier"></a>テキスト修飾子
 
-**Azure Data Lake Store Source** はテキスト修飾子をサポートしません。 ファイルを正しく処理するためにテキスト修飾子を指定する必要がある場合、ファイルをローカル コンピューターにダウンロードし、**フラット ファイル ソース**を使用してファイルを処理することを検討してください。 フラット ファイル ソースでテキスト修飾子を指定できるようになります。 詳細については、「[フラット ファイル ソース](flat-file-source.md)」を参照してください。
+**Azure Data Lake Store Source** はテキスト修飾子をサポートしません。 ファイルを正しく処理するためにテキスト修飾子を指定する必要がある場合、ファイルをローカル コンピューターにダウンロードし、**フラット ファイル ソース** を使用してファイルを処理することを検討してください。 フラット ファイル ソースでテキスト修飾子を指定できるようになります。 詳細については、「[フラット ファイル ソース](flat-file-source.md)」を参照してください。

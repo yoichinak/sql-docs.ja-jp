@@ -1,4 +1,5 @@
 ---
+description: TopCount (DMX)
 title: TopCount (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 23a9a1594c31bda040a22ad3914af8b8e7d3603f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970265"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726085"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,15 +34,15 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>戻り値の型  
  \<table expression>  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  引数によって指定された値によって、 \<rank expression> 引数に指定された行の順位の降順が決定され、 \<table expression> 引数に指定されている最上位の行の数 \<count> が返されます。  
   
- TopCount 関数は、最初に、結合された予測を有効にするために導入されており、一般的には、 **SELECT TOP**句と**ORDER BY**句を含むステートメントと同じ結果を生成します。 予測の数の指定をサポートする**Predict (DMX)** 関数を使用すると、結合された予測のパフォーマンスが向上します。  
+ TopCount 関数は、最初に、結合された予測を有効にするために導入されており、一般的には、 **SELECT TOP** 句と **ORDER BY** 句を含むステートメントと同じ結果を生成します。 予測の数の指定をサポートする **Predict (DMX)** 関数を使用すると、結合された予測のパフォーマンスが向上します。  
   
- ただし、TopCount を使用する必要がある場合もあります。 たとえば、DMX は、サブ select ステートメントの**TOP**修飾子をサポートしていません。 また、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)関数は、 **TOP**の追加をサポートしていません。  
+ ただし、TopCount を使用する必要がある場合もあります。 たとえば、DMX は、サブ select ステートメントの **TOP** 修飾子をサポートしていません。 また、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 関数は、 **TOP**の追加をサポートしていません。  
   
 ## <a name="examples"></a>例  
- 次の例は、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したアソシエーションモデルに対する予測クエリです。 クエリは同じ結果を返しますが、最初の例では TopCount を使用し、2番目の例では Predict 関数を使用します。  
+ 次の例は、「 [基本的なデータマイニングチュートリアル](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130))」で作成したアソシエーションモデルに対する予測クエリです。 クエリは同じ結果を返しますが、最初の例では TopCount を使用し、2番目の例では Predict 関数を使用します。  
   
  TopCount の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
@@ -54,7 +55,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「 [データマイニングデザイナーでの単一クエリの作成](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  結果の例:  
   
@@ -102,7 +103,7 @@ NATURAL PREDICTION JOIN
   
  ただし、この種類のクエリは、実稼働設定のパフォーマンスに影響を与える可能性があります。 これは、クエリがアルゴリズムからすべての予測のセットを返し、これらの予測を並べ替え、上位3を返すためです。  
   
- 次の例は、同じ結果を返すが実行時間が大幅に短縮される代替ステートメントを示しています。 この例では、TopCount を、引数として複数の予測を受け取る Predict 関数に置き換えます。 また、この例では、 **$SUPPORT**キーワードを使用して、入れ子になったテーブル列を直接取得します。  
+ 次の例は、同じ結果を返すが実行時間が大幅に短縮される代替ステートメントを示しています。 この例では、TopCount を、引数として複数の予測を受け取る Predict 関数に置き換えます。 また、この例では、 **$SUPPORT** キーワードを使用して、入れ子になったテーブル列を直接取得します。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
@@ -111,10 +112,9 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  結果には、サポート値によって並べ替えられた上位3件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、「 **Predict (DMX)**」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
- [DMX&#41;&#40;下数](../dmx/bottomcount-dmx.md)   
- [DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)   
- [DMX&#41;&#40;TopSum](../dmx/topsum-dmx.md)  
-  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;下数 ](../dmx/bottomcount-dmx.md)   
+ [DMX&#41;&#40;TopPercent ](../dmx/toppercent-dmx.md)   
+ [DMX&#41;&#40;TopSum ](../dmx/topsum-dmx.md)  
   

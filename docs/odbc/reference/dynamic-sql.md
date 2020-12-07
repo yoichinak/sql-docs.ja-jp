@@ -1,7 +1,8 @@
 ---
+description: 動的 SQL
 title: 動的 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 11/16/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 86164b1bc5d98475d4e2f0980ce433d33e5d858f
+ms.sourcegitcommit: a2182276ba00c48dc1475b9c7dfa45179d4416dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423256"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94704177"
 ---
 # <a name="dynamic-sql"></a>動的 SQL
 静的 SQL は多くの状況で適切に動作しますが、データアクセスを事前に特定できないアプリケーションのクラスもあります。 たとえば、スプレッドシートによってユーザーがクエリを入力できるようにした場合、スプレッドシートからデータを取得するために DBMS に送信されるとします。 このクエリの内容は、スプレッドシートプログラムが記述されている場合、プログラマにとってはわかりません。  
@@ -31,7 +32,7 @@ ms.locfileid: "84423256"
   
  動的 SQL ステートメントを実行する最も簡単な方法は、EXECUTE IMMEDIATE ステートメントを使用することです。 このステートメントは、コンパイルと実行のために SQL ステートメントを DBMS に渡します。  
   
- EXECUTE IMMEDIATE ステートメントの欠点の1つは、ステートメントを実行するたびに、SQL ステートメントを処理する5つの各手順を実行する必要があることです。 多くのステートメントが動的に実行される場合、このプロセスに伴うオーバーヘッドが大きくなる可能性があり、これらのステートメントが類似している場合は無駄になります。 この状況に対処するために、動的 SQL では、次の手順を使用する、準備実行と呼ばれる最適化された形式の実行が提供されています。  
+ EXECUTE IMMEDIATE ステートメントの欠点の1つは、ステートメントを実行するたびに、 [SQL ステートメントを処理する5つ](processing-a-sql-statement.md) の各手順を実行する必要があることです。 多くのステートメントが動的に実行される場合、このプロセスに伴うオーバーヘッドが大きくなる可能性があり、これらのステートメントが類似している場合は無駄になります。 この状況に対処するために、動的 SQL では、次の手順を使用する、準備実行と呼ばれる最適化された形式の実行が提供されています。  
   
 1.  このプログラムは、EXECUTE IMMEDIATE ステートメントと同様に、バッファー内に SQL ステートメントを構築します。 ホスト変数の代わりに、ステートメントテキスト内の任意の場所で疑問符 (?) を使用して、定数の値が後で指定されることを示すことができます。 疑問符はパラメーターマーカーとして呼び出されます。  
   

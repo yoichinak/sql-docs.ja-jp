@@ -1,4 +1,5 @@
 ---
+description: AND (MDX)
 title: AND (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baff2f517f5fdd6dfbb23eb24ad51ed12589df52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429974"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -35,10 +36,10 @@ Expression1 AND Expression2
  数値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 両方のパラメーターが**true**と評価される場合に true を返すブール値です。それ以外の場合は**false**。  
+ 両方のパラメーターが **true**と評価される場合に true を返すブール値です。それ以外の場合は **false**。  
   
-## <a name="remarks"></a>Remarks  
- **And**演算子は、両方の式をブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理積演算を実行します。 次の表は、And 演算子が論理積をどのように実行するか**を**示しています。  
+## <a name="remarks"></a>解説  
+ **And**演算子は、両方の式をブール値として処理した後 (0 は**false**、それ以外の場合は**true**)、演算子が論理積演算を実行します。 次の表は、And 演算子が論理積をどのように実行するか **を** 示しています。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  

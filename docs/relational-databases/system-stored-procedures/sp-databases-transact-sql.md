@@ -1,4 +1,5 @@
 ---
+description: sp_databases (Transact-sql)
 title: sp_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867481"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549900"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,25 +40,25 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|データベースの名前です。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し**ます。** この名前は、データベースカタログビューに格納されています。|  
+|**DATABASE_NAME**|**sysname**|データベースの名前です。 では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] この列は、データベース名を表し **ます。** この名前は、データベースカタログビューに格納されています。|  
 |**DATABASE_SIZE**|**int**|データベースのサイズ (kb 単位)。|  
 |**備考**|**varchar (254)**|では [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、このフィールドは常に NULL を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  返されるデータベース名は、現在のデータベース状況を変更するために USE ステートメントでパラメーターとして使えます。  
   
- **sp_databases**には OPEN DATABASE CONNECTIVITY (ODBC) に相当するものはありません。  
+ **sp_databases** には OPEN DATABASE CONNECTIVITY (ODBC) に相当するものはありません。  
   
 ## <a name="permissions"></a>アクセス許可  
  CREATE DATABASE、ALTER ANY DATABASE、または VIEW ANY DEFINITION 権限が必要です。また、データベースへのアクセス権限が必要です。 VIEW ANY DEFINITION 権限を拒否することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `sp_databases` を実行しています。  
   
 ```sql  
@@ -66,7 +67,7 @@ GO
 EXEC sp_databases;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   

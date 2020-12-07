@@ -1,4 +1,5 @@
 ---
+description: MDX データ操作 - ALTER CUBE
 title: ALTER CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 052d533e503f5b82f506ec119684acbbfe7cdd5f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098522"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192352"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
 
-  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](https://go.microsoft.com/fwlink/?LinkId=394977) 」を参照してください。  
+  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用の詳細については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services) 」を参照してください。  
   
  同時実行ディメンションの書き戻しによってデッドロックが発生する可能性があることに注意してください。2番目の書き戻しによって保持されている共有ロックが原因で、最初の書き戻しがコミットからブロックされます。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更の両方がロールバックされます。  
   
@@ -113,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  メンバー名またはメンバーキーを指定する有効な文字列式です。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>注釈  
  WITH DESCENDANTS 句を使用しなかった場合、削除したメンバーの子は、削除したメンバーの親の子になります。 WITH 子孫句が使用されている場合は、ディメンションテーブル内のすべての子孫とその行も削除されます。  
   
 > [!NOTE]  
@@ -129,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  1つのメンバーを返す有効な MDX 式です。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>注釈  
  指定された MDX 式は、静的または動的にすることができます。  
   
 ## <a name="moving-a-dimension-member"></a>ディメンション メンバーの移動  
@@ -164,6 +165,5 @@ CELL CALCULATION Calculation_Name
  ALTER CUBE ステートメントを使用してセル計算を作成する方法の詳細については、「 [DROP CELL Calculation ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)  
-  
+ [Mdx&#41;&#40;mdx データ定義ステートメント ](../mdx/mdx-data-definition-statements-mdx.md)  
   

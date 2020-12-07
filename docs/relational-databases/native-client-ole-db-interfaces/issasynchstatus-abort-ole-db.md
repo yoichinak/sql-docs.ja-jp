@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus:: Abort (Native Client OLE DB provider)'
 title: 'ISSAsynchStatus:: Abort (Native Client OLE DB provider) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490905"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus:: Abort (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>引数  
  *hChapter*[in]  
- 操作を中止するチャプターのハンドル。 呼び出されるオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合、呼び出し元は*Hchapter*を DB_NULL_HCHAPTER に設定する必要があります。  
+ 操作を中止するチャプターのハンドル。 呼び出されるオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合、呼び出し元は *Hchapter* を DB_NULL_HCHAPTER に設定する必要があります。  
   
  *eOperation*[in]  
  中止する操作。 この引数には、  
@@ -65,7 +66,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **IDBInitialize:: Initialize**が呼び出されていないか、または完了していないデータソースオブジェクトに対して**ISSAsynchStatus:: Abort**が呼び出されました。  
   
- **IDBInitialize:: Initialize**が呼び出されたが、その後初期化前にキャンセルされたか、またはタイムアウトしたデータソースオブジェクトに対して**ISSAsynchStatus:: Abort**が呼び出されました。データソースオブジェクトはまだ初期化されていません。  
+ または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていません。  
   
  **Itransaction:: commit**または**Itransaction:: Abort**が以前に呼び出された行セットで**ISSAsynchStatus:: abort**が呼び出されましたが、行セットがコミットまたは中止になっておらず、ゾンビ状態になっています。  
   

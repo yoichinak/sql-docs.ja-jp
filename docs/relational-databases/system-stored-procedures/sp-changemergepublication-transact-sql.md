@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepublication (Transact-sql)
 title: sp_changemergepublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872513"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541907"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前です。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @property = ] 'property'`指定されたパブリケーションの変更対象となるプロパティです。 *プロパティ*は**sysname**で、次の表に示すいずれかの値を指定できます。  
+`[ @property = ] 'property'` 指定されたパブリケーションの変更対象となるプロパティです。 *プロパティ* は **sysname**で、次の表に示すいずれかの値を指定できます。  
   
-`[ @value = ] 'value'`指定したプロパティの新しい値。 *値*は**nvarchar (255)**,、次の表に一覧表示されているいずれかの値を指定できます。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値。 *値* は **nvarchar (255)**,、次の表に一覧表示されているいずれかの値を指定できます。  
   
  次の表では、変更できるパブリケーションのプロパティについて説明し、それらのプロパティの値に対する制限について説明します。  
   
@@ -77,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**conflict_logging**|**publisher**|競合レコードはパブリッシャーに格納されます。|  
 ||**サブスクライバ**|競合レコードは、競合の原因となったサブスクライバーに保存されます。 サブスクライバーではサポートされていません [!INCLUDE[ssEW](../../includes/ssew-md.md)] *。*|  
 ||**両方とも**|競合レコードは、パブリッシャーとサブスクライバーの両方に保存されます。|  
-|**conflict_retention**||競合を保持する保有期間を日数で指定する**int**です。 *Conflict_retention*を**0**に設定すると、競合のクリーンアップは必要ありません。|  
+|**conflict_retention**||競合を保持する保有期間を日数で指定する **int** です。 *Conflict_retention*を**0**に設定すると、競合のクリーンアップは必要ありません。|  
 |**description**||パブリケーションの説明です。|  
 |**dynamic_filters**|**true**|パブリケーションは動的な句に基づいてフィルター処理されます。|  
 ||**false**|パブリケーションは動的にフィルター選択されません。|  
@@ -91,8 +92,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**generation_leveling_threshold**|**int**|生成に含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
 |**keep_partition_changes**|**true**|同期は最適化され、変更されたパーティション内の行を持つサブスクライバーだけが影響を受けます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 ||**false**|同期は最適化されず、サブスクライバーに送信されるパーティションは、パーティション内のデータが変更されたときに検証されます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
-|**max_concurrent_merge**||これは、パブリケーションに対して実行できる同時マージプロセスの最大数を表す**int**です。 0の場合、制限はありません。この数を超えるマージプロセスが同時に実行されるようにスケジュールされている場合、余分なジョブは、マージプロセスが終了するまでキューに入れられます。|  
-|**max_concurrent_dynamic_snapshots**||これは、パラメーター化された行フィルターを使用するマージパブリケーションに対して同時に実行できる、フィルター選択されたデータスナップショットを生成するためのスナップショットセッションの最大数を表す**int**です。 **0**の場合、制限はありません。 ここで指定した数を超えるスナップショット処理が同時に実行されるようにスケジュールすると、超過したジョブはキューに保存されて、現在実行中のマージ処理が終了するまで待機します。|  
+|**max_concurrent_merge**||これは、パブリケーションに対して実行できる同時マージプロセスの最大数を表す **int** です。 0の場合、制限はありません。この数を超えるマージプロセスが同時に実行されるようにスケジュールされている場合、余分なジョブは、マージプロセスが終了するまでキューに入れられます。|  
+|**max_concurrent_dynamic_snapshots**||これは、パラメーター化された行フィルターを使用するマージパブリケーションに対して同時に実行できる、フィルター選択されたデータスナップショットを生成するためのスナップショットセッションの最大数を表す **int** です。 **0**の場合、制限はありません。 ここで指定した数を超えるスナップショット処理が同時に実行されるようにスケジュールすると、超過したジョブはキューに保存されて、現在実行中のマージ処理が終了するまで待機します。|  
 |**post_snapshot_script**||**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントまたはマージエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**pre_snapshot_script**||**.Sql**ファイルの場所へのポインターを指定します。 マージエージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクトスクリプトの前にプリスナップショットスクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -112,35 +113,35 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|パブリケーションのスナップショットは使用できません。|  
 |**status**|**active**|パブリケーションはアクティブな状態です。|  
 ||**inactive**|パブリケーションは非アクティブな状態です。|  
-|**sync_mode**|**ネイティブ**または<br /><br /> **bcp ネイティブ**|すべてのテーブルのネイティブモードの一括コピープログラム出力は、初期スナップショットに使用されます。|  
-||**記号**<br /><br /> または**bcp 文字**|すべての非サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**sync_mode**|**ネイティブ** または<br /><br /> **bcp ネイティブ**|すべてのテーブルのネイティブモードの一括コピープログラム出力は、初期スナップショットに使用されます。|  
+||**character**<br /><br /> または **bcp 文字**|すべての非サブスクライバーに必要な初期スナップショットには、すべてのテーブルのキャラクターモードの一括コピープログラム出力が使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**use_partition_groups**<br /><br /> 注: partition_groups を使用すると、 **setupbelongs**使用されるように復帰し、 **changemergearticle**で**use_partition_groups = false**に設定した場合、スナップショットの取得後に正しく反映されない可能性があります。 スナップショットによって生成されるトリガーは、パーティショングループに準拠しています。<br /><br /> このシナリオの回避策は、状態を非アクティブに設定し、 **use_partition_groups**を変更して、状態をアクティブに設定することです。|**true**|パブリケーションは事前計算済みパーティションを使用します。|  
 ||**false**|パブリケーションは事前計算済みパーティションを使用しません。|  
 |**validate_subscriber_info**||サブスクライバー情報の取得に使用する関数を一覧表示します。 次に、情報のパーティション分割が一貫性を保っていることをサブスクライバーが確認するときに使用する動的フィルター選択の基準の妥当性を検証します。|  
 |**web_synchronization_url**||Web 同期に使用されるインターネット URL の既定値です。|  
 |NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は**0**です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot* は **ビット**,、既定値は **0**です。  
   
- **0**を指定すると、パブリケーションの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+ **0** を指定すると、パブリケーションの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
   
- **1**は、パブリケーションの変更によってスナップショットがとされる可能性があることを指定します。 新しいスナップショットを必要とする既存のサブスクリプションがある場合は、既存のスナップショットに古いスナップショットをマークし、新しいスナップショットを生成するためのアクセス許可を付与します。  
+ **1** は、パブリケーションの変更によってスナップショットがとされる可能性があることを指定します。 新しいスナップショットを必要とする既存のサブスクリプションがある場合は、既存のスナップショットに古いスナップショットをマークし、新しいスナップショットを生成するためのアクセス許可を付与します。  
   
  変更時に新しいスナップショットを生成する必要があるプロパティについては、「解説」を参照してください。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription*は**ビット**で、既定値は**0**です。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription* は **ビット** で、既定値は **0**です。  
   
- **0**を指定すると、パブリケーションを変更しても、サブスクリプションを再初期化する必要がありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+ **0** を指定すると、パブリケーションを変更しても、サブスクリプションを再初期化する必要がありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
   
- **1**を指定すると、パブリケーションの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を行う権限が与えられます。  
+ **1** を指定すると、パブリケーションの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化を行う権限が与えられます。  
   
  変更によって既存のサブスクリプションの再初期化が必要になるプロパティについては、「解説」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_changemergepublication**は、マージレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_changemergepublication** は、マージレプリケーションで使用します。  
   
  次のプロパティを変更するには、新しいスナップショットを生成する必要があります。 *Force_invalidate_snapshot*パラメーターには値**1**を指定する必要があります。  
   
@@ -162,7 +163,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **post_snapshot_script**  
   
--   **publication_compatibility_level** ( **80sp3**のみ)  
+-   **publication_compatibility_level** ( **80sp3** のみ)  
   
 -   **pre_snapshot_script**  
   
@@ -186,12 +187,12 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changemergepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

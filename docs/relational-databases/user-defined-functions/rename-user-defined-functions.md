@@ -1,4 +1,5 @@
 ---
+description: ユーザー定義関数名の変更
 title: ユーザー定義関数名の変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80d1d948f24c212c547c9367f05802c8570fe01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af6036a3bc6cf2b751eed6a1df173fca2c9a117
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768309"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88488592"
 ---
 # <a name="rename-user-defined-functions"></a>ユーザー定義関数名の変更
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85768309"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **ユーザー定義関数の名前を変更するために使用するもの:**  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85768309"
   
 #### <a name="to-rename-user-defined-functions"></a>ユーザー定義関数の名前を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、名前を変更する関数が格納されているデータベースの横にあるプラス記号をクリックします。  
+1.  **オブジェクト エクスプローラー** で、名前を変更する関数が格納されているデータベースの横にあるプラス記号をクリックします。  
   
 2.  **Programmability** フォルダーの横にあるプラス記号をクリックします。  
   

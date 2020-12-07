@@ -1,4 +1,5 @@
 ---
+description: JSON 関数 (Transact-SQL)
 title: JSON 関数 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364328"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 関数 (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87394223"
 
 このセクションのページで説明されている関数を使用して、JSON テキストを検証または変更するか、単純または複雑な値を抽出します。  
   
-|Function|説明|  
+|機能|説明|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|文字列に有効な JSON が含まれているかどうかをテストします。|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|JSON 文字列からスカラー値を抽出します。|  
@@ -34,7 +35,7 @@ ms.locfileid: "87394223"
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での JSON の組み込みサポートの詳細については、「[SQL Server の JSON データ](../../relational-databases/json/json-data-sql-server.md)」を参照してください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  - [組み込み関数を使用した JSON データの検証、クエリ、変更 &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
  - [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)

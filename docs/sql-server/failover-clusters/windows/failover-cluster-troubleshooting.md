@@ -6,20 +6,20 @@ ms.date: 10/21/2015
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - troublshooting, failover clustering
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f387fc8778a600305696d0c2f4ea45293b8d5c59
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 75090ce180ff6e71796c9363e39768f09ec3f91b
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895859"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121094"
 ---
 # <a name="failover-cluster-troubleshooting"></a>フェールオーバー クラスターのトラブルシューティング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85895859"
 -   拡張ストアド プロシージャおよび COM オブジェクトの使用  
   
 ## <a name="basic-troubleshooting-steps"></a>基本的なトラブルシューティング手順  
- 診断の最初の手順では、新しいクラスターの検証チェックを実行します。 検証の詳細については、[フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのハードウェアの検証](https://technet.microsoft.com/library/cc732035.aspx)に関する記事を参照してください。  これは、オンラインのクラスター リソースに影響しないため、サービスを中断することなく実行できます。 フェールオーバー クラスタ リング機能をインストールしたら、クラスターの展開前、クラスターの作成中、クラスターの実行中を含め、いつでも検証を実行することができます。 実際には、クラスターの使用中に、可用性の高いワークロードのベスト プラクティスに従っているかどうかをチェックする追加テストも実行されます。 数十回のテストのうち数回は、実行中のクラスターのワークロードに影響しますが、これらはすべてストレージ カテゴリ内にあるため、このカテゴリ全体をスキップすると、簡単に中断を伴うテストを回避できます。  
+ 診断の最初の手順では、新しいクラスターの検証チェックを実行します。 検証の詳細については、[フェールオーバー クラスターのステップ バイ ステップ ガイド: フェールオーバー クラスターのハードウェアの検証](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10))に関する記事を参照してください。  これは、オンラインのクラスター リソースに影響しないため、サービスを中断することなく実行できます。 フェールオーバー クラスタ リング機能をインストールしたら、クラスターの展開前、クラスターの作成中、クラスターの実行中を含め、いつでも検証を実行することができます。 実際には、クラスターの使用中に、可用性の高いワークロードのベスト プラクティスに従っているかどうかをチェックする追加テストも実行されます。 数十回のテストのうち数回は、実行中のクラスターのワークロードに影響しますが、これらはすべてストレージ カテゴリ内にあるため、このカテゴリ全体をスキップすると、簡単に中断を伴うテストを回避できます。  
 フェールオーバー クラスタ リングには、検証でストレージ テストを実行する際の偶発的なダウンタイムを回避する組み込みのセーフガードが付属しています。 検証の開始時にクラスターにオンライン グループが含まれており、ストレージ テストが選択されたままになっていると、すべてのテストを実行する (この場合、ダウンタイムが発生します) か、ダウンタイムを避けるためにすべてのオンライン グループのディスクのテストをスキップするかを確認するプロンプトが表示されます。 ストレージ カテゴリ全体をテスト対象から除外すると、このプロンプトは表示されません。 これにより、ダウンタイムなしのクラスターの検証が有効になります。  
   
 #### <a name="how-to-revalidate-your-cluster"></a>クラスターを再検証する方法  
@@ -127,9 +127,9 @@ ms.locfileid: "85895859"
   
  **解決策 3:** 名前付きパイプで接続するには、SQL Server 構成マネージャーを使用して別名を作成し、適切なコンピューターに接続します。 たとえば、2 つのノード (**Node A** および **Node B**) から成るクラスター、および既定のインスタンスを使用するフェールオーバー クラスター インスタンス (**Virtsql**) がある場合、次の手順に従って、オフラインのネットワーク名リソースがあるサーバーに接続できます。  
   
-1.  クラスター アドミニストレーターを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを含むグループが実行されているノードを特定します。 この例では、 **Node A**です。  
+1.  クラスター アドミニストレーターを使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを含むグループが実行されているノードを特定します。 この例では、 **Node A** です。  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **を使用して、そのコンピューターの**サービスを開始します。 **net start**の使用方法については、「 [手動による SQL Server の起動](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)」を参照してください。  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] net start **を使用して、そのコンピューターの** サービスを開始します。 **net start** の使用方法については、「 [手動による SQL Server の起動](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx)」を参照してください。  
   
 3.  **Node A** で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server 構成マネージャーを起動します。サーバーがリッスンしているパイプ名を確認します。 パイプ名は \\\\.\\$$\VIRTSQL\pipe\sql\query のように表示されます。  
   
@@ -189,5 +189,4 @@ ms.locfileid: "85895859"
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [拡張ストアド プロシージャのしくみ](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [拡張ストアド プロシージャの実行における特性](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

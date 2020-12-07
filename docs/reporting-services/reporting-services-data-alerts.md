@@ -10,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246681"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987408"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
 
@@ -117,7 +117,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」をご覧ください。  
+ SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](./install-windows/install-the-first-report-server-in-sharepoint-mode.md)」をご覧ください。  
   
  このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「[SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)」および「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
@@ -158,13 +158,12 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  次の表に、イベント ハンドラーと再試行のタイミングをまとめています。  
   
-|エラー カテゴリ|<|\<|イベントの種類||>|>|>|  
+|エラーのカテゴリとイベントの種類|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
-|メモリ不足|X|X|X|X|X|X|x|  
-|スレッドの中止|X|X|X|X|X|X|x|  
-|SQL エージェントが未実行|X||X|X|x|||  
-|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|X|X|X|X|X|X|x|  
+|メモリ不足|X|X|X|X|X|X|X|  
+|スレッドの中止|X|X|X|X|X|X|X|  
+|SQL エージェントが未実行|X||X|X|X|||  
+|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|X|X|X|X|X|X|X|  
 |IOException|||||||X|  
 |WebException|||||||X|  
 |SocketException|||||||X|  

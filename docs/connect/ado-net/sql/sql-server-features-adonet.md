@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 86d0abbc216deeb583cf4a091e0c36b9cebc4ee1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393110"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725570"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server の機能と ADO.NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "86393110"
 
 このセクションのトピックでは、ADO.NET を使用したデータベース アプリケーションの開発を目的とする SQL Server の機能について説明します。  
   
-詳細については、SQL Server オンライン ブックの「[開発 (データベース エンジン)](https://go.microsoft.com/fwlink/?LinkId=115245)」 を参照してください。
+詳細については、SQL Server オンライン ブックの「[開発 (データベース エンジン)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))」 を参照してください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [SQL Server のインスタンスの列挙 (ADO.NET)](enumerate-instances-sql-server.md)  

@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT (Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,15 +25,15 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEFORMAT
 - dateparts [SQL Server], dateformat
 ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 13000e068c82ff3224eda50b7012bf06c7b83204
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484658"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "89541248"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  日付要素の順序を指定します。 有効なパラメーターは、**mdy**、**dmy**、**ymd**、**ydm**、**myd**、**dym** です。 Unicode または Unicode に変換可能な 2 バイト文字セット (DBCS) を指定できます。 米国英語の既定値は **mdy** です。 サポートされている全言語の既定の DATEFORMAT については、「[sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  DATEFORMAT **ydm** は、**date**、**datetime2**、**datetimeoffset** データ型にはサポートされていません。  
   
  DATEFORMAT の設定は、文字列の形式によっては、日付データ型の文字列の解釈が異なる場合があります。 たとえば、**datetime** および **smalldatetime** の解釈は、**date**、**datetime2**、または **datetimeoffset** と一致しないことがあります。 DATEFORMAT は、文字列をデータベースの日付値に変換するときの解釈に影響します。 日付データ型の値の表示や、データベースのストレージ形式には影響しません。  
@@ -90,6 +91,6 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
 

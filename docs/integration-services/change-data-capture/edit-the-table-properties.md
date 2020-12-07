@@ -1,4 +1,5 @@
 ---
+description: テーブルのプロパティの編集
 title: テーブルのプロパティの編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75854b88a3041def807b621b3e9f4caf6cf3b1c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc848859ebbeeace4d07349d57cacad5808d5b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457704"
 ---
 # <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
 
@@ -44,17 +45,17 @@ ms.locfileid: "86921654"
   
 2.  キャプチャ インスタンスを次のいずれかとして保存します。  
   
-    -   **[新しいキャプチャ インスタンス]** : この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
+    -   **[新しいキャプチャ インスタンス]**: この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
   
          **注**: テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
   
-    -   **[既存のものを置換]** : この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
+    -   **[既存のものを置換]**: この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
   
  **注**: **[テーブル]** タブのテーブルの一覧からキャプチャ インスタンスを削除できます。  
   
  このダイアログ ボックスで情報の入力を終了したら、 **[OK]** をクリックして変更を受け入れます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [変更をキャプチャするために選択したテーブルに対する変更](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: dm_qn_subscriptions (Transact-sql) |Microsoft Docs
+description: クエリ通知-sys.dm_qn_subscriptions
+title: sys.dm_qn_subscriptions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 197d3fd3ab4108c898c9377bbeed2f0e16e83d76
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894695"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834477"
 ---
-# <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys. dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバーのアクティブ クエリ通知サブスクリプションに関する情報を返します。 このビューは、サーバーまたは指定したデータベース内のアクティブなサブスクリプションを確認したり、指定したサーバー プリンシパルを確認する際に使用できます。  
@@ -34,7 +35,7 @@ ms.locfileid: "85894695"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|サブスクリプションの ID。|  
 |**database_id**|**int**|通知クエリが実行されたデータベースの ID。 このデータベースには、このサブスクリプションに関連する情報が格納されます。|  
-|**sid**|**varbinary (85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
+|**sid**|**varbinary(85)**|このサブスクリプションを作成して所有しているサーバー プリンシパルのセキュリティ ID。|  
 |**object_id**|**int**|サブスクリプションパラメーターに関する情報を格納する内部テーブルの ID。|  
 |**created**|**datetime**|サブスクリプションが作成された日付と時刻。|  
 |**timeout**|**int**|サブスクリプションのタイムアウト (秒単位)。 この時間が経過すると、通知のフラグが設定されます。<br /><br /> 注: 実際の起動時間は、指定されたタイムアウトよりも長くなる場合があります。ただし、サブスクリプションを無効にする変更が、指定されたタイムアウトの後、サブスクリプションが開始される前に発生した場合、は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更が行われた時点で発生していることを確認します。|  
@@ -42,17 +43,17 @@ ms.locfileid: "85894695"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|オン|種類|  
+|ソース|宛先|オン|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>注釈  
  状態コードが 0 の場合は、未定義の状態であることを示します。  
   
  次のステータスコードは、変更のためにサブスクリプションが発生したことを示しています。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってトリガーされたサブスクリプション|  
 |65799|データが変更されたため、サブスクリプションが起動しました|削除|  
@@ -69,7 +70,7 @@ ms.locfileid: "85894695"
   
  次のステータスコードは、サブスクリプションを作成できなかったことを示しています。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |132609|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|クエリが複雑すぎます|  
 |132610|ステートメントがサポートされていないため、サブスクリプションを作成できませんでした|サブスクリプションの無効なステートメント|  
@@ -80,7 +81,7 @@ ms.locfileid: "85894695"
   
  次の状態コードは内部で使用され、check kill モードおよび init モードとして分類されます。  
   
-|コード|マイナーステータス|Info|  
+|コード|マイナーステータス|［情報］|  
 |----------|------------------|----------|  
 |198656|内部使用: check kill モードおよび init モード|未定義の情報モード|  
 |198928|サブスクリプションが破棄されました|Db がアタッチされたため、サブスクリプションが起動しました|  
@@ -107,7 +108,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B: 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B. 指定されたユーザーのアクティブなクエリ通知サブスクリプションを返す  
  次の例では、ログイン `Ruth0` によってサブスクライブされたアクティブなクエリ通知サブスクリプションを返します。  
   
 ```  
@@ -117,7 +118,7 @@ WHERE sid = SUSER_SID('Ruth0');
 GO  
 ```  
   
-### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C: クエリ通知サブスクリプションの内部テーブルメタデータを返す  
+### <a name="c-returning-internal-table-metadata-for-query-notification-subscriptions"></a>C. クエリ通知サブスクリプションの内部テーブルメタデータを返す  
  次の例では、クエリ通知サブスクリプションに関する内部テーブルのメタデータを返します。  
   
 ```  
@@ -130,9 +131,8 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [クエリ通知関連の動的管理ビュー &#40;Transact-sql&#41;](./system-dynamic-management-views.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
-  
   

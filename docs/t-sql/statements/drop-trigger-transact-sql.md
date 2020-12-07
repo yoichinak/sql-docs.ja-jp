@@ -1,4 +1,5 @@
 ---
+description: DROP TRIGGER (Transact-SQL)
 title: DROP TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -22,14 +23,14 @@ helpviewer_keywords:
 - removing triggers
 - DML triggers, removing
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09041fdf91f58a815d5ef7d8df19e826578c326b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d800de4adea71523c3ae05bed53c97697c718d70
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481776"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131074"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで、[!INCLUDE[sssds](../../includes/sssds-md.md)])。  
   
  条件付きでは既に存在する場合にのみ、トリガーを削除します。  
   
@@ -106,9 +107,9 @@ ON ALL SERVER
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML トリガーを削除する  
- 次の例では、`employee_insupd` データベースにある [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
   
-```  
+```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
    DROP TRIGGER employee_insupd;  
 ```  
@@ -119,12 +120,12 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
 > [!IMPORTANT]  
 >  DDL トリガーはスキーマ スコープではないため、**sys.objects** カタログ ビューには表示されません。そのため、それらのトリガーがデータベース内に存在するかどうかを、OBJECT_ID 関数を使用してクエリすることはできません。 スキーマ スコープでないオブジェクトをクエリするには、適切なカタログ ビューを使用する必要があります。 DDL トリガーの場合は、**sys.triggers** を使ってください。  
   
-```  
+```sql  
 DROP TRIGGER safety  
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

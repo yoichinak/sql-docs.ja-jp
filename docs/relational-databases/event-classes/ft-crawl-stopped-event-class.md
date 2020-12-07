@@ -1,4 +1,5 @@
 ---
+description: FT:Crawl Stopped イベント クラス
 title: FT:Crawl Stopped イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe0c2680347336172c108753f237279648b0259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d88987358baf3e22b509b9fc6bdbc8d74eda2007
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737231"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88491071"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

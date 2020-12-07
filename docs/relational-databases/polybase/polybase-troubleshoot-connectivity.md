@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d037abd54cc0014289b949d7e00a2bf585d3a9e4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247302"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891332"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -253,7 +253,7 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 4. KDC で AES256 のみをサポートできる場合は、[JCE ポリシー ファイル](http://www.oracle.com/technetwork/java/javase/downloads/index.html)がインストールされていることを確認します。
 
 ## <a name="see-also"></a>関連項目
-[Active Directory 認証を使用した PolyBase と Cloudera の統合](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication)  
+[Active Directory 認証を使用した PolyBase と Cloudera の統合](/archive/blogs/microsoftrservertigerteam/integrating-polybase-with-cloudera-using-active-directory-authentication)  
 [CDH 用に Kerberos を設定するための Cloudera のガイド](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html)  
 [HDP 用に Kerberos を設定するための Hortonworks のガイド](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html)  
 [PolyBase のトラブルシューティング](polybase-troubleshooting.md)

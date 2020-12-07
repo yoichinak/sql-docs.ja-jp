@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilitygroupproperties.backuppreferences.f1
 helpviewer_keywords:
 - read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 2e71c01cfcabaf074b255b1afabd6e72b9fc9e14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9f81d681a0d2539d31639e59836b272a5d7127a9
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900414"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584673"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

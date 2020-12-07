@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_file_free_space (Transact-sql)
 title: sp_clean_db_file_free_space (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 75463e5785c76e6904d2d7a82bf03f160811e6d0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122463"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543629"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>引数  
- @dbname= '*database_name*'  
- クリーニングするデータベースの名前です。 *dbname*は**sysname**であり、NULL にすることはできません。  
+ @dbname = '*database_name*'  
+ クリーニングするデータベースの名前です。 *dbname* は **sysname** であり、NULL にすることはできません。  
   
- @fileid= '*file_number*'  
- クリーニングするデータファイルの id を示します。 *file_number*は**int**であり、NULL にすることはできません。  
+ @fileid = '*file_number*'  
+ クリーニングするデータファイルの id を示します。 *file_number* は **int** であり、NULL にすることはできません。  
   
- @cleaning_delay= '*delay_in_seconds*'  
- ページをクリーニングする間隔を指定します。 これにより、i/o システムへの影響が軽減されます。 *delay_in_seconds*は**int**で、既定値は0です。  
+ @cleaning_delay = '*delay_in_seconds*'  
+ ページをクリーニングする間隔を指定します。 これにより、i/o システムへの影響が軽減されます。 *delay_in_seconds* は **int** で、既定値は0です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -61,7 +62,7 @@ sp_clean_db_file_free_space
   
  を実行する前に `sp_clean_db_file_free_space` 、データベースの完全バックアップを作成することをお勧めします。  
   
- 関連する[sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)ストアドプロシージャは、データベース内のすべてのファイルをクリーンアップします。  
+ 関連する [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) ストアドプロシージャは、データベース内のすべてのファイルをクリーンアップします。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースロールのメンバーシップが必要です `db_owner` 。  
@@ -76,7 +77,7 @@ EXEC sp_clean_db_file_free_space @dbname = N'AdventureWorks2012', @fileid = 1;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ゴーストクリーンアッププロセスガイド](../ghost-record-cleanup-process-guide.md)    
  [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
    

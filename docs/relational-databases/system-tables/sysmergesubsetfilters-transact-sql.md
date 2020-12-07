@@ -1,4 +1,5 @@
 ---
+description: sysmergesubsetfilters (Transact-sql)
 title: sysmergesubsetfilters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubsetfilters system table
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a106c5e60570d553c00d6ec077caacf43a716eee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 932a237037073f81564b9a5f1a2cba89ba4d892b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881329"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542855"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85881329"
 |**join_filterclause**|**nvarchar(1000)**|結合に使用されるフィルター句。|  
 |**filter_type**|**tinyint**|フィルターの種類。次のいずれかになります。<br /><br /> 1 = 結合フィルター。<br /><br /> 2 = 論理レコードのリンク。<br /><br /> 3 = 結合フィルターと論理レコードリンクの両方。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

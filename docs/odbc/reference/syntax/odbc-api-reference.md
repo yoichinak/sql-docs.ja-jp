@@ -1,4 +1,5 @@
 ---
+description: ODBC API リファレンス
 title: ODBC API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476183"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
 このセクションのトピックでは、各 ODBC 関数についてアルファベット順に説明します。 各関数は、C プログラミング言語の関数として定義されています。 説明には次のものがあります。  
@@ -37,13 +38,13 @@ ms.locfileid: "81298936"
   
 -   使用法と実装に関するコメント  
   
--   コード例  
+-   コードの例  
   
 -   関連する関数への参照  
   
- 標準 CLI 準拠レベルは、次のいずれかになります。 ISO 92、Open Group、ODBC、または非推奨です。 Open Group は ISO 92 の純粋なスーパーセットであるため、ISO 92-準拠としてタグ付けされた関数は、オープングループバージョン1でも表示されます。 Open Group 準拠としてタグ付けされた関数は、ODBC 3 にも表示されます。*x*(ODBC 3)。*x*は、オープングループバージョン1の純粋スーパーセットです。 ODBC 準拠としてタグ付けされた関数は、標準ではありません。 非推奨としてタグ付けされた関数は、ODBC 3 では非推奨となりました。*x*。  
+ 標準 CLI 準拠レベルは、次のいずれかになります。 ISO 92、Open Group、ODBC、または非推奨です。 Open Group は ISO 92 の純粋なスーパーセットであるため、ISO 92-準拠としてタグ付けされた関数は、オープングループバージョン1でも表示されます。 Open Group 準拠としてタグ付けされた関数は、ODBC 3 にも表示されます。*x*(ODBC 3)。*x* は、オープングループバージョン1の純粋スーパーセットです。 ODBC 準拠としてタグ付けされた関数は、標準ではありません。 非推奨としてタグ付けされた関数は、ODBC 3 では非推奨となりました。*x*。  
   
- 診断情報の処理については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。 SQLSTATE 値に関連付けられたテキストは、条件の説明を提供するために含まれていますが、特定のテキストを指定するためのものではありません。  
+ 診断情報の処理については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 関数の説明を参照してください。 SQLSTATE 値に関連付けられたテキストは、条件の説明を提供するために含まれていますが、特定のテキストを指定するためのものではありません。  
   
 > [!NOTE]  
 >  ODBC 関数に関するドライバー固有の情報については、ドライバーの「」セクションを参照してください。  

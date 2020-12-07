@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935498"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987878"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL を使用すると、MySQL データベーススキーマを SQL Server または Azure SQL Database に簡単に変換したり、結果のスキーマを SQL Server または Azure SQL Database にアップロードしたり、MySQL から SQL Server または Azure SQL Database にデータを移行したりすることができます。  
@@ -52,7 +52,7 @@ SSMA のインストールとライセンス供与が完了したら、SSMA を�
   
 変換されたスキーマを SQL Server または Azure SQL Database と同期した後、MySQL メタデータエクスプローラーに戻り、MySQL スキーマから SQL Server または Azure SQL Database データベースにデータを移行することができます。  
   
-これらのタスクとその実行方法の詳細については、「 [SQL Server Azure SQL Database &#40;MySQLToSql&#41;への MySQL データベースの移行](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)」を参照してください。  
+これらのタスクとその実行方法の詳細については、「 [SQL Server Azure SQL Database &#40;MySQLToSql&#41;への MySQL データベースの移行 ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)」を参照してください。  
   
 次のセクションでは、SSMA ユーザーインターフェイスの機能について説明します。  
   
@@ -73,10 +73,10 @@ SQL Server または Azure SQL Database メタデータエクスプローラー�
   
 このメタデータエクスプローラーを使用して、変換された MySQL データベースオブジェクトを選択し、それらのオブジェクトを SQL Server または Azure SQL Database のインスタンスと同期させることができます。  
   
-詳細については、「[同期 (MySQL から SQL Server/Azure SQL Database)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3) 」を参照してください。  
+詳細については、「[同期 (MySQL から SQL Server/Azure SQL Database)](./loading-converted-database-objects-into-sql-server-mysqltosql.md) 」を参照してください。  
   
-### <a name="metadata"></a>Metadata  
-各メタデータエクスプローラーの右側には、選択したオブジェクトを説明するタブがあります。 たとえば、MySQL メタデータエクスプローラーでテーブルを選択すると、**テーブル**、 **SQL**、**型マッピング**、**データ**、**設定**、**文字セットマッピング**、 **SQL モード**、**プロパティ**、および**レポート**の9つのタブが表示されます。 [**レポート**] タブには、選択したオブジェクトを含むレポートを作成した後にのみ情報が表示されます。 SQL Server メタデータエクスプローラーでテーブルを選択すると、**テーブル**、 **SQL** 、**データ**の3つのタブが表示されます。  
+### <a name="metadata"></a>メタデータ  
+各メタデータエクスプローラーの右側には、選択したオブジェクトを説明するタブがあります。 たとえば、MySQL メタデータエクスプローラーでテーブルを選択すると、 **テーブル**、 **SQL**、 **型マッピング**、 **データ**、 **設定**、 **文字セットマッピング**、 **SQL モード**、 **プロパティ**、および **レポート**の9つのタブが表示されます。 [ **レポート** ] タブには、選択したオブジェクトを含むレポートを作成した後にのみ情報が表示されます。 SQL Server メタデータエクスプローラーでテーブルを選択すると、 **テーブル**、 **SQL** 、 **データ**の3つのタブが表示されます。  
   
 ほとんどのメタデータ設定は読み取り専用です。 ただし、次のメタデータを変更できます。  
   
@@ -90,14 +90,14 @@ SQL Server または Azure SQL Database メタデータエクスプローラー�
 SSMA には、[プロジェクト] ツールバーと [移行] ツールバーの2つのツールバーがあります。  
   
 ### <a name="the-project-toolbar"></a>[プロジェクト] ツールバー  
-プロジェクトツールバーには、プロジェクトの操作、MySQL への接続、SQL Server または Azure SQL Database への接続を行うためのボタンが含まれています。 これらのボタンは、[**ファイル**] メニューのコマンドに似ています。  
+プロジェクトツールバーには、プロジェクトの操作、MySQL への接続、SQL Server または Azure SQL Database への接続を行うためのボタンが含まれています。 これらのボタンは、[ **ファイル** ] メニューのコマンドに似ています。  
   
 ### <a name="migration-toolbar"></a>移行ツールバー  
 次の表は、移行ツールバーのコマンドを示しています。  
   
 |||  
 |-|-|  
-|**Button**|**Function**|  
+|**ボタン**|**Function**|  
 |**レポートの作成**|選択した MySQL オブジェクトを SQL Server オブジェクトまたは Azure SQL Database オブジェクトに変換し、変換が成功したかどうかを示すレポートを作成します。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
 |**スキーマの変換**|選択した MySQL オブジェクトを SQL Server または Azure SQL Database オブジェクトに変換します。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
 |**データの移行**|MySQL データベースから SQL Server または Azure SQL Database にデータを移行します。 このコマンドを実行する前に、MySQL スキーマを SQL Server または Azure SQL Database スキーマに変換し、オブジェクトを SQL Server または Azure SQL Database に読み込む必要があります。<br /><br />MySQL メタデータエクスプローラーでオブジェクトが選択されていない場合、このコマンドは無効になります。|  
@@ -109,14 +109,14 @@ SSMA メニューを次の表に示します。
 |||  
 |-|-|  
 |**Menu**|**説明**|  
-|**ファイル**|プロジェクトを操作したり、MySQL に接続したり、SQL Server または Azure SQL Database に接続したりするためのコマンドが含まれています。|  
-|**編集**|詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 [**ブックマークの管理**] ダイアログを開くには、[編集] メニューの [ブックマークの管理] をクリックします。 ダイアログには、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
-|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、MySQL メタデータエクスプローラーと SQL Server または Azure SQL Database メタデータエクスプローラー間でオブジェクトが同期されます。 には、**出力**ペインおよび**エラー一覧**ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション**レイアウト**も含まれています。|  
-|**ツール**|レポートを作成したり、スキーマを変換したり、データベースから更新したり、オブジェクトとデータを移行したり、スクリプトとして保存したりするためのコマンドが含まれています。 また、[**グローバル設定]、[既定のプロジェクト設定**]、[**プロジェクトの設定**] の各ダイアログボックスへのアクセスも提供します。|  
-|**ヘルプ**|SSMA ヘルプおよび [**バージョン情報**] ダイアログボックスへのアクセスを提供します。|  
+|**[最近使ったファイル]**|プロジェクトを操作したり、MySQL に接続したり、SQL Server または Azure SQL Database に接続したりするためのコマンドが含まれています。|  
+|**[編集]**|詳細ページ内のテキストを検索して操作するためのコマンドが含まれています。 [ **ブックマークの管理** ] ダイアログを開くには、[編集] メニューの [ブックマークの管理] をクリックします。 ダイアログには、既存のブックマークの一覧が表示されます。 ダイアログの右側にあるボタンを使用して、ブックマークを管理できます。|  
+|**表示**|**メタデータエクスプローラーの同期**コマンドを含みます。 これにより、MySQL メタデータエクスプローラーと SQL Server または Azure SQL Database メタデータエクスプローラー間でオブジェクトが同期されます。 には、 **出力** ペインおよび **エラー一覧** ウィンドウの表示と非表示を切り替えるコマンドと、レイアウトで管理するオプション **レイアウト** も含まれています。|  
+|**ツール**|レポートを作成したり、スキーマを変換したり、データベースから更新したり、オブジェクトとデータを移行したり、スクリプトとして保存したりするためのコマンドが含まれています。 また、[ **グローバル設定]、[既定のプロジェクト設定** ]、[ **プロジェクトの設定** ] の各ダイアログボックスへのアクセスも提供します。|  
+|**Help (ヘルプ)**|SSMA ヘルプおよび [ **バージョン情報** ] ダイアログボックスへのアクセスを提供します。|  
   
 ### <a name="output-pane-and-error-list-pane"></a>出力ウィンドウとエラー一覧ペイン  
-[**表示**] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  
+[ **表示** ] メニューには、[出力] ウィンドウと [エラー一覧] ウィンドウの表示を切り替えるためのコマンドが用意されています。  
   
 -   [出力] ウィンドウには、オブジェクトの変換、オブジェクトの同期、およびデータ移行中に SSMA からのステータスメッセージが表示されます。  
   
@@ -124,5 +124,4 @@ SSMA メニューを次の表に示します。
   
 ## <a name="see-also"></a>参照  
 [ユーザーインターフェイスリファレンス &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
-[MySQL データの SQL Server Azure SQL Database &#40;MySQLToSQL&#41;への移行](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
-  
+[MySQL データの SQL Server Azure SQL Database &#40;MySQLToSQL&#41;への移行 ](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  

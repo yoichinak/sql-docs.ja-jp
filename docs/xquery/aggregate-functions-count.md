@@ -1,4 +1,5 @@
 ---
+description: 集計関数 - count
 title: count 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467185"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *$Arg*が空のシーケンスの場合は0を返します。  
   
-## <a name="examples"></a>使用例  
- このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな **xml** 型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A: Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
  次のクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の数をカウントします (ProductModelID = 7)。  
   
 ```  
@@ -66,7 +67,7 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   このクエリでは、<> 要素を含む XML が構築され `NoOfWorkStations` ます。  
   
--   XQuery 本文の**count ()** 関数は、<> 要素の数をカウント `Location` します。  
+-   XQuery 本文の **count ()** 関数は、<> 要素の数をカウント `Location` します。  
   
  結果を次に示します。  
   
@@ -98,7 +99,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 このクエリでは、 [value () メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md)を使用して、ワークセンターの場所の数を取得します。  
+ XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 このクエリでは、 [value () メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md) を使用して、ワークセンターの場所の数を取得します。  
   
 ```  
 SELECT  ProductModelID,   
@@ -117,7 +118,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

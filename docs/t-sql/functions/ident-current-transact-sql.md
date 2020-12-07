@@ -1,4 +1,5 @@
 ---
+description: IDENT_CURRENT (Transact-SQL)
 title: IDENT_CURRENT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9eddcb219b8b9e8b8b83f0f9e951da1e9531303
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a4fe77504233fe2569a978c9f51c34e4e2236993
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113485"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116331"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87113485"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
@@ -54,7 +55,7 @@ ID 値が返されるテーブルまたはビューの名前です。 *table_or_
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_CURRENT など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 IDENT_CURRENT は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の ID 関数 SCOPE_IDENTITY および @@IDENTITY に似ています。 3 つの関数とも、最後に生成された ID 値を返します。 ただし、各関数の中で、*last* が定義されるスコープとセッションがそれぞれ異なります。  
 
 -   IDENT_CURRENT は、任意のセッションおよび任意のスコープ内の特定のテーブルに対して生成された最後の ID 値を返します。  
@@ -94,8 +95,8 @@ GO
 IF OBJECT_ID(N't7', N'U') IS NOT NULL   
     DROP TABLE t7;  
 GO  
-CREATE TABLE t6(id int IDENTITY);  
-CREATE TABLE t7(id int IDENTITY(100,1));  
+CREATE TABLE t6(id INT IDENTITY);  
+CREATE TABLE t7(id INT IDENTITY(100,1));  
 GO  
 CREATE TRIGGER t6ins ON t6 FOR INSERT   
 AS  

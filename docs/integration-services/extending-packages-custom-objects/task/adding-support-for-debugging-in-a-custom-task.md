@@ -1,4 +1,5 @@
 ---
+description: カスタム タスクにおけるデバッグのサポートの追加
 title: カスタム タスクにおけるデバッグのサポートの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf8461adf02267d433a12543208d48fea00ff953
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916434"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123077"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
 

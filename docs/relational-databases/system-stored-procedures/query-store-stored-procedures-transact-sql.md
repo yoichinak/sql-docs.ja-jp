@@ -1,4 +1,5 @@
 ---
+description: クエリストアストアドプロシージャ (Transact-sql)
 title: クエリストアストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -14,17 +15,19 @@ helpviewer_keywords:
 - stored procedures [SQL Server], query store
 - query store [SQL Server], stored procedures
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3209109fd1a54fcf85e9fbcb0898ef0c88a65d4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3e4219850fec566b39371629226e74e5d6aeaf00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011994"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539174"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>クエリストアストアドプロシージャ (Transact-sql)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   ここでは、クエリストアを構成するために使用する次のストアドプロシージャについて説明します。  
   

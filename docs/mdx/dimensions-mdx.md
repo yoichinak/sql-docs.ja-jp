@@ -1,4 +1,5 @@
 ---
+description: Dimensions (MDX)
 title: ディメンション (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98167516f9e01525ecd351389c885c48626636e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491419"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 
@@ -38,16 +39,16 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  階層名を指定する有効な文字列式です。  
   
-## <a name="remarks"></a>Remarks  
- 階層番号が指定されている場合、 **Dimensions**関数は、キューブ内の0から始まる位置が指定された階層番号を持つ階層を返します。  
+## <a name="remarks"></a>解説  
+ 階層番号が指定されている場合、 **Dimensions** 関数は、キューブ内の0から始まる位置が指定された階層番号を持つ階層を返します。  
   
- 階層名が指定されている場合、 **Dimensions**関数は、指定された階層を返します。 通常、この文字列バージョンの**Dimensions**関数は、ユーザー定義関数と共に使用します。  
+ 階層名が指定されている場合、 **Dimensions** 関数は、指定された階層を返します。 通常、この文字列バージョンの **Dimensions** 関数は、ユーザー定義関数と共に使用します。  
   
 > [!NOTE]  
->  **Measures**ディメンションは、常にに`Dimensions(0)`よって表されます。  
+>  **Measures**ディメンションは、常にによって表され `Dimensions(0)` ます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、 **Dimensions**関数を使用して、数値式と文字列式の両方を使用して、指定した階層の名前、レベル数、およびメンバー数を返します。  
+## <a name="examples"></a>例  
+ 次の例では、 **Dimensions** 関数を使用して、数値式と文字列式の両方を使用して、指定した階層の名前、レベル数、およびメンバー数を返します。  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  

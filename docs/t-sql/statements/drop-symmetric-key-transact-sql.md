@@ -1,4 +1,5 @@
 ---
+description: DROP SYMMETRIC KEY (Transact-SQL)
 title: DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: efb9306db510260279b643814c8c03a06868abcd
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e18319e45c3d397e4283013ec31bb3c98424c892
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484098"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131091"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,8 +40,7 @@ ms.locfileid: "86484098"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql  
 DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]  
 ```  
   
@@ -53,7 +53,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  REMOVE PROVIDER KEY  
  EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  現在のセッションでキーが開かれている場合、ステートメントは失敗します。  
   
  非対称キーが EKM デバイスの拡張キー管理 (EKM) にマップされており、**REMOVE PROVIDER KEY** オプションが指定されていない場合は、キーはデータベースから削除されますが、デバイスからは削除されず、警告が発行されます。  
@@ -64,13 +64,13 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
 ## <a name="examples"></a>例  
  次の例では、現在のデータベースから対称キー `GailSammamishKey6` を削除します。  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY GailSammamishKey6;  
 DROP SYMMETRIC KEY GailSammamishKey6;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

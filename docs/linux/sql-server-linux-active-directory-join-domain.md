@@ -2,19 +2,19 @@
 title: SQL Server on Linux を Active Directory に参加させる
 titleSuffix: SQL Server
 description: この記事では、SQL Server Linux ホスト マシンを AD ドメインに参加させるためのガイダンスを提供します。 組み込みの SSSD パッケージを使用することも、サードパーティの AD プロバイダーを使用することもできます。
-author: Dylan-MSFT
-ms.author: dygray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 04/01/2019
+ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 184744aeea40dd8d21c023806cc63d644311ffde
+ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896972"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96419847"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux ホスト上の SQL Server を Active Directory ドメインに参加させる
 
@@ -29,13 +29,21 @@ Active Directory 認証を構成する前に、ネットワーク上に Active D
 > [!IMPORTANT]
 > この記事で説明されている手順の例はガイダンスのみを目的としており、Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x、および SUSE Enterprise Linux (SLES) 12 オペレーティング システムを参照しています。 お使いの環境での実際の手順は、環境全体の構成方法やオペレーティング システムのバージョンによって多少異なる場合があります。 たとえば、ネットワークの管理と構成には、Ubuntu 18.04 では netplan が使用されますが、Red Hat Enterprise Linux (RHEL) 8.x では nmcli のツールが特に使用されます。 具体的なツール、構成、カスタマイズ、および必要なトラブルシューティングについては、お使いの環境のシステム管理者とドメイン管理者と連携することをお勧めします。
 
+### <a name="reverse-dns-rdns"></a>逆引き DNS (RDNS)
+
+Windows Server を実行しているコンピューターをドメイン コントローラーとして設定した場合、既定では RDNS ゾーンが存在しない可能性があります。 ドメイン コントローラーと、SQL Server を実行する Linux マシンの IP アドレスの両方に適用可能な RDNS ゾーンが必ず存在するようにしてください。
+
+また、ドメイン コントローラーをポイントする PTR レコードが必ず存在するようにしてください。
+
 ## <a name="check-the-connection-to-a-domain-controller"></a>ドメイン コントローラーへの接続を確認する
 
-ドメインの短い名前と完全修飾名の両方を使用して、ドメイン コントローラーに接続できることを確認します。
+ドメインの短い名前と完全修飾名の両方を使用し、ドメイン コントローラーのホスト名を使って、ドメイン コントローラーに接続できることを確認します。 ドメイン コントローラーの IP は、ドメイン コントローラーの FQDN にも解決される必要があります。
 
 ```bash
 ping contoso
 ping contoso.com
+ping dc1.contoso.com
+nslookup <IP address of dc1.contoso.com>
 ```
 
 > [!TIP]
@@ -64,6 +72,39 @@ ping contoso.com
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
+1. 次に、**/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
+
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
+
+### <a name="ubuntu-1804"></a>Ubuntu 18.04
+
+1. [sudo vi /etc/netplan/******.yaml] ファイルを編集して、Active Directory ドメインがドメイン検索リストに含まれるようにします。
+
+   ```/etc/netplan/******.yaml
+   network:
+     ethernets:
+       eth0:
+               dhcp4: true
+
+               dhcp6: true
+               nameservers:
+                       addresses: [ **<AD domain controller IP address>**]
+                       search: [**<AD domain name>**]
+     version: 2
+   ```
+
+   > [!NOTE]
+   > ネットワーク インターフェイス `eth0` は、コンピューターによって異なる場合があります。 使用しているものを確認するには、**ifconfig** を実行します。 その後、IP アドレスを持ち、バイトが送受信されたインターフェイスをコピーします。
+
+1. このファイルを編集した後、ネットワーク サービスを再起動します。
+
+   ```bash
+   sudo netplan apply
+   ```
+
 1. 次に、 **/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
 
    ```/etc/resolv.conf
@@ -87,7 +128,7 @@ ping contoso.com
    sudo systemctl restart network
    ```
 
-1. 次に、 **/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
+1. 次に、**/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -115,7 +156,7 @@ ping contoso.com
    sudo systemctl restart network
    ```
 
-1. 次に、 **/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
+1. 次に、**/etc/resolv.conf** ファイルに次の例のような行が含まれていることを確認します。
 
    ```/etc/resolv.conf
    search contoso.com com
@@ -145,22 +186,41 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
    ```base
    sudo yum install realmd krb5-workstation
    ```
-
-   **SUSE:**
+   
+   **SLES 12:**
+   
+   これらの手順は SLES 12 (Linux で公式にサポートされている唯一の SUSE のバージョン) に固有のものであることに注意してください。
 
    ```bash
-   sudo zypper install realmd krb5-client
+   sudo zypper addrepo https://download.opensuse.org/repositories/network/SLE_12/network.repo
+   sudo zypper refresh
+   sudo zypper install realmd krb5-client sssd-ad
    ```
 
-   **Ubuntu:**
+   **Ubuntu 16.04:**
 
    ```bash
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
+   **Ubuntu 18.04:**
+
+   ```bash
+   sudo apt-get install realmd krb5-user software-properties-common python3-software-properties packagekit
+   sudo apt-get install adcli libpam-sss libnss-sss sssd sssd-tools
+   ```
+
 1. Kerberos クライアント パッケージのインストール時に、領域名の入力を求められた場合は、ドメイン名を大文字で入力します。
 
-1. DNS が正しく構成されたことを確認した後、次のコマンドを実行してドメインに参加します。 新しいコンピューターをドメインに参加させるのに十分な特権を AD に持っている AD アカウントを使って、認証を行う必要があります。 このコマンドでは、AD に新しいコンピューター アカウントが作成され、 **/etc/krb5.keytab** ホスト keytab ファイルが作成され、 **/etc/sssd/sssd.conf** でドメインが構成されて、 **/etc/krb5.conf** が更新されます。
+1. DNS が正しく構成されたことを確認した後、次のコマンドを実行してドメインに参加します。 新しいコンピューターをドメインに参加させるのに十分な特権を AD に持っている AD アカウントを使って、認証を行う必要があります。 このコマンドでは、AD に新しいコンピューター アカウントが作成され、**/etc/krb5.keytab** ホスト keytab ファイルが作成され、**/etc/sssd/sssd.conf** でドメインが構成されて、**/etc/krb5.conf** が更新されます。
+
+   **realmd** に問題があるため、まず、コンピューターのホスト名をコンピューター名ではなく、FQDN に設定します。 そうしないと、**realmd** によってコンピューターに必要なすべての SPN が作成されない可能性があり、DNS エントリが自動的に更新されません。これは、ドメイン コントローラーで動的 DNS 更新がサポートされている場合でも同様です。
+   
+   ```bash
+   sudo hostname <old hostname>.contoso.com
+   ```
+   
+   上記のコマンドを実行した後、/etc/hostname ファイルには <old hostname>.contoso.com が含まれているはずです。
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -210,9 +270,9 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
 SQL Server では、AD 関連のクエリに対して、サードパーティのインテグレーターのコードまたはライブラリは使われません。 SQL Server では常に、このセットアップでの openldap ライブラリの直接呼び出しを使って、AD のクエリが行われます。 サードパーティのインテグレーターは、Linux ホストを AD ドメインに参加させるためにのみ使われ、SQL Server ではこれらのユーティリティとの直接的な通信は行われません。
 
 > [!IMPORTANT]
-> 記事「[SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md#additionalconfig)」の「**その他の構成オプション**」セクションで、**mssql-conf**`network.disablesssd` 構成オプションの使用に関する推奨事項を参照してください。
+> 記事「[SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md#additionalconfig)」の「**その他の構成オプション**」セクションで、**mssql-conf** `network.disablesssd` 構成オプションの使用に関する推奨事項を参照してください。
 
-**/etc/krb5.conf** が正しく構成されていることを確認します。 ほとんどのサードパーティ製 Active Directory プロバイダーでは、この構成は自動的に行われます。 ただし、後で問題が発生するのを防ぐため、 **/etc/krb5.conf** で次の値を確認してください。
+**/etc/krb5.conf** が正しく構成されていることを確認します。 ほとんどのサードパーティ製 Active Directory プロバイダーでは、この構成は自動的に行われます。 ただし、後で問題が発生するのを防ぐため、**/etc/krb5.conf** で次の値を確認してください。
 
 ```/etc/krb5.conf
 [libdefaults]

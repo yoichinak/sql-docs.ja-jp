@@ -1,6 +1,6 @@
 ---
 title: データ ソース オブジェクト (OLE DB ドライバー) | Microsoft Docs
-description: データ ソース オブジェクト (OLE DB)
+description: OLE DB Driver for SQL Server のコンシューマーでプロバイダーのデータ ソース オブジェクトのインスタンスを作成する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB data source objects [OLE DB Driver for SQL Server]
 - data source objects [OLE DB]
 - CLSID
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5bdfdd91daf1e41b7eae33cd504e127c249de1b8
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9abdf54d533eab604ff564c9f32b99b2eba566d9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976353"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862403"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

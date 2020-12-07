@@ -1,4 +1,5 @@
 ---
+description: 多次元式 (MDX) リファレンス
 title: 多次元式 (MDX) リファレンス |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 65164f9560cb87e0bda1018469412bb4b793e3b7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9358bec121704dba28739232c24dbb930cee7c30
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970033"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195589"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多次元式 (MDX) リファレンス
 
@@ -27,9 +28,8 @@ ms.locfileid: "86970033"
 |[MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 言語を定義するステートメント、演算子、および関数について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [MDX による多次元データのクエリ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [XMLA&#41;の Analysis Services スクリプト言語 &#40;ASSL](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
- [分析データソースからのデータの取得](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
- [割り当てとその他のスクリプト コマンドの定義](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
-  
+ [MDX による多次元データのクエリ](/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
+ [XMLA&#41;の Analysis Services スクリプト言語 &#40;ASSL ](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [分析データソースからのデータの取得](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
+ [割り当てとその他のスクリプト コマンドの定義](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

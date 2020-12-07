@@ -1,8 +1,9 @@
 ---
+description: データを確認するためのサンプルのレコードセット
 title: データを検査するためのサンプルレコードセットMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec44c25bba9c792415c462e3028bbf20d8d3f84e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760918"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979743"
 ---
 # <a name="sample-recordset-for-examining-data"></a>データを確認するためのサンプルのレコードセット
-まず、Microsoft SQL Server で Northwind サンプルデータベースに対して実行される、次の SQL クエリを使用して返された**レコードセット**オブジェクトを見てみましょう。  
+まず、Microsoft SQL Server で Northwind サンプルデータベースに対して実行される、次の SQL クエリを使用して返された **レコードセット** オブジェクトを見てみましょう。  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -29,7 +30,7 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- 結果の**レコードセット**オブジェクトには、次の表に示すように、データベースで生成されたすべてのが含まれます。  
+ 結果の **レコードセット** オブジェクトには、次の表に示すように、データベースで生成されたすべてのが含まれます。  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  

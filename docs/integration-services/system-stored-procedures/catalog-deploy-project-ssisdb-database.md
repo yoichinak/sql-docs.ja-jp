@@ -1,4 +1,5 @@
 ---
+description: catalog.deploy_project (SSISDB データベース)
 title: catalog.deploy_project (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2578745d445c1f2ac91b037ac7ce8e694687a16
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a8bb809f349ce68b12abaee171928805d1fe0df
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913048"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129809"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
 
@@ -76,7 +77,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   ユーザーに十分な権限がない  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  プロジェクトの配置または更新中、ストアド プロシージャは、プロジェクトの個々のパッケージの保護レベルをチェックしません。  
   
   

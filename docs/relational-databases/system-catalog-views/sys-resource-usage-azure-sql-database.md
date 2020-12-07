@@ -1,4 +1,5 @@
 ---
+description: sys.resource_usage (Azure SQL データベース)
 title: resource_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9ac9473dbdcc51a4c5313b27596ce38d0607d336
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7f5a7aadb3a16a673bca0d8c0ba34108a158693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85665269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447816"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -51,6 +52,6 @@ ms.locfileid: "85665269"
 |storage_in_megabytes|**decimal**|対象時間内のストレージの最大サイズです。データベース データ、インデックス、ストアド プロシージャ、およびメタデータを含みます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- このビューは、仮想**master**データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
+ このビューは、仮想 **master** データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
   

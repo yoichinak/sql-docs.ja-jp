@@ -1,4 +1,5 @@
 ---
+description: Windows 照合順序名 (Transact-SQL)
 title: Windows 照合順序名 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -15,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], Windows collations
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 04f3a63fd156968cbe27b5d9b4e86baf1a2ad110
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484063"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "89538028"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -74,12 +75,12 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 このオプションを省略すると、文字幅が区別されません。**WS** を指定すると、文字幅が区別されます。
 
 *VariationSelectorSensitivity*  
-- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
+- **適用対象**:[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 以降 
 
 - このオプションを省略すると、異体字セレクターが区別されません。**VSS** を指定すると、異体字セレクターが区別されます。
 
 **UTF8**  
-- **適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
+- **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
 
 - 対象となるデータ型で UTF-8 のエンコードが使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
@@ -89,7 +90,7 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 **BIN2**  
 コード ポイントの比較セマンティクスを使用するバイナリ並べ替え順を指定します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 照合順序のバージョンによっては、一部のコード ポイントで、並べ替え加重や大文字/小文字マッピングが定義されない可能性があります。 たとえば、次のような `LOWER` 関数の出力を比較してみます。この場合、同じ文字が指定されていますが、同じ照合順序でもバージョンは異なります。
 
 ```sql

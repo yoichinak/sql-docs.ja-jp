@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8ebe6f0764cd4993a101a43b9f9db753918d24c1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112563"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688157"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 セキュリティ ポリシーを変更します。  
   
@@ -88,7 +90,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 適用されたセキュリティ述語のターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
 ALTER SECURITY POLICY ステートメントはトランザクションのスコープ内にあります。 トランザクションがロールバックされると、ステートメントもロールバックされます。  
   
 メモリ最適化テーブルで述語関数を使用する場合、セキュリティ ポリシーには **SCHEMABINDING** が含まれる必要があり、**WITH NATIVE_COMPILATION** コンパイル ヒントを使用する必要があります。 SCHEMABINDING の引数は、すべての述語に適用されるため、ALTER ステートメントを使用して変更できません。 スキーマ バインドを変更するには、セキュリティ ポリシーを削除して再作成する必要があります。  
@@ -110,7 +112,7 @@ ALTER ANY SECURITY POLICY 権限が必要です。
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. ポリシーに述語を追加する  
 以下の構文はセキュリティ ポリシーを変更します。その際、`mytable` テーブルにフィルター述語を追加します。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1   
     ADD FILTER PREDICATE schema_preds.SecPredicate(column1)   
     ON myschema.mytable;  
@@ -119,14 +121,14 @@ ALTER SECURITY POLICY pol1
 ### <a name="b-enabling-an-existing-policy"></a>B. 既存のポリシーを有効にする  
 以下の例では、ALTER 構文を使用してセキュリティ ポリシーを有効にします。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1 WITH ( STATE = ON );  
 ```  
   
 ### <a name="c-adding-and-dropping-multiple-predicates"></a>C. 複数の述語を追加または削除する  
 以下の構文ではセキュリティ ポリシーを変更します。その際、`mytable1` テーブルと `mytable3` テーブルにフィルター述語を追加し、`mytable2` テーブルからフィルター述語を削除します。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
 ADD FILTER PREDICATE schema_preds.SecPredicate1(column1)   
     ON myschema.mytable1,  
@@ -139,7 +141,7 @@ ADD FILTER PREDICATE schema_preds.SecPredicate2(column2, 1)
 ### <a name="d-changing-the-predicate-on-a-table"></a>D. テーブルの述語を変更する  
 以下の構文は、mytable テーブルの既存のフィルター述語を SecPredicate2 関数になるように変更します。  
   
-```  
+```sql  
 ALTER SECURITY POLICY pol1  
     ALTER FILTER PREDICATE schema_preds.SecPredicate2(column1)  
         ON myschema.mytable;  
@@ -148,7 +150,7 @@ ALTER SECURITY POLICY pol1
 ### <a name="e-changing-a-block-predicate"></a>E. ブロック述語を変更する  
 テーブルの操作に対するブロック述語関数を変更します。  
   
-```  
+```sql 
 ALTER SECURITY POLICY rls.SecPol  
     ALTER BLOCK PREDICATE rls.tenantAccessPredicate_v2(TenantId) 
     ON dbo.Sales AFTER INSERT;  

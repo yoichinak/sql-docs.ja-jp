@@ -1,4 +1,5 @@
 ---
+description: DROP ROLE (Transact-SQL)
 title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -23,12 +24,12 @@ ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 437fd415aa4a50a1e91435a59cd06c083b04d1fc
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1487d56bd1f93e0410f6c9b6001f4f379b466fb5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395886"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131144"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -39,21 +40,24 @@ ms.locfileid: "87395886"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 DROP ROLE [ IF EXISTS ] role_name  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
+```syntaxsql  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
+
 DROP ROLE role_name  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、ロールを削除します。  
   
@@ -80,7 +84,7 @@ DROP ROLE role_name
 ## <a name="examples"></a>例  
  次の例では、データベース ロール `purchasing` を `AdventureWorks2012` データベースから削除します。  
   
-```  
+```sql  
 DROP ROLE purchasing;  
 GO  
 ```  

@@ -7,18 +7,18 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: end-user-help
 f1_keywords:
 - sql13.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: df0484ee5fdbd6dc5890c661cf1d0cf914fe3289
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: f7e570006908358b1cfe0cb07972113585e58a95
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900391"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584688"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -3,7 +3,7 @@ title: ヒット カウントの指定
 description: ブレークポイントのヒット カウントを設定して、ヒット カウントに達するまで、デバッガーがブレークポイントで中断しないようにする方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdd2924500e7770f4c18b1f50908dd8cc0b437a0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245574"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036285"
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
 
@@ -47,7 +47,7 @@ ms.locfileid: "87245574"
   
  ブレークポイントで実行を中断せずに、ブレークポイントにヒットした回数を追跡する場合は、ヒット カウントに非常に大きい値を指定して、ブレークポイントで中断しないようにします。  
   
- ブレークポイントの既定のアクションでは、ヒット カウントとブレークポイントの条件の両方が満たされたときに、実行が中断されます。 他のアクションを指定する方法の詳細については、「 [ブレークポイント アクションの指定](../../relational-databases/scripting/specify-a-breakpoint-action.md)」を参照してください。  
+ ブレークポイントの既定のアクションでは、ヒット カウントとブレークポイントの条件の両方が満たされたときに、実行が中断されます。 他のアクションを指定する方法の詳細については、「 [ブレークポイント アクションの指定](./specify-a-breakpoint-action.md)」を参照してください。  
   
 #### <a name="to-specify-a-hit-count"></a>ヒット カウントを指定するには  
   
@@ -78,6 +78,5 @@ ms.locfileid: "87245574"
 4.  **[OK]** または **[キャンセル]** をクリックして、ダイアログ ボックスを終了します。  
   
 ## <a name="see-also"></a>参照  
- [ブレークポイント条件の指定](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [ブレークポイント条件の指定](./specify-a-breakpoint-condition.md)  
   

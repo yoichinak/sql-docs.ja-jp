@@ -1,4 +1,5 @@
 ---
+description: 式タスク
 title: 式タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 988157321eff73ecc9e4a77db9b09a52281f3f40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afbfe24c671d8dae1089ca1e1acb892d5d388372
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917908"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196554"
 ---
 # <a name="expression-task"></a>式タスク
 
@@ -34,9 +35,8 @@ ms.locfileid: "86917908"
  式を使用してプロパティを設定する方法の例については、「 **Use Property Expressions in Packages** 」の「 [サンプルのプロパティ式](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>関連コンテンツ  
  pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
-  
   

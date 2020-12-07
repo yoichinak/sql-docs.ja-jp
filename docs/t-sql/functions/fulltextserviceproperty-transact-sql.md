@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTSERVICEPROPERTY (Transact-SQL)
 title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c660b9d2e88a6ef48a75f17dfe759df94fb53266
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b47a991aa2500236aec9d80d2ae4c51144619f90
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112706"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116037"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "87112706"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
@@ -65,7 +65,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 ## <a name="examples"></a>例  
  次の例では、署名付きバイナリのみが読み込まれるかどうかを確認し、戻り値は、この検証が行われていないことを示します。  
   
-```  
+```sql  
 SELECT fulltextserviceproperty('VerifySignature');  
 ```  
   
@@ -78,12 +78,12 @@ SELECT fulltextserviceproperty('VerifySignature');
   
  署名の検証を既定値の 1 に戻すには、次の `sp_fulltext_service` ステートメントを使用できます。  
   
-```  
+```sql  
 EXEC sp_fulltext_service @action='verify_signature', @value=1;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  

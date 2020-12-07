@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW 変換先エディター] ([接続マネージャー] ページ)'
 title: SAP BW 変換先エディター ([接続マネージャー] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913607"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484574"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
 
@@ -85,7 +86,7 @@ ms.locfileid: "86913607"
  ゲートウェイ ホストのサーバー名または IP アドレスを入力します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- **NN**がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
+ **NN** がシステム数である、 **sapgwNN** という形式でゲートウェイ サービスの名前を入力します。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を入力します。  
@@ -108,7 +109,7 @@ ms.locfileid: "86913607"
  **作成**  
  選択した種類の SAP Netweaver BW オブジェクトを作成します。  
   
-|[オブジェクトの種類]|結果|  
+|オブジェクトの型|結果|  
 |-----------------|------------|  
 |**インフォオブジェクト**|**[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用して、新しいインフォオブジェクトを作成します。 このダイアログ ボックスの詳細については、「 [[新しいインフォオブジェクトの作成]](../../integration-services/data-flow/create-new-infoobject.md)」を参照してください。|  
 |**インフォキューブ**|**[トランザクション データのインフォキューブの作成]** ダイアログ ボックスを使用して、新しいインフォキューブを作成します。 このダイアログ ボックスの詳細については、「 [トランザクション データのインフォキューブの作成](../../integration-services/data-flow/create-infocube-for-transaction-data.md)」を参照してください。|  

@@ -1,4 +1,5 @@
 ---
+description: '[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)'
 title: '[コピー元のテーブルおよびビューを選択] (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/02/2018
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aef06cb86897735c91e2407e488b053f128f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 57485f68a1e9418e3d9d2402257599bf54e1ad7b
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914382"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439316"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)
 
@@ -33,14 +34,14 @@ ms.locfileid: "86914382"
  
 この例では、 **[変換元]** の一覧には AdventureWorks サンプル データベース内のすべてのテーブルが含まれます。 選択された行は、ユーザーが **Sales.Customer** テーブルを新しい **Sales.CustomerNew** テーブルにコピーすることを示します。 
    
- ![インポートおよびエクスポート ウィザードの [テーブルの選択] ページ](../../integration-services/import-export-data/media/select-tables1.png "インポートおよびエクスポート ウィザードの [テーブルの選択] ページ")
+ ![テーブルをコピーする場合のインポートおよびエクスポート ウィザードの [テーブルの選択] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/select-tables1.png "インポートおよびエクスポート ウィザードの [テーブルの選択] ページ")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>スクリーンショット - クエリを指定した場合  
  次のスクリーンショットは、 **[テーブルのコピーまたはクエリの指定]** ページの **[転送するデータを指定するためのクエリを記述する]** オプションを選択した後に表示される、ウィザードの **[コピー元のテーブルおよびビューを選択]** ページの例を示しています。 **[変換元]** の一覧には 1 つの行だけが含まれ、`[Query]` という名前の項目は **[基になるクエリの指定]** ページで指定したクエリを表します。
  
 この例では、ユーザーがクエリ結果を **Sales.CustomerNew** テーブルにコピーします。  
     
- ![インポートおよびエクスポート ウィザードの [テーブルの選択] ページ](../../integration-services/import-export-data/media/select-tables2.png "インポートおよびエクスポート ウィザードの [テーブルの選択] ページ")  
+ ![クエリを指定した場合のインポートおよびエクスポート ウィザードの [テーブルの選択] ページを示すスクリーンショット。](../../integration-services/import-export-data/media/select-tables2.png "インポートおよびエクスポート ウィザードの [テーブルの選択] ページ")  
 
 ## <a name="select-source-and-destination-tables"></a>変換元のテーブルと変換先のテーブルの選択 
 **ソース**  
@@ -74,7 +75,7 @@ ms.locfileid: "86914382"
 
 ### <a name="excel-source-tables"></a>Excel の変換元テーブル
 Excel データ ソースの変換元テーブルとビューの一覧には、2 種類の Excel オブジェクトがあります。
--   **ワークシート**。 ワークシート名の末尾にはドル記号 ($) が付きます (例: **'Sheet1$'** )。
+-   **ワークシート** 。 ワークシート名の末尾にはドル記号 ($) が付きます (例: **'Sheet1$'** )。
 -   **名前付き範囲** 名前付き範囲 (ある場合) は名前別に表示されます。
 
 特定の名前のない範囲のセル (たとえば、 **[Sheet1$A1:B4]** ) との間でデータの読み込みを行う場合、クエリを記述する必要があります。 **[テーブルのコピーまたはクエリの指定]** ページに戻り、 **[転送するデータを指定するためのクエリを記述する]** を選択します。
@@ -82,16 +83,16 @@ Excel データ ソースの変換元テーブルとビューの一覧には、2
 ### <a name="excel-destination-tables"></a>Excel 変換先テーブル
 Excel にデータをエクスポートする場合、変換先として、次の 3 つのうちいずれかを指定できます。
 -   **ワークシート。** ワークシートを指定するには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]** )。
--   **名前付き範囲。** 名前付き範囲を指定するには、範囲名をそのまま使用します (例: **MyDataRange**)。
+-   **名前付き範囲。** 名前付き範囲を指定するには、範囲名をそのまま使用します (例: **MyDataRange** )。
 -   **名前のない範囲。** 名前のないセルの範囲を指定するには、シート名の末尾に $ 文字を付加し、範囲の指定を追加し、文字列を区切り文字で囲みます (例: **[Sheet1$A1:B4]** )。
 
 > [!TIP]
 > 変換元または変換先として Excel を使用する場合、 **[列マッピング]** ページで **[マッピングの編集]** をクリックし、データ型マッピングを確認することをお勧めします。 
 
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  変換先テーブルにコピーおよびマップする既存のテーブルおよびビューを選択した後に表示されるのは、 **[パッケージの保存および実行]** ページです。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、ウィザードによって作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む](../load-data-to-from-excel-with-ssis.md)
 

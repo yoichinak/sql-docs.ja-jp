@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_create_collector_type (Transact-sql)
 title: sp_syscollector_create_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba0086ac19daa4118bb411a4d2cb091ec9f1ce86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d49121d6f8ce91d6ca1e8be809466ee58968a1d3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892957"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549532"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>引数  
  [ @collector_type_uid =] '*collector_type_uid*'  
- コレクター型の GUID を示します。 *collector_type_uid*は**UNIQUEIDENTIFIER**で、NULL の場合は自動的に作成され、出力として返されます。  
+ コレクター型の GUID を示します。 *collector_type_uid* は **UNIQUEIDENTIFIER** で、NULL の場合は自動的に作成され、出力として返されます。  
   
  [ @name =] '*name*'  
- コレクター型の名前を指定します。 *名前*は**sysname**ので、指定する必要があります。  
+ コレクター型の名前を指定します。 *名前* は **sysname** ので、指定する必要があります。  
   
  [ @parameter_schema =] '*parameter_schema*'  
- このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**で、既定値は NULL です。  
+ このコレクター型の XML スキーマを指定します。 *parameter_schema* は **xml** で、既定値は NULL です。  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
- コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**で、既定値は NULL です。  
+ コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter* は **xml** で、既定値は NULL です。  
   
  [ @collection_package_id =] *collection_package_id*  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id* は **uniqueidentifer** であり、必須です。  
   
  [ @upload_package_id =] *upload_package_id*  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id* は **uniqueidentifier** であり、必須です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、dc_admin (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
@@ -108,8 +109,8 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

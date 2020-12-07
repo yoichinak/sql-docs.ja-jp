@@ -1,8 +1,9 @@
 ---
+description: 'ADO イベントのインスタンス化: Visual C++'
 title: 'ADO イベントのインスタンス化: Visual C++ |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,17 +13,17 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991653"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
-ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  
+ここでは、Microsoft® Visual C++®で ADO イベントをインスタンス化する方法について説明します。 詳細については、「 [ADO Events Model example (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) 」を参照してください。  
   
- Adoint ファイルにある**Connectioneventsvt**インターフェイスと**RecordsetEventsVt**インターフェイスから派生したクラスを作成します。  
+ Adoint ファイルにある **Connectioneventsvt** インターフェイスと **RecordsetEventsVt** インターフェイスから派生したクラスを作成します。  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 両方のクラスに各イベントハンドラーメソッドを実装します。 各メソッドが S_OK の HRESULT を返すだけで十分です。 ただし、イベントハンドラーが使用できることがわかっている場合は、既定で継続的に呼び出されます。 代わりに、 **Adstatus**を**adStatusUnwantedEvent**に設定することによって、それ以上の通知を初めて要求することもできます。  
+ 両方のクラスに各イベントハンドラーメソッドを実装します。 各メソッドが S_OK の HRESULT を返すだけで十分です。 ただし、イベントハンドラーが使用できることがわかっている場合は、既定で継続的に呼び出されます。 代わりに、 **Adstatus** を **adStatusUnwantedEvent**に設定することによって、それ以上の通知を初めて要求することもできます。  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,9 +66,9 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- イベントクラスは**IUnknown**から継承するため、 **QueryInterface**、 **AddRef**、および**Release**メソッドも実装する必要があります。 また、クラスコンストラクターとデストラクターも実装します。 タスクのこの部分を簡略化するために最も使いやすい Visual C++ ツールを選択します。  
+ イベントクラスは **IUnknown**から継承するため、 **QueryInterface**、 **AddRef**、および **Release** メソッドも実装する必要があります。 また、クラスコンストラクターとデストラクターも実装します。 タスクのこの部分を簡略化するために最も使いやすい Visual C++ ツールを選択します。  
   
- **IConnectionPointContainer**インターフェイスと**IConnectionPoint**インターフェイスの[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対して**QueryInterface**を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して**IConnectionPoint:: Advise**を発行します。  
+ **IConnectionPointContainer**インターフェイスと**IConnectionPoint**インターフェイスの[レコードセット](../../reference/ado-api/recordset-object-ado.md)オブジェクトと[接続](../../reference/ado-api/connection-object-ado.md)オブジェクトに対して**QueryInterface**を発行して、イベントハンドラーが使用できることを認識していることを確認します。 次に、各クラスに対して **IConnectionPoint:: Advise** を発行します。  
   
  たとえば、イベントハンドラーが使用可能であることを**レコードセット**オブジェクトに正常に通知する場合に**True**を返すブール関数を使用しているとします。  
   
@@ -98,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- この時点で、 **RecordsetEvent**ファミリのイベントが有効になり、メソッドが**レコードセット**イベントの発生として呼び出されます。  
+ この時点で、 **RecordsetEvent** ファミリのイベントが有効になり、メソッドが **レコードセット** イベントの発生として呼び出されます。  
   
- 後で、イベントハンドラーを使用できないようにする場合は、もう一度接続ポイントを取得し、 **IConnectionPoint:: アドバイズ**メソッドを発行します。  
+ 後で、イベントハンドラーを使用できないようにする場合は、もう一度接続ポイントを取得し、 **IConnectionPoint:: アドバイズ** メソッドを発行します。  
   
 ```  
 // BeginEventExampleVC04  
@@ -114,7 +115,7 @@ if (FAILED(hr)) return FALSE;
   
  必要に応じて、インターフェイスを解放し、クラスオブジェクトを破棄する必要があります。  
   
- 次のコードは、**レコードセット**イベントシンククラスの完全な例を示しています。  
+ 次のコードは、 **レコードセット** イベントシンククラスの完全な例を示しています。  
   
 ```  
 // BeginEventExampleVC05.cpp  

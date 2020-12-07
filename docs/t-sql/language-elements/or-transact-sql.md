@@ -1,4 +1,5 @@
 ---
+description: OR (Transact-SQL)
 title: OR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00cb67ddee5f0d3f81de61bad0a76f9ff70e1d67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4924d983b55592cbc7a6be5794e0fd32fc10748
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919918"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191483"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,19 +53,19 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>結果の値  
  OR では、いずれかの条件が TRUE の場合に TRUE を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表に、OR 演算子の結果を示します。  
   
-||TRUE|FALSE|UNKNOWN|  
+||true|false|UNKNOWN|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
+|**TRUE**|TRUE|TRUE|true|  
+|**FALSE**|true|false|UNKNOWN|  
+|**UNKNOWN**|true|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>例  
  次の例では、`vEmployeeDepartmentHistory` ビューを使用して、夕方または夜間のシフトで勤務する `Quality Assurance` の従業員の名前を取得します。 かっこを省略した場合、このクエリでは、夕方シフトで勤務する `Quality Assurance` の従業員と、夜間シフトで勤務するすべての従業員が返されます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Shift   
@@ -85,7 +86,7 @@ WHERE Department = 'Quality Assurance'
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、20 未満の `BaseRate` を取得するか、2001 年 1 月 1 日以降の `HireDate` を持つ従業員の名前を取得します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, BaseRate, HireDate   

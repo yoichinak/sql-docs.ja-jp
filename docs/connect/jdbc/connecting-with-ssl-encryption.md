@@ -1,4 +1,5 @@
 ---
+description: 暗号化を使用した接続
 title: 暗号化を使用した接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f60a186626514ed5532cc2ffc0fa4ffd1af0674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71713294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438464"
 ---
 # <a name="connecting-with-encryption"></a>暗号化を使用した接続
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -65,6 +66,6 @@ String connectionUrl =
   
  **encrypt** プロパティが **true** に設定され、**trustServerCertificate** プロパティが **false** に設定され、接続文字列のサーバー名が TLS 証明書のサーバー名に一致しない場合は、次のエラーが発行されます: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 バージョン 7.2 では、ドライバーにより、TLS 証明書のサーバー名の左端のラベルでのワイルドカードのパターン マッチングがサポートされます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [暗号化の使用](../../connect/jdbc/using-ssl-encryption.md) [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)

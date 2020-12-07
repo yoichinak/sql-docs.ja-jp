@@ -1,4 +1,5 @@
 ---
+description: sp_changedistpublisher (Transact-sql)
 title: sp_changedistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ed3ae93d1b2bd87decb43050e03624bb9a7ed62c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ca2b3369a75d2e2b80624d99d2fe11459b8ff749
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864999"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548268"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
   
-`[ @property = ] 'property'`指定されたパブリッシャーに対して変更するプロパティを指定します。 *プロパティ*は**sysname**で、次のいずれかの値を指定できます。  
+`[ @property = ] 'property'` 指定されたパブリッシャーに対して変更するプロパティを指定します。 *プロパティ* は **sysname** で、次のいずれかの値を指定できます。  
   
-`[ @value = ] 'value'`指定されたプロパティの値です。 *値*は**nvarchar (255)**,、既定値は NULL です。  
+`[ @value = ] 'value'` 指定されたプロパティの値です。 *値* は **nvarchar (255)**,、既定値は NULL です。  
   
-`[ @storage_connection_string = ] 'storage_connection_string'`SQL Managed Instance には、Azure SQL Database ストレージボリュームのアクセスキーと一致する必要があります。 
+`[ @storage_connection_string = ] 'storage_connection_string'` SQL Managed Instance には、Azure SQL Database ストレージボリュームのアクセスキーと一致する必要があります。 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -63,14 +64,14 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *これは、以外* [!INCLUDE[msCoName](../../includes/msconame-md.md)] のでは変更できません。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*パブリッシャー。*|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。 *これは、以外* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のでは変更できません。*パブリッシャー。*|  
 |**working_directory**||パブリケーションのデータおよびスキーマ ファイルを保存するために使用する作業ディレクトリです。|  
-|NULL (既定値)||使用可能なすべての*プロパティ*オプションが印刷されます。| 
+|NULL (既定値)||使用可能なすべての *プロパティ* オプションが印刷されます。| 
 |**storage_connection_string**| アクセス キー | データベースが Azure SQL Managed Instance の場合の作業ディレクトリのアクセスキー。 
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_changedistpublisher**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_changedistpublisher** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changedistpublisher**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  

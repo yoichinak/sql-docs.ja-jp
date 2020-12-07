@@ -1,4 +1,5 @@
 ---
+description: FREETEXT (Transact-SQL)
 title: FREETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4b363a773404b28a1c2eaedcd6297d4f5b75f85f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e1cb7e61d6a86773f41244c88dd75762eab7bfed
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555228"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117051"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,6 @@ ms.locfileid: "86555228"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 FREETEXT ( { column_name | (column_list) | * }   
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
@@ -75,11 +75,10 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* は **nvarchar** です。 入力に他の文字データ型が使用された場合は、暗黙の変換が行われます。 大きな文字列データ型 nvarchar (max) および varchar (max) は使用できません。 次の例では、`FREETEXT` 述語において、`varchar(30)` として定義されている変数 `@SearchWord` が暗黙に変換されます。  
   
-```sql  
-  
+```sql
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -90,10 +89,9 @@ WHERE FREETEXT(Description, @SearchWord);
  変換では "パラメーターを見つけ出す" 動作が機能しないため、パフォーマンスの向上を目的とする場合には **nvarchar** を使用してください。 次の例では、`@SearchWord` を `nvarchar(30)` として宣言しています。  
   
 ```sql  
-  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -150,7 +148,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30);  
+DECLARE @SearchWord NVARCHAR(30);  
 SET @SearchWord = N'high-performance';  
 SELECT Description   
 FROM Production.ProductDescription   

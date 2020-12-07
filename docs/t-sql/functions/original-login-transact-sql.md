@@ -1,4 +1,5 @@
 ---
+description: ORIGINAL_LOGIN (Transact-SQL)
 title: ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 04a86234b478ccc27011d7549f3610a031451cf9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115857"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "87110374"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
@@ -57,7 +57,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > Azure SQL Database では ORIGINAL_LOGIN 関数がサポートされますが、*Execute as LOGIN* がサポートされないため、次のスクリプトは失敗します。 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  
@@ -82,7 +82,7 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   

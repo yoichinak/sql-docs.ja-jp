@@ -1,4 +1,5 @@
 ---
+description: リンク ドメインの作成
 title: リンク ドメインの作成
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887964"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725395"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887964"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  リンク ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>リンクドメインの作成  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> リンクドメインの作成  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85887964"
   
 6.  必要に応じて、リンク ドメインの名前や説明を [ドメインのプロパティ] タブで変更できます。  
   
-7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130))」の説明に従ってドメイン管理アクティビティを完了します。  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
@@ -99,5 +100,4 @@ ms.locfileid: "85887964"
 -   複合ドメインに対するリンク ドメインまたはリンク複合ドメインは作成できません。  
   
 -   [ドメイン管理] のいずれかのタブでリンク ドメインをダブルクリックすると、ドメインが編集用に開き、リンク ドメインであることを示す名前の文字列が表示されます。  
-  
   

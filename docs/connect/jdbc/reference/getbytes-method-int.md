@@ -1,4 +1,5 @@
 ---
+description: getBytes (int) メソッド
 title: getBytes メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0f3328c5fcb8d9afd2040317dfa377b5668e23b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1910498f63adb3c143061bc60eaab3278037b517
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436994"
 ---
 # <a name="getbytes-method-int"></a>getBytes (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public byte[] getBytes(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **byte** 値の配列です。  
+ **byte** 値の配列。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

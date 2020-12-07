@@ -1,4 +1,5 @@
 ---
+description: '[エクスプローラー] 機能領域 (マスター データ マネージャー)'
 title: '[エクスプローラー] 機能領域'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da27d391ac6f0a77f839e60b439c4b195f6a5b5a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4682f9f982776bca890968b7bbe0889783845c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388968"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>[エクスプローラー] 機能領域 (マスター データ マネージャー)
 
@@ -61,7 +62,7 @@ ms.locfileid: "85811517"
   
  [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ece1b616c1639a7e826f6c5d5cc566ec8cb35b6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891523"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549567"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @agent_id = ] 'agent_id'`バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。 *agent_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @agent_id = ] 'agent_id'` バックアップ用のプライマリ ID、またはコピーまたは復元用のセカンダリ ID。 *agent_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
-`[ @agent_type = ] 'agent_type'`ログ配布ジョブの種類です。  
+`[ @agent_type = ] 'agent_type'` ログ配布ジョブの種類です。  
   
  0 = バックアップ。  
   
@@ -53,11 +54,11 @@ sp_refresh_log_shipping_monitor
   
  2 = 復元します。  
   
- *agent_type*は**tinyint**であり、NULL にすることはできません。  
+ *agent_type* は **tinyint** であり、NULL にすることはできません。  
   
-`[ @database = ] 'database'`バックアップまたは復元エージェントによってログに記録されるプライマリデータベースまたはセカンダリデータベース。  
+`[ @database = ] 'database'` バックアップまたは復元エージェントによってログに記録されるプライマリデータベースまたはセカンダリデータベース。  
   
-`[ @mode ] n`モニターデータを更新するか、クリーンアップするかを指定します。 *M*のデータ型は tinyint であり、サポートされている値は次のとおりです。  
+`[ @mode ] n` モニターデータを更新するか、クリーンアップするかを指定します。 *M*のデータ型は tinyint であり、サポートされている値は次のとおりです。  
   
  1 = 更新 (既定値)  
   
@@ -69,13 +70,13 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
- **sp_refresh_log_shipping_monitor**は、まだ転送されていないセッション情報を使用して、 **log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**、および**log_shipping_monitor_error_detail**のテーブルを更新します。 これにより、モニターがしばらく同期されていない場合に、監視サーバーをプライマリサーバーまたはセカンダリサーバーと同期することができます。 また、必要に応じて、監視サーバーのモニター情報をクリーンアップすることができます。  
+## <a name="remarks"></a>解説  
+ **sp_refresh_log_shipping_monitor** は、まだ転送されていないセッション情報を使用して、 **log_shipping_monitor_primary**、 **log_shipping_monitor_secondary**、 **log_shipping_monitor_history_detail**、および **log_shipping_monitor_error_detail** のテーブルを更新します。 これにより、モニターがしばらく同期されていない場合に、監視サーバーをプライマリサーバーまたはセカンダリサーバーと同期することができます。 また、必要に応じて、監視サーバーのモニター情報をクリーンアップすることができます。  
   
- **sp_refresh_log_shipping_monitor**は、プライマリサーバーまたはセカンダリサーバーの**master**データベースから実行する必要があります。  
+ **sp_refresh_log_shipping_monitor** は、プライマリサーバーまたはセカンダリサーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

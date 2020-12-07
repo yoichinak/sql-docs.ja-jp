@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efce6c9f297c3dba58a37a3d097a9c8176efa287
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900136"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497994"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>SQL Server on Linux に対する Active Directory 認証
 
@@ -52,6 +52,7 @@ AD 認証を構成する方法の詳細については、チュートリアル�
 ## <a name="known-issues"></a>既知の問題
 
 - 現時点では、データベース ミラーリング エンドポイントでサポートされている唯一の認証方法は CERTIFICATE です。 Windows 認証方法は今後のリリースで有効になる予定です。
+- SQL Server on Linux でのリモート接続で、NTLM プロトコルがサポートされていません。 NTLM を使用する場合は、ローカル接続が機能する場合があります。
 
 ## <a name="next-steps"></a>次の手順
 

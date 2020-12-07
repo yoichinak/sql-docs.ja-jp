@@ -1,4 +1,5 @@
 ---
+description: CREATE SEARCH PROPERTY LIST (Transact-SQL)
 title: CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -14,6 +15,7 @@ f1_keywords:
 - CREATE_SEARCH_PROPERTY_TSQL
 - CREATE SEARCH PROPERTY
 - CREATE SEARCH PROPERTY LIST
+- sql13.swb.spl.newsearchpropertylist.f1
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,14 +23,14 @@ helpviewer_keywords:
 - search property lists [SQL Server], creating
 - CREATE SEARCH PROPERTY LIST statement
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c1443f941f4399e0df24cd69ccc62040b06564ca
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 22ae11a8e37109e7ba90e2b02e9e4351510f9ae7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391685"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127413"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86391685"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 CREATE SEARCH PROPERTY LIST new_list_name  
    [ FROM [ database_name. ] source_list_name ]  
    [ AUTHORIZATION owner_name ]  
@@ -103,7 +105,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 > [!NOTE]  
 >  定義済みで既知の検索プロパティをこの検索プロパティ リストに追加する例については、「[ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)」をご覧ください。 検索プロパティをリストに追加した後、データベース管理者は、START FULL POPULATION 句を指定して別の ALTER FULLTEXT INDEX ステートメントを使用する必要があります。  
   
-```  
+```sql 
 CREATE SEARCH PROPERTY LIST DocumentPropertyList;  
 GO  
 USE AdventureWorks2012;  
@@ -116,17 +118,16 @@ GO
 ### <a name="b-creating-a-property-list-from-an-existing-one"></a>B. 既存のプロパティ リストからプロパティ リストを作成する  
  次の例では、`JobCandidateProperties` データベースのフルテキスト インデックスに関連付けられた、例 A で作成したリスト `DocumentPropertyList` から、新しい検索プロパティ リスト `AdventureWorks2012` を作成します。 次に、ALTER FULLTEXT INDEX ステートメントを使用して、新しいプロパティ リストを、`HumanResources.JobCandidate` データベースにある `AdventureWorks2012` テーブルのフルテキスト インデックスに関連付けます。 この ALTER FULLTEXT INDEX ステートメントにより、完全作成が開始されます。これは、SET SEARCH PROPERTY LIST 句の既定の動作です。  
   
-```  
+```sql  
 CREATE SEARCH PROPERTY LIST JobCandidateProperties 
 FROM AdventureWorks2012.DocumentPropertyList;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   
    SET SEARCH PROPERTY LIST JobCandidateProperties;  
-GO  
-  
+GO
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   

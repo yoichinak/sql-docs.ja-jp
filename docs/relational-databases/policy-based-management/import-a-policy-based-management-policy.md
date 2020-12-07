@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ポリシーのインポート
 title: ポリシー ベースの管理ポリシーのインポート | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54e0ca12595b0ce8bdde128c9261918c910ffdcf
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934349"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91412769"
 ---
 # <a name="import-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのインポート
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87934349"
   
 ### <a name="to-import-a-policy-instance"></a>ポリシー インスタンスをインポートするには  
   
-1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、新しくインポートするポリシー インスタンスを配置するサーバーを展開します。  
+1.  **オブジェクト エクスプローラー** で、プラス記号をクリックして、新しくインポートするポリシー インスタンスを配置するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
@@ -45,4 +46,4 @@ ms.locfileid: "87934349"
 
 
 ## <a name="example-policies"></a>ポリシーの例
- ポリシーの例は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に含まれていませんが、以前に配布されたポリシーの例には、[SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases) をインストールすることによってアクセスできます。  SQL Server Management Studio v17 のインストールが完了すると、ポリシーの例は `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies` で見つけることができます。 これらのポリシーは、ご自分のポリシー ベースの管理ポリシーの基礎としてインポートおよび使用できます。
+ ポリシーの例は、[SQL Server のサンプル コード リポジトリ](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies)にあります。 これらのポリシーは、ご自分のポリシー ベースの管理ポリシーの基礎としてインポートおよび使用できます。

@@ -1,4 +1,5 @@
 ---
+description: REVOKE (アセンブリの権限の取り消し) (Transact-SQL)
 title: REVOKE (アセンブリの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40a79e0c59c3e392d5d36a341b663b41ed8678c2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d76b3e534226c2c8f9271bbcc4690e0900eea2df
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485390"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496640"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE (アセンブリの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  権限を取り消すアセンブリを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -81,7 +82,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -99,7 +100,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  アセンブリは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、アセンブリで取り消すことのできる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |アセンブリ権限|権限が含まれるアセンブリ権限|権限が含まれるデータベース権限|  

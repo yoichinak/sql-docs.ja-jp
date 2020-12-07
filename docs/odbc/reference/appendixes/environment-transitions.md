@@ -1,4 +1,5 @@
 ---
+description: 環境の遷移
 title: 環境の移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebfb5475d24d5fc70c4cb46a666b2573066565a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466232"
 ---
 # <a name="environment-transitions"></a>環境の遷移
 ODBC 環境には、次の3つの状態があります。  
   
-|State|説明|  
+|州|説明|  
 |-----------|-----------------|  
 |E0|未割り当ての環境|  
 |E1|割り当て済みの環境、未割り当ての接続|  
@@ -40,11 +41,11 @@ ODBC 環境には、次の3つの状態があります。
 |(IH)3|E2 [5]<br />HY0104/6|--[4]|  
 |(IH)番|(IH)|--[4]|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は、 *Handletype*が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
+ [3] この行は、 *Handletype* が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
   
  [4] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルが上書きされます。 これは、アプリケーションプログラミングエラーの可能性があります。  
   
@@ -69,9 +70,9 @@ ODBC 環境には、次の3つの状態があります。
 |(IH)1|--[3]<br />HY0104/4|--[3]<br />HY0104/4|  
 |(IH)3|(IH)|--|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
  [3] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されました。  
   
@@ -85,15 +86,15 @@ ODBC 環境には、次の3つの状態があります。
 |(IH)3|(IH)|--[4]<br />E1 [5]|  
 |(IH)番|(IH)|--|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC されたときの遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC されたときの遷移を示しています。  
   
- [3] この行は、 *Handletype*が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
+ [3] この行は、 *Handletype* が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
   
  [4] 他の割り当て済み接続ハンドルがありました。  
   
- [5]*ハンドル*で指定された接続ハンドルは、割り当てられた唯一の接続ハンドルでした。  
+ [5] *ハンドル* で指定された接続ハンドルは、割り当てられた唯一の接続ハンドルでした。  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField と SQLGetDiagRec  
   
@@ -102,9 +103,9 @@ ODBC 環境には、次の3つの状態があります。
 |(IH)1|--|--|  
 |(IH)3|(IH)|--|  
   
- [1] この行は、 *Handletype*が SQL_HANDLE_ENV されたときの遷移を示しています。  
+ [1] この行は、 *Handletype* が SQL_HANDLE_ENV されたときの遷移を示しています。  
   
- [2] この行は、 *Handletype*が SQL_HANDLE_DBC、SQL_HANDLE_STMT、または SQL_HANDLE_DESC の場合の遷移を示しています。  
+ [2] この行は、 *Handletype* が SQL_HANDLE_DBC、SQL_HANDLE_STMT、または SQL_HANDLE_DESC の場合の遷移を示しています。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -124,7 +125,7 @@ ODBC 環境には、次の3つの状態があります。
   
  [1] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
   
- [2]*属性*引数が SQL_ATTR_ODBC_VERSION ませんでした。環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
+ [2] *属性* 引数が SQL_ATTR_ODBC_VERSION ませんでした。環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されていません。  
   
 ## <a name="all-other-odbc-functions"></a>その他すべての ODBC 関数  
   

@@ -1,4 +1,5 @@
 ---
+description: LOCALDB_ERROR_UNKNOWN_VERSION
 title: LOCALDB_ERROR_UNKNOWN_VERSION |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -7,14 +8,14 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 703db802d9a1d7f7971ca82a444b4aab62f2923e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e2a82a1db17512e1ea948f67d0086a294876aea2
+ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246556"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96506117"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

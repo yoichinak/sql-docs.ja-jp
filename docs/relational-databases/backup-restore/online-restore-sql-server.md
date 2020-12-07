@@ -12,20 +12,20 @@ helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-author: mashamsft
-ms.author: mathoma
-ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 00cec6d2ce9fcb74151bcbc6e87a58f9b8fbbfe2
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85670442"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96130376"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされています。 このエディションの既定で、ファイル復元、ページ復元、または段階的な部分復元はオンラインで行われます。 このトピックの内容は、複数のファイルまたはファイル グループを含むデータベース (単純復旧モデルでは、読み取り専用ファイル グループのみ) に関連しています。  
   
- データベースがオンラインのときにデータを復元する処理を *オンライン復元*といいます。 プライマリ ファイル グループがオンラインの場合、1 つ以上のセカンダリ ファイル グループがオフラインでも、そのデータベースはオンラインと見なされます。 どの復旧モデルでも、データベースがオンラインであれば、オフラインのファイルを復元できます。 完全復旧モデルでは、データベースがオンラインであれば、ページも復元できます。  
+ データベースがオンラインのときにデータを復元する処理を *オンライン復元* といいます。 プライマリ ファイル グループがオンラインの場合、1 つ以上のセカンダリ ファイル グループがオフラインでも、そのデータベースはオンラインと見なされます。 どの復旧モデルでも、データベースがオンラインであれば、オフラインのファイルを復元できます。 完全復旧モデルでは、データベースがオンラインであれば、ページも復元できます。  
   
 > [!NOTE]  
 >  オンライン復元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise で自動的に実行されるため、ユーザーが操作を行う必要はありません。 オンライン復元を使用しない場合は、復元を開始する前にデータベースをオフラインにできます。 詳細については、このトピックの「 [データベースまたはファイルのオフライン化](#taking_db_or_file_offline)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "85670442"
 >  サーバーに接続された複数のデバイス使用してバックアップを行った場合は、オンライン復元時に同じ数のデバイスを使用できるようにしておく必要があります。  
   
 > [!CAUTION]  
->  スナップショット バックアップを使用する場合は、 **オンライン復元**を実行できません。 **スナップショット バックアップ**の詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+>  スナップショット バックアップを使用する場合は、 **オンライン復元** を実行できません。 **スナップショット バックアップ** の詳細については、「 [Azure でのデータベース ファイルのスナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
 ## <a name="log-backups-for-online-restore"></a>オンライン復元のログ バックアップ  
  オンライン復元の場合、復旧ポイントとは、復元しているデータがオフラインになった時点、または前回読み取り専用に設定された時点です。 復旧ポイントに至るまでのトランザクション ログ バックアップ、およびこの復旧ポイントを含むトランザクション ログ バックアップが、すべて使用可能になっている必要があります。 通常、ファイルの復旧ポイントに対応するには、復旧ポイント以降のログ バックアップが必要です。 唯一の例外は、データが読み取り専用になった後に作成されたデータ バックアップから、読み取り専用データのオンライン復元を実行する場合です。 この場合、ログ バックアップは必要ありません。  

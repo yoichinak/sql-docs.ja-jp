@@ -1,4 +1,5 @@
 ---
+description: 直接実行 (ODBC)
 title: 直接実行 ODBC |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be03c4f20a82e134481f8fd9bb849ffd830567a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476704"
 ---
 # <a name="direct-execution-odbc"></a>直接実行 (ODBC)
 直接実行は、ステートメントを実行する最も簡単な方法です。 ステートメントが実行のために送信されると、データソースはそれをアクセスプランにコンパイルしてから、そのアクセスプランを実行します。  
@@ -40,7 +41,7 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
   
  ステートメントを直接実行するために、アプリケーションは次のアクションを実行します。  
   
-1.  任意のパラメーターの値を設定します。 詳細については、このセクションで後述する「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。  
+1.  任意のパラメーターの値を設定します。 詳細については、このセクションで後述する「 [ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。  
   
 2.  **SQLExecDirect**を呼び出し、SQL ステートメントを含む文字列を渡します。  
   
@@ -48,7 +49,7 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
   
     -   ステートメントを解析せずに、データソースの SQL 文法を使用するように SQL ステートメントを変更します。これには、「 [ODBC でのエスケープシーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」で説明されているエスケープシーケンスの置換が含まれます。 アプリケーションでは、 **Sqlnativesql**を呼び出すことにより、変更された SQL ステートメントの形式を取得できます。 SQL_ATTR_NOSCAN statement 属性が設定されている場合、エスケープシーケンスは置き換えられません。  
   
-    -   現在のパラメーター値を取得し、必要に応じて変換します。 詳細については、このセクションで後述する「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。  
+    -   現在のパラメーター値を取得し、必要に応じて変換します。 詳細については、このセクションで後述する「 [ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。  
   
     -   ステートメントと変換されたパラメーター値をデータソースに送信して実行します。  
   

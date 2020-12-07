@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662793"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986114"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Reporting Services でのサーバーとデータベースの接続に関する問題のトラブルシューティング
-このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」と「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+このトピックでは、レポート サーバーへの接続時に発生する問題のトラブルシューティングを行います。 また、"予期しないエラー" メッセージについての情報も提供します。 データ ソースの構成と、レポート サーバーの接続情報の構成については、「[レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」、および[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>データ ソース 'datasourcename' への接続を作成できません (rsErrorOpeningConnection)。  
 レポートにデータを提供する外部データ ソースに、レポート サーバーが接続できなかったときに発生する、一般的なエラーです。 このエラーと共に、根本原因を示したもう 1 つのエラー メッセージが表示されます。 **rsErrorOpeningConnection**では、その他のエラーが表示される場合があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "80662793"
 SQL Server に接続している場合、既定の設定では SQL Server によるリモート接続が許可されていないために、このエラーが発生した可能性があります。 (プロバイダー:名前付きパイプ プロバイダー、エラー:40 - SQL Server への接続を開けませんでした)。 このエラーは、レポート サーバー データベースをホストするデータベース エンジンのインスタンスによって返されます。 ほとんどの場合、このエラーが発生すると SQL Server サービスが停止します。 また、SQL Server Express with Advanced Services または名前付きインスタンスを使用している場合、レポート サーバーの URL かレポート サーバー データベースの接続文字列に誤りがあるとこのエラーが発生します。 これらの問題を解決するには、次のことを行います。  
   
 * SQL Server (**MSSQLSERVER**) サービスが開始されていることを確認します。 データベース エンジンのインスタンスをホストするコンピューターで、[スタート] ボタンをクリックします。次に、[管理ツール] をクリックして、[サービス] をクリックし、[SQL Server (**MSSQLSERVER**)] までスクロールします。 まだ開始していなかった場合は、サービスを右クリックして [プロパティ] を選択し、[スタートアップの種類] で [自動] をクリックして、[適用]、[開始]、[OK] の順にクリックします。   
-* レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、Web ポータルの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
+* レポート サーバーの URL およびレポート サーバー データベースの接続文字列が正しいことを確認します。 Reporting Services またはデータベース エンジンが名前付きインスタンスとしてインストールされている場合、セットアップ中に作成された既定の接続文字列にインスタンス名が含まれています。 たとえば、DEVSRV01 というサーバー上に SQL Server Express with Advanced Services の既定のインスタンスをインストールした場合、Web ポータルの URL は DEVSRV01\Reports$SQLEXPRESS になります。 さらに、接続文字列内のデータベース サーバー名は、DEVSRV01\SQLEXPRESS のようになります。 SQL Server Express の URL とデータ ソース接続文字列については、「 [SQL Server Express with Advanced Services の Reporting Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105))」を参照してください。 レポート サーバー データベースの接続文字列を確認するには、Reporting Services 構成ツールを起動し、[データベースのセットアップ] ページを確認します。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>接続できません。 サーバーが実行中であることを確認してください。  
 このエラーは ADOMD.NET プロバイダーから返されます。 このエラーの発生原因はいくつかあります。 サーバーを "localhost" と指定した場合は、代わりにサーバー名を指定してください。 新しい接続にメモリを割り当てることができない場合にも、このエラーが発生します。 詳細については、サポート技術情報の記事 912017「 [Error message when you connect to an instance of SQL Server 2005 Analysis Services (SQL Server 2005 Analysis Services のインスタンスに接続するときのエラー メッセージ)](https://support.microsoft.com/kb/912017)」を参照してください。  
@@ -56,7 +56,7 @@ SQL Server に接続している場合、既定の設定では SQL Server によ
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続したときの WMI エラー  
 Management Studio がレポート サーバーとの接続を確立する際、既定では、Reporting Services Windows Management Instrumentation (WMI) プロバイダーが使用されます。 WMI プロバイダーが正しくインストールされていない場合、レポート サーバーに接続しようとしたときに次のエラーが表示されます。  
   
-\<サーバー名> に接続できません。 Reporting Services WMI プロバイダーがインストールされていないか、正しく構成されていません (Microsoft.SqlServer.Management.UI.RSClient)。  
+\<your server name> に接続できません。 Reporting Services WMI プロバイダーがインストールされていないか、正しく構成されていません (Microsoft.SqlServer.Management.UI.RSClient)。  
   
 このエラーを解決するにはソフトウェアを再インストールする必要があります。 それ以外の場合、一時的な回避策として、レポート サーバーに SOAP エンドポイント経由で接続する方法があります。  
   
@@ -69,7 +69,7 @@ Management Studio がレポート サーバーとの接続を確立する際、�
   
 エラーのフル テキストは "レポート サーバーでレポート サーバー データベースへの接続を開始できません。 ログオンに失敗しました (**rsReportServerDatabaseLogonFailed**)。 ファイル共有へのアクセス中にログオン エラーが発生しました。ユーザー アカウントまたはパスワードが無効です" です。  
   
-パスワードを再設定する場合、接続を更新する必要があります。 詳細については、「 [レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。  
+パスワードを再設定する場合、接続を更新する必要があります。 詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>レポート サーバーでレポート サーバー データベースへの接続を開始できません。 (rsReportServerDatabaseUnavailable)。  
 メッセージ全文: レポート サーバーでレポート サーバー データベースへの接続を開始できません。 すべての要求および処理でデータベースに接続する必要があります (rsReportServerDatabaseUnavailable)  
@@ -120,4 +120,3 @@ SQL Server 2008 Reporting Services では、データベースへのアクセス
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

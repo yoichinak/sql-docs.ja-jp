@@ -1,4 +1,5 @@
 ---
+description: 既存のインデックスの別のファイル グループへの移動
 title: 既存のインデックスの別のファイル グループへの移動 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88470471"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスの別のファイル グループへの移動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85771711"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **既存のインデックスを別のファイル グループに移動するために使用するもの:**  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85771711"
   
 8.  **[閉じる]** をクリックします。  
   
-9. **ファイル** メニューの **table_name**_を保存_を選びます。  
+9. **[ファイル]** メニューの **table_name**_を保存]_ を選びます。  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>オブジェクト エクスプローラーで既存のインデックスを別のファイル グループに移動するには  
   
@@ -101,7 +102,7 @@ ms.locfileid: "85771711"
   
 8.  **[OK]** をクリックします。  
   
- **[インデックスのプロパティ -** index_name **]** ダイアログ ボックスの _[ストレージ]_ ページでは、次の情報を利用できます。  
+ **[インデックスのプロパティ -** _index_name_] ダイアログ ボックスの **[ストレージ]** ページでは、次の情報を利用できます。  
   
  **[ファイル グループ]**  
  指定したファイル グループのインデックスを格納します。 一覧には、標準 (ROW) ファイル グループのみが表示されます。 既定で選択されているのは、データベースのプライマリ ファイル グループです。  
@@ -147,7 +148,7 @@ ms.locfileid: "85771711"
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>既存のインデックスを別のファイル グループに移動するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

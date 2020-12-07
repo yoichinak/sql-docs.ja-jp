@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c2240ad1cbc9bb8c9fd252eefd6633e81e4ab2f8
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91115234"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,6 @@ ms.locfileid: "87113520"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
@@ -53,7 +53,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  権限のテスト対象とするセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class* には **nvarchar(60)** 型のスカラー式を指定します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、securable_class 引数を次のいずれかに設定する必要があります。**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、または **USER**。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] において、securable_class 引数は、**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、**USER** のうちのいずれか 1 つに設定する必要があります。  
   
  *permission*  
  チェックする権限名を表す、NULL 以外の **sysname** 型のスカラー式を指定します。 既定値はありません。 権限名 ANY はワイルドカードです。  
@@ -62,7 +62,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[**_sub name_**]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
   
  *sub-securable_class*  
  権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
@@ -99,7 +99,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   現在のデータベースの照合順序: データベース レベルのセキュリティ保護可能なリソース (スキーマに含まれていないセキュリティ保護可能なリソースを含む)。スキーマ スコープの 1 部または 2 部構成のセキュリティ保護可能なリソース。3 部構成の名前を使用する場合のターゲット データベース。  
   
--   マスター データベース照合順序: サーバー レベルのセキュリティ保護可能なリソース。  
+-   master データベースの照合順序 : サーバー レベルのセキュリティ保護可能なリソース。  
   
 -   列レベルのチェックの場合、"ANY" はサポートされません。 適切な権限を指定する必要があります。  
   
@@ -109,7 +109,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
 ```  
   
@@ -117,20 +117,20 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
 ### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>C. 現在のデータベースに対して権限を保持しているかどうかをチェックする  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
 ### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. 現在のデータベースに、データベース プリンシパル Pd の権限があるかどうかをチェックする  
  呼び出し元は、プリンシパル `Pd` に対する IMPERSONATE 権限を保持していることを前提としています。  
   
-```  
+```sql  
 EXECUTE AS user = 'Pd'  
 GO  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
@@ -142,7 +142,7 @@ GO
 ### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. スキーマ S 内にプロシージャとテーブルを作成できるかどうかをチェックする  
  次の例では、`ALTER` に `S` 権限、データベースに `CREATE PROCEDURE` 権限、およびテーブルに同様の権限が必要です。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')  
     & HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_procs,  
     HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE TABLE') &  
@@ -151,7 +151,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
   
 ### <a name="f-which-tables-do-i-have-select-permission-on"></a>F. どのテーブルに対して、SELECT 権限を保持しているかをチェックする  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME  
 (QUOTENAME(SCHEMA_NAME(schema_id)) + '.' + QUOTENAME(name),   
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
@@ -160,20 +160,20 @@ SELECT HAS_PERMS_BY_NAME
 ### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>G. AdventureWorks2012 の SalesPerson テーブルに対して、INSERT 権限を保持しているかどうかをチェックする  
  次の例では、`AdventureWorks2012` が自分の現在のデータベース コンテキストであると想定し、2 部構成の名前を使用します。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('Sales.SalesPerson', 'OBJECT', 'INSERT');  
 ```  
   
  次の例では、現在のデータベース コンテキストに関する想定はなく、3 部構成の名前を使用します。  
   
-```  
+```sql  
 SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',   
     'OBJECT', 'INSERT');  
 ```  
   
 ### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>H. テーブル T のどの列に対して、SELECT 権限を保持しているかをチェックする  
   
-```  
+```sql  
 SELECT name AS column_name,   
     HAS_PERMS_BY_NAME('T', 'OBJECT', 'SELECT', name, 'COLUMN')   
     AS can_select   

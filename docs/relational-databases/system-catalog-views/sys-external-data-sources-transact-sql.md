@@ -1,4 +1,5 @@
 ---
+description: sys.external_data_sources (Transact-SQL)
 title: external_data_sources (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85b64de0b575738061757254c9698e47982fd942
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 130b23f2961f1b2d2abec96c1f0f1b32400db0a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394479"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546893"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -34,7 +35,7 @@ ms.locfileid: "87394479"
 |name|**sysname**|外部データソースの名前。||  
 |location|**nvarchar (4000)**|外部データソースのプロトコル、IP アドレス、およびポートを含む接続文字列。||  
 |type_desc|**nvarchar (255)**|データソースの種類が文字列として表示されます。|HADOOP、RDBMS、SHARD_MAP_MANAGER、Remotedataアーカイブ Typeextdatasource|  
-|type|**tinyint**|数値として表示されるデータソースの種類。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-Remotedataアーカイブ Typeextdatasource|  
+|型|**tinyint**|数値として表示されるデータソースの種類。|0-HADOOP<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-Remotedataアーカイブ Typeextdatasource|  
 |resource_manager_location|**nvarchar (4000)**|HADOOP の場合、Hadoop リソースマネージャーの IP とポートの場所を指定します。 これは、Hadoop データソースでジョブを送信するために使用されます。<br /><br /> 他の種類の外部データソースの場合は NULL です。||  
 |credential_id|**int**|外部データソースへの接続に使用されるデータベーススコープの資格情報のオブジェクト ID。||  
 |database_name|**sysname**|RDBMS 型の場合は、リモートデータベースの名前。 [種類] には、シャードマップマネージャーデータベースの名前 SHARD_MAP_MANAGER ます。 他の種類の外部データソースの場合は NULL です。||  

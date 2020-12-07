@@ -1,4 +1,5 @@
 ---
+description: クエリ結果の印刷 (Visual Database Tools)
 title: クエリ結果の印刷
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c3efdca2215b4338ef4141117c5ad19031c53bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462769"
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-クエリの結果を印刷するには、 [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
+ クエリの結果を印刷するには、[結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
   
 クエリおよびビュー デザイナーは、クエリの結果をクリップボードにコピーするときに、各列はタブで区切り、行間はキャリッジ リターンとライン フィード (CR-LF) 文字で区切ります。  
   

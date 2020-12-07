@@ -1,4 +1,5 @@
 ---
+description: データ マイニング クエリ
 title: データ マイニング クエリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44448f8f73ee303ff3d9484f887e40362fb1fb53
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c3e798ca968230aa0a554189076281a886bff3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919828"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727633"
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
 
@@ -51,10 +52,10 @@ ms.locfileid: "86919828"
  **フィールド**  
  ソース テーブルから派生した列の一覧から列を選択します。 **[ソース]** で **[予測関数]** を選択した場合、このセルは、選択されたマイニング モデルで利用できる予測関数のドロップダウン リストを含みます。  
   
- **エイリアス**  
+ **Alias**  
  サーバーから返された列の名前です。  
   
- **[表示]**  
+ **表示**  
  列を返す場合、または WHERE 句内でのみ列を使用する場合に選択します。  
   
  **グループ**  
@@ -66,8 +67,7 @@ ms.locfileid: "86919828"
  **[条件と引数]**  
  列に適用する条件またはユーザー式を指定します。 マイニング モデルを含むテーブルや入力列から列をセルにドラッグできます。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング クエリ ツール](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング クエリ ツール](/analysis-services/data-mining/data-mining-query-tools)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

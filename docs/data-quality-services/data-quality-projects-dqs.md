@@ -1,4 +1,5 @@
 ---
+description: データ品質プロジェクト (DQS)
 title: データ品質プロジェクト (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8cc17bac7bca3907ffecc0e39e454889194f7a93
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dfb68d73ba01f343660cef328f8cb8b4dbbd3b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462255"
 ---
 # <a name="data-quality-projects-dqs"></a>データ品質プロジェクト (DQS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85899105"
   
 -   クレンジング アクティビティや照合アクティビティの実施をガイドするウィザードが提供されているほか、データを必要により SQL Server データベースや .csv ファイルにエクスポートできます。 データ スチュワードはデータ品質プロジェクトを使用して、コンピューター支援型の、またはインタクラティブなクレンジングやデータ照合手順を実行および制御できます。  
   
-##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>データ品質プロジェクト: クレンジングアクティビティ  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a> データ品質プロジェクト: クレンジングアクティビティ  
  クレンジング データ品質プロジェクトでは、ナレッジ ベースに基づいてソース データのクレンジングを行うことができます。 DQS のデータ クレンジング アクティビティは、2 段階のプロセスから成ります。  
   
 1.  *コンピューター支援型の* データ クレンジング プロセス。ナレッジ ベース内のナレッジと照らし合わせてソース データを分析し、変更を提示します。 処理後のデータは DQS によって分類 (提案、新規、無効、修正済み、および修正) されたうえでユーザーに表示され、さらに処理が行われます。  
@@ -40,7 +41,7 @@ ms.locfileid: "85899105"
  データ品質プロジェクトのクレンジング アクティビティの詳細については、「 [Data Cleansing](../data-quality-services/data-cleansing.md)」を参照してください。  
   
 ##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> データ品質プロジェクト: 照合アクティビティ  
- データ品質プロジェクトの照合では、ナレッジ ベース内の照合ポリシーに基づいて照合アクティビティを実行します。完全一致やあいまい一致を特定することによってデータの重複を防ぎ、重複データをユーザーが削除できます。 データをクレンジングしてから照合を実行することをお勧めします。 次の手順に従います。  
+ データ品質プロジェクトの照合では、ナレッジ ベース内の照合ポリシーに基づいて照合アクティビティを実行します。完全一致やあいまい一致を特定することによってデータの重複を防ぎ、重複データをユーザーが削除できます。 データをクレンジングしてから照合を実行することをお勧めします。 これを実行するには、次のようにします。  
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択してソース データのデータ クレンジング アクティビティを完了し、その後 SQL Server データベースのテーブルにエクスポートします。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85899105"
 |データ品質プロジェクトを開く、ロック解除する、名前を変更する、および削除する方法について説明します。|[データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]で Integration Services プロジェクトを開く方法について説明します。|[Data Quality Client で Integration Services プロジェクトを開く](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

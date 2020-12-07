@@ -1,8 +1,9 @@
 ---
+description: ParentCatalog プロパティの例 (VB)
 title: ParentCatalog プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6910ac229d309360676f83f855664ab368459ce0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983823"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog プロパティの例 (VB)
-次のコードは、カタログにテーブルを追加する前に、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)プロパティを使用してプロバイダー固有のプロパティにアクセスする方法を示しています。 プロパティは**autoincrement**で、Microsoft Jet データベースに autoincrement フィールドが作成されます。  
+次のコードは、カタログにテーブルを追加する前に、 [ParentCatalog](./parentcatalog-property-adox.md) プロパティを使用してプロバイダー固有のプロパティにアクセスする方法を示しています。 プロパティは **autoincrement**で、Microsoft Jet データベースに autoincrement フィールドが作成されます。  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -84,12 +85,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog プロパティ (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type プロパティ (列) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Append メソッド (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append メソッド (ADOX Tables)](./append-method-adox-tables.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Column オブジェクト (ADOX)](./column-object-adox.md)   
+ [Columns コレクション (ADOX)](./columns-collection-adox.md)   
+ [Name プロパティ (ADOX)](./name-property-adox.md)   
+ [ParentCatalog プロパティ (ADOX)](./parentcatalog-property-adox.md)   
+ [Table オブジェクト (ADOX)](./table-object-adox.md)   
+ [Type プロパティ (列) (ADOX)](./type-property-column-adox.md)

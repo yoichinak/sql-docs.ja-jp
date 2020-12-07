@@ -1,4 +1,5 @@
 ---
+description: IHconstrainttypes (Transact-SQL)
 title: IHconstrainttypes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHconstrainttypes system table
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: efb9a64b6c6b875430cea7fcd5bb834f64bb413c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eaa7ef45e9e6b9ae71eceee558af116fe3314449
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890322"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540403"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,10 +32,10 @@ ms.locfileid: "85890322"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**type**|**nvarchar(255)**|サポートされている非 SQL Server 制約の種類の名前。|  
+|**type**|**nvarchar (255)**|サポートされている非 SQL Server 制約の種類の名前。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+## <a name="see-also"></a>参照  
+ [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

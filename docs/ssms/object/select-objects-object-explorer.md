@@ -1,4 +1,5 @@
 ---
+description: '[オブジェクトの選択] (オブジェクト エクスプローラー)'
 title: '[オブジェクトの選択] (オブジェクト エクスプローラー)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b35f277da1b91e4c47b57eb1ee2f5c8e6ff529a7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dbe7d8cd1e297dbea72635ca1af28a361b52912a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491849"
 ---
 # <a name="select-objects-object-explorer"></a>[オブジェクトの選択] (オブジェクト エクスプローラー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

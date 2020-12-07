@@ -1,4 +1,5 @@
 ---
+description: DROP SYNONYM (Transact-SQL)
 title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - DROP SYNONYM statement
 - dropping synonyms
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cc8d4d19c645c78b7121c7335461de5b7bd95513
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: af16b7921358a12b87e9ab2ddbd6acaefee47d13
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483633"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379664"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,8 +38,7 @@ ms.locfileid: "86483633"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name  
 ```  
   
@@ -56,7 +56,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  削除するシノニムの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  シノニムへの参照はスキーマにバインドされていません。したがってシノニムはいつでも削除できます。 削除したシノニムへの参照は、実行時にのみ検出されます。  
   
  シノニムは、動的な SQL で作成、削除、参照することができます。  
@@ -73,7 +73,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ## <a name="examples"></a>例  
  次の例では、まずシノニム `MyProduct` を作成し、その後シノニムを削除します。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 -- Create a synonym for the Product table in AdventureWorks2012.  

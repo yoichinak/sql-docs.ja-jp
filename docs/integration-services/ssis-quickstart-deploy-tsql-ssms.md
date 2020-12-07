@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 title: Transact-SQL (SSMS) を使用して SSIS プロジェクトを配置する | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9bdd9a10d5ab30cba8f12e07ee3475e902c3e35f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921924"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129962"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Transact-SQL を使用して SSMS から SSIS プロジェクトを配置する
 
@@ -27,7 +28,7 @@ SQL Server Management Studio は、SQL Server から SQL Database まで、SQL �
 
 ## <a name="prerequisites"></a>前提条件
 
-始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)」を参照してください。
+始める前に、最新バージョンの SQL Server Management Studio があることを確認します。 SSMS をダウンロードするには、「[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -59,7 +60,7 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
    | **Login** | サーバー管理者アカウント | このアカウントは、サーバーの作成時に指定したアカウントです。 |
    | **パスワード** | サーバー管理者アカウントのパスワード | このパスワードは、サーバーの作成時に指定したパスワードです。 |
 
-3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
+3. **[Connect]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
 4. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
@@ -102,4 +103,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Transact-SQL (VS Code) を使用して SSIS パッケージを実行する](ssis-quickstart-run-tsql-vscode.md)
     - [コマンド プロンプトから SSIS パッケージを実行する](./ssis-quickstart-run-cmdline.md)
     - [PowerShell を使用して SSIS パッケージを実行する](ssis-quickstart-run-powershell.md)
-    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md) 
+    - [C# を使用して SSIS パッケージを実行する](./ssis-quickstart-run-dotnet.md)

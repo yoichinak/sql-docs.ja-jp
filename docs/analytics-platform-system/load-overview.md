@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401047"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>並列データウェアハウスへのデータの読み込み
-Integration Services、 [Bcp ユーティリティ](../tools/bcp-utility.md)、 **Dwloader**コマンドラインローダー、または SQL insert ステートメントを使用して、SQL Server 並列データウェアハウス (PDW) にデータを読み込んだり、挿入したりすることができます。  
+Integration Services、 [Bcp ユーティリティ](../tools/bcp-utility.md)、 **Dwloader** コマンドラインローダー、または SQL insert ステートメントを使用して、SQL Server 並列データウェアハウス (PDW) にデータを読み込んだり、挿入したりすることができます。  
 
 ## <a name="loading-environment"></a>環境を読み込んでいます  
-データを読み込むには、1つまたは複数の読み込みサーバーが必要です。 独自の既存の ETL や他のサーバーを使用することも、新しいサーバーを購入することもできます。 詳細については、「[読み込みサーバーの取得と構成](acquire-and-configure-loading-server.md)」を参照してください。 これらの手順には、読み込みのための適切なソリューションを計画する際に役立つ、[サーバー容量計画の読み込みワークシート](loading-server-capacity-planning-worksheet.md)が含まれています。  
+データを読み込むには、1つまたは複数の読み込みサーバーが必要です。 独自の既存の ETL や他のサーバーを使用することも、新しいサーバーを購入することもできます。 詳細については、「 [読み込みサーバーの取得と構成](acquire-and-configure-loading-server.md)」を参照してください。 これらの手順には、読み込みのための適切なソリューションを計画する際に役立つ、 [サーバー容量計画の読み込みワークシート](loading-server-capacity-planning-worksheet.md) が含まれています。  
   
 ## <a name="load-with-dwloader"></a>Dwloader を使用した読み込み  
-データを PDW に読み込む最速の方法は、 [Dwloader コマンドラインローダー](dwloader.md)を使用することです。  
+データを PDW に読み込む最速の方法は、 [Dwloader コマンドラインローダー](dwloader.md) を使用することです。  
   
 ![読み込みプロセス](media/loading-process.png "処理の読み込み")  
   
@@ -31,7 +31,7 @@ dwloader は、コントロールノードを介してデータを渡さずに�
   
 各コンピューティングノードで、データ移動サービス (DMS) は、データのチャンクを受信して処理します。 データの処理には、各行を SQL Server ネイティブ形式に変換し、ディストリビューションハッシュを計算して、各行が属する計算ノードを決定することが含まれます。  
   
-これらの行を処理した後、DMS はシャッフル移動を使用して、各行を適切なコンピューティングノードと SQL Server のインスタンスに転送します。 SQL Server は、行を受信すると、dwloader の **-b**バッチサイズパラメーターセットに従ってバッチをバッチ処理し、バッチを一括読み込みします。  
+これらの行を処理した後、DMS はシャッフル移動を使用して、各行を適切なコンピューティングノードと SQL Server のインスタンスに転送します。 SQL Server は、行を受信すると、dwloader の **-b** バッチサイズパラメーターセットに従ってバッチをバッチ処理し、バッチを一括読み込みします。  
 
 ## <a name="load-with-prepared-statements"></a>準備されたステートメントを使用して読み込む
 

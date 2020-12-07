@@ -1,4 +1,5 @@
 ---
+description: Integration Services 式の詳細の例
 title: Integration Services 式の詳細の例 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbf2c304cf97dfad85fbdb53ca83fd7922e3a128
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5a0e9c219a1649385b337ea378dec751f7851d4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917658"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123302"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
 
@@ -29,9 +30,9 @@ ms.locfileid: "86917658"
 
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  
   
- 次の例では、**AdventureWorks** および [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します。 それぞれの例では、式で使用するテーブルを判別します。  
+ 次の例では、**AdventureWorks** および [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを使用します。 それぞれの例では、式で使用するテーブルを判別します。  
   
-## <a name="boolean-expressions"></a>ブール式  
+## <a name="boolean-expressions"></a>Boolean 式  
   
 -   この例では、 **Product** テーブルを使用します。 式は、 **SellStartDate** 列の月エントリを評価し、その月が 6 月以降の場合に TRUE を返します。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86917658"
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   この例では、 **CurrencyRate** テーブルを使用します。 式は、テーブル内の値と変数を比較します。 **FromCurrencyCode** 列または **ToCurrencyCode** 列のエントリが変数の値と等しく、かつ **AverageRate** の値が **EndOfDayRate**の値よりも大きい場合、式は TRUE を返します。  
+-   この例では、 **CurrencyRate** テーブルを使用します。 式は、テーブル内の値と変数を比較します。 **FromCurrencyCode** 列または **ToCurrencyCode** 列のエントリが変数の値と等しく、かつ **AverageRate** の値が **EndOfDayRate** の値よりも大きい場合、式は TRUE を返します。  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
@@ -73,7 +74,7 @@ ms.locfileid: "86917658"
 ## <a name="non-boolean-expressions"></a>ブール式以外の式  
  ブール式以外の式は、派生列変換、プロパティ式、および For ループ コンテナーで使用されます。  
   
--   この例では、 **Contact** テーブルを使用します。 式は、 **FirstName**、 **MiddleName**、および **LastName** 列から先頭および末尾のスペースを削除します。 **MiddleName** 列が NULL でない場合は最初の文字を抽出し、そのミドル ネーム イニシャルと **FirstName** および **LastName**の値を連結して、値の間に適切なスペースを挿入します。  
+-   この例では、 **Contact** テーブルを使用します。 式は、 **FirstName**、 **MiddleName**、および **LastName** 列から先頭および末尾のスペースを削除します。 **MiddleName** 列が NULL でない場合は最初の文字を抽出し、そのミドル ネーム イニシャルと **FirstName** および **LastName** の値を連結して、値の間に適切なスペースを挿入します。  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  
@@ -104,9 +105,8 @@ ms.locfileid: "86917658"
     ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [データ フロー コンポーネントで式を使用する](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [データ フロー コンポーネントで式を使用する](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>関連コンテンツ  
  pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=746575)」  
-  
   

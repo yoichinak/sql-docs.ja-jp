@@ -1,4 +1,5 @@
 ---
+description: SWITCHOFFSET (Transact-SQL)
 title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -24,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6b5595e0a6489919768ab5a4ba9e21d04f7837
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e266c23c0fdc712f5bab15173e187043fede5de
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91380847"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87112820"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -65,17 +66,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  GETDATE() 関数と一緒に SWITCHOFFSET を使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値のカーディナリティを正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーによって、正確なカーディナリティの推定値が取得され、より効率的なクエリ プランが生成されます。 詳細については、RECOMPILE クエリ ヒント、を参照してください。 [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-```  
+```sql
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
 SELECT * FROM t    
 WHERE c1 > @dt OPTION (RECOMPILE);  
-  
 ```  
   
 ## <a name="examples"></a>例  
  次の例では、`SWITCHOFFSET` を使用して、データベースに保存されている値とは異なるタイム ゾーン オフセットを表示します。  
   
-```  
+```sql  
 CREATE TABLE dbo.test   
     (  
     ColDatetimeoffset datetimeoffset  

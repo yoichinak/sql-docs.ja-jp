@@ -1,8 +1,9 @@
 ---
+description: Attributes プロパティの例 (VB)
 title: Attributes プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 28015a4a457ddb4a64c047675d670cbdf4ce0a47
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763973"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985293"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes プロパティの例 (VB)
-この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティを示します。 **Adcolnullable**に設定すると、ユーザーは[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)の値を空の文字列に設定できます。 この場合、ユーザーは、データが不明なレコードと、データが適用されないレコードを区別できます。  
+この例では、[列](./column-object-adox.md)の[Attributes](./attributes-property-adox.md)プロパティを示します。 **Adcolnullable**に設定すると、ユーザーは[レコードセット](../ado-api/recordset-object-ado.md)[フィールド](../ado-api/field-object.md)の値を空の文字列に設定できます。 この場合、ユーザーは、データが不明なレコードと、データが適用されないレコードを区別できます。  
   
 ```  
 ' BeginAttributesVB  
@@ -126,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes プロパティ (ADOX)](./attributes-property-adox.md)   
+ [Catalog オブジェクト (ADOX)](./catalog-object-adox.md)   
+ [Column オブジェクト (ADOX)](./column-object-adox.md)

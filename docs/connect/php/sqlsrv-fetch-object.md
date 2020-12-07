@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893168"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080671"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,13 +37,13 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
   
 *$className* [省略可能]: インスタンス化するクラスの名前を指定する文字列。 *$className* パラメーターの値が指定されていない場合、PHP **stdClass** のインスタンスがインスタンス化されます。  
   
 *$ctorParams* [省略可能]: *$className* パラメーターで指定されたクラスのコンストラクターに渡される値を含む配列。 指定したクラスのコンストラクターがパラメーター値を受け取る場合、 *$ctorParams* object **sqlsrv_fetch_object**パラメーターを使用する必要があります。  
   
-*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。 (*row* が指定されている場合、 *$className* と *$ctorParams* に null を指定しなければならない場合でも、 *$className* と *$ctorParams* を明示的に指定する必要があります。)  
+*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。 (*row* が指定されている場合、*$className* と *$ctorParams* に null を指定しなければならない場合でも、*$className* と *$ctorParams* を明示的に指定する必要があります。)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。  
   
-*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に使用し、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
+*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE および SQLSRV_SCROLL_RELATIVE と共に使用して、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
   
 ## <a name="return-value"></a>戻り値  
 結果セットのフィールド名に対応するプロパティを持つ PHP オブジェクト。 プロパティ値には、対応する結果セットのフィールド値が入力されます。 省略可能な *$className* パラメーターで指定されたクラスが存在しないか、指定されたステートメントにアクティブな結果セットが存在しない場合、 **false** が返されます。 取得する行がなくなった場合、 **null** が返されます。  
@@ -91,7 +92,7 @@ SELECT SCOPE_IDENTITY()
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>例  
+## <a name="object-example"></a>オブジェクトの例  
 次の例では、結果セットの各行を PHP オブジェクトとして取得します。 この例では、SQL Server と [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースはローカル コンピューターにインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ``` 
@@ -130,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="class-example"></a>クラスの例  
 次の例では、スクリプトに定義されている *Product* クラスのインスタンスとして結果セットの各行が取得されます。 この例では、指定納期 *DueDate* で在庫数 *StockQty* が指定値より少ない製品の情報が AdventureWorks データベースの *Purchasing.PurchaseOrderDetail* テーブルと *Production.Product* テーブルから取得されます。 この例では、 **sqlsrv_fetch_object**の呼び出しにクラスを指定したときに適用される規則の一部が強調表示されています。  
   
 -   *$product* 変数は *Product* クラスのインスタンスです。「Product」が *$className* パラメーターで指定され、 *Product* クラスが存在するからです。  
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-既存の **sqlsrv_fetch_object** 関数は常に [Default PHP Data Types](../../connect/php/default-php-data-types.md)パラメーターを使用する必要があります。 PHP データ型を指定する方法については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+既存の **sqlsrv_fetch_object** 関数は常に [Default PHP Data Types](../../connect/php/default-php-data-types.md)パラメーターを使用する必要があります。 PHP データ型を指定する方法については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 名前のないフィールドが返された場合、 **sqlsrv_fetch_object** はフィールド値を破棄し、警告を発行します。 たとえば、データベース テーブルに値を挿入し、サーバーが生成したプライマリ キーを取得する、この Transact-SQL ステートメントがあります。  
   

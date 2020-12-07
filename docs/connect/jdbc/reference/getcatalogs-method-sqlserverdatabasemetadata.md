@@ -1,4 +1,5 @@
 ---
+description: getCatalogs メソッド (SQLServerDatabaseMetaData)
 title: getCatalogs メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a31fca087c206104d197a3121db90991ff38f8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67953452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436904"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +45,11 @@ public java.sql.ResultSet getCatalogs()
  この getCatalogs メソッドは、java.sql.DatabaseMetaData インターフェイスの getCatalogs メソッドで規定されています。  
   
 > [!NOTE]  
->  SQL Azure では、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。 SQL Azure では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 カタログを取得するために、**SQLServerDatabaseMetaData.getCatalogs** によって sys.databases ビューが使用されます。 SQL Azure での **SQLServerDatabaseMetaData.getCatalogs** の動作を理解するには、[sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) のアクセス許可に関する説明を参照してください。  
+>  Azure SQL Database では、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。 SQL Database では、ユーザー データベースからカタログのセット全体を返すことがサポートされていません。 カタログを取得するために、**SQLServerDatabaseMetaData.getCatalogs** によって sys.databases ビューが使用されます。 SQL での **SQLServerDatabaseMetaData.getCatalogs** の動作を理解するには、[sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) のアクセス許可に関する説明を参照してください。Azure SQL Database では、master データベースに接続して **SQLServerDatabaseMetaData.getCatalogs** を呼び出す必要があります。 SQL Database では、ユーザー データベースからカタログのセット全体を返すことがサポートされていません。 カタログを取得するために、**SQLServerDatabaseMetaData.getCatalogs** によって sys.databases ビューが使用されます。 SQL Database での **SQLServerDatabaseMetaData.getCatalogs** の動作を理解するには、[sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) のアクセス許可に関する説明を参照してください。                      .  
   
  getCatalogs メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|Name|種類|説明|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のシステム データベースを含むカタログの名前です。|  
   

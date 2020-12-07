@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7009bdcb9ef2d740a200d8edad74e7559882d7c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864669"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726733"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
 
@@ -42,7 +42,7 @@ ms.locfileid: "87864669"
   
 |SQL Server のデータ型|結果|  
 |--------------------------|------------|  
-|**time**、 **datetimeoffset**|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。|  
+|**time**、 **datetimeoffset**|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../control-flow/execute-sql-task.md)」を参照してください。|  
 |**datetime2**|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーは、ミリ秒の値を切り捨てます。|  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "87864669"
   
 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーの多くの構成オプションは、接続マネージャーが使用する .NET プロバイダーによって異なります。  
   
-[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「[ADO.NET 接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)」を参照してください。  
+[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「[ADO.NET 接続マネージャーの構成]()」を参照してください。  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -85,22 +85,22 @@ ms.locfileid: "87864669"
 接続を選択し、 **[削除]** を選択して削除します。  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID
-[Azure Data Factory 内の Azure-SSIS 統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure SQL Database または Azure SQL Managed Instance 認証に使用できます。 この ID を使用して指定したファクトリからデータベースにアクセスし、データベースに、またはデータベースからデータをコピーできます。
+[Azure Data Factory 内の Azure-SSIS 統合ランタイム](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure SQL Database または Azure SQL Managed Instance 認証に使用できます。 この ID を使用して指定したファクトリからデータベースにアクセスし、データベースに、またはデータベースからデータをコピーできます。
 
 > [!NOTE]
->  Azure Active Directory (Azure AD) 認証 (マネージド ID 認証を含む) を使用して Azure SQL Database または Azure SQL Managed Instance に接続するときに、パッケージの実行エラーや予期しない動作の変更に関連する問題が発生することがあります。 詳しくは、「[Azure AD の機能と制限事項](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)」をご覧ください。
+>  Azure Active Directory (Azure AD) 認証 (マネージド ID 認証を含む) を使用して Azure SQL Database または Azure SQL Managed Instance に接続するときに、パッケージの実行エラーや予期しない動作の変更に関連する問題が発生することがあります。 詳しくは、「[Azure AD の機能と制限事項](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)」をご覧ください。
 
 Azure SQL Database にマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
 
-1. まだ行っていない場合は、Azure portal で Azure SQL サーバーの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 と 3 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
+1. まだ行っていない場合は、Azure portal で Azure SQL サーバーの [Azure Active Directory 管理者をプロビジョニング](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 と 3 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 
-1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 少なくとも ALTER ANY USER アクセス許可を持つ Azure AD ID で、SSMS のようなツールを使用してデータをコピーするデータベースに接続します。 次の T-SQL を実行します。 
+1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 少なくとも ALTER ANY USER アクセス許可を持つ Azure AD ID で、SSMS のようなツールを使用してデータをコピーするデータベースに接続します。 次の T-SQL を実行します。 
     
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。 次のコードを実行します。 詳細については、[こちらのドキュメント](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)を参照してください。
+1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 適切なロールについては、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。 次のコードを実行します。 詳細については、[こちらのドキュメント](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)を参照してください。
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -108,21 +108,21 @@ Azure SQL Database にマネージド ID 認証を使用するには、以下の
 
 Azure SQL Managed Instance にマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
     
-1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
+1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 
-1. データ ファクトリのマネージド ID 用に[ログインを作成](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current)します。 SQL Server Management Studio (SSMS) で、**sysadmin** である SQL Server アカウントを使用して Managed Instance に接続します。 **マスター** データベースで、次の T-SQL を実行します。
+1. データ ファクトリのマネージド ID 用に[ログインを作成](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current)します。 SQL Server Management Studio (SSMS) で、**sysadmin** である SQL Server アカウントを使用して Managed Instance に接続します。 **マスター** データベースで、次の T-SQL を実行します。
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 データのコピー元またはコピー先のデータベースに接続し、次の T-SQL を実行します。 
+1. データ ファクトリのマネージド ID 用に[包含データベース ユーザーを作成](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)します。 データのコピー元またはコピー先のデータベースに接続し、次の T-SQL を実行します。 
   
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 次のコードを実行します。 詳細については、[こちらのドキュメント](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current)を参照してください。
+1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 次のコードを実行します。 詳細については、[こちらのドキュメント](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current)を参照してください。
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
@@ -134,14 +134,13 @@ Azure SQL Managed Instance にマネージド ID 認証を使用するには、�
     > [!NOTE]
     >  現在、SSIS パッケージを SSIS デザイナーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server で実行しているときは、接続マネージャーのプロパティ `ConnectUsingManagedIdentity` は有効になりません (マネージド ID 認証が機能しないことを示します)。
     
-- **実行時に構成します。** パッケージを [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) または [Azure Data Factory の SSIS パッケージの実行アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)で実行するときは、ADO.NET 接続マネージャーを探します。 そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
+- **実行時に構成します。** パッケージを [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) または [Azure Data Factory の SSIS パッケージの実行アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)で実行するときは、ADO.NET 接続マネージャーを探します。 そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]
     >  Azure-SSIS 統合ランタイムでは、データベース接続を確立するためにマネージド ID 認証を使用すると、ADO.NET 接続マネージャーで事前構成済みの他のすべての認証方法 (統合認証、パスワードなど) はオーバーライドされます。
 
 > [!NOTE]
->  既存のパッケージでマネージド ID 認証を構成するための推奨される方法は、[最新の SSIS デザイナー](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)を使用して SSIS プロジェクトを少なくとも 1 回リビルドすることです。 SSIS プロジェクトのすべての ADO.NET 接続マネージャーに新しい接続マネージャー プロパティ `ConnectUsingManagedIdentity` が自動的に追加されるように、SSIS プロジェクトを Azure-SSIS 統合ランタイムに再配置します。 または、実行時にプロパティ パス **\Package.Connections[<接続マネージャーの名前>].Properties[ConnectUsingManagedIdentity]** を指定して、プロパティのオーバーライドを直接使用します。
+>  既存のパッケージでマネージド ID 認証を構成するための推奨される方法は、[最新の SSIS デザイナー](../../ssdt/download-sql-server-data-tools-ssdt.md)を使用して SSIS プロジェクトを少なくとも 1 回リビルドすることです。 SSIS プロジェクトのすべての ADO.NET 接続マネージャーに新しい接続マネージャー プロパティ `ConnectUsingManagedIdentity` が自動的に追加されるように、SSIS プロジェクトを Azure-SSIS 統合ランタイムに再配置します。 または、実行時にプロパティ パス **\Package.Connections[<接続マネージャーの名前>].Properties[ConnectUsingManagedIdentity]** を指定して、プロパティのオーバーライドを直接使用します。
 
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: Version - Transact SQL メタデータ関数
 title: VERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -13,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 360ac0905f452bedd5eeaf4691ccbbf3baedb89e
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1866248cf8f60f55ab0fd0d809c1ce55f7d24f59
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196996"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380527"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL メタデータ関数
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,8 +30,8 @@ ms.locfileid: "86196996"
   
 ## <a name="syntax"></a>構文  
   
-```  
--- Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
   
@@ -42,12 +43,12 @@ VERSION ( )
 ## <a name="examples"></a>例  
 次の例では、バージョン番号を返します。  
   
-```  
+```sql
 SELECT VERSION();  
 ```  
   
 ## <a name="see-also"></a>参照 
-[SESSION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/session-id-transact-sql.md)  
+[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

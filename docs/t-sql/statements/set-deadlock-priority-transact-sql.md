@@ -1,4 +1,5 @@
 ---
+description: SET DEADLOCK_PRIORITY (Transact-SQL)
 title: SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3786cdf92fce5c983e86b8f825d9d57a24e92dc3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 09d7e730404b21850ed58c1600808e5c2a388525
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394153"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540623"
 ---
 # <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,9 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 <numeric-priority> ::= { -10 | -9 | -8 | ... | 0 | ... | 8 | 9 | 10 }  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  LOW  
  現在のセッションがデッドロックに含まれ、そのデッドロック チェーンに含まれる他のセッションのデッドロックの優先度が NORMAL または HIGH または -5 を超える整数値のいずれかである場合、現在のセッションがデッドロックの対象になることが指定されます。 他のセッションのデッドロックの優先度の設定が -5 未満の整数値である場合、現在のセッションはデッドロックの対象とはなりません。 また、別のセッションのデッドロックの優先度が LOW または -5 と等しい整数値に設定されている場合、現在のセッションがデッドロックの対象になることが指定されます。  
   

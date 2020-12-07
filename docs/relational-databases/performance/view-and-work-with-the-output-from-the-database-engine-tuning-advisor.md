@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e81bbff1dd2eedace6ac7a5e535db9e9689157e8
+ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458577"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734675"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) からの出力を表示および操作する
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458577"
  また、GUI を使用して、 **dta** コマンド ライン ユーティリティによって生成したチューニング出力を表示できます。  
   
 > [!NOTE]  
->  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** メニューの **[ファイルを開く]** をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
+>  **dta** コマンド ライン ユーティリティを使用し、 **-ox** 引数を使用して出力を XML ファイルに書き込むように指定した場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ファイル]** メニューの **[ファイルを開く]** をクリックすると、XML 出力ファイルを開いて表示できます。 詳細については、「 [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)」を参照してください。 **dta** コマンド ライン ユーティリティの詳細については、「 [dta ユーティリティ](../../tools/dta/dta-utility.md)」を参照してください。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニングに関する推奨設定を表示するには  
   
@@ -92,7 +92,7 @@ ms.locfileid: "86458577"
   
 1.  データベース エンジン チューニング アドバイザー GUI または **dta** コマンド プロンプト ユーティリティを使用して、データベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを使用しない場合は、この手順を省略して手順 2. に進みます。  
   
-2.  データベース エンジン チューニング アドバイザー GUI を起動します。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションのチューニングに関する推奨設定を実装する場合は、 **セッション モニター**でセッション名をダブルクリックしてセッションを開きます。  
+2.  データベース エンジン チューニング アドバイザー GUI を起動します。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションのチューニングに関する推奨設定を実装する場合は、 **セッション モニター** でセッション名をダブルクリックしてセッションを開きます。  
   
 3.  新しいチューニング セッションが完了した後、またはツールによって既存のセッションが読み込まれた後で、 **[アクション]** メニューの **[推奨設定の適用]** をクリックします。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "86458577"
   
 ##### <a name="to-evaluate-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザー GUI でチューニングの推奨設定を評価するには  
   
-1.  データベース エンジン チューニング アドバイザー GUI を使用して、データベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを評価するには、 **セッション モニター**でそのチューニング セッションをダブルクリックします。  
+1.  データベース エンジン チューニング アドバイザー GUI を使用して、データベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを評価するには、 **セッション モニター** でそのチューニング セッションをダブルクリックします。  
   
 2.  **[推奨設定]** タブで、推奨の物理デザイン構造から使用しない構造を消去します。  
   
@@ -147,13 +147,13 @@ ms.locfileid: "86458577"
   
 ##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>dta コマンド ライン ユーティリティを使用して、チューニング セッションの結果を "what-if" 分析用にデータベース エンジン チューニング アドバイザー GUI からエクスポートするには  
   
-1.  データベース エンジン チューニング アドバイザー GUI を使用して、データベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを評価するには、 **セッション モニター**でチューニング セッションをダブルクリックします。  
+1.  データベース エンジン チューニング アドバイザー GUI を使用して、データベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを評価するには、 **セッション モニター** でチューニング セッションをダブルクリックします。  
   
 2.  **[ファイル]** メニューで **[セッション結果のエクスポート]** をクリックし、XML ファイルとして保存します。  
   
 3.  使い慣れた XML エディター、テキスト エディター、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、手順 2. で作成した XML ファイルを開きます。 **Configuration** 要素まで下方向にスクロールします。 **Configuration** 要素セクションをコピーし、XML 入力ファイル テンプレートの **TuningOptions** 要素の後に貼り付けます。 この XML 入力ファイルを保存します。  
   
-4.  手順 3. で作成した新しい XML 入力ファイルで、**TuningOptions** 要素にチューニング オプションを指定し、**Configuration** 要素セクションを編集し (分析に応じて適宜、物理デザイン構造を追加または削除)、ファイルを保存して、データベース エンジン チューニング アドバイザー XML スキーマに対する検証を行います。 この XML ファイルの編集方法については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
+4.  手順 3. で作成した新しい XML 入力ファイルで、 **TuningOptions** 要素にチューニング オプションを指定し、 **Configuration** 要素セクションを編集し (分析に応じて適宜、物理デザイン構造を追加または削除)、ファイルを保存して、データベース エンジン チューニング アドバイザー XML スキーマに対する検証を行います。 この XML ファイルの編集方法については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
 5.  **dta** コマンド ライン ユーティリティへの入力として、手順 4. で作成した XML ファイルを使用します。 このツールでの XML 入力ファイルの使用については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の「dta ユーティリティの使用によるデータベースのチューニング」を参照してください。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "86458577"
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
-3.  サンプルの XML 入力ファイルで、 **TuningOptions** 要素と **Configuration** 要素を編集します。 **TuningOptions** 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 **Configuration** 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 **TuningOptions** 親要素および **Configuration** 親要素と共に使用できる属性と子要素の詳細については、「[XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
+3.  サンプルの XML 入力ファイルで、 **TuningOptions** 要素と **Configuration** 要素を編集します。 **TuningOptions** 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 **Configuration** 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 **TuningOptions** 親要素および **Configuration** 親要素と共に使用できる属性と子要素の詳細については、「 [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)」を参照してください。  
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "86458577"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     データベース エンジン チューニング アドバイザーの XML スキーマは、[https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) から入手することもできます。  
+     データベース エンジン チューニング アドバイザーの XML スキーマは、[https://schemas.microsoft.com/sqlserver/2004/07/dta/](https://schemas.microsoft.com/sqlserver/2004/07/dta/) から入手することもできます。  
   
 6.  ワークロードと XML 入力ファイルの作成後、分析用に **dta** コマンド ライン ユーティリティに入力ファイルを送信できます。 ユーティリティの **-ox** 引数には、XML 出力ファイル名を指定します。 これにより、 **Configuration** 要素で指定した推奨構成で、XML 出力ファイルが作成されます。 データベース エンジン チューニング アドバイザーを再度実行して、出力に基づいた他の仮定の構成をチェックする場合は、出力ファイルから **Configuration** 要素コンテンツをコピーし、新しい XML 入力ファイルまたは元の XML 入力ファイルに貼り付けることができます。 **dta** ユーティリティでの XML 入力ファイルの使用の詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」の dta ユーティリティを使用してデータベースをチューニングする方法に関するセクションを参照してください。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "86458577"
 7.  必要なだけクエリ パフォーマンスを向上させる仮定の構成が作成されるまで、手順 6. と手順 7. を繰り返します。 その後、新しい構成を実装できます。 詳細については、このトピックの「 [チューニングに関する推奨設定の実装](#Implement) 」を参照してください。  
   
 ##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> チューニング セッションの確認、評価、および複製  
- データベースに対するワークロードの影響分析を開始するたびに、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成されます。 データベース エンジン チューニング アドバイザーの GUI にある**セッション モニター**を使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスで実行したすべてのチューニング セッションを表示したり、再度読み込んだりすることができます。 既存のすべてのチューニング セッションを参照できれば、既存のセッションを基にしてセッションを複製したり、既存のチューニング推奨設定を編集し、データベース エンジン チューニング アドバイザーで編集済みのセッションを評価したり、チューニングを定期的に実行して、データベースの物理設計を監視するなどの作業を簡単に行えます。 たとえば、データベースは毎月定期的にチューニングできます。  
+ データベースに対するワークロードの影響分析を開始するたびに、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成されます。 データベース エンジン チューニング アドバイザーの GUI にある **セッション モニター** を使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のインスタンスで実行したすべてのチューニング セッションを表示したり、再度読み込んだりすることができます。 既存のすべてのチューニング セッションを参照できれば、既存のセッションを基にしてセッションを複製したり、既存のチューニング推奨設定を編集し、データベース エンジン チューニング アドバイザーで編集済みのセッションを評価したり、チューニングを定期的に実行して、データベースの物理設計を監視するなどの作業を簡単に行えます。 たとえば、データベースは毎月定期的にチューニングできます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対するチューニング セッションを確認するには、データベース エンジン チューニング アドバイザーでワークロードをチューニングすることで、サーバー インスタンスにおけるチューニング セッションを作成する必要があります。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "86458577"
 4.  チューニング セッション名をダブルクリックすると、その情報がデータベース エンジン チューニング アドバイザーに読み込まれます。 セッション情報が読み込まれると、任意のタブを選択してこのチューニング セッションに関する情報を表示できるようになります。  
   
 ### <a name="evaluate-existing-tuning-sessions-as-hypothetical-configurations"></a>仮定構成としての既存のチューニング セッションの評価  
- 既存のチューニング セッションを評価するには、次の手順に従います。 既存のチューニング セッションを評価する場合は、そのセッションの推奨設定を表示し、必要に応じて編集した上で、再チューニングを行います。 たとえば、 **table1**のインデックスのみを作成する場合は、インデックス付きビューとパーティションの作成を既存のチューニング推奨設定から削除します。 すると、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成され、編集した推奨設定を仮定構成として、データベースに対するワークロードがチューニングされます。 つまり、編集した推奨設定を実装したものと仮定して、データベースに対するワークロードがチューニングされるので、限られた "what-if" 分析を実行することができます。 この what-if 分析が限られている理由は、データベース エンジン チューニング アドバイザー GUI を使用する場合、選択できるのは既存の推奨設定のサブセットのみであるためです。 完全な what-if 分析を実行し、以前のチューニング セッションのサブセットではない、完全に新しい仮定の構成を指定するには、データベース エンジン チューニング アドバイザーの XML 入力ファイルを **dta** コマンド ライン ユーティリティで使用する必要があります。  
+ 既存のチューニング セッションを評価するには、次の手順に従います。 既存のチューニング セッションを評価する場合は、そのセッションの推奨設定を表示し、必要に応じて編集した上で、再チューニングを行います。 たとえば、 **table1** のインデックスのみを作成する場合は、インデックス付きビューとパーティションの作成を既存のチューニング推奨設定から削除します。 すると、データベース エンジン チューニング アドバイザーによって新しいチューニング セッションが作成され、編集した推奨設定を仮定構成として、データベースに対するワークロードがチューニングされます。 つまり、編集した推奨設定を実装したものと仮定して、データベースに対するワークロードがチューニングされるので、限られた "what-if" 分析を実行することができます。 この what-if 分析が限られている理由は、データベース エンジン チューニング アドバイザー GUI を使用する場合、選択できるのは既存の推奨設定のサブセットのみであるためです。 完全な what-if 分析を実行し、以前のチューニング セッションのサブセットではない、完全に新しい仮定の構成を指定するには、データベース エンジン チューニング アドバイザーの XML 入力ファイルを **dta** コマンド ライン ユーティリティで使用する必要があります。  
   
 ##### <a name="to-evaluate-an-existing-tuning-session"></a>既存のチューニング セッションを評価するには  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458577"
 ## <a name="see-also"></a>参照  
  [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [dta ユーティリティ](../../tools/dta/dta-utility.md)  
-  
   

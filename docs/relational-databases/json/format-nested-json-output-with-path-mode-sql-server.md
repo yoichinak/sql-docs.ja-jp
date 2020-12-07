@@ -1,4 +1,5 @@
 ---
+description: PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server)
 title: PATH モードで入れ子になった JSON 出力を書式設定する
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee7d60d05e1238dc48e872338ed1a19cdb81667
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8c091618be5e414faa15e200fc8b30230f793eaf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96130244"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85722283"
  -   **AUTO** オプションの詳細については、「[Format JSON Output Automatically with AUTO Mode](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)」 (AUTO モードで自動的に JSON 出力を書式設定する) を参照してください。
  -   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」 (FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
  
-以下に、 **FOR JSON** 句で **PATH** オプションを使用した例を示します。 次の例に示すように、ドット区切りの列名を使用するか、入れ子になったクエリを使用して、入れ子になった結果を書式設定します。 既定では、**FOR JSON** 出力に null 値は含まれません。  
+以下に、 **FOR JSON** 句で **PATH** オプションを使用した例を示します。 次の例に示すように、ドット区切りの列名を使用するか、入れ子になったクエリを使用して、入れ子になった結果を書式設定します。 既定では、**FOR JSON** 出力に null 値は含まれません。  [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) は、フラット文字列を表示するのではなく、(この記事に示されているように) JSON の結果を自動的に書式設定するので、JSON クエリ用に推奨されるクエリ エディターです。
 
 ## <a name="example---dot-separated-column-names"></a>例: ドット区切りの列名  
 次のクエリは、AdventureWorks `Person` テーブルの最初の 5 行を JSON として書式設定します。  

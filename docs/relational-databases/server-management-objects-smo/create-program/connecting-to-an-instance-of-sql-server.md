@@ -1,4 +1,5 @@
 ---
+description: SQL Server のインスタンスへの接続
 title: SQL Server のインスタンスへの接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2bcbea3415d26de6146609c1493a2c86781bc8b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 32e004da26b8cba5df8b44e4fbef3fd90967cdfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490461"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>SQL Server のインスタンスへの接続
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +52,7 @@ ms.locfileid: "86006383"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>RMO の SQL Server のインスタンスへの接続  
  レプリケーション管理オブジェクト (RMO) では、レプリケーション サーバーへの接続には、SMO とは少し異なる方法を使用します。  
   
- RMO プログラミングオブジェクトを使用するには、のインスタンスへの接続 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> **Microsoft**の名前空間によって実装されたオブジェクトを使用して行われる必要があります。 サーバーへのこの接続は、RMO プログラミング オブジェクトからは独立して行われます。 そして、インスタンスの作成時、またはオブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティへの割り当てによって、RMO オブジェクトに渡されます。 この方法では、RMO プログラミング オブジェクトおよび接続オブジェクト インスタンスを別々に作成および管理することが可能となり、単一の接続オブジェクトを複数の RMO プログラミング オブジェクトと共に再利用することができます。 レプリケーション サーバーへの接続には、次の規則が適用されます。  
+ RMO プログラミングオブジェクトを使用するには、のインスタンスへの接続 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が、 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> **Microsoft** の名前空間によって実装されたオブジェクトを使用して行われる必要があります。 サーバーへのこの接続は、RMO プログラミング オブジェクトからは独立して行われます。 そして、インスタンスの作成時、またはオブジェクトの <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティへの割り当てによって、RMO オブジェクトに渡されます。 この方法では、RMO プログラミング オブジェクトおよび接続オブジェクト インスタンスを別々に作成および管理することが可能となり、単一の接続オブジェクトを複数の RMO プログラミング オブジェクトと共に再利用することができます。 レプリケーション サーバーへの接続には、次の規則が適用されます。  
   
 -   接続のプロパティはすべて、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクトに対して定義します。  
   
@@ -63,7 +65,7 @@ ms.locfileid: "86006383"
 -   <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> メソッドは、RMO プログラミング オブジェクトに接続を渡す前に呼び出す必要があります。  
   
 ## <a name="examples"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「  [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のローカル インスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル インスタンスへの接続に必要なコードは多くありません。 ただし、認証方法とサーバーの既定の設定によってコードが異なります。 接続は、データの取得を必要とする操作が初めて発生する際に作成します。  
@@ -98,7 +100,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Visual Basic で Windows 認証を使用して SQL Server のリモート インスタンスに接続する  
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要はありません。 既定は Windows 認証です。  
   
- この例は [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 認証を使用してのリモートインスタンスに接続する .net コードです。 文字列変数*Strserver*には、リモートインスタンスの名前が含まれています。  
+ この例は [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 認証を使用してのリモートインスタンスに接続する .net コードです。 文字列変数 *Strserver* には、リモートインスタンスの名前が含まれています。  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -113,7 +115,7 @@ Console.WriteLine(srv.Information.Version)
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-c"></a>Visual C# で Windows 認証を使用して SQL Server のリモート インスタンスに接続する  
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要はありません。 既定は Windows 認証です。  
   
- この例は、Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のリモート インスタンスに接続する Visual C# .NET コードです。 文字列変数*Strserver*には、リモートインスタンスの名前が含まれています。  
+ この例は、Windows 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のリモート インスタンスに接続する Visual C# .NET コードです。 文字列変数 *Strserver* には、リモートインスタンスの名前が含まれています。  
   
 ```csharp  
 {   
@@ -130,7 +132,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Visual Basic で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
- この例は、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] リモートの接続方法と、ログオンとパスワードを格納する*vpassword*を示す .net コードです。  
+ この例は、 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] リモートの接続方法と、ログオンとパスワードを格納する *vpassword* を示す .net コードです。  
   
 ```VBNET  
 ' compile with:   
@@ -178,7 +180,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>Visual C# で SQL Server 認証を使用して SQL Server のインスタンスに接続する  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続する場合、認証の種類を指定する必要があります。 この例では、もう 1 つの方法として、<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト変数を宣言する方法を示します。この方法では、接続情報の再利用が可能になります。  
   
- この例は、リモートと*Vpassword*に接続してログオンとパスワードを格納する方法を示す Visual C# .net コードです。  
+ この例は、リモートと *Vpassword* に接続してログオンとパスワードを格納する方法を示す Visual C# .net コードです。  
   
 ```csharp  
 // compile with:   

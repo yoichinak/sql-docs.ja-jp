@@ -7,18 +7,17 @@ ms.date: 11/20/2019
 ms.topic: how-to
 author: garyericson
 ms.author: garye
-ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: a1a135588c9775758008b5db9ffca38e6ff3d041
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55d2917d149a4c88dbfddf614971c8d4f1e60d26
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723955"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869955"
 ---
 # <a name="install-packages-with-r-tools"></a>R ツールを使用してパッケージをインストールする
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 この記事では、標準の R ツールを使用して、新しい R パッケージを SQL Server Machine Learning Services または SQL Server R Services のインスタンスにインストールする方法について説明します。 インターネットに接続されている SQL Server だけでなく、インターネットから切り離されている SQL Server にもパッケージをインストールできます。
 
@@ -127,4 +126,4 @@ ZIP ファイルが SQL Server インスタンス上にある場合は、標準�
 
 + [R パッケージ情報の取得](r-package-information.md)
 + [R パッケージを使用するためのヒント](tips-for-using-r-packages.md)
-+ [SQL Server の R 言語のチュートリアル](../tutorials/sql-server-r-tutorials.md)
++ [SQL Server の R 言語のチュートリアル](../tutorials/r-tutorials.md)

@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_column_store_segments (Transact-sql)
+description: sys.pdw_nodes_column_store_segments (Transact-sql)
+title: sys.pdw_nodes_column_store_segments (Transact-sql)
 ms.custom: seo-dt-2019
 ms.date: 03/28/2018
 ms.prod: sql
@@ -13,14 +14,14 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc1e04718ea9db16d3b0c2a1cc59b14f906c6f31
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 47e0b471f4622a66fa3ecba7dfa73fdaf8fa08e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197193"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034790"
 ---
-# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>pdw_nodes_column_store_segments (Transact-sql)
+# <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-sql)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
@@ -49,7 +50,7 @@ ms.locfileid: "86197193"
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-論理テーブルあたりの列ストアセグメントの数を決定するには、他のシステムテーブルと共に sys. pdw_nodes_column_store_segments を結合します。
+他のシステムテーブルと sys.pdw_nodes_column_store_segments を結合して、論理テーブルあたりの列ストアセグメントの数を決定します。
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -84,9 +85,9 @@ ORDER BY    table_nm
 
 **VIEW SERVER STATE** アクセス許可が必要です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
-[pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
-[pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)
+[sys.pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

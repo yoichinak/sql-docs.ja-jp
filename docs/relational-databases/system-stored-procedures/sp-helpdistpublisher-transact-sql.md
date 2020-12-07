@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistpublisher (Transact-SQL)
 title: sp_helpdistpublisher (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 129192de74a83232334437035599cffe24a910d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749335"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543343"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'`プロパティが返されるパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は **%** です。  
+`[ @publisher = ] 'publisher'` プロパティが返されるパブリッシャーを指定します。 *publisher* は **sysname**で、既定値は **%** です。  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -52,28 +53,28 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**ログイン**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
 |**password**|**nvarchar (524)**|単純な暗号化形式で返されるパスワードです。 **Sysadmin**以外のユーザーのパスワードは NULL です。|  
 |**active**|**bit**|リモートパブリッシャーがローカルサーバーをディストリビューターとして使用しているかどうか。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**working_directory**|**nvarchar(255)**|作業ディレクトリの名前。|  
-|**テッド**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 以降のバージョンでは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これは常に**0**を返す必要があります。これは、パスワードが必要であることを意味します。|  
+|**working_directory**|**nvarchar (255)**|作業ディレクトリの名前。|  
+|**テッド**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 以降のバージョンでは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、これは常に **0**を返す必要があります。これは、パスワードが必要であることを意味します。|  
 |**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、oracle、または oracle ゲートウェイパブリッシャー。<br /><br /> **1** = サードパーティのアプリケーションを使用して、パブリッシャーはと統合されてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**publisher_type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
 |**publisher_data_source**|**nvarchar (4000)**|パブリッシャーでの OLE DB データ ソースの名前です。|  
 |**storage_connection_string**|**nvarchar (4000)**|ディストリビューターまたはパブリッシャーが Azure SQL Database にある場合の作業ディレクトリのストレージアクセスキー。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_helpdistpublisher**は、すべての種類のレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_helpdistpublisher** は、すべての種類のレプリケーションで使用されます。  
   
- **sp_helpdistpublisher**では、**sysadmin**以外のログインの結果セットには、パブリッシャーのログインまたはパスワードは表示されません。  
+ **sp_helpdistpublisher** では、**sysadmin** 以外のログインの結果セットには、パブリッシャーのログインまたはパスワードは表示されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーは、ローカルサーバーをディストリビューターとして使用している任意のパブリッシャーに対して**sp_helpdistpublisher**を実行できます。 ディストリビューションデータベースの**db_owner**固定データベースロールまたは**replmonitor**ロールのメンバーは、そのディストリビューションデータベースを使用しているすべてのパブリッシャーに対して**sp_helpdistpublisher**を実行できます。 指定された*パブリッシャー*にあるパブリケーションのパブリケーションアクセスリストのユーザーは**sp_helpdistpublisher**を実行できます。 場合*パブリッシャー*が指定されていない、ユーザーがアクセス権を持っているすべてのパブリッシャーの情報が返されます。  
+ **Sysadmin**固定サーバーロールのメンバーは、ローカルサーバーをディストリビューターとして使用している任意のパブリッシャーに対して**sp_helpdistpublisher**を実行できます。 ディストリビューションデータベースの **db_owner** 固定データベースロールまたは **replmonitor** ロールのメンバーは、そのディストリビューションデータベースを使用しているすべてのパブリッシャーに対して **sp_helpdistpublisher** を実行できます。 指定された *パブリッシャー* にあるパブリケーションのパブリケーションアクセスリストのユーザーは **sp_helpdistpublisher**を実行できます。 場合 *パブリッシャー* が指定されていない、ユーザーがアクセス権を持っているすべてのパブリッシャーの情報が返されます。  
   
-## <a name="see-also"></a>関連項目  
- [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+## <a name="see-also"></a>参照  
+ [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

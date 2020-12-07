@@ -1,4 +1,5 @@
 ---
+description: GRANT (データベース スコープの資格情報の権限の許可) (Transact-SQL)
 title: GRANT (データベース スコープの資格情報の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2017
@@ -21,12 +22,12 @@ ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1566d978da2ca0ea7e40e146b1b1d5a2bbc3661
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f65bf32fb857b5039f6a48e26d48a8f49eca5a04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472234"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT (データベース スコープの資格情報の権限の許可) (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -54,7 +55,7 @@ GRANT permission  [ ,...n ]
  権限を許可するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれか:  
+ 権限を許可するプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -69,7 +70,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -80,7 +81,7 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  データベース スコープの資格情報は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、データベース スコープの資格情報で許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に一覧で示します。  
   
 |データベース スコープの資格情報の権限|権限が含まれるデータベース スコープの資格情報の権限|権限が含まれるデータベース権限|  

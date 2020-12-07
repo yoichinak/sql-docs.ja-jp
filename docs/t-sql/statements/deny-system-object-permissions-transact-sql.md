@@ -1,4 +1,5 @@
 ---
+description: DENY (システム オブジェクトの権限の拒否) (Transact-SQL)
 title: DENY (システム オブジェクトの権限の拒否) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e4e866d6cc2c117599f276b51569321cc2ba6107
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: abfb423e90d8c7776fe9d2f5eb8815a37254a3b8
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484160"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131376"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY (システム オブジェクトの権限の拒否) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,14 +35,13 @@ ms.locfileid: "86484160"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
- **[sys.]**  
+ [ **sys.**]  
  **sys** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
   
  *system_object*  
@@ -66,7 +66,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  次のクエリでは、システム オブジェクトの権限に関する情報が返されます。  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -78,9 +78,9 @@ GO
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、`EXECUTE` に対し、`xp_cmdshell` の `public` 権限を拒否します。  
+ 次の例では、`public` に対し、`xp_cmdshell` の `EXECUTE` 権限を拒否します。  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  

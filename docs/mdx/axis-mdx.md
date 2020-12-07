@@ -1,4 +1,5 @@
 ---
+description: Axis (MDX)
 title: 軸 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47e0da231b0792e0099f5e6ee4fe8eda9fb45f9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421936"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
 
@@ -31,13 +32,13 @@ Axis(Axis_Number)
  *Axis_Number*  
  軸番号を指定する有効な数値式です。  
   
-## <a name="remarks"></a>Remarks  
- Axis**関数は、軸**の0から始まる位置を使用して、軸上の組のセットを返します。 たとえば、は`Axis(0)` COLUMNS 軸を返し、 `Axis(1)`は ROWS 軸を返します。 **軸**関数は、フィルター軸では使用できません。 この関数を使用すると、実行されているクエリのコンテキストを計算されるメンバーに認識させることができます。 たとえば、ROWS 軸上で選択されたメンバーのみの合計を提供する、計算されるメンバーが必要になる場合があります。 また、この関数を使用すると、一方の軸の定義をもう一方の軸の定義に依存させることもできます。 たとえば、COLUMNS 軸の最初の項目の値に応じて ROWS 軸の内容を並べ替えます。  
+## <a name="remarks"></a>解説  
+ Axis **関数は、軸** の0から始まる位置を使用して、軸上の組のセットを返します。 たとえば、は `Axis(0)` COLUMNS 軸を返し、は `Axis(1)` ROWS 軸を返します。 **軸**関数は、フィルター軸では使用できません。 この関数を使用すると、実行されているクエリのコンテキストを計算されるメンバーに認識させることができます。 たとえば、ROWS 軸上で選択されたメンバーのみの合計を提供する、計算されるメンバーが必要になる場合があります。 また、この関数を使用すると、一方の軸の定義をもう一方の軸の定義に依存させることもできます。 たとえば、COLUMNS 軸の最初の項目の値に応じて ROWS 軸の内容を並べ替えます。  
   
 > [!NOTE]  
->  軸は、前の軸だけを参照できます。 たとえば、行`Axis(0)`またはページの軸のように、列の軸を評価した後にを実行する必要があります。  
+>  軸は、前の軸だけを参照できます。 たとえば、 `Axis(0)` 行またはページの軸のように、列の軸を評価した後にを実行する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のクエリの例では、軸関数を使用する方法を示します。  
   
  `WITH MEMBER MEASURES.AXISDEMO AS`  

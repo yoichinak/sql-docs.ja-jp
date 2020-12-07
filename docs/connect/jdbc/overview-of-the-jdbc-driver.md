@@ -2,7 +2,7 @@
 title: JDBC ドライバーの概要 | Microsoft Docs
 description: Microsoft JDBC Driver for SQL Server は、SQL データベースへのデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバーです。
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529339"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943655"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC ドライバーの概要
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server は、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008、および Azure SQL Database への堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバーです。  
+Microsoft JDBC Driver for SQL Server は、SQL Server データベースと Azure SQL データベースへの堅牢なデータ アクセスを提供する Type 4 Java Database Connectivity (JDBC) 4.2 準拠のドライバーです。  
 
 ## <a name="redistribution"></a>再配布
 
-JDBC Driver バージョン 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
+JDBC Driver バージョン 6.0 以降は再頒布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
 
-JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポートは 2018 までに有効期限が切れています。
+JDBC Driver バージョン 4.x は非推奨です。 4\.x のサポートは 2018 までに有効期限が切れています。
 
 ## <a name="in-this-section"></a>このセクションの内容  
 

@@ -1,4 +1,5 @@
 ---
+description: 接続の確立
 title: 接続を確立する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f71190a8a2ca1dd8af0d28adb5531540fb1b57e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4256f3f0fe3e082b789d3758ece9bf7c8919eacb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482935"
 ---
 # <a name="establishing-a-connection"></a>接続の確立
-環境ハンドルと接続ハンドルを割り当て、接続属性を設定すると、アプリケーションはデータソースまたはドライバーに接続する準備が整います。 アプリケーションでは、 **SQLConnect** (コアインターフェイス準拠レベル)、 **SQLDriverConnect** (Core)、および**SQLBrowseConnect** (レベル 1) という3つの異なる機能を使用できます。 3つはそれぞれ、異なるシナリオで使用するように設計されています。 接続する前に、アプリケーションでは、 **Sqldrivers**によって返される**connectfunctions**キーワードでサポートされている関数を特定できます。  
+環境ハンドルと接続ハンドルを割り当て、接続属性を設定すると、アプリケーションはデータソースまたはドライバーに接続する準備が整います。 アプリケーションでは、 **SQLConnect** (コアインターフェイス準拠レベル)、 **SQLDriverConnect** (Core)、および **SQLBrowseConnect** (レベル 1) という3つの異なる機能を使用できます。 3つはそれぞれ、異なるシナリオで使用するように設計されています。 接続する前に、アプリケーションでは、 **Sqldrivers**によって返される**connectfunctions**キーワードでサポートされている関数を特定できます。  
   
 > [!NOTE]  
->  一部のドライバーでは、サポートするアクティブな接続の数が制限されています。 アプリケーションは、SQL_MAX_DRIVER_CONNECTIONS オプションを使用して**SQLGetInfo**を呼び出し、特定のドライバーがサポートするアクティブな接続の数を決定します。  
+>  一部のドライバーでは、サポートするアクティブな接続の数が制限されています。 アプリケーションは、SQL_MAX_DRIVER_CONNECTIONS オプションを使用して **SQLGetInfo** を呼び出し、特定のドライバーがサポートするアクティブな接続の数を決定します。  
   
  このセクションでは、次のトピックを扱います。  
   
--   [既定のデータ ソース](../../../odbc/reference/develop-app/default-data-source.md)  
+-   [既定のデータソース](../../../odbc/reference/develop-app/default-data-source.md)  
   
 -   [SQLConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md)  
   

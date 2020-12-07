@@ -1,4 +1,5 @@
 ---
+description: フルテキスト インデックスの作成のトラブルシューティング
 title: フルテキスト インデックスの作成のトラブルシューティング | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c11c753528ed4fdc723ee45884093d9c5ec95dc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325903"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>フルテキスト インデックスの作成のトラブルシューティング
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85628969"
  データベースのトランザクション ログを復元する場合、フルテキスト インデックスの状態に一貫性がないという警告が表示されることがあります。 この警告の原因は、データベースのバックアップ後にテーブルのフルテキスト インデックスが変更されたことにあります。 フルテキスト インデックスを一貫性のある状態に戻すには、テーブルに対してすべてのカタログの作成 (クロール) を実行します。 詳細については、「 [フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)  
   

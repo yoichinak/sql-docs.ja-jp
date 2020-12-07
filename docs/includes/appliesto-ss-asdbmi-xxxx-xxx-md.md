@@ -1,1 +1,0 @@
-<Token>**適用対象:** ![はい ](media/yes-icon.png) SQL Server ![ ○ ](media/yes-icon.png) azure SQL Managed Instance ![ no ](media/no-icon.png) AZURE Synapse Analytics (SQL DW) ![ × ](media/no-icon.png) Parallel Data Warehouse</Token>

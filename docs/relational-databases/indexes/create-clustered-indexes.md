@@ -1,4 +1,5 @@
 ---
+description: クラスター化インデックスの作成
 title: クラスター化インデックスの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760830"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130261"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85760830"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **テーブルにクラスター化インデックスを作成するために使用するもの:**  
   
@@ -83,7 +84,7 @@ ms.locfileid: "85760830"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを作成するテーブルを展開します。  
   
-2.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントして、 **[クラスター化インデックス...]** を選択します。  
+2.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントして、**[クラスター化インデックス...]** を選択します。  
   
 3.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85760830"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを含むテーブルを作成するデータベースを展開します。  
   
-2.  **[テーブル]** フォルダーを右クリックし、 **[新しいテーブル...]** をクリックします。  
+2.  **[テーブル]** フォルダーを右クリックし、**[新しいテーブル...]** をクリックします。  
   
 3.  通常どおりに新しいテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」を参照してください。  
   
@@ -121,7 +122,7 @@ ms.locfileid: "85760830"
   
 #### <a name="to-create-a-clustered-index"></a>クラスター化インデックスを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -145,7 +146,7 @@ ms.locfileid: "85760830"
   
  詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [主キーの作成](../../relational-databases/tables/create-primary-keys.md)   
  [UNIQUE 制約の作成](../../relational-databases/tables/create-unique-constraints.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: JDBC の FIPS モード
 title: JDBC の FIPS モード | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83ce3690d194b8b06fc79d58c2d7bc7efa996619
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 9a8e6af7e191576ec4fe056c048a4f4a4b7901c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81293382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438394"
 ---
 # <a name="fips-mode"></a>FIPS モード
 
@@ -84,7 +85,7 @@ JDBC ドライバーを FIPS 準拠モードで実行するには、次の表に
 
 #### <a name="properties"></a>Properties 
 
-|プロパティ|Type|Default|説明|Notes|
+|プロパティ|種類|Default|説明|Notes|
 |---|---|---|---|---|
 |encrypt|boolean ["true / false"]|"false"|FIPS 対応 JVM の場合、暗号化プロパティを **true** にする必要があります。||
 |TrustServerCertificate|boolean ["true / false"]|"false"|FIPS の場合、ユーザーは、証明書チェーンを検証する必要があるため、このプロパティには値 **"false"** を使用する必要があります。 ||

@@ -1,4 +1,5 @@
 ---
+description: MATCH (Transact-SQL)
 title: MATCH (SQL グラフ) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b3d0f5307b8a9b96dec8b81f00550dbcd639ac9a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555587"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91116261"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -146,9 +147,9 @@ MATCH パターンでは、OR および NOT 演算子はサポートされてい
 ### <a name="a--find-a-friend"></a>A.  友達の検索 
  次の例では、Person ノード テーブルと friend エッジ テーブルを作成し、いくつかデータを挿入し、MATCH を使用して、グラフの Alice の友人を検索します。
 
- ```
+ ```sql
  -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+ CREATE TABLE dbo.Person (ID INTEGER PRIMARY KEY, name VARCHAR(50)) AS NODE;
  CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
  -- Insert into node table
@@ -171,24 +172,22 @@ SELECT Person2.name AS FriendName
 FROM Person Person1, friend, Person Person2
 WHERE MATCH(Person1-(friend)->Person2)
 AND Person1.name = 'Alice';
-
  ```
 
  ### <a name="b--find-friend-of-a-friend"></a>B.  友人の友人の検索
  次の例では、Alice の友人の友人の検索を試行します。 
 
- ```
+ ```sql
 SELECT Person3.name AS FriendName 
 FROM Person Person1, friend, Person Person2, friend friend2, Person Person3
 WHERE MATCH(Person1-(friend)->Person2-(friend2)->Person3)
 AND Person1.name = 'Alice';
-
  ```
 
 ### <a name="c--more-match-patterns"></a>C.  その他の `MATCH` パターン
  MATCH 内でパターンを指定する他のいくつかの方法を次に示します。
 
- ```
+ ```sql
  -- Find a friend
     SELECT Person2.name AS FriendName
     FROM Person Person1, friend, Person Person2

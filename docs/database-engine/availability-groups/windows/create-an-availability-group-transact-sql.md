@@ -6,18 +6,18 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e6235f980627ad56d18330031c3bae6995eb45d2
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565283"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584417"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) を使用した Always On 可用性グループの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "87565283"
   
     1.  次の例の [!INCLUDE[tsql](../../../includes/tsql-md.md)] では、これらのデータベースを作成し、完全復旧モデルを使用するように変更を加えています。  
   
-        ```  
+        ```sql  
         -- Create sample databases:  
         CREATE DATABASE MyDb1;  
         GO  
@@ -100,20 +100,19 @@ ms.locfileid: "87565283"
         GO  
         ```  
   
-    2.  次のコード例では、 *MyDb1* および *MyDb2*データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ共有 \\\\*FILESERVER*\\*SQLbackups*を使用します。  
+    2.  次のコード例では、 *MyDb1* および *MyDb2* データベースの完全バックアップを作成します。 このコード例では、架空のバックアップ共有 \\\\*FILESERVER*\\*SQLbackups* を使用します。  
   
-        ```  
+        ```sql  
         -- Backup sample databases:  
         BACKUP DATABASE MyDb1   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
   
         BACKUP DATABASE MyDb2   
         TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-            WITH FORMAT  
+            WITH FORMAT;  
         GO  
-  
         ```  
   
  [&#91;TopOfExample&#93;](#ExampleConfigAGWinAuth)  
@@ -130,26 +129,24 @@ ms.locfileid: "87565283"
   
 1.  可用性グループの作成先となるサーバー インスタンス ( *上の* という名前のインスタンス) 上に、 `AgHostInstance` dbm_endpoint `COMPUTER01`という名前のデータベース ミラーリング エンドポイントを作成します。 このエンドポイントはポート 7022 を使用します。 可用性グループの作成先となるサーバー インスタンスには、プライマリ レプリカがホストされることに注意してください。  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the primary replica:  
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 2.  セカンダリ レプリカをホストするサーバー インスタンス ( *上の既定のサーバー インスタンス) 上にエンドポイント* dbm_endpoint `COMPUTER02`を作成します。 このエンドポイントはポート 5022 を使用します。  
   
-    ```  
+    ```sql  
     -- Create endpoint on server instance that hosts the secondary replica:   
     CREATE ENDPOINT dbm_endpoint  
         STATE=STARTED   
         AS TCP (LISTENER_PORT=5022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
+        FOR DATABASE_MIRRORING (ROLE=ALL);  
     GO  
-  
     ```  
   
 3.  > [!NOTE]  
@@ -157,9 +154,9 @@ ms.locfileid: "87565283"
   
      2 つのサーバー インスタンスのサービス アカウントが、互いに異なるドメイン ユーザーで実行されている場合、それぞれのサーバー インスタンス上に、相手のサーバー インスタンス用のログインを作成し、このログイン権限に、ローカルのデータベース ミラーリング エンドポイントのアクセス権を付与します。  
   
-     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 ここでは、リモート サーバー インスタンスのドメイン アカウントを *domain_name*\\*user_name*としています。  
+     ログインを作成し、エンドポイントの権限を付与するための [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例を次に示します。 ここでは、リモート サーバー インスタンスのドメイン アカウントを *domain_name*\\*user_name* としています。  
   
-    ```  
+    ```sql  
     -- If necessary, create a login for the service account, domain_name\user_name  
     -- of the server instance that will host the other replica:  
     USE master;  
@@ -174,11 +171,10 @@ ms.locfileid: "87565283"
   
 4.  ユーザー データベースが存在するサーバー インスタンス上に、可用性グループを作成します。  
   
-     次のコード例では、サンプル データベースの *MyDb1* と *MyDb2* を作成したサーバー インスタンス上に、 *MyAG*という名前の可用性グループを作成しています。 最初に、 `AgHostInstance`COMPUTER01 *上のローカル サーバー インスタンス (* ) が指定されています。 初期プライマリ レプリカは、このインスタンスによってホストされます。 リモート サーバー インスタンス ( *COMPUTER02*上の既定のサーバー インスタンス) は、セカンダリ レプリカをホストするように指定されています。 どちらの可用性レプリカも、非同期コミット モードと手動フェールオーバーを使用するように構成します (非同期コミットのレプリカでは、手動フェールオーバーは、データ損失の可能性を伴う強制フェールオーバーを意味します)。  
+     次のコード例では、サンプル データベースの *MyDb1* と *MyDb2* を作成したサーバー インスタンス上に、 *MyAG* という名前の可用性グループを作成しています。 最初に、 `AgHostInstance`COMPUTER01 *上のローカル サーバー インスタンス (* ) が指定されています。 初期プライマリ レプリカは、このインスタンスによってホストされます。 リモート サーバー インスタンス ( *COMPUTER02* 上の既定のサーバー インスタンス) は、セカンダリ レプリカをホストするように指定されています。 どちらの可用性レプリカも、非同期コミット モードと手動フェールオーバーを使用するように構成します (非同期コミットのレプリカでは、手動フェールオーバーは、データ損失の可能性を伴う強制フェールオーバーを意味します)。  
   
-    ```  
-  
-              -- Create the availability group, MyAG:   
+    ```sql
+    -- Create the availability group, MyAG:   
     CREATE AVAILABILITY GROUP MyAG   
        FOR   
           DATABASE MyDB1, MyDB2   
@@ -204,7 +200,7 @@ ms.locfileid: "87565283"
   
      次のコード例では、 `COMPUTER02` 上のセカンダリ レプリカを `MyAG` 可用性グループに参加させています。  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- join the secondary replica to the availability group:  
     ALTER AVAILABILITY GROUP MyAG JOIN;  
@@ -215,19 +211,18 @@ ms.locfileid: "87565283"
   
      次のコード例では、RESTORE WITH NORECOVERY でデータベース バックアップを復元することによって、 *MyDb1* と *MyDb2* のセカンダリ データベースを作成しています。  
   
-    ```  
+    ```sql 
     -- On the server instance that hosts the secondary replica,   
     -- Restore database backups using the WITH NORECOVERY option:  
     RESTORE DATABASE MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NORECOVERY  
+        WITH NORECOVERY;  
     GO  
   
     RESTORE DATABASE MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH NORECOVERY  
-    GO  
-  
+        WITH NORECOVERY;  
+    GO 
     ```  
   
 7.  プライマリ レプリカをホストするサーバー インスタンス上で、各プライマリ データベースのトランザクション ログをバックアップします。  
@@ -237,19 +232,18 @@ ms.locfileid: "87565283"
   
      次のコード例では、MyDb1 および MyDb2 のトランザクション ログのバックアップを作成します。  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the primary replica,   
     -- Backup the transaction log on each primary database:  
     BACKUP LOG MyDb1   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH NOFORMAT  
+        WITH NOFORMAT;  
     GO  
   
     BACKUP LOG MyDb2   
     TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITHNOFORMAT  
-    GO  
-  
+        WITHNOFORMAT;  
+    GO
     ```  
   
     > [!TIP]  
@@ -262,16 +256,16 @@ ms.locfileid: "87565283"
     > [!IMPORTANT]  
     >  実際のセカンダリ データベースを準備する際は、セカンダリ データベースの作成元となったデータベース バックアップの後に作成されたすべてのログ バックアップを適用する必要があります。その際には古いものから順に適用し、毎回 WITH NORECOVERY を使用します。 当然、完全と差分の両方のデータベース バックアップを復元する場合は、差分バックアップ以降に作成されたログ バックアップを適用するだけでかまいません。  
   
-    ```  
+    ```sql  
     -- Restore the transaction log on each secondary database,  
     -- using the WITH NORECOVERY option:  
     RESTORE LOG MyDb1   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     RESTORE LOG MyDb2   
         FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-        WITH FILE=1, NORECOVERY  
+        WITH FILE=1, NORECOVERY;  
     GO  
     ```  
   
@@ -279,7 +273,7 @@ ms.locfileid: "87565283"
   
      次のコード例では、 *MyDb1* のセカンダリ データベースと *MyDb2* のセカンダリ データベースを順に *MyAG* 可用性グループに参加させています。  
   
-    ```  
+    ```sql  
     -- On the server instance that hosts the secondary replica,   
     -- join each secondary database to the availability group:  
     ALTER DATABASE MyDb1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -287,7 +281,6 @@ ms.locfileid: "87565283"
   
     ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
     GO  
-  
     ```  
   
 ###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> サンプル構成プロシージャの完全なコード例  
@@ -313,7 +306,7 @@ ms.locfileid: "87565283"
 > [!NOTE]  
 >  可用性グループを作成するための他の [!INCLUDE[tsql](../../../includes/tsql-md.md)] コード例については、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」を参照してください。  
   
-```  
+```sql  
 -- on the server instance that will host the primary replica,   
 -- create sample databases:  
 CREATE DATABASE MyDb1;  
@@ -329,26 +322,26 @@ GO
 -- Backup sample databases:  
 BACKUP DATABASE MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 BACKUP DATABASE MyDb2   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FORMAT  
+    WITH FORMAT;  
 GO  
   
 -- Create the endpoint on the server instance that will host the primary replica:  
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- Create the endpoint on the server instance that will host the secondary replica:   
 CREATE ENDPOINT dbm_endpoint  
     STATE=STARTED   
     AS TCP (LISTENER_PORT=7022)   
-    FOR DATABASE_MIRRORING (ROLE=ALL)  
+    FOR DATABASE_MIRRORING (ROLE=ALL);  
 GO  
   
 -- If both service accounts run under the same domain account, skip this step. Otherwise,   
@@ -406,18 +399,18 @@ GO
 -- Restore database backups onto this server instance, using RESTORE WITH NORECOVERY:  
 RESTORE DATABASE MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 RESTORE DATABASE MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH NORECOVERY  
+    WITH NORECOVERY;  
 GO  
   
 -- Back up the transaction log on each primary database:  
 BACKUP LOG MyDb1   
 TO DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH NOFORMAT  
+    WITH NOFORMAT;  
 GO  
   
 BACKUP LOG MyDb2   
@@ -429,11 +422,11 @@ GO
 -- using the WITH NORECOVERY option:  
 RESTORE LOG MyDb1   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb1.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
 RESTORE LOG MyDb2   
     FROM DISK = N'\\FILESERVER\SQLbackups\MyDb2.bak'   
-    WITH FILE=1, NORECOVERY  
+    WITH FILE=1, NORECOVERY;  
 GO  
   
 -- On the server instance that hosts the secondary replica,   
@@ -443,7 +436,6 @@ GO
   
 ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;  
 GO  
-  
 ```  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
@@ -509,11 +501,11 @@ GO
   
 -   **ブログ:**  
   
-     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](/archive/blogs/sqlalwayson/)  
   
-     [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server エンジニアのブログ](/archive/blogs/psssql/)  
   
 -   **ビデオ:**  
   
@@ -523,9 +515,9 @@ GO
   
 -   **ホワイト ペーパー:**  
   
-     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -534,5 +526,4 @@ GO
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

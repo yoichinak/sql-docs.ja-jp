@@ -1,4 +1,5 @@
 ---
+description: 詳細エディター
 title: '[詳細エディター] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,14 +17,14 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e8c23226d43bd9d10d56b84ae0b4edccc40151d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923193"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130726"
 ---
-# <a name="advanced-editor"></a>[詳細エディター]
+# <a name="advanced-editor"></a>詳細エディター
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -46,17 +47,16 @@ ms.locfileid: "86923193"
   
  表示されるプロパティはコンポーネントによって異なります。 **[詳細エディター]** に表示される可能性のあるプロパティの詳細については、次のトピックを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [パスのプロパティ](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [パスのプロパティ](./data-flow/integration-services-paths.md)  
   
  編集している固有のコンポーネントの詳細については、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクトと概念のドキュメントで「データ フロー要素」セクションのコンポーネントの説明を参照してください。  
   
 -   [Integration Services の変換](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
-  
+ [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
   

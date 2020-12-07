@@ -1,4 +1,5 @@
 ---
+description: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a215da933308ea271a7e900c13a3929311cae996
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bba9c26443e04bdd1373827fdc11eb5a536e06be
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484013"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380127"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "86484013"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
@@ -57,7 +57,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="examples"></a>例  
  次の例では、`SecurityProvider` という暗号プロバイダーを削除します。  
   
-```  
+```sql  
 /* First, disable provider to perform the upgrade.  
 This will terminate all open cryptographic sessions. */  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   

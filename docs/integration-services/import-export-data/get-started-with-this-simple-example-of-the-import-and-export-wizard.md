@@ -1,4 +1,5 @@
 ---
+description: 簡単な例によるインポートおよびエクスポート ウィザードの概要
 title: 簡単な例によるインポートおよびエクスポート ウィザードの概要 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d9e438aaef2df393a73e7050265b3f24ecf2d5b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910208"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196398"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>簡単な例によるインポートおよびエクスポート ウィザードの概要
 
@@ -24,7 +25,7 @@ ms.locfileid: "86910208"
 Excel スプレッドシートから SQL Server データベースにデータをインポートするというよくあるシナリオを使って、SQL Server インポートおよびエクスポート ウィザードの機能について説明します。 別の変換元および別の変換先を使う予定の場合でも、このトピックを読むとウィザードの実行について知っておく必要があるほとんどのことがわかります。
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>前提条件 - コンピューターへのウィザードのインストール
-ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
+ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>この例の Excel ソース データ
 このソース データをコピーします。WizardWalkthrough.xlsx Excel ブックの WizardWalkthrough ワークシートの 2 列の小さいテーブルです。
@@ -51,7 +52,7 @@ Windows の [スタート] メニューの [Microsoft SQL Server 2016] グルー
 ## <a name="step-2---view-the-welcome-page"></a>ステップ 2 - ウェルカム ページを表示する
 ウィザードの最初のページは **[ようこそ]** ページです。 
 
-通常、このページを再び表示する必要はないので、 **[次回からこの開始ページを表示しない]** をオンにします。
+通常、このページを再び表示する必要はないので、**[次回からこの開始ページを表示しない]** をオンにします。
 
 ![ウィザードへようこそ](../../integration-services/import-export-data/media/welcome-to-the-wizard.jpg)
 
@@ -66,7 +67,7 @@ Windows の [スタート] メニューの [Microsoft SQL Server 2016] グルー
 ウィザードのこのページについて詳しくは、「[Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」([データ ソースの選択]) をご覧ください。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>ステップ 4 - 変換先として SQL Server を選択する
-次の **[変換先の選択]** ページで、Microsoft SQL Server に接続するデータ プロバイダーの 1 つを一覧で選ぶことで、変換先として SQL Server を選びます。 この例では、 **[.Net Framework Data Provider for SQL Server]** を選びます。
+次の **[変換先の選択]** ページで、Microsoft SQL Server に接続するデータ プロバイダーの 1 つを一覧で選ぶことで、変換先として SQL Server を選びます。 この例では、**[.Net Framework Data Provider for SQL Server]** を選びます。
 
 ページにプロバイダーのプロパティの一覧が表示されます。 これらの多くは、わかりにくい名前となじみのない設定です。 幸い、任意のエンタープライズ データベースに接続するには、通常、3 つの情報を提供するだけで済みます。 他の設定の既定値は無視できます。
 
@@ -90,8 +91,8 @@ SQL Server への接続について詳しくは、「[SQL Server データ ソ�
 ## <a name="step-6---pick-the-table-to-copy"></a>ステップ 6 - コピーするテーブルを選ぶ
 次の **[コピー元のテーブルおよびビューを選択]** ページでは、データ ソースのコピー先のテーブルを 1 つ以上選びます。 それから、選んだ各コピー元テーブルを新規または既存のコピー先テーブルにマッピングします。
 
-この例では、既定で **[コピー元]** 列の **WizardWalkthrough$** ワークシートが、SQL Server 変換先の同じ名前を持つ新しいテーブルにマップされています (Excel ブックにはワークシートが 1 つだけ含まれます)。
--   コピー元テーブルの名前のドル記号 ($) は、Excel ワークシートであることを示します (Excel の名前付き範囲は名前だけで表されます)。
+この例では、既定で **[コピー元]** 列の **WizardWalkthrough$** ワークシートが、SQL Server 変換先の同じ名前を持つ新しいテーブルにマップされています  (Excel ブックにはワークシートが 1 つだけ含まれます)。
+-   コピー元テーブルの名前のドル記号 ($) は、Excel ワークシートであることを示します  (Excel の名前付き範囲は名前だけで表されます)。
 -   変換先テーブルのアイコンの星形は、ウィザードが新しい変換先テーブルを作成することを示します。
 
 ![テーブルを選ぶ (名前変更前)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
@@ -103,28 +104,28 @@ SQL Server への接続について詳しくは、「[SQL Server データ ソ�
 ウィザードのこのページについて詳しくは、「[Select Source Tables and Views](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」([コピー元のテーブルおよびビューを選択]) をご覧ください。
 
 ## <a name="optional-step-7---review-the-column-mappings"></a>(省略可能) ステップ 7 - 列のマッピングを確認する
-**[コピー元のテーブルおよびビューを選択]** ページを終了する前に、必要な場合は、 **[マッピングの編集]** ボタンをクリックして **[列マッピング]** ダイアログ ボックスを開きます。 ここの **[マッピング]** テーブルで、ウィザードがコピー元ワークシートの列を新しい変換先テーブルの列にマッピングする方法を確認します。
+**[コピー元のテーブルおよびビューを選択]** ページを終了する前に、必要な場合は、**[マッピングの編集]** ボタンをクリックして **[列マッピング]** ダイアログ ボックスを開きます。 ここの **[マッピング]** テーブルで、ウィザードがコピー元ワークシートの列を新しい変換先テーブルの列にマッピングする方法を確認します。
 
 ![列マッピングを確認する](../../integration-services/import-export-data/media/view-column-mappings.jpg)
 
 ウィザードのこのページについて詳しくは、「[Column Mappings](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」([列マッピング]) をご覧ください。
 
 ## <a name="optional-step-8---review-the-create-table-statement"></a>(省略可能) ステップ 8 - CREATE TABLE ステートメントを確認する
-**[列マッピング]** ダイアログ ボックスを開いている間に、必要に応じて、 **[SQL の編集]** ボタンをクリックして **[テーブル作成 SQL ステートメント]** ダイアログ ボックスを開きます。 ここで、ウィザードが新しい変換先テーブルを作成するために生成した **CREATE TABLE** ステートメントを確認します。 通常、ステートメントを変更する必要はありません。
+**[列マッピング]** ダイアログ ボックスを開いている間に、必要に応じて、**[SQL の編集]** ボタンをクリックして **[テーブル作成 SQL ステートメント]** ダイアログ ボックスを開きます。 ここで、ウィザードが新しい変換先テーブルを作成するために生成した **CREATE TABLE** ステートメントを確認します。 通常、ステートメントを変更する必要はありません。
 
 ![CREATE TABLE ステートメントを表示する](../../integration-services/import-export-data/media/view-create-table-statement.jpg)
 
 ウィザードのこのページについて詳しくは、「[テーブル作成 SQL ステートメント](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)」をご覧ください。
 
 ## <a name="optional-step-9---preview-the-data-to-copy"></a>(省略可能) ステップ 9 - コピーするデータを確認する
-**[OK]** をクリックして **[テーブル作成 SQL ステートメント]** ダイアログ ボックスを閉じた後、 **[OK]** を再びクリックして **[列マッピング]** ダイアログ ボックスを閉じます。 **[コピー元のテーブルおよびビューを選択]** ページに戻ります。 必要に応じて、 **[プレビュー]** ボタンをクリックして、ウィザードがコピーするデータのサンプルを表示します。 この例では、問題ありません。
+**[OK]** をクリックして **[テーブル作成 SQL ステートメント]** ダイアログ ボックスを閉じた後、**[OK]** を再びクリックして **[列マッピング]** ダイアログ ボックスを閉じます。**[コピー元のテーブルおよびビューを選択]** ページに戻ります。 必要に応じて、**[プレビュー]** ボタンをクリックして、ウィザードがコピーするデータのサンプルを表示します。 この例では、問題ありません。
 
 ![コピーするデータを確認する](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
 ウィザードのこのページについて詳しくは、「[Preview Data](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)」([データのプレビュー]) をご覧ください。
 
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>ステップ 10 - インポートおよびエクスポート操作を実行する
-次の **[パッケージの保存および実行]** ページで、 **[すぐに実行する]** を有効のままにして、次のページで **[完了]** をクリックしたらすぐにデータをコピーします。 または、 **[パッケージの保存および実行]** ページで **[完了]** をクリックすると、次のページをスキップできます。
+次の **[パッケージの保存および実行]** ページで、**[すぐに実行する]** を有効のままにして、次のページで **[完了]** をクリックしたらすぐにデータをコピーします。 または、**[パッケージの保存および実行]** ページで **[完了]** をクリックすると、次のページをスキップできます。
 
 ![パッケージの実行](../../integration-services/import-export-data/media/run-the-package.jpg)
 
@@ -155,7 +156,7 @@ SQL Server Management Studio で、ウィザードが SQL Server に作成した
 
 ## <a name="learn-more"></a>詳細情報  
 ウィザードのしくみについては、以下を参照してください。
--   **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+-   **ウィザードの詳細については、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
 -   **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」の一覧から目的のページを選んでください。 ウィザードのページごとに別のドキュメント ページもあります。
 

@@ -1,4 +1,5 @@
 ---
+description: インメモリ OLTP を使用した JSON の処理の最適化
 title: インメモリ OLTP を使用した JSON の処理の最適化
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30a31cb80a9aea2f99824dbf7912714870059be3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73106658572120b2c679c2ac37e2770fbc1151a1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730408"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88490935"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

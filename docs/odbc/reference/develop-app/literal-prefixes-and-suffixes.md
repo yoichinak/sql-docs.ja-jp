@@ -1,4 +1,5 @@
 ---
+description: リテラル プレフィックスおよびサフィックス
 title: リテラルプレフィックスとサフィックス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d52ca54c329353e3d9dc67ca35d89b2d28cedf74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f658c401bfc31e69a6e5e2fc5110bc9a809f345
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424614"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>リテラル プレフィックスおよびサフィックス
-SQL ステートメントでは、*リテラル*は実際のデータ値の文字表現です。 たとえば、次のステートメントでは、ABC、FFFF、および10がリテラルです。  
+SQL ステートメントでは、 *リテラル* は実際のデータ値の文字表現です。 たとえば、次のステートメントでは、ABC、FFFF、および10がリテラルです。  
   
 ```  
 SELECT CharCol, BinaryCol, IntegerCol FROM MyTable  

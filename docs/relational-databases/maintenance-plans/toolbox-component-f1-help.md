@@ -1,4 +1,5 @@
 ---
+description: ツールボックス コンポーネントの F1 ヘルプ
 title: ツールボックス コンポーネントの F1 ヘルプ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 295eaa677578effd375e5443fd20e1f5ca368669
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715332"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91868643"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   **[ツールボックス]** には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
- コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
+ コード エディターまたは **内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   
 ## <a name="how-the-toolbox-works"></a>ツールボックスのしくみ  
- [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 ( **[+]** ) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
+ [ツールボックス] はスライド式のツリー コントロールで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows エクスプローラーの動作と似ていますが、グリッド線や接続線はありません。 **[ツールボックス]** の複数のセグメント (タブ) を同時に展開し、ツリー全体をスクロールして **[ツールボックス]** ウィンドウ内を移動することができます。 **[ツールボックス]** のタブを展開するには、名前の横のプラス記号 (**[+]**) をクリックします。 展開したタブを折りたたむには、名前の横のマイナス記号 ( **[-]** ) をクリックします。  
   
  エディターまたはデザイナーに戻るたびに、 **[ツールボックス]** は最新のタブおよび選択されているアイテムに自動的にスクロールされます。 別のエディターまたはデザイナーにフォーカスを移すと、 **[ツールボックス]** 内の現在の選択も一緒に変わります。  
   
@@ -40,4 +41,4 @@ ms.locfileid: "85715332"
   
 ## <a name="see-also"></a>参照  
  [ツールボックスの使用](../../ssms/use-the-toolbox.md)   
- [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](https://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
+ [[ツールボックス アイテムの選択] &#40;[メンテナンス タスク] ページ&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)

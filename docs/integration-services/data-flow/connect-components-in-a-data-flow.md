@@ -1,4 +1,5 @@
 ---
+description: データ フロー内でコンポーネントを連結する
 title: データ フロー内でコンポーネントを連結する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a2a700b9c2729f72d719ec5537c815daddd3518
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 97eb8da20c9a2f2d51606fee0d8505c0a298d05a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457423"
 ---
 # <a name="connect-components-in-a-data-flow"></a>データ フロー内でコンポーネントを連結する
 
@@ -30,7 +31,7 @@ ms.locfileid: "86923588"
   
  次の図は、1 つの変換元コンポーネント、2 つの変換、1 つの変換先コンポーネント、およびこれらを連結するパスを持つ、簡単なデータ フローを示しています。  
   
- ![データ フロー](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![データ フロー](../../integration-services/data-flow/media/mw-dts-08.gif "データ フロー")  
   
  2 つのコンポーネントを連結したら、パスを移動するデータのメタデータおよびパスのプロパティを、 **[データ フロー パス エディター]** で表示できます。 詳細については、「 [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)」を参照してください。  
   

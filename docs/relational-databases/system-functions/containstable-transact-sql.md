@@ -1,4 +1,5 @@
 ---
+description: CONTAINSTABLE (Transact-SQL)
 title: CONTAINSTABLE (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
@@ -33,19 +34,19 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790450"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753707"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  1つの単語や語句に対する完全一致またはあいまいな一致を含む列に対して、0行、1行、または複数の行から成るテーブルを返します。特定の範囲内での近接語句、または重み付け一致が含まれます。 CONTAINSTABLE は、SELECT ステートメントの[from 句](../../t-sql/queries/from-transact-sql.md)で使用され、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 通常のテーブル名のように参照されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。  
+  1つの単語や語句に対する完全一致またはあいまいな一致を含む列に対して、0行、1行、または複数の行から成るテーブルを返します。特定の範囲内での近接語句、または重み付け一致が含まれます。 CONTAINSTABLE は、SELECT ステートメントの [from 句](../../t-sql/queries/from-transact-sql.md) で使用され、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 通常のテーブル名のように参照されます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字ベースのデータ型を含むフルテキストインデックス列に対してフルテキスト検索を実行します。  
   
- CONTAINSTABLE は、 [contains 述語](../../t-sql/queries/contains-transact-sql.md)と同じ種類の一致に便利であり、contains と同じ検索条件を使用します。  
+ CONTAINSTABLE は、 [contains 述語](../../t-sql/queries/contains-transact-sql.md) と同じ種類の一致に便利であり、contains と同じ検索条件を使用します。  
   
  ただし、CONTAINS とは異なり、CONTAINSTABLE を使用するクエリでは、各行の関連順位値 (RANK) とフルテキストキー (キー) が返されます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
   
@@ -114,9 +115,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>引数  
  *テーブル*  
- フルテキストインデックスが作成されているテーブルの名前を指定します。 *テーブル*には、1、2、3、または4つの要素で構成されるデータベースオブジェクト名を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
+ フルテキストインデックスが作成されているテーブルの名前を指定します。 *テーブル* には、1、2、3、または4つの要素で構成されるデータベースオブジェクト名を指定できます。 ビューに対してクエリを実行する場合は、フルテキスト インデックスが作成されたベース テーブルを 1 つだけ指定できます。  
   
- *テーブル*にサーバー名を指定することはできません。また、リンクサーバーに対するクエリでは使用できません。  
+ *テーブル* にサーバー名を指定することはできません。また、リンクサーバーに対するクエリでは使用できません。  
   
  *column_name*  
  フルテキスト検索用にインデックスが作成される 1 つ以上の列の名前を指定します。 列には、**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary**、**varbinary(max)** のいずれかの型を指定できます。  
@@ -125,29 +126,29 @@ CONTAINSTABLE
  コンマ区切りで複数の列を指定できます。 *column_list* は、かっこで囲む必要があります。 *language_term* を指定しない場合、*column_list* で指定するすべての列の言語は同じにする必要があります。  
   
  \*  
- 指定された検索条件を検索するために、*テーブル*内のすべてのフルテキストインデックス列を使用することを指定します。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
+ 指定された検索条件を検索するために、 *テーブル* 内のすべてのフルテキストインデックス列を使用することを指定します。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  LANGUAGE *language_term*  
- クエリの一部として、単語区切り、ステミング、類義語辞典、およびノイズワード (または[ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) の削除に使用するリソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
+ クエリの一部として、単語区切り、ステミング、類義語辞典、およびノイズワード (または [ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) の削除に使用するリソースの言語を指定します。 このパラメーターは省略可能で、言語のロケール識別子 (LCID) に対応する文字列、整数、または 16 進数の値を指定できます。 *language_term* を指定した場合、その言語は検索条件のすべての要素に適用されます。 値を指定しなかった場合は、列のフルテキストの言語が使用されます。  
   
  1 つの列に言語の異なる複数のドキュメントが BLOB (Binary Large Object) として格納されている場合、そのインデックスの作成に使用される言語は、そのドキュメントのロケール識別子 (LCID) によって決まります。 そのような列に対してクエリを実行する場合は、*LANGUAGE**language_term* を指定すると検索結果の一致率が高まります。  
   
  文字列として指定した場合、 *language_term* [sys.sys言語](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の互換性ビューの**alias**列の値に対応します。  文字列の場合は、'*language_term*' のように引用符 (') で囲む必要があります。 *language_term* を整数で指定する場合は、その言語を表す実際の LCID を指定します。 *language_term* を 16 進数の値で指定する場合は、「0x」の後に LCID の 16 進数の値を指定します。 16 進数の値は、先頭の 0 を含め、8 桁以内で指定してください。  
   
- 値が2バイト文字セット (DBCS) 形式の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はそれを Unicode に変換します。  
+ 値を 2 バイト文字セット (DBCS) の形式で指定すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で Unicode に変換されます。  
   
  指定した言語が無効であるか、その言語に該当するリソースがインストールされていない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりエラーが返されます。 ニュートラル言語リソースを使用するには、*language_term* に「0x0」を指定してください。  
   
  *top_n_by_rank*  
- 一致したものの中から、降順で順位の高い方から*n 個*だけを返すことを指定します。 整数値*n*が指定されている場合にのみ適用されます。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank*を使用すると、最も関連性の高いヒットだけを再度呼び出すことで、クエリのパフォーマンスを向上させることができます。  
+ 一致したものの中から、降順で順位の高い方から *n 個* だけを返すことを指定します。 整数値 *n*が指定されている場合にのみ適用されます。 *top_n_by_rank* を他のパラメーターと組み合わせた場合、クエリから返される行数は、実際にすべての述語に一致する行数より少なくなります。 *top_n_by_rank* を使用すると、最も関連性の高いヒットだけを再度呼び出すことで、クエリのパフォーマンスを向上させることができます。  
   
  <contains_search_condition>  
  *column_name* で検索するテキストと、その一致条件を指定します。 検索条件の詳細については、「 [CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
- 返されるテーブルには、フルテキストキー値を含む**key**という名前の列があります。 フルテキストインデックスが作成された各テーブルには、値が一意であることが保証される列があります。また、**キー**列に返される値は、contains 検索条件で指定された選択基準に一致する行のフルテキストキー値です。 OBJECTPROPERTYEX 関数から取得された**TableFulltextKeyColumn**プロパティは、この一意のキー列の id を提供します。 フルテキストインデックスのフルテキストキーに関連付けられている列の ID を取得するには、 **fulltext_indexes**を使用します。 詳細については、「 [sys. fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
+ 返されるテーブルには、フルテキストキー値を含む **key** という名前の列があります。 フルテキストインデックスが作成された各テーブルには、値が一意であることが保証される列があります。また、 **キー** 列に返される値は、contains 検索条件で指定された選択基準に一致する行のフルテキストキー値です。 OBJECTPROPERTYEX 関数から取得された **TableFulltextKeyColumn** プロパティは、この一意のキー列の id を提供します。 フルテキストインデックスのフルテキストキーに関連付けられている列の ID を取得するには、 **sys.fulltext_indexes**を使用します。 詳細については、「 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  
   
  元のテーブルから目的の行を取得するには、CONTAINSTABLE 行との結合を指定してください。 CONTAINSTABLE を使用する場合、通常は次の形式で FROM 句を SELECT ステートメントに指定します。  
   
@@ -170,7 +171,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="examples"></a>例  
   
 ### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、2つの列からなる単純なテーブルを作成し、そのフラグの3つの市区郡と色を一覧表示します。 このメソッドは、テーブルにフルテキストカタログとインデックスを作成して設定します。 次に、 **CONTAINSTABLE**構文を示します。 この例では、検索値が複数回満たされたときに順位値がどのように増加するかを示します。 最後のクエリでは、"緑" と "黒" の両方が含まれているタンザニアは、クエリされた色の1つのみを含む、イタリアよりも高いランクを持ちます。  
+ 次の例では、2つの列からなる単純なテーブルを作成し、そのフラグの3つの市区郡と色を一覧表示します。 このメソッドは、テーブルにフルテキストカタログとインデックスを作成して設定します。 次に、 **CONTAINSTABLE** 構文を示します。 この例では、検索値が複数回満たされたときに順位値がどのように増加するかを示します。 最後のクエリでは、"緑" と "黒" の両方が含まれているタンザニアは、クエリされた色の1つのみを含む、イタリアよりも高いランクを持ちます。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -190,7 +191,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>B: 順位値を返す  
+### <a name="b-returning-rank-values"></a>B. 順位値を返す  
  次の例では、"frame"、"wheel"、または "tire" という単語を含むすべての製品名を検索します。各単語にはさまざまな重みが割り当てられています。 これらの検索条件に一致する行が返されるたびに、一致の相対的な近さ (順位付け値) が表示されます。 また、最も順位値の高い行を最初に返します。  
   
 ```  
@@ -207,7 +208,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C: 指定された値より大きい順位値を返す  
+### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>C. 指定された値より大きい順位値を返す  
   
 ||  
 |-|  
@@ -232,7 +233,7 @@ GO
 > [!NOTE]  
 >  フルテキストクエリで最大距離として整数が指定されていない場合、ギャップが100の論理用語を超えるヒットのみを含むドキュメントは、NEAR の要件を満たしておらず、順位が0になります。  
   
-### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D: top_n_by_rank を使用して上位 5 個の結果を返す  
+### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. top_n_by_rank を使用して上位 5 個の結果を返す  
  次の例では、`Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  
@@ -278,15 +279,14 @@ GO
 ```  
   
 > [!NOTE]  
->  Top_n_by_rank を使用するために必要な言語*language_term*引数 *。*  
+>  Top_n_by_rank を使用するために必要な言語 *language_term* 引数 *。*  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ランクを使用して検索結果を制限する](../../relational-databases/search/limit-search-results-with-rank.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
- [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [Transact-sql&#41;を含む &#40;](../../t-sql/queries/contains-transact-sql.md)   
+ [フルテキスト検索クエリの作成 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
+ [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

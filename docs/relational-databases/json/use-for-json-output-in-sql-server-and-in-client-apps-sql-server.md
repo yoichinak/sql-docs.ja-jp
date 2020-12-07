@@ -1,4 +1,5 @@
 ---
+description: SQL Server およびクライアント アプリでの FOR JSON 出力の使用 (SQL Server)
 title: SQL Server およびクライアント アプリでの FOR JSON 出力の使用
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 882a5e5aaee3bacf6d27866d388f161a59c0086b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb663a8ccc5dc08b186abce1f90bb4ce55b89ed4
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755743"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "89386013"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>SQL Server およびクライアント アプリでの FOR JSON 出力の使用 (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +85,7 @@ SET Details =
      (SELECT TOP 1 UnitPrice, OrderQty  
        FROM Sales.SalesOrderDetail D  
        WHERE D.SalesOrderId = SalesOrder.SalesOrderId  
-      FOR JSON AUTO 
+      FOR JSON AUTO) 
 ```  
   
 ## <a name="use-for-json-output-in-a-c-client-app"></a>C# クライアント アプリで FOR JSON 出力を使用する  

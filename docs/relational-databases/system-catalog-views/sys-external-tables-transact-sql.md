@@ -1,4 +1,5 @@
 ---
+description: external_tables (Transact-sql)
 title: external_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -8,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e0341c16a8aa78497aa0e1e347d5cc079a26b6b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9ba3034b4cdda575f19ec436725afd4c0f43451f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394093"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550533"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>external_tables (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]

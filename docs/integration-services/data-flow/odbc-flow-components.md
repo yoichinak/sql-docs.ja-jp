@@ -1,4 +1,5 @@
 ---
+description: ODBC フロー コンポーネント
 title: ODBC フロー コンポーネント | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 339d8c68dcafba40b73edbc8c003376a20ae8822
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c2ae72b5e59c56c976632fdc5572dcfae030f689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457348"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
 
@@ -36,7 +37,7 @@ ms.locfileid: "86914760"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 入力元および入力先の概要  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]を使用するパッケージをセットアップする前に、以下のコンポーネントを使用できることを確認する必要があります。  
   
--   [ODBC 変換元](../../integration-services/data-flow/odbc-source.md)  
+-   [ODBC ソース](../../integration-services/data-flow/odbc-source.md)  
   
 -   [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md)  
   
@@ -104,7 +105,7 @@ ms.locfileid: "86914760"
   
 ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされません。次の表に、各 ODBC SQL 型に対応する SSIS データ型を示します。 SSIS 開発者は既定のマッピングをオーバーライドして、入出力列で使用する SSIS データ型を個別に指定できます。このときに必要となるデータ変換によって、パフォーマンスが影響を受けることはありません。  
   
-|ODBC SQL 型|SSIS データ型|説明|  
+|ODBC SQL 型|SSIS データ型|コメント|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC ドライバーで SQL データ型の UNSIGNED_ATTRIBUTE が SQL_TRUE に設定されている場合、その SQL データ型は SSIS の符号なしのデータ型 (DT_UI1、DT_UI2、DT_UI4、DT_UI8) にマッピングされます。|  
@@ -135,7 +136,7 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換元](../../integration-services/data-flow/odbc-source.md)  
+-   [ODBC ソース](../../integration-services/data-flow/odbc-source.md)  
   
 -   [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md)  
   

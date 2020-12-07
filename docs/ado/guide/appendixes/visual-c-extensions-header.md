@@ -1,8 +1,9 @@
 ---
+description: Visual C++ Extensions のヘッダー
 title: Visual C++ Extensions ヘッダー |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c5b4e7a3bc960882830fa447f58f74e6728a559
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1e8c15738d7ad6fe93a1401636239369b3a87381
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761500"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991803"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
-次のヘッダー ( **icrsint .h**) では、クライアントが**レコードセット**からフィールドを取得して、 **CADORecordBinding**から派生したクラスで定義された変数に変換できるようにするインターフェイスについて詳しく説明しています。 アクセスするフィールドごとに ADO バインドマクロを指定する必要があります。  
+次のヘッダー ( **icrsint .h**) では、クライアントが **レコードセット** からフィールドを取得して、 **CADORecordBinding**から派生したクラスで定義された変数に変換できるようにするインターフェイスについて詳しく説明しています。 アクセスするフィールドごとに ADO バインドマクロを指定する必要があります。  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -208,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Visual C++ 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
- [Visual C++ Extensions を使用する](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+ [Visual C++ 拡張機能の例](./visual-c-extensions-example.md)   
+ [Visual C++ Extensions を使用する](./using-visual-c-extensions.md)

@@ -1,4 +1,5 @@
 ---
+description: データコレクターのストアドプロシージャ (Transact-sql)
 title: データコレクターのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 710f9f13450eff01ab54eaf3ae3aa4ff03bd8524
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa98a7f469c465ffb497c4a375082fcde795c621
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977612"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546324"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>データコレクターのストアドプロシージャ (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW 変換先エディター] ([エラー出力] ページ)'
 title: '[SAP BW 変換先エディター] ([エラー出力] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7143a95115836a4f3a975468e5acdb369ee1e8bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c3c080e03e34b8b7cf953a5d3544cb4d3bb39ab
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913606"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88484541"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>[SAP BW 変換先エディター] ([エラー出力] ページ)
 

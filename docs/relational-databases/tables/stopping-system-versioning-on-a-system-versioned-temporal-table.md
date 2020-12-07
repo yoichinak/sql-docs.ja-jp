@@ -1,4 +1,5 @@
 ---
+description: システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する
 title: システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する | Microsoft Docs
 ms.custom: ''
 ms.date: 04/28/2020
@@ -8,19 +9,21 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b145a9f68fe87909113c06b2f081ec156c525dd5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 2686ba2c5ac8e4db03f49a1d090ed8de1066b2c7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554867"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550951"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルでシステム バージョン管理を停止する
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 一時的または永続的に、テンポラル テーブルでバージョン管理を停止する場合があります。 その場合は、 **SYSTEM_VERSIONING** 句を **OFF**に設定します。
 

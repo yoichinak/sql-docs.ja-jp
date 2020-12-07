@@ -1,4 +1,5 @@
 ---
+description: 'IRow:: Open と ISequentialStream を使用して BLOB データをフェッチする'
 title: 'BLOB、IRow:: Open、ISequentialStream'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f986e195b0f2545c6fbf1f1af1a0a94d8e79abc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5a58ab361c7e43537dedcb8b6115b3ff52d78b63
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243646"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869510"
 ---
 # <a name="fetching-blob-data-by-using-irowopen-and-isequentialstream"></a>IRow:: Open と ISequentialStream を使用して BLOB データをフェッチする
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,6 +83,5 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  大きなデータは、**ISequentialStream** インターフェイスを使用してバインドまたは取得できます。 バインドされた列の場合、DBSTATUS_S_TRUNCATED を設定してデータが切り捨てられるかどうかが状態フラグで示されます。  
   
 ## <a name="see-also"></a>参照  
- [IRow を使用した BLOB データのフェッチ](https://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
-  
+ [IRow を使用した BLOB データのフェッチ](./fetching-a-single-row-with-irow.md)  
   

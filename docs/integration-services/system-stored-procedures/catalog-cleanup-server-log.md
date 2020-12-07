@@ -1,4 +1,5 @@
 ---
+description: catalog.cleanup_server_log
 title: catalog.cleanup_server_log | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c97ebcdca436e05488e85e84565cece028a8d7a9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0942fa73c29b14ba5b07b305126e4ba70bfa0cb1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904848"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129921"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 
@@ -57,12 +58,12 @@ catalog.cleanup_server_log
   
 -   SSISDB データベースがシングル ユーザー モードではない。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SQL Server 2012 Service Pack 2 により、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティが **internal.catalog_properties** テーブルに追加されました。 このプロパティには、次の 2 つの有効値があります。  
   
--   **PER_EXECUTION (1)** : 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
+-   **PER_EXECUTION (1)**: 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
   
--   **PER_PROJECT (2)** : 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 PER_PROJECT (2) は既定値です。 この設定は、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
+-   **PER_PROJECT (2)**: 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 PER_PROJECT (2) は既定値です。 この設定は、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
   
  SERVER_OPERATION_ENCRYPTION_LEVEL を 2 から 1、または 1 から 2 に変更するには、事前に [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) ストアド プロシージャを実行する必要があります。 このストアド プロシージャを実行する前に、次の操作を行う必要があります。  
   

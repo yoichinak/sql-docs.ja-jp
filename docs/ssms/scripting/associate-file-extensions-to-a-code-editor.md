@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +16,12 @@ ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c5bcd5b9011a81ba17de1fa57c5e8153e86b3ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0845fc6cbf14259c02e2fdbf1f30bcf450917f00
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921338"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039146"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>ファイル拡張子をコード エディターに関連付ける方法
 
@@ -58,6 +58,5 @@ ms.locfileid: "86921338"
 4.  **[エディター]** ボックスで、この種類のファイルを開くときに使用するコード エディターをクリックし、 **[追加]**、 **[OK]** の順にクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Ssms ユーティリティ](../../tools/sql-server-management-studio/ssms-utility.md)  
-  
+ [Ssms ユーティリティ](../ssms-utility.md)  
   

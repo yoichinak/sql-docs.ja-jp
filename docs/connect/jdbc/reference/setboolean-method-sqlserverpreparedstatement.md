@@ -1,4 +1,5 @@
 ---
+description: setBoolean メソッド (SQLServerPreparedStatement)
 title: setBoolean メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9742112df6732618eeef07c477af98ff033368fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ada97b16611f6e1579faf25baba05efb9f6c962c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432394"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,12 +16,12 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9cd63ae6c84ce09b70246aae91c16446017f6cfc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97cad6d2dae1b9ce6e4b97eae221c810cded10d4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756828"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868756"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler の使用
 
@@ -32,7 +32,7 @@ XEvent Profiler は、拡張イベントのライブ ビューアー ウィン�
 SQL Profiler とは異なり、XEvent Profiler は SSMS に直接統合され、SQL エンジンのスケーラブルな拡張イベント テクノロジ上に構築されています。 この機能を使用すると、SQL Server の診断イベントのライブ ストリーミング ビューにすばやくアクセスできます。 このビューはカスタマイズできます。また、.viewsettings ファイルとして他の SSMS ユーザーと共有することができます。 XE プロファイラーで作成されたセッションは、SQL Profiler を使用した場合の同様の SQL トレースよりも、実行中の SQL Server に対する影響が少なくなります。 このセッションはユーザーがカスタマイズできますが、既存の XE セッションのプロパティの UI または TSQL を使用してカスタマイズすることもできます。
 
 ## <a name="prerequisites"></a>前提条件
-この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)で入手できます。
+この機能は、SQL Server Management Studio (SSMS) v17.3 以降でのみ使用できます。 最新バージョンを使用していることを確認してください。 最新バージョンは[こちら](../../ssms/download-sql-server-management-studio-ssms.md)で入手できます。
 
 ## <a name="getting-started"></a><a id="getting-started"></a>はじめに
 XEvent Profiler にアクセスするには、次の手順を実行します。
@@ -56,5 +56,4 @@ XEvent Profiler にアクセスするには、次の手順を実行します。
 ## <a name="see-also"></a>参照
 [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
 [拡張イベントのツール](../../relational-databases/extended-events/extended-events-tools.md)  
-  
   

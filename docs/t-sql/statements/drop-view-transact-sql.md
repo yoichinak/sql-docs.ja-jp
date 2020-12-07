@@ -1,4 +1,5 @@
 ---
+description: DROP VIEW (Transact-SQL)
 title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -20,15 +21,15 @@ helpviewer_keywords:
 - views [SQL Server], removing
 - removing views
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81d3db058663274babb0eae1e16306e2197ad2a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21dd4a4aac028f06d6c4f8902d7d7ec93a87e083
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483743"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990093"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86483743"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
+-- Syntax for SQL Server, Azure SQL Database, and Azure Synapse Analytics
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
@@ -65,7 +66,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  削除するビューの名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ビューを削除すると、ビューの定義やビューに関するその他の情報がシステム カタログから削除されます。 ビューに対する権限もすべて削除されます。  
   
  DROP TABLE を使用して削除されたテーブルのすべてのビューは、DROP VIEW を使用して明示的に削除する必要があります。  

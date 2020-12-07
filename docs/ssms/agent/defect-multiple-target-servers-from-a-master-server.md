@@ -1,4 +1,5 @@
 ---
+description: マスター サーバーからの複数のターゲット サーバーの参加の解除
 title: マスター サーバーからの複数のターゲット サーバーの参加の解除
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,19 +19,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dc813e464e56139e81eb052f497b16f472829a1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0397c22a479f911ebe5e070ece2d9cdf1fe6ab07
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775118"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036633"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>マスター サーバーからの複数のターゲット サーバーの参加の解除
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server での相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、マルチサーバー管理構成から複数のターゲット サーバーの参加を解除する方法について説明します。 この手順はマスター サーバーから実行します。  
   
@@ -40,13 +41,13 @@ ms.locfileid: "85775118"
   
 1.  **オブジェクト エクスプローラー**で、マスター サーバーとして構成するサーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[ターゲット サーバーの管理]** をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** をクリックします。  
   
 3.  **[命令を通知]** をクリックし、 **[命令の種類]** ボックスの一覧の **[参加解除]** をクリックします。  
   
 4.  **[受信者]** で、次のいずれかの操作を行います。  
   
-    -   このマスター サーバーのすべてのターゲット サーバーの参加を解除するには、 **[すべてのターゲット サーバー]** をクリックします。 このオプションは、現在のマルチサーバー管理構成を完全にアンインストールする場合に使用します。  
+    -   このマスター サーバーのすべてのターゲット サーバーの参加を解除するには、**[すべてのターゲット サーバー]** をクリックします。 このオプションは、現在のマルチサーバー管理構成を完全にアンインストールする場合に使用します。  
   
     -   このマスター サーバーから一部のターゲット サーバーだけを参加解除するには、 **[特定のターゲット サーバー]** をクリックし、参加を解除するサーバーの **[選択]** ボックスをクリックします。  
   
@@ -54,4 +55,3 @@ ms.locfileid: "85775118"
 [マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)  
 [エンタープライズ全体の管理の自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [マスター サーバーからのターゲット サーバーの参加の解除](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  
-  

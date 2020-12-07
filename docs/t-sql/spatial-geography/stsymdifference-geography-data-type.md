@@ -1,4 +1,5 @@
 ---
+description: STSymDifference (geography データ型)
 title: STSymDifference (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d6b6e09623b9a86f342127192ddbe27cf4a8cd72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 26536b5ac3042c1341d75336a7d1b7d8cc439892
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554373"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88305892"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

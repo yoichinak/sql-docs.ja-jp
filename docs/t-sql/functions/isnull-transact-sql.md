@@ -1,4 +1,5 @@
 ---
+description: ISNULL (Transact-SQL)
 title: ISNULL (Transact-SQL)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 985b556fbfbbcb9722b93a950e4a8a75dc33c0c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 67d21c6d51a90015fe78833d572ff4740d64bd81
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111963"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116033"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL) 
 
@@ -66,7 +67,7 @@ ISNULL ( check_expression , replacement_value )
 ### <a name="a-using-isnull-with-avg"></a>A. AVG で ISNULL を使用する  
  次の例では、すべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT AVG(ISNULL(Weight, 50))  
@@ -86,7 +87,7 @@ GO
 ### <a name="b-using-isnull"></a>B. ISNULL を使用する  
  次の例では、`AdventureWorks2012` のすべての特価品について、説明、値引き率、最小数量、および最大数量を選択します。 ある特価品の最大数量が NULL の場合、結果セットに表示される `MaxQty` は `0.00` です。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description, DiscountPct, MinQty, ISNULL(MaxQty, 0.00) AS 'Max Quantity'  
@@ -120,7 +121,7 @@ GO
 ### <a name="c-testing-for-null-in-a-where-clause"></a>C. WHERE 句で NULL をテストする  
  NULL 値の検索に ISNULL を使用しないでください。 代わりに IS NULL を使用します。 次の例では、weight 列が `NULL` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight  
@@ -134,7 +135,7 @@ GO
 ### <a name="d-using-isnull-with-avg"></a>D. AVG で ISNULL を使用する  
  次の例では、サンプル テーブルのすべての製品の重量の平均を求めます。 `50` テーブルの `Weight` 列にあるすべての NULL エントリに、値 `Product` を代入します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT AVG(ISNULL(Weight, 50))  
@@ -151,7 +152,7 @@ FROM dbo.DimProduct;
 ### <a name="e-using-isnull"></a>E. ISNULL を使用する  
  次の例では、ISNULL を使って`MinPaymentAmount` 列が NULL かどうかをテストし、NULL の行には値 `0.00` を表示します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ResellerName,   
@@ -175,7 +176,7 @@ ORDER BY ResellerName;
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. IS NULL を使用して WHERE 句の NULL をテストする  
  次の例では、`NULL` 列が `Weight` の製品をすべて検索しています。 `IS` と `NULL` の間にスペースがあることに注意してください。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EnglishProductName, Weight  

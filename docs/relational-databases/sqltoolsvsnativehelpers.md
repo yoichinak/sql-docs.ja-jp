@@ -1,4 +1,5 @@
 ---
+description: SqlToolsVSNativeHelpers
 title: SqlToolsVSNativeHelpers | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -8,15 +9,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c182953e765581382db207a421f7a199073f21ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 206312ba10a1dfc451434d88b982773dad1ccc4f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750837"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537581"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]

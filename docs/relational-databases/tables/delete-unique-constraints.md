@@ -1,4 +1,5 @@
 ---
+description: UNIQUE 制約の削除
 title: UNIQUE 制約の削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -17,15 +18,16 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bcd1b8b4cd08a3bb2cb0c8700c82de8d7657779
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 56065a74319773012d88ddd9bb09987187e6f4c7
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002103"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646656"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 制約の削除
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して UNIQUE 制約を削除できます。 UNIQUE 制約を削除すると、制約式に含まれる 1 つ以上の列に入力される値に対する一意性の条件が取り除かれ、対応する一意なインデックスが削除されます。  
   
@@ -33,7 +35,7 @@ ms.locfileid: "86002103"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **UNIQUE 制約を削除する方法:**  
   
@@ -68,7 +70,7 @@ ms.locfileid: "86002103"
   
 4.  **[削除]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[** _<テーブル名>_ を保存] をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   

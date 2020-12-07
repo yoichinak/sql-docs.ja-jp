@@ -1,7 +1,8 @@
 ---
+description: DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 title: DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,23 +19,23 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: 25a9714b02330bcaebd041c5f193700ac2f6d0ca
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 4f8ab5fdef426293a7d74be3d41a08b9f033afab
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484118"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380431"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 外部プロセス用のリソースの定義に使われる Resource Governor 外部リソース プールを削除します。 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] の場合、外部プールは `rterm.exe`、`python.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
@@ -44,7 +45,7 @@ ms.locfileid: "86484118"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   

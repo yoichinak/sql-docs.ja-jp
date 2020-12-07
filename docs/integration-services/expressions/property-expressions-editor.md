@@ -1,4 +1,5 @@
 ---
+description: '[プロパティ式エディター]'
 title: '[プロパティ式エディター] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d21140c43c3d584f8e2dac988c0125efd49d8557
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c12c260c4971763041bf41b5be7dafbdfd497c0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919088"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477518"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
 

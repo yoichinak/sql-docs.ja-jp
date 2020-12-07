@@ -1,4 +1,5 @@
 ---
+description: RAND (Transact-SQL)
 title: RAND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6eaffe69fa7ce886b358f5b4adbd41d56796bbeb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 569bc6057e719db436ddbefd04157e8b6a73a252
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396269"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92190092"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,21 +37,23 @@ ms.locfileid: "87396269"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+
+```syntaxsql  
 RAND ( [ seed ] )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>引数
  *seed*  
- シード値を指定する整数の[式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**、または **int**)。 場合 *シード* が指定されていない、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] シード値をランダムに割り当てられます。 指定されたシード値に対し、返される結果は常に同じです。  
+ シード値を指定する整数の [式](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**、**smallint**、または **int**)。 場合 *シード* が指定されていない、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] シード値をランダムに割り当てられます。 指定したシード値について、返される結果は常に同じです。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  同じシード値を使用して RAND() を繰り返し呼び出しても、同じ結果が返されます。  
   
  1 つの接続について、指定したシード値で RAND() を呼び出すと、以降のすべての RAND() の呼び出しで、シード値を指定した RAND() の呼び出しに基づいた結果が生成されます。 たとえば、次のクエリでは、同じ数値のシーケンスが常に返されます。  

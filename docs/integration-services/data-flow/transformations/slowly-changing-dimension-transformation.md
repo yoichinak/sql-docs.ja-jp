@@ -1,4 +1,5 @@
 ---
+description: 緩やかに変化するディメンション変換
 title: 緩やかに変化するディメンション変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71fdb19fb47f953ceb6266be38d5c3b191a30f91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e46178bf0929eda71b91c7bec1ee26a7ed2a17fd
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919487"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195284"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
 
@@ -61,14 +62,14 @@ ms.locfileid: "86919487"
   
  緩やかに変化するディメンション変換は、実行時、まず受信行を参照テーブル内のレコードと照合します。 一致するものがない場合、受信行が新しいレコードになります。つまり、緩やかに変化するディメンション変換は追加の作業を実行せず、その行を **[新しい出力]** に出力します。  
   
- 一致するものがある場合、緩やかに変化するディメンション変換は、行に変更が含まれているかどうかを検出します。 行に変更が含まれる場合、緩やかに変化するディメンション変換は各列の更新の種類を識別し、その行を **[変化する属性更新の出力]** 、 **[固定属性の出力]** 、 **[履歴属性挿入の出力]** 、または **[推定メンバー更新の出力]** に出力します。 行が変更されていない場合、緩やかに変化するディメンション変換は、その行を **[変更されていない出力]** に出力します。  
+ 一致するものがある場合、緩やかに変化するディメンション変換は、行に変更が含まれているかどうかを検出します。 行に変更が含まれる場合、緩やかに変化するディメンション変換は各列の更新の種類を識別し、その行を **[変化する属性更新の出力]**、 **[固定属性の出力]**、 **[履歴属性挿入の出力]**、または **[推定メンバー更新の出力]** に出力します。 行が変更されていない場合、緩やかに変化するディメンション変換は、その行を **[変更されていない出力]** に出力します。  
   
 ## <a name="slowly-changing-dimension-transformation-outputs"></a>緩やかに変化するディメンション変換の出力  
  緩やかに変化するディメンション変換は、1 つの入力と、最大 6 つの出力をとります。 出力は、行の更新および挿入の要件に対応するデータ フローのサブセットに行を出力します。 この変換では、エラー出力はサポートされていません。  
   
  次の表では、変換出力および後続のデータ フローの要件について説明します。 要件では、緩やかに変化するディメンション ウィザードが作成するデータ フローについて説明します。  
   
-|Output|説明|データ フロー要件|  
+|出力|説明|データ フロー要件|  
 |------------|-----------------|----------------------------|  
 |**[変化する属性更新の出力]**|参照テーブル内のレコードが更新されます。 この出力は、変化する属性の行に使用されます。|OLE DB コマンド変換は、UPDATE ステートメントを使用してレコードを更新します。|  
 |**[固定属性の出力]**|変更できない行の値と、参照テーブルの値が一致しない場合の出力です。 この出力は、固定属性の行に使用されます。|既定のデータ フローは作成されません。 この変換が、固定属性の列への変更を検出した後も続行するように構成されている場合、これらの行をキャプチャするデータ フローを作成する必要があります。|  
@@ -93,7 +94,7 @@ ms.locfileid: "86919487"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -113,5 +114,4 @@ ms.locfileid: "86919487"
   
 -   [SSIS で緩やかに変化するディメンションを処理する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
 -   [緩やかに変化するディメンション ウィザードを最適化する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
-  
   

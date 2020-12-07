@@ -1,4 +1,5 @@
 ---
+description: データベース メールでテスト メールを送信する
 title: データベース メールでテスト メールを送信する | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a689daf33baece845ddf81c09b99fc61c96509a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b715e65e4dfaa623f56b0caa2a78b03231819deb
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726502"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88494538"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>データベース メールでテスト メールを送信する  
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

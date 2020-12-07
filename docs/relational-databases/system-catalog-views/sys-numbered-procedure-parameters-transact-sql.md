@@ -1,4 +1,5 @@
 ---
+description: sys.numbered_procedure_parameters (Transact-SQL)
 title: numbered_procedure_parameters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3216f6719371b4e62e25a06a6341ad030620d20
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4bb67e0f0063c9ed7469b0a3d9e29a29b8117e22
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883805"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539600"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  番号付きプロシージャのパラメーターごとに1行の値を格納します。 番号付きストアド プロシージャを作成する場合は、ベース プロシージャの番号が 1 になり、 以降のプロシージャの番号は 2、3 のように続きます。 **numbered_procedure_parameters**には、2番目以降のすべてのプロシージャのパラメーター定義が含まれています。 このビューでは、ベース ストアド プロシージャ (番号 = 1) のパラメーターは示されません。 ベースストアドプロシージャは、番号が付けられていないストアドプロシージャに似ています。 そのため、パラメーターは、 [sys. parameters (transact-sql)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)で表現されます。  
+  番号付きプロシージャのパラメーターごとに1行の値を格納します。 番号付きストアド プロシージャを作成する場合は、ベース プロシージャの番号が 1 になり、 以降のプロシージャの番号は 2、3 のように続きます。 **numbered_procedure_parameters** には、2番目以降のすべてのプロシージャのパラメーター定義が含まれています。 このビューでは、ベース ストアド プロシージャ (番号 = 1) のパラメーターは示されません。 ベースストアドプロシージャは、番号が付けられていないストアドプロシージャに似ています。 そのため、パラメーターは、 [sys. parameters (transact-sql)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)で表現されます。  
   
 > [!IMPORTANT]  
 >  番号付きプロシージャは非推奨とされます。 番号付きプロシージャの使用は推奨されません。 このカタログビューを使用するクエリがコンパイルされると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
@@ -57,8 +58,8 @@ ms.locfileid: "85883805"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

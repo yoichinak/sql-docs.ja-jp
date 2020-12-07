@@ -1,4 +1,5 @@
 ---
+description: MSmerge_sessions (Transact-sql)
 title: MSmerge_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8eaed22600fe2c5c548d2e40b3e496ee81c92faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8bcfbf7faab359bec8241428aad9e471d4ed79be
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889718"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545627"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85889718"
 |**connection_type**|**int**|アップロード中に使用される接続:<br /><br /> **1** = ローカルエリアネットワーク (LAN)。<br /><br /> **2** = ダイヤルアップネットワーク接続。<br /><br /> **3** = Web 同期。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

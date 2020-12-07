@@ -1,4 +1,5 @@
 ---
+description: レッスン 1:SSIS によるプロジェクトと基本パッケージの作成
 title: レッスン 1:SSIS によるプロジェクトと基本パッケージの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917314"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88461994"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1:SSIS によるプロジェクトと基本パッケージの作成
 
@@ -39,7 +40,7 @@ ms.locfileid: "86917314"
 
     2.  **[ダウンロード]** ボタンを選択します。
 
-    3.  **Creating a Simple ETL Package.zip** ファイルを選択し、 **[次へ]** を選択します。
+    3.  **Creating a Simple ETL Package.zip** ファイルを選択し、**[次へ]** を選択します。
 
     4.  ファイルのダウンロード後、そのコンテンツを解凍し、ローカル ディレクトリに置きます。  
 
@@ -88,7 +89,7 @@ SampleCurrencyData.txt ファイルのソース データの例:
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1:新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [手順 1: 新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [手順 2:フラット ファイル接続マネージャーの追加と構成](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

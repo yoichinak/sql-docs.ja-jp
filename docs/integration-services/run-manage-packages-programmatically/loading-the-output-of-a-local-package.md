@@ -1,4 +1,5 @@
 ---
+description: ローカル パッケージの出力の読み込み
 title: ローカル パッケージの出力の読み込み | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98699c4297907a5a05710af231d065f5a42fd94d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f53a5bc1707e8f806d766a611b7792ab056d6f54
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913341"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495562"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な点は、**System.Data** 名前空間からの **IDbConnection**、**IDbCommand**、および **IDbDataParameter** の各インターフェイスを特別に実装した **Microsoft.SqlServer.Dts.DtsClient** 名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
+  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な点は、**System.Data** 名前空間からの **IDbConnection**、**IDbCommand**、および **IDbDataParameter** の各インターフェイスを特別に実装した **Microsoft.SqlServer.Dts.DtsClient** 名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
 
 > [!IMPORTANT]
 > この記事で説明する、`DtsClient` ライブラリを使用する手順は、パッケージ配置モデル (つまり、`/SQL`、`/DTS`、または`/File` オプション) で配置されているパッケージに対してのみ使用できます。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているパッケージに対しては、この手順は使用できません。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているローカル パッケージの出力を使用するには、この記事で説明されている手順ではなく、[Data Streaming Destination](../data-flow/data-streaming-destination.md) を使用します。
@@ -43,7 +44,7 @@ ms.locfileid: "86913341"
   
 1.  パッケージで、クライアント アプリケーションに読み込む出力を受信するように DataReader 変換先を構成します。 DataReader 変換先にはわかりやすい名前を付けます。この名前は後からクライアント アプリケーションで使用します。 DataReader 変換先の名前はメモしておきます。  
   
-2.  開発プロジェクトで、アセンブリ **Microsoft.SqlServer.Dts.DtsClient.dll** を検索して、**Microsoft.SqlServer.Dts.DtsClient** 名前空間への参照を設定します。 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# の **Using**、または [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の **Imports** ステートメントを使用して、コードにこの名前空間をインポートします。  
+2.  開発プロジェクトで、アセンブリ **Microsoft.SqlServer.Dts.DtsClient.dll** を検索して、**Microsoft.SqlServer.Dts.DtsClient** 名前空間への参照を設定します。 既定では、このアセンブリは **C:\Program Files\Microsoft SQL Server\100\DTS\Binn** にインストールされます。 C# の **Using**、または  の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** ステートメントを使用して、コードにこの名前空間をインポートします。  
   
 3.  コードで、**DtsClient.DtsConnection** という種類のオブジェクトを作成します。このオブジェクトにある接続文字列には、パッケージの実行時に **dtexec.exe** で必要になるコマンド ライン パラメーターが格納されます。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。 次に、この接続文字列を使用して接続を開きます。 **dtexecui** ユーティリティを使用して、必要な接続文字列を視覚的に作成することもできます。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86913341"
   
 4.  前に作成した **DtsConnection** を使用する **DtsClient.DtsCommand** という種類のオブジェクトを作成し、その **CommandText** プロパティに、パッケージ内の DataReader 変換先の名前を設定します。 次に、コマンド オブジェクトの **ExecuteReader** メソッドを呼び出して、パッケージの結果を新しい DataReader に読み込みます。  
   
-5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります ( **[名前空間]** 列を表示するには、 **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 次に例を示します。  
+5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります  ( **[名前空間]** 列を表示するには、 **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 次に例を示します。  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -76,7 +77,7 @@ ms.locfileid: "86913341"
   
 1.  新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。 サンプル コードでは、パッケージの名前として "DtsClientWParamPkg.dtsx" が使用されています。  
   
-2.  DtsClient 名前空間に文字列型の変数を追加します。 サンプル コードでは、変数の名前として Country が使用されています ( **[名前空間]** 列を表示するには、 **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。  
+2.  DtsClient 名前空間に文字列型の変数を追加します。 サンプル コードでは、変数の名前として Country が使用されています  (**[名前空間]** 列を表示するには、**[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。  
   
 3.  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースに接続する OLE DB 接続マネージャーを追加します。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86913341"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  **[パラメーター]** をクリックし、 **[クエリ パラメーターの設定]** ダイアログ ボックスで、クエリの単一入力パラメーター Parameter0 を DtsClient::Country 変数にマップします。  
+6.  **[パラメーター]** をクリックし、**[クエリ パラメーターの設定]** ダイアログ ボックスで、クエリの単一入力パラメーター Parameter0 を DtsClient::Country 変数にマップします。  
   
 7.  データ フローに集計変換を追加し、OLE DB ソースの出力を変換に接続します。 集計変換エディターを開いて、すべての入力列 (*) で "すべてのカウント" 操作が実行され、集計された値が CustomerCount の別名で出力されるように構成します。  
   

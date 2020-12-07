@@ -1,5 +1,6 @@
 ---
-title: '[スナップショット エージェント] (パブリケーションの新規作成ウィザード) | Microsoft Docs'
+description: '[スナップショット エージェント] (パブリケーションの新規作成ウィザード)'
+title: '[スナップショット エージェント](パブリケーションの新規作成ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 102eb733cf0b2ca55f52ec9751e67f51c3cae988
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09ba1d7b01a7b162d68dfb55c03fe1fead25f941
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420396"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>[スナップショット エージェント] (パブリケーションの新規作成ウィザード)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: オブジェクトカタログビュー (Transact-sql)
 title: オブジェクトカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fa974bf24ccb811743aea1c4ed2c07c934be3d1f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 811ab46ce472f91aeab40c48ff11ce584f3cabb7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442609"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810148"
 ---
 # <a name="object-catalog-views-transact-sql"></a>オブジェクトカタログビュー (Transact-sql)
 
@@ -114,7 +115,5 @@ ms.locfileid: "87442609"
 :::row-end:::
   
 ## <a name="see-also"></a>参照  
- システム[カタログビュー](catalog-views-transact-sql.md) [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ システム[カタログビュー](catalog-views-transact-sql.md) [システムビュー &#40;transact-sql&#41;](../../t-sql/language-reference.md)  
   
-  
-

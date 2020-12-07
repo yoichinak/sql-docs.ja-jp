@@ -1,4 +1,5 @@
 ---
+description: スパークラインとデータ バーの追加 (レポート ビルダーおよび SSRS)
 title: スパークラインとデータ バーの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484960"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バーの追加 (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは小さく簡潔なグラフであり、余分な情報を最小限に抑えて多くの情報を伝えます。 詳細については、「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
@@ -37,9 +38,9 @@ ms.locfileid: "77081530"
   
      **グラフ データ** ペインが開きます。  
   
-6.  **[値]** 領域で、 **[フィールドの追加]** のプラス記号 ( **+** ) をクリックし、グラフ化する値のあるフィールドをクリックします。  
+6.  **[値]** 領域で、 **[フィールドの追加]** のプラス記号 (**+**) をクリックし、グラフ化する値のあるフィールドをクリックします。  
   
-7.  **[カテゴリ グループ]** 領域で、 **[フィールドの追加]** のプラス記号 ( **+** ) をクリックし、グループ化に使用する値のフィールドをクリックします。  
+7.  **[カテゴリ グループ]** 領域で、 **[フィールドの追加]** のプラス記号 (**+**) をクリックし、グループ化に使用する値のフィールドをクリックします。  
   
      通常、各行に 1 つの系列を使用するので、スパークラインまたはデータ バーでは **[系列グループ]** 領域にフィールドを追加しません。  
   

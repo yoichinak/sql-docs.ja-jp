@@ -1,4 +1,5 @@
 ---
+description: STUnion (geography データ型)
 title: STUnion (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19982bf44aa3e1a5e0e6d894a5d73f503194f567
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: ba22383c52908e44ed69efa0d54464290ace86ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488285"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

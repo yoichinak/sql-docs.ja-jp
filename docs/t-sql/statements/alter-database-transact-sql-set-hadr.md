@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE SET HADR (Transact-SQL)
 title: ALTER DATABASE SET HADR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 132989905006dbf6640473a808998a94f9216f97
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 513b7850956ad0bd639edec3c8ec3b4aa876a03a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301931"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124273"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,6 @@ ms.locfileid: "86301931"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 ALTER DATABASE database_name  
    SET HADR   
    {  
@@ -128,7 +128,7 @@ ALTER DATABASE database_name
 ## <a name="restrictions"></a>制限  
  トランザクションとバッチの外で ALTER DATABASE ステートメントを実行します。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER 権限が必要です。 データベースを可用性グループに参加させるには、**db_owner** 固定データベース ロールのメンバーシップが必要です。  
@@ -136,7 +136,7 @@ ALTER DATABASE database_name
 ## <a name="examples"></a>例  
  次の例では、セカンダリ データベース `AccountsDb1` を、`AccountsAG` 可用性グループのローカル セカンダリ レプリカに参加させます。  
   
-```  
+```sql  
 ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;  
 ```  
   

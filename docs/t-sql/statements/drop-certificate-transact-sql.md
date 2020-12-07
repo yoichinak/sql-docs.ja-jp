@@ -1,4 +1,5 @@
 ---
+description: DROP CERTIFICATE (Transact-SQL)
 title: DROP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
@@ -22,12 +23,12 @@ ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53f8461051c02b5046bd15c385acbfffe796047e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 63c58c8528929c3a90a289f99d793a6fb91f4112
+ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484940"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93067486"
 ---
 # <a name="drop-certificate-transact-sql"></a>DROP CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -48,6 +49,7 @@ ms.locfileid: "86484940"
 ```synaxsql  
 DROP CERTIFICATE certificate_name  
 ```  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -55,7 +57,7 @@ DROP CERTIFICATE certificate_name
  *certificate_name*  
  データベースに認識される証明書の一意な名前を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  エンティティが関連付けられていない場合にのみ、証明書は削除できます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -64,7 +66,7 @@ DROP CERTIFICATE certificate_name
 ## <a name="examples"></a>例  
  次の例では、証明書 `Shipping04` をデータベース `AdventureWorks` から削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP CERTIFICATE Shipping04;  
 ```  
@@ -72,7 +74,7 @@ DROP CERTIFICATE Shipping04;
 ## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、証明書 `Shipping04` を削除します。  
   
-```
+```sql
 USE master;  
 DROP CERTIFICATE Shipping04;  
 ```  

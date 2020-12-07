@@ -1,8 +1,9 @@
 ---
+description: Recordset (ADO - WFC 構文)
 title: レコードセット (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab3bdd34945eb83b375b4c77968dc9408ed0f448
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84996f1676e5ebe9e3e844cf1cf137dc1add3a8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761880"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989773"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -135,7 +136,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>イベント  
- ADO/WFC イベントの詳細については、「[言語別の Ado イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
+ ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -163,4 +164,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

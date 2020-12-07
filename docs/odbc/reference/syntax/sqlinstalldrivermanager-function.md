@@ -1,4 +1,5 @@
 ---
+description: SQLInstallDriverManager 関数
 title: SQLInstallDriverManager 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0788de0493439a360c0446733b31606a02e12422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421176"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0: Windows XP Service Pack 2、Windows Server 2003 Service Pack 1、およびそれ以降のオペレーティングシステムでは非推奨となりました。  
   
  **まとめ**  
- **Sqlinstalldrivermanager**は、ODBC core コンポーネントのインストール先ディレクトリのパスを返します。 呼び出し元のプログラムは、実際にはドライバーマネージャーのファイルをターゲットディレクトリにコピーする必要があります。  
+ **Sqlinstalldrivermanager** は、ODBC core コンポーネントのインストール先ディレクトリのパスを返します。 呼び出し元のプログラムは、実際にはドライバーマネージャーのファイルをターゲットディレクトリにコピーする必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,16 +49,16 @@ BOOL SQLInstallDriverManager(
  Outputインストール先ディレクトリのパス。  
   
  *cbPathMax*  
- 代入*Lpszpath*の長さ。 これは、少なくとも _MAX_PATH バイトである必要があります。  
+ 代入 *Lpszpath*の長さ。 これは、少なくとも _MAX_PATH バイトである必要があります。  
   
  *pcbPathOut*  
- Output*Lpszpath*で返された合計バイト数 (null 終端バイトを除く)。 返すことのできるバイト数が*Cbpathmax*以上の場合、 *lpszpath*内のパスは*cbpathmax*から null 終端文字に切り捨てられます。 *Pcbpathout*引数は null ポインターにすることができます。  
+ Output *Lpszpath*で返された合計バイト数 (null 終端バイトを除く)。 返すことのできるバイト数が *Cbpathmax*以上の場合、 *lpszpath* 内のパスは *cbpathmax* から null 終端文字に切り捨てられます。 *Pcbpathout*引数は null ポインターにすることができます。  
   
 ## <a name="returns"></a>戻り値  
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlinstalldrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlinstalldrivermanager**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
@@ -66,8 +67,8 @@ BOOL SQLInstallDriverManager(
 |ODBC_ERROR_USAGE_UPDATE_FAILED|コンポーネントの使用状況カウントをインクリメントまたはデクリメントできませんでした|インストーラーで、ODBC コアコンポーネントの使用回数を増やすことができませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>説明  
- **Sqlinstalldrivermanager**が呼び出され、ODBC コアコンポーネントのパスが返され、システム情報に含まれるコンポーネントの使用量が増加します。 ドライバーマネージャーのバージョンが既に存在していても、そのドライバーのコンポーネントの使用量が存在しない場合、新しいコンポーネントの使用状況のカウント値は2に設定されます。  
+## <a name="comments"></a>コメント  
+ **Sqlinstalldrivermanager** が呼び出され、ODBC コアコンポーネントのパスが返され、システム情報に含まれるコンポーネントの使用量が増加します。 ドライバーマネージャーのバージョンが既に存在していても、そのドライバーのコンポーネントの使用量が存在しない場合、新しいコンポーネントの使用状況のカウント値は2に設定されます。  
   
  アプリケーションのセットアッププログラムでは、コアコンポーネントファイルを物理的にコピーし、ファイルの使用量のカウントを維持する必要があります。 コアコンポーネントファイルが事前にインストールされていない場合は、アプリケーションセットアッププログラムによってファイルがコピーされ、ファイルの使用量が作成されます。 ファイルが既にインストールされている場合、セットアッププログラムは単にファイルの使用量をインクリメントします。  
   

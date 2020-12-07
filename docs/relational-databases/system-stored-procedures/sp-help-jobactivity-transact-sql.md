@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobactivity (Transact-SQL)
 title: sp_help_jobactivity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e137d556413057b409d67c8ead14530d224241e0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893699"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549704"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`ジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号を指定します。 *job_id*は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`ジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @session_id = ] session_id`情報を報告するセッション id。 *session_id*は**int**,、既定値は NULL です。  
+`[ @session_id = ] session_id` 情報を報告するセッション id。 *session_id* は **int**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
@@ -72,20 +73,20 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**message**|**nvarchar(1024)**|ジョブの前回の実行中に生成されたメッセージ。|  
 |**run_status**|**int**|ジョブの最後の実行から返された状態:<br /><br /> **0** = エラー失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明な状態|  
 |**operator_id_emailed**|**int**|ジョブの完了時に電子メールの通知を受けたオペレーターの ID 番号。|  
-|**operator_id_netsent**|**int**|ジョブの完了時に**net send**によって通知されたオペレーターの ID 番号。|  
+|**operator_id_netsent**|**int**|ジョブの完了時に **net send** によって通知されたオペレーターの ID 番号。|  
 |**operator_id_paged**|**int**|ジョブの完了時に、ポケットベルの通知を受けたオペレーターの ID 番号。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  このプロシージャでは、ジョブに関する現在の状態のスナップショットが生成されます。 返される結果は、要求が処理された時点の情報を表します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル**msdb.dbo.sysのセッション**に格納されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントサービスが開始されるたびに、エージェントによってセッション id が作成されます。 セッション id は、テーブル **msdb.dbo.sysのセッション**に格納されます。  
   
  *Session_id*が指定されていない場合は、最新のセッションに関する情報が一覧表示されます。  
   
  *Job_name*または*job_id*が指定されていない場合は、すべてのジョブの情報が一覧表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -95,7 +96,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- 他のユーザーが所有するジョブのアクティビティを表示できるのは、 **sysadmin**のメンバーだけです。  
+ 他のユーザーが所有するジョブのアクティビティを表示できるのは、 **sysadmin** のメンバーだけです。  
   
 ## <a name="examples"></a>例  
  次の例では、現在のユーザーが表示する権限を持っているすべてのジョブのアクティビティを一覧表示します。  
@@ -108,7 +109,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

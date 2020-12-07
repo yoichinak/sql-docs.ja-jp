@@ -1,4 +1,5 @@
 ---
+description: '[列の型の推測] ダイアログ ボックスの UI リファレンス'
 title: '[列の型の推測] ダイアログ ボックスの UI リファレンス | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a1e742bfc0254cddf38a73a8b5923168fb58745f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c2bfd93e046141889d9cfa5c1c438462efa92d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88425964"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>[列の型の推測] ダイアログ ボックスの UI リファレンス
 

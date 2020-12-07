@@ -1,4 +1,5 @@
 ---
+description: 同期出力型のカスタム変換コンポーネントの開発
 title: 同期出力型のカスタム変換コンポーネントの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920218"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123213"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>同期出力型のカスタム変換コンポーネントの開発
 
@@ -115,7 +116,7 @@ End Class
   
  列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> により、他のプロパティに設定される値が決定されます。 次の表は、各 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> の依存するプロパティの要件を示しています。 ここに示されていないデータ型の場合、依存するプロパティは 0 に設定されます。  
   
-|DataType|長さ|スケール|Precision|CodePage|  
+|DataType|長さ|スケール|有効桁数|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0 より大きく 28 以下。|0|0|  
 |DT_CY|0|0|0|0|  

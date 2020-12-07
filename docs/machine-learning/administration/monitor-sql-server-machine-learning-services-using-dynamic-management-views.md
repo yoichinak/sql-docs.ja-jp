@@ -3,21 +3,21 @@ title: DMV を使用してスクリプトを監視する
 description: 動的管理ビュー (DMV) を使用して、SQL Server Machine Learning Services での Python および R の外部スクリプトの実行を監視します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 09/17/2019
+ms.date: 10/14/2019
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2313b13a009ea4c3fb5ec6a8dae6da75716f0b1b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6d94fc2d85ac0012347cb55f4981a25ba107f5df
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726579"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679209"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 動的管理ビュー (DMV) を使用して、外部スクリプト (Python と R) の実行、使用されたリソース、問題の診断、SQL Server Machine Learning Services のパフォーマンスの調整を監視します。
 
@@ -79,12 +79,12 @@ WHERE name = 'external scripts enabled';
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| IsMLServicesInstalled | インスタンスに対して SQL Server Machine Learning Services がインストールされている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
-| ExternalScriptsEnabled | インスタンスの外部スクリプトが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
+| 列                       | 説明 |
+|------------------------------|-------------|
+| IsMLServicesInstalled        | インスタンスに対して SQL Server Machine Learning Services がインストールされている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
+| ExternalScriptsEnabled       | インスタンスの外部スクリプトが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
 | ImpliedAuthenticationEnabled | 暗黙の認証が有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 暗黙の認証の構成は、SQLRUserGroup のログインが存在するかどうかを確認することによって確認されます。 |
-| IsTcpEnabled | インスタンスの TCP/IP プロトコルが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 詳細については、「[SQL Server の既定のネットワーク プロトコル構成](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)」を参照してください。 |
+| IsTcpEnabled                 | インスタンスの TCP/IP プロトコルが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 詳細については、「[SQL Server の既定のネットワーク プロトコル構成](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)」を参照してください。 |
 
 ## <a name="active-sessions"></a>Active sessions
 
@@ -107,24 +107,24 @@ ON s.session_id = r.session_id;
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| session_id | アクティブな各プライマリ接続に関連付けられたセッションを識別します。 |
-| blocking_session_id | 要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。 |
-| status | 要求の状態。 |
-| database_name | 各セッションの現在のデータベースの名前。 |
-| login_name | 現在セッションを実行している SQL Server ログイン名。 |
-| wait_time | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
-| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類の詳細については、「[sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 |
-| last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
-| total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
-| cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
-| 読み取り | 要求で実行された読み取りの数。 |
-| logical_reads | 要求で実行された論理読み取りの数。 |
-| 書き込み | 要求で実行された書き込みの数。 |
-| language | サポートされているスクリプト言語を表すキーワードです。 |
+| 列                | 説明 |
+|-----------------------|-------------|
+| session_id            | アクティブな各プライマリ接続に関連付けられたセッションを識別します。 |
+| blocking_session_id   | 要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。 |
+| status                | 要求の状態。 |
+| database_name         | 各セッションの現在のデータベースの名前。 |
+| login_name            | 現在セッションを実行している SQL Server ログイン名。 |
+| wait_time             | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
+| wait_type             | 要求が現在ブロックされている場合の待機の種類。 待機の種類の詳細については、「[sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 |
+| last_wait_type        | 要求がブロックされていた場合の最後の待機の種類。 |
+| total_elapsed_time    | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
+| cpu_time              | 要求で使用される CPU 時間 (ミリ秒単位)。 |
+| 読み取り                 | 要求で実行された読み取りの数。 |
+| logical_reads         | 要求で実行された論理読み取りの数。 |
+| 書き込み                | 要求で実行された書き込みの数。 |
+| language              | サポートされているスクリプト言語を表すキーワードです。 |
 | degree_of_parallelism | 作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。 |
-| external_user_name | スクリプトが実行されたときの Windows ワーカー アカウント。 |
+| external_user_name    | スクリプトが実行されたときの Windows ワーカー アカウント。 |
 
 ## <a name="execution-statistics"></a>実行の統計
 
@@ -143,10 +143,10 @@ ORDER BY language, counter_name;
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| language | 登録されている外部スクリプト言語の名前です。 |
-| counter_name | 登録されている外部スクリプト関数の名前です。 |
+| 列        | 説明 |
+|---------------|-------------|
+| language      | 登録されている外部スクリプト言語の名前です。 |
+| counter_name  | 登録されている外部スクリプト関数の名前です。 |
 | counter_value | 登録されている外部スクリプト関数がサーバーで呼び出されたインスタンスの合計数です。 この値は、機能がインスタンスにインストールされてからの累積値で、リセットすることはできません。 |
 
 ## <a name="performance-counters"></a>パフォーマンス カウンター
@@ -165,15 +165,15 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** は、外部スクリプトの次のパフォーマンス カウンターを出力します。
 
-| カウンター | 説明 |
-|---------|-------------|
-| Total Executions | ローカルまたはリモート呼び出しによって開始された外部プロセスの数。 |
-| Parallel Executions | スクリプトに _\@並列処理_仕様が含まれ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が並列クエリ プランを生成して使用することができた回数。 |
-| Streaming Executions | ストリーミング機能が呼び出された回数。 |
-| SQL CC Executions | 呼び出しがリモートでインスタンス化され、SQL Server が計算コンテキストとして使用された外部スクリプトの実行回数。 |
-| Implied Auth.Login | ODBC ループバック呼び出しが暗黙の認証を使用して行われた回数。つまり、スクリプト要求を送信したユーザーに代わって [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が呼び出しを実行した回数。 |
+| カウンター                   | 説明 |
+|---------------------------|-------------|
+| Total Executions          | ローカルまたはリモート呼び出しによって開始された外部プロセスの数。 |
+| Parallel Executions       | スクリプトに _\@並列処理_ 仕様が含まれ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が並列クエリ プランを生成して使用することができた回数。 |
+| Streaming Executions      | ストリーミング機能が呼び出された回数。 |
+| SQL CC Executions         | 呼び出しがリモートでインスタンス化され、SQL Server が計算コンテキストとして使用された外部スクリプトの実行回数。 |
+| Implied Auth.Login      | ODBC ループバック呼び出しが暗黙の認証を使用して行われた回数。つまり、スクリプト要求を送信したユーザーに代わって [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が呼び出しを実行した回数。 |
 | Total Execution Time (ms) | 呼び出しと呼び出しの完了までの経過時間。 |
-| Execution Errors | スクリプトがエラーを報告した回数。 この数には R または Python のエラーは含まれません。 |
+| Execution Errors          | スクリプトがエラーを報告した回数。 この数には R または Python のエラーは含まれません。 |
 
 ## <a name="memory-usage"></a>メモリ使用量
 
@@ -193,11 +193,11 @@ FROM sys.dm_os_sys_info;
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| physical_memory_kb | マシンに搭載されている物理メモリの合計。 |
-| committed_kb | メモリ マネージャーでコミットされたメモリ (KB 単位)。 メモリ マネージャー内の予約済みメモリは含まれません。 |
-| external_pool_peak_memory_kb | すべての外部リソース プールで使用されるメモリの最大量の合計 (KB 単位)。 |
+| 列                       | 説明                                                                                                           |
+|------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| physical_memory_kb           | マシンに搭載されている物理メモリの合計。                                                                   |
+| committed_kb                 | メモリ マネージャーでコミットされたメモリ (KB 単位)。 メモリ マネージャー内の予約済みメモリは含まれません。 |
+| external_pool_peak_memory_kb | すべての外部リソース プールで使用されるメモリの最大量の合計 (KB 単位)。                          |
 
 ## <a name="memory-configuration"></a>メモリ構成
 
@@ -222,9 +222,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| name | 外部リソース プールまたは SQL Server の名前。 |
+| 列             | 説明 |
+|--------------------|-------------|
+| name               | 外部リソース プールまたは SQL Server の名前。 |
 | max_memory_percent | SQL Server または外部リソース プールが使用できる最大メモリ。 |
 
 ## <a name="resource-pools"></a>リソース プール
@@ -247,12 +247,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 このクエリは次の列を返します。
 
-| 列 | 説明 |
-|--------|-------------|
-| pool_name | リソース プールの名前。 SQL Server リソース プールの先頭には `SQL Server` が付けられ、外部リソース プールの先頭には `External Pool` が付けられます。
-| total_cpu_usage_hours | リソース ガバナー統計がリセットされてからの累積 CPU 使用率 (ミリ秒単位)。 |
-| read_io_completed_total | リソース ガバナー統計がリセットされた後に完了した読み取り IO の合計。 |
-| write_io_completed_total | リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 |
+| 列                   | 説明  |
+|--------------------------|--------------|
+| pool_name                | リソース プールの名前。 SQL Server リソース プールの先頭には `SQL Server` が付けられ、外部リソース プールの先頭には `External Pool` が付けられます。 |
+| total_cpu_usage_hours    | Resource Governor 統計がリセットされてからの累積 CPU 使用率 (ミリ秒単位)。 |
+| read_io_completed_total  | Resource Governor 統計がリセットされてからの実行済み読み取り IO の合計。              |
+| write_io_completed_total | Resource Governor 統計がリセットされてからの実行済み書き込み IO の合計。             |
 
 ## <a name="installed-packages"></a>インストール済みパッケージ
 
@@ -267,7 +267,7 @@ SQL Server Machine Learning Services にインストールされた R パッケ�
 この出力を取得するには、次のクエリを実行します。 このクエリでは、R スクリプトを使用して、SQL Server を使用してインストールする R パッケージを決定します。
 
 ```sql
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
 , @script = N'
 OutputDataSet <- data.frame(installed.packages()[,c("Package", "Version", "Depends", "License", "LibPath")]);'
 WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR(4000)
@@ -276,13 +276,13 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 返される列は次のとおりです。
 
-| 列 | 説明 |
-|--------|-------------|
-| Package | インストールされているパッケージの名前。 |
-| Version | パッケージのバージョン。 |
+| 列  | 説明                                                 |
+|---------|-------------------------------------------------------------|
+| Package | インストールされているパッケージの名前。                              |
+| Version | パッケージのバージョン。                                     |
 | 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
-| ライセンス | インストールされているパッケージのライセンス。 |
-| LibPath | パッケージが格納されているディレクトリ。 |
+| ライセンス | インストールされているパッケージのライセンス。                          |
+| LibPath | パッケージが格納されているディレクトリ。                   |
 
 ### <a name="installed-packages-for-python"></a>Python 用にインストールされたパッケージ
 
@@ -293,19 +293,20 @@ SQL Server Machine Learning Services にインストールされた Python パ�
 この出力を取得するには、次のクエリを実行します。 このクエリでは、Python スクリプトを使用して、SQL Server を使用してインストールする Python パッケージを決定します。
 
 ```sql
-EXEC sp_execute_external_script @language = N'Python'
+EXECUTE sp_execute_external_script @language = N'Python'
 , @script = N'
-import pip
-OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.get_installed_distributions()])'
+import pkg_resources
+import pandas
+OutputDataSet = pandas.DataFrame(sorted([(i.key, i.version, i.location) for i in pkg_resources.working_set]))'
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
 返される列は次のとおりです。
 
-| 列 | 説明 |
-|--------|-------------|
-| Package | インストールされているパッケージの名前。 |
-| Version | パッケージのバージョン。 |
+| 列   | 説明                               |
+|----------|-------------------------------------------|
+| Package  | インストールされているパッケージの名前。            |
+| Version  | パッケージのバージョン。                   |
 | 場所 | パッケージが格納されているディレクトリ。 |
 
 ## <a name="next-steps"></a>次のステップ

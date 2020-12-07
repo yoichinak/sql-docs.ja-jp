@@ -1,4 +1,5 @@
 ---
+description: LocalDBUnshareInstance 関数
 title: Localdbunのインスタンス関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,14 +14,14 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 76693483dd8dd2f7e063f31d3e5739cbec9e2b1e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b0b990898d034cc970036f208672ec48a342b69c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765152"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543994"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,10 +67,10 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

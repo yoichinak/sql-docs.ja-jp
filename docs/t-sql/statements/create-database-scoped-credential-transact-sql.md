@@ -1,4 +1,5 @@
 ---
+description: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 title: CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -22,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba0b83c6c03c761264fb6e85b8d93c09debef49
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: ee984b5e04426cd269b7ed21f43d6b9b9dc91469
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523364"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328122"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -52,7 +53,10 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* 作成するデータベース スコープの資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。
 
-IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。
+IDENTITY **='** _identity\_name_ **'** サーバーの外部に接続するときに使用するアカウントの名前を指定します。 共有キーを使用して Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。 データを SQL DW に読み込むには、任意の有効な値を ID に使用できます。 Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。 Kerberos (Windows Active Directory または MIT KDC) の使用時には、IDENTITY 引数でドメイン名を使用しないでください。 アカウント名にしておけば問題ありません。
+
+> [!IMPORTANT]
+> PolyBase 用の SQL、Oracle、Teradata、および MongoDB ODBC コネクタでサポートされるのは、Kerberos 認証ではなく、基本認証のみです。
 
 > [!NOTE]
 > Azure Blob Storage 内のコンテナーで匿名アクセスが有効になっている場合は、WITH IDENTITY を使用する必要はありません。 Azure Blob Storage に対するクエリの例については、「[Azure Blob Storage に格納されているファイルからテーブルへのインポート](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)」を参照してください。
@@ -81,7 +85,7 @@ IDENTITY が Windows ユーザーの場合、このシークレットはパス�
 
 - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、データベース スコープ資格情報を使用して、Azure Blob Storage に拡張イベント ファイルを書き込みます。
 
-- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、エラスティック プールにデータベース スコープ資格情報を使用します。 詳しくは、[エラスティック データベースでの急増の緩和](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)に関する記事をご覧ください
+- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] は、エラスティック プールにデータベース スコープ資格情報を使用します。 詳しくは、[エラスティック データベースでの急増の緩和](/azure/azure-sql/database/elastic-pool-overview)に関する記事をご覧ください
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) と [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) は、データベース スコープ資格情報を使用して Azure Blob Storage からデータにアクセスします。 詳しくは、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。 
 
@@ -120,10 +124,10 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Azure Data Lake Store に PolyBase で接続するためのデータベース スコープ資格情報の作成
 
-次の例では、Azure SQL Data Warehouse で PolyBase によって使用できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。
+次の例では、[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] で PolyBase によって使用できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。
 
 Azure Data Lake Store は、Azure Active Directory アプリケーションをサービス間認証に使用します。
-データベース スコープ資格情報を作成する前に、[AAD アプリケーションを作成](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)し、client_id、OAuth_2.0_Token_EndPoint、キーを文書化してください。
+データベース スコープ資格情報を作成する前に、[AAD アプリケーションを作成](/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)し、client_id、OAuth_2.0_Token_EndPoint、キーを文書化してください。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
@@ -144,4 +148,4 @@ WITH
 - [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)
 - [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)
 - [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)
-- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
+- [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: DBCC USEROPTIONS (Transact-SQL)
 title: DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6332051518af2bfeaf27a5db4a25f081c2a6286e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9a80a6bdaa75d01f63f22244f93225a9b32ba93d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484190"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115560"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86484190"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -51,8 +52,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果セット  
 DBCC USEROPTIONS は、SET オプションの名前の列とオプションの値の列を返します (値とエントリは状況に応じて異なります)。
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 

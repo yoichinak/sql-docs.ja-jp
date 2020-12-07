@@ -1,8 +1,9 @@
 ---
+description: Supports メソッドの例 (VC++)
 title: Supports メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 639beb1e3fe5728ced23e9496b74947b3dfb0428
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765373"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988353"
 ---
 # <a name="supports-method-example-vc"></a>Supports メソッドの例 (VC++)
-この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この例を実行するには DisplaySupport 関数が必要です。  
+この例では、 [サポート](./supports-method.md) メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この例を実行するには DisplaySupport 関数が必要です。  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -226,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)   
+ [Supports メソッド](./supports-method.md)

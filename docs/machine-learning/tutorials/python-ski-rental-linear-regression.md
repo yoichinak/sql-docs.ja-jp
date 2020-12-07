@@ -10,24 +10,24 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 3495fb429754fdd38a203d1d9ce5e8afee60363e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fc700631df6289c0529fdfd65d73b630cfac00f1
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730461"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94585053"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習での線形回帰を使用したスキー レンタルの予測
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/sql-notebooks.md)を使用します。
+この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) または[ビッグ データ クラスター](../../big-data-cluster/machine-learning-services.md)で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/notebooks/notebooks-guidance.md)を使用します。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/sql-notebooks.md)を使用します。
+この 4 部構成のチュートリアル シリーズでは、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/notebooks/notebooks-guidance.md)を使用します。
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-この 4 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/sql-notebooks.md)を使用します。
+この 4 部構成のチュートリアル シリーズでは、[Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) で Python と線形回帰を使用して、スキーのレンタル数を予測します。 このチュートリアルは、[Azure Data Studio で Python のノートブック](../../azure-data-studio/notebooks/notebooks-guidance.md)を使用します。
 ::: moniker-end
 
 たとえば、スキー レンタル事業を所有していて、将来の日付に対するレンタル数を予測したい場合を考えてみましょう。 この情報は、在庫、スタッフおよび設備の準備に役立ちます。
@@ -48,18 +48,18 @@ ms.locfileid: "85730461"
 ## <a name="prerequisites"></a>前提条件
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-* SQL Server Machine Learning Services - Machine Learning Services をインストールする方法については、「[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)」または「[Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)」に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
+* SQL Server Machine Learning Services - Machine Learning Services をインストールするには、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)または [Linux インストール ガイド](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)に関するページを参照してください。 [SQL Server ビッグ データ クラスターで Machine Learning Services を有効にする](../../big-data-cluster/machine-learning-services.md)こともできます。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* SQL Server Machine Learning Services - Machine Learning Services をインストールする方法については、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
+* SQL Server Machine Learning Services - Machine Learning Services をインストールするには、[Windows インストール ガイド](../install/sql-machine-learning-services-windows-install.md)に関するページを参照してください。 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-* Azure SQL Managed Instance の Machine Learning Services。 サインアップの方法については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
+* Azure SQL Managed Instance Machine Learning Services - 詳細については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Python IDE - このチュートリアルは、[Azure Data Studio](../../azure-data-studio/what-is.md) で Python のノートブックを使用します。 詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/sql-notebooks.md)」を参照してください。
+* Python IDE - このチュートリアルは、[Azure Data Studio](../../azure-data-studio/what-is.md) で Python のノートブックを使用します。 詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks/notebooks-guidance.md)」を参照してください。
 
 * SQL クエリ ツール - このチュートリアルでは、[Azure Data Studio](../../azure-data-studio/what-is.md) を使用していることを前提としています。
 

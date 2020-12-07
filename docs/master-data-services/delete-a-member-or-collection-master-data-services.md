@@ -1,4 +1,5 @@
 ---
+description: メンバーまたはコレクションを削除する (マスター データ サービス)
 title: メンバーまたはコレクションを削除する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 613fa319c00ab100e52835faab1eafc33c07c9be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500639"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
 
@@ -32,7 +33,7 @@ ms.locfileid: "85811554"
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -65,7 +66,7 @@ ms.locfileid: "85811554"
   
 8.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンバーまたはコレクションを再アクティブ化する &#40;マスターデータサービス&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [メンバー &#40;マスターデータサービス&#41;](../master-data-services/members-master-data-services.md)   
  [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-author: MikeRayMSFT
-ms.author: mikeray
+author: cawrites
+ms.author: chadam
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: acaf5441ee5ca80468d6795071f99979ac3bcda9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 76c712143d97d602270c9faeacae4c3550f6964d
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863380"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96129292"
 ---
 # <a name="copy-only-backups"></a>コピーのみのバックアップ
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-*コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。
+*コピーのみのバックアップ* は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。
   
  コピーのみのバックアップには、次の種類があります。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "87863380"
  コピーのみのバックアップは、 **backupset** テーブルの [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 列に記録されます。  
  
  > [!IMPORTANT]  
-> Azure SQL Managed Instance では、[サービスによって管理された Transparent Data Encryption (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) を使用して暗号化されたデータベースに対して、コピーのみのバックアップを作成することはできません。 サービスによって管理された TDE ではデータの暗号化に内部キーが使用され、そのキーをエクスポートすることはできません。そのため、他の場所でバックアップを復元することはできません。 暗号化されたデータベースのコピーのみのバックアップを作成できるようにするには、[ユーザーが管理する TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) を代わりに使用することを検討してください。ただし、後で復元するために暗号化キーを確実に使用できるようにしておいてください。
+> Azure SQL Managed Instance では、[サービスによって管理された Transparent Data Encryption (TDE)](/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) を使用して暗号化されたデータベースに対して、コピーのみのバックアップを作成することはできません。 サービスによって管理された TDE ではデータの暗号化に内部キーが使用され、そのキーをエクスポートすることはできません。そのため、他の場所でバックアップを復元することはできません。 暗号化されたデータベースのコピーのみのバックアップを作成できるようにするには、[ユーザーが管理する TDE](/azure/sql-database/transparent-data-encryption-byok-azure-sql) を代わりに使用することを検討してください。ただし、後で復元するために暗号化キーを確実に使用できるようにしておいてください。
   
 ## <a name="to-create-a-copy-only-backup"></a>コピーのみのバックアップを作成するには  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "87863380"
 ###  <a name="a-using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> A. SQL Server Management Studio を使用する  
 次の例では、 `Sales` データベースのコピーのみのバックアップを既定のバックアップ場所にあるディスクにバックアップします。
 
-1. **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
+1. **オブジェクト エクスプローラー** で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。
 
 1. **[データベース]** を展開して `Sales`を右クリックし、 **[タスク]** をポイントしてから **[バックアップ]** をクリックします。
 
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
-- [SQL Server PowerShell プロバイダー](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+- [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)  
 
 ## <a name="see-also"></a>関連項目  
  [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
@@ -108,4 +108,3 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
-  

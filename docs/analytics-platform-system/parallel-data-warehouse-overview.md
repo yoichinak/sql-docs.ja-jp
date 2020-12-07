@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400932"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データウェアハウスコンポーネント-分析プラットフォームシステム
@@ -67,7 +67,7 @@ MPP エンジンは、超並列処理 (MPP) システムの頭脳です。 そ�
 管理コンソールは、アプライアンスの状態、正常性、およびパフォーマンスの情報を表示する web アプリケーションです。  
   
 ### <a name="configuration-manager"></a>構成マネージャー  
-Configuration Manager (dwconfig .exe) は、アプライアンス管理者が分析プラットフォームシステムを構成するために使用するツールです。  
+Configuration Manager (dwconfig.exe) は、アプライアンス管理者が分析プラットフォームシステムを構成するために使用するツールです。  
   
 ### <a name="control-node-databases"></a>ノードデータベースの制御  
 SQL Server は、コントロールノード上のすべてのデータベースを管理します。  
@@ -121,7 +121,7 @@ Analytics Platform System は、仮想化を使用して高可用性を実現し
 ### <a name="failover-clustering"></a>フェールオーバー クラスタリング  
 Windows フェールオーバークラスタリングには、ホストで障害が発生した場合にパッシブホスト上のプロセスを再開する機能が用意されています。  
   
-### <a name="storage-spaces"></a>記憶域  
+### <a name="storage-spaces"></a>記憶域スペース  
 Windows 記憶域スペースは、少数のコンピューティングノードグループの記憶域プールとしてユーザーデータを管理します。 コンピューティングノードで障害が発生した場合でも、グループ内の別のコンピューティングノードを介してデータにアクセスできます。  
   
 ### <a name="hyper-v"></a>Hyper-V  
@@ -138,7 +138,7 @@ PolyBase テクノロジは、SQL Server PDW データを外部の Hadoop デー
   
 ## <a name="query-tools"></a>クエリ ツール   
   
-クエリは、クエリの\-MPP の性質に合わせて変更された Transact SQL を使用して作成されます。 すべてのクエリが制御ノードに送信されます。このノードは、計算ノード全体でクエリを実行するための並列クエリプランを生成します。  
+クエリは \- 、クエリの MPP の性質に合わせて変更された Transact SQL を使用して作成されます。 すべてのクエリが制御ノードに送信されます。このノードは、計算ノード全体でクエリを実行するための並列クエリプランを生成します。  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools は、Visual Studio 内で実行され、クエリを SQL Server PDW に送信するために推奨される GUI ツールです。 オブジェクトエクスプローラー内を移動できるようにすることで、SQL Server Management Studio に似ています。  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>sqlcmd コマンドラインクエリツール  
-sqlcmd は、Transact\-SQL ステートメントおよびシステムコマンドを実行するための SQL Server コマンドラインツールです。 SQL Server PDW と連携し、SQL Server PDW クエリを実行するために推奨されるコマンドラインツールです。 Sqlcmd を使用すると、\-コマンドライン、バッチファイル、または Windows PowerShell から、Transact SQL ステートメントを対話的に実行できます。  
+sqlcmd は、Transact \- SQL ステートメントおよびシステムコマンドを実行するための SQL Server コマンドラインツールです。 SQL Server PDW と連携し、SQL Server PDW クエリを実行するために推奨されるコマンドラインツールです。 Sqlcmd を使用すると、 \- コマンドライン、バッチファイル、または Windows PowerShell から、Transact SQL ステートメントを対話的に実行できます。  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>リンク サーバー  
-SQL Server のリンクサーバー接続を使用すると、SQL Server を使用して\-SQL Server PDW に Transact SQL ステートメントを送信できます。 
+SQL Server のリンクサーバー接続を使用すると、SQL Server を使用して \- SQL Server PDW に Transact SQL ステートメントを送信できます。 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 

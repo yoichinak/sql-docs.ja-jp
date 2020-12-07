@@ -1,4 +1,5 @@
 ---
+description: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用'
 title: 'チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用'
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5b565d7d62b1e189ec9d187c6a585449713f0df0
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247271"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384625"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -32,19 +33,19 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
   
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
+このチュートリアルを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念と T-SQL 構文についての知識が必要です。 このチュートリアルを使用するには、Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、オンプレミスの SQL Server のインスタンスへのアクセス、SQL Server 2016 を実行している Azure 仮想マシン (VM) へのアクセス、および AdventureWorks2016 データベースが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、 **alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
-- [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
+- [Azure ストレージ アカウント](/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成します。
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 - [SQL Server を実行している Azure VM](https://azure.microsoft.com/services/virtual-machines/sql-server/) をプロビジョニングする
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
-- [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
-- ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) をインストールします。
+- [AdventureWorks2016 サンプル データベース](../samples/adventureworks-install-configure.md)をダウンロードする。
+- ユーザー アカウントを [db_backupoperator](./security/authentication-access/database-level-roles.md) のロールに割り当て、[alter any credential](../t-sql/statements/alter-credential-transact-sql.md) 権限を付与する。 
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
 
-このセクションでは [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
+このセクションでは [Azure PowerShell](/powershell/azure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
   
 > [!NOTE]  
 > このスクリプトは、Azure PowerShell 5.0.10586 を使用して作成されています。  
@@ -410,7 +411,7 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
     ```sql  
     -- restore as a new database from a transaction log backup file  
     RESTORE DATABASE AdventureWorks2016_EOM   
-        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<logbackupfile.bak'    
+        FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/<logbackupfile.bak>'    
         WITH MOVE 'AdventureWorks2016_data' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Data.mdf'  
        , MOVE 'AdventureWorks2016_log' to 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/AdventureWorks2014_EOM_Log.ldf'  
        , RECOVERY  
@@ -483,13 +484,13 @@ AdventureWorks2016 データベースにアクティビティを生成し、フ�
 [Microsoft Azure 内の SQL Server データ ファイル](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Shared Access Signature, 第 1 部: SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[コンテナーの作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
-[コンテナー ACL の設定](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
-[コンテナー ACL の取得](https://msdn.microsoft.com/library/azure/dd179469.aspx)
+[Shared Access Signature, 第 1 部: SAS モデルについて](/azure/storage/common/storage-sas-overview)  
+[コンテナーの作成](/rest/api/storageservices/Create-Container)  
+[コンテナー ACL の設定](/rest/api/storageservices/Set-Container-ACL)  
+[コンテナー ACL の取得](/rest/api/storageservices/Get-Container-ACL)
 [資格情報 &#40;データベース エンジン&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots (Transact-SQL)](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure でのデータベース ファイルのスナップショット バックアップ](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)

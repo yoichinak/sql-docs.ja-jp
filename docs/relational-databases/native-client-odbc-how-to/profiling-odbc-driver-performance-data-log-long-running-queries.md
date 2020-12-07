@@ -1,5 +1,6 @@
 ---
-title: 実行時間の長いクエリのログ記録 (ODBC) |Microsoft Docs
+description: ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
+title: ログ Long-Running クエリ (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,11 +14,12 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80757fcbaf0548b520f8357de4eb5cc23db86386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4942428a1f73275aeb85d9c41220467b89e3ab9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005831"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868894"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC ドライバー パフォーマンス データのプロファイル - 長時間実行クエリのログ
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,40 +27,40 @@ ms.locfileid: "86005831"
   このサンプルでは、実行時間の長いクエリをログに記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 このサンプルを実行すると Odbcqry.log が作成されます。このファイルには、アプリケーションの設定間隔よりも実行時間が長いクエリの一覧が格納されます。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>ODBC アドミニストレーターを使用して実行時間の長いクエリをログに記録するには  
   
 1.  **コントロールパネル**で、[**管理ツール**] をダブルクリックし、[**データソース (ODBC)**] をダブルクリックします。 (または、コマンドプロンプトから odbcad32.exe を実行することもできます)。  
   
-2.  [**ユーザー dsn**]、[**システム dsn**]、または [**ファイル dsn** ] タブをクリックします。  
+2.  [ **ユーザー dsn**]、[ **システム dsn**]、または [ **ファイル dsn** ] タブをクリックします。  
   
 3.  実行時間の長いクエリのログを記録するデータ ソースをクリックします。  
   
-4.  **[Configure]\(構成\)** をクリックします。  
+4.  **[構成]** をクリックします。  
   
-5.  Microsoft SQL Server DSN の構成ウィザードで、[**実行時間の長いクエリをログファイルに保存する**] ページに移動します。  
+5.  Microsoft SQL Server DSN の構成ウィザードで、[ **実行時間の長いクエリをログファイルに保存する**] ページに移動します。  
   
-6.  [**実行時間の長いクエリをログファイルに保存する**] を選択します。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じて、[**参照**] をクリックして、ファイルシステムでクエリログを参照します。  
+6.  [ **実行時間の長いクエリをログファイルに保存する**] を選択します。 ボックスに、実行時間の長いクエリのログを記録するファイルの名前を入力します。 必要に応じて、[ **参照** ] をクリックして、ファイルシステムでクエリログを参照します。  
   
-7.  [**長いクエリ時間 (ミリ秒)** ] ボックスで、クエリのタイムアウト間隔をミリ秒単位で設定します。  
+7.  [ **長いクエリ時間 (ミリ秒)** ] ボックスで、クエリのタイムアウト間隔をミリ秒単位で設定します。  
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>実行時間の長いクエリをプログラムでログに記録するには  
   
-1.  SQL_COPT_SS_PERF_QUERY_LOG と、実行時間の長いクエリログファイルの完全なパスとファイル名を使用して、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出します。 次に例を示します。  
+1.  SQL_COPT_SS_PERF_QUERY_LOG と、実行時間の長いクエリログファイルの完全なパスとファイル名を使用して、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) を呼び出します。 次に例を示します。  
   
     ```  
     C:\\Odbcqry.log  
     ```  
   
-2.  SQL_COPT_SS_PERF_QUERY_INTERVAL を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、タイムアウト間隔をミリ秒単位で設定します。  
+2.  SQL_COPT_SS_PERF_QUERY_INTERVAL を使用して [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) を呼び出し、タイムアウト間隔をミリ秒単位で設定します。  
   
-3.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_START を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、実行時間の長いクエリのログ記録を開始します。  
+3.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_START を使用して [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) を呼び出し、実行時間の長いクエリのログ記録を開始します。  
   
-4.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_STOP を使用して[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を呼び出し、実行時間の長いクエリのログ記録を停止します。  
+4.  SQL_COPT_SS_PERF_QUERY と SQL_PERF_STOP を使用して [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) を呼び出し、実行時間の長いクエリのログ記録を停止します。  
   
 ## <a name="example"></a>例  
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384) のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -218,6 +220,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
+ [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

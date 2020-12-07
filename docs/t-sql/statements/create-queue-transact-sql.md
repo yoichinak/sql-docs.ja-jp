@@ -1,4 +1,5 @@
 ---
+description: CREATE QUEUE (Transact-SQL)
 title: CREATE QUEUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2019
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6bf798524d8ccdc4ee1a5971e3c78a1302dcde58
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5af3da74b63578569c201f598cf63c891f9d4ee3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391737"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549346"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 

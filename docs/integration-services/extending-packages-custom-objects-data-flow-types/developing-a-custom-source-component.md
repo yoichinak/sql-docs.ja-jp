@@ -1,4 +1,5 @@
 ---
+description: カスタム変換元コンポーネントの開発
 title: カスタム変換元コンポーネントの開発 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea134d0ec6ca3a7868e21577d033a53b6a8e4f11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920248"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127091"
 ---
 # <a name="developing-a-custom-source-component"></a>カスタム変換元コンポーネントの開発
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920248"
  変換元コンポーネントのデザイン時の機能を実装する作業には、外部データ ソースへの接続の指定、データ ソースを反映する出力列の追加と設定、およびコンポーネントが実行可能かどうかの検証が含まれます。 定義上、変換元コンポーネントには入力がなく、1 つ以上の非同期出力があります。  
   
 ### <a name="creating-the-component"></a>コンポーネントの作成  
- 変換元コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換元コンポーネントで、接続マネージャーに対する要求を示すには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。それは、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することと、接続マネージャーの必要性をデザイナーに通知することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、 **[詳細エディター]** に **[接続プロパティ]** タブが表示されます。このタブを使用することで、ユーザーはパッケージ内で接続を選択したり、作成したりすることができます。  
+ 変換元コンポーネントは、パッケージで定義された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> オブジェクトを使用して、外部データ ソースに接続します。 変換元コンポーネントで、接続マネージャーに対する要求を示すには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> コレクションに要素を追加します。 このコレクションには 2 つの目的があります。それは、コンポーネントが使用する、パッケージ内の接続マネージャーへの参照を保持することと、接続マネージャーの必要性をデザイナーに通知することです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> がコレクションに追加されると、**[詳細エディター]** に **[接続プロパティ]** タブが表示されます。このタブを使用することで、ユーザーはパッケージ内で接続を選択したり、作成したりすることができます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> に出力と <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> オブジェクトを追加する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> の実装を示します。  
   
@@ -173,7 +174,7 @@ End Sub
   
  列の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> により、他のプロパティに設定される値が決定されます。 次の表は、各 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> の依存するプロパティの要件を示しています。 ここに示されていないデータ型の場合、依存するプロパティは 0 に設定されます。  
   
-|DataType|長さ|スケール|Precision|CodePage|  
+|DataType|長さ|スケール|有効桁数|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0 より大きく 28 以下。|0|0|  
 |DT_CY|0|0|0|0|  

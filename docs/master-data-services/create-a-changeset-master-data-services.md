@@ -1,4 +1,5 @@
 ---
+description: 変更セットを作成する (マスター データ サービス)
 title: 変更セットを作成する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495075"
 ---
 # <a name="create-a-changeset-master-data-services"></a>変更セットを作成する (マスター データ サービス)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85812447"
 
   変更セットは、マスター データに対する保留中の変更のコレクションです。 エンティティに変更の承認が必要な場合、保留中の変更は、変更セットに保存してから、管理者の承認を得るために送信する必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
   
 -   [エクスプローラー] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "85812447"
   
 ## <a name="to-create-a-local-changeset"></a>ローカルの変更セットを作成するには  
   
-1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
+1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[ **エクスプローラー**] をクリックします。  
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85812447"
   
 ## <a name="to-create-a-changeset-for-approval"></a>承認のための変更セットを作成するには  
   
-1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[**エクスプローラー**] をクリックします。  
+1.  [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ホーム] ページで、モデルとバージョンを選択し、[ **エクスプローラー**] をクリックします。  
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85812447"
 ## <a name="next-steps"></a>次の手順  
  [変更セットの適用および更新 (マスター データ サービス)](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [変更セット &#40;マスターデータサービスのコミットまたは送信&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   
  [変更セットの承認または拒否 (マスター データ サービス)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

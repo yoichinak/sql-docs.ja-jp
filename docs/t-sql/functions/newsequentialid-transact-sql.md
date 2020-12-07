@@ -1,4 +1,5 @@
 ---
+description: NEWSEQUENTIALID (Transact-SQL)
 title: NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fe754848be676d40387d4887a5a7e519da697f7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784385"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111051"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,24 +43,26 @@ ms.locfileid: "85784385"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 NEWSEQUENTIALID ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## <a name="return-type"></a>戻り値の型  
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>解説  
  NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます **uniqueidentifier**です。 次に例を示します。  
   
-```  
+```sql  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
 ```  
   
  NEWSEQUENTIALID() を DEFAULT 式で使用する場合、他のスカラー演算子と組み合わせることはできません。 たとえば、次を実行することはできません。  
   
-```  
+```sql 
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENTIALID()));  
 ```  
   

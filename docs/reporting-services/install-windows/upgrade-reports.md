@@ -1,4 +1,5 @@
 ---
+description: レポートのアップグレード (SSRS)
 title: レポートのアップグレード | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446028"
 ---
 # <a name="upgrade-reports-ssrs"></a>レポートのアップグレード (SSRS)
 
@@ -100,7 +101,7 @@ ms.locfileid: "77082283"
  レポート サーバー、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]、またはレポートの現在の RDL 名前空間を確認する方法については、「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>レポート サーバー上のレポートのアップグレード  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] レポート サーバーにアップグレードしたレポート サーバーで初めて [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポートを実行すると、そのレポートは、レポート サーバーでサポートされている現在のレポート定義の名前空間に自動的にアップグレードされます。 アップグレード前にレポートがレポート サーバーに存在していた可能性があります。あるいは、レポートが Web ポータル経由でアップロードされたか、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でレポート デザイナーからレポート サーバーに公開されていた可能性があります。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップグレードしたレポート サーバーで初めて [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを実行すると、そのレポートは、レポート サーバーでサポートされている現在のレポート定義の名前空間に自動的にアップグレードされます。 アップグレード前にレポートがレポート サーバーに存在していた可能性があります。あるいは、レポートが Web ポータル経由でアップロードされたか、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でレポート デザイナーからレポート サーバーに公開されていた可能性があります。  
   
  次の表に、レポート内の CRI の種類ごとに、レポート サーバーで実行されるアップグレード操作を示します。  
   
@@ -127,7 +128,7 @@ ms.locfileid: "77082283"
   
 -   **[しない]** レポートの CRI を変換しない場合に **[しない]** を選択します。 現在のバージョンでは、レポート プロセッサはこれらの CRI を表示できません。 システム管理者が、サードパーティのソフトウェア ベンダーから新しいレポート定義形式と互換性のある CRI の新しいバージョンのインストールを計画している場合、 **しない**を選択する必要があります。 新しいバージョンが使用可能になるまで、CRI はレポート内で赤い X のある空白テキスト ボックスとして表示されます。  
   
- どちらの場合でも、レポートは新しいレポート定義形式にアップグレードされ、元のレポートのバックアップ コピーは *\<Report Name>* `-` Backup.rdl として保存されます。 レポート作成ツールにレポートを保存する場合、新しいレポート定義形式でアップグレードされたレポートを保存することになります。 レポートをパブリッシュする場合、レポートはまずコンピューターに保存され、それからレポート サーバーにパブリッシュされます。 レポートのアップグレード バージョンをレポート サーバーにパブリッシュします。  
+ どちらの場合でも、レポートは新しいレポート定義形式にアップグレードされ、元のレポートのバックアップ コピーが *\<Report Name>* `-` Backup.rdl として保存されます。 レポート作成ツールにレポートを保存する場合、新しいレポート定義形式でアップグレードされたレポートを保存することになります。 レポートをパブリッシュする場合、レポートはまずコンピューターに保存され、それからレポート サーバーにパブリッシュされます。 レポートのアップグレード バージョンをレポート サーバーにパブリッシュします。  
   
  レポートを保存しない場合、元のレポートは変更されません。 ただし、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の SQL Server 2016 バージョン、または新しいレポート定義形式を使用するレポート作成環境では、このレポートは編集できません。 Web ポータルを使用して [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバーにアップロードすることで、レポートの元のバージョンを継続して実行できます。 詳細については、「[Web ポータル](../../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。  
   

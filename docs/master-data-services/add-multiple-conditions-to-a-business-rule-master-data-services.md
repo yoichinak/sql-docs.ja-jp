@@ -1,4 +1,5 @@
 ---
+description: ビジネス ルールに複数の条件を追加する (マスター データ サービス)
 title: ビジネスルールに条件を追加する
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dca2f4877a172b7fd75025e226459c699ea7d13b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a3ecfda6bd7b2bbd885cc8cc4b12917289dd3142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495076"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>ビジネス ルールに複数の条件を追加する (マスター データ サービス)
 
@@ -28,12 +29,12 @@ ms.locfileid: "85812078"
 > [!NOTE]  
 >  **OR** 演算子を使用するビジネス ルールを作成する場合は、個別に評価できる条件ステートメントごとに個別のルールを作成することを検討してください。 そうすることによって、必要に応じてルールを除外できるので、柔軟性が向上し、トラブルシューティングも容易になります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   ビジネス ルールが存在する必要があります。 詳細については、「[ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)」を参照してください。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85812078"
   
 2.  メニュー バーから **[管理]** をポイントして **[ビジネス ルール]** をクリックします。  
   
-3.  [**ビジネスルール/** ページ] の [**モデル**] ドロップダウンリストから、モデルを選択します。  
+3.  [ **ビジネスルール/** ページ] の [ **モデル** ] ドロップダウンリストから、モデルを選択します。  
   
 4.  **[エンティティ]** ドロップダウン リストから、エンティティを選択します。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "85812078"
     > [!TIP]  
     >  複数の条件を選択して右クリックすると、論理演算子内で条件をグループ化したり、特定の論理演算子内の条件のグループ化を解除したりできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [ビジネスルールの名前を変更する &#40;マスターデータサービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

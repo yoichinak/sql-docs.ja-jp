@@ -1,4 +1,5 @@
 ---
+description: ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
 title: ビジネス ルールに対してバージョンを検証する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388318"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
 
@@ -33,12 +34,12 @@ ms.locfileid: "85813205"
 > [!NOTE]  
 >  バージョンをコミットするには、すべてのメンバーが検証に合格する必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンの状態は、 **[未処理]** または **[ロック済み]** である必要があります。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "85813205"
   
 -   [バージョンをロックする (マスター データ サービス)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [検証の状態 &#40;マスターデータサービス&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [検証ストアドプロシージャ &#40;マスターデータサービス&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   

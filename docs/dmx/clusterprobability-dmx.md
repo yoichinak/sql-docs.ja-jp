@@ -1,4 +1,5 @@
 ---
+description: ClusterProbability (DMX)
 title: ClusterProbability (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969952"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726324"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,14 +34,14 @@ ClusterProbability([<Node_Caption>])
 ## <a name="return-type"></a>戻り値の型  
  スカラー値。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  次の構文では、マイニングモデルコンテンツスキーマ行セットを使用して、マイニングモデルに存在するノードのキャプションを返します。  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))」を参照してください。  
+ この構文の使用方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;のコンテンツ &#40;](../dmx/select-from-model-content-dmx.md)ます。 マイニングモデルコンテンツスキーマ行セットの詳細については、「 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))」を参照してください。  
   
  \<node caption>が指定されていない場合、関数は、入力ケースが最も可能性の高いクラスターに属する確率を返します。 **クラスター**関数を使用して、最も可能性の高いクラスターを返します。  
   
@@ -63,7 +64,6 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>参照  
  [DMX&#41;のクラスター &#40;](../dmx/cluster-dmx.md)   
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
-  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   

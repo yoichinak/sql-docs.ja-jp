@@ -1,4 +1,5 @@
 ---
+description: sp_upgrade_log_shipping (Transact-sql)
 title: sp_upgrade_log_shipping (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8afb57d3660f9c69c3ded45f55ed393531a044c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3fda9cd96160efa718865fcb6548a9fbe3b4247
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891249"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534777"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このストアドプロシージャは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布用にメタデータをアップグレードするためのアップグレード時に自動的に呼び出されます。 アップグレード中にメタデータで問題が発生しない限り、このプロシージャを明示的に実行する必要はありません。  
   
  sp_upgrade_log_shipping は、プライマリ、セカンダリ、または監視サーバーの master データベースから実行する必要があります。  

@@ -1,4 +1,5 @@
 ---
+description: データベースの圧縮タスク
 title: データベースの圧縮タスク | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 428c03cd4926b43db45a5de7adaadfbc99c31827
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: af97af913af741cc93a5afda1ba9a986ea1f72db
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921002"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92192822"
 ---
 # <a name="shrink-database-task"></a>データベースの圧縮タスク
 
@@ -57,6 +58,5 @@ ms.locfileid: "86921002"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックをクリックしてください。  
   
--   [タスクまたはコンテナーのプロパティを設定する](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [タスクまたはコンテナーのプロパティを設定する](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

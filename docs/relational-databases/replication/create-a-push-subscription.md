@@ -18,12 +18,12 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f69f19c766fc0768bf72101955ee5bc08b9e8702
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4710900a9a33de2be669ddf1204080068aad0220
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110571"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131028"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "87110571"
   
 1. パブリッシャー側のパブリケーション データベースに対して、[sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) を実行して、パブリケーションがプッシュ サブスクリプションをサポートしていることを確認します。  
   
-   - **allow_push** の値が **1**の場合、プッシュ サブスクリプションがサポートされます。  
+   - **allow_push** の値が **1** の場合、プッシュ サブスクリプションがサポートされます。  
   
    - **allow_push** の値が **0** の場合、[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。 **allow_push** を **\@property** に、**true** を **\@value** に指定します。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "87110571"
   
 1. パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) を実行して、パブリケーションがプッシュ サブスクリプションをサポートしていることを確認します。  
   
-   - **allow_push** の値が **1**の場合、パブリケーションでプッシュ サブスクリプションがサポートされます。  
+   - **allow_push** の値が **1** の場合、パブリケーションでプッシュ サブスクリプションがサポートされます。  
   
    - **allow_push** の値が **1** ではない場合、[sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。 **allow_push** を **\@property** に、**true** を **\@value** に指定します。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "87110571"
  レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってプッシュ サブスクリプションを作成できます。 プッシュ サブスクリプションを作成する際に使用する RMO クラスは、作成するサブスクリプションの対象となるパブリケーションの種類によって異なります。  
   
 > [!IMPORTANT]
-> 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework に用意されている[暗号化サービス](https://go.microsoft.com/fwlink/?LinkId=34733)を使用します。  
+> 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework に用意されている[暗号化サービス](/previous-versions/aa719848(v=vs.71))を使用します。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプッシュ サブスクリプションを作成するには  
   
@@ -172,7 +172,7 @@ ms.locfileid: "87110571"
   
 2. 手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.TransPublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
+3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false** を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
 4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "87110571"
      > [!NOTE]
      > サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「[レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-   - (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
+   - (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false** を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
    - (省略可) SQL Server 認証を使用してサブスクライバーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) フィールドを設定します。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "87110571"
   
 2. 手順 1. のパブリッシャー接続を使用して、 <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成します。 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>、および <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>を指定します。  
   
-3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
+3. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false** を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
 4. <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "87110571"
      > [!NOTE]
      > サブスクリプションが **sysadmin** 固定サーバー ロールのメンバーにより作成される場合、<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> の設定は必須ではありませんが、推奨されます。 この場合、エージェントは SQL Server エージェントのアカウントを借用します。 詳細については、「[レプリケーション エージェントのセキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
-   - (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false**を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
+   - (省略可) **true** に <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> (既定値) を指定します。 **false** を指定した場合、サブスクリプションはプログラムでのみ同期が可能になります。  
   
    - (省略可) SQL Server 認証を使用してサブスクライバーに接続する場合、 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> の <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> フィールドおよび <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> (または <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> ) フィールドを設定します。  
   
@@ -266,6 +266,5 @@ ms.locfileid: "87110571"
  [レプリケーション管理オブジェクトの概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
+ [sqlcmd でのスクリプト変数の使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)  
   

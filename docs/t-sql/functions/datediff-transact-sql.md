@@ -31,12 +31,12 @@ ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e5f0fa70dc5c46d984a4d7003fc1ae6a00906a7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: df865c15c13c78f01a8c3da30be2f39656dc7156
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112090"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96117769"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "87112090"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
@@ -171,8 +171,8 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 この例では、ユーザー定義変数が *startdate* と *enddate* の引数として機能します。
   
 ```sql
-DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate   datetime2 = '2007-05-04 12:10:09.3312722';   
+DECLARE @startdate DATETIME2 = '2007-05-05 12:10:09.3312722';  
+DECLARE @enddate   DATETIME2 = '2007-05-04 12:10:09.3312722';   
 SELECT DATEDIFF(day, @startdate, @enddate);  
 ```  
   

@@ -2,7 +2,7 @@
 title: ODBC Driver のドライバー対応接続プール
 description: Windows 上の Microsoft ODBC Driver for SQL Server のドライバー対応接続プールに追加された機能強化について説明します。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922085"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288114"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>OLE DB Provider for SQL Server のドライバー対応接続プール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82922085"
   
 -   接続文字列とプールされた接続文字列の次のいずれかの接続キーワードの間に違いがある場合、プールされた接続は使用されません。  
   
-    |Keyword|ODBC ドライバー 13|ODBC ドライバー 11|
+    |Keyword|ODBC ドライバー 17/13|ODBC ドライバー 11|
     |-|-|-|
     |`Address`|はい|はい|
     |`AnsiNPW`|はい|はい|
@@ -68,7 +68,7 @@ ms.locfileid: "82922085"
     
 - 接続文字列とプールされた接続文字列の次のいずれかの接続属性の間に違いがある場合、プールされた接続は使用されません。  
   
-    |属性|ODBC ドライバー 13|ODBC ドライバー 11|  
+    |属性|ODBC ドライバー 17/13|ODBC ドライバー 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|はい|はい|
     |`SQL_ATTR_PACKET_SIZE`|はい|はい|
@@ -94,7 +94,7 @@ ms.locfileid: "82922085"
   
      これらの接続キーワードは、ドライバー マネージャがプール内の接続とユーザーの接続を一致させるときには考慮されません (これらのいずれかのパラメーターを変更した場合でも、既存の接続を再利用できます。 必要に応じて、ドライバーによりこれらのオプションがリセットされます。)これらの属性は、追加でネットワーク呼び出しを行わずに、クライアント側でリセットできます。  
   
-    |Keyword|ODBC ドライバー 13|ODBC ドライバー 11|  
+    |Keyword|ODBC ドライバー 17/13|ODBC ドライバー 11|  
     |-|-|-|  
     |`AutoTranslate`|はい|はい|
     |`Description`|はい|はい|
@@ -108,7 +108,7 @@ ms.locfileid: "82922085"
   
      次のいずれかの接続属性を変更した場合、既存の接続を再利用できます。  必要に応じて、ドライバーによって値がリセットされます。 ドライバーは追加のネットワーク呼び出しを行うことなく、クライアントでこれらの属性をリセットできます。  
   
-    |属性|ODBC ドライバー 13|ODBC ドライバー 11|  
+    |属性|ODBC ドライバー 17/13|ODBC ドライバー 11|  
     |-|-|-|  
     |すべてのステートメント属性|はい|はい|
     |`SQL_ATTR_AUTOCOMMIT`|はい|はい|

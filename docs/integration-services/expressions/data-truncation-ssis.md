@@ -1,4 +1,5 @@
 ---
+description: データの切り捨て (SSIS)
 title: データの切り捨て (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa36ccd8a161c15cf4d12d1f92bb1ec36b1ac0b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 12431bc9717b28552cc79d6f7d8e3026ed90c7cd
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920644"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123266"
 ---
 # <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
 

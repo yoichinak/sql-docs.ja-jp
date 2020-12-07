@@ -1,4 +1,5 @@
 ---
+description: Sql_variant データ型の使用
 title: sql_variant データ型の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 081e7d5a4c2c2b2620422e53c91c1e54abd272fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923990"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727485"
 ---
 # <a name="using-sql_variant-data-type"></a>Sql_variant データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-バージョン 6.3.0 より、JDBC ドライバーでは、sql_variant データ型がサポートされています。 sql_variant は、テーブル値パラメーターや BulkCopy などの機能を使用する場合にもサポートされていますが、このページで後述するようにいくつかの制限があります。 すべてのデータ型を sql_variant データ型に格納することはできません。 sql_variant でサポートされているデータ型の一覧については、SQL Server の[ドキュメント](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)をご覧ください。
+バージョン 6.3.0 より、JDBC ドライバーでは、sql_variant データ型がサポートされています。 sql_variant は、テーブル値パラメーターや BulkCopy などの機能を使用する場合にもサポートされていますが、このページで後述するようにいくつかの制限があります。 すべてのデータ型を sql_variant データ型に格納することはできません。 sql_variant でサポートされているデータ型の一覧については、SQL Server の[ドキュメント](../../t-sql/data-types/sql-variant-transact-sql.md)をご覧ください。
 
 ##  <a name="populating-and-retrieving-a-table"></a>テーブルの設定と取得:
 次のように、sql_variant 列を持つテーブルがあると仮定します。
@@ -92,6 +93,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

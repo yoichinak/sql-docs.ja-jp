@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1791807519f8e7a6fb47c8ec838f7f9da112a3ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e132297969c20a8c823dfcc1095d89c598c5fd5
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883262"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125979"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
@@ -34,15 +34,15 @@ ms.locfileid: "85883262"
   
 Server Core インストールをリモートで構成および管理する方法について詳しくは、以下の記事をご覧ください。  
   
-- [Server Core のインストール](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
+- [Server Core のインストール](/windows-server/get-started/getting-started-with-server-core)  
   
-- [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016)  
+- [Sconfig.cmd を使用して Windows Server 2016 の Server Core インストールを構成する](/windows-server/get-started/sconfig-on-ws2016)  
   
-- [Server Core サーバーへのサーバーの役割と機能のインストール](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
+- [Server Core サーバーへのサーバーの役割と機能のインストール](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))
   
-- [Server Core インストールの管理: 概要](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Server Core インストールの管理: 概要](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441255(v=ws.10))  
   
-- [Server Core インストールの管理](https://go.microsoft.com/fwlink/?LinkId=245963)
+- [Server Core インストールの管理](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee441258(v=ws.10))
   
 ##  <a name="install-ssnoversion-updates"></a><a name="BKMK_InstallSQLUpdates"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール  
 ここでは、Windows Server Core コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする方法について説明します。 常に最新のセキュリティ更新プログラムがインストールされた状態になるように、適切なタイミングで最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを評価してインストールすることをお勧めします。 Windows Server Core コンピューターへの [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
@@ -54,7 +54,7 @@ Server Core インストールをリモートで構成および管理する方�
 - [既にインストールされている SQL Server の更新プログラムをインストールする](../../database-engine/install-windows/configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyInstall)  
   
 ###  <a name="installing-updates-for-ssnoversion-during-a-new-installation"></a><a name="bkmk_NewInstall"></a> 新規インストール時に [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] の更新プログラムをインストールする  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、コマンド プロンプトによる Server Core オペレーティング システムへのインストールのみがサポートされています。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、コマンド プロンプトによる Server Core オペレーティング システムへのインストールのみがサポートされています。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)」を参照してください。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、メインの製品とそれに適用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールが統合されています。  
   
@@ -110,7 +110,7 @@ AlwaysOn 可用性グループが有効になっていることは、サーバ�
   
 5. **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー]** をダブルクリックします。  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]** (\<instance name>) を右クリックして、[プロパティ] をクリックします。\<instance name> は、Always On 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー** で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]** (\<instance name>) を右クリックして、[プロパティ] をクリックします。\<instance name> は、Always On 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 7. **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -178,7 +178,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>のインスタンスで TCP/IP を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
-1.  Windows Server Core を実行しているコンピューターで、**タスク マネージャー**を起動します。  
+1.  Windows Server Core を実行しているコンピューターで、**タスク マネージャー** を起動します。  
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
@@ -230,6 +230,5 @@ $Tcp
   
 ## <a name="see-also"></a>参照  
  [Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
- [インストール方法に関する記事](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [インストール方法に関する記事](/previous-versions/sql/)  
   

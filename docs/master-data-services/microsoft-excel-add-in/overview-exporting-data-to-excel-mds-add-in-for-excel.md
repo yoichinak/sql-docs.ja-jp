@@ -1,5 +1,6 @@
 ---
-title: 概要:(MDS アドインを Excel の) Excel にデータをエクスポートする |Microsoft Docs
+description: 概要:Excel へのデータのエクスポート (Excel 用 MDS アドイン)
+title: Excel へのデータのエクスポート
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14ebf23101358677f0c9f0afdf4ed069199614ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257643"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概要:Excel へのデータのエクスポート (Excel 用 MDS アドイン)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、データを使用する前に、MDS リポジトリから Excel ワークシートにデータをエクスポートする必要があります。 データの操作が完了したら、そのデータを他のユーザーが共有できるように MDS リポジトリにインポートします。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68074506"
   
 -   [接続 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
+-   [ショートカット クエリ ファイル (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

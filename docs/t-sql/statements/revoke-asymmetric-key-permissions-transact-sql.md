@@ -1,4 +1,5 @@
 ---
+description: REVOKE (非対称キーの権限の取り消し) (Transact-SQL)
 title: REVOKE (非対称キーの権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a79d209646fdc6dc51961ee838863383b17148d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 54c17df591c9e4364d2efa037e6072fa4024dce6
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88496628"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (非対称キーの権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  権限を取り消す非対称キーを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 次のいずれか:  
+ 権限を取り消すプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -82,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 次のいずれかになります。  
   
 -   データベース ユーザー  
   
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  非対称キーは、データベース レベルの保護可能なアイテムで、権限の階層で親となっているデータベースに含まれています。 次に、非対称キーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |非対称キーの権限|権限が含まれる非対称キー権限|権限が含まれるデータベース権限|  

@@ -1,4 +1,5 @@
 ---
+description: データベース メール アカウントの作成
 title: データベース メール アカウントの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737620"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128814"
 ---
 # <a name="create-a-database-mail-account"></a>データベース メール アカウントの作成
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  データベース メール アカウントの作成には、 **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
+   データベース メール アカウントの作成には、**データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
--   **作業を開始する準備:** [前提条件](#Prerequisites)  
+-   **作業を開始する準備:**  [前提条件](#Prerequisites)  
   
--   **データベース メール アカウントを作成するには、** を使用[データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **データベース メール アカウントの作成:**  [データベース メール構成ウィザード](#SSMSProcedure)、 [Transact-SQL の使用](#TsqlProcedure)  
   
--   **補足情報:** [データベース メールを構成する次の手順](#FollowUp)  
+-   **補足情報:**  [データベース メールを構成する次の手順](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   

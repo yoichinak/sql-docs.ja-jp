@@ -1,4 +1,5 @@
 ---
+description: 日付/時刻型の使用
 title: 日付と時刻の型を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,17 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5bdf4f4f48c65fe4f37992c7968bbeb8103a17c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: de9a93cf1c05652b09676c215533f26ddf3e0d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499202"
 ---
 # <a name="use-date-and-time-types"></a>日付/時刻型の使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 これらの型の使用方法の詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+  このサンプルでは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で追加された日付/時刻データ構造を初期化する方法を示します。 さらに、入力値を準備し、パラメーターをバインドして、クエリを実行します。 これらの型の使用方法の詳細については、「 [日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  DateTime という名前の ODBC データ ソースが必要です。 DateTime の既定のデータベースは tempdb です。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  

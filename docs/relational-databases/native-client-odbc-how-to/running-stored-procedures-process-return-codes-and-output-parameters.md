@@ -15,27 +15,28 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941262f9d0be6ed46b403c4525ce5a144547530
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d71c4b453ca9e3f48f5ac2d4d7cbcf46da1d26e8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004679"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869379"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>ストアド プロシージャの実行 - リターン コードと出力パラメーターの処理
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは、リモート ストアド プロシージャとしてのストアド プロシージャの実行をサポートします。 ストアド プロシージャをリモート ストアド プロシージャとして実行すると、ドライバーとサーバーでプロシージャ実行のパフォーマンスが最適化されます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターはサーバーからの最後のパケットで送信され、 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)が SQL_NO_DATA を返すまではアプリケーションで使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターンコードと出力パラメーターはサーバーからの最後のパケットで送信され、 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) が SQL_NO_DATA を返すまではアプリケーションで使用できません。 ストアドプロシージャからエラーが返された場合は、SQLMoreResults を呼び出して、SQL_NO_DATA が返されるまで次の結果に進みます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](/windows/win32/seccrypto/cryptography-reference) を使用して暗号化してください。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>リターン コードと出力パラメーターを処理するには  
   
 1.  ODBC CALL エスケープ シーケンスを使用する SQL ステートメントを作成します。 このステートメントでは、各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対してパラメーター マーカーを使用する必要があります。  
   
-2.  各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対して[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)を呼び出します。  
+2.  各入力、入出力、出力パラメーター、およびプロシージャの戻り値 (存在する場合) に対して [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) を呼び出します。  
   
 3.  **SQLExecDirect**を使用してステートメントを実行します。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "86004679"
 ## <a name="example"></a>例  
  このサンプルでは、リターン コードおよび出力パラメーターの処理を示します。 このサンプルは IA64 ではサポートされていません。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384) のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
@@ -194,6 +195,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
-[ODBC&#41;&#40;ストアドプロシージャを呼び出す](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
-  
+[ODBC&#41;&#40;ストアドプロシージャを呼び出す ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   

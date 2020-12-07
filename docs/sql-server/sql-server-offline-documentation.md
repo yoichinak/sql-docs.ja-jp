@@ -7,15 +7,14 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
-ms.date: 07/22/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.date: 08/12/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: a7ca5fa6785257de26e173a1946045109f00fbd7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237947"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986278"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>SQL Server ドキュメントをインストールし、オフラインで SSMS に表示する
 
@@ -23,7 +22,7 @@ ms.locfileid: "87237947"
 
 この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) で SQL Server のオフライン コンテンツをダウンロードして表示する方法について説明します。 オフライン コンテンツを使用すると、インターネットに接続しなくてもドキュメントにアクセスできます (ただし、ダウンロードするにはインターネット接続が必要です)。
 
-オフライン ドキュメントは、SQL Server 2012 以降のバージョンについて入手できます。 [以前のバージョンのコンテンツをオンラインで](https://docs.microsoft.com/previous-versions/sql/)表示することができますが、オフライン オプションを使用すると、以前のコンテンツに簡単にアクセスできます。
+オフライン ドキュメントは、SQL Server 2012 以降のバージョンについて入手できます。 [以前のバージョンのコンテンツをオンラインで](/previous-versions/sql/)表示することができますが、オフライン オプションを使用すると、以前のコンテンツに簡単にアクセスできます。
 
 - [SQL Server 2016 以降](#sql-server-2016-and-later-offline-content)
 - [SQL Server 2014](#sql-server-2014-offline-content)
@@ -171,7 +170,7 @@ SQL Server のヘルプ コンテンツは、最新バージョンの [SQL Serve
 
 アーカイブされたコンテンツとヘルプ ビューアーの詳細については、以下のリンクを参照してください。
 
-- [SQL Server オンライン ドキュメント](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 オンライン ドキュメント](/sql/2014-toc/)
+- [SQL Server オンライン ドキュメント](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
+- [SQL Server 2014 オンライン ドキュメント](/previous-versions/sql/2014)
 - [以前のバージョンの SQL Server オンライン ドキュメント](previous-versions-sql-server.md)
-- [SQL ドキュメントのバージョン管理システム](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [SQL ドキュメントのバージョン管理システム](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

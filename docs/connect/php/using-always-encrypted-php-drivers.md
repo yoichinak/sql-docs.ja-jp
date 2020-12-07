@@ -1,5 +1,6 @@
 ---
-title: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する | Microsoft Docs
+title: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
+description: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用し、アプリケーションの機密データを保護する方法について説明します。
 ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,17 +11,17 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 81119187f1f00814e5b50dc97e41a506fe94131e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc89f54ca7ab27aad141b8f1bd9bc386d613bcd5
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926831"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603405"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="applicable-to"></a>適用対象
+## <a name="applicable-to"></a>次に対して適用可能
  -   Microsoft SQL Server 用 Drivers 5.2 for PHP
  
 ## <a name="introduction"></a>はじめに
@@ -158,7 +159,7 @@ $stmt->execute();
  -   バインドされたパラメーターを使用してクエリを実行した場合、PHP ドライバーでは、SQLSRV ドライバーの使用時にユーザーが明示的に SQL 型を指定していない限り、ユーザーに対して自動的に SQL 型が決定されます。
  -   ドライバーが SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで出力される値はすべてプレーンテキストになります。
  
-注:暗号化が決定論的である場合にのみ、クエリでは、暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
+注: 暗号化が決定論的である場合にのみ、クエリで暗号化された列に対する等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
 
 SQLSRV:
 ```
@@ -256,7 +257,7 @@ ODBC Driver for SQL Server とは異なり、ステートメント/クエリ レ
 
 列暗号化キー (CEK) を暗号化解除するための列マスター キー ストアの呼び出し回数を減らすために、ドライバーによってプレーンテキスト CEK がメモリにキャッシュされます。 データベース メタデータから暗号化された CEK (ECEK) を受け取った後、ODBC ドライバーでは、まず、キャッシュ内の暗号化されたキー値に対応するプレーンテキスト CEK の検索が試みられます。 ドライバーでは、キャッシュ内で対応するプレーンテキスト CEK が見つからない場合にのみ、CMK を含むキー ストアが呼び出されます。
 
-注:ODBC Driver for SQL Server では、2 時間のタイムアウト後にキャッシュ内のエントリが削除されます。 この動作は、つまり、ECEK が指定されている場合、ドライバーはアプリケーションの有効期間中または 2 時間間隔のうち、どちらか短い方の期間中に 1 回だけキー ストアと交信するということです。
+注: ODBC Driver for SQL Server では、2 時間のタイムアウト後にキャッシュ内のエントリが削除されます。 この動作は、つまり、ECEK が指定されている場合、ドライバーはアプリケーションの有効期間中または 2 時間間隔のうち、どちらか短い方の期間中に 1 回だけキー ストアと交信するということです。
 
 ## <a name="working-with-column-master-key-stores"></a>列マスター キー ストアを操作する
 

@@ -1,6 +1,6 @@
 ---
 title: R チュートリアル:SQL でモデルを開発する
-description: データベース内分析用のエンドツーエンド R ソリューションを作成する方法を示すチュートリアル。
+description: SQL Server 2016 または SQL Server 2017 の R 機能のサポートに基づいて、予測モデリングのためのエンドツーエンド ソリューションを構築する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dbb9e32c1b5f68334ae1ccab17a85c23c069112
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781795"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192622"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:R データ サイエンティスト向けの SQL 開発
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 データ サイエンティスト向けのこのチュートリアルでは、SQL Server 2016 または SQL Server 2017 の R 機能のサポートに基づいて、予測モデリングのためのエンドツーエンド ソリューションを構築する方法について説明します。 このチュートリアルでは、SQL Server で [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) データベースを使用します。 
 
@@ -33,7 +33,7 @@ R コード、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デー�
 
 + [データベース権限](../security/user-permission.md)と SQL Server データベース ユーザー ログイン
 
-+ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)
 
 + [NYC タクシーのデモ データベース](demo-data-nyctaxi-in-sql.md)
 
@@ -47,7 +47,7 @@ R コード、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デー�
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 > [!NOTE]
-> R クライアントではなく [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/) または [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/)を使用している場合、RevoScaleR へのパスは C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR になります。
+> R クライアントではなく [Machine Learning Server](/machine-learning-server/) または [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/)を使用している場合、RevoScaleR へのパスは C:\Program Files\Microsoft\ML Server\R_SERVER\library\RevoScaleR になります。
 
 <a name="add-packages"></a>
 

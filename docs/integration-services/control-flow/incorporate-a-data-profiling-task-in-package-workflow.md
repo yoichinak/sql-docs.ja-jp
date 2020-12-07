@@ -1,4 +1,5 @@
 ---
+description: パッケージ ワークフローでデータ プロファイル タスクを使用する
 title: パッケージ ワークフローでデータ プロファイル タスクを使用する | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 351f5be7bdeddb93618d2a31098f44969b2d79a7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 500ae47346a97132dbc2dcbead0e7d657e4559bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392944"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
 

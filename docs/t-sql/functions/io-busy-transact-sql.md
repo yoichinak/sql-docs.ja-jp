@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IO_BUSY (Transact-SQL)'
 title: '@@IO_BUSY (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 37829d42f4133e374a71eb92be9d82c610addfa5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2b6aa8b3ccdc0dfb6584f6138059de6686326dca
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111490"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124668"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87111490"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 @@IO_BUSY  
 ```  
 
@@ -56,7 +57,7 @@ ms.locfileid: "87111490"
 ## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時から現在までの入出力操作時間をミリ秒単位で返します。 値をマイクロ秒に変換するときに演算オーバーフローが発生しないようにするため、この例では値の 1 つを **float** 型に変換しています。  
   
-```  
+```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
    GETDATE() AS 'as of';  
 ```  

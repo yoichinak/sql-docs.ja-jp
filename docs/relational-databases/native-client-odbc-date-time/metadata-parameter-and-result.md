@@ -1,4 +1,5 @@
 ---
+description: メタデータ - パラメーターと結果
 title: パラメーターと結果のメタデータ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,11 +14,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d9b4e8161abdade07a66eb742683bec0b057ce3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b2205348e8b0ba913cdb12a990d88233c74dfe12
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004321"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868357"
 ---
 # <a name="metadata---parameter-and-result"></a>メタデータ - パラメーターと結果
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +48,9 @@ ms.locfileid: "86004321"
   
  値の範囲が連続しない場合があります。 たとえば、"8,10..16" には 9 がありません。 有効桁数が 0 より大きい場合は、小数点が追加されるためです。  
   
- **datetime2**は、 **smalldatetime**と**datetime**の typename として返されます。これは、ドライバーがすべての**SQL_TYPE_TIMESTAMP**値をサーバーに送信するための共通の型として使用するためです。  
+ **datetime2** は、 **smalldatetime** と **datetime** の typename として返されます。これは、ドライバーがすべての **SQL_TYPE_TIMESTAMP** 値をサーバーに送信するための共通の型として使用するためです。  
   
- SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは IRD と IPD に追加され、アプリケーションで**sqlvariant** (SQL_SSVARIANT) の列とパラメーターに関連付けられている値の型を指定できるようになりました。  
+ SQL_CA_SS_VARIANT_SQL_TYPE は新しい記述子フィールドです。 このフィールドは IRD と IPD に追加され、アプリケーションで **sqlvariant** (SQL_SSVARIANT) の列とパラメーターに関連付けられている値の型を指定できるようになりました。  
   
  SQL_CA_SS_SERVER_TYPE は新しい IPD 専用フィールドです。このフィールドによって、アプリケーションは SQL_TYPE_TYPETIMESTAMP (または C 型の SQL_C_TYPE_TIMESTAMP を持つ SQL_SS_VARIANT) としてバインドされるパラメーターの値がサーバーに送信される方法を制御できます。 SQLExecute または SQLExecDirect が呼び出されたときに SQL_DESC_CONCISE_TYPE が SQL_TYPE_TIMESTAMP (または SQL_SS_VARIANT で C 型が SQL_C_TYPE_TIMESTAMP) の場合、次のように SQL_CA_SS_SERVER_TYPE の値によって、パラメーター値の表形式のデータストリーム (TDS) の型が決定されます。  
   
@@ -68,7 +70,7 @@ ms.locfileid: "86004321"
   
  SQLSetDescField の呼び出しによって SQL_CA_SS_SERVER_TYPE が設定されている場合、その値は SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME、または SQL_SS_TYPE_DATETIME である必要があります。 これらの値ではない場合、SQL_ERROR が返され、"無効な属性またはオプションの ID" というメッセージで SQLState HY092 の診断レコードが記録されます。  
   
- SQL_CA_SS_SERVER_TYPE 属性は、 **datetime**と**smalldatetime**でサポートされている機能に依存するアプリケーションでは使用できますが、 **datetime2**は使用できません。 たとえば、 **datetime2**では、 **dateadd**関数と**datediif**関数を使用する必要があります。一方、 **datetime**と**smalldatetime**では算術演算子も使用できます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
+ SQL_CA_SS_SERVER_TYPE 属性は、 **datetime** と **smalldatetime**でサポートされている機能に依存するアプリケーションでは使用できますが、 **datetime2**は使用できません。 たとえば、 **datetime2** では、 **dateadd** 関数と **datediif** 関数を使用する必要があります。一方、 **datetime** と **smalldatetime** では算術演算子も使用できます。 ほとんどのアプリケーションではこの属性を使用する必要はないので、使用しないでください。  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD フィールドに返される情報  
  IRD フィールドには次の情報が返されます。  
@@ -95,6 +97,5 @@ ms.locfileid: "86004321"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;メタデータ](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
-  
+ [ODBC&#41;&#40;メタデータ ](./date-and-time-improvements-odbc.md)  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 204885c83b400be7f134a7c8a5e622f3c3488797
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448284"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907310"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>モバイル レポートにゲージを追加する | Reporting Services
 ゲージは、モバイル レポートで広く使用されている最も基本的なビジュアルです。 データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
@@ -25,7 +25,7 @@ ms.locfileid: "79448284"
   
 SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 つの共通プロパティ (主要な値) があります。このプロパティは、モバイル レポート内のいずれかのデータ テーブルに含まれる 1 つの数値フィールドに設定されています。  
 
-[数値] ゲージを除くすべてのゲージには、比較対象値、または主要な値と比較対象値の間の関係を示す *差分*値を表示することもできます。 多くの場合、比較対象値は目標値となっており、ゲージは、目標の達成状況や、実際の値と目標値の間の差分を視覚的に示します。
+[数値] ゲージを除くすべてのゲージには、比較対象値、または主要な値と比較対象値の間の関係を示す *差分* 値を表示することもできます。 多くの場合、比較対象値は目標値となっており、ゲージは、目標の達成状況や、実際の値と目標値の間の差分を視覚的に示します。
 
 ゲージは、その主要な値と比較対象値について、それぞれ 1 つの集計値のみを表示できます。 ゲージでは標準的な集計 (合計、平均、最小、最大など) を使用できます。 既定では、ゲージの値は合計に設定されており、ゲージ コントロールで利用できる現在のフィルター済みデータに含まれるすべての値の合計が表示されます。 
 
@@ -43,7 +43,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 
 4. (省略可能) 集計を変更するには、 **[オプション]** をクリックして別の集計を選択します。
    
-   >**注**:主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
+   >**注** :主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
 
 ## <a name="filter-a-gauge"></a>ゲージにフィルターを適用する
   
@@ -53,7 +53,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 
 2. [次に基づいてフィルター] の下で、ゲージをフィルターするナビゲーターを選択します。
 
-   ![モバイル レポートのゲージのナビゲーター](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
+   ![[フィルター] の [Product List]\(製品一覧\) オプションが選択され、[主要な値] の [オプション] が展開されたスクリーンショット。](../../reporting-services/mobile-reports/media/mobile-report-gauge-navigator.png)
  
 ## <a name="set-visual-properties-for-a-gauge"></a>ゲージのビジュアルのプロパティを設定する
   

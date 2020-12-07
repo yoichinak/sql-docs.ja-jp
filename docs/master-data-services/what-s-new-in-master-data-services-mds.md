@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813926"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480594"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -71,11 +71,11 @@ ms.locfileid: "85813926"
   
  インデックスは断片化が 30% を超えると、オンラインで再作成されます。 再作成中は、同じテーブルでの CRUD 操作のパフォーマンスが影響を受けます。 パフォーマンスの低下が心配な場合は、営業時間外にストアド プロシージャを実行することをお勧めします。 インデックスの断片化の詳細については、「 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
- 詳細については、マスター データ サービスのブログ投稿「 [Performance and Scale Improvement in SQL Server 2016 (SQL Server 2016 のパフォーマンスとスケーラビリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615375)」を参照してください。  
+ 詳細については、マスター データ サービスのブログ投稿「 [Performance and Scale Improvement in SQL Server 2016 (SQL Server 2016 のパフォーマンスとスケーラビリティの向上)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)」を参照してください。  
   
 ##  <a name="improved-security"></a>セキュリティの強化  
   
- 新しいスーパー ユーザー機能権限により、前リリースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のサーバー管理権限と同じものがユーザーまたはグループに付与されます。 スーパー ユーザー権限は、複数のユーザーとグループに割り当てることができます。 以前のリリースでは、最初に [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールしたユーザーがサーバー管理者になり、その権限を別のユーザーまたはグループに委譲することは困難でした。 詳細については、「[機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
+ 新しいスーパー ユーザー機能権限により、前リリースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のサーバー管理権限と同じものがユーザーまたはグループに付与されます。 スーパー ユーザー権限は、複数のユーザーとグループに割り当てることができます。 以前のリリースでは、最初に [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] をインストールしたユーザーがサーバー管理者になり、その権限を別のユーザーまたはグループに委譲することは困難でした。 詳細については、「 [機能領域のアクセス許可 &#40;マスターデータサービス&#41;](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
  このリリースでは、ユーザーに対して管理権限をモデル レベルで明示的に割り当てることができます。 つまり、エンティティ レベルなどのモデル サブツリーで後からユーザーに権限が割り当てられた場合、ユーザーはこの管理権限を保持し続けます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "85813926"
   
 -   Name 属性と Code 属性の名前変更と非表示  
   
- 詳しくは、次のトピックをご覧ください。  
+ 詳細については、次の各トピックを参照してください。  
   
 -   [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)  
   
@@ -166,7 +166,7 @@ ms.locfileid: "85813926"
  
  **派生階層の多対多リレーションシップの編集**  
   
- 多対多リレーションシップを編集するには、マッピング エンティティのメンバーを変更します。 詳細については、「[派生階層 &#40;マスターデータサービス&#41;の多対多リレーションシップの表示](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)」を参照してください。  
+ 多対多リレーションシップを編集するには、マッピング エンティティのメンバーを変更します。 詳細については、「 [派生階層 &#40;マスターデータサービス&#41;の多対多リレーションシップの表示 ](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)」を参照してください。  
  
  **派生階層管理エクスペリエンスの向上**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "85813926"
   
  **変更セット**  
   
- 変更セットを使用して、エンティティに対する保留中の変更を保存できます。また、保留中の変更は表示および変更できます。 エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、管理者の承認を受ける必要があります。 詳細については、「[変更セット &#40;マスターデータサービス&#41;](../master-data-services/changesets-master-data-services.md)」を参照してください。  
+ 変更セットを使用して、エンティティに対する保留中の変更を保存できます。また、保留中の変更は表示および変更できます。 エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、管理者の承認を受ける必要があります。 詳細については、「 [変更セット &#40;マスターデータサービス&#41;](../master-data-services/changesets-master-data-services.md)」を参照してください。  
   
  **変更セットの電子メールと管理**  
   

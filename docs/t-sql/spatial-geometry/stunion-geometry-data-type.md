@@ -1,4 +1,5 @@
 ---
+description: STUnion (geometry データ型)
 title: STUnion (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 857428b0dee48336ae41f22e79c82a02f2f7b241
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88458922"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554918"
   
  CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。 結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
 ## <a name="examples"></a>例  

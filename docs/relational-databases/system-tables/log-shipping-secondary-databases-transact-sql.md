@@ -1,4 +1,5 @@
 ---
+description: log_shipping_secondary_databases (Transact-sql)
 title: log_shipping_secondary_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary_databases system table
 ms.assetid: ba2374af-86b8-480c-a10c-51e7c4e3ae23
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d5dcc3f2a76f069d90fd756410a8b478552c6f6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5160975171ab32f0c44d807ec445eeaabc5ff4c2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890127"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540351"
 ---
 # <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ログ配布構成のセカンダリデータベースごとに1つのレコードを格納します。 このテーブルは、 **msdb**データベースに格納されます。  
+  ログ配布構成のセカンダリデータベースごとに1つのレコードを格納します。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

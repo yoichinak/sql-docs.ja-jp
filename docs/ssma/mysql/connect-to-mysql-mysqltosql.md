@@ -1,4 +1,5 @@
 ---
+description: MySQL への接続 (MySQLToSQL)
 title: MySQL への接続 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372698"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
-[ **Mysql への接続**] ダイアログボックスを使用して、移行する mysql データベースに接続します。  
+[ **Mysql への接続** ] ダイアログボックスを使用して、移行する mysql データベースに接続します。  
   
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **MySQL に接続**] を選択します。 以前に接続している場合は、コマンドが**MySQL に再接続**されます。  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **MySQL に接続**] を選択します。 以前に接続している場合は、コマンドが **MySQL に再接続**されます。  
   
 ## <a name="options"></a>オプション  
 **プロバイダー**  
@@ -48,7 +49,7 @@ MySQL データベースへの接続に SSMA が使用するユーザー名を�
   
 **SSL**  
   
-MySQL に安全に接続する場合は、 **ssl**チェックボックスをオンにして Ssl (Secure Socket Layer) を使用します。  
+MySQL に安全に接続する場合は、 **ssl** チェックボックスをオンにして Ssl (Secure Socket Layer) を使用します。  
   
 **構成**  
   

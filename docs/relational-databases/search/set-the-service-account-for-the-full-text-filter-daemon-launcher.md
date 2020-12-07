@@ -1,4 +1,5 @@
 ---
+description: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 title: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36e196d2778407207ece407ddbb72c3b8788b510
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628934"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869201"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,9 +34,9 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
 
 ##  <a name="set-the-service-account"></a><a name="setting"></a> サービス アカウントの設定  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、 **[SQL Server 2016 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、**[SQL Server 2016 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (** _インスタンス名_ **)]** を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (**_インスタンス名_**)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  ダイアログ ボックスの **[ログオン]** タブをクリックし、SQL フルテキスト フィルター デーモン ランチャー サービスが開始するプロセスを実行するアカウントを選択または入力します。  
   
@@ -78,7 +79,6 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスは、SQL フルテキスト フィルター デーモン ランチャー サービス クライアントの名前付きパイプ サーバーとして機能します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が開始される前に名前付きパイプが別のプロセスで作成されていると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログと Windows イベント ログにエラーが記録され、フルテキスト検索を使用できません。  同じ名前付きパイプを使用しようとしているプロセスまたはアプリケーションを特定し、そのアプリケーションを停止してください。  
   
 ## <a name="see-also"></a>参照  
- [サービスの管理方法に関するトピック &#40;SQL Server 構成マネージャー&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [サービスの管理方法に関するトピック &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

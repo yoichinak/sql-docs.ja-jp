@@ -1,4 +1,5 @@
 ---
+description: Transact-SQL 構文表記規則 (Transact-SQL)
 title: Transact-SQL 構文表記規則 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2018
@@ -28,12 +29,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6525a5ba3352a2d841cea556bcaffc40c1ce5472
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392757"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037108"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -117,10 +118,8 @@ _object\_name_
 場合によっては、記事の一般的な主題を製品で使用できますが、すべての引数がサポートされるわけではありません。 たとえば、包含データベース ユーザーは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入されました。 **CREATE USER** ステートメントはすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品で使用できますが、**WITH PASSWORD** 構文は以前のバージョンでは使用できません。 記事の本文の適切な引数の説明に、「**適用対象**」セクションが追加で挿入されます。  
   
 ## <a name="see-also"></a>参照  
-[TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
+[TRANSACT-SQL リファレンス &#40;データベース エンジン&#41;](../language-reference.md)    
 [予約済みキーワード &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
-[Transact-SQL の設計の問題](https://msdn.microsoft.com/library/dd193411.aspx)    
-[Transact-SQL の名前付けの問題](https://msdn.microsoft.com/library/dd193246.aspx)        
-[Transact-SQL のパフォーマンスの問題](https://msdn.microsoft.com/library/dd172117.aspx)    
-
-
+[Transact-SQL の設計の問題](/previous-versions/visualstudio/visual-studio-2010/dd193411(v=vs.100))    
+[Transact-SQL の名前付けの問題](/previous-versions/visualstudio/visual-studio-2010/dd193246(v=vs.100))        
+[Transact-SQL のパフォーマンスの問題](/previous-versions/visualstudio/visual-studio-2010/dd172117(v=vs.100))

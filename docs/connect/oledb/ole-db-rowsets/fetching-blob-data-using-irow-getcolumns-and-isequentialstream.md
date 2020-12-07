@@ -1,6 +1,6 @@
 ---
 title: IRow::GetColumns と ISequentialStream を使用した BLOB データのフェッチ | Microsoft Docs
-description: IRow::GetColumns と ISequentialStream を使用した BLOB データのフェッチ
+description: OLE DB Driver for SQL Server で、この関数は IRow::GetColumns と ISequentialStream を使用して、BLOB データをフェッチします。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ISequentialStream interface
 - GetColumns method
 - BLOBs, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 80d7a8ccce0a0713c9dc2cb2dbbd4914fd391e96
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37bd5d3570d0392ef97e4ad8878bc9ad437a0a34
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244213"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861353"
 ---
 # <a name="fetching-blob-data-by-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns と ISequentialStream を使用した BLOB データのフェッチ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes (Visual FoxPro ODBC ドライバー)
 title: SQLColAttributes (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9508fa7b9ada8273e1250d7584e577892acf5c51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 062a5af2e8aab4d71cf201284bd065242c588f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412198"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
@@ -30,11 +31,11 @@ ms.locfileid: "81307913"
  結果セットの列の記述子情報を返します。 記述子情報は、文字列、32ビット記述子に依存する値、または整数値として返されます。  
   
 > [!NOTE]  
->  **Sqlcolattributes**を使用して、ブックマーク列 (列 0) に関する情報を返すことはできません。  
+>  **Sqlcolattributes** を使用して、ブックマーク列 (列 0) に関する情報を返すことはできません。  
   
- Visual FoxPro ODBC ドライバーは、すべての*fDescType*値をサポートしています。 次の表に、ドライバーによって選択された値の実装に関するコメントを示します。  
+ Visual FoxPro ODBC ドライバーは、すべての *fDescType* 値をサポートしています。 次の表に、ドライバーによって選択された値の実装に関するコメントを示します。  
   
-|*fDescType*|コメント|  
+|*fDescType*|解説|  
 |-----------------|-------------|  
 |SQL_COLUMN_AUTO_INCREMENT|FALSE を返します。 Visual FoxPro にはカウンターフィールドがありません。|  
 |SQL_COLUMN_CASE_SENSITIVE|列の型が文字の場合は、常に TRUE を返します。|  

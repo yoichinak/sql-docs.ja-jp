@@ -5,24 +5,24 @@ metadata:
   title: Azure Data Studio
   summary: Azure Data Studio を使用して、SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook などを実行する方法について説明します。
   ms.prod: azure-data-studio
-  ms.technology: 
+  ms.technology: azure-data-studio
   ms.topic: landing-page
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: 403a4538e514b092041f39425e2b88418e8daa51
-  ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+  ms.openlocfilehash: c1d5d77e80df6d611f906c4286de35add10c05f8
+  ms.sourcegitcommit: 9c6130d498f1cfe11cde9f2e65c306af2fa8378d
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/24/2020
-  ms.locfileid: "87122358"
+  ms.lasthandoff: 10/30/2020
+  ms.locfileid: "93035968"
 landingContent:
 - title: Azure Data Studio について
   linkLists:
   - linkListType: overview
     links:
     - text: Azure Data Studio とは
-      url: what-is.md
+      url: what-is-azure-data-studio.md
   - linkListType: download
     links:
     - text: Azure Data Studio のダウンロード
@@ -37,7 +37,7 @@ landingContent:
       url: quickstart-sql-server.md
     - text: Azure SQL データベースに対する接続およびクエリ
       url: quickstart-sql-database.md
-    - text: Azure SQL データ ウェアハウスのデータに対する接続およびクエリ
+    - text: Azure Synapse Analytics のデータに対する接続およびクエリ
       url: quickstart-sql-dw.md
     - text: PostgreSQL のデータに対する接続およびクエリ
       url: quickstart-postgres.md
@@ -56,22 +56,32 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Azure Data Studio のノートブック
-      url: notebooks-guidance.md
-    - text: SQL Kernel の使用方法
-      url: notebooks-tutorial-sql-kernel.md
-    - text: Python カーネルの使用方法
-      url: notebooks-tutorial-python-kernel.md
-    - text: Azure Data Studio の Kqlmagic 拡張機能
-      url: notebooks-kqlmagic.md
+      url: notebooks/notebooks-guidance.md
+    - text: SQL カーネル
+      url: notebooks/notebooks-sql-kernel.md
+    - text: Python カーネル
+      url: notebooks/notebooks-python-kernel.md
+    - text: Kusto カーネル
+      url: notebooks/notebooks-kusto-kernel.md
+    - text: Azure Data Studio の Kqlmagic
+      url: notebooks/notebooks-kqlmagic.md
 - title: 拡張機能
   linkLists:
   - linkListType: concept
     links:
     - text: Azure Data Studio の機能の拡張
-      url: extensions.md
+      url: extensions/add-extensions.md
     - text: Azure Data Studio 拡張機能を作成することで機能を拡張する
-      url: extension-authoring.md
+      url: extensions/extension-authoring.md
+    - text: Jupyter Book 拡張機能
+      url: extensions/jupyter-book-extension.md
+    - text: Kusto (KQL)
+      url: extensions/kusto-extension.md
+    - text: Notebook 拡張機能
+      url: extensions/notebook-extension.md
     - text: PostgreSQL の拡張機能
-      url: postgres-extension.md
+      url: extensions/postgres-extension.md
     - text: PowerShell エディターのサポート
-      url: powershell-extension.md
+      url: extensions/powershell-extension.md
+    - text: ウィザード拡張機能
+      url: extensions/wizard-extension.md

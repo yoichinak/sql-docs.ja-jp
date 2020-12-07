@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitoraddmonitoring (Transact-SQL)
 title: sp_dbmmonitoraddmonitoring (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 268226d28b134ffe13a5acfca3baf47bde655baf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3fd54e36102e163bda2ba7c5cd69af18ed23c4b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866738"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536600"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 >  更新期間が短すぎると、クライアントの応答時間が長くなる可能性があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- None  
+ なし  
   
 ## <a name="result-sets"></a>結果セット  
  なし  
@@ -55,23 +56,23 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>解説  
  このプロシージャを実行するには、サーバー インスタンス上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行できることが必要です。また、データベース ミラーリング監視ジョブを実行するにはエージェントが実行中であることが必要です。  
   
- データベースミラーリングがから開始された場合 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、 **sp_dbmmonitoraddmonitoring**プロシージャは自動的に実行されます。 ALTER DATABASE ステートメントを使用して手動でミラーリングを開始する場合、サーバーインスタンス上のミラー化されたデータベースを監視するには、 **sp_dbmmonitoraddmonitoring**を手動で実行する必要があります。  
+ データベースミラーリングがから開始された場合 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、 **sp_dbmmonitoraddmonitoring** プロシージャは自動的に実行されます。 ALTER DATABASE ステートメントを使用して手動でミラーリングを開始する場合、サーバーインスタンス上のミラー化されたデータベースを監視するには、 **sp_dbmmonitoraddmonitoring** を手動で実行する必要があります。  
   
 > [!NOTE]  
->  データベースミラーリングをセットアップする前に**sp_dbmmonitoraddmonitoring**を実行すると、監視ジョブは実行されますが、データベースミラーリングモニターの履歴が保存されている状態テーブルは更新されません。  
+>  データベースミラーリングをセットアップする前に **sp_dbmmonitoraddmonitoring** を実行すると、監視ジョブは実行されますが、データベースミラーリングモニターの履歴が保存されている状態テーブルは更新されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、更新間隔 (分) で監視を開始し `3` ます。  
   
 ```  
 EXEC sp_dbmmonitoraddmonitoring 3;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データベースミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   

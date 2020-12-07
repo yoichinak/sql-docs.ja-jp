@@ -4,20 +4,21 @@ titleSuffix: ''
 description: R Services は、リレーショナル データを使用して R スクリプトを実行することができる SQL Server 2016 の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server R Services の基本について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019
-ms.topic: how-to
+ms.date: 08/06/2020
+ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f19c86fe5b61b46a95db7988657b1e5ed833f9fd
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775394"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227093"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 R Services は、リレーショナル データを使用して R スクリプトを実行することができる SQL Server 2016 の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の [Microsoft R パッケージ](#packages)を使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server R Services の基本について説明します。
 
@@ -41,7 +42,7 @@ R Services を使用して、SQL Server 内で機械学習モデルとディー�
 
 SQL Server R Services を使用できる予測の種類の例には、次のものがあります。
 
-|||
+|予測の種類|例|
 |-|-|
 |分類/カテゴリ|顧客からのフィードバックを肯定的なカテゴリと否定的なカテゴリに自動的に分割します|
 |回帰/予測の連続値|サイズと場所に基づいて家の価格を予測します|
@@ -58,9 +59,18 @@ R Services で R スクリプトを実行するには、次の 2 つの方法が
 
 <a name="version"></a>
 
-## <a name="r-version"></a>R バージョン
+## <a name="r-versions"></a>R のバージョン
 
-SQL Server 2016 R Services には R バージョン 3.2.2 が含まれます。 新しいバージョンの R の場合は、[Machine Learning Services for SQL Server 2017 以降](../sql-server-machine-learning-services.md)を使用します。
+次に、SQL Server 2016 R Services に含まれる R ランタイムのバージョンを示します。
+
+SQL Server のバージョン | 既定の R ランタイム バージョン |
+|-|-|
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 以降 | 3.2.2 および 3.5.2 |
+
+SQL Server 2016 Service Pack (SP) 2 以降の累積的更新プログラム (CU) 14 には新しい R ランタイムが含まれます。 詳細については、[既定の言語ランタイム バージョンの変更](../install/change-default-language-runtime-version.md)に関するページを参照してください。
+
+他のバージョンの R の場合や Python を実行するには、[Machine Learning Services for SQL Server 2017 以降](../sql-server-machine-learning-services.md)を使用します。
 
 <a name="packages"></a>
 
@@ -78,7 +88,7 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 ## <a name="how-do-i-get-started-with-rservices"></a>RServices の基本的な使用方法
 
-1. [SQL Server 2016 R Services をインストールする](../install/sql-r-services-windows-install.md)
+1. [SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)
 
 1. 開発ツールを構成します。 使用できるもの:
 
@@ -89,10 +99,10 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
     + クイック スタート:[SQL Server でシンプルな R スクリプトを作成して実行する](../tutorials/quickstart-r-create-script.md)
     + クイック スタート:[R で予測モデルを作成してトレーニングする](../tutorials/quickstart-r-train-score-model.md)
-    + チュートリアル:[T-SQL で R を使用する](../tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
+    + チュートリアル:[T-SQL で R を使用する](../tutorials/r-taxi-classification-introduction.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:[R ツールで R Services を使用する](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)
 
 ## <a name="next-steps"></a>次のステップ
 
-+ [SQL Server 2016 R Services をインストールする](../install/sql-r-services-windows-install.md)
++ [SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)
 + [R 開発用にデータ サイエンス クライアントを設定する](../r/set-up-a-data-science-client.md)

@@ -1,8 +1,9 @@
 ---
+description: IsolationLevel と Mode プロパティの例 (VC + +)
 title: IsolationLevel と Mode プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f9cb93ff669b5636497c10972baf64373e7f06e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7d30aa737f78ba6356ac5104ca24ceeaf2f5504a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990793"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel と Mode プロパティの例 (VC + +)
-この例では、 [Mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティを使用して排他接続を開き、 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
+この例では、 [Mode](./mode-property-ado.md) プロパティを使用して排他接続を開き、 [IsolationLevel](./isolationlevel-property.md) プロパティを使用して、他のトランザクションと分離して実行されるトランザクションを開きます。  
   
 ## <a name="example"></a>例  
   
@@ -244,5 +245,5 @@ void PrintComError(_com_error &e) {
 **Buckingham Palace Kitchens-trad_cook の50年**  
 **すし、だれでも-trad_cook**   
 ## <a name="see-also"></a>参照  
- [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel プロパティ](./isolationlevel-property.md)   
+ [Mode プロパティ (ADO)](./mode-property-ado.md)

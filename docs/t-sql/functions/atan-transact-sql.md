@@ -1,4 +1,5 @@
 ---
+description: ATAN (Transact-SQL)
 title: ATAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ed72dcc8e9b5c1d1289eaae56924effef959769
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fbbc2cb7d9774cc5da44af311cd436072fbbd679
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111673"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96119322"
 ---
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ATAN ( float_expression )
 
 ## <a name="arguments"></a>引数
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。
+**float** 型、または暗黙的に **float** 型に変換できる [式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
@@ -63,7 +64,7 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
   
 -------------------------------   
 The ATAN of -45.01 is: -1.54858                         
@@ -110,7 +111,7 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 1.55       -1.57       0.00       0.15       1.57
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
 [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   

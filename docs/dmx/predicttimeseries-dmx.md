@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries (DMX)
 title: PredictTimeSeries (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943215"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727675"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,14 +44,14 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  *n*  
  予測する次のステップの数を指定します。 *N*に値が指定されていない場合の既定値は1です。  
   
- *n*を0にすることはできません。 少なくとも1つの予測を作成しない場合、関数はエラーを返します。  
+ *n* を0にすることはできません。 少なくとも1つの予測を作成しない場合、関数はエラーを返します。  
   
  *n-開始、n 終了*  
  時系列ステップの範囲を指定します。  
   
- *n-start*は整数である必要があり、0にすることはできません。  
+ *n-start* は整数である必要があり、0にすることはできません。  
   
- *n-end*は、 *n 開始*より大きい整数でなければなりません。  
+ *n-end* は、 *n 開始*より大きい整数でなければなりません。  
   
  *\<source query>*  
  予測の作成に使用される外部データを定義します。  
@@ -67,10 +68,10 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>戻り値の型  
  \<*table expression*>。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]タイムシリーズアルゴリズムでは、予測結合ステートメントを使用して新しいデータを追加した場合、履歴予測はサポートされません。  
   
- 予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n*パラメーターと*n 開始*パラメーターの値には、0より大きい整数を指定する必要があります。  
+ 予測結合では、予測プロセスは常に、元のトレーニングシリーズの最後の直後の時間ステップで開始されます。 これは、新しいデータを追加した場合でも当てはまります。 したがって、 *n* パラメーターと *n 開始* パラメーターの値には、0より大きい整数を指定する必要があります。  
   
 > [!NOTE]  
 >  新しいデータの長さは、予測の開始位置には影響しません。 そのため、新しいデータを追加して新しい予測を作成する場合は、予測の開始位置を新しいデータの長さより大きい値に設定するか、予測の終了位置を新しいデータの長さだけ拡張するようにします。  
@@ -84,13 +85,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   3番目の例では、EXTEND_MODEL_CASES パラメーターを使用して、マイニングモデルを新しいデータで更新する方法を示します。  
   
- タイムシリーズモデルの使用方法の詳細については、「データマイニングチュートリアル」、「[レッスン 2: 予測シナリオの構築」 (中級者向けデータマイニングチュートリアル &#40;&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[時系列予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)) を参照してください。  
+ タイムシリーズモデルの使用方法の詳細については、「データマイニングチュートリアル」、「 [レッスン 2: 予測シナリオの構築」 (中級者向けデータマイニングチュートリアル &#40;&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) と [時系列予測 DMX のチュートリアル](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130))) を参照してください。  
   
 > [!NOTE]  
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>例 1: 複数のタイムスライスを予測する  
- 次の例では、 **PredictTimeSeries**関数を使用して、次の3回のステップの予測を返し、ヨーロッパと太平洋地域の M200 シリーズに結果を制限します。 この特定のモデルでは、予測可能な属性は Quantity であるため、 `[Quantity]` PredictTimeSeries 関数の最初の引数としてを使用する必要があります。  
+ 次の例では、 **PredictTimeSeries** 関数を使用して、次の3回のステップの予測を返し、ヨーロッパと太平洋地域の M200 シリーズに結果を制限します。 この特定のモデルでは、予測可能な属性は Quantity であるため、 `[Quantity]` PredictTimeSeries 関数の最初の引数としてを使用する必要があります。  
   
 ```  
 SELECT FLATTENED  
@@ -118,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>例 2: 新しいデータを追加して REPLACE_MODEL_CASES を使用する  
  特定の地域のデータが間違っていることがわかっており、モデル内のパターンを使用するが、新しいデータに合わせて予測を調整する場合を考えてみます。 または、別のリージョンにより信頼性の高い傾向があり、最も信頼性の高いモデルを別のリージョンのデータに適用する場合もあります。  
   
- このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用するデータの新しいセットを指定できます。 このようにすると、射影は指定されたモデルのパターンに基づいて行われますが、新しいデータポイントの終了からスムーズに進みます。 このシナリオの完全なチュートリアルについては、「 [&#40;中級者向けデータマイニングチュートリアル&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)」を参照してください。  
+ このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用するデータの新しいセットを指定できます。 このようにすると、射影は指定されたモデルのパターンに基づいて行われますが、新しいデータポイントの終了からスムーズに進みます。 このシナリオの完全なチュートリアルについては、「 [&#40;中級者向けデータマイニングチュートリアル&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130))」を参照してください。  
   
  次の PREDICTION JOIN クエリでは、データを置き換えて新しい予測を作成する構文を示します。 置換データの場合、この例では Amount 列と Quantity 列の値を取得し、それぞれを2で乗算しています。  
   
@@ -162,7 +163,7 @@ ON
 |M200 太平洋|9/25/2008 12:00:00 AM|84|  
   
 ### <a name="example-3-adding-new-data-and-using-extend_model_cases"></a>例 3: 新しいデータを追加して EXTEND_MODEL_CASES を使用する  
- 例3は、 *EXTEND_MODEL_CASES*オプションを使用して新しいデータを提供する方法を示しています。これは、既存のデータ系列の最後に追加されます。 既存のデータ ポイントを置き換えるのではなく、新しいデータをモデルに追加します。  
+ 例3は、 *EXTEND_MODEL_CASES* オプションを使用して新しいデータを提供する方法を示しています。これは、既存のデータ系列の最後に追加されます。 既存のデータ ポイントを置き換えるのではなく、新しいデータをモデルに追加します。  
   
  次の例では、NATURAL PREDICTION JOIN の後の SELECT ステートメントで新しいデータを指定します。 この構文では複数行の新しい入力を指定できますが、それぞれの新しい入力行のタイムスタンプが一意である必要があります。  
   
@@ -185,7 +186,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- クエリでは*EXTEND_MODEL_CASES*オプションが使用されるため、では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 予測に対して次の操作を実行します。  
+ クエリでは *EXTEND_MODEL_CASES* オプションが使用されるため、では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 予測に対して次の操作を実行します。  
   
 -   2 か月分の新しいデータをモデルに追加して、トレーニング ケースの合計サイズを大きくします。  
   
@@ -253,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [タイムシリーズモデルのクエリ例](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [タイムシリーズモデルのクエリ例](/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: xml データ型メソッドの使用に関するガイドライン
 title: xml データ型メソッドの使用に関するガイドライン
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393080"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112315"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml データ型メソッドの使用に関するガイドライン
 
@@ -32,7 +33,7 @@ ms.locfileid: "86393080"
 **xml** データ型メソッドは、次の例のように PRINT ステートメント内で使用することはできません。 **xml** データ型メソッドはサブクエリとして扱われますが、PRINT ステートメント内ではサブクエリの使用は認められていません。 このため、次の例ではエラーが返されます。
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -40,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 解決方法の 1 つとしては、まず **value()** メソッドの結果を **xml** 型の変数に割り当ててから、この変数をクエリに指定します。
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -76,8 +77,8 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 次の例では、**nodes()** メソッドで `<book>` 要素ごとに個別の行が生成されます。 `<book>` ノードで評価される **value()** メソッドでは、`@genre` の値を抽出します。これは属性であり、シングルトンです。
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 型指定された XML の型の確認には XML スキーマが使用されます。 XML スキーマでノードがシングルトンとして指定されている場合、その情報がコンパイラで使用され、エラーは発生しません。 それ以外の場合、単一ノードを選択する序数が必要です。 特に、`/book//title` などの、descendant-or-self 軸 (//) を使用すると、XML スキーマでシングルトンが指定されていても `<title>` 要素のシングルトン カーディナリティ推定が厳密ではなくなります。 そのため、これを「`(/book//title)[1]`」と書き換える必要があります。
@@ -89,22 +90,22 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
 型指定されていない XML 列に対し次のクエリを実行すると、静的なコンパイル エラーが発生します。**value()** の最初の引数はシングルトン ノードでなければなりませんが、`<last-name>` ノードが実行時に現れる回数が 1 回のみかどうかをコンパイラで判断できないためです。
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 次のような解決策が考えられます。
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 しかし、各 XML インスタンスで `<author>` ノードが複数回現れる場合があるので、これではエラーは解決しません。 次のように書き換えると、正常に動作します。
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 このクエリは、各 XML インスタンスの最初の `<last-name>` 要素の値を返します。

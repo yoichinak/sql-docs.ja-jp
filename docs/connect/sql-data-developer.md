@@ -2,7 +2,7 @@
 title: SQL データ開発者 |Microsoft Docs
 description: Microsoft の SQL データ プラットフォームを使用して、Web サーバー、エンタープライズ サーバー、およびクラウド用のモバイル デバイスとデスクトップにわたるデータ中心のソリューションを作成します。
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 85b7c9f681a79a3678b932c63f755fc01d543100
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922299"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726594"
 ---
 # <a name="sql-data-developer"></a>SQL データ開発者
 Microsoft の SQL データ プラットフォームを使用して、Web サーバー、エンタープライズ サーバー、およびクラウド用のモバイル デバイスとデスクトップにわたるデータ中心のソリューションを作成します。  
 
 ## <a name="sql-data-storage"></a>SQL データ ストレージ
-* [SQL Server データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md):SQL Server データベース エンジンを使用すると、オンライン トランザクション処理やオンライン分析処理のデータを格納するリレーショナル データベースを作成できます。 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/):SQL Azure を使用してデータベースをクラウドに移動します 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709):モバイル デバイス、デスクトップ、および Web クライアント用のスタンドアロン アプリケーションと時々接続されるアプリケーションを構築する SQL Server Compact。
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md):開発時に LocalDB を使用して、Transact-SQL コードの記述とテストを行います。SQL Server の完全なサーバー インスタンスを管理する必要はありません。
+* [SQL Server データベース エンジン](../database-engine/install-windows/install-sql-server-database-engine.md):SQL Server データベース エンジンを使用すると、オンライン トランザクション処理やオンライン分析処理のデータを格納するリレーショナル データベースを作成できます。 
+* [Azure SQL](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): Azure SQL を使用してデータベースをクラウドに移動します 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709):SQL Server Compact を使用し、モバイル デバイス、デスクトップ、および Web クライアント用のスタンドアロン アプリケーションと時々接続されるアプリケーションを構築します。
+* [LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md):開発時に LocalDB を使用して、Transact-SQL コードの記述とテストを行います。SQL Server の完全なサーバー インスタンスを管理する必要はありません。
 
 ## <a name="sql-data-tools"></a>SQL Data Tools
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md):SSDT を使用して、リレーショナル データベース、Azure SQL データベース、Integration Services パッケージ、Analysis Services データ モデル、Reporting Services レポートを作成します。
-* [SQL Server 管理ツール](../ssms/download-sql-server-management-studio-ssms.md):SSMS を使用して、SQL Server のインスタンスを構成、監視、および管理します。
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md):Windows、macOS、Linux で Azure Data Studio を使用し、SQL Server、Azure SQL Database、PostgreSQL、Jupyter Notebook などを実行します。
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md):Visual Studio 内で SSDT を使用し、リレーショナル データベース、Azure SQL データベース、Integration Services パッケージ、Analysis Services データ モデル、Reporting Services レポートを作成します。
+* [SQL Server 管理ツール](../ssms/download-sql-server-management-studio-ssms.md):Windows で SSMS を使用し、SQL Server のインスタンスを構成、監視、管理します。
 
 ## <a name="sql-data-access"></a>SQL データ アクセス
 * [SQL クライアント ドライバー](sql-connection-libraries.md):SQL ドライバーを使用して、SQL データベースへの接続、クエリ、更新、挿入、または削除を行います。

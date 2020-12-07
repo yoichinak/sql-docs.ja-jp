@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 title: SET ANSI_NULL_DFLT_OFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -21,15 +22,15 @@ helpviewer_keywords:
 - overriding default nullability
 - SET ANSI_NULL_DFLT_OFF statement
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc993ab2b3dbe8d167a91bcf4c52e786844c73fe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7bc83bfc6995b54755ab0195c1f535de5c3eddd5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002450"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91227302"
 ---
 # <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,15 +48,17 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 ```
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  この設定は、新しい列に対する NULL 値の許容にのみ影響を与えます。また、この影響が生じるのは、CREATE TABLE および ALTER TABLE ステートメントで、列に対して NULL 値の許容が設定されていない場合です。 既定では、SET ANSI_NULL_DFLT_OFF が ON の場合、ALTER TABLE ステートメントと CREATE TABLE ステートメントで作成される新しい列は、NULL 値を許可するかどうかを明示的に指定しない限り NOT NULL になります。 NULL または NOT NULL を明示的に使用して作成された列に対して、SET ANSI_NULL_DFLT_OFF は影響しません。  
   
- ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF の両方を同時に ON に設定することはできません。 一方のオプションが ON に設定されている場合、他方のオプションは OFF に設定されます。 つまり、SET ANSI_NULL_DFLT_OFF と SET ANSI_NULL_DFLT_ON のいずれか一方を ON に設定するか、または両方を OFF に設定することだけが可能です。 いずれかのオプションが ON の場合、その設定 (SET ANSI_NULL_DFLT_OFF または SET ANSI_NULL_DFLT_ON) が有効になります。 両方のオプションを OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューにある is_ansi_null_default_on 列の値が使用されます。  
+ ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF の両方を同時に ON に設定することはできません。 一方のオプションが ON に設定されている場合、他方のオプションは OFF に設定されます。 つまり、SET ANSI_NULL_DFLT_OFF と SET ANSI_NULL_DFLT_ON のいずれか一方を ON に設定するか、または両方を OFF に設定することだけが可能です。 いずれかのオプションが ON の場合、その設定 (SET ANSI_NULL_DFLT_OFF または SET ANSI_NULL_DFLT_ON) が有効になります。 両方のオプションを OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では sys.databases カタログ ビューにある [is_ansi_null_default_on](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列の値が使用されます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを、NULL 値の許容に関する設定が異なっているデータベースで使用する場合、このスクリプトによる動作の信頼性を高めるには、CREATE TABLE ステートメントと ALTER TABLE ステートメントで常に NULL または NOT NULL を指定することをお勧めします。  
   
@@ -63,11 +66,10 @@ SET ANSI_NULL_DFLT_OFF OFF
   
  この設定の現在の設定を表示するには、次のクエリを実行します。  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_OFF VARCHAR(3) = 'OFF';  
 IF ( (2048 & @@OPTIONS) = 2048 ) SET @ANSI_NULL_DFLT_OFF = 'ON';  
 SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;  
-  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -76,7 +78,7 @@ SELECT @ANSI_NULL_DFLT_OFF AS ANSI_NULL_DFLT_OFF;
 ## <a name="examples"></a>例  
  次の例では、Ansi Null Default データベース オプションに 2 種類の設定を使用した場合の `SET ANSI_NULL_DFLT_OFF` の効果を示します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -116,28 +118,28 @@ GO
 ALTER DATABASE AdventureWorks2012 SET ANSI_NULL_DEFAULT OFF;  
 GO  
 -- Create table t4.  
-CREATE TABLE t4 (a tinyint) ;  
+CREATE TABLE t4 (a TINYINT) ;  
 GO   
 -- NULL INSERT should fail.  
-INSERT INTO t4 (a) VALUES (null);  
+INSERT INTO t4 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to ON and create table t5.  
 SET ANSI_NULL_DFLT_OFF ON;  
 GO  
-CREATE TABLE t5 (a tinyint);  
+CREATE TABLE t5 (a TINYINT);  
 GO   
 -- NULL insert should fail.  
-INSERT INTO t5 (a) VALUES (null);  
+INSERT INTO t5 (a) VALUES (NULL);  
 GO  
   
 -- SET ANSI_NULL_DFLT_OFF to OFF and create table t6.  
 SET ANSI_NULL_DFLT_OFF OFF;  
 GO  
-CREATE TABLE t6 (a tinyint);   
+CREATE TABLE t6 (a TINYINT);   
 GO   
 -- NULL insert should fail.  
-INSERT INTO t6 (a) VALUES (null);  
+INSERT INTO t6 (a) VALUES (NULL);  
 GO  
   
 -- Drop tables t1 through t6.  

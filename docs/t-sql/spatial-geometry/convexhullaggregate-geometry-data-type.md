@@ -1,4 +1,5 @@
 ---
+description: ConvexHullAggregate (geometry データ型)
 title: ConvexHullAggregate (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ff540360dc48dec0d13d6c0fe1093710263ac12f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f5f27e06872c72244361fe2973b005924a2b85d5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556035"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128176"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

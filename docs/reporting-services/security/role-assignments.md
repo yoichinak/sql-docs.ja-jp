@@ -1,4 +1,5 @@
 ---
+description: ロールの割り当て
 title: ロールの割り当て | Microsoft Docs
 ms.date: 05/07/2017
 ms.prod: reporting-services
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db55abd24cac0fa4cc6aacab03f0b1f68969d39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423256"
 ---
 # <a name="role-assignments"></a>ロールの割り当て
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、 *”ロール”* の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。 ロールの割り当ては以下の要素で構成されています。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、*”ロール”* の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。 ロールの割り当ては以下の要素で構成されています。  
   
 - アクセスを制御するセキュリティ保護可能なアイテム。 セキュリティ保護可能なアイテムの例として、フォルダー、レポート、リソースがあります。  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_table (Transact-SQL)
 title: sp_fulltext_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1117c89aec3a615b439686a065c29457e267bffe
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833235"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541762"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "82833235"
   フルテキストインデックスを作成するテーブルをマークまたは非表示にします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、フル[テキストインデックスの作成](../../t-sql/statements/create-fulltext-index-transact-sql.md)、フルテキストインデックスの[変更](../../t-sql/statements/alter-fulltext-index-transact-sql.md)、および[フルテキスト](../../t-sql/statements/drop-fulltext-index-transact-sql.md)インデックスの削除を使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、フル [テキストインデックスの作成](../../t-sql/statements/create-fulltext-index-transact-sql.md)、フルテキストインデックスの [変更](../../t-sql/statements/alter-fulltext-index-transact-sql.md)、および [フルテキスト](../../t-sql/statements/drop-fulltext-index-transact-sql.md) インデックスの削除を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,17 +50,17 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tabname = ] 'qualified_table_name'`1つまたは2つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name*は**nvarchar (517)**,、既定値はありません。  
+`[ @tabname = ] 'qualified_table_name'` 1つまたは2つの要素で構成されるテーブル名を指定します。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name* は **nvarchar (517)**,、既定値はありません。  
   
-`[ @action = ] 'action'`実行するアクションを指定します。 *アクション*は**nvarchar (50)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
+`[ @action = ] 'action'` 実行するアクションを指定します。 *アクション* は **nvarchar (50)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**作成**|*Qualified_table_name*によって参照されるテーブルのフルテキストインデックスのメタデータを作成し、このテーブルのフルテキストインデックスデータが*fulltext_catalog_name*に存在する必要があることを指定します。 この操作では、フルテキストキー列として*unique_index_name*を使用することも指定します。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> フルテキストカタログが設定されるまで、このテーブルに対してフルテキスト検索を実行することはできません。|  
+|**作成**|*Qualified_table_name*によって参照されるテーブルのフルテキストインデックスのメタデータを作成し、このテーブルのフルテキストインデックスデータが*fulltext_catalog_name*に存在する必要があることを指定します。 この操作では、フルテキストキー列として *unique_index_name* を使用することも指定します。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> フルテキストカタログが設定されるまで、このテーブルに対してフルテキスト検索を実行することはできません。|  
 |**」**|*Qualified_table_name*のフルテキストインデックスのメタデータを削除します。 フルテキストインデックスがアクティブな場合は、自動的に非アクティブ化されてから削除されます。 フルテキスト インデックスを削除する前に、列を削除する必要はありません。|  
-|**する**|非アクティブ化された後、 *qualified_table_name*に対してフルテキストインデックスデータを収集する機能をアクティブにします。 フルテキスト インデックスをアクティブにするには、フルテキスト インデックスの対象となる列が少なくとも 1 つ必要です。<br /><br /> フルテキスト インデックスは、インデックス作成用の最初の列が追加されるとすぐに自動的にアクティブになり、作成を開始できるようになります。 最後の列がインデックスから削除されると、インデックスは非アクティブになります。 変更の追跡がオンの場合、非アクティブなインデックスをアクティブにすると、新しく作成が開始されます。<br /><br /> この方法では、実際にフルテキストインデックスが設定されるわけではありませんが、次のフルテキストインデックスの作成時に*qualified_table_name*の行を取得できるように、ファイルシステムのフルテキストカタログにテーブルを登録するだけです。|  
+|**アクティブ化**|非アクティブ化された後、 *qualified_table_name*に対してフルテキストインデックスデータを収集する機能をアクティブにします。 フルテキスト インデックスをアクティブにするには、フルテキスト インデックスの対象となる列が少なくとも 1 つ必要です。<br /><br /> フルテキスト インデックスは、インデックス作成用の最初の列が追加されるとすぐに自動的にアクティブになり、作成を開始できるようになります。 最後の列がインデックスから削除されると、インデックスは非アクティブになります。 変更の追跡がオンの場合、非アクティブなインデックスをアクティブにすると、新しく作成が開始されます。<br /><br /> この方法では、実際にフルテキストインデックスが設定されるわけではありませんが、次のフルテキストインデックスの作成時に *qualified_table_name* の行を取得できるように、ファイルシステムのフルテキストカタログにテーブルを登録するだけです。|  
 |**非アクティブ化**|*Qualified_table_name*のフルテキストインデックスを非アクティブ化して、 *qualified_table_name*に対してフルテキストインデックスデータを収集できないようにします。 フルテキスト インデックス メタデータはそのまま残り、テーブルは再びアクティブにできます。<br /><br /> 変更の追跡がオンになっている場合、アクティブなインデックスを非アクティブにすると、インデックス作成は停止します。つまり、実行中の作成操作は停止し、インデックスは変更されなくなります。|  
-|**start_change_tracking**|フルテキストインデックスの増分作成を開始します。 テーブルが timestamp 型でない場合は、フルテキスト インデックスの完全作成を開始します。 テーブルに対する変更の追跡を開始します。<br /><br /> フルテキスト変更の追跡では、 **image**、 **text**、または**ntext**型のフルテキストインデックス列に対して実行される WRITETEXT または UPDATETEXT 操作は追跡されません。|  
+|**start_change_tracking**|フルテキストインデックスの増分作成を開始します。 テーブルが timestamp 型でない場合は、フルテキスト インデックスの完全作成を開始します。 テーブルに対する変更の追跡を開始します。<br /><br /> フルテキスト変更の追跡では、 **image**、 **text**、または **ntext**型のフルテキストインデックス列に対して実行される WRITETEXT または UPDATETEXT 操作は追跡されません。|  
 |**stop_change_tracking**|テーブルに対する変更の追跡を停止します。|  
 |**update_index**|現在の追跡された変更のセットをフルテキストインデックスに反映します。|  
 |**Start_background_updateindex**|変更の追跡中に発生した変更を、発生した時点でフルテキスト インデックスに反映します。|  
@@ -68,9 +69,9 @@ sp_fulltext_table
 |**start_incremental**|テーブルのフルテキストインデックスの増分作成を開始します。|  
 |**Stop**|完全作成または増分作成を停止します。|  
   
-`[ @ftcat = ] 'fulltext_catalog_name'`**Create**アクションの有効な既存のフルテキストカタログ名を指定します。 それ以外のすべてのアクションについては、このパラメーターを NULL にする必要があります。 *fulltext_catalog_name*は**sysname**,、既定値は NULL です。  
+`[ @ftcat = ] 'fulltext_catalog_name'`**Create**アクションの有効な既存のフルテキストカタログ名を指定します。 それ以外のすべてのアクションについては、このパラメーターを NULL にする必要があります。 *fulltext_catalog_name* は **sysname**,、既定値は NULL です。  
   
-`[ @keyname = ] 'unique_index_name'`**Create**アクションの*qualified_table_name*上の有効な単一キー列の一意の null 値インデックスです。 それ以外のすべてのアクションについては、このパラメーターを NULL にする必要があります。 *unique_index_name*は**sysname**,、既定値は NULL です。  
+`[ @keyname = ] 'unique_index_name'`**Create**アクションの*qualified_table_name*上の有効な単一キー列の一意の null 値インデックスです。 それ以外のすべてのアクションについては、このパラメーターを NULL にする必要があります。 *unique_index_name* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -93,7 +94,7 @@ sp_fulltext_table
 ## <a name="examples"></a>例  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. フルテキスト インデックスに対してテーブルを有効にする  
- 次の例では、データベースのテーブルのフルテキストインデックスメタデータを作成し `Document` `AdventureWorks` ます。 `Cat_Desc`フルテキストカタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
+ 次の例では、データベースのテーブルのフルテキストインデックスメタデータを作成し `Document` `AdventureWorks` ます。 `Cat_Desc` フルテキストカタログです。 `PK_Document_DocumentID` は `Document` の一意な単一列のインデックスです。  
   
 ```  
 USE AdventureWorks2012;  
@@ -128,12 +129,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_property (SSISDB データベース)
 title: catalog.set_environment_variable_property (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4cf7d169d9cdd3e319b243f831a76bb3fe3ab4a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912872"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129684"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB データベース)
 

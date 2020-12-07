@@ -1,4 +1,5 @@
 ---
+description: Data Quality Client アプリケーション
 title: Data Quality Client アプリケーション
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487818"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
 
@@ -42,7 +43,7 @@ ms.locfileid: "85899121"
 |DQS で照合を実行する方法について説明します。|[データ照合](../data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Data Quality Client のホーム画面](../data-quality-services/data-quality-client-home-screen.md)  
   
   

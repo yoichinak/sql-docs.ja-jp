@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) プロジェクトとパッケージの配置
 title: Integration Services (SSIS) プロジェクトとパッケージの配置 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 90fdfd4a64d77d3fa51ef7dc4c39ccf11b1fb9f3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920141"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130085"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
 
@@ -54,7 +55,7 @@ ms.locfileid: "86920141"
 |データベース エンジンでは CLR 統合が必要です。|データベース エンジンでは CLR 統合は不要です。|  
 |環境固有のパラメーター値は、環境変数に格納されます。|環境固有の構成値は、構成ファイルに格納されます。|  
 |カタログ内のプロジェクトとパッケージは、実行前にサーバー上で検証できます。 SQL Server Management Studio、ストアド プロシージャ、またはマネージド コードを使用して検証を実行できます。|パッケージは実行の直前に検証されます。 dtExec またはマネージド コードを使用してパッケージを検証することもできます。|  
-|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> **dtExec**を使用してパッケージを実行することもできます。|パッケージは、 **dtExec** および **DTExecUI** 実行ユーティリティを使用して実行されます。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
+|パッケージは、データベース エンジンで実行を開始することで実行されます。 プロジェクト識別子、明示的なパラメーター値 (オプション)、および環境参照 (オプション) は、開始前に実行に割り当てられます。<br /><br /> **dtExec** を使用してパッケージを実行することもできます。|パッケージは、 **dtExec** および **DTExecUI** 実行ユーティリティを使用して実行されます。 適切な構成が、コマンド プロンプトの引数で指定されます (オプション)。|  
 |実行時に、パッケージによって生成されたイベントが自動的にキャプチャされ、カタログに保存されます。 Transact-SQL ビューを使用して、これらのイベントに対してクエリを実行できます。|実行時に、パッケージによって生成されたイベントは自動的にキャプチャされません。 イベントをキャプチャするには、パッケージにログ プロバイダーを追加する必要があります。|  
 |パッケージは、個別の Windows プロセスで実行されます。|パッケージは、個別の Windows プロセスで実行されます。|  
 |SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|  
@@ -63,7 +64,7 @@ ms.locfileid: "86920141"
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
   
-|機能|説明|  
+|特徴量|説明|  
 |-------------|-----------------|  
 |パラメーター|パラメーターは、パッケージで使用されるデータを指定します。 パラメーターは、パッケージ パラメーターとプロジェクト パラメーターを使用して、パッケージ レベルとプロジェクト レベルそれぞれにスコープを設定できます。 パラメーターは、式またはタスクで使用できます。 プロジェクトをカタログに配置すると、パラメーターごとにリテラル値を割り当てることも、設計時に割り当てられた既定値を使用することもできます。 リテラル値の代わりに、環境変数を参照することもできます。 環境変数値は、パッケージ実行時に解決されます。|  
 |環境|環境とは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトが参照できる変数のコンテナーです。 各プロジェクトには複数の環境参照を含めることができますが、1 回のパッケージ実行で参照できるのは、1 つの環境の変数のみです。 環境を使用すると、パッケージに割り当てる値をまとめることができます。 たとえば、"Dev"、"test"、"Production" という名前の環境を使用できます。|  
@@ -84,17 +85,17 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 このエラーは、通常、DCOM アクセス許可が不足している場合に発生します。 このエラーを解決するには、次の操作を行います。
 
 1.  **[コンポーネント サービス]** コンソールを開きます (または Dcomcnfg.exe を実行します)。
-2.  **[コンポーネント サービス]** コンソールで、 **[コンポーネント サービス]**  >  **[コンピューター]**  >  **[マイ コンピューター]**  >  **[DCOM の構成]** を展開します。
+2.  **[コンポーネント サービス]** コンソールで、**[コンポーネント サービス]** > **[コンピューター]** > **[マイ コンピューター]** > **[DCOM の構成]** を展開します。
 3.  一覧で、使用している SQL Server のバージョンに対応する **Microsoft SQL Server Integration Services xx.0** を探します。 たとえば、SQL Server 2016 がバージョン 13 であるとします。
-4.  右クリックし、 **[プロパティ]** を選択します。
-5.  **[Microsoft SQL Server Integration Services 13.0 のプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。
-6.  3 つのアクセス許可 ("起動とアクティブ化"、"アクセス"、"構成") のそれぞれに対して、 **[カスタマイズ]** を選択してから、 **[編集]** を選択して **[権限]** ダイアログ ボックスを開きます。
+4.  右クリックし、**[プロパティ]** を選択します。
+5.  **[Microsoft SQL Server Integration Services 13.0 のプロパティ]** ダイアログ ボックスで、**[セキュリティ]** タブをクリックします。
+6.  3 つのアクセス許可 ("起動とアクティブ化"、"アクセス"、"構成") のそれぞれに対して、**[カスタマイズ]** を選択してから、**[編集]** を選択して **[権限]** ダイアログ ボックスを開きます。
 7.  **[権限]** ダイアログ ボックスで、既定以外のサービス アカウントを追加し、必要に応じて **[許可]** を付与します。 通常、アカウントには **[ローカルからの起動]** と **[ローカルからのアクティブ化]** のアクセス許可が割り当てられています。
-8.  **[OK]** を 2 回クリックし、 **[コンポーネント サービス]** コンソールを閉じます。
+8.  **[OK]** を 2 回クリックし、**[コンポーネント サービス]** コンソールを閉じます。
 
 このセクションで示したエラーと SSIS サービス アカウントで求められるアクセス許可の詳細については、次のブログ記事を参照してください。
  
-- [System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](/archive/blogs/dataaccesstechnologies/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -113,7 +114,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
     -   以前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]でプロジェクトを作成した場合、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクト ファイルを開いた後に、プロジェクトをプロジェクト配置モデルに変換します。  
   
         > [!NOTE]  
-        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
+        >  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有できるデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))」 を参照してください。  
   
          **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。  
   
@@ -123,11 +124,11 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
              ウィザードの **[変換先の選択]** ページで、既存のファイルを選択するか、新規ファイルを作成することができます。  
   
-             プロジェクトの変換時にパッケージ ファイルをアップグレードするには、 **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]から実行します。 プロジェクトの変換とは別にパッケージ ファイルをアップグレードするには、 **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から実行してから、 **SSIS パッケージ アップグレード ウィザード**を実行します。 パッケージ ファイルを個別にアップグレードする場合は、必ず変更を保存します。 保存しないと、プロジェクトをプロジェクトの配置モデルに変換するときに、パッケージに対する未保存の変更が変換されません。  
+             プロジェクトの変換時にパッケージ ファイルをアップグレードするには、 **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]から実行します。 プロジェクトの変換とは別にパッケージ ファイルをアップグレードするには、 **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から実行してから、 **SSIS パッケージ アップグレード ウィザード** を実行します。 パッケージ ファイルを個別にアップグレードする場合は、必ず変更を保存します。 保存しないと、プロジェクトをプロジェクトの配置モデルに変換するときに、パッケージに対する未保存の変更が変換されません。  
   
      パッケージのアップグレードの詳細については、「 [Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md) 」および「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
-3.  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、後の手順を参照してください。[Integration Services サーバーにプロジェクトを配置するには](#deploy)。  
+3.  プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、「 [Integration Services サーバーにプロジェクトを配置するには](#deploy)」の手順を参照してください。  
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 
   
@@ -135,7 +136,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
-     または  
+     - または -  
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
@@ -143,7 +144,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 ###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Integration Services サーバーにプロジェクトを配置するには  
   
-1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
+1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード** を起動します。  
   
      or  
   
@@ -151,7 +152,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
      or  
   
-     コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
+     コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe** を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** に 32 ビット バージョンのツールもあります。  
   
 2.  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
   
@@ -166,7 +167,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 ###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Integration Services 配置ウィザードを使用してパッケージを配置する  
   
-1.  コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
+1.  コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe** を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn** に 32 ビット バージョンのツールもあります。  
   
 2.  **[ソースの選択]** ページで、 **[パッケージ配置モデル]** に切り替えます。 次に、配置対象のパッケージが含まれるフォルダーを選択し、パッケージを構成します。  
   
@@ -176,7 +177,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  SQL Server Management Studio のオブジェクト エクスプローラーで、 **[Integration Services カタログ]**  >  **[SSISDB]** ノードの順に展開します。  
   
-2.  **[プロジェクト]** フォルダーを右クリックして、 **[プロジェクトの配置]** をクリックします。  
+2.  **[プロジェクト]** フォルダーを右クリックして、**[プロジェクトの配置]** をクリックします。  
   
 3.  **[説明]** ページが表示される場合は、 **[次へ]** をクリックして続行します。  
   
@@ -277,7 +278,7 @@ static void Main()
 2.  プロジェクトとすべてのパッケージの互換性テストが成功した場合は、 **[OK]** をクリックしてパッケージを変換します。  
   
 > [!NOTE]
-> プロジェクトをプロジェクト配置モデルに変換するには、**Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+> プロジェクトをプロジェクト配置モデルに変換するには、**Integration Services プロジェクト変換ウィザード** を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   **Integration Services 配置ウィザード** は次の 2 つの配置モデルをサポートしています。
@@ -300,7 +301,7 @@ static void Main()
 
  - SQL Server のインストール フォルダーで、実行可能ファイル **ISDeploymentWizard.exe** を検索します。たとえば、"C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn" で検索します。 
  
- > **注:** **[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
+ > **注:****[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
  
  このページの設定は、配置モデルごとに異なります。 このページで選択したモデルに基づいて、「 [Project Deployment Model](#ProjectModel) 」セクションまたは「 [Package Deployment Model](#PackageModel) 」セクションの手順に従ってください。  
   
@@ -320,7 +321,7 @@ static void Main()
   
 #### <a name="results"></a>結果
 
- 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、 **[閉じる]** をクリックしてウィザードを終了します。
+ 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、**[閉じる]** をクリックしてウィザードを終了します。
   
 ###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
@@ -328,25 +329,25 @@ static void Main()
 
  **Integration Services 配置ウィザード** の **[ソースの選択]** ページには、 **配置モデル** に **[パッケージ配置]** オプションを選択した場合、パッケージ配置モデルに固有の設定が表示されます。  
   
- ソース パッケージを選択するには、 **[参照]** ボタンをクリックして、パッケージを含む**フォルダー**を選択するか、 **[パッケージ フォルダーのパス]** テキストボックスにフォルダー パスを入力して、ページの下部にある **[更新]** ボタンをクリックします。 これで、リスト ボックスに指定したフォルダー内のすべてのパッケージが表示されます。 既定では、すべてのパッケージが選択されます。 サーバーに配置するパッケージを選択するには、最初の列の **チェックボックス** をクリックします。  
+ ソース パッケージを選択するには、**[参照]** ボタンをクリックして、パッケージを含む **フォルダー** を選択するか、**[パッケージ フォルダーのパス]** テキストボックスにフォルダー パスを入力して、ページの下部にある **[更新]** ボタンをクリックします。 これで、リスト ボックスに指定したフォルダー内のすべてのパッケージが表示されます。 既定では、すべてのパッケージが選択されます。 サーバーに配置するパッケージを選択するには、最初の列の **チェックボックス** をクリックします。  
   
- **[ステータス]** と **[メッセージ]** 列を参照して、パッケージの状態を確認します。 ステータスが **[準備完了]** または **[警告]** に設定されている場合は、配置ウィザードは配置プロセスをブロックしません。 ステータスが **[エラー]** に設定されている場合は、ウィザードは選択したパッケージの配置には進みません。 詳細な警告メッセージまたはエラー メッセージを表示するには、 **[メッセージ]** 列のリンクをクリックします。  
+ **[ステータス]** と **[メッセージ]** 列を参照して、パッケージの状態を確認します。 ステータスが **[準備完了]** または **[警告]** に設定されている場合は、配置ウィザードは配置プロセスをブロックしません。 ステータスが **[エラー]** に設定されている場合は、ウィザードは選択したパッケージの配置には進みません。 詳細な警告メッセージまたはエラー メッセージを表示するには、**[メッセージ]** 列のリンクをクリックします。  
   
- 機微なデータまたはパッケージのデータがパスワードで暗号化されている場合は、 **[パスワード]** 列にパスワードを入力して、 **[更新]** ボタンをクリックし、パスワードが承認されたかどうかを検証します。 パスワードが正しい場合は、ステータスが **[準備完了]** に変更され、警告メッセージは表示されません。 同じパスワードを使用する複数のパッケージがある場合は、同じ暗号化パスワードのパッケージを選択して、 **[パスワード]** テキストボックスにパスワードを入力し、 **[適用]** ボタンを選択します。 パスワードは、選択したパッケージに適用されます。  
+ 機微なデータまたはパッケージのデータがパスワードで暗号化されている場合は、 **[パスワード]** 列にパスワードを入力して、 **[更新]** ボタンをクリックし、パスワードが承認されたかどうかを検証します。 パスワードが正しい場合は、ステータスが **[準備完了]** に変更され、警告メッセージは表示されません。 同じパスワードを使用する複数のパッケージがある場合は、同じ暗号化パスワードのパッケージを選択して、**[パスワード]** テキストボックスにパスワードを入力し、**[適用]** ボタンを選択します。 パスワードは、選択したパッケージに適用されます。  
   
  選択したすべてのパッケージのステータスが **[エラー]** に設定されていない場合は、パッケージ配置プロセスを続行できるように、 **[次へ]** ボタンが有効になります。  
   
 #### <a name="select-destination"></a>[配置先の選択]
 
- パッケージ ソースを選択した後に、 **[次へ]** ボタンをクリックして、 **[配置先の選択]** ページに切り替えます。 パッケージは、SSIS カタログ (SSISDB) のプロジェクトに配置する必要があります。 パッケージを配置する前に、SSIS カタログに配置先のプロジェクトが既に必ず存在しているようにします。 プロジェクトが存在しない場合は、空のプロジェクトを作成します。 **[配置先の選択]** ページで、 **[サーバー名]** テキストボックスにサーバー名を入力するか、 **[参照]** ボタンをクリックしてサーバー インスタンスを選択します。 次に、 **[パス]** テキストボックスの横にある **[参照]** ボタンをクリックして、配置先のプロジェクトを指定します。 プロジェクトが存在しない場合は、 **[新しいプロジェクト]** ボタンをクリックして、配置先のプロジェクトとして空のプロジェクトを作成します。 プロジェクトは、フォルダーの下に作成する必要があります。  
+ パッケージ ソースを選択した後に、**[次へ]** ボタンをクリックして、**[配置先の選択]** ページに切り替えます。 パッケージは、SSIS カタログ (SSISDB) のプロジェクトに配置する必要があります。 パッケージを配置する前に、SSIS カタログに配置先のプロジェクトが既に必ず存在しているようにします。 プロジェクトが存在しない場合は、空のプロジェクトを作成します。 **[配置先の選択]** ページで、**[サーバー名]** テキストボックスにサーバー名を入力するか、**[参照]** ボタンをクリックしてサーバー インスタンスを選択します。 次に、**[パス]** テキストボックスの横にある **[参照]** ボタンをクリックして、配置先のプロジェクトを指定します。 プロジェクトが存在しない場合は、**[新しいプロジェクト]** ボタンをクリックして、配置先のプロジェクトとして空のプロジェクトを作成します。 プロジェクトは、フォルダーの下に作成する必要があります。  
   
 #### <a name="review-and-deploy"></a>レビューと配置
 
- **[配置先の選択]** ページで **[次へ]** をクリックして、 **Integration Services 配置ウィザード** の **[レビュー]** ページに切り替えます。 [レビュー] ページで、配置アクションに関する概要レポートを確認します。 検証した後に、 **[配置]** ボタンをクリックして、配置アクションを実行します。  
+ **[配置先の選択]** ページで **[次へ]** をクリックして、 **Integration Services 配置ウィザード** の **[レビュー]** ページに切り替えます。 [レビュー] ページで、配置アクションに関する概要レポートを確認します。 検証した後に、**[配置]** ボタンをクリックして、配置アクションを実行します。  
   
 #### <a name="results"></a>結果
 
- 配置が完了したら、 **[結果]** ページが表示されます。 **[結果]** ページで、配置プロセスの各手順の結果を確認します。 **[レポートの保存]** をクリックして配置レポートを保存するか、 **[閉じる]** をクリックしてウィザードを閉じます。  
+ 配置が完了したら、 **[結果]** ページが表示されます。 **[結果]** ページで、配置プロセスの各手順の結果を確認します。 **[レポートの保存]** をクリックして配置レポートを保存するか、**[閉じる]** をクリックしてウィザードを閉じます。  
 
 ## <a name="create-and-map-a-server-environment"></a>サーバー環境の作成とマップ
 
@@ -394,7 +395,7 @@ static void Main()
 7.  環境のスクリプトを作成するには、 **[スクリプト]** をクリックします。 既定では、新しいクエリ エディター ウィンドウにスクリプトが表示されます。  
   
     > [!TIP]  
-    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、 **[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
+    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、**[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
   
 8.  **[OK]** をクリックして、変更を環境プロパティに保存します。  
   
@@ -412,7 +413,7 @@ static void Main()
   
 13. 環境変数を接続マネージャーのプロパティにマップするには、次の操作を行います。 パラメーターは、SSIS サーバー上で接続マネージャー プロパティ用に自動的に生成されます。  
   
-    1.  **[パラメーター]** ページの **[接続マネージャー]** タブで、 **[値]** フィールドの横にある **[参照]** ボタンをクリックします。  
+    1.  **[パラメーター]** ページの **[接続マネージャー]** タブで、**[値]** フィールドの横にある **[参照]** ボタンをクリックします。  
   
     2.  **[環境変数を使用する]** をクリックし、作成した環境変数を選択します。  
   
@@ -529,7 +530,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
   
 > [!NOTE]  
->  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
+>  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](/previous-versions/sql/sql-server-2016/ms140237(v=sql.130))」 を参照してください。  
   
  **目的に合ったトピックをクリックしてください**  
   
@@ -560,7 +561,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーで、 **[Integration Services カタログ]** の **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** をクリックします。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーで、**[Integration Services カタログ]** の **[プロジェクト]** ノードを右クリックし、**[パッケージのインポート]** をクリックします。  
   
  **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。   
   
@@ -627,7 +628,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 > [!NOTE]  
 >  **[配置先の選択]** ページは、ウィザードを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行した場合にのみ使用可能です。  
   
- **[出力パス]**  
+ **出力パス**  
  配置ファイルのパスを入力するか、 **[参照]** をクリックしてファイルに移動します。  
   
  **プロジェクト名**  
@@ -636,7 +637,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **保護レベル**  
  保護レベルを選択します。 詳しくは、「 [Access Control for Sensitive Data in Packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)」をご覧ください。  
   
- **[プロジェクトの説明]**  
+ **プロジェクトの説明**  
  プロジェクトの説明を入力します (省略可)。  
   
 ###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> [プロジェクト プロパティの指定] ページのオプションの設定  
@@ -650,11 +651,11 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **保護レベル**  
  プロジェクトに含まれるパッケージの保護レベルを選択します。 保護レベルの詳細については、「 [パッケージ内の機微なデータへのアクセス制御](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)」を参照してください。  
   
- **[プロジェクトの説明]**  
+ **プロジェクトの説明**  
  プロジェクトの説明 (省略可能) を入力します。  
   
 ###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> [パッケージ実行タスクの更新] ページのオプションの設定  
- プロジェクト ベースの参照を使用するには、パッケージに含まれているパッケージ実行タスクを更新します。 詳細については、「 [パッケージ実行タスク エディター](../../integration-services/control-flow/execute-package-task-editor.md)」を参照してください。  
+ プロジェクト ベースの参照を使用するには、パッケージに含まれているパッケージ実行タスクを更新します。 詳細については、「 [パッケージ実行タスク エディター](../control-flow/execute-package-task.md)」を参照してください。  
   
  **[親パッケージ]**  
  パッケージ実行タスクを使用して子パッケージを実行するパッケージの名前を一覧表示します。  
@@ -671,7 +672,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> [構成の選択] ページのオプションの設定  
  パラメーターで置き換えるパッケージ構成を選択します。  
   
- **Package**  
+ **パッケージ**  
  パッケージ ファイルを一覧表示します。  
   
  **Type**  
@@ -697,7 +698,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> [パラメーターの作成] ページのオプションの設定  
  各構成プロパティのパラメーター名とスコープを選択します。  
   
- **Package**  
+ **パッケージ**  
  パッケージ ファイルを一覧表示します。  
   
  **パラメーター名**  
@@ -725,7 +726,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  また、 **[パラメーターの詳細の設定]** ダイアログ ボックスには、パラメーター値のデータ型や元のパラメーターが一覧表示されます。  
   
 ###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> [確認] ページのオプションの設定  
- プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
+ プロジェクトの変換に関して選択したオプションを確認するには、**[確認]** ページを使用します。  
   
  **[戻る]**  
  オプションを変更する場合にクリックします。  
@@ -745,4 +746,4 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  プロジェクトの変換は、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを保存しないと保存されません。  
   
  **[レポートの保存]**  
- プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
+ プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。

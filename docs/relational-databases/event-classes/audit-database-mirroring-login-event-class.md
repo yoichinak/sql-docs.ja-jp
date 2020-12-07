@@ -1,4 +1,5 @@
 ---
+description: Audit Database Mirroring Login イベント クラス
 title: Audit Database Mirroring Login イベント クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756111"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126856"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login イベント クラス
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85756111"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login イベント クラスのデータ列  
   
-|データ列|種類|説明|列番号|フィルターの適用|  
+|データ列|Type|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|このイベント クラスでは使用しません。|10|はい|  
 |**ClientProcessID**|**int**|このイベント クラスでは使用しません。|9|はい|  
@@ -38,13 +39,13 @@ ms.locfileid: "85756111"
 |**FileName**|**nvarchar**|リモートのデータベース ミラーリング エンドポイントで構成されたサポート済みの認証方式。 複数の方式を使用できる場合は、受け入れ側 (対象) のエンドポイントにより、最初に試行される方式が決まります。 次のいずれかの値になります。<br /><br /> <br /><br /> **なし**。 認証方式が構成されていません。<br /><br /> **NTLM**: NTLM 認証が必要です。<br /><br /> **KERBEROS**: Kerberos 認証が必要です。<br /><br /> **NEGOTIATE**: Windows が認証方式をネゴシエートします。<br /><br /> **CERTIFICATE**: エンドポイントに構成されている証明書が必要です。これは、 **master** データベースに格納されています。<br /><br /> **NTLM, CERTIFICATE**: NTLM またはエンドポイントの証明書を認証方式として受け付けます。<br /><br /> **KERBEROS, CERTIFICATE**: Kerberos またはエンドポイントの証明書を認証方式として受け付けます。<br /><br /> **NEGOTIATE, CERTIFICATE**: Windows が認証方式、または認証に使用できるエンドポイントの証明書をネゴシエートします。<br /><br /> **CERTIFICATE, NTLM**: エンドポイントの証明書または NTLM を認証方式として受け付けます。<br /><br /> **CERTIFICATE, KERBEROS**: エンドポイントの証明書または Kerberos を認証方式として受け付けます。<br /><br /> **CERTIFICATE, NEGOTIATE**: エンドポイントの証明書を認証方式として受け付けるか、Windows が認証方式をネゴシエートします。|36|いいえ|  
 |**HostName**|**nvarchar**|このイベント クラスでは使用しません。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**画像**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|この接続に使用する接続文字列。|34|いいえ|  
 |**OwnerName**|**nvarchar**|ローカルのデータベース ミラーリング エンドポイントで構成されたサポート済みの認証方式。 複数の方式を使用できる場合は、受け入れ側 (対象) のエンドポイントにより、最初に試行される方式が決まります。 次のいずれかの値になります。<br /><br /> <br /><br /> **なし**。 認証方式が構成されていません。<br /><br /> **NTLM**: NTLM 認証が必要です。<br /><br /> **KERBEROS**: Kerberos 認証が必要です。<br /><br /> **NEGOTIATE**: Windows が認証方式をネゴシエートします。<br /><br /> **CERTIFICATE**: エンドポイントに構成されている証明書が必要です。これは、 **master** データベースに格納されています。<br /><br /> **NTLM, CERTIFICATE**: NTLM またはエンドポイントの証明書を認証方式として受け付けます。<br /><br /> **KERBEROS, CERTIFICATE**: Kerberos またはエンドポイントの証明書を認証方式として受け付けます。<br /><br /> **NEGOTIATE, CERTIFICATE**: Windows が認証方式、または認証に使用できるエンドポイントの証明書をネゴシエートします。<br /><br /> **CERTIFICATE, NTLM**: エンドポイントの証明書または NTLM を認証方式として受け付けます。<br /><br /> **CERTIFICATE, KERBEROS**: エンドポイントの証明書または Kerberos を認証方式として受け付けます。<br /><br /> **CERTIFICATE, NEGOTIATE**: エンドポイントの証明書を認証方式として受け付けるか、Windows が認証方式をネゴシエートします。|37|いいえ|  
 |**ProviderName**|**nvarchar**|この接続に使用する認証方式。|46|いいえ|  
-|**RoleName**|**nvarchar**|接続のロール。 **initiator** または **target**のいずれかです。|38|いいえ|  
+|**RoleName**|**nvarchar**|接続のロール。 **initiator** または **target** のいずれかです。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  

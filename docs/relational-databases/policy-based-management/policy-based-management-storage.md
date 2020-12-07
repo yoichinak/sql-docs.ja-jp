@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理のストレージ
 title: ポリシー ベースの管理のストレージ | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b927398f565720412bbd9f15b9520a17ef0a960
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abd24579c34b11332e235d29a5f7b89a6dc183e3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727301"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88475640"
 ---
 # <a name="policy-based-management-storage"></a>ポリシー ベースの管理のストレージ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -26,12 +26,12 @@ ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b3914f2ed9be429f29b929bc74623af9f707bf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a60d78abb92552e6413fd827d2223e507a0a439e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922852"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890952"
 ---
 # <a name="replication-agents-overview"></a>レプリケーション エージェントの概要
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86922852"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーションで使用するエージェントをホストし、スケジュールを設定することによって、レプリケーション エージェントを簡単に実行できるようになっています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、レプリケーション以外の操作も管理および監視します。 詳細については、「 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール時に、サービスがインストール中に自動開始されるように明示的に選択しない限り、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスは既定で無効になります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスを開始する方法の詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール時に、サービスがインストール中に自動開始されるように明示的に選択しない限り、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスは既定で無効になります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスを開始する方法の詳細については、「[SQL Server エージェント サービスの開始、停止、または一時停止](../../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)」を参照してください。  
   
 ## <a name="snapshot-agent"></a>スナップショット エージェント  
  スナップショット エージェントは、一般的にすべての種類のレプリケーションで使用されます。 スナップショット エージェントは、パブリッシュされたテーブルやその他のオブジェクトのスキーマと初期データ ファイルを作成し、スナップショット ファイルを格納して、同期に関する情報をディストリビューション データベースに記録します。 スナップショット エージェントはディストリビューター側で実行されます。 詳細については、「 [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)」を参照してください。  
@@ -66,5 +66,4 @@ ms.locfileid: "86922852"
  [レプリケーション メンテナンス ジョブの実行 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: プロジェクトの設定 (変換) (MySQLToSQL)
 title: プロジェクトの設定 (変換) (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492435"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>プロジェクトの設定 (変換) (MySQLToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [変換] ページには、Ssma が MySQL 構文を SQL Server または SQL Azure 構文に変換する方法をカスタマイズする設定が含まれています。  
+[ **プロジェクトの設定** ] ダイアログボックスの [変換] ページには、Ssma が MySQL 構文を SQL Server または SQL Azure 構文に変換する方法をカスタマイズする設定が含まれています。  
   
-[変換] ペインは、[**プロジェクトの設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
+[変換] ペインは、[ **プロジェクトの設定** ] ダイアログボックスと [ **既定のプロジェクトの設定** ] ダイアログボックスで使用できます。  
   
--   [**既定のプロジェクトの設定**] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 変換の設定にアクセスするには、[**ツール**] メニューの [**既定のプロジェクト設定**] をクリックし、[移行**先のバージョン**] ドロップダウンから表示/変更が必要な設定を選択して、左側のウィンドウの下部にある [**全般**] をクリックし、[**変換**] を選択します。  
+-   [ **既定のプロジェクトの設定** ] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 変換の設定にアクセスするには、[ **ツール** ] メニューの [ **既定のプロジェクト設定**] をクリックし、[移行 **先のバージョン** ] ドロップダウンから表示/変更が必要な設定を選択して、左側のウィンドウの下部にある [ **全般** ] をクリックし、[ **変換**] を選択します。  
   
--   現在のプロジェクトの設定を指定するには、[**ツール**] メニューの [**プロジェクトの設定**] をクリックし、左側のウィンドウの下部にある [**全般**] をクリックして、[**変換**] をクリックします。  
+-   現在のプロジェクトの設定を指定するには、[ **ツール** ] メニューの [ **プロジェクトの設定**] をクリックし、左側のウィンドウの下部にある [ **全般** ] をクリックして、[ **変換**] をクリックします。  
   
 ## <a name="options"></a>オプション  
   
@@ -86,8 +87,8 @@ ms.locfileid: "87935221"
 |||  
 |-|-|  
 |**用語**|**定義**|  
-|**空間インデックスの既定の境界ボックス {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}**|空間インデックスで使用される境界ボックスの {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} パラメーターの既定値を定義します。<br /><br />**既定のモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティックモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**フルモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**空間インデックスの既定のグリッド密度**|空間インデックスで使用されるグリッド密度の LEVEL_1、LEVEL_2、LEVEL_3、および LEVEL_4 の既定値を定義します。<br /><br />**既定のモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**オプティミスティックモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**フルモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定|  
+|**空間インデックスの既定の境界ボックス {XMAX&#124;XMIN&#124;YMAX&#124;YMIN}**|空間インデックスで使用される境界ボックスの {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} パラメーターの既定値を定義します。<br /><br />**既定モード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**オプティミスティックモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**フルモード**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**空間インデックスの既定のグリッド密度**|空間インデックスで使用されるグリッド密度の LEVEL_1、LEVEL_2、LEVEL_3、および LEVEL_4 の既定値を定義します。<br /><br />**既定モード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**オプティミスティックモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定<br /><br />**フルモード**<br /><br />LEVEL_1: 既定<br /><br />LEVEL_2: 既定<br /><br />LEVEL_3: 既定<br /><br />LEVEL_4: 既定|  
   
 ### <a name="transactions"></a>トランザクション  
   
@@ -110,6 +111,6 @@ ms.locfileid: "87935221"
 |**38を超える有効桁数を持つ数値リテラル**|有効桁数が38を超える数値リテラルを変換する方法を指定します。<br /><br />**既定のモード**: 可能な場合はラウンド<br /><br />**オプティミスティックモード**: 可能な場合はラウンド<br /><br />**フルモード**: 可能な場合はラウンド|  
 |**0-NOT NULL 列の日付**|0日、0日、または無効な日付/時刻値の、NOT NULL 列への代入を処理する方法を指定します。<br /><br />**既定のモード**: GETDATE ()<br /><br />**オプティミスティックモード**: GETDATE ()<br /><br />**フルモード**: GETDATE ()|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザーインターフェイスリファレンス &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

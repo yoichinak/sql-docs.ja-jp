@@ -1,4 +1,5 @@
 ---
+description: サブスクリプション、[同期の履歴]
 title: サブスクリプション、[同期の履歴] | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729328"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88326017"
 ---
 # <a name="subscription-synchronization-history"></a>サブスクリプション、[同期の履歴]
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85729328"
   
 -   エラー  
   
--   [完了]  
+-   完了  
   
 -   [再試行中]  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85729328"
  **Start Time**  
  セッションの開始時刻です。  
   
- **[終了時刻]**  
+ **終了時刻**  
  セッションの終了時刻です。 エージェントが停止していない場合は、このフィールドは空になっています。  
   
  **Duration**  
@@ -67,9 +68,9 @@ ms.locfileid: "85729328"
   
 -   **[スキーマの変更と一括挿入]** 。  
   
--   **[パブリッシャーへの変更のアップロード]** 。  
+-   **[パブリッシャーへの変更のアップロード]**。  
   
--   **[サブスクライバーへの変更のダウンロード]** 。  
+-   **[サブスクライバーへの変更のダウンロード]**。  
   
  これらのフェーズを含めることにより、選択されたセッションで各フェーズにかかった時間と合計時間に対する割合をグリッドに表示できます。  
   
@@ -97,7 +98,7 @@ ms.locfileid: "85729328"
  **[選択されたセッションの最終メッセージ]**  
  このテキスト領域は、選択されたセッションの最終メッセージを表示します。 エラーが発生している場合は、詳細なエラー情報と、エラー発生時に実行しようとしていたコマンドが表示されます。 エラーに関連する追加コンテンツへのリンクも含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション モニターの開始](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)   

@@ -1,4 +1,5 @@
 ---
+description: Name プロパティ (SecurityCertificate クラス)
 title: Name プロパティ (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Name property
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 423b505e282a67fbba6ff39c0efdd84fc5988908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e097a5cdc022fafe3bd1916b72f7c0a5079718e6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880955"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545288"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name プロパティ (SecurityCertificate クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.Name [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書の名前を指定する文字列値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

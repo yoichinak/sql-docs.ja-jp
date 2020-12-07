@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd66f5f839c101343babf642e40fdfd999a528e9
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 2f26eb4e27649e1b47af909f34fd2df6db61b904
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458274"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891312"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)」を参照してください。 特定の種類のデータ ソースで作業する方法の詳細については、「 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](/previous-versions/sql/)」を参照してください。 特定の種類のデータ ソースで作業する方法の詳細については、「 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
   
  .  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
- グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、**Text**、**StoredProcedure**、および **TableDirect** の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
+ グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、**Text**、**StoredProcedure**、および **TableDirect** の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](/previous-versions/sql/) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
   
  クエリの種類には、次のオプションがあります。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "86458274"
   
  最初の 3 つのペインのいずれかで情報を変更すると、変更内容が他のペインに反映されます。 たとえば、ダイアグラム ペインでテーブルを追加すると、そのテーブルは SQL ペインの [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリに自動的に追加されます。 また、SQL ペインでクエリにフィールドを追加すると、そのフィールドはグリッド ペインの一覧に自動的に追加され、ダイアグラム ペインのテーブルも更新されます。  
   
- 詳細については、「[クエリおよびビュー デザイナー ツール &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
+ 詳細については、「[クエリおよびビュー デザイナー ツール &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)」を参照してください。  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>グラフィカル クエリ デザイナーのツール バー  
  グラフィカル クエリ デザイナーのツール バーにあるボタンを使用すると、グラフィカル インターフェイスを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリをデザインできます。  
@@ -150,6 +150,5 @@ EXEC uspGetEmployeeManagers '1';
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 構成ファイル](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
-  
+ [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

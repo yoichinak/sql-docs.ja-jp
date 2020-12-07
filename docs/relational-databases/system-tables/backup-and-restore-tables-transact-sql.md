@@ -1,4 +1,5 @@
 ---
+description: テーブルのバックアップと復元 (Transact-sql)
 title: テーブルのバックアップと復元 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - system tables [SQL Server], restore tables
 - restore system tables [SQL Server]
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: abb69d6cefa270330a41d90bea0352981dd7ee8a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750389"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540982"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>テーブルのバックアップと復元 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

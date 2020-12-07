@@ -1,4 +1,5 @@
 ---
+description: DROP RULE (Transact-SQL)
 title: DROP RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - removing roles
 - dropping roles
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4692f23e97da03de8698c48fa1f04049e64cef36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc66ed0c7438c7495395aaa573ba820bd8cf3b6f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485481"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380299"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  削除するルールです。 ルール名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 ルールのスキーマ名の指定は省略可能です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  ルールを削除するには、そのルールが列または別名データ型に現在バインドされている場合、まず、このバインドを解除します。 ルールのバインドを解除するには、**sp_unbindrule** を使います。 バインドされているルールを削除しようとすると、エラー メッセージが表示され、DROP RULE ステートメントは取り消されます。  
   
  ルールを削除すると、以前はそのルールに制御されていた列に新しいデータを入力しても、ルールの制約を受けなくなります。 既存のデータはまったく影響を受けません。  
@@ -71,7 +72,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ## <a name="examples"></a>例  
  次の例では、`VendorID_rule` というルールのバインドを解除し、削除します。 
   
-```  
+```sql  
 sp_unbindrule 'Production.ProductVendor.VendorID'  
 DROP RULE VendorID_rule  
 GO  

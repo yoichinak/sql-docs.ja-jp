@@ -1,4 +1,5 @@
 ---
+description: ASYMKEY_ID (Transact-SQL)
 title: ASYMKEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 508840b147443fb82396d022b7438587cdf758ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 59956382fb5cded4dfac61499c6bb3349b31a8b7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113125"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117126"
 ---
 # <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87113125"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   
@@ -62,7 +63,7 @@ SELECT ASYMKEY_ID('ABerglundKey11');
 GO  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  

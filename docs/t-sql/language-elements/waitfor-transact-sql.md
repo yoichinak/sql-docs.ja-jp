@@ -1,4 +1,5 @@
 ---
+description: WAITFOR (Transact-SQL)
 title: WAITFOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec4eb37c00e524c019b07de3943efd4137e7ab9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922997"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194954"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +87,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  TIMEOUT が指定された WAITFOR は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージに対してのみ適用できます。 詳細については、「[RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)」と「[GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  WAITFOR ステートメントを実行している間は、トランザクションが実行され、その他のリクエストは同じトランザクションの下で実行することはできません。  
   
  実際の遅延時間は *time_to_pass*、*time_to_execute* または *timeout* で指定される時間によって異なり、サーバーの利用状況レベルにも依存します。 時間のカウンターは、WAITFOR ステートメント スレッドがスケジュールされた時点から開始します。 サーバーがビジーの場合、スレッドはすぐにスケジュールされない場合があるので、遅延時間は指定した時間よりも長くなることがあります。  
@@ -109,9 +110,9 @@ WAITFOR
 ## <a name="examples"></a>例  
   
 ### <a name="a-using-waitfor-time"></a>A. WAITFOR TIME を使用する  
- 次の例では、午後 10 時 20 分に msdb データベースでストアド プロシージャ `sp_update_job` を実行します。 (`22:20`)。  
+ 次の例では、午後 10 時 20 分に msdb データベースでストアド プロシージャ `sp_update_job` を実行します。 (`22:20`).  
   
-```  
+```sql  
 EXECUTE sp_add_job @job_name = 'TestJob';  
 BEGIN  
     WAITFOR TIME '22:20';  
@@ -124,7 +125,7 @@ GO
 ### <a name="b-using-waitfor-delay"></a>B. WAITFOR DELAY を使用する  
  次の例では、ストアド プロシージャを 2 時間遅延して実行します。  
   
-```  
+```sql  
 BEGIN  
     WAITFOR DELAY '02:00';  
     EXECUTE sp_helpdb;  
@@ -135,7 +136,7 @@ GO
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. ローカル変数と共に WAITFOR DELAY を使用する  
  次の例では、`WAITFOR DELAY` オプションでローカル変数を使用する方法を示します。 このストアド プロシージャは、可変の時間だけ待機してから、経過した時間数、分数、秒数に関する情報をユーザーに返します。  
   
-```  
+```sql  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
     DROP PROCEDURE dbo.TimeDelay_hh_mm_ss;  
 GO  
@@ -144,7 +145,7 @@ CREATE PROCEDURE dbo.TimeDelay_hh_mm_ss
     @DelayLength char(8)= '00:00:00'  
     )  
 AS  
-DECLARE @ReturnInfo varchar(255)  
+DECLARE @ReturnInfo VARCHAR(255)  
 IF ISDATE('2000-01-01 ' + @DelayLength + '.000') = 0  
     BEGIN  
         SELECT @ReturnInfo = 'Invalid time ' + @DelayLength   

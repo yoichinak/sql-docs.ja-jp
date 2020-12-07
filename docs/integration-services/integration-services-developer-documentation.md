@@ -1,4 +1,5 @@
 ---
+description: Integration Services の開発者向けのドキュメント
 title: Integration Services の開発者向けのドキュメント | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88346098"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services の開発者向けのドキュメント
 
@@ -77,7 +78,7 @@ ms.locfileid: "86919958"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで列挙、実行、および管理する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーとメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
  定義済みの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -86,9 +87,9 @@ ms.locfileid: "86919958"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
+-   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

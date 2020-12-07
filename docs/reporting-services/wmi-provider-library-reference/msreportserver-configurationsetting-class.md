@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting クラス
 title: MSReportServer_ConfigurationSetting クラス | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454429"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting クラス
   レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。  
@@ -42,7 +43,7 @@ public class MSReportServer_ConfigurationSetting
  この型の public static (**では** Shared [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) のすべてのメンバーは、マルチスレッド操作で安全に使用できます。 インスタンスのメンバーは、スレッドセーフであるとは限りません。  
   
 ## <a name="example"></a>例  
- このコードを実行するには、\<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
+ 次のコードを実行するには、それぞれの \<*servername*> を実際のサーバー名に置き換えます。 インストールの場所が既定でない場合は、その場所を指すようにパスを更新します。 次のコード例は、 *MSReportServer_ConfigurationSetting* クラスの各プロパティを反復処理し、各プロパティの名前とその値をコンソールに出力します。  
   
 ```vb  
 Imports System  

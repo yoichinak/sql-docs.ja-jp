@@ -20,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d022af78318203a9f7c5d4f1e7c5d01c2f091ce1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1f6cd4c28efff1425a18fcef9e7ed60ee535a93f
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395992"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570542"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT (検索プロパティ リスト権限の許可) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +45,9 @@ GRANT permission [ ,...n ] ON
     [ AS granting_principal ]  
 ```  
   
-## <a name="arguments"></a>引数  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>引数
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
@@ -135,7 +137,7 @@ GRANT permission [ ,...n ] ON
 ### <a name="granting-permissions-to-a-search-property-list"></a>検索プロパティ リストに対する権限を許可する  
  次の例では、検索プロパティ リスト `Mary` に対する `VIEW DEFINITION` 権限を `DocumentTablePropertyList` に許可します。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  

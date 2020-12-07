@@ -1,4 +1,5 @@
 ---
+description: プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 title: プロジェクトの設定 (型のマッピング) (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372118"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
-[**プロジェクトの設定**] ダイアログボックスの [型マッピング] ページには、Ssma が Sybase Adaptive Server ENTERPRISE (ASE) データ型をデータ型に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+[ **プロジェクトの設定** ] ダイアログボックスの [型マッピング] ページには、Ssma が Sybase Adaptive Server ENTERPRISE (ASE) データ型をデータ型に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
-[型マッピング] ページは、[**プロジェクトの設定**] ダイアログボックスと [**既定のプロジェクトの設定**] ダイアログボックスで使用できます。  
+[型マッピング] ページは、[ **プロジェクトの設定** ] ダイアログボックスと [ **既定のプロジェクトの設定** ] ダイアログボックスで使用できます。  
   
--   すべての今後の SSMA プロジェクトに対して型マッピング設定を指定するには、[**ツール**] メニューの [**既定のプロジェクト設定**] を選択し、[移行先の**バージョン**] ドロップダウンから表示または変更する設定が必要な [移行プロジェクトの種類] を選択して、左側のウィンドウの下部にある [**型マッピング**] を選択します。  
+-   すべての今後の SSMA プロジェクトに対して型マッピング設定を指定するには、[ **ツール** ] メニューの [ **既定のプロジェクト設定**] を選択し、[移行先の **バージョン** ] ドロップダウンから表示または変更する設定が必要な [移行プロジェクトの種類] を選択して、左側のウィンドウの下部にある [ **型マッピング** ] を選択します。  
   
--   現在のプロジェクトの設定を指定するには、[**ツール**] メニューの [**プロジェクトの設定**] をクリックし、左側のウィンドウの下部にある [**型マッピング**] を選択します。  
+-   現在のプロジェクトの設定を指定するには、[ **ツール** ] メニューの [ **プロジェクトの設定**] をクリックし、左側のウィンドウの下部にある [ **型マッピング** ] を選択します。  
   
 ## <a name="options"></a>オプション  
 **ソースの種類**  
@@ -37,7 +38,7 @@ ms.locfileid: "87930730"
 **追加**  
 [マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-**編集**  
+**[編集]**  
 [マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
 **Remove**  

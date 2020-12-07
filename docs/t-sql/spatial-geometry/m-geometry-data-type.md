@@ -1,4 +1,5 @@
 ---
+description: M (geometry データ型)
 title: M (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b8d0c4dd1b813ce5da8f0272a0c2e19e7beab1c6
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 79a575b57bc3f41f48f9a00ed95784b09f84f5f6
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555676"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88497066"
 ---
 # <a name="m-geometry-data-type"></a>M (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555676"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>解説  
  **geometry** インスタンスが **Point** ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
@@ -61,7 +62,7 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.M;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Z &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)   
  [AsTextZM &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)  

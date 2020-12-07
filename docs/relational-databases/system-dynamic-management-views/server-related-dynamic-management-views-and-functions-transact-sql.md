@@ -1,4 +1,5 @@
 ---
+description: サーバー関連の動的管理ビューおよび関数 (Transact-sql)
 title: サーバー関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -9,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e58d81bef57daac6da9cad6e4d943068b618db28
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b3ad603576842161511d6171cc4acbb095ca4399
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942182"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542399"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>サーバー関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

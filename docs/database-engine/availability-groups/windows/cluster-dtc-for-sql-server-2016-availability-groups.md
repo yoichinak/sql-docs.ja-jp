@@ -6,17 +6,17 @@ ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0266fc9922a8dbbf932be8521f2a63b186c6500f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4078d42ddb680c46f763065a47406f855093801c
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522386"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584541"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 可用性グループの DTC サービスをクラスター化する方法
 
@@ -35,8 +35,8 @@ ms.locfileid: "87522386"
 
 |タスク|リファレンス|  
 |-----------------|----------|  
-|共有記憶域ドライブ。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(共有記憶域ドライブの構成)。 ドライブ文字に **M**を使用することを検討します。|
-|固有の DTC ネットワーク名リソース。  名前は、Active Directory にクラスター コンピューター オブジェクトとして登録されます。<br /><br />次のいずれかが満たされていることを確認します。<br /><br />• DTC ネットワーク名リソースを作成するユーザーに、DTC ネットワーク名リソースが保存される OU またはコンテナーに対するコンピューター オブジェクト作成アクセス許可があること。<br /><br />•  ユーザーにコンピューター オブジェクトの作成アクセス許可がない場合は、DTC ネットワーク名リソース用のクラスター コンピューター オブジェクトの用意をドメイン管理者に依頼します。|[Active Directory ドメイン サービスでクラスター コンピューター オブジェクトをプレステージする](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|共有記憶域ドライブ。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(共有記憶域ドライブの構成)。 ドライブ文字に **M** を使用することを検討します。|
+|固有の DTC ネットワーク名リソース。  名前は、Active Directory にクラスター コンピューター オブジェクトとして登録されます。<br /><br />次のいずれかが満たされていることを確認します。<br /><br />• DTC ネットワーク名リソースを作成するユーザーに、DTC ネットワーク名リソースが保存される OU またはコンテナーに対するコンピューター オブジェクト作成アクセス許可があること。<br /><br />•  ユーザーにコンピューター オブジェクトの作成アクセス許可がない場合は、DTC ネットワーク名リソース用のクラスター コンピューター オブジェクトの用意をドメイン管理者に依頼します。|[Active Directory ドメイン サービスでクラスター コンピューター オブジェクトをプレステージする](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |使用可能な有効な静的 IP アドレスとその IP アドレスの適切なサブネット マスク。||
 
 ## <a name="cluster-the-dtc-resource"></a>DTC リソースをクラスター化する
@@ -47,7 +47,7 @@ ms.locfileid: "87522386"
 
 |タスク|リファレンス|  
 |-----------------|----------|  
-|クラスター化された DTC リソースへの安全なネットワーク アクセスを有効にします。|[MS DTC への安全なネットワーク アクセスを有効にする](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|クラスター化された DTC リソースへの安全なネットワーク アクセスを有効にします。|[MS DTC への安全なネットワーク アクセスを有効にする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
 |ローカル DTC サービスを停止して無効にします。|[サービスの開始方法を構成する](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |可用性グループの各インスタンスの SQL Server サービスを停止して再開します。  必要に応じて可用性グループをフェールオーバーします。|[可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
@@ -60,13 +60,13 @@ ms.locfileid: "87522386"
 ### <a name="resources"></a>リソース
 
 
-[可用性グループでの DTC のテストに関する詳細については、次を参照してください。](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
+[可用性グループでの DTC のテストに関する詳細については、次を参照してください。](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)
 
 [AlwaysOn 可用性グループ システム ビューの監視](monitor-availability-groups-transact-sql.md)
 
 [可用性グループの作成の手順](create-an-availability-group-transact-sql.md)
 
 
-[可用性グループでの SQL Server 2016 DTC のサポート](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
+[可用性グループでの SQL Server 2016 DTC のサポート](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups) 
 
 [外部リンク: Windows Server 2008 R2 で SQL Server のクラスター化されたインスタンスの DTC を構成する](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

@@ -1,4 +1,5 @@
 ---
+description: 拡張イベント テーブル - trace_xe_event_map
 title: trace_xe_event_map (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 154eb6731264fb8363aff0825e3ec0639e4e142c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2e5a00eee3eb03b469f53fef18bb0512b8e2f32d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750195"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545772"
 ---
 # <a name="extended-events-tables---trace_xe_event_map"></a>拡張イベント テーブル - trace_xe_event_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85750195"
 |package_name|**nvarchar(60)**|マップされたイベントが存在する拡張イベントパッケージの名前です。|  
 |xe_event_name|**nvarchar(60)**|SQL トレースイベントクラスにマップされる拡張イベントイベントの名前です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のクエリを使用すると、SQL トレース イベント クラスと同様の拡張イベントを特定できます。  
   
 ```  
@@ -59,7 +60,7 @@ WHERE xe.trace_event_id IS NULL
   
  前のクエリでは、返されるイベント クラスのほとんどは、監査に関係しています。 監査には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査を使用することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査では、拡張イベントを使用して監査を作成します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

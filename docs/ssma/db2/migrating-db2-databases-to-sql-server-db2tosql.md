@@ -10,34 +10,34 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c0a762cbe49a3186a29feb5aa3424b083d2f8978
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e31d4b1d31cb186276d8424f8c49450cb4ce9406
+ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933743"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94869530"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 データベースの SQL Server への移行 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2 は、DB2 データベースをまたは Azure SQL Database に迅速に移行するのに役立つ包括的な環境です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータを確認し、データベースの移行を評価したり、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行したり、データをまたは Azure SQL Database に移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 は、DB2 データベースをまたは Azure SQL Database に迅速に移行するのに役立つ包括的な環境です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 SSMA for DB2 を使用することにより、データベースオブジェクトとデータを確認し、データベースの移行を評価したり、データベースオブジェクトを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または Azure SQL Database に移行したり、データをまたは Azure SQL Database に移行したりすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 SYS スキーマとシステム DB2 スキーマは移行できないことに注意してください。  
   
 ## <a name="recommended-migration-process"></a>推奨される移行プロセス  
 オブジェクトとデータを DB2 データベースからまたは Azure SQL Database に正常に移行するに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、次の手順を使用します。  
   
-1.  [新しい SSMA プロジェクト](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)。  
+1.  [新しい SSMA プロジェクト](./new-project-db2tosql.md)。  
   
-    プロジェクトを作成した後、プロジェクトの変換、移行、および種類のマッピングオプションを設定できます。 プロジェクト設定の詳細については、「[プロジェクトの設定 &#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md) 」および関連するセクションを参照してください。 データ型マッピングをカスタマイズする方法の詳細については、「 [MAPPING DB2 and SQL Server Data Types &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)」を参照してください。  
+    プロジェクトを作成した後、プロジェクトの変換、移行、および種類のマッピングオプションを設定できます。 プロジェクト設定の詳細については、「 [プロジェクトの設定 &#40;変換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md) 」および関連するセクションを参照してください。 データ型マッピングをカスタマイズする方法の詳細については、「 [MAPPING DB2 and SQL Server Data Types &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)」を参照してください。  
   
-2.  [DB2 データベースに接続](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)します。  
+2.  [DB2 データベースに接続](./connecting-to-db2-database-db2tosql.md)します。  
   
-3.  [SQL Server に接続](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)しています。  
+3.  [SQL Server に接続](./connecting-to-sql-server-db2tosql.md)しています。  
   
-4.  [DB2 スキーマを SQL Server スキーマにマップ](https://msdn.microsoft.com/05ff7bd4-e60b-4f48-a893-bc2346aa9a8a)します。  
+4.  [DB2 スキーマを SQL Server スキーマにマップ](./mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)します。  
   
-5.  必要に応じて、[評価レポート](https://msdn.microsoft.com/9e13eba0-e3cf-4205-974f-c00f982061de)を使用してデータベースオブジェクトの変換を評価し、変換時間を推定します。  
+5.  必要に応じて、 [評価レポート](./assessment-report-db2tosql.md) を使用してデータベースオブジェクトの変換を評価し、変換時間を推定します。  
   
-6.  [DB2 スキーマを変換](https://msdn.microsoft.com/7947efc3-ca86-4ec5-87ce-7603059c75a0)します。  
+6.  [DB2 スキーマを変換](./converting-db2-schemas-db2tosql.md)します。  
   
-7.  [変換されたデータベースオブジェクトを SQL Server に読み込み](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)ます。  
+7.  [変換されたデータベースオブジェクトを SQL Server に読み込み](./loading-converted-database-objects-into-sql-server-db2tosql.md)ます。  
   
     これは、次の方法のいずれかで実行できます。  
   
@@ -45,11 +45,10 @@ ms.locfileid: "87933743"
   
     -   データベースオブジェクトを同期します。  
   
-8.  [DB2 データを SQL Server に移行](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)する。  
+8.  [DB2 データを SQL Server に移行](./migrating-db2-data-into-sql-server-db2tosql.md)する。  
   
 9. 必要に応じて、データベースアプリケーションを更新します。  
   
 ## <a name="see-also"></a>参照  
-[SSMA for DB2 &#40;DB2ToSQL&#41;のインストール](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
+[SSMA for DB2 &#40;DB2ToSQL&#41;のインストール ](../../ssma/db2/installing-ssma-for-db2-db2tosql.md)  
 [SSMA for DB2 &#40;DB2ToSQL のはじめに&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
-  

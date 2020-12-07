@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464664"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,47 +56,47 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'`ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。 NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 NULL にすることはできません。  
   
-`[ @backup_directory = ] 'backup_directory'`プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory*は**nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
+`[ @backup_directory = ] 'backup_directory'` プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
-`[ @backup_share = ] 'backup_share'`プライマリサーバー上のバックアップディレクトリへのネットワークパスを示します。 *backup_share*は**nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
+`[ @backup_share = ] 'backup_share'` プライマリサーバー上のバックアップディレクトリへのネットワークパスを示します。 *backup_share* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
-`[ @backup_job_name = ] 'backup_job_name'`バックアップをバックアップフォルダーにコピーする、プライマリサーバー上の SQL Server エージェントジョブの名前を指定します。 *backup_job_name*は**sysname**であり、NULL にすることはできません。  
+`[ @backup_job_name = ] 'backup_job_name'` バックアップをバックアップフォルダーにコピーする、プライマリサーバー上の SQL Server エージェントジョブの名前を指定します。 *backup_job_name* は **sysname** であり、NULL にすることはできません。  
   
-`[ @backup_retention_period = ] backup_retention_period`プライマリサーバー上のバックアップディレクトリにログバックアップファイルを保持する時間を分単位で示します。 *backup_retention_period*は**int**,、既定値はありません、NULL にすることはできません。  
+`[ @backup_retention_period = ] backup_retention_period` プライマリサーバー上のバックアップディレクトリにログバックアップファイルを保持する時間を分単位で示します。 *backup_retention_period* は **int**,、既定値はありません、NULL にすることはできません。  
   
-`[ @monitor_server = ] 'monitor_server'`監視サーバーの名前を指定します。 *Monitor_server*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`監視サーバーへの接続に使用されるセキュリティモード。  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` 監視サーバーへの接続に使用されるセキュリティモード。  
   
  1 = Windows 認証。  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。 *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。 *monitor_server_security_mode* は **ビット** であり、NULL にすることはできません。  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`監視サーバーへのアクセスに使用するアカウントのユーザー名を示します。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 監視サーバーへのアクセスに使用するアカウントのユーザー名を示します。  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
   
-`[ @backup_threshold = ] backup_threshold`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold*は**int**,、既定値は60分です。  
+`[ @backup_threshold = ] backup_threshold`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
   
-`[ @threshold_alert = ] threshold_alert`バックアップのしきい値を超えたときに発生する警告を指定します。 *threshold_alert*は**int**,、既定値は14420です。  
+`[ @threshold_alert = ] threshold_alert` バックアップのしきい値を超えたときに発生する警告を指定します。 *threshold_alert* は **int**,、既定値は14420です。  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。 値 0 (既定値) を指定すると、警告が無効になり、生成されなくなります。 *threshold_alert_enabled*は**ビット**です。  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。 値 0 (既定値) を指定すると、警告が無効になり、生成されなくなります。 *threshold_alert_enabled* は **ビット**です。  
   
-`[ @history_retention_period = ] history_retention_period`履歴を保持する時間の長さを分単位で指定します。 *history_retention_period*は**int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
+`[ @history_retention_period = ] history_retention_period` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プライマリサーバー上のバックアップジョブに関連付けられているエージェントジョブ ID。 *backup_job_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プライマリサーバー上のバックアップジョブに関連付けられているエージェントジョブ ID。 *backup_job_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
-`[ @primary_id = ] primary_id OUTPUT`ログ配布構成のプライマリデータベースの ID。 *primary_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @primary_id = ] primary_id OUTPUT` ログ配布構成のプライマリデータベースの ID。 *primary_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
-`[ @backup_compression = ] backup_compression_option`ログ配布構成で[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを指定します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
+`[ @backup_compression = ] backup_compression_option` ログ配布構成で [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを指定します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
  0 = 無効です。 ログ バックアップは圧縮されません。  
   
  1 = 有効。 ログバックアップは常に圧縮します。  
   
- 2 = [ビューの設定[] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
+ 2 = [ビューの設定 [] または [backup compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -104,22 +105,22 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  なし  
   
 ## <a name="remarks"></a>解説  
- **sp_add_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアドプロシージャは、次の機能を実行します。  
+ **sp_add_log_shipping_primary_database** は、プライマリサーバーの **master** データベースから実行する必要があります。 このストアドプロシージャは、次の機能を実行します。  
   
-1.  プライマリ ID を生成し、指定された引数を使用して**log_shipping_primary_databases**テーブルにプライマリデータベースのエントリを追加します。  
+1.  プライマリ ID を生成し、指定された引数を使用して **log_shipping_primary_databases** テーブルにプライマリデータベースのエントリを追加します。  
   
 2.  無効になっているプライマリデータベースのバックアップジョブを作成します。  
   
 3.  **Log_shipping_primary_databases**エントリのバックアップジョブ id をバックアップジョブのジョブ id に設定します。  
   
-4.  指定された引数を使用して、プライマリサーバーのテーブル**log_shipping_monitor_primary**にローカル監視レコードを追加します。  
+4.  指定された引数を使用して、プライマリサーバーのテーブル **log_shipping_monitor_primary** にローカル監視レコードを追加します。  
   
-5.  監視サーバーがプライマリサーバーと異なる場合は、によって、指定された引数を使用して監視サーバーの**log_shipping_monitor_primary**に監視レコードが追加されます。  
+5.  監視サーバーがプライマリサーバーと異なる場合は、によって、指定された引数を使用して監視サーバーの **log_shipping_monitor_primary** に監視レコードが追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ログ配布構成のプライマリ データベースとして、データベース [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] を追加します。  
   
 ```  

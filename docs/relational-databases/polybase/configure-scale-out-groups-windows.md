@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ddf0fe7b4f3f14963291d8ae930d7d680c374cb2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892054"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892142"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "85892054"
   
 1. N 台のマシンに、同じバージョンの SQL Server と PolyBase をインストールします。
   
-2. 1 つの SQL Server インスタンスをヘッド ノードとして選択します。 ヘッド ノードは、SQL Server Enterprise を実行するインスタンスでのみ指定できます。
+2. 1 つの SQL Server インスタンスをヘッド ノードとして選択します。 
   
 3. [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)を使用して、残りの SQL Server インスタンスをコンピューティング ノードとして追加します。
 
@@ -109,6 +109,6 @@ ms.locfileid: "85892054"
   
 ## <a name="next-steps"></a>次のステップ  
 
-トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。
+トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))」を参照してください。
   
 PolyBase について詳しくは、[PolyBase の概要](../../relational-databases/polybase/polybase-guide.md)に関する記事をご覧ください。

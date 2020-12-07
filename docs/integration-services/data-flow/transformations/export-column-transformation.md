@@ -1,4 +1,5 @@
 ---
+description: 列エクスポート変換
 title: 列エクスポート変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1cf2f0799896bfaac652e00a7736a0de3d8be97e
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919371"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123369"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
 
@@ -38,16 +39,16 @@ ms.locfileid: "86919371"
 ## <a name="append-and-truncate-options"></a>追加オプションと切り捨てオプション  
  次の表では、追加オプションと切り捨てオプションが結果に与える影響について説明します。  
   
-|Append|Truncate|ファイルが存在するか|[結果]|  
+|追加する|Truncate|ファイルが存在するか|結果|  
 |------------|--------------|-----------------|-------------|  
 |False|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |False|True|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
-|True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true** を設定するのは無効です。|  
 |False|False|はい|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
 |False|True|はい|ファイルが削除されて再作成され、データが書き込まれます。|  
 |True|False|はい|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
-|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true** を設定するのは無効です。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>列エクスポート変換の構成  
  列エクスポート変換は、次の方法で構成できます。  
@@ -69,7 +70,7 @@ ms.locfileid: "86919371"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -97,7 +98,7 @@ ms.locfileid: "86919371"
 ## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[入力または出力]**  
  出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
   
@@ -118,5 +119,4 @@ ms.locfileid: "86919371"
   
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
-  
   

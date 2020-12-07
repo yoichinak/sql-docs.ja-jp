@@ -1,4 +1,5 @@
 ---
+description: 参照変換
 title: 参照変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919288"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92193220"
 ---
 # <a name="lookup-transformation"></a>参照変換
 
@@ -37,7 +38,7 @@ ms.locfileid: "86919288"
 
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
   
- 参照データセットは、キャッシュ ファイル、既存のテーブル、既存のビュー、新しいテーブル、または SQL クエリの結果のいずれかになります。 参照変換では、OLE DB 接続マネージャーまたはキャッシュ接続マネージャーを使用して、参照データセットに接続します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md) 」および「 [キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md)」をご覧ください。  
+ 参照データセットは、キャッシュ ファイル、既存のテーブル、既存のビュー、新しいテーブル、または SQL クエリの結果のいずれかになります。 参照変換では、OLE DB 接続マネージャーまたはキャッシュ接続マネージャーを使用して、参照データセットに接続します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md) 」および「 [キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md)」をご覧ください。  
   
  参照変換は、次の方法で構成できます。  
   
@@ -90,9 +91,9 @@ ms.locfileid: "86919288"
   
  キャッシュをファイルに永続化する他の利点を次に示します。  
   
--   ***複数のパッケージ間でキャッシュ ファイルを共有できます。詳細については、***[キャッシュ接続マネージャーを使用したフル キャッシュ モードの参照変換の実装](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***に関するページをご覧ください。***  
+-   "***複数のパッケージ間でキャッシュ ファイルを共有できます。詳細については、こちらをご覧ください**": [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) _*_ _*_  
   
--   キャッシュ ファイルをパッケージと一緒に配置できます。 ***これにより、このデータを複数のコンピューター上で使用できます。*** 詳細については、「 [参照変換用のキャッシュを作成および配置する](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
+-   キャッシュ ファイルをパッケージと一緒に配置できます。 _*_これにより、このデータを複数のコンピューター上で使用できます。_*_ 詳細については、「 [参照変換用のキャッシュを作成および配置する](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
   
 -   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../../../integration-services/data-flow/raw-file-source.md)」を参照してください。  
   
@@ -107,7 +108,7 @@ ms.locfileid: "86919288"
   
      このキャッシュ オプションは、 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]の参照変換に用意されているフル キャッシュ オプションと互換性があります。  
   
--   参照データセットは、データ フロー内の接続されているデータ ソースまたはキャッシュ ファイルから生成され、参照変換の実行前にキャッシュに読み込まれます。 キャッシュ接続マネージャー (および必要に応じてキャッシュ変換) を使用して、データセットにアクセスします。 詳細については、「 [キャッシュ接続マネージャー](../../../integration-services/data-flow/transformations/cache-connection-manager.md) 」および「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」をご覧ください。  
+-   参照データセットは、データ フロー内の接続されているデータ ソースまたはキャッシュ ファイルから生成され、参照変換の実行前にキャッシュに読み込まれます。 キャッシュ接続マネージャー (および必要に応じてキャッシュ変換) を使用して、データセットにアクセスします。 詳細については、「 [キャッシュ接続マネージャー](../../connection-manager/cache-connection-manager.md) 」および「 [キャッシュ変換](../../../integration-services/data-flow/transformations/cache-transform.md)」をご覧ください。  
   
 -   参照データセットは、参照変換の実行時に、テーブル、ビュー、または SQL クエリを使用して生成されます。 参照データセットに一致するエントリがある行、およびデータセットに一致するエントリがない行がキャッシュに読み込まれます。  
   
@@ -126,28 +127,28 @@ ms.locfileid: "86919288"
   
 -   [キャッシュなしモードまたは部分キャッシュ モードの参照を実装する](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [OLE DB 接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」 (msdn.microsoft.com)  
+-   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100))」  
   
 -   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ記事「[参照パターン: 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
 -   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
      [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
 ## <a name="lookup-transformation-editor-general-page"></a>[参照変換エディター] ([全般] ページ)
-  [参照変換エディター] ダイアログ ボックスの **[全般]** ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
+  [参照変換エディター] ダイアログ ボックスの _ *[全般]* * ページを使用して、キャッシュ モードや接続の種類を選択し、一致するエントリがない行の処理方法を指定します。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[フル キャッシュ]**  
  参照変換を実行する前に、参照データセットを生成してキャッシュに読み込みます。  
   
@@ -171,12 +172,12 @@ ms.locfileid: "86919288"
  **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で他のオプションを選択した場合は、行がエラーとして処理されます。 **[エラー出力]** ページの **[エラー]** オプションを使用できます。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) 」  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]** および **[キャッシュ接続マネージャー]** を選択すると、次のオプションを使用できます。  
   
  **[フル キャッシュ]**  
@@ -185,7 +186,7 @@ ms.locfileid: "86919288"
  **[新規作成]**  
  新しい接続を作成するには、 **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスを使用します。  
   
- **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]** 、 **[部分キャッシュ]** 、 **[キャッシュなし]** 、および **[OLE DB 接続マネージャー]** を選択すると、次のオプションを使用できます。  
+ **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]**、 **[部分キャッシュ]**、 **[キャッシュなし]**、および **[OLE DB 接続マネージャー]** を選択すると、次のオプションを使用できます。  
   
  **[キャッシュなし]**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
@@ -197,7 +198,7 @@ ms.locfileid: "86919288"
  既存のテーブルまたはビューを一覧から選択するか、 **[新規作成]** をクリックして新しいテーブルを作成します。  
   
 > [!NOTE]  
->  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントでオーバーライドおよび置換されます。 詳細については、「 [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)」を参照してください。  
+>  **[参照変換エディター]** の **[詳細設定]** ページで SQL ステートメントを指定する場合、ここで選択したテーブル名はその SQL ステートメントでオーバーライドおよび置換されます。 詳細については、「 [[参照変換エディター] &#40;[詳細設定] ページ&#41;]()」を参照してください。  
   
  **[新規作成]**  
  **[テーブルの作成]** ダイアログ ボックスを使用して新しいテーブルを作成します。  
@@ -218,12 +219,12 @@ ms.locfileid: "86919288"
  **[クエリ結果のプレビュー]** ダイアログ ボックスを使用して、結果をプレビューします。 結果は 200 行まで表示されます。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) 」  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 入力列とは、データ フロー内の接続されているソースからの列です。 入力列と参照列のデータ型は一致している必要があります。  
   
@@ -252,7 +253,7 @@ ms.locfileid: "86919288"
 ## <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>オプション  
  **[キャッシュ サイズ (32 ビット)]**  
  32 ビット コンピューター用のキャッシュ サイズを MB 単位で調整します。 既定値は 5 MB です。  
   
@@ -269,18 +270,17 @@ ms.locfileid: "86919288"
  参照データセットを生成するために使用される SQL ステートメントを変更します。  
   
 > [!NOTE]  
->  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)」を参照してください。  
+>  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;]()」を参照してください。  
   
  **[パラメーターの設定]**  
  **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、入力列をパラメーターにマップします。  
   
 ### <a name="external-resources"></a>外部リソース  
- blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
+ blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) 」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [あいまい参照変換](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [用語参照変換](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.stats (Transact-SQL)
 title: sys. stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -17,30 +18,31 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats catalog view
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3461f2f9b46d5933f92782151d2debdc3189711
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012909"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545121"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   データベース内のテーブル、インデックス、およびインデックス付きビューに対して存在する統計オブジェクトごとに1行のデータを格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 すべてのインデックスには、同じ名前と ID (**index_id**stats_id) の対応する統計行があり  =  **stats_id**ますが、すべての統計行に対応するインデックスがあるわけではありません。  
   
- カタログビューの[stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)は、データベース内の各列の統計情報を提供します。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
+ カタログビューの [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) は、データベース内の各列の統計情報を提供します。 統計の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|これらの統計が属するオブジェクトの ID。|  
 |**name**|**sysname**|統計の名前。 は、オブジェクト内で一意です。|  
-|**stats_id**|**int**|統計の ID。 は、オブジェクト内で一意です。<br /><br />統計がインデックスに対応している場合、 *stats_id*の値は、 *index_id* [カタログビューの値](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)と同じになります。|  
+|**stats_id**|**int**|統計の ID。 は、オブジェクト内で一意です。<br /><br />統計がインデックスに対応している場合、 *stats_id* の値は、 *index_id* [カタログビューの値](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) と同じになります。|  
 |**auto_created**|**bit**|統計が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されたかどうかを示します。<br /><br /> 0 = 統計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されませんでした。<br /><br /> 1 = 統計は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成されました。|  
 |**user_created**|**bit**|統計がユーザーによって作成されたかどうかを示します。<br /><br /> 0 = 統計はユーザーによって作成されませんでした。<br /><br /> 1 = 統計はユーザーによって作成されました。|  
-|**no_recompute**|**bit**|統計が**NORECOMPUTE**オプションを使用して作成されたかどうかを示します。<br /><br /> 0 = 統計は、 **NORECOMPUTE**オプションを使用して作成されませんでした。<br /><br /> 1 = 統計は、 **NORECOMPUTE**オプションを使用して作成されました。|  
+|**no_recompute**|**bit**|統計が **NORECOMPUTE** オプションを使用して作成されたかどうかを示します。<br /><br /> 0 = 統計は、 **NORECOMPUTE** オプションを使用して作成されませんでした。<br /><br /> 1 = 統計は、 **NORECOMPUTE** オプションを使用して作成されました。|  
 |**has_filter**|**bit**|0 = 統計にはフィルターがないため、すべての行で計算されます。<br /><br /> 1 = 統計にフィルターがあり、フィルター定義を満たす行についてのみ計算されます。|  
 |**filter_definition**|**nvarchar(max)**|フィルター選択された統計情報に含まれる行のサブセットの式。<br /><br /> NULL = フィルター選択されていない統計。|  
 |**is_temporary**|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 統計が一時的なものかどうかを示します。 一時的な統計 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] は、読み取り専用アクセスが有効になっているセカンダリデータベースをサポートします。<br /><br /> 0 = 統計は一時的ではありません。<br /><br /> 1 = 統計は一時的です。|  
@@ -67,11 +69,11 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
 ```  
   
 ## <a name="see-also"></a>参照  
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [値](../../relational-databases/statistics/statistics.md)    
- [dm_db_stats_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [統計](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [dm_db_stats_histogram &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  

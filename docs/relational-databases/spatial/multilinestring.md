@@ -1,4 +1,5 @@
 ---
+description: MultiLineString
 title: MultiLineString | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751080"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006299"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   **MultiLineString** は、0 個以上の **geometry** または **geographyLineString** インスタンスのコレクションです。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString インスタンス  
@@ -94,7 +95,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STLength &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   

@@ -1,4 +1,5 @@
 ---
+description: '[列変換の詳細] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)'
 title: '[列変換の詳細] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 742e3aef907a5537ef6ac158fd3219251bc7762e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e512c1834a74be5c45ce81fd859eaebb375be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484152"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>[列変換の詳細] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -39,8 +40,8 @@ ms.locfileid: "86913378"
   
  ![インポートおよびエクスポート ウィザードの列変換ページ](../../integration-services/import-export-data/media/column-conversion.png "インポートおよびエクスポート ウィザードの列変換ページ") 
   
-## <a name="whats-next"></a>次の操作  
+## <a name="whats-next"></a>次の手順  
  列変換の詳細を確認して **[OK]** をクリックすると、 **[列変換の詳細]** ダイアログ ボックスから **[データ型マッピングの確認]** ページに戻ります。 詳しくは、「 [[データ型マッピングの確認]](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)」をご覧ください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

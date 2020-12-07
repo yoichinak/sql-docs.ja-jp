@@ -1,4 +1,5 @@
 ---
+description: 'SQL から C へ: bit'
 title: 'SQL から C へ: Bit |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57688f34c504b221f77c1b66792bf9ee9398df27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15f635ea1c325c60e8ae957aed6f8e1f6b7fe58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456544"
 ---
 # <a name="sql-to-c-bit"></a>SQL から C へ: bit
 ビット ODBC SQL データ型の識別子は次のとおりです。  
@@ -35,7 +36,7 @@ ms.locfileid: "81296752"
 |SQL_C_BIT|なし [a]|データ|1 [b]|該当なし|  
 |SQL_C_BINARY|*Bufferlength* >= 1<br /><br /> *Bufferlength* < 1|データ<br /><br /> 未定義。|1<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
   
- [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [a] この変換では、 *Bufferlength* の値は無視されます。 ドライバーは、**Targetvalueptr* のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。  
   

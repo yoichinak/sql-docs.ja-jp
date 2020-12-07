@@ -1,4 +1,5 @@
 ---
+description: '&lt;source data query&gt;'
 title: '&lt;ソースデータクエリ &gt; |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9dbceb416cea3e64200708639a771989f900be3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970287"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726127"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;source data query&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86970287"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  このステートメントは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、既存のデータソースを使用して、のインスタンスの外部にあるデータを照会します。  
   
- [DMX&#41;&#40;図形](../dmx/source-data-query-shape.md)  
+ [DMX&#41;&#40;図形 ](../dmx/source-data-query-shape.md)  
  このステートメントは複数のデータ ソースをクエリして、入れ子になったテーブルを作成します。 **SHAPE**を使用すると、複数のソースのデータを1つの階層テーブルに結合できます。 これは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を利用して、テーブル内にテーブルを埋め込むことによってテーブルを入れ子にします。  
   
  ソースデータを指定するには、次のオプションを使用することもできます。  
@@ -53,6 +54,5 @@ ms.locfileid: "86970287"
 ## <a name="see-also"></a>参照  
  [DMX&#41; データ操作ステートメントを &#40;データマイニング拡張機能](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
- [入れ子になったテーブル &#40;Analysis Services データマイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
-  
+ [入れ子になったテーブル &#40;Analysis Services データマイニング&#41;](/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   

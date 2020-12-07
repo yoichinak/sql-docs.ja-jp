@@ -1,4 +1,5 @@
 ---
+description: 分離レベルについて
 title: 分離レベルについて | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 758012112df2bce1b0a7624834bfde3c3c4ece10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488045"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 
@@ -75,6 +76,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の分離レベルの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[!INCLUDE[ssDE](../../includes/ssde_md.md)]における分離レベル」を参照してください。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーを使用したトランザクションの実行](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

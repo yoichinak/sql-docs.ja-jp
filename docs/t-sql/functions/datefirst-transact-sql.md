@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;DATEFIRST (Transact-SQL)'
 title: '@@DATEFIRST (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -32,12 +33,12 @@ ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 440a97921bc4a5f375158bcc9c1f0e1ac565ebb2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4337e26a03fa87c3914701bf5fa3a4ea0a6b3b74
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110595"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124798"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87110595"
   
 ## <a name="syntax"></a>構文  
   
-```
+```syntaxsql
 @@DATEFIRST  
 ```  
 
@@ -96,7 +97,7 @@ SELECT @@DATEFIRST AS 'First Day'
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```sql
+```
 First Day         Today  
 ----------------  --------------  
 5                 2  

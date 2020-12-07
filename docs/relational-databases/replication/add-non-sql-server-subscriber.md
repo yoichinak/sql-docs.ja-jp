@@ -1,4 +1,5 @@
 ---
+description: '[SQL Server 以外のサブスクライバーの追加]'
 title: SQL Server 以外のサブスクライバーの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9503a9de44f26a4f005669b2bf6d27e761dab25a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2bb31950f257054279fc9d9ad354f48b50b9ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423656"
 ---
 # <a name="add-non-sql-server-subscriber"></a>[SQL Server 以外のサブスクライバーの追加]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   レプリケーションでは、Oracle サブスクライバーと IBM DB2 のサブスクライバーのスナップショット パブリケーションおよびトランザクション パブリケーションに対するプッシュ サブスクリプションの作成をサポートします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
  **[追加するサブスクライバーの種類]**  
  Oracle サブスクライバーまたは IBM DB2 サブスクライバーを選択します。 これらのサブスクライバーのサポートの詳細については、「[SQL Server 以外のサブスクライバー](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。  
   

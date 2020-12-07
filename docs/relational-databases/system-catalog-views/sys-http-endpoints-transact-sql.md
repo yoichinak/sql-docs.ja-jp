@@ -1,5 +1,6 @@
 ---
-title: http_endpoints (Transact-sql) |Microsoft Docs
+description: sys.http_endpoints (Transact-SQL)
+title: sys.http_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,17 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 527cc2d7596a1bdd894ba71c1e3b1139150efc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a9d4627c0a5914b4ff62b36fd9357f7919c2e490
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896272"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956463"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+ [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
 
   HTTP プロトコルを使用するサーバー内で作成されたエンドポイントごとに 1 行のデータを保持します。  
   
@@ -53,8 +56,8 @@ ms.locfileid: "85896272"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

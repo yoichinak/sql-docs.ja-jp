@@ -9,12 +9,12 @@ ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f8aa2351837c43454656d468e93818adfb7ccf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401092"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767011"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 
@@ -51,4 +51,4 @@ PDW では、画期的なパフォーマンスを得られるだけではなく�
 
 ## <a name="next-steps"></a>次のステップ
 
-PDW の利点の詳細については、MSDN でホワイトペーパー「[A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29)」 (次世代のデータ ウェアハウジング ソリューションとビッグ データ ソリューションのための画期的なプラットフォーム) を参照してください。
+PDW の利点の詳細については、MSDN でホワイトペーパー「[A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](/previous-versions/sql/sql-server-2012/dn520808(v=msdn.10))」 (次世代のデータ ウェアハウジング ソリューションとビッグ データ ソリューションのための画期的なプラットフォーム) を参照してください。

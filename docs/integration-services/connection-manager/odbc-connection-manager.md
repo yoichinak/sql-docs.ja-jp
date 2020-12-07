@@ -1,4 +1,5 @@
 ---
+description: ODBC 接続マネージャー
 title: ODBC 接続マネージャー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b362f60e2fb38ce9a9eda476dd4b1077055da18
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7fe63ad503b49a760823635902b3744a1ae2d85a
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914165"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91719558"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
 
@@ -33,7 +34,7 @@ ms.locfileid: "86914165"
   
  ODBC 接続をパッケージに追加して接続マネージャーのプロパティを設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって接続マネージャーが作成され、パッケージの **Connections** コレクションに追加されます。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
   
- 接続マネージャーの **ConnectionManagerType** プロパティは、 **ODBC**に設定されます。  
+ 接続マネージャーの **ConnectionManagerType** プロパティは、 **ODBC** に設定されます。  
   
  ODBC 接続マネージャーは、次の方法で構成できます。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86914165"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [ODBC 接続マネージャーの UI リファレンス](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [ODBC 接続マネージャーの UI リファレンス]()  
   
  プログラムによる接続マネージャーの構成については、「 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 」と「 [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)に設定されます。  
   
@@ -64,12 +65,11 @@ ms.locfileid: "86914165"
  **[データ接続のプロパティ]**  
  選択されている ODBC 接続マネージャーのプロパティと値を表示します。  
   
- **[新規作成]**  
+ **新規**  
  **[接続マネージャー]** ダイアログ ボックスを使用して ODBC 接続マネージャーを作成します。 このダイアログ ボックスでは、必要に応じて新しい ODBC データ ソースを作成することもできます。  
   
  **削除**  
  接続を選択し、 **[削除]** ボタンを使用して削除します。  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

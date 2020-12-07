@@ -1,4 +1,5 @@
 ---
+description: 影響を受けるオブジェクトの選択と構成 (OracleToSQL)
 title: 影響を受けるオブジェクトの選択と構成 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418348"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けるオブジェクトの選択と構成 (OracleToSQL)
 このページでは、前の手順で選択したオブジェクトの実行結果が SSMA によって検証されるときに、テーブルと外部キーを選択できます。また、これらの変更を比較する必要があります。 また、検証パラメーターをカスタマイズすることもできます。  
@@ -26,7 +27,7 @@ ms.locfileid: "87932913"
 ## <a name="selection-of-affected-objects"></a>影響を受けるオブジェクトの選択  
 ウィンドウの左側にある Oracle オブジェクトツリーで、テーブルと外部キーを確認します。変更内容は、同一であるかどうかを比較する必要があります。  
   
-SSMA Tester がこれらのオブジェクトのいずれかを確認できない場合は、**選択したオブジェクトの中**に [オブジェクト] ツリーの下にエラーが含まれているというリンクが表示されます。 このリンクをクリックすると、これらのオブジェクトを比較できない理由が表示され、間違ったオブジェクトの選択を解除できます。  
+SSMA Tester がこれらのオブジェクトのいずれかを確認できない場合は、 **選択したオブジェクトの中** に [オブジェクト] ツリーの下にエラーが含まれているというリンクが表示されます。 このリンクをクリックすると、これらのオブジェクトを比較できない理由が表示され、間違ったオブジェクトの選択を解除できます。  
   
 ## <a name="table"></a>テーブル  
 [テーブル] タブには、選択したテーブルのグリッドビューが表示されます。 グリッドには、選択したテーブルに関する次の情報が表示されます。  
@@ -41,7 +42,7 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
   
 -   ルール  
   
--   既定  
+-   Default  
   
 -   ID  
   
@@ -50,10 +51,10 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
 ## <a name="sql"></a>Sql  
 [SQL] タブには、選択したテーブルの "Create table" SQL が含まれています。  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>データ  
 [データ] タブ選択したテーブルに存在するデータが表示されます。  
   
-## <a name="properties"></a>Properties  
+## <a name="properties"></a>プロパティ  
 [プロパティ] タブ選択したテーブルのプロパティが表示されます。 [プロパティ] タブには、次のフィールドが表示されます。  
   
 -   作成済みまたは最終変更日時  
@@ -79,20 +80,20 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
   
 ### <a name="comparing-scale"></a>比較 (スケールを)  
   
--   [**カスタムスケールを使用**する] オプションが**True**に設定されている場合にのみ使用できます。 これは、数値比較の有効桁数です。  
+-   [ **カスタムスケールを使用** する] オプションが **True**に設定されている場合にのみ使用できます。 これは、数値比較の有効桁数です。  
   
 ### <a name="date-time-comparing"></a>日付と時刻の比較  
 日付/時刻値の比較方法を定義します。  
   
--   [全体の**比較**] を選択すると、両方のプラットフォームの値の完全な比較が実行されます。  
+-   [全体の **比較**] を選択すると、両方のプラットフォームの値の完全な比較が実行されます。  
   
--   [**日付のみを比較**] を選択した場合、時刻部分は無視されます。  
+-   [ **日付のみを比較**] を選択した場合、時刻部分は無視されます。  
   
--   [**時間のみを比較**] を選択した場合、日付部分は無視されます。  
+-   [ **時間のみを比較**] を選択した場合、日付部分は無視されます。  
   
--   [**ミリ秒を無視**する] を選択すると、結果は秒単位で比較されます。  
+-   [ **ミリ秒を無視**する] を選択すると、結果は秒単位で比較されます。  
   
--   [**日付とミリ秒を無視**する] を選択した場合、結果は時刻部分のみで比較され、秒の小数部は無視されます。  
+-   [ **日付とミリ秒を無視**する] を選択した場合、結果は時刻部分のみで比較され、秒の小数部は無視されます。  
   
 ### <a name="ignore-strings-case"></a>文字列を無視する大文字小文字を区別する  
 比較の大文字と小文字の区別を制御します。  
@@ -102,15 +103,15 @@ SSMA Tester がこれらのオブジェクトのいずれかを確認できな�
 -   **False**を選択した場合、比較では大文字と小文字の区別が考慮されます。  
   
 ## <a name="comparing-sql"></a>比較 (SQL を)  
-SSMA Tester によって生成された SELECT ステートメントは、 **SQL の比較**ページで確認できます。 テスト担当者は、これらのステートメントの結果セットを行ごとに比較します。 Oracle の結果セットの次の行は、SQL Server で生成される結果セットの次の行と同じである必要があります。
+SSMA Tester によって生成された SELECT ステートメントは、 **SQL の比較** ページで確認できます。 テスト担当者は、これらのステートメントの結果セットを行ごとに比較します。 Oracle の結果セットの次の行は、SQL Server で生成される結果セットの次の行と同じである必要があります。
   
-これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Oracle および SQL Server ステートメントで変更を保存するには、ソースとターゲットの SQL の下にある [**適用**] ボタンを使用します。  
+これらの SELECT ステートメントを編集して、カスタム検証を行うことができます。 Oracle および SQL Server ステートメントで変更を保存するには、ソースとターゲットの SQL の下にある [ **適用** ] ボタンを使用します。  
   
 ## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ &#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
 ## <a name="see-also"></a>参照  
-[テストケースの準備 &#40;OracleToSQL&#41;を終了しています](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[OracleToSQL&#41;&#40;のテストケースの実行](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[テストケースの準備 &#40;OracleToSQL&#41;を終了しています ](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[OracleToSQL&#41;&#40;のテストケースの実行 ](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[移行されたデータベースオブジェクト &#40;OracleToSQL&#41;のテスト ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

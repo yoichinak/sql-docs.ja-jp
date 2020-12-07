@@ -1,4 +1,5 @@
 ---
+description: CHAR (Transact-SQL)
 title: CHAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2018
@@ -27,12 +28,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2e71a4b4851e61176235b5615f0b7adbd553e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 16b9daa836f745bc4b7068275baf91b637427815
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112153"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111168"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ CHAR ( integer_expression )
 ## <a name="return-types"></a>戻り値の型
 **char(1)**
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 文字列に制御文字を挿入するには `CHAR` を使用します。 次の表に、よく使用される制御文字の一部を示します。
   
 |制御文字|値|  
@@ -77,7 +78,7 @@ CHAR ( integer_expression )
 SET TEXTSIZE 0;  
 -- Create variables for the character string and for the current   
 -- position in the string.  
-DECLARE @position int, @string char(8);  
+DECLARE @position INT, @string CHAR(8);  
 -- Initialize the current position and the string variables.  
 SET @position = 1;  
 SET @string = 'New Moon';  
@@ -201,7 +202,7 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: SELECT - SQL コマンド
 title: SELECT-SQL コマンド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466424"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1つ以上のテーブルからデータを取得します。  
   
- Visual FoxPro ODBC ドライバーでは、このコマンドのネイティブな Visual FoxPro 言語構文がサポートされています。 ドライバー固有の情報については、「**ドライバーの解説**」を参照してください。  
+ Visual FoxPro ODBC ドライバーでは、このコマンドのネイティブな Visual FoxPro 言語構文がサポートされています。 ドライバー固有の情報については、「 **ドライバーの解説**」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,9 +46,9 @@ FROM [DatabaseName!]Table [Local_Alias]
 ## <a name="arguments"></a>引数  
   
 > [!NOTE]  
->  次の引数で参照される*サブクエリ*は select 内の select であり、かっこで囲む必要があります。 WHERE 句では、(入れ子になっていない) 同じレベルで、最大で2つのサブクエリを使用できます。 (引数のセクションを参照してください)。サブクエリには、複数の結合条件を含めることができます。  
+>  次の引数で参照される *サブクエリ*は select 内の select であり、かっこで囲む必要があります。 WHERE 句では、(入れ子になっていない) 同じレベルで、最大で2つのサブクエリを使用できます。 (引数のセクションを参照してください)。サブクエリには、複数の結合条件を含めることができます。  
   
- [すべての &#124; 個別]  [*別名*]*Select_Item* [ *Column_Name*] [, [*別名*]*Select_Item* [AS *Column_Name*]...]  
+ [すべての &#124; 個別]  [*別名*] *Select_Item* [ *Column_Name*] [, [*別名*] *Select_Item* [AS *Column_Name*]...]  
  SELECT 句では、クエリ結果に表示されるフィールド、定数、および式を指定します。  
   
  既定では、[すべて] にクエリ結果のすべての行が表示されます。  
@@ -85,41 +86,41 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   COUNT (*Select_Item*)-列内の選択項目の数をカウントします。 COUNT (*) は、クエリ出力の行数をカウントします。  
   
--   MIN (*Select_Item*)-列の*Select_Item*の最小値を決定します。  
+-   MIN (*Select_Item*)-列の *Select_Item* の最小値を決定します。  
   
--   MAX (*Select_Item*)-列内の*Select_Item*の最大値を決定します。  
+-   MAX (*Select_Item*)-列内の *Select_Item* の最大値を決定します。  
   
 -   SUM (*Select_Item*)-数値データの列の合計。  
   
  フィールド関数を入れ子にすることはできません。  
   
  AS *Column_Name*  
- クエリ出力の列の見出しを指定します。 これは、 *Select_Item*が式であるか、フィールド関数を含み、列にわかりやすい名前を付けたい場合に便利です。 *Column_Name*は式にすることができますが、テーブルフィールド名で許可されていない文字 (たとえば、スペース) は使用できません。  
+ クエリ出力の列の見出しを指定します。 これは、 *Select_Item* が式であるか、フィールド関数を含み、列にわかりやすい名前を付けたい場合に便利です。 *Column_Name* は式にすることができますが、テーブルフィールド名で許可されていない文字 (たとえば、スペース) は使用できません。  
   
- [*DatabaseName*!] から*テーブル*[*Local_Alias*] [, [*DatabaseName*!]*テーブル*[*Local_Alias*]...]  
- クエリによって取得されるデータを含むテーブルが一覧表示されます。 テーブルが開かれていない場合、ファイルの場所を指定できるように、[**開く**] ダイアログボックスが表示されます。 テーブルを開いた後は、クエリが完了した後もテーブルは開いたままになります。  
+ [*DatabaseName*!] から*テーブル* [*Local_Alias*] [, [*DatabaseName*!]*テーブル* [*Local_Alias*]...]  
+ クエリによって取得されるデータを含むテーブルが一覧表示されます。 テーブルが開かれていない場合、ファイルの場所を指定できるように、[ **開く** ] ダイアログボックスが表示されます。 テーブルを開いた後は、クエリが完了した後もテーブルは開いたままになります。  
   
  *DatabaseName*! データソースで指定されたデータベース以外のデータベースの名前を指定します。 データベースがデータソースで指定されていない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後とテーブル名の前に、感嘆符 (!) の区切り記号を含めます。  
   
- *Local_Alias*は、*テーブル*にという名前のテーブルの一時的な名前を指定します。 ローカルエイリアスを指定する場合は、SELECT ステートメント全体でテーブル名の代わりにローカルエイリアスを使用する必要があります。 ローカルエイリアスは、Visual FoxPro 環境には影響しません。  
+ *Local_Alias* は、 *テーブル*にという名前のテーブルの一時的な名前を指定します。 ローカルエイリアスを指定する場合は、SELECT ステートメント全体でテーブル名の代わりにローカルエイリアスを使用する必要があります。 ローカルエイリアスは、Visual FoxPro 環境には影響しません。  
   
  *Joincondition* [および*joincondition* ...]   [および &#124; または*filtercondition* [および &#124; または*filtercondition* ...]]  
  クエリ結果に特定のレコードのみを含めるように Visual FoxPro に指示します。 複数のテーブルからデータを取得するには、が必要です。  
   
- *Joincondition*は、from 句内のテーブルをリンクするフィールドを指定します。 クエリに複数のテーブルを含める場合は、最初のテーブルの後に、すべてのテーブルに対して結合条件を指定する必要があります。  
+ *Joincondition* は、from 句内のテーブルをリンクするフィールドを指定します。 クエリに複数のテーブルを含める場合は、最初のテーブルの後に、すべてのテーブルに対して結合条件を指定する必要があります。  
   
 > [!IMPORTANT]  
 >  結合条件を作成するときは、次の情報を考慮してください。  
   
 -   クエリに2つのテーブルを含め、結合条件を指定しない場合、フィルター条件が満たされていれば、最初のテーブルのすべてのレコードが2番目のテーブル内のすべてのレコードに結合されます。 このようなクエリを実行すると、長い結果が生成される可能性があります。  
   
--   空のフィールドを含むテーブルを結合する場合は、Visual FoxPro が空のフィールドと一致するため、注意してください。 たとえば、顧客に参加する場合です。ZIP および請求書。また、顧客に100の空の郵便番号が含まれていて、請求書に空の郵便番号が400含まれている場合、クエリ出力には空のフィールドからの4万余分なレコードが含まれます。 空のレコードをクエリ出力から削除するには、 **empty ()** 関数を使用します。  
+-   空のフィールドを含むテーブルを結合する場合は、Visual FoxPro が空のフィールドと一致するため、注意してください。 たとえば、CUSTOMER.ZIP に参加していて INVOICE.ZIP、顧客に100の空の郵便番号が含まれていて、請求書に空の郵便番号が400含まれている場合、クエリ出力には空のフィールドからの4万余分なレコードが含まれます。 空のレコードをクエリ出力から削除するには、 **empty ()** 関数を使用します。  
   
 -   複数の結合条件を接続するには、AND 演算子を使用する必要があります。 各結合条件には、次の形式があります。  
   
      *FieldName1 比較 FieldName2*  
   
-     *FieldName1*は、1つのテーブルのフィールドの名前、 *FieldName2*は別のテーブルのフィールドの名前、*比較*は次の表で説明する演算子の1つです。  
+     *FieldName1* は、1つのテーブルのフィールドの名前、 *FieldName2* は別のテーブルのフィールドの名前、 *比較* は次の表で説明する演算子の1つです。  
   
 |演算子|比較|  
 |--------------|----------------|  
@@ -134,7 +135,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  文字列で = 演算子を使用すると、SET ANSI の設定によって異なる動作になります。 [SET ANSI] がオフに設定されている場合、Visual FoxPro では、Xbase ユーザーになじみのある方法で文字列比較を処理します。 SET ANSI が ON に設定されている場合、Visual FoxPro は、文字列比較のために ANSI 標準に従います。 Visual FoxPro が文字列比較を実行する方法の詳細については、「 [SET ANSI](../../odbc/microsoft/set-ansi-command.md) 」と「 [EXACT set](../../odbc/microsoft/set-exact-command.md) 」を参照してください。  
   
- *Filtercondition*は、クエリ結果に含めるためにレコードが満たす必要のある条件を指定します。 必要な数のフィルター条件をクエリに含め、AND または OR 演算子を使用して接続できます。 また、NOT 演算子を使用して論理式の値を反転させることも、 **empty ()** を使用して空のフィールドをチェックすることもできます。 *Filtercondition*は、次の例のいずれかの形式を取ることができます。  
+ *Filtercondition* は、クエリ結果に含めるためにレコードが満たす必要のある条件を指定します。 必要な数のフィルター条件をクエリに含め、AND または OR 演算子を使用して接続できます。 また、NOT 演算子を使用して論理式の値を反転させることも、 **empty ()** を使用して空のフィールドをチェックすることもできます。 *Filtercondition* は、次の例のいずれかの形式を取ることができます。  
   
  **例 1** *FieldName1 比較 FieldName2*  
   
@@ -144,7 +145,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `payments.amount >= 1000`  
   
- **例 3** *フィールド名の比較*(*サブクエリ*)  
+ **例 3** *フィールド名の比較* (*サブクエリ*)  
   
  `company < ALL ;`  
   
@@ -152,7 +153,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  フィルター条件に ALL が含まれている場合、そのレコードがクエリ結果に含まれる前に、そのサブクエリによって生成されるすべての値の比較条件を満たす必要があります。  
   
- **例 4** *フィールド名の比較*&#124; SOME (*サブクエリ*)  
+ **例 4** *フィールド名の比較* &#124; SOME (*サブクエリ*)  
   
  `company < ANY ;`  
   
@@ -194,10 +195,10 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- このフィルター条件では、 *Cexpression*に一致する各フィールドが検索されます。 パーセント記号 (%) を使用できます。とアンダースコア (_) のワイルドカード文字を*Cexpression*の一部として指定します。 アンダースコアは、文字列内の1つの不明な文字を表します。  
+ このフィルター条件では、 *Cexpression*に一致する各フィールドが検索されます。 パーセント記号 (%) を使用できます。とアンダースコア (_) のワイルドカード文字を *Cexpression*の一部として指定します。 アンダースコアは、文字列内の1つの不明な文字を表します。  
   
  *Groupcolumn* [, *groupcolumn* ...] でグループ化  
- 1つまたは複数の列の値に基づいて、クエリ内の行をグループ化します。 *Groupcolumn*には、次のいずれかを指定できます。  
+ 1つまたは複数の列の値に基づいて、クエリ内の行をグループ化します。 *Groupcolumn* には、次のいずれかを指定できます。  
   
 -   通常のテーブルフィールドの名前。  
   
@@ -208,7 +209,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  *Filtercondition*を持つ  
  グループがクエリ結果に含めるために満たす必要のあるフィルター条件を指定します。 HAVING は GROUP BY と共に使用する必要があり、必要な数のフィルター条件を AND または OR 演算子で連結できます。 論理式の値を逆にするために NOT を使用することもできます。  
   
- *Filtercondition*にサブクエリを含めることはできません。  
+ *Filtercondition* にサブクエリを含めることはできません。  
   
  GROUP BY 句のない HAVING 句は、WHERE 句と同様に動作します。 HAVING 句では、ローカルエイリアスとフィールド関数を使用できます。 HAVING 句にフィールド関数が含まれていない場合は、パフォーマンスを向上させるために WHERE 句を使用します。  
   
@@ -253,13 +254,13 @@ WHERE customer.cust_id NOT IN ;
   
 -   WHERE 句は、orders テーブルにない customer テーブル内のすべての顧客番号を検索します。 コマンドの最初のセクションでは、orders テーブルに顧客番号を持つすべての会社が提供されているので、customer テーブル内のすべての会社がクエリ結果に含まれるようになりました。  
   
--   UNION に含まれるテーブルの構造は同一である必要があるため、2つ目の SELECT ステートメントには2つのプレースホルダーがあります。1つ目の SELECT ステートメントから、 *order_id*と*orders. emp_id*を表します。  
+-   UNION に含まれるテーブルの構造は同一である必要があるため、2つ目の SELECT ステートメントには2つのプレースホルダーがあります。1つ目の SELECT ステートメントから、 *order_id* と *orders. emp_id* を表します。  
   
     > [!NOTE]  
     >  プレースホルダーは、それらが表すフィールドと同じ型である必要があります。 フィールドが日付型の場合、プレースホルダーは {///} である必要があります。 フィールドが文字フィールドの場合、プレースホルダーは空の文字列 ("") にする必要があります。  
   
  ORDER BY *Order_Item* [ASC &#124; desc] [, *Order_Item* [asc &#124; DESC]...]  
- 1つまたは複数の列のデータに基づいてクエリの結果を並べ替えます。 各*Order_Item*は、クエリ結果の列に対応している必要があり、次のいずれかになります。  
+ 1つまたは複数の列のデータに基づいてクエリの結果を並べ替えます。 各 *Order_Item* は、クエリ結果の列に対応している必要があり、次のいずれかになります。  
   
 -   サブクエリではなく、メイン SELECT 句の選択項目でもある、FROM テーブル内のフィールド。  
   
@@ -271,7 +272,7 @@ WHERE customer.cust_id NOT IN ;
   
  ORDER BY で order を指定しない場合、クエリ結果は順序なしとして表示されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SELECT は、他の Visual FoxPro コマンドと同様に、Visual FoxPro に組み込まれている SQL コマンドです。 SELECT を使用してクエリを実行すると、Visual FoxPro はクエリを解釈し、テーブルから指定されたデータを取得します。 SELECT クエリは、コマンドプロンプトウィンドウまたは Visual FoxPro プログラム (他の Visual FoxPro コマンドと同様) のいずれかで作成できます。  
   
 > [!NOTE]  
@@ -280,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションが ODBC SQL ステートメントをデータソースに送信するとき、Visual FoxPro ODBC ドライバーは、コマンドに ODBC エスケープシーケンスが含まれていない限り、コマンドを変換せずに Visual FoxPro SELECT コマンドに変換します。 ODBC エスケープシーケンスで囲まれた項目は、Visual FoxPro 構文に変換されます。 ODBC エスケープシーケンスの使用方法の詳細については、『 *MICROSOFT Odbc プログラマーズリファレンス*』の「 [Time 関数と Date 関数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)」および「 [odbc でのエスケープシーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ANSI の設定](../../odbc/microsoft/set-ansi-command.md)   

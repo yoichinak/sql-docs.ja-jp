@@ -1,4 +1,5 @@
 ---
+description: catalog.deny_permission (SSISDB データベース)
 title: catalog.deny_permission (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1de8ae0aeaa1aa260b20649ac9b831a11e0447
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c0ec15f671e6319f82ed069f69d590d865f6682
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422186"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (SSISDB データベース)
 
@@ -37,7 +38,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引数  
  [ @object_type = ] *object_type*  
- セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint** _です。_  
+ セキュリティ保護可能なオブジェクトの種類。 セキュリティ保護可能なオブジェクトの種類には、フォルダー (`1`)、プロジェクト (`2`)、環境 (`3`)、操作 (`4`) があります。*object_type* は **smallint**_ です。_  
   
  [ @object_id = ] *object_id*  
  セキュリティ保護可能なオブジェクトの一意の識別子 (ID) または主キーを指定します。 *object_id* は **bigint** です。  

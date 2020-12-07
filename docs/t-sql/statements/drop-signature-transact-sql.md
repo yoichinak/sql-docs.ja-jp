@@ -1,4 +1,5 @@
 ---
+description: DROP SIGNATURE (Transact-SQL)
 title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fe1402f5d0f71a36ac6e2c7ae83e5d645d804d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 659baca8c7b0dc99ee070888e09744fa8e6b5b5c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485448"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379714"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +40,6 @@ ms.locfileid: "86485448"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 DROP [ COUNTER ] SIGNATURE FROM module_name   
     BY <crypto_list> [ ,...n ]  
   
@@ -60,7 +60,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  ASYMMETRIC KEY *Asym_key_name*  
  ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名に使用されている非対称キーの名前です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  署名に関する情報は、sys.crypt_properties カタログ ビューで確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -69,14 +69,14 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## <a name="examples"></a>例  
  次の例では、証明書 `HumanResourcesDP` の署名を、ストアド プロシージャ `HumanResources.uspUpdateEmployeeLogin` から削除します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
  [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   

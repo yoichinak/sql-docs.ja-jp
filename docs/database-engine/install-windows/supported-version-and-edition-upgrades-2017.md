@@ -13,15 +13,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 180a0a75b36ff945b672a730783b80766753a1b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f7e330f353e1a7e0652ad825bb65e5b09180e609
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900289"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96125809"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2017"></a>サポートされているバージョンとエディションのアップグレード (SQL Server 2017)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900289"
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
--   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードした後、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)」を参照してください。  
+-   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードした後、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のセットアップを使用して機能を追加できます。 詳細については、「[SQL Server のインスタンスへの機能の追加 &#40;セットアップ&#41;](./add-features-to-an-instance-of-sql-server-setup.md)」を参照してください。  
  
 -   フェールオーバー クラスターは、WOW モードでサポートされていません。  
     
@@ -185,5 +185,4 @@ ms.locfileid: "85900289"
  [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

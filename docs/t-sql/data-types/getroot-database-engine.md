@@ -1,4 +1,5 @@
 ---
+description: GetRoot (データベース エンジン)
 title: GetRoot (データベース エンジン) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4dfb1988f2f1405b2e69459824ee47983295ad31
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 645c39d8108ba52212788a65ae2d6116ee629e34
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556217"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92037134"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
 
@@ -32,12 +33,12 @@ ms.locfileid: "86556217"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 -- Transact-SQL syntax  
 hierarchyid::GetRoot ( )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  
@@ -71,8 +72,7 @@ SqlHierarchyId.GetRoot()
 ```  
   
 ## <a name="see-also"></a>参照
-[hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid データ型メソッド リファレンス](./hierarchyid-data-type-method-reference.md)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968033"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195766"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R での OLAP キューブからのデータの使用
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **olapR** パッケージは、Microsoft により、Machine Learning Server および SQL Server で使用するために提供される R パッケージです。これにより、MDX クエリを実行して、OLAP キューブからデータを取得できます。 このパッケージでは、リンク サーバーの作成や、フラット化した行セットのクリーンアップは必要ありません。OLAP データを R から直接使用できます。
 
@@ -30,7 +30,7 @@ ms.locfileid: "86968033"
 
 OLAP は、オンライン分析処理 (Online Analytical Processing) の略です。 OLAP ソリューションは、長期間にわたり重要なビジネス データをキャプチャし格納するために、幅広く使用されています。 OLAP データは、多様なツール、ダッシュボード、視覚エフェクトでビジネス分析に使用されます。 詳細については、「[Online analytical processing](https://en.wikipedia.org/wiki/Online_analytical_processing)」(オンライン分析処理) を参照してください。
 
-Microsoft には [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services) が用意されています。この機能を使用すると、_キューブ_または_表形式モデル_の形式で、OLAP データを設計、配置、クエリできます。 キューブとは多次元データベースのことです。 _ディメンション_は、データのファセットまたは R の要因に似ています。ディメンションを使用して、集計や分析をするデータのサブセットを特定します。 たとえば、時間は重要なディメンションですので、多くの OLAP ソリューションでは、データをスライスして集計する際に使用する複数のカレンダーが、既定で定義されています。 
+Microsoft には [Analysis Services](/analysis-services/analysis-services-overview) が用意されています。この機能を使用すると、_キューブ_または_表形式モデル_の形式で、OLAP データを設計、配置、クエリできます。 キューブとは多次元データベースのことです。 _ディメンション_は、データのファセットまたは R の要因に似ています。ディメンションを使用して、集計や分析をするデータのサブセットを特定します。 たとえば、時間は重要なディメンションですので、多くの OLAP ソリューションでは、データをスライスして集計する際に使用する複数のカレンダーが、既定で定義されています。 
 
 パフォーマンス上の理由から、OLAP データベースは、しばしばサマリー (または_集計_) を事前に計算し、高速に取得できるよう格納します。 サマリーは、数値データに適用できる数式を表す*メジャー*に基づいています。 ディメンションを使用してデータのサブセットを定義し、それからそのデータに対しメジャーを計算します。 たとえば、メジャーを使用して、複数の四半期にわたる特定の製品ラインの合計売上から税金を差し引いて計算し、特定の供給者への平均輸送費や、支払済年度累計賃金などを報告することができます。
 
@@ -95,11 +95,11 @@ SQL Server Management Studio などのクライアントを使って Analysis Se
 
 この 2 種類のモデルに関する一般情報については、次の記事を参照してください。
 
-+ [多次元モデルと表形式モデルの比較](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [多次元モデルと表形式モデルの比較](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 サーバー プロパティのクエリの詳細については、次の記事を参照してください。
 
-+ [OLE DB for OLAP Schema 行セット](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [OLE DB for OLAP Schema 行セット](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>書き戻しはサポートされていません
 
@@ -107,9 +107,9 @@ SQL Server Management Studio などのクライアントを使って Analysis Se
 
 一般に、キューブで書き戻しが有効になっている場合でも、限られた操作のみがサポートされ、追加の構成が必要になることがあります。 このような操作には、MDX の使用をお勧めします。
 
-+ [書き込み許可ディメンション](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [書き込み許可パーティション](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [セルデータへのカスタム アクセス権の設定](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [書き込み許可ディメンション](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [書き込み許可パーティション](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [セルデータへのカスタム アクセス権の設定](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>実行時間の長い MDX クエリは、キューブの処理を妨げます
 

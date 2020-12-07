@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobhistory (Transact-sql)
 title: dbo.sysjobhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2019
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 06a5ab82207534d01f84c58d3a445f3fb91f0c34
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5b24fc8ef4511e6519cb715e1ba261f4444fd200
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890499"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544604"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "85890499"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行予定のジョブに関する情報を格納します。
   
 > [!NOTE]
-> ほとんどの場合、データは、ジョブステップが完了した後にのみ更新されます。テーブルには、通常、現在進行中のジョブステップのレコードが含まれていませんが、場合によっては、基に*なるプロセスが*進行中のジョブステップに関する情報を提供します。
+> ほとんどの場合、データは、ジョブステップが完了した後にのみ更新されます。テーブルには、通常、現在進行中のジョブステップのレコードが含まれていませんが、場合によっては、基に *なるプロセスが* 進行中のジョブステップに関する情報を提供します。
 
-このテーブルは、 **msdb**データベースに格納されます。  
+このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -47,8 +48,8 @@ ms.locfileid: "85890499"
 |**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
 |**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br />**4** = 実行中|  
 |**run_date**|**int**|ジョブまたはステップの実行を開始した日付。 進行中の履歴については、履歴が書き込まれた日付/時刻です。|  
-|**run_time**|**int**|ジョブまたはステップが**HHMMSS**形式で開始された時刻。|  
-|**run_duration**|**int**|ジョブまたはステップの実行の経過時間 ( **HHMMSS**形式)。|  
+|**run_time**|**int**|ジョブまたはステップが **HHMMSS** 形式で開始された時刻。|  
+|**run_duration**|**int**|ジョブまたはステップの実行の経過時間 ( **HHMMSS** 形式)。|  
 |**operator_id_emailed**|**int**|ジョブの完了時に通知されたオペレーターの ID。|  
 |**operator_id_netsent**|**int**|ジョブの完了時にメッセージによって通知されたオペレーターの ID。|  
 |**operator_id_paged**|**int**|ジョブの終了時にポケットベルの通知を受けるオペレーターの ID。|  
@@ -56,7 +57,7 @@ ms.locfileid: "85890499"
 |**server**|**sysname**|ジョブが実行されたサーバーの名前。|  
   
   ## <a name="example"></a>例
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリでは、 **run_time**と**run_duration**列をユーザーフレンドリな形式に変換します。  でスクリプトを実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリでは、 **run_time** と **run_duration** 列をユーザーフレンドリな形式に変換します。  でスクリプトを実行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] します。
  
  ```sql
  SET NOCOUNT ON;

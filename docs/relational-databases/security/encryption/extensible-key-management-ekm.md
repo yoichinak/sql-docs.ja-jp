@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0524aa4738ae7003d763422c20db17e39e89e964
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896789"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867848"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85896789"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の拡張キー管理では、サードパーティの EKM/HSM ベンダーがそれぞれのモジュールを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に登録できます。 登録すると、その EKM モジュールに格納されている暗号化キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ユーザーが使用できるようになります。 これにより、それらのモジュールでサポートされている一括暗号化/暗号化解除などの高度な暗号化機能や、キー エージングやキー ローテーションなどのキー管理機能を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から利用できます。  
   
- Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
+ Azure 仮想マシンで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [Azure Key Vault](/azure/key-vault/general/basic-concepts)に格納されたキーを使用できます。 詳細については、「 [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)で処理できるようになります。  
   
 ## <a name="ekm-configuration"></a>EKM の構成  
  拡張キー管理は [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のすべてのエディションでサポートされているわけではありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
@@ -169,5 +169,4 @@ DECRYPTION BY EKM_AKey1
  [データベース マスター キーのバックアップ](../../../relational-databases/security/encryption/back-up-a-database-master-key.md)   
  [データベース マスター キーの復元](../../../relational-databases/security/encryption/restore-a-database-master-key.md)   
  [2 台のサーバーでの同じ対称キーの作成](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
-  
   

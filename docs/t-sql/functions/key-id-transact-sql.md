@@ -1,4 +1,5 @@
 ---
+description: KEY_ID (Transact-SQL)
 title: KEY_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a20c9f8e3df230c2c7799fcbed740385fc324db0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 35499f8b6ab0b95b59798fad463819b2f9c8ac72
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113398"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115153"
 ---
 # <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +37,7 @@ ms.locfileid: "87113398"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 Key_ID ( 'Key_Name' )  
 ```  
   
@@ -61,18 +61,18 @@ Key_ID ( 'Key_Name' )
 ### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. 対称キーの ID を返す  
  次の例では、`ABerglundKey1` というキーの ID を返します。  
   
-```  
+```sql  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
 ### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>B. 一時対称キーの ID を返す  
  次の例では、一時的な非対称キーの ID を返します。 キー名の前に `#` が付いていることに注意してください。  
   
-```  
+```sql  
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   

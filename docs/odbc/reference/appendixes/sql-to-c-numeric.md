@@ -1,4 +1,5 @@
 ---
+description: 'SQL から C へ: 数値'
 title: 'SQL から C へ: Numeric |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429564"
 ---
 # <a name="sql-to-c-numeric"></a>SQL から C へ: 数値
 
@@ -47,7 +48,7 @@ ms.locfileid: "81296412"
 |SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|切り捨てられていないデータ<br /><br /> 秒の小数部の切り捨て<br /><br /> 切り捨てられた数値の部分全体|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015|  
 |SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|切り捨てられた数値の部分全体|未定義。|未定義。|22015|  
   
- [a] この変換では、 *Bufferlength*の値は無視されます。 ドライバーは、**Targetvalueptr*のサイズが C データ型のサイズであることを前提としています。  
+ [a] この変換では、 *Bufferlength* の値は無視されます。 ドライバーは、**Targetvalueptr* のサイズが C データ型のサイズであることを前提としています。  
   
  [b] これは、対応する C データ型のサイズです。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "81296412"
 
 ## <a name="sql_c_numeric-and-sqlsetdescfield"></a>SQL_C_NUMERIC と SQLSetDescField
 
- SQL_C_NUMERIC 値を使用して手動バインドを実行するには、 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md)が必要です。 (SQLSetDescField は ODBC 3.0 で追加されたことに注意してください)。手動バインドを実行するには、最初に記述子ハンドルを取得する必要があります。  
+ SQL_C_NUMERIC 値を使用して手動バインドを実行するには、 [SQLSetDescField 関数](../../../odbc/reference/syntax/sqlsetdescfield-function.md) が必要です。 (SQLSetDescField は ODBC 3.0 で追加されたことに注意してください)。手動バインドを実行するには、最初に記述子ハンドルを取得する必要があります。  
 
 ```cpp
 if (fCType == SQL_C_NUMERIC) {   

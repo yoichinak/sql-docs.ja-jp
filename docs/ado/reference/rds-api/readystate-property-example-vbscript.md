@@ -1,6 +1,7 @@
 ---
+description: ReadyState プロパティの例 (VBScript)
 title: ReadyState プロパティの例 (VBScript) |Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c439b60d8b349fcb7d130ff45b71a4f3a63f576e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755514"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724323"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState プロパティの例 (VBScript)
 > [!IMPORTANT]
->  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- 次の例は、RDS の[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティを読み取る方法を示して[います。](../../../ado/reference/rds-api/datacontrol-object-rds.md)実行時の DataControl オブジェクトを VBScript コードで実行します。 **ReadyState**は読み取り専用プロパティです。  
+ 次の例は、RDS の [ReadyState](./readystate-property-rds.md) プロパティを読み取る方法を示して [います。](./datacontrol-object-rds.md) 実行時の DataControl オブジェクトを VBScript コードで実行します。 **ReadyState** は読み取り専用プロパティです。  
   
- この例をテストするには、 \< 通常の HTML ドキュメントで body> と body> タグの間でこのコードを切り取って貼り付け、 \< **RDSReadySt**という名前を付けます。 [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 ASP スクリプトによってサーバーが識別されます。  
+ この例をテストするには、 \<Body> \</Body> 通常の HTML ドキュメントのタグとタグの間でこのコードを**RDSReadySt.asp**切り取って貼り付け、RDSReadySt という名前を付けます。 [ **検索** ] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 ASP スクリプトによってサーバーが識別されます。  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -110,7 +111,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>参照  
- [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ReadyState プロパティ (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)   
+ [ReadyState プロパティ (RDS)](./readystate-property-rds.md)

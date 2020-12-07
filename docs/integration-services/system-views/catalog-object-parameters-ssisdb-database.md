@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters (SSISDB データベース)
 title: catalog.object_parameters (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422046"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86912508"
 |object_name|**sysname**|対応するプロジェクトまたはパッケージの名前。|  
 |parameter_name|**sysname(nvarchar(128))**|パラメーターの名前。|  
 |data_type|**nvarchar(128)**|パラメーターのデータ型です。|  
-|required|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
+|必須|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
 |sensitive|**bit**|値が `1` の場合、パラメーター値はセンシティブです。 値が `0` の場合、パラメーター値はセンシティブではありません。|  
 |description|**nvarchar(1024)**|パッケージの説明 (省略可)。|  
 |design_default_value|**sql_variant**|プロジェクトまたはパッケージの設計中に割り当てられたパラメーターの既定値。|  

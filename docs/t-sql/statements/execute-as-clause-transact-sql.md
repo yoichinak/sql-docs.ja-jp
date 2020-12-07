@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS 句 (Transact-SQL)
 title: EXECUTE AS 句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483724"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131055"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 句 (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,6 @@ Queues
 ```  
   
 ```syntaxsql
-  
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
@@ -107,7 +107,7 @@ DDL Triggers with Database Scope
   
  *login_name* には、グループ、ロール、証明書、キー、および、NT AUTHORITY\LocalService、NT AUTHORITY\NetworkService、NT AUTHORITY\LocalSystem などのビルトイン アカウントを指定できません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]による、モジュール内で参照されるオブジェクトに対する権限の評価方法は、呼び出し元のオブジェクトと参照されるオブジェクト間に存在する所有権の継承によって異なります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、呼び出し元のユーザーに対して、参照されるすべてのオブジェクトへのアクセスを許可するためには、所有権の継承を使用する方法しかありませんでした。  
   
  所有権の継承には、次のような制限があります。  
@@ -154,7 +154,7 @@ DDL Triggers with Database Scope
   
  次の `CREATE PROCEDURE` ステートメントが実行されると、`CompanyDomain\SqlUser1` が、`Sales` データベースのデータベース プリンシパルとして暗黙的に作成されます。  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -169,7 +169,7 @@ GO
   
  次のストアド プロシージャが `SqlUser2` によって呼び出されるとします。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -201,7 +201,7 @@ GO
 ## <a name="examples"></a>例  
  次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにストアド プロシージャを作成し、実行コンテキストを `OWNER` に割り当てます。  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -220,10 +220,9 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

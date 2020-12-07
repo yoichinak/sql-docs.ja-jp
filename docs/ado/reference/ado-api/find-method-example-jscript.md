@@ -1,8 +1,9 @@
 ---
+description: Find メソッドの例 (JScript)
 title: Find メソッドの例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bcc1014b589ab45af5aeaaf85b86d4b863f09712
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760118"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972943"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
-この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドを使用して、名前が G で始まる***Northwind***データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  
+この例では、 [レコードセット](./recordset-object-ado.md) オブジェクトの [Find](./find-method-ado.md) メソッドを使用して、名前が G で始まる ***Northwind*** データベース内の会社を検索して表示します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **findjs**として保存します。  
   
 ```  
 <!-- BeginFindJS -->  
@@ -153,5 +154,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find メソッド (ADO)](./find-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

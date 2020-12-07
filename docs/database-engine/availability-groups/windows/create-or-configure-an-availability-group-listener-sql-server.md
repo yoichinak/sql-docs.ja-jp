@@ -6,22 +6,22 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 manager: erikre
-ms.openlocfilehash: a056f29bfba78c7ea64a0c1e4c99612aae3ebcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 855ed087fb8276e83db72c7ca6a12a22f0225eef
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899894"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584388"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "85899894"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
   
@@ -268,7 +268,7 @@ ms.locfileid: "85899894"
     >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通して可用性グループ リスナーを作成すると、 **RegisterAllProvidersIP** は既定で 0 (false) になります。  
   
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> HostRecordTTL の設定  
- 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  **HostRecordTTL**の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、**HostRecordTTL** の設定を小さくすると、DNS サーバーへのトラフィックが増加する可能性があります。  
+ 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  **HostRecordTTL** の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、**HostRecordTTL** の設定を小さくすると、DNS サーバーへのトラフィックが増加する可能性があります。  
   
 ###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト  
  次の PowerShell の例では、リスナー リソースに対する **RegisterAllProvidersIP** クラスター パラメーターと **HostRecordTTL** クラスター パラメーターの両方を構成する方法を示しています。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、 **MultiSubnetFailover** パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  WSFC 可用性グループに対する依存関係を追加します。  
   
-         フェールオーバー クラスター マネージャーのダイアログ ボックスおよびタブについては、「[ユーザー インターフェイス:フェールオーバー クラスター マネージャー スナップ イン](https://technet.microsoft.com/library/cc772502.aspx)」を参照してください。  
+         フェールオーバー クラスター マネージャーのダイアログ ボックスおよびタブについては、「[ユーザー インターフェイス:フェールオーバー クラスター マネージャー スナップ イン](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11))」を参照してください。  
   
     -   **フェールオーバー クラスターの Windows PowerShell の使用:**  
   
         1.  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
   
-        2.  [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) を使用して、ネットワーク名リソースを開始します。  
+        2.  [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) を使用して、ネットワーク名リソースを開始します。  
   
-        3.  [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
+        3.  [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
   
-         フェールオーバー クラスターの Windows PowerShell の詳細については、「 [サーバー マネージャーのコマンドの概要](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)」を参照してください。  
+         フェールオーバー クラスターの Windows PowerShell の詳細については、「 [サーバー マネージャーのコマンドの概要](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps)」を参照してください。  
   
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で新しいリスナーのリッスンを開始します。 追加リスナーを作成した後、プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してリスナー ポートを変更します。  
   
- 詳細については、「 [同じ可用性グループの複数のリスナーを作成する方法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) 」(SQL Server AlwaysOn チームのブログ) を参照してください。  
+ 詳細については、「 [同じ可用性グループの複数のリスナーを作成する方法](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) 」(SQL Server AlwaysOn チームのブログ) を参照してください。  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 これでリスナーを作成したので、[リスナーに接続する](listeners-client-connectivity-application-failover.md)ようにアプリケーションを構成します。 また、可用性グループの正常性を確保するために、さまざまな[可用性グループの監視戦略](monitoring-of-availability-groups-sql-server.md)を確認することもできます。
 
 また、必要に応じて、[リスナーのプロパティを表示](view-availability-group-listener-properties-sql-server.md)したり、[リスナーを削除する](remove-an-availability-group-listener-sql-server.md)方法を学習したりすることもできます。 
-  

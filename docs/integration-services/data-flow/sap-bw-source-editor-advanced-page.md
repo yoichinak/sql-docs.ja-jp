@@ -1,4 +1,5 @@
 ---
+description: '[SAP BW 変換元エディター] ([詳細設定] ページ)'
 title: '[SAP BW 変換元エディター] ([詳細設定] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cdc189849f501558500d1910bf1950aaf45e9be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923708"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495757"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86923708"
   
 3.  **[SAP BW 変換元エディター]** で、 **[詳細設定]** をクリックして **[詳細設定]** ページを開きます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
   
 > [!NOTE]  
 >  変換元を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -52,9 +53,9 @@ ms.locfileid: "86923708"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、 **nvarchar** にすべての文字列を変換します。 それ以外の場合は **varchar**にすべての文字列を変換します。|  
-|**文字列を varchar に変換**|**varchar**にすべての文字列を変換します。|  
-|**文字列を nvarchar に変換**|**nvarchar**にすべての文字列を変換します。|  
+|**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、 **nvarchar** にすべての文字列を変換します。 それ以外の場合は **varchar** にすべての文字列を変換します。|  
+|**文字列を varchar に変換**|**varchar** にすべての文字列を変換します。|  
+|**文字列を nvarchar に変換**|**nvarchar** にすべての文字列を変換します。|  
   
  **タイムアウト (秒)**  
  ソースが待機する最大秒数を指定します。  

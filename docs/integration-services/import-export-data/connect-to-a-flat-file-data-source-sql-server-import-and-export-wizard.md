@@ -1,4 +1,5 @@
 ---
+description: フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 title: フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920396"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195192"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>フラット ファイル データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
 
@@ -32,7 +33,7 @@ ms.locfileid: "86920396"
  
  フラット ファイル データ ソース用のオプションに関するページは 4 ページあります。 このようにページ数が多くなっています。 しかし、各ページで多くの時間を費やす必要はありません。 検討すべきタスクを次に示します。
  
-ページ|推奨  |種類  
+Page|推奨  |Type  
 ----|---------|---------
 **全般**|必ず **[形式]** セクションのオプションを更新する。|推奨    
 **[列]**|列と行の区切り記号の確認 (区切りファイルの場合)、または列のマーク付け (固定幅ファイルの場合) を必ず行う。|推奨
@@ -40,11 +41,11 @@ ms.locfileid: "86920396"
 **プレビュー**|必要に応じて、指定した設定を使用して、データのサンプルをプレビューする。|省略可能
 
 ## <a name="general-page-source"></a>[全般] ページ (ソース)
- **[全般]** ページでは、ファイルを選択し、 **[フォーマット]** セクションで設定を確認できます。
+ **[全般]** ページでは、ファイルを選択し、**[フォーマット]** セクションで設定を確認できます。
  
  ![フラット ファイル接続の [全般] ページ](../../integration-services/import-export-data/media/flat-file-connection-general.png)  
 
-### <a name="options-to-specify-general-page"></a>指定するオプション ( **[全般]** ページ)
+### <a name="options-to-specify-general-page"></a>指定するオプション (**[全般]** ページ)
 
  **[ファイル名]**  
  フラット ファイルのパスと名前を入力します。  
@@ -74,7 +75,7 @@ ms.locfileid: "86920396"
  ファイルで使用するテキスト修飾子を必要に応じて指定します。 たとえば、テキスト フィールドを引用符で囲むことを指定できます。 (このプロパティは、区切りファイルにのみ適用されます。) 
   
 > [!NOTE]
-> テキスト修飾子を選択した後で、 **[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
+> テキスト修飾子を選択した後で、**[なし]** オプションを再度選択することはできません。 テキスト修飾子の選択を解除するには、「 **なし** 」と入力します。  
   
  **[ヘッダー行区切り記号]**  
  ヘッダー行の区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
@@ -101,7 +102,7 @@ ms.locfileid: "86920396"
  
 ![フラット ファイル、区切り記号、[列] ページ](../../integration-services/import-export-data/media/flat-file-delimited-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--delimited"></a>指定するオプション ( **[列]** ページ - 形式 = 区切り記号)
+### <a name="options-to-specify-columns-page---format--delimited"></a>指定するオプション (**[列]** ページ - 形式 = 区切り記号)
 
  **[行区切り記号]**  
  使用できる行区切り記号の一覧から選択するか、区切り記号テキストを入力します。  
@@ -145,7 +146,7 @@ ms.locfileid: "86920396"
   
 ![フラット ファイル、固定幅、[列] ページ](../../integration-services/import-export-data/media/flat-file-fixed-width-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--fixed-width"></a>指定するオプション ( **[列]** ページ - 形式 = 固定幅)
+### <a name="options-to-specify-columns-page---format--fixed-width"></a>指定するオプション (**[列]** ページ - 形式 = 固定幅)
 
  **フォント**  
  プレビュー データの表示に使用するフォントを選択します。  
@@ -167,7 +168,7 @@ ms.locfileid: "86920396"
  
 ![フラット ファイル、幅合わせしない、[列] ページ](../../integration-services/import-export-data/media/flat-file-ragged-right-columns-page.jpg)
 
-### <a name="options-to-specify-columns-page---format--ragged-right"></a>指定するオプション ( **[列]** ページ - 形式 = 幅合わせしない)
+### <a name="options-to-specify-columns-page---format--ragged-right"></a>指定するオプション (**[列]** ページ - 形式 = 幅合わせしない)
    
  **フォント**  
  プレビュー データの表示に使用するフォントを選択します。  
@@ -199,7 +200,7 @@ ms.locfileid: "86920396"
 
 スクリーン ショットでは、数値を含む **[id]** 列で、最初にくるのが文字列のデータ型であることに注目してください。
 
-### <a name="options-to-specify-advanced-page"></a>指定するオプション ( **[詳細設定]** ページ)
+### <a name="options-to-specify-advanced-page"></a>指定するオプション (**[詳細設定]** ページ)
 
  **[各列のプロパティを構成します。]**  
  左側のペインで列を選択すると、そのプロパティが右側のペインに表示されます。 列プロパティの説明については、次の表を参照してください。 一覧されたプロパティの中には、特定のフラット ファイル形式に対してのみ構成可能なもの、および特定のデータ型の列に対してのみ構成可能なものがあります。  
@@ -231,13 +232,13 @@ ms.locfileid: "86920396"
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。  
  
-**[型の推測]** をクリックすると、 **[列の型の推測]** ダイアログ ボックスが表示されます。 
+**[型の推測]** をクリックすると、**[列の型の推測]** ダイアログ ボックスが表示されます。 
 
 ![フラット ファイル接続の [型の推測] ダイアログ ボックス](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
-**[列の型の推測]** ダイアログ ボックスでオプションを選択した後、 **[OK]** をクリックすると、列のデータ型がウィザードによって一部変更される場合があります。
+**[列の型の推測]** ダイアログ ボックスでオプションを選択した後、**[OK]** をクリックすると、列のデータ型がウィザードによって一部変更される場合があります。
 
-次のスクリーン ショットでは、 **[型の推測]** をクリックした後で、データ ソースの **id** 列が実際にはテキスト文字列ではなく、数値であることがウィザードによって認識され、列のデータ型が文字列から整数に変更されています。
+次のスクリーン ショットでは、**[型の推測]** をクリックした後で、データ ソースの **id** 列が実際にはテキスト文字列ではなく、数値であることがウィザードによって認識され、列のデータ型が文字列から整数に変更されています。
 
 ![フラット ファイル接続の詳細設定の変更後](../../integration-services/import-export-data/media/flat-file-connection-advanced-after.png)
 
@@ -249,7 +250,7 @@ ms.locfileid: "86920396"
 
 ![フラット ファイル、[プレビュー] ページ](../../integration-services/import-export-data/media/flat-file-preview-page.jpg)
 
-### <a name="options-to-specify-preview-page"></a>指定するオプション ( **[プレビュー]** ページ)
+### <a name="options-to-specify-preview-page"></a>指定するオプション (**[プレビュー]** ページ)
 
  **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
@@ -260,14 +261,14 @@ ms.locfileid: "86920396"
  **[更新]**  
  **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
  
-**[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)」を参照してください。
+**[プレビュー]** ページの詳細については、Integration Services リファレンス ページ「[[フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../connection-manager/flat-file-connection-manager.md)」を参照してください。
 
 ## <a name="connect-to-a-flat-file-destination"></a>フラット ファイル変換先に接続する
-フラット ファイル変換先の場合は、次のスクリーン ショットに示すように、オプションに関するページは 1 ページのみとなります。 ファイルを参照して選択し、 **[形式]** セクションで設定を確認します。
+フラット ファイル変換先の場合は、次のスクリーン ショットに示すように、オプションに関するページは 1 ページのみとなります。 ファイルを参照して選択し、**[形式]** セクションで設定を確認します。
 
 ![フラット ファイル変換先に接続する](../../integration-services/import-export-data/media/connect-to-flat-file-destination.jpg)
 
-### <a name="options-to-specify-choose-a-destination-page"></a>指定するオプション ( **[変換先]** ページ)
+### <a name="options-to-specify-choose-a-destination-page"></a>指定するオプション (**[変換先]** ページ)
 
  **[ファイル名]**  
  フラット ファイルのパスと名前を入力します。  
@@ -302,4 +303,3 @@ ms.locfileid: "86920396"
 ## <a name="see-also"></a>参照
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

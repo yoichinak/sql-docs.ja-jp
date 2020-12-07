@@ -1,4 +1,5 @@
 ---
+description: OLE DB 変換先を使用してデータを読み込む
 title: OLE DB 変換先を使用してデータを読み込む | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71879f64bbe46900b27c467f37d4fdacd9cb7b13
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3165371fc1153636ae869b650468342e3614b024
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916525"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495835"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
 
@@ -46,7 +47,7 @@ ms.locfileid: "86916525"
   
     -   **[テーブルまたはビュー]** データが含まれるデータベース内のテーブルまたはビューを選択します。  
   
-    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、 **[バッチごとの行数]** 、または **[挿入コミット サイズの最大値]** があります。  
+    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]**、 **[NULL を保持する]**、 **[テーブル ロック]**、 **[CHECK 制約]**、 **[バッチごとの行数]**、または **[挿入コミット サイズの最大値]** があります。  
   
     -   **[テーブル名またはビュー名の変数]** データベースのテーブルまたはビューの名前が含まれている、ユーザー定義変数を選択します。  
   

@@ -1,4 +1,5 @@
 ---
+description: REVOKE (型の権限の取り消し) (Transact-SQL)
 title: REVOKE (型の権限の取り消し) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a160a4ddbcf80f77f2631a67170c47afd9ab14e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3f2dc28c6d703102ef9d01797f1fe2127e0180ab
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484873"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497869"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (型の権限の取り消し) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,6 @@ ms.locfileid: "86484873"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
     { FROM | TO } <database_principal> [ ,...n ]   
@@ -132,7 +132,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>例  
  次の例では、ユーザー定義型 `PhoneNumber` に対する `VIEW DEFINITION` 権限を、ユーザー `KhalidR` から取り消します。 `CASCADE` オプションは、`KhalidR` が `VIEW DEFINITION` 権限を許可したプリンシパルからも権限を取り消すことを示します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
-```  
+```sql  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     FROM KhalidR CASCADE;  
 GO  

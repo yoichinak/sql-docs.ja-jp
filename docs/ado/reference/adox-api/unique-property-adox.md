@@ -1,8 +1,9 @@
 ---
+description: Unique プロパティ (ADOX)
 title: Unique プロパティ (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18b2bc4fca3ebd999529b61ac3b7ec1e8254966e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b0357d0ea75f6949437d9a38bdedc4031700a238
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763233"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983093"
 ---
 # <a name="unique-property-adox"></a>Unique プロパティ (ADOX)
 インデックスキーが一意である必要があるかどうかを示します。  
@@ -31,13 +32,13 @@ ms.locfileid: "82763233"
  **ブール**値を設定して返します。  
   
 ## <a name="remarks"></a>解説  
- 既定値は **False** です。  
+ 既定値は **False**です。  
   
- このプロパティは、既にコレクションに追加されている[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトでは読み取り専用です。  
+ このプロパティは、既にコレクションに追加されている [インデックス](./index-object-adox.md) オブジェクトでは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
- [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index オブジェクト (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [PrimaryKey および Unique プロパティの例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [PrimaryKey および Unique プロパティの例 (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [Key オブジェクト (ADOX)](./key-object-adox.md)

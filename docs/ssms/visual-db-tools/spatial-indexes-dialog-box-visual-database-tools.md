@@ -1,4 +1,5 @@
 ---
+description: '[空間インデックス] ダイアログ ボックス (Visual Database Tools)'
 title: '[空間インデックス] ダイアログ ボックス'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ffbabe94a55328a4de6bd6c85bcaa5af01b3fa8c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8da73314062051bf93da1fba6912612b20e1a9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446052"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-**[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
+**[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、**[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  
   
 空間インデックスの作成の制限については、「 [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)」を参照してください。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "85999299"
 **[Y の最小値]**  
 境界ボックスの左下隅の y 座標を指定します。 このプロパティは、 **[テセレーション スキーム]** が **[地理グリッド]** の場合、淡色表示になります。  
   
-**[ID]**  
+**ID**  
 展開して、 **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
 **[(名前)]**  

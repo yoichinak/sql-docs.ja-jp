@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan (Transact-sql)
 title: sp_delete_maintenance_plan (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_maintenance_plan
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d993720a85508751b734322454d2f2d98be469c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 79f746fd1fccb81688b42994aa1d5fe57502261e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862647"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546200"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,25 +45,25 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_id = ] 'plan\_id'`削除するメンテナンスプランの ID を指定します。 *plan_id*は**uniqueidentifier**で、有効な id である必要があります。  
+`[ @plan_id = ] 'plan\_id'` 削除するメンテナンスプランの ID を指定します。 *plan_id* は **uniqueidentifier**で、有効な id である必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_delete_maintenance_plan**は、 **msdb**データベースから実行する必要があります。  
+ **sp_delete_maintenance_plan** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_delete_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **Sp_add_maintenance_plan**を使用して作成されたメンテナンスプランを削除します。  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベースメンテナンスプランのストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

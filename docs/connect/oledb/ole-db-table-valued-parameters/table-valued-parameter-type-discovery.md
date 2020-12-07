@@ -1,6 +1,6 @@
 ---
-title: テーブル値パラメーターの型探索 | Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したテーブル値パラメーターの型探索
+title: テーブル値パラメーターの型の検出 (OLE DB ドライバー)
+description: OLE DB Driver for SQL Server のコンシューマーでテーブル値パラメーターの個別の列ごとにメタデータ情報を検出する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, type discovery
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 06e0de0ad5fb0b4b8b7fd90144769ca9f9133928
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b330de20afa6bc1264bda74ea6d326e938e63501
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003334"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862497"
 ---
-# <a name="table-valued-parameter-type-discovery"></a>テーブル値パラメーターの型の検出
+# <a name="table-valued-parameter-type-discovery-ole-db-driver"></a>テーブル値パラメーターの型の検出 (OLE DB ドライバー)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

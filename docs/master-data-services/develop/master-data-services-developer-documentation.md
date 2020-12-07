@@ -1,4 +1,5 @@
 ---
+description: マスター データ サービスの開発者向けドキュメント
 title: 開発者向けドキュメント
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3dc41680a336936bf419dbcd52255e8a60120a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c1772c12889da4200553a7f303e2b6c9c26b894
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461778"
 ---
 # <a name="master-data-services-developer-documentation"></a>マスター データ サービスの開発者向けドキュメント
 
@@ -42,7 +43,7 @@ ms.locfileid: "85892271"
  <xref:Microsoft.MasterDataServices.ServiceClient> クラスの Web サービス操作のカテゴリ別一覧です。  
   
 ## <a name="custom-workflows"></a>カスタム ワークフロー  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します。 開発者は、指定した条件に基づいてデータを自動的に更新および検証したり、電子メール通知を送信することができます。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 内のビジネス ルールは、最も一般的なワークフロー シナリオを管理するためのものです。 複数階層の承認や複雑な意思決定ツリーなど、より高度な複合イベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、作成したカスタム アセンブリにデータを送ることができます。 カスタムワークフローを処理するには、web アプリケーションコンピューターで MDS Workflow Integration Service を構成して SQL Server を開始し、 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))インターフェイスを実装するアセンブリを作成する必要があります。  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、ビジネス ルールを使用して基本的なワークフロー ソリューションを作成します。 開発者は、指定した条件に基づいてデータを自動的に更新および検証したり、電子メール通知を送信することができます。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 内のビジネス ルールは、最も一般的なワークフロー シナリオを管理するためのものです。 複数階層の承認や複雑な意思決定ツリーなど、より高度な複合イベント処理を必要とするワークフローの場合は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] を構成することで、作成したカスタム アセンブリにデータを送ることができます。 カスタムワークフローを処理するには、web アプリケーションコンピューターで MDS Workflow Integration Service を構成して SQL Server を開始し、 [MasterDataServices](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) インターフェイスを実装するアセンブリを作成する必要があります。  
   
 ### <a name="custom-workflow-content"></a>カスタム ワークフローに関するコンテンツ  
  [カスタム ワークフローの作成 &#40;マスター データ サービス&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  

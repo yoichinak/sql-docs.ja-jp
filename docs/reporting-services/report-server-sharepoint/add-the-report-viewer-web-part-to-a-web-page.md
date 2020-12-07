@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 0061f824a8801db7c703df4a902b7b6cac7d10bd
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767113"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935543"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>レポート ビューアー Web パーツを Web ページに追加する
 
@@ -55,7 +55,7 @@ Web パーツを Web ページに追加するには、サイト レベルでの 
   
 ## <a name="see-also"></a>関連項目
 
- [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint サイトのレポート ビューアー Web パーツ](./report-viewer-web-part-sharepoint-site.md)   
  [レポート ビューアー Web パーツのカスタマイズ](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)

@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942468"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987218"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>方法:ターゲット プラットフォームを変更し、データベース プロジェクトを公開する
 
@@ -43,7 +43,7 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
   
 3.  **エラー一覧**ペインに、"SQL70015: 'ファイル グループ参照とパーティション構成' は SQL Azure ではサポートされていません。" というエラーが表示されます。  
   
-    ターゲット プラットフォームに基づいて、スクリプトが自動的に検証されます。 ここでは、ファイル グループが SQL Azure でサポートされていないため、SSDT からエラーが返されます。 SQL Azure でサポートされていない Transact\-SQL ステートメントの一覧については、「[部分的にサポートされる Transact-SQL ステートメント (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)」をご覧ください。  
+    ターゲット プラットフォームに基づいて、スクリプトが自動的に検証されます。 ここでは、ファイル グループが SQL Azure でサポートされていないため、SSDT からエラーが返されます。 SQL Azure でサポートされていない Transact\-SQL ステートメントの一覧については、「[部分的にサポートされる Transact-SQL ステートメント (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100))」をご覧ください。  
   
 4.  `ON` 句を削除します。 エラーが直ちに **[エラー一覧]** から消えます。  
   
@@ -68,4 +68,3 @@ SSDT では、ターゲット プラットフォームを認識し、コード�
 **A project which specifies Microsoft SQL Server 2012 as the target platform may experience compatibility issues with SQL Server 2008**    このようなプロジェクトに Microsoft SQL Server 2012 で導入されたエンティティ (たとえば、シーケンス オブジェクト) が含まれている場合、発行操作は失敗します。  
   
 オブジェクトの述語で、新しく作成したフルテキスト インデックスに対して **CONTAINS** または **FREETEXT** を使用し、トランザクション スクリプトが使用されると、配置は失敗します。 トランザクション スクリプトを含むオプションを配置中に有効にすると、プロシージャやビューがトランザクション内で定義されるのに対し、フルテキスト インデックスは配置スクリプトの末尾のトランザクションの外部で定義されます。 スクリプト内のこの順序により、CONTAINS または FREETEXT を使用したプロシージャまたはビューは、フルテキスト インデックスに対して解決されず、配置エラーが発生します。  
-  

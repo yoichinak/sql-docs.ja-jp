@@ -1,4 +1,5 @@
 ---
+description: DROP WORKLOAD GROUP (Transact-SQL)
 title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2020
@@ -14,15 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD GROUP statement
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fb87822e638e879287d556434172f8b436d998
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 60b18502d8ac5a39f7e429bc7eac90a0abe39313
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864311"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496857"
 ---
 # <a name="drop-workload-group-transact-sql"></a>DROP WORKLOAD GROUP (Transact-SQL)
 
@@ -35,7 +36,7 @@ ms.locfileid: "87864311"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -56,7 +57,7 @@ ms.locfileid: "87864311"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+        **_\* SQL Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](drop-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -77,7 +78,7 @@ ms.locfileid: "87864311"
         [SQL Server](drop-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />Managed Instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Managed Instance](drop-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -90,7 +91,7 @@ ms.locfileid: "87864311"
 
 ワークロード グループを削除します。  ステートメントが完了すると、設定が有効になります。
 
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+:::image type="icon" source="../../database-engine/configure-windows/media/topic-link.gif"::: [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="syntax"></a>構文
 

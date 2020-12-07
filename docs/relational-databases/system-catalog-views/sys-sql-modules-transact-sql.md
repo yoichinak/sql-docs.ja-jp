@@ -1,4 +1,5 @@
 ---
+description: sys.sql_modules (Transact-SQL)
 title: sql_modules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
@@ -17,14 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008350"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551373"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86008350"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|このオブジェクトが属するオブジェクトの ID です。 データベース内で一意です。|  
-|**カスタム**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。 この値は[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)組み込み関数を使用して取得することもできます。<br /><br /> NULL = 暗号化されています。|  
+|**カスタム**|**nvarchar(max)**|このモジュールを定義する SQL テキスト。 この値は [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 組み込み関数を使用して取得することもできます。<br /><br /> NULL = 暗号化されています。|  
 |**uses_ansi_nulls**|**bit**|モジュールは、SET ANSI_NULLS ON で作成されました。<br /><br /> ルールと既定値の場合、は常に0になります。|  
 |**uses_quoted_identifier**|**bit**|モジュールは QUOTED_IDENTIFIER ON に設定して作成されました。|  
 |**is_schema_bound**|**bit**|モジュールは SCHEMABINDING オプションを使用して作成されました。<br /><br /> ネイティブコンパイルストアドプロシージャの場合は、常に値1が格納されます。|  
@@ -45,12 +47,12 @@ ms.locfileid: "86008350"
 |**null_on_null_input**|**bit**|モジュールは、任意の NULL 入力上で NULL 出力を生成するように宣言されました。|  
 |**execute_as_principal_id**|**Int**|実行データベースプリンシパルの ID。<br /><br /> 既定では NULL、または EXECUTE AS CALLER の場合は NULL です。<br /><br /> SELF として実行する場合は指定したプリンシパルの ID、または EXECUTE AS にする場合は \<principal> です。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 0 = ネイティブでコンパイルされていない<br /><br /> 1 = ネイティブコンパイル<br /><br /> 既定値は 0 です。|  
-|**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br/><br />モジュールがインライン化可能かどうかを示します。 Inlineability は、[ここで](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定した条件に基づいています。<br /><br /> 0 = not インライン化可能<br /><br /> 1 = はインライン化可能です。 <br /><br /> スカラー Udf の場合、UDF がインライン化可能の場合、値は1になり、それ以外の場合は0になります。 インライン Tvf の場合は値1、その他のすべてのモジュール型の場合は0を格納します。<br />|  
+|**is_inlineable**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br/><br />モジュールがインライン化可能かどうかを示します。 Inlineability は、 [ここで](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)指定した条件に基づいています。<br /><br /> 0 = not インライン化可能<br /><br /> 1 = はインライン化可能です。 <br /><br /> スカラー Udf の場合、UDF がインライン化可能の場合、値は1になり、それ以外の場合は0になります。 インライン Tvf の場合は値1、その他のすべてのモジュール型の場合は0を格納します。<br />|  
 |**inline_type**|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 以降。<br /><br />現在モジュールに対してインライン展開が有効になっているかどうかを示します。 <br /><br />0 = インライン展開は無効になっています<br /><br /> 1 = インライン展開が有効になっています。<br /><br /> スカラー Udf では、インライン展開が有効になっている場合 (明示的または暗黙的)、値は1になります。 インライン Tvf の場合、値は常に1になり、その他のモジュールの種類では0になります。<br />|  
 
   
-## <a name="remarks"></a>コメント  
- 既定の制約の SQL 式、D 型のオブジェクトは、 [default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)カタログビューにあります。 CHECK 制約の SQL 式、C 型のオブジェクトは、 [check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)カタログビューにあります。  
+## <a name="remarks"></a>解説  
+ 既定の制約の SQL 式、D 型のオブジェクトは、 [default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) カタログビューにあります。 CHECK 制約の SQL 式、C 型のオブジェクトは、 [check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) カタログビューにあります。  
   
  この情報については、「 [sys. dm_db_uncontained_entities &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)」を参照してください。  
   
@@ -69,8 +71,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

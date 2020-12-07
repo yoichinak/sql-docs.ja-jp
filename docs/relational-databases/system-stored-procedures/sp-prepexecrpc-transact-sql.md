@@ -1,4 +1,5 @@
 ---
+description: sp_prepexecrpc (Transact-SQL)
 title: sp_prepexecrpc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f35bd49fa9969d0d5f381d5e1cb7f905b9a0743b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9db0c4450f6726d39934afac27c3306dae9ded3f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760048"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535019"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_prepexecrpc handle OUTPUT, RPCCall
   
 ## <a name="arguments"></a>引数  
  *扱え*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *handle* は、 **int** 戻り値を持つ必須パラメーターです。  
   
  *RPCCall*  
- ODBC 標準構文を使用してストアド プロシージャ呼び出しを定義します。 *Rpccall*は、 **ntext**文字列入力値を呼び出す必須のパラメーターです。  
+ ODBC 標準構文を使用してストアド プロシージャ呼び出しを定義します。 *Rpccall* は、 **ntext** 文字列入力値を呼び出す必須のパラメーターです。  
   
  *bound_param*  
- 追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
+ 追加パラメーターをオプションで使用することを示します。 *bound_param* は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

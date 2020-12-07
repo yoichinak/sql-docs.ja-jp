@@ -1,4 +1,5 @@
 ---
+description: TupleToStr (MDX)
 title: TupleToStr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69e81156b26d4becb05390c8684b433584793697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487625"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -31,10 +32,10 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
- この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこ{}で囲まれ、各メンバーは組で明示的に定義されている場合はコンマで区切られます。  
+## <a name="remarks"></a>解説  
+ この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこで囲まれ、 {} 各メンバーは組で明示的に定義されている場合はコンマで区切られます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、文字列 ([Date]. [暦年]。 & [2001]、[Geography]。[Geography]。[Country] & [米国]):  
   
 ```  

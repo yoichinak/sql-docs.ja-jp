@@ -1,4 +1,5 @@
 ---
+description: 多角形
 title: 多角形 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,23 +14,23 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a17fb30859866155b2e3976e3d1a1bb2890ac4e
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92006224"
 ---
 # <a name="polygon"></a>多角形
 
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   **Polygon** は、1 つの外部境界リングと 0 個以上の内部リングを定義する一連の点として格納される 2 次元表面です。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
  **Polygon** インスタンスは、3 つ以上の異なる点を持つリングで形成されます。 **Polygon** インスタンスは空にすることもできます。  
   
-**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon**の内部を定義します。  
+**Polygon** の外部および内部のリングは、その境界を定義します。 リング内の空間は **Polygon** の内部を定義します。  
   
 次の図は、 **Polygon** インスタンスの例です。  
   
@@ -155,7 +156,7 @@ SELECT @g.ToString()
   
 上の例で返されるジオメトリ インスタンスは `Point(1 3)`です。  `Polygon` が `POLYGON((1 3, 1 5, 1 3, 1 3))` の場合、 `MakeValid()` は `LINESTRING(1 3, 1 5)`を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STArea &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

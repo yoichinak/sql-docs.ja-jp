@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR (Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a75da0d64957e87997e65fd135c332065a5fa31
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921480"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128289"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,17 +68,17 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  データの一時コピーを作成するためのカーソルを定義します。作成されるコピーは、カーソルで使用されます。 このカーソルに対する要求の応答は、すべて **tempdb** 内のこの一時テーブルから得られます。したがって、ベース テーブルへの修正は、このカーソルで取り出したデータには反映されません。また、このカーソルで修正を行うこともできません。 ISO 構文で `INSENSITIVE` を指定しない場合は、任意のユーザーによって基になるテーブルに加えられた削除および更新がコミットされると、以降のフェッチで反映されます。  
   
  SCROLL  
- すべてのフェッチ オプション (`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE`、`ABSOLUTE`) を使用可能に指定します。 ISO 形式の `SCROLL` ステートメントに `DECLARE CURSOR` を指定しない場合、`NEXT` は、サポートされている唯一のフェッチ オプションです。 `SCROLL` も指定されている場合は、`FAST_FORWARD` を指定できません。 `SCROLL` が指定されていない場合は、フェッチ オプション `NEXT` だけが使用でき、カーソルは `FORWARD_ONLY` になります。
+ すべてのフェッチ オプション (`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE`、`ABSOLUTE`) を使用可能に指定します。 ISO 形式の `DECLARE CURSOR` ステートメントに `SCROLL` を指定しない場合、`NEXT` は、サポートされている唯一のフェッチ オプションです。 `FAST_FORWARD` も指定されている場合は、`SCROLL` を指定できません。 `SCROLL` が指定されていない場合は、フェッチ オプション `NEXT` だけが使用でき、カーソルは `FORWARD_ONLY` になります。
   
  *select_statement*  
- カーソルの結果セットを定義する標準の `SELECT` ステートメントです。 カーソル宣言の `FOR BROWSE`select_statement`INTO` 内で *および* キーワードは許可されません。  
+ カーソルの結果セットを定義する標準の `SELECT` ステートメントです。 カーソル宣言の *select_statement* 内で `FOR BROWSE` および `INTO` キーワードは許可されません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select_statement *内の句が、要求されたカーソルの種類の機能と矛盾する場合、* によってカーソルが別の種類に暗黙的に変換されます。  
+ *select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。  
   
  READ ONLY  
- このカーソルによる更新を禁止します。 `WHERE CURRENT OF` または `UPDATE` ステートメントの `DELETE` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
+ このカーソルによる更新を禁止します。 `UPDATE` または `DELETE` ステートメントの `WHERE CURRENT OF` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  カーソル内で更新できる列を定義します。 OF <column_name> [, <... n>] を指定した場合は、指定した列に対してのみ更新ができます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。  
   
 *cursor_name*  
@@ -93,7 +94,7 @@ GLOBAL
 >  `GLOBAL` も `LOCAL` も指定しない場合は、**default to local cursor** データベース オプションの設定によって既定の動作が決まります。  
   
 FORWARD_ONLY  
-カーソルは前方にだけ移動でき、先頭行から最終行までスクロールできることを指定します。 `FETCH NEXT` は、サポートされている唯一のフェッチ オプションです。 現在のユーザーが行い (または別のユーザーがコミットし)、結果セット内の行に影響を与えたすべての挿入、更新、削除ステートメントは、行がフェッチされると認識できるようになります。 ただし、カーソルは後方にスクロールできないので、データベース内の行のフェッチ後にその行に対して行われた変更内容は、カーソル内で確認できません。 順方向専用カーソルは既定では動的であり、現在の行が処理されるとすべての変更が検出されることを意味します。 これにより、カーソルを開く時間が短縮され、基になるテーブルに対して行われた更新を結果セットで表示できるようになります。 順方向専用カーソルでは後方スクロールはサポートされていませんが、アプリケーションでカーソルを閉じて開きなおすことにより、結果セットの先頭にカーソルを戻すことができます。 `FORWARD_ONLY`、`STATIC`、または `KEYSET` キーワードなしで `DYNAMIC` を指定した場合、カーソルは動的カーソルとして動作します。 `FORWARD_ONLY` と `SCROLL` のどちらも指定しない場合、既定値は `FORWARD_ONLY` になります。ただし、キーワードに `STATIC`、`KEYSET`、または `DYNAMIC` が指定されている場合を除きます。 `STATIC`、`KEYSET`、および `DYNAMIC` の各カーソルは既定で `SCROLL` になります。 ODBC や ADO などのデータベース API と異なり、`FORWARD_ONLY` は、`STATIC`、`KEYSET`、`DYNAMIC` の [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルと共にサポートされます。  
+カーソルは前方にだけ移動でき、先頭行から最終行までスクロールできることを指定します。 `FETCH NEXT` は、サポートされている唯一のフェッチ オプションです。 現在のユーザーが行い (または別のユーザーがコミットし)、結果セット内の行に影響を与えたすべての挿入、更新、削除ステートメントは、行がフェッチされると認識できるようになります。 ただし、カーソルは後方にスクロールできないので、データベース内の行のフェッチ後にその行に対して行われた変更内容は、カーソル内で確認できません。 順方向専用カーソルは既定では動的であり、現在の行が処理されるとすべての変更が検出されることを意味します。 これにより、カーソルを開く時間が短縮され、基になるテーブルに対して行われた更新を結果セットで表示できるようになります。 順方向専用カーソルでは後方スクロールはサポートされていませんが、アプリケーションでカーソルを閉じて開きなおすことにより、結果セットの先頭にカーソルを戻すことができます。 `STATIC`、`KEYSET`、または `DYNAMIC` キーワードなしで `FORWARD_ONLY` を指定した場合、カーソルは動的カーソルとして動作します。 `FORWARD_ONLY` と `SCROLL` のどちらも指定しない場合、既定値は `FORWARD_ONLY` になります。ただし、キーワードに `STATIC`、`KEYSET`、または `DYNAMIC` が指定されている場合を除きます。 `STATIC`、`KEYSET`、および `DYNAMIC` の各カーソルは既定で `SCROLL` になります。 ODBC や ADO などのデータベース API と異なり、`FORWARD_ONLY` は、`STATIC`、`KEYSET`、`DYNAMIC` の [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルと共にサポートされます。  
    
  STATIC  
 カーソルが最初に開かれた時点での結果セットを常に表示し、カーソルによって使用されるデータの一時的なコピーを作成することを指定します。 カーソルに対するすべての要求は、**tempdb** 内のこの一時テーブルから応答されます。 したがって、ベース テーブルに対して行われた挿入、更新、削除は、このカーソルに対して行われたフェッチによって返されるデータには反映されず、カーソルが開かれた後で結果セットのメンバーシップ、順序、値に対して行われた変更は、このカーソルでは検出されません。 静的カーソルは、それ自体の更新、削除、挿入を検出してもかまいませんが、必ず行う必要はありません。 たとえば、静的カーソルが行をフェッチした後で、別のアプリケーションによってその行が更新されるものとします。 アプリケーションで静的カーソルから行を再フェッチした場合、他のアプリケーションによって変更が行われたにも関わらず、認識される値は変更されていません。 すべての種類のスクロールがサポートされています。 
@@ -111,42 +112,42 @@ DYNAMIC
 変更がカーソル内またはカーソル外の他のユーザーのどちらによって行われたのかに関係なく、カーソルをスクロールして新しいレコードをフェッチすると、結果内の行に対して行われたすべてのデータ変更が反映されるカーソルを定義します。 したがって、すべてのユーザーによって行われたすべての挿入、更新、削除ステートメントが、カーソルによって表示されます。 行のデータ値、順序、メンバーシップは、各フェッチ操作で変化する可能性があります。 `ABSOLUTE` フェッチ オプションは、動的カーソルではサポートされません。 カーソルの外部から行った更新は、(カーソルのトランザクション分離レベルが `UNCOMMITTED` に設定されている場合を除き) コミットされるまで表示されません。 たとえば、動的カーソルで 2 つの行がフェッチされた後、別のアプリケーションによって一方の行は更新され、他の行は削除されたものとします。 その後、動的カーソルでこれらの行がフェッチされた場合、削除された行は検出されませんが、更新された行は新しい値が表示されます。 
   
 FAST_FORWARD  
-パフォーマンスの最適化が有効に設定された `FORWARD_ONLY`、`READ_ONLY` カーソルを指定します。 `FAST_FORWARD` または `SCROLL` も指定されている場合、`FOR_UPDATE` は指定できません。 この種類のカーソルでは、カーソル内からのデータ変更は許可されません。  
+パフォーマンスの最適化が有効に設定された `FORWARD_ONLY`、`READ_ONLY` カーソルを指定します。 `SCROLL` または `FOR_UPDATE` も指定されている場合、`FAST_FORWARD` は指定できません。 この種類のカーソルでは、カーソル内からのデータ変更は許可されません。  
   
 > [!NOTE]  
 > `FAST_FORWARD` と `FORWARD_ONLY` の両方を同じ `DECLARE CURSOR` ステートメントで使用できます。  
   
 READ_ONLY  
-このカーソルによる更新を禁止します。 `WHERE CURRENT OF` または `UPDATE` ステートメントの `DELETE` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
+このカーソルによる更新を禁止します。 `UPDATE` または `DELETE` ステートメントの `WHERE CURRENT OF` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
 SCROLL_LOCKS  
-カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 `SCROLL_LOCKS` または `FAST_FORWARD` も指定されている場合、`STATIC` は指定できません。  
+カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 `FAST_FORWARD` または `STATIC` も指定されている場合、`SCROLL_LOCKS` は指定できません。  
   
 OPTIMISTIC  
-行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗することを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行がカーソルに読み取られるとき、その行はロックされません。 代わりに **timestamp** 列の値を比較するか、テーブルに **timestamp** 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 `OPTIMISTIC` も指定されている場合は、`FAST_FORWARD` を指定できません。  
+行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗することを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行がカーソルに読み取られるとき、その行はロックされません。 代わりに **timestamp** 列の値を比較するか、テーブルに **timestamp** 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 `FAST_FORWARD` も指定されている場合は、`OPTIMISTIC` を指定できません。  
   
  TYPE_WARNING  
  カーソルの種類が、要求されたものから別のものに暗黙的に変換された場合、クライアントに警告メッセージが送信されることを指定します。  
   
  *select_statement*  
- カーソルの結果セットを定義する標準の SELECT ステートメントです。 カーソル宣言の `COMPUTE`select_statement`COMPUTE BY` 内で `FOR BROWSE`、`INTO`、*および* キーワードは許可されません。  
+ カーソルの結果セットを定義する標準の SELECT ステートメントです。 カーソル宣言の *select_statement* 内で `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` および `INTO` キーワードは許可されません。  
   
 > [!NOTE]  
-> カーソル宣言内ではクエリ ヒントを使用できますが、`FOR UPDATE OF` 句も使用する場合は、`OPTION (<query_hint>)` の後に `FOR UPDATE OF` を指定する必要があります。  
+> カーソル宣言内ではクエリ ヒントを使用できますが、`FOR UPDATE OF` 句も使用する場合は、`FOR UPDATE OF` の後に `OPTION (<query_hint>)` を指定する必要があります。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select_statement *内の句が、要求されたカーソルの種類の機能と矛盾する場合、* によってカーソルが別の種類に暗黙的に変換されます。 詳細については、「暗黙的なカーソル変換」を参照してください。  
+*select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。 詳細については、「暗黙的なカーソル変換」を参照してください。  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
 カーソル内で更新できる列を定義します。 `OF <column_name> [, <... n>]` を指定した場合は、指定した列に対してのみ更新できます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。ただし、`READ_ONLY` コンカレンシー オプションを指定した場合を除きます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `DECLARE CURSOR` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルの属性を定義します。これには、スクロール動作や、カーソルが操作する結果セットを作成するクエリなどが含まれます。 `OPEN` ステートメントは結果セットを設定し、`FETCH` ステートメントは結果セットから行を返します。 `CLOSE` ステートメントは、カーソルに関係付けられた現在の結果セットを解放します。 `DEALLOCATE` ステートメントは、カーソルが使用するリソースを解放します。  
   
 最初の形式の `DECLARE CURSOR` ステートメントは、ISO 構文を使用してカーソルの動作を宣言します。 2 番目の形式の `DECLARE CURSOR` は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の拡張機能を使用します。これによって、ODBC または ADO のデータベース API カーソル関数で使用されるカーソルの種類と同じカーソルの種類を使用して、カーソルを定義できます。  
   
-2 つの形式を混在することはできません。 `SCROLL` キーワードの前に `INSENSITIVE` または `CURSOR` キーワードを指定した場合、`CURSOR` キーワードと `FOR <select_statement>` キーワードの間にはキーワードを一切使用できません。 `CURSOR` と `FOR <select_statement>` の各キーワードの間にキーワードを指定した場合、`SCROLL` キーワードの前に `INSENSITIVE` または `CURSOR` を指定できません。  
+2 つの形式を混在することはできません。 `CURSOR` キーワードの前に `SCROLL` または `INSENSITIVE` キーワードを指定した場合、`CURSOR` キーワードと `FOR <select_statement>` キーワードの間にはキーワードを一切使用できません。 `CURSOR` と `FOR <select_statement>` の各キーワードの間にキーワードを指定した場合、`CURSOR` キーワードの前に `SCROLL` または `INSENSITIVE` を指定できません。  
   
-`DECLARE CURSOR` 構文を使用した [!INCLUDE[tsql](../../includes/tsql-md.md)] で `READ_ONLY`、`OPTIMISTIC`、または `SCROLL_LOCKS` を指定していない場合、既定値は次のようになります。  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を使用した `DECLARE CURSOR` で `READ_ONLY`、`OPTIMISTIC`、または `SCROLL_LOCKS` を指定していない場合、既定値は次のようになります。  
   
 -   権限が十分でなかったり、更新をサポートしないリモート テーブルにアクセスしているなどの理由で、`SELECT` ステートメントが更新をサポートしない場合、カーソルは `READ_ONLY` です。  
   
@@ -178,7 +179,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>A. 単純なカーソルと構文を使用する  
 
-このカーソルのオープン時に作成された結果セットには、テーブルに存在するすべての行と列が含まれています。 このカーソルは更新することができ、すべての更新結果および削除結果は、このカーソルに対して行ったフェッチに反映されます。 `FETCH NEXT` オプションを指定していないため、フェッチに使用できるのは `SCROLL` のみです。  
+このカーソルのオープン時に作成された結果セットには、テーブルに存在するすべての行と列が含まれています。 このカーソルは更新することができ、すべての更新結果および削除結果は、このカーソルに対して行ったフェッチに反映されます。 `SCROLL` オプションを指定していないため、フェッチに使用できるのは `FETCH NEXT` のみです。  
  
 ```sql  
 DECLARE vend_cursor CURSOR  
@@ -193,8 +194,8 @@ FETCH NEXT FROM vend_cursor;
 ```sql  
 SET NOCOUNT ON;  
   
-DECLARE @vendor_id int, @vendor_name nvarchar(50),  
-    @message varchar(80), @product nvarchar(50);  
+DECLARE @vendor_id INT, @vendor_name NVARCHAR(50),  
+    @message VARCHAR(80), @product NVARCHAR(50);  
   
 PRINT '-------- Vendor Products Report --------';  
   

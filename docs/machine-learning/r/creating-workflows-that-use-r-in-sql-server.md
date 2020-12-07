@@ -3,20 +3,20 @@ title: R での SSIS と SSRS のワークフローを作成する
 description: SQL Server Machine Learning Services と R Services、Reporting Services (SSRS)、および SQL Server Integration Services (SSIS) を組み合わせた統合シナリオ。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb11607fe7424c8c1159ba767e6f8292361065f
+ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680365"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92793759"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、次に示す 2 つの重要な SQL Server 機能を備えた SQL Server Machine Learning Services の言語およびデータ サイエンス能力を使用して、埋め込み R と Python スクリプトを使用する方法について説明します。その機能とは、SQL Server Integration Services (SSIS) および SQL Server Reporting Services SSRS です。 SQL Server の R および Python ライブラリには、統計関数と予測関数が用意されています。 SSIS と SSRS は、それぞれ連携した ETL 変換と視覚化を提供します。 この記事では、これらのすべての機能をこのワークフロー パターンにまとめる方法について説明します。
 
@@ -47,9 +47,9 @@ ms.locfileid: "85680365"
 
 次の例は、この URL (`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`) で Jimmy Wong によって作成された、現在は提供終了となった MSDN ブログ投稿を基にしています。
 
-この例では、SSIS を使用してタスクを自動化する方法を示します。 SQL Server Management Studio を使用して R を埋め込んだストアド プロシージャを作成した後、それらのストアド プロシージャを、SSIS パッケージの [T-SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)から実行します。
+この例では、SSIS を使用してタスクを自動化する方法を示します。 SQL Server Management Studio を使用して R を埋め込んだストアド プロシージャを作成した後、それらのストアド プロシージャを、SSIS パッケージの [T-SQL タスクの実行](../../integration-services/control-flow/execute-t-sql-statement-task.md)から実行します。
 
-この例を実行するには、Management Studio、SSIS、SSIS デザイナー、パッケージ デザイン、および T-SQL について理解している必要があります。 SSIS パッケージでは、トレーニング データをテーブルに挿入、データをモデル化し、データをスコアリングして予測の出力を取得する、3 つの [T-SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)を使用します。
+この例を実行するには、Management Studio、SSIS、SSIS デザイナー、パッケージ デザイン、および T-SQL について理解している必要があります。 SSIS パッケージでは、トレーニング データをテーブルに挿入、データをモデル化し、データをスコアリングして予測の出力を取得する、3 つの [T-SQL タスクの実行](../../integration-services/control-flow/execute-t-sql-statement-task.md)を使用します。
 
 ### <a name="load-training-data"></a>トレーニング データの読み込み
 
@@ -83,7 +83,7 @@ begin
 end;
 ```
 
-SSIS デザイナーで、先ほど定義したストアド プロシージャを実行する [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成します。 **SQLStatement** のスクリプトは、既存のデータを削除し、挿入するデータを指定してから、ストアド プロシージャを呼び出してデータを提供します。
+SSIS デザイナーで、先ほど定義したストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成します。 **SQLStatement** のスクリプトは、既存のデータを削除し、挿入するデータを指定してから、ストアド プロシージャを呼び出してデータを提供します。
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,7 +108,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) を使用して線形モデルを生成する、ストアド プロシージャを作成します。 RevoScaleR と revoscalepy のライブラリは、SQL Server 上の R および Python セッションで自動的に使用できるため、ライブラリをインポートする必要はありません。
+[rxLinMod](/machine-learning-server/r-reference/revoscaler/rxlinmod) を使用して線形モデルを生成する、ストアド プロシージャを作成します。 RevoScaleR と revoscalepy のライブラリは、SQL Server 上の R および Python セッションで自動的に使用できるため、ライブラリをインポートする必要はありません。
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -127,7 +127,7 @@ end;
 GO
 ```
 
-SSIS デザイナーで [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成して、**generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
+SSIS デザイナーで [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成して、 **generate_iris_rx_model** ストアド プロシージャを実行します。 モデルはシリアル化され、ssis_iris_models テーブルに保存されます。 **SQLStatement** のスクリプトは次のとおりです。
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -143,7 +143,7 @@ update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default 
 
 これで、トレーニング データを読み込み、モデルを生成するコードが完成しました。残りの手順は、モデルを使用して予測を生成することだけです。 
 
-これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
+これを行うには、SQL クエリに R スクリプトを配置し、ssis_iris_model で [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) 組み込み R 関数をトリガーします。 このタスクは **predict_species_length** と名付けられたストアド プロシージャによって実現されます。
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -171,7 +171,7 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-SSIS デザイナーで、**predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task)を作成し、予測される花弁長を生成します。
+SSIS デザイナーで、 **predict_species_length** ストアド プロシージャを実行する [SQL タスクの実行](../../integration-services/control-flow/execute-sql-task.md)を作成し、予測される花弁長を生成します。
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';
@@ -192,19 +192,6 @@ SSIS デザイナーで、F5 キーを押してパッケージを実行します
 R ではチャートや注意を引く視覚エフェクトを作成できますが、外部データ ソースと十分に統合されません。つまり、各チャートまたはグラフを個別に生成する必要があります。 共有も困難な可能性があります。
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を使用すれば、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを介することで複雑な操作を R で実行できます。このストアド プロシージャは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] や Power BI などのさまざまなエンタープライズ レポート ツールで簡単に使用できます。
-
-### <a name="ssrs-example"></a>SSRS の例
-
-[R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Microsoft Reporting Services (SSRS) 用の R グラフィックス デバイス)
-
-この CodePlex プロジェクトが提供するコードを使用すると、R のグラフィックス出力を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートで使用できるイメージとしてレンダリングする、カスタム レポート アイテムの作成に役立ちます。  カスタム レポート アイテムを使用すると、次の操作を実行できます。
-
-+ R グラフィックス デバイスを使用して作成したグラフとプロットを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダッシュボードに公開する
-
-+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] パラメーターを R プロットに渡す
-
-> [!NOTE]
-> このサンプルでは、Reporting Services 用の R グラフィックス デバイスをサポートするコードが、Reporting Services サーバー、および Visual Studio にインストールされている必要があります。 手動によるコンパイルと構成も必要です。
 
 ## <a name="next-steps"></a>次のステップ
 

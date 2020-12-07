@@ -1,4 +1,5 @@
 ---
+description: dm_exec_function_stats (Transact-sql)
 title: dm_exec_function_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
@@ -15,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_function_stats dynamic management view
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0ec3f05f40f6de423cec2d08f2a240729201e43e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396781"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550291"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>dm_exec_function_stats (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,12 +43,12 @@ ms.locfileid: "87396781"
 |**object_id**|**int**|関数のオブジェクト id 番号。|  
 |**type**|**char(2)**|オブジェクトの型: FN = スカラー値関数|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|これを使用すると、この関数内から実行された**dm_exec_query_stats**のクエリと関連付けることができます。|  
-|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブコンパイル関数がメモリ最適化テーブルに対してクエリを実行する場合、は常に0x000 になります。|  
+|**sql_handle**|**varbinary(64)**|これを使用すると、この関数内から実行された **dm_exec_query_stats** のクエリと関連付けることができます。|  
+|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値は、 **dm_exec_cached_plans** 動的管理ビューで使用できます。<br /><br /> ネイティブコンパイル関数がメモリ最適化テーブルに対してクエリを実行する場合、は常に0x000 になります。|  
 |**cached_time**|**datetime**|関数がキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|関数が最後に実行された時刻。|  
 |**execution_count**|**bigint**|関数が最後にコンパイルされてから実行された回数。|  
-|**total_worker_time**|**bigint**|コンパイル後にこの関数の実行で消費された CPU 時間の合計 (マイクロ秒単位)。<br /><br /> ネイティブコンパイル関数の場合、多くの実行に1ミリ秒未満の時間がかかると、 **total_worker_time**が正確ではない可能性があります。|  
+|**total_worker_time**|**bigint**|コンパイル後にこの関数の実行で消費された CPU 時間の合計 (マイクロ秒単位)。<br /><br /> ネイティブコンパイル関数の場合、多くの実行に1ミリ秒未満の時間がかかると、 **total_worker_time** が正確ではない可能性があります。|  
 |**last_worker_time**|**bigint**|関数が最後に実行されたときに消費された CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|この関数が1回の実行で消費した最小 CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|この関数が1回の実行で消費した最大 CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  

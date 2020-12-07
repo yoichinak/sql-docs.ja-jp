@@ -1,4 +1,5 @@
 ---
+description: ステージング中に発生したエラーの表示 (Master Data Services)
 title: ステージング中に発生したエラーの表示
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af131613399fd45dd363f21f9f92216556be456b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: dea75b433d96aca750f941ef5dda8bb6b2951420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456780"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>ステージング中に発生したエラーの表示 (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85812307"
   
 -   stg.viw_name_RelationshipErrorDetails (階層のリレーションシップの更新用)。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、stg.viw_name_MemberErrorDetails ビューまたは stg.viw_name_RelationshipErrorDetails ビューのどちらかに対する SELECT 権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-view-staging-errors"></a>ステージング エラーを表示するには  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85812307"
 ## <a name="next-steps"></a>次の手順  
  エラー メッセージの詳細については、「[ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [概要: テーブルからのデータのインポート &#40;マスターデータサービス&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [ステージング処理のトラブルシューティング (マスター データ サービス)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

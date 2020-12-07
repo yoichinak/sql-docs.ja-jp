@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 4861b5688c485ca0f8245bdf149ed995841ecdee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462196"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935443"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>組み込みコレクション - 組み込み Globals および Users 参照 (レポート ビルダー)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す **Globals** コレクションと **User** コレクションの両方が含まれています。 **Globals** コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 **User** コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -87,9 +87,8 @@ ms.locfileid: "84462196"
   
 ## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [[式] ダイアログ ボックス &#40;レポート ビルダー&#41;](./expressions-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
-  
   

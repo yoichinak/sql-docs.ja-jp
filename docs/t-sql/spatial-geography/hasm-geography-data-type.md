@@ -1,4 +1,5 @@
 ---
+description: HasM (geography データ型)
 title: HasM (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec68ecc0973683bc93c5e11b80eec860912ebccf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 33c1bdd90dae6fc6d7f40872355056b539d8016b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88445265"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: 診断レコードと診断フィールド
 title: 診断レコードとフィールド |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5370b0730328466dbdf1c1602bb4bdb3140c040e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420566"
 ---
 # <a name="diagnostic-records-and-fields"></a>診断レコードと診断フィールド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,15 +39,15 @@ ms.locfileid: "86002373"
   
  状態レコード内のフィールドには、SQLSTATE、ネイティブ エラー番号、診断メッセージ、列番号、行番号など、ODBC ドライバー マネージャー、ドライバー、またはデータ ソースから返される特定のエラーや警告に関する情報が保存されます。 状態レコードは、関数から SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA、または SQL_STILL_EXECUTING が返された場合のみ作成されます。 状態レコードのフィールドの完全な一覧については、「 **SQLGetDiagField**」を参照してください。  
   
- **SQLGetDiagRec**は、1つの診断レコードと、その ODBC SQLSTATE、ネイティブエラー番号、および診断メッセージフィールドを取得します。 この機能は、ODBC 2 に似ています。_x_**SQLError**関数。 ODBC 3 の最も単純なエラー処理関数です。*x*は、 *recnumber*パラメーターを1に設定して**SQLGetDiagRec**を繰り返し呼び出し、 **SQLGetDiagRec**が SQL_NO_DATA を返すまで、 *recnumber*を1ずつインクリメントします。 これは、ODBC 2 に相当します。SQL_NO_DATA_FOUND が返されるまで、 **SQLError**を呼び出す*x*アプリケーション。  
+ **SQLGetDiagRec** は、1つの診断レコードと、その ODBC SQLSTATE、ネイティブエラー番号、および診断メッセージフィールドを取得します。 この機能は、ODBC 2 に似ています。_x_**SQLError** 関数。 ODBC 3 の最も単純なエラー処理関数です。*x*は、 *recnumber*パラメーターを1に設定して**SQLGetDiagRec**を繰り返し呼び出し、 **SQLGetDiagRec**が SQL_NO_DATA を返すまで、 *recnumber*を1ずつインクリメントします。 これは、ODBC 2 に相当します。SQL_NO_DATA_FOUND が返されるまで、 **SQLError**を呼び出す*x*アプリケーション。  
   
- ODBC 3.*x*では、ODBC 2 よりも多くの診断情報がサポートされています。*x*。 この情報は、 **SQLGetDiagField**を使用して取得した診断レコードの追加フィールドに格納されます。  
+ ODBC 3.*x* では、ODBC 2 よりも多くの診断情報がサポートされています。*x*。 この情報は、 **SQLGetDiagField**を使用して取得した診断レコードの追加フィールドに格納されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC ドライバーには、 **SQLGetDiagField**を使用して取得できるドライバー固有の診断フィールドがあります。 これらのドライバー固有のフィールドのラベルは、sqlncli.h で定義されています。 これらのラベルを使用して、各診断レコードに関連付けられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の状態、重大度レベル、サーバー名、プロシージャ名、および行番号を取得します。 また、sqlncli には、アプリケーションが*DiagIdentifier*を SQL_DIAG_DYNAMIC_FUNCTION_CODE に設定して**SQLGetDiagField**を呼び出す場合に、transact-sql ステートメントを識別するためにドライバーが使用するコードの定義が含まれています。  
   
- **SQLGetDiagField**は、基になるドライバーからキャッシュするエラー情報を使用して、ODBC ドライバーマネージャーによって処理されます。 ODBC ドライバー マネージャーでは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 **SQLGetDiagField**は、正常に接続が完了する前にドライバー固有の診断フィールドを取得するために呼び出された場合に SQL_ERROR を返します。 ODBC 接続関数から SQL_SUCCESS_WITH_INFO が返されても、その接続関数のドライバー固有の診断フィールドはまだ使用できません。 接続関数の後に別の ODBC 関数呼び出しを行った後でのみ、ドライバー固有の診断フィールドに対して**SQLGetDiagField**の呼び出しを開始できます。  
+ **SQLGetDiagField** は、基になるドライバーからキャッシュするエラー情報を使用して、ODBC ドライバーマネージャーによって処理されます。 ODBC ドライバー マネージャーでは、接続が正しく確立されるまでドライバー固有の診断フィールドをキャッシュしません。 **SQLGetDiagField** は、正常に接続が完了する前にドライバー固有の診断フィールドを取得するために呼び出された場合に SQL_ERROR を返します。 ODBC 接続関数から SQL_SUCCESS_WITH_INFO が返されても、その接続関数のドライバー固有の診断フィールドはまだ使用できません。 接続関数の後に別の ODBC 関数呼び出しを行った後でのみ、ドライバー固有の診断フィールドに対して **SQLGetDiagField** の呼び出しを開始できます。  
   
- Native Client ODBC ドライバーによって報告されるほとんどのエラー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagRec**によって返された情報のみを使用して、効果的に診断することができます。 ただし、ドライバー固有の診断フィールドから返される情報がエラーを診断するうえで重要になることもあります。 Native Client ODBC ドライバーを使用してアプリケーションの ODBC エラーハンドラをコーディングする場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagField**を使用して、少なくとも SQL_DIAG_SS_MSGSTATE および SQL_DIAG_SS_SEVERITY ドライバ固有のフィールドを取得することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード内の複数の箇所で特定のエラーが発生した可能性がある場合は、SQL_DIAG_SS_MSGSTATE により、エラーの厳密な発生箇所がマイクロソフトのサポート エンジニアに報告されます。この情報は、問題の診断に役立つことがあります。  
+ Native Client ODBC ドライバーによって報告されるほとんどのエラー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagRec**によって返された情報のみを使用して、効果的に診断することができます。 ただし、ドライバー固有の診断フィールドから返される情報がエラーを診断するうえで重要になることもあります。 Native Client ODBC ドライバーを使用してアプリケーションの ODBC エラーハンドラをコーディングする場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **SQLGetDiagField** を使用して、少なくとも SQL_DIAG_SS_MSGSTATE および SQL_DIAG_SS_SEVERITY ドライバ固有のフィールドを取得することをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード内の複数の箇所で特定のエラーが発生した可能性がある場合は、SQL_DIAG_SS_MSGSTATE により、エラーの厳密な発生箇所がマイクロソフトのサポート エンジニアに報告されます。この情報は、問題の診断に役立つことがあります。  
   
 ## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

@@ -1,8 +1,9 @@
 ---
+description: Prepared プロパティの例 (VB)
 title: Prepared プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d5cb8a583e5434e81922f556ae62e3d0f4f312f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0442b231be45132c486ae45e5f8850b115b932bc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761950"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990033"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared プロパティの例 (VB)
-次の例では、2つの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)を示しています。1つは準備されています。  
+次の例では、2つの[コマンド](./command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](./prepared-property-ado.md)を示しています。1つは準備されています。  
   
 ```  
 'BeginPreparedVB  
@@ -115,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command オブジェクト (ADO)](./command-object-ado.md)   
+ [Prepared プロパティ (ADO)](./prepared-property-ado.md)

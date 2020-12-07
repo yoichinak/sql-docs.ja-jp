@@ -1,4 +1,5 @@
 ---
+description: 複数の列に対して複数の検索条件を指定する (Visual Database Tools)
 title: 複数の列に対して複数の検索条件を指定する
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a78fbabb45d634e88b7b6bf1c5b663b8d6d6b15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5a5f5d4e3396e3ccbff7280fbae14036015ba5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445990"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>複数の列に対して複数の検索条件を指定する (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-検索条件に複数のデータ列を指定して、クエリの範囲を広くしたり狭くしたりできます。 たとえば、次の場合です。  
+検索条件に複数のデータ列を指定して、クエリの範囲を広くしたり狭くしたりできます。 たとえば、次の操作を行います。  
   
 -   勤続年数が 5 年以上の従業員または特定の職務を担当している従業員を検索する場合  
   
@@ -77,8 +78,8 @@ ms.locfileid: "85999284"
 4.  条件を追加するたびに、手順 2. および手順 3. を繰り返します。  
   
 ## <a name="see-also"></a>参照  
-[AND が優先する場合の条件を結合する](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
+[AND が優先する場合に条件を結合する](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
 [OR が優先する場合の条件の結合](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [抽出条件ペインで検索条件を組み合わせる場合の規則](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[検索条件を指定する](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[検索条件の指定](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 次のフェッチ位置 (OLE DB ドライバー) | Microsoft Docs
-description: 行のフェッチ - 次のフェッチ位置
+description: OLE DB Driver for SQL Server は次のフェッチ位置を追跡します。その結果、GetNextRows メソッドの一連の呼び出しでは行セット全体が読み取られます。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - next fetch position
 - rowsets [OLE DB], fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d6fd65f54f0c6f6aa219595e1948ce758c50b4db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ba713e9da40255d992e7cccf8c8430a205cadf4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244203"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861579"
 ---
 # <a name="fetching-rows---next-fetch-position-ole-db-driver"></a>行のフェッチ - 次のフェッチ位置 (OLE DB ドライバー)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: GETUTCDATE (Transact-SQL)
 title: GETUTCDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -35,12 +36,12 @@ ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0979bf4241c24477274d7a220f7a4687339ab1e4
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 763faa16b37621807e6e24e1a577406f38f9ea32
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112689"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91114830"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "87112689"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 GETUTCDATE()  
 ```  
   
@@ -75,7 +76,7 @@ GETUTCDATE()
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', SYSDATETIME();  
 SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
 SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
@@ -114,7 +115,7 @@ GETUTCDATE()             2007-05-04
   
 ### <a name="c-getting-the-current-system-time"></a>C. 現在のシステム時刻を取得する  
   
-```  
+```sql  
 SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
 SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
 SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  

@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations を使ったブックマークによる行の更新
 title: SQLBulkOperations を使用したブックマークによる行の更新 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482875"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の更新
-ブックマークによって行を更新すると、 **Sqlbulkoperations**によってデータソースがテーブルの1つ以上の行を更新します。 行は、バインドされたブックマーク列のブックマークによって識別されます。 行は、バインドされた各列のアプリケーションバッファーのデータを使用して更新されます (ただし、列の長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE の場合を除きます)。 非バインド列は更新されません。  
+ブックマークによって行を更新すると、 **Sqlbulkoperations** によってデータソースがテーブルの1つ以上の行を更新します。 行は、バインドされたブックマーク列のブックマークによって識別されます。 行は、バインドされた各列のアプリケーションバッファーのデータを使用して更新されます (ただし、列の長さ/インジケーターバッファーの値が SQL_COLUMN_IGNORE の場合を除きます)。 非バインド列は更新されません。  
   
  **Sqlbulkoperations**でブックマークを使用して行を更新するには、次のアプリケーションを実行します。  
   

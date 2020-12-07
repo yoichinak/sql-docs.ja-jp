@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_primary_database (Transact-sql)
 title: sp_help_log_shipping_primary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5606c29eb4592f15eff641d969f6fcd28c89fa90
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3dea602c3464fb4fee36281a2430f2fef39b7ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493200"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'`ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。 NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 NULL にすることはできません。  
   
-`[ @primary_id = ] 'primary_id'`ログ配布構成のプライマリデータベースの ID。 *primary_id*は**uniqueidentifier**であり、NULL にすることはできません。  
+`[ @primary_id = ] 'primary_id'` ログ配布構成のプライマリデータベースの ID。 *primary_id* は **uniqueidentifier** であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,7 +58,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|プライマリサーバーからのトランザクションログバックアップファイルが格納されているディレクトリ。|  
 |**backup_share**|バックアップディレクトリへのネットワークまたは UNC パス。|  
 |**backup_retention_period**|バックアップ ディレクトリでログ バックアップ ファイルが保持される時間 (分単位)。この時間を過ぎるとファイルは削除されます。|  
-|**backup_compression**|ログ配布構成で[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを示します。<br /><br /> **0** = 無効です。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効。 ログバックアップは常に圧縮します。<br /><br /> **2** = [ビューの設定[] または [Backup Compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。<br /><br /> バックアップの圧縮は、(以降のバージョン) でのみサポートされてい [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ます。 その他のエディションでは、値は常に 2 です。|  
+|**backup_compression**|ログ配布構成で [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを示します。<br /><br /> **0** = 無効です。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効。 ログバックアップは常に圧縮します。<br /><br /> **2** = [ビューの設定 [] または [Backup Compression Default サーバー構成オプションの構成]](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)を使用します。 これが既定値です。<br /><br /> バックアップの圧縮は、(以降のバージョン) でのみサポートされてい [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ます。 その他のエディションでは、値は常に 2 です。|  
 |**backup_job_id**|プライマリ サーバー上のバックアップ ジョブに関連付けられている、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ID。|  
 |**monitor_server**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成で監視サーバーとして使用されているのインスタンスの名前。|  
 |**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティモード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。|  
@@ -69,14 +70,14 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|プライマリデータベースでの最後のトランザクションログバックアップ操作の日時。協定世界時で表されます。|  
 |**history_retention_period**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
-## <a name="remarks"></a>Remarks  
- **sp_help_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_help_log_shipping_primary_database** は、プライマリサーバーの **master** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例では、 **sp_help_log_shipping_primary_database**を使用して、データベースのプライマリデータベースの設定を取得する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
+## <a name="examples"></a>例  
+ この例では、 **sp_help_log_shipping_primary_database** を使用して、データベースのプライマリデータベースの設定を取得する方法を示し [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ます。  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  

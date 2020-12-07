@@ -1,4 +1,5 @@
 ---
+description: データベースの名前変更
 title: データベースの名前変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b81e565875074e3ba3fc08dd85f27b9c077ebb08
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "92005505"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 
@@ -40,10 +41,10 @@ ms.locfileid: "85728387"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **補足情報:** [データベースの名前を変更した後](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
-> Azure SQL Data Warehouse または Parallel Data Warehouse でデータベースの名前を変更するには、[RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。
+> Azure Synapse Analytics または Parallel Data Warehouse でデータベースの名前を変更するには、[RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。
   
 ## <a name="before-you-begin"></a>はじめに
   
@@ -54,7 +55,7 @@ ms.locfileid: "85728387"
   - SQL Server では、データベースをシングル ユーザー モードに設定することで、開いているすべての接続を閉じることができます。 詳細については、「 [データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。
   - Azure SQL Database では、名前を変更するデータベースに対して他のユーザーが接続を開いていないことを確認する必要があります。
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
   
 #### <a name="permissions"></a>アクセス許可
 
@@ -65,11 +66,11 @@ ms.locfileid: "85728387"
 SQL Server Management Studio を使用して SQL Server または Azure SQL データベースの名前を変更するには、次の手順を使用します。
 
   
-1. **オブジェクト エクスプローラー**で、SQL インスタンスに接続します。  
+1. **オブジェクト エクスプローラー** で、SQL インスタンスに接続します。  
   
 2. データベースに対して開いている接続がないことを確認します。 SQL Server を使用している場合は、[データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)ことで、開いているすべての接続を閉じ、データベース名の変更中は他のユーザーが接続できないようにすることができます。  
   
-3. オブジェクト エクスプローラーで **[データベース]** を展開し、名前を変更するデータベースを右クリックし、 **[名前の変更]** をクリックします。  
+3. オブジェクト エクスプローラーで **[データベース]** を展開し、名前を変更するデータベースを右クリックし、**[名前の変更]** をクリックします。  
   
 4. 新しいデータベース名を入力し、 **[OK]** をクリックします。  
   

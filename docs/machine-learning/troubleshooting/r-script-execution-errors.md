@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253715"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196336"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>SQL Server での一般的な R スクリプト エラー
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、SQL Server で R コードを実行する際のいくつかの一般的なスクリプト エラーについて説明します。 この一覧がすべてではありません。 パッケージは多数あり、同じパッケージのバージョンによってエラーが異なる場合があります。
-
-ここに記載されていないスクリプト エラーが発生した場合は、[Machine Learning Server フォーラム](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)に投稿してください。 このフォーラムでは、さまざまな SQL 機械学習製品で使用されている機械学習コンポーネントをサポートしています。
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-SQL またはストアド プロシージャで有効なスクリプトが失敗する
 
@@ -33,7 +31,7 @@ ms.locfileid: "87253715"
 
 2. メッセージを調べて、入力データまたは出力データに互換性のないデータ型またはサポートされていないデータ型の列が含まれているかどうかを確認します。 たとえば、SQL データベースに対するクエリでは、GUID または RowGUID が返されることがよくありますが、これらはどちらもサポートされていません。 詳しくは、[R のライブラリとデータ型](../r/r-libraries-and-data-types.md)に関する記事をご覧ください。
 
-3. 個々の R 関数のヘルプ ページを参照して、SQL Server 計算コンテキストですべてのパラメーターがサポートされているかどうかを確認します。 ScaleR のヘルプについては、インライン R ヘルプ コマンドを使用するか、[パッケージ リファレンス](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)を参照してください。
+3. 個々の R 関数のヘルプ ページを参照して、SQL Server 計算コンテキストですべてのパラメーターがサポートされているかどうかを確認します。 ScaleR のヘルプについては、インライン R ヘルプ コマンドを使用するか、[パッケージ リファレンス](/r-server/r-reference/revoscaler/revoscaler)を参照してください。
 
 R ランタイムが機能していても、スクリプトからエラーが返された場合は、R Tools for Visual Studio などの専用の R 開発環境でスクリプトをデバッグしてみることをお勧めします。
 
@@ -100,6 +98,6 @@ remove('name1', 'name2', ...)
 
 [機械学習のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)
 
-[アップグレードとインストールに関してよく寄せられる質問](upgrade-and-installation-faq-sql-server-r-services.md)
+[SQL Server Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)
 
 [データベース エンジンの接続のトラブルシューティング](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

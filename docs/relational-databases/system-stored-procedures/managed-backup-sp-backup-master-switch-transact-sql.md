@@ -1,4 +1,5 @@
 ---
+description: managed_backup。 sp_backup_master_switch (Transact-sql)
 title: managed_backup。 sp_backup_master_switch (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,13 +19,14 @@ helpviewer_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: eb140e5ff831373d2725bca82c70655c5745a658
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0cbb360512888007f8fa5e0408771f1e27f94aeb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053538"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548422"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup。 sp_backup_master_switch (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>数値  
+##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @state  
  の状態を設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。 @stateパラメーターは**BIT**です。 値を0に設定すると、操作は一時停止されます。値を1に設定すると、操作が再開されます。  
   

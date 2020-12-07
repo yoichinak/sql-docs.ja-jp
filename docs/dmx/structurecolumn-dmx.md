@@ -1,4 +1,5 @@
 ---
+description: StructureColumn (DMX)
 title: StructureColumn (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 43e02efd8594497ad4f3c02679a475531489141c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500782"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,14 +37,14 @@ StructureColumn('structure column name')
   
  参照されるマイニング構造列が入れ子になったテーブルの場合、関数はテーブル値を返します。 返されるテーブル値は、サブ SELECT ステートメントの FROM 句で使用できます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  この関数はポリモーフィックであり、SELECT 式リスト、WHERE 条件式、および ORDER BY 式など、式を使用できるステートメント内の任意の場所で使用できます。  
   
  マイニング構造内の列の名前は文字列値であるため、単一引用符で囲む必要があります (たとえば、 `StructureColumn('` **列 1**) `')` 。 同じ名前を持つ列が複数ある場合、名前は SELECT ステートメントが含まれるコンテキスト内で解決されます。  
   
  **StructureColumn**関数を使用してクエリから返される結果は、モデルにフィルターが存在することによって影響を受けます。 つまり、モデルフィルターは、マイニングモデルに含まれるケースを制御します。 したがって、構造列に対するクエリは、マイニングモデルで使用されたケースのみを返すことができます。 ケーステーブルと入れ子になったテーブルの両方に対するマイニングモデルフィルターの効果を示すコードサンプルについては、このトピックの「例」のセクションを参照してください。  
   
- DMX SELECT ステートメントでこの関数を使用する方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)は[&#60;構造&#62; から選択します。ケース](../dmx/select-from-structure-cases.md)。  
+ DMX SELECT ステートメントでこの関数を使用する方法の詳細については、「 [SELECT FROM &#60;model&#62;」を参照してください。DMX&#41;&#40;ケース ](../dmx/select-from-model-cases-dmx.md) は [&#60;構造&#62; から選択します。ケース](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="error-messages"></a>エラー メッセージ  
  次のセキュリティエラーは、親のマイニング構造に対するドリルスルー権限がユーザーに与えられていない場合に発生します。  
@@ -137,7 +138,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41;&#40;関数 ](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)  
   
   

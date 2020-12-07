@@ -1,4 +1,5 @@
 ---
+description: プロジェクト (SQL Server Management Studio)
 title: プロジェクト (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8edcfdae75389c0922582aa7bad4ad323e6ba49a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011594"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036000"
 ---
 # <a name="projects-sql-server-management-studio"></a>プロジェクト (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,5 +60,4 @@ ms.locfileid: "86011594"
 ## <a name="see-also"></a>参照  
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
 [ソリューション (SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[ソリューション エクスプローラーのソース管理](https://msdn.microsoft.com/library/ms173879.aspx)  
-  
+[ソリューション エクスプローラーのソース管理](./solution-explorer.md)  

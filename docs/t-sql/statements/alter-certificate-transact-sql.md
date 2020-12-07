@@ -1,4 +1,5 @@
 ---
+description: ALTER CERTIFICATE (Transact-SQL)
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -23,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: faee93b7e3185b11f2c603c0017f88f51f21f232
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381226"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96128141"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -75,7 +76,7 @@ ALTER CERTIFICATE certificate_name
         DECRYPTION BY PASSWORD = '<key password>' )
 }  
 ```  
-  
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -132,7 +133,7 @@ ALTER CERTIFICATE certificate_name
   
 ### <a name="a-removing-the-private-key-of-a-certificate"></a>A. 証明書の秘密キーを削除する  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping04   
     REMOVE PRIVATE KEY;  
 GO  
@@ -140,7 +141,7 @@ GO
   
 ### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>B. 秘密キーの暗号化に使用するパスワードを変更する  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping11   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%',  
     ENCRYPTION BY PASSWORD = '34958tosdgfkh##38');  
@@ -149,7 +150,7 @@ GO
   
 ### <a name="c-importing-a-private-key-for-a-certificate-that-is-already-present-in-the-database"></a>C. データベースに存在する証明書の秘密キーをインポートする  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping13   
     WITH PRIVATE KEY (FILE = 'c:\importedkeys\Shipping13',  
     DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
@@ -158,7 +159,7 @@ GO
   
 ### <a name="d-changing-the-protection-of-the-private-key-from-a-password-to-the-database-master-key"></a>D. 秘密キーの保護をパスワードからデータベース マスター キーに変更する  
   
-```  
+```sql  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
 GO  

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 title: sp_xtp_control_proc_exec_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9d011be97c90f156b8cd26cfb8fcc85963b75161
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dcfc3a19de02b46cb869d529c1ec3c2ce88a1c22
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442401"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545855"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>引数  
- @new_collection_value=*値*  
+ @new_collection_value = *値*  
  プロシージャレベルの統計コレクションが on (1) か off (0) かを指定します。  
   
- @new_collection_valueまたはデータベースの起動時には、は0に設定され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+ @new_collection_value またはデータベースの起動時には、は0に設定され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- @old_collection_value=*値*  
+ @old_collection_value = *値*  
  現在の状態を返します。  
   
 ## <a name="return-code"></a>リターンコード  
@@ -63,7 +64,7 @@ select @c as 'collection status'
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

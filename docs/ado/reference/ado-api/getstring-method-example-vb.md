@@ -1,8 +1,9 @@
 ---
+description: GetString メソッドの例 (VB)
 title: GetString メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f73ae3fa0600bad94493ab08c6248ee422cdb56
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4f7d0c7d205db8f9b8d756f8bfd6fb6e219b7ce7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990833"
 ---
 # <a name="getstring-method-example-vb"></a>GetString メソッドの例 (VB)
-この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドを示します。  
+この例では、 [GetString](./getstring-method-ado.md) メソッドを示します。  
   
- データアクセスの問題をデバッグしているときに、小さな[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
+ データアクセスの問題をデバッグしているときに、小さな [レコードセット](./recordset-object-ado.md)の現在の内容をすばやく簡単に印刷できるようにすることを想定しています。  
   
 ```  
 'BeginGetStringVB  
@@ -102,5 +103,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>参照  
- [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [GetString メソッド (ADO)](./getstring-method-ado.md)   
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

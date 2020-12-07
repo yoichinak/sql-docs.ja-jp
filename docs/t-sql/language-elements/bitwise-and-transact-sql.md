@@ -1,4 +1,5 @@
 ---
+description: '&amp; (ビットごとの AND) (Transact-SQL)'
 title: '&amp; (ビットごとの AND) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -21,12 +22,12 @@ ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 948147292506544a5a0308cf7571c56d666bddd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9590b5be5abbc2414674f552c4f8c6675b5dc935
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919718"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92189265"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (ビットごとの AND) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86919718"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql
 expression & expression  
 ```  
   
@@ -65,7 +66,7 @@ expression & expression
 ## <a name="examples"></a>例  
  次の例では、**int** 型で値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
-```  
+```sql
 CREATE TABLE bitwise (   
   a_int_value INT NOT NULL,  
   b_int_value INT NOT NULL);  
@@ -76,7 +77,7 @@ GO
   
  このクエリは、`a_int_value` 列と `b_int_value` 列の間でビットごとの AND を実行します。  
   
-```  
+```sql  
 SELECT a_int_value & b_int_value  
 FROM bitwise;  
 GO  

@@ -1,4 +1,5 @@
 ---
+description: カスタム アプリケーション
 title: カスタムアプリケーション |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429394"
 ---
 # <a name="custom-applications"></a>カスタム アプリケーション
 カスタムアプリケーションは、通常、いくつかの Dbms に対して特定のタスクを実行します。 たとえば、アプリケーションが1つの DBMS からデータを取得してレポートを生成したり、複数の Dbms 間でデータを転送したりすることがあります。 これらのアプリケーションの共通点は、アプリケーションが記述される前にこれらの Dbms が知られており、アプリケーションの実行中に変更される可能性が低いことです。  

@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518852"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987228"
 ---
 # <a name="database-project-settings"></a>データベース プロジェクトの設定
 
@@ -87,7 +87,7 @@ ms.locfileid: "85518852"
 |フィールド|既定値|説明|  
 |---------|-----------------|---------------|  
 |対象プラットフォーム|Microsoft SQL Server 2012|このデータベース プロジェクトの対象となる SQL Server のバージョンを指定します。|  
-|共通オブジェクトに対する拡張 Transact\-SQL 検証を有効にします。|新しいオブジェクトを作成するときは有効になりません。<br /><br />SQL Azure に接続された SQL Server オブジェクト エクスプローラーからプロジェクトを作成するとき、SQL Azure データベースをプロジェクトにインポートするとき、またはプロジェクトのターゲット プラットフォームを SQL Azure に変更するときに有効になります。|このオプションを有効にすると、SQL Server コンパイラの検証に失敗したプロジェクト内で見つかったエラーが報告されます。 ターゲット プラットフォームを SQL Azure に変更すると、拡張検証が有効になります。 ターゲット プラットフォームを変更した場合、オプションはオフになりません。<br /><br />このオプションは他のバージョンの SQL Server に対して有効にすることができますが、検証は Microsoft SQL Server 2012 の部分的包含データベースと SQL Azure に限定されます。 すべての Transact\-SQL 構文がすべてのバージョンの SQL Server でサポートされているわけではありません。<br /><br />詳しくは、このトピックの後半の「[拡張 Transact-SQL 検証](#bkmk_evf)」をご覧ください|  
+|共通オブジェクトに対する拡張 Transact\-SQL 検証を有効にします。|新しいオブジェクトを作成するときは有効になりません。<br /><br />SQL Azure に接続された SQL Server オブジェクト エクスプローラーからプロジェクトを作成するとき、Azure SQL Database をプロジェクトにインポートするとき、またはプロジェクトのターゲット プラットフォームを SQL Azure に変更するときに有効になります。|このオプションを有効にすると、SQL Server コンパイラの検証に失敗したプロジェクト内で見つかったエラーが報告されます。 ターゲット プラットフォームを SQL Azure に変更すると、拡張検証が有効になります。 ターゲット プラットフォームを変更した場合、オプションはオフになりません。<br /><br />このオプションは他のバージョンの SQL Server に対して有効にすることができますが、検証は Microsoft SQL Server 2012 の部分的包含データベースと SQL Azure に限定されます。 すべての Transact\-SQL 構文がすべてのバージョンの SQL Server でサポートされているわけではありません。<br /><br />詳しくは、このトピックの後半の「[拡張 Transact-SQL 検証](#bkmk_evf)」をご覧ください|  
 |出力の種類|||  
 |データ層アプリケーション (.dacpac ファイル)|有効な状態でロックされています。 データベース プロジェクトのビルド出力により、プロジェクトのビルド時に .dacpac パッケージが必ず生成されます。|[追加のダウンレベル .dacpac ファイル (v2.0) を作成する] チェック ボックスがある SQL Server Data Tools (SSDT) のバージョンを使用している場合、パッケージに SQL Server Management Studio または SQL Azure Management Portal との互換性を持たせるには、このチェック ボックスをオンにします。 .dacpac パッケージは SSDT から直接配置できますが、SQL Server Data Tools のリリース時点では、SQL Server Management Studio を使用して配置できるのはバージョン 2.0 の .dacpac ファイルのみです。|  
 |スクリプト (.sql ファイル) を作成する||プロジェクト内のすべてのオブジェクトを対象に完全な .sql の CREATE スクリプトを生成し、プロジェクトのビルド時にそれを bin\debug フォルダーに保存するかどうかを指定します。 **[プロジェクトの公開]** または SQL Compare ユーティリティを使用して、増分更新スクリプトを作成できます。|  
@@ -105,9 +105,9 @@ ms.locfileid: "85518852"
 拡張 Transact-SQL 検証は、データベース プロジェクト システム内の機能です。この機能を使用すると、開発者はビルド時にデータベース プロジェクトを Transact-SQL コンパイラ サービスに送信し、SQL Server エンジンのパーサーおよびインタープリターに対してコードを検証できます。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL コンパイラ サービス  
-Transact-SQL コンパイラ サービスは、Microsoft SQL Server 2012 データベース エンジンに基づくコンポーネントです。 このサービスでは、Microsoft SQL Server 2012 データベース エンジンと同じ忠実性で DDL ステートメントの構文とセマンティクスを検証することができます。 つまり、本質的に、コンパイラ サービスは Microsoft SQL Server 2012 で非推奨になっている構文や機能をサポートしません。 非推奨の機能の詳細については、「[SQL Server 2012 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。  
+Transact-SQL コンパイラ サービスは、Microsoft SQL Server 2012 データベース エンジンに基づくコンポーネントです。 このサービスでは、Microsoft SQL Server 2012 データベース エンジンと同じ忠実性で DDL ステートメントの構文とセマンティクスを検証することができます。 つまり、本質的に、コンパイラ サービスは Microsoft SQL Server 2012 で非推奨になっている構文や機能をサポートしません。 非推奨の機能の詳細については、「[SQL Server 2012 で廃止されたデータベース エンジンの機能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)」を参照してください。  
   
-データベース プロジェクトを検証するために、コンパイラ サービスは部分的包含データベースを作成し、そのデータベースに対して DDL ステートメントの実行をシミュレートします。 詳細については、「 [部分的包含データベース](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)」を参照してください。  
+データベース プロジェクトを検証するために、コンパイラ サービスは部分的包含データベースを作成し、そのデータベースに対して DDL ステートメントの実行をシミュレートします。 詳細については、「 [部分的包含データベース](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))」を参照してください。  
   
 コンパイラ サービスには、2 つのカテゴリの制限があります。  
   
@@ -132,7 +132,7 @@ Transact-SQL コンパイラ サービスは、Microsoft SQL Server 2012 デー�
 -   SQL Azure メタデータ照合順序 (コンパイラ サービスでは、SQL Server 2012 部分的包含データベースのメタデータ照合順序を使用します - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>拡張検証の有効化/無効化  
-拡張 Transact-SQL 検証は、SQL Azure データベースから、またはターゲット プラットフォームが SQL Azure に設定されているプロジェクトから直接作成されるデータベース プロジェクトで既定で有効になっています。 SQL Azure 向け、または SQL Server 2012 を対象とするアプリケーション スコープ データベース向けの開発をする際には、拡張検証を使用することをお勧めします。 アプリケーション スコープ データベースの詳細については、「 [部分的包含データベース](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)」を参照してください。  
+拡張 Transact-SQL 検証は、Azure SQL Database から、またはターゲット プラットフォームが SQL Azure に設定されているプロジェクトから直接作成されるデータベース プロジェクトで既定では有効になっています。 SQL Azure 向け、または SQL Server 2012 を対象とするアプリケーション スコープ データベース向けの開発をする際には、拡張検証を使用することをお勧めします。 アプリケーション スコープ データベースの詳細については、「 [部分的包含データベース](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110))」を参照してください。  
   
 SQL Server 2008/R2 用のアプリケーション スコープ データベースを開発する際に、拡張検証の機能を使用して Microsoft SQL Server 2012 および SQL Azure との互換性を実現することもできます。  
   
@@ -151,24 +151,24 @@ SQL Server 2008/R2 用のアプリケーション スコープ データベー�
   
 2.  **[プロパティ]** で、**拡張 T-SQL 検証**プロパティを **[False]** に変更します。  
   
-![ファイルのプロパティ](../ssdt/media/ssdt-evf.gif "ファイルのプロパティ")  
+    ![ファイルのプロパティ](../ssdt/media/ssdt-evf.gif "ファイルのプロパティ")  
   
 ### <a name="special-considerations-for-collations"></a>照合順序に関する注意事項  
-部分的包含データベースでの照合順序に関する詳細については、「 [包含データベースの照合順序](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)」を参照してください。  
+部分的包含データベースでの照合順序に関する詳細については、「 [包含データベースの照合順序](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110))」を参照してください。  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-アセンブリ オプションの詳細については、「 [[アセンブリ情報] ダイアログ ボックス](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)」を参照してください。  
+アセンブリ オプションの詳細については、「 [[アセンブリ情報] ダイアログ ボックス](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true)」を参照してください。  
   
-署名の詳細については、「」の「 **[署名] ページ (プロジェクト デザイナー)** [アセンブリの署名](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) 」を参照してください。  
+署名の詳細については、「」の「 **[署名] ページ (プロジェクト デザイナー)** [アセンブリの署名](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) 」を参照してください。  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR および SQLCLR ビルド  
 **SQLCLR** および **SQLCLR ビルド** のプロパティ ページには、SQL CLR オブジェクトをプロジェクトで使用するための設定が多数含まれています。 具体的には、 **SQLCLR** プロパティ ページには SQLCLR アセンブリに対するアクセス許可を設定するためのアクセス許可レベル設定が含まれています。 また、プロジェクトに追加された SQLCLR オブジェクトの動的データ言語 (DDL) を作成するかどうかを制御する "DDL を作成する" 設定も含まれています。 **SQLCLR ビルド** のプロパティ ページには、プロジェクト内の SQLCLR コードのコンパイルを構成するために設定できるコンパイラ オプションがすべて含まれています。  
   
 **SQLCLR ビルド** のプロパティ ページには、SQL CLR オブジェクトをビルドするためのビルドの詳細設定が含まれています。 SQL CLR オブジェクトのコーディングに使用されている言語 (VB または C#) に基づくさまざまなオプションが用意されています。  
   
-1.  オブジェクトが C# で記述されている場合は、**SQLCLR ビルド**のプロパティ ページで **[詳細]** をクリックして、オプションにアクセスできます。 C# のオプションに関する説明については、「[[ビルドの詳細設定] ダイアログ ボックス (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx)」をご覧ください。  
+1.  オブジェクトが C# で記述されている場合は、**SQLCLR ビルド**のプロパティ ページで **[詳細]** をクリックして、オプションにアクセスできます。 C# のオプションに関する説明については、「[[ビルドの詳細設定] ダイアログ ボックス (C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp)」をご覧ください。  
   
-2.  オブジェクトが VB で記述されている場合は、最初に **[言語]** ボックスの一覧で VB を選択してから、 **[詳細]** をクリックします。 VB のオプションに関する説明については、「[[コンパイラの詳細設定] ダイアログ ボックス (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)」をご覧ください  
+2.  オブジェクトが VB で記述されている場合は、最初に **[言語]** ボックスの一覧で VB を選択してから、 **[詳細]** をクリックします。 VB のオプションに関する説明については、「[[コンパイラの詳細設定] ダイアログ ボックス (Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)」をご覧ください  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>ビルド  
@@ -228,10 +228,9 @@ SQL Server データベース プロジェクトでは、SQLCMD 変数を使用�
 |[詳細設定]|いいえ|イベントと配置の動作を制御するオプションを指定できるコマンド ボタンです。|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>参照パス  
-このページを使用すると、データベース間参照に関連付けられたサーバー変数およびデータベース変数を定義できます。 また、それらの変数の値も指定できます。 詳細については、「 [データベース プロジェクトでの参照の使用](https://msdn.microsoft.com/library/bb386242.aspx)」を参照してください。  
+このページを使用すると、データベース間参照に関連付けられたサーバー変数およびデータベース変数を定義できます。 また、それらの変数の値も指定できます。 詳細については、「 [データベース プロジェクトでの参照の使用](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100))」を参照してください。  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>コード分析  
 コード分析を使用すると、デザイン、名前、パフォーマンスに関する問題など、スクリプト内の潜在的な問題を検出できます。 データベース プロジェクト用の規則は、特定の分野を対象とする定義済みの規則セットにまとめられています。 **[プロジェクトのプロパティ]** ページの **[コード分析]** タブでは、任意の規則を有効化または無効化できます。 同じタブで、プロジェクトがビルドされるたびにコード分析が自動的に実行されるように指定することも、警告をエラーとして処理するかどうかを指定することもできます。  
   
-コード分析を手動で使用するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[コード分析の実行]** をクリックします。 コード分析の警告が **[エラー一覧]** ウィンドウに一覧表示されます。 警告をダブルクリックすると、その問題が含まれるソース コードに移動できます。**[エラーのヘルプを表示]** コンテキスト メニューを使用すると、警告の追加情報および修正候補を表示できます。 コード分析の詳細については、「 [データベース コードの分析によるコードの品質の向上](https://msdn.microsoft.com/library/dd172133.aspx)」を参照してください。  
-  
+コード分析を手動で使用するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[コード分析の実行]** をクリックします。 コード分析の警告が **[エラー一覧]** ウィンドウに一覧表示されます。 警告をダブルクリックすると、その問題が含まれるソース コードに移動できます。**[エラーのヘルプを表示]** コンテキスト メニューを使用すると、警告の追加情報および修正候補を表示できます。 コード分析の詳細については、「 [データベース コードの分析によるコードの品質の向上](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100))」を参照してください。  

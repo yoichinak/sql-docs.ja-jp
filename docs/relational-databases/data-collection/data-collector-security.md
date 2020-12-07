@@ -1,4 +1,5 @@
 ---
+description: データ コレクターのセキュリティ
 title: データ コレクターのセキュリティ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429054"
 ---
 # <a name="data-collector-security"></a>データ コレクターのセキュリティ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -144,7 +145,7 @@ ms.locfileid: "85733853"
 ### <a name="mdw_reader-role"></a>mdw_reader ロール  
  **mdw_reader** ロールのメンバーには、管理データ ウェアハウスへの読み取りアクセス権が与えられます。 このロールの目的は、履歴データへのアクセスを提供してトラブルシューティングをサポートすることであるため、このロールのメンバーは、管理データ ウェアハウスのスキーマのその他の要素を表示することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

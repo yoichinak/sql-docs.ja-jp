@@ -4,7 +4,7 @@ description: 1 つのドキュメントまたはウィンドウをインクリ�
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf507a3ede4e1ed106c5d443bec0034b54d73fe5
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 6e28ed3ad28a47fba60a703882684a1625523675
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122852"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036415"
 ---
 # <a name="search-an-active-document-incrementally"></a>アクティブ ドキュメントのインクリメンタル検索
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,10 +50,9 @@ ms.locfileid: "87122852"
 >  キーボード ショートカット キーの完全な一覧については、「 [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [検索と置換](../../relational-databases/scripting/search-and-replace.md)   
- [ドキュメントの対話形式の検索](../../relational-databases/scripting/search-documents-interactively.md)   
- [結果一覧を使用してドキュメントを検索する方法](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [ワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [正規表現によるテキストの検索](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [検索と置換](./search-and-replace.md)   
+ [ドキュメントの対話形式の検索](./search-documents-interactively.md)   
+ [結果一覧を使用してドキュメントを検索する方法](./search-documents-using-results-lists.md)   
+ [ワイルドカードを使用したテキスト検索](./search-text-with-wildcards.md)   
+ [正規表現によるテキストの検索](./search-text-with-regular-expressions.md)  
   

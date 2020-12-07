@@ -1,4 +1,5 @@
 ---
+description: SharePoint サイトのレポート サーバー アイテムに対する権限の付与
 title: SharePoint サイトのレポート サーバー アイテムに対するアクセス許可の付与 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373358"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセス許可に使用できる、組み込みのセキュリティ機能を提供します。 既にユーザーに権限を割り当てている場合、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] とレポート サーバーの統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。 既存の権限を使用して、レポート定義などのドキュメントのアップロード、レポートの表示、サブスクリプションの作成、アイテムの管理を実行できます。  

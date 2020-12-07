@@ -1,4 +1,5 @@
 ---
+description: GROUPING_ID (Transact-SQL)
 title: GROUPING_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bcd15058633ed82c45b2620aba3621627a58612e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0f2c8332aabe8c6583cd76429aaf1679417a956d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110964"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111111"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "87110964"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
   
@@ -74,7 +74,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
  ステートメント A:  
   
-```  
+```sql  
 SELECT GROUPING_ID(A,B)  
 FROM T   
 GROUP BY CUBE(A,B)   
@@ -82,7 +82,7 @@ GROUP BY CUBE(A,B)
   
  ステートメント B:  
   
-```  
+```sql  
 SELECT 3 FROM T GROUP BY ()  
 UNION ALL  
 SELECT 1 FROM T GROUP BY A  
@@ -97,7 +97,7 @@ SELECT 0 FROM T GROUP BY A,B
 ### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. GROUPING_ID を使用してグループ化レベルを識別する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Name` と `Title` ごとの従業員数、`Name,` ごとの従業員数、および会社の合計従業員数が返されます。 `GROUPING_ID()` は、集計レベルを示す `Title` 列の各行に対する値を作成するために使われます。  
   
-```  
+```sql  
 SELECT D.Name  
     ,CASE   
     WHEN GROUPING_ID(D.Name, E.JobTitle) = 0 THEN E.JobTitle  
@@ -121,7 +121,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 #### <a name="simple-example"></a>簡単な例  
  役職ごとの従業員数が含まれた行のみを返すには、次のコードの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` からコメント文字を削除します。 部門ごとの従業員数が含まれた行のみを返すには、`HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;` からコメント文字を削除します。  
   
-```  
+```sql  
 SELECT D.Name  
     ,E.JobTitle  
     ,GROUPING_ID(D.Name, E.JobTitle) AS 'Grouping Level'  
@@ -156,9 +156,9 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
 #### <a name="complex-example"></a>複雑な例  
  次の例では、`GROUPING_ID()` を使用して、複数のグループ化レベルが含まれた結果セットをグループ化レベルでフィルター処理します。 これと同様のコードを使用すると、複数のグループ化レベルがあるビューとストアド プロシージャを作成できます。このストアド プロシージャは、ビューをグループ化レベルでフィルター処理するパラメーターを渡すことによって、ビューを呼び出します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
-```  
-DECLARE @Grouping nvarchar(50);  
-DECLARE @GroupingLevel smallint;  
+```sql  
+DECLARE @Grouping NVARCHAR(50);  
+DECLARE @GroupingLevel SMALLINT;  
 SET @Grouping = N'CountryRegionCode Total';  
   
 SELECT @GroupingLevel = (  
@@ -248,14 +248,14 @@ ORDER BY
 #### <a name="rollup-example"></a>ROLLUP の例  
  この例では、すべてのグループ化レベルが次の CUBE 例の場合と同様に表示されるわけではありません。 `ROLLUP` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
      AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  
@@ -329,14 +329,14 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  前の例の `ROLLUP` と異なり、`CUBE` ではすべてのグループ化レベルが出力されます。 `CUBE` リストの列の順序が変更された場合は、`Grouping Level` 列のレベル値も変更する必要があります。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
         AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  

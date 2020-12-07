@@ -1,4 +1,5 @@
 ---
+description: NOT (DMX)
 title: NOT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 03a8ea859160af36b9c822bf01c4197e8b4c3175
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426264"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,17 +35,17 @@ NOT Expression1
 ## <a name="return-value"></a>戻り値  
  引数の結果が TRUE の場合は FALSE を返し、そうでない場合は TRUE を返すブール値です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  引数は、演算子が論理否定を実行する前に、ブール値 (FALSE の場合は0、それ以外の場合は TRUE) として処理されます。 *Expression1*が TRUE の場合、演算子は FALSE を返します。 *Expression1*が FALSE の場合、演算子は TRUE を返します。 次の表は、論理積の実行方法を示しています。  
   
 |Expression1|戻り値はです。|  
 |-----------------------|---------------------|  
-|TRUE|FALSE|  
-|FALSE|TRUE|  
+|true|false|  
+|false|true|  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [DMX&#41;&#40;論理演算子](../dmx/operators-logical.md)   
- [DMX&#41;&#40;オペレーター](../dmx/operators-dmx.md)  
+ [DMX&#41;&#40;論理演算子 ](../dmx/operators-logical.md)   
+ [DMX&#41;&#40;オペレーター ](../dmx/operators-dmx.md)  
   
   

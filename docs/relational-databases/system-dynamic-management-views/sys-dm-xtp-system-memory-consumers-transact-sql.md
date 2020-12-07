@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322598"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543791"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>dm_xtp_system_memory_consumers (Transact-sql)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
-|列名|Type|説明|  
+|列名|種類|説明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリコンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次のいずれかの値を持つメモリコンシューマーの種類を表す整数。<br /><br /> 0: 表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルックアサイド: システムルックアサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP: 可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページプール: IO 操作に使用されるシステムページプールのメモリ使用量を追跡します。|  

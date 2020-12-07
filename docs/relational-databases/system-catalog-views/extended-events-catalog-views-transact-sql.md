@@ -1,4 +1,5 @@
 ---
+description: 拡張イベント カタログ ビュー (Transact-SQL)
 title: 拡張イベントのカタログビュー (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - xe
 - catalog views [SQL Server], extended events
 ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 114958d9701b784ef3c8a4dd950e6cd62a0ca9ba
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d5716feb3fd79327ffdbe0f43701becf9958b5b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442622"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545120"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>拡張イベント カタログ ビュー (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

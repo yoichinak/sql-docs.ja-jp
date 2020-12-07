@@ -2,7 +2,7 @@
 title: SQL Server 2019:ハードウェアとソフトウェアの要件
 description: SQL Server 2019 をインストールして実行するためのハードウェア、ソフトウェア、およびオペレーティング システムの要件の一覧。
 ms.custom: sqlfreshmay19
-ms.date: 02/19/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -43,14 +43,14 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-ms.author: mikeray
-author: MikeRayMSFT
-ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.author: chadam
+author: cawrites
+ms.openlocfilehash: 460de4547ababdaac8dff28ff71c53520726ad53
+ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245639"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96121119"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019:ハードウェアとソフトウェアの要件
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "87245639"
 
 
 > [!IMPORTANT]
-> PolyBase 機能には、ハードウェアとソフトウェアに追加の要件があります。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/get-started-with-polybase.md)」を参照してください。  
+> PolyBase 機能には、ハードウェアとソフトウェアに追加の要件があります。 詳細については、「 [PolyBase 入門](../../relational-databases/polybase/polybase-guide.md)」を参照してください。  
   
 
 ##  <a name="operating-system-support"></a><a name="TOP_Principal"></a> オペレーティング システムのサポート 
@@ -113,11 +113,11 @@ ms.locfileid: "87245639"
 | Windows Server 2016 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2016 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2016 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows 10 IoT Enterprise         |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | Windows 10 Enterprise             |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | Windows 10 Professional           |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | Windows 10 Home                   |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | &nbsp; | &nbsp; |
-
 
 ### <a name="server-core-support"></a>Server Core サポート
 
@@ -176,7 +176,7 @@ Server Core への SQL Server のインストールの詳細については、�
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は現在、標準のネイティブ セクター サイズである 512 バイトと 4 KB のディスク ドライブに対応しています。  ハード ディスクのセクター サイズが 4 KB を超える場合、それに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルを格納しようとするとエラーが発生することがあります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているハード ディスク セクターのサイズに関する詳細については、[SQL Server でのハード ディスク ドライブ セクターのサイズのサポート範囲](https://support.microsoft.com/kb/926930)に関するページを参照してください。 
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 tempdb のデータ ファイルおよびログ ファイルに指定されたパスが、すべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。
 - ストレージの共有  
-- [記憶域スペース ダイレクト \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+- [記憶域スペース ダイレクト \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 - SMB ファイル共有  
     - スタンドアロン インストールやクラスター化されたインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルに対して SMB ストレージはサポートされていません。 代わりに、直接アタッチされたストレージ、ストレージ エリア ネットワーク、または S2D を使用してください。 
     - SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
@@ -205,6 +205,4 @@ Server Core への SQL Server のインストールの詳細については、�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server のインストールのためのハードウェアとソフトウェアの要件を確認した後は、[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)を開始したり、[SQL Server のセキュリティに関する考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)を確認したりできます。
-
-
+SQL Server のインストールのためのハードウェアとソフトウェアの要件を確認したら、[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)を開始したり、[SQL Server のセキュリティに関する考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)を確認したりできます。

@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (geography データ型)
 title: IsValidDetailed (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422356"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555225"
   
  CLR 戻り値の型: **string**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  次の表に、返される可能性のある戻り値を示します。  
   
 |戻り値|説明|  

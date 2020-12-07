@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepexec (Transact-SQL)
 title: sp_cursorprepexec (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c77a02d7232acdd9dd2f109c6e7ae2d56121382e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831670"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549923"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,32 +43,32 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>引数  
  *準備済みハンドル*  
- は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成される準備済み*ハンドル*識別子です。 *準備*されたハンドルが必要です。 **int**を返します。  
+ は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成される準備済み *ハンドル* 識別子です。 *準備* されたハンドルが必要です。 **int**を返します。  
   
  *cursor*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成されたカーソル識別子です。 *cursor*は必須のパラメーターであり、このカーソルに対して操作する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成されたカーソル識別子です。 *cursor* は必須のパラメーターであり、このカーソルに対して操作する後続のすべてのプロシージャ (sp_cursorfetch など) で指定する必要があります。  
   
  *params*  
- パラメーター化されたステートメントを指定します。 変数の*params*定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params*は、 **ntext**、 **nchar**、または**nvarchar**の入力値を呼び出す必須のパラメーターです。  
+ パラメーター化されたステートメントを指定します。 変数の *params* 定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params* は、 **ntext**、 **nchar**、または **nvarchar** の入力値を呼び出す必須のパラメーターです。  
   
 > [!NOTE]  
 >  *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、入力値として**ntext**文字列を使用します。  
   
- *諸表*  
+ *statement*  
  カーソル結果セットを定義します。 *ステートメント*のパラメーターは必須であり、 **ntext**、 **nchar**、または**nvarchar**の入力値に対してを呼び出します。  
   
 > [!NOTE]  
->  Stmt 値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は**ntext**である必要があります。  
+>  Stmt 値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は **ntext**である必要があります。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 * オプションには、次の**int**入力値が必要です。  
+ カーソル結果セット列の説明を返す省略可能なパラメーターです。 * オプションには、次の **int** 入力値が必要です。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
- スクロールオプション。 *scrollopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
+ スクロールオプション。 *scrollopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -86,16 +87,16 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 要求されたオプションが* \< stmt>* によって定義されたカーソルに適していない可能性があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な型が割り当てられ、この値が変更されます。  
+ 要求されたオプションがで定義されているカーソルに適していない可能性があるため *\<stmt>* 、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な型が割り当てられ、この値が変更されます。  
   
  *ccopt*  
- 同時実行制御オプション。 *ccopt*は省略可能なパラメーターで、次のいずれかの**int**入力値を必要とします。  
+ 同時実行制御オプション。 *ccopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
-|0x0004|**オプティミスティック**(以前は optcc と呼ばれていました)|  
+|0x0004|**オプティミスティック** (以前は optcc と呼ばれていました)|  
 |0x0008|オプティミスティック (以前の OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -108,13 +109,13 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *同様 scrollpt,* と同様に、は要求された値とは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
  *行*  
- AUTO_FETCH で使用するフェッチバッファー行の数を示す省略可能なパラメーターです。 既定値は20行です。 *rowcount*の動作は、入力値と戻り値として割り当てられた場合に異なります。  
+ AUTO_FETCH で使用するフェッチバッファー行の数を示す省略可能なパラメーターです。 既定値は20行です。 *rowcount* の動作は、入力値と戻り値として割り当てられた場合に異なります。  
   
 |入力値として|戻り値として|  
 |--------------------|---------------------|  
-|FAST_FORWARD cursor で AUTO_FETCH が指定されている場合、 *rowcount*はフェッチバッファーに格納する行の数を表します。|結果セット内の行の数を表します。 *Scrollopt* AUTO_FETCH 値を指定すると、 *rowcount*はフェッチバッファーにフェッチされた行の数を返します。|  
+|FAST_FORWARD cursor で AUTO_FETCH が指定されている場合、 *rowcount* はフェッチバッファーに格納する行の数を表します。|結果セット内の行の数を表します。 *Scrollopt* AUTO_FETCH 値を指定すると、 *rowcount*はフェッチバッファーにフェッチされた行の数を返します。|  
 
-*parameter_name*Params 引数で定義されている1つ以上のパラメーター名を指定します。  Params に含まれるすべてのパラメーターにパラメーターが指定されている必要があります。 この引数は、Transact-sql ステートメントまたはバッチ内のバッチにパラメーターが定義されていない場合は必要ありません。
+*parameter_name* Params 引数で定義されている1つ以上のパラメーター名を指定します。  Params に含まれるすべてのパラメーターにパラメーターが指定されている必要があります。 この引数は、Transact-sql ステートメントまたはバッチ内のバッチにパラメーターが定義されていない場合は必要ありません。
   
 ## <a name="return-code-values"></a>リターン コードの値  
  Params が NULL 値を返す場合、ステートメントはパラメーター化されません。  

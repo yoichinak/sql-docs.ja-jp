@@ -1,4 +1,5 @@
 ---
+description: 関数 (DMX)
 title: 関数 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 891bad9f62174ec00451e533fe94063a21dc62af
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971687"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726196"
 ---
 # <a name="functions-dmx"></a>関数 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,12 +44,12 @@ SELECT lCase([Attribute_Name])
 FROM [TM_Decision_Tree].CONTENT  
 ```  
   
- VBA と Excel の両方に同じ関数が存在する場合は、DMX ステートメントで**vba**または**excel**を使用して関数名の前に付ける必要があります。 たとえば、またはを使用 `VBA!Log` し `Excel!Log` ます。 使用する VBA または Excel 関数が DMX または多次元式 (MDX) にも存在する場合、または関数にドル記号 ($) が含まれている場合は、角かっこ ([]) を使用して関数をエスケープする必要があります。 たとえば、関数呼び出しは `[VBA!Format]` のようになります。  
+ VBA と Excel の両方に同じ関数が存在する場合は、DMX ステートメントで **vba** または **excel**を使用して関数名の前に付ける必要があります。 たとえば、またはを使用 `VBA!Log` し `Excel!Log` ます。 使用する VBA または Excel 関数が DMX または多次元式 (MDX) にも存在する場合、または関数にドル記号 ($) が含まれている場合は、角かっこ ([]) を使用して関数をエスケープする必要があります。 たとえば、関数呼び出しは `[VBA!Format]` のようになります。  
   
 ## <a name="stored-procedures"></a>ストアド プロシージャ  
  共通言語ランタイム プログラミング言語を使用して、DMX の機能を拡張するストアド プロシージャを作成できます。 たとえば、回帰ツリーマイニングモデルは、回帰式を記述する A、B などの係数を返しますが、モデルは + Bx = y などの式自体を返しません。 ただし、データ マイニング モデル オブジェクトを使用して、コンテンツ スキーマを操作し、出力として回帰式を返すストアド プロシージャは記述できます。 したがって、DMX ステートメントは、クエリ結果の一部として回帰式の一覧を返すことができます。  
   
- **詳細については、「** [多次元モデルアセンブリ管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)」を参照してください。  
+ **詳細については、「** [多次元モデルアセンブリ管理](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -57,8 +58,7 @@ FROM [TM_Decision_Tree].CONTENT
  [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
  [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数 ](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

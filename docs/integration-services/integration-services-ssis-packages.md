@@ -1,4 +1,5 @@
 ---
+description: Integration Services (SSIS) パッケージ
 title: Integration Services (SSIS) パッケージ | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917516"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193857"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
 
@@ -60,12 +61,12 @@ ms.locfileid: "86917516"
 ### <a name="configurations"></a>構成  
  構成とは、パッケージが実行されるときの、パッケージおよびそのタスク、コンテナー、変数、およびイベント ハンドラーのプロパティを定義する、プロパティと値の組み合わせのことです。 構成を使用すると、パッケージを変更しなくてもプロパティを更新できます。 パッケージが実行されると、構成情報が読み込まれ、プロパティの値が更新されます。 たとえば、構成を使用して接続の接続文字列を更新できます。  
   
- パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](../integration-services/packages/create-package-configurations.md)」を参照してください。  
+ パッケージを別のコンピューターにインストールすると、パッケージと共に構成が保存され、配置されます。 パッケージのインストールの際、別の環境でパッケージがサポートされるように、構成の値を更新できます。 詳細については、「 [パッケージ構成を作成する](./packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 ### <a name="logging-and-log-providers"></a>ログ記録とログ プロバイダー  
  ログとは、パッケージの実行時に収集される、パッケージに関する情報の集まりのことです。 たとえば、ログにはパッケージの実行開始時刻と終了時刻を記録できます。 ログ プロバイダーとは、パッケージとそのコンテナーおよびタスクが実行時の情報を記録するために使用する、記録先の種類と形式を定義するものです。 ログはパッケージに関連付けられますが、パッケージ内のタスクとコンテナーの情報は、任意のパッケージ ログに記録できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、ログ記録用の各種のログ プロバイダーが組み込まれています。 たとえば [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] およびテキスト ファイル用のログ プロバイダーが含まれます。 また、カスタム ログ プロバイダーを作成してログ記録用に使用することもできます。 詳細については、「[Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-### <a name="variables"></a>変数:  
+### <a name="variables"></a>変数  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、システム変数とユーザー定義変数がサポートされます。 システム変数は、実行時のパッケージ オブジェクトに関する有益な情報を提供します。またユーザー定義変数を使用すると、パッケージのシナリオをユーザー独自でサポートできます。 どちらの種類の変数も、式、スクリプト、および構成の内部で使用できます。  
   
  パッケージ レベルの変数には、1 つのパッケージで使用できる定義済みのシステム変数と、パッケージの範囲を定めたユーザー定義変数が含まれます。 詳細については、「 [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。  
@@ -77,7 +78,7 @@ ms.locfileid: "86917516"
  パッケージ オブジェクトを構成して、チェックポイントでのパッケージの再開、デジタル証明書を使用したパッケージの署名、パッケージの保護レベルの設定、およびトランザクションを使用したデータ整合性の検証などの機能をサポートできます。  
   
 ### <a name="restarting-packages"></a>パッケージの再開  
- パッケージには、チェックポイント プロパティが含まれます。これを使用すると、1 つ以上のタスクが失敗した場合にパッケージを再開できます。 たとえば、異なる 2 つのテーブルを更新する 2 つのデータ フロー タスクがパッケージに含まれ、2 番目のタスクが失敗した場合、最初のデータ フロー タスクを繰り返さずにそのパッケージを再実行できます。 パッケージの再開を使用すると、実行時間が長いパッケージで時間を節約できます。 再開とは、パッケージ全体を再実行するのではなく、失敗したタスクからパッケージを開始できるということです。 詳細については、「[チェックポイントを使用してパッケージを再開する](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
+ パッケージには、チェックポイント プロパティが含まれます。これを使用すると、1 つ以上のタスクが失敗した場合にパッケージを再開できます。 たとえば、異なる 2 つのテーブルを更新する 2 つのデータ フロー タスクがパッケージに含まれ、2 番目のタスクが失敗した場合、最初のデータ フロー タスクを繰り返さずにそのパッケージを再実行できます。 パッケージの再開を使用すると、実行時間が長いパッケージで時間を節約できます。 再開とは、パッケージ全体を再実行するのではなく、失敗したタスクからパッケージを開始できるということです。 詳細については、「 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
 ### <a name="securing-packages"></a>パッケージの保護  
  デジタル署名を使用してパッケージに署名したり、パスワードまたはユーザー キーを使用してパッケージを暗号化できます。 デジタル署名により、パッケージのソースが認証されます。 ただし、パッケージの読み込み時にデジタル署名を確認するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を構成する必要もあります。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 」および「 [パッケージ内の機微なデータへのアクセス制御](../integration-services/security/access-control-for-sensitive-data-in-packages.md)」を参照してください。  
@@ -116,5 +117,4 @@ ms.locfileid: "86917516"
 -   [SQL Server データ ツールでのパッケージの作成](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   開発者ガイドの「[プログラムによるパッケージの作成](../integration-services/building-packages-programmatically/building-packages-programmatically.md)」を参照してください。 
-  
   

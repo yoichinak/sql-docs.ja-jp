@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_description
 title: catalog.set_customized_logging_level_description | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5243a4caf0f380adb89e6fdcb4bdd689ac0a681
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99d413f8447a79331f92229a295192b6c0c5ea72
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912908"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129732"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
 
@@ -41,7 +42,7 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
   
  *level_description* は **nvarchar (1024)** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

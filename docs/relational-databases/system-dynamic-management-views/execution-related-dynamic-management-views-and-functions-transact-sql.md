@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b77497e87725ad65b766038afc1b50094a2363fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2acd26b8fb88fa6cf51c6b8715eee9cdfca8ad49
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375118"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834303"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "88375118"
 
         [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md)
 
-        [dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+        [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
 
         [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)
 
         [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)
 
-        [dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)
+        [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)
 
         [sys.dm_exec_session_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)
 
@@ -117,11 +117,9 @@ ms.locfileid: "88375118"
 :::row-end:::
 
 > [!NOTE]  
->  **Dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
+>  **Sys.dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システムビュー &#40;Transact-sql&#41;](../../t-sql/language-reference.md)  
   
-  
-

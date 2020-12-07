@@ -1,4 +1,5 @@
 ---
+description: Data Quality Services の概要
 title: Data Quality Services の概要
 ms.date: 03/05/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46a95e0cdd54360a91aa56cfde86be6fff8d0c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462102"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
 
@@ -24,7 +25,7 @@ ms.locfileid: "85901618"
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。  
   
-##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a>DQS のビジネスニーズ  
+##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a> DQS のビジネスニーズ  
  不正確なデータの原因として、ユーザーの入力エラー、転送または格納時の破損、データ辞書定義の不一致、データ品質およびデータ処理に関するその他の問題などが考えられます。 異なるデータ標準を使用する異なるソースからデータを集計すると、任意のルールが適用されたり履歴データが上書きされたりして、データの一貫性が損なわれる可能性があります。 不正確なデータは、業務の遂行や顧客へのサービス提供に影響を及ぼして、信頼性や収益の損失、顧客の不満足、コンプライアンスの問題につながります。 システムが自動化されている場合、不正確なデータでは機能しないこともあり、手動で処理を実行する時間と労力の浪費になります。 誤ったデータは、データ解析、レポート作成、データ マイニング、データ ウェアハウスに大混乱をもたらす可能性があります。  
   
  企業や公共機関の効率性を確保するためには高品質なデータが非常に重要です。 どのような規模の組織でも、DQS を使用することで、データの情報価値を高め、データを使用目的にいっそう適したものにすることができます。 データ品質ソリューションは、データの信頼性、アクセス可能性、再利用可能性を高めることができます。 データの完全性、正確性、適合性、整合性を向上させ、ビジネス インテリジェンスやデータ ウェアハウスのワークロードおよび稼働状態の OLTP システムにおいて不適切なデータによって発生する問題を解決できます。  

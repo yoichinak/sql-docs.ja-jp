@@ -1,6 +1,6 @@
 ---
 title: 分離レベル (OLE DB ドライバー) | Microsoft Docs
-description: 分離レベル (OLE DB)
+description: OLE DB Driver for SQL Server のコンシューマーで接続のトランザクション分離レベルを制御する方法について説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - isolation levels [OLE DB]
 - transactions [OLE DB]
 - OLE DB Driver for SQL Server, transactions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 60fce8b96ff116f1c1e92a75e1335a33207d36d3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87b3a348a7219eda5868223b167b2ecf851c2079
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861882"
 ---
 # <a name="isolation-levels-ole-db"></a>分離レベル (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

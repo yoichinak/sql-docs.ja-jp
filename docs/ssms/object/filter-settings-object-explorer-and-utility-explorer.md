@@ -1,4 +1,5 @@
 ---
+description: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
 title: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66ae081ad6fcfb5b5d361201430ea9fb4d8dcd6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50a7eccca6f889a7bff57b244d8c209af7b73ec2
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001959"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037206"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,6 +75,5 @@ ms.locfileid: "86001959"
 現在のすべてのフィルター設定を削除します。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Management Studio の使用 [SQL Server]](../../ssms/use-sql-server-management-studio.md)  
+[SQL Server Management Studio の使用 [SQL Server]](../sql-server-management-studio-ssms.md)  
 [SQL Server ユーティリティの概要](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  

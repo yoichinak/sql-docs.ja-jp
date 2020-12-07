@@ -1,4 +1,5 @@
 ---
+description: getFunctions メソッド (SQLServerDatabaseMetaData)
 title: getFunctions メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cafef140d505197bfe1993f65ef17d4cb53e19f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 517cafe5157848948f0a6ffa9005a255510556a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435944"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +61,7 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  各関数の記述には、次の列が含まれます。  
   
-|Name|種類|説明|  
+|名前|種類|説明|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|関数が存在するデータベースの名前です。|  
 |FUNCTION_SCHEM|**String**|関数が存在するスキーマの名前です。|  

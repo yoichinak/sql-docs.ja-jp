@@ -1,4 +1,5 @@
 ---
+description: Integration Services のデータ型
 title: Integration Services のデータ型 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495873"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
 
@@ -56,15 +57,15 @@ ms.locfileid: "86904920"
 |DT_I4|4 バイトの符号付き整数です。|  
 |DT_I8|8 バイトの符号付き整数です。|  
 |DT_NUMERIC|有効桁数と小数点以下桁数が固定長の、正確な数値です。 このデータ型は、16 バイトの符号なし整数で、区切り記号および 0 から 38 までの小数点以下桁数を持ち、最大有効桁数は 38 です。|  
-|DT_R4|単精度浮動小数点値です。|  
-|DT_R8|倍精度浮動小数点値です。|  
+|DT_R4|単精度浮動小数点数値。|  
+|DT_R8|倍精度浮動小数点数値。|  
 |DT_STR|NULL で終わる [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 文字の文字列で、最大長は 8,000 文字です。 列の値に追加の NULL ターミネータが含まれている場合、その文字列は最初に NULL が出現した箇所で切り捨てられます。|  
 |DT_UI1|1 バイトの符号なし整数です。|  
 |DT_UI2|2 バイトの符号なし整数です。|  
 |DT_UI4|4 バイトの符号なし整数です。|  
 |DT_UI8|8 バイトの符号なし整数です。|  
 |DT_WSTR|NULL で終わる Unicode 文字の文字列で、最大長は 4,000 文字です。 列の値に追加の NULL ターミネータが含まれている場合、その文字列は最初に NULL が出現した箇所で切り捨てられます。|  
-|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 。|  
+|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 .|  
 |DT_NTEXT|最大長が 2^30 - 1 (1,073,741,823) 文字の Unicode 文字列です。|  
 |DT_TEXT|最大長が 2^31-1 (2,147,483,647) 文字の [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 文字列です。|  
   
@@ -224,7 +225,7 @@ ms.locfileid: "86904920"
   
 |データ型|SQL Server<br /><br /> (SQLOLEDB、SQLNCLI10)|SQL Server (SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
-|DT_BOOL|bit|bit|bit||||  
+|DT_BOOL|bit|bit|ビット||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
@@ -239,10 +240,10 @@ ms.locfileid: "86904920"
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
 |DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
-|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I4|INT|INT|Long||INTEGER|整数|  
 |DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|real|real|Single||real|real|  
+|DT_R4|real|real|Single||real|実数|  
 |DT_R8|float|float|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||VarChar||char、varchar|char、varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_category (Transact-SQL)
 title: sp_help_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901528"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549708"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,28 +43,28 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'`要求する情報に関するクラス。 *クラス*は**varchar (8)**,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
+`[ @class = ] 'class'` 要求する情報に関するクラス。 *クラス* は **varchar (8)**,、既定値は **JOB**です。 *クラス* には、次のいずれかの値を指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
 |**OPERATOR**|オペレーター カテゴリに関する情報|  
   
-`[ @type = ] 'type'`情報を要求するカテゴリの種類。 *型*は**varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'` 情報を要求するカテゴリの種類。 *型* は **varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|[説明]|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**地元の**|ローカルジョブカテゴリ。|  
+|**LOCAL**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
 |**NONE**|**JOB**以外のクラスのカテゴリ。|  
   
-`[ @name = ] 'name'`情報が要求されるカテゴリの名前。 *名前*は**sysname**,、既定値は NULL です。  
+`[ @name = ] 'name'` 情報が要求されるカテゴリの名前。 *名前* は **sysname**,、既定値は NULL です。  
   
-`[ @suffix = ] suffix`結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
+`[ @suffix = ] suffix` 結果セットの **category_type** 列が ID と名前のどちらであるかを指定します。 *サフィックス* は **ビット**,、既定値は **0**です。 **1** は **category_type** を名前として示し、 **0** は ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  ** \@ サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
@@ -82,13 +83,13 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>注釈  
- **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_help_category** は、 **msdb** データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -112,7 +113,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B: アラート情報を返す  
+### <a name="b-returning-alert-information"></a>B. アラート情報を返す  
  次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
@@ -125,7 +126,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

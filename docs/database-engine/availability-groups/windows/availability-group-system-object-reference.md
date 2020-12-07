@@ -6,16 +6,16 @@ ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: reference
+author: cawrites
+ms.author: chadam
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b6afc86afc567e2d6f93b45dae8fb9fd4861525
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 99a600e29cf8b1f8bda8b093e9b51c572d86ad9b
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522406"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584669"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性グループ システム オブジェクト リファレンス
 

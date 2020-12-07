@@ -1,4 +1,5 @@
 ---
+description: sp_help_operator (Transact-sql)
 title: sp_help_operator (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891722"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535385"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @operator_name = ] 'operator_name'`演算子名。 *operator_name*は**sysname**です。 *Operator_name*が指定されていない場合は、すべての演算子に関する情報が返されます。  
+`[ @operator_name = ] 'operator_name'` 演算子名。 *operator_name* は **sysname**です。 *Operator_name*が指定されていない場合は、すべての演算子に関する情報が返されます。  
   
-`[ @operator_id = ] operator_id`情報を要求するオペレーターの識別番号を指定します。 *operator_id*は**int**,、既定値は NULL です。  
+`[ @operator_id = ] operator_id` 情報を要求するオペレーターの識別番号を指定します。 *operator_id*は **int**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Operator_id*または*operator_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -58,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|オペレーター識別番号。|  
 |**name**|**sysname**|オペレーター名。|  
-|**enabled**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
+|**有効**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**email_address**|**nvarchar (100)**|オペレーターの電子メールアドレス。|  
 |**last_email_date**|**int**|オペレーターが最後に電子メールで通知した日付。|  
 |**last_email_time**|**int**|オペレーターが最後に電子メールで通知した時刻。|  
@@ -77,11 +78,11 @@ sp_help_operator
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
 |**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   
-## <a name="remarks"></a>Remarks  
- **sp_help_operator**は、 **msdb**データベースから実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **sp_help_operator** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -91,7 +92,7 @@ sp_help_operator
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、オペレーター `François Ajenstat` についての情報をレポートします。  
   
 ```  

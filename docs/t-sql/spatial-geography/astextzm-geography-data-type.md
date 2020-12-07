@@ -1,4 +1,5 @@
 ---
+description: AsTextZM (geography データ型)
 title: AsTextZM (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 20bcc248f04e5f432cb99ba83640f34e436fb3c5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 49857a94c95240386893854408d2b26cba533815
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555519"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96115164"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

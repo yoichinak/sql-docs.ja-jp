@@ -1,4 +1,5 @@
 ---
+description: DROP EVENT NOTIFICATION (Transact-SQL)
 title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 22621d34994c7c137b741ad01086d7226608584d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9c3faeeac400e02f9cb01fcfc4af66c2ee5fe09d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484547"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131295"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  イベント通知のスコープが、*queue_name* で指定されたキューに適用されることを示します。 イベント通知の作成時に QUEUE を指定した場合は、QUEUE を指定する必要があります。 同様に、キューの名前である *queue_name* も指定する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  トランザクション内でイベント通知が開始され、同じトランザクション内で削除される場合は、イベント通知インスタンスが送信されてから、このイベント通知が削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -85,7 +86,7 @@ DROP EVENT NOTIFICATION NotifyALTER_T1
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   

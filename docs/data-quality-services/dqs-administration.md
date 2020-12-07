@@ -1,4 +1,5 @@
 ---
+description: DQS 管理
 title: DQS 管理
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487790"
 ---
 # <a name="dqs-administration"></a>DQS 管理
 
@@ -42,7 +43,7 @@ ms.locfileid: "85888107"
   
 -   イベントの重大度レベルに基づくログを構成します。  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Data Quality Client を使用した管理アクティビティ  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Data Quality Client を使用した管理アクティビティ  
  以下のアクティビティは、 **の** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]機能を使用して行います。  
   
 ### <a name="activity-monitoring"></a>[アクティビティ監視]  
@@ -82,7 +83,7 @@ ms.locfileid: "85888107"
 |DQS データベースのバックアップと復元の方法について説明します。|[DQS データベースのバックアップと復元](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS データベースをデタッチおよびアタッチする方法について説明します。|[DQS データベースのデタッチとアタッチ](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS での Data Services の参照](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS ログファイルの管理](../data-quality-services/manage-dqs-log-files.md)   
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

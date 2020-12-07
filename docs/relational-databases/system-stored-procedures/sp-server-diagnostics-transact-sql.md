@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics (Transact-SQL)
 title: sp_server_diagnostics (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783739"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547413"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`正常性情報を送信するために、ストアドプロシージャが繰り返し実行される時間間隔を示します。  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 正常性情報を送信するために、ストアドプロシージャが繰り返し実行される時間間隔を示します。  
   
- *repeat_interval_in_seconds*は**int**で、既定値は0です。 有効なパラメーター値は0、または5以上の値です。 ストアドプロシージャは、完全なデータを返すために少なくとも5秒間実行する必要があります。 繰り返しモードで実行するストアドプロシージャの最小値は5秒です。  
+ *repeat_interval_in_seconds* は **int** で、既定値は0です。 有効なパラメーター値は0、または5以上の値です。 ストアドプロシージャは、完全なデータを返すために少なくとも5秒間実行する必要があります。 繰り返しモードで実行するストアドプロシージャの最小値は5秒です。  
   
  このパラメーターが指定されていない場合、または指定した値が 0 の場合、このストアド プロシージャはデータを 1 回返して終了します。  
   
@@ -54,16 +55,16 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
-**sp_server_diagnostics**は次の情報を返します。  
+**sp_server_diagnostics** は次の情報を返します。  
   
 |列|データ型|説明|  
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
-|**component_type**|**sysname**|行に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|行に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> インスタンス<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |**状態**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|状態列について説明します。 State 列の値に対応する説明は次のとおりです。<br /><br /> 0: 不明<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
-|**データ**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
+|**data**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
  5つのコンポーネントの説明を次に示します。  
   
@@ -79,7 +80,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: 指定された可用性グループのデータを収集します (component_type が "Always On: AvailabilityGroup" の場合)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 障害の観点から見ると、システム、リソース、および query_processing コンポーネントはエラーの検出に利用され、io_subsystem とイベントのコンポーネントは診断目的でのみ利用されます。  
   
 次の表は、コンポーネントと関連する正常性状態の対応を示しています。  
@@ -100,7 +101,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="permissions"></a>アクセス許可  
 サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 拡張セッションを使用して正常性の情報をキャプチャし、SQL Server の外部にあるファイルに保存することをお勧めします。 そのため、エラーが発生してもアクセスできます。 次の例は、イベント セッションからの出力をファイルに保存します。  
 ```sql  
 CREATE EVENT SESSION [diag]  
@@ -240,7 +241,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>関連項目  
- [フェールオーバークラスターインスタンスのフェールオーバーポリシー](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+## <a name="see-also"></a>参照  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

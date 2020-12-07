@@ -1,4 +1,5 @@
 ---
+description: time (Transact-SQL)
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88368258"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "86007983"
 |使用法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の場合は、0 ～ 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100 ナノ秒) です。|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳細については、「[下位クライアントの下位互換性](#BackwardCompatibilityforDownlevelClients)」セクションを参照してください。|  
-|Range|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
+|範囲|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
 |要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica の場合は、n\* は 0 ～ 3 桁の数字です (0 ～ 999)。|  
 |文字長|8 文字 (hh:mm:ss) 以上、16 文字 (hh:mm:ss.nnnnnnn) 以下。 Informatica の場合は、最大 12 文字 (hh:mm:ss.nnn) です。|  
 |有効桁数、小数点以下桁数<br /><br /> (ユーザーは小数点以下桁数のみ指定)|次の表を参照してください。|  
@@ -57,7 +58,7 @@ ms.locfileid: "86007983"
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
   
-|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト)|1 秒未満の<br /><br /> seconds<br /><br /> precision|  
+|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト)|1 秒未満の<br /><br /> seconds<br /><br /> 精度|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) (Informatica では (12,3))|5 (Informatica では 4)|7 (Informatica では 3)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -76,11 +77,11 @@ ms.locfileid: "86007983"
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|AM を指定したかどうかに関係なく、時刻値 0 は午前 0 時を表します。 時刻値が 0 のときに PM を指定することはできません。<br /><br /> AM と PM のどちらも指定していない場合、01 から 11 までの時刻値は午前の時刻を表します。 これらの値は、AM を指定した場合も午前の時刻を表します。 PM を指定すると、午後の時刻を表します。<br /><br /> AM と PM のどちらも指定していない場合、時刻値 12 は正午を表します。 AM を指定すると、午前の時刻を表します。 PM を指定すると、正午を表します。 たとえば、12:01 という値は、12:01 PM では正午を 1 分過ぎた時刻、12:01 AM では午前 0 時を 1 分過ぎた時刻を表します。 12:01 AM と指定することは、00:01 または 00:01 AM と指定することと同じです。<br /><br /> 13 から 23 までの時刻値は、AM または PM を指定していなくても、午後の時刻を表します。 また、PM を指定した場合も午後の時刻を表します。 時刻値が 13 から 23 までの場合、AM を指定することはできません。<br /><br /> 24 という時刻値は無効です。 午前 0 時を表すには、12:00 AM または 00:00 を使います。<br /><br /> ミリ秒の前には、コロン (:) またはピリオド (.) を付けます。 コロンを付けると、その数値は 1000 分の 1 秒単位になります。 ピリオドを付けると、数字が 1 桁なら 10 分の 1 秒単位に、2 桁なら 100 分の 1 秒単位に、3 桁なら 1000 分の 1 秒単位になります。 たとえば、12:30:20:1 は 12 時 30 分を 20 と 1000 分の 1 秒過ぎた時刻を表し、12:30:20.1 は 12 時 30 分を 20 と 10 分の 1 秒過ぎた時刻を表します。|  
   
-|ISO 8601|Notes|  
+|ISO 8601|メモ|  
 |--------------|-----------|  
 |hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh は、タイム ゾーン オフセットの時間数を表す、0 から 23 までの 2 桁の数字です。<br /><br /> mm は、タイム ゾーン オフセットの追加の分数を表す、0 から 59 までの 2 桁の数字です。|  
   
-|ODBC|Notes|  
+|ODBC|メモ|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.fractional seconds]'}|ODBC API 固有です。|  
   

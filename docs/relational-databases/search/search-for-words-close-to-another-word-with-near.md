@@ -1,4 +1,5 @@
 ---
+description: NEAR による他の単語の近くにある単語の検索
 title: NEAR による他の単語の近くにある単語の検索 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629184"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88465008"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  *CONTAINS* 述語または **CONTAINSTABLE** 関数で "[近接語句](../../t-sql/queries/contains-transact-sql.md)" ([NEAR](../../relational-databases/system-functions/containstable-transact-sql.md)) を使用すると、互いに似た単語や語句を検索できます。 
+  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で "*近接語句" (* **NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> NEAR の概要  
 **NEAR** には次の機能があります。  
@@ -121,7 +122,7 @@ GO
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
- たとえば、次のように入力します。  
+ たとえば、オブジェクトに適用された  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  

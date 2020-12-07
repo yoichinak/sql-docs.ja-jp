@@ -1,4 +1,5 @@
 ---
+description: MSreplication_objects (Transact-sql)
 title: MSreplication_objects (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_objects system table
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57a4c20f6aac12f1671b88dc04b0366290abe127
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3c582b495702a46c51519f56dee1e977980840f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881495"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538271"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85881495"
 |**object_type**|**char(2)**|オブジェクトの種類:<br /><br /> **u** = テーブル。<br /><br /> **t** = トリガー。<br /><br /> **p** = ストアドプロシージャ。|  
 |**記事**|**sysname**|オブジェクトが関連付けられているアーティクルの名前です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

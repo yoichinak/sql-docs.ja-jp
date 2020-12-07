@@ -1,4 +1,5 @@
 ---
+description: Microsoft Open Database Connectivity (ODBC)
 title: Microsoft Open Database Connectivity (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c51822e347c606d586238f84711797e63f6aa563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ccf7a5ceb15d61bc61bf3434a239c130bc5fcf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494795"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Microsoft Open Database Connectivity (ODBC) インターフェイスは、アプリケーションがさまざまなデータベース管理システム (Dbms) のデータにアクセスできるようにする C プログラミング言語のインターフェイスです。 ODBC は、リレーショナルデータストア専用に設計された低レベルの高パフォーマンスのインターフェイスです。  
@@ -43,9 +44,9 @@ Microsoft Open Database Connectivity (ODBC) インターフェイスは、アプ
   
  ODBC に関連する用語を定義します。  
   
- [ODBCCONF.EXCEL.EXE](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  ドライバーとデータソース名を構成するためのコマンドラインユーティリティについて説明します。  
   
 ## <a name="support"></a>サポート  
- サポートオプションの詳細については、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink?linkid=5521)の Web サイトを参照してください。
+ サポートオプションの詳細については、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink?linkid=5521) の Web サイトを参照してください。

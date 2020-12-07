@@ -1,4 +1,5 @@
 ---
+description: Interval のリテラル
 title: Interval リテラル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425034"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
 ODBC では、すべてのドライバーで SQL_CHAR または SQL_VARCHAR データ型からすべての C interval データ型への変換がサポートされている必要があります。 ただし、基になるデータソースで interval データ型がサポートされていない場合、ドライバーは、これらの変換をサポートするために、[SQL_CHAR] フィールドの値の正しい形式を認識している必要があります。 同様に、ODBC では、任意の ODBC C 型が SQL_CHAR または SQL_VARCHAR に変換可能である必要があるため、ドライバーは、文字フィールドに格納されている間隔の形式を認識している必要があります。 このセクションでは、間隔リテラルの構文について説明します。この構文では、ドライバーライターは、C の interval データ型の間で変換中に SQL_CHAR フィールドを検証するために使用する必要があります。  
   
 > [!NOTE]  
->  Interval リテラルの完全な BNF 構文については、「付録 C: SQL 文法」の「 [Interval リテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)」を参照してください。  
+>  Interval リテラルの完全な BNF 構文については、「付録 C: SQL 文法」の「 [Interval リテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md) 」を参照してください。  
   
- Interval リテラルを SQL ステートメントの一部として渡すには、interval リテラルに対してエスケープ句の構文を定義します。 詳細については、「[日付、時刻、およびタイムスタンプリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)」を参照してください。  
+ Interval リテラルを SQL ステートメントの一部として渡すには、interval リテラルに対してエスケープ句の構文を定義します。 詳細については、「 [日付、時刻、およびタイムスタンプリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)」を参照してください。  
   
  間隔のリテラルの形式は次のとおりです。  
   
@@ -37,7 +38,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  "INTERVAL" は、文字リテラルが間隔であることを示します。 符号は、正符号または負符号 (+) のいずれかにすることができます。この値は間隔の文字列の外側にあり、省略可能です。  
   
- 間隔修飾子には、1つの datetime フィールドを指定することも、2つの datetime フィールドで\<構成することもできます。この場合、*先頭のフィールド*> \<*末尾のフィールド*> になります。  
+ 間隔修飾子には、単一の datetime フィールドを指定するか、という形式の2つの datetime フィールドを使用 \<*leading field*> できます。 \<*trailing field*>  
   
 -   間隔が1つのフィールドで構成されている場合、1つのフィールドには、省略可能な先頭の有効桁数をかっこで囲んだ2番目のフィールドを指定できます。 また、1つの datetime フィールドには、省略可能な先頭の有効桁数、かっこで囲まれた省略可能な秒の有効桁数、またはその両方を伴う2番目のフィールドを指定することもできます。 秒のフィールドに先頭の有効桁数と秒の小数部の有効桁数の両方がある場合は、コンマで区切られます。 秒の小数点以下桁数が秒の小数部の有効桁数である場合は、有効桁数も指定する必要があります。  
   
@@ -45,7 +46,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  *値*の間隔文字列は単一引用符で囲まれます。 年、月リテラル、または日時リテラルを指定できます。 *値*の文字列の形式は、次の規則によって決定されます。  
   
--   文字列には、 \<*間隔**修飾子*> によって暗黙的に指定されるすべてのフィールドの10進値が含まれます。  
+-   文字列には、によって暗黙的に指定されるすべてのフィールドの10進値が含まれ \<*interval* *qualifier*> ます。  
   
 -   間隔の精度に年と月のフィールドが含まれている場合、これらのフィールドの値はマイナス記号で区切られます。  
   
@@ -61,7 +62,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
     -   2番目のフィールドの小数部は、指定された秒の有効桁数または暗黙的な秒数にすることができます。  
   
-    -   末尾のフィールドは、グレゴリオ暦の通常の制約に従います。 (「[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)」を参照してください)。  
+    -   末尾のフィールドは、グレゴリオ暦の通常の制約に従います。 (「 [グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)」を参照してください)。  
   
  次の表に、間隔の ODBC escape 句に含まれる有効な間隔リテラルの例を示します。 エスケープ句の構文は次のとおりです。  
   

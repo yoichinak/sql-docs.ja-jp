@@ -1,8 +1,9 @@
 ---
+description: カタログの例 (VB)
 title: カタログの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88474aaf40fe715f6240d0519be5cec8fc06e12e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 018b4d96995e11f98fc06ad382033c2059d3ef25
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765153"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987313"
 ---
 # <a name="catalog-example-vb"></a>カタログの例 (VB)
 この Visual Basic プロジェクトでは、MDX を使用して新しいキューブを作成します。 次に、Microsoft Word 文書内のキューブの構造について説明します。  

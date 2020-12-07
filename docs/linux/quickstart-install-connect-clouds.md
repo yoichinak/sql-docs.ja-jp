@@ -1,7 +1,7 @@
 ---
 title: クラウドで SQL Server (on Linux) を開始する
 titleSuffix: SQL Server
-description: このクイック スタートでは、任意のクラウドで SQL Server on Linux を実行する方法を示します。
+description: 任意のクラウドで Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server をインストールする方法について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 49f47819a6ca128ce45f950c9cd6881e325bec59
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897544"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115605"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>クイック スタート:クラウドで SQL Server を実行する
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-このクイックスタートでは、任意のクラウドで Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server をインストールします。 「[Azure portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)」に進み、Azure で SQL Server on Linux を実行します。
+このクイックスタートでは、任意のクラウドで Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server をインストールします。 「[Azure portal での Linux SQL Server 仮想マシンのプロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%252fsql%252ftoc%252ftoc.json)」に進み、Azure で SQL Server on Linux を実行します。
 
 > [!NOTE]
 > SQL Server の有料版を実行する場合、ライセンスを持ち込む必要があります (BYOL)。

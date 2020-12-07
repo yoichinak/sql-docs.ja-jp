@@ -1,4 +1,5 @@
 ---
+description: データ コレクションを有効または無効にする方法
 title: データ コレクションを有効または無効にする方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a2ec874b0a590530721fce37b12be8810a196f40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0ff43debf025f9c6494f9e1beeeae1cb5721037
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717887"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125279"
 ---
 # <a name="enable-or-disable-data-collection"></a>データ コレクションを有効または無効にする方法
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85717887"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **データ コレクションを有効または無効にする方法:**  
   

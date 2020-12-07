@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -22,14 +23,14 @@ helpviewer_keywords:
 - messages [Service Broker], sending
 - sending messages
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a7e4c9c6b58b8dd6853aa545ca457e8ae1ced74c
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484045"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "89538030"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ MESSAGE TYPE *message_type_name*
 *message_body_expression*  
 メッセージ本文を表す式を指定します。 *message_body_expression* は省略可能です。 ただし、*message_body_expression* を指定する場合は、**varbinary(max)** に変換できる型の式にする必要があります。 この式が NULL になることはありません。 この句が省略されると、メッセージ本文は空になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!IMPORTANT]  
 >  SEND ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  

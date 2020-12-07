@@ -1,4 +1,5 @@
 ---
+description: モデル オブジェクト権限を割り当てる (Master Data Services)
 title: モデル オブジェクト権限を割り当てる
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b134629e732934d44f219edc9be368234911a5d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9b79a9428df0dc528190281070ea33b3a2c21b25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456747"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>モデル オブジェクト権限を割り当てる (Master Data Services)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85812811"
 > [!NOTE]  
 >  モデルに権限を割り当てると、その他のすべてのモデルへの権限は暗黙的に拒否されます。 モデル オブジェクト権限を割り当てない場合、ユーザーまたはグループは **[エクスプローラー]** のデータにアクセスできません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-assign-model-object-permissions"></a>モデル オブジェクト権限を割り当てるには  
   
@@ -62,8 +63,8 @@ ms.locfileid: "85812811"
   
 -   (省略可能) [階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
- [マスターデータサービス&#41;&#40;モデルオブジェクト権限の削除](../master-data-services/delete-model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>参照  
+ [マスターデータサービス&#41;&#40;モデルオブジェクト権限の削除 ](../master-data-services/delete-model-object-permissions-master-data-services.md)   
  [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)  
   

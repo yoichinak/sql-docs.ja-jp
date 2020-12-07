@@ -6,23 +6,23 @@ ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: ''
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b4c593a1486c7cf7d7030c7ddcbbf971533bc707
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900908"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584784"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
+SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための *自動シード処理* という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
 
 ## <a name="security"></a>Security
 
@@ -249,11 +249,11 @@ GO
 
 ## <a name="see-also"></a>参照
 
-[ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
+[ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Always On 可用性グループのトラブルシューティングと監視のガイド](https://technet.microsoft.com/library/dn135328.aspx)
+[Always On 可用性グループのトラブルシューティングと監視のガイド](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

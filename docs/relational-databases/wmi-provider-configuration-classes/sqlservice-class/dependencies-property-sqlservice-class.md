@@ -1,4 +1,5 @@
 ---
+description: Dependencies プロパティ (SqlService クラス)
 title: Dependencies プロパティ (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -15,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Dependencies property
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f3a418ee4a0f20d47bd72b31140b6c0a88c45f2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 36b40efb76cedd83dfadb9e8597a7d9bb5e9888c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880652"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550874"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies プロパティ (SqlService クラス)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.Dependencies [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されたサービスに依存するサービスのリストを格納する string[] 配列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

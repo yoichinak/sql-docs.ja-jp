@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.date: 07/24/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d2fd489c31ea140f747f90c50976b28f45f0045
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.date: 08/12/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: c34b07a774d0afa4fd4055985a4672ce04d61f74
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248089"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988708"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>以前のバージョンの SQL Server ドキュメント
 
@@ -24,7 +24,7 @@ ms.locfileid: "87248089"
 
 SQL Server 2005 から 2014 のオンライン ドキュメントにアクセスするには、次のランディング ページを参照してください。
 
-- [SQL Server の以前のバージョンに関するドキュメント](https://docs.microsoft.com/previous-versions/sql/)。
+- [SQL Server の以前のバージョンに関するドキュメント](/previous-versions/sql/)。
 
 ## <a name="offline-documentation"></a>オフライン ドキュメント
 

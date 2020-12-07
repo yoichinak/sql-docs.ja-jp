@@ -1,4 +1,5 @@
 ---
+description: イベント通知のダイアログ セキュリティの構成
 title: イベント通知のダイアログ セキュリティの構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fbbe596954083015a0533995784f31609d1b90
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773859"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130203"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85773859"
 ||まだデータベースに送信先データベース ユーザーとして接続していない場合は、直ちに接続してください。|  
 ||イベント通知メッセージを受信する[キューを作成](../../t-sql/statements/create-queue-transact-sql.md) し、メッセージを配信する [サービスを作成](../../t-sql/statements/create-service-transact-sql.md) します。|  
 ||送信元データベースのユーザーに、送信先サービスに対する[SEND 権限を許可](../../t-sql/statements/grant-transact-sql.md) します。|  
-|送信元データベースの Service Broker 識別子をターゲット サーバーに指定します。 この識別子は、 **sys.databases** カタログ ビューの [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb**を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
+|送信元データベースの Service Broker 識別子をターゲット サーバーに指定します。 この識別子は、 **sys.databases** カタログ ビューの [service_broker_guid](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列にクエリを実行することで取得できます。 サーバー レベルのイベント通知の場合は、Service Broker 識別子として **msdb** を使用します。|送信先データベースの Service Broker 識別子を送信元サーバーに指定します。|  
   
  **手順 4. : ルートを作成し、サーバー レベルの認証を設定します。**  
   

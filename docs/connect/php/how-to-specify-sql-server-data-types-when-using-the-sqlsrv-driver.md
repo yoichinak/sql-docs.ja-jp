@@ -1,7 +1,8 @@
 ---
-title: '方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する | Microsoft Docs'
+title: '方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する'
+description: PHP 用の SQLSRV ドライバーを使用する場合に、準備されたステートメントまたは直接クエリでオプションの *$params* 配列を使用して SQL Server データ型を指定する方法について説明します
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b9ddb359c34e929247357713c5c48035a3eed9a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993356"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680571"
 ---
-# <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
+# <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、SQLSRV ドライバーを使用して、サーバーに送信されるデータの SQL Server データ型を指定する方法を説明します。 このトピックは、PDO_SQLSRV ドライバーを使用する場合は適用しません。  
@@ -38,7 +39,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  目的の SQL Server データ型を指定するには、 *$params* 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV_SQLTYPE_&#42;** 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  目的の SQL Server データ型を指定するには、*$params* 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV_SQLTYPE_&#42;** 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  
@@ -139,9 +140,9 @@ sqlsrv_close($conn);
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)
+[方法:PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)
 
 [データ型の変換](../../connect/php/converting-data-types.md)
 
-[方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

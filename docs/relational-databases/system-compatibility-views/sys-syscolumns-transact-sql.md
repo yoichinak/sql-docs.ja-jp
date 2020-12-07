@@ -1,4 +1,5 @@
 ---
+description: sys.syscolumns (Transact-SQL)
 title: sys.sysの列 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7f16d1975d4e8ac872c8c8d625b935b738fbfdb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423366"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,17 +53,17 @@ ms.locfileid: "87396101"
 |**確保**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|この列の既定値の ID。|  
-|**領域**|**int**|この列のルールまたは CHECK 制約の ID。|  
+|**domain**|**int**|この列のルールまたは CHECK 制約の ID。|  
 |**number**|**smallint**|グループ化しているプロシージャの場合は、サブプロシージャ番号です。<br /><br /> 0 = プロシージャ以外のエントリ|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|この列が表示される行にオフセットします。|  
 |**collationid**|**int**|列の照合順序の ID。 非文字ベースの列の場合は NULL です。|  
-|**status**|**tinyint**|列またはパラメーターのプロパティを説明するビットマップです。<br /><br /> 0x08 = NULL 入力を許可する列です。<br /><br /> 0x10 = **varchar**または**varbinary**列が追加されたときに、ANSI padding が有効になりました。 **Varchar**の後続の空白は保持され、 **varbinary**列の後続のゼロは保持されます。<br /><br /> 0x40 = OUTPUT パラメーターです。<br /><br /> 0x80 = 列は ID 列です。|  
+|**status**|**tinyint**|列またはパラメーターのプロパティを説明するビットマップです。<br /><br /> 0x08 = NULL 入力を許可する列です。<br /><br /> 0x10 = **varchar** または **varbinary** 列が追加されたときに、ANSI padding が有効になりました。 **Varchar**の後続の空白は保持され、 **varbinary**列の後続のゼロは保持されます。<br /><br /> 0x40 = OUTPUT パラメーターです。<br /><br /> 0x80 = 列は ID 列です。|  
 |**type**|**tinyint**|**Sys**からの物理ストレージの種類。**型**。|  
 |**usertype**|**smallint**|**Sys. 型**からのユーザー定義データ型の ID。 データ型の数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**prec**|**smallint**|この列の有効桁数。<br /><br /> -1 = **xml**または大きな値の型。|  
+|**prec**|**smallint**|この列の有効桁数。<br /><br /> -1 = **xml** または大きな値の型。|  
 |**scale**|**int**|この列の小数点以下桁数。<br /><br /> NULL = データ型は数値型ではありません。|  
 |**iscomputed**|**int**|列が計算されるかどうかを示すフラグです。<br /><br /> 0 = 非計算列<br /><br /> 1 = 計算列|  
 |**isoutparam**|**int**|プロシージャパラメーターが出力パラメーターかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  

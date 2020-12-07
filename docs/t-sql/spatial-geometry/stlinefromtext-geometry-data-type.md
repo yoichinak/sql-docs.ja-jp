@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (geometry データ型)
 title: STLineFromText (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554631"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88427044"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,11 +49,11 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**LineString**  
+ OGC の型: **LineString**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。 SQL 仕様バージョン 1.2.1 の Open Geospatial Consortium (OGC) Simple Features の 3 次元ジオメトリと測定ジオメトリの WKT 表記はサポートされていません。 Z (標高) 値と M (メジャー) 値のサポートされている表現の例を参照してください。
   
 ## <a name="examples"></a>例  

@@ -1,4 +1,5 @@
 ---
+description: TopSum (MDX)
 title: TopSum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 665a1ace9df98303da19b861cdd3ce6340ec8368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412914"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 
@@ -31,13 +32,13 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) 式です。  
   
- *[値]*  
+ *Value*  
  各組の比較対象となる値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、メジャーを返す多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **TopSum**関数は、指定されたセットに対して評価される指定メジャーの合計を計算し、セットを降順に並べ替えます。 関数は、指定された数値式の合計が指定された値以上になる最大値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  

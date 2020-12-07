@@ -3,7 +3,7 @@ title: ブレークポイント条件の指定
 description: ブレークポイント条件を設定して、ブレークポイントにヒットしてヒット カウントに達したときに、デバッガーがブレークポイント アクションを実行するかどうかを制御する方法について説明します。
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f2ac3801bd4bfeb64c20674042869978718c97c
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 40e30f96de60e6d6bd404ca2b00099b7ac7b01a9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122753"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036313"
 ---
 # <a name="specify-a-breakpoint-condition"></a>ブレークポイント条件の指定
 
@@ -52,5 +52,5 @@ ms.locfileid: "87122753"
   
 ## <a name="see-also"></a>参照
 
-- [ヒット カウントの指定](../../relational-databases/scripting/specify-a-hit-count.md)
-- [ブレークポイント アクションの指定](../../relational-databases/scripting/specify-a-breakpoint-action.md)
+- [ヒット カウントの指定](./specify-a-hit-count.md)
+- [ブレークポイント アクションの指定](./specify-a-breakpoint-action.md)

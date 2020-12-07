@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (geometry データ型)
 title: IsValidDetailed (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555131"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88497043"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ SELECT @p.IsValidDetailed()
 ```  
   
 ## <a name="see-also"></a>参照  
- [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

@@ -1,5 +1,6 @@
 ---
-title: アダプティブ バッファリングの使用 | Microsoft Docs
+title: アダプティブ バッファリングの使用
+description: Microsoft JDBC Driver for SQL Server を使用して大きな値のデータを取得するとき、アダプティブ バッファリングを使用し、サーバー カーソルのオーバーヘッドをなくす方法について説明します。
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924084"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603393"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 
@@ -27,9 +28,9 @@ ms.locfileid: "80924084"
 
 アプリケーションで非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] はアダプティブ バッファリングを提供しています。 ドライバーでアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。
 
-- **クエリによって非常に大きな結果セットが生成される:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントが実行される可能性があります。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。
+- **クエリが非常に大きな結果セットを生成する:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントを実行できます。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。
 
-- **クエリによって、非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値が生成される:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) が取得される可能性があります。 アダプティブ バッファリングを使用すると、クライアント アプリケーションで getAsciiStream メソッド、getBinaryStream メソッド、または getCharacterStream メソッドを使用して、そのような値をストリームとして取得できます。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から値を取得します。
+- **クエリが非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値を生成する:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) を取得できます。 アダプティブ バッファリングを使用すると、クライアント アプリケーションで getAsciiStream メソッド、getBinaryStream メソッド、または getCharacterStream メソッドを使用して、そのような値をストリームとして取得できます。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から値を取得します。
 
 > [!NOTE]  
 > アダプティブ バッファリングでは、必要な量のデータだけが、JDBC ドライバーによってバッファリングされます。 ドライバーにバッファーのサイズを制御したり制限したりするためのパブリック メソッドは備わっていません。
@@ -58,7 +59,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) クラスおよび [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) クラスで定義されている get\<Type>Stream メソッドは、`mark` メソッドを呼び出すことなく、常にストリームの開始位置に位置を変更できるストリームを返します。
 
-アプリケーションでアダプティブ バッファリングを使用する場合、get\<Type>Stream メソッドによって取得される値は、1 回だけ取得できます。 同じオブジェクトの get\<Type>Stream メソッドを呼び出した後に、同じ列またはパラメーターで任意の get\<Type>Stream メソッドを呼び出すと、"このデータはアクセスされており、この列またはパラメーターに対しては使用できません" という意味のメッセージで例外がスローされます。
+アプリケーションでアダプティブ バッファリングを使用する場合、get\<Type>Stream メソッドによって取得される値は、1 回だけ取得できます。 同じオブジェクトの get\<Type>Stream メソッドを呼び出した後に、同じ列またはパラメーターで任意の get\<Type> メソッドを呼び出すと、"データがアクセスされましたが、この列またはパラメーターには使用できませんでした" というメッセージと共に例外がスローされます。
 
 > [!NOTE]
 > ResultSet の処理中に ResultSet.close() を呼び出すと、残りのすべてのパケットを読み取って破棄するために Microsoft JDBC Driver for SQL Server が必要になります。 クエリから大きなデータ セットが返された場合、特にネットワーク接続の速度が遅い場合、この処理にはかなりの時間がかかることがあります。
@@ -89,7 +90,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - スクロール可能な結果セット : 行をブロック単位でフェッチする場合、常に [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。これは、アダプティブ バッファリングが有効になっていたとしても変わりません。 スクロールによって OutOfMemoryError が発生した場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 それでも OutOfMemoryError を回避できない場合は、あまり大きな列がスクロール可能な結果セットに含まれないようにします。
 
-- 順方向専用の更新可能な結果セット: 行をブロック単位でフェッチする場合、その接続でアダプティブ バッファリングが有効になっていたとしても、通常は [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) メソッドを呼び出すと OutOfMemoryError が発生する場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを "**adaptive**" パラメーターで呼び出した後、ステートメントを実行することによって、行のバッファリングを強制的に抑制することもできます。 結果セットはスクロールできないため、アプリケーションから、いずれかの get\<Type>Stream メソッドで大きな列の値にアクセスした場合、アプリケーションが読み取りを始めると直ちに、ドライバーが、順方向専用、読み取り専用の結果セットの場合とまったく同じように、その値を破棄します。
+- 順方向専用の更新可能な結果セット: 行をブロック単位でフェッチする場合、その接続でアダプティブ バッファリングが有効になっていたとしても、通常は [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) メソッドで指定された行数がメモリに読み込まれます。 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) メソッドを呼び出すと OutOfMemoryError が発生する場合は、フェッチされる行数を減らすことによって対処できます。フェッチ サイズの行数を減らすには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) メソッドを呼び出します。必要であれば、行数を 1 に設定することも検討してください。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを "**adaptive**" パラメーターで呼び出した後、ステートメントを実行することによって、行のバッファリングを強制的に抑制することもできます。 結果セットはスクロールできないため、アプリケーションから、いずれかの get\<Type>Stream メソッドで大きな列の値にアクセスした場合、アプリケーションが読み取りを始めると直ちに、順方向専用、読み取り専用の結果セットの場合とまったく同じように、ドライバーによってその値が破棄されます。
 
 ## <a name="see-also"></a>関連項目
 

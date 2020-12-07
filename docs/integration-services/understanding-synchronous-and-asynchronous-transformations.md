@@ -1,4 +1,5 @@
 ---
+description: 同期および非同期変換について
 title: 同期変換と非同期変換について | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88495163"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>同期および非同期変換について
 
@@ -45,7 +46,7 @@ ms.locfileid: "86913718"
   
 -   入力行と出力行の間に 1 対 1 の対応がない場合。 たとえば、集計変換です。この変換では、コンポーネントは出力に行を追加し、計算された集計値を保持する必要があります。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 。 これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 . これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
   
 > [!NOTE]  
 >  変換元コンポーネントはデータ ソースから読み取った各行を出力バッファーに明示的に追加する必要もあるため、変換元では変換を非同期出力のように表示します。  

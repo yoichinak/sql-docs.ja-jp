@@ -1,4 +1,5 @@
 ---
+description: availability_group_listener_ip_addresses (Transact-sql)
 title: availability_group_listener_ip_addresses (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e4c3dce812a06b4b42b45d0baa3874f5cfa2ba3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddd226db188933232c2e561533a63b559d0cb457
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733541"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545034"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>availability_group_listener_ip_addresses (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +49,12 @@ ms.locfileid: "85733541"
 |**状態**|**tinyint**|WSFC のクラスターからの IP リソースのオンラインまたはオフライン状態。次のいずれかになります。<br /><br /> 1 = オンライン。 IP リソースはオンラインです。<br /><br /> 0 = オフライン。 IP リソースはオフラインです。<br /><br /> 2 = オンライン待ち。 IP リソースはオフラインですが、オンラインになっています。<br /><br /> 3 = 失敗しました。 IP リソースがオンラインになっていましたが、失敗しました。|  
 |**state_desc**|**nvarchar(60)**|**状態**の説明。次のいずれかになります。<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

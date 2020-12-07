@@ -1,4 +1,5 @@
 ---
+description: STEnvelope (geometry データ型)
 title: STEnvelope (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 87146a39fda67da157c48abed2b06dab926e7194
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 57a21436791e9517bcea8912fbc66f96abd1f491
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88416888"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

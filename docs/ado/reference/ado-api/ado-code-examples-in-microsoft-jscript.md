@@ -1,8 +1,9 @@
 ---
+description: Microsoft JScript での ADO のコード例
 title: Microsoft JScript の ADO コード例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8fff86663c19b4be71b2d83ae24c1cd3ea61ee14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760588"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976673"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript での ADO のコード例
 次のコード例を使用して、JScript で記述するときに ADO のメソッド、プロパティ、およびイベントを使用する方法を学習します。  
@@ -29,34 +30,34 @@ ms.locfileid: "82760588"
   
 ## <a name="methods"></a>メソッド  
   
--   [AddNew メソッドの例](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
+-   [AddNew メソッドの例](./addnew-method-example-jscript.md)  
   
--   [Append および CreateParameter メソッドの例](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Append および CreateParameter メソッドの例](./append-and-createparameter-methods-example-jscript.md)  
   
--   [Execute、Requery、および Clear メソッドの例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [Execute、Requery、および Clear メソッドの例](./execute-requery-and-clear-methods-example-jscript.md)  
   
--   [Find メソッドの例](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Find メソッドの例](./find-method-example-jscript.md)  
   
--   [GetRows メソッドの例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [GetRows メソッドの例](./getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>プロパティ  
   
--   [AbsolutePage、PageCount、および PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [AbsolutePage、PageCount、および PageSize プロパティの例](./absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [AbsolutePosition およびカーソルの場所のプロパティの例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [AbsolutePosition およびカーソルの場所のプロパティの例](./absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
--   [ActiveCommand プロパティの例](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
+-   [ActiveCommand プロパティの例](./activecommand-property-example-jscript.md)  
   
--   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
+-   [ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例](./activeconnection-commandtext-timeout-type-size-example-jscript.md)  
   
--   [ActualSize とのサイズプロパティの例](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
+-   [ActualSize とのサイズプロパティの例](./actualsize-and-definedsize-properties-example-jscript.md)  
   
--   [CacheSize プロパティの例](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
+-   [CacheSize プロパティの例](./cachesize-property-example-jscript.md)  
   
--   [Filter プロパティと RecordCount プロパティの例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Filter プロパティと RecordCount プロパティの例](./filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>参照  
- [Visual Basic の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO コード例 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Visual C++ の ADO コード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Visual Basic の ADO コード例](./ado-code-examples-in-visual-basic.md)   
+ [ADO コード例 VBScript](./ado-code-examples-vbscript.md)   
+ [Visual C++ の ADO コード例](./ado-code-examples-in-visual-c.md)   
+ [付録 D: ADO のサンプル](../../guide/appendixes/appendix-d-ado-samples.md)

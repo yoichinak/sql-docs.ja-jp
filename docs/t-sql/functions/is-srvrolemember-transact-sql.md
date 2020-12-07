@@ -1,4 +1,5 @@
 ---
+description: IS_SRVROLEMEMBER (Transact-SQL)
 title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c956e6a17340e371b7135dcd22f73e2b3165a20d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248516"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91117083"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 
@@ -37,7 +38,6 @@ ms.locfileid: "87248516"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
@@ -45,7 +45,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 
 ## <a name="arguments"></a>引数
  **'** *role* **'**  
- 確認するサーバー ロールの名前です。 *role* は **sysname**です。  
+ 確認するサーバー ロールの名前です。 *role* は **sysname** です。  
   
  *role* の有効な値は、ユーザー定義サーバー ロールと、次の固定サーバー ロールです。  
 
@@ -99,7 +99,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="examples"></a>例  
  次の例では、現在のユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが固定サーバー ロール `sysadmin` のメンバーであるかどうかを示しています。  
   
-```  
+```sql  
 IF IS_SRVROLEMEMBER ('sysadmin') = 1  
    print 'Current user''s login is a member of the sysadmin role'  
 ELSE IF IS_SRVROLEMEMBER ('sysadmin') = 0  
@@ -110,7 +110,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
   
  次の例では、ドメイン ログイン Pat が固定サーバー ロール **diskadmin** のメンバーであるかどうかを示します。  
   
-```  
+```sql  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   

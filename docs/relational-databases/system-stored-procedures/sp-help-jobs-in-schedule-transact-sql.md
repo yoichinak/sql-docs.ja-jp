@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobs_in_schedule (Transact-sql)
 title: sp_help_jobs_in_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893652"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538855"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @schedule_id = ] schedule_id`情報を一覧表示するスケジュールの識別子を設定します。 *schedule_id*は**int**,、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
+`[ @schedule_id = ] schedule_id` 情報を一覧表示するスケジュールの識別子を設定します。 *schedule_id* は **int**,、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
   
-`[ @schedule_name = ] 'schedule_name'`情報を一覧表示するスケジュールの名前を指定します。 *schedule_name*は**sysname**であり、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
+`[ @schedule_name = ] 'schedule_name'` 情報を一覧表示するスケジュールの名前を指定します。 *schedule_name* は **sysname**であり、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
@@ -56,7 +57,7 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|ジョブの一意の ID。|  
 |**originating_server**|**nvarchar(30)**|ジョブの送信元のサーバーの名前。|  
 |**name**|**sysname**|ジョブの名前。|  
-|**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
+|**有効**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**description**|**nvarchar(512)**|ジョブの説明。|  
 |**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**category**|**sysname**|ジョブ カテゴリ。|  
@@ -86,11 +87,11 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類:<br /><br /> **1** = ローカルジョブ。<br /><br /> **2** = マルチサーバージョブ。<br /><br /> **0** = ジョブに対象サーバーがありません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この手順では、指定したスケジュールに関連付けられているジョブに関する情報を一覧表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -102,7 +103,7 @@ sp_help_jobs_in_schedule
   
  **SQLAgentUserRole**のメンバーは、自分が所有しているジョブの状態のみを表示できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブを一覧表示します。  
   
 ```  
@@ -114,8 +115,8 @@ EXEC sp_help_jobs_in_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

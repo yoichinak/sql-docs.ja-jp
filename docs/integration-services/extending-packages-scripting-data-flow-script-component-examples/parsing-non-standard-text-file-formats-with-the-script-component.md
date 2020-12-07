@@ -1,4 +1,5 @@
 ---
+description: スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
 title: スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88477290"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
 
@@ -94,7 +95,7 @@ ms.locfileid: "86919221"
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -104,13 +105,13 @@ ms.locfileid: "86919221"
   
     -   LastName  
   
-    -   タイトル  
+    -   Title  
   
     -   City  
   
     -   StateProvince  
   
-13. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、例の **ScriptMain** クラスに示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+13. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、例の **ScriptMain** クラスに示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -253,7 +254,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -271,7 +272,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord、文字列型 [DT_STR]、長さ 50  
   
-14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 **ScriptMain** クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックします。 **ScriptMain** クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 15. SQL Server 変換先をデータ フローに追加します。 スクリプト コンポーネントの ParentRecords 出力をこの変換先に接続します。OLE DB 接続マネージャーと Parents テーブルを使用するように構成します。  
   
@@ -288,7 +289,7 @@ Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
   
     ' If current row starts with separator characters,  
     '  then following row contains new parent record.  
-    If Row.Column0.StartsWith("***") Then  
+    If Row.Column0.StartsWith("**_") Then  
         nextRowIsParent = True  
     Else  
         If nextRowIsParent Then  
@@ -321,7 +322,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
         // If current row starts with separator characters,   
         // then following row contains new parent record.   
-        if (Row.Column0.StartsWith("***"))  
+        if (Row.Column0.StartsWith("_**"))  
         {  
             static_Input0_ProcessInputRow_nextRowIsParent = true;  
         }  

@@ -1,4 +1,5 @@
 ---
+description: Cursors イベント カテゴリ
 title: Cursors イベント カテゴリ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37c73c51856643b346a176f9a0a8b5b3c41cc47a
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719877"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96126644"
 ---
 # <a name="cursors-event-category"></a>Cursors イベント カテゴリ
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,18 +1,18 @@
 ---
 title: SQL Server on Linux に関する FAQ
-description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問への回答を提供します。
+description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問 (FAQ) への回答を提供します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7b6583ce7fb4ae2d0b37d898b549a385cfc09763
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477354"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115451"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux に関してよく寄せられる質問 (FAQ)
 
@@ -95,7 +95,7 @@ ms.locfileid: "87477354"
 
 1. **SQL Server on Linux の無人インストールを実行できますか?**
 
-   はい。 無人インストールの詳細については、「[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md#unattended)」を参照してください。 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、[Ubuntu](sample-unattended-install-ubuntu.md) のサンプル スクリプトを参照してください。 SQL Server Customer Advisory Team によって作成された[このサンプル スクリプト](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)を確認することもできます。
+   はい。 無人インストールの詳細については、「[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md#unattended)」を参照してください。 [Red Hat](sample-unattended-install-redhat.md)、[SUSE Linux Enterprise Server](sample-unattended-install-suse.md)、[Ubuntu](sample-unattended-install-ubuntu.md) のサンプル スクリプトを参照してください。 SQL Server Customer Advisory Team によって作成された[このサンプル スクリプト](/archive/blogs/sqlcat/unattended-install-and-configuration-for-sql-server-2017-on-linux)を確認することもできます。
 
 ## <a name="tools"></a>ツール
 
@@ -117,7 +117,7 @@ ms.locfileid: "87477354"
 
 1. **Linux で SQL Server パフォーマンスを監視するために使用できるツールは何ですか?**
 
-   [システム動的管理ビュー (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) を使用して、Linux プロセス情報を含む、SQL Server に関するさまざまな種類の情報を収集できます。 [クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)を使用すると、クエリのパフォーマンスを向上させることができます。 組み込みの[パフォーマンス ダッシュボード](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)などの他のツールは、Windows の SQL Server Management Studio (SSMS) でリモートで動作します。
+   [システム動的管理ビュー (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) を使用して、Linux プロセス情報を含む、SQL Server に関するさまざまな種類の情報を収集できます。 [クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)を使用すると、クエリのパフォーマンスを向上させることができます。 組み込みの[パフォーマンス ダッシュボード](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)などの他のツールは、Windows の SQL Server Management Studio (SSMS) でリモートで動作します。
 
    > [!TIP]
    > パフォーマンスを向上させる方法の 1 つは、Linux オペレーティング システムと SQL Server インスタンスを適切に構成することです。 詳細については、「[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)」を参照してください。
@@ -130,7 +130,7 @@ ms.locfileid: "87477354"
 
 1. **SQL Server on Linux で同じホスト上の複数のインスタンスはサポートされますか?**
 
-   複数の異なるインスタンスが含まれるように、ホスト上で複数のコンテナーを実行することをお勧めします。 これは docker を使用して簡単に実現されますが、各コンテナーでは別のポートでリッスンする必要があります。 詳細については、「[複数の SQL Server コンテナーを実行する](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)」を参照してください。
+   複数の異なるインスタンスが含まれるように、ホスト上で複数のコンテナーを実行することをお勧めします。 これは docker を使用して簡単に実現されますが、各コンテナーでは別のポートでリッスンする必要があります。 詳細については、「[複数の SQL Server コンテナーを実行する](./sql-server-linux-docker-container-deployment.md#multiple)」を参照してください。
 
 1. **Linux では Active Directory 認証がサポートされていますか?**
 

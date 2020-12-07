@@ -1,4 +1,5 @@
 ---
+description: TRY_CONVERT (Transact-SQL)
 title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: e3c1c579360b3487e3ee5efbc11aa05111242acc
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 82c8807aef206867a8f50eed507e7a3a4cb48e59
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379507"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,6 @@ ms.locfileid: "87396491"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
   
@@ -51,7 +51,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 関数が *expression* を変換する方法を指定する省略可能な整数式。  
   
- *style* は、*CONVERT* 関数の **style** パラメーターと同じ値を使用します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
+ *style* は、**CONVERT** 関数の *style* パラメーターと同じ値を使用します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
   
  許容される値の範囲は、*data_type* の値によって決まります。 *style* が null の場合、**TRY_CONVERT** は null を返します。  
   
@@ -124,7 +124,7 @@ Explicit conversion from data type int to xml is not allowed.
 ### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT が成功する  
  この例は、式を求められている形式にする必要があることを示しています。  
   
-```  
+```sql
 SET DATEFORMAT mdy;  
 SELECT TRY_CONVERT(datetime2, '12/31/2010') AS Result;  
 GO  

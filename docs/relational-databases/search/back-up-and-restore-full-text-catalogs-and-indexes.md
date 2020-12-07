@@ -1,4 +1,5 @@
 ---
+description: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 title: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3458c111b32ae42a71d062df091b01b4723fc6d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729249"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869194"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85729249"
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で作成されたフルテキスト インデックスのバックアップと復元を行う方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、フルテキスト カタログは論理的概念であり、ファイル グループ内には存在しません。 そのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でフルテキスト カタログをバックアップするには、カタログに属しているフルテキスト インデックスが含まれるファイル グループをすべて特定する必要があります。 そのうえで、これらのファイルのグループを 1 つずつバックアップする必要があります。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、フルテキスト カタログをインポートすることができます。 インポートした各フルテキスト カタログは、自身のファイル グループのデータベース ファイルです。 インポートされたカタログをバックアップするには、単にそのファイル グループをバックアップします。 詳細については、 [オンライン ブックの「](https://go.microsoft.com/fwlink/?LinkID=121052)フルテキスト カタログのバックアップと復元 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 」を参照してください。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースをアップグレードする場合は、フルテキスト カタログをインポートすることができます。 インポートした各フルテキスト カタログは、自身のファイル グループのデータベース ファイルです。 インポートされたカタログをバックアップするには、単にそのファイル グループをバックアップします。 詳細については、 [オンライン ブックの「]()フルテキスト カタログのバックアップと復元 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 」を参照してください。  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> フルテキスト カタログのフルテキスト インデックスのバックアップ  
   
@@ -104,5 +105,4 @@ GO
 ## <a name="see-also"></a>参照  
  [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

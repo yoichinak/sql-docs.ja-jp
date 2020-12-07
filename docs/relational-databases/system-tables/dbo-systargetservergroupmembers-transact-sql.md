@@ -1,4 +1,5 @@
 ---
+description: dbo.systargetservergroupmembers (Transact-sql)
 title: dbo.systargetservergroupmembers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - systargetservergroupmembers system table
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d6b61dac079e612e447b98010bd297b8a848b349
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05fe757bd15ffd454225303e7f23526a00b5f9f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750235"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538363"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

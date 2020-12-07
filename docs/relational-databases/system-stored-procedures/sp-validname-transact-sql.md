@@ -1,4 +1,5 @@
 ---
+description: sp_validname (Transact-sql)
 title: sp_validname (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480960"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`有効性を確認する[識別子](../../relational-databases/databases/database-identifiers.md)の名前を指定します。 *名前*は**sysname**,、既定値はありません。 *名前*を NULL にすることはできません。空の文字列にすることはできません。また、バイナリ0の文字を含めることもできません。  
+`[ @name = ] 'name'` 有効性を確認する [識別子](../../relational-databases/databases/database-identifiers.md) の名前を指定します。 *名前* は **sysname**,、既定値はありません。 *名前* を NULL にすることはできません。空の文字列にすることはできません。また、バイナリ0の文字を含めることもできません。  
   
-`[ @raise_error = ] raise_error`エラーを発生させるかどうかを指定します。 *raise_error*は**ビット**,、既定値は1です。 つまり、エラーが表示されます。 0 の場合、エラー メッセージは表示されません。  
+`[ @raise_error = ] raise_error` エラーを発生させるかどうかを指定します。 *raise_error* は **ビット**,、既定値は1です。 つまり、エラーが表示されます。 0 の場合、エラー メッセージは表示されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,7 +53,7 @@ sp_validname [@name =] 'name'
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-sql&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [nchar および nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   

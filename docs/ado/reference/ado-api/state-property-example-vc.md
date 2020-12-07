@@ -1,8 +1,9 @@
 ---
+description: State プロパティの例 (VC++)
 title: State プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c1eeb97d29525a7aa3a48b0c123f60776fc5e223
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759728"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988793"
 ---
 # <a name="state-property-example-vc"></a>State プロパティの例 (VC++)
-この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用してメッセージを表示します。  
+この例では、非同期接続が開いており、非同期コマンドが実行中の場合に、 [State](./state-property-ado.md) プロパティを使用してメッセージを表示します。  
   
 ```  
 // BeginStateCpp.cpp  
@@ -136,4 +137,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>参照  
- [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [State プロパティ (ADO)](./state-property-ado.md)

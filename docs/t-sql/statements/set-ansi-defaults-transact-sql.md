@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_DEFAULTS (Transact-SQL)
 title: SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - ANSI_DEFAULTS option
 - SET ANSI_DEFAULTS statement
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087fc2be7400052c2bbd3e82999c66b052422f99
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f90af0fff19b2053710158f292da880cb0ad9ca4
+ms.sourcegitcommit: 644223c40af7168f9d618526e9f4cd24e115d1db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394702"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96328095"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,19 +38,19 @@ ms.locfileid: "87394702"
 
 ## <a name="syntax"></a>構文
 
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>[!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] および [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)] の構文
 ```syntaxsql
--- Syntax for SQL Server
-
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>[!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] および [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)] の構文
 ```syntaxsql
--- Syntax for Azure Synapse and Parallel Data Warehouse
-
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
 ANSI_DEFAULTS はサーバー側の設定であり、すべてのクライアント接続の動作を有効にすることができます。 クライアントでは、通常、接続またはセッションの初期化時に設定を要求します。 サーバー設定は、ユーザーが変更するものではありません。   
 ユーザーがクライアントの動作を変更するには、`SQL_COPT_SS_PRESERVE_CURSORS` などのクライアント固有のメソッドを使用する必要があります。 詳細については、「[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。
   

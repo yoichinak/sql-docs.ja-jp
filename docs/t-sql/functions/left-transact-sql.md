@@ -1,4 +1,5 @@
 ---
+description: LEFT (Transact-SQL)
 title: LEFT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -21,12 +22,12 @@ ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54566cd00f9128ce44042ae8815e17f15c0f5435
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9215ff6f4be0118f83c422451697fda52efef229
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111928"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570706"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ LEFT ( character_expression , integer_expression )
 ### <a name="a-using-left-with-a-column"></a>A. 列を指定した LEFT を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `Product` テーブル内の各製品名の左端から 5 文字が返されます。  
   
-```  
+```sql  
 SELECT LEFT(Name, 5)   
 FROM Production.Product  
 ORDER BY ProductID;  
@@ -78,7 +79,7 @@ GO
 ### <a name="b-using-left-with-a-character-string"></a>B. 文字列を指定した LEFT を使用する  
  次の例では、`LEFT` を使用して `abcdefg` という文字列の左端の 2 文字を返します。  
   
-```  
+```sql  
 SELECT LEFT('abcdefg',2);  
 GO  
 ```  
@@ -97,7 +98,7 @@ ab
 ### <a name="c-using-left-with-a-column"></a>C. 列を指定した LEFT を使用する  
  次の例では、各製品名の左端の 5 文字を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT(EnglishProductName, 5)   
@@ -108,7 +109,7 @@ ORDER BY ProductKey;
 ### <a name="d-using-left-with-a-character-string"></a>D. 文字列を指定した LEFT を使用する  
  次の例では、`LEFT` を使用して `abcdefg` という文字列の左端の 2 文字を返します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;  

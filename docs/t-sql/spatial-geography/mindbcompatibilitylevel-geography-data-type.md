@@ -1,4 +1,5 @@
 ---
+description: MinDbCompatibilityLevel (geography データ型)
 title: MinDbCompatibilityLevel (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0d381653235dac77b2a3a86b36d56929bbe70112
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: cfce4111cfcfb296689754e18aeea37878636543
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552549"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038085"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography データ型)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,6 +94,5 @@ END
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md)  
   

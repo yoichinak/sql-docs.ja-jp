@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723119"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868676"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>メモリ最適化テーブルのデータへのアクセス  
 
-メモリ最適化テーブルには、ネイティブ コンパイル ストアド プロシージャ (「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」) からアクセスするのが最も効率的です。 メモリ最適化テーブルのデータには、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]でもアクセスできます。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] とは、ネイティブ コンパイル ストアド プロシージャを使用せずにメモリ最適化テーブルにアクセスすることを表します。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスの例として、DML トリガー、アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ビュー、およびテーブル値関数からのメモリ最適化テーブルへのアクセスがあります。  
+メモリ最適化テーブルには、ネイティブ コンパイル ストアド プロシージャ (「[ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)」) からアクセスするのが最も効率的です。 メモリ最適化テーブルのデータには、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]でもアクセスできます。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] とは、ネイティブ コンパイル ストアド プロシージャを使用せずにメモリ最適化テーブルにアクセスすることを表します。 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスの例として、DML トリガー、アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ビュー、およびテーブル値関数からのメモリ最適化テーブルへのアクセスがあります。  
   
  次の表に、さまざまなオブジェクトへのネイティブ アクセスおよび解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスを示します。  
   
@@ -108,5 +108,4 @@ EXECUTE AS CALLER には、呼び出し元のアクセス許可チェックに�
 ## <a name="see-also"></a>参照
 
 [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

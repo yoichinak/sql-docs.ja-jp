@@ -1,4 +1,5 @@
 ---
+description: データ型の明示的な変換用関数
 title: 明示的なデータ型変換関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466189"
 ---
 # <a name="explicit-data-type-conversion-function"></a>データ型の明示的な変換用関数
 明示的なデータ型の変換は、SQL データ型定義の観点から指定されます。  
   
- 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 あるデータ型から別のデータ型への特定の変換の有効性は、ドライバー固有の各実装によって決まります。 ドライバーは ODBC 構文をネイティブ構文に変換するので、ODBC 構文で有効であってもデータソースではサポートされていない変換を拒否します。 ODBC 関数**SQLGetInfo**は、変換オプション (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH など) と共に、データソースによってサポートされている変換について照会する手段を提供します。  
+ 明示的なデータ型変換関数の ODBC 構文では、変換は制限されません。 あるデータ型から別のデータ型への特定の変換の有効性は、ドライバー固有の各実装によって決まります。 ドライバーは ODBC 構文をネイティブ構文に変換するので、ODBC 構文で有効であってもデータソースではサポートされていない変換を拒否します。 ODBC 関数 **SQLGetInfo**は、変換オプション (SQL_CONVERT_BIGINT、SQL_CONVERT_BINARY、SQL_CONVERT_INTERVAL_YEAR_MONTH など) と共に、データソースによってサポートされている変換について照会する手段を提供します。  
   
  **CONVERT**関数の形式は次のとおりです。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "87363322"
 
  明示的なデータ型変換関数の ODBC 構文では、変換形式の指定はサポートされていません。 明示的な形式の指定が基になるデータソースでサポートされている場合、ドライバーは既定値を指定するか、形式指定を実装する必要があります。  
   
- 引数*value_exp*には、列名、別のスカラー関数の結果、または数値または文字列リテラルを指定できます。 次に例を示します。  
+ 引数 *value_exp* には、列名、別のスカラー関数の結果、または数値または文字列リテラルを指定できます。 次に例を示します。  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
@@ -89,7 +90,7 @@ ms.locfileid: "87363322"
   
  ODBC では、スカラー関数からの戻り値のデータ型が必須ではないため (関数はデータソースに固有のものであるため)、データ型の変換を強制するために、可能な場合は常に CONVERT スカラー関数を使用する必要があります。  
   
- 次の2つの例は、 **CONVERT**関数の使用方法を示しています。 これらの例では、EMPLOYEES という名前のテーブルが存在することを前提としています。 SQL_SMALLINT 型の EMPNO 列と SQL_CHAR 型の EMPNO 列が含まれています。  
+ 次の2つの例は、 **CONVERT** 関数の使用方法を示しています。 これらの例では、EMPLOYEES という名前のテーブルが存在することを前提としています。 SQL_SMALLINT 型の EMPNO 列と SQL_CHAR 型の EMPNO 列が含まれています。  
   
  アプリケーションで次の SQL ステートメントを指定する場合:  
   

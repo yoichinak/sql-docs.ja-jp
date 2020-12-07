@@ -1,4 +1,5 @@
 ---
+description: 属性値を要求する (マスター データ サービス)
 title: 属性値を要求する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456754"
 ---
 # <a name="require-attribute-values-master-data-services"></a>属性値を要求する (マスター データ サービス)
 
@@ -29,12 +30,12 @@ ms.locfileid: "85811891"
 > [!NOTE]  
 >  ドメイン ベースの属性値がないメンバーは、それらのリレーションシップに基づく派生階層に表示されません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
--   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
+-   [ **システム管理** ] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「[管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-require-attribute-values"></a>属性値を要求するには  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811891"
   
     -   [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)   
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   

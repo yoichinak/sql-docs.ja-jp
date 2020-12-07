@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487211"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395193"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services エラー
     
 ## <a name="details"></a>詳細  
   
-|||  
+|カテゴリ|値|  
 |-|-|  
 |製品名|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |イベント ID|rsServerConfiguration|  

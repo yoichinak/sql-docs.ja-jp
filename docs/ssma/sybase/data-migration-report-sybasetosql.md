@@ -1,4 +1,5 @@
 ---
+description: データ移行レポート (SybaseToSQL)
 title: データ移行レポート (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c13b2536ddada33a6b9a3f14d53b208dd177098c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492295"
 ---
 # <a name="data-migration-report-sybasetosql"></a>データ移行レポート (SybaseToSQL)
-[**データ移行レポート**] ダイアログボックスは、にデータを移行した後に表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+[ **データ移行レポート** ] ダイアログボックスは、にデータを移行した後に表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="options"></a>Options  
 **状態**  

@@ -1,4 +1,5 @@
 ---
+description: スクリプト コンポーネントでのログ記録
 title: スクリプト コンポーネントでのログ記録 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44bb7079f01fbf745b514a8930be734477f21359
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d761fd4bd949f066a7dc0c59a69efa4a46edfff
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913408"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88430294"
 ---
 # <a name="logging-in-the-script-component"></a>スクリプト コンポーネントでのログ記録
 

@@ -1,4 +1,5 @@
 ---
+description: SSIS ETL パッケージを作成する方法
 title: SSIS ETL パッケージを作成する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921963"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88457048"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL パッケージを作成する方法
 

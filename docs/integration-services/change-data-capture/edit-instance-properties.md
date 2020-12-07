@@ -1,4 +1,5 @@
 ---
+description: インスタンスのプロパティの編集
 title: インスタンスのプロパティの編集 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69eff5afd66fb7167d894e116e5a5b1f21bf9b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 926ee3afb3828419a6863e99f27f529d4dcc1bab
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921678"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130633"
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
 

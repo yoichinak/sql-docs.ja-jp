@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -19,12 +20,12 @@ ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f30162b95e48d36a3ce5a556557b0170ae65e6c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7a7ac4bb318f2fe45df7c198c9acfb88e894f68c
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396999"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380097"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -38,11 +39,13 @@ ms.locfileid: "87396999"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  データベースが暗号化されている場合は、まず ALTER DATABASE ステートメントを使用してデータベースの暗号化を解除する必要があります。 暗号化の解除が完了するまで待機し、その後でデータベース暗号化キーを削除します。 ALTER DATABASE ステートメントについて詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。 データベースの状態を表示するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使います。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -51,7 +54,7 @@ DROP DATABASE ENCRYPTION KEY
 ## <a name="examples"></a>例  
  次の例では、データベースの暗号化を解除し、データベース暗号化キーを削除します。  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET ENCRYPTION OFF;  
 GO  
@@ -69,7 +72,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、TDE の暗号化を解除し、データベース暗号化キーを削除します。  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorksPDW2012  
     SET ENCRYPTION OFF;  
 GO  

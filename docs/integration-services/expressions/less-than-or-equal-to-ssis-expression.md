@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (以下) (SSIS 式)'
 title: '&lt;= (以下) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc5ff8aeceff48d203e15242cf8dfc305694c33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5241cb30244dd3a3ee9371990d5843988ba4e16d
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914511"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127112"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (以下) (SSIS 式)
 
@@ -53,7 +54,7 @@ expression1 <= expression2
 ## <a name="remarks"></a>解説  
  比較する式のいずれかが NULL の場合、比較結果は NULL になります。 両方の式が NULL の場合も、結果は NULL になります。  
   
- 設定する式の *expression1* と *expression2*は、次のいずれかのルールに従う必要があります。  
+ 設定する式の *expression1* と *expression2* は、次のいずれかのルールに従う必要があります。  
   
 -   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
@@ -106,7 +107,7 @@ ListPrice <= 500
 @LPrice <= 500  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   

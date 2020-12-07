@@ -1,4 +1,5 @@
 ---
+description: GRANT (型の権限の許可) (Transact-SQL)
 title: GRANT (型の権限の許可) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4e03489c066d4ed25f5d3b15ba30e0ac24a4623b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1eced05b0eb6a293a4bb2eb21880e2181effa750
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484497"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498121"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (型の権限の許可) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86484497"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
     TO <database_principal> [ ,...n ]  
     [ WITH GRANT OPTION ]  
@@ -136,7 +136,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="examples"></a>例  
  次の例では、ユーザー `VIEW DEFINITION` に対し、ユーザー定義型 `GRANT OPTION` の `PhoneNumber` 権限を、`KhalidR` を指定して許可します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     TO KhalidR WITH GRANT OPTION;  
 GO  

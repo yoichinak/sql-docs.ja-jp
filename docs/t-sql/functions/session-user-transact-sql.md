@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER (Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4de45bdd147626832f932f5bd619c3a89860d68a
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112319"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379407"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87112319"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 SESSION_USER  
 ```  
   
@@ -48,7 +49,7 @@ SESSION_USER
 ## <a name="return-types"></a>戻り値の型
  **nvarchar(128)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  SESSION_USER は、DEFAULT 制約と共に CREATE TABLE または ALTER TABLE ステートメント内で使用するか、標準の関数として使用します。 SESSION_USER は、既定値が指定されていなければテーブルに挿入できます。 この関数は引数を取りません。 SESSION_USER はクエリで使用できます。  
   
  コンテキスト切り替え後に SESSION_USER が呼び出された場合、SESSION_USER では借用したコンテキストのユーザー名が返されます。  
@@ -58,8 +59,8 @@ SESSION_USER
 ### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. SESSION_USER を使用して現在のセッションのユーザー名を返す  
  次の例では、変数を `nchar` 型として宣言し、`SESSION_USER` の現在値をこの変数に割り当てた後、テキストの説明と共にこの変数を出力します。  
   
-```  
-DECLARE @session_usr nchar(30);  
+```sql  
+DECLARE @session_usr NCHAR(30);  
 SET @session_usr = SESSION_USER;  
 SELECT 'This session''s current user is: '+ @session_usr;  
 GO  
@@ -77,24 +78,24 @@ This session's current user is: Surya
 ### <a name="b-using-session_user-with-default-constraints"></a>B. SESSION_USER を DEFAULT 制約と共に使用する  
  次の例では、荷物の受領記録者の名前に対し、`SESSION_USER` を `DEFAULT` 制約として使用するテーブルを作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE deliveries3  
 (  
- order_id int IDENTITY(5000, 1) NOT NULL,  
- cust_id  int NOT NULL,  
- order_date smalldatetime NOT NULL DEFAULT GETDATE(),  
- delivery_date smalldatetime NOT NULL DEFAULT   
+ order_id INT IDENTITY(5000, 1) NOT NULL,  
+ cust_id  INT NOT NULL,  
+ order_date SMALLDATETIME NOT NULL DEFAULT GETDATE(),  
+ delivery_date SMALLDATETIME NOT NULL DEFAULT   
     DATEADD(dd, 10, GETDATE()),  
- received_shipment nchar(30) NOT NULL DEFAULT SESSION_USER  
+ received_shipment NCHAR(30) NOT NULL DEFAULT SESSION_USER  
 );  
 GO  
 ```  
   
  テーブルに追加されたレコードに対して、現在のユーザーのユーザー名が設定されます。 この例では、`Wanida`、`Sylvester`、`Alejandro` が荷物の受領を確認します。 `EXECUTE AS` を使用してユーザー コンテキストを切り替えることでも、同様の機能を実現できます。  
   
-```  
+```sql
 EXECUTE AS USER = 'Wanida'  
 INSERT deliveries3 (cust_id)  
 VALUES (7510);  
@@ -116,7 +117,7 @@ GO
   
  次のクエリでは、`deliveries3` テーブルからすべての情報を選択します。  
   
-```  
+```sql
 SELECT order_id AS 'Order #', cust_id AS 'Customer #',   
    delivery_date AS 'When Delivered', received_shipment   
    AS 'Received By'  
@@ -144,7 +145,7 @@ Order #   Customer #  When Delivered       Received By
 ### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. SESSION_USER を使用して現在のセッションのユーザー名を返す  
  次の例では、現在のセッションのセッション ユーザーを返します。  
   
-```  
+```sql
 SELECT SESSION_USER;  
 ```  
   

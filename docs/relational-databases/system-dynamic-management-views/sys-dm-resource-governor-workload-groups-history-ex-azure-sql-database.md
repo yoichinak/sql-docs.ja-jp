@@ -1,5 +1,6 @@
 ---
-title: dm_resource_governor_workload_groups_history_ex (Azure SQL Database) |Microsoft Docs
+description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823320"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834407"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -79,7 +80,7 @@ Azure SQL Database のリソースプール統計の最後の32分 (合計128秒
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 
@@ -102,6 +103,6 @@ ORDER BY snapshot_time DESC;
 
 ## <a name="see-also"></a>参照
 
-- [翻訳ログレートガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [エラスティック プールの DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [エラスティック プールの仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [翻訳ログレートガバナンス](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [エラスティック プールの DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [エラスティック プールの仮想コア リソースの制限](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

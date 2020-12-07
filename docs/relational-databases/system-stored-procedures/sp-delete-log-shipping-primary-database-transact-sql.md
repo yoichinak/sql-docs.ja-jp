@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_database (Transact-SQL)
 title: sp_delete_log_shipping_primary_database (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f1b5625ed09cb3c5e9d753477b61fdd1e898590
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b7a1e58188a9b9f3a845e465139e5a24d3fad88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474389"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'`ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。 NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -48,28 +49,28 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>結果セット  
  [なし] :  
   
-## <a name="remarks"></a>Remarks  
- **sp_delete_log_shipping_primary_database**は、プライマリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>解説  
+ **sp_delete_log_shipping_primary_database** は、プライマリサーバーの **master** データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  指定されたプライマリデータベースのバックアップジョブを削除します。  
   
-2.  プライマリサーバー上の**log_shipping_monitor_primary**のローカル監視レコードを削除します。  
+2.  プライマリサーバー上の **log_shipping_monitor_primary** のローカル監視レコードを削除します。  
   
 3.  **Log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**内の対応するエントリを削除します。  
   
-4.  監視サーバーがプライマリサーバーと異なる場合は、監視サーバーの**log_shipping_monitor_primary**の監視レコードを削除します。  
+4.  監視サーバーがプライマリサーバーと異なる場合は、監視サーバーの **log_shipping_monitor_primary** の監視レコードを削除します。  
   
-5.  監視サーバー上の**log_shipping_monitor_history_detail**と**log_shipping_monitor_error_detail**内の対応するエントリを削除します。  
+5.  監視サーバー上の **log_shipping_monitor_history_detail** と **log_shipping_monitor_error_detail** 内の対応するエントリを削除します。  
   
-6.  このプライマリデータベースの**log_shipping_primary_databases**のエントリを削除します。  
+6.  このプライマリデータベースの **log_shipping_primary_databases** のエントリを削除します。  
   
-7.  監視サーバーで**sp_delete_log_shipping_alert_job**を呼び出します。  
+7.  監視サーバーで **sp_delete_log_shipping_alert_job** を呼び出します。  
 
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- この例では、 **sp_delete_log_shipping_primary_database**を使用して、プライマリデータベース**AdventureWorks2012**を削除しています。  
+## <a name="examples"></a>例  
+ この例では、 **sp_delete_log_shipping_primary_database** を使用して、プライマリデータベース **AdventureWorks2012**を削除しています。  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  

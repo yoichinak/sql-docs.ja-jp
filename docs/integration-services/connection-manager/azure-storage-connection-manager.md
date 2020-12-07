@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 44193053e6a5f09b2864b95ded9c5ac933c4cf95
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913657"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726023"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
 
@@ -37,21 +37,21 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
     - **AccessKey:** この認証方法には、**アカウント キー**を指定します。
     - **ServicePrincipal:** この認証方法には、サービス プリンシパルの**アプリケーション ID**、**アプリケーション キー**、**テナント ID** を指定します。
       **テスト接続**が機能するためには、サービス プリンシパルには少なくともストレージ アカウントに対する**ストレージ BLOB データ閲覧者**の役割を割り当てる必要があります。
-      詳細については、「[Azure portal で RBAC を使用して Azure BLOB とキューのデータへのアクセスを付与する](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)」を参照してください。
+      詳細については、「[Azure portal で RBAC を使用して Azure BLOB とキューのデータへのアクセスを付与する](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)」を参照してください。
     - **SharedAccessSignature:** この認証方法では、Shared Access Signature の、少なくとも**トークン**を指定します。
       接続をテストするには、テスト対象のリソース スコープをさらに指定します。 これは、**サービス**、**コンテナー**、または **BLOB** である可能性があります。
       **コンテナー**と **BLOB** には、コンテナー名と BLOB パスをそれぞれ指定します。
-      詳細については、[Azure Storage Shared Access Signature の概要](https://docs.microsoft.com/azure/storage/common/storage-sas-overview)に関する記事を参照してください。
+      詳細については、[Azure Storage Shared Access Signature の概要](/azure/storage/common/storage-sas-overview)に関する記事を参照してください。
 - **環境:** ストレージ アカウントをホストするクラウド環境を指定します。
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID
-[Azure Data Factory 内の Azure-SSIS 統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure Storage 認証に使用できます。 この ID を使用して指定したファクトリからストレージ アカウントにアクセスし、ストレージ アカウントとの間でデータをコピーできます。
+[Azure Data Factory 内の Azure-SSIS 統合ランタイム](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure Storage 認証に使用できます。 この ID を使用して指定したファクトリからストレージ アカウントにアクセスし、ストレージ アカウントとの間でデータをコピーできます。
 
-一般的な Azure Storage 認証については、[Azure Active Directory を使用した Azure Storage へのアクセスの認証](https://docs.microsoft.com/azure/storage/common/storage-auth-aad)に関する記事をご覧ください。 Azure Storage にマネージド ID 認証を使用するには:
+一般的な Azure Storage 認証については、[Azure Active Directory を使用した Azure Storage へのアクセスの認証](/azure/storage/common/storage-auth-aad)に関する記事をご覧ください。 Azure Storage にマネージド ID 認証を使用するには:
 
-1. [Azure portal でデータ ファクトリのマネージド ID を確認します](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)。 お使いのデータ ファクトリの **[プロパティ]** に移動します。 (**マネージド ID オブジェクト ID** ではなく) **マネージド ID アプリケーション ID** をコピーします。
+1. [Azure portal でデータ ファクトリのマネージド ID を確認します](/azure/data-factory/data-factory-service-identity)。 お使いのデータ ファクトリの **[プロパティ]** に移動します。 (**マネージド ID オブジェクト ID** ではなく) **マネージド ID アプリケーション ID** をコピーします。
 
-1. ストレージ アカウント内でマネージド ID に適切なアクセス許可を付与します。 ロールの詳細については、[RBAC を使用した Azure Storage データへのアクセス権の管理](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal)に関する記事をご覧ください。
+1. ストレージ アカウント内でマネージド ID に適切なアクセス許可を付与します。 ロールの詳細については、[RBAC を使用した Azure Storage データへのアクセス権の管理](/azure/storage/common/storage-auth-aad-rbac-portal)に関する記事をご覧ください。
 
     - **ソースとして**、アクセス制御 (IAM) で、少なくとも**ストレージ BLOB データ閲覧者**の役割を付与します。
     - **宛先として**、アクセス制御 (IAM) で、少なくとも**ストレージ BLOB データ共同作成者**の役割を付与します。
@@ -62,15 +62,15 @@ Azure Storage 接続マネージャーにより、SQL Server Integration Service
     > [!NOTE]
     >  現在、SSIS パッケージを SSIS デザイナーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server で実行しているときは、このオプションが有効になりません (マネージド ID 認証が機能しないことを示します)。
     
-- **実行時に構成します。** パッケージを [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) または [Azure Data Factory の SSIS パッケージの実行アクティビティ](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)で実行するときは、Azure Storage 接続マネージャーを探します。 そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
+- **実行時に構成します。** パッケージを [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) または [Azure Data Factory の SSIS パッケージの実行アクティビティ](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)で実行するときは、Azure Storage 接続マネージャーを探します。 そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]
     >  Azure-SSIS 統合ランタイムでは、ストレージ操作にマネージド ID 認証を使用すると、Azure Storage 接続マネージャーで事前構成済みの他のすべての認証方法 (アクセス キー、サービス プリンシパルなど) はオーバーライドされます。
 
 > [!NOTE]
->  既存のパッケージでマネージド ID 認証を構成するための推奨される方法は、[最新の SSIS デザイナー](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)を使用して SSIS プロジェクトを少なくとも 1 回リビルドすることです。 SSIS プロジェクトのすべての Azure Storage 接続マネージャーに新しい接続マネージャー プロパティ `ConnectUsingManagedIdentity` が自動的に追加されるように、SSIS プロジェクトを Azure-SSIS 統合ランタイムに再配置します。 または、実行時にプロパティ パス **\Package.Connections[<接続マネージャーの名前>].Properties[ConnectUsingManagedIdentity]** を指定して、プロパティのオーバーライドを直接使用します。
+>  既存のパッケージでマネージド ID 認証を構成するための推奨される方法は、[最新の SSIS デザイナー](../../ssdt/download-sql-server-data-tools-ssdt.md)を使用して SSIS プロジェクトを少なくとも 1 回リビルドすることです。 SSIS プロジェクトのすべての Azure Storage 接続マネージャーに新しい接続マネージャー プロパティ `ConnectUsingManagedIdentity` が自動的に追加されるように、SSIS プロジェクトを Azure-SSIS 統合ランタイムに再配置します。 または、実行時にプロパティ パス **\Package.Connections[<接続マネージャーの名前>].Properties[ConnectUsingManagedIdentity]** を指定して、プロパティのオーバーライドを直接使用します。
 
 ## <a name="secure-network-traffic-to-your-storage-account"></a>ストレージ アカウントへのネットワークトラフィックをセキュリティで保護する
-Azure Data Factory は、Azure Storage にとって[信頼できる Microsoft サービス](https://docs.microsoft.com/azure/storage/common/storage-network-security#trusted-microsoft-services)になりました。 マネージド ID の認証を使用すると、[選択したネットワークへのアクセスを制限](https://docs.microsoft.com/azure/storage/common/storage-network-security#change-the-default-network-access-rule)することで、ストレージ アカウントをセキュリティで保護することができます。その上、データ ファクトリでご利用のストレージ アカウントに引き続きアクセスすることができます。 手順については、「[例外の管理](https://docs.microsoft.com/azure/storage/common/storage-network-security#managing-exceptions)」を参照してください。
+Azure Data Factory は、Azure Storage にとって[信頼できる Microsoft サービス](/azure/storage/common/storage-network-security#trusted-microsoft-services)になりました。 マネージド ID の認証を使用すると、[選択したネットワークへのアクセスを制限](/azure/storage/common/storage-network-security#change-the-default-network-access-rule)することで、ストレージ アカウントをセキュリティで保護することができます。その上、データ ファクトリでご利用のストレージ アカウントに引き続きアクセスすることができます。 手順については、「[例外の管理](/azure/storage/common/storage-network-security#managing-exceptions)」を参照してください。
 
 ## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)

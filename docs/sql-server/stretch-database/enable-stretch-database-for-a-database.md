@@ -1,4 +1,5 @@
 ---
+description: Enable Stretch Database for a database
 title: Enable Stretch Database for a database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454402"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database 用にデータベースを構成するには、SQL Server Management Studio でデータベースに対して **[タスク]、[ストレッチ]、[有効にする]** の順に選択し、 **[データベースのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用してデータベースの Stretch Database を有効にすることもできます。  
@@ -41,7 +42,7 @@ ms.locfileid: "73844590"
   
 -   新しい Azure サーバーを作成する、または既存の Azure サーバーを選択するために必要な接続およびログイン情報を入手します。  
   
-##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 前提条件: サーバーで Stretch Database を有効にする  
+##  <a name="prerequisite-enable-stretch-database-on-the-server"></a><a name="EnableTSQLServer"></a> 前提条件:サーバーで Stretch Database を有効にする  
  データベースまたはテーブルで Stretch Database を有効にする前に、ローカル サーバーで有効にする必要があります。 この操作には、sysadmin または serveradmin のアクセス許可が必要です。  
   
 -   必要な管理アクセス許可がある場合、 **データベースのストレッチの有効化** ウィザードは Stretch 用にサーバーを構成します。  

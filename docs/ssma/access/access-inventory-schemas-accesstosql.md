@@ -1,4 +1,5 @@
 ---
+description: インベントリスキーマへのアクセス (アクセスアクセス Sql)
 title: インベントリスキーマにアクセスする (アクセス可能 Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -36,18 +37,18 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418638"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>インベントリスキーマへのアクセス (アクセスアクセス Sql)
 次のセクションでは、にアクセススキーマをエクスポートするときに SSMA によって作成されるテーブルについて説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="databases"></a>データベース  
-データベースメタデータは**SSMA_Access_InventoryDatabases**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+データベースメタデータは **SSMA_Access_InventoryDatabases** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -72,7 +73,7 @@ ms.locfileid: "87934153"
 |**QueryTimeout**|**int**|データベースの構成済み ODBC クエリタイムアウト値 (秒単位)。 既定値は 60 秒です。|  
   
 ## <a name="tables"></a>テーブル  
-テーブルのメタデータが**SSMA_Access_InventoryTables**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+テーブルのメタデータが **SSMA_Access_InventoryTables** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -84,24 +85,24 @@ ms.locfileid: "87934153"
 |**LinkedTable**|**nvarchar (4000)**|テーブルにリンクされている別のテーブル (存在する場合)。 テーブルをリンクすると、このテーブルを使用して、他のテーブルの追加、削除、および更新を行うことができます。|  
 |**ExternalSource**|**nvarchar (4000)**|テーブルに関連付けられているデータソース (存在する場合)。 テーブルがリンクされている場合、このフィールドには外部データソースが指定されています。|  
   
-## <a name="columns"></a>列  
-列のメタデータが**SSMA_Access_InventoryColumns**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+## <a name="columns"></a>[列]  
+列のメタデータが **SSMA_Access_InventoryColumns** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|この列を含むデータベースを識別します。|  
 |**TableId**|**uniqueidentifier**|この列を含むテーブルを識別します。|  
-|**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId**は、テーブルの主キーです。|  
+|**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId** は、テーブルの主キーです。|  
 |**[ColumnName]**|**nvarchar (4000)**|列の名前。|  
 |**IsNullable**|**bit**|列に null 値を含めることができるかどうかを指定します。 値が1の場合、列に null 値を含めることができます。 値が0の場合、列に null 値を含めることはできません。 検証規則は、null 値を防ぐためにも使用できます。|  
 |**DataType**|**nvarchar (4000)**|**Text**や**Long**など、列のアクセスデータ型。|  
 |**IsAutoIncrement**|**bit**|列が自動的に整数値をインクリメントするかどうかを指定します。 値が1の場合、整数は自動的にインクリメントされます。|  
 |**Ordinal**|**smallint**|テーブル内の列の順序。0から始まります。|  
-|**DefaultValue**|**nvarchar (4000)**|列の既定値。|  
+|**既定**|**nvarchar (4000)**|列の既定値。|  
 |**ValidationRule**|**nvarchar (4000)**|列に追加または更新されたデータの検証に使用されるルール。|  
   
-## <a name="indexes"></a>Indexes  
-インデックスメタデータは**SSMA_Access_InventoryIndexes**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+## <a name="indexes"></a>インデックス  
+インデックスメタデータは **SSMA_Access_InventoryIndexes** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -115,7 +116,7 @@ ms.locfileid: "87934153"
 |**IsClustered**|**bit**|インデックスがクラスター化されているかどうかを指定します。 クラスター化インデックスは、データの物理ストレージを並べ替えます。 テーブルにはクラスター化インデックスを1つだけ含めることができます。|  
   
 ## <a name="foreign-keys"></a>外部キー  
-外部キーのメタデータが**SSMA_Access_InventoryForeignKeys**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+外部キーのメタデータが **SSMA_Access_InventoryForeignKeys** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -131,7 +132,7 @@ ms.locfileid: "87934153"
 |**IsEnforced**|**bit**|Foreign key 制約を適用することを指定します。|  
   
 ## <a name="queries"></a>クエリ  
-クエリメタデータは**SSMA_Access_InventoryQueries**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+クエリメタデータは **SSMA_Access_InventoryQueries** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -144,7 +145,7 @@ ms.locfileid: "87934153"
 |**ExternalSource**|**nvarchar (4000)**|クエリが外部データソースを参照している場合は、クエリによって使用される接続文字列です。|  
   
 ## <a name="forms"></a>フォーム  
-フォームメタデータは**SSMA_Access_InventoryForms**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+フォームメタデータは **SSMA_Access_InventoryForms** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -153,7 +154,7 @@ ms.locfileid: "87934153"
 |**FormName**|**nvarchar (4000)**|フォームの名前。|  
   
 ## <a name="macros"></a>[マクロ]  
-マクロのメタデータが**SSMA_Access_InventoryMacros**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+マクロのメタデータが **SSMA_Access_InventoryMacros** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -161,8 +162,8 @@ ms.locfileid: "87934153"
 |**マクロ Id**|**int**|マクロを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**マクロ**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>Reports  
-レポートのメタデータが**SSMA_Access_InventoryReports**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+## <a name="reports"></a>レポート  
+レポートのメタデータが **SSMA_Access_InventoryReports** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  
@@ -171,7 +172,7 @@ ms.locfileid: "87934153"
 |**ReportName**|**nvarchar (4000)**|レポートの名前です。|  
   
 ## <a name="modules"></a>モジュール  
-モジュールのメタデータは**SSMA_Access_InventoryModules**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
+モジュールのメタデータは **SSMA_Access_InventoryModules** テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |---------------|-------------|---------------|  

@@ -1,4 +1,5 @@
 ---
+description: バージョンを削除する (マスター データ サービス)
 title: バージョンを削除する
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6faf2fc9b6b4ac3b8004771df79af34a3d255fa8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1e1fb93c02edc21cceae90470c35a99d17748c6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500595"
 ---
 # <a name="delete-a-version-master-data-services"></a>バージョンを削除する (マスター データ サービス)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85813348"
 > [!WARNING]  
 >  モデルにバージョンが 1 つしかない場合にそのバージョンを削除すると、モデルは使用できなくなります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.viw_SYSTEM_SCHEMA_VERSION ビューを表示して mds.udpVersionDelete ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](../master-data-services/database-object-security-master-data-services.md)」を参照してください。  
@@ -55,7 +56,7 @@ ms.locfileid: "85813348"
     > [!NOTE]  
     >  Web アプリケーションに変更が反映されるまで数分かかる場合があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バージョン &#40;マスターデータサービス&#41;](../master-data-services/versions-master-data-services.md)   
  [バージョンをコピーする (マスター データ サービス)](../master-data-services/copy-a-version-master-data-services.md)  
   

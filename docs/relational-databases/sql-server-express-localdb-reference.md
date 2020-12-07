@@ -1,4 +1,5 @@
 ---
+description: SQL Server Express LocalDB リファレンス
 title: SQL Server Express LocalDB リファレンス | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 465b78999808a8b44f05861251da43a2e6f0ee72
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e7e87627674b423c4e4adf10a2fe052966e6ef96
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913928"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546913"
 ---
 # <a name="sql-server-express-localdb-reference"></a>SQL Server Express LocalDB リファレンス
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

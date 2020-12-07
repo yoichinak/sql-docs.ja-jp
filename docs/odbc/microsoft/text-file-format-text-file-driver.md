@@ -1,4 +1,5 @@
 ---
+description: テキスト ファイルの形式 (テキスト ファイル ドライバー)
 title: テキストファイル形式 (テキストファイルドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449094"
 ---
 # <a name="text-file-format-text-file-driver"></a>テキスト ファイルの形式 (テキスト ファイル ドライバー)
 ODBC テキストドライバーでは、区切り文字と固定幅のテキストファイルの両方がサポートされています。 テキストファイルは、省略可能なヘッダー行と0個以上のテキスト行で構成されます。  
@@ -37,12 +38,12 @@ ODBC テキストドライバーでは、区切り文字と固定幅のテキス
   
  プログラマ向けに記述された次の文法は、ODBC テキストドライバーで読み取ることができるテキストファイルの形式を定義しています。  
   
-|フォーマット|[表記]|  
+|形式|[表記]|  
 |------------|--------------------|  
 |斜体以外|表示されるように入力する必要がある文字|  
 |*付き*|文法の別の場所で定義された引数|  
 |角かっこ ([])|省略可能な項目|  
-|中かっこ{}()|相互に排他的な選択肢の一覧|  
+|中かっこ ( {} )|相互に排他的な選択肢の一覧|  
 |縦棒 (&#124;)|相互に排他的な選択肢を分離する|  
 |省略記号 (...)|1回以上繰り返すことができる項目|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  固定幅テキストファイルの各列の幅は、schema.ini ファイルで指定されます。  
+>  固定幅テキストファイルの各列の幅は、Schema.ini ファイルで指定されます。  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  カスタム区切りのテキストファイルの区切り記号は、schema.ini ファイルで指定します。  
+>  カスタム区切りのテキストファイルの区切り記号は、Schema.ini ファイルに指定されています。  
   
 ```  
 quote-character ::= "  

@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_columns (Transact-sql) |Microsoft Docs
+description: sys.pdw_nodes_columns (Transact-sql)
+title: sys.pdw_nodes_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,19 +13,19 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8865ca09c1c0aad0da1388a514c522ba89a71e97
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197385"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037415"
 ---
-# <a name="syspdw_nodes_columns-transact-sql"></a>pdw_nodes_columns (Transact-sql)
+# <a name="syspdw_nodes_columns-transact-sql"></a>sys.pdw_nodes_columns (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   ユーザー定義テーブルとユーザー定義ビューの列を表示します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|この列が所属するオブジェクトの ID。||  
 |name|**sysname**|列の名前です。 オブジェクト内で一意です。||  
@@ -56,8 +57,8 @@ ms.locfileid: "86197385"
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys.all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SET EXACT コマンド
 title: SET EXACT Command |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e754fff35b6b948ac63d19361067b2d65a07fdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466364"
 ---
 # <a name="set-exact-command"></a>SET EXACT コマンド
 長さが異なる2つの文字列を比較するための規則を指定します。  
@@ -36,7 +37,7 @@ SET EXACT ON | OFF
  OFF  
  (既定値)。等しいと見なされるように、右辺の式の終わりに達するまで、式が文字の文字と一致する必要があることを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  両方の文字列が同じ長さである場合、[正確に設定] 設定は無効です。  
   
 ## <a name="string-comparisons"></a>文字列比較  
@@ -52,18 +53,18 @@ SET EXACT ON | OFF
   
 |比較|= 完全にオフ|= 完全一致|= = 完全にオンまたはオフ|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|照合|照合|照合|  
+|"abc" = "abc"|一致したもの|一致したもの|一致したもの|  
 |"ab" = "abc"|一致なし。|一致なし。|一致なし。|  
-|"abc" = "ab"|照合|一致なし。|一致なし。|  
+|"abc" = "ab"|一致したもの|一致なし。|一致なし。|  
 |"abc" = "ab_"|一致なし。|一致なし。|一致なし。|  
-|"ab" = "ab_"|一致なし。|照合|一致なし。|  
-|"ab_" = "ab"|照合|照合|一致なし。|  
+|"ab" = "ab_"|一致なし。|一致したもの|一致なし。|  
+|"ab_" = "ab"|一致したもの|一致したもの|一致なし。|  
 |"" = "ab"|一致なし。|一致なし。|一致なし。|  
-|"ab" = ""|照合|一致なし。|一致なし。|  
-|"__" = ""|照合|照合|一致なし。|  
-|"" = "___"|一致なし。|照合|一致なし。|  
-|TRIM ("__ _") = ""|照合|照合|照合|  
-|"" = TRIM ("__ _")|照合|照合|照合|  
+|"ab" = ""|一致したもの|一致なし。|一致なし。|  
+|"__" = ""|一致したもの|一致したもの|一致なし。|  
+|"" = "___"|一致なし。|一致したもの|一致なし。|  
+|TRIM ("__ _") = ""|一致したもの|一致したもの|一致したもの|  
+|"" = TRIM ("__ _")|一致したもの|一致したもの|一致したもの|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET ANSI コマンド](../../odbc/microsoft/set-ansi-command.md)

@@ -3,17 +3,17 @@ title: Linux 上の SQL Server 2017 のリリース ノート
 description: この記事には、Linux で実行されている SQL Server 2017 のリリース ノートとサポートされている機能が含まれています。 リリース ノートは、最新のリリースと以前のいくつかのリリースに含まれています。
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/01/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd0473eea265df700c1224ba4db8edf2dbff9e9e
+ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882696"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013675"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -22,7 +22,7 @@ ms.locfileid: "85882696"
 次のリリース ノートは、Linux で実行されている [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] に適用されます。 この記事は、リリースごとのセクションに分けられています。 GA リリースには、詳細なサポートと既知の問題が記載されています。 更新累積プログラム (CU) または一般配布リリース (GDR) のそれぞれには、Linux パッケージのダウンロードへのリンクに加えて、CU の変更について説明するサポート記事へのリンクが含まれています。
 
 > [!TIP]
-> これらのリリース ノートは、特に [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] リリースを対象としています。 新しい [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の詳細については、[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)を参照してください。
+> これらのリリース ノートは、特に [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] リリースを対象としています。 新しい [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の詳細については、[Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true)を参照してください。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -46,6 +46,7 @@ ms.locfileid: "85882696"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
@@ -82,6 +83,27 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 - [フルテキスト検索パッケージのインストール](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu22-september-2020"></a><a id="CU22"></a> CU22 (2020 年 9 月)
+
+これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 22 (CU22) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3356.20 です。 このリリースでの修正プログラムと機能強化の詳細については、<https://support.microsoft.com/help/4577467> を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+> [!NOTE]
+> **Ubuntu 18.04** と **RHEL 8** は、CU20 以降の SQL Server 2017 でサポートされるようになりました。
+>
+> Ubuntu 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (Ubuntu 18.04 では使用できません)、Ubuntu 18.04 のパッケージが参照されています。 Ubuntu 16.04 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/> を参照してください。
+>
+> Red Hat 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (RHEL 8 では使用できません)、RHEL 8 のパッケージが参照されています。 RHEL 7 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/rhel/7/mssql-server-2017/> を参照してください。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3356.20-23 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3356.20-23 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3356.20-23.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3356.20-23.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3356.20-23.x86_64.rpm) | 
+| Ubuntu 18.04 Debian パッケージ | 14.0.3356.20-23 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3356.20-23_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3356.20-23_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3356.20-23_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (2020 年 7 月)
 
@@ -654,7 +676,7 @@ Linux の SSIS の詳細については、次の記事を参照してくださ�
 - [Red Hat Enterprise Linux へのインストール](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server へのインストール](quickstart-install-connect-suse.md)
 - [Ubuntu へのインストール](quickstart-install-connect-ubuntu.md)
-- [Docker 上での実行](quickstart-install-connect-ubuntu.md)
+- [Docker 上での実行](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
 

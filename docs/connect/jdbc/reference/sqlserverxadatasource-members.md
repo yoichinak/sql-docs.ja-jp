@@ -1,4 +1,5 @@
 ---
+description: SQLServerXADataSource のメンバー
 title: SQLServerXADataSource のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed2d2515dc742eca0ece6036dbf0b06dd9a9530c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67970176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458204"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "67970176"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスの新しいインスタンスを初期化します。|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "67970176"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) **applicationIntent** 接続プロパティの値が返されます。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|([SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) から継承されます) アプリケーション名が返されます。|  

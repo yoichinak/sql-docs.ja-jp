@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagField
 title: SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,11 +15,12 @@ ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f609a066d06a82edfb8961222d94d0d92cf0915
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 31355856b10e0ec1213655b2968dfbf3ad511fe9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010108"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811020"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +31,7 @@ ms.locfileid: "86010108"
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
 |SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラーメッセージの状態の詳細については、「 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。 この値は、32 ビットの符号付き整数で返されます。|  
-|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 SQL_MAX_PROCEDURE_NAME_LEN の値を要求する[SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md)を呼び出すことによって決定できます。|  
+|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 SQL_MAX_PROCEDURE_NAME_LEN の値を要求する [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) を呼び出すことによって決定できます。|  
 |SQL_DIAG_SS_SEVERITY|関連付けられたエラー メッセージの重大度レベル。 この値は、32 ビットの符号付き整数で返されます。|  
 |SQL_DIAG_SS_SRVNAME|エラーが発生したサーバーの名前。 この値は文字列で返されます。 この文字列の長さ (文字列) は、sqlncli.h の SQL_MAX_SQLSERVERNAME マクロで定義されます。|  
   
@@ -98,10 +100,9 @@ ms.locfileid: "86010108"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
  SQLGetDiagField は、SQL_DIAG_SS_TABLE_COLUMN_NUMBER と SQL_DIAG_SS_TABLE_ROW_NUMBER の2つの診断フィールドを取得するために使用できます。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「 [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetDiagField 関数](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField 関数](../../odbc/reference/syntax/sqlgetdiagfield-function.md)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

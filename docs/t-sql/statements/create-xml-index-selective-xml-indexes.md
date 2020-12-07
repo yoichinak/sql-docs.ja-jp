@@ -1,4 +1,5 @@
 ---
+description: CREATE XML INDEX (選択的 XML インデックス)
 title: CREATE XML INDEX (選択的 XML インデックス) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9d6b7434c8daf3e1236e5a16368f175ded765f1
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766906"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688068"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,6 @@ ms.locfileid: "85766906"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE XML INDEX index_name  
     ON <table_object> ( xml_column_name )  
     USING XML INDEX sxi_index_name  
@@ -87,7 +87,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options> インデックス オプションについては、[CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md) に関するページを参照してください。  
   
-## <a name="remarks"></a>解説  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>解説
  ベース テーブルの各 XML 列に複数の選択的セカンダリ XML インデックスを作成できます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -101,7 +103,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="examples"></a>例  
  次の例では、パス `pathabc`に選択的セカンダリ XML インデックスを作成します。 インデックスを作成するパスは、[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) で割り当てられた名前です。  
   
-```  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  

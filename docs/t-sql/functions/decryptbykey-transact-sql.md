@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEY (Transact-SQL)
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 45808c6b9036c41c46cafedc286ec306b9a07e91
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111073"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124762"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。 `DECRYPTBYKEY` は、データの暗号化に使用する対称キーが開いていない場合か、*ciphertext* が NULL の場合、NULL を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
 `DECRYPTBYKEY` は対称キーを使用します。 データベースでは、この対称キーを既に開いている必要があります。 `DECRYPTBYKEY` では、複数のキーを同時に開いておくことができます。 暗号化テキストの復号する直前にキーを開く必要はありません。  
   
 対称暗号化/復号は通常、比較的すぐに動作します。大量のデータが含まれる操作で効率的に動作します。  
@@ -171,7 +172,7 @@ GO
 ```
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

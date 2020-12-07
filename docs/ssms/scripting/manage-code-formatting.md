@@ -1,11 +1,8 @@
 ---
 title: コードの書式設定の管理
 description: テキスト インデントの 3 つのスタイルとそれらの使用方法について説明し、クリック可能な URL を作成する方法について説明します。
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
@@ -26,17 +23,22 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88d0d170172d215ae0bed9574005bc83bb42f026
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d85ba0589e239fc54280f3c418eaf011e69906b1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123103"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093411"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  エディターでは、コードに関して、インデント設定、テキストの非表示、URL などの書式設定を行えます。 スマート インジケーターを使用して、入力と同時にコードを自動的に書式設定することも可能です。  
+
+エディターでは、コードに関して、インデント設定、テキストの非表示、URL などの書式設定を行えます。 スマート インジケーターを使用して、入力と同時にコードを自動的に書式設定することも可能です。  
   
 ## <a name="indenting"></a>インデント  
  テキストのインデントは、3 種類のスタイルから選択できます。 また、1 つのインデントまたはタブのスペース数や、エディターでタブとスペースのどちらの文字を使用してインデントするかを指定できます。  

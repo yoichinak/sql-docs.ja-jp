@@ -10,25 +10,25 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400883"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System の並列データウェアハウスファイアウォール構成
 
-SQL Server PDW Configuration Manager の [**ファイアウォール**] ページでは、Analytics Platform System appliance の特定のポートへのアクセスを許可または禁止するファイアウォール規則を有効または無効にすることができます。  
+SQL Server PDW Configuration Manager の [ **ファイアウォール** ] ページでは、Analytics Platform System appliance の特定のポートへのアクセスを許可または禁止するファイアウォール規則を有効または無効にすることができます。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>アプライアンスノードのポートとファイアウォールルールを管理するには  
   
-1.  Configuration Manager を起動します。 詳細については、「 [Configuration Manager &#40;Analytics Platform System&#41;の起動](launch-the-configuration-manager.md)」を参照してください。  
+1.  Configuration Manager を起動します。 詳細については、「 [Configuration Manager &#40;Analytics Platform System&#41;の起動 ](launch-the-configuration-manager.md)」を参照してください。  
   
-2.  Configuration Manager の左側のウィンドウで、[**並列データウェアハウストポロジ**] を展開し、[**ファイアウォール**] をクリックします。  
+2.  Configuration Manager の左側のウィンドウで、[ **並列データウェアハウストポロジ**] を展開し、[ **ファイアウォール**] をクリックします。  
   
 3.  [構成] ボックスの一覧で、更新するポートまたはファイアウォール規則を見つけて、その項目の横にあるチェックボックスをオンまたはオフにします。 この一覧には、SQL Server PDW 管理者が構成可能なオプションのみが表示されます。外部に接続しているノードのポートを開いたり閉じたりすることもできます。  
   
-4.  [**適用**] をクリックして変更を保存します。  
+4.  [ **適用** ] をクリックして変更を保存します。  
   
 ![DWConfig アプライアンス PDW のファイアウォール](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   

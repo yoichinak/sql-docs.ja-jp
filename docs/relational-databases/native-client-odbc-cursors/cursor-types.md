@@ -1,4 +1,5 @@
 ---
+description: カーソルの種類
 title: カーソルの種類 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 030a793b949c0e3b94cbee2b35a24bde46dfee2f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7459f8a312cbfbb960d6cfdf87e64d5b8015429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460804"
 ---
 # <a name="cursor-types"></a>カーソルの種類
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,13 +33,13 @@ ms.locfileid: "86000638"
   
 -   順方向専用カーソルではスクロールがサポートされず、カーソルの最初から最後まで行を順番にフェッチする機能だけがサポートされます。  
   
--   静的カーソルは、カーソルを開いたときに**tempdb**に構築されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバーカーソルは作業テーブルとして**tempdb**に作成されるので、カーソルの結果セットのサイズは、で許容される最大行サイズを超えることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+-   静的カーソルは、カーソルを開いたときに **tempdb** に構築されます。 静的カーソルは、常に、カーソルを開いた時点の結果セットを表示します。 データへの変更は反映されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の静的カーソルは常に読み取り専用です。 静的サーバーカーソルは作業テーブルとして **tempdb**に作成されるので、カーソルの結果セットのサイズは、で許容される最大行サイズを超えることはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   キーセット ドリブン カーソルでは、カーソルを開くときに、結果セット内の行のメンバーシップと順序が固定されます。 非キー列の変更は、このカーソルを使用して表示されます。  
   
 -   動的カーソルは静的カーソルと対照的です。 動的カーソルでは、結果セット内の行に対するすべての変更が反映されます。 結果セット内の行のデータ値、順序、およびメンバーシップは、フェッチを実行するたびに変化する可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [ODBC&#41;&#40;カーソルの使用](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;カーソルの使用 ](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

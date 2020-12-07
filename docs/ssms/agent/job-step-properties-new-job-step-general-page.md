@@ -1,4 +1,5 @@
 ---
+description: ジョブ ステップのプロパティ - [新しいジョブ ステップ] \([全般] ページ)
 title: 新しいジョブ ステップのプロパティ ([全般] ページ)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,23 +14,23 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7575152ff23cec3096c9f5e1e22f1f0ea1a8094
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731396"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036560"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>ジョブ ステップのプロパティ - [新しいジョブ ステップ] \([全般] ページ)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
+> 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
 このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
-このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** 、 **[挿入]** 、または **[編集]** をクリックします。  
+このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
   
 ## <a name="options"></a>オプション  
 **[ステップ名]**  
@@ -54,13 +55,13 @@ ms.locfileid: "85731396"
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択されたテキストをクリップボードにコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
-**解析**  
+**Parse**  
 コマンドの構文をチェックします。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX スクリプト ジョブ ステップのオプション  
@@ -83,10 +84,10 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-operating-system-cmdexec-job-steps"></a>オペレーティング システム (CmdExec) ジョブ ステップのオプション  
@@ -99,10 +100,10 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell ジョブ ステップのオプション  
@@ -112,30 +113,30 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 スクリプトのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>レプリケーション ディストリビューター ジョブ ステップのオプション  
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-merge-job-steps"></a>レプリケーション マージ ジョブ ステップのオプション  
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>レプリケーション キュー リーダーのジョブ ステップのオプション  
@@ -145,34 +146,34 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>レプリケーション スナップショット ジョブ ステップのオプション  
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>レプリケーション トランザクション ログ リーダー ジョブ ステップのオプション  
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-sql-server-analysis-services-command-job-steps"></a>SQL Server Analysis Services コマンド ジョブ ステップのオプション  
-**[サーバー]**  
+**サーバー**  
 ジョブ ステップを実行するサーバーを選択します。  
   
 **[ファイル]**  
@@ -181,14 +182,14 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-sql-server-analysis-services-query-job-steps"></a>SQL Server Analysis Services クエリ ジョブ ステップのオプション  
-**[サーバー]**  
+**サーバー**  
 ジョブ ステップを実行するサーバーを選択します。  
   
 **[データベース]**  
@@ -200,10 +201,10 @@ JScript をジョブ ステップの言語として指定します。
 **[すべて選択]**  
 コマンドのテキストを選択します。  
   
-**Copy** に設定する必要があります  
+**コピー**  
 選択したテキストをコピーします。  
   
-**[貼り付け]**  
+**貼り付け**  
 クリップボードの内容を貼り付けます。  
   
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services パッケージ実行ジョブ ステップのオプション  
@@ -232,7 +233,7 @@ JScript をジョブ ステップの言語として指定します。
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証は旧バージョンとの互換性を維持するために提供されます。 セキュリティを向上させるためには、可能な限り、Windows 認証を使用してください。  
   
-**Package**  
+**パッケージ**  
 パッケージの場所を入力します。  
   
 > [!IMPORTANT]  
@@ -241,7 +242,7 @@ JScript をジョブ ステップの言語として指定します。
 ### <a name="configurations-tab"></a>[構成] タブ  
 [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージの構成オプションを指定します。 このタブを選択すると、次のオプションを使用できます。  
   
-**[構成ファイル]**  
+**構成ファイル**  
 パッケージの構成ファイルを一覧表示します。  
   
 **追加**  
@@ -304,7 +305,7 @@ JScript をジョブ ステップの言語として指定します。
 **[チェックポイント ファイル]**  
 パッケージ チェックポイント ファイルの名前を入力します。  
   
-**[...]**  
+**...**  
 パッケージ チェックポイント ファイルを参照して指定します。  
   
 **[再開オプションをオーバーライドする]**  
@@ -358,7 +359,7 @@ JScript をジョブ ステップの言語として指定します。
 **[バージョン ID を確認する]**  
 特定のバージョン ID を持つパッケージのみ実行します。 このオプションがオンになっていると、パッケージのバージョン ID が指定の ID と異なる場合は、ジョブ ステップが失敗します。  
   
-**[バージョン ID]**  
+**バージョン ID**  
 バージョン ID を入力します。  
   
 ### <a name="command-line-tab"></a>[コマンド ライン] タブ  
@@ -377,4 +378,3 @@ JScript をジョブ ステップの言語として指定します。
 [ジョブ ステップの管理](../../ssms/agent/manage-job-steps.md)  
 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
 [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)  
-  

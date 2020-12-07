@@ -1,4 +1,5 @@
 ---
+description: 転送オクテット長
 title: 転送オクテット長 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386348"
 ---
 # <a name="transfer-octet-length"></a>転送オクテット長
 列の転送オクテット長は、データが既定の C データ型に転送されるときにアプリケーションに返される最大バイト数です。 文字データの場合、転送オクテット長には null 終端文字のスペースは含まれません。 列の転送オクテット長は、データソースにデータを格納するために必要なバイト数とは異なる場合があります。  

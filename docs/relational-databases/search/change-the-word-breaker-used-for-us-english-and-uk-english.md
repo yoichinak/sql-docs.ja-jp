@@ -1,4 +1,5 @@
 ---
+description: 米国英語と英国英語に使用されるワード ブレーカーを変更する方法
 title: 米国英語と英国英語に使用されるワード ブレーカーの変更 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bb7151b0a36267fa1cd9cad24432f5d72f96b11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9aea3dff9973d75c71eb27a60859c99d4385b617
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934344"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866939"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、英語用のワード ブレーカーおよびステマーの新しいバージョン (バージョン 14.0.4999.1038) がインストールされて、前のバージョン (バージョン 12.0.6828.0) が置き換えられます。 新しいコンポーネントで変更された動作の詳細については、「 [フルテキスト検索の動作の変更](./full-text-search.md?view=sql-server-ver15)」を参照してください。 このトピックでは、これらのコンポーネントの新しいバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。 クラスターのインストールでは、これらの変更を、すべてのプライマリ ノードとパッシブ ノードで行う必要があります。  
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "87934344"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
-1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
   
 2.  次の手順を使用して、LCID 1033 の前の米国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "87934344"
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
-1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
   
 2.  次の手順を使用して、LCID 2057 の前の英国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "87934344"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
-1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
   
 2.  次のキーが存在しない場合は、次の手順を使用して、LCID 1033 の現在の米国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "87934344"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
-1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
   
 2.  次のキーが存在しない場合は、次の手順を使用して、LCID 2057 の現在の英国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -126,6 +127,5 @@ ms.locfileid: "87934344"
   
 ## <a name="see-also"></a>参照  
  [検索で使用するワード ブレーカーを以前のバージョンに戻す](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [フルテキスト検索の動作の変更](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
-  
+ [フルテキスト検索の動作の変更](./full-text-search.md?view=sql-server-ver15)  
   

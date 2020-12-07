@@ -1,4 +1,5 @@
 ---
+description: 接続のオプション
 title: 接続オプション |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25cfe2a897b0c312f91cd0c1e41ad6fa11725ab8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22326ca650f575c6a4f0503093306d8b68581475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483685"
 ---
 # <a name="connect-options"></a>接続のオプション
 > [!IMPORTANT]  
@@ -27,9 +28,9 @@ ms.locfileid: "81281312"
   
  これらのオプションを使用すると、アプリケーション内のデータベース接続をカスタマイズできます。  
   
-|Connect オプション|メモ|  
+|Connect オプション|ノート|  
 |--------------------|-----------|  
-|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは[Sqltransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。|  
+|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは [Sqltransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。|  
 |SQL_ODBC_CURSORS|この接続属性は、ドライバーマネージャーに実装されます。|  
 |SQL_OPT_TRACE|この接続属性は、ドライバーマネージャーに実装されます。|  
 |SQL_OPT_TRACEFILE|この接続属性は、ドライバーマネージャーに実装されます。|  

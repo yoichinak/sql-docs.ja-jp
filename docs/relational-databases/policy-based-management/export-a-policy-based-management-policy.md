@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ポリシーのエクスポート
 title: ポリシー ベースの管理ポリシーのエクスポート | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c97684af46e58625c7bd63e7e07fd33c6f3ce39d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fff3bda286f50b2220dbb1ea4732547e98829f
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760524"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127867"
 ---
 # <a name="export-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのエクスポート
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85760524"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してポリシーをエクスポートするには:**  
   

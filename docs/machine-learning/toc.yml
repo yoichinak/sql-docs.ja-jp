@@ -35,7 +35,15 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: 事前トレーニング済みモデルのインストール
       href: ../machine-learning/install/sql-pretrained-models-install.md
-    - name: Python と R のアップグレード
+    - name: カスタム ランタイムをインストールする
+      items:
+        - name: Python カスタム ランタイムをインストールする
+          href: ../machine-learning/install/custom-runtime-python.md
+        - name: R カスタム ランタイムをインストールする
+          href: ../machine-learning/install/custom-runtime-r.md
+    - name: 既定の Python および R ランタイムの変更
+      href: ../machine-learning/install/change-default-language-runtime-version.md
+    - name: バインドを使用した Python と R ランタイムのアップグレード
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Azure Data Studio ノートブック
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
@@ -95,20 +103,20 @@
               href: ../machine-learning/tutorials/python-clustering-model-build.md
             - name: 4 - モデルをデプロイする
               href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-        - name: revoscalepy を使用した Python モデルの作成
-          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: SQL 開発者向けの Python
+        - name: NYC タクシーのヒント (分類)
           items:
             - name: 1 - 概要
-              href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+              href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
             - name: 2 - データの探索
-              href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 3 - 特徴量エンジニアリング
-              href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
+            - name: 3 - 機能エンジニアリング
+              href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
             - name: 4 - トレーニングおよびデプロイ
-              href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
             - name: 5 - 予測
-              href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+              href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+        - name: revoscalepy を使用した Python モデルの作成
+          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
     - name: R
       items:
         - name: R のチュートリアル
@@ -133,20 +141,20 @@
               href: ../machine-learning/tutorials/r-clustering-model-build.md
             - name: 4 - モデルをデプロイする
               href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-        - name: パーティション ベースのモデルの作成
-          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: T-SQL での R の使用
+        - name: NYC タクシーのヒント (分類)
           items:
             - name: 1. はじめに
-              href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+              href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
             - name: 2. データの探索
-              href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 3. 特徴量エンジニアリング
-              href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
+            - name: 3. 機能エンジニアリング
+              href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
             - name: 4. トレーニングおよびデプロイ
-              href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+              href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
             - name: 5. 予測
-              href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+              href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+        - name: パーティション ベースのモデルの作成
+          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: R ツールでの SQL ML の使用
           items:
             - name: 1. はじめに
@@ -155,7 +163,7 @@
               href: ../machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r.md
             - name: 3. グラフとプロット
               href: ../machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. 特徴量エンジニアリング
+            - name: 4. 機能エンジニアリング
               href: ../machine-learning/tutorials/walkthrough-create-data-features.md
             - name: 5. モデルの構築と保存
               href: ../machine-learning/tutorials/walkthrough-build-and-save-the-model.md
@@ -229,6 +237,14 @@
               href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
     - name: データ探索とモデリング
       items:
+        - name: Python
+          items:
+            - name: Python でのヒストグラムのプロット
+              href: ../machine-learning/data-exploration/python-plot-histogram.md
+            - name: pandas データ フレームにデータをインポートする
+              href: ../machine-learning/data-exploration/python-dataframe-pandas.md
+            - name: SQL にデータフレームを挿入する
+              href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
         - name: R
           items:
             - name: ODBC を使用して R オブジェクトを読み込む
@@ -255,12 +271,10 @@
           href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
     - name: 予測
       items:
-        - name: 予測を生成する方法
-          href: ../machine-learning/r/how-to-do-realtime-scoring.md
-        - name: sp_rxPredict でのリアルタイム スコアリング
-          href: ../machine-learning/real-time-scoring.md
         - name: PREDICT T-SQL でのネイティブ スコアリング
-          href: ../machine-learning/sql-native-scoring.md
+          href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+        - name: sp_rxPredict でのリアルタイム スコアリング
+          href: ../machine-learning/predictions/real-time-scoring.md
     - name: パッケージの管理
       items:
         - name: 新しい Python パッケージのインストール
@@ -327,16 +341,10 @@
           href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
     - name: パフォーマンス
       items:
-        - name: R
+        - name: R コードのパフォーマンス
           items:
-            - name: R でのパフォーマンス チューニングの概要
-              href: ../machine-learning/r/sql-server-r-services-performance-tuning.md
-            - name: パフォーマンス チューニングのサーバーの構成
-              href: ../machine-learning/r/sql-server-configuration-r-services.md
-            - name: パフォーマンス チューニング - R でのデータの最適化
+            - name: R でのデータ最適化
               href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R での結果のパフォーマンス チューニング
-              href: ../machine-learning/r/performance-case-study-r-services.md
             - name: R コード プロファイル関数の使用
               href: ../machine-learning/r/using-r-code-profiling-functions.md
 - name: リファレンス
@@ -359,19 +367,23 @@
           href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: リソース
   items:
-    - name: リリース ノート >
+    - name: リリース ノート 2019 >
+      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
+    - name: リリース ノート 2017 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+    - name: リリース ノート 2016 >
+      href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+    - name: リリース ノート 2014 >
+      href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
     - name: トラブルシューティング
       items:
         - name: トラブルシューティングの概要
-          href: ../machine-learning/machine-learning-troubleshooting-faq.md
+          href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
         - name: 既知の問題
-          href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-        - name: データ コレクション
-          href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-        - name: インストールとアップグレードのエラー
-          href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
-        - name: スタート パッドや外部スクリプトの実行エラー
-          href: ../machine-learning/common-issues-external-script-execution.md
-        - name: R スクリプトのエラー
-          href: ../machine-learning/r-script-execution-errors.md
+          href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+        - name: トラブルシューティングのためにデータを収集する
+          href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+        - name: スタート パッドと外部スクリプトに関する問題
+          href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+        - name: 一般的な R スクリプトのエラー
+          href: ../machine-learning/troubleshooting/r-script-execution-errors.md

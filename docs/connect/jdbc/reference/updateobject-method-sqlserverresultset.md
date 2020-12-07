@@ -1,4 +1,5 @@
 ---
+description: updateObject メソッド (SQLServerResultSet)
 title: updateObject メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6d2baa57-079c-4e79-a5c4-c1a0c4376e72
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1462534837a8364ffb8e104dc13ea6ad25f22e6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 769415f92ee9e1011c9ff2bc20e726f9a9261f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457959"
 ---
 # <a name="updateobject-method-sqlserverresultset"></a>updateObject メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80919712"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[updateObject (int, java.lang.Object)](../../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md)|渡された列インデックスを使用して、指定された列を **Object** 値で更新します。|  
 |[updateObject (int, java.lang.Object, int)](../../../connect/jdbc/reference/updateobject-method-int-java-lang-object-int.md)|渡された列インデックスおよび小数点以下桁数を使用して、指定された列を **Object** 値で更新します。|  

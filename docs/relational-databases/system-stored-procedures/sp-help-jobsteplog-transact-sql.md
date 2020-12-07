@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobsteplog (Transact-sql)
 title: sp_help_jobsteplog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4499ad9e2dd54e5592bd4ee9d3b22e3505e9d144
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891802"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547994"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  特定のエージェントのジョブステップログに関するメタデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_help_jobsteplog**は実際のログを返しません。  
+  特定のエージェントのジョブステップログに関するメタデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_help_jobsteplog** は実際のログを返しません。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] 'job_id'`ジョブステップログ情報を返すジョブの識別番号を指定します。 *job_id*は**int**,、既定値は NULL です。  
+`[ @job_id = ] 'job_id'` ジョブステップログ情報を返すジョブの識別番号を指定します。 *job_id* は **int**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'`ジョブの名前。 *job_name*は**sysname**で、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
 >  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id`ジョブのステップの識別番号を指定します。 含まれていない場合は、ジョブのすべての手順が含まれます。 *step_id*は**int**,、既定値は NULL です。  
+`[ @step_id = ] step_id` ジョブのステップの識別番号を指定します。 含まれていない場合は、ジョブのすべての手順が含まれます。 *step_id* は **int**,、既定値は NULL です。  
   
-`[ @step_name = ] 'step_name'`ジョブのステップの名前。 *step_name*は**sysname**,、既定値は NULL です。  
+`[ @step_name = ] 'step_name'` ジョブのステップの名前。 *step_name* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -62,7 +63,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ジョブの一意識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
-|**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、ステップがジョブの最初のステップである場合、その*step_id*は1になります。|  
+|**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、ステップがジョブの最初のステップである場合、その *step_id* は1になります。|  
 |**step_name**|**sysname**|ジョブのステップの名前。|  
 |**step_uid**|**uniqueidentifier**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
 |**date_created**|**datetime**|ステップが作成された日付。|  
@@ -70,11 +71,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
 |**出力**|**nvarchar(max)**|ジョブステップのログ出力。|  
   
-## <a name="remarks"></a>注釈  
- **sp_help_jobsteplog**は**msdb**データベースにあります。  
+## <a name="remarks"></a>解説  
+ **sp_help_jobsteplog** は **msdb** データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -100,7 +101,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>B: 特定のジョブ ステップに関するジョブ ステップ ログ情報を返す  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>B. 特定のジョブ ステップに関するジョブ ステップ ログ情報を返す  
  次の例では、`Weekly Sales Data Backup` という名前のジョブ内にある最初のジョブ ステップに関するジョブ ステップ ログ情報を返します。  
   
 ```  
@@ -113,12 +114,12 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

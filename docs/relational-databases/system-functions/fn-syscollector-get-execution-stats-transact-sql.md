@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_stats (Transact-sql)
 title: fn_syscollector_get_execution_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9d6bb073cc237fff2a859c37316a981e4b5d88f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447514"
 ---
 # <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>引数  
  *log_id*  
- 実行ログの一意なローカル識別子を指定します。 *log_id*は**int**です。  
+ 実行ログの一意なローカル識別子を指定します。 *log_id* は **int**です。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -63,6 +64,6 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="see-also"></a>関連項目  
  [syscollector_execution_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [データコレクション](../../relational-databases/data-collection/data-collection.md)  
+ [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   
   

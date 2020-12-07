@@ -1,4 +1,5 @@
 ---
+description: パーティション テーブルとパーティション インデックスのレプリケート
 title: パーティション テーブルとパーティション インデックスのレプリケート | Microsoft Docs
 ms.custom: ''
 ms.date: 09/10/2015
@@ -17,12 +18,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6d4e7dc85c98e368217b7d556e4c0a8fbd2501e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8d6d59dc29060a10fc0ad15f1b2fbbfbba5fb34
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915754"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88448186"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86915754"
   
  パーティション分割に関連するプロパティの最初のセットは、パーティション分割するオブジェクトをサブスクライバーにコピーするかどうかを指定するアーティクルのスキーマ オプションです。 これらのスキーマ オプションは次の方法で設定できます。  
   
--   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 上記の表に示したオブジェクトをコピーするには、 **[テーブル分割構成のコピー]** プロパティと **[インデックス分割構成のコピー]** プロパティに、値 **true**を指定します。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+-   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 上記の表に示したオブジェクトをコピーするには、 **[テーブル分割構成のコピー]** プロパティと **[インデックス分割構成のコピー]** プロパティに、値 **true** を指定します。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 -   次のいずれかのストアド プロシージャの *schema_option* パラメーターの使用。  
   

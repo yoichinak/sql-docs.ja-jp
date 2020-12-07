@@ -1,4 +1,5 @@
 ---
+description: 使用されていないオブジェクトを閉じる
 title: 使用されていないオブジェクトを閉じる | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1f0c264a7752b296691f20f702ab345f18b1b37
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c8e1242f5090e347dd3dd61d42fedd3698613cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438454"
 ---
 # <a name="closing-objects-when-not-in-use"></a>使用されていないオブジェクトを閉じる
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80922582"
   
  スクロール ロックを使用しているときに、サーバー上で適切なコンカレンシーを維持するためには、オブジェクトを閉じることが特に重要となります。 最後にアクセスしたフェッチ バッファーのスクロール ロックは、結果セットが閉じられるまで保持されます。 同様に、ステートメントの準備されたハンドルは、ステートメントが閉じられるまで保持されます。 複数のステートメントで接続を再利用する場合は、スコープから出る前にステートメントを閉じることで、サーバーが準備されたハンドルを早期にクリーンアップできるようになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーによるパフォーマンスと信頼性の強化](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
@@ -17,12 +18,12 @@ ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bab6abe83478c0f391d37a816c52f042f72b18b2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: a4ac1f679400a021b8a61b0e5c0b3adbdffcdf29
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544395"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380087"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -33,8 +34,7 @@ ms.locfileid: "87544395"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql  
 DROP DATABASE SCOPED CREDENTIAL credential_name  
 ```  
   

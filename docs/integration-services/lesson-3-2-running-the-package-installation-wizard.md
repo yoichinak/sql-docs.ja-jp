@@ -1,4 +1,5 @@
 ---
+description: レッスン 3-2 - パッケージ インストール ウィザードの実行
 title: '手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922216"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472054"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
 
@@ -103,7 +104,7 @@ ms.locfileid: "86922216"
     > パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 3: 配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[手順 3:配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>参照  
 [Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)  

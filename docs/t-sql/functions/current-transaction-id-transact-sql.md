@@ -1,5 +1,6 @@
 ---
-title: CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs
+description: CURRENT_TRANSACTION_ID (Transact-SQL)
+title: CURRENT_TRANSACTION_ID (Transact-SQL)
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
@@ -17,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3304e738d93aa019f43505352d9491c6ccc42c9d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 80ef65ccfbd26b74c31ed36adc95730315d2943a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112044"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645967"
 ---
 # <a name="current_transaction_id-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 この関数によって、現在のセッションの現在のトランザクションのトランザクション ID が返されます。
   
@@ -33,7 +35,7 @@ ms.locfileid: "87112044"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```syntaxsql
 CURRENT_TRANSACTION_ID( )  
   
 ```  
@@ -55,11 +57,11 @@ CURRENT_TRANSACTION_ID( )
 SELECT CURRENT_TRANSACTION_ID();  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)  
 [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)  
 [行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)  
-[CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+[CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
 [SET CONTEXT_INFO &#40;Transact-SQL&#41;](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

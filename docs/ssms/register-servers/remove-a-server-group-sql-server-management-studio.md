@@ -1,4 +1,5 @@
 ---
+description: サーバー グループの削除 (SQL Server Management Studio)
 title: サーバー グループの削除
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: dee1d250227f7123ea003447bdfe191db8e90042
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85982553"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037545"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
 
@@ -37,7 +38,6 @@ ms.locfileid: "85982553"
   
 2.  **[削除の確認]** ダイアログ ボックスで **[はい]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
-  
+## <a name="see-also"></a>関連項目  
+ [登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](./move-a-registered-server-or-registered-server-group.md)  
   

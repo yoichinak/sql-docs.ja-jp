@@ -1,7 +1,8 @@
 ---
-title: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する | Microsoft Docs'
+title: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する'
+description: Microsoft SQLSRV Driver for PHP for SQL Server を使用してストアドプロシージャを呼び出す場合にパラメーターの方向を指定する方法について説明します
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915928"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680247"
 ---
-# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する
+# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用してパラメーターの方向を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、ストアド プロシージャを呼び出す際に、SQLSRV ドライバーを使用して、パラメーターの方向を指定する方法について説明します。 パラメーターの方向は、[sqlsrv_query](../../connect/php/sqlsrv-query.md) または [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) に渡されるパラメーター配列を構築する (手順 3) ときに指定します。  
@@ -83,7 +84,7 @@ ms.locfileid: "80915928"
     ```  
   
 ## <a name="see-also"></a>参照  
-[方法: SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[方法:SQLSRV ドライバーを使用して出力パラメーターを取得する](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

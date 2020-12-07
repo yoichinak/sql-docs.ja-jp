@@ -1,4 +1,5 @@
 ---
+description: USER_ID (Transact-SQL)
 title: USER_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 646ed2166a7519c12fd7695ef49bfe3aca7c0738
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 50ffbb7ff9afa07b022f1c119afe07f43ab8ff6d
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "91379427"
 ---
 # <a name="user_id-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,8 +42,7 @@ ms.locfileid: "87113276"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```syntaxsql
 USER_ID ( [ 'user' ] )  
 ```  
   
@@ -50,7 +50,7 @@ USER_ID ( [ 'user' ] )
 
 ## <a name="arguments"></a>引数
  *user*  
- 使用するユーザー名を指定します。 *ユーザー* は **nchar**です。 場合、 **char** 値を指定すると、暗黙的に変換されます **nchar**です。 かっこが必要です。  
+ 使用するユーザー名を指定します。 *ユーザー* は **nchar** です。 場合、 **char** 値を指定すると、暗黙的に変換されます **nchar** です。 かっこが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -65,7 +65,7 @@ USER_ID ( [ 'user' ] )
 ## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` ユーザー `Harold` の ID 番号が返されます。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 SELECT USER_ID('Harold');  
 GO  

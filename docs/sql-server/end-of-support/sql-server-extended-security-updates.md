@@ -2,20 +2,20 @@
 title: 延長セキュリティ更新プログラムとは
 description: サポートとライフサイクルが終了した SQL Server 2008 や SQL Server 2008 R2 などの SQL Server 製品について、SQL Server レジストリを使用して延長セキュリティ更新プログラムを入手する方法を説明します。
 ms.custom: ''
-ms.date: 12/09/2019
+ms.date: 11/24/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: cawrites
+ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e585b0314b6306bdff84b07f2d12514ee015936
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3a337395be09743be335dd01ac80caf9dc98be0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900544"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96121270"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server 用の延長セキュリティ更新プログラムとは
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85900544"
 ## <a name="what-are-extended-security-updates"></a>延長セキュリティ更新プログラムとは
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 用の延長セキュリティ更新プログラム (ESU) には、延長サポート更新プログラムのサブスクリプションをご購入いただいたお客様に対する、セキュリティ更新プログラムの提供が含まれています。
 
-ESU は、セキュリティの脆弱性が検出され、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって**クリティカル**と評価されると、**必要に応じて**利用可能になります。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。
+ESU は、セキュリティの脆弱性が検出され、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって **クリティカル** と評価されると、**必要に応じて** 利用可能になります。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。
 
 ESU に含まれないもの:
 - 新機能
@@ -52,17 +52,17 @@ ESU にテクニカル サポートは含まれていませんが、オンプレ
 ESU は、Azure、オンプレミス、またはホスト環境でワークロードを実行しているお客様にご利用いただけます。
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
-ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る**追加料金はかかりません**。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
+ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る **追加料金はかかりません**。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
 
-**Windows Server 2008 R2 以降**で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
+**Windows Server 2008 R2 以降** で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
 
-**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて*いない*** 仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
+**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて _いない_** 仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
 
 ### <a name="on-premises-or-hosted-environments"></a>オンプレミスまたはホスト環境
 ソフトウェア アシュアランスをご利用の場合は、Enterprise Agreement (EA)、エンタープライズ サブスクリプション契約 (EAS)、サーバーおよびクラウド加入契約 (SCE)、または教育ソリューション加入契約 (EES) のもとで、サポート終了日から最大 3 年間の延長セキュリティ更新プログラム (ESU) サブスクリプションをご購入いただけます。 ESU は、対象にする必要があるサーバー用にのみご購入いただけます。 ESU は、Microsoft または Microsoft のライセンス パートナーから直接お買い求めいただけます。 
 
 ESU 契約の対象となるお客様は、次の手順に従って ESU 修正プログラムをダウンロードして展開する必要があります。
--  **[SQL Server レジストリ](#create-sql-server-registry)** に[対象のインスタンスを登録](#register-instances-for-esus)します。 
+-  **[SQL Server レジストリ](#create-sql-server-registry)** に [対象のインスタンスを登録](#register-instances-for-esus)します。 
 -  登録が完了すると、ESU 修正プログラムがリリースされるたびに、パッケージをダウンロードするためのダウンロード リンクが Azure portal に表示されます。 
 -  ダウンロードしたパッケージは、手動で、または組織内で使用されている Microsoft Endpoint Configuration Manager (旧称 System Center Configuration Manager) などの任意の更新プログラム オーケストレーション ソリューションを使用して、オンプレミスまたはホスト環境に展開できます。 
 
@@ -80,22 +80,22 @@ ESU が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イ�
 SQL Server レジストリを作成するには、次の手順に従います。
 
 1. [Azure Portal](https://portal.azure.com) にサインインします。 
-1. **リソースを作成する**オプションを選択します。 
+1. **リソースを作成する** オプションを選択します。 
 1. 検索ボックスに、「`SQL Server registry`」と入力します。  
 1. [!INCLUDE[msCoName](../../includes/msconame-md.md)] によって公開されている **SQL Server レジストリ** オプションを選択し、 **[作成]** を選択します。 
 
-   ![SQL Server レジストリ サービスを選択する](media/sql-server-extended-security-updates/sql-server-registry-service.png)
+   ![SQL Server レジストリの作成方法が表示されている Auzre portal のスクリーンショット。](media/sql-server-extended-security-updates/sql-server-registry-service.png)
 
-1. **[プロジェクトの詳細]** で、お使いのサブスクリプションをドロップダウンから選択します。 次に、既存の**リソース グループ**を選択するか、 **[新規作成]** を選択して新しい SQL Server レジストリ サービス用の新しいリソース グループを作成します。 
+1. **[プロジェクトの詳細]** で、お使いのサブスクリプションをドロップダウンから選択します。 次に、既存の **リソース グループ** を選択するか、 **[新規作成]** を選択して新しい SQL Server レジストリ サービス用の新しいリソース グループを作成します。 
 1. **[サービスの詳細]** で、新しい **SQL Server レジストリ** リソースの名前とリージョンを指定します。 
 
-   ![SQL Server レジストリ サービスを選択する](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
+   ![[基本] タブが表示されている SQL Server レジストリのスクリーンショット。](media/sql-server-extended-security-updates/create-new-sql-server-registry.png)
 
-1. **[確認および作成]** を選択して、**SQL Server レジストリ**の詳細を確認します。 検証に合格したら、 **[作成]** を選択します。 
+1. **[確認および作成]** を選択して、**SQL Server レジストリ** の詳細を確認します。 検証に合格したら、 **[作成]** を選択します。 
 
 ## <a name="register-instances-for-esus"></a>ESU 用にインスタンスを登録する
 
-**SQL Server レジストリ** リソースがデプロイされた後、[1 つ](#single-sql-server-instance)の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録するか、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを[一括](#multiple-sql-server-instances-in-bulk)で登録することができます。 ESU パッケージをダウンロードするには、少なくとも 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが SQL Server レジストリのスコープに登録されている必要があります。 
+**SQL Server レジストリ** リソースがデプロイされた後、[1 つ](#single-sql-server-instance)の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録するか、複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを [一括](#multiple-sql-server-instances-in-bulk)で登録することができます。 ESU パッケージをダウンロードするには、少なくとも 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが SQL Server レジストリのスコープに登録されている必要があります。 
 
 ### <a name="single-sql-server-instance"></a>1 つの SQL Server インスタンス
 
@@ -146,7 +146,7 @@ SQL Server レジストリを作成するには、次の手順に従います。
 ### <a name="formatting-requirements-for-csv-file"></a>CSV ファイルの形式設定の要件
 - 値がコンマで区切られている
 - 値が一重引用符または二重引用符で囲まれていない
-- 列名は大文字と小文字が区別されませんが、次のように**名前を付ける**必要があります。 
+- 列名は大文字と小文字が区別されませんが、次のように **名前を付ける** 必要があります。 
   - name
   - version
   - edition
@@ -207,9 +207,42 @@ ESU をダウンロードするには、次の手順に従います。
 
 1. セキュリティ更新プログラムが利用可能な場合、利用可能になった時点で、こちらからダウンロードしてください。 
 
+## <a name="supported-regions-and-data-residency"></a>サポートされているリージョンとデータ所在地
+
+**SQL Server レジストリ** サービス (プレビュー) は、Azure リージョンのサブセットで利用できます。 次の表に示すリージョンと、それぞれにおけるデータ所在地の種類が、サポートされています。
+
+| **リージョン** | **データの保存場所** |
+|:--|:--|
+|オーストラリア東部|ジオ (主要地域)|
+|オーストラリア南東部|ジオ (主要地域)|
+|カナダ中部|ジオ (主要地域)|
+|フランス中部|ジオ (主要地域)|
+|東日本|ジオ (主要地域)|
+|西日本|ジオ (主要地域)|
+|韓国中部|ジオ (主要地域)|
+|韓国南部|ジオ (主要地域)|
+|米国中北部|ジオ (主要地域)|
+|北ヨーロッパ|ジオ (主要地域)|
+|米国中南部|ジオ (主要地域)|
+|東南アジア|単一リージョン|
+|インド南部|ジオ (主要地域)|
+|南アフリカ北部|ジオ (主要地域)|
+|英国南部|ジオ (主要地域)|
+|英国西部|ジオ (主要地域)|
+|米国西部|ジオ (主要地域)|
+|米国東部|ジオ (主要地域)|
+|米国中部|ジオ (主要地域)|
+|東アジア|ジオ (主要地域)|
+|西ヨーロッパ|ジオ (主要地域)|
+|米国中西部|ジオ (主要地域)|
+|米国西部 2|ジオ (主要地域)|
+|米国東部 2|ジオ (主要地域)|
+
+リージョンに地理的な所在地が含まれる場合は、SQL レジストリ サービスによって geo 冗長ストレージ アカウント (GRS) にデータ バックアップが保持されます。  リージョンに含まれるのが単一のリージョン所在地である場合は、SQL レジストリ サービスによってゾーン冗長ストレージ アカウント (ZRS) にデータ バックアップが保持されます。 詳細については、[トラスト センター](https://azuredatacentermap.azurewebsites.net/)に関するページを参照してください。
+
 ## <a name="configure-regional-redundancy"></a>リージョン冗長を構成する 
 
-**SQL Server レジストリ**に対するリージョン冗長を必要とするお客様は、2 つの異なるリージョンに登録データを作成できます。 その後、お客様は、**SQL Server レジストリ** サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできます。 
+**SQL Server レジストリ** に対するリージョン冗長を必要とするお客様は、2 つの異なるリージョンに登録データを作成できます。 その後、お客様は、**SQL Server レジストリ** サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできます。 
 
 リージョン冗長を使用するには、**SQL Server レジストリ** サービスを 2 つの異なるリージョンに作成する必要があり、SQL Server のインベントリをこれら 2 つのサービス間で分割する必要があります。 これにより、SQL Server の半分は一方のリージョンのレジストリ サービスに登録され、SQL Server の残りの半分はもう一方のリージョンのレジストリ サービスに登録されます。 
 
@@ -219,8 +252,8 @@ ESU をダウンロードするには、次の手順に従います。
   
    :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="アップロード ファイルの例":::
 
-1. 1 つのリージョンに最初の **SQL Server レジストリ** サービスを作成し、csv ファイルの 1 つをそれに一括登録します。 たとえば、最初の **SQL Server レジストリ** サービスを**米国西部**リージョンに作成し、upload1.csv ファイルを使用して SQL Server を一括登録します。 
-1. 2 番目の **SQL Server レジストリ** サービスを第 2 のリージョンに作成し、他の csv ファイルをそこに一括登録します。 たとえば、2 番目の **SQL Server レジストリ** サービスを**米国東部**リージョンに作成し、upload2.csv ファイルを使用して SQL Server を一括登録します。 
+1. 1 つのリージョンに最初の **SQL Server レジストリ** サービスを作成し、csv ファイルの 1 つをそれに一括登録します。 たとえば、最初の **SQL Server レジストリ** サービスを **米国西部** リージョンに作成し、upload1.csv ファイルを使用して SQL Server を一括登録します。 
+1. 2 番目の **SQL Server レジストリ** サービスを第 2 のリージョンに作成し、他の csv ファイルをそこに一括登録します。 たとえば、2 番目の **SQL Server レジストリ** サービスを **米国東部** リージョンに作成し、upload2.csv ファイルを使用して SQL Server を一括登録します。 
 
 
 データが 2 つの異なる **SQL Server レジストリ** リソースに登録されると、サービスの可用性に基づいて、いずれかのリージョンからセキュリティ更新プログラムをダウンロードできるようになります。 
@@ -248,7 +281,7 @@ Microsoft ライフサイクル ポリシーでは、ビジネスおよび開発
 
 **延長セキュリティ更新プログラムには何が含まれていますか?** 
 
-延長セキュリティ更新プログラムでは、2019 年 7 月 9 日から最大 3 年間、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/) によって**クリティカル**と評価されたセキュリティ更新プログラムとセキュリティ情報が提供されます。 延長セキュリティ更新プログラムは、利用可能な場合に利用可能になった時点で配信されます。 延長セキュリティ更新プログラムにはテクニカル サポートは含まれていませんが、延長セキュリティ更新プログラムの対象となるワークロードに関する [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の質問には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] の他のサポート プランを使用できます。 延長セキュリティ更新プログラムには、新機能や機能強化、またはお客様のご要望による修正プログラムは含まれません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] には、必要と見なされたセキュリティ以外の修正プログラムが含まれる場合があります。
+延長セキュリティ更新プログラムでは、2019 年 7 月 9 日から最大 3 年間、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/) によって **クリティカル** と評価されたセキュリティ更新プログラムとセキュリティ情報が提供されます。 延長セキュリティ更新プログラムは、利用可能な場合に利用可能になった時点で配信されます。 延長セキュリティ更新プログラムにはテクニカル サポートは含まれていませんが、延長セキュリティ更新プログラムの対象となるワークロードに関する [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の質問には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] の他のサポート プランを使用できます。 延長セキュリティ更新プログラムには、新機能や機能強化、またはお客様のご要望による修正プログラムは含まれません。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] には、必要と見なされたセキュリティ以外の修正プログラムが含まれる場合があります。
 
 **SQL Server 2008 および 2008 R2 の延長セキュリティ更新プログラムでは、なぜ "クリティカル" な更新プログラムのみが提供されるのですか?**
 
@@ -281,17 +314,17 @@ Microsoft ライフサイクル ポリシーでは、ビジネスおよび開発
 
 **SQL Server 2008 および 2008 R2 のユーザーが、自分のライセンスを持ち込む (BYOL) 必要がある場合、ソフトウェア アシュアランスを保有している必要がありますか?**
 
-はい。お客様がライセンス モビリティ プログラムの一部として Azure Virtual Machines 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で BYOL プログラムを活用するためには、ソフトウェア アシュアランスをご利用いただく必要があります。 ソフトウェア アシュアランスをお持ちでないお客様には、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 環境を対象に Azure SQL Database Managed Instance への移行をお勧めします。 お客様は、従量課金制の Azure Virtual Machines に移行することもできます。 SQL をコア単位でライセンスするソフトウェア アシュアランスのお客様は、Azure ハイブリッド特典 (AHB) を使用して Azure に移行することもできます。
+はい。お客様がライセンス モビリティ プログラムの一部として Azure Virtual Machines 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で BYOL プログラムを活用するためには、ソフトウェア アシュアランスをご利用いただく必要があります。 ソフトウェア アシュアランスをお持ちでないお客様には、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 環境を対象に Azure SQL Managed Instance への移行をお勧めします。 お客様は、従量課金制の Azure Virtual Machines に移行することもできます。 SQL をコア単位でライセンスするソフトウェア アシュアランスのお客様は、Azure ハイブリッド特典 (AHB) を使用して Azure に移行することもできます。
 
-Azure SQL Database Managed Instance は、オンプレミス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのほぼ 100% の互換性を提供する Azure のサービスです。 Managed Instance には、組み込みの高可用性およびディザスター リカバリー機能に加え、インテリジェントなパフォーマンス機能と、即座にスケーリングする機能が用意されています。 また Managed Instance では、手動でのセキュリティ修正プログラムの適用やアップグレードの必要性を解消する、バージョンに関係しないエクスペリエンスが提供されます。 BYOL プログラムの詳細については、Azure の料金ガイダンスのページを参照してください。
+Azure SQL Managed Instance は、オンプレミス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのほぼ 100% の互換性を提供する Azure のサービスです。 Managed Instance には、組み込みの高可用性およびディザスター リカバリー機能に加え、インテリジェントなパフォーマンス機能と、即座にスケーリングする機能が用意されています。 また Managed Instance では、手動でのセキュリティ修正プログラムの適用やアップグレードの必要性を解消する、バージョンに関係しないエクスペリエンスが提供されます。 BYOL プログラムの詳細については、Azure の料金ガイダンスのページを参照してください。
 
 **Azure で SQL Server を実行するには、どのようなオプションがありますか?**
 
-お客様は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境をフル マネージドのデータ プラットフォーム サービス (PaaS) である Azure SQL Database Managed Instance (サポート終了日に関する懸念が解消される "バージョンに関係しない" オプションが提供されます) に移行するか、セキュリティ更新プログラムにアクセスできる Azure Virtual Machines に移行することができます。 移行したデータベースとレガシ システムとの互換性が維持されます。 詳細については、「[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)」 (互換性証明書) を参照してください。
+お客様は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境をフル マネージドのデータ プラットフォーム サービス (PaaS) である Azure SQL Managed Instance (サポート終了日に関する懸念が解消される "バージョンに関係しない" オプションが提供されます) に移行するか、セキュリティ更新プログラムにアクセスできる Azure Virtual Machines に移行することができます。 移行したデータベースとレガシ システムとの互換性が維持されます。 詳細については、「[Compatibility Certification](../../database-engine/install-windows/compatibility-certification.md)」 (互換性証明書) を参照してください。
 
 延長セキュリティ更新プログラムは、2019 年 7 月 9 日のサポート終了日後の次の 3 年間、Azure Virtual Machines の [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] で利用できます。 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] からアップグレードしようとしているお客様については、以降のすべてのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートされます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] については、お客様はサポートされている最新の Service Pack を適用済みである必要があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、最新の累積更新プログラムを適用することが推奨されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、Service Pack を使用できず、累積更新プログラムと一般配布リリース (GDR) のみを利用できることに注意してください。
 
-Azure SQL Database Managed Instance は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのインスタンスをスコープとするデプロイ オプションで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンの互換性とネイティブ仮想ネットワーク (VNET) の最も幅広いサポートを提供するものです。そのため、アプリを変更することなく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを Managed Instance に移行できます。 充実した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティと、インテリジェントなフル マネージド サービスの運用上および財務上の利点が組み合わされています。 新しい Azure Database Migration Service を利用すると、アプリケーション コードの変更をほとんどまたはまったく行わずに、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] を Azure SQL Database Managed Instance に移行できます。
+Azure SQL Managed Instance は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] でのインスタンスをスコープとするデプロイ オプションで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンの互換性とネイティブ仮想ネットワーク (VNET) の最も幅広いサポートを提供するものです。そのため、アプリを変更することなく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを Managed Instance に移行できます。 充実した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティと、インテリジェントなフル マネージド サービスの運用上および財務上の利点が組み合わされています。 新しい Azure Database Migration Service を利用すると、アプリケーション コードの変更をほとんどまたはまったく行わずに、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] を Azure SQL Managed Instance に移行できます。
 
 **SQL Server 2008 バージョンと 2008 R2 バージョンの Azure ハイブリッド特典を利用することはできますか?**
 
@@ -323,7 +356,7 @@ Azure Virtual Machines で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 - [SQL Server 2008/2008 R2 のサポート終了のページ](https://aka.ms/sqleos)
 - [拡張セキュリティ更新プログラムのよくある質問 (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
-- [Azure Automation を使用して Windows 更新プログラムを管理する](/azure/automation/automation-tutorial-update-management)
+- [Azure Automation を使用して Windows 更新プログラムを管理する](/azure/automation/update-management/overview)
 - [SQL Server VM の自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)
 - [Microsoft データ移行ガイド](https://datamigration.microsoft.com/)
 - [Azure Migrate: 現在の SQL Server 2008/2008 R2 を Azure VM に移行するためのリフトアンドシフトのオプション](https://azure.microsoft.com/services/azure-migrate/)

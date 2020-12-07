@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: b8db1d2a7fe18264c81d7585e02babef65b3346d
+ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462386"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93364574"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>レポート ビルダー関数 - Multilookup 関数
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -31,19 +31,19 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (**VariantArray**) 現在のスコープ内で評価される式。参照する名前またはキーのセットを指定します。 たとえば、複数値パラメーターの場合、 `=Parameters!IDs.value`のように指定します。  
+ ( **VariantArray** ) 現在のスコープ内で評価される式。参照する名前またはキーのセットを指定します。 たとえば、複数値パラメーターの場合、 `=Parameters!IDs.value`のように指定します。  
   
  *destination_expression*  
- (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
+ ( **Variant** ) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!Name.Value` 」のように入力します。  
+ ( **Variant** ) *source_expression* = *destination_expression* であるデータセットの行で評価され、取得する値を指定する式。 たとえば、「 `=Fields!Name.Value` 」のように入力します。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Colors" と指定します。  
   
 ## <a name="return"></a>戻り値  
- **VariantArray**を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
+ **VariantArray** を返します。一致する結果がなかった場合は、 **Nothing** を返します。  
   
 ## <a name="remarks"></a>解説  
  データセットで、名前と値の各ペアに 1 対 1 のリレーションシップが存在する場合、 **Multilookup** を使用して一連の値を取得します。 **MultiLookup** は、一連の名前またはキーに対して **Lookup** を呼び出すことと同じです。 たとえば、主キー識別子に基づく複数値パラメーターの場合、テーブルのテキスト ボックス内の式で **Multilookup** を使用して、パラメーターまたはテーブルにバインドされていないデータセットから、関連付けられている値を取得することができます。  
@@ -84,7 +84,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  詳細については、「[集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)」および「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例
+
+### <a name="a-use-multilookup-function"></a>A. MultiLookup 関数を使用する
  "Category" というデータセットに、CategoryList フィールドが含まれているとします。このフィールドには、コンマ区切りのカテゴリの識別子のリスト ("2, 4, 2, 1" など) が含まれています。  
   
  CategoryNames データセットには、次の表に示すように、カテゴリ識別子とカテゴリ名が格納されています。  
@@ -96,7 +98,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 |3|Clothing|  
 |4|コンポーネント|  
   
- 識別子のリストに対応する名前を参照するには、 **Multilookup**を使用します。 まず、リストを文字列の配列に分割する必要があります。次に、 **Multilookup** を呼び出してカテゴリ名を取得し、結果を連結して文字列にします。  
+ 識別子のリストに対応する名前を参照するには、 **Multilookup** を使用します。 まず、リストを文字列の配列に分割する必要があります。次に、 **Multilookup** を呼び出してカテゴリ名を取得し、結果を連結して文字列にします。  
   
  Category データセットにバインドされているデータ領域内のテキスト ボックスに次の式を置いた場合、"Bikes, Components, Bikes, Accessories" と表示されます。  
   
@@ -106,7 +108,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
    ", ")  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-use-multilookup-with-multivalue-parameter"></a>B. 複数値パラメーターで MultiLookup を使用する  
  ProductColors データセットに、次の表に示すように色の識別子のフィールドである ColorID と、色の値のフィールドである Color が含まれているとします。  
   
 |ColorID|Color|  

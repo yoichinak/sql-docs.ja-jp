@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL DATA SOURCE (Transact-SQL)
 title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,18 +11,18 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a1ea2729261ee6ecbe5659286aed03c2a2a2527
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f8fd681675c2c15caf311bb0e3a132f3b39ea68b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626293"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547762"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
   PolyBase の外部データ ソースを削除します。  
   
@@ -42,7 +43,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 ## <a name="metadata"></a>メタデータ  
  外部データ ソースの一覧を表示するのには、sys.external_data_sources のシステム ビューを使用します。  
   
-```  
+```sql  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
@@ -59,7 +60,7 @@ SELECT * FROM sys.external_data_sources;
   
 ### <a name="a-using-basic-syntax"></a>A. 基本的な構文を使用します  
   
-```  
+```sql  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   

@@ -1,8 +1,9 @@
 ---
+description: SeekEnum
 title: SeekEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dca33c975b3d25347b0cb9bb804b852ec5f93d7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 345e6dff5c2bc372f06eb386a4546a61b9e5a1bb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765393"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989153"
 ---
 # <a name="seekenum"></a>SeekEnum
-実行する[シーク](../../../ado/reference/ado-api/seek-method.md)の種類を指定します。  
+実行する [シーク](./seek-method.md) の種類を指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**Adseekの Steq**|1|*Keyvalues*と等しい最初のキーをシークします。|  
 |**adSeekLastEQ**|2|*Keyvalues*と等しい最後のキーをシークします。|  
@@ -47,4 +48,4 @@ ms.locfileid: "82765393"
 |AdoEnums|  
   
 ## <a name="applies-to"></a>適用対象  
- [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)
+ [Seek メソッド](./seek-method.md)

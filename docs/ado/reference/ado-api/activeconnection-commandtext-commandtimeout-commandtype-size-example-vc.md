@@ -1,8 +1,9 @@
 ---
+description: ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)
 title: ストアドプロシージャのプロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d22f2cb5500522ee525a778f9333be527d3f86e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 608d6258f0f8b458e346c4e56166439dd7ba934e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762973"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977043"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、Size、Direction プロパティの例 (VC + +)
-この例では、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[Direction](../../../ado/reference/ado-api/direction-property.md)プロパティを使用してストアドプロシージャを実行します。  
+この例では、 [ActiveConnection](./activeconnection-property-ado.md)、 [CommandText](./commandtext-property-ado.md)、 [CommandTimeout](./commandtimeout-property-ado.md)、 [CommandType](./commandtype-property-ado.md)、 [Size](./size-property-ado-parameter.md)、および [Direction](./direction-property.md) プロパティを使用してストアドプロシージャを実行します。  
   
 ## <a name="example"></a>例  
   
@@ -202,7 +203,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Authors With  25  Percent Royalty  
@@ -211,9 +212,9 @@ Authors With  25  Percent Royalty
 ```  
   
 ## <a name="see-also"></a>参照  
- [ActiveConnection プロパティ (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
- [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandTimeout プロパティ (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Direction プロパティ](../../../ado/reference/ado-api/direction-property.md)   
- [Size プロパティ (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [ActiveConnection プロパティ (ADO)](./activeconnection-property-ado.md)   
+ [CommandText プロパティ (ADO)](./commandtext-property-ado.md)   
+ [CommandTimeout プロパティ (ADO)](./commandtimeout-property-ado.md)   
+ [CommandType プロパティ (ADO)](./commandtype-property-ado.md)   
+ [Direction プロパティ](./direction-property.md)   
+ [Size プロパティ (ADO Parameter)](./size-property-ado-parameter.md)

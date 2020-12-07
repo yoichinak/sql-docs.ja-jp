@@ -1,4 +1,5 @@
 ---
+description: spatial_reference_systems (Transact-sql)
 title: spatial_reference_systems (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - sys.spatial_reference_systems catalog view
 - spatial_reference_systems
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caf9e6bccc2ca0cbff4d86dab5c2b4991b5266d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3c2a11f4df6bca6351391b13b39060e400319e0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771617"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550375"
 ---
 # <a name="sysspatial_reference_systems-transact-sql"></a>spatial_reference_systems (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: '? :(条件) (SSIS 式)'
 title: '? : (条件) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07e6668750bfd58e31d5f9dda0205cf8d57e967f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f63ea95489b639672ddb50b44fa882eecc463025
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923478"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123278"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
@@ -46,9 +47,9 @@ boolean_expression?expression1:expression2
  任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
- *expression1* または *expression2*のデータ型です。  
+ *expression1* または *expression2* のデータ型です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  *boolean_expression* が NULL に評価された場合、式の結果は NULL になります。 選択された式 ( *expression1* または *expression2* のいずれか) が NULL の場合、結果は NULL になります。 選択された式が NULL でなく、選択されていない式が NULL の場合、結果は選択された式の値になります。  
   
  *expression1* と *expression2* のデータ型が同じ場合、結果はそのデータ型になります。 次の追加のルールが結果の型に適用されます。  
@@ -57,7 +58,7 @@ boolean_expression?expression1:expression2
   
 -   DT_BYTES データ型の場合、結果の長さは、長いほうの引数の長さと同じです。  
   
- 式セットである *expression1* および *expression2*は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
+ 式セットである *expression1* および *expression2* は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
   
 -   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
@@ -101,7 +102,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

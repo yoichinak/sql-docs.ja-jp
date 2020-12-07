@@ -1,7 +1,8 @@
 ---
+description: FIRST_VALUE (Transact-SQL)
 title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/10/2016
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,25 +20,25 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5299ca65f1e47a76d7fa525b7210747be431d7c4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cba74e40373a4b00a93d41ebc49e2a849df98572
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396968"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124736"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の順序付けられた値のセットにある最初の値を返します。  
+  順序付けられた値セットの最初の値を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-FIRST_VALUE ( [scalar_expression ] )   
-    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
+FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
+    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
   
 ```  
   
@@ -46,12 +47,20 @@ FIRST_VALUE ( [scalar_expression ] )
 ## <a name="arguments"></a>引数
  *scalar_expression*  
  返される値。 *scalar_expression* 列、サブクエリ、またはその他の任意の式を結果が 1 つの値を指定できます。 他の分析関数は指定できません。  
+
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **適用対象**:Azure SQL Edge
+
+ IGNORE NULLS - パーティションの最初の値の計算時に、データセット内の null 値を無視します。     
+ RESPECT NULLS - パーティションの最初の値の計算時に、データセット内の null 値を使用します。     
+ 
+  詳細については、[欠損値の補完](/azure/azure-sql-edge/imputing-missing-values/)に関する記事を参照してください。
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* は必須です。 *rows_range_clause* は始点と終点を指定することによって、パーティション内の行をさらに制限します。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>戻り値の型  
- 同じ型には *scalar_expression*です。  
+ 同じ型には *scalar_expression* です。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  FIRST_VALUE は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
@@ -61,7 +70,7 @@ FIRST_VALUE ( [scalar_expression ] )
 ### <a name="a-using-first_value-over-a-query-result-set"></a>A. クエリの結果セットで FIRST_VALUE を使用する  
  次の例では、FIRST_VALUE を使用して、指定された製品カテゴリ内で最も安価な製品の名前を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, ListPrice,   
@@ -93,7 +102,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ### <a name="b-using-first_value-over-partitions"></a>B. パーティションで FIRST_VALUE を使用する  
  次の例では、FIRST_VALUE を使用して、同じ役職の他の従業員と比較して休暇時間数が最も少ない従業員を返します。 PARTITION BY 句によって役職ごとに従業員がパーティションに分割され、各パーティションに個別に FIRST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に FIRST_VALUE 関数が適用される論理的な順序を決定します。 ROWS UNBOUNDED PRECEDING 句は、ウィンドウの開始位置を各パーティションの最初の行として指定します。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT JobTitle, LastName, VacationHours,   
@@ -125,5 +134,5 @@ Accounts Receivable Specialist      Walton                    62            Poe
   
 ## <a name="see-also"></a>参照  
  [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
-  
+ [Last_Value &#40;Transact-SQL&#41;](last-value-transact-sql.md)  
+

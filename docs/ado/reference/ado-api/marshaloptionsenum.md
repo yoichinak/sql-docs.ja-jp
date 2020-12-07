@@ -1,8 +1,9 @@
 ---
+description: MarshalOptionsEnum
 title: MarshalOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1aae84d12c098bdabf68cd014a359be54b0dcba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 134bf880c762e5b57d6a0ff270c65ef750c4255a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754449"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990633"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーに返すレコードを指定します。  
   
-|定数|[値]|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値。 サーバーにすべての行を返します。|  
 |**adMarshalModifiedOnly**|1|サーバーに変更された行のみを返します。|  
@@ -39,4 +40,4 @@ ms.locfileid: "82754449"
 |AdoEnums MODIFIEDONLY|  
   
 ## <a name="applies-to"></a>適用対象  
- [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions プロパティ (ADO)](./marshaloptions-property-ado.md)

@@ -6,20 +6,20 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
 - TDE, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: aed6a2e94b553bf6a32d46d45ee1fb7af877addf
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2569f44e4642df714c8108b6540b81d013d30b82
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565585"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584305"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>暗号化されたデータベースを Always On 可用性グループに追加する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

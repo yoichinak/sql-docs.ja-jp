@@ -1,4 +1,5 @@
 ---
+description: セットアップを使用してデータ ソースを追加および変更する
 title: Setup | を使用してデータソースを追加および変更するMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494742"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>セットアップを使用してデータ ソースを追加および変更する
 > [!IMPORTANT]  
@@ -57,15 +58,15 @@ ms.locfileid: "81281412"
   
 1.  [オプション] をクリックして、ODBC Driver for Oracle セットアップに関するより多くの仕様を作成します。  
   
-    -   [**翻訳**]-[選択] をクリックして、読み込まれたデータ変換プログラムを選択します。 既定値は\<、> 変換されません。  
+    -   [**翻訳**]-[選択] をクリックして、読み込まれたデータ変換プログラムを選択します。 既定値は、\<No Translator> です。  
   
-    -   **パフォーマンス**-[カタログ関数に注釈を含める] チェックボックスは、ドライバーが[sqlcolumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)結果セットの解説列を返すかどうかを指定します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。  
+    -   **パフォーマンス** -[カタログ関数に注釈を含める] チェックボックスは、ドライバーが [sqlcolumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 結果セットの解説列を返すかどうかを指定します。 ODBC Driver for Oracle では、この値が設定されていない場合にアクセスが高速になります。  
   
          [SQL 列にシノニムを含める] チェックボックスは、ドライバーが列情報を返すかどうかを指定します。 [**バッファーサイズ**] フェッチされたデータを受信するために割り当てられたサイズ (バイト単位) を指定します。 ドライバーは、Oracle サーバーからの1つのフェッチが、指定されたサイズのバッファーを格納するのに十分な行数を返すように、フェッチを最適化します。 値が大きいほど、大量のデータをフェッチするときにパフォーマンスが向上する傾向があります。  
   
-    -   **カスタマイズ**-[Odbc DayOfWeek 標準を適用する] チェックボックスで、結果セットが odbc 指定の曜日形式に準拠するかどうかを指定します (日曜日 = 1、土曜日 = 7)。 このチェックボックスがオフの場合、ロケール固有の Oracle 値が返されます。  
+    -   **カスタマイズ** -[Odbc DayOfWeek 標準を適用する] チェックボックスで、結果セットが odbc 指定の曜日形式に準拠するかどうかを指定します (日曜日 = 1、土曜日 = 7)。 このチェックボックスがオフの場合、ロケール固有の Oracle 値が返されます。  
   
-         SQLDescribeCol は**常に [有効桁数の値を返し**ます] チェックボックスを使用して、ドライバーが**SQLDescribeCol**の*cbcoldef*引数に対して0以外の値を返すかどうかを指定します。 この接続文字列属性は、計算された数値列や、有効桁数や小数点以下桁数のない数値として定義された列など、Oracle によって定義された小数点以下桁数がない列にのみ適用されます。 Oracle がその情報を提供していない場合、 **SQLDescribeCol**の呼び出しでは、有効桁数として130が返されます。 このチェックボックスがオフの場合、ドライバーは、これらの種類の列に対して0を返します。  
+         SQLDescribeCol は**常に [有効桁数の値を返し**ます] チェックボックスを使用して、ドライバーが**SQLDescribeCol**の*cbcoldef*引数に対して0以外の値を返すかどうかを指定します。 この接続文字列属性は、計算された数値列や、有効桁数や小数点以下桁数のない数値として定義された列など、Oracle によって定義された小数点以下桁数がない列にのみ適用されます。 Oracle がその情報を提供していない場合、 **SQLDescribeCol** の呼び出しでは、有効桁数として130が返されます。 このチェックボックスがオフの場合、ドライバーは、これらの種類の列に対して0を返します。  
   
 2.  [追加] をクリックして別のデータソースを追加するか、[閉じる] をクリックして終了します。  
   

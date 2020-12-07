@@ -1,4 +1,5 @@
 ---
+description: 行サンプリング変換
 title: 行サンプリング変換 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a21325c9f6b2058efa83c60baadfb0cebcb5ded
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d84ebaadb1bee24c400d8fde34eae2e3d422774a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919515"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195298"
 ---
 # <a name="row-sampling-transformation"></a>行サンプリング変換
 
@@ -55,7 +56,7 @@ ms.locfileid: "86919515"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -81,5 +82,4 @@ ms.locfileid: "86919515"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
-  
   

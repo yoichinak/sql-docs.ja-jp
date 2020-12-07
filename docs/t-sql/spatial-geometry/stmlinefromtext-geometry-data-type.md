@@ -1,4 +1,5 @@
 ---
+description: STMLineFromText (geometry データ型)
 title: STMLineFromText (geometry データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 70a1b678578612265491803b748db95ba9e3ac96
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 25aaadff2928c1ed0e20aac626305621c98e9159
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554289"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88472433"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry データ型)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

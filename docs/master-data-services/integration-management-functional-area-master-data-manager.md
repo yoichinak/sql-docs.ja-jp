@@ -1,4 +1,5 @@
 ---
+description: '[統合管理] 機能領域 (マスター データ マネージャー)'
 title: '[統合管理] 機能領域'
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b859fe26c6daf5fd8b2b3135f833867a9c6d7020
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616a8c01e568a4223f3ba120b3a2dbc21d30f890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388718"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
 
@@ -37,7 +38,7 @@ ms.locfileid: "85812938"
   
  [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

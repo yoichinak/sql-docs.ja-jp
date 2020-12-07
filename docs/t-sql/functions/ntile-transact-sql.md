@@ -1,4 +1,5 @@
 ---
+description: NTILE (Transact-SQL)
 title: NTILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23477a5da8dad7187e2465357a18d3bfd4a917ff
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112898"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115983"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### <a name="a-dividing-rows-into-groups"></a>A. 行をグループに分割する  
  次の例では、年度累計の売上高に基づいて、行を 4 つの従業員グループに分割します。 行の総数がグループの数で割り切れないため、最初の 2 つのグループに 4 つの行が割り当てられ、残りのグループにはそれぞれ 3 つの行が割り当てられます。  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -110,10 +111,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. PARTITION BY を使用して結果セットを分割する  
  次の例では、`PARTITION BY` 引数を例 A のコードに追加します。まず、行を `PostalCode` でパーティション分割した後、それぞれの `PostalCode` 内で 4 つのグループに分割します。 この例では、`@NTILE_Var` 変数も宣言し、その変数を使用して *integer_expression* パラメーターの値を指定します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -157,7 +158,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### <a name="c-dividing-rows-into-groups"></a>C. 行をグループに分割する  
  次の例では、各自に割り当てられた 2003 年度の販売ノルマに基づいて、一連の販売員を 4 つのグループに分割します。 行の総数がグループの数で割り切れないため、最初のグループに 5 つの行が割り当てられ、残りのグループにはそれぞれ 4 つの行が割り当てられます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -197,7 +198,7 @@ Tsoflias          4          867,000.00
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. PARTITION BY を使用して結果セットを分割する  
  次の例では、PARTITION BY 引数を例 A のコードに追加します。まず、行を `SalesTerritoryCountry` でパーティション分割した後、それぞれの `SalesTerritoryCountry` 内で 2 つのグループに分割します。 OVER 句の ORDER BY は STDEV を並べ替え、SELECT ステートメントの NTILE と ORDER BY は結果セットを並べ替えることに注意してください。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  

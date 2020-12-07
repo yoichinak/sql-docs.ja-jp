@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property (SSISDB データベース)
 title: catalog.set_worker_agent_property (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912795"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129592"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB データベース)
 

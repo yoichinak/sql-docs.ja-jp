@@ -1,4 +1,5 @@
 ---
+description: 外部キー リレーションシップの変更
 title: 外部キー リレーションシップの変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,15 +18,16 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c8972b0f407f7de3a4fa6f825e6a1b2b0d33953
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007095"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645912"
 ---
 # <a name="modify-foreign-key-relationships"></a>外部キー リレーションシップの変更
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、リレーションシップの外部キー側を変更できます。 テーブルの外部キーを変更すると、主キー テーブルの列に関連付けられる列が変更されます。  
   
@@ -35,7 +37,7 @@ ms.locfileid: "86007095"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用して外部キーを変更するには:**  
   
@@ -81,7 +83,7 @@ ms.locfileid: "86007095"
      **[全般] カテゴリ**  
      展開して **[作成時または再度有効化するときに既存データを確認]** および **[テーブルと列の指定]** を表示します。  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **[作成時または再度有効化するときに既存データを確認]**  
      制約を作成した時点、または制約を再度有効にした時点よりも前からテーブルに存在しているすべてのデータについて、その制約に対して検証します。  
   
      **[テーブルと列の指定] カテゴリ**  
@@ -102,7 +104,7 @@ ms.locfileid: "86007095"
      **[IDENTITY] カテゴリ**  
      展開して **[オブジェクト名]** および **[説明]** のプロパティ フィールドを表示します。  
   
-     **Name**  
+     **名前**  
      リレーションシップの名前を表示します。 新しいリレーションシップを作成した場合、このプロパティには、 **テーブル デザイナー**のアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
      **説明**  
@@ -142,7 +144,7 @@ ms.locfileid: "86007095"
   
     -   **[既定値の設定]** &#xA0;&#xA0;テーブルのすべての外部キー列に既定値が定義されている場合、その列に定義されている既定値が設定されます。  
   
-4.  **[ファイル]** メニューの **[ _<テーブル名>_ を保存]** をクリックします。  
+4.  **[ファイル]** メニューの **[_<テーブル名>_ を保存]** をクリックします。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **外部キーを変更するには**  

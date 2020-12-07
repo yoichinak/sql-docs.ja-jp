@@ -1,4 +1,5 @@
 ---
+description: Visual FoxPro ODBC ドライバーの設定
 title: Visual FoxPro ODBC ドライバーの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26c73cb42e9adb9d46218983ade143450ff5d73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 810936f2de3c978e0af3a48cc8fa607101e21330
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300732"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193934"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
-Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) 」を参照してください。  
+Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)) 」を参照してください。  
   
  Microsoft Visual FoxPro ODBC ドライバーセットアッププログラムを使用して、次の操作を行います。  
   

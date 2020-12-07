@@ -1,4 +1,5 @@
 ---
+description: IMultipleResults を使用して SQL Server Native Client で複数の結果セットを処理する
 title: IMultipleResults、複数の結果セット
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,17 +17,17 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9ad3e29da828e22a656b151659062149a65bf42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 885ec9a1130c7e1f3db6bbbbebbe9a0190bd2ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455788"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets-in-sql-server-native-client"></a>IMultipleResults を使用して SQL Server Native Client で複数の結果セットを処理する
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  コンシューマーは、 **IMultipleResults**インターフェイスを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコマンド実行によって返される結果を処理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実行するコマンドを送信すると、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを実行し、結果を返します。  
+  コンシューマーは、 **IMultipleResults** インターフェイスを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコマンド実行によって返される結果を処理します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実行するコマンドを送信すると、は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを実行し、結果を返します。  
   
  クライアントはコマンドの実行結果をすべて処理する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーコマンドを実行すると、複数行セットオブジェクトが結果として生成される可能性があるため、 **IMultipleResults**インターフェイスを使用して、アプリケーションデータの取得がクライアントによって開始されるラウンドトリップを完了するようにします。  
   

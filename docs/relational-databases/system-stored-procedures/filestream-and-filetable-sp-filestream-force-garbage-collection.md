@@ -1,4 +1,5 @@
 ---
+description: sp_filestream_force_garbage_collection (Transact-SQL)
 title: sp_filestream_force_garbage_collection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0068e1afb8f096b3758d45a770f1aac56512d0c6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977602"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753845"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,10 +66,10 @@ sp_filestream_force_garbage_collection
 |*file_name*|FILESTREAM コンテナー名を示します。|  
 |*num_collected_items*|このコンテナー内の、ガベージ コレクションが実行 (削除) された FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。|  
 |*num_marked_for_collection_items*|このコンテナー内の、ガベージ コレクションの対象としてマークされた FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 これらの項目はまだ削除されていませんが、ガベージコレクションフェーズに従って削除することができます。|  
-|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないために、固定する必要があるファイル。<br /><br /> 完全復旧モデルまたは BULK_LOGGED 復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーションログリーダージョブが実行されていません。 詳細については、ホワイトペーパー「 [SQL Server 2008 の FILESTREAM ストレージ](https://go.microsoft.com/fwlink/?LinkId=209156)」を参照してください。|  
+|*num_unprocessed_items*|この FILESTREAM コンテナー内の、ガベージ コレクションで処理されなかった対象となる FILESTREAM アイテム (ファイルまたはディレクトリ) の数を示します。 アイテムは次のようなさまざまな理由で処理されないことがあります。<br /><br /> ログのバックアップまたはチェックポイントが作成されていないために、固定する必要があるファイル。<br /><br /> 完全復旧モデルまたは BULK_LOGGED 復旧モデル内のファイル。<br /><br /> 実行時間の長いアクティブなトランザクションが存在している。<br /><br /> レプリケーションログリーダージョブが実行されていません。 詳細については、ホワイトペーパー「 [SQL Server 2008 の FILESTREAM ストレージ](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) 」を参照してください。|  
 |*last_collected_xact_seqno*|指定した FILESTREAM コンテナー内の、ガベージ コレクションが実行されたファイルに対応する最後のログ シーケンス番号 (LSN) を返します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  要求されたデータベース (および FILESTREAM コンテナー) で、FILESTREAM ガベージコレクタータスクが明示的に完了するように実行します。 不要になったファイルは、ガベージ コレクション プロセスによって削除されます。 この操作の完了に必要な時間は、そのデータベースまたはコンテナー内の FILESTREAM データのサイズに加え、FILESTREAM データで最近発生した DML アクティビティの量によって異なります。 この操作はデータベースがオンラインのときに実行できますが、ガベージ コレクション プロセスによってさまざまな I/O 操作が行われるため、実行中にデータベースのパフォーマンスに影響を与える可能性があります。  
   
 > [!NOTE]  
@@ -110,5 +111,4 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 <br>[Filestream および FileTable の動的管理ビュー (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream および FileTable のカタログ ビュー (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-sql)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
-  
   

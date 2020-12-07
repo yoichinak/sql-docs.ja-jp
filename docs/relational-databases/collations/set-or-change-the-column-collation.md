@@ -1,4 +1,5 @@
 ---
+description: 列の照合順序の設定または変更
 title: 列の照合順序の設定または変更 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/05/2019
@@ -13,16 +14,16 @@ ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e96206160557eaaa71d3b44dd6960182b47a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98faafb23e6f5c3f981fdf04eca99a7ab3eb7a7b
+ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694974"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94384822"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  **char** 型、**varchar** 型、**text** 型、**nchar** 型、**nvarchar** 型、および **ntext** 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
+  **char** 型、 **varchar** 型、 **text** 型、 **nchar** 型、 **nvarchar** 型、および **ntext** 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
   
 -   次の例で示すような、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) と [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) の COLLATE 句。 
 
@@ -67,7 +68,7 @@ ms.locfileid: "85694974"
         GO
         DROP TABLE dbo.MyTable;
         GO
-        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable’;
+        EXEC sp_rename 'dbo.MyTableNew', 'dbo.MyTable';
         GO
         ```
 
@@ -75,7 +76,7 @@ ms.locfileid: "85694974"
         
     詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 詳細については、「[列の変更 (データベース エンジン)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 詳細については、「[列の変更 (データベース エンジン)](../../relational-databases/tables/modify-columns-database-engine.md#SSMSProcedure)」を参照してください。  
   
 -   **管理オブジェクト (SMO) の** Column.Collation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロパティ。  
   
@@ -87,13 +88,13 @@ ms.locfileid: "85694974"
 -   CHECK 制約  
 -   FOREIGN KEY 制約  
   
- **tempdb**を操作する場合、 [COLLATE](~/t-sql/statements/collations.md) 句に *database_default* オプションを指定することで、一時テーブルの列で、接続の現在のユーザー データベースでの既定の照合順序を **tempdb**の照合順序の代わりに使用するように指定することもできます。  
+ **tempdb** を操作する場合、 [COLLATE](~/t-sql/statements/collations.md) 句に *database_default* オプションを指定することで、一時テーブルの列で、接続の現在のユーザー データベースでの既定の照合順序を **tempdb** の照合順序の代わりに使用するように指定することもできます。  
   
 ## <a name="collations-and-text-columns"></a>照合順序と text 列  
  データベースの既定の照合順序のコード ページと異なる照合順序が設定された **text** 列では、値の挿入と更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、値がこの列の照合順序に暗黙的に変換されます。  
   
 ## <a name="collations-and-tempdb"></a>照合順序と tempdb  
- **tempdb** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに作成され、 **model** データベースと同じ既定の照合順序が設定されます。 これは、通常、インスタンスの既定の照合順序と同じになります。 ユーザー データベースを作成して、 **model**と異なる既定の照合順序を指定すると、そのユーザー データベースでは **tempdb**と異なる既定の照合順序が使用されます。 一時ストアド プロシージャや一時テーブルは、すべて **tempdb**内に作成および格納されます。 その結果、一時テーブル内のすべての暗黙の列、および一時ストアド プロシージャ内で強制的に適用されるすべての既定の定数、変数、パラメーターでは、パーマネント テーブルやストアド プロシージャで作成される同等のオブジェクトとは異なる照合順序が指定されます。  
+ **tempdb** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに作成され、 **model** データベースと同じ既定の照合順序が設定されます。 これは、通常、インスタンスの既定の照合順序と同じになります。 ユーザー データベースを作成して、 **model** と異なる既定の照合順序を指定すると、そのユーザー データベースでは **tempdb** と異なる既定の照合順序が使用されます。 一時ストアド プロシージャや一時テーブルは、すべて **tempdb** 内に作成および格納されます。 その結果、一時テーブル内のすべての暗黙の列、および一時ストアド プロシージャ内で強制的に適用されるすべての既定の定数、変数、パラメーターでは、パーマネント テーブルやストアド プロシージャで作成される同等のオブジェクトとは異なる照合順序が指定されます。  
   
  このため、ユーザー定義データベースとシステム データベース オブジェクトの照合順序の不一致による問題が発生する可能性があります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでは照合順序として Latin1_General_CS_AS が使用されていて、次のステートメントを実行するとします。  
   
@@ -126,7 +127,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
   
  このエラーを回避するには、次のいずれかを行います。  
   
--   一時テーブル列で、 **tempdb**ではなく、ユーザー データベースの既定の照合順序を使用するように指定します。 この措置によって、システムで必要とされる場合に、一時テーブルを複数のデータベース内で同様の形式が設定されたテーブルと併用できます。  
+-   一時テーブル列で、 **tempdb** ではなく、ユーザー データベースの既定の照合順序を使用するように指定します。 この措置によって、システムで必要とされる場合に、一時テーブルを複数のデータベース内で同様の形式が設定されたテーブルと併用できます。  
   
     ```sql  
     CREATE TABLE #TestTempTab  

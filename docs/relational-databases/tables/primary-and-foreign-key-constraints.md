@@ -1,4 +1,5 @@
 ---
+description: 主キー制約と外部キー制約
 title: 主キー制約と外部キー制約 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -16,19 +17,20 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a31936649bb145701b915bb8c23bd0ff06fe5a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004775"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646448"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは、次のセクションで構成されています。  
   
  [主キー制約](../../relational-databases/tables/primary-and-foreign-key-constraints.md#PKeys)  
   
@@ -128,7 +130,7 @@ ms.locfileid: "86004775"
 |主キーを変更する方法について説明します。|[主キーの変更](../../relational-databases/tables/modify-primary-keys.md)|  
 |外部キー リレーションシップを作成する方法について説明します。|[外部キーのリレーションシップの作成](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |外部キー リレーションシップを変更する方法について説明します。|[外部キー リレーションシップの変更](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|外部キー リレーションシップを削除する方法について説明します。|[外部キー リレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|外部キー リレーションシップを削除する方法について説明します。|[外部キーのリレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |外部キーのプロパティを表示する方法について説明します。|[外部キーのプロパティの表示](../../relational-databases/tables/view-foreign-key-properties.md)|  
 |レプリケーションに対して外部キー制約を無効にする方法を説明します。|[レプリケーションに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
 |INSERT または UPDATE ステートメント時に外部キー制約を無効にする方法について説明します。|[INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  

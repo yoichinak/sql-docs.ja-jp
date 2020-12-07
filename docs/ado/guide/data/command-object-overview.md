@@ -1,8 +1,9 @@
 ---
+description: Command オブジェクトの概要
 title: Command オブジェクトの概要 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0048765d3a5f5cb57419f9dbd755790c9931e218
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e0f1616fa83f1fed5a22de6fc1a1ee443bdddd82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761198"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991563"
 ---
 # <a name="command-object-overview"></a>Command オブジェクトの概要
 **Command**オブジェクトを使用すると、次の操作を実行できます。  
@@ -28,7 +29,7 @@ ms.locfileid: "82761198"
   
 -   **Execute**メソッドを使用して、コマンドを実行し、必要に応じて**レコードセット**オブジェクトを返します。  
   
--   実行前に**CommandType**プロパティを使用してコマンドの種類を指定し、パフォーマンスを最適化します。  
+-   実行前に **CommandType** プロパティを使用してコマンドの種類を指定し、パフォーマンスを最適化します。  
   
 -   **Command オブジェクトの** **Dialect**プロパティを使用して、コマンドテキストに関する特定の情報を指定します。  
   
@@ -42,4 +43,4 @@ ms.locfileid: "82761198"
   
 -   データを取得するために、**レコードセット**の**Source**プロパティに**Command**オブジェクトを渡します。  
   
--   コマンドを含む**ストリーム**オブジェクト (XML コマンドなど) を、それをサポートするプロバイダーに渡します。
+-   コマンドを含む **ストリーム** オブジェクト (XML コマンドなど) を、それをサポートするプロバイダーに渡します。

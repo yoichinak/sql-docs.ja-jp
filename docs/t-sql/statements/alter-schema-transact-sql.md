@@ -1,4 +1,5 @@
 ---
+description: ALTER SCHEMA (Transact-SQL)
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2020
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - schemas [SQL Server], modifying
 - modifying schemas
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8c5f444c3866c9660cea1d1396357e276d434a84
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380985"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024433"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ALTER SCHEMA schema_name
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
    TRANSFER [ OBJECT :: ] securable_name   
@@ -104,7 +105,7 @@ ALTER SCHEMA schema_name
 ### <a name="a-transferring-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する  
  次の例では、テーブル `Address` をスキーマ `Person` からスキーマ "HumanResources" に移動することで、スキーマ `HumanResources` を変更します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -114,11 +115,11 @@ GO
 ### <a name="b-transferring-ownership-of-a-type"></a>B. 型の所有権を譲渡する  
  次の例では、`Production` スキーマに型を作成し、その型を `Person` スキーマに譲渡します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -145,10 +146,10 @@ GO
 ### <a name="c-transferring-ownership-of-a-table"></a>C. テーブルの所有権を譲渡する  
  次の例では、`dbo` スキーマで `Region` テーブルを作成し、`Sales` スキーマを作成し、`Region` テーブルを `dbo` スキーマから `Sales` スキーマに移動します。  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5bdd0eb36873c179b51f2a867feac1c7539165d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253680"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194514"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>SQL 機械学習のトラブルシューティングのためにデータを収集する
 
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、SQL 機械学習の問題を解決しようとするときに、必要なデータの収集方法について説明します。 このデータは、自分自身で問題を解決しているか、Microsoft カスタマー サポートの支援を受けるかに関係なく、役立つ可能性があります。
 
@@ -36,7 +36,7 @@ SQL Server 2017 以降には Python 言語が統合されています。 以前�
 
 一般に、R Services 機能または Machine Learning Services 機能を選択したときにインストールされる Microsoft R のバージョンは、SQL Server のビルド番号によって決まります。 SQL Server をアップグレードまたは修正する場合は、その R コンポーネントもアップグレードまたは修正する必要があります。
 
-R コンポーネントのダウンロードに関するリリースとリンクの一覧については、[インターネット アクセスを使用しない機械学習コンポーネントのインストール](/sql/machine-learning/install/sql-ml-component-install-without-internet-access)に関する記事を参照してください。 インターネットにアクセスできるコンピューターでは、必要なバージョンの R が自動的に識別され、インストールされます。
+R コンポーネントのダウンロードに関するリリースとリンクの一覧については、[インターネット アクセスを使用しない機械学習コンポーネントのインストール](../install/sql-ml-component-install-without-internet-access.md)に関する記事を参照してください。 インターネットにアクセスできるコンピューターでは、必要なバージョンの R が自動的に識別され、インストールされます。
 
 バインドと呼ばれるプロセスでは、R Server コンポーネントを SQL Server データベース エンジンとは別にアップグレードすることができます。 そのため、SQL Server で R コードを実行するときに使用する R のバージョンは、インストールされている SQL Server のバージョンと、サーバーを最新の R バージョンに移行したかどうかによって異なる場合があります。
 

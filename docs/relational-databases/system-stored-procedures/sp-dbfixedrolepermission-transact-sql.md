@@ -1,4 +1,5 @@
 ---
+description: sp_dbfixedrolepermission (Transact-sql)
 title: sp_dbfixedrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a7abd42379d62d9a2c34adb50b7610494493b6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867672"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536618"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に正しい情報が返さ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] れます。 出力には、に実装された権限階層への変更は反映されません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 詳細については、「[データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
+  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission** では、に正しい情報が返さ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] れます。 出力には、に実装された権限階層への変更は反映されません [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 詳細については、「 [データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'`有効な固定データベースロールの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *role*の部分は**sysname**で、既定値は NULL です。 *Role*が指定されていない場合は、すべての固定データベースロールの権限が表示されます。  
+`[ @rolename = ] 'role'` 有効な固定データベースロールの名前を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *role* の部分は **sysname**で、既定値は NULL です。 *Role*が指定されていない場合は、すべての固定データベースロールの権限が表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,7 +55,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
 |**権限**|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
 |固定データベースロール|説明|  
@@ -85,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   

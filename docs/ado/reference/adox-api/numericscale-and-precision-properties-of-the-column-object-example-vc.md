@@ -1,8 +1,9 @@
 ---
+description: Column オブジェクトの NumericScale および Precision プロパティの例 (VC++)
 title: 列の NumericScale および Precision プロパティ (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3acf3c8c8533d6ac1c803c5bb42acd530c0b0df2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9b7ca5a849dafe9768a422a942f5c2c1816f77b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763803"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983903"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column オブジェクトの NumericScale および Precision プロパティの例 (VC++)
-この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトの[Numericscale](../../../ado/reference/adox-api/numericscale-property-adox.md)プロパティと[Precision](../../../ado/reference/adox-api/precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  
+この例では、[列](./column-object-adox.md)オブジェクトの[Numericscale](./numericscale-property-adox.md)プロパティと[Precision](./precision-property-adox.md)プロパティを示します。 このコードでは、 *Northwind*データベースの**Order Details**テーブルの値が表示されます。  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

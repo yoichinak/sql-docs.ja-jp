@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: CREATE SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6cc72e48eea68aa97323fc30bdad083fd79d391e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392950"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96131283"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,7 +35,6 @@ ms.locfileid: "86392950"
 ## <a name="syntax"></a>構文  
   
 ```syntaxsql
-  
 CREATE SERVER AUDIT SPECIFICATION audit_specification_name  
 FOR SERVER AUDIT audit_name  
 {  
@@ -69,9 +69,9 @@ FOR SERVER AUDIT audit_name
  サーバー監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
   
 ## <a name="examples"></a>例  
- 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `HIPAA_Audit` 監査に対して作成します。  
+ 次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、`HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して作成します。  
   
-```  
+```sql  
 CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP)  
@@ -81,7 +81,7 @@ GO
   
  監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
    
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

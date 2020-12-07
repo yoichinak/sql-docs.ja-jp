@@ -1,4 +1,5 @@
 ---
+description: 並列インデックス操作の構成
 title: 並列インデックス操作の構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffd74e1cf495ef3cfc1784011fb1d7c18b5ab15d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f4226d3fac66ec20f5012a15bb092b666cf86f9
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760874"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96125191"
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "85760874"
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>既存のインデックスに並列処理の最大限度を設定するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -125,7 +126,7 @@ ms.locfileid: "85760874"
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>新しいインデックスに並列処理の最大限度を設定する方法  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

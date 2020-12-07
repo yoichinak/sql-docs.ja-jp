@@ -1,4 +1,5 @@
 ---
+description: SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する
 title: データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94c0c2d183943c4fbbc2cbf0170120c3f9d680e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d8738fb22682ad4a6f432187998663c4c8282cd
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922428"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96122830"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する
 
@@ -23,7 +24,7 @@ ms.locfileid: "86922428"
 
 このセクションのトピックでは、SQL Server インポートおよびエクスポート ウィザードを実行するときに、よく使用されるさまざまなデータ ソースに接続する方法を説明します。 ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページにデータ ソースの接続情報を入力する必要があります。
 
-このセクションのトピックでは、ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページから**データ ソースへの接続**方法についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。
+このセクションのトピックでは、ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページから **データ ソースへの接続** 方法についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。
 
 ## <a name="connect-to-a-commonly-used-data-source"></a>一般的に使用されるデータ ソースへの接続
 次のよく使用されるデータ ソースへの接続の詳細については、該当するリンクをクリックしてください。
@@ -50,16 +51,14 @@ ms.locfileid: "86922428"
 
 -   **ウィザードのしくみについては、以下を参照してください。**
 
-    -   **ウィザードのしくみについては、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
+    -   **ウィザードの詳細については、以下を参照してください。** ウィザードの概要をお探しの場合は、「 [SQL Server でサポートされるインポートとエクスポートのデータ ソース](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
     -   **ウィザードの手順について学習する。** ウィザードの手順についての情報を探している場合は、「[SQL Server インポートおよびエクスポート ウィザードの手順](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)」をご覧ください。 ウィザードのページごとに別のドキュメント ページもあります。
 
 -   **ウィザードを起動します。** ウィザードを実行する準備が整い、開始方法について知りたい場合は、「[SQL Server インポートおよびエクスポート ウィザードを起動する](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)」を参照してください。
 
--   **ウィザードを取得します。** ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](https://msdn.microsoft.com/library/mt204009.aspx)」を参照してください。
+-   **ウィザードを取得します。** ウィザードを実行する必要はあるが、コンピューターに [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしていない場合は、SQL Server Data Tools (SSDT) をインストールすることで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードをインストールできます。 詳細については、「 [SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 [データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
-

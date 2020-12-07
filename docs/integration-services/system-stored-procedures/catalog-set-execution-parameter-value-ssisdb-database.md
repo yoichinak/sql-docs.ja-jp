@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value (SSISDB データベース)
 title: catalog.set_execution_parameter_value (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5775b87b13fc126907dfc0f121e9838c2d490fd0
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912839"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96129659"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB データベース)
 
@@ -70,7 +71,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  パラメーターの値。 *parameter_value* は **sql_variant** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  特定の実行に使用されたパラメーター値を調べるには、catalog.execution_parameter_values ビューに対してクエリを実行します。  
   
  パッケージの実行中にログに記録される情報のスコープを指定するには、*parameter_name* を LOGGING_LEVEL に設定して、*parameter_value* を次のいずれかの値に設定します。  
@@ -113,7 +114,10 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|1 つまたは複数のイベント コード|  
   
-## <a name="example"></a>例  
+## <a name="examples"></a>例  
+
+### <a name="a-generate-dump-files-for-errors"></a>A. エラーのダンプ ファイルを生成する
+
  次の例では、パッケージの実行中にエラーが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定しています。  
   
 ```sql
@@ -121,7 +125,8 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a>例  
+### <a name="b-generate-dump-files-for-events"></a>B. イベントのダンプ ファイルを生成する
+
  次の例では、パッケージの実行中にイベントが発生した場合に、Integration Services サーバーによりダンプ ファイルが生成されるように指定し、サーバーによるファイルの生成が行われる原因となるイベントを指定しています。  
   
 ```sql

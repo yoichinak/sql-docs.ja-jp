@@ -1,4 +1,5 @@
 ---
+description: TRIM (Transact-SQL)
 title: TRIM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
@@ -18,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2c2110b541ad06770b1218e3e48e77056085eaeb
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113295"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379527"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -33,13 +34,13 @@ ms.locfileid: "87113295"
 
 ## <a name="syntax"></a>構文
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string )
 ```
 
-```
--- Syntax for Azure SQL Data Warehouse
+```syntaxsql
+-- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
 

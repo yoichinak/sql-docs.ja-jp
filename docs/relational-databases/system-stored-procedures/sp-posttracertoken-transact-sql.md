@@ -1,4 +1,5 @@
 ---
+description: sp_posttracertoken (Transact-sql)
 title: sp_posttracertoken (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aa46de0f06b0566de0a221ed8f7ca7bf97443836
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891539"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545970"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`待機時間を測定するパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` 待機時間を測定するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`挿入されるトレーサートークンの ID を示します。 *tracer_token_id*は**int**で、既定値は NULL です。これは出力パラメーターです。 この値を使用して[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)を実行したり、 [transact-sql &#40;を](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)最初に実行せずに transact-sql&#41;を[sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)することができます。  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` 挿入されるトレーサートークンの ID を示します。 *tracer_token_id* は **int** で、既定値は NULL です。これは出力パラメーターです。 この値を使用して[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)を実行したり、 [transact-sql &#40;を](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)最初に実行せずに transact-sql&#41;を[sp_deletetracertokenhistory](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)することができます。  
   
-`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**であり、既定値は NULL です。パブリッシャーに対して指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**であり、既定値は NULL です。パブリッシャーに対して指定することはできません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_posttracertoken**は、トランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_posttracertoken** は、トランザクションレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
@@ -59,7 +60,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_posttracertoken**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+## <a name="see-also"></a>参照  
+ [待機時間を計測して Connections for Transactional Replication を検証します。](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

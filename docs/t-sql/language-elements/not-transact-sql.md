@@ -1,4 +1,5 @@
 ---
+description: NOT (Transact-SQL)
 title: NOT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bda0a8199275ad124786e0eaf56bac4efdead6c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bdaf68bd8f119fa0c0cba7c8cd16a11d927d310c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923190"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92188172"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "86923190"
 ## <a name="examples"></a>例  
  次の例では、標準価格が 400 ドル以下で、色が Silver の自転車を検索します。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, Color, StandardCost  
@@ -92,7 +93,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`SalesOrderNumber` の結果を `SO6` で始まる値に制限し、`ProductKeys` を 400 以上に制限しています。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductKey, CustomerKey, OrderDateKey, ShipDateKey  

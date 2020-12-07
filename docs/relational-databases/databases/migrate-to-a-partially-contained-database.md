@@ -1,4 +1,5 @@
 ---
+description: Migrate to a Partially Contained Database
 title: 部分的包含データベースへの移行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cb7fbdc8085fbf068ddc4f97587e919b1872971f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a942af36a551498e81b3dbaeaa02686dec9c28b
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726435"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88410998"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ GO
   
 1.  オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[詳細設定]** ページの **[包含]** セクションで、 **[包含データベースを有効にする]** オプションを **True**に設定します。  
+2.  **[詳細設定]** ページの **[包含]** セクションで、 **[包含データベースを有効にする]** オプションを **True** に設定します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

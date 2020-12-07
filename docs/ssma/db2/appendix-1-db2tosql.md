@@ -1,4 +1,5 @@
 ---
+description: 付録-1 (DB2ToSQL)
 title: 付録-1 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6683a435262012f67d7690766f32a802a138226
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937154"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988158"
 ---
 # <a name="appendix---1-db2tosql"></a>付録-1 (DB2ToSQL)
 SSMA コンソールのコマンドラインオプションのクイックビューを次に示します。  
@@ -28,8 +29,7 @@ SSMA コンソールのコマンドラインオプションのクイックビュ
 |5|-l/ログ|いいえ|logfile|有効なファイル名です。|  
 |6|-e/projectenvironment|いいえ|project環境フォルダー|SSMA プロジェクト環境ファイルを含む有効なフォルダー名です。|  
 |7|-p/securepassword|いいえ|-a/add {<server_id> [,...n] &#124; すべて}-c&#124;microsoft.sqlserver.management.common.serverconnection> <サーバー接続-ファイル> [-v&#124;variable <variable-file>] [-o/overwrite]<br /><br />or<br /><br />-a/add {<server_id> [,...n] すべての}-s&#124;スクリプトを &#124; <スクリプトファイル> [-v&#124;variable <variable-file>] [-o/overwrite]<br /><br />-r/remove {<server_id> [,...n] &#124; すべて}<br /><br />-l/リスト<br /><br />-e/export {<サーバー id> [,...n] すべてを &#124;} <暗号化されたパスワードファイル><br /><br />-i/インポート {<サーバー id> [,...n] すべてを &#124;} <暗号化されたパスワードファイル>|このオプションを指定する場合は、他のオプションと組み合わせることはできません。<br /><br />サーバー id: サーバー {string} に対して指定された一意の ID<br /><br />サーバー-接続-ファイル: サーバー定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数-値-ファイル: 変数定義ファイルで、サーバー接続ファイルで使用されます。<br /><br />暗号化-パスワードファイル: ユーザー指定のパスフレーズを使用して暗号化されたサーバーパスワードファイルです。|  
-|8|-?|いいえ|適用できません|適用できません|  
+|8|-?|いいえ|適用しない|適用しない|  
   
 ## <a name="see-also"></a>参照  
-[SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[SSMA コンソールの実行](./executing-the-ssma-console-db2tosql.md)  

@@ -3,27 +3,27 @@ title: Python と R に関する既知の問題
 description: この記事では、SQL Server Machine Learning Services および SQL Server 2016 R Services で提供される Python および R コンポーネントでの既知の問題または制限事項について説明します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c0089390202f6bebfc0ecce8b41b70adee7348c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253731"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196346"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 この記事では、[SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) および [SQL Server 2016 R Services](../r/sql-server-r-services.md) で提供される Python および R コンポーネントでの既知の問題または制限事項について説明します。
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成に関する問題
 
-初期セットアップと構成に関連するプロセスおよび一般的な質問については、[アップグレードとインストールに関する FAQ](upgrade-and-installation-faq-sql-server-r-services.md) の記事をご覧ください。 新しい R または Python のコンポーネントのアップグレード、サイドバイサイド インストール、およびインストールに関する情報が含まれています。
+初期セットアップと構成に関連するプロセスの詳細については、[SQL Server Machine Learning Services のインストール](../install/sql-machine-learning-services-windows-install.md)に関する記事を参照してください。 新しい R または Python のコンポーネントのアップグレード、サイドバイサイド インストール、およびインストールに関する情報が含まれています。
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1.環境変数がないことによる MKL の計算結果の不整合
 
@@ -136,7 +136,7 @@ SQL Server 2016 のコンピューティング コンテキストで R コード
 このメッセージは、次のいずれかに該当する場合に表示されます。
 
 + [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] のセットアップ ウィザードを使用して、クライアント コンピューターに Microsoft R Server (スタンドアロン) をインストールした。
-+ [別の Windows インストーラー](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)を使用して、Microsoft R Server をインストールした。
++ [別の Windows インストーラー](/machine-learning-server/install/r-server-install-windows)を使用して、Microsoft R Server をインストールした。
 
 サーバーとクライアントで確実に同じバージョンが使用されるようにするには、Microsoft R Server 9.0 以降のリリースでサポートされている "_バインド_" を使用して、SQL Server 2016 インスタンスの R コンポーネントをアップグレードすることが必要な場合があります。 お使いの R Services のバージョンでアップグレードがサポートされているかどうかを判断するには、[SqlBindR.exe を用いた R Services のインスタンスのアップグレード](../install/upgrade-r-and-python.md)に関する記事を参照してください。
 
@@ -254,7 +254,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 ### <a name="15-installation-or-upgrade-error-on-fips-enabled-servers"></a>15. FIPS 対応サーバーでのインストールまたはアップグレード エラー
 
-機能 **Machine Learning Services および言語拡張機能**を備えた SQL Server 2019 をインストールするか、または [(FIPS) Federal Information Processing Standard (FIPS)](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 対応サーバー上の SQL Server インスタンスをアップグレードすると、次のエラーが表示されます。
+機能 **Machine Learning Services および言語拡張機能**を備えた SQL Server 2019 をインストールするか、または [(FIPS) Federal Information Processing Standard (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) 対応サーバー上の SQL Server インスタンスをアップグレードすると、次のエラーが表示されます。
 
 > *An error occurred while installing extensibility feature with error message:AppContainer Creation Failed with error message NONE, state This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms. (拡張機能のインストール中にエラーが発生しました。エラー メッセージ: AppContainer の作成がエラー メッセージ NONE で失敗しました、この実装は Windows プラットフォーム FIPS 検証暗号化アルゴリズムの一部ではありません。)*
 
@@ -268,7 +268,7 @@ Oct 18 14:03:21 sqlextmls launchpadd[57471]: [launchpad] 2019/10/18 14:03:21 WAR
 
 このセクションでは、SQL Server での R の実行に固有の既知の問題と、Microsoft によって公開されている R ライブラリおよびツール (RevoScaleR を含む) に関連するいくつかの問題について説明します。
 
-R ソリューションに影響する可能性があるその他の既知の問題については、[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues) のサイトをご覧ください。
+R ソリューションに影響する可能性があるその他の既知の問題については、[Machine Learning Server](/machine-learning-server/resources-known-issues) のサイトをご覧ください。
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.既定以外の場所の SQL Server で R スクリプトを実行するときのアクセス拒否警告
 
@@ -288,7 +288,7 @@ SQL Server が既定の場所にインストールされている場合は、す
 
 > *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).* (memDecompress(data, type = decompress) でのエラー、memDecompress(2) での内部エラー -3。)
 
-このエラーが発生するのは、最新バージョンのシリアル化関数 [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) を使用してモデルを保存したにもかかわらず、モデルを逆シリアル化する SQL Server インスタンスに古いバージョンの RevoScaleR API (SQL Server 2017 CU2 以前) が存在する場合です。
+このエラーが発生するのは、最新バージョンのシリアル化関数 [rxSerializeModel](/machine-learning-server/r-reference/revoscaler/rxserializemodel) を使用してモデルを保存したにもかかわらず、モデルを逆シリアル化する SQL Server インスタンスに古いバージョンの RevoScaleR API (SQL Server 2017 CU2 以前) が存在する場合です。
 
 この回避策としては、SQL Server 2017 インスタンスを CU3 以降にアップグレードします。
 
@@ -300,7 +300,7 @@ API のバージョンが同じ場合、または古いシリアル化関数で�
 
 デシジョン ツリーまたはデシジョン フォレストのメソッドを使用してモデルを作成し、学習速度を指定した場合、`sp_rxpredict` または SQL の `PREDICT` 関数を使用すると、`rxPredict` を使用した場合と比較して、一貫性のない結果が表示されることがあります。
 
-原因は、シリアル化されたモデルを処理する API のエラーであり、[rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) などの `learningRate` パラメーターに限定されています。
+原因は、シリアル化されたモデルを処理する API のエラーであり、[rxBTrees](/machine-learning-server/r-reference/revoscaler/rxbtrees) などの `learningRate` パラメーターに限定されています。
 
 この問題は、次のサービス リリースで解決されます。
 
@@ -396,7 +396,7 @@ SQL でサポートされているデータ型の一部を R で使用できま�
 
 R から binary データ型 (R の **raw** データ型) を返すときは、出力データ フレームで値を送る必要があります。
 
-**raw** 以外のデータ型では、OUTPUT キーワードを追加することにより、ストアド プロシージャの結果と共にパラメーター値を返すことができます。 詳しくは、「[パラメーター](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)」をご覧ください。
+**raw** 以外のデータ型では、OUTPUT キーワードを追加することにより、ストアド プロシージャの結果と共にパラメーター値を返すことができます。 詳しくは、「[パラメーター](../../relational-databases/stored-procedures/parameters.md)」をご覧ください。
 
 **raw** 型の値が含まれる複数の出力セットを使用する必要がある場合、可能な回避策は、ストアド プロシージャの呼び出しを複数回行うか、ODBC を使用して結果セットを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に返送することです。
 
@@ -544,7 +544,7 @@ SQL Server 2019 には、並列実行を使用する R スクリプトに影響�
 
 ## <a name="python-script-execution-issues"></a>Python スクリプトの実行に関する問題
 
-このセクションでは、SQL Server での Python の実行に固有の既知の問題と、Microsoft によって公開されている Python パッケージ ([revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) や [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package) など) に関連する問題について説明します。
+このセクションでは、SQL Server での Python の実行に固有の既知の問題と、Microsoft によって公開されている Python パッケージ ([revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package) や [microsoftml](/r-server/python-reference/microsoftml/microsoftml-package) など) に関連する問題について説明します。
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1.モデルへのパスが長すぎると、事前トレーニング済みモデルの呼び出しが失敗する
 
@@ -554,12 +554,12 @@ SQL Server 2017 の早期リリースに事前トレーニング済みモデル�
 
 + 事前トレーニング済みモデルをインストールするときに、カスタムの場所を選択します。
 + 可能な場合は、C:\SQL\MSSQL14.MSSQLSERVER などの短いパスを使用して、カスタム インストール パスに SQL Server インスタンスをインストールします。
-+ Windows ユーティリティ [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) を使用して、モデル ファイルを短いパスにマップするハード リンクを作成します。
++ Windows ユーティリティ [Fsutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc788097(v=ws.11)) を使用して、モデル ファイルを短いパスにマップするハード リンクを作成します。
 + 最新のサービス リリースに更新します。
 
 ### <a name="2-error-when-saving-serialized-model-to-sql-server"></a>2.シリアル化されたモデルを SQL Server に保存するときのエラー
 
-リモート SQL Server インスタンスにモデルを渡し、[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) で `rx_unserialize` 関数を使用してバイナリモデルを読み取ろうとすると、次のエラーが表示されることがあります。 
+リモート SQL Server インスタンスにモデルを渡し、[revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) で `rx_unserialize` 関数を使用してバイナリモデルを読み取ろうとすると、次のエラーが表示されることがあります。 
 
 > *NameError: 名前 'rx_unserialize_model' が定義されていません*
 
@@ -603,7 +603,7 @@ SQL Server 2017 CU2 以降では、Python コードが正常に実行された�
 
 この問題は、SQL Server 2017 累積的な更新プログラム 3 (CU3) で修正されました。 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.数値、10 進、通貨の各データ型がサポートされていない
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. numeric、decimal、money の各データ型がサポートされていない
 
 SQL Server 2017 累積的な更新プログラム 12 (CU12) 以降では、`sp_execute_external_script` で Python を使用する場合、WITH RESULT SETS では数値、10 進、通貨の各データ型がサポートされていません。 次のメッセージが表示されることがあります。
 
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9.**sqlmlutils** を使用して **tensorflow** パッケージをインストールできません
 
-[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
+[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/) のダウンロード、インストールおよび更新を行う必要があります。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
 
 **回避策**
 

@@ -1,5 +1,6 @@
 ---
-title: pdw_nodes_tables (Transact-sql) |Microsoft Docs
+description: sys.pdw_nodes_tables (Transact-sql)
+title: sys.pdw_nodes_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,23 +13,23 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: a115b3ff132658dcfc2746fc9899fcfafce411ae
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196870"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035768"
 ---
-# <a name="syspdw_nodes_tables-transact-sql"></a>pdw_nodes_tables (Transact-sql)
+# <a name="syspdw_nodes_tables-transact-sql"></a>sys.pdw_nodes_tables (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   プリンシパルが所有しているか、プリンシパルが権限を許可されている、テーブルオブジェクトごとに1行の値を格納します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||このビューが継承する列の一覧については、「 [sys. オブジェクト](../system-catalog-views/sys-objects-transact-sql.md)」を参照してください。||  
 |lob_data_space_id|**int**||常に 0 です。|  
-|filestream_data_space_id|**int**|FILESTREAM ファイルグループのデータ領域 ID または[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|FILESTREAM ファイルグループのデータ領域 ID または [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|このテーブルで使用される列の最大 ID。||  
 |lock_on_bulk_load|**bit**|テーブルは一括読み込みでロックされています。|TBD|  
 |uses_ansi_nulls|**bit**|テーブルは、SET ANSI_NULLS データベース オプションが ON の場合に作成されます。|1|  
@@ -44,7 +45,7 @@ ms.locfileid: "86196870"
 |lock_escalation_desc|**nvarchar(60)**|Lock_escalation オプションの説明テキスト。|常にꞌ AUTO ꞌです。|  
 |pdw_node_id|**int**|ノードの一意識別子 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。|NOT NULL|  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse and Parallel Data Warehouse Catalog Views (SQL Data Warehouse および Parallel Data Warehouse のカタログ ビュー)](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>参照  
+ [Azure Synapse Analytics と Parallel Data Warehouse のカタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

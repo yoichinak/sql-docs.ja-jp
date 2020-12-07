@@ -1,4 +1,5 @@
 ---
+description: setInt メソッド (SQLServerPreparedStatement)
 title: setInt メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805029884b1fdc51bda3d07038839eff4941ffdc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d20e24bc8aeadcd61e684f282efc1c89cc28d325
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431774"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public final void setInt(int n,
   
  *value*  
   
- **int** 値です。  
+ **int** 値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

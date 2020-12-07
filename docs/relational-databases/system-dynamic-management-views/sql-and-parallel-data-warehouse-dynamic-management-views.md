@@ -1,4 +1,5 @@
 ---
+description: SQL および Parallel Data Warehouse の動的管理ビュー
 title: SQL および Parallel Data Warehouse の動的管理ビュー
 ms.custom: seo-dt-2019
 ms.date: 11/05/2019
@@ -11,12 +12,12 @@ dev_langs:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 399389b3b3decb92a9184d10dc2b8ca90232e114
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 877c1b09d443cafa30558d015cd604daaacc941b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482015"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>SQL および Parallel Data Warehouse の動的管理ビュー
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "86197279"
   
  すべての [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および dmv は、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **sys. dm_pdw**で始まります。  
   
-## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 動的管理ビュー  
+## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 動的管理ビュー  
  次の動的管理ビューは、との両方に適用され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ます。  
   
  [dm_pdw_dms_cores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
@@ -64,7 +65,7 @@ ms.locfileid: "86197279"
   
  [dm_pdw_waits &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
-## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]動的管理ビュー 
+## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 動的管理ビュー 
  次の動的管理ビューはにのみ適用され [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ます。
  
 [dm_pdw_nodes_exec_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
@@ -79,7 +80,7 @@ ms.locfileid: "86197279"
 
  [dm_workload_management_workload_groups_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (プレビュー)
 
-## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]動的管理ビュー  
+## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 動的管理ビュー  
  次の動的管理ビューはにのみ適用され [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ます。  
   
  [dm_pdw_component_health_active_alerts &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
@@ -102,6 +103,6 @@ ms.locfileid: "86197279"
   
  [dm_pdw_query_stats_xe_file &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-query-stats-xe-file-transact-sql.md)  
   
-## <a name="see-also"></a>関連項目  
- [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
+## <a name="see-also"></a>参照  
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   

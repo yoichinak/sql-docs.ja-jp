@@ -1,4 +1,5 @@
 ---
+description: sp_control_plan_guide (Transact-sql)
 title: sp_control_plan_guide (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870141"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753904"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>引数  
  **N '** _plan_guide_name_ **'**  
- 削除するか、有効または無効にするプラン ガイドを指定します。 現在のデータベースに対して*plan_guide_name*が解決されます。 指定しない場合、 *plan_guide_name*既定値は NULL です。  
+ 削除するか、有効または無効にするプラン ガイドを指定します。 現在のデータベースに対して*plan_guide_name*が解決されます。 指定しない場合、 *plan_guide_name* 既定値は NULL です。  
   
  DROP  
  *Plan_guide_name*によって指定されたプランガイドを削除します。 プランガイドが削除された後、プランガイドによって以前一致したクエリの今後の実行は、プランガイドの影響を受けません。  
@@ -63,7 +64,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  *Plan_guide_name*によって指定されたプランガイドを無効にします。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
- 現在のデータベース内のすべてのプランガイドを無効にします。 **N '**_PLAN_GUIDE_NAME_は、DISABLE ALL が指定されている場合は指定できません。  
+ 現在のデータベース内のすべてのプランガイドを無効にします。 **N '**_PLAN_GUIDE_NAME_ は、DISABLE ALL が指定されている場合は指定できません。  
   
  有効化  
  *Plan_guide_name*によって指定されたプランガイドを有効にします。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プランガイドは作成時に有効になります。  
@@ -71,12 +72,12 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  現在のデータベース内のすべてのプランガイドを有効にします。 ENABLE ALL が指定されている場合、 **N '**_plan_guide_name_**'** を指定することはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
   
  無効なプラン ガイドを無効にする場合や、有効なプラン ガイドを有効にする場合は影響は生じず、エラーなしで実行できます。  
   
- プランガイドは、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、の任意のエディションの [すべて削除] または [すべて削除] オプションを使用して**sp_control_plan_guide**を実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+ プランガイドは、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、の任意のエディションの [すべて削除] または [すべて削除] オプションを使用して **sp_control_plan_guide** を実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
  オブジェクト型 ( ** @type = '** OBJECT **'** を指定して作成) のプランガイドで**sp_control_plan_guide**を実行するには、プランガイドによって参照されるオブジェクトに対する ALTER 権限が必要です。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
@@ -124,7 +125,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B: 現在のデータベース内のすべてのプランガイドを無効にする  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. 現在のデータベース内のすべてのプランガイドを無効にする  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのすべてのプラン ガイドを無効にします。  
   
 ```  
@@ -133,11 +134,10 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [プラン ガイド](../../relational-databases/performance/plan-guides.md)  
-  
   

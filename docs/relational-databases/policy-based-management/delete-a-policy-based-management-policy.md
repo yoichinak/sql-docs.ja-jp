@@ -1,4 +1,5 @@
 ---
+description: ポリシー ベースの管理ポリシーの削除
 title: ポリシー ベースの管理ポリシーの削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca019a5183cabcc78468fa504d9bfd98f8532032
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de66aa15b385ee2aef206e026550aca95e770f12
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749434"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127881"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーの削除
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85749434"
   
 -   **作業を開始する準備:**  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してポリシーを削除するには:**  
   

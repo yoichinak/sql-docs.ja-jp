@@ -1,4 +1,5 @@
 ---
+description: SQLServerXAResource のメンバー
 title: SQLServerXAResource のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458164"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80925665"
   
 ## <a name="fields"></a>フィールド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|XA ブランチ トランザクション ID (XID) は異なるが、グローバル トランザクション ID (GTRID) が同じである、密に結合された XA トランザクションを許可するために使用します。|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80925665"
   
 ## <a name="methods"></a>メソッド  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|渡された Xid オブジェクトによって指定されたグローバル トランザクションをコミットします。|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|トランザクション ブランチのために実行していた処理を終了します。|  

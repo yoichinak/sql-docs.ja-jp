@@ -1,4 +1,5 @@
 ---
+description: カスタム ログ プロバイダーの作成
 title: カスタム ログ プロバイダーの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a4eaaf0e4c441fd4f08589d98c58cbac65b9e7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d12ea8d1c1289ef917c5781980af4f09eacfdf18
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916431"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96123095"
 ---
 # <a name="creating-a-custom-log-provider"></a>カスタム ログ プロバイダーの作成
 

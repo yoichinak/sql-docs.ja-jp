@@ -1,8 +1,9 @@
 ---
+description: 'レコードセット (Visual C++ 構文インデックス #import)'
 title: 'レコードセット (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ff8a863273e11edf4daa67cb10b2d826190883d7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761850"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989713"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>レコードセット (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
@@ -204,4 +205,4 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
 ```  
   
 ## <a name="see-also"></a>参照  
- [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset オブジェクト (ADO)](./recordset-object-ado.md)

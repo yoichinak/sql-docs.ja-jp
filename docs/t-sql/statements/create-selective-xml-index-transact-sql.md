@@ -1,4 +1,5 @@
 ---
+description: CREATE SELECTIVE XML INDEX (Transact-SQL)
 title: CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 81bfeb64f7acded533c78d5937160dacb86af652
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d6faa43382c948eb2ebf8524cc525a2d47bedc6
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767040"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688858"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -135,7 +136,7 @@ identifier
 ## <a name="examples"></a>例  
  次の例では、選択的 XML インデックスを作成するための構文を示しています。 また、インデックスを作成するパスと省略可能な最適化ヒントを指定する構文のいくつかのバリエーションを示します。  
   
-```  
+```sql  
 CREATE TABLE Tbl ( id INT PRIMARY KEY, xmlcol XML );  
 GO  
 CREATE SELECTIVE XML INDEX sxi_index  
@@ -150,7 +151,7 @@ FOR(
   
  次の例では、WITH XMLNAMESPACES 句を使用しています。  
   
-```  
+```sql  
 CREATE SELECTIVE XML INDEX on T1(C1)  
 WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)  
 FOR ( path1 = '/myns:book/myns:author/text()' );  

@@ -1,4 +1,5 @@
 ---
+description: 統合メンバーを作成する (マスター データ サービス)
 title: 統合メンバーを作成する
 ms.custom: ''
 ms.date: 04/01/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 598c1b12168919ecd90324aa4c581ef8c994b348
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4465fa105492cd691f474664748a4b3aca0a4f3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461906"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85812407"
 
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で明示的階層の親ノードが必要な場合、統合メンバーを作成します。 データを一括で追加する場合は、ステージング テーブルを使用します。 詳細については、「[テーブルからのデータのインポート (マスター データ サービス)](../master-data-services/import-data-from-tables-master-data-services.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  

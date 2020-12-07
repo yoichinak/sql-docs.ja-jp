@@ -1,4 +1,5 @@
 ---
+description: ODBC が正解ですか?
 title: ODBC が正解ですか? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3716acbcc1b8ea648b5edc03e277983936da557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a51c4248a041d65f00ec1846f60788cded68f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476604"
 ---
 # <a name="is-odbc-the-answer"></a>ODBC が正解ですか?
 相互運用性の問題を調査する前に、アプリケーションで ODBC を使用するかどうかを検討してください。 これは、ODBC のガイドで質問されることもありますが、実際には正当な質問です。 ODBC はネイティブデータベース Api を完全に置き換えるように設計されていません。また、すべての状況でデータベースアクセスを提供するように設計されていませんでした。 これは、データベースに共通のインターフェイスを提供するように設計されており、アプリケーションプログラマが複数のデータベースへのリンクについて学習し、維持する必要がないようにするためのものです。  

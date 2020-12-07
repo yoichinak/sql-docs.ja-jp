@@ -2,20 +2,20 @@
 title: SUSE:SQL Server on Linux の可用性グループを構成する
 titleSuffix: SQL Server
 description: SUSE Linux Enterprise Server (SLES) 用の可用性グループ クラスターを作成する方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f353230ecedbec6e30347a6999fabc706c9b09c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892337"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081721"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の SLES クラスターを構成する
 
@@ -320,7 +320,7 @@ commit
 IP アドレスが事前フェールオーバー セカンダリのノードを一時的に指さないようにするには、順序制約を追加します。 順序制約を追加するには、1 つのノードで次のコマンドを実行します。 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

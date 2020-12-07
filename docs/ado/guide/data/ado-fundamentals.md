@@ -1,8 +1,9 @@
 ---
+description: ADO の基礎
 title: ADO の基礎 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761298"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991663"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO を使用すると、開発者は、OLE DB システムインターフェイスを使用して、さまざまなデータソースからプログラムを使用してデータにアクセスしたり、編集したり、更新したりすることができます。 ADO の最も一般的な使用方法は、リレーショナルデータベース内の1つまたは複数のテーブルに対してクエリを実行し、その結果を取得してアプリケーションで表示し、ユーザーがデータの変更を行って保存できるようにすることです。 その他のタスクは次のとおりです。  
@@ -48,7 +49,7 @@ ADO を使用すると、開発者は、OLE DB システムインターフェイ
   
 -   データベースフィールドをデータ対応コンポーネントにバインドしています。  
   
--   リモートの切断された**レコードセット**を作成しています。  
+-   リモートの切断された **レコードセット**を作成しています。  
   
  ADO は、このような柔軟性を提供するさまざまなオプションと設定を公開しています。 そのため、アプリケーションで ADO を使用する方法を学習し、それぞれの目標を管理しやすい部分に分割することが重要です。  
   
@@ -56,10 +57,10 @@ ADO を使用すると、開発者は、OLE DB システムインターフェイ
   
  ただし、これらの詳細について説明する前に、ADO オブジェクトモデルと単純な ADO アプリケーションの概要を説明します。このアプリケーションは、Microsoft® Visual Basic®で記述され、次の4つの主要な ADO 操作のそれぞれを実行します。  
   
--   [ADO オブジェクトとコレクション](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [ADO オブジェクトとコレクション](./ado-objects-and-collections.md)  
   
--   [HelloData: 単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: 単純な ADO アプリケーション](./hellodata-a-simple-ado-application.md)  
   
--   [OLE DB プロバイダー](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [OLE DB プロバイダー](./ole-db-providers-ado.md)  
   
--   [エラー](../../../ado/guide/data/errors-ado.md)
+-   [エラー](./errors-ado.md)

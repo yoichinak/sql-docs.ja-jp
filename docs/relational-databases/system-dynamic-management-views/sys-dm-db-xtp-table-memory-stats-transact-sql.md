@@ -1,4 +1,5 @@
 ---
+description: dm_db_xtp_table_memory_stats (Transact-sql)
 title: dm_db_xtp_table_memory_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -18,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_db_xtp_table_memory_stats
 - dm_db_xtp_table_memory_stats
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 5bf82197a769e8268d882aadc9358a4b4ee8bbb7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442894"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537010"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>dm_db_xtp_table_memory_stats (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87442894"
   
  システム テーブルは、VIEW DATABASE STATE 権限を持つユーザーにのみ返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の DMV に対してクエリを実行して、データベース内のテーブルとインデックスに割り当てられたメモリを取得できます。  
   
 ```  

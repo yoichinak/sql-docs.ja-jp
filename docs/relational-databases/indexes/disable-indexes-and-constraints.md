@@ -1,4 +1,5 @@
 ---
+description: インデックスと制約の無効化
 title: インデックスと制約の無効化 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629773"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96130286"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85629773"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **以下を使用してインデックスを無効化するには**  
   
@@ -130,7 +131,7 @@ ms.locfileid: "85629773"
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類 ( **[クラスター化]** 、 **[非クラスター化]** 、 **[空間]** 、または **[XML]** ) を表示します。  
+ インデックスの種類 ( **[クラスター化]**、 **[非クラスター化]**、 **[空間]**、または **[XML]**) を表示します。  
   
  **状態**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  
@@ -166,7 +167,7 @@ ms.locfileid: "85629773"
   
 #### <a name="to-disable-an-index"></a>インデックスを無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
@@ -183,7 +184,7 @@ ms.locfileid: "85629773"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>テーブルのすべてのインデックスを無効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

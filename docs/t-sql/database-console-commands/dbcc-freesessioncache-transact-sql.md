@@ -1,4 +1,5 @@
 ---
+description: DBCC FREESESSIONCACHE (Transact-SQL)
 title: DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 30a4245b58b9da0d51a246ba025533f42b17a715
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 4ec9f2a854daa85ea57627c13fa64c3fddeb70c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485253"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115599"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86485253"
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
-```sql
+```syntaxsql
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   

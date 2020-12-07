@@ -1,4 +1,5 @@
 ---
+description: 復旧モデルのエラーを抑制する - サーバー構成オプション
 title: 復旧モデルのエラーを抑制する - サーバー構成オプション | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2020
@@ -9,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a59ff201edb153487640b4c5781d38a2df3756f9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942227"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670745"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>復旧モデルのエラーを抑制する - サーバー構成オプション
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-SQL Server の[復旧モデル](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)では、トランザクション ログのメンテナンスが制御されます。 完全復旧モデルでは、データ ファイルが失われたり破損したりしたために失われる作業はなく、バックアップ保持ポリシー内の任意の特定の時点への回復がサポートされます。 完全復旧モデルは、SQL Managed Instance でサポートされている既定かつ唯一の復旧モデルです。 SQL Managed Instance で復旧モデルの変更を試みると、エラーメッセージが返されます。
+SQL Server の[復旧モデル](../../relational-databases/backup-restore/recovery-models-sql-server.md)では、トランザクション ログのメンテナンスが制御されます。 完全復旧モデルでは、データ ファイルが失われたり破損したりしたために失われる作業はなく、バックアップ保持ポリシー内の任意の特定の時点への回復がサポートされます。 完全復旧モデルは、SQL Managed Instance でサポートされている既定かつ唯一の復旧モデルです。 SQL Managed Instance で復旧モデルの変更を試みると、エラーメッセージが返されます。
 
 SQL Managed Instance で実行されるデータベース復旧モデルを変更するコマンドがエラーまたは警告のみを返すかどうかを指定するには、 **[Suppress Recovery Model Errors]\(復旧モデルのエラーを抑制する\)** 詳細構成オプションを使用します。 このオプションが SQL Managed Instance で 1 (ON) に設定されている場合は、コマンド ALTER DATABASE SET RECOVERY を実行しても、データベースの復旧モデルは変更されず、エラーは返されませんが、警告メッセージが返されます。 このオプションが SQL Managed Instance で 0 (OFF) に設定されている場合は、コマンド ALTER DATABASE SET RECOVERY を実行するとエラー メッセージが返されます。
 

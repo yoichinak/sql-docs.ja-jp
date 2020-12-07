@@ -1,4 +1,5 @@
 ---
+description: 手順 5:レッスン 4 のチュートリアル パッケージのテスト
 title: '手順 5: レッスン 4 のチュートリアル パッケージのテスト | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457139"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>レッスン 4-5: レッスン 4 のパッケージをテストする
 
@@ -43,13 +44,13 @@ ms.locfileid: "86916875"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>レッスン 4 のチュートリアル パッケージを実行する  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
+1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>ErrorOutput.txt ファイルの内容を確認する  
   
-メモ帳などのテキスト エディターで、**ErrorOutput.txt** ファイルを開きます。 既定の列の順序は次のとおりです。AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
+メモ帳などのテキスト エディターで、**ErrorOutput.txt** ファイルを開きます。 既定の列の順序は、AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
  
 ファイルのすべての行には、一致しない CurrencyID 値 ("BAD")、ErrorCode 値 (-1071607778)、ErrorColumn 値 (0)、ErrorDescription 値 ("参照中に一致する行が見つかりませんでした") が含まれています。 エラーは列固有のものではなく、参照操作の失敗によるものであるため、ErrorColumn の値は 0 となります。
   

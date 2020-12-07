@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication (Transact-SQL)
 title: sp_changepublication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -13,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771426"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543726"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,17 +42,17 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は NULL です。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。  
   
-`[ @property = ] 'property'`変更するパブリケーションプロパティを設定します。 *プロパティ*は**nvarchar (255)** です。  
+`[ @property = ] 'property'` 変更するパブリケーションプロパティを設定します。 *プロパティ* は **nvarchar (255)** です。  
   
-`[ @value = ] 'value'`新しいプロパティ値を指定します。 *値*は**nvarchar (255)**,、既定値は NULL です。  
+`[ @value = ] 'value'` 新しいプロパティ値を指定します。 *値* は **nvarchar (255)**,、既定値は NULL です。  
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|値|説明|  
+|プロパティ|[値]|説明|  
 |--------------|-----------|-----------------|  
-|**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync*も**true**である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
+|**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync* も **true**である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
 ||**false**|指定されたパブリケーションに対して匿名サブスクリプションを作成することはできません。 ピアツーピアパブリケーションの場合は変更できません。|  
 |**allow_initialize_from_backup**|**true**|サブスクライバーでは、初期スナップショットではなくバックアップから、このパブリケーションへのサブスクリプションを初期化できます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**false**|サブスクライバーは初期スナップショットを使用する必要があります。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
@@ -71,20 +72,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**conflict_policy**|**pub wins**|パブリッシャーが競合で優先される場合に、サブスクライバーの更新で競合を解決する方法です。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**サブ reinit**|サブスクライバーの更新で競合が発生した場合は、サブスクリプションを再初期化する必要があります。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**sub wins**|サブスクライバーが競合で優先される場合に、サブスクライバーの更新で競合を解決する方法です。 このプロパティは、アクティブなサブスクリプションがない場合にのみ変更できます。 Oracle パブリッシャーではサポートされていません。|  
-|**conflict_retention**||競合の保有期間を日数で指定する**int**です。 既定の保有期間は14日です。 **0**は、競合のクリーンアップが必要ないことを意味します。 Oracle パブリッシャーではサポートされていません。|  
+|**conflict_retention**||競合の保有期間を日数で指定する**int**です。 既定の保有期間は14日です。 **0** は、競合のクリーンアップが必要ないことを意味します。 Oracle パブリッシャーではサポートされていません。|  
 |**description**||パブリケーションを説明する省略可能なエントリです。|  
-|**enabled_for_het_sub**|**true**|パブリケーションで以外のサブスクライバーをサポートできるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 パブリケーションへのサブスクリプションが存在する場合、 **enabled_for_het_sub**を変更することはできません。 **Enabled_for_het_sub**を true に設定する前に、次の要件に準拠するために、[レプリケーションストアドプロシージャ (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)の実行が必要になる場合があります。<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> **Enabled_for_het_sub**を**true**に変更すると、既存のパブリケーション設定が変更される可能性があります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**enabled_for_het_sub**|**true**|パブリケーションで以外のサブスクライバーをサポートできるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 パブリケーションへのサブスクリプションが存在する場合、 **enabled_for_het_sub**を変更することはできません。 **Enabled_for_het_sub**を true に設定する前に、次の要件に準拠するために、[レプリケーションストアドプロシージャ (transact-sql)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)の実行が必要になる場合があります。<br /> - **allow_queued_tran** は **false**である必要があります。<br /> - **allow_sync_tran** は **false**である必要があります。<br /> **Enabled_for_het_sub**を**true**に変更すると、既存のパブリケーション設定が変更される可能性があります。 詳細については、「 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)」を参照してください。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**false**|パブリケーションは、以外のサブスクライバーをサポートしていません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**enabled_for_internet**|**true**|パブリケーションはインターネットに対して有効であり、ファイル転送プロトコル (FTP) を使用して、スナップショットファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address*を NULL にすることはできません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|**enabled_for_internet**|**true**|パブリケーションはインターネットに対して有効であり、ファイル転送プロトコル (FTP) を使用して、スナップショットファイルをサブスクライバーに転送できます。 パブリケーションの同期ファイルはディレクトリ C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp に保存されます。 *ftp_address* を NULL にすることはできません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**false**|パブリケーションはインターネットに対応していません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**enabled_for_p2p**|**true**|パブリケーションは、ピアツーピアレプリケーションをサポートしています。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /> **Enabled_for_p2p**を**true**に設定するには、次の制限が適用されます。<br /> - **allow_anonymous**は**false**である必要があります<br /> - **allow_dts**は**false**である必要があります。<br /> - **allow_initialize_from_backup**は**true**である必要があります<br /> - **allow_queued_tran**は**false**である必要があります。<br /> - **allow_sync_tran**は**false**である必要があります。<br /> - **enabled_for_het_sub**は**false**である必要があります。<br /> - **independent_agent**は**true**である必要があります。<br /> - **repl_freq**が**連続**している必要があります。<br /> - **replicate_ddl**は**1**である必要があります。|  
+|**enabled_for_p2p**|**true**|パブリケーションは、ピアツーピアレプリケーションをサポートしています。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /> **Enabled_for_p2p**を**true**に設定するには、次の制限が適用されます。<br /> - **allow_anonymous**は**false**である必要があります<br /> - **allow_dts** は **false**である必要があります。<br /> - **allow_initialize_from_backup**は**true**である必要があります<br /> - **allow_queued_tran** は **false**である必要があります。<br /> - **allow_sync_tran** は **false**である必要があります。<br /> - **enabled_for_het_sub** は **false**である必要があります。<br /> - **independent_agent** は **true**である必要があります。<br /> - **repl_freq** が **連続**している必要があります。<br /> - **replicate_ddl** は **1**である必要があります。|  
 ||**false**|パブリケーションでピア ツー ピア レプリケーションがサポートされません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ftp_address**||パブリケーションスナップショットファイルの FTP アクセス可能な場所です。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ftp_login**||FTP サービスへの接続に使用するユーザー名です。値 ANONYMOUS は許可されます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ftp_password**||FTP サービスへの接続に使用するユーザー名のパスワード。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ftp_port**||ディストリビューター用 FTP サービスのポート番号。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**ftp_subdirectory**||パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合にスナップショットファイルを作成する場所を指定します。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|**immediate_sync**|**true**|スナップショットエージェントを実行するたびに、パブリケーションの同期ファイルが作成または再作成されます。 サブスクリプションの前にスナップショットエージェントが完了している場合、サブスクライバーはサブスクリプションの直後に同期ファイルを受け取ることができます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent*も**true**である必要があります。 **Immediate_sync**の詳細については、以下の解説を参照してください。|  
+|**immediate_sync**|**true**|スナップショットエージェントを実行するたびに、パブリケーションの同期ファイルが作成または再作成されます。 サブスクリプションの前にスナップショットエージェントが完了している場合、サブスクライバーはサブスクリプションの直後に同期ファイルを受け取ることができます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent* も **true**である必要があります。 **Immediate_sync**の詳細については、以下の解説を参照してください。|  
 ||**false**|同期ファイルは、新しいサブスクリプションがある場合にのみ作成されます。 スナップショットエージェントが開始されて完了するまで、サブスクライバーはサブスクリプションの後に同期ファイルを受け取ることができません。|  
 |**independent_agent**|**true**|パブリケーションに専用のディストリビューション エージェントがあります。|  
 ||**false**|パブリケーションでは共有ディストリビューション エージェントが使用されます。パブリケーションおよびサブスクリプション データベースの各ペアには 1 つの共有エージェントがあります。|  
@@ -99,7 +100,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**ショット**|スケジュールされた同期イベントのみをパブリッシュします。|  
 |**replicate_ddl**|**1**|パブリッシャーで実行されるデータ定義言語 (DDL) ステートメントはレプリケートされます。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0**|DDL ステートメントはレプリケートされません。 このプロパティは、以外のパブリケーションに対しては変更できません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
-|**replicate_partition_switch**|**true**|テーブルの変更...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch*が TRUE に設定されている場合にのみ有効です。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
+|**replicate_partition_switch**|**true**|テーブルの変更...パブリッシュされたデータベースに対して実行される SWITCH ステートメントは、サブスクライバーにレプリケートする必要があります。 このオプションは、 *allow_partition_switch* が TRUE に設定されている場合にのみ有効です。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
 ||**false**|テーブルの変更...SWITCH ステートメントをサブスクライバーにレプリケートすることはできません。|  
 |**保有**||サブスクリプションアクティビティの保有期間を時間単位で表す**int**です。 保有期間内にサブスクリプションがアクティブでない場合は、削除されます。|  
 |**snapshot_in_defaultfolder**|**true**|スナップショットファイルは、既定のスナップショットフォルダーに格納されます。 *Alt_snapshot_folder*も指定されている場合、スナップショットファイルは既定の場所と代替の場所の両方に格納されます。|  
@@ -107,34 +108,34 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーではサポートされていません。|  
 ||**inactive**|パブリケーションデータは、パブリケーションの作成時にサブスクライバーで使用することはできません。 Oracle パブリッシャーではサポートされていません。|  
 |**sync_method**|**native**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
-||**記号**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
+||**character**|サブスクリプションを同期するときに、すべてのテーブルのキャラクターモードの一括コピー出力を使用します。|  
 ||**同時**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショットレプリケーションでは無効です。|  
 |**taskid**||このプロパティは非推奨とされており、サポートされなくなりました。|  
 |**allow_drop**|**true**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを有効にします。 サポートされている最小バージョン: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service pack 2 以降および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] service pack 1 以降。 追加の参照: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを無効にします。 これは、このプロパティの**既定**値です。|
+||**false**|`DROP TABLE`トランザクションレプリケーションに含まれるアーティクルの DLL サポートを無効にします。 これは、このプロパティの **既定** 値です。|
 |**NULL** (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は**0**です。  
-  - **0**を指定すると、アーティクルへの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
-  - **1**に設定すると、アーティクルへの変更によってスナップショットが無効になることがあります。 新しいスナップショットを必要とする既存のサブスクリプションがある場合、この値によって、既存のスナップショットが古いバージョンとしてマークされ、新しいスナップショットが生成されます。   
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot* は **ビット**,、既定値は **0**です。  
+  - **0** を指定すると、アーティクルへの変更によってスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+  - **1** に設定すると、アーティクルへの変更によってスナップショットが無効になることがあります。 新しいスナップショットを必要とする既存のサブスクリプションがある場合、この値によって、既存のスナップショットが古いバージョンとしてマークされ、新しいスナップショットが生成されます。   
 変更時に新しいスナップショットの生成が必要になるプロパティについては、「解説」を参照してください。  
   
 [** @force_reinit_subscription =** ] *force_reinit_subscription*  
- このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription*は**ビット**で、既定値は**0**です。  
-  - **0**に設定すると、アーティクルへの変更によってサブスクリプションが再初期化されることはありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
-  - **1**に設定すると、アーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化が許可されます。  
+ このストアドプロシージャによって実行されるアクションで、既存のサブスクリプションの再初期化が必要になる可能性があることを確認します。 *force_reinit_subscription* は **ビット** で、既定値は **0**です。  
+  - **0** に設定すると、アーティクルへの変更によってサブスクリプションが再初期化されることはありません。 変更によって既存のサブスクリプションが再初期化される必要があることをストアドプロシージャが検出すると、エラーが発生し、変更は加えられません。  
+  - **1** に設定すると、アーティクルへの変更によって既存のサブスクリプションが再初期化され、サブスクリプションの再初期化が許可されます。  
   
-`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値は NULL です。  
   
   > [!NOTE]  
   >  パブリッシャーでアーティクルのプロパティを変更する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_changepublication**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_changepublication** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  次のいずれかのプロパティを変更した後で、新しいスナップショットを生成する必要があります。また、 *force_invalidate_snapshot*パラメーターに値**1**を指定する必要があります。  
 -   **alt_snapshot_folder**  
@@ -163,12 +164,12 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

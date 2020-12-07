@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914890"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891652"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "86914890"
  プロジェクト構成でプロジェクトのプロパティのセットを作成および管理するには、構成マネージャーを使用します。 構成マネージャーは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の基となる [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] によってサポートされる機能です。  
   
 > [!NOTE]  
-> この機能は、インストール後に Reporting Services を構成するために使用する Reporting Services 構成マネージャーと混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) &#40;SSRS ネイティブ モード&#41;」を参照してください。  
+> この機能と、インストール後に Reporting Services を構成するために使用するレポート サーバー構成マネージャーとを混同しないようにしてください。 詳細については、「[レポート サーバーを構成および管理する](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) &#40;SSRS ネイティブ モード&#41;」を参照してください。  
 >
 > [!NOTE]  
 > [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]では、Report Server プロジェクトまたはソリューションからレポートをパブリッシュするアクションは、 *レポートの配置*として知られています。  
@@ -65,7 +65,7 @@ ms.locfileid: "86914890"
   
 10. **[TargetServerURL]** ボックスに、対象レポート サーバーの URL を入力します。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。 ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します (たとえば、http:*//server/reportserver* 、または https:*//server/reportserver*)。 これは、Web ポータルではなく、レポート サーバーの仮想ディレクトリです。  
   
-     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、<https://*servername*>、<https://*servername*/*site*>、<https://*servername*/*site*/*subsite*>)。  
+     SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます (たとえば、`https://*servername*`、`https://*servername*/*site*`、`https://*servername*/*site*/*subsite*`)。  
   
 ## <a name="to-set-configuration-manager-properties"></a>構成マネージャーのプロパティを設定するには  
   

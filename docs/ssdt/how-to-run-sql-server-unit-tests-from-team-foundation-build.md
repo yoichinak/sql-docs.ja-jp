@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed4241fb1aeac7faaceadc250f0c2e61f10179fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893921"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987538"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
 
@@ -23,15 +23,15 @@ Team Foundation ビルドを使用すると、SQL Server の単体テストを�
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [方法: 方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [方法: 方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](/previous-versions/visualstudio/visual-studio-2010/ms182465(v=vs.100))  
   
--   [基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [基本的なビルド定義の作成](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
   
 これらの手順を使用する前に、まず、次のタスクを実行することによって作業環境を構成する必要があります。  
   
 -   Team Foundation ビルドと Team Foundation バージョン管理をインストールします。 Team Foundation ビルドと Team Foundation バージョン管理を異なるコンピューターにインストールすることが必要になる場合があります。  
   
--   Team Foundation ビルドと同じコンピューターに、MicrosoftSQL Server Data Tools のビルド ユーティリティをインストールします。 SQL Server Data Tools のビルド ユーティリティをインストールするには、まず管理インストール ポイントを作成します。 管理インストール ポイントについて詳しくは、「[SQL Server Data Tools のインストール](../ssdt/install-sql-server-data-tools.md)」をご覧ください。 次に、管理インストール ポイントに使用している場所 (/location) から、SSDTBuildUtilties.msi をビルド サーバーにインストールします。  
+-   Team Foundation ビルドと同じコンピューターに、MicrosoftSQL Server Data Tools のビルド ユーティリティをインストールします。 SQL Server Data Tools のビルド ユーティリティをインストールするには、まず管理インストール ポイントを作成します。 管理インストール ポイントについて詳しくは、「[SQL Server Data Tools のインストール](./download-sql-server-data-tools-ssdt.md)」をご覧ください。 次に、管理インストール ポイントに使用している場所 (/location) から、SSDTBuildUtilties.msi をビルド サーバーにインストールします。  
   
 -   Visual Studio Team Foundation Server のインスタンスに接続します。  
   
@@ -215,22 +215,22 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 1.  Team Foundation Server を実行しているコンピューターに接続します。  
   
-    詳しくは、「[ソース管理エクスプローラーの使用](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)」をご覧ください。  
+    詳しくは、「[ソース管理エクスプローラーの使用](/previous-versions/visualstudio/visual-studio-2010/ms181370(v=vs.100))」をご覧ください。  
   
 2.  ソリューションがソース管理にまだ含まれていない場合は、ソース管理に追加します。  
   
-    詳しくは、[バージョン管理へのプロジェクトまたはソリューションの追加に関するページ](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)をご覧ください。  
+    詳しくは、[バージョン管理へのプロジェクトまたはソリューションの追加に関するページ](/previous-versions/visualstudio/visual-studio-2010/ms181374(v=vs.100))をご覧ください。  
   
 3.  **[表示]** をクリックし、 **[保留中のチェックイン]** をクリックします。  
   
 4.  ソリューションのすべてのファイルをチェックインします。  
   
-    詳しくは、「[保留中の変更のチェックイン](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)」をご覧ください。  
+    詳しくは、「[保留中の変更のチェックイン](/previous-versions/visualstudio/visual-studio-2010/ms181411(v=vs.100))」をご覧ください。  
   
     > [!NOTE]  
     > 自動テストの作成方法および管理方法を制御する特定のチーム プロセスを用意することができます。 たとえば、ビルドをローカルで検証した後に、ビルドで実行されるテストと共にそのコードをチェックインすることを要求するプロセスもあります。  
   
-    **ソリューション エクスプローラー**で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)」をご覧ください。  
+    **ソリューション エクスプローラー**で、チェックインされている各ファイルの横には南京錠が表示されます。 詳しくは、「[バージョン管理ファイルとフォルダーのプロパティの表示](/previous-versions/visualstudio/visual-studio-2010/ms245468(v=vs.100))」をご覧ください。  
   
     テストは、Team Foundation ビルドで使用できるようになります。 これで、実行するテストを含むビルド定義を作成できます。  
   
@@ -280,11 +280,10 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 3.  **[ビルド定義]**、**[ビルド エージェント]**、**[このビルドの格納フォルダー]** の各フィールドの値がすべて適切であることを確認し、**[キューに登録]** をクリックします。  
   
-    **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)」をご覧ください。  
+    **ビルド エクスプローラー**の **[キューに挿入済み]** タブが表示されます。 詳しくは、「[完了したビルドの管理と表示 (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms181730(v=vs.100))」または「[ビルド エクスプローラーでのビルドの管理 (Visual Studio 2012)](/previous-versions/ms181732(v=vs.140))」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[ビルドをキューに配置する](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[実行中のビルドの進行状況の監視](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
-  
+[基本的なビルド定義の作成](/previous-versions/visualstudio/visual-studio-2010/ms181716(v=vs.100))  
+[ビルドをキューに配置する](/previous-versions/visualstudio/visual-studio-2010/ms181722(v=vs.100))  
+[実行中のビルドの進行状況の監視](/previous-versions/visualstudio/visual-studio-2010/ms181724(v=vs.100))  

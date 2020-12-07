@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_parameter_values (SSISDB データベース)
 title: catalog.execution_parameter_values (SSISDB データベース) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 868f6bb8b1a0052e843ae9d0e93c1d9993febbfa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 022d1d29438da9bebeb7e7544b01445f27803fce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495227"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB データベース)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86912583"
 |parameter_name|**sysname**|パラメーターの名前。|  
 |parameter_value|**sql_variant**|パラメーターの値。 sensitive が `0` の場合、プレーンテキストの値が表示されます。 sensitive が `1` の場合、**NULL** 値が表示されます。|  
 |sensitive|**bit**|値が `1` の場合、パラメーター値はセンシティブです。 値が `0` の場合、パラメーター値はセンシティブではありません。|  
-|required|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
+|必須|**bit**|値が `1` の場合、実行を開始するためパラメーター値が必要です。 値が `0` の場合、実行を開始するためのパラメーター値は不要です。|  
 |value_set|**bit**|値が `1` の場合、パラメーター値は割り当てられています。 値が `0` の場合、パラメーター値は割り当てられていません。|  
 |runtime_override|**bit**|値が `1` の場合、実行が開始される前に、パラメーター値が元の値から変更されました。 値が `0` の場合、パラメーター値は割り設定された元の値です。|  
   

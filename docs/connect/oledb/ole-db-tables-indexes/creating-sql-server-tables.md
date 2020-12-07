@@ -1,6 +1,6 @@
 ---
 title: SQL Server テーブルを作成する (OLE DB ドライバー) | Microsoft Docs
-description: OLE DB Driver for SQL Server を使用した SQL Server テーブルの作成
+description: OLE DB Driver for SQL Server の ITableDefinition::CreateTable 関数を利用するとコンシューマーが SQL Server テーブルを作成できるしくみについて説明します。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - DBCOLUMNDESC usage
 - adding tables
 - CreateTable function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2fbc22968180eda12bee592a507178c97eaec74e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9205ab77737b2b03d512f37c4e4bdf74031df6a1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977811"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858846"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server テーブルの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

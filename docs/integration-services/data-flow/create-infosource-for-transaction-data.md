@@ -1,4 +1,5 @@
 ---
+description: '[トランザクション データのインフォソースの作成]'
 title: '[トランザクション データのインフォソースの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28c3d7da3777f20957d0bdd4cf0881453af2cc00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b37416ef8283f32909b216508defda671080e30
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923994"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96127260"
 ---
 # <a name="create-infosource-for-transaction-data"></a>[トランザクション データのインフォソースの作成]
 
@@ -88,7 +89,7 @@ ms.locfileid: "86923994"
 |値|説明|  
 |-----------|-----------------|  
 |CHA|特性|  
-|UNI|Units|  
+|UNI|ユニット|  
 |KYF|主要データ|  
 |TIM|時間の特性|  
   

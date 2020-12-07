@@ -1,5 +1,6 @@
 ---
-title: '&gt;(より大きい)(MDX) |Microsoft Docs'
+description: '&gt; (より大きい)MDX'
+title: '&gt; (より大きい)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54be7523c074b2242bd740ec0b1665eb8dfb81fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429944"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(より大きい)MDX
+# <a name="gt-greater-than-mdx"></a>&gt; (より大きい)MDX
 
 
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値よりも大きいかどうかを判別する比較演算を実行します。  
@@ -40,7 +41,7 @@ MDX_Expression > MDX_Expression
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のクエリの例では、この演算子の使用方法を示します。  
   
 ```  

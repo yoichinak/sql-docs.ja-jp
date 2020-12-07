@@ -1,4 +1,5 @@
 ---
+description: CLOSE MASTER KEY (Transact-SQL)
 title: CLOSE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -22,12 +23,12 @@ ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dec9e3bcb8ddc281fa5e104806a21439abbf54c
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 44884bdfe8b5981ade28508a016e8e3f3b78bfb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380855"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193252"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,9 +39,11 @@ ms.locfileid: "86380855"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 CLOSE MASTER KEY  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -55,7 +58,7 @@ CLOSE MASTER KEY
   
 ## <a name="examples"></a>例  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CLOSE MASTER KEY;  
 GO  
@@ -63,7 +66,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```  
+```sql  
 USE master;  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = '43987hkhj4325tsku7';  
 GO   

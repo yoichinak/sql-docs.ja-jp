@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772595"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670726"
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772595"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに関連付けられているサービスを管理する方法について説明します。 これには、サービスの開始と停止、スタートアップ オプションの構成などの動作が含まれています。|[データベース エンジン サービスの管理](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |プロトコルの有効化、プロトコルで使用されるポートやパイプの変更、暗号化の構成、SQL Server Browser サービスの構成、ネットワーク上での SQL Server データベース エンジンの公開または非表示、サーバー プリンシパル名の登録など、サーバーのネットワーク構成タスクを実行する方法について説明します。|[サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)|  
 |クライアント プロトコルの構成やサーバーの別名の作成または削除など、クライアントのネットワーク構成タスクを実行する方法について説明します。|[クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スクリプトなどのスクリプトの設計、デバッグ、および実行に使用できる [!INCLUDE[tsql](../../includes/tsql-md.md)] エディターについて説明します。 SQL Server コンポーネントを操作する Windows PowerShell スクリプトを記述する方法についても説明します。|[データベース エンジン スクリプト](../../relational-databases/scripting/database-engine-scripting.md)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スクリプトなどのスクリプトの設計、デバッグ、および実行に使用できる [!INCLUDE[tsql](../../includes/tsql-md.md)] エディターについて説明します。 SQL Server コンポーネントを操作する Windows PowerShell スクリプトを記述する方法についても説明します。|[データベース エンジン スクリプト](../../ssms/scripting/database-engine-scripting.md)|  
 |インスタンスの一般的な管理タスクのワークフローを指定するメンテナンス プランを使用する方法について説明します。 ワークフローには、データベースのバックアップや、パフォーマンスを向上させるための統計情報の更新などのタスクが含まれます。|[メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |アプリケーション要求で使用可能な CPU とメモリの量の制限を指定することによってリソース消費量と負荷を管理するためにリソース ガバナーを使用する方法について説明します。|[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]から電子メール メッセージを送信するために、データベース アプリケーションがどのようにデータベース メールを使用できるかについて説明します。|[データベース メール](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772595"
   
 ## <a name="see-also"></a>参照  
  [sqlservr アプリケーション](../../tools/sqlservr-application.md)   
- [データベース機能](../../relational-databases/database-features.md)   
- [データベース エンジンのインスタンス間機能](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [データベース機能](../../relational-databases/databases/databases.md)   
+ [データベース エンジンのインスタンス間機能](../../relational-databases/databases/databases.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: ERROR_MESSAGE (Transact-SQL) | Microsoft Docs
+description: ERROR_MESSAGE (Transact-SQL)
+title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a6eac4fa014241d99824ce90b13ca9877a36e4a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 283ed2043029ad89934079df96b81ac1bc11e040
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111613"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116750"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "87111613"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```syntaxsql  
 ERROR_MESSAGE ( )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>戻り値の型
@@ -88,7 +89,7 @@ Divide by zero error encountered.
 
 ```  
   
-### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
+### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>B.  CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_MESSAGE を使用する  
 この例は、0 除算エラーを生成する `SELECT` ステートメントを示しています。 `CATCH` ブロックは、エラー メッセージと共にそのエラーに関する情報を返します。  
   
 ```sql  

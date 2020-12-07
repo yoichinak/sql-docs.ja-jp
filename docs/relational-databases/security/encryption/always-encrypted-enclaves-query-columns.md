@@ -1,4 +1,5 @@
 ---
+description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bf127e7aa40e538bb3dee390f3661ae5d74413f3
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 8daabf320e0f736bcfabc5addb8508320b10bb8f
+ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411498"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "88482225"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]

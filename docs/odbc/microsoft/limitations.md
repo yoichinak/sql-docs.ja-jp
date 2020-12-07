@@ -1,4 +1,5 @@
 ---
+description: 制限事項
 title: 制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92605f083cb0e49381b7d309e05b2c93944d3c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7fe340faaf8841b0674c8c2e7031a2d00cd78db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483505"
 ---
 # <a name="limitations"></a>制限事項
 ここでは、ODBC デスクトップデータベースドライバーの制限事項について、次のトピックについて説明します。  

@@ -1,4 +1,5 @@
 ---
+description: 高速データベース復旧を管理する
 title: 高速データベース復旧を管理する | Microsoft Docs
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f2433eb096e6b354c5f174a2e8db3437dede2d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c7e8912a4f057f895b73c0b76ad1f4ac02d46d1b
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942664"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565077"
 ---
 # <a name="manage-accelerated-database-recovery"></a>高速データベース復旧を管理する
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver2019.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>ADR の有効化と制御
 

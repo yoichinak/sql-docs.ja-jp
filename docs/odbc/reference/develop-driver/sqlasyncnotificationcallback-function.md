@@ -1,4 +1,5 @@
 ---
+description: SQLAsyncNotificationCallback 関数
 title: SQLAsyncNotificationCallback 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9d03e8a3fa7e62c19dd09a210dca3a56348c692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476231"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
 **互換性**  
@@ -24,11 +25,11 @@ ms.locfileid: "81294539"
  標準への準拠: なし  
   
  **まとめ**  
- ドライバーが SQL_STILL_EXECUTING を返した後、現在の非同期操作の進行状況が発生したときに、ドライバーがドライバーマネージャーにコールバックできるようにするには、 **Sqlasyncnotificationcallback**を使用します。 **Sqlasyncnotificationcallback**は、ドライバーによってのみ呼び出すことができます。  
+ ドライバーが SQL_STILL_EXECUTING を返した後、現在の非同期操作の進行状況が発生したときに、ドライバーがドライバーマネージャーにコールバックできるようにするには、 **Sqlasyncnotificationcallback**を使用します。 **Sqlasyncnotificationcallback** は、ドライバーによってのみ呼び出すことができます。  
   
  ドライバーは、 **sqlasyncnotificationcallback 関数名を**指定して**sqlasyncnotificationcallback**を呼び出しません。 代わりに、ドライバーマネージャーは、対応する接続ハンドルまたはステートメントハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値として、関数ポインターをドライバーに渡します。 異なるハンドルに異なる関数ポインターの値を割り当てることができます。 関数ポインターの型は SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
   
- **Sqlasyncnotificationcallback**はスレッドセーフです。 ドライバーでは、複数のスレッドを使用して、異なるハンドルで同時に**Sqlasyncnotificationcallback**を呼び出すことができます。  
+ **Sqlasyncnotificationcallback** はスレッドセーフです。 ドライバーでは、複数のスレッドを使用して、異なるハンドルで同時に **Sqlasyncnotificationcallback** を呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,12 +52,12 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
  SQL_SUCCESS または SQL_ERROR。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlasyncnotificationcallback**は、次の2つの状況で SQL_ERROR を返すことができます (これらは、ドライバーまたはドライバーマネージャーの実装の問題を示します)。  
+ **Sqlasyncnotificationcallback** は、次の2つの状況で SQL_ERROR を返すことができます (これらは、ドライバーまたはドライバーマネージャーの実装の問題を示します)。  
   
 |エラー|説明|  
 |-----------|-----------------|  
 |接続またはステートメントが通知を要求しませんでした。||  
-|無効な*ハンドル*|ドライバーが無効なハンドルで渡されました。このハンドルは、内部ドライバーマネージャーの検証テストに失敗しました。|  
+|無効な *ハンドル*|ドライバーが無効なハンドルで渡されました。このハンドルは、内部ドライバーマネージャーの検証テストに失敗しました。|  
   
-## <a name="see-also"></a>参照  
- [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+## <a name="see-also"></a>関連項目  
+ [非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

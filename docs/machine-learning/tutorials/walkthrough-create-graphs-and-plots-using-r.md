@@ -1,6 +1,6 @@
 ---
 title: R チュートリアル:グラフとプロットの作成
-description: SQL Server で R 言語関数を使用してグラフやプロットを作成する方法を示すチュートリアル。
+description: SQL Server データと R 言語を使用してプロットとマップを生成する手法について説明します。 単純なヒストグラムを作成してから、より複雑なマップ プロットを作成します。
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781817"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196236"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL と R を使用してグラフとプロットを作成する (チュートリアル)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 チュートリアルのこのパートでは、R を使用して SQL Server データでプロットとマップを生成する方法について説明します。 単純なヒストグラムを作成してから、より複雑なマップ プロットを作成します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "85781817"
 
 ## <a name="create-a-histogram"></a>ヒストグラムの作成
 
-1. [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 関数を利用し、最初のプロットを生成します。  rxHistogram 関数は、オープンソース R パッケージのそれと同様の機能を提供しますが、リモート実行コンテキストで実行できます。
+1. [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) 関数を利用し、最初のプロットを生成します。  rxHistogram 関数は、オープンソース R パッケージのそれと同様の機能を提供しますが、リモート実行コンテキストで実行できます。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -45,7 +45,7 @@ ms.locfileid: "85781817"
 
 2. この画像はお使いの開発環境の R グラフィックス デバイスで返されたものです。  たとえば、RStudio で、 **プロット** ウィンドウをクリックします。  [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]で、別個のグラフィックス ウィンドウが開きます。
 
-    ![rxHistogram を使用して料金をプロットする](media/rsql-e2e-rxhistogramresult.png "rxHistogram を使用して料金量をプロットする")
+    ![rxHistogram を使用して料金量をプロットする](media/rsql-e2e-rxhistogramresult.png "rxHistogram を使用して料金量をプロットする")
 
     > [!NOTE]
     > グラフの外観が異なっていますか?
@@ -73,7 +73,7 @@ ms.locfileid: "85781817"
 
     + 関数 *mapPlot* は 2 つの引数を受け取ります。RxSqlServerData を利用して先に定義した既存のデータ オブジェクトとクライアントから渡されたマップ表示です。
     + *ds* 変数で始まる行では、以前に作成したデータ ソース *inDataSource* からメモリ データを読み込むために、rxImport が使用されます (このデータ ソースには 1000 行しか含まれていません。より多くのデータ ポイントを含むマップを作成する場合は、別のデータ ソースに置き換えることができます)。
-    + オープンソース R 関数を使用するときは、データをローカル メモリのデータ フレームに読み込む必要があります。 ただし、[rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) 関数を呼び出すことによって、リモート計算コンテキストのメモリ内で実行できます。
+    + オープンソース R 関数を使用するときは、データをローカル メモリのデータ フレームに読み込む必要があります。 ただし、[rxImport](/r-server/r-reference/revoscaler/rximport) 関数を呼び出すことによって、リモート計算コンテキストのメモリ内で実行できます。
 
 2. 計算コンテキストをローカルに変更し、マップの作成に必要なライブラリを読み込みます。
 
@@ -89,7 +89,7 @@ ms.locfileid: "85781817"
 
     + `googmap` で始まる行により、指定した座標を中心に据えるマップが生成されます。
 
-3. 次に示すように、[rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) でプロット関数をラップすることで、SQL Server 計算コンテキストに切り替え、結果を表示します。 rxExec 関数は **RevoScaleR** パッケージに含まれ、リモート計算コンテキストで任意の R 関数の実行をサポートします。
+3. 次に示すように、[rxExec](/r-server/r-reference/revoscaler/rxexec) でプロット関数をラップすることで、SQL Server 計算コンテキストに切り替え、結果を表示します。 rxExec 関数は **RevoScaleR** パッケージに含まれ、リモートの計算コンテキストで任意の R 関数の実行をサポートします。
 
     ```R
     rxSetComputeContext(sqlcc)

@@ -1,4 +1,5 @@
 ---
+description: ASCII (Transact-SQL)
 title: ASCII (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2019
@@ -21,12 +22,12 @@ ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3101a78ba29e12997048683bdada7e7d53aa7bd6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0169bc8dd5ed25e6f1689802e9a431df34fe457
+ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113164"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96124935"
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,13 +46,13 @@ ASCII ( character_expression )
 
 ## <a name="arguments"></a>引数
 *character_expression*  
-[char](../../t-sql/language-elements/expressions-transact-sql.md) 型または **varchar** 型の**式**。
+**char** 型または **varchar** 型の [式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
 ## <a name="remarks"></a>解説
-ASCII は、情報交換用米国標準コード (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「**ASCII**」の[印刷可能文字](https://www.wikipedia.org/wiki/ASCII)に関するセクションを参照してください。
+ASCII は、情報交換用米国標準コード (**A** merican **S** tandard **C** ode for **I** nformation **I** nterchange) の略語です。 最新のコンピューター上で文字エンコード標準として機能します。 ASCII 文字の一覧については、「[ASCII](https://www.wikipedia.org/wiki/ASCII)」の **印刷可能文字** に関するセクションを参照してください。
 
 ASCII は 7 ビット文字セットです。 拡張 ASCII または高 ASCII は、`ASCII` 関数によって処理されない 8 ビット文字セットです。 
 
@@ -115,7 +116,7 @@ Extended_ASCII CHARACTER
 230            æ
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

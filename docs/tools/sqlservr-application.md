@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36fde81f6317d45b2169282d99e4eef27b3467b3
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112578"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714270"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
 
@@ -85,7 +85,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |パラメーター | 詳細情報|
 |:-----|:-----|
-|**-h** | 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで、AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保します。 [!INCLUDE[sssql14](../includes/sssql14-md.md)] を介してサポートされています。 詳細については、「 [SQL Server 2016 で提供が中止された機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。|
+|**-h** | 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで、AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保します。 [!INCLUDE[sssql14](../includes/sssql14-md.md)] を介してサポートされています。 詳細については、「 [SQL Server 2016 で提供が中止された機能](../database-engine/discontinued-database-engine-functionality-in-sql-server.md?view=sql-server-ver15)」を参照してください。|
 |**-g** | *memory_to_reserve*<br/><br>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビット インスタンスの以前のバージョンに適用されます。 [!INCLUDE[sssql14](../includes/sssql14-md.md)] を介してサポートされています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プール外にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセス内に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がメモリ割り当て用の領域として残すメモリの容量を、整数で指定します (メガバイト単位)。 詳細については、[サーバー メモリ構成オプションに関する SQL Server 2014 ドキュメント](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)を参照してください。|
 | &nbsp; | &nbsp; |
 

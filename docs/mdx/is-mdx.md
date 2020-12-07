@@ -1,4 +1,5 @@
 ---
+description: IS (MDX)
 title: IS (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eab5fc86d89fccbe6ae56c4dba78ccde60e26d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387348"
 ---
 # <a name="is-mdx"></a>IS (MDX)
 
@@ -35,13 +36,13 @@ Expression1 IS ( Expression2 | NULL )
  MDX オブジェクト参照を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 両方の引数が同じオブジェクトを参照する場合に**true**を返すブール値です。それ以外の場合は**false**。 **Null**キーワードが指定されている場合、演算子は、 *Expression1*が**null**の場合に**true**を返します。それ以外の場合は**false**。  
+ 両方の引数が同じオブジェクトを参照する場合に **true** を返すブール値です。それ以外の場合は **false**。 **Null**キーワードが指定されている場合、演算子は、 *Expression1*が**null**の場合に**true**を返します。それ以外の場合は**false**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Is**演算子は、組とメンバーが等しいかどうかを判断するためによく使用されます。これは、厳密に等価であることを意味します。  
   
-## <a name="examples"></a>使用例  
- 次の例で**は、is**演算子を使用して、軸上の現在のメンバーが特定のメンバーであるかどうかを確認する方法を示します。  
+## <a name="examples"></a>例  
+ 次の例で **は、is** 演算子を使用して、軸上の現在のメンバーが特定のメンバーであるかどうかを確認する方法を示します。  
   
  `With`  
   

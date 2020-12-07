@@ -2,19 +2,19 @@
 title: 可用性グループの読み取りスケールを構成する
 description: Windows で読み取りスケール ワークロードの SQL Server Always On 可用性グループを構成する方法について学習します。
 ms.custom: seodec18
-author: MashaMSFT
-ms.author: mathoma
+author: cawrites
+ms.author: chadam
 ms.reviewer: ''
 ms.date: 05/24/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: c5029f8f6e2200751d193172322d7d84934271ab
+ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565310"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94584506"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 読み取り専用セカンダリ レプリカには、次の 2 つの方法で接続できます。
 * アプリケーションは、セカンダリ レプリカをホストする SQL Server インスタンスに直接接続し、データベースにクエリを実行できます。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。
-* アプリケーションでは、リスナーを要求する読み取り専用ルーティングも利用できます。 詳細については、「[リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。
+* アプリケーションでは、リスナーを要求する読み取り専用ルーティングも利用できます。 クラスター マネージャーを使用せずに読み取りスケールのシナリオをデプロイする場合でも、SQL Server がリッスンするものとは異なる現在のプライマリ レプリカとポートの IP アドレスを指すリスナーを作成することができます。 フェールオーバー後に新しいプライマリ IP アドレスを指すようにリスナーを再作成する必要があります。 詳細については、「[リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続](listeners-client-connectivity-application-failover.md#ConnectToSecondary)」を参照してください。
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>読み取りスケール可用性グループのプライマリ レプリカをフェールオーバーする
 
@@ -87,6 +87,6 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 ## <a name="next-steps"></a>次のステップ
 
-* [分散型可用性グループの構成](distributed-availability-groups-always-on-availability-groups.md)
+* [分散型可用性グループの構成](./distributed-availability-groups.md)
 * [可用性グループの詳細](overview-of-always-on-availability-groups-sql-server.md)
 * [強制手動フェールオーバーの実行](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)

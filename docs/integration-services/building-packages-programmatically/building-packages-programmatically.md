@@ -1,4 +1,5 @@
 ---
+description: プログラムによるパッケージの作成
 title: プログラムによるパッケージの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 464bc971ca52c1363366ff439bcc5c51f32d5065
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905551"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480780"
 ---
 # <a name="building-packages-programmatically"></a>プログラムによるパッケージの作成
 
@@ -52,7 +53,7 @@ ms.locfileid: "86905551"
  [プログラムによる接続の追加](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  接続マネージャーをパッケージに追加する方法について説明します。  
   
- [プログラムによる変数の使用](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
+ [プログラムでの変数の使用](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  パッケージの実行中に、変数を追加および使用する方法について説明します。  
   
  [プログラムによるイベントの処理](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
@@ -76,11 +77,11 @@ ms.locfileid: "86905551"
  [プログラムによる入力列の選択](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  データ フローの上流コンポーネントによってコンポーネントに提供される入力列から、使用する入力列を選択する方法について説明します。  
   
- [プログラムによるパッケージの保存](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [パッケージをプログラムで保存](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  プログラムを使用してパッケージを保存する方法について説明します。  
   
 ## <a name="reference"></a>リファレンス  
- [Integration Services のエラーとメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../integration-services/integration-services-error-and-message-reference.md)  
  事前に定義されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -95,11 +96,11 @@ ms.locfileid: "86905551"
   
 ## <a name="external-resources"></a>外部リソース  
   
--   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
+-   [www.codeplex.com/MSFTISProdSamples](www.codeplex.com/MSFTISProdSamples) の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
--   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](https://go.microsoft.com/fwlink/?LinkId=238831)」  
+-   blogs.msdn.com のブログ「[カスタム拡張機能のパフォーマンスのプロファイル](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490)」  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
