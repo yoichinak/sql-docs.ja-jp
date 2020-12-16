@@ -54,20 +54,20 @@ ms.locfileid: "96428282"
 
 |.NET の種類|DbType|SqlDbType|
 |-------------------------|------------|---------------|
-|<xref:System.Boolean>|ブール型|ビット|
+|<xref:System.Boolean>|Boolean|Bit|
 |<xref:System.Byte>|Byte|TinyInt|
-|byte[]|2 項|VarBinary。 バイト配列が VarBinary の最大サイズ (8000 バイト) より大きい場合、この暗黙の変換はエラーになります。 8000 バイトを超えるバイト配列の場合は、明示的に <xref:System.Data.SqlDbType> を設定してください。|
+|byte[]|Binary|VarBinary。 バイト配列が VarBinary の最大サイズ (8000 バイト) より大きい場合、この暗黙の変換はエラーになります。 8000 バイトを超えるバイト配列の場合は、明示的に <xref:System.Data.SqlDbType> を設定してください。|
 |<xref:System.Char>| |char から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 |<xref:System.DateTime>|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|SQL Server 2008 の DateTimeOffset。 SQL Server 2008 より前のバージョンの SQL Server では、DateTimeOffset から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 |<xref:System.Decimal>|Decimal|Decimal|
 |<xref:System.Double>|Double|Float|
 |<xref:System.Single>|Single|Real|
-|<xref:System.Guid>|GUID|UniqueIdentifier|
+|<xref:System.Guid>|Guid|UniqueIdentifier|
 |<xref:System.Int16>|Int16|SmallInt|
-|<xref:System.Int32>|Int32|int|
+|<xref:System.Int32>|Int32|Int|
 |<xref:System.Int64>|Int64|BigInt|
-|<xref:System.Object>|Object|バリアント|
+|<xref:System.Object>|Object|Variant|
 |<xref:System.String>|String|NVarChar。 文字列が NVarChar の最大サイズ (4000 文字) より大きい場合、この暗黙の変換はエラーになります。 4000 文字を超える文字列の場合は、明示的に <xref:System.Data.SqlDbType>を設定してください。|
 |<xref:System.TimeSpan>|時刻|SQL Server 2008 の Time。 SQL Server 2008 より前のバージョンの SQL Server では、TimeSpan から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 |<xref:System.UInt16>|UInt16|UInt16 から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
@@ -75,11 +75,11 @@ ms.locfileid: "96428282"
 |<xref:System.UInt64>|UInt64|UInt64 から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 ||AnsiString|VarChar|
 ||AnsiStringFixedLength|Char|
-||通貨|通貨|
+||Currency|Money|
 ||Date|SQL Server 2008 の Date。 SQL Server 2008 より前のバージョンの SQL Server では、Date から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 ||SByte|SByte から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 ||StringFixedLength|NChar|
-||時刻|SQL Server 2008 の Time。 SQL Server 2008 より前のバージョンの SQL Server では、Time から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
+||Time|SQL Server 2008 の Time。 SQL Server 2008 より前のバージョンの SQL Server では、Time から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 ||VarNumeric|VarNumeric から <xref:System.Data.SqlDbType> への推論はサポートされていません。|
 |ユーザー定義型 ( <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>を持つオブジェクト)|SqlClient は常に Object を返します|<xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> が存在する場合は `SqlDbType.Udt`。それ以外の場合は `Variant`|
 
