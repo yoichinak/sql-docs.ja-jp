@@ -13,17 +13,17 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c18b6842139e5a4f5f0261761fa93cc42d3a506c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405693"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559324"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC パッケージでの Always Encrypted を使用した列暗号化の構成 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-[データ層アプリケーション (DAC) パッケージ](../../data-tier-applications/data-tier-applications.md) (DACPAC とも呼ばれます) は、テーブル内のテーブルや列を含むすべての SQL Server オブジェクトを定義する SQL Server データベースのデプロイの移植可能な単位です。 DACPAC をデータベースに発行する場合 (DACPAC を使用してデータベースをアップグレードする場合)、ターゲット データベースのスキーマは、DACPAC のスキーマに一致するように更新されます。 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell)、または [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) の[データ層アプリケーションのアップグレード ウィザード](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)を使用して、DACPAC を発行できます。
+[データ層アプリケーション (DAC) パッケージ](../../data-tier-applications/data-tier-applications.md) (DACPAC とも呼ばれます) は、テーブル内のテーブルや列を含むすべての SQL Server オブジェクトを定義する SQL Server データベースのデプロイの移植可能な単位です。 DACPAC をデータベースに発行する場合 (DACPAC を使用してデータベースをアップグレードする場合)、ターゲット データベースのスキーマは、DACPAC のスキーマに一致するように更新されます。 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell)、または [sqlpackage](../../../tools/sqlpackage/sqlpackage-publish.md) の[データ層アプリケーションのアップグレード ウィザード](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)を使用して、DACPAC を発行できます。
 
 この記事では、DACPAC またはターゲット データベースに [Always Encrypted](always-encrypted-database-engine.md) で保護された列が含まれる場合に、データベースをアップグレードするための特別な考慮事項について説明します。 DACPAC 内の列の暗号化スキームが、ターゲット データベースの既存の列の暗号化スキームと異なる場合、DACPAC を発行すると、列に格納されているデータの暗号化、暗号化解除、または再暗号化が行われます。 詳細については、次の表を参照してください。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bdeaca276e64ec436b3ee39cc97439bbdc25aa98
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7c50a2e201bcba99299998dc232e1246005eb168
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719443"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97639424"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
 
@@ -112,7 +112,7 @@ Azure SQL Managed Instance にマネージド ID 認証を使用するには、�
     
 1. まだ行っていない場合は、Azure portal でお使いのマネージド インスタンスの [Azure Active Directory 管理者をプロビジョニング](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)します。 Azure AD 管理者は、Azure AD ユーザーでも Azure AD グループでもかまいません。 マネージド ID を持つグループに管理者ロールを付与する場合は、ステップ 2 から 4 をスキップします。 管理者は、データベースへのフル アクセスを持ちます。
 
-1. データ ファクトリのマネージド ID 用に[ログインを作成](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current)します。 SQL Server Management Studio (SSMS) で、**sysadmin** である SQL Server アカウントを使用して Managed Instance に接続します。 **マスター** データベースで、次の T-SQL を実行します。
+1. データ ファクトリのマネージド ID 用に[ログインを作成](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)します。 SQL Server Management Studio (SSMS) で、**sysadmin** である SQL Server アカウントを使用して Managed Instance に接続します。 **マスター** データベースで、次の T-SQL を実行します。
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
@@ -124,7 +124,7 @@ Azure SQL Managed Instance にマネージド ID 認証を使用するには、�
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 次のコードを実行します。 詳細については、[こちらのドキュメント](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current)を参照してください。
+1. SQL ユーザーや他のユーザーに対する通常の方法と同様に、データ ファクトリのマネージド ID に必要なアクセス許可を付与します。 次のコードを実行します。 詳細については、[こちらのドキュメント](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)を参照してください。
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
@@ -132,7 +132,7 @@ Azure SQL Managed Instance にマネージド ID 認証を使用するには、�
 
 次に、OLE DB 接続マネージャーに対して OLE DB プロバイダーを構成します。 これを行うには次のオプションがあります。
     
-- **設計時に構成します。** SSIS デザイナーで、OLE DB 接続マネージャーをダブルクリックして、 **[接続マネージャー]** ウィンドウを開きます。 **[プロバイダー]** ドロップダウン リストで、[ **[Microsoft OLE DB Driver for SQL Server]** ](https://go.microsoft.com/fwlink/?linkid=871294) を選択します。
+- **設計時に構成します。** SSIS デザイナーで、OLE DB 接続マネージャーをダブルクリックして、 **[接続マネージャー]** ウィンドウを開きます。 **[プロバイダー]** ドロップダウン リストで、[ **[Microsoft OLE DB Driver for SQL Server]**](https://go.microsoft.com/fwlink/?linkid=871294) を選択します。
     > [!NOTE]
     >  ドロップダウン リストの他のプロバイダーでは、マネージド ID 認証がサポートされていない場合があります。
     
@@ -147,7 +147,7 @@ Azure SQL Managed Instance にマネージド ID 認証を使用するには、�
     > [!NOTE]
     >  現在、SSIS パッケージを SSIS デザイナーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server で実行しているときは、接続マネージャーのプロパティ `ConnectUsingManagedIdentity` は有効になりません (マネージド ID 認証が機能しないことを示します)。
 
-- **実行時に構成します。** パッケージを SSMS または **SQL パッケージの実行**アクティビティで実行するときは、OLE DB 接続マネージャーを見つけて、そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
+- **実行時に構成します。** パッケージを SSMS または **SQL パッケージの実行** アクティビティで実行するときは、OLE DB 接続マネージャーを見つけて、そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]
     >  Azure-SSIS 統合ランタイムでは、データベース接続を確立するためにマネージド ID 認証を使用すると、OLE DB 接続マネージャーで事前構成済みの他のすべての認証方法 (統合セキュリティ、パスワードなど) はオーバーライドされます。
 

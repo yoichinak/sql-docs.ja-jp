@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88465422"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637866"
 ---
 # <a name="model-database"></a>model データベース
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88465422"
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 64 MB ずつ自動拡張|  
 |ログ|modellog|modellog.ldf|最大 2 TB まで 64 MB ずつ自動拡張|  
 
-SQL Server 2014 での既定のファイル拡張値については、「[model データベース](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014)」をご覧ください。  
+SQL Server 2014 での既定のファイル拡張値については、「[model データベース](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014&preserve-view=true)」をご覧ください。  
 
  **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)」を参照してください。  
   

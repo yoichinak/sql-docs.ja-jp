@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: f0e1d76ae7977eac4d761c76a27e10619f300ca1
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f33a5a6890d12628faf3144a0ca6e8471a15c73d
+ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115695"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97559284"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Windows 上で SSMS または SqlPackage.exe を使用して Linux 上でデータベースをエクスポートおよびインポートする
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) と [SqlPackage.exe](../tools/sqlpackage.md) を使用して SQL Server on Linux 上でデータベースをエクスポートおよびインポートする方法について説明します。 SSMS と SqlPackage.exe は Windows アプリケーションなので、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがある場合は、この手法を使用します。
+この記事では、[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) と [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) を使用して SQL Server on Linux 上でデータベースをエクスポートおよびインポートする方法について説明します。 SSMS と SqlPackage.exe は Windows アプリケーションなので、Linux 上のリモート SQL Server インスタンスに接続できる Windows マシンがある場合は、この手法を使用します。
 
 [Windows 上の SSMS を使用して SQL Server on Linux に接続する方法](sql-server-linux-manage-ssms.md)に関するページの説明に従い、常に SQL Server Management Studio (SSMS) の最新バージョンをインストールして使用するようにします。
 
@@ -64,7 +64,7 @@ ms.locfileid: "92115695"
 
 ## <a name="sqlpackage-command-line-option"></a><a id="sqlpackage"></a> SqlPackage のコマンドライン オプション
 
-また、SQL Server Data Tools (SSDT) コマンドライン ツールである [SqlPackage.exe](../tools/sqlpackage.md) を使用して、BACPAC ファイルをエクスポートおよびインポートすることもできます。
+また、SQL Server Data Tools (SSDT) コマンドライン ツールである [SqlPackage.exe](../tools/sqlpackage/sqlpackage.md) を使用して、BACPAC ファイルをエクスポートおよびインポートすることもできます。
 
 次のコマンド例では、BACPAC ファイルをエクスポートします。
 
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>関連項目
-SSMS の使用方法の詳細については、[SQL Server Management Studio の使用](../ssms/sql-server-management-studio-ssms.md)に関するページを参照してください。 SqlPackage.exe の詳細については、[SqlPackage のリファレンス ドキュメント](../tools/sqlpackage.md)を参照してください。
+SSMS の使用方法の詳細については、[SQL Server Management Studio の使用](../ssms/sql-server-management-studio-ssms.md)に関するページを参照してください。 SqlPackage.exe の詳細については、[SqlPackage のリファレンス ドキュメント](../tools/sqlpackage/sqlpackage.md)を参照してください。
