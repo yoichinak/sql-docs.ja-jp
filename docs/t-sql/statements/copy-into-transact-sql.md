@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 9b480c90337017c77a0d05afe5861e85c89637d3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460785"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97638824"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -131,7 +131,7 @@ WITH
 >Polybase のファイルの種類である "区切りテキスト" は "CSV" ファイル形式に置き換えられています。このファイル形式で既定のコンマ区切り記号を構成するには、FIELDTERMINATOR パラメーターを使用します。 
 
 *FILE_FORMAT = external_file_format_name*</br>
-*FILE_FORMAT* は Parquet ファイルおよび ORC ファイルにのみ適用され、外部データのファイルの種類と圧縮方法を格納する外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest) を使用します。
+*FILE_FORMAT* は Parquet ファイルおよび ORC ファイルにのみ適用され、外部データのファイルの種類と圧縮方法を格納する外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md) を使用します。
 
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* は、外部ストレージ アカウントにアクセスするための認証メカニズムを指定します。 認証方法を次に示します。
@@ -256,7 +256,7 @@ ROW TERMINATOR の UTF-8 では、拡張 ASCII およびマルチバイト文字
 *FIRSTROW* は CSV に適用され、COPY コマンドに対して、すべてのファイルで最初に読み取られる行番号を指定します。 値は 1 から始まり、これが既定値です。 2 に設定すると、データが読み込まれるときに、すべてのファイルの最初の行 (ヘッダー行) がスキップされます。 行は、行ターミネータの存在に基づいてスキップされます。
 
 *DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
-DATEFORMAT は CSV にのみ適用され、SQL Server 日付形式に対する日付の日付形式のマッピングを指定します。 Transact-SQL の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15)」を参照してください。 COPY コマンド内の DATEFORMAT は、[セッション レベルで構成された DATEFORMAT](set-dateformat-transact-sql.md?view=sql-server-ver15) よりも優先されます。
+DATEFORMAT は CSV にのみ適用され、SQL Server 日付形式に対する日付の日付形式のマッピングを指定します。 Transact-SQL の日付と時刻のデータ型および関数の概要については、「[日付と時刻のデータ型および関数 (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。 COPY コマンド内の DATEFORMAT は、[セッション レベルで構成された DATEFORMAT](set-dateformat-transact-sql.md) よりも優先されます。
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
 *ENCODING* は CSV にのみ適用されます。 既定値は UTF8 です。 COPY コマンドによって読み込まれたファイルのデータ エンコード標準を指定します。 
@@ -275,8 +275,8 @@ IDENTITY_INSERT は、インポートしたデータ ファイルの ID 値 (複
 
 コピー コマンドを実行するユーザーには次の権限が必要です。 
 
-- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
-- [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
+- [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md#remarks)
+- [INSERT ](grant-database-permissions-transact-sql.md#remarks)
 
 INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。
 

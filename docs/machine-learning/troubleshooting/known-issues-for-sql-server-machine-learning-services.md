@@ -7,14 +7,14 @@ ms.date: 10/13/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 7772c0307732809cb7d5d6d0767ad7bcd29c7c89
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4c4b293b13ec59421ea5827572203ba13e526212
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470673"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878807"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -718,7 +718,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### <a name="9-cannot-install-tensorflow-package-using-sqlmlutils"></a>9.**sqlmlutils** を使用して **tensorflow** パッケージをインストールできません
 
-[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/) のダウンロード、インストールおよび更新を行う必要があります。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
+[sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md) パッケージは SQL Server 2019 に Python パッケージをインストールするために使用します。 [Microsoft Visual C++ 2015-2019 Redistributable (x64)](https://visualstudio.microsoft.com/downloads/) のダウンロード、インストールおよび更新を行う必要があります。 ただし、パッケージ **tensorflow** は、sqlmlutils を使用してインストールできません。 tensorflow パッケージは、SQL Server にインストールされているバージョンより新しい numpy のバージョンに依存しています。 ただし、numpy は、tensorflow をインストールしようとしたときに sqlmlutils で更新できないプレインストールされたシステム パッケージです。
 
 **回避策**
 

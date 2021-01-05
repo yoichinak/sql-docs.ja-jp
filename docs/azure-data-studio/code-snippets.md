@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: aa1826539a6b9d2a5f649159e566d3ceda8d624d
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: bd86afbe288be3b92b15b6702ec46903f56a2ad5
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364129"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637805"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Azure Data Studio でコード スニペットを作成して使用し、Transact-SQL (T-SQL) スクリプトをすばやく作成する
 
@@ -89,16 +89,16 @@ Azure Data Studio には、適切な構文を迅速に生成するのに役立�
        "description": "User-defined snippet example 2"
        }
        }
-       ```
+    ```
 
-4. Save the sql.json file.
+4. sql.json ファイルを保存します。
 
-5. Open a new query editor window by clicking **Ctrl+N**.
+5. **Ctrl+N** キーをクリックして、新しいクエリ エディター ウィンドウを開きます。
 
-6. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
+6. 「**sql**」と入力すると、追加した 2 つのユーザー スニペット (*sqlCreateTable2* と *sqlSelectTop5*) が表示されます。
 
-Select one of the new snippets and give it a test run!
+新しいスニペットの 1 つを選択し、テストを実行してみましょう。
 
-## Next steps
+## <a name="next-steps"></a>次のステップ
 
-For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).
+SQL エディターの詳細については、[コード エディターのチュートリアル](tutorial-sql-editor.md)に関するページを参照してください。

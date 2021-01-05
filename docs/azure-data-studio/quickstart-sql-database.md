@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 7eb89be3b94565f7a8642dad893642176a22822b
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: c168ceb916ac1b65f4e6d45c9ee1054b15b0cb75
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439296"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97637659"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>クイック スタート:Azure Data Studio を使用して、Azure SQL Database に接続してクエリを実行する
 
@@ -24,7 +24,7 @@ ms.locfileid: "92439296"
 
 このクイック スタートを完了するには、Azure Data Studio と Azure SQL Database サーバーが必要です。
 
-- [Azure Data Studio をインストールする](./download-azure-data-studio.md?view=sql-server-ver15)
+- [Azure Data Studio をインストールする](./download-azure-data-studio.md)
 
 Azure SQL サーバーがない場合は、次のいずれかの Azure SQL Database クイック スタートを完了します。 後の手順のために、完全修飾サーバー名とサインイン資格情報を覚えておいてください。
 
@@ -88,7 +88,7 @@ Azure Data Studio を使用して、Azure SQL Database サーバーへの接続�
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
-クエリ エディターは **master** データベースに接続されていますが、 **TutorialDB** データベースにテーブルを作成する必要があります。 
+クエリ エディターは **master** データベースに接続されていますが、**TutorialDB** データベースにテーブルを作成する必要があります。 
 
 1. **TutorialDB** データベースに接続します。
 

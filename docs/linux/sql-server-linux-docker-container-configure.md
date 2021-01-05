@@ -4,19 +4,19 @@ description: SQL Server Docker コンテナーをカスタマイズするさま�
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: fbae468dfd0f68f2765dc781ad710e9b8525aeaf
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 3fa589fdb522014994923edfa1a7d7858cfa7b72
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489892"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878822"
 ---
 # <a name="configure-and-customize-sql-server-docker-containers"></a>SQL Server Docker コンテナーを構成およびカスタマイズする
 
@@ -374,7 +374,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-- [クイックスタート](quickstart-install-connect-docker.md?view=sql-server-ver15)に従って、Docker 上で SQL Server 2019 のコンテナー イメージを開始する
+- [クイックスタート](quickstart-install-connect-docker.md)に従って、Docker 上で SQL Server 2019 のコンテナー イメージを開始する
 
 ::: moniker-end
 
