@@ -2,7 +2,7 @@
 description: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
 title: sys.dm_resource_governor_resource_pools_history_ex (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8aafaca36fb5ef1d96ddbd9f369a3ba4f06a596d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484584"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928441"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-Azure SQL Database のリソースプール統計の最後の32分 (合計 128) の20秒間隔でスナップショットを返します。  
-  
+各行は、Azure SQL Database のリソースプール統計の定期的なスナップショットを表します。 スナップショットは、データベースエンジンの起動時と、それ以降は数秒ごとに実行されます。 現在のスナップショットと前のスナップショットの間の間隔は異なる場合があり、列に表示され `duration_ms` ます。 利用可能な最新のスナップショットが返されます。各リソースプールについて最大128のスナップショットが返されます。
+
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|INT|リソースプールの ID。 NULL 値は許可されません。

@@ -2,7 +2,7 @@
 description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 title: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 01/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: d761d1ca80037e26f8757ec681929dd5356b182f
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 69f310b699e59845dbd62a908a6a49bfb6efb42f
+ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834407"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97928451"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Azure SQL Database のリソースプール統計の最後の32分 (合計128秒間) について、20秒間隔でスナップショットを返します。
+各行は、Azure SQL Database のワークロードグループ統計の定期的なスナップショットを表します。 スナップショットは、データベースエンジンの起動時と、それ以降は数秒ごとに実行されます。 現在のスナップショットと前のスナップショットの間の間隔は異なる場合があり、列に表示され `duration_ms` ます。 使用可能な最新のスナップショットが返されます。各ワークロードグループの最大128スナップショットが返されます。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -80,7 +80,7 @@ Azure SQL Database のリソースプール統計の最後の32分 (合計128秒
 
 このビューには VIEW SERVER STATE 権限が必要です。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 ユーザーは、この動的管理ビューにアクセスして、ユーザーワークロードプールと Azure SQL Database インスタンスのシステム内部プールについて、ほぼリアルタイムのリソース消費を監視できます。
 
