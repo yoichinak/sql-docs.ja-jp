@@ -7,26 +7,26 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 9ec5d4f34d299876614383c79fb79f2c2be9114d
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115450"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641283"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux の新機能
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-この記事では、Linux 上で実行される SQL Server 2019 で使用できる主な機能とサービスについて説明します。 パッケージのダウンロードと既知の問題については、[リリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)のページをご覧ください。
+この記事では、Linux 上で実行される SQL Server 2019 で使用できる主な機能とサービスについて説明します。 パッケージのダウンロードと既知の問題については、[リリース ノート](sql-server-linux-release-notes-2019.md)のページをご覧ください。
 
 ## <a name="ubuntu-1804-supported"></a>Ubuntu 18.04 をサポート
 
-SQL Server 2019 CU3 以降では、Ubuntu 18.04 がサポートされるようになりました。 [Ubuntu での SQL Server のインストールとデータベースの作成](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15)に関するクイック スタートを参照してください。
+SQL Server 2019 CU3 以降では、Ubuntu 18.04 がサポートされるようになりました。 [Ubuntu での SQL Server のインストールとデータベースの作成](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)に関するクイック スタートを参照してください。
 
 ## <a name="rhel-8-supported"></a>RHEL 8 をサポート
 
-SQL Server 2019 CU1 以降では、RHEL 8 がサポートされるようになりました。 [Red Hat での SQL Server のインストールとデータベースの作成](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15)に関するクイック スタートを参照してください。
+SQL Server 2019 CU1 以降では、RHEL 8 がサポートされるようになりました。 [Red Hat での SQL Server のインストールとデータベースの作成](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true)に関するクイック スタートを参照してください。
 
 ## <a name="updates"></a>更新プログラム
 
@@ -48,12 +48,12 @@ SQL Server 2019 on Linux では、次の更新が行われています。
 
 SQL Server on Linux をインストールするには、次のチュートリアルのいずれかを使用します。
 
-- [Red Hat Enterprise Linux へのインストール](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15)
-- [SUSE Linux Enterprise Server へのインストール](quickstart-install-connect-suse.md?view=sql-server-linux-ver15)
-- [Ubuntu へのインストール](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15)
-- [Docker 上での実行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15)
+- [Red Hat Enterprise Linux へのインストール](quickstart-install-connect-red-hat.md?view=sql-server-linux-ver15&preserve-view=true)
+- [SUSE Linux Enterprise Server へのインストール](quickstart-install-connect-suse.md?view=sql-server-linux-ver15&preserve-view=true)
+- [Ubuntu へのインストール](quickstart-install-connect-ubuntu.md?view=sql-server-linux-ver15&preserve-view=true)
+- [Docker 上での実行](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。 SQL Server 2019 で導入されたその他の改善点については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)に関する記事をご覧ください。
+よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。 SQL Server 2019 で導入されたその他の改善点については、[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true)に関する記事をご覧ください。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

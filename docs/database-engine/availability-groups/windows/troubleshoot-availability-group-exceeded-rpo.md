@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 34ac1e35b83158aec9aa2bae6cdd9754078212bb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670689"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642929"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング:可用性グループ接続の超過 RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "91670689"
   
  また、2 つのパフォーマンス オブジェクト `SQL Server:Availability Replica > Flow Control Time (ms/sec)` と `SQL Server:Availability Replica > Flow Control/sec` を確認することも役に立ちます。 これら 2 つの値を乗算すると、最後の秒で、フロー制御がクリアされるのを待っていた時間が示されます。 長いフロー制御待機時間、小さい送信レート。  
   
- 以下のメトリックは、ネットワーク遅延とスループットの診断に役立ちます。 **ping.exe** や[ネットワーク モニター](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7)などの他の Windows ツールを使用して、待機時間とネットワーク使用率を評価できます。  
+ 以下のメトリックは、ネットワーク遅延とスループットの診断に役立ちます。 **ping.exe** や [ネットワーク モニター](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7)などの他の Windows ツールを使用して、待機時間とネットワーク使用率を評価できます。  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

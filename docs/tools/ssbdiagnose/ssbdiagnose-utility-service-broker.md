@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 8590f3677d27c367782999877cb6892251785278
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714260"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641301"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 
@@ -115,13 +115,13 @@ ssbdiagnose
   
  **INFO**: エラー メッセージ、警告メッセージ、および情報メッセージを報告します。  
   
- 既定の設定は **WARNING**です。  
+ 既定の設定は **WARNING** です。  
   
  **-IGNORE** _error_id_  
  指定した *error_id* のエラーまたはメッセージがレポートから除外されます。 **-IGNORE** を複数回指定すると、複数のメッセージ ID を除外することができます。  
   
  **\<baseconnectionoptions>**  
- 接続オプションが特定の句に含まれていない場合に **ssbdiagnose** が使用する、基本的な接続情報を指定します。 特定の句で指定された接続情報は、**baseconnectionoption** の情報をオーバーライドします。 優先的に使用される接続情報は、パラメーターごとに判別されます。 たとえば、 **-S** と **-d** の両方が **baseconnetionoptions**で指定され、 **-d** のみが **toconnetionoptions**で指定されている場合、 **ssbdiagnose** では、 **baseconnetionoptions** の -S と **toconnetionoptions**の -d が使用されます。  
+ 接続オプションが特定の句に含まれていない場合に **ssbdiagnose** が使用する、基本的な接続情報を指定します。 特定の句で指定された接続情報は、**baseconnectionoption** の情報をオーバーライドします。 優先的に使用される接続情報は、パラメーターごとに判別されます。 たとえば、 **-S** と **-d** の両方が **baseconnetionoptions** で指定され、 **-d** のみが **toconnetionoptions** で指定されている場合、 **ssbdiagnose** では、 **baseconnetionoptions** の -S と **toconnetionoptions** の -d が使用されます。  
   
  **CONFIGURATION**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスのペアまたは 1 つのサービスでの構成エラーのレポートを要求します。  
@@ -207,7 +207,7 @@ WHERE database_id = DB_ID();
  **RUNTIME** レポートを実行する秒数を指定します。 **-TIMEOUT** が指定されていない場合、ランタイム レポートは無制限に実行されます。 **-TIMEOUT** は、**CONFIGURATION** レポートではなく、**RUNTIME** レポートのみで使用されます。 **-TIMEOUT** が指定されていない場合に **ssbdiagnose** を終了したり、タイムアウト間隔を経過する前にランタイム レポートを終了したりするには、Ctrl キーを押しながら C キーを押します。 **-** *timeout_interval* は 1 から 2,147,483,647 までの数値にする必要があります。  
   
  **\<runtimeconnectionoptions>**  
- 監視対象のメッセージ交換要素に関連付けられたサービスが格納されているデータベースについての接続情報を指定します。 すべてのサービスが同じデータベースに格納されている場合は、 **CONNECT TO** 句を 1 つ指定するだけで十分です。 サービスが異なるデータベースに格納されている場合は、各データベースに対して **CONNECT TO** 句を指定する必要があります。 **runtimeconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions**の接続情報を使用します。  
+ 監視対象のメッセージ交換要素に関連付けられたサービスが格納されているデータベースについての接続情報を指定します。 すべてのサービスが同じデータベースに格納されている場合は、 **CONNECT TO** 句を 1 つ指定するだけで十分です。 サービスが異なるデータベースに格納されている場合は、各データベースに対して **CONNECT TO** 句を指定する必要があります。 **runtimeconnectionoptions** が指定されていない場合、 **ssbdiagnose** では **baseconnectionoptions** の接続情報を使用します。  
   
  **-E**  
  現在の Windows アカウントをログイン ID として使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに対して Windows 認証接続を開きます。 ログインは **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
@@ -221,7 +221,7 @@ WHERE database_id = DB_ID();
  **-U** _login_id_  
  指定されたログイン ID を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証接続を開きます。 ログインは **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
- **-E** も **ｰU** も指定されていない場合、 **ssbdiagnose** では、SQLCMDUSER 環境変数の値を使用します。 SQLCMDUSER も設定されていない場合、 **ssbdiagnose** では、 **ssbdiagnose**を実行しているユーザーの Windows アカウントに基づいた Windows 認証モードを使用して接続を試行します。  
+ **-E** も **ｰU** も指定されていない場合、 **ssbdiagnose** では、SQLCMDUSER 環境変数の値を使用します。 SQLCMDUSER も設定されていない場合、 **ssbdiagnose** では、 **ssbdiagnose** を実行しているユーザーの Windows アカウントに基づいた Windows 認証モードを使用して接続を試行します。  
   
  **-U** オプションを **-E** オプションと共に使用すると、エラー メッセージが生成されます。 **-U** オプションの後に複数の引数があると、エラー メッセージが生成され、プログラムが終了します。  
   
@@ -272,7 +272,7 @@ WHERE database_id = DB_ID();
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)] の一連のメッセージ交換要素で発生するすべてのエラーに関するレポートを取得する。  
   
 ## <a name="configuration-reporting"></a>構成レポート  
- メッセージ交換で使用されている構成を正しく分析するには、メッセージ交換で使用されているオプションと同じオプションを使用する **ssbdiagnose** の構成レポートを実行します。 メッセージ交換よりも低いレベルのオプションを **ssbdiagnose** に指定すると、 **ssbdiagnose** は、メッセージ交換に必要な条件を報告しない場合があります。 また、より高いレベルのオプションを **ssbdiagnose**に指定すると、メッセージ交換に必要のない項目を報告する場合があります。 たとえば、同じデータベース内の 2 つのサービス間のメッセージ交換は、ENCPRYPTION OFF を指定して実行できます。 **ssbdiagnose** を実行してこの 2 つのサービス間の構成を検証する場合でも、既定の設定 ENCRYPTION ON を使用すると、 **ssbdiagnose** は、データベースにマスター キーが存在しないことを報告します。 マスター キーは、メッセージ交換には必要ありません。  
+ メッセージ交換で使用されている構成を正しく分析するには、メッセージ交換で使用されているオプションと同じオプションを使用する **ssbdiagnose** の構成レポートを実行します。 メッセージ交換よりも低いレベルのオプションを **ssbdiagnose** に指定すると、 **ssbdiagnose** は、メッセージ交換に必要な条件を報告しない場合があります。 また、より高いレベルのオプションを **ssbdiagnose** に指定すると、メッセージ交換に必要のない項目を報告する場合があります。 たとえば、同じデータベース内の 2 つのサービス間のメッセージ交換は、ENCPRYPTION OFF を指定して実行できます。 **ssbdiagnose** を実行してこの 2 つのサービス間の構成を検証する場合でも、既定の設定 ENCRYPTION ON を使用すると、 **ssbdiagnose** は、データベースにマスター キーが存在しないことを報告します。 マスター キーは、メッセージ交換には必要ありません。  
   
  **ssbdiagnose** の構成レポートを実行するたびに、1 つの [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスまたは 1 組のサービスが分析されます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスの複数のペアに関するレポートを作成するには、 **ssbdiagnose** を複数回呼び出す .cmd コマンド ファイルを作成します。  
   
@@ -291,11 +291,11 @@ WHERE database_id = DB_ID();
   
  接続オプションで対応されていないデータベースの要素は、一覧に含まれません。 たとえば、 **-ID** を使用してメッセージ交換 ID を指定しても、発信先データベースではなく発信側データベースのみに対して **runtimeconnectionoptions** 句を指定するとします。 **ssbdiagnose** は、発信先のメッセージ交換ハンドルを ID の一覧に含めず、メッセージ交換 ID と、発信側のメッセージ交換ハンドルのみを含めます。  
   
- **ssbdiagnose** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] runtimeconnectionoptions **と** baseconnectionoptions **に含まれるデータベースの**イベントを監視します。 この ssbdiagnose は、ランタイムの一覧に含まれる 1 つ以上の [!INCLUDE[ssSB](../../includes/sssb-md.md)] ID でエラーが発生したことを示す [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントを検索します。 また、**ssbdiagnose** は、どのメッセージ交換グループにも特に関連付けられていないシステムレベルの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エラー イベントも検索します。  
+ **ssbdiagnose** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] runtimeconnectionoptions **と** baseconnectionoptions **に含まれるデータベースの** イベントを監視します。 この ssbdiagnose は、ランタイムの一覧に含まれる 1 つ以上の [!INCLUDE[ssSB](../../includes/sssb-md.md)] ID でエラーが発生したことを示す [!INCLUDE[ssSB](../../includes/sssb-md.md)] イベントを検索します。 また、**ssbdiagnose** は、どのメッセージ交換グループにも特に関連付けられていないシステムレベルの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エラー イベントも検索します。  
   
  **ssbdiagnose** がメッセージ交換エラーを検出すると、このユーティリティは、構成レポートも実行して、そのイベントの根本的な原因の報告を試行します。 **ssbdiagnose** では、データベース内のメタデータを使用して、メッセージ交換で使用されるインスタンス、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ID、データベース、サービス、およびコントラクトを特定します。 その後、使用可能なすべての情報を使用して構成レポートを実行します。  
   
- 既定では、 **ssbdiagnose** はエラー イベントを報告しません。 報告するのは、構成チェック時に見つかった根本的な問題だけです。 これにより、報告される情報量が最小限に抑えられるため、根本的な構成の問題に注目することができます。 **-SHOWEVENTS** によって検出されたエラー イベントを確認するには、 **ssbdiagnose**を指定します。  
+ 既定では、 **ssbdiagnose** はエラー イベントを報告しません。 報告するのは、構成チェック時に見つかった根本的な問題だけです。 これにより、報告される情報量が最小限に抑えられるため、根本的な構成の問題に注目することができます。 **-SHOWEVENTS** によって検出されたエラー イベントを確認するには、 **ssbdiagnose** を指定します。  
   
 ## <a name="issues-reported-by-ssbdiagnose"></a>ssbdiagnose によって報告される問題  
  **ssbdiagnose** が報告する問題は、3 種類に分類されます。 XML 出力ファイルでは、各種類の問題が Issue 要素の異なる型として報告されます。 **ssbdiagnose** が報告する 3 種類の問題は次のとおりです。  
@@ -310,10 +310,10 @@ WHERE database_id = DB_ID();
  **ssbdiagnose** で構成分析を完了したり、メッセージ交換を監視したりすることができない場合に、その原因となる問題を報告します。  
   
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 環境変数  
- **ssbdiagnose** ユーティリティでは、 **sqlcmd** ユーティリティでも使用されている SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDLOGINTIMOUT の各環境変数がサポートされています。 これらの環境変数を設定するには、コマンド プロンプトの SET コマンドを使用するか、 **sqlcmd** を使用して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの **setvar**コマンドを使用します。 **sqlcmd** で **setvar**を使用する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15)」をご覧ください。  
+ **ssbdiagnose** ユーティリティでは、 **sqlcmd** ユーティリティでも使用されている SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDLOGINTIMOUT の各環境変数がサポートされています。 これらの環境変数を設定するには、コマンド プロンプトの SET コマンドを使用するか、 **sqlcmd** を使用して実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの **setvar** コマンドを使用します。 **sqlcmd** で **setvar** を使用する方法の詳細については、「 [sqlcmd でのスクリプト変数の使用](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md)」をご覧ください。  
   
 ## <a name="permissions"></a>アクセス許可  
- 各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin**固定サーバー ロールのメンバーである必要があります。  
+ 各 **connectionoptions** 句では、 **-E** または **-U** のいずれかで指定されたログインが、 **-S** で指定されたインスタンスの **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
 ## <a name="examples"></a>例  
  ここでは、コマンド プロンプトでの **ssbdiagnose** の使用例を示します。  
@@ -379,7 +379,7 @@ TO SERVICE /test/target ON CONTRACT PromotionContract
 ```  
   
 ### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>F. タイムアウトが設定された、ローカル コンピューター上の特定のメッセージ交換の状態を監視する  
- 次の例では、 **ssbdiagnose**を実行しているコンピューターの既定のインスタンスにある同一のデータベースに発信側と発信先のサービスが格納されている場合に、特定のメッセージ交換を監視する方法を示します。 タイムアウト間隔は 20 秒に設定されています。  
+ 次の例では、 **ssbdiagnose** を実行しているコンピューターの既定のインスタンスにある同一のデータベースに発信側と発信先のサービスが格納されている場合に、特定のメッセージ交換を監視する方法を示します。 タイムアウト間隔は 20 秒に設定されています。  
   
 ```  
 ssbdiagnose -E -d TestDatabase RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D -TIMEOUT 20  
@@ -441,7 +441,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 ```  
   
 ### <a name="m-using-an-environment-variable"></a>M. 環境変数を使用する  
- 次の例では、最初に、サーバー名を保持する SQLCMDSERVER 環境変数を設定し、次に、 **-S** を指定せずに **ssbdiagnose**を実行します。  
+ 次の例では、最初に、サーバー名を保持する SQLCMDSERVER 環境変数を設定し、次に、 **-S** を指定せずに **ssbdiagnose** を実行します。  
   
 ```  
 SET SQLCMDSERVER=MyComputer  

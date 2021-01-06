@@ -6,19 +6,19 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb42f9910acbc412117713b7be7d08fe4c6ee78f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751892"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642019"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85751892"
 |**[ミラー化の状態]**|データベースの状態。<br /><br /> [Disconnected]\(切断済み\)<br /><br /> [フェールオーバーを保留しています]<br /><br /> Suspended<br /><br /> 同期済み<br /><br /> [同期中]<br /><br /> Unknown|  
 |**[ミラーリング監視接続]**|データベースのミラーリング セッションにおけるミラーリング監視接続の状態です。[接続済み] または [接続解除] のいずれかになります。 ミラーリング監視が存在しない場合、値は NULL になります。|  
 |**[未送信のログ]**|プリンシパル サーバー インスタンスの送信キューにある未送信ログのサイズをキロバイト (KB) 単位で表します。|  
-|**[送信する日時]**|プリンシパル サーバー インスタンスが、送信キューに現在存在するログをミラー サーバー インスタンスに送信するために必要な、おおよその時間です。その際の速度は、 *送信比率*で表されます。 入力トランザクションの送信比率は著しく変化するため、ログの送信にかかる時間は、推定値になります。 ただし、送信比率は、手動フェールオーバーに必要な時間を推定する際の目安として使用できます。|  
+|**[送信する日時]**|プリンシパル サーバー インスタンスが、送信キューに現在存在するログをミラー サーバー インスタンスに送信するために必要な、おおよその時間です。その際の速度は、 *送信比率* で表されます。 入力トランザクションの送信比率は著しく変化するため、ログの送信にかかる時間は、推定値になります。 ただし、送信比率は、手動フェールオーバーに必要な時間を推定する際の目安として使用できます。|  
 |**Send Rate**|トランザクションがミラー サーバー インスタンスに送信される速度 (KB/秒) です。|  
 |**[新しいトランザクションの比率]**|入力トランザクションが、プリンシパルのログに記録される速度 (KB/秒) です。 この値と **[送信する日時]** の値を比較することによって、ミラーリングの状況 (遅延している、順調に進行している、遅延が解消されつつあるなど) を確認できます。|  
 |**[最も古い未送信のトランザクション]**|送信キュー内で最も古い未送信トランザクションの経過期間。 トランザクションの経過期間は、トランザクションがミラー サーバー インスタンスに送信されないまま経過した時間を分単位で示します。 この値は、データ損失の可能性を時間の観点から測定するのに役立ちます。|  

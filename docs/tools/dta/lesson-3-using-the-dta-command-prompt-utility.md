@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 53eacd0177862b81d32b44616dc67cc0beb90f79
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 064d7fc2d47cbd4f688d113f60be6080ca90fee1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489192"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642605"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3:DTA コマンド プロンプト ユーティリティの使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97489192"
   
 このチュートリアルでは、AdventureWorks2017 サンプル データベースを使用します。 セキュリティ上の理由から、既定ではサンプル データベースがインストールされません。 サンプル データベースをインストールするには、「 [SQL Server のサンプルとサンプル データベースのインストール](../../samples/adventureworks-install-configure.md)」を参照してください。  
   
-この後の実習では、コマンド プロンプトを開き、 **dta** コマンド プロンプト ユーティリティを起動して、構文ヘルプを表示します。さらに、「 [ワークロードのチューニング](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)」で作成した簡単なワークロード MyScript.sql をチューニングします。  
+この後の実習では、コマンド プロンプトを開き、 **dta** コマンド プロンプト ユーティリティを起動して、構文ヘルプを表示します。さらに、「 [ワークロードのチューニング](./lesson-2-using-database-engine-tuning-advisor.md)」で作成した簡単なワークロード MyScript.sql をチューニングします。  
 
 ## <a name="prerequisites"></a>前提条件 
 
@@ -84,7 +84,7 @@ SSMS でデータベースを復元する手順については、[データベ�
 
   ![DTA での CMD の使用](media/dta-tutorials/dta-cmd.png)
   
-3.  データベース エンジン チューニング アドバイザーによるワークロードのチューニングが完了すると、チューニング セッションが正常に完了したことを知らせるメッセージが表示されます。 チューニング結果を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して MySession2OutputScript.sql および MySession2Output.xml を開きます。 また、データベース エンジン チューニング アドバイザーの GUI でチューニング セッション MySession2 を開き、その推奨設定とレポートを表示する方法もあります。これは、「 [チューニング推奨設定の表示](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) 」および「 [チューニング レポートの表示](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15)」で行った操作と同様です。  
+3.  データベース エンジン チューニング アドバイザーによるワークロードのチューニングが完了すると、チューニング セッションが正常に完了したことを知らせるメッセージが表示されます。 チューニング結果を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して MySession2OutputScript.sql および MySession2Output.xml を開きます。 また、データベース エンジン チューニング アドバイザーの GUI でチューニング セッション MySession2 を開き、その推奨設定とレポートを表示する方法もあります。これは、「 [チューニング推奨設定の表示](./lesson-2-using-database-engine-tuning-advisor.md) 」および「 [チューニング レポートの表示](./lesson-2-using-database-engine-tuning-advisor.md)」で行った操作と同様です。  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>このチュートリアルが終了したら  
