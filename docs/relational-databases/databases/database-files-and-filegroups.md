@@ -1,7 +1,7 @@
 ---
 title: データベース ファイルとファイル グループ | Microsoft Docs
 description: データベース ファイルと、割り当てと管理の目的で SQL Server にファイル グループを作成する方法について説明します。 例、ルール、および推奨事項を表示します。
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 05/29/2020
 ms.prod: sql
 ms.prod_service: database-engine
@@ -33,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b9a4fc2995b0442f46794ad8ad226b48bfa4726b
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: f14eaec691218c4f7a9cad82dabb2f31f36b6245
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92497003"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878753"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "92497003"
 |セカンダリ|省略可能なユーザー定義データ ファイル。 各ファイルを異なるディスク ドライブに配置することにより、複数のディスクにデータを分散できます。 セカンダリ データ ファイルに推奨されるファイル名拡張子は .ndf です。|  
 |トランザクション ログ|このログには、データベースの復旧に使用するログ情報が格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。 トランザクション ログに推奨されるファイル名拡張子は .ldf です。|  
   
- たとえば、 **Sales** という単純なデータベースには、データとオブジェクトをすべて格納するプライマリ ファイルが 1 つと、トランザクション ログ情報を格納するログ ファイルが 1 つ含まれます。 プライマリ ファイルを 1 つとセカンダリ ファイルを 5 つ含む **Orders** というより複雑なデータベースを作成できます。 データベース内のデータとオブジェクトは 6 つすべてのファイルに分散され、4 つのログ ファイルにトランザクション ログ情報が含まれます。  
+ たとえば、**Sales** という単純なデータベースには、データとオブジェクトをすべて格納するプライマリ ファイルが 1 つと、トランザクション ログ情報を格納するログ ファイルが 1 つ含まれます。 プライマリ ファイルを 1 つとセカンダリ ファイルを 5 つ含む **Orders** というより複雑なデータベースを作成できます。 データベース内のデータとオブジェクトは 6 つすべてのファイルに分散され、4 つのログ ファイルにトランザクション ログ情報が含まれます。  
   
  既定では、単一ディスク システムを処理するため、データとトランザクション ログは同一のドライブおよびパス上に配置されます。 この選択は、実稼働環境では最適ではない場合があります。 そのため、データとログ ファイルは別のディスクに配置することをお勧めします。  
 

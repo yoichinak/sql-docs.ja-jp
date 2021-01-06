@@ -5,17 +5,17 @@ ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15ae1302fcff002816e8e8e7a5e37b6fbe8bd503
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: fa6d63d665a2a81d0a112a1685b3ead1969479d1
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235458"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643742"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "93235458"
   
  ![可用性グループの再実行時間の計算](media/always-on-redo.gif "可用性グループの再実行時間の計算")  
   
- ここで、 *redo_queue* は [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 内の値であり、 *redo_rate* は [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 内の値です。  
+ ここで、*redo_queue* は [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 内の値であり、*redo_rate* は [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 内の値です。  
   
  フェールオーバーのオーバーヘッド時間 Toverhead には、WSFC クラスターをフェールオーバーしてデータベースをオンラインにするのにかかる時間が含まれます。 この時間は通常は短く一定です。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "93235458"
   
  ![可用性グループの RPO の計算](media/always-on-rpo.gif "可用性グループの RPO の計算")  
   
- ここで、 *log_send_queue* は、 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) の値であり、 *ログ生成速度* は、 [SQL Server: データベース > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md) の値です。  
+ ここで、*log_send_queue* は、[log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) の値であり、*ログ生成速度* は、[SQL Server: データベース > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md) の値です。  
   
 > [!WARNING]  
 >  可用性グループに 1 つ以上の可用性データベースが含まれている場合、最高 Tdata_loss で可用性データベースの RPO 対応制限値になります。  
@@ -93,7 +93,7 @@ Always On 可用性グループで、セカンダリ レプリカでホストさ
    ![RTO RPO ダッシュボードを示すスクリーンショット。](media/rto-rpo-dashboard.png)
 
 ### <a name="calculation-of-secondary-database-rto"></a>セカンダリ データベースの RTO の計算 
-フェールオーバーが発生した後、 *セカンダリ データベース* の復旧に必要な時間は、復旧時間の計算で決まります。  フェールオーバー時間は通常は短く一定です。 この検出時間は、個々の可用性レプリカではなく、クラスター レベルの設定に依存します。 
+フェールオーバーが発生した後、*セカンダリ データベース* の復旧に必要な時間は、復旧時間の計算で決まります。  フェールオーバー時間は通常は短く一定です。 この検出時間は、個々の可用性レプリカではなく、クラスター レベルの設定に依存します。 
 
 
 セカンダリ データベース (DB_sec) の場合、その RTO の計算と表示は **redo_queue_size** と **redo_rate** に基づきます。
@@ -110,15 +110,15 @@ Always On 可用性グループで、セカンダリ レプリカでホストさ
 
 セカンダリ データベース (DB_sec) の場合、その RPO の計算と表示は、is_failover_ready、last_commit_time、および関連付けられているプライマリ データベース (DB_pri) の last_commit_time に基づきます。 セカンダリ データベースの is_failover_ready が 1 の場合、データは同期され、フェールオーバー時にデータの損失は発生しません。 しかし、この値が 0 の場合、プライマリ データベースの **last_commit_time** とセカンダリ データベースの **last_commit_time** には差が生じます。 
 
-プライマリ データベースの場合、 **last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、 **last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 この数値は、プライマリ データベースとセカンダリ データベースで同じである必要があります。 これら 2 つの値の間の差は、保留中のトランザクションがセカンダリ データベースに書き込まれず、フェールオーバーの発生時に失われる期間です。 
+プライマリ データベースの場合、**last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、**last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 この数値は、プライマリ データベースとセカンダリ データベースで同じである必要があります。 これら 2 つの値の間の差は、保留中のトランザクションがセカンダリ データベースに書き込まれず、フェールオーバーの発生時に失われる期間です。 
 
 ![RPO の計算](media/calculate-rpo.png)
 
 ### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO と RPO の数式で使用されるパフォーマンス カウンター
 
-- **redo_queue_size** (KB) ( *RTO で使用* ): 再実行キューのサイズは、 **last_received_lsn** と **last_redone_lsn** の間のトランザクション ログのサイズです。 **last_received_lsn** は、このセカンダリ データベースをホストするセカンダリ レプリカによって受信されたすべてのログ ブロックの最後のポイントを示すログ ブロック ID です。 **Last_redone_lsn** は、セカンダリ データベースで再実行された最後のログ レコードのログ シーケンス番号です。 これら 2 つの値に基づき、開始ログ ブロック ( **last_received_lsn** ) と終了ログ ブロック ( **last_redone_lsn** ) の ID を見つけることができます。 これら 2 つのログ ブロックの間のスペースで、まだ再実行されていないトランザクション ログ ブロックの数を表すことができます。 これはキロバイト (KB) で測定されます。
--  **redo_rate** (KB/秒) ( *RTO で使用* ): 一定の経過時間において、セカンダリ データベースでトランザクション ログ (KB) がどれくらい再実行されたかをキロバイト (KB)/秒で表す累積値。 
-- **last_commit_time** (日時) ( *RPO で使用* ): プライマリ データベースの場合、 **last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、 **last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 セカンダリのこの値はプライマリの同じ値と同期する必要があるため、これら 2 つの値の間の差はデータ損失の推定値 (RPO) となります。  
+- **redo_queue_size** (KB) (*RTO で使用*): 再実行キューのサイズは、**last_received_lsn** と **last_redone_lsn** の間のトランザクション ログのサイズです。 **last_received_lsn** は、このセカンダリ データベースをホストするセカンダリ レプリカによって受信されたすべてのログ ブロックの最後のポイントを示すログ ブロック ID です。 **Last_redone_lsn** は、セカンダリ データベースで再実行された最後のログ レコードのログ シーケンス番号です。 これら 2 つの値に基づき、開始ログ ブロック (**last_received_lsn**) と終了ログ ブロック (**last_redone_lsn**) の ID を見つけることができます。 これら 2 つのログ ブロックの間のスペースで、まだ再実行されていないトランザクション ログ ブロックの数を表すことができます。 これはキロバイト (KB) で測定されます。
+-  **redo_rate** (KB/秒) (*RTO で使用*): 一定の経過時間において、セカンダリ データベースでトランザクション ログ (KB) がどれくらい再実行されたかをキロバイト (KB)/秒で表す累積値。 
+- **last_commit_time** (日時) (*RPO で使用*): プライマリ データベースの場合、**last_commit_time** は最後のトランザクションがコミットされた時間となります。 セカンダリ データベースの場合、**last_commit_time** は、同様にセカンダリ データベースに正常に書き込まれた、プライマリ データベースでのトランザクションに対する最後のコミット時間となります。 セカンダリのこの値はプライマリの同じ値と同期する必要があるため、これら 2 つの値の間の差はデータ損失の推定値 (RPO) となります。  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>DMV を使用して RTO と RPO を推定する
 
@@ -206,7 +206,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   ```sql
    exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
   ```
-3. 出力には、ターゲット セカンダリ レプリカ データベースの RTO の値が表示されます。 RPO 推定ストアド プロシージャで使用する *group_id* 、 *replica_id* 、 *group_database_id* を保存します。 
+3. 出力には、ターゲット セカンダリ レプリカ データベースの RTO の値が表示されます。 RPO 推定ストアド プロシージャで使用する *group_id*、*replica_id*、*group_database_id* を保存します。 
    
    サンプル出力:
 <br>データベース DB_sec の RTO は 0 です
@@ -299,7 +299,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
       end
  ```
 
-2. ターゲット セカンダリ データベースの *group_id* 、 *replica_id* 、 *group_database_id* を指定して、 **proc_calculate_RPO** を実行します。 
+2. ターゲット セカンダリ データベースの *group_id*、*replica_id*、*group_database_id* を指定して、**proc_calculate_RPO** を実行します。 
 
  ```sql
    exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
@@ -312,7 +312,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO と RPO の監視  
  このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
   
- [フェールオーバー時間 (RTO) の推定](#estimating-failover-time-rto) および [データ損失の可能性 (RPO) の推定](#estimating-potential-data-loss-rpo) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット " **データベース レプリカ状態** " の中でパフォーマンス メトリックとして便利に提供されています (「 [SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
+ [フェールオーバー時間 (RTO) の推定](#estimating-failover-time-rto) および [データ損失の可能性 (RPO) の推定](#estimating-potential-data-loss-rpo) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
   
  デモ スクリプトでは、以下の特性を備え、それぞれのスケジュールに従って実行される 2 つのシステム ポリシーが作成されます。  
   
@@ -338,43 +338,43 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
 4.  次の仕様に基づいて[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **名前** : `RTO`  
+    -   **名前**: `RTO`  
   
-    -   **ファセット** : **データベース レプリカ状態**  
+    -   **ファセット**: **データベース レプリカ状態**  
   
-    -   **フィールド** : `Add(@EstimatedRecoveryTime, 60)`  
+    -   **フィールド**: `Add(@EstimatedRecoveryTime, 60)`  
   
-    -   **演算子** : **<=**  
+    -   **演算子**: **<=**  
   
-    -   **値** : `600`  
+    -   **値**: `600`  
   
      この条件は、潜在的なフェールオーバー時間が 10 分 (エラー検出とフェールオーバーの両方ための 60 秒のオーバーヘッドも含まれる) を超えると失敗します。  
   
 5.  次の仕様に基づいて 2 番目の[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **名前** : `RPO`  
+    -   **名前**: `RPO`  
   
-    -   **ファセット** : **データベース レプリカ状態**  
+    -   **ファセット**: **データベース レプリカ状態**  
   
-    -   **フィールド** : `@EstimatedDataLoss`  
+    -   **フィールド**: `@EstimatedDataLoss`  
   
-    -   **演算子** : **<=**  
+    -   **演算子**: **<=**  
   
-    -   **値** : `3600`  
+    -   **値**: `3600`  
   
      この条件は、データ損失の可能性が 1 時間を超えると失敗します。  
   
 6.  次の仕様に基づいて 3 番目の[ポリシー ベースの管理条件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)を作成します。  
   
-    -   **名前** : `IsPrimaryReplica`  
+    -   **名前**: `IsPrimaryReplica`  
   
-    -   **ファセット** : **可用性グループ**  
+    -   **ファセット**: **可用性グループ**  
   
-    -   **フィールド** : `@LocalReplicaRole`  
+    -   **フィールド**: `@LocalReplicaRole`  
   
-    -   **演算子** : **=**  
+    -   **演算子**: **=**  
   
-    -   **値** : `Primary`  
+    -   **値**: `Primary`  
   
      この条件では、特定の可用性グループのローカルの可用性レプリカがプライマリ レプリカであるかどうかがチェックされます。  
   
@@ -382,55 +382,55 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
     -   **[全般]** ページ:  
   
-        -   **名前** : `CustomSecondaryDatabaseRTO`  
+        -   **名前**: `CustomSecondaryDatabaseRTO`  
   
-        -   **条件の確認** : `RTO`  
+        -   **条件の確認**: `RTO`  
   
-        -   **対象** : **IsPrimaryReplica AvailabilityGroup** の **すべての DatabaseReplicaState**  
+        -   **対象**: **IsPrimaryReplica AvailabilityGroup** の **すべての DatabaseReplicaState**  
   
              この設定により、ポリシーは必ず、ローカルの可用性レプリカがプライマリ レプリカである可用性グループのみで評価されます。  
   
-        -   **[評価モード]** : **スケジュールで実行**  
+        -   **[評価モード]** :**スケジュールで実行**  
   
-        -   **[スケジュール]** : **CollectorSchedule_Every_5min**  
+        -   **[スケジュール]** :**CollectorSchedule_Every_5min**  
   
-        -   **有効** : **選択**  
+        -   **有効**: **選択**  
   
     -   **[説明]** ページ:  
   
-        -   **カテゴリ** : **可用性データベースの警告**  
+        -   **カテゴリ**:**可用性データベースの警告**  
   
              この設定により、Always On ダッシュボードにポリシーの評価結果を表示できるようになります。  
   
-        -   **説明** : **検出とフェールオーバーのオーバーヘッドが 1 分であると仮定すると、現在のレプリカの RTO は 10 分を超えています。すぐに、それぞれのサーバー インスタンスでのパフォーマンスの問題を調査する必要があります。**  
+        -   **説明**:**検出とフェールオーバーのオーバーヘッドが 1 分であると仮定すると、現在のレプリカの RTO は 10 分を超えています。すぐに、それぞれのサーバー インスタンスでのパフォーマンスの問題を調査する必要があります。**  
   
-        -   **表示するテキスト** : **RTO を超過しました!**  
+        -   **表示するテキスト**:**RTO を超過しました!**  
   
 8.  次の仕様に基づいて 2 番目の[ポリシー ベースの管理ポリシー](~/relational-databases/policy-based-management/create-a-policy-based-management-policy.md)を作成します。  
   
     -   **[全般]** ページ:  
   
-        -   **名前** : `CustomAvailabilityDatabaseRPO`  
+        -   **名前**: `CustomAvailabilityDatabaseRPO`  
   
-        -   **条件の確認** : `RPO`  
+        -   **条件の確認**: `RPO`  
   
-        -   **対象** : **IsPrimaryReplica AvailabilityGroup** の **すべての DatabaseReplicaState**  
+        -   **対象**: **IsPrimaryReplica AvailabilityGroup** の **すべての DatabaseReplicaState**  
   
-        -   **[評価モード]** : **スケジュールで実行**  
+        -   **[評価モード]** :**スケジュールで実行**  
   
-        -   **[スケジュール]** : **CollectorSchedule_Every_30min**  
+        -   **[スケジュール]** :**CollectorSchedule_Every_30min**  
   
-        -   **有効** : **選択**  
+        -   **有効**: **選択**  
   
     -   **[説明]** ページ:  
   
-        -   **カテゴリ** : **可用性データベースの警告**  
+        -   **カテゴリ**:**可用性データベースの警告**  
   
-        -   **説明** : **可用性データベースは、1 時間の RPO を超過しています。すぐに、可用性レプリカでのパフォーマンスの問題を調査する必要があります。**  
+        -   **説明**:**可用性データベースは、1 時間の RPO を超過しています。すぐに、可用性レプリカでのパフォーマンスの問題を調査する必要があります。**  
   
-        -   **表示するテキスト** : **RPO を超過しました!**  
+        -   **表示するテキスト**:**RPO を超過しました!**  
   
- 完了すると、2 つの新しい SQL Server エージェント ジョブが作成されます (各ポリシー評価スケジュールに対して 1 つ)。 これらのジョブの名前は、 **syspolicy_check_schedule** で始める必要があります。  
+ 完了すると、2 つの新しい SQL Server エージェント ジョブが作成されます (各ポリシー評価スケジュールに対して 1 つ)。 これらのジョブの名前は、**syspolicy_check_schedule** で始める必要があります。  
   
  評価結果を検査するために、ジョブの履歴を表示することができます。 評価エラーは、イベント ID 34052 で Windows アプリケーション ログ (イベント ビューアー内) にも記録されます。 また、ポリシー エラー発生時にアラートを送信するように SQL Server エージェントを構成することもできます。 詳細については、「[ポリシー管理者にポリシー エラーを通知する警告の構成](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)」を参照してください。  
   

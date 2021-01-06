@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: markingmyname
 ms.author: maghan
-ms.custom: contperfq4
-ms.openlocfilehash: 846d393640e02365348f5ffd7057c0142163f5d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: contperf-fy20q4
+ms.openlocfilehash: aabe0f1c418440053998ce1a1b388e82d74b06c9
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763974"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878865"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -137,7 +137,7 @@ GO
   
 1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
+2.  **SQL Server 構成マネージャー** で **[SQL Server のサービス]** をクリックします。  
   
 3.  詳細ペインで **[SQL Server (\<**_instancename_**>)]** を右クリックし、 **[プロパティ]** をクリックします。  
   

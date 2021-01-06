@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a30a3d3184c411fc0b54c0e26330a8fb138ffdae
-ms.sourcegitcommit: 2add15a99df7b85d271adb261523689984dfd134
+ms.openlocfilehash: 2a00ef1ec1f2f5d8ee892289021f42cb139b5a12
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97051302"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771326"
 ---
 # <a name="transactions-and-concurrency"></a>トランザクションとコンカレンシー
 
@@ -35,21 +35,22 @@ SQL Server と Oracle 間のトランザクションなど、種類の異なる�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
- [ローカル トランザクション](local-transactions.md)  
- データベースに対してトランザクションを実行する方法を示します。  
+[ローカル トランザクション](local-transactions.md)  
+データベースに対してトランザクションを実行する方法を示します。  
   
- [分散トランザクション](distributed-transactions.md)  
- ADO.NET で分散トランザクションを実行する方法について説明します。  
+[分散トランザクション](distributed-transactions.md)  
+ADO.NET で分散トランザクションを実行する方法について説明します。  
   
- [SQL Server と System.Transactions の統合](system-transactions-integration-with-sql-server.md)  
- 分散トランザクションを使用するための、SQL Server での <xref:System.Transactions> の統合について説明します。  
+[SQL Server と System.Transactions の統合](system-transactions-integration-with-sql-server.md)  
+分散トランザクションを使用するための、SQL Server での <xref:System.Transactions> の統合について説明します。  
   
- [オプティミスティック同時実行制御](optimistic-concurrency.md) オプティミスティックとペシミスティックの同時実行制御について説明し、コンカレンシー違反をテストする方法について説明します。  
+[オプティミスティック同時実行制御](optimistic-concurrency.md) オプティミスティックとペシミスティックの同時実行制御について説明し、コンカレンシー違反をテストする方法について説明します。  
 
 ## <a name="see-also"></a>関連項目
 
 - [トランザクションの基礎](/dotnet/framework/data/transactions/transaction-fundamentals)
 - [データ ソースへの接続](connecting-to-data-source.md)
-- [コマンドおよびパラメーター](commands-parameters.md)
+- [コマンドとパラメーター](commands-parameters.md)
 - [DataAdapter と DataReader](dataadapters-datareaders.md)
+- [DbProviderFactories](dbproviderfactories.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

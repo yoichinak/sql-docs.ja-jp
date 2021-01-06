@@ -6,7 +6,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - parallel redo [SQL Server]
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b8f2e5435f6f168a113cf78b1539e97c4935972
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754678"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643947"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "85754678"
   
 -   [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]の場合、データベースのロールフォワードにミラー サーバーが使用するスレッドは常に 1 つです。  
   
--   [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、5 基未満の CPU が搭載されたコンピューター上のミラー サーバーでも、1 つのスレッドのみが使用されます。 5 基以上の CPU が搭載されている場合、ミラー サーバーでは、フェールオーバー時にロールフォワード操作が複数スレッドに分散されます (これは、 *並列再実行*と呼ばれています)。 並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。  
+-   [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、5 基未満の CPU が搭載されたコンピューター上のミラー サーバーでも、1 つのスレッドのみが使用されます。 5 基以上の CPU が搭載されている場合、ミラー サーバーでは、フェールオーバー時にロールフォワード操作が複数スレッドに分散されます (これは、 *並列再実行* と呼ばれています)。 並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。  
   
 #### <a name="estimating-the-single-threaded-redo-rate"></a>シングルスレッドでの再実行速度の測定  
  シングルスレッドでの再実行では、フェールオーバー時にミラー データベースをロールフォワードすると、ログ バックアップの復元で同量のログをロールフォワードするのと同程度の時間がかかります。 フェールオーバー時間を測定するには、ミラーリングを実行しようとしている環境にテスト データベースを作成します。 次に、実稼働データベースからログ バックアップを取得します。 そのログのバックアップの再実行速度を測定するには、ログ バックアップを WITH NORECOVERY でテスト データベースに復元するのにかかる時間を測定します。  
@@ -72,7 +72,7 @@ ms.locfileid: "85754678"
  [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。 並列再実行のロールフォワード時間を測定するには、テスト データベースにアクセスするよりも、稼働中のテスト システムにアクセスした方がより正確な値を得られます。 ミラー サーバー上の再実行キューを監視している間は、プリンシパル サーバー上の負荷を増やします。 通常の運用では、再実行キューはゼロに近くなります。 Redo Queue が継続的に増加し始めるまでは、プリンシパル サーバー上の負荷を増やします。そうすると、システムが最大の再実行速度になり、この時点で **Redo Bytes/sec** パフォーマンス カウンターは、最大の再実行速度を示します。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
   
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>自動フェールオーバー中に発生するサービスの中断時間の算出  
- 下の図は、 **Partner_B**で自動フェールオーバーが完了するのに必要な時間に、エラー検出とフェールオーバー時間がどのように影響しているのかを示します。 フェールオーバーには、データベースをロールフォワードする (再実行フェーズ) ための時間に加え、データベースをオンラインにするための短い時間が必要です。 コミットされていないトランザクションのロールバックを実行する元に戻すフェーズは、新しいプリンシパル データベースがオンラインになった後に発生し、フェールオーバー後に続行します。 元に戻すフェーズの間、データベースは使用できます。  
+ 下の図は、 **Partner_B** で自動フェールオーバーが完了するのに必要な時間に、エラー検出とフェールオーバー時間がどのように影響しているのかを示します。 フェールオーバーには、データベースをロールフォワードする (再実行フェーズ) ための時間に加え、データベースをオンラインにするための短い時間が必要です。 コミットされていないトランザクションのロールバックを実行する元に戻すフェーズは、新しいプリンシパル データベースがオンラインになった後に発生し、フェールオーバー後に続行します。 元に戻すフェーズの間、データベースは使用できます。  
   
  ![エラー検出とフェールオーバー時間](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "エラー検出とフェールオーバー時間")  
   

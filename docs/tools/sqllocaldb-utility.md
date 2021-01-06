@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b418baa8bf729746ac14382e0e9099055ee0fb5e
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 65646c84e7e0840e2dfeb3ec4e926deb847237fe
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714000"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643418"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** のインスタンスを作成するには、**SqlLocalDB** ユーティリティを使用します。 **SqlLocalDB** ユーティリティ (SqlLocalDB.exe) は、ユーザーおよび開発者が [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを作成および管理できるようにするシンプルなコマンド ライン ツールです。 **LocalDB**の使用方法の詳細については、「 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)」を参照してください。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** のインスタンスを作成するには、**SqlLocalDB** ユーティリティを使用します。 **SqlLocalDB** ユーティリティ (SqlLocalDB.exe) は、ユーザーおよび開発者が [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** のインスタンスを作成および管理できるようにするシンプルなコマンド ライン ツールです。 **LocalDB** の使用方法の詳細については、「 [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,13 +52,13 @@ SqlLocalDB.exe
  指定された共有名を使用して、 **LocalDB** の指定されたプライベート インスタンスを共有します。 ユーザー SID またはアカウント名を省略した場合、既定で現在のユーザーになります。  
   
  [ **unshared** | **u** ]  
- **LocalDB**の指定した共有インスタンスの共有を停止します。  
+ **LocalDB** の指定した共有インスタンスの共有を停止します。  
   
  [ **delete** | **d** ] *\<instance-name>*  
  指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを削除します。  
   
  [ **start** | **s** ] " *\<instance-name>* "  
- 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを起動します。 成功した場合、ステートメントから **LocalDB**の名前付きパイプ アドレスが返されます。  
+ 指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを起動します。 成功した場合、ステートメントから **LocalDB** の名前付きパイプ アドレスが返されます。  
   
  [ **stop** | **p** ] *\<instance-name>* **[-i]** **[-k]**  
  指定した [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** のインスタンスを停止します。 **-i** を追加した場合、**NOWAIT** オプション付きでインスタンスのシャットダウンを要求します。 **-k** を追加した場合は、インスタンス プロセスに通知することなく、そのプロセスを停止します。  
@@ -114,5 +114,5 @@ sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md?view=sql-server-ver15)  
+ [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-express-localdb.md)  
 [コマンドライン管理ツール:SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  

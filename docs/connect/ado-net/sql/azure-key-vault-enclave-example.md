@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 39d03c4ddcf7edc7d0df1176c9aed1b92f9af9d5
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 1feed9699d925c47ae7d38ab72db5b366ad00ba8
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96123979"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771568"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例
 
@@ -33,7 +33,7 @@ ms.locfileid: "96123979"
 >
 > - セキュリティで保護されたエンクレーブを使用する Always Encrypted を Linux と macOS で使用するには、**Microsoft.Data.SqlClient** バージョン 2.1.0 以降が必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Always Encrypted での Azure Key Vault プロバイダーの使用を示す例](azure-key-vault-example.md)
 - [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-apps.md)」をご覧ください。

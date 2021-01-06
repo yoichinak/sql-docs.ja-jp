@@ -1,11 +1,8 @@
 ---
-title: サーバー構成オプション (SQL Server) | Microsoft Docs
+title: サーバー構成オプション (SQL Server)
 description: SQL Server リソースを管理および最適化する方法について説明します。 使用可能な構成オプション、可能な設定、既定値、および再起動の要件を表示します。
-ms.custom: ''
-ms.date: 07/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 keywords:
@@ -27,15 +24,17 @@ helpviewer_keywords:
 - stored procedures [SQL Server], configuration options
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
-ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ffbb3df5a8a8dac4ce22c27a1194520e8b058de
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 07/20/2020
+ms.openlocfilehash: bcadbc294414b2fe992d3864be240a1998a5e477
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923613"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684224"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "86923613"
 
 構成オプションは、次のいずれかの場合に有効になります。
 
-- オプションを設定し、**RECONFIGURE** ステートメントまたは場合によっては **RECONFIGURE WITH OVERRIDE**ステートメントを実行した直後。 特定のオプションを再設定すると、プラン キャッシュのプランが無効になり、新しいプランがコンパイルされます。 詳細については、「 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)」を参照してください。
+- オプションを設定し、**RECONFIGURE** ステートメントまたは場合によっては **RECONFIGURE WITH OVERRIDE** ステートメントを実行した直後。 特定のオプションを再設定すると、プラン キャッシュのプランが無効になり、新しいプランがコンパイルされます。 詳細については、「 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)」を参照してください。
 
   \- - または -
 
@@ -58,7 +57,7 @@ ms.locfileid: "86923613"
 
 オプションの中には、新しい構成を有効にするために、サーバーを再起動する必要があるものもあります。 新しい値を設定し sp_configure を実行した後にサーバーを再起動した場合、新しい値は構成オプションの **value_in_use** 列ではなく **value** 列に表示されます。 サーバーの再起動後は、新しい値が **value_in_use** 列に表示されます。
 
-自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 例には、**ワーカー スレッドの最大数**オプションとユーザー接続オプションが含まれます。
+自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 例には、**ワーカー スレッドの最大数** オプションとユーザー接続オプションが含まれます。
 
 ## <a name="configuration-options-table"></a>構成オプションの表
  次の表は、使用可能なすべての構成オプション、設定可能範囲、および既定値を示しています。 構成オプションには文字コードを付けています。その内容を次に示します。

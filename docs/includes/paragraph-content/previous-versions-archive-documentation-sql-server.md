@@ -18,6 +18,6 @@ FYI: In the following link syntax to SQL 2014 content, the two 'view' related pa
 [SQL Server 2014 documentation](/previous-versions/sql/2014/index?view=sql-server-2014&preserve-view=true) is still available on our main Docs address.
 -->
 
-[SQL Server 2019 のドキュメント](../../sql-server/index.yml?preserve-view=true&view=sql-server-ver15) は、メインの Docs アドレスから入手できます。 次に、ページの上部近くにある [バージョン管理] ドロップダウンを使用して、対象の別のバージョンを選択します。
+[SQL Server 2019 のドキュメント](../../sql-server/index.yml?view=sql-server-ver15&preserve-view=true) は、メインの Docs アドレスから入手できます。 次に、ページの上部近くにある [バージョン管理] ドロップダウンを使用して、対象の別のバージョンを選択します。
 
 以前のバージョンの SQL Server に関するドキュメントの詳細については、「[以前のバージョンの SQL Server ドキュメント](/previous-versions/sql/)」を参照してください。

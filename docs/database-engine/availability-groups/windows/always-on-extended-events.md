@@ -5,17 +5,17 @@ ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: how-to
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a5b2f339f5aec4d97daaee9ac273dd73833d564
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 28eab9dae04e0268c6dd7827aab8be71220e4218
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115848"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643744"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,11 +29,11 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
  可用性グループを作成し、可用性グループ関連のイベントのサブセットをキャプチャすると、alwayson_health 拡張イベント セッションが自動的に作成されます。 このセッションは、可用性グループをトラブルシューティングする際にすぐに開始することができる有効かつ便利なツールとしてあらかじめ構成されています。 可用性グループの作成ウィザードでは、このウィザードで構成されたすべての参加中の可用性レプリカに対してセッションを自動的に開始します。  
   
 > [!IMPORTANT]  
->  この**新しい可用性グループ ウィザード**を使用して可用性グループを作成していない場合、alwayson_health セッションは自動的に開始されない場合があります。 このセッションが開始していない場合は、予期せぬ問題が発生しても、イベント データをキャプチャすることはできません。 セッションを手動で開始してから、セッションのプロパティを設定してセッションが自動的に開始されるように構成する必要があります。  
+>  この **新しい可用性グループ ウィザード** を使用して可用性グループを作成していない場合、alwayson_health セッションは自動的に開始されない場合があります。 このセッションが開始していない場合は、予期せぬ問題が発生しても、イベント データをキャプチャすることはできません。 セッションを手動で開始してから、セッションのプロパティを設定してセッションが自動的に開始されるように構成する必要があります。  
   
  alwayson_health セッションの定義を表示するには:  
   
-1.  **オブジェクト エクスプローラー**で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
+1.  **オブジェクト エクスプローラー** で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
   
 2.  **[Alwayson_health]** を右クリックし、 **[セッションをスクリプト化]** 、 **[CREATE]** の順にポイントし、 **[新しいクエリ エディター ウィンドウ]** をクリックします。  
 
@@ -43,7 +43,7 @@ alwayson_health でカバーされているイベントの一部については�
 ##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> デバッグ用の拡張イベント  
  Alwayson_health セッションでカバーされている拡張イベントに加えて、SQL Server では可用性グループ用のさまざまなデバッグ イベントが定義されています。 このような追加の拡張イベントをセッションで利用するには、以下の手順に従います。  
   
-1.  **オブジェクト エクスプローラー**で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
+1.  **オブジェクト エクスプローラー** で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
   
 2.  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。 または、 **[Alwayson_health]** を右クリックし、 **[プロパティ]** を選択します。  
   

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: database-mirroring
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f8479b88d100f9687469ad615d0b92c50aedb6ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b77b54ba48dc2c3820d055227411f61983b1a7c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771830"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644292"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 ( **データベース ミラーリング モニターのジョブ**など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
+  ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 ( **データベース ミラーリング モニターのジョブ** など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
   
  ミラーリング セッション中にミラー化されたデータベースを監視すると、データ フローが発生しているかどうかや、データ フローがどの程度適切に行われているかを確認することができます。 サーバー インスタンス上にある 1 つ以上のミラー化されたデータベースの監視を設定および管理するには、データベース ミラーリング モニターまたは **sp_dbmmonitor** システム ストアド プロシージャを使用します。  
   
- **データベース ミラーリング モニターのジョブ**は、データベース ミラーリング モニターから独立して、バックグラウンドで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが **データベース ミラーリング モニターのジョブ** を定期的に (既定では 1 分間に 1 回) 呼び出し、このジョブは、ミラーリング状態を更新するストアド プロシージャを呼び出します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング セッションを開始した場合は、 **データベース ミラーリング モニターのジョブ** が自動的に作成されます。 ALTER DATABASE *<database_name>* SET PARTNER のみを使用してミラーリングを開始した場合は、ストアド プロシージャを実行してジョブを作成する必要があります。  
+ **データベース ミラーリング モニターのジョブ** は、データベース ミラーリング モニターから独立して、バックグラウンドで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが **データベース ミラーリング モニターのジョブ** を定期的に (既定では 1 分間に 1 回) 呼び出し、このジョブは、ミラーリング状態を更新するストアド プロシージャを呼び出します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング セッションを開始した場合は、 **データベース ミラーリング モニターのジョブ** が自動的に作成されます。 ALTER DATABASE *<database_name>* SET PARTNER のみを使用してミラーリングを開始した場合は、ストアド プロシージャを実行してジョブを作成する必要があります。  
   
  **このトピックの内容**  
   
@@ -92,7 +92,7 @@ ms.locfileid: "85771830"
     |[sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)|監視対象のデータベースの状態行を返すので、このプロシージャで事前に最新の状態を取得するかどうかを選択できます。|  
     |[sp_dbmmonitordropmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)|サーバー インスタンスのすべてのデータベースに対し、ミラーリング監視ジョブを停止して削除します。|  
   
-     **dbmmonitor** システム ストアド プロシージャは、データベース ミラーリング モニターを補完するものとして使用できます。 たとえば、 **sp_dbmmonitoraddmonitoring**を使用して監視が構成されていても、データベース ミラーリング モニターを使用して状態を表示できます。  
+     **dbmmonitor** システム ストアド プロシージャは、データベース ミラーリング モニターを補完するものとして使用できます。 たとえば、 **sp_dbmmonitoraddmonitoring** を使用して監視が構成されていても、データベース ミラーリング モニターを使用して状態を表示できます。  
   
 ### <a name="how-monitoring-works"></a>監視のしくみ  
  ここでは、データベース ミラーリングの状態テーブル、データベース ミラーリング モニターのジョブとモニター、データベース ミラーリングの状態の監視方法、および監視ジョブの削除方法について説明します。  
@@ -102,7 +102,7 @@ ms.locfileid: "85771830"
   
  状態テーブルは、システム管理者が自動または手動のいずれかの方法で更新でき、最小更新間隔は 15 秒です。 最小更新間隔である 15 秒を設定すると、状態の要求によってサーバー インスタンスが過負荷になるのを防ぐことができます。  
   
- 状態テーブルは、データベース ミラーリング モニターと、実行されている場合にはデータベース ミラーリング モニターのジョブの両方によって自動的に更新されます。 **[データベース ミラーリング モニターのジョブ]** では、既定により 1 分間に 1 回、状態テーブルを更新します (システム管理者は更新間隔として 1 ～ 120 分を指定できます)。 これに対しデータベース ミラーリング モニターでは、30 秒ごとに自動的に状態テーブルを更新します。 これらの更新では、 **[データベース ミラーリング モニターのジョブ]** およびデータベース ミラーリング モニターによって **sp_dbmmonitorupdate**が呼び出されます。  
+ 状態テーブルは、データベース ミラーリング モニターと、実行されている場合にはデータベース ミラーリング モニターのジョブの両方によって自動的に更新されます。 **[データベース ミラーリング モニターのジョブ]** では、既定により 1 分間に 1 回、状態テーブルを更新します (システム管理者は更新間隔として 1 ～ 120 分を指定できます)。 これに対しデータベース ミラーリング モニターでは、30 秒ごとに自動的に状態テーブルを更新します。 これらの更新では、 **[データベース ミラーリング モニターのジョブ]** およびデータベース ミラーリング モニターによって **sp_dbmmonitorupdate** が呼び出されます。  
   
  **sp_dbmmonitorupdate** 初回実行時には、 **msdb** データベース内に **データベース ミラーリングの状態** テーブルと固定データベース ロール **dbm_monitor** が作成されます。 **sp_dbmmonitorupdate** では、通常、サーバー インスタンス上のミラー化されたデータベースごとに、新しい行を状態テーブルに挿入することによってミラーリングの状態を更新します。詳細については、このトピックの「データベース ミラーリング状態テーブル」を参照してください。 また、このプロシージャは、新しい行のパフォーマンス基準を評価して、現在の保有期間 (既定では 7 日) よりも古い行を切り捨てます。 詳細については、「 [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)」を参照してください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "85771830"
   
      **[状態]** ページの基準に関する詳細については、後の「データベース ミラーリング モニターに表示されるパフォーマンス基準」を参照してください。  
   
--   **sp_dbmmonitorresults**の使用  
+-   **sp_dbmmonitorresults** の使用  
   
      システム管理者は、 **sp_dbmmonitorresults** システム ストアド プロシージャを使用して状態テーブルを表示できます。また、前回の更新から 15 秒以内に更新が行われていない場合には、必要に応じて状態テーブルを更新できます。 このプロシージャは、 **sp_dbmmonitorupdate** プロシージャを呼び出し、プロシージャ コールでの要求数に応じて 1 つ以上の履歴行を返します。 返される結果セットの状態に関する詳細については、「 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)」を参照してください。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "85771830"
  **dbm_monitor** 固定データベース ロールのメンバーは、 **[データベース ミラーリング モニターのジョブ]** を使用して定期的に状態テーブルを更新します。 ジョブが存在しない場合や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態が急速に古くなり、ミラーリング セッションの構成を反映しなくなることがあります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>データベース ミラーリング モニターのジョブの削除  
- データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]** は、削除するまでなくなりません。 監視ジョブは、システム管理者が管理する必要があります。 **[データベース ミラーリング モニターのジョブ]** を削除するには、 **sp_dbmmonitordropmonitoring**を使用します。 詳細については、「 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)」を参照してください。  
+ データベース ミラーリング モニターのジョブである **[データベース ミラーリング モニターのジョブ]** は、削除するまでなくなりません。 監視ジョブは、システム管理者が管理する必要があります。 **[データベース ミラーリング モニターのジョブ]** を削除するには、 **sp_dbmmonitordropmonitoring** を使用します。 詳細については、「 [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)」を参照してください。  
   
 ###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> データベース ミラーリング モニターに表示される状態  
  データベース ミラーリング モニターの **[状態]** ページには、パートナーと、ミラーリング セッションの状態が表示されます。 この情報には、トランザクション ログの状態、フェールオーバーを完了するために必要な時間を推測するのに役立つその他の情報、データ損失の可能性 (セッションが同期されていない場合) などのパフォーマンス基準が含まれます。 さらに、 **[状態]** ページには、ミラーリング セッションに関する一般的な状態と情報が表示されます。  

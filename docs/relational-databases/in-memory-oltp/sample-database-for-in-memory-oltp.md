@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d581d8dcf038b56a6b3df5b5ecc67a9a32b4255f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0d28550dba1a4703bab01324910436b7256597bb
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485234"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643861"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "97485234"
  このサンプルでは、インメモリ OLTP 機能を紹介します。 このサンプルで取り上げるのは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャです。また、インメモリ OLTP のパフォーマンス上の利点も示します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](./overview-and-usage-scenarios.md?view=sql-server-ver15#in-memory-oltp-overview)」をご覧ください。  
+>  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のこのトピックを表示するには、「 [メモリ内 OLTP を実証する AdventureWorks の拡張](./overview-and-usage-scenarios.md#in-memory-oltp-overview)」をご覧ください。  
   
  このサンプルは、AdventureWorks データベースの 5 つのテーブルをメモリ最適化テーブルに移行します。販売注文処理のデモ ワークロードも含まれています。 このデモ ワークロードを使用して、サーバーでインメモリ OLTP を使用するパフォーマンス上の利点を確認できます。  
   

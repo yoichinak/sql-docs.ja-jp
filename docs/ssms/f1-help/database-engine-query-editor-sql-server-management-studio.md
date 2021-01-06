@@ -41,14 +41,14 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: seo-lt-2019, contperfq1
+ms.custom: seo-lt-2019, contperf-fy21q1
 ms.date: 08/28/2020
-ms.openlocfilehash: 7450a77549d05dab5a024b39be6d2b4aef6c09de
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 87fd12a17b86a47e6fec1b235ae9e9a21fde6e45
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364848"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878960"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>SQL Server Management Studio (SSMS) クエリ エディター
 
@@ -94,7 +94,7 @@ SSMS のエディターは、一般的なアーキテクチャを共有します
 
 選択されているコードを実行します。コードが選択されていない場合は、すべてのクエリ エディター コードを実行します。
 
-F5 キーを押すか、 [コンテキスト メニュー](#execute-using-the-context-menu)から選択してクエリを **実行** することもできます。
+F5 キーを押すか、[コンテキスト メニュー](#execute-using-the-context-menu)から選択してクエリを **実行** することもできます。
 
 ### <a name="cancel-executing-query-using-the-editor-toolbar"></a>エディター ツール バーを使用した [クエリ実行のキャンセル]
 
@@ -118,31 +118,31 @@ Alt + Break キー押して、実行中のクエリをキャンセルするこ�
 
 **[クエリ オプション]** ダイアログ ボックスを開きます。 このダイアログ ボックスを使用すると、クエリの実行およびクエリ結果に関する既定のオプションを構成できます。
 
-**[クエリ オプション]** は、 [コンテキスト メニュー](#query-options-using-the-context-menu)から選択することもできます。
+**[クエリ オプション]** は、[コンテキスト メニュー](#query-options-using-the-context-menu)から選択することもできます。
 
 ### <a name="intellisense-enabled-using-the-editor-toolbar"></a>エディター ツール バーを使用した [IntelliSense 有効]
 
 データベース エンジン クエリ エディターで、[IntelliSense](../scripting/configure-intellisense-sql-server-management-studio.md) 機能が使用できるかどうかを示します。 このオプションは、既定で設定されています。
 
-**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl + I キーを押すか、 [コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
+**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl + I キーを押すか、[コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>エディター ツール バーを使用した [実際の実行プランを含める]
 
 クエリを実行し、クエリ結果を返し、クエリに対して実行プランを使用します。 クエリは、グラフィカルなクエリ プランとして **[実行プラン]** ウィンドウに表示されます。
 
-**[実際の実行プランを含める]** を選択するには、Ctrl + M キーを押すか、 [コンテキスト メニュー](#include-actual-execution-plan-using-the-context-menu)から選択することもできます。
+**[実際の実行プランを含める]** を選択するには、Ctrl + M キーを押すか、[コンテキスト メニュー](#include-actual-execution-plan-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-live-query-statistics-using-the-editor-toolbar"></a>エディター ツール バーを使用した [ライブ クエリ統計を含む]
 
 クエリ プラン演算子間の制御フローとして、クエリ実行プロセスのリアルタイムの分析情報を提供します。
 
-**[ライブ クエリ統計を含む]** は、 [コンテキスト メニュー](#include-live-query-statistics-using-the-context-menu)から選択することもできます。
+**[ライブ クエリ統計を含む]** は、[コンテキスト メニュー](#include-live-query-statistics-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-client-statistics-using-the-editor-toolbar"></a>エディター ツール バーを使用した [クライアント統計情報を含める]
 
 クエリおよびネットワーク パケットに関する統計、およびクエリの経過時間を表示する **[クライアント統計]** ウィンドウを含めます。
 
-**[ライブ クエリ統計を含む]** は、Shift + Alt + S キーを押すか、 [コンテキスト メニュー](#include-client-statistics-using-the-context-menu)から選択することもできます。
+**[ライブ クエリ統計を含む]** は、Shift + Alt + S キーを押すか、[コンテキスト メニュー](#include-client-statistics-using-the-context-menu)から選択することもできます。
 
 ### <a name="results-to-text-using-the-editor-toolbar"></a>エディター ツール バーを使用した [結果をテキストで表示]
 
@@ -258,7 +258,7 @@ Microsoft データベース エンジン チューニング アドバイザー 
 
 ![結果オプション](media/database-engine-query-editor-sql-server-management-studio/context-menu-results.png)
 
-コンテキスト メニューから、任意の " *結果* " オプションを選択できます。
+コンテキスト メニューから、任意の "*結果*" オプションを選択できます。
 
 - **[結果をテキストで表示]** - クエリ結果をテキストとして **[結果]** ウィンドウに表示します。
 
