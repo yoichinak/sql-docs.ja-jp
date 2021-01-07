@@ -136,6 +136,25 @@
               href: ../connect/ado-net/common-schema-collections.md
             - name: SQL Server スキーマ コレクション
               href: ../connect/ado-net/sql-server-schema-collections.md
+        - name: DbProviderFactories
+          href: ../connect/ado-net/dbproviderfactories.md
+          items:
+            - name: SqlClientFactory の取得
+              href: ../connect/ado-net/obtain-sqlclientfactory.md
+        - name: ID 値または autonumber 値の取得
+          href: ../connect/ado-net/retrieve-identity-or-autonumber-values.md
+        - name: バイナリ データの取得
+          href: ../connect/ado-net/retrieve-binary-data.md
+        - name: ストアド プロシージャによるデータの変更
+          href: ../connect/ado-net/modify-data-with-stored-procedures.md
+        - name: SqlClient でのデータ トレース
+          href: ../connect/ado-net/data-tracing.md
+        - name: SqlClient のパフォーマンス カウンター
+          href: ../connect/ado-net/performance-counters.md
+        - name: 非同期プログラミング
+          href: ../connect/ado-net/asynchronous-programming.md
+        - name: SqlClient ストリーミング サポート
+          href: ../connect/ado-net/sqlclient-streaming-support.md
     - name: SQL Server と ADO.NET
       href: ../connect/ado-net/sql/index.md
       items:
