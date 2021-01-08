@@ -1,25 +1,27 @@
 ---
+title: sp_data_source_table_columns
 description: sp_data_source_table_columns (Transact-sql)
-title: sp_data_source_table_columns |Microsoft Docs
-ms.custom: ''
-ms.date: 11/10/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
-- sp_data_source_table_columns
+- sp_data_source_table_columns_TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - PolyBase
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4153b7546dfce226cb056b7a548efb69f5175e06
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.custom: ''
+ms.date: 11/10/2020
+ms.openlocfilehash: 30205befcdd9da78f4f9a3f002ddd398f49abc55
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96128777"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005387"
 ---
 # <a name="sp_data_source_table_columns-transact-sql"></a>sp_data_source_table_columns (Transact-sql)
 
@@ -57,9 +59,9 @@ sp_data_source_table_columns
 |---|---|---|
 |NAME|nvarchar(max)|列の名前。
 |TYPE|nvarchar(200)|SQL Server 型名
-|LENGTH|INT|列の長さ
-|PRECISION|INT|列の有効桁数
-|SCALE|INT|列の小数点以下桁数
+|LENGTH|int|列の長さ
+|PRECISION|int|列の有効桁数
+|SCALE|int|列の小数点以下桁数
 |COLLATION|nvarchar(200)|列の SQL Server 照合順序
 |IS_NULLABLE|bit|この列は null 値を許容します。
 |SOURCE_TYPE_NAME|nvarchar(max)|バックエンド固有の型名。 ほとんどはデバッグに使用されます。 ODBC ソースの場合は、SQLColumns () の TYPE_NAME 結果列に対応します。

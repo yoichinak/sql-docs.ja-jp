@@ -1,8 +1,6 @@
 ---
+title: sys.database_query_store_options (Transact-sql)
 description: sys.database_query_store_options (Transact-sql)
-title: sys.database_query_store_options (Transact-sql) |Microsoft Docs
-ms.custom: ''
-ms.date: 05/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,18 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 05/27/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6b346496eb08e9121abac463b3e87f6e27362e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484784"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005415"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-sql)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   このデータベースのクエリストアオプションを返します。  
@@ -50,7 +50,7 @@ ms.locfileid: "97484784"
 |**stale_query_threshold_days**|**bigint**|クエリの情報がクエリストアに保持される日数。 既定値は **30** です。 保持ポリシーを無効にするには0に設定します。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は 7 日です。<br /><br /> ステートメントを使用してを変更し `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` ます。|  
 |**max_plans_per_query**|**bigint**|格納されているプランの最大数を制限します。 既定値は **200** です。 最大値に達した場合、クエリストアそのクエリの新しいプランのキャプチャを停止します。 を0に設定すると、キャプチャされたプランの数に関する制限がなくなります。<br /><br /> ステートメントを使用してを変更し `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` ます。|  
 |**query_capture_mode**|**smallint**|現在アクティブなクエリのキャプチャモード:<br /><br /> **1** = すべて-すべてのクエリがキャプチャされます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降) の既定の構成値です [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 2 = 実行回数とリソース消費量に基づいて、関連するクエリを自動キャプチャします。 これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。<br /><br /> 3 = なし-新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリをキャプチャしない場合があるため、この構成は慎重に使用してください。|  
-|**query_capture_mode_desc**|**nvarchar(60)**|クエリストアの実際のキャプチャモードの説明テキスト。<br /><br /> ALL (の既定値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (の既定値 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE|  
+|**query_capture_mode_desc**|**nvarchar(60)**|クエリストアの実際のキャプチャモードの説明テキスト。<br /><br /> ALL (の既定値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (の既定値 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> なし|  
 |**size_based_cleanup_mode**|**smallint**|データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。<br /><br /> 0 = オフサイズベースのクリーンアップは自動的にアクティブ化されません。<br /><br /> **1** = 自動サイズベースのクリーンアップは、ディスク上のサイズが *max_storage_size_mb* の **90%** に達したときに自動的にアクティブ化されます。 これは既定の構成値です。<br /><br />サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 *Max_storage_size_mb* の約 **80%** に達した時点で停止します。|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|クエリストアの実際のサイズに基づくクリーンアップモードの説明テキストです。<br /><br /> OFF <br /> **AUTO** (既定値)|  
 |**wait_stats_capture_mode**|**smallint**|クエリストア待機の統計情報のキャプチャを実行するかどうかを制御します。 <br /><br /> 0 = OFF <br /> **1** = オン<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。|
