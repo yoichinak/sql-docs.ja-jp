@@ -2734,7 +2734,7 @@
               href: language-extensions/language-extensions-whats-new.md
         - name: インストール
           items:
-            - name: Windows に言語拡張をインストールする
+            - name: Windows 上に Java 言語拡張を インストールする
               href: language-extensions/install/windows-java.md
         - name: チュートリアル
           items:
