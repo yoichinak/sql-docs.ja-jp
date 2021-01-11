@@ -13,12 +13,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: b69137a197cab3054eeae2ee180a2624e7d564e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8913e553460c9fae3d008783d571aca81b5c21a4
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474443"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860573"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
@@ -93,10 +93,10 @@ Analysis Services、Integration Services、Reporting Services プロジェクト
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-:::image type="icon" source="media/download.png" border="false"::: **[SSDT for Visual Studio 2017 (15.9.6) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2139376)**
+:::image type="icon" source="media/download.png" border="false"::: **[SSDT for Visual Studio 2017 (15.9.7) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2151759)**
 
 > [!IMPORTANT]
-> * SSDT for Visual Studio 2017 (15.9.6) をインストールする前に、*Analysis Services プロジェクト* と *Reporting Services プロジェクト* の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。 
+> * SSDT for Visual Studio 2017 (15.9.7) をインストールする前に、*Analysis Services プロジェクト* と *Reporting Services プロジェクト* の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。 
 > * SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/download/details.aspx?id=100619)からダウンロードできます。
 > * Oracle および Teradata コネクタを使用し、SQL 2019 より前の以前のバージョンの SQL Server をターゲットとするパッケージを設計するには、[SQL 2019 用の Microsoft Oracle Connector](https://www.microsoft.com/download/details.aspx?id=58228) および [SQL 2019 用の Microsoft Teradata Connector](https://www.microsoft.com/download/details.aspx?id=100599) に加えて、対応するバージョンの Microsoft Connector for Oracle and Teradata by Attunity もインストールする必要があります。
 >    * [SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -116,17 +116,17 @@ SSDT for Visual Studio 2017 の[システム要件](/visualstudio/productinfo/vs
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-* [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
-* [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
-* [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
-* [フランス語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
-* [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
-* [イタリア語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
-* [日本語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
-* [韓国語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
-* [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
-* [ロシア語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
-* [スペイン語](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
+* [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x804)
+* [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x404)
+* [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x409)
+* [フランス語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x40c)
+* [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x407)
+* [イタリア語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x410)
+* [日本語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x411)
+* [韓国語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x412)
+* [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x416)
+* [ロシア語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x419)
+* [スペイン語](https://go.microsoft.com/fwlink/?linkid=2151759&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>考慮事項と制限事項
 

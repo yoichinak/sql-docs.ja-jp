@@ -10,13 +10,13 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 10/27/2020
-ms.openlocfilehash: 4569c61552a03e928d01e47940ae02e7fee9dcec
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+ms.date: 12/17/2020
+ms.openlocfilehash: 346e964b30f76bf79c20d6f348636a626a8beee2
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523091"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97642388"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -26,9 +26,89 @@ ms.locfileid: "96523091"
 
 ## <a name="current-ssms-release"></a>現在の SSMS リリース
 
+### <a name="188"></a>18.8
+
+![ダウンロード](media/download-icon.png) [SSMS 18.8 をダウンロードする](download-sql-server-management-studio-ssms.md)
+
+- リリース番号:18.8
+- ビルド番号:15.0.18369.0
+- リリース日: 2020 年 12 月 17 日
+
+[簡体中国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
+
+SSMS 18.8 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
+
+#### <a name="whats-new-in-188"></a>18.8 の新機能
+
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
+| [新しい項目] | 詳細 |
+|----------|---------|
+| Azure Data Studio のインストールの統合 | SSMS をインストールすると Azure Data Studio 1.25.1 がインストールされる。 |
+| Analysis Services | Power BI Premium Gen2 ワークスペースのサポートを追加。 |
+| 監査 | EXTERNAL_MONITOR と "演算子監査" のサポートを追加。  詳細については、構成に関する[ドキュメント](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure)を参照してください。 |
+| Integration Services | SSIS IR を作成しているときに SSISDB の作成が省略可能になるよう IR 作成ウィザードを改善 |
+
+#### <a name="bug-fixes-in-188"></a>18.8 でのバグ修正
+
+| New Item | 詳細 |
+|----------|---------|
+| アクセシビリティ | [ProgressReport] ダイアログのナレーターに影響を及ぼしている問題を修正 |
+| 利用状況モニター | [アクティブなコストの高いクエリ] グリッドの [クエリ テキストの編集] コンテキスト メニューが機能しない問題を修正 |
+| Always Encrypted | SSMS でランタイム エラー ("クラスが見つからない") がスローされる問題を修正 |
+| 高 DPI/スケーリング | [ProgressReport] ダイアログの 4k 表示を改善 |
+| 高 DPI/スケーリング | Integration Services の [New Schedule-  Package]\(新しいスケジュール - パッケージ\) フォームでの問題を修正 |
+| SSMS 全般 |  bigint のサイズを超える IDENTITY シードまたは ID の増分値がある列のプロパティを表示しようとすると、SSMS でエラーがスローされる場合がある問題を修正。
+| SSMS 全般 | 表示されるはずでなかったメニュー項目 [Projects Export Templates…]\(プロジェクト テンプレートのエクスポート…\) によって引き起こされる SSMS のクラッシュを修正 |
+| SSMS 全般 | フォルダー内のバックアップを列挙するときに SSMS がクラッシュする可能性がある問題を修正 |
+| SSMS 全般 | クエリの結果を表示しているときに、SSMS がハンドルおよびメモリをリークする原因となった問題に対処 |
+| SSMS 全般 | 特定の種類の列 (SQL 2014 以降の UniqueIdentifier、SQL 2017 以降の VarCharMax/NVarCharMax/VarBinaryMax) でユーザーがクラスター化された列ストア インデックスを作成できなかった問題を修正 |
+| SSMS 全般 | "結果グリッド" の XML 列の並べ替えが機能していなかった、長く未解決であった問題を修正。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/32890930)を参照してください |
+| SSMS 全般 | "メモリ最適化オブジェクトを含むデータベースで変更の追跡がサポートされない" ことに関する警告が SSMS で誤って表示されていた問題を修正。 |
+| スクリプト生成ウィザード | SQL Server 2014 以前でデータベース オブジェクトが列挙されるバグを引き起こしていた問題を修正。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)を参照してください。 |
+| レプリケーション ツール | SQL レプリケーション モニターで自動接続設定が守られていなかったため、ユーザーが毎回手動で再接続するよう強いられていた問題を修正。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40394743)を参照してください |
+| SMO/スクリプト作成 | SQL Azure DB の暗号化ビューで [スクリプトの生成...] の使用を試行するときの問題を修正 |
+| XEvent の UI | 他のアプリケーションから SSMS に切り替えるときに SSMS のクラッシュを引き起こす可能性がある問題を修正。 |
+| XEvent の UI | 追加の引用符による XEvent 作成のバグの原因となった 18.7 からの改善が適用されなくなった。 "*この変更は一時的なものであり、後続のリリースではこの改善がバグが付随しない状態で再度適用されます。* " |
+
+#### <a name="known-issues-188"></a>既知の問題 (18.8)
+
+| New Item | 詳細 | 回避策 |
+|----------|---------|------------|
+| Analysis Services | msmdpump.dll 経由で SSAS に接続するときのエラー。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696)を参照してください。 | 該当なし |
+| Analysis Services | 場合によっては、アップグレード セットアップを使用しているときに、SSMS のアップグレード後に DAX エディターを開こうとすると、"オブジェクトのインスタンスにオブジェクトが設定されていません" というエラーが発生することがまれにあります。 | SQL Server Management Studio をアンインストールして再インストールします。  再インストールしても解決しない場合は、SSMS のすべてのインスタンスを閉じ、バックアップしてから `%AppData%\Microsoft\SQL Server Management Studio` と `%LocalAppData%\Microsoft\SQL Server Management Studio` を削除します。 |
+| SSMS 全般 | 新しい [サーバー監査の仕様] ダイアログにより、SSMS がアクセス違反エラーでクラッシュする場合があります。 | 該当なし |
+| SSMS 全般 | SMO を使用する SSMS 拡張機能は、新しい SSMS 固有の SMO v161 パッケージを対象とするように再コンパイルする必要があります。 https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ で新しいバージョンが利用できるようになりました </br></br> 以前の 160 バージョンの Microsoft.SqlServer.SqlManagementObjects パッケージに対してコンパイルされた拡張機能は、引き続き機能します。 | 該当なし |
+| Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 | フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 |
+| Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 | Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 |
+
+
+他の既知の問題について、および製品チームにフィードバックを提供するには、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server)を参照できます。
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
+
+以前のバージョンの SSMS をダウンロードするには、関連セクションでダウンロード リンクを選択します。
+
+| SSMS のバージョン | ビルド番号 | リリース日 |
+|--------------|--------------|--------------|
+| [18.7.1](#1871) | 15.0.18358.0 | 2020 年 10 月 27 日 |
+| [18.7](#187) | 15.0.18357.0 | 2020 年 10 月 20 日 |
+| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
+| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
+| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
+| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
+| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2 日 |
+| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
+| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
+| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
+| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
+| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
+
 ### <a name="1871"></a>18.7.1
 
-![ダウンロード](media/download-icon.png) [SSMS 18.7 をダウンロードする](download-sql-server-management-studio-ssms.md)
+![ダウンロード](media/download-icon.png) [SSMS 18.7 をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2147207)
 
 - リリース番号:18.7.1
 - ビルド番号:15.0.18358.0
@@ -64,31 +144,9 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 | Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 |
 | オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降を使用する必要があります。 |
 
-他の既知の問題について、および製品チームにフィードバックを提供するには、[SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server)を参照できます。
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-[!INCLUDE[ssms-connect-aazure-ad](../includes/ssms-connect-azure-ad.md)]
-
-以前のバージョンの SSMS をダウンロードするには、関連セクションでダウンロード リンクを選択します。
-
-| SSMS のバージョン | ビルド番号 | リリース日 |
-|--------------|--------------|--------------|
-| [18.7](#187) | 15.0.18357.0 | 2020 年 10 月 20 日 |
-| [18.6](#186) | 15.0.18338.0 | 2020 年 7 月 22 日 |
-| [18.5.1](#1851) | 15.0.18333.0 | 2020 年 6 月 9 日 |
-| [18.5](#185) | 15.0.18330.0 | 2020 年 4 月 7 日 |
-| [18.4](#184) | 15.0.18206.0 | 2019 年 11 月 4 日 |
-| [18.3.1](#1831) | 15.0.18183.0 | 2019 年 10 月 2 日 |
-| [18.2](#182) | 15.0.18142.0 | 2019 年 7 月 25 日 |
-| [18.1](#181) | 15.0.18131.0 | 2019 年 6 月 11 日 |
-| [18.0](#180) | 15.0.18118.0 | 2019 年 4 月 24 日 |
-| [17.9.1](#1791) | 14.0.17289.0 | 2018 年 11 月 21 日 |
-| [16.5.3](#1653) | 13.0.16106.4 | 2017 年 1 月 30 日 |
-
 ### <a name="187"></a>18.7
 
-![ダウンロード](media/download-icon.png) [SSMS 18.7 をダウンロードする](download-sql-server-management-studio-ssms.md)
+![ダウンロード](media/download-icon.png) [SSMS 18.7 をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2146265)
 
 - リリース番号:18.7
 - ビルド番号:15.0.18357.0

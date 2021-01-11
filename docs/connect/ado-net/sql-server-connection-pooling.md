@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: ef687114ff2ceceabc1ed87d67a4585a5846029d
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: a878d8250a3e402cd1043dc289eb1712af45f385
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563080"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771537"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 
@@ -59,7 +59,7 @@ ms.locfileid: "96563080"
 
 [!code-csharp[SqlConnection_Pooling#1](~/../sqlclient/doc/samples/SqlConnection_Pooling.cs#1)]
 
-## <a name="adding-connections"></a>接続の追加
+## <a name="add-connections"></a>接続を追加する
 
 一意の接続文字列ごとに 1 つの接続プールが作成されます。 プールが作成された段階で、複数の接続オブジェクトが作成されてそのプールへ追加され、最小プール サイズ要件を満たします。 必要に応じて、指定されている最大プール サイズ (**既定値は 100**) になるまで、接続がプールに追加されます。 接続が終了または破棄されると、その接続は解放され、プールに戻されます。
 
@@ -75,7 +75,7 @@ ms.locfileid: "96563080"
 
 接続の開始と終了に関連するイベントについて詳しくは、SQL Server のドキュメントの「[Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)」および「[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)」をご覧ください。
 
-## <a name="removing-connections"></a>接続の削除
+## <a name="remove-connections"></a>接続を削除する
 
 接続が約 **4 から 8** 分間アイドル状態になった後、またはサーバーとの接続が切断されたことがプーラーで検出された場合は、接続プーラーによってプールから接続が削除されます。
 
@@ -84,7 +84,7 @@ ms.locfileid: "96563080"
 
 既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときでも、プールからその接続を削除できます。 この機能は、接続がまだ有効であることを確認するオーバーヘッドによってサーバーへのラウンド トリップが実行されることにより、プーラーの利点が失われてしまうことを防ぐためにあります。 この状況が発生した場合は、接続の使用を最初に試みたときに接続が切断されていることが検出され、例外がスローされます。
 
-## <a name="clearing-the-pool"></a>プールのクリア
+## <a name="clear-the-pool"></a>プールをクリアする
 
 Microsoft SqlClient Data Provider for SQL Server において、プールをクリアするための 2 つの新しいメソッド <xref:Microsoft.Data.SqlClient.SqlConnection.ClearAllPools%2A> と <xref:Microsoft.Data.SqlClient.SqlConnection.ClearPool%2A> が導入されています。 `ClearAllPools` は、指定されたプロバイダーの接続プールをクリアし、`ClearPool` は、特定の接続に関連付けられた接続プールをクリアします。
 
@@ -97,7 +97,7 @@ Microsoft SqlClient Data Provider for SQL Server において、プールをク�
 
 接続が終了すると、その接続は解放されてプールへ返り、さらに、そのトランザクション コンテキストに基づいて特定のサブプールへ返ります。 そのため、分散トランザクションが保留状態である場合を含め、エラーを発生させることなく、開発者が接続を終了させることは可能です。 これにより、分散トランザクションを後でコミットまたは中止できます。
 
-## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>接続文字列キーワードによる接続プールの制御
+## <a name="control-connection-pooling-with-connection-string-keywords"></a>接続文字列のキーワードを使用して接続プーリングを制御する
 
 `ConnectionString` オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> プロパティは、接続プール ロジックの動作を調整するために使用できる接続文字列キーおよび値のペアをサポートします。 詳細については、「<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。
 
@@ -119,11 +119,11 @@ Microsoft SqlClient Data Provider for SQL Server において、プールをク�
 
 [!code-csharp[SqlConnection_Pooling_Use_Statement#1](~/../sqlclient/doc/samples/SqlConnection_Pooling_Use_Statement.cs#1)]
 
-## <a name="application-roles-and-connection-pooling"></a>アプリケーション ロールおよび接続プール
+## <a name="application-roles-and-connection-pooling"></a>アプリケーション ロールと接続プーリング
 
 `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。
 
-### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法
+### <a name="application-role-alternatives"></a>アプリケーション ロールの代替
 
 アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。
 
@@ -131,3 +131,5 @@ Microsoft SqlClient Data Provider for SQL Server において、プールをク�
 
 - [接続プール](connection-pooling.md)
 - [SQL Server と ADO.NET](./sql/index.md)
+- [SqlClient のパフォーマンス カウンター](performance-counters.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

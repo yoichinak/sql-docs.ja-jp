@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: b1427fa78e52c985478996bfb41cb7a20e1ee608
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 772ecef470b69a34e4bd4b0eba2ca60255657eaf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428239"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771424"
 ---
 # <a name="executing-a-command"></a>コマンドの実行
 
@@ -34,7 +34,7 @@ Microsoft SqlClient Data Provider for SQL Server には、<xref:System.Data.Comm
 |`ExecuteNonQuery`|行を一切返さないコマンドを実行します。|  
 |`ExecuteXMLReader`|<xref:System.Xml.XmlReader> を返します。 `SqlCommand` オブジェクトでのみ使用できます。|
 
- 厳密に型指定された各コマンド オブジェクトは、次の表に示す <xref:System.Data.CommandType> 列挙値をサポートしています。これらの列挙値を使用してコマンド文字列の解釈方法を指定できます。
+厳密に型指定された各コマンド オブジェクトは、次の表に示す <xref:System.Data.CommandType> 列挙値をサポートしています。これらの列挙値を使用してコマンド文字列の解釈方法を指定できます。
 
 |CommandType|説明|
 |-----------------|-----------------|  
@@ -55,8 +55,10 @@ Microsoft SqlClient Data Provider for SQL Server には、<xref:System.Data.Comm
 
 [!INCLUDE[appliesto-netfx-xxxx-xxxx-md](../../includes/appliesto-netfx-xxxx-xxxx-md.md)]
 
-Microsoft SqlClient Data Provider for SQL Server では、失敗したコマンド実行に関連する断続的な問題を検出できるようにするための **パフォーマンス カウンター** が追加されています。
+Microsoft SqlClient Data Provider for SQL Server では、失敗したコマンド実行に関連する断続的な問題を検出できるようにするための **パフォーマンス カウンター** が追加されています。 詳細については、「[SqlClientのパフォーマンス カウンター](performance-counters.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [コマンドとパラメーター](commands-parameters.md)
+- [DataAdapter と DataReader](dataadapters-datareaders.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

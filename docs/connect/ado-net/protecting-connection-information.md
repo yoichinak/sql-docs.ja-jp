@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 146063d665b89a8541c34d9cc3b0b6da3939d801
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: 1d170d712269bf169d069ef7b93f975de855f8ec
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563098"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771414"
 ---
 # <a name="protecting-connection-information"></a>接続情報の保護
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563098"
 
 接続文字列に関係したセキュリティ上の脆弱性は、使用されている認証の種類、メモリやディスクへの接続文字列の保存方法、実行時に接続文字列を作成する際の手法などから発生します。
 
-## <a name="use-windows-authentication"></a>Windows 認証の使用
+## <a name="use-windows-authentication"></a>Windows 認証を使用する
 
 データ ソースへのアクセスを制限するには、ユーザー ID、パスワード、データ ソース名などの接続情報をセキュリティで保護する必要があります。 ユーザー情報の漏洩を防ぐためにも、できるだけ Windows 認証 ("*統合セキュリティ*" とも呼ばれます) を使用することをお勧めします。 Windows 認証は、接続文字列に `Integrated Security` キーワードまたは `Trusted_Connection` キーワードを使用することによって指定できます。こうすることで、ユーザー ID とパスワードを使う必要がなくなります。 Windows 認証を使用した場合、ユーザーは Windows によって認証され、サーバー リソースやデータベース リソースへのアクセスは Windows のユーザーおよびグループに付与された権限によって制御されます。
 
@@ -41,15 +41,15 @@ Windows 認証が使用できない場合、ユーザーの資格情報を接続
 
 固定 ID アカウントには、権限の低いアカウント、つまり、データベースに対する必要な権限だけが付与されたアカウントを使用してください。 さらに、ユーザー名とパスワードがクリア テキストで表示されないよう、構成ファイルを暗号化する必要があります。
 
-## <a name="avoid-injection-attacks-with-connection-string-builders"></a>接続文字列ビルダーを使用したインジェクション攻撃の防止
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a>接続文字列ビルダーを使用してインジェクション攻撃を防止する
 
 ユーザー入力から文字列を動的に連結することによって接続文字列を構築している場合、接続文字列のインジェクション攻撃を受ける可能性があります。 ユーザー入力の検証や悪意のある文字のエスケープを怠ると、機密データなど、サーバー上のリソースへのアクセスを攻撃者に許してしまうことも考えられます。 この問題に対処するため、Microsoft SqlClient Data Provider for SQL Server には、接続文字列の構文を検証し、余分なパラメーターの追加を防ぐ新しい接続文字列ビルダー クラスが導入されています。 詳細については、「[接続文字列ビルダー](connection-string-builders.md)」をご覧ください。
 
-## <a name="use-persist-security-infofalse"></a>Persist Security Info=False の使用
+## <a name="use-persist-security-infofalse"></a>"Persist Security Info=false" を使用する
 
 `Persist Security Info` の既定値は false です。すべての接続文字列には、この既定値を使用することをお勧めします。 `Persist Security Info` を `true` または `yes` に設定すると、ユーザー ID やパスワードなどのセキュリティ関連情報を、接続を開いた後にその接続から取得できます。 `Persist Security Info` を `false` または `no` に設定した場合、その情報を使って接続を開いた後で、セキュリティ情報が破棄されるため、信頼できないソースによってセキュリティ関連情報がアクセスされることを確実に防ぐことができます。
 
-## <a name="encrypt-configuration-files"></a>構成ファイルの暗号化
+## <a name="encrypt-configuration-files"></a>構成ファイルを暗号化する
 
 [!INCLUDE[appliesto-netfx-netcore-xxxx-md](../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
@@ -58,3 +58,4 @@ Windows 認証が使用できない場合、ユーザーの資格情報を接続
 ## <a name="see-also"></a>関連項目
 
 - [保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

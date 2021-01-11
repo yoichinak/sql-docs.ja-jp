@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: bdb4294fda1f26ec346f786ec29061f8d4f9ee27
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 38c1ad34fb4819460c08f00da4c1dbd31749b7cb
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419803"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771436"
 ---
 # <a name="connection-string-builders"></a>接続文字列ビルダー
 
@@ -44,7 +44,7 @@ data source=(local);Integrated Security=True;
 initial catalog="AdventureWorks;NewValue=Bad"
 ```
 
-## <a name="building-connection-strings-from-configuration-files"></a>構成ファイルからの接続文字列の作成
+## <a name="build-connection-strings-from-configuration-files"></a>構成ファイルから接続文字列を構築する
 
 接続文字列の特定の要素があらかじめわかっている場合、接続文字列を構成ファイルに格納しておき、それを実行時に取得することによって完全な接続文字列を作成できます。 たとえば、サーバー名は不明でも、データベースの名前はあらかじめ把握できる場合があります。 または、ユーザーに名前とパスワードだけを実行時に指定してもらい、それ以外の値を接続文字列に挿入できないようにしたい場合もあります。
 
@@ -74,3 +74,4 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ## <a name="see-also"></a>関連項目
 
 - [接続文字列](connection-strings.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -3,7 +3,7 @@ title: データの列の暗号化 | Microsoft Docs
 description: Transact-SQL (列レベルまたはセルレベルの暗号化とも呼ばれる) を使用して、SQL Server で対称暗号化を使ってデータ列を暗号化する方法について説明します。
 ms.custom: ''
 titleSuffix: SQL Server & Azure Synapse Analytics & Azure SQL Database & SQL Managed Instance
-ms.date: 01/02/2019
+ms.date: 12/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -18,55 +18,54 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 89e06fabdf2cf443f96c379c1363cfb845c83da2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c09f7f91edf2cada0464b6cfbc1922664a86866f
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477593"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97641078"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics を対象としたプレビューの段階です
+この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で対称暗号化を使用してデータ列を暗号化する方法について説明します。 これは、列レベルの暗号化、またはセル レベルの暗号化とも呼ばれます。 この機能は、Azure Synapse Analytics を対象としたプレビューの段階です
 
-## <a name="security"></a>セキュリティ  
+この記事の例は、AdventureWorks2017 に対して検証済みです。 サンプル データベースを取得するには、「[AdventureWorks サンプル データベース](../../../samples/adventureworks-install-configure.md)」を参照してください。
+
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- 次の手順を実行するには、次の権限が必要です。  
-  
-- データベースに対する CONTROL 権限。  
-  
-- データベースに対する CREATE CERTIFICATE 権限。 証明書を所有できるのは、Windows ログイン、ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  
-  
-- テーブルに対する ALTER 権限。  
-  
-- キーに対する権限。VIEW DEFINITION 権限が拒否されていないことが必要です。  
-  
-## <a name="using-transact-sql"></a>Transact-SQL の使用  
 
-次の例を使うには、データベース マスター キーが必要です。 データベースにデータベース マスター キーがまだない場合、次のステートメントを実行してパスワードを提供することにより作成します。
+次の手順を実行するには、次の権限が必要です。  
+  
+- データベースに対する `CONTROL` 権限。  
+- データベースに対する `CREATE CERTIFICATE` 権限。 証明書を所有できるのは、Windows ログイン、ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  
+- テーブルに対する `ALTER` 権限。  
+- キーに対する権限。`VIEW DEFINITION` 権限が拒否されていないことが必要です。  
+  
+## <a name="create-database-master-key"></a>データベースのマスター キーを作成する  
+
+次の例を使うには、データベース マスター キーが必要です。 データベースにデータベース マスター キーがない場合は、作成してください。 作成するには、データベースに接続し、次のスクリプトを実行します。 必ず複雑なパスワードを使用してください。
+
+次の例をコピーし、AdventureWorks のサンプル データベースに接続されているクエリ ウィンドウに貼り付けます。 **[実行]** をクリックします。  
 
 ```sql  
 CREATE MASTER KEY ENCRYPTION BY   
-PASSWORD = '<some strong password>';  
+PASSWORD = '<complex password>';  
 ```  
 
 データベース マスター キーは常にバックアップしてください。 データベース マスター キーの詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)」をご覧ください。
 
-### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
+## <a name="example-encrypt-with-symmetric-encryption-and-authenticator"></a>例:対称暗号化と認証子を使用した暗号化
   
 1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3. 次の例をコピーし、AdventureWorks のサンプル データベースに接続されているクエリ ウィンドウに貼り付けます。 **[実行]** をクリックします。
 
     ```sql
-    USE AdventureWorks2012;  
-    GO  
-  
     CREATE CERTIFICATE Sales09  
        WITH SUBJECT = 'Customer Credit Card Numbers';  
     GO  
@@ -90,7 +89,7 @@ PASSWORD = '<some strong password>';
     -- Save the result in column CardNumber_Encrypted.    
     UPDATE Sales.CreditCard  
     SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11')  
-        , CardNumber, 1, HashBytes('SHA1', CONVERT( varbinary  
+        , CardNumber, 1, HASHBYTES('SHA2_256', CONVERT( varbinary  
         , CreditCardID)));  
     GO  
   
@@ -108,24 +107,21 @@ PASSWORD = '<some strong password>';
     SELECT CardNumber, CardNumber_Encrypted   
         AS 'Encrypted card number', CONVERT(nvarchar,  
         DecryptByKey(CardNumber_Encrypted, 1 ,   
-        HashBytes('SHA1', CONVERT(varbinary, CreditCardID))))  
+        HASHBYTES('SHA2_256', CONVERT(varbinary, CreditCardID))))  
         AS 'Decrypted card number' FROM Sales.CreditCard;  
     GO  
     ```  
   
-### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
-  
+## <a name="encrypt-with-simple-symmetric-encryption"></a>単純な対称暗号化による暗号化  
+
 1. **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3. 次の例をコピーし、AdventureWorks のサンプル データベースに接続されているクエリ ウィンドウに貼り付けます。 **[実行]** をクリックします。  
   
     ```sql
-    USE AdventureWorks2012;  
-    GO  
-  
-    CREATE CERTIFICATE HumanResources037  
+     CREATE CERTIFICATE HumanResources037  
        WITH SUBJECT = 'Employee Social Security Numbers';  
     GO  
   

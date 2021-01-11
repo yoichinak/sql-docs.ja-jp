@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: availability-groups
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 82a8d9f4e787fd419e31e637775e33a4cf71f36d
-ms.sourcegitcommit: 54cd97a33f417432aa26b948b3fc4b71a5e9162b
+ms.openlocfilehash: c8f93191b689599a24ad960d316a02901de2e6e0
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94584864"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97643819"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "94584864"
   
  一時的な統計を作成して更新できるのは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のみです。 ただし、永続的な統計の場合と同じツールを使用すると、一時的な統計を削除したり、そのプロパティを監視したりできます。  
   
--   [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して一時的な統計を削除します。  
+-   [DROP STATISTICS](../../../t-sql/statements/drop-statistics-transact-sql.md) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して一時的な統計を削除します。  
   
 -   **sys.stats** カタログ ビューと **sys.stats_columns** カタログ ビューを使用して統計を監視します。 **sys_stats** には、どの統計が一時的または永続的なものかを示すための **is_temporary** 列が含まれています。  
   

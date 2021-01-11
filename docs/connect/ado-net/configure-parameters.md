@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a24241d3ef66739a85422397426278738987bf15
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428282"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771460"
 ---
 # <a name="configuring-parameters"></a>パラメーターの構成
 
@@ -31,7 +31,7 @@ ms.locfileid: "96428282"
 
 <xref:System.Data.Common.DbParameter> オブジェクトは、コンストラクターを使って作成できるほか、 <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> コレクションの `Add` メソッドを呼び出し、 <xref:System.Data.Common.DbParameterCollection> にオブジェクトを追加することによって作成することもできます。 `Add` メソッドは、コンストラクター引数または既存のパラメーター オブジェクトを入力として受け取ります。この点はデータ プロバイダーによっても異なります。
 
-## <a name="supplying-the-parameterdirection-property"></a>ParameterDirection プロパティの指定
+## <a name="supply-the-parameterdirection-property"></a>ParameterDirection プロパティを指定する
 
 パラメーターを追加する際は、入力パラメーターとは別に、パラメーターの <xref:System.Data.ParameterDirection> プロパティを指定する必要があります。 `ParameterDirection` で使用できる <xref:System.Data.ParameterDirection> の値を次の表に示します。
 
@@ -42,11 +42,11 @@ ms.locfileid: "96428282"
 |<xref:System.Data.ParameterDirection.Output>|このパラメーターは出力パラメーターです。|
 |<xref:System.Data.ParameterDirection.ReturnValue>|パラメーターは、ストアド プロシージャ、組み込み関数、ユーザー定義関数などの操作からの戻り値を表します。|
 
-## <a name="working-with-parameter-placeholders"></a>パラメーターのプレースホルダーの使用
+## <a name="work-with-parameter-placeholders"></a>パラメーターのプレースホルダーを操作する
 
 パラメーターのプレースホルダーの構文はデータ ソースに依存します。 Microsoft SqlClient Data Provider for SQL Server では、パラメーターおよびパラメーターのプレースホルダーの名前付け方法と指定方法が異なります。 SqlClient Data Provider では、`@`*parametername* 形式の名前付きパラメーターが使用されます。
 
-## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定
+## <a name="specify-parameter-data-types"></a>パラメーターのデータ型を指定する
 
 パラメーターのデータ型は、Microsoft SqlClient Data Provider for SQL Server に固有です。 型を指定すると、`Parameter` の値が Microsoft SqlClient Data Provider for SQL Server 型に変換されてから、データ ソースに値が渡されます。 `Parameter` オブジェクトの `DbType` プロパティを特定の `Parameter` に設定する一般的な方法で <xref:System.Data.DbType>の型を指定することもできます。
 
@@ -89,7 +89,7 @@ ms.locfileid: "96428282"
 > [!NOTE]
 > サーバーに NULL パラメーター値を送信する場合は、`null` (Visual Basic の場合は `Nothing`) ではなく、<xref:System.DBNull> を指定する必要があります。 システムの null 値は、値のない空オブジェクトです。 <xref:System.DBNull> は、null 値を表すために使用します。
 
-## <a name="deriving-parameter-information"></a>パラメーター情報の派生
+## <a name="derive-parameter-information"></a>パラメーター情報を派生させる
 
 `DbCommandBuilder` クラスを使用してストアド プロシージャからパラメーターを派生させることができます。 `SqlCommandBuilder` クラスには静的メソッド `DeriveParameters` が用意されています。これにより、ストアド プロシージャからのパラメーター情報を使用するコマンド オブジェクトのパラメーターのコレクションが自動的に設定されます。 `DeriveParameters` はコマンドの既存のパラメーター情報を上書きします。
 
@@ -123,4 +123,6 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 ## <a name="see-also"></a>関連項目
 
 - [コマンドとパラメーター](commands-parameters.md)
+- [DataAdapter と DataReader](dataadapters-datareaders.md)
 - [ADO.NET のデータ型のマッピング](data-type-mappings-ado-net.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

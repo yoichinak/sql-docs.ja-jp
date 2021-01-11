@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: f61b867b70825595a012b2167d2c63b13409a8e2
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442817"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771632"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 
@@ -88,13 +88,13 @@ SQL Server の名前付きインスタンスに接続するには、*server name
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> の `Type System Version` キーワードは、クライアント側での SQL Server 型の表現を指定します。 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> キーワードの詳細については、`Type System Version` のトピックを参照してください。
 
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンスへの接続とアタッチ
+## <a name="connect-and-attach-to-sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンスへの接続とアタッチ
 
 ユーザー インスタンスは、SQL Server Express の機能の 1 つです。 最小限の特権しか持たないローカル Windows アカウントで実行しているユーザーが、SQL Server データベースにアタッチできます。この場合、管理特権は不要です。 ユーザー インスタンスは、サービスとしてではなく、ユーザーの Windows 資格情報で実行されます。
 
 ユーザー インスタンスの使用について詳しくは、「[SQL Server Express ユーザー インスタンス](./sql/sql-server-express-user-instances.md)」をご覧ください。
 
-## <a name="using-trustservercertificate"></a>TrustServerCertificate の使用
+## <a name="use-trustservercertificate"></a>TrustServerCertificate の使用
 
 `TrustServerCertificate` キーワードは、有効な証明書を使用して SQL Server インスタンスに接続する場合にのみ使用できます。 `TrustServerCertificate` が `true` に設定されている場合は、トランスポート層で TLS/SSL を使用してチャネルを暗号化し、証明書チェーンで信頼性を検証する処理をバイパスします。
 
@@ -105,7 +105,7 @@ SQL Server の名前付きインスタンスに接続するには、*server name
 > [!NOTE]
 > `TrustServerCertificate` を `true` に設定して暗号化を有効にした場合、接続文字列で `Encrypt` を `false` に設定したとしても、サーバーで指定された暗号化レベルが使用されます。 それ以外の場合、接続は失敗します。
 
-### <a name="enabling-encryption"></a>暗号化の有効化
+### <a name="enable-encryption"></a>暗号化を有効にする
 
 サーバー証明書がプロビジョニングされていない場合、暗号化を有効にするには、SQL Server 構成マネージャーで **[プロトコルの暗号化を設定する]** オプションと **[サーバー証明書を信頼する]** オプションを設定する必要があります。 このように、検証可能なサーバー証明書がプロビジョニングされていない場合、暗号化には検証を伴わない自己署名入りのサーバー証明書が使用されます。
 
@@ -129,3 +129,4 @@ SQL Server で構成されたセキュリティのレベルを、アプリケー
 
 - [接続文字列](connection-strings.md)
 - [データ ソースへの接続](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

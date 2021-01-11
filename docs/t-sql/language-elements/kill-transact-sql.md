@@ -35,12 +35,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a42d01bead1a5d3882dcce0df67cda7785724b5e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 13afe3aa357bfd968874ae1f89bf0720c39fe49c
+ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466153"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97644458"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,8 @@ KILL は通常の接続を終了します。これにより、指定されたセ
 ```syntaxsql  
 -- Syntax for SQL Server  
   
-KILL { session ID | UOW } [ WITH STATUSONLY ]   
+KILL { session ID [ WITH STATUSONLY ] | UOW [ WITH STATUSONLY | COMMIT | ROLLBACK ] }    
+
 ```  
   
 ```syntaxsql  
@@ -69,26 +70,37 @@ KILL 'session_id'
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
-_セッション ID_  
-終了するプロセスのセッション ID です。 _セッション ID_ は、接続されたときに各ユーザー接続に割り当てられる一意の整数 (**int** 型) です。 セッション ID の値は、接続の間、接続に関連付けられます。 接続が終了すると、この整数値は解放され、新しい接続に再度割り当てることができます。  
+
+_session ID_   
+終了するプロセスのセッション ID です。 `session_id` は、接続されたときに各ユーザー接続に割り当てられる一意の整数 (**int** 型) です。 セッション ID の値は、接続の間、接続に関連付けられます。 接続が終了すると、この整数値は解放され、新しい接続に再度割り当てることができます。  
+
 次のクエリを使用して、強制終了する `session_id` を識別できます。  
+
  ```sql  
  SELECT conn.session_id, host_name, program_name,
      nt_domain, login_name, connect_time, last_request_end_time 
 FROM sys.dm_exec_sessions AS sess
 JOIN sys.dm_exec_connections AS conn
     ON sess.session_id = conn.session_id;
+
 ```  
+
+
+_UOW_   
+分散トランザクションの作業単位 ID (UOW) を指定します。 _UOW_ は、`sys.dm_tran_locks` 動的管理ビューの request_owner_guid 列から取得できる GUID です。 _UOW_ は、エラー ログや MS DTC モニターからも取得できます。 分散トランザクションの監視の詳細については、MS DTC のドキュメントを参照してください。  
   
-_UOW_  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
-  
-分散トランザクションの作業単位 ID (UOW) を指定します。 _UOW_ は、sys.dm_tran_locks 動的管理ビューの request_owner_guid column から取得できる GUID です。 _UOW_ は、エラー ログや MS DTC モニターからも取得できます。 分散トランザクションの監視の詳細については、MS DTC のドキュメントを参照してください。  
-  
-孤立した分散トランザクションを終了するには、KILL _UOW_ を使用します。 これらのトランザクションは、実際のセッション ID には関連付けられていませんが、人為的にセッション ID = '-2' に関連付けられています。 sys.dm_tran_locks、sys.dm_exec_sessions、または sys.dm_exec_requests  のいずれかの動的管理ビューのセッション ID 列を照会すれば、孤立したトランザクションをこのセッション ID で容易に識別できます。  
-  
-WITH STATUSONLY  
-指定した _セッション ID_ または _UOW_ の、前の KILL ステートメントに従って実行されているロールバックの進行状況レポートを生成します。 KILL WITH STATUSONLY では、_セッション ID_ または _UOW_ の終了もロールバックも実行されません。 このコマンドは、ロールバックの現在の進行状況のみを表示します。  
+孤立した分散トランザクションを終了するには、KILL \<UOW> を使用します。 これらのトランザクションは、実際のセッション ID には関連付けられていませんが、人為的にセッション ID = '-2' に関連付けられています。 `sys.dm_tran_locks`、` sys.dm_exec_sessions`、`sys.dm_exec_requests` のいずれかの動的管理ビューのセッション ID 列を照会すると、孤立したトランザクションをこのセッション ID で容易に識別できます。  
+
+_WITH STATUSONLY_   
+指定した _UOW_ または `session_id` の、前の KILL ステートメントに従って実行されているロールバックの進行状況レポートを生成するために使用されます。 KILL WITH STATUSONLY では、UOW および session ID の終了もロールバックも実行されません。 このコマンドは、ロールバックの現在の進行状況のみを表示します。
+
+_WITH COMMIT_   
+コミットを伴う未解決の分散トランザクションを中止するために使用されます。 分散トランザクションにのみ適用されます。このオプションを使用するには、_UOW_ を指定する必要があります。  詳細については、[分散トランザクション](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions)に関するセクションを参照してください。
+
+_WITH ROLLBACK_   
+ロールバックを伴う未解決の分散トランザクションを中止するために使用されます。 分散トランザクションにのみ適用されます。このオプションを使用するには、_UOW_ を指定する必要があります。  詳細については、[分散トランザクション](../../database-engine/availability-groups/windows/configure-availability-group-for-distributed-transactions.md#manage-unresolved-transactions)に関するセクションを参照してください。
+
+
   
 ## <a name="remarks"></a>解説  
 KILL は、通常は、他の重要なプロセスをロックを使用してブロックしているプロセスを終了するために使用されます。 KILL は、必要なシステム リソースを使用しているクエリを実行しているプロセスを停止するためにも使用できます。 システム プロセスと拡張ストアド プロシージャを実行しているプロセスは終了できません。  

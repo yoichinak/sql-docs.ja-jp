@@ -2,7 +2,7 @@
 title: クエリ ストアを使用する際のベスト プラクティス | Microsoft Docs
 description: 最新の SQL Server Management Studio や Query Performance Insight を使用するなど、ワークロードに SQL Server クエリ ストアを使用する際のベスト プラクティスについて説明します。
 ms.custom: ''
-ms.date: 09/02/2020
+ms.date: 12/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: performance
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d71da2a6d0bcc0cb43529331116acdbb4a6d8136
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
+ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97418724"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765211"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -124,7 +124,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
 ```
 
-**サイズ ベースのクリーンアップ モード**:クエリ ストアのデータ サイズが制限に達したときに、データの自動クリーンアップを行うかどうかを指定します。 クエリ ストアが常に読み取り/書き込みモードで実行され、最新データが収集されるようにするには、サイズ ベースのクリーンアップを有効にします。
+**サイズ ベースのクリーンアップ モード**:クエリ ストアのデータ サイズが制限に達したときに、データの自動クリーンアップを行うかどうかを指定します。 クエリ ストアが常に読み取り/書き込みモードで実行され、最新データが収集されるようにするには、サイズ ベースのクリーンアップを有効にします。  負荷の高いワークロード下では、クエリ ストアのクリーンアップによってデータ サイズが常にその制限以下に維持されるという保証はないのでご注意ください。 自動データ クリーンアップが遅延し、(一時的に) 読み取り専用モードに切り替わる可能性があります。
 
 ```sql
 ALTER DATABASE [QueryStoreDB]

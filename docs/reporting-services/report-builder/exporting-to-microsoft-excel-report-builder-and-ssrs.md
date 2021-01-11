@@ -1,7 +1,7 @@
 ---
 title: Microsoft Excel へのエクスポート (レポート ビルダー) | Microsoft Docs
 description: レポートビルダーの Excel 表示拡張機能では、ページ分割されたレポートを、Microsoft Excel で使用する Office Open XML 形式として表示します。
-ms.date: 01/09/2017
+ms.date: 12/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 865caa0938aa89feacbb5e330eb38f292039446c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4e8b43d3e9e772b06961602bf2d8bd69aa51216e
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342890"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878855"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートが [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 形式 (.xlsx) で表示されます。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
@@ -26,7 +26,7 @@ ms.locfileid: "80342890"
  Excel へのエクスポート方法については、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  **String**型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
+>  **String** 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "80342890"
   
 -   他のアイテムの表示と非表示を制御するレポート アイテムが、前後の行または列に存在しない場合、アウトラインも無効化されます。  
   
- Excel の制限の詳細については、「 [Excel の仕様と制限](https://support.office.com/article/Excel-specifications-and-limits-CA36E2DC-1F09-4620-B726-67C00B05040F)」を参照してください。  
+ Excel の制限の詳細については、「 [Excel の仕様と制限](https://support.microsoft.com/en-us/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)」を参照してください。  
   
 ### <a name="sizes-of-excel-2003-xls-files"></a>Excel 2003 (.xls) ファイルのサイズ  
   
@@ -220,7 +220,7 @@ ms.locfileid: "80342890"
  Excel のヘッダー セクションとフッター セクションでサポートされる最大文字数は 256 文字 (マークアップを含む) です。 この制限を超えた場合、Excel レンダラーは、文字数の合計を減らすために、ヘッダー文字列またはフッター文字列の終端位置を起点として、マークアップ文字を削除します。 マークアップ文字をすべて削除しても最大文字数を超えていた場合、文字列が右側から切り詰められます。  
   
 ### <a name="simplepageheader-settings"></a>SimplePageHeader の設定  
- 既定では、デバイス情報の SimplePageHeaders 設定は **False**に設定されます。つまり、ページ ヘッダーは、レポートの行として Excel ワークシート領域にレンダリングされます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。 **[印刷タイトル]** オプションが選択されている場合、すべてのワークシート ページについて、これらのヘッダーが印刷されるように自動的に設定されます。  
+ 既定では、デバイス情報の SimplePageHeaders 設定は **False** に設定されます。つまり、ページ ヘッダーは、レポートの行として Excel ワークシート領域にレンダリングされます。 ヘッダーが格納されるワークシートの行はロックされます。 Excel のウィンドウ枠は固定することも、固定を解除することもできます。 **[印刷タイトル]** オプションが選択されている場合、すべてのワークシート ページについて、これらのヘッダーが印刷されるように自動的に設定されます。  
   
  Excel の [ページ レイアウト] タブの **[印刷タイトル]** オプションが選択されている場合、ページ ヘッダーは、ドキュメント マップの表紙を除く、ブック内のすべてのワークシートの最上部に表示されます。 [レポート ヘッダーのプロパティ] ダイアログ ボックスまたは [レポート フッターのプロパティ] ダイアログ ボックスで、 **[最初のページに印刷する]** オプションまたは **[最後のページに印刷する]** オプションが選択されていなかった場合、最初または最後のページにはヘッダーが追加されません。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "80342890"
   
  ドキュメント マップのアウトラインは、折りたたみ可能な Excel アウトラインとしてレンダリングされます。 アウトライン構造は、ドキュメント マップの入れ子構造と一致します。 アウトラインの展開と折りたたみは、第 2 レベルからとなります。  
   
- マップのルート ノードはレポート名 \<*reportname*>.rdl で、これを対話的に操作することはできません。 ドキュメント マップ リンクのフォントは Arial (10 ポイント) です。  
+ マップのルート ノードはレポート名 (\<*reportname*>.rdl) で、これを対話的に操作することはできません。 ドキュメント マップ リンクのフォントは Arial (10 ポイント) です。  
   
 ### <a name="drillthrough-links"></a>ドリルスルー リンク  
  テキスト ボックス内にあるドリルスルー リンクは、テキストが表示されるセルに Excel ハイパーリンクとしてレンダリングされます。 画像やグラフのドリルスルー リンクは、Excel ハイパーリンクとして、画像上にレンダリングされます。 クリックすると、クライアントの既定のブラウザーが起動し、対象となる HTML が表示されます。  

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 67b805e4ec95047b843e6b72ba10dc8fee4688d5
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419823"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771448"
 ---
 # <a name="connection-events"></a>接続イベント
 
@@ -32,7 +32,7 @@ Microsoft SqlClient Data Provider for SQL Server には、データ ソースか
 |**InfoMessage**|データ ソースから情報メッセージが返されたときに発生します。 情報メッセージはデータ ソースからのメッセージであり、例外はスローされません。|  
 |**StateChange**|**Connection** の状態が変化したときに発生します。|  
 
-## <a name="working-with-the-infomessage-event"></a>InfoMessage イベントの使用
+## <a name="work-with-the-infomessage-event"></a>InfoMessage イベントを操作する
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳しくは、「[データベース エンジン エラーの重大度](/sql/relational-databases/errors-events/database-engine-error-severities)」をご覧ください。
 
@@ -44,7 +44,7 @@ Microsoft SqlClient Data Provider for SQL Server には、データ ソースか
 
 [!code-csharp[SqlConnection_._InfoMessage#1](~/../sqlclient/doc/samples/SqlConnection_InfoMessage_StateChange.cs#1)]
 
-## <a name="handling-errors-as-infomessages"></a>InfoMessages としてのエラー処理
+## <a name="handle-errors-as-infomessages"></a>エラーを InfoMessage として処理する
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントは通常、サーバーが情報メッセージまたは警告メッセージを送信した場合に限り発生します。 ただし、実際にエラーが発生した場合は、サーバーの操作を開始した **ExecuteNonQuery** メソッドまたは **ExecuteReader** メソッドの実行は停止され、例外がスローされます。
 
@@ -53,7 +53,7 @@ Microsoft SqlClient Data Provider for SQL Server には、データ ソースか
 > [!NOTE]
 > 重大度レベルが 17 以上のエラーが発生すると、サーバーのコマンド処理が停止します。このエラーは、例外として処理する必要があります。 この場合、<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントによるエラー処理の方法にかかわらず例外がスローされます。
 
-## <a name="working-with-the-statechange-event"></a>StateChange イベントの使用
+## <a name="work-with-the-statechange-event"></a>StateChange イベントを操作する
 
 **StateChange** イベントは、**Connection** の状態が変化したときに発生します。 **StateChange** イベントは、**OriginalState** プロパティと **CurrentState** プロパティを使用して、**Connection** の状態の変化を判別できる <xref:System.Data.StateChangeEventArgs> を受け取ります。 **OriginalState** プロパティは、**Connection** の状態が変更される前の状態を示す <xref:System.Data.ConnectionState> 列挙型です。 **CurrentState** は、**Connection** の状態が変更された後の状態を示す <xref:System.Data.ConnectionState> 列挙型です。
 
@@ -64,3 +64,4 @@ Microsoft SqlClient Data Provider for SQL Server には、データ ソースか
 ## <a name="see-also"></a>関連項目
 
 - [データ ソースへの接続](connecting-to-data-source.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -1,6 +1,6 @@
 ---
 title: 暗号化された接続を有効にする | Microsoft Docs
-ms.custom: contperfq4
+ms.custom: contperf-fy20q4
 ms.date: 08/29/2019
 ms.prod: sql
 ms.prod_service: security
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670972"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878970"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -64,14 +64,14 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 ## <a name="about-certificates"></a><a name="about"></a>証明書について
 
- **サーバー認証**用の証明書が発行されている必要があります。 証明書の名前は、コンピューターの完全修飾ドメイン名 (FQDN) である必要があります。  
+ **サーバー認証** 用の証明書が発行されている必要があります。 証明書の名前は、コンピューターの完全修飾ドメイン名 (FQDN) である必要があります。  
   
  証明書は、コンピューター上のユーザーにローカルに格納されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用する証明書をインストールするには、ローカル管理者特権を持つアカウントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを実行している必要があります。
 
  クライアントは、サーバーが使用する証明書の所有権を検証できる必要があります。 サーバー証明書に署名した証明機関の公開キー証明書をクライアントが持っている場合は、それ以上の構成は必要ありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows には、多くの証明機関の公開キー証明書が含まれています。 サーバー証明書に署名した公的または私的な証明機関に対する公開キー証明書をクライアントが持っていない場合は、サーバー証明書に署名した証明機関の公開キー証明書をインストールする必要があります。  
   
 > [!NOTE]  
-> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、***test1.\*\<your company>\*.com*** および ***test2.\*\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、***virtsql*** という仮想サーバーがあるとします。この場合、***virtsql.\*\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
+> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、 **_test1.\_\<your company>\*.com*** および **_test2.\_\<your company>\*.com*** というノードを持つ 2 ノードのクラスターと、**_virtsql_*_ という仮想サーバーがあるとします。この場合、_ *_virtsql.\_\<your company>\*.com*** の証明書を両方のノードにインストールする必要があります。 **[SQL Server ネットワークの構成]** の **[virtsql のプロトコル]** プロパティ ボックスの **[強制的に暗号化]** オプションを **[はい]** に設定します。
 
 > [!NOTE]
 > Azure VM 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への Azure Search インデクサーからの暗号化接続を作成するには、「[Azure VM での Azure Search インデクサーから SQL Server への接続の構成](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers)」を参照してください。 
@@ -138,7 +138,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 1. **[証明書]** スナップインで、 **[証明書]**  /  **[個人]** フォルダーで証明書を探し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[エクスポート]** をクリックします。  
   
-2. **証明書のエクスポート ウィザード**を実行して、証明書ファイルを使いやすい場所に格納します。  
+2. **証明書のエクスポート ウィザード** を実行して、証明書ファイルを使いやすい場所に格納します。  
   
 ## <a name="configure-server"></a>サーバーの構成
 
@@ -147,7 +147,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で暗号化を強制するために使用される証明書の読み取りアクセス許可が必要です。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動できなくなる可能性があります。
   
-1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックして、 **[プロパティ]** を選択します。  
+1. **SQL Server 構成マネージャー** で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックして、 **[プロパティ]** を選択します。  
   
 2. **[ _\<instance name>_ のプロトコル]** の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
   

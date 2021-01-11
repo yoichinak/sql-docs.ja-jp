@@ -1,7 +1,7 @@
 ---
 title: SqlClient ドライバーのサポート ライフサイクル
 description: 製品サポート ライフサイクル情報を含むページ。
-ms.date: 11/19/2020
+ms.date: 01/04/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: eef9e81c94c930b9f00689b41339d54a0f0302be
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 200e600448f1f93cca3d566be10d6065ffd537e7
+ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442717"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97878585"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient ドライバーのサポート ライフサイクル
 
@@ -36,7 +36,7 @@ Microsoft.Data.SqlClient ライブラリは、すべてのリリースで最新�
 
 | Version | 公式リリース日 | 最新の修正プログラム バージョン | 修正プログラム リリース日 | サポート レベル  | サポートの終了 |
 | -- | -- | -- | -- | -- | -- |
-| 2.1 | 2020 年 11 月 19 日 | 2.1.0 | 2020 年 11 月 19 日 | Current | |
+| 2.1 | 2020 年 11 月 19 日 | 2.1.1 | 2020 年 12 月 18 日 | Current | |
 | 2.0 | 2020 年 6 月 16 日 | 2.0.1 | 2020 年 8 月 25 日 | Current | 2021 年 2 月 19 日 |
 | 1.1 | 2019 年 11 月 20 日 | 1.1.3 | 2020 年 5 月 15 日 | LTS | 2022 年 11 月 21 日 |
 

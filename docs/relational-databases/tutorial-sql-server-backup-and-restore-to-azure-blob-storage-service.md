@@ -2,27 +2,35 @@
 title: クイック スタート:Azure Blob Storage サービスへのバックアップと復元
 description: 'クイック スタート: Azure Blob Storage サービスにバックアップを書き込み、このサービスから復元する方法について説明します。 Azure Blob コンテナーを作成し、バックアップを書き込み、復元します。'
 ms.custom: seo-dt-2019
-ms.date: 04/09/2018
+ms.date: 12/21/2020
 ms.prod: sql
-ms.prod_service: database-engine
+ms.technology: backup-restore
+ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.technology: performance
 ms.topic: quickstart
-ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-author: WilliamDAssafMSFT
-ms.author: wiassaf
-ms.openlocfilehash: faf3ccecd17ece2b66371d81a68589f184fe48a0
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: d27f53f80c8f987106f90816a4566339d777e6f6
+ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506409"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97736900"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート:Azure Blob Storage サービスへの SQL のバックアップと復元
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdbmi](../includes/applies-to-version/sqlserver2016-asdbmi.md)]
+
 このクイックスタートでは、Azure Blob Storage サービスへのバックアップの書き込みと、Azure Blob Storage サービスからの復元を実行する方法について学習できます。  この記事では、Azure BLOB コンテナーを作成し、Blob service にバックアップを書き込んだ後、復元を実行する方法について説明します。
+
+> [!NOTE]
+> SQL Server 2012 SP1 CU2 には、Azure Blob Storage へのバックアップのサポートが導入されています。 SQL Server 2014 以前では、このクイックスタートの記事で説明されている Shared Access Signature (SAS) はサポートされていません。
+>
+> SQL Server 2014 以前の場合は、[チュートリアル:チュートリアル: Microsoft Azure Blob Storage への SQL Server 2014 のバックアップと復元](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url)。
+>
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>前提条件
+
 このクイックスタートを完了するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元の概念および T-SQL 構文についての知識が必要です。  Azure ストレージ アカウント、SQL Server Management Studio (SSMS)、および SQL Server または Azure SQL Managed Instance が実行されているサーバーへのアクセスが必要です。 また、BACKUP コマンドと RESTORE コマンドの実行に使用するアカウントは、**alter any credential** 権限を持つ **db_backup operator** データベース ロールに属している必要があります。 
 
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
@@ -214,12 +222,12 @@ GO
 
    ![ファイルの復元の選択](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/select-restore-file.png)
 
-1. **[OK]** を選択すると **[バックアップ デバイスの選択]** ダイアログ ボックスが閉じます。 
-1. **[OK]** を選択してデータベースを復元します。 
+1. **[OK]** を選択すると **[バックアップ デバイスの選択]** ダイアログ ボックスが閉じます。
+1. **[OK]** を選択してデータベースを復元します。
 
 # <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
-Azure Blob Storage からオンプレミスのデータベースを復元するには、独自のストレージ アカウントを使用するように次の Transact-SQL コマンドを変更した後、新しいクエリ ウィンドウで実行します。 
+Azure Blob Storage からオンプレミスのデータベースを復元するには、独自のストレージ アカウントを使用するように次の Transact-SQL コマンドを変更した後、新しいクエリ ウィンドウで実行します。
 
 ```sql
 USE [master]

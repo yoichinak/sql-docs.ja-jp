@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 091f7c2736c240951beb0f434fdcd2efb39a9b59
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: d738650db9dbb7b0b2ed3f9411945173f73f748f
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96428250"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771321"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder を使用したコマンドの生成
 
@@ -39,9 +39,9 @@ ms.locfileid: "96428250"
 
 `DataAdapter` との関連付けが行われていて、<xref:System.Data.Common.DbCommandBuilder> の `InsertCommand`、`UpdateCommand`、`DeleteCommand` の各プロパティが null 参照である場合、`DataAdapter` は自動的にこれらのプロパティを生成します。 プロパティに対して既に `Command` が存在する場合は、既存の `Command` が使用されます。
 
-複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 このインスタンスでは、コマンドを自動的に生成するために <xref:System.Data.Common.DbCommandBuilder> を使用することはできません。コマンドは明示的に指定する必要があります。
+複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 このインスタンスでは、コマンドを自動的に生成するために <xref:System.Data.Common.DbCommandBuilder> を使用することはできません。コマンドは明示的に指定する必要があります。 `DataSet` に対する更新を元のデータ ソースに反映させるコマンドを明示的に設定する方法については、「[DataAdapter を使用してデータ ソースを更新する](update-data-sources-with-dataadapters.md)」を参照してください。
 
-出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 このインスタンスでは、コマンドを明示的に指定する必要があります。
+出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 このインスタンスでは、コマンドを明示的に指定する必要があります。 自動的に生成された ID フィールドを挿入行の列に割り当てる例については、「[ID 値または autonumber 値の取得](retrieve-identity-or-autonumber-values.md)」を参照してください。
 
 ## <a name="rules-for-automatically-generated-commands"></a>自動生成されたコマンドの規則
 
@@ -74,13 +74,13 @@ UPDATE および DELETE ステートメントに対するコマンドの自動�
 
 列名またはテーブル名にスペース、ピリオド (.)、疑問符 (?)、引用符、その他の英数字以外の特殊文字が含まれていると、それらの文字が角かっこで囲まれていても、コマンドの自動生成ロジックはエラーになる場合があります。 プロバイダーによって異なりますが、QuotePrefix パラメーターと QuoteSuffix パラメーターを設定すると、生成ロジックではスペースを処理できる場合があっても、特殊文字をエスケープできません。 *catalog.schema.table* の形式をとる、テーブルの完全修飾名はサポートされています。
 
-## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>CommandBuilder を使用して SQL ステートメントを自動的に生成する
+## <a name="use-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>CommandBuilder を使用して SQL ステートメントを自動的に生成する
 
 `DataAdapter` に対して SQL ステートメントを自動的に生成するには、まず `SelectCommand` の `DataAdapter` プロパティを設定します。次に、`CommandBuilder` オブジェクトを作成し、`DataAdapter` で SQL ステートメントを自動的に生成する `CommandBuilder` を引数として指定します。
 
 [!code-csharp[SqlCommandBuilder_Create#1](~/../sqlclient/doc/samples/SqlCommandBuilder_Create.cs#1)]
 
-## <a name="modifying-the-selectcommand"></a>SelectCommand の変更
+## <a name="modify-the-selectcommand"></a>SelectCommand を変更する
 
 INSERT、UPDATE、または DELETE の各コマンドを自動生成した後に `CommandText` の `SelectCommand` を変更すると、例外が発生することがあります。 変更された `SelectCommand.CommandText` に、INSERT、UPDATE、または DELETE の各コマンドの自動生成時に使用した `SelectCommand.CommandText` と矛盾するスキーマ情報が含まれている場合、後続の `DataAdapter.Update` メソッド呼び出しでアクセスする列は `SelectCommand` によって参照された現在のテーブルには存在しない可能性があり、例外が発生します。
 
@@ -100,3 +100,4 @@ INSERT、UPDATE、または DELETE の各コマンドを自動生成した後に
 
 - [コマンドとパラメーター](commands-parameters.md)
 - [コマンドの実行](execute-command.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

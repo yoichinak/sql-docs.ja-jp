@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c07ce738ea3364cba27cd2872894ff4701f41dfe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5dd2c6c6f33f9a115196d9a2afc3ca700b3a4631
+ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476683"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97684207"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,15 +110,95 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>引数
- PARTITION BY  
+
+ウィンドウ関数の `OVER` 句には、次の関数が含まれる場合があります。
+- [PARTITION BY](#partition-by)。クエリ結果セットをパーティションに分割します。
+- [ORDER BY](#order-by)。結果セットの各パーティション内の行の論理的な順序を定義します。 
+- [ROWS/RANGE](#rows-or-range)。パーティション内の開始点と終了点を指定することで、パーティション内の行をさらに制限します。 これには `ORDER BY` 引数が必要です。また、`ORDER BY` 引数が指定されている場合、既定値はパーティションの先頭から現在の要素までです。
+
+引数を指定しない場合、そのウィンドウ関数は結果セット全体に適用されます。
+```sql
+select 
+      object_id
+    , [min] = min(object_id) over()
+    , [max] = max(object_id) over()
+from sys.objects
+```
+ 
+|object_id | 分 | max |
+|---|---|---|
+| 3 | 3 | 2139154666 |
+| 5 | 3 | 2139154666 |
+| ... | ... | ... |
+| 2123154609 |  3 | 2139154666 |
+| 2139154666 |  3 | 2139154666 |
+
+### <a name="partition-by"></a>PARTITION BY  
  クエリ結果セットをパーティションに分割します。 ウィンドウ関数は各パーティションに対して個別に適用され、各パーティションで計算が再開されます。  
+
+```sqlsyntax
+PARTITION BY *value_expression* 
+```
+ 
+ PARTITION BY を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのパーティションとして扱います。
+`ORDER BY` 句を指定しない場合、関数はそのパーティション内のすべての行に適用されます。
   
- *value_expression*  
- 行セットをパーティションに分割するときに使用する列を指定します。 *value_expression* で参照できるのは FROM 句で取得した列だけです。 *value_expression* は、選択リストの式または別名を参照できません。 *value_expression* には、列式、スカラー サブクエリ、スカラー関数、またはユーザー定義変数を指定できます。  
+#### <a name="partition-by-value_expression"></a>PARTITION BY *value_expression*  
+ 行セットをパーティションに分割するときに使用する列を指定します。 *value_expression* で参照できるのは FROM 句で取得した列だけです。 *value_expression* は、選択リストの式または別名を参照できません。 *value_expression* には、列式、スカラー サブクエリ、スカラー関数、またはユーザー定義変数を指定できます。 
+ 
+ ```sql
+ select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type)
+    , [max] = max(object_id) over(partition by type)
+from sys.objects
+```
+
+|object_id | type | 分 | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 711673583 |
+| 631673298 | PK    | 68195293  | 711673583 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 98 |
+| 5 | S |   3   | 98 |
+| ... | ... | ... |
+| 98    | S |   3   | 98 |
+| ... | ... | ... |
   
- \<ORDER BY clause>  
- 結果セットの各パーティション内の行の論理的な順序を定義します。 つまり、ウィンドウ関数の計算が実行される論理的な順序を指定します。  
-  
+### <a name="order-by"></a>ORDER BY  
+
+```sqlsyntax
+ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]  
+```
+
+ 結果セットの各パーティション内の行の論理的な順序を定義します。 つまり、ウィンドウ関数の計算が実行される論理的な順序を指定します。 
+ - これが指定されていない場合、既定の順序は `ASC` であり、ウィンドウ関数ではパーティション内のすべての行を使用します。
+ - これが指定されており、かつ ROWS/RANGE が指定されていない場合、省略可能な ROWS/RANGE の指定を受け入れることができる関数 (`min` や `max`など) によって、既定の `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` がウィンドウ フレームの既定値として使用されます。 
+ 
+```sql
+select 
+      object_id, type
+    , [min] = min(object_id) over(partition by type order by object_id)
+    , [max] = max(object_id) over(partition by type order by object_id)
+from sys.objects
+```
+
+|object_id | type | 分 | max |
+|---|---|---|---|
+| 68195293  | PK    | 68195293  | 68195293 |
+| 631673298 | PK    | 68195293  | 631673298 |
+| 711673583 | PK    | 68195293  | 711673583 |
+| ... | ... | ... |
+| 3 | S | 3 | 3 |
+| 5 | S |   3 | 5 |
+| 6 | S |   3 | 6 |
+| ... | ... | ... |
+| 97    | S |   3 | 97 |
+| 98    | S |   3 | 98 |
+| ... | ... | ... |
+
+
  *order_by_expression*  
  並べ替えに使用する列または式を指定します。 *order_by_expression* で参照できるのは FROM 句で取得した列だけです。 整数を指定して列の名前または別名を表すことはできません。  
   
@@ -128,17 +208,40 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  **ASC** | DESC  
  指定した列の値を昇順と降順のどちらで並べ替えるかを指定します。 ASC が既定の並べ替え順序です。 NULL 値は最小値として扱われます。  
   
- ROWS | RANGE  
+### <a name="rows-or-range"></a>ROWS または RANGE  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  パーティション内の開始点と終了点を指定することで、パーティション内の行をさらに制限します。 これは、論理アソシエーションまたは物理アソシエーションによって現在の行を基準に行の範囲を指定することで行います。 物理アソシエーションは ROWS 句を使用することで実現されます。  
   
  ROWS 句では、現在行の前または後にある固定数の行を指定することにより、パーティション内の行が限定されます。 または、RANGE 句は、現在行の値を基準とする値の範囲を指定することにより、パーティション内の行を論理的に限定します。 前後の行は、ORDER BY 句での順序に基づいて定義されます。 ウィンドウ フレーム "RANGE ...CURRENT ROW ..." には、ORDER BY 式に現在行と同じ値を持つすべての行が含まれます。 たとえば、ROWS BETWEEN 2 PRECEDING AND CURRENT ROW は、関数の操作対象である行のウィンドウが、現在行の 2 行前の行から現在行までの 3 行 (現在行を含みます) であることを意味します。  
+ 
+```sql
+select
+      object_id
+    , [preceding]   = count(*) over(order by object_id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW )
+    , [central] = count(*) over(order by object_id ROWS BETWEEN 2 PRECEDING AND 2 FOLLOWING )
+    , [following]   = count(*) over(order by object_id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
+from sys.objects
+order by object_id asc
+```
+
+|object_id | preceding | central | following |
+|---|---|---|---|
+| 3 | 1 | 3 | 156 |
+| 5 | 2 | 4 | 155 |
+| 6 | 3 | 5 | 154 |
+| 7 | 4 | 5 | 153 |
+| 8 | 5 | 5 | 152 |
+| ...   | ...   | ...   | ... |
+| 2112726579    | 153   | 5 | 4 |
+| 2119678599    | 154   | 5 | 3 |
+| 2123154609    | 155   | 4 | 2 |
+| 2139154666    | 156   | 3 | 1 | 
   
 > [!NOTE]  
 >  ROWS または RANGE を使用する場合は、ORDER BY 句を指定する必要があります。 ORDER BY に複数の順序式が含まれる場合、ROW FOR RANGE では、現在行を決定するときに ORDER BY リスト内のすべての列が考慮されます。  
   
- UNBOUNDED PRECEDING  
+#### <a name="unbounded-preceding"></a>UNBOUNDED PRECEDING  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  ウィンドウがパーティションの最初の行から開始することを指定します。 UNBOUNDED PRECEDING はウィンドウの開始位置としてのみ指定できます。  
@@ -146,17 +249,20 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<unsigned value specification> PRECEDING  
  \<unsigned value specification> は、現在行より前にある行または値の数を示します。 RANGE に対してはこの指定を使用できません。  
   
- CURRENT ROW  
+#### <a name="current-row"></a>CURRENT ROW  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  ウィンドウが現在の行 (ROWS の場合) または現在の値 (RANGE の場合) で開始または終了することを指定します。 CURRENT ROW は開始位置としても終了位置としても指定できます。  
   
- BETWEEN \<window frame bound > AND \<window frame bound >  
+#### <a name="between-and"></a>BETWEEN AND  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
+```sqlsyntax
+BETWEEN <window frame bound > AND <window frame bound >  
+```
  ROWS または RANGE で使用し、ウィンドウの下限 (開始) と上限 (終了) の境界位置を指定します。 前の \<window frame bound> は境界の開始位置を定義し、後の \<window frame bound> は境界の終了位置を定義します。 上限を下限より小さくすることはできません。  
   
- UNBOUNDED FOLLOWING  
+#### <a name="unbounded-following"></a>UNBOUNDED FOLLOWING  
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  ウィンドウがパーティションの最後の行で終了することを指定します。 UNBOUNDED FOLLOWING はウィンドウの終了位置としてのみ指定できます。 たとえば、RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING では、現在行から開始してパーティションの最後の行で終了するウィンドウが定義されます。  

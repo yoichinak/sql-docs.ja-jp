@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 0be62b3c2a63f7b25889e25f88969aa5aaa9b50e
-ms.sourcegitcommit: c127c0752e84cccd38a7e23ac74c0362a40f952e
+ms.openlocfilehash: 6f2feb876d0f232f4d7951de8ee1cc84587e6486
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772234"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771375"
 ---
 # <a name="update-data-sources-with-dataadapters"></a>DataAdapter を使用してデータ ソースを更新する
 
@@ -75,7 +75,7 @@ Command パラメーターを使用して、`DataSet` 内の各変更行に対�
 
 ## <a name="autoincrement-columns"></a>AutoIncrement 列
 
-データ ソースから取得したテーブルに自動インクリメント列がある場合、自動インクリメント値をストアド プロシージャの出力パラメーターとして取得してそれをテーブルの列に割り当てるか、ストアド プロシージャまたは SQL ステートメントによって返された結果セットの最初の行の自動インクリメント値を取得するか、または `DataSet` の `RowUpdated` イベントを使用して追加の SELECT コマンドを実行することによって、`DataAdapter` の列に値を格納できます。
+データ ソースから取得したテーブルに自動インクリメント列がある場合、自動インクリメント値をストアド プロシージャの出力パラメーターとして取得してそれをテーブルの列に割り当てるか、ストアド プロシージャまたは SQL ステートメントによって返された結果セットの最初の行の自動インクリメント値を取得するか、または `DataSet` の `RowUpdated` イベントを使用して追加の SELECT コマンドを実行することによって、`DataAdapter` の列に値を格納できます。 詳細と例については、「[ID 値または autonumber 値の取得](retrieve-identity-or-autonumber-values.md)」を参照してください。
 
 ## <a name="ordering-of-inserts-updates-and-deletes"></a>挿入、更新、削除の順序
 
@@ -172,4 +172,5 @@ GO
 ## <a name="see-also"></a>関連項目
 
 - [DataAdapter と DataReader](dataadapters-datareaders.md)
+- [ID 値または autonumber 値の取得](retrieve-identity-or-autonumber-values.md)
 - [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

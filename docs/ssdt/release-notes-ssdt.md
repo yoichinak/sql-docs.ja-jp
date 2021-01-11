@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: c59e142ec924a573e127d9caa0cd7d6ac9bf9e8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a380eabba4a20a65fd291b938d270a440f66d754
+ms.sourcegitcommit: 44eebb659f9b226c08aea6c31a909b22ad4fec60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440498"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860605"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1597nbsp-ssdt-for-vs-2017"></a>15.9.7、VS 2017 用 &nbsp; SSDT
+
+_リリース済み:_ &nbsp; 2021 年 1 月 5 日  
+_ビルド番号:_ &nbsp; 14.0.16228.0  
+_Visual Studio 2017 用 SSDT。_
+
+### <a name="whats-new"></a>新機能
+
+| New Item | 詳細 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | IR 作成ウィザードの SSISDB の作成をオプションにします。 |
+| Integration Services (SSIS) | 異なるサブスクリプションの名前が同じである場合に、IR 作成ウィザードおよび Azure 対応プロジェクト ウィザードで Azure サブスクリプションのコンボ ボックス項目が重複するという問題を修正しました。 |
+| Integration Services (SSIS) | IR 作成ウィザードで [接続] ボタンを有効にできない場合があるという問題が修正されました。 |
+| Integration Services (SSIS) | 異なるサブスクリプションの名前が同じである場合に、IR 作成ウィザードおよび Azure 対応プロジェクト ウィザードで Azure サブスクリプションのコンボ ボックス項目が重複するという問題を修正しました。 |
+| Integration Services (SSIS) | 現在のロケールがドイツの場合に、スクリプト コンポーネントの bufferwrapper.cs の下にある自動生成されたコードによって余計な二重引用符が追加される問題を修正しました。 |
+| Integration Services (SSIS) | ターゲット サーバーのバージョンが SQL Server 2012、2014、2016 の場合、[WSDL のダウンロード] ボタンが表示されない問題を修正しました。 |
+| Integration Services (SSIS) | メモリ不足の例外が原因で大規模なプロジェクトのビルドが失敗することがある問題を修正しました。 |
+| Integration Services (SSIS) | パッケージ配置モデルでファイル システムまたは MSDB にコピーとして保存するときに、パッケージがプロジェクトの現在のターゲット サーバー バージョンにダウングレードされない問題を修正しました。 |
+| Integration Services (SSIS) | "No such interface" (該当するインターフェイスがありません) エラーが原因でディメンション処理変換先が機能しない問題を修正しました。 |
+| Integration Services (SSIS) | アクセシビリティと高 DPI に関連するいくつかの問題を修正しました。 |
+
+### <a name="known-issues"></a>既知の問題
+
+| 既知の問題 | 詳細 |
+| :---------- | :------ |
+| ExecuteOutOfProcess が True に設定されていると、SSIS パッケージ実行タスクはデバッグをサポートしません。 | この問題はデバッグにのみ該当します。 DTExec.exe または SSIS カタログを介した保存、展開、実行は影響を受けません。 |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6、VS&nbsp;2017 用 SSDT
 
@@ -755,7 +784,7 @@ _SQL Server 2017 までのサポート。_
     - PowerQuery での例示による列の追加
     - 1400 モデルでのデータ アクセス オプション (M エンジンによって使われるモデル レベルのプロパティ)
         - 高速結合の有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンはデータを結合するときにデータ ソースのプライバシー レベルを無視します)
-        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。    たとえば、HTTPS から HTTP URI へのリダイレクト)  
+        - 従来のリダイレクトの有効化 (既定値は false です。true に設定すると、マッシュアップ エンジンは安全ではない可能性のある HTTP リダイレクトに従います。    たとえば、HTTPS から HTTP URI へのリダイレクト)  
         - エラー値を null として返します (既定値は false です。true にすると、セル レベルのエラーが null として返されます。 false の場合、セルにエラーが含まれると例外が発生します)  
     - PowerQuery を使う追加データ ソース (ファイル データ ソース)
         - Excel 

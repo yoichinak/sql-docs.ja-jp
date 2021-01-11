@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: e37d77304644d1adb50bb195dd32d4c4e1222c09
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 257ed7d43f8ab204c7c7e7575c69251be6f2efdf
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96126497"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771631"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 
@@ -69,7 +69,7 @@ Keyword=a=b=c
 
 入力ミスによってエラーが発生する可能性があります。 たとえば、`Integrated Security=true` は有効ですが、`IntegratedSecurity=true` ではエラーが発生します。
 
-実行時に検証されていないユーザー入力から接続文字列を手動で構築すると、文字列のインジェクション攻撃に弱くなり、データ ソースのセキュリティが脅かされます。 これらの問題に対処するため、[接続文字列ビルダー](connection-string-builders.md)が作成されています。 この接続文字列ビルダーにより、厳密に型指定されたプロパティとしてパラメーターが公開され、データ ソースに送信される前に接続文字列を検証できるようになります。
+無効なユーザー入力から実行時に手動で構築された接続文字列は、文字列のインジェクション攻撃に対して脆弱で、データ ソースのセキュリティが脅かされます。 これらの問題に対処するために、<xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> クラスが作成されています。 この[接続文字列ビルダー](connection-string-builders.md)のクラスにより、厳密に型指定されたプロパティとしてパラメーターが公開され、データ ソースに送信される前に接続文字列を検証できるようになります。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -84,3 +84,7 @@ Keyword=a=b=c
 
 [接続情報の保護](protecting-connection-information.md)\
 データ ソースへの接続に使用する情報を保護する方法を示します。
+
+## <a name="see-also"></a>関連項目
+
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 554c3a08cc29cfbc6addef598698c40df31f9990
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9029dd87712ee7128504a9b495b699c9c58e000d
+ms.sourcegitcommit: 5b2c47ce88f7e56552fd415c32b319009d043b56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471233"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804345"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>SQL Server 用の R カスタム ランタイムをインストールする
 
@@ -62,9 +62,9 @@ R カスタム ランタイムをインストールする前に、次のもの�
 
     - **Machine Learning Services および言語の拡張**
 
-       **[Machine Learning Services および言語の拡張]** を選択します。 R を選択する必要はありません。
+        **[Machine Learning Services および言語の拡張]** を選択します。 R を選択する必要はありません。
 
-    ![SQL Server 2019 CU3 以降のインストール機能](../install/media/sql-feature-selection.png)
+        :::image type="content" source="media/2019-setup-language-extensions.png" alt-text="SQL Server 2019 言語拡張機能のセットアップ。":::
 
 1. **[インストールの準備完了]** ページで、以下が選択されていることを確認した後、 **[インストール]** を選択します。
 

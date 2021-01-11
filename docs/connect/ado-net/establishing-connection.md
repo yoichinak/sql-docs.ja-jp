@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: cb77d01ede16a6fa68aac6dcb49612ad8fd9a191
-ms.sourcegitcommit: 7a3fdd3f282f634f7382790841d2c2a06c917011
+ms.openlocfilehash: b3d92f49fb4eae6184a673ffc25ff6bbdf521626
+ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96563087"
+ms.lasthandoff: 12/25/2020
+ms.locfileid: "97771594"
 ---
 # <a name="establishing-connection"></a>接続の確立
 
@@ -27,7 +27,7 @@ ms.locfileid: "96563087"
 
 Microsoft SQL Server に接続するには、Microsoft SqlClient Data Provider for SQL Server の <xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトを使用します。 安全な接続文字列の格納および取得については、「[接続情報の保護](protecting-connection-information.md)」を参照してください。
 
-## <a name="closing-connections"></a>接続の終了
+## <a name="closing-connections"></a>接続を閉じる
 
 接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することをお勧めします。 Visual Basic または C# の `Using` ブロックは、コードがこのブロックを終了したときに接続を破棄します。これは、未処理の例外の場合でも実行されます。 詳しくは、「[using ステートメント](/dotnet/csharp/language-reference/keywords/using-statement)」および「[Using ステートメント](/dotnet/visual-basic/language-reference/statements/using-statement)」をご覧ください。
 
@@ -57,3 +57,4 @@ ASP.NET アプリケーションのセキュリティ ID は、他のオプシ�
 
 - [データ ソースへの接続](connecting-to-data-source.md)
 - [接続文字列](connection-strings.md)
+- [Microsoft ADO.NET for SQL Server](microsoft-ado-net-sql-server.md)
