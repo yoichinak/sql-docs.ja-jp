@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a973fd5ec66f101c162e35baec0269f7b6d3d601
-ms.sourcegitcommit: d8a9ad86401bff422d506078c6200494c795e7c0
+ms.openlocfilehash: cccb47e059938745aa6166902402c8b94b674722
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765211"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099341"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 
@@ -34,7 +34,7 @@ ms.locfileid: "97765211"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> UseAzure SQL Database で Query Performance Insight を使用する
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](../../azure-data-studio/what-is.md) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)」を参照してください。
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でクエリ ストアを実行する場合、[Query Performance Insight](/azure/sql-database/sql-database-query-performance) を使用して、経時的にリソース消費量を分析できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) を使用して、CPU、メモリ、I/O など、すべてのクエリの詳細なリソース消費量を取得することができますが、Query Performance Insight を使用すると、データベースの DTU 全体の消費量に対する影響を簡単かつ効率的に確認できます。 詳細については、「 [Azure SQL Database Query Performance Insight](/azure/azure-sql/database/query-performance-insight-use)」を参照してください。
 
 このセクションでは、クエリ ストアおよび依存機能を確実に操作できるように設計された最適な構成の既定値について説明します。 既定の構成は、データ収集が継続的に実施される (OFF/READ_ONLY 状態の時間が最小限になる) ように最適化されています。 使用可能なすべてのクエリ ストア オプションの詳細については、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store)」を参照してください。
 

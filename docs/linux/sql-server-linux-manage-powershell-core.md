@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d9df9281926008ddac99b6827c41a0b6e73b2290
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: a65ad9ad35e4feb2a55ffbdc259601a7b16106f9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115600"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094557"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core で SQL Server on Linux を管理する
 
@@ -27,10 +27,10 @@ ms.locfileid: "92115600"
 
 サポートされているさまざまな実験用プラットフォームで PowerShell Core をインストールする方法については、次の記事を参照してください。
 
-- [Windows に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Linux に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [macOS に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [ARM に PowerShell Core をインストールする](/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Windows に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-windows)
+- [Linux に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [macOS に PowerShell Core をインストールする](/powershell/scripting/install/installing-powershell-core-on-macos)
+- [ARM に PowerShell Core をインストールする](/powershell/scripting/install/powershell-core-on-arm)
 
 ## <a name="install-the-sqlserver-module"></a>SqlServer モジュールをインストールする
 
@@ -46,7 +46,7 @@ PowerShell ギャラリーから SqlServer モジュールをインストール�
 
 ## <a name="using-the-sqlserver-module"></a>SqlServer モジュールを使用する
 
-まず、PowerShell Core を起動してみましょう。  macOS または Linux を使用している場合、コンピューターで*ターミナル セッション*を開き、「**pwsh**」と入力すると、新しい PowerShell Core セッションが起動します。  Windows の場合、<kbd>Win</kbd>+<kbd>R</kbd> を使用し、「`pwsh`」と入力すると、新しい PowerShell Core セッションが起動します。
+まず、PowerShell Core を起動してみましょう。  macOS または Linux を使用している場合、コンピューターで *ターミナル セッション* を開き、「**pwsh**」と入力すると、新しい PowerShell Core セッションが起動します。  Windows の場合、<kbd>Win</kbd>+<kbd>R</kbd> を使用し、「`pwsh`」と入力すると、新しい PowerShell Core セッションが起動します。
 
 ```
 pwsh
@@ -183,7 +183,7 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 実行に数分かかる場合があります。 これらのコマンドで次の手順が実行されます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
 - *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
-- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します
+- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日** 以降のエラー ログを取得します
 
 必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。
 

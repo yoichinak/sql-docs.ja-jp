@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 870f9b9f4d3fcc8186ed1d16faee861ed63e4135
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 8b9d79dc7b23339b5b152695daf5efc5c47847a4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418800"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099356"
 ---
 # <a name="mssqlserver_17112"></a>MSSQLSERVER_17112
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92418800"
 
 ## <a name="explanation"></a>説明
 
-このエラーは、無効な[データベース エンジン サービスのスタートアップ オプション](/sql/database-engine/configure-windows/database-engine-service-startup-options)が指定されたことを示しています。 スタートアップ オプションが正しく指定されていない場合、SQL Server が起動に失敗するか、想定どおりに実行されないおそれがあります。 エラー 17112 も発生します。
+このエラーは、無効な[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)が指定されたことを示しています。 スタートアップ オプションが正しく指定されていない場合、SQL Server が起動に失敗するか、想定どおりに実行されないおそれがあります。 エラー 17112 も発生します。
 
 場合によっては、インスタンスが開始されることもありますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを確認すると、スタートアップ パラメーターが正しくありません。
 
@@ -67,5 +67,5 @@ ms.locfileid: "92418800"
 
 このトピックの詳細については、次のトピックを参照してください。
 
-- [データベース エンジン サービスのスタートアップ オプション](/sql/database-engine/configure-windows/database-engine-service-startup-options)
-- [SCM サービス - サーバー起動オプションを構成する](/sql/database-engine/configure-windows/scm-services-configure-server-startup-options)
+- [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+- [SCM サービス - サーバー起動オプションを構成する](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 '
-ms.openlocfilehash: dd0151edd199c5627b9676db5ed2ff304c1f5c3f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 04ece9daf696d73b9de96f48a08e32136fe6ab66
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471553"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094636"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>SQL Server on Linux を管理するための適切なツールの選択
 
@@ -32,7 +32,7 @@ SQL Server on Linux を管理するには、いくつかの方法があります
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-新しい Azure Data Studio は、SQL Server を管理するためのクロスプラットフォーム ツールです。 詳細については、[Azure Data Studio](../azure-data-studio/what-is.md) に関するページを参照してください。
+新しい Azure Data Studio は、SQL Server を管理するためのクロスプラットフォーム ツールです。 詳細については、[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) に関するページを参照してください。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上の SQL Server Management Studio
 

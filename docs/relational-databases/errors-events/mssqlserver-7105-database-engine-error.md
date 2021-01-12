@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rgward
 ms.author: ramakoni
-ms.openlocfilehash: bfcd8763c649f83bb9e72881c6facda29917f7b8
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 7aa3b39996f8dc282e11d92706743a7ba42998da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418892"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099272"
 ---
 # <a name="mssqlserver_7105"></a>MSSQLSERVER_7105
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "92418892"
 1. メッセージで示されているように、最初に行う必要があるのは、問題が発生したデータベースに対して `DBCC CHECKDB` を実行するか、テーブルに対して `DBCC CHECKTABLE` を実行することです。
 
     - データベース ID は、メッセージで提供されています。
-    - `DBCC CHECKDB` を実行せずに影響を受けたテーブルを正確に調べるには、エラーが発生したクエリによってアクセスされたテーブルを確認する必要があります。 1 つの方法は、SQL Profiler を使用してクエリをトレースすることです。 ただし、[!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] および [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 を使用している場合は、system_health 拡張イベント セッションを使用して、クエリを見つけることができる場合があります。 system_health セッションの使用方法の詳細については、次のリンクを参照してください: 「[system_health セッションの使用](/sql/relational-databases/extended-events/use-the-system-health-session)」。
+    - `DBCC CHECKDB` を実行せずに影響を受けたテーブルを正確に調べるには、エラーが発生したクエリによってアクセスされたテーブルを確認する必要があります。 1 つの方法は、SQL Profiler を使用してクエリをトレースすることです。 ただし、[!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] および [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 を使用している場合は、system_health 拡張イベント セッションを使用して、クエリを見つけることができる場合があります。 system_health セッションの使用方法の詳細については、次のリンクを参照してください: 「[system_health セッションの使用](../extended-events/use-the-system-health-session.md)」。
 
     - データベースの整合性に関する他の問題と同様に、この問題が含まれない既知の正常なバックアップから復元することで、これらのエラーを解決できます。
 

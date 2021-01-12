@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 59cf1ed10d71bf9813f2ce814d88e7f7d64b6b2e
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 905b961e2fbf882f59b050a3acb7ba0f9c2f9046
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418789"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099342"
 ---
 # <a name="mssqlserver_17892"></a>MSSQLSERVER_17892
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "92418789"
 
 ## <a name="explanation"></a>説明
 
-エラー 17892 は、ログオン トリガー コードを正常に実行できない場合に発生します。 [ログオン トリガー](/sql/relational-databases/triggers/logon-triggers)は、LOGON イベントに応答してストアド プロシージャを起動します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 次のようなエラー メッセージがユーザーに報告されます。
+エラー 17892 は、ログオン トリガー コードを正常に実行できない場合に発生します。 [ログオン トリガー](../triggers/logon-triggers.md)は、LOGON イベントに応答してストアド プロシージャを起動します。 このイベントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでユーザー セッションが確立されるときに発生します。 次のようなエラー メッセージがユーザーに報告されます。
 
 > メッセージ 17892、レベル 14、状態 1、サーバー \<Server Name>、行 1  
 トリガーの実行により、ログイン \<Login Name> のログオンに失敗しました。
@@ -52,7 +52,7 @@ ms.locfileid: "92418789"
 
 該当するシナリオに応じて、次のいずれかの解決策を使用してください。
 
-- **シナリオ 1** : 現在、管理者アカウントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのオープン セッションにアクセスできる。
+- **シナリオ 1**: 現在、管理者アカウントで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのオープン セッションにアクセスできる。
 
   この場合は、トリガー コードを修正するために必要な修正措置を講じることができます。
 
@@ -62,15 +62,15 @@ ms.locfileid: "92418789"
   
   または、ログイン トリガーを削除または無効にして、ユーザーが引き続き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインできるようにすることもできます。  
 
-- **シナリオ 2** : 管理者特権で開いている現在のセッションはないが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で専用管理者接続 (DAC) が有効になっている。
+- **シナリオ 2**: 管理者特権で開いている現在のセッションはないが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で専用管理者接続 (DAC) が有効になっている。
 
-    この場合、DAC 接続はログイン トリガーの影響を受けないため、DAC 接続を使用して、例 1 で説明したのと同じ手順を行うことができます。 DAC 接続の詳細については、「[データベース管理者用の診断接続](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators)」を参照してください。
+    この場合、DAC 接続はログイン トリガーの影響を受けないため、DAC 接続を使用して、例 1 で説明したのと同じ手順を行うことができます。 DAC 接続の詳細については、「[データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。
 
     ご使用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で DAC が有効になっているかどうかを確認するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログで次のようなメッセージがあるかを確認します。
 
     > 2020-02-09 16:17:44.150 ポート 1434 でローカルにリッスンするため、専用管理者接続のサポートが確立されました。  
 
-- **シナリオ 3** :サーバーで DAC が有効になっておらず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への既存の管理セッションもない。
+- **シナリオ 3**:サーバーで DAC が有効になっておらず、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への既存の管理セッションもない。
 
     このシナリオで問題を修復する唯一の方法は、次の手順を行うことです。
   
@@ -78,9 +78,9 @@ ms.locfileid: "92418789"
     2. スタートアップ パラメーター `-c`、`-m`、`-f` を使用して、[コマンド プロンプト](/previous-versions/sql/sql-server-2008-r2/ms180965(v=sql.105))から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動します。 これにより、ログイン トリガーが無効になり、上記の **例 1** で説明されているのと同じ修復手段を実行できます。
   
         > [!NOTE]
-        > 上記の手順では、 *SA* または同等の管理者アカウントが必要です。
+        > 上記の手順では、*SA* または同等の管理者アカウントが必要です。
   
-         これらおよび他のスタートアップ オプションについて詳しくは、「[データベース エンジン サービスのスタートアップ オプション](/sql/database-engine/configure-windows/database-engine-service-startup-options)」を参照してください。
+         これらおよび他のスタートアップ オプションについて詳しくは、「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
 
 ## <a name="more-information"></a>詳細情報
 

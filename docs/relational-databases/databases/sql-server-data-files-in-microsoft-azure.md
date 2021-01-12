@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 85d9e42b9c0ac537d6f33bd884b898374119972d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192852"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099333"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,7 +126,7 @@ ON
   
 - Azure 機能で SQL Server データ ファイルを使用する場合、SQL Server は、**master** データベース内で設定された照合順序を使用して、すべての URL 比較またはパス比較を実行します。  
   
-- **AlwaysOn 可用性グループ**は、プライマリ データベースに新しいデータベース ファイルを追加しない限りサポートされます。 データベース操作により、プライマリ データベースに新しいファイルを作成する必要がある場合は、最初にセカンダリ ノードで可用性グループを無効にします。 次に、プライマリ データベースに対してデータベース操作を実行し、プライマリ ノードでデータベースをバックアップします。 次に、データベースをセカンダリ ノードに復元します。 この操作が終了したら、セカンダリ ノードで Always On 可用性グループを再び有効にします。 
+- **AlwaysOn 可用性グループ** は、プライマリ データベースに新しいデータベース ファイルを追加しない限りサポートされます。 データベース操作により、プライマリ データベースに新しいファイルを作成する必要がある場合は、最初にセカンダリ ノードで可用性グループを無効にします。 次に、プライマリ データベースに対してデータベース操作を実行し、プライマリ ノードでデータベースをバックアップします。 次に、データベースをセカンダリ ノードに復元します。 この操作が終了したら、セカンダリ ノードで Always On 可用性グループを再び有効にします。 
 
    >[!NOTE]
    >Azure 機能で SQL Server データ ファイルを使用する場合は、Always On フェールオーバー クラスター インスタンスはサポートされません。
@@ -153,7 +153,7 @@ ON
 ### <a name="transact-sql-support"></a>Transact-SQL のサポート  
  この新しい機能により、Transact-SQL の表層のセキュリティ構成が次のように変更されました。
 
-- **sys.master_files** システム ビューに、新しい **int**列 **credential_id** が追加されました。 **credential_id** 列は、Azure Storage データ ファイルが自身の資格状態を使用するために `sys.credentials` への相互参照を有効にする目的で使用されます。 資格情報を使用するデータベース ファイルが存在するが、この資格情報を削除できないという場合などに、トラブルシューティングとして使用できます。  
+- **sys.master_files** システム ビューに、新しい **int** 列 **credential_id** が追加されました。 **credential_id** 列は、Azure Storage データ ファイルが自身の資格状態を使用するために `sys.credentials` への相互参照を有効にする目的で使用されます。 資格情報を使用するデータベース ファイルが存在するが、この資格情報を削除できないという場合などに、トラブルシューティングとして使用できます。  
   
 ##  <a name="troubleshooting-for-sql-server-data-files-in-microsoft-azure"></a><a name="bkmk_Troubleshooting"></a> Microsoft Azure で SQL Server データ ファイルを使用する場合のトラブルシューティング  
  サポートされていない機能または制限事項によるエラーを回避するために、まず「 [Limitations](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)」をご確認ください。  
@@ -177,7 +177,7 @@ ON
   
  **データベース エラー**  
   
-**データベースの作成中にエラーが発生しました** 解決策: 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-4-restore-database-to-virtual-machine-from-url.md)」をご覧ください。  
+**データベースの作成中にエラーが発生しました** 解決策: 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#4----restore-database-to-virtual-machine-from-url)」をご覧ください。  
   
 **ALTER ステートメントの実行中にエラーが発生しました。** 解決策: ALTER DATABASE ステートメントは、必ずデータベースがオンライン状態のときに実行してください。 データ ファイルを Azure Storage にコピーするときは常に、ブロック BLOB ではなくページ BLOB を作成します。 そうしないと、ALTER DATABASE は失敗します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   

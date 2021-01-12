@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 4a3857e9e98bfbe7fcc86ee07272698f0fcac763
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 3228a21b43fd5b5ed2a23c5e13b47353e55cd028
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418774"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093281"
 ---
 # <a name="mssqlserver_3859"></a>MSSQLSERVER_3859
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "92418774"
 
     システム テーブルが手動で更新された後に `DBCC_CHECKDB` コマンドを実行すると、次の警告メッセージが返されます。
 
-    > ' **database_name** ' の DBCC 結果。  
+    > '**database_name**' の DBCC 結果。  
     メッセージ 8992、レベル 16、状態 1、行 1  
     カタログ メッセージ 3859 の確認、状態 1: 警告:システム カタログがデータベース ID \%d で直接更新されました。最新の更新は **date_time** で行われました。  
-    CHECKDB により、データベース ' **db_name** ' に 0 個のアロケーション エラーと 0 個の一貫性エラーが見つかりました。  
+    CHECKDB により、データベース '**db_name**' に 0 個のアロケーション エラーと 0 個の一貫性エラーが見つかりました。  
     DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。
 
 ## <a name="user-action"></a>ユーザー アクション
@@ -77,4 +77,4 @@ ms.locfileid: "92418774"
 
 ## <a name="more-information"></a>詳細情報
 
-詳細については、以下を参照してください: 「[システム ベース テーブル](/sql/relational-databases/system-tables/system-base-tables)」。
+詳細については、以下を参照してください: 「[システム ベース テーブル](../system-tables/system-base-tables.md)」。

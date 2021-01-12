@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 846ce27ff8e7d9560a6d4cc691d1523fddd913fa
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 5252cae293cd4c700f359b8168e0d5d5d10a70cf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418829"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099248"
 ---
 # <a name="mssqlserver_832"></a>MSSQLSERVER_832
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,4 +60,4 @@ ms.locfileid: "92418829"
 
 ディスクへの書き込み後、この状態にあるページに関するエラーが `DBCC CHECKDB` によって報告されない場合もあります。 これは、誤った変更が、データが一切保持されていない、または重要なページまたは行構造の情報が含まれていないページ上の場所で発生したか、あるいは CHECKDB で検出されないデータに対する変更である可能性があるためです。  
 
-メッセージ 832 の詳細情報については、ホワイトペーパー「[SQL Server 入出力の基礎、第 2 章](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))」でも確認できます。
+メッセージ 832 の詳細情報については、ホワイトペーパー「[SQL Server 入出力の基礎、第 2 章](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))」でも確認できます。
