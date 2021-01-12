@@ -15,12 +15,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f462f256c98c4482af67527401cc6d30f3f0776
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 281fe018c5c2d5e0717fb2c35dfcc8c3c9e8c3fc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465383"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100240"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化
 
@@ -56,7 +56,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 |[インメモリ OLTP のコード サンプル](./sample-database-for-in-memory-oltp.md)|メモリ最適化テーブルを作成して使用する方法を示すコード例が記載されています。|  
 |[メモリ最適化テーブル](./sample-database-for-in-memory-oltp.md)|メモリ最適化テーブルの概要を示します。|  
 |[メモリ最適化テーブル変数](./faster-temp-table-and-table-variable-by-using-memory-optimization.md)|tempdb の使用を減らすために、従来のテーブル変数の代わりにメモリ最適化テーブル変数を使用する方法を示すコード例です。|  
-|[メモリ最適化テーブルのインデックス](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables)|メモリ最適化インデックスを示します。|  
+|[メモリ最適化テーブルのインデックス](./indexes-for-memory-optimized-tables.md)|メモリ最適化インデックスを示します。|  
 |[ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)|ネイティブ コンパイル ストアド プロシージャについて説明します。|  
 |[インメモリ OLTP のメモリ管理](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))|システムのメモリ使用量について説明し、メモリ使用量を管理する方法を示します。|  
 |[メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|メモリ最適化テーブルでのトランザクションに関する情報を格納するデータ ファイルとデルタ ファイルについて説明します。|  
@@ -136,4 +136,3 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
 
 ## <a name="see-also"></a>関連項目  
  [データベース機能](../databases/databases.md)  
-  
