@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1774e2b2a27b2b1f0c36b298f98c916318fd1543
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477653"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101830"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>ホスト ガーディアン サービスにコンピューターを登録する
 
@@ -243,7 +243,7 @@ HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを HGS に登録した後 (TPM モードの場合は[手順 4A](#step-4a-register-a-computer-in-tpm-mode)、ホスト キー モードの場合は[手順 4B](#step-4b-register-a-computer-in-host-key-mode))、正常に証明できることを確認する必要があります。
 
-[Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
+[Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
 このコマンドの出力は、次のようになります。
 
 ```

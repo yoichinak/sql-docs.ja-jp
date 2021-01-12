@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: a408cfb25f40ee58c1aeb521c11938026d9241cb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9839a6fa8bd678afdce426f9dcd5657500c5a6cd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439017"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100794"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97439017"
 指定したバイト ストリームまたはファイル パスから R または Python パッケージ ファイルをデータベースにアップロードします。 このステートメントは、データベース管理者が必要な成果物をアップロードするための一般的なメカニズムとして機能します。 
 
 > [!NOTE]
-> Azure SQL Managed Instance では、**sqlmlutils** を使用してライブラリをインストールすることができます。 詳細については、「[sqlmlutils を使用した Python パッケージのインストール](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)」および「[sqlmlutils で新しい R パッケージをインストールする](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current)」を参照してください。
+> Azure SQL Managed Instance では、**sqlmlutils** を使用してライブラリをインストールすることができます。 詳細については、「[sqlmlutils を使用した Python パッケージのインストール](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true)」および「[sqlmlutils で新しい R パッケージをインストールする](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md?context=%252fazure%252fazure-sql%252fmanaged-instance%252fcontext%252fml-context&view=azuresqldb-mi-current&preserve-view=true)」を参照してください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"

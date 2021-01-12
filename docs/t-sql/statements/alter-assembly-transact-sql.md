@@ -22,14 +22,14 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 781d61c5cde33ae51b7ecb94d56a8c3cadff1595
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: dda1de9a2eb4628765333651c7d074b0c38551db
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300213"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100912"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -104,26 +104,26 @@ ALTER ASSEMBLY assembly_name
   
 -   直接または間接的にアセンブリ内のメソッドを参照する CHECK 制約。  
   
--   アセンブリに依存する CLR ユーザー定義型の列と、 **UserDefined** (非 **ネイティブ** ) シリアル化形式を実装する型の列。  
+-   アセンブリに依存する CLR ユーザー定義型の列と、**UserDefined** (非 **ネイティブ**) シリアル化形式を実装する型の列。  
   
 -   WITH SCHEMABINDING を使用して作成されたビューを参照する、CLR ユーザー定義型の列。  
   
  CHECK 制約がある場合、これらのデータは無効になり、信頼されていないことを示すマークが付きます。 アセンブリに依存する列が含まれるテーブルは、明示的に検証されるまで、未検証のデータが含まれていることを示すマークが付きます。  
   
- このオプションを指定できるのは、 **db_owner** 固定データベース ロールと **db_ddlowner** 固定データベース ロールのメンバーだけです。  
+ このオプションを指定できるのは、**db_owner** 固定データベース ロールと **db_ddlowner** 固定データベース ロールのメンバーだけです。  
   
- このオプションを指定するには、 **ALTER ANY SCHEMA** 権限が必要です。  
+ このオプションを指定するには、**ALTER ANY SCHEMA** 権限が必要です。  
   
  詳細については、「[アセンブリの実装](../../relational-databases/clr-integration/assemblies-implementing.md)」を参照してください。  
   
- [ DROP FILE { *file_name* [ **,** _...n_ ] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  アセンブリに関連付けられているファイル名、またはアセンブリに関連付けられているすべてのファイルを、データベースから削除します。 続けて ADD FILE を指定する場合は、最初に DROP FILE が実行されます。 このため、同じファイル名でファイルを置き換えることができます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
- [ ADD FILE FROM { *client_file_specifier* [ AS *file_name* ] | *file_bits* AS *file_name* }  
- ソース コード、デバッグ ファイル、その他の関連情報など、アセンブリに関連付けられるファイルをサーバーにアップロードし、 **sys.assembly_files** カタログ ビューに表示できるようにします。 *client_file_specifier* には、ファイルのアップロード元となる場所を指定します。 *file_bits* を代わりに使用し、ファイルを構成するバイナリ値の一覧を指定できます。 *file_name* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに格納する必要があるファイルの名前を指定します。 *file_name* は、 *file_bits* が指定されている場合は指定する必要があり、 *client_file_specifier* が指定されている場合はオプションになります。 *file_name* が指定されていない場合、 *client_file_specifier* の file_name の部分が *file_name* として使用されます。  
+ [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits* AS *file_name*}  
+ ソース コード、デバッグ ファイル、その他の関連情報など、アセンブリに関連付けられるファイルをサーバーにアップロードし、**sys.assembly_files** カタログ ビューに表示できるようにします。 *client_file_specifier* には、ファイルのアップロード元となる場所を指定します。 *file_bits* を代わりに使用し、ファイルを構成するバイナリ値の一覧を指定できます。 *file_name* には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに格納する必要があるファイルの名前を指定します。 *file_name* は、*file_bits* が指定されている場合は指定する必要があり、*client_file_specifier* が指定されている場合はオプションになります。 *file_name* が指定されていない場合、*client_file_specifier* の file_name の部分が *file_name* として使用されます。  
   
 > [!NOTE]  
 >  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
@@ -150,7 +150,7 @@ ALTER ASSEMBLY assembly_name
   
 -   CLR テーブル値関数の **FillRow** メソッド名の属性。  
   
--   ユーザー定義集計のメソッド署名、 **Accumulate** と **Terminate** 。  
+-   ユーザー定義集計のメソッド署名、**Accumulate** と **Terminate**。  
   
 -   システム アセンブリ。  
   
@@ -181,7 +181,7 @@ ALTER ASSEMBLY assembly_name
   
 -   アセンブリの権限セットを UNSAFE に変更するには、サーバーに対する **UNSAFE ASSEMBLY** 権限が必要です。  
   
--   WITH UNCHECKED DATA を指定するには、 **ALTER ANY SCHEMA** 権限が必要です。  
+-   WITH UNCHECKED DATA を指定するには、**ALTER ANY SCHEMA** 権限が必要です。  
 
 
 ### <a name="permissions-with-clr-strict-security"></a>CLR の厳密なセキュリティによるアクセス許可    

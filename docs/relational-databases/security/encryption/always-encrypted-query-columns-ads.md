@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ac5e42497a0167a0e935c116a1efd9cc466300c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477613"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101882"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-この記事では、[Azure Data Studio](../../../azure-data-studio/what-is.md) を使用して [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) によって暗号化された列にクエリを実行する方法について説明します。 Azure Data Studio では、以下を実行できます。
+この記事では、[Azure Data Studio](../../../azure-data-studio/what-is-azure-data-studio.md) を使用して [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) によって暗号化された列にクエリを実行する方法について説明します。 Azure Data Studio では、以下を実行できます。
 - 暗号化された列に格納された暗号化テキスト値を取得する。 
 - 暗号化された列に格納されたプレーンテキスト値を取得する。  
 - 暗号化された列をターゲットとするプレーンテキスト値を送信する (たとえば、`INSERT` または `UPDATE` ステートメントや、`WHERE` ステートメントの `SELECT` 句のルックアップ パラメーターとして)。 

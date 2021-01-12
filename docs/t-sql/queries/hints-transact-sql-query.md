@@ -55,13 +55,13 @@ helpviewer_keywords:
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
-ms.author: vanto
-ms.openlocfilehash: effad55b1fd1eec856aa412700a751e36e588b37
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.author: pelopes
+ms.openlocfilehash: eda240576ebb819e387e3fb93d55a06b6a1c1d9e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035856"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102382"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -298,7 +298,7 @@ ROBUST PLAN
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
  
-1 つ以上の追加のヒントをクエリ プロセッサに指定します。 追加のヒントは、ヒント名を**単一引用符で囲んで**指定します。   
+1 つ以上の追加のヒントをクエリ プロセッサに指定します。 追加のヒントは、ヒント名を **単一引用符で囲んで** 指定します。   
 
 次のヒント名がサポートされています。    
  

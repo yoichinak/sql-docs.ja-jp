@@ -15,14 +15,14 @@ helpviewer_keywords:
 - mathematical functions [SQL Server]
 - functions [SQL Server], mathematical
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7d3f3d6cc5bbd7730e229df06724635f707034b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2fa744343341f8076c59d626218ef29cdcbbb3bc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422706"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102574"
 ---
 # <a name="mathematical-functions-transact-sql"></a>数学関数 (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,17 +44,17 @@ ms.locfileid: "88422706"
 - [LOG10](../../t-sql/functions/log10-transact-sql.md)
 - [PI](../../t-sql/functions/pi-transact-sql.md)
 - [POWER](../../t-sql/functions/power-transact-sql.md)
-- [RADIANS](../../t-sql/functions/radians-transact-sql.md)  
-- [RAND](../../t-sql/functions/rand-transact-sql.md)  
-- [ROUND](../../t-sql/functions/round-transact-sql.md)  
-- [SIGN](../../t-sql/functions/sign-transact-sql.md)  
-- [SIN](../../t-sql/functions/sin-transact-sql.md)  
-- [SQRT](../../t-sql/functions/sqrt-transact-sql.md)  
-- [SQUARE](../../t-sql/functions/square-transact-sql.md)  
+- [RADIANS](../../t-sql/functions/radians-transact-sql.md)  
+- [RAND](../../t-sql/functions/rand-transact-sql.md)  
+- [ROUND](../../t-sql/functions/round-transact-sql.md)  
+- [SIGN](../../t-sql/functions/sign-transact-sql.md)  
+- [SIN](../../t-sql/functions/sin-transact-sql.md)  
+- [SQRT](../../t-sql/functions/sqrt-transact-sql.md)  
+- [SQUARE](../../t-sql/functions/square-transact-sql.md)  
 - [TAN](../../t-sql/functions/tan-transact-sql.md)
   
 > [!NOTE]  
-> ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS、SIGN などの算術関数では、入力値と同じデータ型の値を返します。 EXP、LOG、LOG10、SQUARE、SQRT などの三角関数やその他の関数は、その入力値を**float** 型にキャストし、**float** 型の値を返します。  
+> ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS、SIGN などの算術関数では、入力値と同じデータ型の値を返します。 EXP、LOG、LOG10、SQUARE、SQRT などの三角関数やその他の関数は、その入力値を **float** 型にキャストし、**float** 型の値を返します。  
   
 RAND を除く、すべての数学関数が決定論的関数です。 これは、特定の入力値のセットを使用して呼び出されるたびに、同じ結果を返すことを意味します。 RAND は、seed パラメーターが指定されている場合にのみ決定的です。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   

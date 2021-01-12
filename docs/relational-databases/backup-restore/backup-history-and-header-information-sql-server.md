@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ec866bae59d0b37803e7df72e9ba9593e0f66c7b
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 49788f0329cb55106fcb7ce85746fca0860f0ee3
+ms.sourcegitcommit: b652ff2f0f7edbb5bd2f8fdeac56348e4d84f8fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130489"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98112664"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,35 +177,11 @@ ms.locfileid: "96130489"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader%2A> (SMO)  
-  
- **バックアップ履歴テーブルと復元履歴テーブルから古い行を削除するには**  
-  
--   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
-  
- **バックアップ履歴テーブルと復元履歴テーブルから特定のデータベースのすべての行を削除するには**  
-  
--   [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)  
-  
- **メディア ヘッダー情報を表示するには**  
-  
--   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
-  
--   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader%2A> (SMO)    
   
 -   [バックアップ テープまたはバックアップ ファイルの内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadMediaHeader%2A> (SMO)  
-  
- **バックアップ ヘッダー情報を表示するには**  
-  
--   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
-  
--   [バックアップ テープまたはバックアップ ファイルの内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
-  
--   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader%2A> (SMO)  
   
  **バックアップ セットに含まれているファイルを表示するには**  
   

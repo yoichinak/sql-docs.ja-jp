@@ -12,12 +12,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: bf8ef986da54559c5928677643f6bd99c63c2266
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 733b129c9dd4f598e75baa31f49a4f9811edd5b8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643018"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102362"
 ---
 # <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
@@ -326,7 +326,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 行ストア テーブルを列ストア テーブルに変更するには、テーブル上の既存のインデックスをすべて削除してから、クラスター化列ストア インデックスを作成します。 例については、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
 
 詳細と例については、次の記事をご覧ください。
-- [列ストア インデックスのバージョン管理機能の概要](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)
+- [列ストア インデックスのバージョン管理機能の概要](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)
 - [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] でテーブルにインデックスを作成する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列ストア インデックスの説明](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
