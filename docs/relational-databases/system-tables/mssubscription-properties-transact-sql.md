@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8895f78aa31e5fa38b52de7163ddb2a1554e5617
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9927dd1e15f04a073d0fb3cf7f95e13b1f425e0c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545512"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100500"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsubscription_properties**テーブルには、サブスクライバーでレプリケーションエージェントを実行するために必要なパラメーター情報の行が含まれています。 このテーブルは、プルサブスクリプションの場合はサブスクライバー側のサブスクリプションデータベースに格納され、プッシュサブスクリプションの場合はディストリビューター側のディストリビューションデータベースに格納されます。  
+  **MSsubscription_properties** テーブルには、サブスクライバーでレプリケーションエージェントを実行するために必要なパラメーター情報の行が含まれています。 このテーブルは、プルサブスクリプションの場合はサブスクライバー側のサブスクリプションデータベースに格納され、プッシュサブスクリプションの場合はディストリビューター側のディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,12 +49,12 @@ ms.locfileid: "89545512"
 |**ftp_password**|**nvarchar (524)**|FTP サービスへの接続に使用される u. ユーザーパスワード。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショットの代替フォルダーの場所を指定します。|  
 |**working_directory**|**nvarchar (255)**|データファイルとスキーマファイルの格納に使用する作業ディレクトリの名前。|  
-|**use_ftp**|**bit**|スナップショットを取得するために通常のプロトコルではなく FTP を使用することを指定します。 **1**の場合、FTP が使用されます。|  
+|**use_ftp**|**bit**|スナップショットを取得するために通常のプロトコルではなく FTP を使用することを指定します。 **1** の場合、FTP が使用されます。|  
 |**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
 |**dts_package_password**|**nvarchar (524)**|パッケージのパスワードを指定します。|  
 |**dts_package_location**|**int**|DTS パッケージが格納されている場所です。|  
 |**enabled_for_syncmgr**|**bit**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 同期マネージャーを介してサブスクリプションを同期化できるかどうかを示します。<br /><br /> **0** = サブスクリプションは同期マネージャーに登録されていません。<br /><br /> **1** = サブスクリプションは同期マネージャーに登録されており、を起動せずに同期でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。|  
-|**offload_agent**|**bit**|エージェントをリモートからアクティブ化できるかどうかを指定します。 **0**の場合、エージェントをリモートでアクティブにすることはできません。|  
+|**offload_agent**|**bit**|エージェントをリモートからアクティブ化できるかどうかを指定します。 **0** の場合、エージェントをリモートでアクティブにすることはできません。|  
 |**offload_server**|**sysname**|リモートからのアクティブ化に使用するサーバーのネットワーク名を指定します。|  
 |**dynamic_snapshot_location**|**nvarchar (255)**|スナップショットファイルを保存するフォルダーへのパスを指定します。|  
 |**use_web_sync**|**bit**|サブスクリプションを HTTP で同期できるかどうかを指定します。 値 **1** は、この機能が有効になっていることを意味します。|  
@@ -63,7 +63,7 @@ ms.locfileid: "89545512"
 |**internet_password**|**nvarchar (524)**|認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインのパスワード [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用される認証モード。値 **1** は Windows 認証を意味し、値 **0** は認証を意味し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間の長さ (秒単位)。|  
-|**hostname**|**sysname**|結合フィルターまたは論理レコードリレーションシップの**where**句でこの関数を使用する場合の**HOST_NAME**の値を指定します。|  
+|**hostname**|**sysname**|結合フィルターまたは論理レコードリレーションシップの **where** 句でこの関数を使用する場合の **HOST_NAME** の値を指定します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

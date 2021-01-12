@@ -16,26 +16,26 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_map system table
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 66896c98c0d02dbb7cf9276f512420688b14be0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ee51f669562f902addcba79d3186824132df342b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551017"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099635"
 ---
 # <a name="msdbms_map-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_map**テーブルには、ソースデータ型の情報に加えて、ソースとターゲットの DBMS ペアに関する既定の変換先のデータ型情報へのリンクが含まれています。 このテーブルは **msdb** データベースに格納され、異種パブリッシングに使用されます。  
+  **MSdbms_map** テーブルには、ソースデータ型の情報に加えて、ソースとターゲットの DBMS ペアに関する既定の変換先のデータ型情報へのリンクが含まれています。 このテーブルは **msdb** データベースに格納され、異種パブリッシングに使用されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|データ型マッピングを一意に識別します。|  
-|**src_dbms_id**|**int**|[Msdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)テーブルで**dbms_id**を指定することによって、ソース DBMS を識別します。|  
-|**dest_dbms_id**|**int**|[Msdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)テーブルでその**dbms_id**を指定することによって、対象の DBMS を識別します。|  
-|**src_datatype_id**|**int**|[MSdbms_datatype](../../relational-databases/system-tables/msdbms-datatype-transact-sql.md)テーブルからソースデータ型の**datatype_id**を識別します。|  
+|**src_dbms_id**|**int**|[Msdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)テーブルで **dbms_id** を指定することによって、ソース DBMS を識別します。|  
+|**dest_dbms_id**|**int**|[Msdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)テーブルでその **dbms_id** を指定することによって、対象の DBMS を識別します。|  
+|**src_datatype_id**|**int**|[MSdbms_datatype](../../relational-databases/system-tables/msdbms-datatype-transact-sql.md)テーブルからソースデータ型の **datatype_id** を識別します。|  
 |**src_len_min**|**bigint**|マップ元 DBMS におけるデータ型の最小の長さ。値 NULL は長さが使用されないことを示します。|  
 |**src_len_max**|**bigint**|ソース DBMS でのデータ型の最大長。値が NULL の場合は、長さが使用されていないことを示します。|  
 |**src_prec_min**|**bigint**|ソース DBMS でのデータ型の最小有効桁数。値 NULL は、有効桁数が使用されないことを示します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "89551017"
 |**src_scale_min**|**int**|ソース DBMS でのデータ型の最小小数点以下桁数。値 NULL は、小数点以下桁数が使用されないことを示します。|  
 |**src_scale_max**|**int**|マップ元 DBMS におけるデータ型の最大小数点以下桁数。値 NULL は小数点以下桁数が使用されないことを示します。|  
 |**src_nullable**|**bit**|マッピングの変換先列で NULL 値を許容するかどうかを示します。値が NULL の場合、この定義は必要ありません。|  
-|**default_datatype_mapping_id**|**int**|テーブル[MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md)で**map_id**を指定することによって、既定のデータ型マッピングを識別します。|  
+|**default_datatype_mapping_id**|**int**|テーブル [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md)で **map_id** を指定することによって、既定のデータ型マッピングを識別します。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

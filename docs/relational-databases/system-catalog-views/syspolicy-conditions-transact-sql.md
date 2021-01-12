@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05389c23d73c80af8544696977daf3edd04a4042
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: edaf380a4a6a8f938c4b8601cb60999a0e99a330
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89519170"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100093"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89519170"
 |date_modified|**datetime**|条件が作成された日付と時刻。 変更されていない場合は NULL になります。|  
 |is_name_condition|**smallint**|条件が名前付け条件であるかどうかを指定します。<br /><br /> 0 = 条件式には @Name 変数が含まれません。<br /><br /> 1 = 条件式には、変数が含まれてい @Name ます。|  
 |facet|**nvarchar(max)**|条件の基になっているファセットの名前。|  
-|正規表現|**nvarchar(max)**|ファセットの状態の式。|  
+|Expression|**nvarchar(max)**|ファセットの状態の式。|  
 |obj_name|**sysname**|@Name条件式にこの変数が含まれている場合にに割り当てられるオブジェクト名。|  
   
 ## <a name="remarks"></a>解説  

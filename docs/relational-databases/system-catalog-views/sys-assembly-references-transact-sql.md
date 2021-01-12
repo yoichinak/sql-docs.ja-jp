@@ -1,6 +1,6 @@
 ---
-description: assembly_references (Transact-sql)
-title: assembly_references (Transact-sql) |Microsoft Docs
+description: sys.assembly_references (Transact-sql)
+title: sys.assembly_references (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_references catalog view
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9376c15ecf0da2922714ce4c17e80485d628d91b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 278214acd7a8a0fd0b78fb8bb77d30e73f68000c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550532"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099249"
 ---
-# <a name="sysassembly_references-transact-sql"></a>assembly_references (Transact-sql)
+# <a name="sysassembly_references-transact-sql"></a>sys.assembly_references (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   1 つのアセンブリが直接他方を参照している、アセンブリのペアごとに 1 行のデータを保持します。  

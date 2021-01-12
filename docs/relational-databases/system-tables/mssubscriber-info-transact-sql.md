@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_info system table
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d949fe0234cad850a1080b727f0917df6e6a24af
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 05ea16f0f6687a82a04ab04039edf3223bb8ef70
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523879"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099674"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsubscriber_info**テーブルには、ローカルディストリビューターからプッシュされたサブスクリプションのパブリッシャー/サブスクライバーのペアごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSsubscriber_info** テーブルには、ローカルディストリビューターからプッシュされたサブスクリプションのパブリッシャー/サブスクライバーのペアごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
  **メモ** このシステムテーブルは非推奨とされており、以前のバージョンのをサポートするために保持されてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   

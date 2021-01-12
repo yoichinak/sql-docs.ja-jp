@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_sentitems database mail view
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 36846ca8cba5022bc1d4bc431419c6687a4af003
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 06dff45056c38800c0aa72ecc28e462086e8e5b6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546682"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100152"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89546682"
 |**blind_copy_recipients**|**varchar(max)**|メッセージのコピーを受信したが、その名前がメッセージヘッダーに表示されない電子メールアドレス。|  
 |**subject**|**nvarchar (510)**|メッセージの件名行。|  
 |**body**|**varchar(max)**|メッセージの本文|  
-|**body_format**|**varchar (20)**|メッセージの本文形式。 指定できる値は、 **TEXT** と **HTML**です。|  
+|**body_format**|**varchar (20)**|メッセージの本文形式。 指定できる値は、 **TEXT** と **HTML** です。|  
 |**importance**|**varchar (6)**|メッセージの **重要度** パラメーター。|  
 |**区別**|**varchar (12)**|メッセージの **感度** パラメーター。|  
 |**file_attachments**|**varchar(max)**|電子メール メッセージに添付されたファイル名の、セミコロン区切りの一覧。|  
@@ -66,7 +66,7 @@ ms.locfileid: "89546682"
  データベースメールのトラブルシューティングを行うときに、このビューは、正常に送信されたメッセージの属性を表示することによって、問題の性質を特定するのに役立ちます。 データベースメールは、SMTP メールサーバーに正常に送信されたときにメッセージを送信済みとしてマークします。 通常、電子メールは数分のうちに相手側に届きますが、SMTP サーバーの問題が原因で遅れることもあります。 データベースメールは、SMTP メールサーバーによって受け付けられたときにメッセージを送信済みとしてマークします。 受信者の電子メール アドレスに配信できないなど、SMTP メール サーバーで発生する電子メール エラーは、データベース メールには返されません。 これらの電子メールは、配信されていない場合でも、送信済みとして記録されます。 SMTP サーバーでのエラーのトラブルシューティングを行います。 また、SMTP メールサーバーは、データベースメールアカウントの返信用電子メールアドレスに配信不能メッセージ通知を送信する場合があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールおよび**databasemailuserrole**データベースロールに付与されます。 **Sysadmin**固定サーバーロールのメンバーによって実行されると、このビューには、送信されたすべてのメッセージが表示されます。 その他のユーザーの場合は、自分が送信したメッセージだけを確認できます。  
+ **Sysadmin** 固定サーバーロールおよび **databasemailuserrole** データベースロールに付与されます。 **Sysadmin** 固定サーバーロールのメンバーによって実行されると、このビューには、送信されたすべてのメッセージが表示されます。 その他のユーザーの場合は、自分が送信したメッセージだけを確認できます。  
   
 ## <a name="see-also"></a>参照  
  [データベース メール メッセージング オブジェクト](../../relational-databases/database-mail/database-mail-messaging-objects.md)  

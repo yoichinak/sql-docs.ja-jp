@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 7146d3455d4d9a36304cc0a1cc69ba3c4c841479
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 21028fd5cdabf435d7672074907b20ebeaaad3c4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477223"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101552"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -39,7 +39,7 @@ ms.locfileid: "97477223"
 |resource_type|**int**|操作が実行されるリソースの種類を表します。 NULL 以外。 現在のリリースでは、このビューは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみで実行される操作を追跡し、対応する整数値は 0 です。|  
 |resource_type_desc|**nvarchar(2048)**|操作が実行される対象のリソースの種類の説明。 現在のリリースでは、このビューは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]のみで実行される操作を追跡します。|  
 |major_resource_id|**sql_variant**|操作が実行される対象の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の名前。 NULL 以外。|  
-|minor_resource_id|**sql_variant**|内部使用専用です。 NULL 以外。|  
+|minor_resource_id|**sql_variant**|内部使用のみ。 NULL 以外。|  
 |操作|**nvarchar(60)**|CREATE や ALTER など、に対して実行される操作 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|  
 |state|**tinyint**|操作の状態。<br /><br /> 0 = 保留<br />1 = 実行中<br />2 = 完了<br />3 = 失敗<br />4 = 取り消し|  
 |state_desc|**nvarchar(120)**|PENDING = 操作はリソースまたはクォータが利用可能になるのを待機しています。<br /><br /> IN_PROGRESS = 操作が開始され、進行中です。<br /><br /> COMPLETED = 操作が正常に完了しました。<br /><br /> FAILED = 操作が失敗しました。 詳細については、 **error_desc** 列を参照してください。<br /><br /> CANCELLED = ユーザーの要求によって操作が停止しました。|  

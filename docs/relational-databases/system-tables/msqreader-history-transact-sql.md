@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 65f1330aa14e52b3295a9514060ca9244721028b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 22053b5cae7f87c4cf2544ca0ed3ecc39dbda6a9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540287"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100578"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSqreader_history**テーブルには、ローカルディストリビューターに関連付けられているキューリーダーエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSqreader_history** テーブルには、ローカルディストリビューターに関連付けられているキューリーダーエージェントの履歴行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "89540287"
 |**duration**|**int**|ログに記録されたセッションのアクティビティの経過時間 (秒単位)。|  
 |**コメント**|**nvarchar (255)**|説明のテキスト。|  
 |**transaction_id**|**nvarchar(40)**|メッセージと共に格納されるトランザクション ID (該当する場合)。|  
-|**transaction_status **|**int**|トランザクションの状態。|  
+|**transaction_status**|**int**|トランザクションの状態。|  
 |**transactions_processed**|**int**|セッションで処理されたトランザクションの累積数。|  
 |**commands_processed**|**int**|セッション中に処理されたコマンド数の累計。|  
 |**delivery_rate**|**float(53)**|1秒間に配信されたコマンドの平均数。|  

@@ -1,6 +1,6 @@
 ---
 description: sys.conversation_endpoints (Transact-SQL)
-title: conversation_endpoints (Transact-sql) |Microsoft Docs
+title: sys.conversation_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e62cd4fb5c39a8b24ca25f49e381a23a32186643
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537485"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100686"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "89537485"
 |conversation_group_id|**uniqueidentifier**|このメッセージ交換が属しているメッセージ交換グループの識別子。 NULL 値は許容されません。|  
 |service_id|**int**|メッセージ交換の一方 (このビューを現在使用している側) で使用するサービスの識別子。 NULL 値は許容されません。|  
 |有効期間|**datetime**|メッセージ交換の有効期限 (日付と時刻)。 NULL 値は許容されません。|  
-|状態|**char(2)**|メッセージ交換の現在の状態。 NULL 値は許容されません。 つぎのいずれかです。<br /><br /> 送信が開始されました。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このメッセージ交換の開始メッセージ交換を処理しましたが、メッセージはまだ送信されていません。<br /><br /> SI   受信開始。 別のインスタンスがとの新しいメッセージ交換を開始し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ましたが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージをまだ完全に受信していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージが断片化されている場合、またはメッセージを順不同で受信した場合に、この状態のメッセージ交換を作成することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO (メッセージ交換確立) 状態のメッセージ交換が作成されることがあります。<br /><br /> CO   メッセージ交換確立。 メッセージ交換が確立され、メッセージ交換の両側でメッセージを送信できます。 通常のサービスでのメッセージ交換の大半は、メッセージ交換がこの状態のときに行われます。<br /><br /> DI 受信が切断されました。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションがメッセージ交換のメッセージを受信する場合もあります。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションがメッセージ交換を終了すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> 送信を切断します。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側がメッセージ交換の終了を確認すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> ER エラーです。 このエンドポイントでエラーが発生しました。 エラーメッセージはアプリケーションキューに格納されます。 アプリケーションキューが空の場合は、アプリケーションが既にエラーメッセージを使用していることを示します。<br /><br /> CD を閉じました。 メッセージ交換のエンドポイントは解放されました。|  
+|state|**char(2)**|メッセージ交換の現在の状態。 NULL 値は許容されません。 つぎのいずれかです。<br /><br /> 送信が開始されました。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このメッセージ交換の開始メッセージ交換を処理しましたが、メッセージはまだ送信されていません。<br /><br /> SI   受信開始。 別のインスタンスがとの新しいメッセージ交換を開始し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ましたが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージをまだ完全に受信していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初のメッセージが断片化されている場合、またはメッセージを順不同で受信した場合に、この状態のメッセージ交換を作成することができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO (メッセージ交換確立) 状態のメッセージ交換が作成されることがあります。<br /><br /> CO   メッセージ交換確立。 メッセージ交換が確立され、メッセージ交換の両側でメッセージを送信できます。 通常のサービスでのメッセージ交換の大半は、メッセージ交換がこの状態のときに行われます。<br /><br /> DI 受信が切断されました。 メッセージ交換のリモート側で END CONVERSATION が発行されました。 メッセージ交換のローカル側で END CONVERSATION が発行されるまで、メッセージ交換はこの状態になります。 アプリケーションがメッセージ交換のメッセージを受信する場合もあります。 メッセージ交換のリモート側ではメッセージ交換が終了しているので、このメッセージ交換でアプリケーションからメッセージを送信することはできません。 アプリケーションがメッセージ交換を終了すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> 送信を切断します。 メッセージ交換のローカル側で END CONVERSATION が発行されました。 メッセージ交換のリモート側で END CONVERSATION が承認されるまで、メッセージ交換はこの状態になります。 アプリケーションはこのメッセージ交換でメッセージを送受信することはできません。 メッセージ交換のリモート側がメッセージ交換の終了を確認すると、メッセージ交換は CD (Closed) 状態に移動します。<br /><br /> ER エラーです。 このエンドポイントでエラーが発生しました。 エラーメッセージはアプリケーションキューに格納されます。 アプリケーションキューが空の場合は、アプリケーションが既にエラーメッセージを使用していることを示します。<br /><br /> CD を閉じました。 メッセージ交換のエンドポイントは解放されました。|  
 |state_desc|**nvarchar(60)**|エンドポイントのメッセージ交換の状態の説明。 この列は NULL 値を許容します。 つぎのいずれかです。<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **会話**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **開閉**<br /><br /> **ERROR**|  
 |far_service|**nvarchar (256)**|メッセージ交換のリモート側で使用されるサービスの名前。 NULL 値は許容されません。|  
 |far_broker_instance|**nvarchar(128)**|メッセージ交換のリモート側のブローカーインスタンス。 NULLABLE.|  

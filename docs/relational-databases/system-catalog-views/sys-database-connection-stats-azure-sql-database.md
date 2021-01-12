@@ -17,16 +17,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: e303099001b1708b6227547fdd68e94dba5c5eee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b5d01ec490009c2c3b26dd888bd6050b0638e952
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97459889"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102823"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 
@@ -34,9 +34,9 @@ ms.locfileid: "97459889"
 
   データベース接続の [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 成功と失敗の概要を提供する、データベース接続イベントの統計が含まれます。 接続イベントの詳細については、「 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)のイベントの種類」を参照してください。  
   
-|統計|型|説明|  
+|統計|Type|説明|  
 |---------------|----------|-----------------|  
-|**database_name**|**sysname**|データベースの名前です。|  
+|**database_name**|**sysname**|データベース名。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 この時刻は常に 5 分の倍数です。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
 |**end_time**|**datetime2**|集計間隔の終了時刻を示す UTC 日時。 **End_time** は、同じ行の対応する **start_time** よりも常に5分後になります。|  
 |**success_count**|**int**|成功した接続の数。|  

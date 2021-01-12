@@ -1,6 +1,6 @@
 ---
-description: database_audit_specification_details (Transact-sql)
-title: database_audit_specification_details (Transact-sql) |Microsoft Docs
+description: sys.database_audit_specification_details (Transact-sql)
+title: sys.database_audit_specification_details (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8bc8e09e9f48a7fc37b1ba0f1d308f3e17fde46
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 80eb02546225f3378c2ca8f139f3282e4651ea24
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542624"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102832"
 ---
-# <a name="sysdatabase_audit_specification_details-transact-sql"></a>database_audit_specification_details (Transact-sql)
+# <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、 [dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)をクエリします。  
+  すべてのデータベースについてサーバー インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に含まれる、データベース監査仕様に関する情報を含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 すべての audit_action_id とその名前の一覧については、クエリ [sys.dm_audit_actions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)を使用してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "89542624"
 |**is_group**|**ビット**|オブジェクトがグループかどうかを示します。<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
 ## <a name="permissions"></a>アクセス許可  
- **ALTER ANY DATABASE AUDIT**権限または**VIEW DEFINITION**権限を持つプリンシパル、 **dbo**ロール、および**db_owners**固定データベースロールのメンバーは、このカタログビューにアクセスできます。 また、プリンシパルに対して **VIEW DEFINITION** 権限を拒否することはできません。  
+ **ALTER ANY DATABASE AUDIT** 権限または **VIEW DEFINITION** 権限を持つプリンシパル、 **dbo** ロール、および **db_owners** 固定データベースロールのメンバーは、このカタログビューにアクセスできます。 また、プリンシパルに対して **VIEW DEFINITION** 権限を拒否することはできません。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   

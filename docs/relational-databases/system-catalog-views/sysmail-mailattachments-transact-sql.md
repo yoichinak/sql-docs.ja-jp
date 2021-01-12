@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f3f29f688e750b853c288c901cd81b9891a285c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9fe55316cc27c21849379afe400d2950a5bcf882
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542396"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100138"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89542396"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|添付ファイルの識別子。|  
 |**mailitem_id**|**int**|添付ファイルが含まれていたメール アイテムの識別子。|  
-|**ファイル名**|**nvarchar (520)**|添付ファイルのファイル名。 **Attach_query_result**が1で**query_attachment_filename**が NULL の場合、データベースメールによって任意のファイル名が作成されます。|  
+|**filename**|**nvarchar (520)**|添付ファイルのファイル名。 **Attach_query_result** が1で **query_attachment_filename** が NULL の場合、データベースメールによって任意のファイル名が作成されます。|  
 |**filesize**|**int**|添付ファイルのサイズ (バイト単位)。|  
 |**資料**|**varbinary(max)**|添付ファイルのコンテンツ。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
@@ -43,10 +43,10 @@ ms.locfileid: "89542396"
 ## <a name="remarks"></a>解説  
  データベースメールのトラブルシューティングを行う場合は、このビューを使用して添付ファイルのプロパティを表示します。  
   
- システムテーブルに格納されている添付ファイルは、 **msdb** データベースのサイズが大きくなる可能性があります。 **Sysmail_delete_mailitems_sp**を使用して、メールアイテムとそれに関連付けられている添付ファイルを削除します。 詳細については、「 [データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  
+ システムテーブルに格納されている添付ファイルは、 **msdb** データベースのサイズが大きくなる可能性があります。 **Sysmail_delete_mailitems_sp** を使用して、メールアイテムとそれに関連付けられている添付ファイルを削除します。 詳細については、「 [データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールおよび**databasemailuserrole**データベースロールに付与されます。 **Sysadmin**固定サーバーロールのメンバーによって実行されると、このビューにはすべての添付ファイルが表示されます。 他のすべてのユーザーには、送信したメッセージの添付ファイルのみが表示されます。  
+ **Sysadmin** 固定サーバーロールおよび **databasemailuserrole** データベースロールに付与されます。 **Sysadmin** 固定サーバーロールのメンバーによって実行されると、このビューにはすべての添付ファイルが表示されます。 他のすべてのユーザーには、送信したメッセージの添付ファイルのみが表示されます。  
   
 ## <a name="see-also"></a>参照  
  [sysmail_allitems &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   

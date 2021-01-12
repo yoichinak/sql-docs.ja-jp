@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 0e8ffcc7ae60096de1b0355ed113ffb55e02e286
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543986"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100119"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  **未送信**または**再試行**中の状態のデータベースメールメッセージごとに1行の情報を格納します。 未送信または再試行の状態のメッセージは、メールキューに残ります。いつでも送信できます。 メッセージは、次の理由により、 **未送信** 状態になることがあります。  
+  **未送信** または **再試行** 中の状態のデータベースメールメッセージごとに1行の情報を格納します。 未送信または再試行の状態のメッセージは、メールキューに残ります。いつでも送信できます。 メッセージは、次の理由により、 **未送信** 状態になることがあります。  
   
 -   メッセージが新しく、メール キューに挿入されていても、データベース メールが他のメッセージの処理中でこのメッセージに達していない。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "89543986"
 |**blind_copy_recipients**|**varchar(max)**|メッセージのコピーを受信したが、その名前がメッセージヘッダーに表示されない電子メールアドレス。|  
 |**subject**|**nvarchar (510)**|メッセージの件名行。|  
 |**body**|**varchar(max)**|メッセージの本文|  
-|**body_format**|**varchar (20)**|メッセージの本文形式。 指定できる値は、 **TEXT** と **HTML**です。|  
+|**body_format**|**varchar (20)**|メッセージの本文形式。 指定できる値は、 **TEXT** と **HTML** です。|  
 |**importance**|**varchar (6)**|メッセージの **重要度** パラメーター。|  
 |**区別**|**varchar (12)**|メッセージの **感度** パラメーター。|  
 |**file_attachments**|**varchar(max)**|電子メール メッセージに添付されたファイル名の、セミコロン区切りの一覧。|  
@@ -73,9 +73,9 @@ ms.locfileid: "89543986"
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
   
 ## <a name="remarks"></a>解説  
- データベース メールのトラブルシューティングを行うとき、このビューでは送信済みのメッセージ数とメッセージの待機時間を確認できるので、問題の性質を特定するのに役立ちます。 メッセージが 1 つも送信されていない場合は、データベース メール外部プログラムが動作していないか、ネットワークの問題によってデータベース メールから SMTP サーバーへの接続に障害が発生している可能性があります。 未送信のメッセージの多くが同じ **profile_id**を持っている場合は、SMTP サーバーに問題がある可能性があります。 プロファイルにアカウントを追加することを検討してください。 メッセージが送信されているにもかかわらず、メッセージがキューに過剰に時間を費やしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要なメッセージの量を処理するためにより多くのリソースが必要になることがあります。  
+ データベース メールのトラブルシューティングを行うとき、このビューでは送信済みのメッセージ数とメッセージの待機時間を確認できるので、問題の性質を特定するのに役立ちます。 メッセージが 1 つも送信されていない場合は、データベース メール外部プログラムが動作していないか、ネットワークの問題によってデータベース メールから SMTP サーバーへの接続に障害が発生している可能性があります。 未送信のメッセージの多くが同じ **profile_id** を持っている場合は、SMTP サーバーに問題がある可能性があります。 プロファイルにアカウントを追加することを検討してください。 メッセージが送信されているにもかかわらず、メッセージがキューに過剰に時間を費やしている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必要なメッセージの量を処理するためにより多くのリソースが必要になることがあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールおよび**databasemailuserrole**データベースロールに付与されます。 **Sysadmin**固定サーバーロールのメンバーによって実行されると、このビューにはすべての**未送信**または**再試行**中のメッセージが表示されます。 他のすべてのユーザーには、送信した **未送信** または **再試行** 中のメッセージのみが表示されます。  
+ **Sysadmin** 固定サーバーロールおよび **databasemailuserrole** データベースロールに付与されます。 **Sysadmin** 固定サーバーロールのメンバーによって実行されると、このビューにはすべての **未送信** または **再試行** 中のメッセージが表示されます。 他のすべてのユーザーには、送信した **未送信** または **再試行** 中のメッセージのみが表示されます。  
   
   

@@ -1,6 +1,6 @@
 ---
-description: cdc. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql)
-title: cdc. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
+description: cdc.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql)
+title: cdc.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_net_changes_<capture_instance>
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7dee462b6b4a66b61d790bb06673d36f0907ef73
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498221"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099707"
 ---
-# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql)
+# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたログシーケンス番号 (LSN) の範囲内で変更されたソース行ごとに1つの差分変更行を返します。  
@@ -35,7 +35,7 @@ ms.locfileid: "88498221"
   
  LSN 範囲内でソース行に複数の変更がある場合、行の最終的な内容を反映した1行が、次に示す列挙関数によって返されます。 たとえば、トランザクションがソーステーブルに行を挿入し、LSN 範囲内の後続のトランザクションがその行の1つ以上の列を更新する場合、関数は、更新された列の値を含む **1** 行だけを返します。  
   
- この列挙関数は、ソーステーブルで変更データキャプチャが有効になっていて、net tracking が指定されている場合に作成されます。 差分の追跡を有効にするには、ソーステーブルに主キーまたは一意のインデックスが必要です。 関数名は、fn_cdc_get_net_changes_*capture_instance*の形式で使用されます。ここで *capture_instance* は、ソーステーブルで変更データキャプチャが有効にされたときにキャプチャインスタンスに対して指定された値です。 詳細については、「 [sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
+ この列挙関数は、ソーステーブルで変更データキャプチャが有効になっていて、net tracking が指定されている場合に作成されます。 差分の追跡を有効にするには、ソーステーブルに主キーまたは一意のインデックスが必要です。 関数名は、cdc.fn_cdc_get_net_changes_ *capture_instance* の形式で使用されます。 *capture_instance* は、ソーステーブルで変更データキャプチャが有効にされたときにキャプチャインスタンスに対して指定された値です。 詳細については、「 [sys.sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,12 +61,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  結果セットに含める LSN 範囲の上端を表す LSN を指定します。 *to_lsn* は **binary (10)** です。  
   
- 結果セットに含まれるのは、 [&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)変更テーブルの行のうち、__ start_lsn $ の*値が* *from_lsn 以下 to_lsn または*等しい場合のみです。  
+ 結果セットに含まれるのは、 [&#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)変更テーブルの行のうち、__ start_lsn $ の *値が* *from_lsn 以下 to_lsn または* 等しい場合のみです。  
   
  *<row_filter_option>* :: = {all | mask | all with merge}  
  メタデータ列の内容と、結果セットで返される行を制御するオプション。 次のいずれかのオプションを指定できます。  
   
- all  
+ すべて  
  行に対する最終的な変更の LSN と、メタデータ列 __ $ start_lsn および $operation の行を適用するために必要な操作を返し \_ \_ ます。 _Mask 列 \_ \_ $update は常に NULL です。  
   
  すべてマスク付き  
@@ -97,7 +97,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="examples"></a>例  
  次の例では、関数を使用して、 `cdc.fn_cdc_get_net_changes_HR_Department` 特定の時間間隔中にソーステーブルに対して行われた差分変更を報告し `HumanResources.Department` ます。  
   
- まず、関数を使用して、 `GETDATE` 時間間隔の開始をマークします。 ソース テーブルに対して複数の DML ステートメントを適用した後、再び `GETDATE` 関数を呼び出して期間の終わりを指定します。 次に、関数 [sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) を使用して、lsn 値で制限された変更データキャプチャのクエリ範囲に時間間隔をマップします。 最後に、`cdc.fn_cdc_get_net_changes_HR_Department` 関数を呼び出して、該当期間中に行われたソース テーブルへの差分変更を取得します。 挿入され、削除された行は、関数によって返される結果セットには表示されないことに注意してください。 たとえ行を追加しても、同じ期間内に削除されれば、その期間におけるソース テーブルへの差分変更とはならないためです。 この例を実行する前に、最初に例 B を実行する必要があり [ます sys. sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)です。  
+ まず、関数を使用して、 `GETDATE` 時間間隔の開始をマークします。 ソース テーブルに対して複数の DML ステートメントを適用した後、再び `GETDATE` 関数を呼び出して期間の終わりを指定します。 次に、関数 [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) を使用して、lsn 値で制限された変更データキャプチャのクエリ範囲に時間間隔をマップします。 最後に、`cdc.fn_cdc_get_net_changes_HR_Department` 関数を呼び出して、該当期間中に行われたソース テーブルへの差分変更を取得します。 挿入され、削除された行は、関数によって返される結果セットには表示されないことに注意してください。 たとえ行を追加しても、同じ期間内に削除されれば、その期間におけるソース テーブルへの差分変更とはならないためです。 この例を実行する前に、まず [sys.sp_cdc_enable_table &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)の例 B を実行する必要があります。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,10 +127,10 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ```  
   
 ## <a name="see-also"></a>参照  
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

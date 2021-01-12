@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6ca14e58a777603fc0bbfed73834597641fddf08
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 06a04e6b6deecddf722a80f9bcf736d7bc57387a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548922"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100016"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server オペレーティングシステム関連の動的管理ビュー (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,8 +63,8 @@ ms.locfileid: "89548922"
 |||  
 |-|-|  
 |**sys.dm_os_function_symbolic_name**|**sys.dm_os_ring_buffers**|  
-|**dm_os_memory_allocations**|**dm_os_sublatches**|  
-|**dm_os_worker_local_storage**||  
+|**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
+|**sys.dm_os_worker_local_storage**||  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

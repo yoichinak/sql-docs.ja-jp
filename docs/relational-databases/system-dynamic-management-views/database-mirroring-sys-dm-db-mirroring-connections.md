@@ -1,6 +1,6 @@
 ---
-description: データベースミラーリング-sys. dm_db_mirroring_connections
-title: dm_db_mirroring_connections (Transact-sql) |Microsoft Docs
+description: データベースミラーリング-sys.dm_db_mirroring_connections
+title: sys.dm_db_mirroring_connections (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1a9f7b7d1cb6f3c3f9af3dcb9f64b42fa48af78c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e0cd194ef04063bcd1500d4c3be59c352e905114
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551331"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101710"
 ---
-# <a name="database-mirroring---sysdm_db_mirroring_connections"></a>データベースミラーリング-sys. dm_db_mirroring_connections
+# <a name="database-mirroring---sysdm_db_mirroring_connections"></a>データベースミラーリング-sys.dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   データベース ミラーリング用に確立された各接続の行を返します。  
@@ -35,7 +35,7 @@ ms.locfileid: "89551331"
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|接続の識別子。|  
 |**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tcp/ip 通信用にこの接続で使用されるネットワークインターフェイス (SNI) 接続の識別子。|  
-|**状態**|**smallint**|接続の現在の状態です。 指定できる値<br /><br /> 1 = 新規<br /><br /> 2 = 接続中<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 終了|  
+|**state**|**smallint**|接続の現在の状態です。 指定できる値<br /><br /> 1 = 新規<br /><br /> 2 = 接続中<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 終了|  
 |**state_desc**|**nvarchar(60)**|接続の現在の状態です。 指定できる値<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|接続が開いた日付と時刻。|  
 |**login_time**|**datetime**|接続に対するログインが成功した日付と時刻。|  
@@ -69,7 +69,7 @@ ms.locfileid: "89551331"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|差出人|終了|Relationship|  
 |----------|--------|------------------|  
 |**dm_db_mirroring_connections.connection_id**|**dm_exec_connections.connection_id**|一対一|  
   

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a962925e0a359055286b6598914cd3e79cf8036c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b27a5202f20e6ced2ad73734688702cfbb7e7a2
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474973"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099892"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-sql)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97474973"
 |sizeclass_count|**int**|内部使用のみ。|  
 |min_sizeclass|**int**|内部使用のみ。|  
 |max_sizeclass|**int**|内部使用のみ。|  
-|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用専用です。|  
+|memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。 内部使用のみ。|  
 |xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
 ## <a name="remarks"></a>解説  
@@ -76,7 +76,7 @@ SELECT OBJECT_NAME(object_id), *
 FROM sys.dm_db_xtp_memory_consumers;  
 ```  
   
-## <a name="user-scenario"></a>ユーザーシナリオ  
+## <a name="user-scenario"></a>ユーザー シナリオ  
   
 ```  
 -- memory consumers (database level)  

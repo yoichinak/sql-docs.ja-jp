@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c912d3cb46d4545bf0501281cec23c8f9ce4fb97
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810199"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101817"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "91810199"
 |**resource_group_id**|**nvarchar(40)**|可用性グループの WSFC クラスター リソース グループのリソース グループ ID。|  
 |**failure_condition_level**|**int**|自動フェールオーバーをトリガーする必要があるユーザー定義のエラー状態レベル。このレベルでは、このテーブルのすぐ下のテーブルに表示される整数値の1つです。<br /><br /> エラー状態レベルの範囲は 1 ～ 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 から 4) が含まれ、レベル 4 にはレベル 1 から 3 が含まれます。以下同様です。<br /><br /> この値を変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの FAILURE_CONDITION_LEVEL オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |**health_check_timeout**|**int**|サーバーインスタンスが低速または応答していないと想定される前に、 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システムストアドプロシージャがサーバーの正常性情報を返すまでの待機時間 (ミリ秒単位)。 既定値は 30000 ミリ秒 (30 秒) です。<br /><br /> この値を変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの HEALTH_CHECK_TIMEOUT オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
-|**automated_backup_preference**|**tinyint**|この可用性グループの可用性データベースでバックアップを実行するための推奨される場所です。 使用可能な値とその説明を次に示します。<br /><br /> <br /><br /> 0: プライマリ。 バックアップは常にプライマリレプリカで実行する必要があります。<br /><br /> 1: セカンダリのみ。 セカンダリレプリカでバックアップを実行することをお勧めします。<br /><br /> 2: セカンダリを優先します。 セカンダリレプリカでバックアップを実行することをお勧めしますが、バックアップ操作に使用できるセカンダリレプリカがない場合は、プライマリレプリカでバックアップを実行できます。 これは既定の動作です。<br /><br /> 3: 任意のレプリカ。 バックアップをプライマリレプリカとセカンダリレプリカのどちらで実行するかについては、優先順位はありません。<br /><br /> <br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
-|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference**の説明。次のいずれかになります。<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
+|**automated_backup_preference**|**tinyint**|この可用性グループの可用性データベースでバックアップを実行するための推奨される場所です。 使用可能な値とその説明を次に示します。<br /><br /> <br /><br /> 0: プライマリ。 バックアップは常にプライマリレプリカで実行する必要があります。<br /><br /> 1: セカンダリのみ。 セカンダリレプリカでバックアップを実行することをお勧めします。<br /><br /> 2: セカンダリを優先します。 セカンダリレプリカでバックアップを実行することをお勧めしますが、バックアップ操作に使用できるセカンダリレプリカがない場合は、プライマリレプリカでバックアップを実行できます。 これが既定の動作です。<br /><br /> 3: 任意のレプリカ。 バックアップをプライマリレプリカとセカンダリレプリカのどちらで実行するかについては、優先順位はありません。<br /><br /> <br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference** の説明。次のいずれかになります。<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> なし|  
 |**version**|**smallint**|Windows フェールオーバークラスターに格納されている可用性グループのメタデータのバージョン。 このバージョン番号は、新しい機能が追加されたときにインクリメントされます。|  
 |**basic_features**|**bit**|これが基本的な可用性グループかどうかを指定します。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。|  
-|**dtc_support**|**bit**|この可用性グループに対して DTC サポートが有効になっているかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DTC_SUPPORT**オプションは、この設定を制御します。|  
-|**db_failover**|**bit**|可用性グループがデータベースの正常性状態のフェールオーバーをサポートするかどうかを指定します。 **CREATE AVAILABILITY GROUP**の**DB_FAILOVER**オプションは、この設定を制御します。|  
+|**dtc_support**|**bit**|この可用性グループに対して DTC サポートが有効になっているかどうかを指定します。 **CREATE AVAILABILITY GROUP** の **DTC_SUPPORT** オプションは、この設定を制御します。|  
+|**db_failover**|**bit**|可用性グループがデータベースの正常性状態のフェールオーバーをサポートするかどうかを指定します。 **CREATE AVAILABILITY GROUP** の **DB_FAILOVER** オプションは、この設定を制御します。|  
 |**is_distributed**|**bit**|分散型可用性グループかどうかを指定します。 詳細については、「[Distributed Availability Groups &#40;Always On Availability Groups&#41; (分散型可用性グループ (Always On 可用性グループ))](../../database-engine/availability-groups/windows/distributed-availability-groups.md)」を参照してください。|
 |**cluster_type**|**tinyint**|0: Windows Server フェールオーバークラスター <br/><br/>1: 外部クラスター (たとえば、Linux Pacemaker)<br/><br/>2: なし|
 |**cluster_type_desc**|**nvarchar(60)**|クラスターの種類の説明テキスト|
@@ -57,7 +57,7 @@ ms.locfileid: "91810199"
 ## <a name="failure-condition-level--values"></a>エラー条件レベルの値  
  次の表では、 **failure_condition_level** 列に対して考えられるエラー状態のレベルについて説明します。  
   
-|Value|エラー条件|  
+|値|エラー条件|  
 |-----------|-----------------------|  
 |1|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスがダウンしています。<br /><br /> -サーバーインスタンスから ACK を受信しないため、WSFC フェールオーバークラスターに接続するための可用性グループのリースが期限切れになります。 詳細については、「[How It Works:SQL Server Always On Lease Timeout](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください。|  
 |2|次のいずれかが発生した場合に自動フェールオーバーを開始する必要があることを指定します。<br /><br /> <br /><br /> -のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスターに接続しておらず、可用性グループのユーザー指定の **health_check_timeout** しきい値を超えています。<br /><br /> -可用性レプリカがエラー状態になっています。|  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e84ad652e1253a9026d61ec0f0a28b571b699a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: cd2f3ac634f737772691c3fdb7a1d4ab4d736123
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525074"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102742"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89525074"
   バックアップ時に、データベース内のファイルグループごとに1行のデータを格納します。 **backupfilegroup** は **msdb** データベースに格納されます。  
   
 > [!NOTE]  
->  **Backupfilegroup**テーブルには、バックアップセットではなく、データベースのファイルグループの構成が表示されます。 バックアップセットにファイルが含まれているかどうかを確認するには、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)テーブルの**is_present**列を使用します。  
+>  **Backupfilegroup** テーブルには、バックアップセットではなく、データベースのファイルグループの構成が表示されます。 バックアップセットにファイルが含まれているかどうかを確認するには、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)テーブルの **is_present** 列を使用します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "89525074"
 ## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
->  同じファイルグループ名を別のデータベースに表示できます。ただし、各ファイルグループには独自の GUID があります。 したがって、 **(backup_set_id、filegroup_guid)** は、 **backupfilegroup**内のファイルグループを識別する一意のキーです。  
+>  同じファイルグループ名を別のデータベースに表示できます。ただし、各ファイルグループには独自の GUID があります。 したがって、 **(backup_set_id、filegroup_guid)** は、 **backupfilegroup** 内のファイルグループを識別する一意のキーです。  
   
  LOADHISTORY を使用した *backup_device* からの RESTORE verifyonly は、 **backupmediaset** テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   

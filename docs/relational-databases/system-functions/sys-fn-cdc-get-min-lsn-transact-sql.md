@@ -1,6 +1,6 @@
 ---
-description: fn_cdc_get_min_lsn (Transact-sql)
-title: fn_cdc_get_min_lsn (Transact-sql) |Microsoft Docs
+description: sys.fn_cdc_get_min_lsn (Transact-sql)
+title: sys.fn_cdc_get_min_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 34f941c959d56e4526a73bd186e18cafeda43660
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321688"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099679"
 ---
-# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>fn_cdc_get_min_lsn (Transact-sql)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [Change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)システムテーブルから、指定されたキャプチャインスタンスの start_lsn 列の値を返します。 この値は、キャプチャ インスタンスの有効期間の下端を表します。  
+  [Cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)システムテーブルから、指定されたキャプチャインスタンスの start_lsn 列の値を返します。 この値は、キャプチャ インスタンスの有効期間の下端を表します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>引数  
  **'** *capture_instance_name* **'**  
- キャプチャ インスタンスの名前を指定します。 *capture_instance_name* は **sysname**です。  
+ キャプチャ インスタンスの名前を指定します。 *capture_instance_name* は **sysname** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **binary(10)**  
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
