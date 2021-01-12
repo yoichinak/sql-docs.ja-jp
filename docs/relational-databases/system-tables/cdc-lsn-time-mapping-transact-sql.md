@@ -1,6 +1,6 @@
 ---
-description: cdc. lsn_time_mapping (Transact-sql)
-title: cdc. lsn_time_mapping (Transact-sql) |Microsoft Docs
+description: cdc.lsn_time_mapping (Transact-sql)
+title: cdc.lsn_time_mapping (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - cdc.lsn_time_mapping
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e4791eba84c89b96b03acc6011a018bab2bda4b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: edb2732da4b3d2dba2c8dfa0947eb0c5d135ffb6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544630"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094913"
 ---
-# <a name="cdclsn_time_mapping-transact-sql"></a>cdc. lsn_time_mapping (Transact-sql)
+# <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   変更テーブル内の行を保持しているトランザクションごとに1行の値を返します。 このテーブルは、ログシーケンス番号 (LSN) のコミット値とトランザクションがコミットされた時刻の間のマッピングに使用されます。 変更テーブルエントリがないエントリもログに記録される場合があります。 これにより、変更アクティビティが少ないか、まったくない場合に、LSN 処理の完了をテーブルに記録できます。  
   
- システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、transact-sql &#40;システム関数を[&#41;transact-sql&#41;fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)および &#40;を実行して、 [fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)を実行します。  
+ システムテーブルに対して直接クエリを実行しないことをお勧めします。 代わりに、transact-sql [&#41;&#40;sys.fn_cdc_map_lsn_to_time ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) を実行し、 [transact-sql &#40;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) システム関数を sys.fn_cdc_map_time_to_lsn します。  
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

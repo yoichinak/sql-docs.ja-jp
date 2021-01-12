@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c5b83521f64253aaa5d4eb6dfd6d5e49eb5d71b4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: bcd51354cab293afcdce2845fef5bd6e51e1c70f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89524121"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096187"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSsnapshot_agents**テーブルには、ローカルディストリビューターに関連付けられているスナップショットエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSsnapshot_agents** テーブルには、ローカルディストリビューターに関連付けられているスナップショットエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

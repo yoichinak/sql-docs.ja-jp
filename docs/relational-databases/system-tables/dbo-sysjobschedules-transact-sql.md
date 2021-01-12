@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2cd3180f982b978a5918b505f9cf0989baf4e0fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 3880d33e9c69a4911aa64487c34e636ce45a3a05
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544594"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096276"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   エージェントによって実行されるジョブのスケジュール情報を格納 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 このテーブルは、 **msdb** データベースに格納されます。  
   
-> **注:****Sysjobschedules**テーブルは20分ごとに更新され、 **sp_help_jobschedule**ストアドプロシージャによって返される値に影響を与える可能性があります。  
+> **注:****Sysjobschedules** テーブルは20分ごとに更新され、 **sp_help_jobschedule** ストアドプロシージャによって返される値に影響を与える可能性があります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

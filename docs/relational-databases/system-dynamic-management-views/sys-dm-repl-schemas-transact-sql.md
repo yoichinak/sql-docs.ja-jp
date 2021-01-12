@@ -1,6 +1,6 @@
 ---
-description: dm_repl_schemas (Transact-sql)
-title: dm_repl_schemas (Transact-sql) |Microsoft Docs
+description: sys.dm_repl_schemas (Transact-sql)
+title: sys.dm_repl_schemas (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45ca3d11d1299e2fa308e823f196251066fb6202
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 549f5beaae81d181f391936d1acecbc4aeb5b77a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536915"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095082"
 ---
-# <a name="sysdm_repl_schemas-transact-sql"></a>dm_repl_schemas (Transact-sql)
+# <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   レプリケーションでパブリッシュされたテーブル列に関する情報を返します。  
@@ -82,7 +82,7 @@ ms.locfileid: "89536915"
 |**se_nullBitInLeafRows**|**int**|列の値が NULL かどうかを指定します。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Dm_repl_schemas**を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
+ **Dm_repl_schemas** を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="remarks"></a>解説  
  情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.sysprocesses compatibility view
 - sysprocesses system table
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 89e9bf9ab596e24148851f68ffa30515079fb51f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d8272d6759508697512506bcab8df81d65b90b83
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482081"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095389"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysのプロセス (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88482081"
 |last_batch|**datetime**|クライアントプロセスがリモートストアドプロシージャ呼び出しまたは EXECUTE ステートメントを最後に実行した時刻。|  
 |ecid|**smallint**|1つのプロセスに代わって動作するサブスレッドを一意に識別するために使用される実行コンテキスト ID。|  
 |open_tran|**smallint**|プロセスの開いているトランザクションの数。|  
-|status|**nchar(30)**|プロセス ID の状態。 次の値を指定できます。<br /><br /> **休止中**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションをリセットしています。<br /><br /> **running** = セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** = セッションは、デッドロック検出などのバックグラウンドタスクを実行しています。<br /><br /> **rollback** = セッションでトランザクションのロールバックが進行中です。<br /><br /> **pending** = セッションは、ワーカースレッドが使用可能になるのを待機しています。<br /><br /> 実行**可能 = セッション**のタスクは、時間の経過を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop** = セッションのタスクは、スピンロックが解放されるのを待機しています。<br /><br /> **中断** = セッションは、i/o などのイベントが完了するのを待機しています。|  
+|status|**nchar(30)**|プロセス ID の状態。 次の値を指定できます。<br /><br /> **休止中**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セッションをリセットしています。<br /><br /> **running** = セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** = セッションは、デッドロック検出などのバックグラウンドタスクを実行しています。<br /><br /> **rollback** = セッションでトランザクションのロールバックが進行中です。<br /><br /> **pending** = セッションは、ワーカースレッドが使用可能になるのを待機しています。<br /><br /> 実行 **可能 = セッション** のタスクは、時間の経過を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop** = セッションのタスクは、スピンロックが解放されるのを待機しています。<br /><br /> **中断** = セッションは、i/o などのイベントが完了するのを待機しています。|  
 |sid|**binary(86)**|ユーザーのグローバル一意識別子 (GUID)。|  
 |hostname|**nchar(128)**|ワークステーションの名前。|  
 |program_name|**nchar(128)**|アプリケーション プログラム名です。|  

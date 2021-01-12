@@ -1,6 +1,6 @@
 ---
-description: transmission_queue (Transact-sql)
-title: transmission_queue (Transact-sql) |Microsoft Docs
+description: sys.transmission_queue (Transact-sql)
+title: sys.transmission_queue (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.transmission_queue catalog view
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b0a45de2a9eb967151bf0850556469fe857db5c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8d3b3b9662feefbc14c4ee12fbdd17f4e10ba25c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544939"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094351"
 ---
-# <a name="systransmission_queue-transact-sql"></a>transmission_queue (Transact-sql)
+# <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   このカタログ ビューは、転送キュー内のメッセージごとに 1 行のデータを格納します。ビューの内容を次の表に示します。  

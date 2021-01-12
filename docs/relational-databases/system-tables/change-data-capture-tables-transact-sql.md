@@ -11,14 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 540228ff06fa673d55f0549e6e841c0af81b1a06
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6ef80682d8d95188aa764c6e04e768c57298715a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544651"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094947"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>変更データキャプチャテーブル (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89544651"
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
  変更テーブルに関連付けられている各インデックス列に対して1行の値を返します。  
   
- [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  変更データ キャプチャのエージェント ジョブの構成パラメーターを返します。  
   
 ## <a name="see-also"></a>参照  

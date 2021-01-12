@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: cf8982115b1a4399c327aefc66a5e99a1d46c575
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399408"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094196"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,19 +42,19 @@ ms.locfileid: "88399408"
 |**status**|**int**|システム状態情報。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|最初のページまたはルートページへのポインター。<br /><br /> **Indid** = 0 の場合は使用されません。<br /><br /> NULL = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> NULL = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
 |**indid**|**smallint**|インデックスの ID:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> >1 = 非クラスター化インデックス|  
-|**root**|**binary(6)**|**Indid** >= 1**の場合、root はルート**ページへのポインターです。<br /><br /> **Indid** = 0 の場合は使用されません。<br /><br /> NULL = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> NULL = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
+|**root**|**binary(6)**|**Indid** >= 1 **の場合、root はルート** ページへのポインターです。<br /><br /> **Indid** = 0 の場合は使用されません。<br /><br /> NULL = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> NULL = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
 |**minlen**|**smallint**|行の最小サイズ。|  
 |**keycnt**|**smallint**|キーの数。|  
 |**groupid**|**smallint**|オブジェクトが作成されたファイル グループ ID。<br /><br /> NULL = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> NULL = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
-|**dpages**|**int**|**Indid** = 0 または**indid** = 1 の場合、 **dpages**は使用されているデータページの数です。<br /><br /> **Indid** > 1 の場合、 **dpages**は使用されているインデックスページの数を示します。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
-|**確保**|**int**|**Indid** = 0 または**indid** = 1 の場合、 **reserved**は、すべてのインデックスとテーブルデータに割り当てられたページ数を示します。<br /><br /> **Indid** > 1 の場合、**予約**されるのは、インデックスに割り当てられたページ数です。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
-|**用い**|**int**|**Indid** = 0 または**indid** = 1 の場合は、すべてのインデックスとテーブルデータに使用される合計ページ数が**使用**されます。<br /><br /> **Indid** > 1 の場合は、インデックスに使用されるページ数が**使用さ**れます。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
-|**rowcnt**|**bigint**|**Indid** = 0 および**indid** = 1 に基づくデータレベルの行数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
-|**rowmodctr**|**int**|テーブルの統計情報が前回更新されてから挿入、削除、更新された行の総数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **rowmodctr**は以前のバージョンと完全には互換性がありません。 詳細については、「解説」を参照してください。|  
+|**dpages**|**int**|**Indid** = 0 または **indid** = 1 の場合、 **dpages** は使用されているデータページの数です。<br /><br /> **Indid** > 1 の場合、 **dpages** は使用されているインデックスページの数を示します。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
+|**確保**|**int**|**Indid** = 0 または **indid** = 1 の場合、 **reserved** は、すべてのインデックスとテーブルデータに割り当てられたページ数を示します。<br /><br /> **Indid** > 1 の場合、**予約** されるのは、インデックスに割り当てられたページ数です。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
+|**用い**|**int**|**Indid** = 0 または **indid** = 1 の場合は、すべてのインデックスとテーブルデータに使用される合計ページ数が **使用** されます。<br /><br /> **Indid** > 1 の場合は、インデックスに使用されるページ数が **使用さ** れます。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> 行オーバーフローが発生した場合、は正確な結果を生成しません。|  
+|**rowcnt**|**bigint**|**Indid** = 0 および **indid** = 1 に基づくデータレベルの行数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。|  
+|**rowmodctr**|**int**|テーブルの統計情報が前回更新されてから挿入、削除、更新された行の総数。<br /><br /> 0 = **indid** > 1 の場合、インデックスはパーティション分割されます。<br /><br /> 0 = **indid** が0または1の場合、テーブルはパーティション分割されます。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **rowmodctr** は以前のバージョンと完全には互換性がありません。 詳細については、「解説」を参照してください。|  
 |**reserved3**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved4**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xmaxlen**|**smallint**|行の最大サイズ|  
-|**maxirow**|**smallint**|非リーフインデックス行の最大サイズ。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **maxirow**は、以前のバージョンと完全には互換性がありません。|  
+|**maxirow**|**smallint**|非リーフインデックス行の最大サイズ。<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降では、 **maxirow** は、以前のバージョンと完全には互換性がありません。|  
 |**OrigFillFactor**|**tinyint**|インデックスが作成されたときに使用された元の FILL FACTOR 値。 この値は維持されません。ただし、インデックスを再作成する必要があり、使用された FILL FACTOR 値を記憶していない場合に便利です。|  
 |**StatVersion**|**tinyint**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved2**|**int**|0 を返します。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -66,16 +66,16 @@ ms.locfileid: "88399408"
 |**name**|**sysname**|インデックスまたは統計の名前。 **Indid** = 0 の場合は NULL を返します。 アプリケーションを変更して、ヒープ名が NULL であることを確認します。|  
 |**statblob**|**image**|統計バイナリ ラージ オブジェクト (BLOB)。<br /><br /> NULL を返します。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**レコード**|**int**|**Indid = 0**および**indid** = 1 に基づくデータレベルの行数。 **indid** >1 に対して値が繰り返されます。|  
+|**rows**|**int**|**Indid = 0** および **indid** = 1 に基づくデータレベルの行数。 **indid** >1 に対して値が繰り返されます。|  
   
 ## <a name="remarks"></a>解説  
  予約済みとして定義されている列は使用しないでください。  
   
- テーブルまたはインデックスに ROW_OVERFLOW アロケーションユニットのデータが含まれている場合、列 **dpages**、 **reserved**、および **used** では、正確な結果が返されません。 また、各インデックスのページ数は個別に追跡され、ベース テーブル用に集計されることはありません。 ページ数を表示する[には、](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) [allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)カタログビューまたは[dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)動的管理ビューを使用します。  
+ テーブルまたはインデックスに ROW_OVERFLOW アロケーションユニットのデータが含まれている場合、列 **dpages**、 **reserved**、および **used** では、正確な結果が返されません。 また、各インデックスのページ数は個別に追跡され、ベース テーブル用に集計されることはありません。 ページ数を表示するには、 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) または [パーティション](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) カタログビュー、または [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 動的管理ビューを使用します。  
   
  SQL Server 2000 以前では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって行レベルの変更カウンターが管理されていました。 現在、こうしたカウンターは列レベルで管理されます。 そのため、 **rowmodctr** 列が計算され、以前のバージョンの結果に似た結果が生成されますが、正確ではありません。  
   
- **Rowmodctr**の値を使用して統計を更新するタイミングを決定する場合は、次の解決策を検討してください。  
+ **Rowmodctr** の値を使用して統計を更新するタイミングを決定する場合は、次の解決策を検討してください。  
   
 -   何もしない。 新しい **rowmodctr** 値を使用すると、以前のバージョンの動作が適度に近いため、統計を更新するタイミングを判断する際によく役立ちます。  
   

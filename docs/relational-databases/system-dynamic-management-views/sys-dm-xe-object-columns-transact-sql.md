@@ -1,6 +1,6 @@
 ---
-description: dm_xe_object_columns (Transact-sql)
-title: dm_xe_object_columns (Transact-sql) |Microsoft Docs
+description: sys.dm_xe_object_columns (Transact-sql)
+title: sys.dm_xe_object_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e381833a5869f20364b7797bb86a1c4e06fed81
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c5da079cfecbf1ddaa622f05ce71e5c04d63f4f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546362"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095066"
 ---
-# <a name="sysdm_xe_object_columns-transact-sql"></a>dm_xe_object_columns (Transact-sql)
+# <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   すべてのオブジェクトのスキーマ情報を返します。  
@@ -39,7 +39,7 @@ ms.locfileid: "89546362"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar (256)**|列の名前。 名前は、オブジェクト内で一意です。 NULL 値は許可されません。|  
 |column_id|**int**|列の識別子。 column_id は、column_type と共に使用する場合に、オブジェクト内で一意です。 NULL 値は許可されません。|  
-|object_name|**nvarchar (256)**|この列が所属するオブジェクトの名前。 Dm_xe_objects との間には多対一のリレーションシップがあります。Null 値は許容されません。|  
+|object_name|**nvarchar (256)**|この列が所属するオブジェクトの名前。 Sys.dm_xe_objects との間には多対一のリレーションシップがあります。Null 値は許容されません。|  
 |object_package_guid|**uniqueidentifier**|オブジェクトを含むパッケージの GUID。 NULL 値は許可されません。|  
 |type_name|**nvarchar (256)**|この列の型の名前。 NULL 値は許可されません。|  
 |type_package_guid|**uniqueidentifier**|列のデータ型を含むパッケージの GUID。 NULL 値は許可されません。|  
@@ -54,7 +54,7 @@ ms.locfileid: "89546362"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|終了|リレーションシップ|  
+|差出人|終了|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name、sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多対一|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多対一|  

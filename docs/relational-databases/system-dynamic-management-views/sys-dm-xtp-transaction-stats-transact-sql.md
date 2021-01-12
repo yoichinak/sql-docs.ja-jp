@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
-title: dm_xtp_transaction_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_xtp_transaction_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ec1926e523ef388ddac159b3b2208069eb93f80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 23913759f951d4bdb0f870ddaf73f1d0a0808520
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539213"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096400"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,35 +35,35 @@ ms.locfileid: "89539213"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|total_count|**bigint**|インメモリ OLTP データベースエンジンで実行されたトランザクションの合計数。|  
+|total_count|**bigint**|In-Memory OLTP データベースエンジンで実行されたトランザクションの合計数。|  
 |read_only_count|**bigint**|読み取り専用トランザクションの数。|  
 |total_aborts|**bigint**|ユーザーまたはシステムの中止によって中止されたトランザクションの総数。|  
 |user_aborts|**bigint**|システムによって開始された中止の回数。 たとえば、書き込みの競合、検証の失敗、依存関係のエラーなどがあります。|  
 |validation_failures|**bigint**|検証エラーによってトランザクションが中止された回数。|  
-|dependencies_taken|**bigint**|内部使用のみです。|  
+|dependencies_taken|**bigint**|内部使用のみ。|  
 |dependencies_failed|**bigint**|トランザクションが依存していたトランザクションが中止されたためにトランザクションが中止された回数。|  
 |savepoint_create|**bigint**|作成されたセーブポイントの数。 ATOMIC ブロックごとに新しいセーブポイントが作成されます。|  
 |savepoint_rollbacks|**bigint**|前のセーブポイントにロールバックする回数。|  
-|savepoint_refreshes|**bigint**|内部使用のみです。|  
-|log_bytes_written|**bigint**|インメモリ OLTP ログレコードに書き込まれた合計バイト数。|  
+|savepoint_refreshes|**bigint**|内部使用のみ。|  
+|log_bytes_written|**bigint**|In-Memory OLTP ログレコードに書き込まれた合計バイト数。|  
 |log_IO_count|**bigint**|ログ IO を必要とするトランザクションの総数。 持続性のあるテーブルのトランザクションのみを考慮します。|  
-|phantom_scans_started|**bigint**|内部使用のみです。|  
-|phatom_scans_retries|**bigint**|内部使用のみです。|  
-|phantom_rows_touched|**bigint**|内部使用のみです。|  
-|phantom_rows_expiring|**bigint**|内部使用のみです。|  
-|phantom_rows_expired|**bigint**|内部使用のみです。|  
-|phantom_rows_expired_removed|**bigint**|内部使用のみです。|  
-|scans_started|**bigint**|内部使用のみです。|  
-|scans_retried|**bigint**|内部使用のみです。|  
-|rows_returned|**bigint**|内部使用のみです。|  
-|rows_touched|**bigint**|内部使用のみです。|  
-|rows_expiring|**bigint**|内部使用のみです。|  
-|rows_expired|**bigint**|内部使用のみです。|  
-|rows_expired_removed|**bigint**|内部使用のみです。|  
-|rows_inserted|**bigint**|内部使用のみです。|  
-|rows_updated|**bigint**|内部使用のみです。|  
-|rows_deleted|**bigint**|内部使用のみです。|  
-|write_conflicts|**bigint**|内部使用のみです。|  
+|phantom_scans_started|**bigint**|内部使用のみ。|  
+|phatom_scans_retries|**bigint**|内部使用のみ。|  
+|phantom_rows_touched|**bigint**|内部使用のみ。|  
+|phantom_rows_expiring|**bigint**|内部使用のみ。|  
+|phantom_rows_expired|**bigint**|内部使用のみ。|  
+|phantom_rows_expired_removed|**bigint**|内部使用のみ。|  
+|scans_started|**bigint**|内部使用のみ。|  
+|scans_retried|**bigint**|内部使用のみ。|  
+|rows_returned|**bigint**|内部使用のみ。|  
+|rows_touched|**bigint**|内部使用のみ。|  
+|rows_expiring|**bigint**|内部使用のみ。|  
+|rows_expired|**bigint**|内部使用のみ。|  
+|rows_expired_removed|**bigint**|内部使用のみ。|  
+|rows_inserted|**bigint**|内部使用のみ。|  
+|rows_updated|**bigint**|内部使用のみ。|  
+|rows_deleted|**bigint**|内部使用のみ。|  
+|write_conflicts|**bigint**|内部使用のみ。|  
 |unique_constraint_violations|**bigint**|UNIQUE 制約の違反の総数。|  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7439c541a15f980cb85b91bc336e0e63d2f3dec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d93b2be18167232798b3d8de6ce1ca67f9e8c9d6
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482673"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095134"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "97482673"
 |exception_severity|**int**|ワーカーで前回発生した例外の重大度。|  
 |exception_address|**varbinary (8)**|例外をスローしたコード アドレス。|  
 |affinity|**bigint**|ワーカーのスレッド関係。 [Sys.dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)のスレッドの関係と一致します。|  
-|state|**nvarchar(60)**|ワーカーの状態。 次の値のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
+|state|**nvarchar(60)**|ワーカーの状態。 値は、次のいずれかです。<br /><br /> INIT = Worker は現在初期化中です。<br /><br /> RUNNING = ワーカーは、現在非プリエンプティブまたはプリエンプティブのいずれかで実行中です。<br /><br /> RUNNABLE = ワーカーは、スケジューラ上で実行できる状態です。<br /><br /> SUSPENDED = ワーカーは現在中断されています。イベントによるシグナル送信を待機中です。|  
 |start_quantum|**bigint**|ワーカーの現在の実行が開始された時間 (ミリ秒単位)。|  
 |end_quantum|**bigint**|このワーカーの現在の実行が終了するまでの時間 (ミリ秒単位)。|  
 |last_wait_type|**nvarchar(60)**|最後の待機の種類。 待機の種類の一覧については、「 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
-|return_code|**int**|前回の待機からの戻り値。 次の値のいずれかです。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|return_code|**int**|前回の待機からの戻り値。 値は、次のいずれかです。<br /><br /> 0 =SUCCESS<br /><br /> 3 = デッドロック<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|内部使用のみ。|  
 |max_quantum|**bigint**|内部使用のみ。|  
 |boost_count|**int**|内部使用のみ。|  

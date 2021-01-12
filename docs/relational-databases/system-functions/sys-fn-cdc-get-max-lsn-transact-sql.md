@@ -1,6 +1,6 @@
 ---
 description: sys.fn_cdc_get_max_lsn (Transact-SQL)
-title: fn_cdc_get_max_lsn (Transact-sql) |Microsoft Docs
+title: sys.fn_cdc_get_max_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - fn_cdc_get_max_lsn
 - sys.fn_cdc_get_max_lsn
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 314fac004523b27d5766cca264535dcca6dd058e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 59613b93de2a086bfd4d0bac7fa0f8a8983d8ce5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88322138"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094995"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [Lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの start_lsn 列の最大ログシーケンス番号 (LSN) を返します。 この関数を使用すると、キャプチャインスタンスの変更データキャプチャタイムラインの上端を返すことができます。  
+  [Cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの start_lsn 列からの最大ログシーケンス番号 (LSN) を返します。 この関数を使用すると、キャプチャインスタンスの変更データキャプチャタイムラインの上端を返すことができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sys.fn_cdc_get_max_lsn ()
  **binary(10)**  
   
 ## <a name="remarks"></a>解説  
- この関数は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) テーブルの start_lsn 列の最大 LSN を返します。 変更がデータベース変更テーブルに反映されたときに、キャプチャ プロセスで最後に処理された LSN になります。 データベースに対して定義されているキャプチャインスタンスに関連付けられているすべてのタイムラインの高エンドポイントとして機能します。  
+ この関数は、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) テーブルの start_lsn 列の最大 LSN を返します。 変更がデータベース変更テーブルに反映されたときに、キャプチャ プロセスで最後に処理された LSN になります。 データベースに対して定義されているキャプチャインスタンスに関連付けられているすべてのタイムラインの高エンドポイントとして機能します。  
   
  関数は、通常、クエリ間隔に対して適切な高いエンドポイントを取得するために使用されます。  
   
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

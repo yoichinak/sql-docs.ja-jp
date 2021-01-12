@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trigger_events catalog view
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18f9453079f7a11da4c1d073cda4dd750a3c91c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2caa1b4e7c140228dd870250ad1cd55f83fc3483
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482873"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094352"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trigger_events (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482873"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Columns inherited from sys.events>**|適用できません|**Object_id**、**型**、 **type_desc** 列を、 [sys. events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)から継承します。|  
+|**\<Columns inherited from sys.events>**|該当なし|**Object_id**、**型**、 **type_desc** 列を、 [sys. events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)から継承します。|  
 |**is_first**|**bit**|トリガーは、このイベントに対して最初に起動するようにマークされています。|  
 |**is_last**|**bit**|トリガーは、このイベントに対して最後に起動されるようにマークされています。|  
 |**event_group_type**|**int**|トリガーが作成されるイベントグループ。イベントグループに作成されていない場合は null。|  

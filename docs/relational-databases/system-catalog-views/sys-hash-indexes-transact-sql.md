@@ -1,6 +1,6 @@
 ---
-description: hash_indexes (Transact-sql)
-title: hash_indexes (Transact-sql) |Microsoft Docs
+description: sys.hash_indexes (Transact-sql)
+title: sys.hash_indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.hash_indexes catalog view
 ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 64008b6fe537c611c0c7204692dbef9461b79b8b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: b422523074806b6cac30fc56859006561fc0c828
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539636"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095535"
 ---
-# <a name="syshash_indexes-transact-sql"></a>hash_indexes (Transact-sql)
+# <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のハッシュインデックスとハッシュインデックスのプロパティが表示されます。 ハッシュインデックスは、インメモリ [OLTP &#40;のインメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)でのみサポートされます。  
+  現在のハッシュインデックスとハッシュインデックスのプロパティが表示されます。 ハッシュインデックスは、 [インメモリ OLTP &#40;In-Memory 最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)でのみサポートされています。  
   
- Hash_indexes ビューには、sys ビューと同じ列と、 **bucket_count**という名前の追加の列が含まれています。 Hash_indexes ビューのその他の列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)」を参照してください。  
+ Sys.hash_indexes ビューには、sys ビューと同じ列と、 **bucket_count** という名前の追加の列が含まれています。 Sys.hash_indexes ビューのその他の列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

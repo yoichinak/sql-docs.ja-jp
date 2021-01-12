@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 694f14e95c0bec4edaf94c7a2c8a3885ad841c24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 04a9bc5f6336119d08285ae73dfa7a09ae5d3648
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537287"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094264"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "89537287"
 |**upload_package_id**|**uniqueidentifer**|アップロード パッケージの GUID。 NULL 値は許可されません。|  
 |**upload_package_path**|**nvarchar (4000)**|アップロード パッケージのパス。 NULL 値が許可されます。|  
 |**upload_package_name**|**sysname**|アップロードパッケージの名前です。 NULL 値は許可されません。|  
-|**is_system**|**bit**|コレクター型がデータコレクターに付属しているかどうか、または後で **dc_admin**によって追加されたかどうかを示すには、(1) または off (0) をオンにします。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
+|**is_system**|**bit**|コレクター型がデータコレクターに付属しているかどうか、または後で **dc_admin** によって追加されたかどうかを示すには、(1) または off (0) をオンにします。 たとえば、社内またはサード パーティによって開発されたカスタム型が考えられます。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Dc_operator**、 **dc_proxy**を選択する必要があります。  
+ **Dc_operator**、 **dc_proxy** を選択する必要があります。  
   
 ## <a name="change-history"></a>変更履歴  
   
 |変更内容|  
 |---------------------|  
-|**Collection_type_uid**列名が**collector_type_uid**に更新されました。|  
-|**Parameter_schema**列の説明を、null 値が許容される値であることを示すように修正しました。|  
-|**Parameter_formatter**列を追加しました。|  
-|**Collection_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
-|**Upload_package_path**列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
+|**Collection_type_uid** 列名が **collector_type_uid** に更新されました。|  
+|**Parameter_schema** 列の説明を、null 値が許容される値であることを示すように修正しました。|  
+|**Parameter_formatter** 列を追加しました。|  
+|**Collection_package_path** 列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
+|**Upload_package_path** 列のデータ型を修正し、値が null 許容であることを示す説明を更新しました。|  
   
 ## <a name="see-also"></a>参照  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

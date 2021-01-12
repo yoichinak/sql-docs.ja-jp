@@ -17,14 +17,14 @@ helpviewer_keywords:
 - backup media [SQL Server], sysopentapes system table
 - sysopentapes system table
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a64ea925775daacdbd44a71a945e86fe0f2c9aa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 0cb05c0ac88f7f362651b872fa84598a656ff25d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537907"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096062"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "89537907"
   現在開いているテープ デバイスごとに 1 行のデータを格納します。 このビューは、 **master** データベースに格納されます。  
   
 > [!IMPORTANT]  
->  このシステムテーブルは、下位互換性のためのビューとして含まれています。 代わりに、 [dm_io_backup_tapes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューを使用します。  
+>  このシステムテーブルは、下位互換性のためのビューとして含まれています。 代わりに、 [sys.dm_io_backup_tapes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 動的管理ビューを使用します。  
   
 > [!NOTE]  
->  **Sysopentapes**ビューを削除することはできません。  
+>  **Sysopentapes** ビューを削除することはできません。  
 
   
 |列名|データ型|説明|  

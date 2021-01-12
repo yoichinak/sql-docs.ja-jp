@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017
-ms.openlocfilehash: fc21a6549db71609674be8442436471112764030
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 98d27fff17b897c7dfaba34b7afd2e21181a5cef
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440691"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096449"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-sql)
 
@@ -52,7 +52,7 @@ ms.locfileid: "97440691"
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  
   
-## <a name="user-scenario"></a>ユーザーシナリオ  
+## <a name="user-scenario"></a>ユーザー シナリオ  
  この出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が 4 コアで実行中か、または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが 4 コアに関連付けられていることを示しています。  
   
  この出力は、処理する作業項目がキューにないことを示しています。 キュー0の場合、SQL スタートアップが15625でキューの深さの最大値が15625であるため、合計作業項目がキューから解除されます。  

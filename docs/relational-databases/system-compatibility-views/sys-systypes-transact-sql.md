@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.systypes compatibility view
 - systypes system table
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bd2a68f151a136a5bb9de7efd170c7178d8001e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b00fc15f26b54acf7de52684949473c0bbd6ed19
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464673"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095352"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.sysの型 (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97464673"
 |**xprec**|**tinyint**|サーバーで使用される内部精度。 クエリでは使用されません。|  
 |**xscale**|**tinyint**|内部スケール。サーバーで使用されます。 クエリでは使用されません。|  
 |**tdefault**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
-|**領域**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
+|**domain**|**int**|このデータ型の整合性チェックが含まれているストアドプロシージャの ID。|  
 |**uid**|**smallint**|型の所有者のスキーマ ID です。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の前のバージョンからアップグレードしたデータベースの場合、スキーマ ID は所有者のユーザー ID と同じです。<br /><br /> 重要次のいずれかの DDL ステートメントを使用する場合は、sys.sys **\* 型ではなく、sys カタログビューを使用する必要があります。 \* \* \*** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) <br /><br /> 型に対する ALTER AUTHORIZATION<br /><br /> CREATE TYPE<br /><br /> ユーザーおよびロールの数が32767を超えた場合、オーバーフローまたは NULL を返します。|  
 |**確保**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|文字ベースの場合、 **collationid** は現在のデータベースの照合順序の id です。それ以外の場合は NULL になります。|  

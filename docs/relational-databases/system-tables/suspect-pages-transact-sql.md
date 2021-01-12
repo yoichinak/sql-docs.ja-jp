@@ -17,14 +17,14 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c601496075c71d70af89b0413e5bcbf3a6ba8b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c2b5952f12c857a7bf58c066744e1c366279b1e4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544483"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096137"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89544483"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|このページが適用されるデータベースの ID。|  
 |**file_id**|**int**|データベース内のファイルの ID。|  
-|**page_id**|**bigint**|問題があると考えられるページの ID。 すべてのページには、データベース内のページの場所を識別する32ビット値であるページ ID があります。 **Page_id**は、8 KB ページのデータファイル内のオフセットです。 各ページ ID はファイル内で一意です。|  
+|**page_id**|**bigint**|問題があると考えられるページの ID。 すべてのページには、データベース内のページの場所を識別する32ビット値であるページ ID があります。 **Page_id** は、8 KB ページのデータファイル内のオフセットです。 各ページ ID はファイル内で一意です。|  
 |**event_type**|**int**|エラーの種類です。次のいずれか:<br /><br /> 1 = 問題があると考えられるページ (ディスク エラーなど) の原因となった 823 エラー、または、不正なチェックサムまたは破損ページ (不適切なページ ID) 以外の 824 エラー。<br /><br /> 2 = 不適切なチェックサムです。<br /><br /> 3 = 破損ページ。<br /><br /> 4 = 復元済み (ページは不適切とマークされた後に復元されました)。<br /><br /> 5 = 修復済み (DBCC によってページが修復されました)。<br /><br /> 7 = DBCC により割り当て解除。|  
 |**error_count**|**int**|エラーが発生した回数。|  
 |**last_update_date**|**datetime**|最後に更新された日付と時刻のタイムスタンプ。|  

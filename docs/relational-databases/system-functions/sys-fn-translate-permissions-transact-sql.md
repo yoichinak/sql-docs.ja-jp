@@ -1,6 +1,6 @@
 ---
 description: sys.fn_translate_permissions (Transact-SQL)
-title: fn_translate_permissions (Transact-sql) |Microsoft Docs
+title: sys.fn_translate_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 1069d5b76d6ee404ddd2e671eb6a7b63396424ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e4d00e0b945012cb8a1b583921328009d12a34ad
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481765"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094945"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sys.fn_translate_permissions ( level , perms )
  **テーブル**  
   
 ## <a name="remarks"></a>解説  
- SQL トレースの **permissions** 列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **fn_translate_permissions** は、このビットマスクを権限名のテーブルに変換します。  
+ SQL トレースの **permissions** 列に返される値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有効な権限を計算するためにによって使用されるビットマスクを整数で表したものです。 25種類の securables にはそれぞれ、対応する数値を持つ独自のアクセス許可セットがあります。 **sys.fn_translate_permissions** は、このビットマスクを権限名のテーブルに変換します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bd6320435c372b99d9b88f9e0ecc7e41c41cf90
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 55b5465b2c43b02247a48478272393f941a4a51d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405414"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095536"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97405414"
 |database_id|**int**|このファイルが適用されるデータベースの ID。 Masterdatabase_id は常に1です。|  
 |file_id|**int**|データベース内のファイルの ID。 プライマリ ファイルの file_id は常に 1 です。|  
 |file_guid|**uniqueidentifier**|ファイルの一意識別子。<br /><br /> NULL = データベースは、以前のバージョンのからアップグレードされました [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 以前では有効)。|  
-|型|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
+|type|**tinyint**|ファイルの種類です。<br /><br /> 0 = 行。<br /><br /> 1 = ログ<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = フルテキスト ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降用にアップグレードまたは作成されたフルテキスト カタログの場合、ファイルの種類は 0 で報告されます。)|  
 |type_desc|**nvarchar(60)**|ファイルの種類の説明。<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のフルテキスト カタログです。)|  
 |data_space_id|**int**|このファイルが属しているデータ領域の ID。 データ領域はファイルグループです。<br /><br /> 0 = ログ ファイル|  
 |name|**sysname**|データベース内のファイルの論理名。|  

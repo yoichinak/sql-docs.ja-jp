@@ -16,26 +16,26 @@ dev_langs:
 helpviewer_keywords:
 - MSagent_profiles system table
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2f9b44e872ef5175d07a679c330b7662ff9e5bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 237ecf85225d5c16160ee4b04f6e0ccdc41f2e31
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540916"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094806"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSagent_profiles**テーブルには、定義されているレプリケーションエージェントプロファイルごとに1つの行が含まれています。 このテーブルは、 **msdb** データベースに格納されます。  
+  **MSagent_profiles** テーブルには、定義されているレプリケーションエージェントプロファイルごとに1つの行が含まれています。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|プロファイル ID。|  
 |**profile_name**|**sysname**|エージェントの種類に固有のプロファイル名です。|  
 |**agent_type**|**int**|エージェントの種類。<br /><br /> **1** = スナップショットエージェント<br /><br /> **2** = ログリーダーエージェント<br /><br /> **3** = ディストリビューションエージェント<br /><br /> **4** = マージエージェント<br /><br /> **9** = キューリーダーエージェント|  
-|**type**|**int**|プロファイルの種類です。<br /><br /> **0** = システム**1** = カスタム|  
+|**type**|**int**|プロファイルの種類です。<br /><br /> **0** = システム **1** = カスタム|  
 |**description**|**nvarchar (3000)**|プロファイルの説明。|  
 |**def_profile**|**bit**|このプロファイルがこの種類のエージェントの既定のプロファイルかどうかを指定します。|  
   

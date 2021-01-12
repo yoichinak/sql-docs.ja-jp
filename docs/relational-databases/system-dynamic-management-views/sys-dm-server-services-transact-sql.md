@@ -1,6 +1,6 @@
 ---
-description: dm_server_services (Transact-sql)
-title: dm_server_services (Transact-sql) |Microsoft Docs
+description: sys.dm_server_services (Transact-sql)
+title: sys.dm_server_services (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1b013b97e15fafbc35c1f2120892d9382ea1bc2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2133cd83a96a6db171f078c89dec887aec0e0646
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546475"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095087"
 ---
-# <a name="sysdm_server_services-transact-sql"></a>dm_server_services (Transact-sql)
+# <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   の現在のインスタンスの SQL Server、フルテキスト、SQL Server Launchpad サービス (SQL Server 2017 +)、および SQL Server エージェントの各サービスに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらのサービスに関するステータス情報を報告するには、この動的管理ビューを使用します。  
@@ -53,5 +53,5 @@ ms.locfileid: "89546475"
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys.dm_server_registry &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

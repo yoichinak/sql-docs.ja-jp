@@ -1,6 +1,6 @@
 ---
-description: fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
-title: fn_all_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
+description: sys.fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
+title: sys.fn_all_changes_ &lt; capture_instance &gt; (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c1b411daa6ccdfdb34da1a9560520416e26e1191
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486339"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096482"
 ---
-# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
+# <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_all_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **すべての変更**クエリ関数のラッパー。 これらの関数を作成するために必要なスクリプトは、sys.sp_cdc_generate_wrapper_function ストアド プロシージャで生成されます。  
+  **すべての変更** クエリ関数のラッパー。 これらの関数を作成するために必要なスクリプトは、sys.sp_cdc_generate_wrapper_function ストアド プロシージャで生成されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  *end_time*  
  結果セットに含める変更テーブルエントリの範囲の上限を表す **datetime** 値です。  
   
- このパラメーターは、 @closed_high_end_point sys 関数の作成スクリプトを生成するために sp_cdc_generate_wrapper_function を呼び出すときに選択した値に応じて、次の2つの意味のいずれかを使用できます。  
+ このパラメーターは、 @closed_high_end_point ラッパー関数の作成スクリプトを生成するために sys.sp_cdc_generate_wrapper_function を呼び出すときに選択した値に応じて、次の2つの意味のいずれかを使用できます。  
   
 -   @closed_high_end_point = 1  
   
@@ -67,7 +67,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 0  
   
-     結果セットに含まれるのは、関連付けられたコミット時間が end_time 未満の capture_instance_CT 変更テーブル内の行だけです。  
+     結果セットには、cdc.capture_instance_CT 変更テーブル内の行のうち、関連付けられたコミット時間が end_time よりも厳密に小さい行だけが含まれます。  
   
  この引数に NULL 値が指定されている場合、クエリ範囲の上端は、キャプチャインスタンスの有効な範囲の上限に対応します。  
   
@@ -76,7 +76,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  次のいずれかのオプションを指定できます。  
   
- all  
+ すべて  
  指定された LSN 範囲内のすべての変更を返します。 更新操作の結果として発生する変更の場合、このオプションは、更新が適用された後に、新しい値を含む行のみを返します。  
   
  すべての更新プログラムが古い  
@@ -93,7 +93,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |\<columns from @update_flag_list>|**bit**|ビットフラグには、列名に _uflag を追加することによって名前が付けられます。 フラグは、 \_ ' UO ' の _CDC_OPERATION が ' i ' の場合は常に NULL に設定されます。 \__CDC_OPERATION が ' UN ' の場合、更新によって対応する列が変更された場合は1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
 ## <a name="remarks"></a>解説  
- Fn_all_changes_<capture_instance> 関数は、cdc. fn_cdc_get_all_changes_<capture_instance のクエリ関数のラッパーとして機能します。 ラッパーを作成するスクリプトを生成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
+ Fn_all_changes_<capture_instance> 関数は、cdc.fn_cdc_get_all_changes_<capture_instance クエリ関数のラッパーとして機能します。 ラッパーを作成するスクリプトを生成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  
   
@@ -105,14 +105,14 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  パラメーターを使用してスクリプトを作成すると @closed_high_end_point 、指定されたクエリウィンドウで閉じた上限または開いた上限をサポートするラッパーを生成できます。 つまり、コミット時間が抽出範囲の上限と等しくなるエントリを間隔に含めるかどうかを決定できます。 既定では、上限が含まれます。  
   
- **All changes**ラッパー関数によって返される結果セットは、変更テーブルの __ $ start_lsn と \_ \_ $seqval 列を \_ それぞれ _CDC_STARTLSN と _CDC_SEQVAL の列として返し \_ ます。 ラッパーが生成されたときに、 * \@ column_list*パラメーターに指定された追跡対象の列だけを使用して、これらの列に従います。 * \@ COLUMN_LIST*が NULL の場合、追跡対象のすべてのソース列が返されます。 基になる列には、操作列 _CDC_OPERATION が続きます \_ 。これは、操作を識別する1つまたは2文字の列です。  
+ **All changes** ラッパー関数によって返される結果セットは、変更テーブルの __ $ start_lsn と \_ \_ $seqval 列を \_ それぞれ _CDC_STARTLSN と _CDC_SEQVAL の列として返し \_ ます。 ラッパーが生成されたときに、 *\@ column_list* パラメーターに指定された追跡対象の列だけを使用して、これらの列に従います。 *\@ COLUMN_LIST* が NULL の場合、追跡対象のすべてのソース列が返されます。 基になる列には、操作列 _CDC_OPERATION が続きます \_ 。これは、操作を識別する1つまたは2文字の列です。  
   
  次に、@update_flag_list パラメーターで指定された各列の結果セットに対し、ビット フラグが追加されます。 すべての **変更** ラッパーでは、__CDC_OPERATION が ' d '、' I '、または ' uo ' の場合、ビットフラグは常に NULL になります。 \__CDC_OPERATION が ' UN ' の場合、更新操作によって列が変更されたかどうかに応じて、フラグが1または0に設定されます。  
   
  変更データキャプチャの構成テンプレート ' インスタンス化 CDC Wrapper Tvf for Schema ' では、sp_cdc_generate_wrapper_function ストアドプロシージャを使用して、スキーマの定義済みクエリ関数に対するすべてのラッパー関数の作成スクリプトを取得する方法を示しています。 その後、テンプレートによってこれらのスクリプトが作成されます。 テンプレートの詳細については、「 [テンプレートエクスプローラー](../../ssms/template/template-explorer.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9b0c2fec2d053f80cd9baa9d9bd4d0bfc971e2ec
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ff1e70701882c1740ae91212c8d33ae5e7e3040b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538411"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094872"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysの警告 (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "89538411"
 |**database_name**|**nvarchar(512)**|このアラートをトリガーするためにこの警告が発生する必要があるデータベース。|  
 |**event_description_keyword**|**nvarchar (100)**|警告をトリガーするために、エラーが一致する必要があるパターン。|  
 |**occurrence_count**|**int**|警告の発生回数。|  
-|**count_reset_date**|**int**|日 (日付) のカウントは **0**にリセットされます。|  
-|**count_reset_time**|**int**|時刻のカウントは **0**にリセットされます。|  
+|**count_reset_date**|**int**|日 (日付) のカウントは **0** にリセットされます。|  
+|**count_reset_time**|**int**|時刻のカウントは **0** にリセットされます。|  
 |**job_id**|**uniqueidentifier**|警告が発生したときに実行するタスクの ID。|  
 |**has_notification**|**int**|アラートが発生したときに電子メール通知を受信するオペレーターの数。|  
 |**flags**|**int**|予約済み。|  

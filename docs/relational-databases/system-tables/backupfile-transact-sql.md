@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8c9086ca4c3c97b9a10cd9d460eaf69408373551
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525555"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096313"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89525555"
 |**first_media_number**|**smallint**|バックアップ ファイルが保存されている先頭のメディアのメディア番号。 NULL にすることができます。|  
 |**filegroup_name**|**nvarchar(128)**|バックアップされたデータベースファイルを含むファイルグループの名前。 NULL にすることができます。|  
 |**page_size**|**int**|ページのサイズ (バイト単位)。|  
-|**file_number**|**numeric (10, 0)**|データベース内で一意なファイル識別番号 ( **database_files**に対応し**ます。file_id**)。|  
+|**file_number**|**numeric (10, 0)**|データベース内で一意なファイル識別番号 ( **sys.database_files** に対応します。**file_id**)。|  
 |**backed_up_page_count**|**numeric (10, 0)**|バックアップされたページ数。 NULL にすることができます。|  
 |**file_type**|**char(1)**|バックアップされたファイル。次のいずれかです。<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイル。<br /><br /> F = フルテキスト カタログ<br /><br /> NULL にすることができます。|  
 |**source_file_block_size**|**numeric (10, 0)**|バックアップ時に元のデータファイルまたはログファイルが格納されていたデバイス。 NULL にすることができます。|  
@@ -46,17 +46,17 @@ ms.locfileid: "89525555"
 |**logical_name**|**nvarchar(128)**|バックアップされたファイルの論理名。 NULL にすることができます。|  
 |**physical_drive**|**nvarchar(260)**|物理ドライブまたはパーティション名。 NULL にすることができます。|  
 |**physical_name**|**nvarchar(260)**|残りの物理 (オペレーティングシステム) ファイル名。 NULL にすることができます。|  
-|**状態**|**tinyint**|ファイルの状態。次のいずれかになります。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = ドロップされました<br /><br /> 注: 値5はスキップされるので、これらの値はデータベースの状態の値に対応します。|  
+|**state**|**tinyint**|ファイルの状態。次のいずれかになります。<br /><br /> 0 = ONLINE<br /><br /> 1 = 復元中<br /><br /> 2 = 回復中<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = ドロップされました<br /><br /> 注: 値5はスキップされるので、これらの値はデータベースの状態の値に対応します。|  
 |**state_desc**|**nvarchar (64)**|ファイルの状態の説明。次のいずれかになります。<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
 |**drop_lsn**|**numeric(25,0)**|ファイルが削除されたときのログ シーケンス番号。 NULL にすることができます。<br /><br /> ファイルが削除されていない場合、この値は NULL です。|  
 |**file_guid**|**uniqueidentifier**|ファイルの一意識別子。|  
 |**read_only_lsn**|**numeric(25,0)**|このファイルを含むファイル グループが、前回読み書き可能から読み取り専用に変更されたときのログ シーケンス番号。 NULL にすることができます。|  
 |**read_write_lsn**|**numeric(25,0)**|このファイルを含むファイル グループが、前回読み取り専用から読み書き可能に変更されたときのログ シーケンス番号。 NULL にすることができます。|  
-|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース LSN。 差分バックアップには、 **differential_base_lsn**以上のログシーケンス番号を持つデータエクステントのみが含まれます。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
+|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース LSN。 差分バックアップには、 **differential_base_lsn** 以上のログシーケンス番号を持つデータエクステントのみが含まれます。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |**differential_base_guid**|**uniqueidentifier**|差分バックアップの場合、ファイルの差分ベースとなる最新のデータ バックアップの一意識別子。この値が NULL の場合、ファイルは差分バックアップに含まれますが、ベースの作成後に追加されています。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
 |**backup_size**|**numeric(20,0)**|このファイルのバックアップ サイズ (バイト単位)。|  
-|**filegroup_guid**|**uniqueidentifier**|ファイル グループの ID。 Backupfilegroup テーブルでファイルグループの情報を検索するには、 **backup_set_id**で**filegroup_guid**を使用します。|  
+|**filegroup_guid**|**uniqueidentifier**|ファイル グループの ID。 Backupfilegroup テーブルでファイルグループの情報を検索するには、 **backup_set_id** で **filegroup_guid** を使用します。|  
 |**is_readonly**|**bit**|1 = ファイルは読み取り専用です。|  
 |**is_present**|**bit**|1 = ファイルはバックアップ セットに含まれる。|  
   

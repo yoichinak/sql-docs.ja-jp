@@ -1,6 +1,6 @@
 ---
-description: fn_db_backup_file_snapshots (Transact-sql)
-title: fn_db_backup_file_snapshots (Transact-sql) |Microsoft Docs
+description: sys.fn_db_backup_file_snapshots (Transact-sql)
+title: sys.fn_db_backup_file_snapshots (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -11,19 +11,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 067a1d65b65c1e2cc9bde252e6f56951e87950a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4976e0ae436fe1c9c59742b6580ae083b3e3c5c4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427794"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094944"
 ---
-# <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>fn_db_backup_file_snapshots (Transact-sql)
+# <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  データベースファイルに関連付けられている Azure スナップショットを返します。 指定されたデータベースが見つからない場合、またはデータベースファイルが Microsoft Azure Blob ストレージサービスに格納されていない場合、行は返されません。 このシステム関数を **sp_delete_backup_file_snapshot** システムストアドプロシージャと共に使用して、孤立したバックアップスナップショットを特定および削除します。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+  データベースファイルに関連付けられている Azure スナップショットを返します。 指定されたデータベースが見つからない場合、またはデータベースファイルが Microsoft Azure Blob ストレージサービスに格納されていない場合、行は返されません。 このシステム関数を **sys.sp_delete_backup_file_snapshot** システムストアドプロシージャと共に使用して、孤立したバックアップスナップショットを特定および削除します。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

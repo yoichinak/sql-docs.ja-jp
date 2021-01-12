@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0dd3ef69b380122d173436e19ae42ed3227b30e5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 9380cd5c5e04293e0296c098ee7455eb803e3972
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545696"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096214"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_agents**テーブルには、サブスクライバーで実行されているマージエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSmerge_agents** テーブルには、サブスクライバーで実行されているマージエージェントごとに1つの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "89545696"
 |**subscriber_db**|**sysname**|サブスクリプションデータベースの名前。|  
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号を指定します。|  
-|**profile_id**|**int**|**MSagent_profiles**テーブルの構成 ID。|  
+|**profile_id**|**int**|**MSagent_profiles** テーブルの構成 ID。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名エージェントの ID。|  
 |**subscriber_name**|**sysname**|サブスクライバーの名前です。|  
 |**creation_date**|**datetime**|分布またはマージエージェントが作成された日付と時刻。|  

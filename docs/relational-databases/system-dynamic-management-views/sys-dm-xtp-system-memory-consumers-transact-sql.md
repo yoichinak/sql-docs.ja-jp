@@ -1,6 +1,6 @@
 ---
-description: dm_xtp_system_memory_consumers (Transact-sql)
-title: dm_xtp_system_memory_consumers (Transact-sql) |Microsoft Docs
+description: sys.dm_xtp_system_memory_consumers (Transact-sql)
+title: sys.dm_xtp_system_memory_consumers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e998b531c867d78bbf27bff516aaecda6f7f9f88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 20edce0accbe4549b5c109b8d6958fd742cd4ede
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543791"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096404"
 ---
-# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>dm_xtp_system_memory_consumers (Transact-sql)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-sql)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   のシステムレベルのメモリコンシューマーを報告 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザースレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステムスレッドのコンテキスト内にある場合) から取得されます。  
@@ -49,16 +49,16 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
 |used_bytes|**bigint**|このコンシューマーによって使用されているバイト数。 varheap メモリ コンシューマーのみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
-|partition_count|**int**|内部使用のみです。|  
-|sizeclass_count|**int**|内部使用のみです。|  
-|min_sizeclass|**int**|内部使用のみです。|  
-|max_sizeclass|**int**|内部使用のみです。|  
+|partition_count|**int**|内部使用のみ。|  
+|sizeclass_count|**int**|内部使用のみ。|  
+|min_sizeclass|**int**|内部使用のみ。|  
+|max_sizeclass|**int**|内部使用のみ。|  
 |memory_consumer_address|**varbinary**|コンシューマーの内部アドレス。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="user-scenario"></a>ユーザーシナリオ  
+## <a name="user-scenario"></a>ユーザー シナリオ  
   
 ```  
 -- system memory consumers @ instance  

@@ -1,6 +1,6 @@
 ---
 description: sys.trace_events (Transact-SQL)
-title: trace_events (Transact-sql) |Microsoft Docs
+title: sys.trace_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_events catalog view
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b83821952fb9b7aa96a1c5c1da4033da1e750aa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 2a1d4bf30f4b59f9ccd8ff3bc04dccf8eb2a6d23
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544957"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094376"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Trace_events**カタログビューには、すべての SQL トレースイベントの一覧が含まれています。 これらのトレース イベントは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって異なることはありません。  
+  **Sys.trace_events** カタログビューには、すべての SQL トレースイベントの一覧が含まれています。 これらのトレース イベントは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって異なることはありません。  
   
 > **重要:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントカタログビューを使用します。  
   
@@ -39,8 +39,8 @@ ms.locfileid: "89544957"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|イベントの一意な ID。 この列は、 **trace_event_bindings** および **trace_subclass_values** カタログビューにも含まれています。|  
-|**category_id**|**smallint**|イベントのカテゴリ ID。 この列は、 **trace_categories** カタログビューにも含まれています。|  
+|**trace_event_id**|**smallint**|イベントの一意な ID。 この列は、 **sys.trace_event_bindings** および **sys.trace_subclass_values** カタログビューにも含まれています。|  
+|**category_id**|**smallint**|イベントのカテゴリ ID。 この列は、 **sys.trace_categories** カタログビューにも含まれています。|  
 |**name**|**nvarchar(128)**|このイベントの一意な名前。 このパラメーターはローカライズされていません。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -49,9 +49,9 @@ ms.locfileid: "89544957"
 ## <a name="see-also"></a>関連項目  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;のトレース ](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
- [trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [trace_event_bindings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
- [trace_subclass_values &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
+ [sys.trace_categories &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys.trace_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
+ [sys.trace_event_bindings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   
+ [sys.trace_subclass_values &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)  
   
   

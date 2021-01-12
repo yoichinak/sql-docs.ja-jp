@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysoledbusers system table
 - sys.sysoledbusers compatibility view
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 01a2683f063280800606ebd42ba9ce65a286ab82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 442ca09761a75a5ca53b028bf8ac0a7f58c59314
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482115"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095455"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "88482115"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|サーバーのセキュリティ id 番号 (SID)。|  
-|**rmtloginame**|**nvarchar (** 128 **)**|リンクされた**rmtservid**の**loginsid**がマップされるリモートログインの名前。|  
+|**rmtloginame**|**nvarchar (** 128 **)**|リンクされた **rmtservid** の **loginsid** がマップされるリモートログインの名前。|  
 |**rmtpassword**|**nvarchar (** 128 **)**|NULL を返します。|  
-|**loginsid**|**varbinary(** 85 **)**|マップされるローカルログインの SID。|  
+|**loginsid**|**varbinary (** 85 **)**|マップされるローカルログインの SID。|  
 |**status**|**smallint**|1の場合、マッピングはユーザーの資格情報を使用する必要があります。|  
 |**changedate**|**datetime**|マッピング情報が最後に変更された日付。|  
   

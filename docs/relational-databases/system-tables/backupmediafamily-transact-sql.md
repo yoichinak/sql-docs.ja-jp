@@ -1,5 +1,6 @@
 ---
 title: backupmediafamily (Transact-sql) |Microsoft Docs
+description: Backupmediafamily のリファレンス。各メディアファミリの1行が含まれています。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
-ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2499bbc91fb09f943e5a093851bd5aef810b5b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6adacacdb3e075e3eb058005d3b11fc8fc219cbe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547215"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096290"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-sql)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  メディア ファミリごとに 1 行のデータを格納します。 メディア ファミリがミラー化されたメディア セット内にある場合は、メディア セット内のミラーごとに個別の行が格納されます。 このテーブルは、 **msdb** データベースに格納されます。  
+メディア ファミリごとに 1 行のデータを格納します。 メディア ファミリがミラー化されたメディア セット内にある場合は、メディア セット内のミラーごとに個別の行が格納されます。 このテーブルは、 **msdb** データベースに格納されます。  
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -36,9 +37,9 @@ ms.locfileid: "89547215"
 |**family_sequence_number**|**tinyint**|メディアセット内のこのメディアファミリの位置。|  
 |**media_family_id**|**uniqueidentifier**|メディアファミリを識別する一意の識別番号。 NULL にすることができます。|  
 |**media_count**|**int**|メディアファミリ内のメディアの数。 NULL にすることができます。|  
-|**logical_device_name**|**nvarchar(128)**|このバックアップデバイスの名前を指定します。 **backup_devices**。 これが ( **sys. backup_devices**に存在するパーマネントバックアップデバイスではなく) 一時的なバックアップデバイスの場合、 **logical_device_name** の値は NULL になります。|  
+|**logical_device_name**|**nvarchar(128)**|**Sys.backup_devices** にあるこのバックアップデバイスの名前。 これが ( **sys.backup_devices** に存在するパーマネントバックアップデバイスではなく) 一時的なバックアップデバイスの場合、 **logical_device_name** の値は NULL になります。|  
 |**physical_device_name**|**nvarchar(260)**|バックアップデバイスの物理名。 NULL にすることができます。 このフィールドは、バックアップと復元のプロセス間で共有されます。 元のバックアップ先のパスまたは元の復元元のパスが含まれている場合があります。 データベースのサーバーでバックアップまたは復元が最初に実行されたかどうかによって異なります。 同じバックアップファイルからの連続した復元では、復元時の場所に関係なく、パスが更新されないことに注意してください。 このため、使用されている復元パスを確認するために **physical_device_name** フィールドを使用することはできません。|  
-|**device_type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 5 = テープ<br /><br /> 7 = 仮想デバイス<br /><br /> 9 = Azure Storage<br /><br /> 105 = パーマネントなバックアップ デバイス。<br /><br /> NULL にすることができます。<br /><br /> すべての永続的なデバイス名とデバイス番号は、 **sys. backup_devices**にあります。|  
+|**device_type**|**tinyint**|バックアップ デバイスの種類。<br /><br /> 2 = ディスク<br /><br /> 5 = テープ<br /><br /> 7 = 仮想デバイス<br /><br /> 9 = Azure Storage<br /><br /> 105 = パーマネントなバックアップ デバイス。<br /><br /> NULL にすることができます。<br /><br /> 永続的なデバイス名とデバイス番号はすべて **sys.backup_devices** にあります。|  
 |**physical_block_size**|**int**|メディアファミリの書き込みに使用される物理ブロックサイズ。 NULL にすることができます。|  
 |**mirror**|**tinyint**|ミラー数 (0 ～ 3)。|  
   

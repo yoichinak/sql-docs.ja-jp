@@ -1,6 +1,6 @@
 ---
-description: master_key_passwords (Transact-sql)
-title: master_key_passwords (Transact-sql) |Microsoft Docs
+description: sys.master_key_passwords (Transact-sql)
+title: sys.master_key_passwords (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2020
 ms.prod: sql
@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c928b85aed482e774b8b180c6f97c2138f7ad0d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1552e621ba2b0d16e8a9e505a460b682bf33accd
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539696"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98095577"
 ---
-# <a name="sysmaster_key_passwords-transact-sql"></a>master_key_passwords (Transact-sql)
+# <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  **Sp_control_dbmasterkey_password**ストアドプロシージャを使用して追加されたデータベースマスターキーのパスワードごとに1行のデータを返します。 マスターキーを保護するために使用されるパスワードは、資格情報ストアに格納されます。 資格情報名は、# #DBMKEY_<database_family_guid>_<random_password_guid # # の形式に従います。 パスワードは、資格情報のシークレットとして保存されます。 **Sp_control_dbmasterkey_password**を使用して追加されたパスワードごとに、 **sys. 資格情報**に行があります。  
+  **Sp_control_dbmasterkey_password** ストアドプロシージャを使用して追加されたデータベースマスターキーのパスワードごとに1行のデータを返します。 マスターキーを保護するために使用されるパスワードは、資格情報ストアに格納されます。 資格情報名は、# #DBMKEY_<database_family_guid>_<random_password_guid # # の形式に従います。 パスワードは、資格情報のシークレットとして保存されます。 **Sp_control_dbmasterkey_password** を使用して追加されたパスワードごとに、 **sys. 資格情報** に行があります。  
   
- このビューの各行には、 **credential_id** と、その資格情報に関連付けられているパスワードによって保護されているデータベースの **family_guid** が表示されます。 **Credential_id**での**sys. 資格情報**の結合では、 **create_date**や資格情報名などの便利なフィールドが返されます。  
+ このビューの各行には、 **credential_id** と、その資格情報に関連付けられているパスワードによって保護されているデータベースの **family_guid** が表示されます。 **Credential_id** での **sys. 資格情報** の結合では、 **create_date** や資格情報名などの便利なフィールドが返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
