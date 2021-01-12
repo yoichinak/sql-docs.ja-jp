@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 1ab5c24dadbe3e8d0ad333cd67452c752cb2937b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1210ec1da44d68aaf778145da8a02bf3f3092e2c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478993"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093847"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -103,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | 監査可能なアクションが発生した日時。 NULL 値は許可されません。 |  
 | file_name | **varchar(260)** | レコードの送信元の監査ログファイルのパスと名前。 NULL 値は許可されません。 |
 | is_column_permission | **bit** | 列レベルのアクセス許可であるかどうかを示すフラグ。 NULL 値は許可されません。 Permission_bitmask が0の場合は0を返します。<br /> 1 = true<br /> 0 = false |
-| object_id | **int** | 監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
-| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
+| object_id | **int** | 監査が発生したエンティティの ID。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
+| object_name | **sysname** | 監査が発生したエンティティの名前。 次に例を示します。<br /> サーバー オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
 | permission_bitmask | **varbinary(16)** | 一部のアクションでは、権限の許可、拒否、または取り消しを示します。 |
 | response_rows | **bigint** | **適用対象**: AZURE SQL DATABASE と SQL Managed Instance<br /><br /> 結果セットで返される行の数。 |  
 | schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 スキーマの外部で発生する監査の場合は NULL を返します。 |  

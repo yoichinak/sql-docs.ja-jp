@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_hosts dynamic management view
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bc04cbc95d7b08903c596937bdec482311d29f63
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a0220ed88a3852188c5ee2f7952df7f067e410ad
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97321976"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098896"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97321976"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary (8)**|ホスト オブジェクトの内部メモリ アドレス。|  
-|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、次のように入力します。<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
+|**type**|**nvarchar(60)**|ホストされるコンポーネントの種類。 たとえば、オブジェクトに適用された<br /><br /> SOSHOST_CLIENTID_SERVERSNI = SQL Server ネイティブインターフェイス<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB プロバイダー<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft データアクセスの実行時|  
 |**name**|**nvarchar(32)**|ホストの名前。|  
 |**enqueued_tasks_count**|**int**|ホストによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のキューに挿入されたタスクの合計数。|  
 |**active_tasks_count**|**int**|このホストがキューに配置した現在実行中のタスクの数。|  

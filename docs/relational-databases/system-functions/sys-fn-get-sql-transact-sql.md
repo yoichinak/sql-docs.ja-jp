@@ -1,6 +1,6 @@
 ---
-description: fn_get_sql (Transact-sql)
-title: fn_get_sql (Transact-sql) |Microsoft Docs
+description: sys.fn_get_sql (Transact-sql)
+title: sys.fn_get_sql (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - valid SQL handles [SQL Server]
 - SQL handles
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4b3e28e4c66d45f28c6239431e8e6d5440d5d4a0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427804"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093822"
 ---
-# <a name="sysfn_get_sql-transact-sql"></a>fn_get_sql (Transact-sql)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された SQL ハンドルの SQL ステートメントのテキストを返します。  
   
 > [!IMPORTANT]  
->  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、「 [sys. dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)」を参照してください。  
+>  この機能は、Microsoft SQL Server の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに sys.dm_exec_sql_text を使用してください。 詳細については、「 [sys.dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)」を参照してください。  
   
  
   
@@ -60,14 +60,14 @@ sys.fn_get_sql ( SqlHandle )
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|データベース ID。 アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
 |objectid|**int**|データベース オブジェクトの ID。 アドホック SQL ステートメントの場合は NULL になります。|  
-|number|**smallint**|プロシージャがグループ化されている場合は、グループの番号を示します。<br /><br /> 0 = エントリはプロシージャではありません。<br /><br /> NULL = アドホック SQL ステートメント|  
+|数値|**smallint**|プロシージャがグループ化されている場合は、グループの番号を示します。<br /><br /> 0 = エントリはプロシージャではありません。<br /><br /> NULL = アドホック SQL ステートメント|  
 |encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
 |text|**text**|SQL ステートメントのテキストを入力します。 暗号化されているオブジェクトの場合は NULL になります。|  
   
 ## <a name="remarks"></a>解説  
- 有効な SQL ハンドルを取得するには、 [dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 動的管理ビューの sql_handle 列を使用します。  
+ 有効な SQL ハンドルは、 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 動的管理ビューの [sql_handle] 列から取得できます。  
   
- キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq**l** は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  
+ キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq **l** は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  
   
  では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 一括コピーステートメントや、8 KB を超える文字列リテラルを含むステートメントなど、一部のステートメントをキャッシュすることはできません。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
