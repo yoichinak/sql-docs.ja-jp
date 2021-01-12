@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 0fd911cd7ce60068c0d28ecd5a386a344c5ebea7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481463"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975468"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -38,7 +38,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 >   - [Azure で SQL Server オプションを選択する](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview)  
   
 ## <a name="upgrade-in-place"></a>インプレース アップグレード  
- このアプローチでは、SQL Server セットアップ プログラムは、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビットを新しい [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ビットで置き換えて、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールをアップグレードし、次に各システム データベースとユーザー データベースをアップグレードします。  インプレース アップグレード アプローチは最も簡単ですが、ある程度のダウンタイムを必要とし、フォールバックが必要な場合にフォールバックに時間がかかるため、すべてのシナリオでサポートされるわけではありません。 インプレース アップグレードがサポートされるシナリオとサポートされないシナリオの詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)」を参照してください。  
+ このアプローチでは、SQL Server セットアップ プログラムは、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビットを新しい [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ビットで置き換えて、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールをアップグレードし、次に各システム データベースとユーザー データベースをアップグレードします。  インプレース アップグレード アプローチは最も簡単ですが、ある程度のダウンタイムを必要とし、フォールバックが必要な場合にフォールバックに時間がかかるため、すべてのシナリオでサポートされるわけではありません。 インプレース アップグレードがサポートされるシナリオとサポートされないシナリオの詳細については、「 [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)」を参照してください。  
   
  このアプローチは、次のシナリオでよく使われます。  
   
