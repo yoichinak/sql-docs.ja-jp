@@ -1,6 +1,6 @@
 ---
 description: sys.dm_database_replica_states (Azure SQL Database)
-title: dm_database_replica_states (Azure SQL Database) |Microsoft Docs
+title: sys.dm_database_replica_states (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 217f9e691ceb0da86834eb452d6b608fdbb8f091
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 4ce500e9a149844ee6516aac82975e0bbe1b6e7c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537680"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097783"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "89537680"
 |**last_received_time**|**datetime**|最後に受信したメッセージのログ ブロック ID がセカンダリ レプリカで読み取られた時刻。|  
 |**last_hardened_lsn**|**numeric(25,0)**|セカンダリデータベースで最後に書き込まれた LSN のログレコードを含むログブロックの先頭。<br /><br /> 非同期コミットプライマリデータベース、または現在のポリシーが "delay" である同期コミットデータベースでは、値は NULL です。 その他の同期コミットプライマリデータベースの場合、 **last_hardened_lsn** は、すべてのセカンダリデータベースで書き込まれた lsn の最小値を示します。<br /><br /> **注: last_hardened_lsn** には、0で埋め込まれたログブロック ID が反映されます。 これは実際のログ シーケンス番号ではありません。|  
 |**last_hardened_time**|**datetime**|セカンダリデータベースで、最後に書き込まれた LSN のログブロック識別子の時刻 (**last_hardened_lsn**)。 プライマリ データベースの場合、書き込まれた LSN の最小値に対応する時刻が反映されます。|  
-|**last_redone_lsn**|**numeric(25,0)**|セカンダリデータベースで再実行された最後のログレコードの実際のログシーケンス番号。 **last_redone_lsn** は常に **last_hardened_lsn**未満です。|  
+|**last_redone_lsn**|**numeric(25,0)**|セカンダリデータベースで再実行された最後のログレコードの実際のログシーケンス番号。 **last_redone_lsn** は常に **last_hardened_lsn** 未満です。|  
 |**last_redone_time**|**datetime**|セカンダリ データベースでログ レコードが最後に再実行された時刻。|  
 |**log_send_queue_size**|**bigint**|セカンダリ データベースに送信されていない、プライマリ データベースのログ レコードの量 (KB 単位)。|  
 |**log_send_rate**|**bigint**|プライマリレプリカインスタンスが最後のアクティブ期間中にデータを送信した平均速度 (kb/秒)。|  

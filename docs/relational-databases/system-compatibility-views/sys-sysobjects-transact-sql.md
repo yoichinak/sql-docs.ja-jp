@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.sysobjects compatibility view
 - sysobjects system table
 ms.assetid: 44fdc387-67b0-4139-8bf5-ed26cf640cd1
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aada1686982e39c405c0c022fa46d5117d690f86
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 30d2b16bb9e0366752418fb3e958cdc0600db14b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466933"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099109"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysオブジェクト (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "97466933"
 |ftcatid|**smallint**|フルテキスト インデックス作成で登録されたすべてのユーザー テーブルのフルテキスト カタログの識別子です。登録されていないすべてのユーザー テーブルには 0 を指定します。|  
 |schema_ver|**int**|テーブルのスキーマが変更されるたびに増加するバージョン番号です。 常に 0 を返します。|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|型|**char(2)**|オブジェクトの種類です。 次の値のいずれかです。<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = Default または DEFAULT 制約<br /><br /> F = FOREIGN KEY 制約<br /><br /> FN = スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数 If = インラインテーブル関数<br /><br /> IT = 内部テーブル<br /><br /> K = PRIMARY KEY 制約または UNIQUE 制約<br /><br /> L = ログ<br /><br /> P = ストアドプロシージャ<br /><br /> PC = アセンブリ (CLR) ストアドプロシージャ<br /><br /> R = ルール<br /><br /> RF = レプリケーションフィルターストアドプロシージャ<br /><br /> S = システムテーブル<br /><br /> SN = シノニム<br /><br /> SQ = サービスキュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = テーブル関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブル型<br /><br /> U = ユーザーテーブル<br /><br /> V = ビュー<br /><br /> X = 拡張ストアド プロシージャ|  
+|type|**char(2)**|オブジェクトの種類です。 値は、次のいずれかです。<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = Default または DEFAULT 制約<br /><br /> F = FOREIGN KEY 制約<br /><br /> FN = スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数 If = インラインテーブル関数<br /><br /> IT = 内部テーブル<br /><br /> K = PRIMARY KEY 制約または UNIQUE 制約<br /><br /> L = ログ<br /><br /> P = ストアドプロシージャ<br /><br /> PC = アセンブリ (CLR) ストアドプロシージャ<br /><br /> R = ルール<br /><br /> RF = レプリケーションフィルターストアドプロシージャ<br /><br /> S = システムテーブル<br /><br /> SN = シノニム<br /><br /> SQ = サービスキュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = テーブル関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブル型<br /><br /> U = ユーザーテーブル<br /><br /> V = ビュー<br /><br /> X = 拡張ストアド プロシージャ|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

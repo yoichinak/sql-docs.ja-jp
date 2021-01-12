@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9fc19ad90c8dcf73c9e0bc368b30ee41ca4fa125
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: daf45f65ddc0e7ea496a60a3da8b9fc9d270fc73
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525153"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098220"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSdbms_datatype**の表には、異種データベースレプリケーションでパブリッシャーまたはサブスクライバーとして使用される、サポートされている各データベース管理システム (DBMS) のネイティブデータ型の完全な一覧が含まれています。 このテーブルは、 **msdb** データベースに格納されます。  
+  **MSdbms_datatype** の表には、異種データベースレプリケーションでパブリッシャーまたはサブスクライバーとして使用される、サポートされている各データベース管理システム (DBMS) のネイティブデータ型の完全な一覧が含まれています。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

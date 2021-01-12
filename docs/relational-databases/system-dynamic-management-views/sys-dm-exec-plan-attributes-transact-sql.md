@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c80e576bd6f2872a2486da5fd09292609f86ba60
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7fa0b60cc1c172ea8777286fda425c7714d6b363
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97331986"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096609"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,12 +48,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |属性 (attribute)|**varchar(128)**|このプランに関連付けられている属性の名前。 このテーブルのすぐ下の表は、使用可能な属性とそのデータ型とその説明を示しています。|  
-|値|**sql_variant**|このプランに関連付けられている属性の値。|  
+|value|**sql_variant**|このプランに関連付けられている属性の値。|  
 |is_cache_key|**bit**|プランのキャッシュ参照キーの一部として属性を使用するかどうかを示します。|  
 
 上記の表では、 **属性** の値は次のようになります。
 
-|属性|データの種類|説明|  
+|属性|データ型|説明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|プランをコンパイルしたオプションの値を示します。|  
 |objectid|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの1つ。 これは、データベースオブジェクト (プロシージャ、ビュー、トリガーなど) のために、 [sys. オブジェクト](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) に格納されているオブジェクト ID です。 "アドホック プラン" または "準備されたプラン" では、バッチ テキストの内部ハッシュです。|  

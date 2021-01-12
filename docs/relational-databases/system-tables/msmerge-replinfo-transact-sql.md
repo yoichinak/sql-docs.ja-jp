@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce4bee70ea5ef410512ce399e8d715fbc321e1a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 6d7ba27eb3b01fcc34e5f53d954b12d120542116
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545610"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098626"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_replinfo**テーブルには、サブスクリプションごとに1つの行が含まれています。 このテーブルは、サブスクリプションに関する情報を追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
+  **MSmerge_replinfo** テーブルには、サブスクリプションごとに1つの行が含まれています。 このテーブルは、サブスクリプションに関する情報を追跡します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

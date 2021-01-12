@@ -1,6 +1,6 @@
 ---
-description: availability_databases_cluster (Transact-sql)
-title: availability_databases_cluster (Transact-sql) |Microsoft Docs
+description: sys.availability_databases_cluster (Transact-sql)
+title: sys.availability_databases_cluster (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d600d524c5bee67113c98065989b0706acbd0f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 1316bf5c7a619eb5f9c204ec32e1ac6e63e5d4bb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551505"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099238"
 ---
-# <a name="sysavailability_databases_cluster-transact-sql"></a>availability_databases_cluster (Transact-sql)
+# <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカルコピーデータベースが可用性グループにまだ参加しているかどうかに関係なく、Windows Server フェールオーバークラスタリング (WSFC) クラスター内の任意の Always On 可用性グループの可用性レプリカをホストしているのインスタンス上の可用性データベースごとに1行のデータを格納します。  
@@ -45,13 +45,13 @@ ms.locfileid: "89551505"
 |**database_name**|**sysname**|可用性グループに追加されたデータベースの名前。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Availability_databases_cluster**の呼び出し元がデータベースの所有者でない場合、対応する行を表示するために必要な最小限の権限は、ALTER any database または VIEW any database のサーバーレベルの権限、または**MASTER**データベースの CREATE database 権限です。  
+ **Sys.availability_databases_cluster** の呼び出し元がデータベースの所有者でない場合、対応する行を表示するために必要な最小限の権限は、ALTER any database または VIEW any database のサーバーレベルの権限、または **MASTER** データベースの CREATE database 権限です。  
   
 ## <a name="see-also"></a>参照  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
- [dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
+ [sys.dm_hadr_database_replica_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
+ [sys.dm_hadr_database_replica_cluster_states &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
  [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

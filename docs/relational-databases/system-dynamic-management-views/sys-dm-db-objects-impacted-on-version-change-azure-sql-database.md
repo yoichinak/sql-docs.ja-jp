@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2996d419ae22b58c065eb2b6dbcdae6786703420
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7830e874026b9d5af250fde294c8c72294d013d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466853"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097702"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -66,9 +66,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>影響を受けるオブジェクトを更新する方法  
  次の手順は、次の 6 月のサービス リリースのアップグレード後に行う必要のある修正措置を説明しています。  
   
-|注文|影響を受けるオブジェクト|修正措置|  
+|Order|影響を受けるオブジェクト|修正措置|  
 |-----------|---------------------|-----------------------|  
-|1|**インデックス**|**Sys.dm_db_objects_impacted_on_version_change** によって識別されるインデックスを再構築します。次に例を示します。`ALTER INDEX ALL ON <table> REBUILD`<br />または<br />`ALTER TABLE <table> REBUILD`|  
+|1|**インデックス**|**Sys.dm_db_objects_impacted_on_version_change** によって識別されるインデックスを再構築します。次に例を示します。`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|**sys.dm_db_objects_impacted_on_version_change** で識別されるすべての制約は、基になるテーブルの geometry 型および geography 型のデータが再計算された後に再検証する必要があります。 制約に対しては、ALTER TABLE を使用して再検証します。 <br />次に例を示します。 <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

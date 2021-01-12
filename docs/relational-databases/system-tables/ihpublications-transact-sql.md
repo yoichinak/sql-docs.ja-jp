@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 61a1845ac54b42148b468462835cf041844007bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a97462b4224244633a945f2108370b8c4f549f63
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540957"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098253"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **IHpublications**システムテーブルには、現在のディストリビューターを使用する非 SQL Server パブリケーションごとに1行のレコードが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **IHpublications** システムテーブルには、現在のディストリビューターを使用する非 SQL Server パブリケーションごとに1行のレコードが格納されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,14 +40,14 @@ ms.locfileid: "89540957"
 |**snapshot_jobid**|**[バイナリ]**|スケジュールされたタスク ID。|  
 |**enabled_for_internet**|**bit**|パブリケーションの同期ファイルが FTP およびその他のサービスを介してインターネットに公開されるかどうかを示します。 **1** は、インターネットからアクセスできることを意味します。|  
 |**immediate_sync_ready**|**bit**|同期ファイルが使用可能かどうかを示します。 **1** は使用可能であることを示します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
-|**allow_queued_tran**|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューに保持するかどうかを示します。 **1**の場合、サブスクライバーでの変更はキューに登録されます。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
+|**allow_queued_tran**|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューに保持するかどうかを示します。 **1** の場合、サブスクライバーでの変更はキューに登録されます。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**allow_sync_tran**|**bit**|パブリケーションで即時更新サブスクリプションを許可するかどうかを指定します。 **1** は、即時更新サブスクリプションが許可されることを示します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**autogen_sync_procs**|**bit**|即時更新サブスクリプションの同期ストアドプロシージャがパブリッシャーで生成されるかどうかを指定します。 **1** は、パブリッシャーで生成されることを意味します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
-|**snapshot_in_defaultfolder**|**bit**|スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。 **0**の場合、スナップショットファイルは*alternate_snapshot_folder*によって指定された別の場所に格納されています。 **1**の場合、スナップショットファイルは既定のフォルダーにあります。|  
+|**snapshot_in_defaultfolder**|**bit**|スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。 **0** の場合、スナップショットファイルは *alternate_snapshot_folder* によって指定された別の場所に格納されています。 **1** の場合、スナップショットファイルは既定のフォルダーにあります。|  
 |**alt_snapshot_folder**|**nvarchar (510)**|スナップショットの代替フォルダーの場所を指定します。|  
-|**pre_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
-|**post_snapshot_script**|**nvarchar (510)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **0** を指定すると、スナップショットは圧縮されません。|  
+|**pre_snapshot_script**|**nvarchar (510)**|**.Sql** ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
+|**post_snapshot_script**|**nvarchar (510)**|**.Sql** ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder* の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 **0** を指定すると、スナップショットは圧縮されません。|  
 |**ftp_address**|**sysname**|ディストリビューター用の FTP サービスのネットワークアドレス。 ディストリビューション エージェントが受け取るパブリケーション スナップショット ファイルの場所を示します。|  
 |**ftp_port**|**int**|ディストリビューターの FTP サービスのポート番号。 ディストリビューションエージェントが取得するパブリケーションスナップショットファイルの場所を指定します。|  
 |**ftp_subdirectory**|**nvarchar (510)**|パブリケーションが FTP を使用したスナップショットの配布をサポートしている場合に、ディストリビューションエージェントでスナップショットファイルを取得できる場所を指定します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "89540957"
 |**conflict_retention**|**int**|競合の保有期間を日数で指定します。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションを格納します。<br /><br /> この列は、以外のパブリッシャーでは使用されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、サポートされなくなりました。<br /><br /> *この列は、SQL 以外のパブリッシャーではサポートされていません。*|  
-|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 guid は、対応する Active Directory パブリケーションオブジェクトの **objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
+|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 guid は、対応する Active Directory パブリケーションオブジェクトの **objectGUID** です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> *SQL 以外のパブリッシャーに対してはサポートされていません。*|  
 |**description**|**nvarchar (255)**|パブリケーションの内容を示すエントリ。|  
 |**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9358bec121704dba28739232c24dbb930cee7c30
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 6e524635d20f3d2bb669ac36d5b4b131af904ecf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195589"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099148"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多次元式 (MDX) リファレンス
 
@@ -30,6 +30,6 @@ ms.locfileid: "92195589"
 ## <a name="see-also"></a>参照  
  [MDX による多次元データのクエリ](/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
  [XMLA&#41;の Analysis Services スクリプト言語 &#40;ASSL ](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
- [分析データソースからのデータの取得](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
+ [分析データソースからのデータの取得](/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [割り当てとその他のスクリプト コマンドの定義](/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   

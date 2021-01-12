@@ -1,6 +1,6 @@
 ---
 description: sys.dm_filestream_file_io_requests (Transact-SQL)
-title: dm_filestream_file_io_requests (Transact-sql) |Microsoft Docs
+title: sys.dm_filestream_file_io_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9f4f675f0022b3afeeaccbdc6e907b5ce1c17ca7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 69b34fd2a8ec5adf393994399011cf1b2df6ea03
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543895"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097667"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "89543895"
 |**request_id**|**int**|ドライバーによってこの要求に割り当てられた一意の要求 ID が表示されます。 NULL 値は許可されません。|  
 |**irp_id**|**int**|一意の IRP ID を表示します。 これは、特定の IRP に関連するすべての I/O 要求を識別する場合に役立ちます。 NULL 値は許可されません。|  
 |**handle_id**|**int**|名前空間ハンドル ID が指定されました。 これは NSO 固有の識別子で、インスタンス内で一意です。 NULL 値は許可されません。|  
-|**client_thread_id**|**varbinary (8)**|要求元のクライアントアプリケーションのスレッド ID が表示されます。<br /><br /> 警告これは、クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合にのみ意味があります。 ** \* \* \* \* ** クライアントアプリケーションがリモートで実行されている場合、 **client_thread_id** には、リモートクライアントの代わりに動作するシステムプロセスのスレッド id が表示されます。<br /><br /> NULL 値が許可されます。|  
+|**client_thread_id**|**varbinary (8)**|要求元のクライアントアプリケーションのスレッド ID が表示されます。<br /><br /> 警告これは、クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合にのみ意味があります。 **\* \* \* \*** クライアントアプリケーションがリモートで実行されている場合、 **client_thread_id** には、リモートクライアントの代わりに動作するシステムプロセスのスレッド id が表示されます。<br /><br /> NULL 値が許可されます。|  
 |**client_process_id**|**varbinary (8)**|クライアントアプリケーションが SQL Server と同じコンピューター上で実行されている場合に、クライアントアプリケーションのプロセス ID を表示します。 リモート クライアントの場合は、クライアント アプリケーションの代わりに動作しているシステム プロセス ID を示します。 NULL 値が許可されます。|  
 |**handle_context_address**|**varbinary (8)**|クライアントのハンドルに関連付けられた内部 NSO 構造体のアドレスを表示します。 NULL 値が許可されます。|  
-|**filestream_transaction_id**|**varbinary (128)**|指定したハンドルと、このハンドルに関連付けられているすべての要求に関連付けられているトランザクションの ID を表示します。 **Get_filestream_transaction_context**関数によって返される値です。 NULL 値が許可されます。|  
+|**filestream_transaction_id**|**varbinary (128)**|指定したハンドルと、このハンドルに関連付けられているすべての要求に関連付けられているトランザクションの ID を表示します。 **Get_filestream_transaction_context** 関数によって返される値です。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

@@ -1,6 +1,6 @@
 ---
-description: dm_os_volume_stats (Transact-sql)
-title: dm_os_volume_stats (Transact-sql) |Microsoft Docs
+description: sys.dm_os_volume_stats (Transact-sql)
+title: sys.dm_os_volume_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/03/2020
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
-ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 32deca4f06709806d90ee7d25e25105f191ad23e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614601"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098825"
 ---
-# <a name="sysdm_os_volume_stats-transact-sql"></a>dm_os_volume_stats (Transact-sql)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   指定されたデータベースおよびファイルが格納されているオペレーティングシステムボリューム (ディレクトリ) に関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この動的管理関数は、物理ディスク ドライブの属性を確認する場合や、ディレクトリの使用可能な空き容量に関する情報を取得する場合に使用します。  
@@ -41,7 +41,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  *database_id*  
- データベースの ID です。 *database_id* は** int**, 、既定値はありません。 Nll は指定できません。  
+ データベースの ID です。 *database_id* は **int**, 、既定値はありません。 Nll は指定できません。  
   
  *file_id*  
  ファイルの ID。 *file_id* は **int**,、既定値はありません。 Nll は指定できません。  
@@ -64,9 +64,9 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|ボリュームがスパースファイルをサポートするかどうかを示します。  Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
 |**is_read_only**|**tinyint**|ボリュームが現在読み取り専用としてマークされているかどうかを示します。 null にすることはできません。|  
 |**is_compressed**|**tinyint**|このボリュームが現在圧縮されているかどうかを示します。 Windows では null にすることはできず、Linux オペレーティングシステムでは null を返します。|  
-|**incurs_seek_penalty**|**tinyint**|このボリュームをサポートしているストレージの種類を示します。 設定可能な値は、次のとおりです。<br /><br />0: 通常、記憶装置が PMM または SSD の場合、このボリュームに対するシークペナルティはありません。<br /><br />1: 通常、記憶装置が HDD の場合、このボリュームのシークペナルティ<br /><br />2: ボリュームが UNC パスまたはマウントされた共有にある場合、記憶域の種類を特定できません<br /><br />NULL: ストレージの種類を Linux オペレーティングシステムで特定できません<br /><br />**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
+|**incurs_seek_penalty**|**tinyint**|このボリュームをサポートしているストレージの種類を示します。 次のいずれかの値になります。<br /><br />0: 通常、記憶装置が PMM または SSD の場合、このボリュームに対するシークペナルティはありません。<br /><br />1: 通常、記憶装置が HDD の場合、このボリュームのシークペナルティ<br /><br />2: ボリュームが UNC パスまたはマウントされた共有にある場合、記憶域の種類を特定できません<br /><br />NULL: ストレージの種類を Linux オペレーティングシステムで特定できません<br /><br />**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  `VIEW SERVER STATE` 権限が必要です。  
@@ -92,7 +92,7 @@ CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);
 ```  
   
 ## <a name="see-also"></a>参照  
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

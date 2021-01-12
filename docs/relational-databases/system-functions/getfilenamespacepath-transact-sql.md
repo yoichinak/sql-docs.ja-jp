@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - GetFileNamespacePath function
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 9ecda7d44603636ff12eef955dd83e7659cb9dc7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419576"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097490"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419576"
  *列名*  
  FileTable 内の VARBINARY (MAX) **file_stream** 列の列名。  
   
- *列名*の値は、有効な列名である必要があります。 式、または別のデータ型の列から変換またはキャストされた値を指定することはできません。  
+ *列名* の値は、有効な列名である必要があります。 式、または別のデータ型の列から変換またはキャストされた値を指定することはできません。  
   
  *is_full_path*  
  相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path* には、次のいずれかの値を指定できます。  
@@ -52,7 +52,7 @@ ms.locfileid: "88419576"
 |**1**|で始まる完全な UNC パスを返し `\\computer_name` ます。|  
   
  *\@オプション*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 * \@ オプション*には、次のいずれかの値を指定できます。  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *\@ オプション* には、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "88419576"
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath** 関数は、コンピューター名ではなく仮想ネットワーク名 (vnn) を返します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- **GetFileNamespacePath**関数が返すパスは、次の形式の論理ディレクトリまたはファイルパスです。  
+ **GetFileNamespacePath** 関数が返すパスは、次の形式の論理ディレクトリまたはファイルパスです。  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\...`  
   

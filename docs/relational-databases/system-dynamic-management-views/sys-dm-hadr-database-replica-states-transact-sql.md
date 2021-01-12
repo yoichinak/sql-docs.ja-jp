@@ -1,6 +1,6 @@
 ---
-description: dm_hadr_database_replica_states (Transact-sql)
-title: dm_hadr_database_replica_states (Transact-sql) |Microsoft Docs
+description: sys.dm_hadr_database_replica_states (Transact-sql)
+title: sys.dm_hadr_database_replica_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 31d6534b055b9bc82052445202d35ff5a63bcb19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 18642535521a50c7beb005c0ae8181f04ac3c6d5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533385"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097589"
 ---
-# <a name="sysdm_hadr_database_replica_states-transact-sql"></a>dm_hadr_database_replica_states (Transact-sql)
+# <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   のローカルインスタンスが可用性レプリカをホストしている Always On 可用性グループに参加しているデータベースごとに1行のデータを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 この動的管理ビューは、プライマリ レプリカとセカンダリ レプリカの両方の状態情報を公開します。 セカンダリ レプリカの場合、このビューはサーバー インスタンス上のセカンダリ データベースごとに 1 行のデータを返します。 プライマリ レプリカの場合、このビューはプライマリ データベースごとに 1 行のデータと、対応するセカンダリ データベースについての追加の行のデータを返します。  
@@ -61,7 +61,7 @@ ms.locfileid: "89533385"
 |**last_received_time**|**datetime**|最後に受信したメッセージのログ ブロック ID がセカンダリ レプリカで読み取られた時刻。|  
 |**last_hardened_lsn**|**numeric(25,0)**|セカンダリデータベースで最後に書き込まれた LSN のログレコードを含むログブロックの先頭。<br /><br /> 非同期コミットプライマリデータベース、または現在のポリシーが "delay" である同期コミットデータベースでは、値は NULL です。 その他の同期コミットプライマリデータベースの場合、 **last_hardened_lsn** は、すべてのセカンダリデータベースで書き込まれた lsn の最小値を示します。<br /><br /> **注: last_hardened_lsn** には、0で埋め込まれたログブロック ID が反映されます。 これは実際のログ シーケンス番号ではありません。 詳細については、このトピックの「 [LSN 列の値につい](#LSNcolumns)て」を参照してください。|  
 |**last_hardened_time**|**datetime**|セカンダリデータベースで、最後に書き込まれた LSN のログブロック識別子の時刻 (**last_hardened_lsn**)。 プライマリ データベースの場合、書き込まれた LSN の最小値に対応する時刻が反映されます。|  
-|**last_redone_lsn**|**numeric(25,0)**|セカンダリデータベースで再実行された最後のログレコードの実際のログシーケンス番号。 **last_redone_lsn** は常に **last_hardened_lsn**未満です。|  
+|**last_redone_lsn**|**numeric(25,0)**|セカンダリデータベースで再実行された最後のログレコードの実際のログシーケンス番号。 **last_redone_lsn** は常に **last_hardened_lsn** 未満です。|  
 |**last_redone_time**|**datetime**|セカンダリ データベースでログ レコードが最後に再実行された時刻。|  
 |**log_send_queue_size**|**bigint**|セカンダリ データベースに送信されていない、プライマリ データベースのログ レコードの量 (KB 単位)。|  
 |**log_send_rate**|**bigint**|プライマリレプリカインスタンスが最後のアクティブ期間中にデータを送信した平均速度 (kb/秒)。|  
@@ -75,11 +75,11 @@ ms.locfileid: "89533385"
 |**secondary_lag_seconds**|**bigint**|同期中にセカンダリレプリカがプライマリレプリカの背後にある秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
   
 ##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> LSN 列の値について  
- **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn**、および**truncation_lsn**の各列の値は、実際のログシーケンス番号 (lsn) ではありません。 これらの各値には、0 が埋め込まれたログ ブロック ID が反映されます。  
+ **End_of_log_lsn**、 **last_hardened_lsn**、 **last_received_lsn**、 **last_sent_lsn**、 **recovery_lsn**、および **truncation_lsn** の各列の値は、実際のログシーケンス番号 (lsn) ではありません。 これらの各値には、0 が埋め込まれたログ ブロック ID が反映されます。  
   
  **end_of_log_lsn**、 **last_hardened_lsn**、 **recovery_lsn** は、flush lsn です。 たとえば、 **last_hardened_lsn** は、既にディスク上にあるブロックを超えた次のブロックの開始を示します。  そのため、 **last_hardened_lsn** の値 < LSN はディスク上にあります。  >= がこの値になる LSN はフラッシュされません。  
   
- **Dm_hadr_database_replica_states**によって返される lsn 値のうち、 **last_redone_lsn**だけが実際の lsn になります。  
+ **Sys.dm_hadr_database_replica_states** によって返される lsn 値のうち、 **last_redone_lsn** だけが実際の lsn です。  
   
 ## <a name="security"></a>セキュリティ  
   

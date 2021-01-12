@@ -1,6 +1,6 @@
 ---
-description: soap_endpoints (Transact-sql)
-title: soap_endpoints (Transact-sql) |Microsoft Docs
+description: sys.soap_endpoints (Transact-sql)
+title: sys.soap_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.soap_endpoints catalog view
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: daba746b3bbaf198160855e6caa85fb3d7b4fd1d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: a0a41f08d7600ae25541924953c407ef12a2ab20
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539503"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096731"
 ---
-# <a name="syssoap_endpoints-transact-sql"></a>soap_endpoints (Transact-sql)
+# <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- SOAP 型ペイロードを保持する、サーバー内のエンドポイントごとに1行の値を格納します。 このビューのすべての行には、HTTP 構成メタデータを保持する、 **http_endpoints**カタログビューに同じ**endpoint_id**を持つ対応する行があります。  
+ SOAP 型ペイロードを保持する、サーバー内のエンドポイントごとに1行の値を格納します。 このビューのすべての行について、HTTP 構成メタデータを格納する **sys.http_endpoints** カタログビューに同じ **endpoint_id** を持つ対応する行が存在します。  
   
  
 |列名|データ型|説明|  
@@ -43,7 +43,7 @@ ms.locfileid: "89539503"
 |**default_database**|**sysname**|DATABASE = オプションで指定された既定のデータベースの名前。<br /><br /> NULL = DEFAULT が指定されています。|  
 |**default_namespace**|**nvarchar (384)**|NAMESPACE = オプションで指定された既定の名前空間 `https://tempuri.org` 。代わりに default が指定された場合は。|  
 |**default_result_schema**|**tinyint**|SCHEMA = オプションの既定値。<br /><br /> 0 = NONE<br /><br /> 1 = 標準|  
-|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = オプションの既定値の説明。<br /><br /> NONE<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|SCHEMA = オプションの既定値の説明。<br /><br /> なし<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = CHARACTER_SET = SQL オプションが指定されました。<br /><br /> 1 = CHARACTER_SET = XML オプションが指定されました。|  
 |**is_session_enabled**|**bit**|0 は、SESSION = DISABLE オプションが指定されていることを示します。<br /><br /> 1 = SESSION = ENABLED オプションが指定されました。|  
 |**session_timeout**|**int**|SESSION_TIMEOUT = オプションで指定された値。|  

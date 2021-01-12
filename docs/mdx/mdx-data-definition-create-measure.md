@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d352a12a4567fc88d2d037862c4cab2f1cd20fe0
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: af9ff1465c23231637cac636bb63702e79cf054c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193964"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098335"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX データ操作 - CREATE MEASURE
 
@@ -40,10 +40,10 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  1つのスカラー値を返す有効な DAX 式です。  
   
-## <a name="remarks"></a>注釈  
- *Measure_Name*は、角かっこで囲む必要があります。  
+## <a name="remarks"></a>解説  
+ *Measure_Name* は、角かっこで囲む必要があります。  
   
- CREATE MEASURE ステートメントは、MDX スクリプト定義内でのみ使用できます。「 [MdxScript 要素 &#40;ASSL&#41;](/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions)」を参照してください。  
+ CREATE MEASURE ステートメントは、MDX スクリプト定義内でのみ使用できます。「 [MdxScript 要素 &#40;ASSL&#41;](/analysis-services/assl/objects/mdxscript-element-assl)」を参照してください。  
   
  また、1つのクエリで使用するために、計算されるメンバーを定義することもできます。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、「 [MDX でのメジャーの作成](/analysis-services/multidimensional-models/mdx/mdx-building-measures)」を参照してください。  
   

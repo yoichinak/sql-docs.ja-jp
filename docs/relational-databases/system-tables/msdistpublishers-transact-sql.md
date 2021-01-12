@@ -16,18 +16,18 @@ dev_langs:
 helpviewer_keywords:
 - MSdistpublishers system table
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa3f8872775f9d82a23d9ba2eb33a892696ca792
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 296bedcc14194dbba3a8f91cb8ebbc6553b6481c
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551000"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098209"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  **Msdistpublishers**テーブルには、ローカルディストリビューターによってサポートされるリモートパブリッシャーごとに1つの行が含まれます。 このテーブルは、 **msdb** データベースに格納されます。  
+  **Msdistpublishers** テーブルには、ローカルディストリビューターによってサポートされるリモートパブリッシャーごとに1つの行が含まれます。 このテーブルは、 **msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "89551000"
 |**active**|**bit**|ローカルディストリビューターがリモートパブリッシャーによって使用されているかどうかを示します。|  
 |**テッド**|**bit**|リモートパブリッシャーがローカルディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = ディストリビューターに接続するために、リモートパブリッシャーでパスワードが必要です。<br /><br /> **1** = パスワードは必要ありません。|  
 |**third_party**|**bit**|パブリッシャーがインストールされているかどうかを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール。**1** = 異種データソース。|  
-|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文書.<br /><br /> **Oracle** = Standard oracle パブリッシャー。<br /><br /> **ORACLE gateway** = Oracle ゲートウェイパブリッシャー。|  
+|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br />   =  MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文書.<br /><br /> **Oracle** = Standard oracle パブリッシャー。<br /><br /> **ORACLE gateway** = Oracle ゲートウェイパブリッシャー。|  
 |**storage_connection_string**|**nvarchar (779)**|Azure SQL Database ストレージ接続文字列の値。|  
 
   

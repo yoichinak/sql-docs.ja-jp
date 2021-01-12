@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_events (Transact-SQL)
-title: server_event_session_events (Transact-sql) |Microsoft Docs
+title: sys.server_event_session_events (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_events catalog view
 - xe
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7f58a80a3d3d85fd7411d629d9d018a40002641
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 48e6ae7653dc4ba2bb37bab71d597c405f35d626
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551425"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096718"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89551425"
 |event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベントセッションオブジェクト内で一意です。 NULL 値は許可されません。|  
 |name|**sysname**|イベントの名前です。 NULL 値は許可されません。|  
-|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
+|パッケージ|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値は許可されません。|  
 |name|**sysname**|イベントが格納されているモジュールの名前。 NULL 値は許可されません。|  
 |predicate|**nvarchar (3000)**|イベントに適用される述語式。 NULL 値が許可されます。|  
 |predicate_xml|**nvarchar (3000)**|イベントに適用される XML 述語式。 NULL 値が許可されます。|  
@@ -49,9 +49,9 @@ ms.locfileid: "89551425"
 ## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| From | 終了 | リレーションシップ |
+| 差出人 | 終了 | Relationship |
 | ---- | -- | ------------ |
-|sys.server_event_session_events.event_session_id|server_event_sessions。 event_session_id|多対一|  
+|sys.server_event_session_events.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|多対一|  
   
 ## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

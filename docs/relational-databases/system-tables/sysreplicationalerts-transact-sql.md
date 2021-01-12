@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cce33fa91f6ea11cda33e622edd39ec764b2c2ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 2f44fb1f1b07b53705b45825955918c3026a2485
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537820"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097338"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "89537820"
 |**alert_id**|**int**|警告の ID。|  
 |**status**|**int**|ユーザー定義の値です。<br /><br /> **0** = サービス解除。<br /><br /> **1** = サービス。|  
 |**agent_type**|**int**|エージェントのタイプです。<br /><br /> **1** = スナップショットエージェント。<br /><br /> **2** = ログリーダーエージェント。<br /><br /> **3** = ディストリビューションエージェント。<br /><br /> **4** = マージエージェント。|  
-|**agent_id**|**int**|テーブル **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**、または **MSmerge_agents**のエージェント ID。|  
-|**error_id**|**int**|**MSrepl_errors**に格納されているエラーの ID。|  
+|**agent_id**|**int**|テーブル **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**、または **MSmerge_agents** のエージェント ID。|  
+|**error_id**|**int**|**MSrepl_errors** に格納されているエラーの ID。|  
 |**alert_error_code**|**int**|このレコードをログに記録するときに発生する警告のメッセージ ID。|  
 |**time**|**datetime**|レコードが挿入された時刻。|  
 |**publisher**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  

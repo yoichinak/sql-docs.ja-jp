@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 841f2986d09bd048f857e45a8bde3c5db6d0fc70
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10beb9d65bba15ef0b21acd2242fcbaf1d515dca
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545605"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098582"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_settingshistory**テーブルは、マージレプリケーションのアーティクルおよびパブリケーションのプロパティに加えられた変更の履歴を保持するために使用され、マージレプリケーショントポロジに対して行われた変更ごとに1行のデータを保持します。 このテーブルには、プロパティの初期設定が行われたタイミングに関する情報も格納されます。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
+  **MSmerge_settingshistory** テーブルは、マージレプリケーションのアーティクルおよびパブリケーションのプロパティに加えられた変更の履歴を保持するために使用され、マージレプリケーショントポロジに対して行われた変更ごとに1行のデータを保持します。 このテーブルには、プロパティの初期設定が行われたタイミングに関する情報も格納されます。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

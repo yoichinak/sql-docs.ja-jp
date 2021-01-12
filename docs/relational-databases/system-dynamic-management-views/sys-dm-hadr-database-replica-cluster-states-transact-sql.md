@@ -1,6 +1,6 @@
 ---
 description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-title: dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
+title: sys.dm_hadr_database_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 11f2e6ddb0a51170ebf9da0ed4f5f9d673359e03
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f97172a1f417b237a8e1ee4d16fc573cd94f571d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543874"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097678"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Windows Server フェールオーバー クラスタリング (WSFC) クラスター上の各 AlwaysOn 可用性グループについて、AlwaysOn 可用性グループ内の可用性データベースの正常性を把握するための情報を含む行を返します。 **Dm_hadr_database_replica_states**を照会して、次の質問に答えます。  
+  Windows Server フェールオーバー クラスタリング (WSFC) クラスター上の各 AlwaysOn 可用性グループについて、AlwaysOn 可用性グループ内の可用性データベースの正常性を把握するための情報を含む行を返します。 **Sys.dm_hadr_database_replica_states** クエリを実行して、次の質問に回答します。  
   
 -   可用性グループのすべてのデータベースでフェールオーバーの準備ができているか。  
   

@@ -1,6 +1,6 @@
 ---
 description: sys.server_event_session_actions (Transact-SQL)
-title: server_event_session_actions (Transact-sql) |Microsoft Docs
+title: sys.server_event_session_actions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_actions catalog view
 - xe
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 189e2a7f246fc231fc21c1a26d5a95d2148a430e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 79beef65fe0cd52caea3c93d5dbeb76c134ef6f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551437"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097928"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "89551437"
 |event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
 |event_id|**int**|イベントの ID。 この ID は、イベントセッションオブジェクト内で一意です。 NULL 値は許可されません。|  
 |name|**sysname**|アクションの名前。 NULL 値が許可されます。|  
-|package|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値が許可されます。|  
+|パッケージ|**sysname**|イベントを含むイベント パッケージの名前。 NULL 値が許可されます。|  
 |name|**sysname**|イベントが格納されているモジュールの名前。 NULL 値が許可されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -47,7 +47,7 @@ ms.locfileid: "89551437"
 ## <a name="remarks"></a>解説  
  このビューには、次のリレーションシップ基数があります。  
   
-| From | 終了 | リレーションシップ |
+| 差出人 | 終了 | Relationship |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|多対一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多対一|  

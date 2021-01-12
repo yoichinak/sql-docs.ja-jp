@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sysaltfiles system table
 - sys.sysaltfiles compatibility view
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 936ce13f9350042f81dbae8591c34131bdb87100
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f6139fb221ab1d960d8cfb455e592ac16fbcee09
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399708"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097804"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "88399708"
 |**groupid**|**smallint**|ファイルグループの id 番号。|  
 |**size**|**int**|ファイル サイズ (8 KB ページ単位) です。|  
 |**maxsize**|**int**|最大ファイル サイズ (8 KB ページ単位) です。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。<br /><br /> -1 = ディスクがいっぱいになるまでファイル サイズが拡張します。<br /><br /> 268435456 = ログファイルは、最大サイズの 2 TB まで拡張されます。<br /><br /> 注: ログファイルのサイズを無制限にアップグレードしたデータベースは、ログファイルの最大サイズに対して-1 を報告します。|  
-|**成長**|**int**|データベースの拡張サイズ。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。 Status の値に応じて、ページ数またはファイルサイズのパーセンテージのいずれかになります。 **Status**が0x100000 の場合、**拡張**はファイルサイズの割合です。それ以外の場合は、ページ数になります。|  
+|**成長**|**int**|データベースの拡張サイズ。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。 Status の値に応じて、ページ数またはファイルサイズのパーセンテージのいずれかになります。 **Status** が0x100000 の場合、**拡張** はファイルサイズの割合です。それ以外の場合は、ページ数になります。|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**perf**|**int**|予約済み。|  
 |**dbid**|**smallint**|このファイルが属するデータベースのデータベース識別番号です。|  
 |**name**|**sysname**|ファイルの論理名です。|  
-|**ファイル名**|**nvarchar(260)**|物理デバイスの名前です。 これには、ファイルの完全パスが含まれます。|  
+|**filename**|**nvarchar(260)**|物理デバイスの名前です。 これには、ファイルの完全パスが含まれます。|  
   
 ## <a name="see-also"></a>参照  
  [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

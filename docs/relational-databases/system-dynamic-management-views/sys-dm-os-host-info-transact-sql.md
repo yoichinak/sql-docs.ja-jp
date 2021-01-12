@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee91975b31d16845c56f27e872998809fb252838
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41462fd558a30639342dc75be5bb68a44fcedf67
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468393"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097563"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys.dm_os_host_info (Transact-sql)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "97468393"
 ## <a name="remarks"></a>解説  
 このビューは、Windows と Linux を区別するために列を追加する [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)に似ています。
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
 `SELECT`既定では、に対する権限 `sys.dm_os_host_info` がロールに付与され `public` ます。 取り消す場合は、 `VIEW SERVER STATE` サーバーに対する権限が必要です。   

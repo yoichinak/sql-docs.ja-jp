@@ -1,6 +1,6 @@
 ---
-description: service_broker_endpoints (Transact-sql)
-title: service_broker_endpoints (Transact-sql) |Microsoft Docs
+description: sys.service_broker_endpoints (Transact-sql)
+title: sys.service_broker_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,25 +18,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_broker_endpoints catalog view
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ee3bd0e5e09ab2e8511596f3920e0e8408f1b6f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: d8e8a6590dedf9c43da14147c503d1e62423e595
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539567"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096700"
 ---
-# <a name="sysservice_broker_endpoints-transact-sql"></a>service_broker_endpoints (Transact-sql)
+# <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このカタログビューには、Service Broker エンドポイントの1つの行が含まれています。 このビューのすべての行には、TCP 構成メタデータを含む、 **tcp_endpoints**ビューに同じ**endpoint_id**を持つ対応する行があります。 Service Broker で使用できるプロトコルは TCP のみです。  
+  このカタログビューには、Service Broker エンドポイントの1つの行が含まれています。 このビューのすべての行について、 **sys.tcp_endpoints** ビューには、tcp 構成メタデータを含む同じ **endpoint_id** を持つ対応する行があります。 Service Broker で使用できるプロトコルは TCP のみです。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<inherited columns>**|**--**|[では、transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)から列を継承しています。|  
 |**is_message_forwarding_enabled**|**bit**|エンドポイントがメッセージの転送をサポートします。 これは、最初は **0** (無効) に設定されます。 NULL 値は許容されません。|  
-|**message_forwarding_size**|**int**|転送されるメッセージに使用できる **tempdb** 領域の最大値 (mb)。 初期設定は **10**に設定されています。 NULL 値は許容されません。|  
+|**message_forwarding_size**|**int**|転送されるメッセージに使用できる **tempdb** 領域の最大値 (mb)。 初期設定は **10** に設定されています。 NULL 値は許容されません。|  
 |**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、証明書<br /><br /> **6** -KERBEROS、証明書<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -証明書、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -証明書、ネゴシエート<br /><br /> NULL 値は許容されません。|  
 |**connection_auth_desc**|**nvarchar(60)**|このエンドポイントへの接続に必要な接続認証の種類の説明。次のいずれかになります。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> ネゴシエーション<br /><br /> CERTIFICATE<br /><br /> NTLM、証明書<br /><br /> KERBEROS、証明書<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> 証明書、ネゴシエート<br /><br /> NULLABLE.|  
 |**certificate_id**|**int**|認証で使用される証明書の ID (存在する場合)。<br /><br /> 0 = Windows 認証が使用されています。|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9eb8d8b48203b047df830670eb88b0956d04c4dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 6bc9b58549bbc20fe66caaf2adc61edd4345acd7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537961"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096658"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "89537961"
 |**send_request_date**|**datetime**|メッセージがメールキューに置かれた日付と時刻。|  
 |**send_request_user**|**sysname**|メッセージを送信したユーザー。 これは、メッセージの From: フィールドではなく、データベースメールプロシージャのユーザーコンテキストです。|  
 |**sent_account_id**|**int**|メッセージの送信に使用されるデータベースメールアカウントの識別子。|  
-|**sent_status**|**varchar (8)**|メールの状態。 設定可能な値は、次のとおりです。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール**再試行**しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
+|**sent_status**|**varchar (8)**|メールの状態。 次のいずれかの値になります。<br /><br /> **送信** 済み-メールが送信されました。<br /><br /> **未送信** -データベースメールはまだメッセージの送信を試みています。<br /><br /> データベースメール **再試行** しています。メッセージを送信できませんでしたが、もう一度送信しようとしています。<br /><br /> **失敗しました** -データベースメールはメッセージを送信できませんでした。|  
 |**sent_date**|**datetime**|メッセージが送信された日時。|  
 |**last_mod_date**|**datetime**|行が最後に変更された日付と時刻。|  
 |**last_mod_user**|**sysname**|行を最後に変更したユーザー。|  
@@ -68,6 +68,6 @@ ms.locfileid: "89537961"
  このビューによって公開されるシステムテーブルにはすべてのメッセージが含まれているため、 **msdb** データベースのサイズが大きくなる可能性があります。 テーブルのサイズを小さくするために、古いメッセージをビューから定期的に削除します。 詳細については、「 [データベースメールメッセージとイベントログをアーカイブするための SQL Server エージェントジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールおよび**databasemailuserrole**データベースロールに付与されます。 **Sysadmin**固定サーバーロールのメンバーによって実行されると、このビューにはすべてのメッセージが表示されます。 他のすべてのユーザーには、送信したメッセージのみが表示されます。  
+ **Sysadmin** 固定サーバーロールおよび **databasemailuserrole** データベースロールに付与されます。 **Sysadmin** 固定サーバーロールのメンバーによって実行されると、このビューにはすべてのメッセージが表示されます。 他のすべてのユーザーには、送信したメッセージのみが表示されます。  
   
   

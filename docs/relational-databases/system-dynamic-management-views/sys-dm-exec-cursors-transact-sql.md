@@ -1,6 +1,6 @@
 ---
-description: dm_exec_cursors (Transact-sql)
-title: dm_exec_cursors (Transact-sql) |Microsoft Docs
+description: sys.dm_exec_cursors (Transact-sql)
+title: sys.dm_exec_cursors (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 351f97ed08d1a6a79f8611d19842dc93138277ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 8ab1ed9e722f2363c0568932e7eb337bc09dbe41
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543941"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099008"
 ---
-# <a name="sysdm_exec_cursors-transact-sql"></a>dm_exec_cursors (Transact-sql)
+# <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   各種データベースで開いているカーソルに関する情報を返します。  
@@ -40,7 +40,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="arguments"></a>引数  
  *session_id* |0  
- セッションの ID。 *Session_id*が指定されている場合、この関数は、指定されたセッションのカーソルに関する情報を返します。  
+ セッションの ID。 *Session_id* が指定されている場合、この関数は、指定されたセッションのカーソルに関する情報を返します。  
   
  0 を指定した場合、この関数ではすべてのセッションのすべてのカーソルに関する情報が返されます。  
   
@@ -53,8 +53,8 @@ dm_exec_cursors (session_id | 0 )
 |**name**|**nvarchar (256)**|ユーザーによって定義されたカーソルの名前。|  
 |**properties**|**nvarchar (256)**|カーソルのプロパティ。 次のプロパティの値が連結され、この列の値が形成されます。<br />宣言インターフェイス<br />カーソルの種類 <br />カーソルの同時実行<br />カーソルのスコープ<br />カーソルの入れ子レベル<br /><br /> たとえば、この列で返される値は、"TSQL &#124; Dynamic &#124; オプティミスティック &#124; Global (0)" のようになります。|  
 |**sql_handle**|**varbinary(64)**|カーソルを宣言したバッチのテキストを処理します。|  
-|**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 **Sql_handle**、 **statement_end_offset**、および[dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
-|**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャ内で現在実行中のステートメントが終了するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および**dm_exec_sql_text**の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
+|**statement_start_offset**|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 **Sql_handle**、 **statement_end_offset**、および [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
+|**statement_end_offset**|**int**|現在実行中のバッチまたはストアドプロシージャ内で現在実行中のステートメントが終了するまでの文字数。 **Sql_handle**、 **statement_start_offset**、および **sys.dm_exec_sql_text** の動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。|  
 |**plan_generation_num**|**bigint**|再コンパイル後にプランのインスタンスを区別するために使用できるシーケンス番号。|  
 |**creation_time**|**datetime**|カーソルが作成されたタイムスタンプ。|  
 |**is_open**|**bit**|カーソルが開いているかどうかを示します。|  
@@ -82,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表は、カーソルの種類に関する説明と、プロパティ列に返される値です。  
   
-|種類|説明|  
+|Type|説明|  
 |----------|-----------------|  
 |Keyset|カーソルはキーセットとして宣言されています。|  
 |動的|カーソルは動的として宣言されました。|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  次の表に、カーソルのスコープについて説明し、[プロパティ] 列に使用できる値を示します。  
   
-|Scope|説明|  
+|スコープ|説明|  
 |-----------|-----------------|  
 |ローカル|カーソルのスコープは、カーソルが作成されたバッチ、ストアド プロシージャ、またはトリガーに対してローカルです。|  
 |グローバル|カーソルのスコープは、接続に対してグローバルです。|  

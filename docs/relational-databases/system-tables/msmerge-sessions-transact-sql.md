@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8bcfbf7faab359bec8241428aad9e471d4ed79be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 7247b3a8cf652de741fedf08a5141f6090fbcae8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545627"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098599"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_sessions**テーブルには、前のマージエージェントジョブセッションの結果を含む履歴行が含まれています。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSmerge_sessions** テーブルには、前のマージエージェントジョブセッションの結果を含む履歴行が含まれています。 このテーブルには、マージ エージェントが実行されるたびに、新しい行が追加されます。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -43,15 +43,15 @@ ms.locfileid: "89545627"
 |**delivery_rate**|**float**|1秒間に配信されたコマンドの平均数。|  
 |**time_remaining**|**int**|アクティブなセッションの残りの秒数。|  
 |**percent_complete**|**decimal**|アクティブなセッションで既に配信されている変更の合計の推定割合。|  
-|**upload_inserts **|**int**|パブリッシャー側で適用される挿入の数です。|  
+|**upload_inserts**|**int**|パブリッシャー側で適用される挿入の数です。|  
 |**upload_updates**|**int**|パブリッシャーで適用された更新数。|  
-|**upload_deletes **|**int**|パブリッシャー側で適用される削除の数です。|  
+|**upload_deletes**|**int**|パブリッシャー側で適用される削除の数です。|  
 |**upload_conflicts**|**int**|パブリッシャー側で変更を適用する間に発生した競合の数です。|  
 |**upload_conflicts_resolved**|**int**|パブリッシャーで変更を適用している間に、解決された競合の数。|  
 |**upload_rows_retried**|**int**|パブリッシャーにアップロードされた行数のうち、再試行された行数。|  
-|**download_inserts **|**int**|サブスクライバー側で適用される挿入の数です。|  
+|**download_inserts**|**int**|サブスクライバー側で適用される挿入の数です。|  
 |**download_updates**|**int**|サブスクライバーで適用された更新プログラムの数。|  
-|**download_deletes **|**int**|サブスクライバー側で適用される削除の数です。|  
+|**download_deletes**|**int**|サブスクライバー側で適用される削除の数です。|  
 |**download_conflicts**|**int**|サブスクライバーで変更を適用している間に発生した競合の数。|  
 |**download_conflicts_resolved**|**int**|サブスクライバーで変更を適用している間に、解決された競合の数。|  
 |**download_rows_retried**|**int**|サブスクライバーにダウンロードされた行数のうち、再試行された行数。|  

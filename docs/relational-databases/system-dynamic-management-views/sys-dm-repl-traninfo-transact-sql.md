@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6369fc0d1ee2c0b70cb3e6e13fd201fd718236dc
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f8a0613d83cebfed56ba5202a6c3535ef31c8a84
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834574"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098848"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ ms.locfileid: "91834574"
 |**max_cmds_in_tran**|**int**|ログリーダーエージェントによって指定された、論理トランザクション内のコマンドの最大数。|  
 |**begin_time**|**datetime**|トランザクションが開始された時刻。|  
 |**commit_time**|**datetime**|トランザクションがコミットされた時刻。|  
-|**session_id**|**int**|変更データキャプチャのログスキャンセッションの ID。 この列は[sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)の**session_id**列にマップされます。|  
-|**session_phase**|**int**|エラー発生時のセッションのフェーズを示す数値。 この列は[sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)の**phase_number**列にマップされます。|  
+|**session_id**|**int**|変更データキャプチャのログスキャンセッションの ID。 この列は [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)の **session_id** 列にマップされます。|  
+|**session_phase**|**int**|エラー発生時のセッションのフェーズを示す数値。 この列は [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)の **phase_number** 列にマップされます。|  
 |**is_known_cdc_tran**|**bit**|トランザクションが変更データキャプチャによって追跡されることを示します。<br /><br /> 0 = トランザクション レプリケーション トランザクション。<br /><br /> 1 = 変更データ キャプチャ トランザクション。|  
 |**error_count**|**int**|発生したエラーの数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  パブリケーション データベースまたは変更データ キャプチャが有効にされたデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
  この情報は、アーティクルキャッシュに現在読み込まれている、レプリケートされたデータベースオブジェクトまたは変更データキャプチャが有効になっているテーブルに対してのみ返されます。  
   
 ## <a name="see-also"></a>参照  

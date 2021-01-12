@@ -14,19 +14,18 @@ f1_keywords:
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- database_query_store_options catalog view
 - sys.database_query_store_options catalog view
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 ms.custom: ''
-ms.date: 05/27/2020
+ms.date: 1/8/2021
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8fce0932d546470206bbc7752429090c0212158
-ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
+ms.openlocfilehash: 273e5c4446853c3f44d0c99535880c9c9da2aa5f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98005415"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098071"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-sql)
 
@@ -49,12 +48,17 @@ ms.locfileid: "98005415"
 |**max_storage_size_mb**|**bigint**|クエリストアの最大ディスクサイズ (mb)。 既定値は、では **100** MB、はから [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] **1 GB** です [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]Premium edition では、既定値は 1 GB、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションでは既定値は 10 MB です。<br /><br /> ステートメントを使用してを変更し `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` ます。|  
 |**stale_query_threshold_days**|**bigint**|クエリの情報がクエリストアに保持される日数。 既定値は **30** です。 保持ポリシーを無効にするには0に設定します。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は 7 日です。<br /><br /> ステートメントを使用してを変更し `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` ます。|  
 |**max_plans_per_query**|**bigint**|格納されているプランの最大数を制限します。 既定値は **200** です。 最大値に達した場合、クエリストアそのクエリの新しいプランのキャプチャを停止します。 を0に設定すると、キャプチャされたプランの数に関する制限がなくなります。<br /><br /> ステートメントを使用してを変更し `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` ます。|  
-|**query_capture_mode**|**smallint**|現在アクティブなクエリのキャプチャモード:<br /><br /> **1** = すべて-すべてのクエリがキャプチャされます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降) の既定の構成値です [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 2 = 実行回数とリソース消費量に基づいて、関連するクエリを自動キャプチャします。 これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。<br /><br /> 3 = なし-新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリをキャプチャしない場合があるため、この構成は慎重に使用してください。|  
-|**query_capture_mode_desc**|**nvarchar(60)**|クエリストアの実際のキャプチャモードの説明テキスト。<br /><br /> ALL (の既定値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (の既定値 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> なし|  
+|**query_capture_mode**|**smallint**|現在アクティブなクエリのキャプチャモード:<br /><br /> **1** = すべて-すべてのクエリがキャプチャされます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降) の既定の構成値です [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 2 = 実行回数とリソース消費量に基づいて、関連するクエリを自動キャプチャします。 これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。<br /><br /> 3 = なし-新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリをキャプチャしない場合があるため、この構成は慎重に使用してください。 <br /><br /> 4 = カスタム- [QUERY_CAPTURE_POLICY オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md#SettingOptions)を使用して、クエリキャプチャポリシーをさらに制御できます。<br /> **適用対象**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 以降。|  
+|**query_capture_mode_desc**|**nvarchar(60)**|クエリストアの実際のキャプチャモードの説明テキスト。<br /><br /> ALL (の既定値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **AUTO** (の既定値 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> なし <br /><br /> CUSTOM|  
+|**capture_policy_execution_count**|**int**|クエリキャプチャモードのカスタムポリシーオプション。 評価期間中、クエリを実行する回数を定義します。 既定値は 30 です。<br />**適用対象**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 以降。| 
+|**capture_policy_total_compile_cpu_time_ms**|**bigint**|クエリキャプチャモードのカスタムポリシーオプション。 評価期間中、クエリで使用されるコンパイル CPU 時間の合計経過時間を定義します。 既定値は 1000 です。<br /> **適用対象**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 以降。|
+|**capture_policy_total_execution_cpu_time_ms**|**bigint**|クエリキャプチャモードのカスタムポリシーオプション。 評価期間中、クエリによって使用される実行 CPU の合計経過時間を定義します。 既定値は、100 です。<br /> **適用対象**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 以降。|
+|**capture_policy_stale_threshold_hours**|**int**|クエリキャプチャモードのカスタムポリシーオプション。 クエリをキャプチャすべきかどうかを決定する評価の間隔を定義します。 既定値は24時間です。<br /> **適用対象**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] 以降。|
 |**size_based_cleanup_mode**|**smallint**|データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。<br /><br /> 0 = オフサイズベースのクリーンアップは自動的にアクティブ化されません。<br /><br /> **1** = 自動サイズベースのクリーンアップは、ディスク上のサイズが *max_storage_size_mb* の **90%** に達したときに自動的にアクティブ化されます。 これは既定の構成値です。<br /><br />サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 *Max_storage_size_mb* の約 **80%** に達した時点で停止します。|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|クエリストアの実際のサイズに基づくクリーンアップモードの説明テキストです。<br /><br /> OFF <br /> **AUTO** (既定値)|  
 |**wait_stats_capture_mode**|**smallint**|クエリストア待機の統計情報のキャプチャを実行するかどうかを制御します。 <br /><br /> 0 = OFF <br /> **1** = オン<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。|
-|**wait_stats_capture_mode_desc**|**nvarchar(60)**|実際の待機統計キャプチャモードの説明テキスト。 <br /><br /> OFF <br /> **ON** (既定値)<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。| 
+|**wait_stats_capture_mode_desc**|**nvarchar(60)**|実際の待機統計キャプチャモードの説明テキスト。 <br /><br /> OFF <br /> **ON** (既定値)<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。|
+|**actual_state_additional_info**|**nvarchar (8000)**|現在使用されていません。 将来実装される可能性があります。|
   
 ## <a name="permissions"></a>アクセス許可  
  `VIEW DATABASE STATE` アクセス許可が必要です。  
@@ -71,5 +75,3 @@ ms.locfileid: "98005415"
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  

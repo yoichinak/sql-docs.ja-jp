@@ -1,6 +1,6 @@
 ---
-description: fn_trace_getfilterinfo (Transact-sql)
-title: fn_trace_getfilterinfo (Transact-sql) |Microsoft Docs
+description: sys.fn_trace_getfilterinfo (Transact-sql)
+title: sys.fn_trace_getfilterinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - fn_trace_getfilterinfo function
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: a76efe75df29423c1f788ace0f8dde8b158c6a0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 889a10c6ae999a5211120e52d7b903d04c5ec70e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454784"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097460"
 ---
-# <a name="sysfn_trace_getfilterinfo-transact-sql"></a>fn_trace_getfilterinfo (Transact-sql)
+# <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定されたトレースに適用されたフィルターに関する情報を返します。  
@@ -61,7 +61,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**value**|**sql_variant**|フィルターを適用するときに使用する値を示します。|  
   
 ## <a name="remarks"></a>解説  
- ユーザーは *trace_id* 値を設定して、トレースの識別、変更、および制御を行います。 特定のトレースの ID が渡された場合、 **fn_trace_getfilterinfo** はそのトレースに関するすべてのフィルターに関する情報を返します。 指定されたトレースにフィルターがない場合、空の行セットが返されます。 無効な ID が渡された場合、空の行セットが返されます。 トレースに関する同様の情報については、「 [sys. fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)」を参照してください。  
+ ユーザーは *trace_id* 値を設定して、トレースの識別、変更、および制御を行います。 特定のトレースの ID が渡された場合、 **fn_trace_getfilterinfo** はそのトレースに関するすべてのフィルターに関する情報を返します。 指定されたトレースにフィルターがない場合、空の行セットが返されます。 無効な ID が渡された場合、空の行セットが返されます。 トレースに関する同様の情報については、「 [sys.fn_trace_getinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER TRACE 権限が必要です。  
@@ -76,14 +76,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;トレースを作成する ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_create &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

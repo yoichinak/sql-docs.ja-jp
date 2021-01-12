@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.data_spaces catalog view
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aa268bd7614aa97b77149cd85d0f6aa050dac8f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 29de7e042334210b8ccf39706ad0f05e8b1f43e0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473093"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096869"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces (Transact-sql)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97473093"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|データ領域の名前。データベース内で一意です。|  
 |data_space_id|**int**|データ領域 ID 番号。データベース内で一意です。|  
-|型|**char(2)**|データ領域の種類:<br /><br /> FG = ファイル グループ<br /><br /> FD = FILESTREAM データ ファイル グループ<br /><br /> FX = メモリ最適化テーブルファイルグループ<br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> PS = パーティション構成|  
+|type|**char(2)**|データ領域の種類:<br /><br /> FG = ファイル グループ<br /><br /> FD = FILESTREAM データ ファイル グループ<br /><br /> FX = メモリ最適化テーブルファイルグループ<br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> PS = パーティション構成|  
 |type_desc|**nvarchar(60)**|データ領域の種類の説明:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = 既定のデータ領域です。 既定のデータ領域は、CREATE TABLE または CREATE INDEX ステートメントでファイル グループやパーティション構成が指定されない場合に使用されます。<br /><br /> 0 = 既定のデータ領域ではありません。|  
 |is_system|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 1 = データ領域は、フルテキストインデックスフラグメントに使用されます。<br /><br /> 0 = フルテキスト インデックス フラグメントに使用しないデータ領域。|  

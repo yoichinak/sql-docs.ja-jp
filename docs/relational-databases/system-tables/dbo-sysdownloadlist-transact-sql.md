@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 34e0ba69d668cd25b902f9decdf75c0039a74fc9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: b523812f7923f6ba68a40fe70ab2076950a3463a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551065"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098748"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "89551065"
 |**status**|**tinyint**|ジョブの状態:<br /><br /> **0** = まだダウンロードされていません<br /><br /> **1** = 正常にダウンロードされました|  
 |**deleted_object_name**|**sysname**|削除されたオブジェクトの名前。|  
   
- <sup>1</sup> **object_id** 列の値には **-1**を指定できます。この値は、 **operation_code** 列の値が DELETE の場合に ALL の値に対応します。  
+ <sup>1</sup> **object_id** 列の値には **-1** を指定できます。この値は、 **operation_code** 列の値が DELETE の場合に ALL の値に対応します。  
   
   

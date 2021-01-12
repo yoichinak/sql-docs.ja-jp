@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1c547cee24397cc9cc1c0b139bd728aef92c2b3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6ffbd16a2a62b9adcc5ff4e2f31dcee9f133538a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472783"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098741"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,13 +69,13 @@ CHANGETABLE (
  VERSION *table*, { <primary_key_values> }  
  指定された行の最新の変更追跡情報を返します。 行は主キー値によって識別される必要があります。 <primary_key_values> は主キー列を識別し、値を指定します。 主キー列の名前は、任意の順序で指定できます。  
   
- *Table*  
+ *テーブル*  
  変更追跡情報を取得するユーザー定義テーブルを指定します。 テーブルで変更の追跡を有効にする必要があります。 1 つ、2 つ、3 つ、または 4 つの部分で構成されるテーブル名を使用できます。 テーブル名は、テーブルのシノニムにすることができます。  
   
  *column_name*  
  主キー列の名前を指定します。 複数の列名を任意の順序で指定できます。  
   
- *値*  
+ *Value*  
  主キーの値を指定します。 複数の主キー列がある場合は、 *column_name* リストに表示される列と同じ順序で値を指定する必要があります。  
   
  と *table_alias* [(*column_alias* [,...*n* ])]  

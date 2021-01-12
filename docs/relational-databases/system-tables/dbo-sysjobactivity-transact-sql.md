@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dd0fb9ae28d2101b02feb17bc5b2eacbfcb476a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 091f3052a568fa5c1c0e7f521333c67947716cdf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551123"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098368"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89551123"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|**Msdb**データベースの**syssessions**テーブルに格納されているセッションの ID。|  
+|**session_id**|**int**|**Msdb** データベースの **syssessions** テーブルに格納されているセッションの ID。|  
 |**job_id**|**uniqueidentifier**|ジョブの ID。|  
 |**run_requested_date**|**datetime**|ジョブの実行が要求された日付と時刻。|  
 |**run_requested_source**|**sysname(nvarchar(128))**|ジョブの実行要求の発生元。<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
@@ -43,7 +43,7 @@ ms.locfileid: "89551123"
 |**last_executed_step_id**|**int**|実行された最後のジョブ ステップの ID。|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|前回のジョブステップが実行を開始した日付と時刻。|  
 |**stop_execution_date**|**datetime**|ジョブの実行が終了した日付と時刻。|  
-|**job_history_id**|**int**|**Sysjobhistory**テーブル内の行を識別するために使用されます。|  
+|**job_history_id**|**int**|**Sysjobhistory** テーブル内の行を識別するために使用されます。|  
 |**next_scheduled_run_date**|**datetime**|ジョブを実行する予定の次の日付と時刻。|  
 
 ## <a name="example"></a>例

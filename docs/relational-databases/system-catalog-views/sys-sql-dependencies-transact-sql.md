@@ -1,6 +1,6 @@
 ---
-description: sql_dependencies (Transact-sql)
-title: sql_dependencies (Transact-sql) |Microsoft Docs
+description: sys.sql_dependencies (Transact-sql)
+title: sys.sql_dependencies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,22 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6dc1bb60a075f75aabb737a0eccc35b8269f8db2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 7c20d20cedd1304136af2d57f599aa2797dd4eee
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548669"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099192"
 ---
-# <a name="syssql_dependencies-transact-sql"></a>sql_dependencies (Transact-sql)
+# <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   参照先エンティティの依存関係ごとに1行の値を格納します。参照先のエンティティ [!INCLUDE[tsql](../../includes/tsql-md.md)] は、他の参照元オブジェクトを定義する式またはステートメントで参照されます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使用してください。  
 
   
 |列名|データ型|説明|  

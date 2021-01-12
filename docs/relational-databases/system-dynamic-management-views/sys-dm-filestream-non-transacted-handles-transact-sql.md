@@ -1,6 +1,6 @@
 ---
-description: dm_filestream_non_transacted_handles (Transact-sql)
-title: dm_filestream_non_transacted_handles (Transact-sql) |Microsoft Docs
+description: sys.dm_filestream_non_transacted_handles (Transact-sql)
+title: sys.dm_filestream_non_transacted_handles (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cde44e61d01f4995f1f3517f2144a36fff669177
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: e6b5082f5ad2105d91c23d3d1cca3e959b01343a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550265"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097646"
 ---
-# <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>dm_filestream_non_transacted_handles (Transact-sql)
+# <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   FileTable データに関連付けられている、現在開いている非トランザクションファイルハンドルを表示します。  
@@ -45,7 +45,7 @@ ms.locfileid: "89550265"
 |correlation_process_id|varbinary (8)|要求を発信したプロセスの一意の識別子を格納します。|  
 |correlation_thread_id|varbinary (8)|要求を生成したスレッドの一意な識別子を格納します。|  
 |file_context|varbinary (8)|このハンドルで使用されるファイル オブジェクトへのポインター。|  
-|状態|INT|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
+|state|INT|ハンドルの現在の状態。 アクティブ、終了、強制終了のいずれかになります。|  
 |state_desc|nvarchar(120)|"ACTIVE"、<br />"CLOSED"、<br />キル|  
 |current_workitem_type|INT|このハンドルが現在処理されている状態。|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType"、<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem"、<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem"、<br />"FFtPreCloseWorkitem"、<br />"FFtQueryDirectoryWorkItem"、<br />"FFtQueryInfoWorkItem"、<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem"、<br />FFtWriteCompletionWorkitem|  

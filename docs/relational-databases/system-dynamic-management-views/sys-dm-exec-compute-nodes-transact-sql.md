@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a9776a0fa0e1d6c939c41d66f32a6cc4855e360
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 947439df0c2ecf611507039ca203893f92cc13de
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428050"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098983"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "97428050"
 |列名|データ型|説明|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|ノードに関連付けられている一意の数値 id。 このビューのキー。|種類に関係なく、スケールアウトクラスター全体で一意です。|  
-|型|**nvarchar(32)**|ノードの種類。|' COMPUTE '、' HEAD '|  
+|type|**nvarchar(32)**|ノードの種類。|' COMPUTE '、' HEAD '|  
 |name|**nvarchar(32)**|ノードの論理名。|適切な長さの任意の文字列。|  
 |address|**nvarchar(32)**|このノードの IP アドレス。|IP アドレスの範囲|  
   

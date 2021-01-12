@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20b5615cc4f0b11b05eb69f4233e20f7a7379378
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 8ba6fbe6033bff1f113a0ee128357d49a1f57e7f
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550977"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98097321"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,12 @@ ms.locfileid: "89550977"
 |**allow_sync_tran**|**bit**|パブリケーションで即時更新サブスクリプションを許可するかどうかを指定します。 **1** は、即時更新サブスクリプションが許可されることを示します。|  
 |**autogen_sync_procs**|**bit**|即時更新サブスクリプションの同期ストアドプロシージャがパブリッシャーで生成されるかどうかを指定します。 **1** は、パブリッシャーで生成されることを意味します。|  
 |**保有**|**int**|指定されたパブリケーションに対して保存する変更の量 (時間単位)。|  
-|**allowed_queued_tran**|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューに保持するかどうかを示します。 **1**の場合、サブスクライバーでの変更はキューに登録されます。|  
-|**snapshot_in_defaultfolder**|**bit**|スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。<br /><br /> **0** = スナップショットファイルは、 *alternate_snapshot_folder*によって指定された別の場所に格納されています。<br /><br /> **1** = スナップショットファイルは既定のフォルダーにあります。|  
+|**allowed_queued_tran**|**bit**|変更をパブリッシャーで適用できるようになるまで、サブスクライバーで変更をキューに保持するかどうかを示します。 **1** の場合、サブスクライバーでの変更はキューに登録されます。|  
+|**snapshot_in_defaultfolder**|**bit**|スナップショットファイルを既定のフォルダーに格納するかどうかを指定します。<br /><br /> **0** = スナップショットファイルは、 *alternate_snapshot_folder* によって指定された別の場所に格納されています。<br /><br /> **1** = スナップショットファイルは既定のフォルダーにあります。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショットの代替フォルダーの場所を指定します。|  
-|**pre_snapshot_script**|**nvarchar (255)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
-|**post_snapshot_script**|**nvarchar (255)**|**.Sql**ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder*の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。**1**は、スナップショットが圧縮されることを意味します。|  
+|**pre_snapshot_script**|**nvarchar (255)**|**.Sql** ファイルの場所へのポインターを指定します。 ディストリビューション エージェントは、サブスクライバー側でスナップショットを適用するとき、レプリケートされたオブジェクト スクリプトより前に、プリスナップショット スクリプトを実行します。|  
+|**post_snapshot_script**|**nvarchar (255)**|**.Sql** ファイルの場所へのポインターを指定します。 ディストリビューションエージェントは、他のすべてのレプリケートされたオブジェクトスクリプトとデータが初期同期中に適用された後に、ポストスナップショットスクリプトを実行します。|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder* の場所に書き込まれるスナップショットを CAB 形式で圧縮することを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。**1** は、スナップショットが圧縮されることを意味します。|  
 |**ftp_address**|**sysname**|ディストリビューター用の FTP サービスのネットワークアドレス。 ディストリビューション エージェントが受け取るパブリケーション スナップショット ファイルの場所を示します。|  
 |**ftp_port**|**int**|ディストリビューターの FTP サービスのポート番号。 ディストリビューションエージェントが取得するパブリケーションスナップショットファイルの場所を指定します。|  
 |**ftp_subdirectory**|**nvarchar (255)**|パブリケーションで FTP を使用したスナップショットの配布がサポートされている場合に、ディストリビューションエージェントでスナップショットファイルを取得できる場所を指定します。|  
@@ -66,7 +66,7 @@ ms.locfileid: "89550977"
 |**conflict_retention**|**int**|競合の保有期間を日数で指定します。|  
 |**conflict_policy**|**int**|キュー更新サブスクライバーオプションを使用する場合の競合解決ポリシーを指定します。 次のいずれかの値を指定します。<br /><br /> **1** = パブリッシャー優先。<br /><br /> **2** = サブスクライバー優先。<br /><br /> **3** = サブスクリプションは再初期化されます。|  
 |**queue_type**|**int**|使用されるキューの種類。 次のいずれかの値を指定します。<br /><br /> **1** = msmq は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューを使用してトランザクションを格納します。<br /><br /> **2** = sql: を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクションを格納します。<br /><br /> 注: [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューの使用は推奨されておらず、使用できなくなりました。|  
-|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの **objectGUID**です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。|  
+|**ad_guidname**|**sysname**|パブリケーションが Active Directory でパブリッシュされるかどうかを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] ます。 有効なグローバル一意識別子 (GUID) は、パブリケーションが Active Directory にパブリッシュされることを指定します。 GUID は、対応する Active Directory パブリケーションオブジェクトの **objectGUID** です。 NULL の場合、パブリケーションは Active Directory でパブリッシュされません。|  
 |**backward_comp_level**|**int**|データベースの互換性レベル。次のいずれかの値になります。<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> **110**  =  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。<br /><br /> **120**  =  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。|  
 |**allow_initialize_from_backup**|**bit**|サブスクライバーが、初期スナップショットではなくバックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 **1** は、サブスクリプションをバックアップから初期化できることを意味します。 **0** は、サブスクリプションが使用できないことを意味します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。|  
 |**min_autonosync_lsn**|**[バイナリ]**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

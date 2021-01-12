@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: caabac10703a39aa88afd357fd1596379f82978d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: ca7e44f973e0e9150511f70e19dec81b5383d994
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538260"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098132"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSreplication_queue**テーブルは、SQL ベースのキューを使用しているすべてのキュー更新サブスクリプションによって発行されたキューに登録されたコマンドを格納するために、レプリケーションプロセスによって使用されます。 このテーブルは、サブスクリプションデータベースに格納されます。  
+  **MSreplication_queue** テーブルは、SQL ベースのキューを使用しているすべてのキュー更新サブスクリプションによって発行されたキューに登録されたコマンドを格納するために、レプリケーションプロセスによって使用されます。 このテーブルは、サブスクリプションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
