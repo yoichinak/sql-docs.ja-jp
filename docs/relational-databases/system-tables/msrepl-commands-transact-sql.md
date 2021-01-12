@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_commands system table
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8596aefdaecce0e7d39033b2a484ebfe6a4f46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: c939e1c5112aee07738ad5d368cb0ef05d804618
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540279"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091127"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSrepl_commands**テーブルには、レプリケートされたコマンドの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
+  **MSrepl_commands** テーブルには、レプリケートされたコマンドの行が含まれています。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

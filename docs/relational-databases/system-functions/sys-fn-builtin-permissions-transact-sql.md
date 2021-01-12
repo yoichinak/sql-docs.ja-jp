@@ -25,15 +25,15 @@ helpviewer_keywords:
 - displaying permission hierarchy
 - sys.fn_builtin_permissions function
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
-author: rothja
-ms.author: jroth
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 117c4c2e6bc3e08ea32869cd198850eb3bb29ab2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ca23195b680ca5e2e16010b04c357fa2369d7f0a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484564"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093874"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +77,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|サーバーの照合順序|セキュリティ保護可能なクラスの説明。|  
 |permission_name|**nvarchar(60)**|サーバーの照合順序|アクセス許可の名前。|  
-|型|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
+|type|**varchar (4)**|サーバーの照合順序|Compact アクセス許可の型コード。 次の表を参照してください。|  
 |covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合は、このクラスのアクセス許可の名前を指定します。これは、このクラスの他のアクセス許可を意味します。|  
 |parent_class_desc|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、現在のクラスを含む親クラスの名前。|  
 |parent_covering_permission_name|**nvarchar(60)**|サーバーの照合順序|NULL でない場合、親クラスの権限で、そのクラスの他の権限をすべて含む権限の名前。|  

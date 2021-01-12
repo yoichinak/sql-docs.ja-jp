@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 126474b4efe2eafb5c235d1ba4a31e433d71500c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: a7e5f2752557f63acffa69908f1c95025df83ae5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544668"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093779"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "89544668"
 |__$conflict_type|**int**|競合の種類。次のいずれかの値を指定できます。<br /><br /> 1: ローカル行が別の更新によって変更されたか、削除されてから再挿入されたため、更新に失敗しました。<br /><br /> 2: ローカル行が既に削除されていたため、更新に失敗しました。<br /><br /> 3: ローカル行が別の更新によって変更されたか、削除された後に再挿入されたため、削除できませんでした。<br /><br /> 4: ローカル行が既に削除されていたため、削除に失敗しました。<br /><br /> 5: ローカル行が既に挿入されているか、挿入されてから更新されたため、挿入に失敗しました。|  
 |__$is_winner|**bit**|このテーブルの行が競合の優先であるかどうかを示します。これは、ローカルノードに適用されたことを意味します。|  
 |__$pre_version|**varbinary (32)**|競合する変更が発生したデータベースのバージョン。|  
-|__$reason_code|**int**|競合の解決コード。 次の値のいずれかです。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、「 **__ $ reason_text**」を参照してください。|  
-|__$reason_text|**nvarchar (720)**|競合の解決策。 次の値のいずれかです。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
+|__$reason_code|**int**|競合の解決コード。 値は、次のいずれかです。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、「 **__ $ reason_text**」を参照してください。|  
+|__$reason_text|**nvarchar (720)**|競合の解決策。 値は、次のいずれかです。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**。 サイズはコンテンツによって異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
 |__$inserted_date|**datetime**|競合している行がこのテーブルに挿入された日付と時刻。|  
 |__$row_id|**timestamp**|競合の原因となった行に関連付けられている行バージョン。|  

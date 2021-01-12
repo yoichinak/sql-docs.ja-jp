@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 51e98246a61d18206015e358a83aee5c66a26711
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: 10d3e082032daa3782e15caa20d43e8eb4130bd5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547089"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091425"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **MSmerge_dynamic_snapshots**テーブルでは、パラメーター化された行フィルターを使用して、マージパブリケーションに対して定義されている各パーティションのフィルター選択されたデータスナップショットの場所を追跡します。 このテーブルは、 **パブリケーション** データベースに格納されます。  
+  **MSmerge_dynamic_snapshots** テーブルでは、パラメーター化された行フィルターを使用して、マージパブリケーションに対して定義されている各パーティションのフィルター選択されたデータスナップショットの場所を追跡します。 このテーブルは、 **パブリケーション** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

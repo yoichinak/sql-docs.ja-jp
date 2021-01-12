@@ -1,6 +1,6 @@
 ---
-description: dm_hadr_availability_replica_cluster_states (Transact-sql)
-title: dm_hadr_availability_replica_cluster_states (Transact-sql) |Microsoft Docs
+description: sys.dm_hadr_availability_replica_cluster_states (Transact-sql)
+title: sys.dm_hadr_availability_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea7242f1658f5a52ab5a403e186c1be319834825
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 79ed4be2df381b2b64c6a69a2beedaef92d38dd7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89533504"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092809"
 ---
-# <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>dm_hadr_availability_replica_cluster_states (Transact-sql)
+# <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のすべての AlwaysOn 可用性グループ (レプリカの場所を問いません) の AlwaysOn 可用性レプリカ (結合状態を問いません) ごとに 1 行のデータを返します。  

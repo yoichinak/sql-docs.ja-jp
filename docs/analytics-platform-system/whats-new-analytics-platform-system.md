@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 590ca4149bc93fd2c22d04f22c3c47b7389245a2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 004550d95ca69bae45c518b8054886e635e829df
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489609"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091785"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
 Microsoft Analytics Platform System (APS) の最新のアプライアンス更新プログラムの新機能を参照してください。 APS は、MPP SQL Server 並列データウェアハウスをホストする、スケールアウトされたオンプレミスのアプライアンスです。 
@@ -142,7 +142,7 @@ SQL Server 2017 をサポートする新しい APS SSIS 変換先アダプター
 リリース日-2018 年7月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC コマンドは同時実行スロットを使用しません (動作の変更)
-APS は、 [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)などの t-sql [dbcc コマンド](../t-sql/database-console-commands/dbcc-transact-sql.md)のサブセットをサポートしています。 以前は、これらのコマンドは[コンカレンシー スロット](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots)を消費したので、実行できるユーザー負荷/クエリの数が減少しました。 コマンドは、 `DBCC` ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
+APS は、 [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)などの t-sql [dbcc コマンド](../t-sql/database-console-commands/dbcc-transact-sql.md)のサブセットをサポートしています。 以前は、これらのコマンドは[コンカレンシー スロット](./workload-management.md?view=aps-pdw-2016-au7&preserve-view=true&#concurrency-slots)を消費したので、実行できるユーザー負荷/クエリの数が減少しました。 コマンドは、 `DBCC` ユーザーの同時実行スロットを使用しないローカルキューで実行されるようになりました。これにより、全体的なクエリ実行パフォーマンスが向上します。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>一部のメタデータ呼び出しをカタログオブジェクトに置き換えます。
 SMO を使用する代わりに、メタデータ呼び出しに catalog オブジェクトを使用すると、APS のパフォーマンスが向上しています。 CU 7.1 以降、これらのメタデータ呼び出しの一部では、既定でカタログオブジェクトが使用されるようになりました。 メタデータクエリを使用しているお客様が問題が発生した場合は、 [機能スイッチ](appliance-feature-switch.md) でこの動作を無効にすることができます。
@@ -275,7 +275,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [bcp ユーティリティ]:/sql/tools/bcp-utility
 [一意]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
-[行または範囲]:/sql/t-sql/queries/select-over-clause-transact-sql
+[ROWS または RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql

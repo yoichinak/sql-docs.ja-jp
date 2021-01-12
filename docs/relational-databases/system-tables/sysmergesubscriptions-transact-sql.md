@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aef0f508cc4d3c3034fe49c7e46762f3b9bb2645
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: cawrites
+ms.author: chadam
+ms.openlocfilehash: e3caa66b5e8e938a0e54f7212b37e0442e29ebfe
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537873"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98090867"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "89537873"
 |partition_id|**int**|サブスクリプションが属する事前計算済みのパーティションを識別します。|  
 |cleanedup_unsent_changes|**bit**|未送信の変更のメタデータがサブスクライバーでクリーンアップされたことを示します。|  
 |replica_version|**int**|サブスクリプションが所属するサブスクライバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを識別します。次のいずれかの値になります。<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|内部使用のみです。|  
-|application_name|**nvarchar(128)**|内部使用のみです。|  
-|subscriber_number|**int**|内部使用のみです。|  
+|supportability_mode|**int**|内部使用のみ。|  
+|application_name|**nvarchar(128)**|内部使用のみ。|  
+|subscriber_number|**int**|内部使用のみ。|  
 |last_makegeneration_datetime|**datetime**|Makegeneration プロセスがパブリッシャーに対して実行した最後の **日時** 。 詳細については、「 [レプリケーションマージエージェント](../../relational-databases/replication/agents/replication-merge-agent.md)」の-MakeGenerationInterval パラメーターを参照してください。|  
   
 ## <a name="see-also"></a>参照  

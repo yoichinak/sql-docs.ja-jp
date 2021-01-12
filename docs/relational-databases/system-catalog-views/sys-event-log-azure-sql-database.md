@@ -18,15 +18,15 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: d60c081eecf88868db4541bc79960bf1bbd8723c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c3a358e23d9428440166dd98a0f29ca8e4ea11c5
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97412943"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093102"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 
@@ -41,7 +41,7 @@ ms.locfileid: "97412943"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|データベースの名前です。 接続が失敗し、ユーザーがデータベース名を指定していない場合、この列は空白です。|  
+|**database_name**|**sysname**|データベース名。 接続が失敗し、ユーザーがデータベース名を指定していない場合、この列は空白です。|  
 |**start_time**|**datetime2**|集計間隔の開始時刻を示す UTC 日時。 集計イベントの場合、時刻は常に 5 分単位になります。 次に例を示します。<br /><br /> ' 2011-09-28 16:00:00 '<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
 |**end_time**|**datetime2**|集計間隔の終了時刻を示す UTC 日時。 集計イベントの場合、 **End_time** は、同じ行の対応する **start_time** よりも常に5分後になります。 集計されていないイベントの場合、 **start_time** と **end_time** はイベントの実際の UTC 日時と同じになります。|  
 |**event_category**|**nvarchar (64)**|このイベントを生成した上位レベルのコンポーネント。<br /><br /> 使用可能な値の一覧については、「 [イベントの種類](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 」を参照してください。|  
@@ -83,7 +83,7 @@ ms.locfileid: "97412943"
 |**できる**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用量が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、「 [リソースの制限](/previous-versions/azure/dn338081(v=azure.100))」を参照してください。|  
 |**できる**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、「 [リソースの制限](/previous-versions/azure/dn338081(v=azure.100))」を参照してください。|  
 |**できる**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注: Azure SQL Database V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、「 [リソースの制限](/previous-versions/azure/dn338081(v=azure.100))」を参照してください。|  
-|**双発**|**起こり**|0|**起こり**|2|デッドロックが発生しました。|  
+|**engine**|**deadlock**|0|**deadlock**|2|デッドロックが発生しました。|  
   
 ## <a name="permissions"></a>アクセス許可
 

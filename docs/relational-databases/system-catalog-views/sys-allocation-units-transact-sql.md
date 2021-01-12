@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: markingmyname
-ms.author: maghan
+author: WilliamDAssafMSFT
+ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06b45e2bb57f8b39595beee13014ac72b835e4e1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 12a5924d1137f9face839899a742f20d3565f267
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464683"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091576"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97464683"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|アロケーションユニットの ID。 データベース内で一意です。|  
-|型|**tinyint**|アロケーションユニットの種類:<br /><br /> 0 = 削除された<br /><br /> 1 = 行内データ (LOB データ型を除くすべてのデータ型)<br /><br /> 2 = ラージオブジェクト (LOB) データ (**テキスト**,、 **ntext**,、 **イメージ**,、 **xml**,、大きな値の型と CLR ユーザー定義型)<br /><br /> 3 = 行オーバーフローデータ|  
+|type|**tinyint**|アロケーションユニットの種類:<br /><br /> 0 = 削除された<br /><br /> 1 = 行内データ (LOB データ型を除くすべてのデータ型)<br /><br /> 2 = ラージオブジェクト (LOB) データ (**テキスト**,、 **ntext**,、 **イメージ**,、 **xml**,、大きな値の型と CLR ユーザー定義型)<br /><br /> 3 = 行オーバーフローデータ|  
 |type_desc|**nvarchar(60)**|アロケーション ユニットの種類の説明。<br /><br /> **アロケーション**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|アロケーションユニットに関連付けられているストレージコンテナーの ID。<br /><br /> type = 1 または 3 の場合、container_id = sys.partitions.hobt_id になります。<br /><br /> type = 2 の場合、container_id = sys.partitions.partition_id になります。<br /><br /> 0 = 遅延削除用にマークされたアロケーションユニット|  
 |data_space_id|**int**|このアロケーションユニットが存在するファイルグループの ID。|  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 30cfb208d709f19743216369b23e6b7bef9dfc38
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 590ad007eebcf37765752272ef775e0d3d2443f0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810398"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092559"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>メッセージ (エラー用) のカタログ ビュー - sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "91810398"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|メッセージの ID。 これはサーバー内で一意です。 5万未満のメッセージ Id はシステムメッセージです。|  
-|**language_id**|**smallint**|**Sys.syslanguages**で定義されているように、**テキスト**内のテキストが使用される言語 ID。 これは、指定された **message_id**に対して一意です。|  
-|**severity**|**tinyint**|メッセージの重大度レベル (1 ~ 25)。 これは、 **message_id**内のすべてのメッセージ言語で同じです。|  
-|**is_event_logged**|**bit**|1 = メッセージは、エラーが発生するとイベントがログに記録されます。 これは、 **message_id**内のすべてのメッセージ言語で同じです。|  
+|**language_id**|**smallint**|**Sys.syslanguages** で定義されているように、**テキスト** 内のテキストが使用される言語 ID。 これは、指定された **message_id** に対して一意です。|  
+|**severity**|**tinyint**|メッセージの重大度レベル (1 ~ 25)。 これは、 **message_id** 内のすべてのメッセージ言語で同じです。|  
+|**is_event_logged**|**bit**|1 = メッセージは、エラーが発生するとイベントがログに記録されます。 これは、 **message_id** 内のすべてのメッセージ言語で同じです。|  
 |**text**|**nvarchar(2048)**|対応する **language_id** がアクティブな場合に使用されるメッセージのテキスト。|  
   
 ## <a name="permissions"></a>アクセス許可  

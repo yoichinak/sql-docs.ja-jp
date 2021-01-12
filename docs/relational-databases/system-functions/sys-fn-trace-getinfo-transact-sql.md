@@ -1,6 +1,6 @@
 ---
-description: fn_trace_getinfo (Transact-sql)
-title: fn_trace_getinfo (Transact-sql) |Microsoft Docs
+description: sys.fn_trace_getinfo (Transact-sql)
+title: sys.fn_trace_getinfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sys.fn_trace_getinfo function
 - fn_trace_getinfo function
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 2502fa3fb70811ff73235863eb83fb63b889ad8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: c7426552dd52732b6b22f9947862b8607418f482
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481810"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093812"
 ---
-# <a name="sysfn_trace_getinfo-transact-sql"></a>fn_trace_getinfo (Transact-sql)
+# <a name="sysfn_trace_getinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定したトレースまたはすべての既存のトレースに関する情報を返します。  
@@ -46,7 +46,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>引数  
  *trace_id*  
- トレースの ID を示します。 *trace_id* は **int**です。 有効な入力値は、トレースの ID 番号、NULL、0、または DEFAULT です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 のインスタンス内のすべてのトレースに関する情報を返すには、NULL、0、または DEFAULT を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
+ トレースの ID を示します。 *trace_id* は **int** です。 有効な入力値は、トレースの ID 番号、NULL、0、または DEFAULT です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 のインスタンス内のすべてのトレースに関する情報を返すには、NULL、0、または DEFAULT を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
   
@@ -59,7 +59,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 ## <a name="remarks"></a>解説  
  特定のトレースの ID が渡された場合、fn_trace_getinfo ではそのトレースに関する情報が返されます。 無効な ID が渡された場合、空の行セットが返されます。  
   
- fn_trace_getinfo を実行すると、結果セットに含まれるトレース ファイルの名前には .trc 拡張子が付けられます。 トレースを定義する方法の詳細については、「 [sp_trace_create &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)」を参照してください。 トレースフィルターに関する同様の情報については、「 [sys. fn_trace_getfilterinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)」を参照してください。  
+ fn_trace_getinfo を実行すると、結果セットに含まれるトレース ファイルの名前には .trc 拡張子が付けられます。 トレースを定義する方法の詳細については、「 [sp_trace_create &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)」を参照してください。 トレースフィルターに関する同様の情報については、「 [sys.fn_trace_getfilterinfo &#40;transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)」を参照してください。  
   
  トレースストアドプロシージャを使用する完全な例については、「 [transact-sql&#41;&#40;のトレースの作成 ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
@@ -75,14 +75,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;トレースを作成する ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
- [sp_trace_create &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
+ [トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
+ [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_gettable &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

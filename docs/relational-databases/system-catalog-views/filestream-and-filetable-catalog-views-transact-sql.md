@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTables [SQL Server], catalog views
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fb9a8f2daa440386e48e12ab5a25bcb746a26c97
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: f280208aa768997e63d0df2c9ee9fc4d8a079aca
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545090"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092614"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream および FileTable のカタログ ビュー (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "89545090"
  Filetable に関連するシステム定義のオブジェクトの一覧を表示します。 システム定義オブジェクトごとに1行のレコードを格納します。  
   
  [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
- FileTable ごとに1行の値を返します。 は、 **sys. tables**から継承します。  
+ FileTable ごとに1行の値を返します。 は、 **sys. tables** から継承します。  
 
 ## <a name="see-also"></a>参照
 [FileStream](../../relational-databases/blob/filestream-sql-server.md)

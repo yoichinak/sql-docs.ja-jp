@@ -1,6 +1,6 @@
 ---
 description: sys.fn_cdc_decrement_lsn (Transact-SQL)
-title: fn_cdc_decrement_lsn (Transact-sql) |Microsoft Docs
+title: sys.fn_cdc_decrement_lsn (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 6402fabc4904ca8d9c9953d8dddc6f4626d949dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 460af637f6829940d3dce5282e2bab067a6b08c7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321758"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093884"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
  この関数から返される LSN は、指定された値よりも必ず小さくなり、2 つの値の間に LSN 値が存在することはありません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**データベースロールのメンバーシップが必要です。  
+ **Public** データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、を使用して、lsn 値 `sys.fn_cdc_decrement_lsn` が最大値よりも小さい変更データ行を返すクエリで、上限の lsn の境界を設定します。  
@@ -69,9 +69,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
- [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+ [sys.fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

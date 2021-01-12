@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92523919"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091608"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
@@ -34,7 +34,7 @@ ms.locfileid: "92523919"
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) version 4.5 以降。
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17.0 以降。
   - [Power BI デスクトップ](/power-bi/fundamentals/desktop-get-the-desktop)。
-  - [Azure PowerShell モジュール](/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell モジュール](/powershell/azure/install-az-ps)
 - ダウンロードと抽出:
   - [DMA は Power BI テンプレートを報告](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip)します。
   - [Loadwarehouse スクリプト](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip)。
@@ -45,7 +45,7 @@ Powershell モジュールを PowerShell modules ディレクトリに保存す�
 
 モジュールを読み込むには、次の手順を実行します。
 
-1. C:\Program Files\WindowsPowerShell\Modules に移動し、 **DataMigrationAssistant**という名前のフォルダーを作成します。
+1. C:\Program Files\WindowsPowerShell\Modules に移動し、 **DataMigrationAssistant** という名前のフォルダーを作成します。
 2. [PowerShell モジュール](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)を開き、作成したフォルダーに保存します。
 
       ![PowerShell モジュール](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
@@ -80,7 +80,7 @@ PowerShell スクリプトを実行して SQL Server を評価する前に、評
 >
 > 既定のインスタンスの場合は、[インスタンス名] を「MSSQLServer」に設定します。
 
-Csv ファイルを使用してデータをインポートする場合は、データ **インスタンス名** と **データベース名**の列が2つだけであり、列にヘッダー行がないことを確認します。
+Csv ファイルを使用してデータをインポートする場合は、データ **インスタンス名** と **データベース名** の列が2つだけであり、列にヘッダー行がないことを確認します。
 
  ![csv ファイルの内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
@@ -89,7 +89,7 @@ Csv ファイルを使用してデータをインポートする場合は、デ�
 > [!IMPORTANT]
 > 既定のインスタンスの場合は、[インスタンス名] を「MSSQLServer」に設定します。
 
-**Estateinventory**という名前のデータベースと、 **databaseinventory**という名前のテーブルを作成します。 このインベントリデータを含むテーブルには、次の4つの列が存在する限り、任意の数の列を含めることができます。
+**Estateinventory** という名前のデータベースと、 **databaseinventory** という名前のテーブルを作成します。 このインベントリデータを含むテーブルには、次の4つの列が存在する限り、任意の数の列を含めることができます。
 
 - ServerName
 - InstanceName
@@ -106,7 +106,7 @@ CSV ファイルに対して SQL Server テーブルを使用する利点は、[
 
 ### <a name="if-using-an-instance-inventory"></a>インスタンスインベントリを使用する場合
 
-**Estateinventory**という名前のデータベースと、 **instanceinventory**という名前のテーブルを作成します。 このインベントリデータを含むテーブルには、次の4つの列が存在する限り、任意の数の列を含めることができます。
+**Estateinventory** という名前のデータベースと、 **instanceinventory** という名前のテーブルを作成します。 このインベントリデータを含むテーブルには、次の4つの列が存在する限り、任意の数の列を含めることができます。
 
 - ServerName
 - InstanceName
@@ -125,14 +125,14 @@ PowerShell モジュールを modules ディレクトリに読み込んでイン
 
 |パラメーター  |説明 |
 |---------|---------|
-|**getServerListFrom** | インベントリ。 指定できる値は、 **SqlServer** と **CSV**です。<br/>詳細については、「 [SQL server のインベントリを作成](#create-inventory)する」を参照してください。 |
-|**csvPath** | CSV インベントリファイルへのパスです。  **GetServerListFrom**が**CSV**に設定されている場合にのみ使用されます。 |
-|**serverName** | **GetServerListFrom**パラメーターで**SqlServer**を使用する場合の、インベントリの SQL Server インスタンス名。 |
+|**getServerListFrom** | インベントリ。 指定できる値は、 **SqlServer** と **CSV** です。<br/>詳細については、「 [SQL server のインベントリを作成](#create-inventory)する」を参照してください。 |
+|**csvPath** | CSV インベントリファイルへのパスです。  **GetServerListFrom** が **CSV** に設定されている場合にのみ使用されます。 |
+|**serverName** | **GetServerListFrom** パラメーターで **SqlServer** を使用する場合の、インベントリの SQL Server インスタンス名。 |
 |**databaseName** | インベントリテーブルをホストしているデータベース。 |
 |**useInstancesOnly** | 評価にインスタンスのリストを使用するかどうかを指定するビットフラグです。  0に設定すると、データベースインベントリテーブルが評価ターゲットリストの作成に使用されます。 |
 |**AssessmentName** | DMA 評価の名前。 |
-|**TargetPlatform** | 実行する評価ターゲットの種類。  指定できる値は、 **AzureSQLDatabase**、 **managedsqlserver**、 **SQLServer2012**、 **SQLServer2014**、 **Sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、  **SqlServerWindows2019**、および **SqlServerLinux2019**です。  |
-|**AuthenticationMethod** | 評価するターゲット SQL Server に接続するための認証方法。 指定できる値は、 **sqlauth** と **windowsauth**です。 |
+|**TargetPlatform** | 実行する評価ターゲットの種類。  指定できる値は、 **AzureSQLDatabase**、 **managedsqlserver**、 **SQLServer2012**、 **SQLServer2014**、 **Sqlserver2016-ssei-expr**、 **SQLServerLinux2017**、 **SQLServerWindows2017**、  **SqlServerWindows2019**、および **SqlServerLinux2019** です。  |
+|**AuthenticationMethod** | 評価するターゲット SQL Server に接続するための認証方法。 指定できる値は、 **sqlauth** と **windowsauth** です。 |
 |**OutputLocation** | JSON 評価出力ファイルを格納するディレクトリ。 評価されるデータベースの数とデータベース内のオブジェクトの数によっては、評価に非常に長い時間がかかることがあります。 すべての評価が完了した後で、ファイルが書き込まれます。 |
 
 予期しないエラーが発生した場合、このプロセスによって開始されたコマンドウィンドウは終了します。  エラーログを確認して、失敗した原因を特定します。
@@ -149,8 +149,8 @@ PowerShell モジュールを modules ディレクトリに読み込んでイン
 
 |パラメーター  |説明 |
 |---------|---------|
-|**processTo** | JSON ファイルが処理される場所。 指定できる値は、 **SQLServer** と **AzureSQLDatabase**です。 |
-|**serverName** | データが処理される SQL Server インスタンス。  **Processto**パラメーターに**AzureSQLDatabase**を指定する場合は、SQL Server 名のみを含めます (. database.windows.net を含めないでください)。 Azure SQL Database を対象とする場合、2つのログインの入力を求められます。1つ目は Azure テナントの資格情報ですが、2つ目は Azure SQL Server の管理者ログインです。 |
+|**processTo** | JSON ファイルが処理される場所。 指定できる値は、 **SQLServer** と **AzureSQLDatabase** です。 |
+|**serverName** | データが処理される SQL Server インスタンス。  **Processto** パラメーターに **AzureSQLDatabase** を指定する場合は、SQL Server 名のみを含めます (. database.windows.net を含めないでください)。 Azure SQL Database を対象とする場合、2つのログインの入力を求められます。1つ目は Azure テナントの資格情報ですが、2つ目は Azure SQL Server の管理者ログインです。 |
 |**作成した Mareporting** | JSON ファイルを処理するために作成するステージングデータベース。  指定したデータベースが既に存在し、このパラメーターを1に設定した場合、オブジェクトは作成されません。  このパラメーターは、削除された1つのオブジェクトを再作成する場合に便利です。 |
 |**CreateDataWarehouse** | Power BI レポートによって使用されるデータウェアハウスを作成します。 |
 |**databaseName** | DMAReporting データベースの名前。 |
@@ -173,7 +173,7 @@ DmaProcessor が評価ファイルの処理を完了すると、データが Rep
 
 ## <a name="set-your-database-owners"></a>データベースの所有者を設定する
 
-必須ではありませんが、レポートから最大の値を取得するには、 **dimDBOwner**ディメンションでデータベース所有者を設定し、 **FactAssessment**テーブルの**DBOwnerKey**を更新することをお勧めします。  このプロセスに従うと、特定のデータベース所有者に基づいて Power BI レポートをスライスおよびフィルター処理できます。
+必須ではありませんが、レポートから最大の値を取得するには、 **dimDBOwner** ディメンションでデータベース所有者を設定し、 **FactAssessment** テーブルの **DBOwnerKey** を更新することをお勧めします。  このプロセスに従うと、特定のデータベース所有者に基づいて Power BI レポートをスライスおよびフィルター処理できます。
 
 LoadWarehouse スクリプトを使用して、データベース所有者を設定するための基本的な TSQL ステートメントを指定することもできます。
 
@@ -182,11 +182,11 @@ LoadWarehouse スクリプトを使用して、データベース所有者を設
 ## <a name="dma-reports"></a>DMA レポート
 
 1. Power BI Desktop で、DMA レポート Power BI テンプレートを開きます。
-2. **DMAWarehouse**データベースをポイントするサーバーの詳細を入力し、[**読み込み**] を選択します。
+2. **DMAWarehouse** データベースをポイントするサーバーの詳細を入力し、[**読み込み**] を選択します。
 
    ![DMA レポート Power BI テンプレートが読み込まれました](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   **DMAWarehouse**データベースのデータがレポートによって更新されると、次のようなレポートが表示されます。
+   **DMAWarehouse** データベースのデータがレポートによって更新されると、次のようなレポートが表示されます。
 
    ![DMAWarehouse レポートビュー](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 

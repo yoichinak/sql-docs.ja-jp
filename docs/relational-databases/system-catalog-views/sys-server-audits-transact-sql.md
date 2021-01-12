@@ -1,6 +1,6 @@
 ---
-description: server_audits (Transact-sql)
-title: server_audits (Transact-sql) |Microsoft Docs
+description: sys.server_audits (Transact-sql)
+title: sys.server_audits (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea8ed9b7b779b9a81743ab909aa2bbba1e3c4856
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 3bb5b8b56cb2fec01b6fe655f3f51841cc7ebb21
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539615"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98093092"
 ---
-# <a name="sysserver_audits-transact-sql"></a>server_audits (Transact-sql)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   サーバー インスタンス内の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査について行を 1 つずつ含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "89539615"
 |**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
 |**principal_id**|**int**|サーバーに登録されている監査の所有者の ID。|  
 |**type**|**char(2)**|監査の種類。<br /><br /> SL-NT セキュリティイベントログ<br /><br /> AL-NT アプリケーションイベントログ<br /><br /> ファイルシステム上の FL ファイル|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> FILE|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION ログ<br /><br /> ファイル|  
 |**on_failure**|**tinyint**|アクションエントリの書き込みに失敗した場合:<br /><br /> 0-続行<br /><br /> 1-サーバーインスタンスのシャットダウン<br /><br /> 2-失敗した操作|  
 |**on_failure_desc**|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-無効<br /><br /> 1 - 有効|  
@@ -49,7 +49,7 @@ ms.locfileid: "89539615"
 |**predicate**|**nvarchar (3000)**|イベントに適用される述語式。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **ALTER ANY SERVER AUDIT**または**VIEW any DEFINITION**権限を持つプリンシパルは、このカタログビューにアクセスできます。 また、プリンシパルに **対して VIEW ANY DEFINITION** 権限を拒否することはできません。  
+ **ALTER ANY SERVER AUDIT** または **VIEW any DEFINITION** 権限を持つプリンシパルは、このカタログビューにアクセスできます。 また、プリンシパルに **対して VIEW ANY DEFINITION** 権限を拒否することはできません。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
