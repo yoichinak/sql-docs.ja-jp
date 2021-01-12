@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 63e40e66003737798c444f220058feceab69411a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: b22910f0a794925d07358fa73f3bd6d7a7c6e15a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678918"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091662"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -28,7 +28,7 @@ ms.locfileid: "92678918"
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
 
-[![SSIS Feature Pack for Azure のダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **ダウンロード**
+[![SSIS Feature Pack for Azure のダウンロード](/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **ダウンロード**
 
 - SQL Server 2019 の場合 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - SQL Server 2017 の場合 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
@@ -116,13 +116,13 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 4. **[システム変数]** セクションで **[新規]** を選択します。
 5. **[変数名]** に「`JAVA_HOME`」と入力します。
 6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
-   **[OK]** を選択すると、 **変数の値** が自動的に入力されます。
+   **[OK]** を選択すると、**変数の値** が自動的に入力されます。
 7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
 8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
 9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
 
 > [!TIP]
-> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space** " というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、環境変数 *`_JAVA_OPTIONS`* を追加し、JVM の最小/最大ヒープ サイズを調整できます。
 >
 >![jvm ヒープ](media/azure-feature-pack-jvm-heap-size.png)
 >
@@ -149,7 +149,7 @@ powershell.exe -file install_openjdk.ps1
 ~~~
 
 > [!TIP]
-> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space** " というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
+> Parquet 形式を使用し、"Java の呼び出し中にエラーが発生しました。メッセージ: **java.lang.OutOfMemoryError:Java heap space**" というエラーが発生した場合、 *`main.cmd`* でコマンドを追加し、JVM の最小/最大ヒープ サイズを調整できます。 例:
 > ~~~
 > setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
 > ~~~

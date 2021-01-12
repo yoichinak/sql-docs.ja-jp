@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d98fda12251dafb69ab3738ea90f1eaf0298df46
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a3ee00006285ff8959ecba27624a491954e5a1bc
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92192700"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091645"
 ---
 # <a name="partition-processing-destination"></a>パーティション処理変換先
 
@@ -56,7 +56,7 @@ ms.locfileid: "92192700"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [パーティション処理変換先のカスタム プロパティ](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   

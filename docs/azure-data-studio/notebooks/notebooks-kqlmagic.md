@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: cdb110059043741627300e1f6d080582363d834b
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: cd9145bb01350a2019f1bfaa12c5280151c35f49
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900835"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091746"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Azure Data Studio の Kqlmagic
 
@@ -254,8 +254,8 @@ ms.locfileid: "96900835"
 
 ノートブックと Kqlmagic についてさらに学習します:
 
-- [Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)](https://docs.microsoft.com/sql/azure-data-studio/extensions/kusto-extension)
-- [Kusto (KQL) ノートブックの作成と実行 (プレビュー)](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-kusto-kernel)
+- [Azure Data Studio 用の Kusto (KQL) 拡張機能 (プレビュー)](../extensions/kusto-extension.md)
+- [Kusto (KQL) ノートブックの作成と実行 (プレビュー)](./notebooks-kusto-kernel.md)
 - [Jupyter Notebook と Kqlmagic 拡張機能を使用して Azure Data Explorer 内のデータを分析する](/azure/data-explorer/Kqlmagic)
 - Kusto、Application Insights、および LogAnalytics のデータを使用してノートブック エクスペリエンスを実現する、[Jupyter Notebook と Jupyter Lab への拡張 (マジック)](https://github.com/Microsoft/jupyter-Kqlmagic)。
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)

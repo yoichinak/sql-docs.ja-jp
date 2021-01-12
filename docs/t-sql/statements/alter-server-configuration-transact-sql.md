@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ALTER SERVER CONFIGURATION statement
 - setting process affinity
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+author: WilliamDAssafMSFT
+ms.author: wiassaf
+ms.openlocfilehash: 5fc18fa93e47267d299c3b568011de5645f943da
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300931"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092036"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -144,7 +144,7 @@ NUMA ノードまたは NUMA ノードの範囲を指定します。
   
 **\<diagnostic_log> ::=**  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
 
   
 DIAGNOSTICS LOG  
@@ -167,7 +167,7 @@ MAX_FILES = { 'max_file_count' | DEFAULT }
   
 **\<failover_cluster_property> ::=**  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。    
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。    
   
 FAILOVER CLUSTER PROPERTY  
 SQL Server リソース プライベート フェールオーバー クラスターのプロパティを変更します。  
@@ -200,7 +200,7 @@ SQL Server データベース エンジンのリソース DLL が、サーバー
   
 **\<hadr_cluster_context> ::=**  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。   
   
 HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 サーバー インスタンスの HADR クラスター コンテキストを、指定した Windows Server フェールオーバー クラスター (WSFC) に切り替えます。 *HADR クラスター コンテキスト* は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する WSFC を決定します。 SET HADR CLUSTER CONTEXT オプションは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を新しい WSFC 上の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降のバージョンのインスタンスに移行するクラスター間での移行中にのみ使用してください。  
@@ -224,7 +224,7 @@ LOCAL
   
 **\<buffer_pool_extension>::=**  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。    
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。    
   
 ON  
 バッファー プール拡張オプションを有効にします。 このオプションは不揮発性記憶域を使用してバッファー プールのサイズを拡張します。 ソリッドステート ドライブ (SSD) などの不揮発性記憶域はプール内にクリーンなデータ ページを保持します。 この機能の詳細については、「[バッファー プール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)」を参照してください。バッファー プール拡張機能は、すべての SQL Server エディションで使用できるとは限りません。 詳細については、「[SQL Server 2016 の各エディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
@@ -245,7 +245,7 @@ OFF
   
 **\<soft_numa>**  
 
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。  
   
 ON  
 大きい NUMA ハードウェア ノードを小さい NUMA ノードに分割する自動パーティション分割を有効にします。 実行中の値を変更するには、データベース エンジンの再起動が必要です。  
@@ -264,7 +264,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
 
 ON <br>
 [メモリ内データベース](../../relational-databases/in-memory-database.md)機能ファミリの一部である、インスタンスレベルのすべての機能を有効にします。 これには現在、[メモリ最適化 tempdb メタデータ](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)と[ハイブリッド バッファー プール](../../database-engine/configure-windows/hybrid-buffer-pool.md)が含まれます。 有効にするには再起動が必要です。
@@ -359,7 +359,7 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 ###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。    
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。    
   
 このセクションの例では、診断ログ オプションの値を設定する方法を示します。  
   
@@ -395,7 +395,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 ###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> フェールオーバー クラスター プロパティを設定する  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。   
   
 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースのプロパティの値を設定します。  
   
@@ -418,7 +418,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. バッファー プール拡張オプションを設定する  
   
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。    
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降)。    
   
 次の例では、バッファー プール拡張オプションを有効にし、ファイル名とサイズを指定します。  
   
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a>メモリ内データベース オプションの設定
 
-**適用対象** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 既定のオプションを使用してすべてのメモリ内データベース機能を有効にする
 

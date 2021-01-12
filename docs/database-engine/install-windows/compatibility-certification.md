@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 8f680d2569bd05a5adb922e273378f920830a1ea
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82d5aee8d0fa37ca66c49cf00b22385a896c653d
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481493"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091792"
 ---
 # <a name="compatibility-certification"></a>互換性証明書
 
@@ -41,7 +41,7 @@ ms.locfileid: "97481493"
 
 これは [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 継続的インテグレーション運用モデルの基本原則です。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は Azure で継続的に改善され、アップグレードされますが、既存のデータベースで現行の互換性レベルが維持されるため、基礎となる [!INCLUDE[ssde_md](../../includes/ssde_md.md)] にアップグレードされた後でも、引き続き設計どおりに動作します。 
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] での SharePoint Server 2016 と SharePoint Server 2019 の認定も、この方法で行われます。これにより、これらのバージョンの SharePoint Server に対して、サポートされているデータベース互換性レベルを使用できる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を配置できるようになります。 詳細については、「[SharePoint Server 2016 のハードウェア要件およびソフトウェア要件](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)」と、「[SharePoint Server 2019 のハードウェア要件およびソフトウェア要件](https://docs.microsoft.com/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] での SharePoint Server 2016 と SharePoint Server 2019 の認定も、この方法で行われます。これにより、これらのバージョンの SharePoint Server に対して、サポートされているデータベース互換性レベルを使用できる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を配置できるようになります。 詳細については、「[SharePoint Server 2016 のハードウェア要件およびソフトウェア要件](/sharepoint/install/hardware-and-software-requirements#minimum-requirements-for-a-database-server-in-a-farm)」と、「[SharePoint Server 2019 のハードウェア要件およびソフトウェア要件](/sharepoint/install/hardware-and-software-requirements-2019#minimum-requirements-for-a-database-server-in-a-farm)」を参照してください。
 
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>互換性証明書によるアップグレード リスクの管理
 互換性証明書の使用は、データベースの最新化に役立つアプローチです。 互換性レベルに基づいて認定することで、開発者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] でサポートするアプリケーションの技術的要件を設定しつつ、アプリケーションのライフサイクルをデータベース プラットフォームのライフサイクルから切り離します。 そうすることで、企業はライフサイクル ポリシーの必要に応じて [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を継続的にアップグレードしながら、コードに依存しない新しい拡張性やパフォーマンス拡張機能を活用できます。また、アップグレードを通してアプリケーションは **その機能的ステータスを維持します**。
@@ -115,4 +115,4 @@ ms.locfileid: "97481493"
 ## <a name="see-also"></a>参照 
 [ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)       
 [データベースの互換性レベルの表示または変更](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
-[データベース互換性レベルのアップグレードのベスト プラクティス](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)      
+[データベース互換性レベルのアップグレードのベスト プラクティス](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)

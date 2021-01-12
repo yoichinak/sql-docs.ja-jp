@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 7fb3e4847bef4b14fe7ce68b800b9cc8e95a5a64
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: d0c3828e26e5bde24d678cfac8959264adafcb13
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489566"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091596"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration での SQL Server をインストールする
 
@@ -44,7 +44,7 @@ ms.locfileid: "97489566"
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>SqlServerDsc DSC リソースのインストール
 
-[SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC リソースは、[Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1&preserve-view=true) コマンドレットを使用して [PowerShell Gallery](https://www.powershellgallery.com/) からダウンロードします。 
+[SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) DSC リソースは、[Install-Module](/powershell/module/powershellget/Install-Module) コマンドレットを使用して [PowerShell Gallery](https://www.powershellgallery.com/) からダウンロードします。 
 
 > [!NOTE]
 > このモジュールをインストールするには、PowerShell が **管理者として** 実行されていることを確認します。

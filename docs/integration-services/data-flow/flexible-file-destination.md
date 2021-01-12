@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253bd5f8accf3e2fd9fc28dcaa535bea6f736316
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: d331004e82b155a1c101a31253a82e029ec4a31b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127158"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091653"
 ---
 # <a name="flexible-file-destination"></a>柔軟なファイルの変換先
 
@@ -53,7 +53,7 @@ ms.locfileid: "96127158"
 - **escapeChar:** 入力ファイルの列区切り記号をエスケープするための特殊文字。 escapeChar と quoteChar の両方をテーブルに指定することはできません。 許可される文字は 1 つだけです。 既定値はありません。
 - **quoteChar:** 文字列値を引用符で囲むための文字。 引用符文字内の列区切り記号と行区切り記号は文字列値の一部として扱われます。 このプロパティは、入力と出力の両方のデータセットに適用できます。 escapeChar と quoteChar の両方をテーブルに指定することはできません。 許可される文字は 1 つだけです。 既定値はありません。
 - **nullValue:** null 値を表すための 1 つまたは複数の文字。 **既定** 値は \N です。
-- **encodingName:** エンコーディング名を指定します。 [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8) プロパティを参照してください。
+- **encodingName:** エンコーディング名を指定します。 [Encoding.EncodingName](/dotnet/api/system.text.encoding) プロパティを参照してください。
 - **skipLineCount:** 入力ファイルからデータを読むとき、スキップする空ではない行の数を示します。 skipLineCount と firstRowAsHeader の両方が指定されている場合、行が最初にスキップされ、次に、入力ファイルからヘッダー情報が読まれます。
 - **treatEmptyAsNull:** 入力ファイルからデータを読むとき、null 値として null または空の文字列を扱うことを指定します。 既定値は **True** です。
 

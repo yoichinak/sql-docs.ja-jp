@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 697cf043c4582796015b061c857145c214d105fb
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670755"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091774"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
 
@@ -198,7 +198,7 @@ Microsoft Windows の **net** コマンドを使用して、Microsoft SQL Server
   
 ### <a name="to-start-the-database-engine-with-startup-options"></a><a name="dbStartup"></a> スタートアップ オプションを使用してデータベース エンジンを開始するには  
 
-- **net start "SQL Server (MSSQLSERVER)"** ステートメントの末尾に、スタートアップ オプションをスペースで区切って追加します。 **net start**を使用して起動するときは、スタートアップ オプションでハイフン (-) の代わりにスラッシュ (/) を使用します。  
+- **net start "SQL Server (MSSQLSERVER)"** ステートメントの末尾に、スタートアップ オプションをスペースで区切って追加します。 **net start** を使用して起動するときは、スタートアップ オプションでハイフン (-) の代わりにスラッシュ (/) を使用します。  
   
     **net start "SQL Server (MSSQLSERVER)" /f /m**
   
@@ -245,9 +245,9 @@ Microsoft Windows の **net** コマンドを使用して、Microsoft SQL Server
 
 - サービスを一時停止または停止するには、次のようにコマンドを変更します。  
 
-- サービスを一時停止するには、 **net start** を **net pause**に置き換えます。  
+- サービスを一時停止するには、 **net start** を **net pause** に置き換えます。  
 
-- サービスを停止するには、 **net start** を **net stop**に置き換えます。  
+- サービスを停止するには、 **net start** を **net stop** に置き換えます。  
 
 ## <a name="transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL
 
@@ -342,7 +342,7 @@ Microsoft Windows の **net** コマンドを使用して、Microsoft SQL Server
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> ServiceController クラスの使用
 
-ServiceController クラスを使用して、SQL Server サービスや他の Windows サービスを制御することができます。 これを行う方法の例については、「[ServiceController クラス](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8)」を参照してください。
+ServiceController クラスを使用して、SQL Server サービスや他の Windows サービスを制御することができます。 これを行う方法の例については、「[ServiceController クラス](/dotnet/api/system.serviceprocess.servicecontroller)」を参照してください。
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Linux 上の SQL Server サービスを管理する
 

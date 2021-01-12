@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 453ec8226b018b1d5d756ba96ac174823657c5dd
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: d73e4b95059dab183f9a0af4896c5a6f86b7e564
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92060883"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091759"
 ---
 # <a name="create-sql-server-on-azure-virtual-machines-using-azure-data-studio"></a>Azure Data Studio を使用して Azure Virtual Machines 上に SQL Server を作成する
 
@@ -47,7 +47,7 @@ ms.locfileid: "92060883"
 
 3. 一意の仮想マシン名と、ユーザー名とパスワード資格情報を入力します。
 
-4. 任意のイメージ、SKU、バージョンを選択し、任意の VM サイズを選択します。 [使用可能な VM サイズ](https://docs.microsoft.com/azure/virtual-machines/sizes)の詳細を確認すると、選択に役立ちます。 **[次へ]** を選択します。
+4. 任意のイメージ、SKU、バージョンを選択し、任意の VM サイズを選択します。 [使用可能な VM サイズ](/azure/virtual-machines/sizes)の詳細を確認すると、選択に役立ちます。 **[次へ]** を選択します。
 
 5. ドロップダウン リストから既存の仮想ネットワークを選択するか、 **[新しい仮想ネットワーク]** チェックボックスをオンにして新しい仮想ネットワークの名前を入力します。
 
@@ -75,6 +75,6 @@ Notebook が開いたら、コンテンツとコードを確認し、必要に�
 新しい SQL VM にデータを移行する方法の詳細については、次の記事を参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL VM にデータベースを移行する](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
+> [SQL VM にデータベースを移行する](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
 
-Azure での SQL Server の使用に関するその他の情報については、[Azure 仮想マシンにおける SQL Server](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) に関する記事と[よく寄せられる質問](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq)に関するページを参照してください。
+Azure での SQL Server の使用に関するその他の情報については、[Azure 仮想マシンにおける SQL Server](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview) に関する記事と[よく寄せられる質問](/azure/azure-sql/virtual-machines/windows/frequently-asked-questions-faq)に関するページを参照してください。

@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: e8c0a889b764f81aaf8ac34cf566b52bf1e86c83
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6e6b362f9e121f10515753d46ee098387348f272
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643279"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091751"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -310,7 +310,7 @@ Start-Clustergroup yourListenerGroupName
   
     -   **フェールオーバー クラスターの Windows PowerShell の使用:**  
   
-        1.  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
+        1.  [Add-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee460983(v=technet.10)) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
   
         2.  [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) を使用して、ネットワーク名リソースを開始します。  
   
@@ -328,4 +328,4 @@ Start-Clustergroup yourListenerGroupName
 
 これでリスナーを作成したので、[リスナーに接続する](listeners-client-connectivity-application-failover.md)ようにアプリケーションを構成します。 また、可用性グループの正常性を確保するために、さまざまな[可用性グループの監視戦略](monitoring-of-availability-groups-sql-server.md)を確認することもできます。
 
-また、必要に応じて、[リスナーのプロパティを表示](view-availability-group-listener-properties-sql-server.md)したり、[リスナーを削除する](remove-an-availability-group-listener-sql-server.md)方法を学習したりすることもできます。 
+また、必要に応じて、[リスナーのプロパティを表示](view-availability-group-listener-properties-sql-server.md)したり、[リスナーを削除する](remove-an-availability-group-listener-sql-server.md)方法を学習したりすることもできます。

@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 981ce2dcfadf234383382103a33faf4f0ab9302e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4fd420fd7d07af5a6efa81cdb7e716020c03a89b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643063"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091805"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 可用性グループの DTC サービスをクラスター化する方法
 
@@ -48,7 +48,7 @@ ms.locfileid: "97643063"
 |タスク|リファレンス|  
 |-----------------|----------|  
 |クラスター化された DTC リソースへの安全なネットワーク アクセスを有効にします。|[MS DTC への安全なネットワーク アクセスを有効にする](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
-|ローカル DTC サービスを停止して無効にします。|[サービスの開始方法を構成する](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|ローカル DTC サービスを停止して無効にします。|[サービスの開始方法を構成する](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755249(v=ws.11))|
 |可用性グループの各インスタンスの SQL Server サービスを停止して再開します。  必要に応じて可用性グループをフェールオーバーします。|[可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - サーバーが Windows Server 2012 R2 の場合、オペレーティング システムに [KB 3030373](https://support.microsoft.com/kb/3090973) が適用されている必要があります。
