@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: aa516146c4db55cbfcb3b3f3817cdcf9d11216be
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b72b618559f02fed01e1760168f72ea4a12065ae
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096721"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151293"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98096721"
 |create_date|**datetime**|ファイル監査が作成された UTC 日付。|  
 |modify_date|**datatime**|ファイル監査が最後に変更された UTC 日付。|  
 |principal_id|**int**|サーバーに登録されている監査の所有者の ID。|  
-|type|**char(2)**|監査の種類。<br /><br /> 0 = NT セキュリティ イベント ログ<br /><br /> 1 = NT アプリケーションイベントログ<br /><br /> 2 = ファイル システムのファイル|  
+|type|**char(2)**|監査の種類。<br /><br /> SL = NT セキュリティイベントログ<br /><br /> AL = NT アプリケーションイベントログ<br /><br /> FL = ファイルシステム上のファイル|  
 |type_desc|**nvarchar(60)**|監査の種類の説明。|  
 |on_failure|**tinyint**|エラー状態時:<br /><br /> 0 = 続行<br /><br /> 1 = サーバー インスタンスのシャットダウン<br /><br /> 2 = 失敗の操作|  
 |on_failure_desc|**nvarchar(60)**|アクションエントリの書き込みに失敗した場合:<br /><br /> CONTINUE<br /><br /> サーバーインスタンスのシャットダウン<br /><br /> 失敗した操作|  
