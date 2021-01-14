@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a72ccacd9401a8b7955eae10751c5ac67ca211ac
-ms.sourcegitcommit: eeb30d9ac19d3ede8d07bfdb5d47f33c6c80a28f
+ms.openlocfilehash: c24a98684e87eb94a3cd9e100f203509789b7a0f
+ms.sourcegitcommit: 4a813a0741502c56c0cd5ecaafafad2e857a9d7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96523062"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031111"
 ---
 # <a name="move-system-databases"></a>システム データベースの移動
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "96523062"
   
 2.  メンテナンスを行うため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを停止するか、システムをシャットダウンします。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
-3.  ファイルを新しい場所に移動します。  
+3.  ファイルを新しい場所に移動し、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] サービス アカウントにそれにアクセスするアクセス許可がまだあることを確認します。
 
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスまたはサーバーを再起動します。 詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
@@ -151,14 +151,10 @@ ms.locfileid: "96523062"
   
 3.  **[SQL Server (** _instance_name_ **) のプロパティ]** ダイアログ ボックスで、 **[起動時のパラメーター]** タブをクリックします。  
   
-4.  **[既存のパラメーター]** ボックスで -d パラメーターを選択して、マスター データ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
+4.  **[既存のパラメーター]** ボックスで、-d パラメーターを選択します。 **[起動時のパラメーターの指定]** ボックスで、マスター "*データ*" ファイルの新しいパスにパラメーターを変更します。 **[更新]** をクリックして変更を保存します。
   
-     **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
-  
-5.  **[既存のパラメーター]** ボックスで -l パラメーターを選択して、マスター ログ ファイルを移動します。 **[更新]** をクリックして変更を保存します。  
-  
-     **[起動時のパラメーターの指定]** ボックスで、パラメーターを master データベースの新しいパスに変更します。  
-  
+5.  **[既存のパラメーター]** ボックスで、-l パラメーターを選択します。 **[起動時のパラメーターの指定]** ボックスで、マスター "*ログ*" ファイルの新しいパスにパラメーターを変更します。 **[更新]** をクリックして変更を保存します。
+
      `-d` パラメーターの後にデータ ファイルのパラメーター値を指定し、 `-l` パラメーターの後にログ ファイルのパラメーター値を指定します。 次の例は、マスター データ ファイルの既定の場所のパラメーター値を示します。  
   
      `-dC:\Program Files\Microsoft SQL Server\MSSQL<version>.MSSQLSERVER\MSSQL\DATA\master.mdf`  
@@ -170,14 +166,16 @@ ms.locfileid: "96523062"
      `-dE:\SQLData\master.mdf`  
   
      `-lE:\SQLData\mastlog.ldf`  
+
+6.  **[OK]** をクリックして変更を永続的に保存し、 **[SQL Server (** _インスタンス名_ **) プロパティ]** ダイアログ ボックスを閉じます。
+
+7.  インスタンス名を右クリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [停止] **をクリックし、** のインスタンスを停止します。  
   
-6.  インスタンス名を右クリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [停止] **をクリックし、** のインスタンスを停止します。  
+8.  master.mdf ファイルおよび mastlog.ldf ファイルを新しい場所に移動します。  
   
-7.  master.mdf ファイルおよび mastlog.ldf ファイルを新しい場所に移動します。  
+9.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動します。  
   
-8.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動します。  
-  
-9. master データベースのファイルが変更されたことを確認するため、次のクエリを実行します。  
+10. master データベースのファイルが変更されたことを確認するため、次のクエリを実行します。  
   
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
@@ -186,7 +184,7 @@ ms.locfileid: "96523062"
     GO  
     ```  
 
-10. この時点で、SQL Server は通常どおり実行されるはずです。 ただし、Microsoft では、 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`( *instance_ID* は `MSSQL13.MSSQLSERVER`のようになります) のレジストリ エントリを調整することもお勧めします。 そのハイブで、 `SQLDataRoot` 値を新しいパスに変更します。 レジストリの更新に失敗すると、修正プログラムの適用やアップグレードが失敗する可能性があります。
+11. この時点で、SQL Server は通常どおり実行されるはずです。 ただし、Microsoft では、 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`( *instance_ID* は `MSSQL13.MSSQLSERVER`のようになります) のレジストリ エントリを調整することもお勧めします。 そのハイブで、 `SQLDataRoot` 値を新しいパスに変更します。 レジストリの更新に失敗すると、修正プログラムの適用やアップグレードが失敗する可能性があります。
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Resource データベースの移動  

@@ -2,7 +2,7 @@
 description: パーティション テーブルとパーティション インデックスの作成
 title: パーティション テーブルとパーティション インデックスの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 1/5/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 791c2fa9d0ea4aad3c59f0edbafb2a28a2585d25
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 387a2f88afd22004f7146384ce29ddc2ba2f2da7
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464853"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952053"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,6 +50,9 @@ ms.locfileid: "97464853"
 3.  パーティション テーブルまたはパーティション インデックスのパーティションを新しいファイル グループにマップするパーティション構成を作成します。  
   
 4.  テーブルまたはインデックスを作成または変更し、格納場所としてそのパーティション構成を指定します。  
+ 
+> [!NOTE]
+> Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では、プライマリ ファイル グループのみがサポートされています。  
   
  **このトピックの内容**  
   
@@ -96,7 +99,7 @@ ms.locfileid: "97464853"
 3.  **[行]** で、 **[追加]** をクリックします。 新しい行に、ファイル グループ名を入力します。  
   
     > [!WARNING]  
-    >  パーティションを作成するときは常に、境界値に指定されたファイル グループの数より 1 つ多い数のファイル グループが必要です。  
+    >  パーティションの作成時にファイル グループを複数指定する場合は、境界値に指定したファイル グループの数より 1 つ多い数のファイル グループが常に必要です。  
   
 4.  行の追加を繰り返して、パーティション テーブルのすべてのファイル グループを作成します。  
   
@@ -138,7 +141,7 @@ ms.locfileid: "97464853"
   
      このページを完了したら、 **[次へ]** をクリックします。  
   
-6.  **[パーティションのマップ]** ページの **[範囲]** で、 **[左側の境界]** または **[右側の境界]** を選択して、作成する各ファイル グループ内に最大または最小の境界値を含めるかどうかを指定します。 パーティションを作成するときは常に、境界値に指定されたファイル グループの数に 1 つ余分なファイル グループを足した数を入力する必要があります。  
+6.  **[パーティションのマップ]** ページの **[範囲]** で、 **[左側の境界]** または **[右側の境界]** を選択して、作成する各ファイル グループ内に最大または最小の境界値を含めるかどうかを指定します。 パーティションの作成時にファイル グループを複数指定する場合は、境界値に指定したファイル グループの数より 1 つ多い数のファイル グループを常に入力する必要があります。  
   
      **[ファイル グループを選択して境界値を指定します]** グリッドの **[ファイル グループ]** で、データをパーティション分割するファイル グループを選択します。 **[境界]** で、各ファイル グループの境界値を入力します。 境界値を空にした場合、パーティション関数は、パーティション関数名を使用して、テーブルまたはインデックス全体を単一のパーティションにマップします。  
   
@@ -345,6 +348,34 @@ ms.locfileid: "97464853"
         ON myRangePS1 (col1) ;  
     GO  
     ```  
+
+
+#### <a name="to-create-a-partitioned-table-in-azure-sqldbesa"></a>Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] にパーティション テーブルを作成するには
+
+Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では、ファイルとファイル グループの追加はサポートされていませんが、PRIMARY ファイル グループのみをパーティション分割するテーブルのパーティション分割はサポートされています。
+  
+1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
+  
+1.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+  
+1.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、パーティション関数とパーティション構成を作成します。 パーティション構成を格納場所として指定した新しいテーブルが作成されます。 
+
+    ```
+    -- Creates a partition function called myRangePF1 that will partition a table into four partitions  
+    CREATE PARTITION FUNCTION myRangePF1 (int)  
+        AS RANGE LEFT FOR VALUES (1, 100, 1000) ;  
+    GO  
+    -- Creates a partition scheme called myRangePS1 that applies myRangePF1 to the PRIMARY filegroup 
+    CREATE PARTITION SCHEME myRangePS1  
+        AS PARTITION myRangePF1  
+        ALL TO ('PRIMARY') ;  
+    GO  
+    -- Creates a partitioned table called PartitionTable that uses myRangePS1 to partition col1  
+    CREATE TABLE PartitionTable (col1 int PRIMARY KEY, col2 char(10))  
+        ON myRangePS1 (col1) ;  
+    GO
+    ```  
+
   
 #### <a name="to-determine-if-a-table-is-partitioned"></a>テーブルがパーティション分割されているかどうかを調べるには  
   

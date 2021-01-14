@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25835dd5fbac5f95434d46ac152d44ea6974496
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 00b4856ab0c057b7f63aae44834884bc775d8e92
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440133"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102170"
 ---
 # <a name="diagnose-and-resolve-spinlock-contention-on-sql-server"></a>SQL Server でのスピンロックの競合を診断および解決する
 
@@ -137,7 +137,7 @@ SQL Server のスピンロックの競合を診断するための一般的な技
 
 2. **手順 2**:*sys.dm\_ os_spinlock_stats* から統計をキャプチャして、最も競合が発生しているスピンロックの種類を見つけます。
 
-3. **手順 3**:sqlservr.exe (sqlservr.pdb) のデバッグ シンボルを取得し、SQL Server のインスタンスの SQL Server サービスの .exe ファイル (sqlservr.exe) と同じディレクトリにシンボルを配置します。また、バックオフ イベントの呼び出し履歴を表示するには、実行している SQL Server の特定のバージョンのシンボルが必要です。 SQL Server のシンボルは、Microsoft シンボル サーバーで入手できます。 Microsoft シンボル サーバーからシンボルをダウンロードする方法の詳細については、「[シンボルを使用したデバッグ](https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols)」を参照してください。
+3. **手順 3**:sqlservr.exe (sqlservr.pdb) のデバッグ シンボルを取得し、SQL Server のインスタンスの SQL Server サービスの .exe ファイル (sqlservr.exe) と同じディレクトリにシンボルを配置します。また、バックオフ イベントの呼び出し履歴を表示するには、実行している SQL Server の特定のバージョンのシンボルが必要です。 SQL Server のシンボルは、Microsoft シンボル サーバーで入手できます。 Microsoft シンボル サーバーからシンボルをダウンロードする方法の詳細については、「[シンボルを使用したデバッグ](/windows/win32/dxtecharts/debugging-with-symbols)」を参照してください。
 
 4. **手順 4**:SQL Server 拡張イベントを使用して、対象とするスピンロックの種類のバックオフ イベントをトレースします。
 
@@ -237,7 +237,7 @@ drop event session spin_lock_backoff on server
 出力を分析することにより、SOS_CACHESTORE スピンの最も一般的なコード パスの呼び出し履歴を確認できます。 スクリプトは、返された呼び出し履歴の整合性をチェックするために、CPU 使用率が高いときに数回実行されました。 スロット バケット数が最も多い呼び出し履歴は、2 つの出力 (35,668 と 8,506) の間で共通していることに注目してください。 これらの呼び出し履歴には、次に高いエントリより 2 桁大きい "スロット カウント" があります。 この状態は、対象とするコード パスを示します。
 
 > [!NOTE]
-> 前のスクリプトによって返された呼び出し履歴が見られるのは、珍しいことではありません。 スクリプトを 1 分間実行すると、スロット数が \>1,000 のスタックに問題が発生する可能性が高く、スロット数が \>10,000 のスタックに問題が発生する可能性が高いことがわかりました。
+> 前のスクリプトによって返された呼び出し履歴が見られるのは、珍しいことではありません。 1 分間スクリプトを実行したとき、スロット数が 1000 を超える呼び出し履歴は問題であることを確認しましたが、よりスロット数の多い 10,000 未満のスロット数の方が問題になる可能性が高くなることを確認しました。
 
 > [!NOTE]
 > 次の出力の形式は、読みやすくするために不要なものは削除されています。

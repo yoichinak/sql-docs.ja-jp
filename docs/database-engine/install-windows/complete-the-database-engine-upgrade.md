@@ -11,12 +11,12 @@ ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: be6c23f2943a437565ead1512922408e609c0300
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c309c86f4f6609f1bd5383d311e1ce5781350fd9
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438827"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975453"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>データベース エンジンのアップグレードの完了
 
@@ -28,7 +28,7 @@ SQL Server へのアップグレードが完了したら、必要に応じて追
   
 - **データベースのバックアップ:** 各データベースの完全バックアップを実行します。  
 
-- **新機能の有効化:** SQL Server 2016 および SQL Server 2017 では、一部の変更は、データベースの DATABASE_COMPATIBILITY レベルが 130 以上に変更された場合にのみ有効になります。  詳細と推奨ワークフローについては、「 [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。 データベースに SQL Server 2014 で作成されたメモリ最適化テーブルがある場合は、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を確認してください。
+- **新機能の有効化:** SQL Server 2016、2017 および 2019 の一部の変更は、データベースの DATABASE_COMPATIBILITY レベルが 130 以上に変更された場合にのみ有効になります。  詳細と推奨ワークフローについては、「 [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。 データベースに SQL Server 2014 で作成されたメモリ最適化テーブルがある場合は、「[メモリ最適化テーブルの統計](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md)」を確認してください。
   
 - **Integration Services:**  
   
@@ -36,7 +36,7 @@ SQL Server へのアップグレードが完了したら、必要に応じて追
   
 - **Reporting Services:** 新しいインストールのアップグレードの場合は、Reporting Services の暗号化キーを復元します。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。  
   
-- **マスター データ サービス:** MDS データベース スキーマをアップグレードし、SQL Server 2017 の Web アプリケーションを作成します。 詳細については、「 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)」を参照してください。  
+- **マスター データ サービス:** MDS データベース スキーマをアップグレードし、SQL Server 2019 の Web アプリケーションを作成します。 詳細については、「 [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)」を参照してください。  
   
 - **Data Quality Services:** DQS データベース スキーマをアップグレードし、DQS データベース スキーマのアップグレードを確認します。 詳細については、「 [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)」を参照してください。  
   

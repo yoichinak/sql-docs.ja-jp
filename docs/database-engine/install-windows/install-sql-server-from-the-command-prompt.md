@@ -83,14 +83,14 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 07/26/2019
+ms.date: 01/07/2020
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6d815a88b9ac185871ed12b8192f6a5a7741f23a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f3d0be0d607a8f6a810e9d1f24fbbbff1dc11a69
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440243"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005371"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -832,7 +832,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 
 ##  <a name="feature-parameters"></a><a name="Feature"></a> 機能パラメーター  
- 特定の機能をインストールするには、/FEATURES パラメーターを使用して、以下の表の親機能の値または機能の値を指定します。 SQL Server の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
+ 特定の機能をインストールするには、/FEATURES パラメーターを使用して、以下の表の親機能の値または機能の値を指定します。 SQL Server の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」、「[[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」、または「[[!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-version-15.md)」を参照してください。
   
 |親機能パラメーター|機能パラメーター|説明|  
 |:---|:---|:---|  
@@ -845,9 +845,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBaseCore | SQL Server 2019 以降では、Oracle、Teradata、SQL Server、その他のリレーショナル データと非リレーショナル データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする Polybase テクノロジをインストールするには、**PolyBase** と併用してください。 |
 || PolyBaseJava | SQL Server 2019 以降では、HDFS データで標準 T-SQL ステートメントを使った十分に統合されたクエリを可能にする PolyBase Java Connector をインストールするには、**PolyBase** と併用してください。
 ||AdvancedAnalytics |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) または [SQL Server 2016 R Services (データベース内)](../../machine-learning/install/sql-r-services-windows-install.md) をインストールします。|  
-||SQL_INST_MR |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 R Open と専用の R パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
-||SQL_INST_MPY|[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 Anaconda と専用の Python パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
-||SQL_INST_JAVA |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) に適用されます。 標準 T-SQL ステートメントを使った Java との統合を可能にする拡張機能をインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_MR |[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 以降) および [SQL Server 2016 R Services (データベース内)](../../machine-learning/install/sql-r-services-windows-install.md) に該当します。 R Open と専用の R パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_MPY|[SQL Server Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (2017 以降) に該当します。 Anaconda と専用の Python パッケージをインストールするには、**AdvancedAnalytics** と併用してください。|  
+||SQL_INST_JAVA |[SQL Server Java 言語拡張](../../language-extensions/install/windows-java.md) (2019 以降) に該当します。 標準 T-SQL ステートメントを使った Java との統合を可能にする拡張機能をインストールするには、**AdvancedAnalytics** と併用してください。|  
 |AS||すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コンポーネントをインストールします。|  
 |RS||すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。 SQL Server 2017 以降で削除されました。 |  
 |RS_SHP||SharePoint 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをインストールします。 SQL Server 2017 以降で削除されました。|  

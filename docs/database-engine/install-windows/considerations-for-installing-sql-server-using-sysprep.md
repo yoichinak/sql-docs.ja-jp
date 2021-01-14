@@ -11,12 +11,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: b394c18d1db40bec24bfa0d676bb74b66d3b1faa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 127d1a0bcac97d2b802460549b38c79012f71329
+ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460725"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97975431"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
 
@@ -69,7 +69,7 @@ SysPrep を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを準備すると自動的に準備され、 イメージの完了手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させると完了します。  
   
-サポートされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるエディションについては、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」および [SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。  
   
 準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの構成時に、エディションをアップグレードできます。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ではサポートされていません。  
   

@@ -17,12 +17,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc6e5734edbf7203f98d1b7fc7a685e699aaa635
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481433"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98098396"
 ---
 # <a name="contained-databases"></a>包含データベース
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -128,15 +128,13 @@ ms.locfileid: "97481433"
 ##  <a name="limitations"></a><a name="Limitations"></a> 制限事項  
  部分的包含データベースでは、以下の機能は許可されません。  
   
--   部分的包含データベースは、レプリケーション、変更データ キャプチャ、または変更の追跡を使用できません。  
+-   レプリケーション、変更データ キャプチャ、または変更の追跡。  
   
 -   番号付きプロシージャ  
   
 -   照合順序の変更を伴う、組み込み関数に依存するスキーマ バインド オブジェクト。  
   
--   オブジェクト、列、記号、または型への参照など、照合順序の変更によるバインドの変更。  
-  
--   レプリケーション、変更データ キャプチャ、および変更の追跡。  
+-   オブジェクト、列、記号、または型への参照など、照合順序の変更によるバインドの変更。
   
 > [!WARNING]  
 >  一時ストアド プロシージャは、現在許可されています。 一時ストアド プロシージャは包含関係に違反するので、将来のバージョンの包含データベースではサポートされない予定です。  

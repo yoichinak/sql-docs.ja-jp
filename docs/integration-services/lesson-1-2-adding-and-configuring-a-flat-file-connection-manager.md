@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 57bf9bd3863e5486c890088324641a5100581a02
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88449735"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98099231"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>レッスン 1-2:フラット ファイル接続マネージャーの追加と構成
 
@@ -48,7 +48,7 @@ ms.locfileid: "88449735"
   
 4.  **[ファイルを開く]** ダイアログ ボックスで、コンピューター上の **SampleCurrencyData.txt** ファイルを指定します。  
   
-5.  [先頭データ行を列名として使用する] チェック ボックスをオフにします。  
+5.  **[先頭データ行を列名として使用する]** チェックボックスをオフにします。  
   
 ### <a name="set-locale-sensitive-properties"></a>ロケール依存型プロパティを設定する  
   

@@ -2,11 +2,13 @@
 title: 統計
 description: クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 クエリ最適化を使用するための概念とガイドラインについて説明します。
 ms.custom: ''
-ms.date: 11/23/2020
+ms.date: 1/7/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -20,21 +22,20 @@ helpviewer_keywords:
 - index statistics [SQL Server]
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
-ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b24a6602ece47194997a829c4f2824d4a6c71
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 77bd2f1cb2cd3e028bccbc5185f2336812f3f891
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475353"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005427"
 ---
 # <a name="statistics"></a>統計
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したり、クエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  
+  クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したり、クエリのデザインを変更したりする必要がある場合もあります。 この記事では、統計の概念を説明し、クエリの最適化の統計を効果的に使用するガイドラインを提供します。  
   
 ##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> コンポーネントおよび概念  
 ### <a name="statistics"></a>統計  
@@ -85,10 +86,10 @@ ms.locfileid: "97475353"
 |(CustomerId, ItemId, Price)|CustomerId、ItemId、および Price の値が一致する行| 
 
 ### <a name="filtered-statistics"></a>フィルター選択された統計情報  
- 適切に定義されたデータのサブセットから選択するクエリでは、フィルター選択された統計情報を使用するとクエリのパフォーマンスを向上させることができます。 フィルター選択された統計情報では、統計情報に含まれるデータのサブセットを選択するためにフィルター述語を使用します。 統計情報を適切にフィルター選択すると、テーブル全体の統計情報を使用する場合と比べて、クエリ実行プランが向上します。 フィルター述語の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 フィルター選択された統計情報を作成する場合の詳細については、このトピックの「 [統計を作成する場合](#CreateStatistics) 」を参照してください。  
+ 適切に定義されたデータのサブセットから選択するクエリでは、フィルター選択された統計情報を使用するとクエリのパフォーマンスを向上させることができます。 フィルター選択された統計情報では、統計情報に含まれるデータのサブセットを選択するためにフィルター述語を使用します。 統計情報を適切にフィルター選択すると、テーブル全体の統計情報を使用する場合と比べて、クエリ実行プランが向上します。 フィルター述語の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 フィルター選択された統計情報を作成する場合の詳細については、このトピックの「[統計を作成する場合](#CreateStatistics)」を参照してください。  
  
 ### <a name="statistics-options"></a>統計オプション  
- 統計の作成と更新のタイミングおよび方法を指定するための 3 つのオプションを設定できます。 これらのオプションは、データベース レベルでのみ設定されます。  
+ 統計の作成と更新のタイミングおよび方法を指定するオプションは 3 つあります。 これらのオプションは、データベース レベルでのみ設定できます。  
   
 #### <a name="auto_create_statistics-option"></a><a name="AutoUpdateStats"></a>AUTO_CREATE_STATISTICS オプション  
  統計の自動作成オプション [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) がオンの場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだ[ヒストグラム](#histogram)がない列について作成されます。 AUTO_CREATE_STATISTICS オプションでは、インデックスに対する統計を作成するかどうかは判断されません。 また、フィルター選択された統計情報も生成されません。 このオプションは、テーブル全体の 1 列ずつの統計にのみ適用されます。  
@@ -113,7 +114,7 @@ ORDER BY s.name;
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 以下の場合、500 回変更されるたびに更新されます。
     * 統計情報が評価された時点でテーブルのカーディナリティが 500 よりも大きい場合、500 プラス 20% の数の変更があるたびに更新されます。
 
-* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt(1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 ?
+* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)が 130 未満の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブル内の行数に基づいて調整された、より小さな値の動的な統計情報更新しきい値を使用します。 これは、1,000 と現在のテーブルのカーディナリティの積の平方根として計算されます。 たとえば、テーブルに 200 万行含まれている場合、計算は sqrt(1000 * 2000000) = 44721.359 となります。 この変更により、大規模なテーブルの統計がより頻繁に更新されます。 ただし、データベースの互換性レベルが 130 未満の場合、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のしきい値が適用されます。 
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 以下では、[トレース フラグ 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を有効にして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で低下した動的統計更新しきい値が使用されるようにします。
@@ -139,9 +140,13 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の *[データベースのプロパティ]* ウィンドウの *[オプション]* ページで統計の非同期更新オプションを設定するには、 *[統計の自動更新]* と *[統計の非同期的自動更新]* の両方のオプションを **True** に設定する必要があります。
   
-統計の更新には、同期更新 (既定) と非同期更新があります。 統計の同期更新では、クエリは常に最新の統計を使用してコンパイルおよび実行されます。統計が古い場合、クエリ オプティマイザーでは、統計が更新されるまでクエリのコンパイルおよび実行を待機します。 統計の非同期更新では、クエリは、既存の統計が古い場合でもその統計を使用してコンパイルされます。クエリのコンパイル時に古い統計が使用された場合、クエリ オプティマイザーで最適なクエリ プランが選択されない可能性があります。 非同期更新の完了後にコンパイルされるクエリには、更新された統計を使用できます。  
-  
-テーブルの切り捨てや大部分の行の一括更新を行うなど、データの分布が変わる操作を実行する場合は、同期統計を使用することを検討してください。 操作が完了した後に統計を更新していない場合、同期統計を使用すれば、変更されたデータに対するクエリを実行する前に統計が最新になります。  
+統計の更新には、同期更新 (既定) と非同期更新があります。 
+
+* 統計の同期更新では、クエリには常に最新の統計が使用され、コンパイルおよび実行されます。 統計が古い場合、クエリ オプティマイザーでは、統計が更新されるのを待機してからクエリがコンパイルされ、実行されます。 
+
+* 統計の非同期更新では、既存の統計が古い場合でも、既存の統計を使用してクエリがコンパイルされます。 クエリ オプティマイザーは、クエリをコンパイルするときに統計が古い場合、最適ではないクエリ プランを選択する場合があります。 通常、統計はその後すぐに更新されます。 統計の更新の完了後にコンパイルされるクエリには、通常どおりに更新された統計が使用されることでメリットが得られます。   
+
+テーブルの切り捨てや大部分の行の一括更新を行うなど、データの分布が変わる操作を実行する場合は、同期統計を使用することを検討してください。 操作の完了後に手動で統計を更新していない場合、同期統計を使用すれば、確実に、変更されたデータに対するクエリを実行する前に統計が最新になります。  
   
 次のような場合は、非同期統計を使用してクエリの応答時間を予測しやすくすることを検討してください。  
   
@@ -154,10 +159,13 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 
 統計の非同期更新は、バックグラウンド要求によって実行されます。 要求は、更新された統計情報をデータベースに書き込む準備ができた時点で、統計メタデータ オブジェクトに対するスキーマ変更ロックの取得を試みます。 別のセッションが同じオブジェクトに対して既にロックを保持している場合、スキーマ変更ロックを取得できるようになるまで、非同期統計の更新がブロックされます。 同様に、クエリをコンパイルするために統計メタデータ オブジェクトに対するスキーマ安定性ロックを取得する必要があるセッションは、既にスキーマ変更ロックの取得を保持しているか待機している非同期統計更新のバックグラウンド セッションによってブロックされる可能性があります。 したがって、クエリのコンパイルや統計の更新が非常に頻繁に行われるワークロードでは、非同期統計を使用すると、ロックのブロックによる同時実行の問題が起きる可能性が高くなる場合があります。
 
-Azure SQL Database では、ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を有効にすると、非同期統計の更新を使用して潜在的な同時実行の問題を回避可能です。 この構成を有効にすると、バックグラウンド要求は、優先度の低い別のキューに対するスキーマ変更ロックの取得を待機します。これにより、他の要求では既存の統計情報を使用したクエリのコンパイルを続行できます。 他のセッションが統計メタデータ オブジェクトのロックを保持しなくなると、バックグラウンド要求はそのスキーマ変更ロックおよび更新統計を取得します。 まれに、バックグラウンド要求が数分のタイムアウト期間内にロックを取得できない場合、非同期統計の更新は中止されます。統計は、別の自動統計更新がトリガーされるか、[手動で更新](update-statistics.md)されるまで更新されません。
+Azure SQL Database と Azure SQL Managed Instance で ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を有効にすると、統計の非同期更新の使用によって発生する潜在的な同時実行の問題を回避できます。 この構成を有効にすると、他の要求が既存の統計情報を使用してクエリをコンパイルしている間、バックグラウンド要求は優先度の低い別のキューでスキーマ修正 (Sch-M) ロックの取得を待機します。 他のセッションが統計メタデータ オブジェクトのロックを保持しなくなると、バックグラウンド要求はそのスキーマ変更ロックおよび更新統計を取得します。 まれに、バックグラウンド要求が数分のタイムアウト期間内にロックを取得できない場合、非同期統計の更新は中止されます。統計は、別の自動統計更新がトリガーされるか、[手動で更新](update-statistics.md)されるまで更新されません。
+
+> [!Note]
+> ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY データベース スコープ構成オプションが、Azure SQL Database と Azure SQL Managed Instance で利用できるようになりました。また SQL Server vNext に含まれるようになる予定です。 
 
 #### <a name="incremental"></a>INCREMENTAL  
- CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーが削除され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティをオーバーライドします。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
+ CREATE STATISTICS の INCREMENTAL オプションが ON の場合、作成される統計情報はパーティションごとの統計になります。 OFF の場合、統計ツリーは削除され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって統計が再計算されます。 既定値は OFF です。 この設定は、データベース レベルの INCREMENTAL プロパティをオーバーライドします。 増分統計の作成の詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。 パーティションごとの統計を自動的に作成する方法の詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   
  大きなテーブルに新しいパーティションを追加した場合、新しいパーティションが含まれるように統計を更新する必要があります。 ただし、テーブル全体のスキャン (FULLSCAN または SAMPLE オプション) に要する時間は非常に長くなることがあります。 また、新しいパーティションに対する統計のみが必要となるため、テーブル全体をスキャンする必要はありません。 増分オプションでは、パーティションごとの統計が作成され格納されるため、更新時には、新しい統計を必要とするそれらのパーティションの統計のみを更新します。  
   
@@ -201,7 +209,7 @@ CREATE STATISTICS ステートメントを使用して統計を作成する場�
   
 複数列統計を作成する場合、統計オブジェクト定義内の列の順序によって、カーディナリティの推定に密度を使用した場合の効果が変わります。 統計オブジェクトには、統計オブジェクト定義内のキー列の各プレフィックスの密度が格納されます。 密度の詳細については、このページの[密度](#density)に関するセクションを参照してください。  
   
-カーディナリティの推定に効果的な密度を作成するには、クエリ述語内の列が、統計オブジェクト定義内の列のいずれかのプレフィックスに一致する必要があります。 たとえば、次の例では、列 `LastName`、 `MiddleName`、および `FirstName`に対する複数列統計オブジェクトを作成しています。  
+カーディナリティの推定に効果的な密度を作成するには、クエリ述語内の列が、統計オブジェクト定義内の列のいずれかのプレフィックスに一致する必要があります。 たとえば、次の例では、列 `LastName`、`MiddleName`、`FirstName` で複数列統計オブジェクトが作成されます。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -261,7 +269,7 @@ GO
  一時的な統計は **tempdb** に格納されるので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動すると、一時的な統計はすべてなくなります。  
     
 ## <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>統計を更新する場合  
- クエリ オプティマイザーでは、古くなっている可能性がある統計を判断し、それらがクエリ プランに必要な場合は更新します。 場合によっては、 [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) をオンにした場合より頻繁に統計を更新することで、クエリ プランが向上し、クエリのパフォーマンスが向上することがあります。 統計は、UPDATE STATISTICS ステートメントまたは sp_updatestats ストアド プロシージャを使用して更新できます。  
+ クエリ オプティマイザーでは、古くなっている可能性がある統計を判断し、それらがクエリ プランに必要な場合は更新します。 場合によっては、[AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics) をオンにした場合よりも頻繁に統計を更新すると、クエリ プランが向上し、クエリのパフォーマンスが向上することがあります。 統計は、UPDATE STATISTICS ステートメントまたは sp_updatestats ストアド プロシージャを使用して更新できます。  
   
  統計を更新すると、クエリが最新の統計を使用してコンパイルされるようになります。 ただし、統計の更新によりクエリが再コンパイルされます。 パフォーマンスの向上を目的とする場合、クエリ プランの改善とクエリの再コンパイルに要する時間の間にはトレードオフの関係があるため、あまり頻繁に統計を更新しないようにすることをお勧めします。 実際のトレードオフはアプリケーションによって異なります。  
   
@@ -390,7 +398,7 @@ GO
 ```  
   
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>プラン ガイドを使用してカーディナリティの推定を向上させる  
- アプリケーションによっては、クエリを変更できない場合や、RECOMPILE クエリ ヒントを使用すると再コンパイルが多くなりすぎる場合など、クエリのデザイン ガイドラインを適用できないことがあります。 プラン ガイドを使用すると、アプリケーション ベンダーによるアプリケーションの違いを確認しながら、その他のヒント (USE PLAN など) を指定してクエリの動作を制御することができます。 プラン ガイドの詳細については、「 [Plan Guides](../../relational-databases/performance/plan-guides.md)」を参照してください。  
+ アプリケーションによっては、クエリを変更できない場合や、RECOMPILE クエリ ヒントを使用すると再コンパイルが多くなりすぎる場合など、クエリのデザイン ガイドラインが該当しないことがあります。 プラン ガイドを使用すると、アプリケーション ベンダーによるアプリケーションの違いを確認しながら、その他のヒント (USE PLAN など) を指定してクエリの動作を制御することができます。 プラン ガイドの詳細については、「 [Plan Guides](../../relational-databases/performance/plan-guides.md)」を参照してください。  
   
   
 ## <a name="see-also"></a>参照  

@@ -2,7 +2,7 @@
 description: パーティション テーブルとパーティション インデックス
 title: パーティション テーブルとパーティション インデックス | Microsoft Docs
 ms.custom: ''
-ms.date: 01/20/2016
+ms.date: 1/5/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4cb894ef393f767d85af5c43b50bffce87f3a6fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dcc5d8e3602261c975f5517ea859e19fc7902936
+ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480043"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952059"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,6 +55,9 @@ ms.locfileid: "97480043"
   
 ### <a name="partition-scheme"></a>パーティション構成 
 パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
+
+> [!NOTE]
+> Azure [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では、プライマリ ファイル グループのみがサポートされています。  
   
 ### <a name="partitioning-column"></a>パーティション分割列  
 パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp** 型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
@@ -72,7 +75,7 @@ ms.locfileid: "97480043"
 一意の非クラスター化インデックスをパーティション分割するときは、インデックス キーにパーティション分割列を含める必要があります。 一意でない非クラスター化インデックスをパーティション分割するときは、ベース テーブルにインデックスを固定するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定動作によりパーティション分割列がインデックスの非キー (付加) 列として追加されます。 既にパーティション分割列がインデックスに存在している場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は追加を行いません。 
 
 ### <a name="non-aligned-index"></a>固定されていないインデックス  
-対応するパーティション テーブルから個別に分割されたインデックス。 つまり、インデックスのパーティション構成が異なっているか、インデックスがベース テーブルとは別のファイル グループに配置されています。 次のような場合、固定されていないパーティション インデックスをデザインすると便利です。  
+対応するパーティション テーブルから個別に分割されたインデックス。 つまり、インデックスのパーティション構成が異なっているか、インデックスがベース テーブルとは別のファイル グループに配置されています。 次のような場合は、配置されていないパーティション インデックスを設計すると便利です。  
 -   ベース テーブルがパーティション分割されていない。  
 -   インデックス キーが一意であり、テーブルのパーティション分割列を含んでいない。  
 -   異なる結合列を使用して多くのテーブルが併置されている結合にベース テーブルを加える。  
