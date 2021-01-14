@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: b7516d42e7b4ce804061f977ed530ecb03eba572
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c088a6cf0779c5c37c92d7ecd2ff93b2cda4ae46
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472423"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172154"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
 
@@ -26,12 +26,12 @@ SharePoint 製品およびテクノロジ (rssharepoint.msi) 用 [!INCLUDE[msCoN
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン、レポート サーバー、および SharePoint のサポートされる組み合わせの一覧については、「[SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
   
-##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Reporting Services アドイン  
+##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 <a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Reporting Services アドイン  
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
 -   [Microsoft SharePoint 用 Microsoft® SQL Server® 2016 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- このアドインの [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] バージョンは、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] インストール ウィザードでも提供されます。  
+ このアドインの [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] バージョンは、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] インストール ウィザードでも提供されます。  
   
 -   セットアップ ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   

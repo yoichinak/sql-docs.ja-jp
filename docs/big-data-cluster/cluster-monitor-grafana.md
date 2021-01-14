@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d258ac514cd998fd121c87a8d6da4a2694878c3e
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: ee0ceb3a9f86fc2a7fabe44e9279b7e63dabfb8b
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378395"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091687"
 ---
 # <a name="monitor-cluster-with-azdata-and-grafana-dashboard"></a>azdata と Grafana ダッシュボードを使用してクラスターを監視する
 
@@ -24,18 +24,18 @@ ms.locfileid: "92378395"
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
+- [azdata コマンドライン ユーティリティ](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>機能
 
-SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、 **azdata** で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
 |コマンド |説明 |
 |:---|:---|
 |`azdata bdc endpoint list` | ビッグ データ クラスターのエンドポイントを一覧表示します。 |
 
 
-次の例を利用し、 **Grafana ダッシュボード** のエンドポイントをリストアップできます。
+次の例を利用し、**Grafana ダッシュボード** のエンドポイントをリストアップできます。
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 

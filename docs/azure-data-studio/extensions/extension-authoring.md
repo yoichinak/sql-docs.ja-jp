@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: d23e37065eb18a7a22d5717a95379161c10870a0
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364039"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151238"
 ---
 # <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 拡張機能を作成して機能を拡張する
 
@@ -35,7 +35,7 @@ Azure Data Studio の拡張に関心がある場合は、独自の拡張機能�
 新しい拡張機能を作成するには、Azure Data Studio 拡張機能ジェネレーターを使用できます。 この Yeoman [拡張機能ジェネレーター](https://www.npmjs.com/package/generator-azuredatastudio)は、拡張機能プロジェクトの使用を開始するうえで便利です。 ジェネレーターを開始するには、コマンド プロンプトで次のコマンドを入力します。
 
 ```console
-npm install -g yo generator-azuredatastudio # Install the generator
+npm install -g yo generator-azuredatastudio
 yo azuredatastudio
 ```
 

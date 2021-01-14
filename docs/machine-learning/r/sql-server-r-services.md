@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016
-ms.openlocfilehash: d1910099e1f0aa4a8f3e58f1faa01dfbe177c517
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 66e023799f69f35b8e220983b261d9e5ae074f24
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470763"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102241"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
 
@@ -92,7 +92,7 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 1. 開発ツールを構成します。 使用できるもの:
 
-    + T-SQL およびストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して R スクリプトを実行する [Azure Data Studio](../../azure-data-studio/what-is.md) または [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
+    + T-SQL およびストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して R スクリプトを実行する [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) または [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
     + スクリプトを実行する開発用のノート PC またはワークステーション上の R。 [RevoScaleR](../r/ref-r-revoscaler.md) を使用してデータをローカルにプルすることや、リモートから SQL Server に実行をプッシュすることができます。 詳細については、[データ サイエンス クライアントの R 開発を設定する](../r/set-up-a-data-science-client.md)方法に関する記事を参照してください。
 
 1. 最初の R スクリプトを作成します

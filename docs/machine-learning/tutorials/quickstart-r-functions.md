@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 393ee2db073ef871f68f4c81cbd9b27fbf827fe5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0da73dd1202d4b5eab2c14077dfe54b04dfe9bd8
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470243"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092668"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>クイック スタート:SQL 機械学習を使用した R 関数
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97470243"
 - Azure SQL Managed Instance の Machine Learning Services。 詳細については、[Azure SQL Managed Instance の Machine Learning Services の概要](/azure/azure-sql/managed-instance/machine-learning-services-overview)に関するページを参照してください。
 ::: moniker-end
 
-- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is.md) を使用します。
+- R スクリプトを含む SQL クエリを実行するためのツール。 このクイックスタートでは [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) を使用します。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>乱数を生成するストアド プロシージャを作成する
 

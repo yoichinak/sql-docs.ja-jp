@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: 21730bf32e66c5954b2447037286dfdc10717e9c
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 960f146d7cd6943d27a0ecce2c1edaedc41de472
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081541"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102902"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>SQL Server PowerShell モジュールをインストールする
 
@@ -165,11 +165,11 @@ SQL Server PowerShell on Linux をインストールする方法については�
 
 ## <a name="cmdlet-reference"></a>コマンドレット リファレンス
 
-- [SqlServer のコマンドレット](https://docs.microsoft.com/powershell/module/sqlserver)
-- [SQLPS のコマンドレット](https://docs.microsoft.com/powershell/module/sqlps)
+- [SqlServer のコマンドレット](/powershell/module/sqlserver)
+- [SQLPS のコマンドレット](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>次のステップ
 
 - [SQL Server PowerShell](sql-server-powershell.md)
-- [SQL Server PowerShell コマンドレット](https://docs.microsoft.com/powershell/module/sqlserver)
+- [SQL Server PowerShell コマンドレット](/powershell/module/sqlserver)
 - [Azure Data Studio で PowerShell を使用する](../azure-data-studio/extensions/powershell-extension.md)

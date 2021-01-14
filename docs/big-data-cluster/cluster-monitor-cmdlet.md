@@ -10,22 +10,22 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 80535a9baefe60301927723511a5bf1afeb805a8
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: be07fa7f00f38f4f7ff3782593b19a584627e2f7
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378416"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091700"
 ---
 # <a name="monitor-cluster-with-azdata-and-kubectl"></a>azdata と kubectl を使用してクラスターを監視する
 
 ## <a name="use-azdata"></a>azdata を使用する
 
-[azdata](deploy-install-azdata.md) コマンドを使用して、エンドポイントとクラスターの状態の両方を表示することもできます。
+[azdata](../azdata/install/deploy-install-azdata.md) コマンドを使用して、エンドポイントとクラスターの状態の両方を表示することもできます。
 
 ### <a name="service-endpoints"></a>サービス エンドポイント
 
-1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
+1. [azdata login](../azdata/reference/reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -39,7 +39,7 @@ ms.locfileid: "92378416"
    azdata login --endpoint https://<control_domain_name>:30080 --auth ad
    ```
 
-1. [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明と、それに対応する IP アドレスとポート値を示した一覧を取得します。 
+1. [`azdata bdc endpoint list`](../azdata/reference/reference-azdata-bdc-endpoint.md) を実行して、各エンドポイントの説明と、それに対応する IP アドレスとポート値を示した一覧を取得します。 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -65,7 +65,7 @@ ms.locfileid: "92378416"
 
 ### <a name="view-cluster-status"></a>クラスターの状態を表示する
 
-[`azdata bdc status show`](reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を表示できます。
+[`azdata bdc status show`](../azdata/reference/reference-azdata-bdc-status.md) コマンドを使用して、クラスターの状態を表示できます。
 
 ```bash
 azdata bdc status show
@@ -150,7 +150,7 @@ azdata bdc status show
 
 ### <a name="view-specific-resource-status"></a>特定のリソースの状態を表示する
 
-[azdata bdc status show](reference-azdata-bdc-status.md) コマンドを使用して、クラスター内の特定のリソースの状態を表示できます。 このコマンドを使用すると、`--resource` パラメーターを使用してフィルター処理できます。 `--resource` パラメーターの入力の例を次にいくつか示します。
+[azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md) コマンドを使用して、クラスター内の特定のリソースの状態を表示できます。 このコマンドを使用すると、`--resource` パラメーターを使用してフィルター処理できます。 `--resource` パラメーターの入力の例を次にいくつか示します。
 
 - master
 - control
@@ -242,7 +242,7 @@ azdata bdc status show --all --resource storage-0
 
 ### <a name="view-controller-status"></a>コントローラーの状態を表示する
 
-[`azdata bdc control status show`](reference-azdata-bdc-control-status.md) コマンドを使用して、コントローラーの状態を表示できます。 ビッグ データ クラスターのコントローラー コンポーネントに関連する監視ダッシュボードへの同様のリンクが表示されます。
+[`azdata bdc control status show`](../azdata/reference/reference-azdata-bdc-control-status.md) コマンドを使用して、コントローラーの状態を表示できます。 ビッグ データ クラスターのコントローラー コンポーネントに関連する監視ダッシュボードへの同様のリンクが表示されます。
 
 
 ## <a name="next-steps"></a>次のステップ

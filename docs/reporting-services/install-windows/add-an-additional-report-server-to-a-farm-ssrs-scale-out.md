@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 307384f199cf81d051c53bd9fca8047918e12783
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e0f1807d8050408ca7e6153d9f7b9189b004bc8a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472503"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101974"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>ファームへのレポート サーバーの追加 (SSRS スケールアウト)
 
@@ -60,7 +60,7 @@ ms.locfileid: "97472503"
   
 |手順|説明とリンク|  
 |----------|--------------------------|  
-|SharePoint サーバーをファームに追加します。|別の Reporting Services アプリケーションをデプロイするには、SharePoint をインストールする必要があります。<br/><br/>SharePoint 2013 の場合は、 [SharePoint Server 2013 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)に関する記事を参照してください。<br/><br/>SharePoint 2016 の場合は、 [SharePoint Server 2016 での SharePoint サーバーのファームへの追加](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)に関する記事を参照してください。|  
+|SharePoint サーバーをファームに追加します。|別の Reporting Services アプリケーションをデプロイするには、SharePoint をインストールする必要があります。<br/><br/>SharePoint 2013 の場合は、 [SharePoint Server 2013 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-web-or-application-server-to-the-farm)に関する記事を参照してください。<br/><br/>SharePoint 2016 の場合は、 [SharePoint Server 2016 での SharePoint サーバーのファームへの追加](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)に関する記事を参照してください。|  
 |Reporting Services SharePoint モードをインストールして構成します。|SQL Server のインストールを実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードのインストールの詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。<br /><br /> サーバーをアプリケーション サーバーとしてのみ使用し、WFE として使用しない場合は、 **[SharePoint 製品用 Reporting Services アドイン]** を選択する必要はありません。<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2) **[機能の選択]** ページで、 **[Reporting Services - SharePoint]** を選択します。<br /><br /> 3) **[Reporting Services 構成]**  ページで、 **[Reporting Services SharePoint モード]** に **[インストールのみ]** オプションが選択されていることを確認します。|  
 |Reporting Services が動作することを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) **SQL Server Reporting Services サービス** を確認します。<br /><br />詳細については、「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。|  
   

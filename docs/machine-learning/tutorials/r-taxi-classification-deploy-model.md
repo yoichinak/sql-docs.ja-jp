@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 0b32d12a694062e56611abaff18dc4f1e2f23061
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 026090f3eb61e2bd2ffe2b96eb09751cc3543dbf
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470113"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101872"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>R チュートリアル:SQL ストアド プロシージャで予測を実行する
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + SELECT ステートメントは、シリアル化されたモデルをデータベースから取得し、R を利用してさらに処理するために R 変数 `mod` にモデルを保存します。
 
-+ スコア付けの新しいケースは、ストアド プロシージャの最初のパラメーター、`@inquery`で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは [PREDICT](/sql/t-sql/queries/predict-transact-sql) 関数に渡され、これによりスコアが生成されます。
++ スコア付けの新しいケースは、ストアド プロシージャの最初のパラメーター、`@inquery`で指定された [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリから取得されます。 クエリ データが読み取られると、行が既定のデータ フレーム `InputDataSet`に保存されます。 このデータ フレームは [PREDICT](../../t-sql/queries/predict-transact-sql.md) 関数に渡され、これによりスコアが生成されます。
   
   `OutputDataSet <- data.frame(predict(mod, InputDataSet, type = "response"));`
   

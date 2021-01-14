@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 346e964b30f76bf79c20d6f348636a626a8beee2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642388"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102685"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -188,7 +188,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SSMS 全般 | Azure SQL DB に接続しようとすると数秒かかる可能性があるという問題が修正されました (ユーザー データベースでの SQL ログイン)。 |
 | SSMS 全般 | キャプチャされたデッドロック (.xdl ファイル) が SSMS で処理または表示されないという問題が修正されました。 |
 | SSMS 全般 | SQL Server 2008 R2 以下でエラー ログ設定を開こうとすると、ErrorLogSizeKb プロパティが見つからないために失敗するという問題が修正されました。 |
-| SSMS 全般 | [Azure Synapse Analytics サーバーレス SQL プール](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)のサポートに関する全般的な修正と改善が行われました。 |
+| SSMS 全般 | [Azure Synapse Analytics サーバーレス SQL プール](/azure/synapse-analytics/sql/on-demand-workspace-overview)のサポートに関する全般的な修正と改善が行われました。 |
 | フラット ファイルのインポート | ファイルが別のアプリケーションによって使用されている可能性があることがウィザードで検出されず、エラーがスローされるという問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40761574)を参照してください。 |
 | データ層アプリケーションのインポート/エクスポート | bacpac をインポートするときの既定のサービス レベルが Standard S0 に修正されました (Azure portal および SqlPackage.exe の動作と同じ)。 |
 | フラット ファイルのインポート | ファイルが別のアプリケーションによって使用されている可能性があることがウィザードで検出されず、エラーがスローされるという問題が修正されました。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035/suggestions/40761574)を参照してください。 |
@@ -220,7 +220,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | スクリプト生成ウィザード | SQL Server 2014 以前では、データベース オブジェクトを列挙しようとすると、ウィザードが失敗します。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)を参照してください。 | SSMS 18.6 を使用して、SQL 2014 以前用のスクリプト生成ウィザードでオブジェクトを選択します。 |
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 対処法:フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 | 該当なし |
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 対処法:Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 | 該当なし |
-| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降が必要です。 |
+| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降が必要です。 |
 | クエリ ストア | クエリ ストアのオブジェクト エクスプローラー ノードを右クリックすると、エラーがスローされます。 | ノードを展開し、個々の子オプションを右クリックして、項目に直接アクセスします。 |
 
 ### <a name="186"></a>18.6

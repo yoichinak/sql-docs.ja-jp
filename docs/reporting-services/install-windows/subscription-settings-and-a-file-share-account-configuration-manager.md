@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 90e585e887e9415a8cf1f9d0104595547f2d1c87
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935552"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171984"
 ---
 # <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (レポート サーバーの構成マネージャー)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、2 つのワークフローがあります。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] リリースから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理者が構成した 1 つのファイル共有アカウントから、1 つ以上 (多数も可能) のサブスクリプションを使用することが可能になりました。 **[ファイル共有アカウントの指定]** を構成し、個々のサブスクリプションの構成ページで、ユーザーが **[ファイル共有アカウントを使用]** を選択します。  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] リリースから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理者が構成した 1 つのファイル共有アカウントから、1 つ以上 (多数も可能) のサブスクリプションを使用することが可能になりました。 **[ファイル共有アカウントの指定]** を構成し、個々のサブスクリプションの構成ページで、ユーザーが **[ファイル共有アカウントを使用]** を選択します。  
   
 -   個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "91935552"
 >  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>ファイル共有アカウントの使用の監査を実行する PowerShell のサンプル  
- 次の Windows PowerShell スクリプトを実行すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル共有アカウント **を使用するよう構成されている**のサブスクリプションがすべて列挙されます。 レポート サーバーに適切した値に、 `SERVERNAME` を更新します。  
+ 次の Windows PowerShell スクリプトを実行すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ファイル共有アカウント **を使用するよう構成されている** のサブスクリプションがすべて列挙されます。 レポート サーバーに適切した値に、 `SERVERNAME` を更新します。  
   
 ```  
 # get all file share subscriptions using the default file share account  

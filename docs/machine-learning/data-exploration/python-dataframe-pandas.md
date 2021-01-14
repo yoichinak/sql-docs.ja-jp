@@ -9,12 +9,12 @@ ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: d3c051a2c72e911ddbf9d310929fe15628b8b5a2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3acd5153599c6237117e52b483247033ebf983ec
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471323"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091632"
 ---
 # <a name="insert-data-from-a-sql-table-into-a-python-pandas-dataframe"></a>SQL テーブルから Python Pandas データフレームにデータを挿入する
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97471323"
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Azure Data Studio。 インストールするには、[Azure Data Studio](../../azure-data-studio/what-is.md) に関するページを参照してください。
+* Azure Data Studio。 インストールするには、[Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) に関するページを参照してください。
 
 * この記事で使用されているサンプル データを取得するために、[サンプル データベースを復元](../../samples/adventureworks-install-configure.md)します。
 

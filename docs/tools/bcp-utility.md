@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: ac37754513e5c204399e8ac4ae57141f229b4681
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 018508727950aa370fb7b3879541d04ff8384ced
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465793"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169704"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -174,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|クライアントが使用する既定のコード ページです。 **-C** が指定されていない場合に使用される既定のコード ページです。|  
 |RAW|コード ページの変換は行われません。 したがって、これは最も速いオプションです。|  
-|*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
+|*code_page*|850 などの特定のコード ページ番号を指定します。<br /><br /> バージョン 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) より前のバージョンでは、コード ページ 65001 (UTF-8 エンコード) はサポートされません。 バージョン 13 以降では、UTF-8 エンコードを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の前のバージョンにインポートできます。|  
 |||
   
  **-d** _**database\_name**_<a name="d"></a>   
@@ -429,7 +429,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
   
  たとえば、 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]でサポートされておらず、それ以降のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で導入された型のデータを生成する場合は、-V80 オプションを使用します。  
   

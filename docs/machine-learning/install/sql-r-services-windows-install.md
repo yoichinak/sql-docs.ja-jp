@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy20q4
 monikerRange: =sql-server-2016
-ms.openlocfilehash: 5a4aefa522486eda1a955254d33ca7dd312c6cc6
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 78b208be4f893f7029ae09c7c0b624b3642b8f35
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878875"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98100194"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
 
@@ -110,7 +110,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 ##  <a name="enable-script-execution"></a>スクリプトの実行を有効にする
 
-1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) または [Azure Data Studio](../../azure-data-studio/what-is.md) を開きます。
+1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) または [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) を開きます。
 
 1. R Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリ ウィンドウを開き、次のコマンドを実行します。
 

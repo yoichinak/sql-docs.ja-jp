@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017'
-ms.openlocfilehash: 9df3f0d56e3d210389110cdf155bd79a32c7c978
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 592a365024edbbe4ee2743a156ee480b76849ba9
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471193"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98096853"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -191,7 +191,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
     > [!TIP]
     > 次のページから適切なバージョンをダウンロードしてインストールできます。[SQL Server Management Studio (SSMS) をダウンロードしてください](../../ssms/download-sql-server-management-studio-ssms.md)。
     > 
-    > SQL Server に対する管理タスクとクエリをサポートする [Azure Data Studio](../../azure-data-studio/what-is.md) を使用することもできます。
+    > SQL Server に対する管理タスクとクエリをサポートする [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) を使用することもできます。
   
 2. Machine Learning Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリ ウィンドウを開き、次のコマンドを実行します。
 

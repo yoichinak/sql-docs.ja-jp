@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: b262b29028afbc0497c0efb2728fa1065cd14d10
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f63ffdc74fab82ca5bbf803e3dbc34c66ae5e629
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470383"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98101982"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python のチュートリアル:SQL 機械学習での線形回帰を使用したスキー レンタルの予測
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "97470383"
 * サンプル データベースを Azure SQL Managed Instance に復元するための [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)。
 ::: moniker-end
 
-* Python IDE - このチュートリアルは、[Azure Data Studio](../../azure-data-studio/what-is.md) で Python のノートブックを使用します。 詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks/notebooks-guidance.md)」を参照してください。
+* Python IDE - このチュートリアルは、[Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) で Python のノートブックを使用します。 詳細については、「[Azure Data Studio でノートブックを使用する方法](../../azure-data-studio/notebooks/notebooks-guidance.md)」を参照してください。
 
-* SQL クエリ ツール - このチュートリアルでは、[Azure Data Studio](../../azure-data-studio/what-is.md) を使用していることを前提としています。
+* SQL クエリ ツール - このチュートリアルでは、[Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) を使用していることを前提としています。
 
 * 追加の Python パッケージ - このチュートリアル シリーズの例では、既定ではインストールされない可能性がある次の Python パッケージを使用します。
 

@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: b73b8521593b81e38d5b0b3931da793f943c45a0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 98e9dd928f2639bfd1df3e6782bcc9aaed60f31e
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470693"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98102872"
 ---
 # <a name="what-is-sql-server-machine-learning-services-with-python-and-r"></a>SQL Server Machine Learning Services (Python と R) とは
 [!INCLUDE [SQL Server 2017 SQL MI](../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -47,7 +47,7 @@ Machine Learning Services では、SQL Server での Python および R スク�
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 1. [Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)または [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。 また、[ビッグ データ クラスターで Machine Learning Services](../big-data-cluster/machine-learning-services.md) を使用したり、[Azure SQL Managed Instance で Machine Learning Services ](/azure/azure-sql/managed-instance/machine-learning-services-overview)を使用したりすることもできます。
 
-1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を実行することもできます。
+1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) で T-SQL を実行することもできます。
 
 1. 初めての Python または R スクリプトを作成する。
 
@@ -65,7 +65,7 @@ Machine Learning Services では、SQL Server での Python および R スク�
 ::: moniker range="=sql-server-2017"
 1. [Windows に SQL Server Machine Learning Services をインストールする](install/sql-machine-learning-services-windows-install.md)。
 
-1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is.md) で T-SQL を使用することもできます。
+1. 開発ツールを構成します。 「[Azure Data Studio のノートブックで Python スクリプトと R スクリプトを実行する](install/sql-machine-learning-azure-data-studio.md)」を使用できます。 [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) で T-SQL を使用することもできます。
 
 1. 初めての Python または R スクリプトを作成する。
 

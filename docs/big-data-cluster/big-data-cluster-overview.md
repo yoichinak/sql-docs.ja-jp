@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd3a092906bf2a7d46c7f343b7edf913bdd4d9cf
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914345"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091810"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
@@ -69,11 +69,11 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 
 管理と監視は、コマンド ライン ツール、API、ポータル、および動的管理ビューを組み合わせて実行できます。
 
-[Azure Data Studio](../azure-data-studio/what-is.md) を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。
+[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。
 - 一般的な管理タスク用の組み込みスニペット。
 - HDFS の参照、ファイルのアップロード、ファイルのプレビュー、およびディレクトリの作成を行う機能。
 - Jupyter 互換ノートブックを作成、開く、および実行する機能。
-- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード ( **データ仮想化の拡張機能** によって有効化されます)。
+- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード (**データ仮想化の拡張機能** によって有効化されます)。
 
 ## <a name="architecture"></a><a id="architecture"></a> アーキテクチャ
 

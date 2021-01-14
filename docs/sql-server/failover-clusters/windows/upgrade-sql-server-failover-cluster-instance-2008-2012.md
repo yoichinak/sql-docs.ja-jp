@@ -12,12 +12,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 90ab761cdc9a84008803ebb4bc5493eb87778f20
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4d9e3116902ae96eaa97e9624ea33ba3fa8952d3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642678"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171584"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -30,7 +30,7 @@ ms.locfileid: "97642678"
 
 -   移行前に、並列クラスターに [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]をインストールする必要はありません。
 
--   (SQL FCI の有無に関係なく) 厳密に可用性グループを使用するクラスターの移行時のダウンタイムは、分散型可用性グループを使用して大幅に制限できます。ただし、その場合、すべてのインスタンスで [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] RTM (以上) のバージョンを実行する必要があります。
+-   (SQL FCI の有無に関係なく) 厳密に可用性グループを使用するクラスターの移行時のダウンタイムは、分散型可用性グループを使用して大幅に制限できます。ただし、その場合、すべてのインスタンスで [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] RTM (以上) のバージョンを実行する必要があります。
 
 -   すべての移行方法で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sysadmin ロールが必要になります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスで使用されるすべての Windows ユーザー (つまり、レプリケーション エージェントを実行している Windows アカウント) には、新しい環境内の各コンピューターに対する OS レベルのアクセス許可が必要です。
 
@@ -54,11 +54,11 @@ ms.locfileid: "97642678"
 \* 可用性グループ リスナー名を除く
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>シナリオ 1:SQL Server 可用性グループを使用する、フェールオーバー クラスター インスタンス (FCI) のない Windows クラスター
-可用性グループ (AG) を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の並列配置を作成することで新しいクラスターに移行できます。 その後、ターゲット クラスターが現在の運用クラスターに対してセカンダリとなる分散型 AG を作成できます。 その場合、ユーザーは [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以降にアップグレードする必要があります。
+可用性グループ (AG) を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップの場合、Windows Server 2016/2012 R2 とは異なる Windows クラスターに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の並列配置を作成することで新しいクラスターに移行できます。 その後、ターゲット クラスターが現在の運用クラスターに対してセカンダリとなる分散型 AG を作成できます。 その場合、ユーザーは [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 以降にアップグレードする必要があります。
 
 ###  <a name="to-perform-the-upgrade"></a>アップグレードを実行するには
 
-1.  必要に応じて、すべてのインスタンスを [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以降にアップグレードします。 並列インスタンスは、同じバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する必要があります。
+1.  必要に応じて、すべてのインスタンスを [!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 以降にアップグレードします。 並列インスタンスは、同じバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行する必要があります。
 
 2.  ターゲット クラスターの可用性グループを作成します。 ターゲット クラスターのプライマリ ノードが FCI でない場合は、リスナーを作成します。
 

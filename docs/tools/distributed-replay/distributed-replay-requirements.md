@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
-ms.openlocfilehash: 1b75a40618d327c077c36b93d6368e245a2669dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f03a5bd4c35bc071df184b37e48cd358d62660a6
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414838"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170674"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88414838"
  分散再生は、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で収集される入力トレース データをサポートします。  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] Cumulative Update 1 以降。 [SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu) を参照してください。
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 -   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
@@ -118,12 +118,12 @@ ms.locfileid: "88414838"
   
 |入力トレース データのバージョン|ターゲット サーバー インスタンスでサポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン|  
 |---------------------------------|------------------------------------------------------------------------------------|  
-|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)],[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
@@ -155,7 +155,7 @@ ms.locfileid: "88414838"
   
 -   ターゲット コンピューター上のデータベース ID が、ソース コンピューター上のデータベース ID と同じであること。 ただし、これらが同じでない場合、トレース内に **DatabaseName** が存在すれば、それに基づいて一致させることができます。  
   
--   トレース データに含まれている各ログインの既定データベースが、ターゲット サーバー上で、ログインの対象データベースにそれぞれ設定されていること。 たとえば、再生されるトレース データが、 **の元のインスタンス上のデータベース**Fred_Db **に対する、ログイン** Fred [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の利用状況を含むとします。 この場合、ターゲット サーバー上では、ログイン **Fred** の既定データベースが、**Fred_Db** に一致するデータベースに設定されていなければなりません (データベース名が異なる場合も同様)。 ログインの既定データベースを設定するには、 `sp_defaultdb` システム ストアド プロシージャを使用します。  
+-   トレース データに含まれている各ログインの既定データベースが、ターゲット サーバー上で、ログインの対象データベースにそれぞれ設定されていること。 たとえば、再生されるトレース データが、 **の元のインスタンス上のデータベース** Fred_Db **に対する、ログイン** Fred [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の利用状況を含むとします。 この場合、ターゲット サーバー上では、ログイン **Fred** の既定データベースが、**Fred_Db** に一致するデータベースに設定されていなければなりません (データベース名が異なる場合も同様)。 ログインの既定データベースを設定するには、 `sp_defaultdb` システム ストアド プロシージャを使用します。  
   
  失われたログインや不正なログインに関連付けられたイベントを再生すると、再生エラーとなります。ただし、再生の処理は継続されます。  
   

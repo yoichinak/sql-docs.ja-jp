@@ -8,12 +8,12 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0528125a4bd74b259fd02facb0589f4e123aad
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: dcb3806c4ac165080e791db01d829272b3297e8a
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617551"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091562"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -40,7 +40,7 @@ ms.locfileid: "97617551"
 + Python 言語オプションと共に [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) がインストールされている必要があります。
 ::: moniker-end
 
-+ SQL Server への接続に使用するクライアント コンピューターに [Azure Data Studio](../../azure-data-studio/what-is.md) をインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio を想定しています。
++ SQL Server への接続に使用するクライアント コンピューターに [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) をインストールします。 他のデータベース管理ツールまたはクエリ ツールも使用できますが、この記事では Azure Data Studio を想定しています。
 
 + Azure Data Studio に Python カーネルをインストールします。 また、コマンドラインから Python をインストールして使用することもできます。また、[Python の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-python.python)と共に [Visual Studio Code](https://code.visualstudio.com/download) などの代替 Python 開発環境を使用できます。
 

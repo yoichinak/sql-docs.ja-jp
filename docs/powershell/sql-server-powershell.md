@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: fad1ac64dcc1024d5dad091670300b8d39fa0632
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081891"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98092707"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "92081891"
 
 **[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)**
 
-SQL Server PowerShell モジュールには、 **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** と **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** の 2 つがあります。
+SQL Server PowerShell モジュールには、 **[SqlServer](/powershell/module/sqlserver)** と **[SQLPS](/powershell/module/sqlps)** の 2 つがあります。
 
 **SqlServer** モジュールは、使用する現在の PowerShell モジュールです。
 
@@ -53,7 +53,7 @@ SQLPS モジュールが同じコンピューターにインストールされ�
 
 **SqlServer** モジュールには、次のものが付属しています。
 
-- [PowerShell プロバイダー](/powershell/module/microsoft.powershell.core/about/about_providers)。これにより、ファイル システム パスと同様の簡単なナビゲーション メカニズムを使用できるようになります。 ファイル システム パスと同様に、ドライブが SQL Server 管理オブジェクト モデルに関連付けられ、ノードがオブジェクト モデルのクラスに基づくパスを構築できます。 その後、 **cd** や **dir** などのなじみのあるコマンドを使用して、コマンド プロンプト ウィンドウでフォルダーを操作するのと同様の方法でパスを操作できます。 **ren** や **del**などの他のコマンドを使用すると、パスのノードで操作を実行できます。
+- [PowerShell プロバイダー](/powershell/module/microsoft.powershell.core/about/about_providers)。これにより、ファイル システム パスと同様の簡単なナビゲーション メカニズムを使用できるようになります。 ファイル システム パスと同様に、ドライブが SQL Server 管理オブジェクト モデルに関連付けられ、ノードがオブジェクト モデルのクラスに基づくパスを構築できます。 その後、 **cd** や **dir** などのなじみのあるコマンドを使用して、コマンド プロンプト ウィンドウでフォルダーを操作するのと同様の方法でパスを操作できます。 **ren** や **del** などの他のコマンドを使用すると、パスのノードで操作を実行できます。
 
 - Transact-SQL または XQuery ステートメントを含む **sqlcmd** コマンドレットの実行などの操作をサポートする、コマンドレットのセット。  
 

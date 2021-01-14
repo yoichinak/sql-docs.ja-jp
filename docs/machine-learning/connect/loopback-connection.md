@@ -10,12 +10,12 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 4cce378546ef8c6fa9405f24fb9157dc6a249969
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 49d62ab967f972d777a02659b5a87b9e11740604
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471253"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98094570"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Python または R スクリプトからの SQL Server へのループバック接続
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ Linux でのループバック接続文字列の例を次に示します。
 
 サーバー アドレス、クライアント証明書ファイルの場所、およびクライアント キー ファイルの場所は、どの `sp_execute_external_script` でも固有であり、Python の場合は API **rx_get_sql_loopback_connection_string()**、R の場合は API **rxGetSqlLoopbackConnectionString()** を使用して取得できます。
 
-接続文字列の属性について詳しくは、Microsoft ODBC Driver for SQL Server の「[DSN と接続文字列のキーワードと属性](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes)」を参照してください。
+接続文字列の属性について詳しくは、Microsoft ODBC Driver for SQL Server の「[DSN と接続文字列のキーワードと属性](../../connect/odbc/dsn-connection-string-attribute.md#new-connection-string-keywords-and-connection-attributes)」を参照してください。
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Python の revoscalepy を使用して接続文字列を生成する
 

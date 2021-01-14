@@ -1,1 +1,1 @@
-SSMS は Windows (AMD または Intel) 上でのみ実行されます。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行されるクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
+SSMS は Windows (AMD または Intel) 上でのみ実行されます。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行されるクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) に関する記事をご覧ください。

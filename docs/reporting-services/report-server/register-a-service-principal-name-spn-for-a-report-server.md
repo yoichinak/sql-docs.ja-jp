@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c87da88bcec8d1fcc29c282a1e012121a81f6f45
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38985454ae83a73fd27dac886fd0f4ee10e5ad55
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986708"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125589"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
   相互認証に Kerberos プロトコルを使用するネットワークに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を配置する場合に、レポート サーバー サービスをドメイン ユーザー アカウントとして実行するように構成するには、レポート サーバー サービスのサービス プリンシパル名 (SPN) を作成する必要があります。  
@@ -66,7 +66,7 @@ Setspn -s http/<computer-name>.<domain-name> <domain-user-account>
   
 6.  **RsReportServer.config** ファイルを開き、 `<AuthenticationTypes>` セクションを探します。  
   
-7.  このセクションの最初のエントリとして `<RSWindowsNegotiate/>` を追加し、Kerberos を有効にします。  
+7.  このセクションの最初のエントリとして `<RSWindowsNegotiate />` を追加し、Kerberos を有効にします。  
   
 ## <a name="see-also"></a>参照  
  [サービス アカウントの構成 (レポート サーバー構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   

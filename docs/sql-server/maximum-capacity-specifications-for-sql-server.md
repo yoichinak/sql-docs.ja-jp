@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 81a36f15a68d3b122a0ba7651c11bfb22fbfa2e2
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988558"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172384"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 
@@ -56,7 +56,7 @@ ms.locfileid: "91988558"
 |外部キーごとのバイト数|900||
 |主キーごとのバイト数|900||
 |行ごとのバイト数|8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 行オーバーフロー ストレージがサポートされています。これにより、可変長列の行外への移動が可能になります。 行外に押し出された可変長列については、メイン レコードに 24 バイトのルートだけが格納されます。 この機能を使用すると、以前のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] よりも効果的に高い制限を課すことができます。 詳細については、[大量の行のサポート](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)に関する記事を参照してください。|
-|メモリ最適化テーブル内の行ごとのバイト数|8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] から、メモリ最適化テーブルで行外ストレージがサポートされます。 テーブル内のすべての列の最大サイズが 8,060 バイトを超える場合、可変長列が行外に押し出されます。このアクションはコンパイル時の決定です。 行外に保存された列用に、8 バイトの参照だけが行内に保存されます。 詳細については、「 [メモリ最適化テーブルのテーブルと行のサイズ](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)」を参照してください。|
+|メモリ最適化テーブル内の行ごとのバイト数|8,060|[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] から、メモリ最適化テーブルで行外ストレージがサポートされます。 テーブル内のすべての列の最大サイズが 8,060 バイトを超える場合、可変長列が行外に押し出されます。このアクションはコンパイル時の決定です。 行外に保存された列用に、8 バイトの参照だけが行内に保存されます。 詳細については、「 [メモリ最適化テーブルのテーブルと行のサイズ](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)」を参照してください。|
 |ストアド プロシージャのソース テキスト内のバイト数|バッチ サイズまたは 250 MB のいずれか小さい方||
 |`varchar(max) `、`varbinary(max)`、`xml`、`text`、または `image` 列ごとのバイト数|2^31-1||
 |`ntext` または `nvarchar(max)` 列ごとの文字数|2^30-1||
@@ -83,7 +83,7 @@ ms.locfileid: "91988558"
 |テーブルごとの外部キー テーブル参照数|発信 = 253。 着信 = 10,000。|制限については、「 [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md)」を参照してください。|
 |識別子長 (文字数)|128||
 |コンピューターごとのインスタンス数|スタンドアロン サーバー上に 50 個のインスタンス。<br /><br />ストレージとして共有クラスター ディスクを使用する場合は、25 個のフェールオーバー クラスター インスタンス。<br/><br/>ストレージ オプションとして SMB ファイル共有を使用する場合は、50 個のフェールオーバー クラスター インスタンス。||
-|メモリ最適化テーブルごとのインデックス|[!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 以降および [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] では 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] および [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)] では 8||
+|メモリ最適化テーブルごとのインデックス|[!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] 以降および [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)] では 999<br/>[!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] および [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] では 8||
 |SQL ステートメントが含まれた文字列の長さ (バッチ サイズ)|65,536 (ネットワーク パケットのサイズ)|ネットワーク パケット サイズとは、アプリケーションとリレーショナル [!INCLUDE[ssDE](../includes/ssde-md.md)]の間の通信に使用される表形式データ ストリーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。|
 |接続ごとのロック数|サーバーごとの最大ロック数||
 |のインスタンスごとのロック数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|メモリのみによって制限されます。|これは静的ロック割り当てに対する値です。 動的ロックの場合は、メモリのみによって制限されます。|

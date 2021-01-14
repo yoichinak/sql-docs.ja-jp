@@ -10,12 +10,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66b405f020728c0ed7040a712d56bcadc3180e38
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 55dc3056b9f66f7a96b55ab750a5f74fe9bfd394
+ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378415"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98091712"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>Kibana ダッシュボードを使用してクラスター ログを確認する
 
@@ -24,18 +24,18 @@ ms.locfileid: "92378415"
 ## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
-- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
+- [azdata コマンドライン ユーティリティ](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>機能
 
-SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、 **azdata** で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
 |コマンド |説明 |
 |:---|:---|
 |`azdata bdc endpoint list` | ビッグ データ クラスターのエンドポイントを一覧表示します。 |
 
 
-次の例を利用し、 **Kibana ダッシュボード** のエンドポイントをリストアップできます。
+次の例を利用し、**Kibana ダッシュボード** のエンドポイントをリストアップできます。
 
 ```bash
 azdata bdc endpoint list --endpoint-name logsui 
