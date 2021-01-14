@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7555332848e338fe73e0add1a1fb4e9a3097256e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d0c91c8af4b0264c6cb418e858e18e0c252eda15
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098935"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171424"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-sql)
 
@@ -30,7 +30,7 @@ ms.locfileid: "98098935"
 
   各セッションで実行されたスレッドによって検出されたすべての待機に関する情報を返します。 このビューを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セッション、および特定のクエリとバッチに関するパフォーマンスの問題を診断できます。  このビューでは、 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) に対して集計されたものと同じ情報が返されますが、 **session_id** 番号も表示されます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -41,7 +41,7 @@ ms.locfileid: "98098935"
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  
 |signal_wait_time_ms|**bigint**|待機スレッドがシグナルを受け取ってから実行を開始するまでの時間。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この DMV は、セッションが開かれたとき、またはセッションがリセットされたとき (接続プールがある場合) に、セッションの情報をリセットします。  
   
  待機の種類の詳細については、「 [sys.dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 2133cd83a96a6db171f078c89dec887aec0e0646
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 65ba3ca60ceb6d1c4ba327ee191084fc63aca8d6
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095087"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170654"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98095087"
 |filename|**nvarchar (256)**|サービスの実行可能ファイルのパスとファイル名。 null にすることはできません。|  
 |is_clustered|**nvarchar (1)**|サービスがクラスターサーバーのリソースとしてインストールされているかどうかを示します。 null にすることはできません。|  
 |cluster_nodename|**nvarchar (256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
-|instant_file_initialization_enabled|**nvarchar (1)**|サービスに対してファイルの瞬時初期化を有効にするかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。<br /><br />Y = サービスに対してファイルの瞬時初期化が有効になっています。<br /><br />N = サービスに対してファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** は、SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) をインストールします。|  
+|instant_file_initialization_enabled|**nvarchar (1)**|サービスに対してファイルの瞬時初期化を有効にするかどうかを指定し [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ます。<br /><br />Y = サービスに対してファイルの瞬時初期化が有効になっています。<br /><br />N = サービスに対してファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** は、SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降) をインストールします。|  
 
 ## <a name="security"></a>セキュリティ  
   

@@ -23,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eede187e90a838ae0e0a2c0051a5b4d496c7b4b6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 60e2e6b9ff455156e0a2d074b325918d00c997d8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096538"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170494"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,15 +71,15 @@ ms.locfileid: "98096538"
 |**time_source_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Time_source** 列について説明します。 NULL 値は許可されません。<br /><br /> QUERY_PERFORMANCE_COUNTER = [Queryperformancecounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) API は、ウォールクロック時間を取得します。<br /><br /> MULTIMEDIA_TIMER = ウォールクロック時間を取得する [マルチメディアタイマー](/previous-versions//ms713418(v=vs.85)) API。|  
 |**virtual_machine_type**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が仮想化環境で実行されているかどうかを示します。  NULL 値は許可されません。<br /><br /> 0 = NONE<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降。<br /><br /> **Virtual_machine_type** 列について説明します。 NULL 値は許可されません。<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は仮想マシン内で実行されていません。<br /><br /> ハイパーバイザー = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ハイパーバイザーを実行する os によってホストされる仮想マシン内で実行されている (ハードウェア支援による仮想化を採用したホスト os)。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、Microsoft VIRTUAL PC などのハードウェアアシスタントを使用しない OS によってホストされる仮想マシン内で実行されています。|  
-|**softnuma_configuration**|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> NUMA ノードの構成方法を指定します。 NULL 値は許可されません。<br /><br /> 0 = OFF はハードウェアの既定値を示します。<br /><br /> 1 = 自動ソフト NUMA<br /><br /> 2 = レジストリを使用した手動ソフト NUMA|  
-|**softnuma_configuration_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> OFF = ソフト NUMA 機能はオフです。<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソフト numa の numa ノードのサイズを自動的に決定します。<br /><br /> MANUAL = 手動で構成されたソフト NUMA|
+|**softnuma_configuration**|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> NUMA ノードの構成方法を指定します。 NULL 値は許可されません。<br /><br /> 0 = OFF はハードウェアの既定値を示します。<br /><br /> 1 = 自動ソフト NUMA<br /><br /> 2 = レジストリを使用した手動ソフト NUMA|  
+|**softnuma_configuration_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> OFF = ソフト NUMA 機能はオフです。<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ソフト numa の numa ノードのサイズを自動的に決定します。<br /><br /> MANUAL = 手動で構成されたソフト NUMA|
 |**process_physical_affinity**|**nvarchar (3072)** |**適用対象:** 以降 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 。<br /><br />情報はまだ提供されていません。 |
-|**sql_memory_model**|**int**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降。<br /><br />メモリを割り当てるためにによって使用されるメモリモデルを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。<br /><br />1 = 従来のメモリモデル<br />2 = メモリ内のページをロックする<br /> 3 = メモリ内の大きなページ|
-|**sql_memory_model_desc**|**nvarchar(120)**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降。<br /><br />メモリを割り当てるためにによって使用されるメモリモデルを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。<br /><br />**従来の**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、メモリの割り当てに従来のメモリモデルを使用しています。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、起動時にサービスアカウントがメモリのロックページを持っていない場合の既定の sql メモリモデルです。<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリのロックページを使用してメモリを割り当てています。 これは、SQL Server の起動時にサービスアカウントに Lock Pages in Memory 特権がある場合の既定の sql memory manager です。 SQL Server ます。<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ内の大きなページを使用してメモリを割り当てています。 SQL Server は、サーバーの起動時とトレースフラグ834が有効になっているときに SQL Server サービスアカウントがメモリのロックページを保持しているときに、Large Pages アロケーターを使用して Enterprise edition でのみメモリを割り当てます。|
+|**sql_memory_model**|**int**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降。<br /><br />メモリを割り当てるためにによって使用されるメモリモデルを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。<br /><br />1 = 従来のメモリモデル<br />2 = メモリ内のページをロックする<br /> 3 = メモリ内の大きなページ|
+|**sql_memory_model_desc**|**nvarchar(120)**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降。<br /><br />メモリを割り当てるためにによって使用されるメモリモデルを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 NULL 値は許可されません。<br /><br />**従来の**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、メモリの割り当てに従来のメモリモデルを使用しています。 これは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、起動時にサービスアカウントがメモリのロックページを持っていない場合の既定の sql メモリモデルです。<br />  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリのロックページを使用してメモリを割り当てています。 これは、SQL Server の起動時にサービスアカウントに Lock Pages in Memory 特権がある場合の既定の sql memory manager です。 SQL Server ます。<br />   =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリ内の大きなページを使用してメモリを割り当てています。 SQL Server は、サーバーの起動時とトレースフラグ834が有効になっているときに SQL Server サービスアカウントがメモリのロックページを保持しているときに、Large Pages アロケーターを使用して Enterprise edition でのみメモリを割り当てます。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
-|**socket_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br />システムで使用可能なプロセッサソケットの数を指定します。 |  
-|**cores_per_socket** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br />システムで使用可能なソケットあたりのプロセッサ数を指定します。 |  
-|**numa_node_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、物理 numa ノードとソフト numa ノードが含まれています。 |  
+|**socket_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降。<br /><br />システムで使用可能なプロセッサソケットの数を指定します。 |  
+|**cores_per_socket** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降。<br /><br />システムで使用可能なソケットあたりのプロセッサ数を指定します。 |  
+|**numa_node_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、物理 numa ノードとソフト numa ノードが含まれています。 |  
   
 ## <a name="permissions"></a>アクセス許可
 

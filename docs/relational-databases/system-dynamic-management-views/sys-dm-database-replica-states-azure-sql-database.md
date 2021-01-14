@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4ce500e9a149844ee6516aac82975e0bbe1b6e7c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c4e27058097feb472f936696d225e5be978bb597
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097783"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172164"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "98097783"
 |**last_commit_lsn**|**numeric(25,0)**|トランザクション ログの最終コミット レコードに対応する実際のログ シーケンス番号。<br /><br /> プライマリ データベースの場合、これは処理された最終コミット レコードに対応します。 セカンダリ データベースの行には、セカンダリ レプリカがプライマリ レプリカに送信したログ シーケンス番号が反映されます。<br /><br /> セカンダリ レプリカの場合、これは再実行された最終コミット レコードです。|  
 |**last_commit_time**|**datetime**|最終コミット レコードに対応する時刻。<br /><br /> セカンダリ データベースの場合、この時刻はプライマリ データベースと同じになります。<br /><br /> プライマリ レプリカの場合、各セカンダリ データベースの行に、そのセカンダリ データベースをホストするセカンダリ レプリカがプライマリ レプリカに報告した時刻が表示されます。 プライマリデータベースの行と特定のセカンダリデータベースの行の間の時間の差は、再実行プロセスが検出され、進行状況がセカンダリレプリカによってプライマリレプリカに報告されていることを前提として、目標復旧時点 (RPO) を表します。|  
 |**low_water_mark_for_ghosts**|**bigint**|プライマリデータベースのゴーストクリーンアップで使用される下限を示す、データベースの単調に増加する数。 この数が時間の経過と共に増加していない場合は、ゴーストクリーンアップが行われない可能性があることを意味します。 プライマリ レプリカでは、クリーンアップする非実体行を決定するために、すべての可用性レプリカ (プライマリ レプリカを含む) でこのデータベースのこの列の最小値を使用します。|  
-|**secondary_lag_seconds**|**bigint**|同期中にセカンダリレプリカがプライマリレプリカの背後にある秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
+|**secondary_lag_seconds**|**bigint**|同期中にセカンダリレプリカがプライマリレプリカの背後にある秒数。<br /><br />**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。|  
 |**quorum_commit_lsn**|**numeric(25,0)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
 |**quorum_commit_time**|**datetime**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
 

@@ -21,12 +21,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6eb4083361d07fee44557d20dd4be4625cbdb12
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 819d0388ca7b358bb9b6cf455cfb061a1a38fd9a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095189"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172174"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +91,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|テーブルまたはビューの ID。|    
 |**index_id**|**int**|インデックスまたはヒープの ID。<br /><br /> 0 = ヒープ| 
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。| 
-|**hobt_id**|**bigint**|**に適用さ** れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 通じて [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys.internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
+|**hobt_id**|**bigint**|**に適用さ** れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (を [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 通じて [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] です。<br /><br /> 列ストアインデックスの内部データを追跡するデータヒープまたは B ツリー行セットの ID。<br /><br /> NULL-これは内部列ストア行セットではありません。<br /><br /> 詳細については、「 [sys.internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md) 」を参照してください。|       
 |**leaf_insert_count**|**bigint**|リーフレベルの挿入の累積数。|    
 |**leaf_delete_count**|**bigint**|リーフレベルの削除の累積数。 leaf_delete_count は、まずゴーストとしてマークされていない削除済みレコードに対してのみインクリメントされます。 削除されたレコードが最初にゴーストである場合は、代わりに **leaf_ghost_count** がインクリメントされます。|    
 |**leaf_update_count**|**bigint**|リーフレベルの更新の累積数。|    
@@ -133,7 +133,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページ レベルの圧縮が評価されたページの数。 大幅な節減を実現できないため圧縮されなかったページも含まれます。 列ストア インデックスでは、常に 0 です。|    
 |**page_compression_success_count**|**bigint**|テーブル、インデックス、またはインデックス付きビューの特定のパーティションで、ページの圧縮を使用して圧縮されたデータ ページの数。 列ストア インデックスでは、常に 0 です。|    
     
-## <a name="remarks"></a>解説    
+## <a name="remarks"></a>Remarks    
  この動的管理オブジェクトは、およびからの相関パラメーターを受け入れません `CROSS APPLY` `OUTER APPLY` 。    
     
  **sys.dm_db_index_operational_stats** を使用すると、テーブル、インデックス、またはパーティションに対する読み書きを行うために、ユーザーが待機する必要がある時間の長さを追跡でき、重大な I/O 動作やホット スポットが発生したテーブルまたはインデックスを特定できます。    

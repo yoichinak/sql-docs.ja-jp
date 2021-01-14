@@ -28,12 +28,12 @@ ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca23195b680ca5e2e16010b04c357fa2369d7f0a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db232d77311b4d9e82bfe0afda8b14a4822d29f
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093874"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172644"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,10 +88,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |---------------------|---------------------|-----------------------------------|  
 |AADS|ALTER ANY DATABASE EVENT SESSION<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |AAES|ALTER ANY EVENT SESSION|SERVER|  
-|AAMK|任意のマスクを変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|AAMK|任意のマスクを変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
-|AEDS|すべての外部データ ソースを変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
-|AEFF|任意の外部のファイル形式を変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|AEDS|すべての外部データ ソースを変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|AEFF|任意の外部のファイル形式を変更します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |AL|ALTER|APPLICATION ROLE|  
 |AL|ALTER|ASSEMBLY|  
 |AL|ALTER<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|AVAILABILITY GROUP|  
@@ -123,12 +123,12 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCF|ALTER ANY CERTIFICATE|DATABASE|  
-|ALCK|任意の列の暗号化キーを変更します。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
-|ALCM|ALTER ANY COLUMN MASTER KEY<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|ALCK|任意の列の暗号化キーを変更します。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|ALCM|ALTER ANY COLUMN MASTER KEY<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDA|ALTER ANY DATABASE AUDIT|DATABASE|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
-|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|ALDC|ALTER ANY DATABASE SCOPED CONFIGURATION<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |ALDS|ALTER ANY DATASPACE|DATABASE|  
 |ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
 |ALES|ALTER ANY EVENT NOTIFICATION|SERVER|  
@@ -144,7 +144,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |ALSC|ALTER ANY CONTRACT|DATABASE|  
 |ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
 |ALSM|ALTER ANY SCHEMA|DATABASE|  
-|ALSP|すべてのセキュリティ ポリシーを変更します。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|ALSP|すべてのセキュリティ ポリシーを変更します。<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |ALSR|ALTER ANY SERVER ROLE<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
@@ -224,7 +224,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |DL|DELETE|DATABASE|  
 |DL|DELETE|OBJECT|  
 |DL|DELETE|SCHEMA|  
-|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |EX|EXECUTE|DATABASE|  
 |EX|EXECUTE|OBJECT|  
 |EX|EXECUTE|SCHEMA|  
@@ -283,7 +283,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|SYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
-|UMSK|マスク解除します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|UMSK|マスク解除します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |UP|UPDATE|DATABASE|  
 |UP|UPDATE|OBJECT|  
 |UP|UPDATE|SCHEMA|  
@@ -313,8 +313,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|User|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
-|VWCK|列の暗号化キーの定義を表示します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
-|VWCM|任意の列のマスター_キーの定義の表示<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|VWCK|列の暗号化キーの定義を表示します。<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
+|VWCM|任意の列のマスター_キーの定義の表示<br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|DATABASE|  
 |VWCT|VIEW CHANGE TRACKING|OBJECT|  
 |VWCT|VIEW CHANGE TRACKING|SCHEMA|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
@@ -323,7 +323,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `sys.fn_builtin_permissions` 定義済みの権限階層のコピーを生成するテーブル値関数です。 この階層には、包含アクセス許可が含まれます。 結果セットには、 `DEFAULT` アクセス許可階層の有向非循環グラフが記述されます。このグラフは、ルートは (クラス = サーバー、アクセス許可 = CONTROL server) です。  
   
  `sys.fn_builtin_permissions` では、相関パラメーターは受け入れられません。  

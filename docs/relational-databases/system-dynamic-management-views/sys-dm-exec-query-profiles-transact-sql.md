@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80c59436a83795f4111dfae2997b8678b94e617e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 461898cf3bf9e694e8d8272608861fdbfa0aff79
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096602"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170254"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "98096602"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでにスキップされたセグメントの数。| 
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
+|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  [クエリプラン] ノードに i/o がない場合は、i/o 関連のすべてのカウンターが NULL に設定されます。  
@@ -84,7 +84,7 @@ ms.locfileid: "98096602"
   
 -   並列スキャンがある場合、この DMV では、スキャンで使用される並列スレッドごとにカウンターがレポートされます。
  
-SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ* とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ* を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
+SP1 以降では [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 、 *標準のクエリ実行統計プロファイルインフラストラクチャ* は、 *軽量のクエリ実行統計プロファイルインフラストラクチャ* とサイドバイサイドで存在します。 `SET STATISTICS XML ON` と `SET STATISTICS PROFILE ON` は、常に *標準のクエリ実行統計プロファイルインフラストラクチャ* を使用します。 にデータを設定するには `sys.dm_exec_query_profiles` 、クエリプロファイルインフラストラクチャの1つを有効にする必要があります。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。    
 
 >[!NOTE]
 > 調査対象のクエリは、クエリのプロファイルインフラストラクチャが有効になっ **た後** に開始する必要があります。クエリを開始した後で有効にすると、で結果が生成されません `sys.dm_exec_query_profiles` 。 クエリプロファイルインフラストラクチャを有効にする方法の詳細については、「 [クエリプロファイリングインフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。

@@ -21,12 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20bbd88f7f65ce16029913a63c4516aa935dbb3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0f033d0b414fab40a33a34490a0ef7ff08a2c232
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094474"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171134"
 ---
 # <a name="systables-transact-sql"></a>sys. tables (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "98094474"
 |durability|**tinyint**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 返される値は次のとおりです。<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 既定値は0です。|  
 |durability_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA の値は、テーブルが持続性のあるインメモリテーブルであることを示します。 メモリ最適化テーブルの既定値は SCHEMA_AND_DATA です。 値 SCHEMA_ONLY は、メモリ最適化オブジェクトでは、データベースを再起動した場合にテーブル データの更新内容が保存されないことを示します。|  
 |is_memory_optimized|**bit**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用できる値を次に示します。<br /><br /> 0 = メモリ最適化ではありません。<br /><br /> 1 = メモリ最適化です。<br /><br /> 値 0 が既定の値です。<br /><br /> メモリ最適化テーブルは、メモリ内のユーザーテーブルです。スキーマは、他のユーザーテーブルと同様にディスクに保存されます。 メモリ最適化テーブルには、ネイティブコンパイルストアドプロシージャからアクセスできます。|  
-|temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
-|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
-|is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
+|temporal_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類を表す数値。<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> テーブルの種類の説明テキスト。<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> (2, 4) で temporal_type ときに、履歴データを保持するテーブルの object_id を返します。それ以外の場合は、NULL を返します。|  
+|is_remote_data_archive_enabled|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> テーブルで Stretch が有効になっているかどうかを示します。<br /><br /> 0 = テーブルは Stretch が有効になっていません。<br /><br /> 1 = テーブルは Stretch が有効です。<br /><br /> 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。|  
+|is_external|**bit**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> テーブルが外部テーブルであることを示します。<br /><br /> 0 = テーブルは、外部テーブルではありません。<br /><br /> 1 = テーブルは外部テーブルです。| 
 |history_retention_period|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>History_retention_period_unit で指定された単位で表した、テンポラル履歴の保有期間を表す数値。 |  
 |history_retention_period_unit|**int**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴の保有期間の単位の種類を表す数値。 <br /><br />-1: 無制限 <br /><br />3: 日 <br /><br />4: 週 <br /><br />5: 月 <br /><br />6: 年 |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**適用対象**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] <br/><br/>テンポラル履歴保有期間の単位の種類の説明テキスト。 <br /><br />容量 <br /><br />DAY <br /><br />[WEEK] <br /><br />MONTH <br /><br />YEAR |  
@@ -84,7 +84,7 @@ GO
   
 次の例は、関連するテンポラルデータを公開する方法を示しています。  
    
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  

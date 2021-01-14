@@ -21,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ab47e249eed0d82a2d373685b34c11584dcfe0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 240737da03fa21d1076251062d99f64b46aecad8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099936"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168306"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98099936"
 現在のデータベース内の指定されたデータベースオブジェクト (テーブルまたはインデックス付きビュー) の統計ヒストグラムを返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 `DBCC SHOW_STATISTICS WITH HISTOGRAM` と似ています。
 
 > [!NOTE] 
-> この DMF は、SP1 CU2 以降で使用できます。 [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
+> この DMF は、SP1 CU2 以降で使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>構文  
   
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |ヒストグラム区間内 (上限は除く) にある個別の列値を持つ行の予測数。 |
 |average_range_rows |**real** |上限を除く、ヒストグラムのステップ内で重複する列値を持つ行の平均数 ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` の場合 `DISTINCT_RANGE_ROWS > 0` )。 |
   
- ## <a name="remarks"></a>解説  
+ ## <a name="remarks"></a>Remarks  
  
  の resultset は `sys.dm_db_stats_histogram` 、と同様の情報を返し `DBCC SHOW_STATISTICS WITH HISTOGRAM` ます。また、、、およびも含まれ `object_id` `stats_id` `step_number` ます。
 

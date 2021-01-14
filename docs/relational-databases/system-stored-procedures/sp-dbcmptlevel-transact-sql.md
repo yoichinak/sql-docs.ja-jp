@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf4875ec03cc961e696ae5f39bd0e29abccb4e9
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541923"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168431"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  **120** = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+ **130** = [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,9 +64,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>結果セット  
  パラメーターが指定されていない場合、または *name* パラメーターが指定されていない場合、 **sp_dbcmptlevel** はエラーを返します。  
   
- *Name*が指定されて*いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
+ *Name* が指定されて *いない場合、は*、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベースの現在の互換性レベルを表示するメッセージを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  互換性レベルの詳細については、「 [ALTER Database Compatibility Level &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

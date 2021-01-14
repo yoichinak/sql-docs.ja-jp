@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 21224e52ae9109f5404fc6a6ee11ad59e525995b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194424"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171174"
 ---
 # <a name="database-requirements-master-data-services"></a>データベース要件 (マスター データ サービス)
 
@@ -36,9 +36,9 @@ ms.locfileid: "92194424"
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースは、次のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でホストできます。  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Enterprise (64 ビット) x64  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Enterprise (64 ビット) x64  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Developer (64 ビット) x64  
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Developer (64 ビット) x64  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence (64 ビット) x64  
   
@@ -63,9 +63,9 @@ ms.locfileid: "92194424"
   
 ### <a name="accounts-and-permissions"></a>アカウントと権限  
   
-|種類|説明|  
+|Type|説明|  
 |----------|-----------------|  
-|ユーザー アカウント|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]では、Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースをホストできます。 このユーザー アカウントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスの **sysadmin** サーバー ロールに属している必要があります。 **Sysadmin**ロールの詳細については、「[サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
+|ユーザー アカウント|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]では、Windows アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースをホストできます。 このユーザー アカウントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスの **sysadmin** サーバー ロールに属している必要があります。 **Sysadmin** ロールの詳細については、「[サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。|  
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 管理者アカウント|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成する場合、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] システム管理者となるドメイン ユーザー アカウントを指定する必要があります。 このユーザーは、このデータベースに関連付けられているすべての [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションについて、すべての機能領域のすべてのモデルおよびすべてのデータを更新できます。 詳細については、「 [管理者 &#40;マスターデータサービス&#41;](../../master-data-services/administrators-master-data-services.md)」を参照してください。|  
   
 ### <a name="database-backup"></a>データベース バックアップ  

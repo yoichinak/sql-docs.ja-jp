@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480594"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170434"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -30,7 +30,7 @@ ms.locfileid: "89480594"
   
  **ダウンロード**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
+-   [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** に移動してください。  
   
 -   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "89480594"
   
  この [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] リリースでは、読み取り、作成、更新、削除の各権限が新しく導入され、権限レベルがさらに多く提供されています。 たとえば、ユーザーに更新権限しかない場合、そのユーザーはマスター データを更新できますが、作成や削除はできません。 作成、更新、または削除権限をユーザーに付与すると、そのユーザーには読み取り権限が自動的に割り当てられます。 読み取り、作成、更新、削除の各権限を組み合わせることもできます。  
   
- 次の表に示すように、 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]にアップグレードすると、以前の権限が新しい権限に変換されます。  
+ 次の表に示すように、 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]にアップグレードすると、以前の権限が新しい権限に変換されます。  
   
 |以前のリリースの権限|新しい権限|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "89480594"
   
 ## <a name="improved-troubleshooting"></a>トラブルシューティングの向上  
   
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、デバッグを改善し、問題のトラブルシューティングをさらに容易にするための機能が追加されました。 詳細については、「[Tracing (Master Data Services) (トレース (マスター データ サービス))](../master-data-services/tracing-master-data-services.md)」を参照してください。  
+ [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、デバッグを改善し、問題のトラブルシューティングをさらに容易にするための機能が追加されました。 詳細については、「[Tracing (Master Data Services) (トレース (マスター データ サービス))](../master-data-services/tracing-master-data-services.md)」を参照してください。  
   
 ## <a name="improved-manageability"></a>管理の容易性の向上  
   
@@ -232,7 +232,7 @@ ms.locfileid: "89480594"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)

@@ -21,12 +21,12 @@ ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf45b9d2c8293b0a7788b8f8690bf24886433681
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e73ce211ddc5dfd0ee78835e60402b1e166f370a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091625"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172294"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,13 +74,13 @@ ms.locfileid: "98091625"
 |rule_object_id|**int**|Sys.sp_bindrule を使用して、列にバインドされているスタンドアロンルールの ID。<br /><br /> 0 = スタンドアロンルールはありません。 列レベルの CHECK 制約については、「 [sys.check_constraints &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)」を参照してください。|  
 |is_sparse|**bit**|1 = 列はスパース列です。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 |is_column_set|**bit**|1 = 列は列セットです。 詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
-|generated_always_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 列の値が生成されることを示します (システムテーブルの列の場合は常に0になります)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 詳細については、「 [テンポラルテーブル &#40;リレーショナルデータベース&#41;](../../relational-databases/tables/temporal-tables.md)」を参照してください。|  
-|generated_always_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> の値の説明テキスト `generated_always_type` (常にシステムテーブルの列に対して NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類:<br /><br /> 1 = 決定的な暗号化<br /><br /> 2 = ランダム化暗号化|  
-|encryption_type_desc|**nvarchar (64)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類の説明:<br /><br /> 化<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化アルゴリズムの名前。<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 のみがサポートされています。|  
-|column_encryption_key_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK の ID。|  
-|column_encryption_key_database_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 列のデータベースと異なる場合に、列の暗号化キーが存在するデータベースの名前。 キーが列と同じデータベースに存在する場合は NULL になります。|  
+|generated_always_type|**tinyint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 列の値が生成されることを示します (システムテーブルの列の場合は常に0になります)。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 詳細については、「 [テンポラルテーブル &#40;リレーショナルデータベース&#41;](../../relational-databases/tables/temporal-tables.md)」を参照してください。|  
+|generated_always_type_desc|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> の値の説明テキスト `generated_always_type` (常にシステムテーブルの列に対して NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類:<br /><br /> 1 = 決定的な暗号化<br /><br /> 2 = ランダム化暗号化|  
+|encryption_type_desc|**nvarchar (64)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化の種類の説明:<br /><br /> 化<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 暗号化アルゴリズムの名前。<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 のみがサポートされています。|  
+|column_encryption_key_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK の ID。|  
+|column_encryption_key_database_name|**sysname**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 列のデータベースと異なる場合に、列の暗号化キーが存在するデータベースの名前。 キーが列と同じデータベースに存在する場合は NULL になります。|  
 |is_hidden|**bit**|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 列が非表示かどうかを示します。<br /><br /> 0 = 通常、非表示、表示列<br /><br /> 1 = 非表示の列|  
 |is_masked|**bit**|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 動的データマスクによって列がマスクされているかどうかを示します。<br /><br /> 0 = 通常、マスクされていない列<br /><br /> 1 = 列はマスクされます。|  
 

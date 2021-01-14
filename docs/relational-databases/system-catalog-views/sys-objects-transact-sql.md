@@ -24,12 +24,12 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 450832d26a75b119424ee63fcc5fa56d23b95e2d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 92f2d9d61f1f04af35b9d0d5a8450de7c8cceebc
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096824"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171324"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "98096824"
 |principal_id|**int**|個々の所有者の ID (スキーマの所有者と異なる場合)。 既定では、スキーマに含まれるオブジェクトはスキーマの所有者によって所有されます。 ただし、ALTER AUTHORIZATION ステートメントを使用して所有権を変更することによって、代替所有者を指定できます。<br /><br /> 別の所有者が存在しない場合は NULL になります。<br /><br /> オブジェクトの型が次のいずれかの場合は NULL になります。<br /><br /> C = CHECK 制約<br /><br /> D = DEFAULT (制約またはスタンドアロン)<br /><br /> F = FOREIGN KEY 制約<br /><br /> PK = PRIMARY KEY 制約<br /><br /> R = Rule (旧形式、スタンドアロン)<br /><br /> TA = アセンブリ (CLR 統合) トリガー<br /><br /> TR = SQL トリガー<br /><br /> UQ = UNIQUE 制約<br /><br /> EC = エッジ制約 |  
 |schema_id|**int**|オブジェクトが含まれているスキーマの ID。<br /><br /> スキーマ スコープ システム オブジェクトは、常に sys スキーマまたは INFORMATION_SCHEMA スキーマに含まれています。|  
 |parent_object_id|**int**|このオブジェクトが属するオブジェクトの ID です。<br /><br /> 0 = 子オブジェクトではありません。|  
-|type|**char(2)**|オブジェクトの種類:<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = DEFAULT (制約またはスタンドアロン)<br /><br /> F = FOREIGN KEY 制約<br /><br /> FN = SQL スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数<br /><br /> IF = SQL インライン テーブル値関数<br /><br /> 内部テーブル<br /><br /> P = SQL ストアドプロシージャ<br /><br /> PC = アセンブリ (CLR) ストアドプロシージャ<br /><br /> PG = プランガイド<br /><br /> PK = PRIMARY KEY 制約<br /><br /> R = Rule (旧形式、スタンドアロン)<br /><br /> RF = レプリケーション-フィルター-プロシージャ<br /><br /> S = システム ベース テーブル<br /><br /> SN = シノニム<br /><br /> SO = Sequence オブジェクト<br /><br /> U = テーブル (ユーザー定義)<br /><br /> V = ビュー<br /><br /> EC = エッジ制約 <br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> <br /><br /> SQ = サービスキュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = SQL テーブル値関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブル型<br /><br /> UQ = UNIQUE 制約<br /><br /> X = 拡張ストアド プロシージャ<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。<br /><br /> <br /><br /> ET = 外部テーブル|  
+|type|**char(2)**|オブジェクトの種類:<br /><br /> AF = 集計関数 (CLR)<br /><br /> C = CHECK 制約<br /><br /> D = DEFAULT (制約またはスタンドアロン)<br /><br /> F = FOREIGN KEY 制約<br /><br /> FN = SQL スカラー関数<br /><br /> FS = アセンブリ (CLR) スカラー関数<br /><br /> FT = アセンブリ (CLR) テーブル値関数<br /><br /> IF = SQL インライン テーブル値関数<br /><br /> 内部テーブル<br /><br /> P = SQL ストアドプロシージャ<br /><br /> PC = アセンブリ (CLR) ストアドプロシージャ<br /><br /> PG = プランガイド<br /><br /> PK = PRIMARY KEY 制約<br /><br /> R = Rule (旧形式、スタンドアロン)<br /><br /> RF = レプリケーション-フィルター-プロシージャ<br /><br /> S = システム ベース テーブル<br /><br /> SN = シノニム<br /><br /> SO = Sequence オブジェクト<br /><br /> U = テーブル (ユーザー定義)<br /><br /> V = ビュー<br /><br /> EC = エッジ制約 <br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> <br /><br /> SQ = サービスキュー<br /><br /> TA = アセンブリ (CLR) DML トリガー<br /><br /> TF = SQL テーブル値関数<br /><br /> TR = SQL DML トリガー<br /><br /> TT = テーブル型<br /><br /> UQ = UNIQUE 制約<br /><br /> X = 拡張ストアド プロシージャ<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 、 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。<br /><br /> <br /><br /> ET = 外部テーブル|  
 |type_desc|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|オブジェクトが作成された日付です。|  
 |modify_date|**datetime**|オブジェクトが ALTER ステートメントを使用して最後に変更された日付です。 オブジェクトがテーブルまたはビューの場合は、テーブルまたはビューのインデックスが作成または変更されたときにも modify_date が変更されます。|  
@@ -56,7 +56,7 @@ ms.locfileid: "98096824"
 |is_published|**bit**|オブジェクトがパブリッシュされます。|  
 |is_schema_published|**bit**|オブジェクトのスキーマのみがパブリッシュされることを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)、および[objectproperty](../../t-sql/functions/objectproperty-transact-sql.md)() 組み込み関数を、sys. オブジェクトに表示されるオブジェクトに適用できます。  
   
  このビューには、システムオブジェクトを表示する [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)という同じスキーマを持つバージョンがあります。 システムオブジェクトとユーザーオブジェクトの両方を表示する [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) という別のビューがあります。 3つのすべてのカタログビューの構造は同じです。  

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b11acf31ca9f20aaf70acbe530106e58ca787439
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 27585efd99f537e6b2f6d3082c341533e8bbea3b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094145"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172094"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内にある指定されたデータベース オブジェクト (テーブル) について、増分統計のプロパティを返します。 `sys.dm_db_incremental_stats_properties` (パーティション番号を含む) の使用方法は、非増分統計に使用される `sys.dm_db_stats_properties` と似ています。 
   
-  この機能は [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 、Service pack 2 および [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] service pack 1 で導入されました。
+  この機能は [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 、Service pack 2 および [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] service pack 1 で導入されました。
   
 ## <a name="syntax"></a>構文  
   

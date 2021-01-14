@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 603ad99e126f1175cce21a48933362e4ad6d7aaa
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cdcf7bdcca72f8c80576dcd68146ebfbd36e672
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094179"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171734"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 の \| 既定値  
  インデックスがあるテーブルまたはビューのオブジェクト ID を示します。 *object_id* は **int** です。  
   
- 有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降、有効な入力には、service broker のキュー名またはキューの内部テーブル名も含まれます。 既定のパラメーター (つまり、すべてのオブジェクト、すべてのインデックスなど) が適用されると、すべてのキューの断片化情報が結果セットに含まれます。  
+ 有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降、有効な入力には、service broker のキュー名またはキューの内部テーブル名も含まれます。 既定のパラメーター (つまり、すべてのオブジェクト、すべてのインデックスなど) が適用されると、すべてのキューの断片化情報が結果セットに含まれます。  
   
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関する情報が返されます。 *Object_id* に null を指定する場合は、 *index_id* と *partition_number* にも null を指定する必要があります。  
   
@@ -121,7 +121,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|元のデータ行の外部に保持されているバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|長期間と見なされるバージョンレコードの数。 <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 動的管理関数は、DBCC SHOWCONTIG ステートメントの代わりに使用できます。  
   
 ## <a name="scanning-modes"></a>スキャン モード  
@@ -417,7 +417,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
  次の例では、サーバーブローカーキューの断片化をクエリする方法を示します。  
   

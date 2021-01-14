@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 165287fd2d699c56dc635d85fd58a1b081a497a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f39965e87911f7fef8d50c0b0888d552a451a90
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427034"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172654"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [ **プロジェクトの設定** ] ダイアログボックスの [変換] ページには、SSMA が DB2 構文を構文に変換する方法をカスタマイズする設定が含まれてい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -71,7 +71,7 @@ TOP では、TOP 句の式が整数に評価される必要があります。 �
   
 1.  **データベースへのスキーマ:** このモードでは、DB2 スキーマ ' sch1 ' は、既定で SQL Server データベース ' sch1 ' の ' dbo ' SQL Server スキーマにマップされます。  
   
-2.  スキーマ**からスキーマへ:** このモードでは、DB2 スキーマ ' sch1 ' は、既定では、接続ダイアログで指定された既定の SQL Server データベースの ' sch1 ' SQL Server スキーマにマップされます。  
+2.  スキーマ **からスキーマへ:** このモードでは、DB2 スキーマ ' sch1 ' は、既定では、接続ダイアログで指定された既定の SQL Server データベースの ' sch1 ' SQL Server スキーマにマップされます。  
   
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -79,9 +79,9 @@ TOP では、TOP 句の式が整数に評価される必要があります。 �
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE ステートメントの変換方法  
   
--   **Insert、update、delete ステートメントを使用して**を選択した場合、ssma は、マージステートメントを INSERT、UPDATE、delete ステートメントに変換します。  
+-   **Insert、update、delete ステートメントを使用して** を選択した場合、ssma は、マージステートメントを INSERT、UPDATE、delete ステートメントに変換します。  
   
--   [ **Merge ステートメントを使用**する] を選択した場合、ssma は、のマージステートメントを merge ステートメントに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
+-   [ **Merge ステートメントを使用** する] を選択した場合、ssma は、のマージステートメントを merge ステートメントに変換 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。  
   
 > [!WARNING]  
 > このプロジェクト設定オプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、2012、2014でのみ使用でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -143,9 +143,9 @@ DB2 では foreign key 制約を作成できます。参照先の列では null 
   
 SSMA は、ラッパー関数への呼び出しをプロシージャの呼び出しに変換できます。 これにより、読みやすいコードが作成され、パフォーマンスが向上します。 ただし、コンテキストによって常に許可されるわけではありません。たとえば、SELECT リスト内の関数呼び出しをプロシージャ呼び出しに置き換えることはできません。 SSMA には、一般的なケースに対応するためのオプションがいくつかあります。  
   
--   **Always**を選択すると、ssma はラッパー関数呼び出しをプロシージャ呼び出しに変換しようとします。 現在のコンテキストでこの変換が許可されていない場合は、エラーメッセージが生成されます。 このように、生成されたコードに関数呼び出しは残されません。  
+-   **Always** を選択すると、ssma はラッパー関数呼び出しをプロシージャ呼び出しに変換しようとします。 現在のコンテキストでこの変換が許可されていない場合は、エラーメッセージが生成されます。 このように、生成されたコードに関数呼び出しは残されません。  
   
--   **可能な**場合に選択すると、ssma では、関数に出力パラメーターがある場合にのみ、プロシージャ呼び出しに移動します。 移動できない場合、パラメーターの出力属性は削除されます。 それ以外の場合、SSMA は関数呼び出しを残します。  
+-   **可能な** 場合に選択すると、ssma では、関数に出力パラメーターがある場合にのみ、プロシージャ呼び出しに移動します。 移動できない場合、パラメーターの出力属性は削除されます。 それ以外の場合、SSMA は関数呼び出しを残します。  
   
 -   [ **なし**] を選択した場合、ssma は関数呼び出しとしてすべての関数呼び出しをそのままにします。 この選択は、パフォーマンス上の理由から許容できない場合があります。  
   
@@ -202,7 +202,7 @@ SSMA では、DB2 レコードを、特定の構造を持つ変数と XML 変数
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>SUBSTR 関数呼び出しから SUBSTRING 関数呼び出しへの変換  
 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パラメーターの数に応じて、DB2 SUBSTR 関数呼び出しを **substring** 関数呼び出しに変換できます。 SSMA で SUBSTR 関数呼び出しを変換できない場合、またはパラメーターの数がサポートされていない場合、SSMA は SUBSTR 関数呼び出しをカスタム SSMA 関数呼び出しに変換します。  
   
--   [ **はい**] を選択すると、ssma は、3つのパラメーターを使用する SUBSTR 関数呼び出しを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **部分文字列**に変換します。 その他の SUBSTR 関数は、カスタム SSMA 関数を呼び出すように変換されます。  
+-   [ **はい**] を選択すると、ssma は、3つのパラメーターを使用する SUBSTR 関数呼び出しを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **部分文字列** に変換します。 その他の SUBSTR 関数は、カスタム SSMA 関数を呼び出すように変換されます。  
   
 -   [ **いいえ**] を選択すると、SSMA は SUBSTR 関数呼び出しをカスタム ssma 関数呼び出しに変換します。  
   
@@ -257,9 +257,9 @@ SSMA では、次の2つの方法で PL/SQL のサブタイプを変換できま
 ### <a name="convert-to_chardate-format"></a>変換 TO_CHAR (日付、形式)  
 SSMA では、DB2 TO_CHAR (date、format) を sysdb データベースのプロシージャに変換できます。  
   
--   [ **TO_CHAR_DATE 関数を使用**する] を選択した場合、ssma は TO_CHAR (DATE, format) を変換に英語 (*) を使用して TO_CHAR_DATE 関数に変換します。  
+-   [ **TO_CHAR_DATE 関数を使用** する] を選択した場合、ssma は TO_CHAR (DATE, format) を変換に英語 (*) を使用して TO_CHAR_DATE 関数に変換します。  
   
--   [ **TO_CHAR_DATE_LS 関数 (NLS ケア) を使用**する] を選択した場合、ssma は、変換にセッション言語を使用して、TO_CHAR (DATE、format) を TO_CHAR_DATE_LS 関数に変換します。  
+-   [ **TO_CHAR_DATE_LS 関数 (NLS ケア) を使用** する] を選択した場合、ssma は、変換にセッション言語を使用して、TO_CHAR (DATE、format) を TO_CHAR_DATE_LS 関数に変換します。  
   
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -333,7 +333,7 @@ SSMA がでテーブルを作成するときに [!INCLUDE[ssNoVersion](../../inc
 -   **トリガーを含むテーブルの rowid 列を追加** トリガーを含むテーブルの rowid を追加します。  
   
 > [!WARNING]  
-> SQL Server 2005、SQL Server 2008、SQL Server 2012 および2014の場合の既定の設定では、 **トリガーを含むテーブルに ROWID 列を追加**します。  
+> SQL Server 2005、SQL Server 2008、SQL Server 2012 および2014の場合の既定の設定では、 **トリガーを含むテーブルに ROWID 列を追加** します。  
   
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
@@ -353,14 +353,14 @@ DB2 の入れ子になった subprogram の種類 (スタンドアロンスト�
   
 -   [ **インライン**] を選択した場合、入れ子になった subprogram の呼び出しはその本文で置き換えられます。  
   
--   **ストアドプロシージャ**を選択した場合、入れ子になった subprogram は SQL Server ストアドプロシージャに変換され、その呼び出しはこのプロシージャ呼び出しで置き換えられます。  
+-   **ストアドプロシージャ** を選択した場合、入れ子になった subprogram は SQL Server ストアドプロシージャに変換され、その呼び出しはこのプロシージャ呼び出しで置き換えられます。  
   
 [ **モード** ] ボックスで変換モードを選択すると、ssma によって次の設定が適用されます。  
   
 **既定/オプティミスティック/フルモード:** インライン  
   
 ### <a name="use-isnull-in-string-concatenation"></a>文字列の連結で ISNULL を使用する  
-文字列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結に NULL 値が含まれている場合、DB2 とは異なる結果を返します。 DB2 では、空の文字セットと同様に NULL 値が処理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NULL を返します。  
+文字列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結に NULL 値が含まれている場合、DB2 とは異なる結果を返します。 DB2 では、空の文字セットと同様に NULL 値が処理されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
   
 -   [ **はい**] を選択すると、SSMA は DB2 連結文字 (| |) を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連結文字 (+) に置き換えます。 SSMA では、連結の両側の式も NULL 値に対してチェックされます。  
   
@@ -472,12 +472,12 @@ SSMA には、DB2 シーケンスを SSMA シーケンスエミュレーター�
 最後に、テーブルの列に割り当てられたシーケンスを変換して、id 値を SQL Server することもできます。 DB2 **テーブル** タブの id 列へのシーケンス間のマッピングを指定する必要があります  
   
 ### <a name="convert-currval-outside-triggers"></a>トリガーの外部の中の VAL を変換する  
-Convert シーケンスジェネレーターが **列 id を使用**するように設定されている場合にのみ表示されます。 DB2 シーケンスはテーブルとは別のオブジェクトであるため、シーケンスを使用する多くのテーブルでは、トリガーを使用して新しいシーケンス値を生成して挿入します。 SSMA は、これらのステートメントをコメントアウトするか、コメントアウトによってエラーが生成されるときにエラーとしてマークします。  
+Convert シーケンスジェネレーターが **列 id を使用** するように設定されている場合にのみ表示されます。 DB2 シーケンスはテーブルとは別のオブジェクトであるため、シーケンスを使用する多くのテーブルでは、トリガーを使用して新しいシーケンス値を生成して挿入します。 SSMA は、これらのステートメントをコメントアウトするか、コメントアウトによってエラーが生成されるときにエラーとしてマークします。  
   
 -   [ **はい**] を選択した場合、ssma は、変換されたシーケンスに対する外部トリガーへのすべての参照を警告付きでマークします。  
   
 -   [ **いいえ**] を選択すると、ssma は、変換されたシーケンスで、外部トリガーへのすべての参照をエラーとしてマークします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [ユーザーインターフェイスリファレンス &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

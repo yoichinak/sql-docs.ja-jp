@@ -13,12 +13,12 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: c5c908d8db988e83d682bbf636de08ef86a8223a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f1917899d58262f670b58843c118864618702950
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644066"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169964"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
 
@@ -68,9 +68,9 @@ ms.locfileid: "97644066"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでにスキップされたセグメントの数。| 
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
+|estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md)の同じ解説が適用されます。  
 

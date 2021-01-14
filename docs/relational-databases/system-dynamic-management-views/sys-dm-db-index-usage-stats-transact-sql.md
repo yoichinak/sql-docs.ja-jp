@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a6691dc481c09f02b0bd1dff2850cbe90e0656
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 23907a0b37bbc4804b9972d830c0c64f0f0d1712
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094159"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171294"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-sql)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "98094159"
 |**last_system_update**|**datetime**|前回のシステム更新の時刻。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  指定したインデックスに対し、1 回のクエリ実行でシーク、スキャン、参照、または更新が行われるたび、その操作はインデックスの使用としてカウントされ、このビュー内の対応するカウンターが 1 増えます。 情報は、ユーザーが送信したクエリによる操作と、統計収集のスキャンなど内部生成されたクエリによる操作の両方についてレポートされます。  
   
  **user_updates** カウンターでは、基になるテーブルまたはビューで行われた挿入、更新、または削除操作に基づく、インデックスのメンテナンスのレベルが示されます。 このビューを使用して、アプリケーションであまり使用されないインデックスを特定できます。 また、メンテナンスのオーバーヘッドの原因になっているインデックスも特定できます。 メンテナンスのオーバーヘッドの原因になっており、クエリでほとんどまたはまったく使用されないインデックスが特定できれば、インデックスの削除を検討することもできます。  
@@ -73,7 +73,7 @@ ms.locfileid: "98094159"
   
  インデックスを使用しているときは、そのインデックスにまだ行が存在しない場合に、行が **sys.dm_db_index_usage_stats** に追加されます。 行が追加されるときに、カウンターが 0 に初期設定されます。  
   
- 、、またはへのアップグレード中に、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sys.dm_db_index_usage_stats のエントリが削除されます。 以降で [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は、エントリは以前と同じように保持され [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ます。  
+ 、、またはへのアップグレード中に、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sys.dm_db_index_usage_stats のエントリが削除されます。 以降で [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] は、エントリは以前と同じように保持され [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
 で [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、 `VIEW SERVER STATE` 権限が必要です。   

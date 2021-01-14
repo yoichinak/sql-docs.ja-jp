@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c1b5bd85e22c4876004b000c5cc41f9f120d681
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b47d4bd97718bab9b25c6cb6d7772b08cd7251f2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095201"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172124"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-sql)
 
@@ -52,7 +52,7 @@ ms.locfileid: "98095201"
 |**trim_reason**|**tinyint**|圧縮された行グループをトリガーした理由は、行の最大数よりも少なくなっています。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-BULKLOAD<br /><br /> 3-再組織<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-スピルオーバー<br /><br /> 9-AUTO_MERGE|  
 |**trim_reason_desc**|**nvarchar(60)**|*Trim_reason* の説明。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: 以前のバージョンのからアップグレードするときに発生しました [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 1-NO_TRIM: 行グループは切り捨てられませんでした。 行グループが最大1048576行で圧縮されました。  行のサブセットが閉じられた後に行のサブセットが削除された場合、行の数が少なくなる可能性があります。<br /><br /> 2-BULKLOAD: 一括読み込みバッチのサイズは、行の数に制限されています。<br /><br /> 3-REORG: REORG コマンドの一部として強制圧縮。<br /><br /> 4-DICTIONARY_SIZE: ディクショナリのサイズが大きすぎて、すべての行をまとめて圧縮できませんでした。<br /><br /> 5-MEMORY_LIMITATION: すべての行をまとめて圧縮するのに十分なメモリがありません。<br /><br /> 6-RESIDUAL_ROW_GROUP: インデックスの構築操作中に行 < 100万を含む最後の行グループの一部として閉じられました<br /><br /> 7-STATS_MISMATCH: インメモリテーブルの列ストアのみです。 Stats が不適切に示されている場合 >は、末尾に100万の修飾された行を指定しますが、これは少なくとも、圧縮された行グループは100万行を < します。<br /><br /> 8-スピルオーバー: インメモリテーブルの列ストアのみです。 末尾 > に100万の行が含まれている場合、その数が 10 ~ 100万の場合、残りの行の最後のバッチは圧縮されます。<br /><br /> 9-AUTO_MERGE: バックグラウンドで実行されている組ムーバーのマージ操作で、この行グループに1つ以上の行グループが統合されています。|  
 |**transition_to_compressed_state**|tinyint|この行グループがデルタストアから列ストアの圧縮状態に移動した方法を示します。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-BULKLOAD<br /><br /> 7-マージ|  
-|**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-操作はデルタストアには適用されません。 または、にアップグレードする前に、行グループが圧縮されて [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] います。この場合、履歴は保持されません。<br /><br /> 2-INDEX_BUILD-インデックスの作成またはインデックスの再構築によって、行グループが圧縮されます。<br /><br /> 3-TUPLE_MOVER-バックグラウンドで実行されている組ムーバーが、行グループを圧縮します。 組ムーバーは、行グループが状態をオープンから終了に変更した後に発生します。<br /><br /> 4-REORG_NORMAL-再編成操作、ALTER INDEX...REORG は、終了した行グループをデルタストアから列ストアに移動しました。 これは、組ムーバーが行グループを移動するのに時間があった前に発生しました。<br /><br /> 5-REORG_FORCED-この行グループはデルタストアで開かれており、行をすべて保持する前に列ストアに強制されていました。<br /><br /> 6-BULKLOAD-一括読み込み操作では、デルタストアを使用せずに行グループを直接圧縮しました。<br /><br /> 7-MERGE-マージ操作では、1つ以上の行グループをこの行グループに統合し、列ストア圧縮を実行しました。|  
+|**transition_to_compressed_state_desc**|nvarchar(60)| 1-NOT_APPLICABLE-操作はデルタストアには適用されません。 または、にアップグレードする前に、行グループが圧縮されて [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] います。この場合、履歴は保持されません。<br /><br /> 2-INDEX_BUILD-インデックスの作成またはインデックスの再構築によって、行グループが圧縮されます。<br /><br /> 3-TUPLE_MOVER-バックグラウンドで実行されている組ムーバーが、行グループを圧縮します。 組ムーバーは、行グループが状態をオープンから終了に変更した後に発生します。<br /><br /> 4-REORG_NORMAL-再編成操作、ALTER INDEX...REORG は、終了した行グループをデルタストアから列ストアに移動しました。 これは、組ムーバーが行グループを移動するのに時間があった前に発生しました。<br /><br /> 5-REORG_FORCED-この行グループはデルタストアで開かれており、行をすべて保持する前に列ストアに強制されていました。<br /><br /> 6-BULKLOAD-一括読み込み操作では、デルタストアを使用せずに行グループを直接圧縮しました。<br /><br /> 7-MERGE-マージ操作では、1つ以上の行グループをこの行グループに統合し、列ストア圧縮を実行しました。|  
 |**has_vertipaq_optimization**|bit|VertiPaq の最適化では、より高い圧縮を実現するために、行グループ内の行の順序を再調整することによって列ストア圧縮が向上します。 ほとんどの場合、この最適化は自動的に行われます。 VertiPaq の最適化が使用されない場合は、次の2つのケースがあります。<br/>  a. デルタ行グループが列ストアに移動し、列ストアインデックスに1つ以上の非クラスター化インデックスがある場合、この例では、マッピングインデックスへの変更を最小限に抑えるために、VertiPaq の最適化がスキップされます。<br/> b. メモリ最適化テーブルの列ストアインデックスの場合。 <br /><br /> 0 = いいえ<br /><br /> 1 = はい|  
 |**generation**|bigint|この行グループに関連付けられている行グループの生成。|  
 |**created_time**|datetime2|この行グループが作成された時刻。<br /><br /> NULL-インメモリテーブルの列ストアインデックスの場合。|  

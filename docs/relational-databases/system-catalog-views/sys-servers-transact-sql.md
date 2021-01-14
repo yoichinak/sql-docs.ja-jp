@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 542db6b144471e2942bb160f1b91d7e2628ace69
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5324370d1635914fbf6436e97cfaaee7d062329b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097906"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171664"
 ---
 # <a name="sysservers-transact-sql"></a>sys. servers (Transact-sql)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "98097906"
 |**is_nonsql_subscriber**|**bit**|サーバーは SQL Server 以外のレプリケーション サブスクライバーです。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1の場合、リモートストアドプロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。|  
 |**modify_date**|**datetime**|サーバー情報が前回変更された日付です。|  
-|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
+|**is_rda_server**|**bit**|**適用対象:** 以降 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 。<br /><br />サーバーはリモートデータアーカイブの有効化 (stretch 対応) です。 詳細については、「 [Enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)」を参照してください。|
   
 ## <a name="permissions"></a>アクセス許可  
  **Provider_string** の値は、呼び出し元が ALTER ANY LINKED SERVER 権限を持っていない限り、常に NULL になります。  

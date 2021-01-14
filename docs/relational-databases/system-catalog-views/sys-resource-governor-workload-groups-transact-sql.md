@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 83d699e2da5e1de1e25a2618171924843c569188
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70718b01e07cc883a030107e461e4390ca4e7cac
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101762"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169640"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "98101762"
 |max_dop|**int**|ワークロード グループの並列処理の最大限度。 既定値は0で、グローバル設定が使用されます。 NULL 値は許可されません。<br /><br /> **ノード:** この設定は、クエリオプション **maxdop** を上書きします。|  
 |group_max_requests|**int**|同時要求の最大数。 既定値は0で、無制限であることを示します。 NULL 値は許可されません。|  
 |pool_id|**int**|このワークロード グループが使用するリソース プールの ID。|  
-|external_pool_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> このワークロードグループが使用する外部リソースプールの ID。|  
+|external_pool_id|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> このワークロードグループが使用する外部リソースプールの ID。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  カタログビューには、格納されているメタデータが表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用し、 [sys.dm_resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)を使用します。  
   
  リソース ガバナーの構成を変更したにもかかわらず、ALTER RESOURCE GOVERNOR RECONFIGURE ステートメントを適用していない場合、異なる構成がメモリ内に格納されている可能性があります。  

@@ -18,12 +18,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a595a2bcb78d86c3a770db6b584974c229a0df
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9c01a9e02576d666c39df13dc6e7e01f6d622a7d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483654"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169874"
 ---
 # <a name="automatic-tuning"></a>自動チューニング
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -99,9 +99,9 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリストアのパフォーマンスを監視し、問題を修正するために必要なすべてのビューと手順について説明します。
 
-では [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 以降では、によって、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] プランの選択の回帰の可能性が検出され、 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV で適用される推奨の操作が示されます。 DMV には、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を解決するために実行できるステートメントなどの詳細が表示されます。
+では [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 以降では、によって、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] プランの選択の回帰の可能性が検出され、 [sys.dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) DMV で適用される推奨の操作が示されます。 DMV には、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 問題を解決するために実行できるステートメントなどの詳細が表示されます。
 
-| 型 | description | DATETIME | score | details | ... |
+| type | description | DATETIME | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が4ミリ秒から14ミリ秒に変更されました | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が37ミリ秒から84ミリ秒に変更されました | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -138,7 +138,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | クエリ \_ id | 現在のプラン \_ id | 推奨されるプラン \_ id | 推定 \_ ゲイン | エラーが発生し \_ やすい
+| reason | score | スクリプト | クエリ \_ id | 現在のプラン \_ id | 推奨されるプラン \_ id | 推定 \_ ゲイン | エラーが発生し \_ やすい
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | CPU 時間が3ミリ秒から46ミリ秒に変更されました | 36 | EXEC sp \_ クエリ \_ ストア \_ force \_ プラン 12, 17; | 12 | 28 | 17 | 11.59 | 0
 

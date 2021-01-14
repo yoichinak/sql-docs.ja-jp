@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eef4f3a36c61a24a1a90c5904db578634a791a80
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c93e9c33174172311a7378219440b7c60b7ab4b8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097509"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172484"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 現在の外部リソースプールの構成に関する CPU アフィニティ情報を返します。
   
@@ -39,7 +39,7 @@ ms.locfileid: "98097509"
 |processor_group|**smallint**|Windows 論理プロセッサグループの ID。 NULL 値は許可されません。|
 |cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリマスク。 NULL 値は許可されません。|
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 アフィニティを使用して作成されたプールは、アフィニティがない `AUTO` ため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) ステートメント」を参照してください。
 
