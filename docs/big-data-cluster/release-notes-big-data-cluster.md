@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 10/19/2020
+ms.date: 01/13/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f328e136bc0b07f23083153277ac98588702b373
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 1382a7e2d1c1e54163c1918b0795197fd9b217cd
+ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489662"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192989"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -62,16 +62,17 @@ ms.locfileid: "97489662"
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のリリース履歴の一覧を次の表に示します。
 
-| リリース <sup>1</sup> | BDC のバージョン    | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン <sup>2</sup>| リリース日 |
-|------------------|----------------|-----------------|--------------|
-| [CU8](#cu8)      | 15.0.4073.23   | 20.2.2          | 2020-10-19   |
-| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
-| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
-| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
-| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
-| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 2020-02-13   |
-| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
-| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
+| リリース <sup>1</sup> | BDC のバージョン | [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] バージョン <sup>2</sup> | リリース日 |
+|--|--|--|--|
+| [CU8-GDR](#cu8-gdr) | 15.0.4083.2  | 20.2.6    | 2021-01-12 |
+| [CU8](#cu8)     | 15.0.4073.23 | 20.2.2    | 2020-10-19 |
+| [CU6](#cu6)     | 15.0.4053.23 | 20.0.1    | 2020-08-04 |
+| [CU5](#cu5)     | 15.0.4043.16 | 20.0.0    | 2020-06-22 |
+| [CU4](#cu4)     | 15.0.4033.1  | 15.0.4033 | 2020-03-31 |
+| [CU3](#cu3)     | 15.0.4023.6  | 15.0.4023 | 2020-03-12 |
+| [CU2](#cu2)     | 15.0.4013.40 | 15.0.4013 | 2020-02-13 |
+| [CU1](#cu1)     | 15.0.4003.23 | 15.0.4003 | 2020-01-07 |
+| [GDR1](#rtm)    | 15.0.2070.34 | 15.0.2070 | 2019-11-04 |
 
 <sup>1</sup> CU7 は BDC では使用できません。
 
@@ -80,6 +81,14 @@ ms.locfileid: "97489662"
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
+
+## <a name="cu8-gdrjanuary-2021"></a><a id="cu8-gdr"></a> CU8-GDR (2021 年 1 月)
+
+SQL Server 2019 の累積的な更新プログラム 8 GDR (CU8-GDR) リリース。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4083.2 |[2019-CU8-GDR1-ubuntu-16.04]<br/><br/>[2019-CU8-GDR1-ubuntu-18.04]
 
 ## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (2020 年 9 月)
 

@@ -8681,9 +8681,6 @@
                       href: ssms/scripting/generate-and-publish-scripts-wizard.md
                     - name: スクリプト生成ウィザードでサポートされるオブジェクト
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-                - name: クエリ エディターとテキスト エディター
-                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15
-                  items:
                     - name: XML エディター
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: クエリ エディターでのコードの色分け
@@ -9103,8 +9100,6 @@
               items:
                 - name: クエリ エディターとテキスト エディター
                   href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
-                - name: データベース エンジン クエリ エディター
-                  href: ./ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: XML エディター
                   href: ssms/scripting/xml-editor-sql-server-management-studio.md
                 - name: エディターの構成
@@ -9223,6 +9218,8 @@
                   href: ssms/menu-help/options-environment-fonts-and-colors-page.md
                 - name: 'オプション (環境 - ヘルプ - [全般] ページ)'
                   href: ssms/menu-help/options-environment-help-general-page.md
+                - name: '[オプション] ([クエリ実行オプション] - [ヘルプ]/[全般] ページ)'
+                  href: ssms/menu-help/options-query-execution.md
                 - name: '[外部ツール]'
                   href: ssms/menu-help/external-tools.md
                 - name: '[カスタマイズ] ([コマンド] ページ)'
