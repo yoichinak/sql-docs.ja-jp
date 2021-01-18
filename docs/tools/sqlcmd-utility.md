@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: fcd184e195ce8c81e16ca4ceaaab03a1f156a812
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c822321323eb5f74fda34df2d540b7c5c79c382
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471833"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151316"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
@@ -917,13 +917,21 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 - 統合セキュリティを使用します。  
 
-- 自動化された環境では **-X** を使用します。  
+- 自動化された環境では **-X[1]** を使用します。
 
 - 適切な NTFS ファイル システム権限を使用して、入力ファイルと出力ファイルのセキュリティを保護します。
 
 - パフォーマンスを向上させるには、複数のセッションではなく、1 つの **sqlcmd** セッションの中で、できるだけ作業するようにします。
 
 - バッチまたはクエリ実行のタイムアウト値を、推定所要時間よりも長めに設定します。
+
+次の説明を参考にして、正確さを最大限に高めます。
+
+- **-V16** を使用して、[重大度 16 レベルのメッセージ](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity)をログに記録します。  重大度 16 のメッセージは、ユーザーが訂正できる一般的なエラーを示します。
+
+- プロセスが終了した後、終了コードと DOS ERRORLEVEL 変数を確認します。  通常、**sqlcmd** からは 0 が返されます。それ以外の場合は、 **-V** によって構成された ERRORLEVEL が設定されます。  つまり、ERRORLEVEL が SQL Server から報告されるエラー番号と同じ値であると想定しないでください。 エラー番号は、システム関数 [ **@@ERROR** ](../t-sql/functions/error-transact-sql.md) に対応する SQL Server 固有の値です。  ERRORLEVEL は、(SQLCMD が) 終了した理由を示す SQLCMD 固有の値であり、その値はコマンド ライン引数 **-b** を指定することによって影響を受けます。
+
+終了コードおよび DOS ERRORLEVEL のチェックと組み合わせて **-V16** を使用すると、自動化された環境 (特に運用リリース前の品質ゲート) でエラーをキャッチできます。
 
 ## <a name="next-steps"></a>次のステップ
 

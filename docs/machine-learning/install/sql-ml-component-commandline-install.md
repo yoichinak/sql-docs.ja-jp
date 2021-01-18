@@ -3,18 +3,18 @@ title: コマンド プロンプトからのインストール
 description: SQL Server コマンド ライン セットアップを実行して、Python と R を備えた Machine Learning Services を SQL Server データベース エンジン インスタンスに追加します。
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/25/2020
+ms.date: 01/07/2021
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 7c9fb33f32a5807f46136ec1ede69386927621ca
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b0bf3444ab09cbbbb4aa8eca225dfa9964898c3
+ms.sourcegitcommit: d681796e8c012eca2d9629d3b816749e9f50f868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471143"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98005327"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>R と Python を備えた SQL Server Machine Learning Services をコマンド ラインからインストールする
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "97471143"
 | /FEATURES = AdvancedAnalytics | In-Database バージョンをインストールします:SQL Server Machine Learning Services (In-Database)。  |
 | /FEATURES = SQL_INST_MR | AdvancedAnalytics と組み合わせて使用します。 Microsoft R Open や R の専用パッケージなど、(In-Database) R 機能をインストールします。 |
 | /FEATURES = SQL_INST_MPY | AdvancedAnalytics と組み合わせて使用します。 Anaconda や Python の専用パッケージなど、(In-Database) Python 機能をインストールします。 |
-| /FEATURES = SQL_INST_MJAVA | AdvancedAnalytics と組み合わせて使用します。 Open JRE など、(In-Database) Java 機能をインストールします。 |
+| /FEATURES = SQL_INST_MJAVA | AdvancedAnalytics と組み合わせて使用します。 Open JRE など、(In-Database) Java 機能をインストールします。 [SQL Server Java 言語拡張](../../language-extensions/install/windows-java.md)に該当します。|
 | /FEATURES = SQL_SHARED_MR | スタンドアロン バージョンの R 機能をインストールします:SQL Server Machine Learning Server (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされない "共有機能" です。|
 | /FEATURES = SQL_SHARED_MPY | スタンドアロン バージョンの Python 機能をインストールします:SQL Server Machine Learning Server (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされない "共有機能" です。|
 | /IACCEPTROPENLICENSETERMS  | オープンソースの R コンポーネントを使用するためのライセンス条項に同意したことを示します。 |

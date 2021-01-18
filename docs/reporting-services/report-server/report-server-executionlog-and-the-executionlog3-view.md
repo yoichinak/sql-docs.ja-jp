@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 28d083e053e31c1fcce26e233ba22211e211a993
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548014"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125590"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -27,7 +27,7 @@ ms.locfileid: "84548014"
 ##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> ログ情報の表示  
  レポート サーバーは、レポート実行に関するデータのログを内部データベース テーブルに記録します。 このテーブルの情報は SQL Server ビューで参照できます。  
   
- レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
+ レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer** です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog **3** を使用することをお勧めします。  
   
  このトピックの内容:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "84548014"
   
 1.  **サービス アプリケーションの** [システム設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページで、 **[ユーザー定義]** セクションを探します。  
   
-2.  **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
+2.  **ExecutionLogLevel** を **verbose** に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal** の 2 つです。  
   
 ##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> ネイティブ モードのレポート サーバーの構成設定  
  レポート実行のログ記録の有効と無効の切り替えは、SQL Server Management Studio の [サーバーのプロパティ] ページで行うことができます。 詳細プロパティの **EnableExecutionLogging** を使用します。  
@@ -95,10 +95,10 @@ ms.locfileid: "84548014"
   
 1.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックします。  
   
-2.  **[ユーザー定義]** セクションで、 **ExecutionLogLevel** を **verbose**に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal**の 2 つです。  
+2.  **[ユーザー定義]** セクションで、 **ExecutionLogLevel** を **verbose** に変更します。 このフィールドはテキスト入力フィールドで、有効な値は **verbose** と **normal** の 2 つです。  
   
 ##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> ログのフィールド (ExecutionLog3)  
- このビューの XML ベースの **AdditionalInfo** 列内に追加のパフォーマンス診断ノードが追加されました。 AdditionalInfo 列には、他の 1 つ以上の情報のフィールドから成る XML 構造が格納されています。 ExecutionLog3 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
+ このビューの XML ベースの **AdditionalInfo** 列内に追加のパフォーマンス診断ノードが追加されました。 AdditionalInfo 列には、他の 1 つ以上の情報のフィールドから成る XML 構造が格納されています。 ExecutionLog3 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer** であることを前提にしています。  
   
 ```  
 Use ReportServer  
@@ -309,7 +309,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 ##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> ログのフィールド (ExecutionLog2)  
- このビューにはフィールドがいくつか追加されたほか、一部のフィールドの名前が変更されています。 ExecutionLog2 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
+ このビューにはフィールドがいくつか追加されたほか、一部のフィールドの名前が変更されています。 ExecutionLog2 ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer** であることを前提にしています。  
   
 ```  
 Use ReportServer  
@@ -328,11 +328,11 @@ select * from ExecutionLog2 order by TimeStart DESC
 |Format|表示形式。|  
 |パラメーター|レポート実行に使用するパラメーター値。|  
 |ReportAction|指定できる値Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
-|TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
-|TimeEnd||  
-|TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
-|TimeProcessing||  
-|TimeRendering||  
+|TimeStart|レポート処理の期間を示す開始時刻。|
+|TimeEnd|レポート処理の期間を示す終了時刻。|
+|TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|
+|TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|
+|TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|
 |source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
@@ -340,7 +340,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。|  
   
 ##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> ログのフィールド (ExecutionLog)  
- ExecutionLog ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
+ ExecutionLog ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer** であることを前提にしています。  
   
 ```  
 Use ReportServer  
