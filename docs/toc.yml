@@ -1986,6 +1986,8 @@
               href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
             - name: 操作
               href: relational-databases/track-changes/work-with-change-data-sql-server.md
+            - name: 相互運用性
+              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
         - name: 変更の追跡
           href: relational-databases/track-changes/about-change-tracking-sql-server.md
           items:
@@ -1995,8 +1997,6 @@
               href: relational-databases/track-changes/manage-change-tracking-sql-server.md
             - name: 操作
               href: relational-databases/track-changes/work-with-change-tracking-sql-server.md
-            - name: 相互運用性
-              href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: トリガー
       items:
         - name: ログオン トリガー
@@ -7785,11 +7785,12 @@
                     - name: .NET Framework でのアプリケーションの開発
                       href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: セキュア エンクレーブを使用する Always Encrypted
-              href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
+                  href: relational-databases/security/encryption/configure-always-encrypted-enclaves.md
                 - name: エンクレーブと構成証明をサポートする環境を設定する
                   items:
-                    - name: ホスト ガーディアン サービスの構成証明を使用した VBS エンクレーブの設定
+                    - name: Set up SQL Server
                       items:
                         - name: ホスト ガーディアン サービスの構成証明の計画
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
@@ -7797,6 +7798,8 @@
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
                         - name: ホスト ガーディアン サービスにコンピューターを登録する
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                        - name: SQL Server でセキュリティで保護されたエンクレーブを構成する
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md
                 - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する
                   items:
                     - name: エンクレーブ対応キーの管理
@@ -7813,12 +7816,10 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
                     - name: 既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
-                  items:
-                    - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-                    - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを SSMS で実行する
-                      href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
+                - name: セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
+                - name: セキュリティで保護されたエンクレーブの一般的な問題のトラブルシューティング
+                  href: relational-databases/security/encryption/always-encrypted-enclaves-troubleshooting.md
                 - name: エンクレーブ対応の列でインデックスを作成して使用する
                   href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
                 - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する
@@ -7964,8 +7965,10 @@
               href: /azure/sql-database/sql-database-always-encrypted-azure-key-vault
         - name: セキュア エンクレーブを使用する Always Encrypted
           items:
-            - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
+            - name: SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要
               href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+            - name: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要 >
+              href: /azure/azure-sql/database/always-encrypted-enclaves-getting-started
             - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
               href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
             - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する
@@ -9220,6 +9223,8 @@
                   href: ssms/menu-help/options-environment-help-general-page.md
                 - name: '[オプション] ([クエリ実行オプション] - [ヘルプ]/[全般] ページ)'
                   href: ssms/menu-help/options-query-execution.md
+                - name: '[オプション] ([Azure サービス] - [ヘルプ] - [全般] ページ)'
+                  href: ssms/menu-help/options-azure-services.md
                 - name: '[外部ツール]'
                   href: ssms/menu-help/external-tools.md
                 - name: '[カスタマイズ] ([コマンド] ページ)'
@@ -9990,6 +9995,8 @@
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
         - name: 可用性グループの作成と構成
           href: linux/sql-server-linux-create-availability-group.md
+        - name: HPE Serviceguard を使用した HA で作成する
+          href: linux/sql-server-availability-group-ha-hpe.md
         - name: Kubernetes への配置
           href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: レプリケーションの設定
