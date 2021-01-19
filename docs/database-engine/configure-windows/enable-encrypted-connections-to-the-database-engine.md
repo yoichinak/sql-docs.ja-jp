@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b18a3131329e0485221a0ae2cdaafd0726a4f31c
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878970"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241840"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 
@@ -40,7 +40,7 @@ ms.locfileid: "97878970"
  サーバー コンピューターには、証明書がプロビジョニングされている必要があります。 サーバー コンピューターで証明書をプロビジョニングするには、Windows に[証明書をインポート](#single-server)します。 クライアント コンピューターは、[証明書のルート証明機関を信頼](#about)するように設定する必要があります。  
   
 > [!IMPORTANT]
-> SSL (Secure Sockets Layer) は、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では廃止されています。 代わりに、トランスポート層セキュリティ (TLS) を使用してください。
+> SSL (Secure Sockets Layer) は、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では廃止されています。 代わりに、トランスポート層セキュリティ (TLS) を使用してください。
 
 ## <a name="transport-layer-security-tls"></a>トランスポート層セキュリティ (TLS)
 
@@ -92,7 +92,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - 証明書の **Subject** プロパティで、共通名 (CN) がサーバー コンピューターのホスト名または完全修飾ドメイン名 (FQDN) と同一であると示されていること。 ホスト名を使用するときは、証明書で DNS サフィックスを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスターで実行されている場合、共通名は仮想サーバーのホスト名または FQDN と同じである必要があり、証明書がフェールオーバー クラスター内のすべてのノードにプロビジョニングされる必要があります。
 
-- ワイルドカード証明書は、[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) でサポートされています。 その後、SNAC は廃止され、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) と [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) に置き換わりました。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳細については、クライアントのドキュメントと [KB 258858](https://support.microsoft.com/kb/258858) を参照してください。       
+- ワイルドカード証明書は、[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) でサポートされています。 その後、SNAC は廃止され、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) と [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) に置き換わりました。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。      
   SQL Server 構成マネージャーを使用して、ワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  
 
   > [!WARNING]  
