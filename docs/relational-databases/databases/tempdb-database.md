@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345c02a175643967a509900ab415b90708a3d9e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 910db0887a50e12163ddeda927159f5e6c97b74b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478303"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169280"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -213,7 +213,7 @@ GO
 ユーザー データベースによって使用されるものとは異なるディスクに、`tempdb` データベースを配置します。
 
 ## <a name="performance-improvements-in-tempdb-for-sql-server"></a>SQL Server の tempdb でのパフォーマンスの強化
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、`tempdb` のパフォーマンスが次の方法でさらに最適化されています。  
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、`tempdb` のパフォーマンスが次の方法でさらに最適化されています。  
   
 - 一時テーブルとテーブル変数はキャッシュされます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行できます。 また、キャッシュによって、ページの割り当てやメタデータの競合も減少します。  
 - 割り当てページ ラッチ プロトコルが改善され、使用される `UP` (更新) ラッチの回数が減っています。  

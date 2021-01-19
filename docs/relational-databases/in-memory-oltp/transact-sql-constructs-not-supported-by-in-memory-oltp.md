@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f28ea2b3ce9520eca770b0808738a53073d70316
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 514c5f035094b2a74a32ac54183136210801b5ce
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438735"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169812"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,12 +54,12 @@ ms.locfileid: "97438735"
 |----------|----------|----------------|  
 |特徴量|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 **CREATE TABLE** ステートメントから ON 句を削除します。<br /><br /> すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。|  
 |データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。|  
-|特徴量|計算列|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、メモリ最適化テーブルでの計算列およびインデックスをサポートしています。|  
+|特徴量|計算列|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、メモリ最適化テーブルでの計算列およびインデックスをサポートしています。|  
 |特徴量|レプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
 |特徴量|FILESTREAM|FILESTREAM ストレージは、メモリ最適化テーブルのサポートされた列ではありません。 列定義から **FILESTREAM** キーワードを削除します。|  
 |特徴量|SPARSE|メモリ最適化テーブルの列を SPARSE として定義することはできません。 列定義から **SPARSE** キーワードを削除します。|  
 |特徴量|ROWGUIDCOL|ROWGUIDCOL オプションはメモリ最適化テーブルの列ではサポートされていません。 列定義から **ROWGUIDCOL** キーワードを削除します。|  
-|特徴量|FOREIGN KEY|**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>メモリ最適化テーブルでは、FOREIGN KEY 制約は、他のメモリ最適化テーブルの主キーを参照している外部キーでのみサポートされます。 外部キーが一意制約を参照している場合は、テーブル定義から制約を削除します。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] では、外部キー制約はメモリ最適化テーブルでサポートされていません。|  
+|特徴量|FOREIGN KEY|**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 以降の SQL Server<br/>メモリ最適化テーブルでは、FOREIGN KEY 制約は、他のメモリ最適化テーブルの主キーを参照している外部キーでのみサポートされます。 外部キーが一意制約を参照している場合は、テーブル定義から制約を削除します。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] では、外部キー制約はメモリ最適化テーブルでサポートされていません。|  
 |特徴量|クラスター化インデックス|非クラスター化インデックスを指定します。 主キー インデックスの場合は **PRIMARY KEY NONCLUSTERED** を指定する必要があります。|  
 |特徴量|DDL 内部トランザクション|メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャは、ユーザー トランザクションのコンテキストで作成または削除できません。 トランザクションを開始せず、CREATE または DROP ステートメントを実行する前にセッション設定 IMPLICIT_TRANSACTION を OFF に設定していることを確認します。|  
 |特徴量|DDL トリガー|DDL 操作のサーバーまたはデータベース トリガーがある場合は、メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャを作成または削除できません。 CREATE/DROP TABLE および CREATE/DROP PROCEDURE のサーバーおよびデータベース トリガーを削除します。|  
@@ -68,7 +68,7 @@ ms.locfileid: "97438735"
 |操作|主キー列の更新|メモリ最適化テーブルおよびテーブル型の主キー列を更新できません。 主キーを更新する必要がある場合は、古い行を削除し、更新された主キーで新しい行を挿入します。|  
 |操作|CREATE INDEX|メモリ最適化テーブルのインデックスは、 **CREATE TABLE** ステートメントまたは **ALTER TABLE** ステートメントを使用してインラインで指定する必要があります。|  
 |操作|CREATE FULLTEXT INDEX|フルテキスト インデックスは、メモリ最適化テーブルでサポートされていません。|  
-|操作|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server:ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]:ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
+|操作|スキーマの変更|メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャでは、以下のスキーマの変更はサポートされていません。<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server:ALTER TABLE、ALTER PROCEDURE、および sp_rename 操作がサポートされています。 拡張プロパティの追加など、その他のスキーマの変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]:ALTER TABLE および ALTER PROCEDURE 操作はサポートされています。 sp_rename など、その他のスキーマ変更はサポートされていません。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]: スキーマの変更はサポートされていません。 メモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャの定義を変更するには、まずオブジェクトを削除し、次に目的の定義でオブジェクトを再作成します。| 
 |操作|TRUNCATE TABLE|メモリ最適化テーブルでは TRUNCATE 操作はサポートされません。 テーブルからすべての行を削除するには、 **DELETE FROM**_table_ を使用してすべての行を削除するか、テーブルを削除してから再作成します。|  
 |操作|ALTER AUTHORIZATION|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャでの所有者の変更はサポートされていません。 所有者を変更するには、テーブルまたはプロシージャを削除した後、再作成します。|  
 |操作|ALTER SCHEMA|既存のメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャを別のスキーマに転送することはサポートされていません。 スキーマ間で転送を行うには、オブジェクトを削除してから再作成します。|  
@@ -111,7 +111,7 @@ ms.locfileid: "97438735"
 |特徴量|SELECT INTO|**INTO** 句は **SELECT** ステートメントではサポートされていません。 クエリを **INSERT INTO** _Table_ **SELECT** に書き換えます。|  
 |特徴量|不完全な挿入列リスト|通常、INSERT ステートメントでは、テーブルのすべての列に値を指定する必要があります。<br /><br /> ただし、メモリ最適化テーブルでは、DEFAULT 制約と IDENTITY(1,1) 列はサポートされません。 これらの列は INSERT 列リストから省略でき、IDENTITY 列の場合は INSERT 列リストから省略する必要があります。|  
 |特徴量|*Function*|いくつかの組み込み関数は、ネイティブ コンパイル ストアド プロシージャではサポートされません。 ストアド プロシージャから、拒否された関数を削除します。 サポートされる組み込み関数の詳細については、<br />「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」または<br />「[ネイティブ コンパイル ストアド プロシージャ](./a-guide-to-query-processing-for-memory-optimized-tables.md)」を参照してください。|  
-|特徴量|CASE|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>**CASE** 式は、ネイティブ コンパイル ストアド プロシージャ内のクエリではサポートされていません。 各ケースのクエリを作成します。 詳細については、「 [ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)」を参照してください。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では CASE 式をサポートしていません。|  
+|特徴量|CASE|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 以降の SQL Server<br/>**CASE** 式は、ネイティブ コンパイル ストアド プロシージャ内のクエリではサポートされていません。 各ケースのクエリを作成します。 詳細については、「 [ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)」を参照してください。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では CASE 式をサポートしていません。|  
 |特徴量|INSERT EXECUTE|参照を削除します。|  
 |特徴量|EXECUTE|ネイティブ コンパイル ストアド プロシージャおよびユーザー定義関数を実行する場合にのみサポートされます。|  
 |特徴量|ユーザー定義集計|ユーザー定義集計関数はネイティブ コンパイル ストアド プロシージャ内で使用できません。 プロシージャから関数への参照を削除します。|  
@@ -139,7 +139,7 @@ ms.locfileid: "97438735"
 |演算子|OFFSET|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **OFFSET** を削除します。|  
 |演算子|INTERSECT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **INTERSECT** を削除します。 場合によっては INNER JOIN を使用して同じ結果を得ることができます。|  
 |演算子|EXCEPT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **EXCEPT** を削除します。|  
-|演算子|APPLY|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、ネイティブ コンパイル モジュール内で APPLY 演算子をサポートしていません。|  
+|演算子|APPLY|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 以降の SQL Server<br/>この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **APPLY** を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、ネイティブ コンパイル モジュール内で APPLY 演算子をサポートしていません。|  
 |演算子|PIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **PIVOT** を削除します。|  
 |演算子|UNPIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **UNPIVOT** を削除します。|  
 |演算子|CONTAINS|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから **CONTAINS** を削除します。|  
@@ -157,7 +157,7 @@ ms.locfileid: "97438735"
 |結合ヒント|HASH、MERGE|ネイティブ コンパイル ストアド プロシージャは、入れ子になったループ結合のみをサポートします。 HASH および MERGE 結合はサポートされていません。 結合ヒントを削除します。|  
 |クエリ ヒント|*クエリ ヒント*|このクエリ ヒントはネイティブ コンパイル ストアド プロシージャ内にありません。 サポートされているクエリ ヒントについては、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。|  
 |オプション|PERCENT|このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **PERCENT** を削除します。|  
-|オプション|WITH TIES|**適用対象:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **WITH TIES** を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、**TOP WITH TIES** をサポートしていません。|  
+|オプション|WITH TIES|**適用対象:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)]<br/>このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **WITH TIES** を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、**TOP WITH TIES** をサポートしていません。|  
 |集計関数|*集計関数*|集計関数はすべてサポートされているわけではありません。 ネイティブ コンパイル T-SQL モジュールでサポートされている集計関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
 |順位付け関数|*順位付け関数*|順位付け関数は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 プロシージャの定義から削除します。|  
 |機能|*Function*|この関数はサポートされません。 ネイティブ コンパイル T-SQL モジュールでサポートされている関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
@@ -172,7 +172,7 @@ ms.locfileid: "97438735"
 |特徴量|インライン テーブル変数の宣言。|テーブル変数は、明示的に定義されたメモリ最適化テーブル型を参照する必要があります。 メモリ最適化テーブル型を作成し、(インライン型を指定する変わりに) 変数の宣言でその型を使用します。|  
 |特徴量|ディスク ベース テーブル|ディスク ベース テーブルには、ネイティブ コンパイル ストアド プロシージャからアクセスできません。 ディスク ベース テーブルへの参照をネイティブ コンパイル ストアド プロシージャから削除します。 または、ディスク ベース テーブルをメモリ最適化テーブルに移行します。|  
 |特徴量|ビュー|ビューには、ネイティブ コンパイル ストアド プロシージャからアクセスできません。 ビューではなく、基になるベース テーブルを参照します。|  
-|特徴量|テーブル値関数|**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 以降の SQL Server<br/>複数ステートメントのテーブル値関数には、ネイティブ コンパイル T-SQL モジュールからアクセスできません。 インライン テーブル値関数はサポートされていますが、NATIVE_COMPILATION で作成する必要があります。<br/><br/>**適用対象**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>テーブル値関数はネイティブ コンパイル T-SQL モジュールから参照できません。|  
+|特徴量|テーブル値関数|**適用対象:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql16-md.md)] 以降の SQL Server<br/>複数ステートメントのテーブル値関数には、ネイティブ コンパイル T-SQL モジュールからアクセスできません。 インライン テーブル値関数はサポートされていますが、NATIVE_COMPILATION で作成する必要があります。<br/><br/>**適用対象**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>テーブル値関数はネイティブ コンパイル T-SQL モジュールから参照できません。|  
 |オプション|PRINT|参照を削除します。|  
 |特徴量|DDL (DDL)|DDL はネイティブ コンパイル T-SQL モジュールでサポートされていません。|  
 |オプション|STATISTICS XML|サポートされていません。 STATISTICS XML を有効にしてクエリを実行すると、ネイティブ コンパイル ストアド プロシージャの部分が欠如した XML コンテンツが返されます。|  

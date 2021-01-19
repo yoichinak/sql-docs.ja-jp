@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: d81ecf6b555022aeac47e810041d96a57f61b00b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468213"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98169751"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -249,7 +249,7 @@ SELECT *
 |ACP|**char**、**varchar**、または **text** データ型の列を、ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
 |OEM (既定値)|**char**、**varchar**、または **text** データ型の列を、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|
 |RAW|コード ページの変換は行われません。 これは最も高速なオプションです。|
-|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンではコード ページ 65001 (UTF-8 エンコード) がサポートされません。|
+|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要**[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] より前のバージョンではコード ページ 65001 (UTF-8 エンコード) がサポートされません。|
 
 ##### <a name="format"></a>FORMAT
 `FORMAT` **=** 'CSV' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.

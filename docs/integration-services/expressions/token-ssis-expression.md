@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2490c95bf099e586de9692b6057f59fc6a6ce2fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc99e599596658019c073b67dbf39b6dd7e573ce
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425354"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125609"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
 
@@ -95,7 +95,7 @@ TOKEN("        a little white dog", " ", 1)
  次の例では、TOKEN 関数は日付文字列から年を返します。  
   
 ```  
-TOKEN("2009/01/01", "/"), 1  
+TOKEN("2009/01/01", "/", 1)
 ```  
   
  次の例では、TOKEN 関数は指定されたパスからファイル名を返します。 たとえば、User::Path の値が "c:\program files files\data\myfile.txt" の場合、TOKEN 関数は "myfile.txt" を返します。 TOKENCOUNT 関数は 4 を返し、TOKEN 関数は 4 番目のトークン "myfile.txt" を返します。  

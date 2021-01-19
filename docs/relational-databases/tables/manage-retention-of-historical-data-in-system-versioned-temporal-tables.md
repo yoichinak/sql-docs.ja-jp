@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f742ece496377a224a67b12223b09d198327812a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484494"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168139"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
 
@@ -70,7 +70,7 @@ Stretch Database 手法の利用では、一時的な履歴テーブルの一部
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Stretch ウィザードを利用し、履歴テーブル全体をストレッチする
 
-初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。
+初心者にとって最も簡単な方法は、Stretch ウィザードを利用して、データベース全体でストレッチを有効にし、Stretch ウィザード内で一時的な履歴テーブルを選択することです (この例では、本来であれば空のデータベースで、Department テーブルをシステム バージョン管理のテンポラル テーブルとして構成しているものと想定しています)。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]では一時的な履歴テーブル自体を右クリックし、[Stretch] をクリックすることはできません。
 
 1. データベースを右クリックし、 **[タスク]** をポイントし、 **[Stretch]** をポイントします。それから、 **[有効化]** をクリックしてウィザードを起動します。
 2. **[テーブルの選択]** ウィンドウで、一時的な履歴テーブルのチェック ボックスを選択し、[次へ] をクリックします。
