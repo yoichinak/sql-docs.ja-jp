@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63e19c205bf635257d8b5b4957fe64b6ec310c64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465463"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172284"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97465463"
   
 インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] とは、ネイティブ コンパイル ストアド プロシージャとは異なる、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチまたはストアド プロシージャを意味します。 インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] による、メモリ最適化されたテーブルへのアクセスは、相互運用アクセスと呼ばれます。  
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降では、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリは、直列モードだけではなく、並列でもメモリ最適化テーブルをスキャンできます。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]以降では、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリは、直列モードだけではなく、並列でもメモリ最適化テーブルをスキャンできます。
 
 メモリ最適化テーブルには、ネイティブ コンパイル ストアド プロシージャを使用してアクセスすることもできます。 ネイティブ コンパイル ストアド プロシージャは、パフォーマンスが重要な OLTP 操作に推奨されます。  
   

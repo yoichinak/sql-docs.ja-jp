@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06db04136d3e38ad62fe71313490c0a54670c46
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5088cb94c4c4387cd77835bbe02502764d3c2384
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479433"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171704"
 ---
 # <a name="create-a-database-user"></a>データベース ユーザーの作成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "97479433"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を初めて使用する場合は、作成するユーザーの種類を決定するのが難しい可能性があります。 まず、データベースにアクセスする必要があるユーザーまたはグループがログインを持っているかどうかを確認します。 master データベース内のログインは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を管理するユーザー、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで複数またはすべてのデータベースにアクセスする必要があるユーザーにとっては一般的です。 ここでは、 **ログインを持つ SQL ユーザー** を作成します。 データベース ユーザーは、ログインの ID として、データベースへの接続時に使用されます。 データベース ユーザーとログインには同じ名前を使用できますが、必ずしもその必要はありません。 このトピックは、既存のログインが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に存在することを前提としています。 ログインの作成方法の詳細については、「 [ログインの作成](../../../relational-databases/security/authentication-access/create-a-login.md)」を参照してください。  
   
- データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー** を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+ データベースにアクセスする必要があるユーザーまたはグループがログインを持っていない場合、かつ 1 つまたは複数のデータベースにだけアクセスする必要がある場合は、 **Windows ユーザー** または **パスワードを持つ SQL ユーザー** を作成します。 このユーザーは包含データベース ユーザーとも呼ばれ、master データベース内のログインに関連付けられません。 これは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス間でデータベースを簡単に移動できるようにするときに最適な選択肢です。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]でこのオプションを使用するには、管理者は最初に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の包含データベースを有効にし、データベースの包含を有効にする必要があります。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
 > **重要:** 包含データベース ユーザーとして接続するときには、接続文字列の一部としてデータベースの名前を指定する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]でデータベースを指定するには、 **[接続先]** ダイアログ ボックスで **[オプション]** をクリックし、 **[接続プロパティ]** タブをクリックします。  
   

@@ -23,12 +23,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 2b4cd2af87ec181766ab98c9d1483ee6425e51e6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7f57b0e829c240813d6f1a453d764e64bce6b279
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438997"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171604"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97438997"
 外部プロセス用のリソースを定義するための外部プールを作成します。 リソース プールは、データベース エンジン インスタンスの物理リソース (メモリと CPU) のサブセットを表します。 Resource Governor を使用すると、サーバー リソースを最大 64 個のリソース プールに分散できます。
 
 ::: moniker range="=sql-server-2016"
-[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
+[!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] の [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] の場合、外部プールは `rterm.exe`、`BxlServer.exe`、およびそれらにより生成された他のプロセスを管理します。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15"

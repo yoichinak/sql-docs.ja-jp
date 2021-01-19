@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9fc87cef0244afc4459c789f94855c0c0530ddd
-ms.sourcegitcommit: e5664d20ed507a6f1b5e8ae7429a172a427b066c
+ms.openlocfilehash: 58f0348a84362b48520c9bd5cf46868cdaea60e0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97697116"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171184"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "97697116"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各バージョンで利用可能な列ストア機能の概要と、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の最新リリース。  
 
  > [!NOTE]
- > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium レベル、Standard レベル (S3 以上)、すべての vCore レベルで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、列ストア インデックスがすべてのエディションで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (SP1 より前) 以前のバージョンでは、列ストア インデックスが Enterprise Edition でのみ使用できます。
+ > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、列ストア インデックスが [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Premium レベル、Standard レベル (S3 以上)、すべての vCore レベルで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降では、列ストア インデックスがすべてのエディションで使用できます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] (SP1 より前) 以前のバージョンでは、列ストア インデックスが Enterprise Edition でのみ使用できます。
  
 ## <a name="feature-summary-for-product-releases"></a>製品リリースの機能の概要  
  列ストア インデックスの主な機能と、これらの機能を利用できる製品をまとめた表を次に示します。  
 
-|列ストア インデックスの機能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|列ストア インデックスの機能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |マルチ スレッド クエリのバッチ モード実行|はい|はい|はい|はい|はい|はい|はい| 
 |シングル スレッド クエリのバッチ モード実行|||はい|はい|はい|はい|はい|  
@@ -67,8 +67,8 @@ ms.locfileid: "97697116"
 ### <a name="functional"></a>機能
 - [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] は、クラスター化列ストア インデックス内の保存されない計算列をサポートします。 保存される計算列は、クラスター化列ストア インデックス内ではサポートされません。 計算列が含まれる列ストア インデックスに非クラスター化インデックスを作成することはできません。 
 
-## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、パフォーマンスと列ストア インデックスの柔軟性を向上させるために重要な機能強化が追加されます。 これらの機能強化により、データ ウェアハウスのシナリオが強化され、リアルタイムの運用分析が可能になります。  
+## [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] には、パフォーマンスと列ストア インデックスの柔軟性を向上させるために重要な機能強化が追加されます。 これらの機能強化により、データ ウェアハウスのシナリオが強化され、リアルタイムの運用分析が可能になります。  
   
 ### <a name="functional"></a>機能  
   

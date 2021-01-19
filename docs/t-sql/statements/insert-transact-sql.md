@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cccb11c84b9b5354d418dae19557f7f76e027cf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095732"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171274"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ MERGE ステートメントでの挿入操作の結果としてヒープに挿�
   
 制限の緩い一括更新 (BU) ロックを保持する `BULK INSERT` ステートメントとは異なり、`TABLOCK` ヒントが指定された `INSERT INTO … SELECT` を使用すると、テーブルに対する排他 (X) ロックが保持されます。 つまり、複数の挿入操作を同時に実行して行を挿入することはできません。 
 
-ただし、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
+ただし、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入するときに、1 つの `INSERT INTO … SELECT` ステートメントを並列実行できるようになりました。 `TABLOCK` ヒントを使用すると、並列挿入を行うことができます。  
 
 上記のステートメントの並列処理には、最小ログ記録の要件と同様の次の要件があります。  
 -   対象テーブルが、空のヒープか、空でないヒープである。  

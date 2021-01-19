@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5790d5eb416f789bbe67f10d28f18a375b4c572
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158930"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171074"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache サーバー構成オプション
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-データベース オブジェクトに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアクセスすると、アクセス チェックが **access check result cache**と呼ばれる内部構造にキャッシュされます。 
+データベース オブジェクトに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアクセスすると、アクセス チェックが **access check result cache** と呼ばれる内部構造にキャッシュされます。 
   
 **access check cache bucket count** オプションは、access check result cache に使用されるハッシュ バケットの数を制御します。 
 
 **access check cache quota** オプションは、access check result cache に格納されるエントリの数を制御します。 エントリが最大数に達すると、最も古いエントリが access check result cache から削除されます。
   
-既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、既定値は次の内部構成に変換されます。
+既定値は 0 で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がこれらのオプションを管理していることを示します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、既定値は次の内部構成に変換されます。
 -   access check cache bucket count の値が 0 の場合、バケット数の既定値は 256 になります。
 -   access check cache quota の値が 0 の場合、エントリの既定値は 1,024 になります。
 

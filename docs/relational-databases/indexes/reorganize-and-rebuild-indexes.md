@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eca1dbef6ff7d519200e46cff7879d7cb0a9b128
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 991a30108d0683d89d8bece48eb0d2de1c1e0d37
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478253"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171884"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>インデックスを再構成または再構築することでインデックス断片化を解決する
 
@@ -110,7 +110,7 @@ ms.locfileid: "97478253"
 |**計算された断片化のパーセント値**|適用されるバージョン|断片化解消ステートメント|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
-|> = 20%|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|ALTER INDEX REORGANIZE|
+|> = 20%|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降|ALTER INDEX REORGANIZE|
 
 ### <a name="to-check-the-fragmentation-of-a-rowstore-index-using-tsql"></a>[!INCLUDE[tsql](../../includes/tsql-md.md)] を利用して行ストア インデックスの断片化を確認するには
 
@@ -234,7 +234,7 @@ object_id   TableName                   index_id    IndexName                   
 - [列ストア インデックス](columnstore-indexes-overview.md)では、再構築によって断片化が解消され、すべての行が列ストアに移動されて、テーブルから論理的に削除された行を物理的に削除することによってディスク領域が解放されます。 
   
   > [!TIP]
-  > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、`REORGANIZE` によってオンライン操作としてバックグラウンドで基本的な再構築が実行されるため、通常、列ストア インデックスの再構築は必要ありません。 
+  > [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、`REORGANIZE` によってオンライン操作としてバックグラウンドで基本的な再構築が実行されるため、通常、列ストア インデックスの再構築は必要ありません。 
   
   構文の例については、[列ストアのリビルド](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)に関するページを参照してください。
 
@@ -382,7 +382,7 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>列ストア インデックスの再構成に固有の注意点
 
-列ストア インデックスを再構成すると、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] によって、CLOSED の各デルタ行グループが、圧縮された行グループとして列ストアに圧縮されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の `REORGANIZE` コマンドでは、次の追加のデフラグ最適化がオンラインで実行されます。
+列ストア インデックスを再構成すると、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] によって、CLOSED の各デルタ行グループが、圧縮された行グループとして列ストアに圧縮されます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の `REORGANIZE` コマンドでは、次の追加のデフラグ最適化がオンラインで実行されます。
 
 - 行の 10% 以上が論理的に削除されたとき、行グループから行を物理的に削除します。 削除されたバイトは、物理メディア上で解放されます。 たとえば、100 万行から成る圧縮された行グループで 10 万行が論理的に削除された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、削除された行を物理的に削除し、90 万行を含む行グループを圧縮し直します。 削除された行を解放することで、記憶域が節約されます。
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23f9507c0db019383aa1cef148a169d83e4a53be
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100813"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171644"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 - [PolyBase][intro_pb] を使用したデータ仮想化とデータ読み込み
 - `BULK INSERT` または `OPENROWSET` を使用した一括読み込み操作
 
-**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
+**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降
 
 ## <a name="syntax"></a>構文
 
@@ -91,8 +91,8 @@ WITH
 
 | 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所 |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降                       |
-| Azure Storage アカウント (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降         階層型名前空間はサポート **されていません** |
+| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降                       |
+| Azure Storage アカウント (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降         階層型名前空間はサポート **されていません** |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降                       |
@@ -212,7 +212,7 @@ SQL Server ビッグ データ クラスターでストレージまたはデー�
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>例 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+## <a name="examples-starting-with-sssql15"></a>例 ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
 
 > [!IMPORTANT]
 > PolyBase をインストールして有効にする方法については、「[Windows への PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください

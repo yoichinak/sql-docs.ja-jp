@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: a036ba8c2b822d5663252b52beeb0ca2e526b969
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670535"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170554"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
-このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+このトピックでは、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] でまだ使用できるものの、非推奨とされた [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]の機能について説明します。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 機能に非推奨の印が付いている場合、それは次のことを意味します。
 -  その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
@@ -45,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能
- 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名**の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
+ 以下の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の次のバージョンではサポートされません。 新規の開発作業ではこれらの機能を使用しないようにし、現在これらの機能を使用しているアプリケーションはできるだけ早く修正してください。 **機能名** の値は、トレース イベントには ObjectName として表示され、パフォーマンス カウンターと `sys.dm_os_performance_counters` にはインスタンス名として表示されます。 **機能 ID** の値は、トレース イベントに ObjectId として表示されます。  
   
 |カテゴリ|非推奨の機能|代替|機能名|機能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
@@ -150,7 +150,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|3 つおよび 4 つの部分で構成された列参照|2 つの部分で構成される名前が標準に準拠した動作です。|3 つ以上の部分で構成される列名|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|SELECT リストの式に対して、列の別名として使用される、引用符で囲まれた文字列:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|列の別名としての文字列リテラル|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|番号付きプロシージャ|[なし] : 使用しないでください。|ProcNums|160|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|DROP INDEX での*table_name.index_name* 構文|DROP INDEX での*index_name* ON *table_name* 構文です。|2 部構成の名前が使用された DROP INDEX|163|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|DROP INDEX での *table_name.index_name* 構文|DROP INDEX での *index_name* ON *table_name* 構文です。|2 部構成の名前が使用された DROP INDEX|163|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|セミコロンで終了しない [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント|[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをセミコロンで (;) で終了してください。|なし|なし|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|GROUP BY ALL|状況に応じて UNION または派生テーブルを使用したカスタム ソリューションを使用してください。|GROUP BY ALL|169|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML ステートメントでの列名としての ROWGUIDCOL の使用|$rowguid を使用してください。|ROWGUIDCOL|182|  
@@ -167,7 +167,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |ツール|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server プロファイラー|なし|  
 |トレース管理オブジェクト|Microsoft.SqlServer.Management.Trace namespace (SQL Server の Trace および Replay オブジェクト用の API が含まれています)|トレース構成: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> トレース読み取り: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> トレース再生:なし|||  
 |SQL トレースのストアド プロシージャ、関数、およびカタログ ビュー|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[拡張イベント](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
-|SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE**ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
+|SET オプション|**SET ROWCOUNT** 、 **INSERT**、および **UPDATE** ステートメントの **DELETE**|TOP キーワード|SET ROWCOUNT|109|  
 
   
 > [!NOTE]  

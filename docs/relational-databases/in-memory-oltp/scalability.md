@@ -12,25 +12,25 @@ ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 251af732e6c55ee2b5567bb181859b1fdec1360a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e72e67bf033ecef94b318d69b31f33604572cf8
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485224"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172064"
 ---
 # <a name="scalability"></a>スケーラビリティ
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブル用のディスク上ストレージに対するスケーラビリティ機能が強化されています。 
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、メモリ最適化テーブル用のディスク上ストレージに対するスケーラビリティ機能が強化されています。 
 
 ## <a name="multiple-threads-to-persist-memory-optimized-tables"></a>メモリ最適化テーブルを保持する複数のスレッド  
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] には、メモリ最適化テーブルへの変更についてトランザクション ログをスキャンし、メモリ最適化テーブルをチェックポイント ファイル (データ ファイルや差分ファイルなど) に保持する 1 つのオフライン チェックポイント スレッドがありました。 コア数が多いコンピューターの場合、1 つのオフライン チェックポイント スレッドでは処理が遅れることがありました。  
   
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、メモリ最適化テーブルへの変更を保持する複数の同時実行スレッドがあります。  
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、メモリ最適化テーブルへの変更を保持する複数の同時実行スレッドがあります。  
   
 ## <a name="multi-threaded-recovery"></a>マルチ スレッドの回復
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のリリースでは、回復操作の一環としてのログ適用がシングル スレッド化されていました。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、ログ適用はマルチ スレッドです。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のリリースでは、回復操作の一環としてのログ適用がシングル スレッド化されていました。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、ログ適用はマルチ スレッドです。  
   
 ## <a name="merge-operation"></a>MERGE 操作  
 MERGE 操作はマルチ スレッドになりました。  

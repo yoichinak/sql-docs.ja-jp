@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 43c75b4462f8a725e5ce06d4d5eb545000bc8bb7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ea4130d49d35f1bdb9a5c74b74fff32052db9bc5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095788"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172054"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、既定値を削除します。  
   
@@ -79,7 +79,7 @@ IF EXISTS (SELECT name FROM sys.objects
 GO  
 ```  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、次の構文を使うことができます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、次の構文を使うことができます。  
   
 ```sql  
 DROP DEFAULT IF EXISTS datedflt;  

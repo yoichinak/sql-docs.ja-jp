@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: eda240576ebb819e387e3fb93d55a06b6a1c1d9e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8f884c24acbb4499cbab2e7837367ec49e0c7cbb
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102382"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172324"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -217,12 +217,12 @@ IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
 クエリで非クラスター化メモリ最適化列ストア インデックスが使用されないようにします。 クエリに、列ストア インデックスの使用を回避するクエリ ヒントと、列ストア インデックスを使用するインデックス ヒントがある場合、ヒントが競合してクエリはエラーを返します。  
   
 MAX_GRANT_PERCENT = <numeric_value>     
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 
 構成されているメモリ制限の最大メモリ許可サイズ (%)。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこのヒントで指定されている値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
   
 MIN_GRANT_PERCENT = <numeric_value>        
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 
 構成されているメモリ制限の最小メモリ許可サイズ (%)。 クエリを開始するために最小限必要なメモリがあるため、クエリには確実に `MAX(required memory, min grant)` が割り当てられます。 有効な値では、0.0 ～ 100.0 します。  
  
@@ -244,7 +244,7 @@ MAXRECURSION <integer_value>
 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。     
   
 NO_PERFORMANCE_SPOOL    
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
   
 Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、スプールで tempdb が使用され、スプール操作が実行されている多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
   
@@ -296,7 +296,7 @@ ROBUST PLAN
 このようなプランが可能でない場合は、クエリ実行の後でエラー検出を行うのではなく、クエリ オプティマイザーがエラーを返します。 行は可変長列で構成されている可能性があります。[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が処理できる範囲を超えた最大可能サイズを持つように、行を定義できます。 通常、可能な最大サイズに関係なく、アプリケーションは[!INCLUDE[ssDE](../../includes/ssde-md.md)]の処理能力で実際に対応できるサイズの行を格納します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が長すぎる行を検出した場合は、実行エラーが返されます。  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
  
 1 つ以上の追加のヒントをクエリ プロセッサに指定します。 追加のヒントは、ヒント名を **単一引用符で囲んで** 指定します。   
 
@@ -359,7 +359,7 @@ ROBUST PLAN
     
 *  'QUERY_PLAN_PROFILE'      
  クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。    
-   **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
+   **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
 
    > [!NOTE]
    > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      

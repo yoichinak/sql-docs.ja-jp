@@ -8,18 +8,18 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 075a2e7ed11abe0ceadfa4f50ba82ca57ff97f0e
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: ecb634a770b4990bfbbc094b15498b03bdea4a57
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785156"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172004"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の可用性グループを作成および構成する
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-このチュートリアルでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux の可用性グループ (AG) を作成および構成する方法について説明します。 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] on Windows 以前とは異なり、基になる Pacemaker クラスターを最初に作成してもしなくても AG を有効にできます。 必要な場合でも、クラスターとの統合は後まで行われません。
+このチュートリアルでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux の可用性グループ (AG) を作成および構成する方法について説明します。 [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] on Windows 以前とは異なり、基になる Pacemaker クラスターを最初に作成してもしなくても AG を有効にできます。 必要な場合でも、クラスターとの統合は後まで行われません。
 
 チュートリアルには次のタスクが含まれます。
  

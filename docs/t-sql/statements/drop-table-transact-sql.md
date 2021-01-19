@@ -38,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246ba275b1e918f063e05b22d9ec3637b9a5631e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7096cc309a826d88ba160882fe3b4da2bff87534
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099460"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171504"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +77,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。 Azure SQL Database では、4 つの要素で構成された名前はサポートされません。  
   
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、テーブルを削除します。  
   
@@ -123,7 +123,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 一時テーブルを削除する  
- 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で使用できる **IF EXISTS** 構文は使用しません。  
+ 次の例では、一時テーブルを作成して、その存在テストを行います。さらに、このテーブルを削除して、再度存在テストを行います。 この例では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降で使用できる **IF EXISTS** 構文は使用しません。  
   
 ```sql  
 CREATE TABLE #temptable (col1 INT);  
@@ -142,7 +142,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS を使用してテーブルを削除する  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  次の例では、T1 のという名前のテーブルを作成します。 2 番目のステートメントで、テーブルを削除します。 3 番目のステートメントでは、テーブルがすでに削除されているため、何も操作が実行されませんが、エラーは発生しません。  
   

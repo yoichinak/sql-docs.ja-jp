@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b2e8810783bb3341f10b21c3068881558dfc611
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 02ddc1ad96f45ba67ed613ee7446d8a1c12e1e5b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97403908"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171404"
 ---
 # <a name="thread-and-task-architecture-guide"></a>スレッドおよびタスクのアーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "97403908"
 > -  ワーカー 2 はミリ秒未満の短時間タスクを行います。そのため、そのクォンタムが完全に使用される前に一時停止する必要があります。     
 >
 > このシナリオおよび [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、ワーカー 1 には、全体的クォンタム時間を増やすことで、基本的にスケジューラーを独占することが許可されます。   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、共同作業スケジューリングには、Large Deficit First (LDF) スケジューリングが含まれます。 LDF スケジューリングにより、クォンタム使用パターンが監視されており、1 つのワーカー スレッドでスケジューラーが独占されることがありません。 同じシナリオで、ワーカー 2 には、ワーカー 1 にクォンタムを増やすことが許可される前に、クォンタムを繰り返し使用することが許可されます。そのため、ワーカー 1 では、好ましくないパターンでスケジューラーを独占することができません。
+> [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降、共同作業スケジューリングには、Large Deficit First (LDF) スケジューリングが含まれます。 LDF スケジューリングにより、クォンタム使用パターンが監視されており、1 つのワーカー スレッドでスケジューラーが独占されることがありません。 同じシナリオで、ワーカー 2 には、ワーカー 1 にクォンタムを増やすことが許可される前に、クォンタムを繰り返し使用することが許可されます。そのため、ワーカー 1 では、好ましくないパターンでスケジューラーを独占することができません。
 
 ### <a name="scheduling-parallel-tasks"></a>並列タスクのスケジューリング
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が MaxDOP 8 で構成され、CPU アフィニティが NUMA ノード 0 と 1 で 24 個の CPU (スケジューラ) 用に構成されているとします。 スケジューラ 0 から 11 は NUMA ノード 0 に属しており、スケジューラ 12 から 23 は NUMA ノード 1 に属しています。 アプリケーションは、次のクエリ (要求) を[!INCLUDE[ssde_md](../includes/ssde_md.md)]に送信します。

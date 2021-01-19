@@ -11,12 +11,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 73c70e347de00a18f4c4ec5ce3228d6d000d16f0
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 45b0ba2a207be68b0faaea0af0ba7592ae1f0f94
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975486"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172274"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 
@@ -39,7 +39,7 @@ ms.locfileid: "97975486"
   
 -   **現在の環境:** 現在の環境を調査して、使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと、実際の環境に接続されているクライアントを把握します。  
   
-    -   **クライアント プロバイダー:** アップグレード中はクライアントごとにプロバイダーを更新する必要はありませんが、更新してもかまいません。 [!INCLUDE[sql14](../../includes/sssql14-md.md)] 以前からアップグレードする場合、次の [!INCLUDE[sql15](../../includes/sssql15-md.md)] 機能では、追加機能を利用するために更新されたプロバイダー、またはクライアントごとに更新されたプロバイダーが必要です。  
+    -   **クライアント プロバイダー:** アップグレード中はクライアントごとにプロバイダーを更新する必要はありませんが、更新してもかまいません。 [!INCLUDE[sql14](../../includes/sssql14-md.md)] 以前からアップグレードする場合、次の [!INCLUDE[sql15](../../includes/sssql16-md.md)] 機能では、追加機能を利用するために更新されたプロバイダー、またはクライアントごとに更新されたプロバイダーが必要です。  
   
        -   [Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   

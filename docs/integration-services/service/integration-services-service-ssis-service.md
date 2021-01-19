@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: a665d78d180d87fe0d412b025bcce75d509285d4
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90990410"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171204"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
 
@@ -274,7 +274,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>構成ファイルの場所の変更  
- レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用する構成ファイルの場所と名前を指定します。 レジストリ キーの既定値は、**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml** です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 パスのバージョン番号 (SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は 120、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は 130 など) は、SQL Server のバージョンによって異なるので注意してください。
+ レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** には、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用する構成ファイルの場所と名前を指定します。 レジストリ キーの既定値は、**C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml** です。 レジストリ キーの値を更新すると、構成ファイルに別の名前と場所を使用することができます。 パスのバージョン番号 (SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は 120、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の場合は 130 など) は、SQL Server のバージョンによって異なるので注意してください。
   
 > [!CAUTION]  
 >  レジストリの編集を誤ると、深刻な問題が発生し、オペレーティング システムの再インストールが必要になる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レジストリの誤った編集により発生した問題に関しては、一切責任を負わないものとします。 レジストリを編集する前に、重要なデータをすべてバックアップしてください。 レジストリのバックアップ、復元、および編集の方法については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [Microsoft Windows レジストリの説明](https://support.microsoft.com/kb/256986)」を参照してください。  

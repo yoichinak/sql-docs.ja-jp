@@ -18,12 +18,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 345601ea43048fca18fabb93b52d5d5f4eb153d0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0271ca850648af434d225429976b4e111e49d498
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472603"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171384"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "97472603"
 
 変更追跡で有効な各テーブルにはディスク上の内部テーブルがあり、変更追跡機能ではこのテーブルを使用して、変更バージョンと特定のバージョン以降に変更された行が判別されます。 **自動クリーンアップ** スレッドがウェイクアップされるたびに、SQL Server インスタンスのすべてのユーザー データベースがスキャンされ、変更追跡が有効なデータベースが識別されます。 データベースの保有期間の設定に基づき、各ディスク上の内部テーブルから有効期限切れのレコードが削除されます。
 
-ストアド プロシージャは、内部変更追跡テーブルの手動クリーンアップを実行するために [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 用 Service Pack に追加されました。 ストアド プロシージャの詳細については、[KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) を参照してください。 
+ストアド プロシージャは、内部変更追跡テーブルの手動クリーンアップを実行するために [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 用 Service Pack に追加されました。 ストアド プロシージャの詳細については、[KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) を参照してください。 
   
 ## <a name="see-also"></a>参照  
  [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   

@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7854c78f0643294b1b5111c1b6f2e0b0ef07afa6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f04986f085653957bd685ae0db72a14a109e8079
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099594"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170754"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -293,7 +293,7 @@ LOB_COMPACTION = OFF
 -   CLOSED デルタ行グループを圧縮された行グループに移動する場合、REORGANIZE は必須ではありません。 CLOSED デルタ行グループを圧縮するために、組ムーバー (TM) バックグラウンド プロセスが定期的に起動します。 組ムーバーに遅延がある場合は、REORGANIZE の使用をお勧めします。 REORGANIZE では、行グループをより積極的に圧縮できます。  
 -   すべての OPEN 行グループと CLOSED 行グループを圧縮するには、このセクションの `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)` オプションを参照してください。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における列ストア インデックスの場合、REORGANIZE では、次の追加のデフラグ最適化がオンラインで実行されます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における列ストア インデックスの場合、REORGANIZE では、次の追加のデフラグ最適化がオンラインで実行されます。  
   
 -   行の 10% 以上が論理的に削除されたとき、行グループから行を物理的に削除します。 削除されたバイトは、物理メディア上で解放されます。 たとえば、100 万行から成る圧縮された行グループで 10 万行が論理的に削除された場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、削除された行を物理的に削除し、90 万行を含む行グループを圧縮し直します。 削除された行を解放することで、記憶域が節約されます。  
   
@@ -304,7 +304,7 @@ LOB_COMPACTION = OFF
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  列ストア インデックスに適用されます。 
 
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS では、OPEN デルタ行グループまたは CLOSED デルタ行グループを強制的に列ストアに移動することができます。 このオプションを使用すると、デルタ行グループを空にするために列ストア インデックスを再構築する必要がありません。  このオプションを他の削除およびマージ最適化機能と組み合わせて使用すれば、ほとんどの状況でインデックスを再構築する必要はなくなります。    
 
@@ -410,7 +410,7 @@ STATISTICS_INCREMENTAL = { ON | **OFF** }
  XML インデックスまたは空間インデックスの場合、`ONLINE = OFF` だけがサポートされます。ONLINE を ON に設定すると、エラーが発生します。  
   
 > [!IMPORTANT]
-> オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
+> オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
   
  ON  
  長期のテーブル ロックは、インデックス操作の間は保持されません。 インデックス操作の主なフェーズの間は、基になるテーブル上に、インテント共有 (IS) ロックのみが保持されます。 これによって、基になるテーブルおよびインデックスに対してクエリや更新を続けることができます。 操作の開始時、非常に短い時間、ソース オブジェクトでは共有 (S) ロックが保持されます。 操作の終了時、非クラクタ化インデックスが作成される場合は、短い時間、ソース オブジェクト上で S ロックが保持されます。また、クラスター化インデックスがオンラインで作成または削除されるか、クラスター化または非クラスター化インデックスが再構築される場合は、SCH-M (スキーマ修正) ロックが取得されます。 インデックスがローカルの一時テーブルに作成される場合、ONLINE は ON にできません。  
@@ -512,7 +512,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 COMPRESSION_DELAY **=** { **0** |*期間 [分]* }  
 
-**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)  
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)  
   
  ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が遅延によって指定され、その時間が経過すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間と更新時間が追跡されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLOSED 状態のデルタ行グループに遅延を適用します。  
   
@@ -835,7 +835,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- TABLOCK オプションを使用して、行を並列に挿入します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降のバージョンでは、TABLOCK を使用すると、INSERT INTO 操作を並列に実行できます。  
+ TABLOCK オプションを使用して、行を並列に挿入します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降のバージョンでは、TABLOCK を使用すると、INSERT INTO 操作を並列に実行できます。  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -875,7 +875,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. すべての OPEN デルタ行グループおよび CLOSED デルタ行グループを列ストアに圧縮する  
- **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  コマンド REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) では、OPEN および CLOSED のデルタ行グループをそれぞれ圧縮し、圧縮された行グループとして列ストアに移動します。 これにより、デルタストアは空になり、すべての行が強制的に列ストアに圧縮されます。 これは多くの挿入操作を実行した後で特に便利です。挿入操作を多く実行すると行が 1 つまたは複数のデルタ行グループに格納されるからです。  
   
@@ -893,10 +893,10 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. オンラインで列ストア インデックスを最適化する  
  適用対象: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降のバージョンでは、REORGANIZE によってより多くのデルタ行グループが列ストアに圧縮されます。 また、オンラインでの最適化も行われます。 まず、行グループ内にある行の 10% 以上が削除されると、削除された行を物理的に削除することで、列ストアのサイズを縮小します。  次に、複数の行グループを結合して、より大きな行グループを形成します。行グループあたり最大で 1,024,576 行を含めることができます。  変更された行グループはすべて再度圧縮されます。  
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降のバージョンでは、REORGANIZE によってより多くのデルタ行グループが列ストアに圧縮されます。 また、オンラインでの最適化も行われます。 まず、行グループ内にある行の 10% 以上が削除されると、削除された行を物理的に削除することで、列ストアのサイズを縮小します。  次に、複数の行グループを結合して、より大きな行グループを形成します。行グループあたり最大で 1,024,576 行を含めることができます。  変更された行グループはすべて再度圧縮されます。  
   
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降のバージョンでは、ほとんどの状況で列ストア インデックスを再構築する必要はなくなりました。REORGANIZE によって行が物理的に削除され、行グループがマージされるからです。 COMPRESS_ALL_ROW_GROUPS オプションを指定すると、OPEN または CLOSED の行グループがすべて列ストアに強制的に圧縮されます。以前、この処理は再構築によってのみ可能でした。 REORGANIZE はオンラインで動作し、バックグラウンドで実行されます。このため、操作が発生してもクエリを続行することができます。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降のバージョンでは、ほとんどの状況で列ストア インデックスを再構築する必要はなくなりました。REORGANIZE によって行が物理的に削除され、行グループがマージされるからです。 COMPRESS_ALL_ROW_GROUPS オプションを指定すると、OPEN または CLOSED の行グループがすべて列ストアに強制的に圧縮されます。以前、この処理は再構築によってのみ可能でした。 REORGANIZE はオンラインで動作し、バックグラウンドで実行されます。このため、操作が発生してもクエリを続行することができます。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -908,7 +908,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 適用対象:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、ALTER INDEX REBUILD ではなく ALTER INDEX REORGANIZE を使用することをお勧めします。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、ALTER INDEX REBUILD ではなく ALTER INDEX REORGANIZE を使用することをお勧めします。  
   
 > [!NOTE]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] において、REORGANIZE は CLOSED 行グループを列ストアに圧縮するためにのみ使用されます。 最適化操作を実行し、すべてのデルタ行グループを列ストアに強制的に移動する唯一の方法は、インデックスを再構築することです。  
@@ -946,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. クラスター化列ストア インデックスのパーティションをオフラインで再構築する  
  **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)  
  
- 大きなクラスター化列ストア インデックスのパーティションを再構築するには、ALTER INDEX REBUILD とパーティション オプションを一緒に使用します。 この例では、パーティション 12 を再構築します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、REBUILD を REORGANIZE に置き換えることをお勧めします。  
+ 大きなクラスター化列ストア インデックスのパーティションを再構築するには、ALTER INDEX REBUILD とパーティション オプションを一緒に使用します。 この例では、パーティション 12 を再構築します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、REBUILD を REORGANIZE に置き換えることをお勧めします。  
   
 ```sql  
 ALTER INDEX cci_fact3   

@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: b32b17c2909b22068daf4090f0cac7bb6575706a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a0b3238eb85d1fc916d0543bb9723e9a44a7a884
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094662"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171804"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
 
@@ -139,7 +139,7 @@ REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 *logical_file_name*: ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。
 
 > [!WARNING]
-> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
+> `FILE_SNAPSHOT` のあるデータベース ファイルを削除する関連付けられているバックアップは成功しますが、関連付けられたスナップショットを参照するデータベース ファイルのバックアップを無効化を回避するのには削除されません。 ファイルは切り捨てられますが、FILE_SNAPSHOT のバックアップをそのままの状態に保つために物理的には削除されません。 詳細については、「[Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
 
 変更するファイルを指定します。 一度に 1 つの \<filespec> プロパティだけを変更できます。 変更するファイルを識別するには、\<filespec> に NAME を指定する必要があります。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。
 
@@ -242,7 +242,7 @@ FILEGROWTH が指定されていない場合、既定値は次のとおりです
 
 |Version|既定値|
 |-------------|--------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
+|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|
 
@@ -286,13 +286,13 @@ DEFAULT: 既定のデータベース ファイル グループを *filegroup_nam
 
 NAME = *new_filegroup_name*: ファイル グループ名を *new_filegroup_name* に変更します。
 
-AUTOGROW_SINGLE_FILE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+AUTOGROW_SINGLE_FILE **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たす場合は、そのファイルのみが拡張されます。 これは既定値です。
 
 AUTOGROW_ALL_FILES
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)
 
 ファイル グループ内のファイルが自動拡張のしきい値を満たすときに、ファイル グループ内のすべてのファイルを拡張します。
 

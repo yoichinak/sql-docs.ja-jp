@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a2c4ba7f0a52a7a9eae4a9407685c95b0b179c8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 371e5230707c4b82680213689f8e4cd4ddc45986
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480433"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170294"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -165,7 +165,7 @@ OBJECTPROPERTYEX ( id , property )
 |UserDataAccess|関数、ビュー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス内にある、ユーザー データやユーザー テーブルにオブジェクトがアクセスします。<br /><br /> 1 = 読み取り<br /><br /> 0 = なし<br /><br /> 基本データ型: **int**|  
 |TableHasColumnSet|テーブル|テーブルに列セットがあります。<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|  
 |カーディナリティ|テーブル (システムまたはユーザー定義)、ビュー、またはインデックス|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 指定されたオブジェクト内の行数。|  
-|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
+|TableTemporalType|テーブル|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降。<br /><br /> テーブルの種類を指定します。<br /><br /> 0 = 非テンポラル テーブル<br /><br /> 1 = システムのバージョン情報のテーブルの履歴テーブル<br /><br /> 2 = システムのバージョン情報のテンポラル テーブル|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  

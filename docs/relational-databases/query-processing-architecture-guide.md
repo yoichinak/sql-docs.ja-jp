@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 62ea3f9484c232112317af9f0cb7bf8d8facde2f
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639025"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170514"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -127,7 +127,7 @@ GO
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、実行プランを表示するための 3 つのオプションがあります。        
-> -  *" *_[推定実行プラン](../relational-databases/performance/display-the-estimated-execution-plan.md)_* "_。これは、クエリ オプティマイザーによって生成された、コンパイル済みプランです。        
+> -  *"*_[推定実行プラン](../relational-databases/performance/display-the-estimated-execution-plan.md)_*"_。これは、クエリ オプティマイザーによって生成された、コンパイル済みプランです。        
 > -  " _*_ [実際の実行プラン](../relational-databases/performance/display-an-actual-execution-plan.md) _*_ "。これは、コンパイル済みプランにその実行コンテキストを加えたものと同じです。 これには、実行が完了した後に利用可能なランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの[!INCLUDE[ssde_md](../includes/ssde_md.md)]の場合) が含まれます。        
 > -  " _*_ [ライブ クエリ統計](../relational-databases/performance/live-query-statistics.md) _*_ "。これは、コンパイル済みプラン (その実行コンテキストを含む) と同じです。 これには、実行が進行中のランタイム情報が含まれ、1 秒ごとに更新されます。 ランタイム情報には、演算子を通過する実際の行数などが含まれます。       
 
@@ -550,7 +550,7 @@ GO
 > `sys.dm_exec_requests` DMV には、各レコードの `statement_start_offset` および `statement_end_offset` 列が含まれており、現在実行中のバッチまたは持続オブジェクトの現在実行中のステートメントを参照します。 詳細については、「[sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。       
 > また、`sys.dm_exec_query_stats` DMV には、バッチまたは持続オブジェクト内のステートメントの位置を参照する、各レコードのこれらの列が含まれています。 詳細については、「[sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)」を参照してください。     
 
-バッチの実際の [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、 **SQL Manager** キャッシュ (SQLMGR) と呼ばれる、プラン キャッシュとは別のメモリ領域に格納されます。 コンパイル済みプランの [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、sql manager キャッシュから **SQL ハンドル** を使用して取得できます。これは、参照元の 1 つ以上のプランがプラン キャッシュに残っている間だけ一定に保たれる一時 ID です。 sql ハンドルは、バッチ テキスト全体から派生したハッシュ値であり、すべてのバッチで一意であることが保証されます。
+バッチの実際の [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、**SQL Manager** キャッシュ (SQLMGR) と呼ばれる、プラン キャッシュとは別のメモリ領域に格納されます。 コンパイル済みプランの [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、sql manager キャッシュから **SQL ハンドル** を使用して取得できます。これは、参照元の 1 つ以上のプランがプラン キャッシュに残っている間だけ一定に保たれる一時 ID です。 sql ハンドルは、バッチ テキスト全体から派生したハッシュ値であり、すべてのバッチで一意であることが保証されます。
 
 > [!NOTE]
 > コンパイル済みプランと同様に、[!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、コメントを含め、バッチごとに格納されます。 sql ハンドルには、バッチ テキスト全体の MD5 ハッシュが含まれており、すべてのバッチで一意であることが保証されます。
@@ -695,7 +695,7 @@ sql_handle
 * 実行プランは頻繁に参照されるため、そのコストがゼロになることはありません。 メモリ負荷が存在せず、現在のコストがゼロでない場合、実行プランはプラン キャッシュに残り、削除されません。
 * アドホック実行プランは挿入され、メモリ負荷が生じるまでは再度参照されることはありません。 アドホック実行プランは、現在のコストがゼロで初期化されます。そのため、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は実行プランを検証するときに現在のコストがゼロであると認識し、プラン キャッシュから実行プランを削除します。 メモリ負荷が存在しない場合、アドホック実行プランは、現在のコストがゼロでプラン キャッシュに残ります。
 
-キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) はプラン キャッシュを含むすべてのキャッシュの消去に使用できます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) および [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) を使用して一部の構成設定を変更すると、プラン キャッシュからプランが削除されることがあります。 これらの構成設定の一覧については、「[DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)」の記事の「注釈」を参照してください。 このような構成の変更があると、次の情報メッセージがエラー ログに記録されます。
+キャッシュから 1 つまたはすべてのプランを手動で削除するには、 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)を使用します。 [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) はプラン キャッシュを含むすべてのキャッシュの消去に使用できます。 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。 [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) および [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) を使用して一部の構成設定を変更すると、プラン キャッシュからプランが削除されることがあります。 これらの構成設定の一覧については、「[DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)」の記事の「注釈」を参照してください。 このような構成の変更があると、次の情報メッセージがエラー ログに記録されます。
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1077,11 +1077,11 @@ WHERE ProductID = 63;
 ### <a name="degree-of-parallelism"></a><a name="DOP"></a> 並列処理の次数
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、並列クエリの実行またはインデックス DDL (データ定義言語) 操作のインスタンスごとに、並列処理の最適な次数を自動的に検出します。 この処理は次の基準に基づいて実行されます。 
 
-1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が、SMP (対称型マルチプロセッシング) コンピューターなど、 **複数のマイクロプロセッサまたは CPU を搭載したコンピューター上で実行** されているかどうか。 並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が、SMP (対称型マルチプロセッシング) コンピューターなど、**複数のマイクロプロセッサまたは CPU を搭載したコンピューター上で実行** されているかどうか。 並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
 
 2. **十分な数のワーカー スレッドを使用できる** かどうか。 各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
 
-3. **実行するクエリまたはインデックス操作の種類** 。 インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
+3. **実行するクエリまたはインデックス操作の種類**。 インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
 
 4. **処理する十分な数の行** があるかどうか。 クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
 
@@ -1098,23 +1098,23 @@ WHERE ProductID = 63;
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] およびデータベース互換性レベル 110 以降、`SELECT … INTO` ステートメントは並列実行できるようになりました。 他の形式の挿入演算子は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の説明と同じように機能します。
 
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入し、TABLOCK ヒントを使用するときに、`INSERT … SELECT` ステートメントを並列実行できるようになりました。 ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。 詳細については、「[INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)」を参照してください。
+[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] およびデータベース互換性レベル 130 以降、ヒープまたはクラスター化列ストア インデックス (CCI) に挿入し、TABLOCK ヒントを使用するときに、`INSERT … SELECT` ステートメントを並列実行できるようになりました。 ローカル一時テーブル (# プレフィックスで識別されます) とグローバル一時テーブル (## プレフィックスで識別されます) への挿入は、TABLOCK ヒントを使用した並列処理にも有効です。 詳細については、「[INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)」を参照してください。
 
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 
 #### <a name="overriding-degrees-of-parallelism"></a>並列処理の次数のオーバーライド
 並列プランの実行で使用するプロセッサの数は、並列処理の次数によって設定されます。 この構成は、次のさまざまなレベルで設定できます。
 
-1.  サーバー レベル。 **並列処理の最大限度 (MAXDOP)** の [サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+1.  サーバー レベル。**並列処理の最大限度 (MAXDOP)** の [サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
     > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] では、インストール プロセス中に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
 
-2.  ワークロード レベル。 **MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../t-sql/statements/create-workload-group-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+2.  ワークロード レベル。**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../t-sql/statements/create-workload-group-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
-3.  データベース レベル。 **MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+3.  データベース レベル。**MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
-4.  クエリまたはインデックス ステートメント レベル。 **MAXDOP** [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)または **MAXDOP** インデックス オプションを使用します。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+4.  クエリまたはインデックス ステートメント レベル。**MAXDOP** [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)または **MAXDOP** インデックス オプションを使用します。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 max degree of parallelism オプションを 0 (既定) に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で並列プランの実行で使用するプロセッサの数を最大 64 に制限できます。 MAXDOP オプションを 0 に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 64 個の論理プロセッサという実行時ターゲットが設定されますが、必要であれば、別の値を手動で設定できます。 クエリおよびインデックスに対して MAXDOP を 0 に設定すると、並列プランの実行で指定されたクエリまたはインデックスに対して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で利用可能なすべてのプロセッサ (最大 64) を使用できます。 MAXDOP はあらゆる並列クエリに強制される値ではなく、並列に望ましいあらゆるクエリにとっての仮のターゲットです。 つまり、実行時に十分なワーカー スレッドが利用できない場合、MAXDOP サーバー構成オプションより低い並列度でクエリが実行されることがあります。
 
@@ -1273,7 +1273,7 @@ OLE DB データ ソースにリンク サーバーとしてアクセスする�
 
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] までは、パーティション テーブルおよびインデックスは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise、Developer および Evaluation Edition でのみサポートされます。   
-> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 以降では、パーティション テーブルおよびインデックスは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition でもサポートされます。 
+> [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 以降では、パーティション テーブルおよびインデックスは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition でもサポートされます。 
 
 ### <a name="new-partition-aware-seek-operation"></a>新しいパーティション対応のシーク操作
 

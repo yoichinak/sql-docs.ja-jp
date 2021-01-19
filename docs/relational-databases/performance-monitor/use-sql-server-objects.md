@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6595db2d6d9f0c2f4e3cbd50dcadbc16e379d05f
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: e293b33b0b20ab7545744c7d4e3f47351f8e0c29
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505425"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172194"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,14 +100,14 @@ ms.locfileid: "96505425"
 |[SQL Server: Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフリー ページの要求頻度とアクセスの頻度についての情報を提供します。|  
 |[SQLServer:Catalog Metadata](../../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md)|SQL Server のカタログ メタデータ マネージャー オブジェクトを定義します。| 
 |[SQLServer:CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|共通言語ランタイム (CLR: Common Language Runtime) に関する情報を提供します。|  
-|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。<br /><br /> 列ストアインデックスの行グループとセグメントに関する情報を提供します。|  
+|[SQLServer:Columnstore](../../relational-databases/performance-monitor/sql-server-columnstore-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。<br /><br /> 列ストアインデックスの行グループとセグメントに関する情報を提供します。|  
 |[SQLServer:Cursor Manager by Type](../../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md)|カーソルについての情報を提供します。|  
 |[SQLServer:Cursor Manager Total](../../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md)|カーソルについての情報を提供します。|  
 |[SQLServer:Database Mirroring](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)|データベース ミラーリングについての情報を提供します。|  
 |[SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)|使用できるログ用空きディスク領域やデータベース内のアクティブなトランザクションの数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースについての情報を提供します。 このオブジェクトには、複数のインスタンスが存在することがあります。|  
 |[SQL Server:Deprecated Features](../../relational-databases/performance-monitor/sql-server-deprecated-features-object.md)|非推奨機能が使用された回数をカウントします。|  
 |[SQLServer:Exec Statistics](../../relational-databases/performance-monitor/sql-server-execstatistics-object.md)|実行統計についての情報を提供します。|  
-|[SQLServer:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。<br /><br /> 外部スクリプトの実行についての情報を提供します。|  
+|[SQLServer:External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。<br /><br /> 外部スクリプトの実行についての情報を提供します。|  
 |[SQLServer:FileTable](../../relational-databases/performance-monitor/sql-server-filetable-object.md)|FileTable と非トランザクション アクセスに関する統計です。|  
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続しているユーザーの数など、一般的なサーバー全体の利用状況についての情報を提供します。|  
 |[SQL Server:HADR Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|現在割り当てられているロック構造の総数など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性レプリカについての情報を提供します。|  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbf0c127a47fc18f3b2a56dd303ac60565689ddb
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: cbce18def0654c88e2d8a575c78068be7b6cb49e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379752"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171684"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 
@@ -44,7 +44,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きでは既に存在する場合にのみ、セキュリティ ポリシーを削除します。  
   
@@ -54,7 +54,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  セキュリティ ポリシーの名前。 セキュリティ ポリシー名は識別子のルールに準拠し、データベースおよびそのスキーマで一意でなければなりません。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER ANY SECURITY POLICY 権限と ALTER 権限が必要です。  

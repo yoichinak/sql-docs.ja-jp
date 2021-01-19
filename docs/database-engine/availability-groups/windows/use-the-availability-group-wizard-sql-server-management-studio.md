@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f4361019a3f65dbe1fc4a1b65fe54e388175a84d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 59b0e82558e14e29e4fad69ddc86b76d982a634a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641775"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171104"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "97641775"
   
     -   **[自動シード処理]**  
   
-         グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
+         グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
     
     -   **[完全なデータベースとログ バックアップ]**  
   

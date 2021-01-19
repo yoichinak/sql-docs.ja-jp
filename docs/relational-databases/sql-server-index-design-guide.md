@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe0c23f3cd5b087b4e5a14d50d681b983aeac496
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9d7e51afb97a5ff698ef9a504375783b93ef9640
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97459972"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170664"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -799,15 +799,15 @@ WHERE b = CONVERT(Varbinary(4), 1);
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>同じテーブルで列ストア インデックスと行ストア インデックスを結合できる
 非クラスター化インデックスには、基になるテーブルの行と列の一部または全体のコピーが含まれています。 インデックスはテーブルの 1 つ以上の列として定義され、行のフィルター処理条件をオプションで設定できます。 
 
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、更新可能な **非クラスター化列ストア インデックスを、行ストア テーブル** に作成できます。 列ストア インデックスは、データのコピーを格納するため、追加のストレージが必要です。 ただし、列ストア インデックス内のデータは、行ストア テーブルが必要とするサイズよりも小さいサイズに圧縮されます。  これにより、同時に、列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。したがって、両方のインデックスが、同じデータに対して作業を行うことになります。  
+[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降、更新可能な **非クラスター化列ストア インデックスを、行ストア テーブル** に作成できます。 列ストア インデックスは、データのコピーを格納するため、追加のストレージが必要です。 ただし、列ストア インデックス内のデータは、行ストア テーブルが必要とするサイズよりも小さいサイズに圧縮されます。  これにより、同時に、列ストア インデックスの分析と行ストア インデックスのトランザクションを同時に実行できます。 行ストア テーブルでデータが変更されると列ストアが更新されます。したがって、両方のインデックスが、同じデータに対して作業を行うことになります。  
   
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 以降、列ストア インデックスでは、**1 つ以上の非クラスター化行ストア インデックス** を使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、SQL Server でその値を列ストアに挿入することはできません。  
+[!INCLUDE[ssSQL15](../includes/sssql16-md.md)] 以降、列ストア インデックスでは、**1 つ以上の非クラスター化行ストア インデックス** を使用できます。 これにより、基になる列ストアで、効率的なテーブル シークを実行できます。 他のオプションも使用できます。 たとえば、行ストア テーブルで UNIQUE 制約を使用することで、主キー制約を適用できます。 一意でない値は行ストア テーブルに挿入できないため、SQL Server でその値を列ストアに挿入することはできません。  
  
 ### <a name="performance-considerations"></a>パフォーマンスに関する考慮事項 
 
 -   非クラスター化列ストア インデックスの定義で、フィルター適用条件の使用をサポートします。 OLTP テーブルに列ストア インデックスを追加することによるパフォーマンスへの影響を最小限に抑えるには、フィルター条件を使って、用して、運用ワークロードのコールド データのみに、非クラスター化列ストア インデックスを作成します。 
   
--   インメモリ テーブルでは、列ストア インデックスを 1 つ使用できます。 これは、テーブルの作成時に作成することも、後で [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) を使用して追加することもできます。 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] より前のバージョンでは、列ストア インデックスを保持できたのはディスク ベースのテーブルのみでした。 
+-   インメモリ テーブルでは、列ストア インデックスを 1 つ使用できます。 これは、テーブルの作成時に作成することも、後で [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) を使用して追加することもできます。 [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] より前のバージョンでは、列ストア インデックスを保持できたのはディスク ベースのテーブルのみでした。 
 
 詳細については、「[列ストア インデックス - クエリ パフォーマンス](../relational-databases/indexes/columnstore-indexes-query-performance.md)」を参照してください。
 

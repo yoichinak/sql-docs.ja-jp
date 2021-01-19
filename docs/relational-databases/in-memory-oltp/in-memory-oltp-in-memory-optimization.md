@@ -15,12 +15,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 281fe018c5c2d5e0717fb2c35dfcc8c3c9e8c3fc
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7af10ecc4753034948cc616cc85301afd7a7046d
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100240"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172074"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化
 
@@ -37,7 +37,7 @@ SQL Server 上のインメモリ OLTP について説明し、パフォーマン
  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、トランザクション処理のパフォーマンスを向上させる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジであることに注意してください。 報告と分析クエリのパフォーマンスを向上させる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジについては、「 [列ストア インデックスの説明](../../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、インメモリ OLTP はいくつかの機能強化が行われています。 データベース アプリケーションの移行を容易にできるように、Transact-SQL の表層が拡大されています。 アプリケーションのメンテナンスを容易にできるように、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの ALTER 操作を実行するためのサポートが追加されています。
+ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、インメモリ OLTP はいくつかの機能強化が行われています。 データベース アプリケーションの移行を容易にできるように、Transact-SQL の表層が拡大されています。 アプリケーションのメンテナンスを容易にできるように、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの ALTER 操作を実行するためのサポートが追加されています。
   
 > [!NOTE]  
 >  **お試しください**  

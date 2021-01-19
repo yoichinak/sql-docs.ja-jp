@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 16f81a4ac6265d37cb9e5d50a6500ca68740e394
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5d9f07f96f83767a84f7ee0128d674f4ab955eed
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438845"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170854"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 データベース エンジンの非推奨の機能
 
@@ -46,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> このリストは、[!INCLUDE[sssql15-md](../includes/sssql15-md.md)] のリストと同じです。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] で提供が終了または中止されることが新しく発表されたデータベース エンジン機能はありません。
+> このリストは、[!INCLUDE[sssql15-md](../includes/sssql16-md.md)] のリストと同じです。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] で提供が終了または中止されることが新しく発表されたデータベース エンジン機能はありません。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能
 

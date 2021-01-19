@@ -24,7 +24,7 @@ CREATE WORKLOAD GROUP group_name
 ## <a name="arguments"></a>引数
 
 *group_name*</br>
-ワークロード グループのユーザー定義の名前を指定します。 *group_name* には、英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](ssnoversion-md.md)] のインスタンス内で一意である必要があり、 [識別子](../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
+ワークロード グループのユーザー定義の名前を指定します。 *group_name* には、英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
 
 IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
 ワークロード グループでの要求の相対的な重要度を指定します。 重要度は次のいずれかで、MEDIUM が既定値です。
@@ -48,7 +48,7 @@ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 >
 > *value* を 0 に設定すると、ユーザー定義のワークロード グループでは SORT と HASH JOIN 操作を含むクエリが実行されなくなります。
 >
-> 同時に他のクエリが実行されているとサーバーが空きメモリを十分に確保できない可能性があるため、 *value* を 70 より大きな値に設定することはお勧めしません。 これによってやがては、クエリの時間切れエラー 8645 が発生します。
+> 同時に他のクエリが実行されているとサーバーが空きメモリを十分に確保できない可能性があるため、*value* を 70 より大きな値に設定することはお勧めしません。 これによってやがては、クエリの時間切れエラー 8645 が発生します。
 >
 > クエリのメモリ要求がこのパラメーターによって指定されている制限を超えると、サーバーは次のように対応します。
 >
@@ -64,7 +64,7 @@ REQUEST_MAX_CPU_TIME_SEC = *value*</br>
 > [!NOTE]
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
+> [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定である 0 の場合、クエリ コストに基づく内部の計算を使用して、最大時間が決定されます。
@@ -76,14 +76,14 @@ MAX_DOP = *value*</br>
 並列クエリ実行に対する **並列処理の最大限度 (MAXDOP)** を指定します。 *value* は、0 または正の整数にする必要があります。 *value* の許容範囲は 0 から 64 です。 *value* の既定の設定は 0 で、グローバル設定が使用されます。 MAX_DOP は次のように処理されます。
 
 > [!NOTE]
-> ワークロード グループの MAX_DOP では、 [並列処理の最大限度に対するサーバー構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)と、 **MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)がオーバーライドされます。
+> ワークロード グループの MAX_DOP では、[並列処理の最大限度に対するサーバー構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)と、**MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)がオーバーライドされます。
 
 > [!TIP]
-> これをクエリ レベルで行うには、 **MAXDOP** [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)を使用します。 ワークロード グループの MAX_DOP を超えない限り、クエリ ヒントとして並列処理の最大限度を設定することは有効です。 MAXDOP クエリ ヒントの値が Resource Governor を使用して構成されている値を超える場合、[!INCLUDE[ssDEnoversion](ssdenoversion-md.md)] ではリソース ガバナーの `MAX_DOP` の値が使用されます。 MAXDOP [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)では常に、[並列処理の最大限度のサーバー構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)がオーバーライドされます。
+> これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)を使用します。 ワークロード グループの MAX_DOP を超えない限り、クエリ ヒントとして並列処理の最大限度を設定することは有効です。 MAXDOP クエリ ヒントの値が Resource Governor を使用して構成されている値を超える場合、[!INCLUDE[ssDEnoversion](ssdenoversion-md.md)] ではリソース ガバナーの `MAX_DOP` の値が使用されます。 MAXDOP [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)では常に、[並列処理の最大限度のサーバー構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)がオーバーライドされます。
 >
-> データベース レベルでこれを行うには、 **MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。
+> データベース レベルでこれを行うには、**MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。
 >
-> これをサーバー レベルで行うには、 **並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。
+> これをサーバー レベルで行うには、**並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。
 
 GROUP_MAX_REQUESTS = *value*</br>
 ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定は 0 であり、これでは無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。
@@ -97,7 +97,7 @@ USING { *pool_name* |  **"default"** }</br>
 > 定義済みのワークロード グループおよびリソース プールではすべて、"default" などの小文字の名前が使用されています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。
 
 EXTERNAL external_pool_name | "default"</br>
-**適用対象** : [!INCLUDE[ssNoVersion](ssnoversion-md.md)] ([!INCLUDE[ssSQL15](sssql15-md.md)] 以降)。
+**適用対象**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] ([!INCLUDE[ssSQL15](sssql16-md.md)] 以降)。
 
 ワークロード グループには、外部リソース プールを指定できます。 ワークロード グループを定義し、2 つのプールに関連付けることができます。
 

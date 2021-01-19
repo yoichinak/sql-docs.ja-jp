@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8e64eb57dbcfecabaa5c6f24881206152df4d8d0
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f7e96df4eba36bbcb3da18a1423b5162aef557a7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639882"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170804"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取り専用ルーティングの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]で読み取り専用ルーティングをサポートするように AlwaysOn 可用性グループを構成するには、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] または PowerShell を使用します。 *読み取り専用ルーティング* は、対象の読み取り専用接続要求を、AlwaysOn の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 読み取り可能なセカンダリ レプリカ [(セカンダリ ロールで実行されているときに、読み取り専用ワークロードを許可するように構成されているレプリカ) にルーティングする](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) の機能です。 読み取り専用ルーティングをサポートするには、可用性グループに [可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)が存在する必要があります。 読み取り専用クライアントは、このリスナーに接続要求を送信する必要があります。クライアントの接続文字列では、アプリケーションの目的として "読み取り専用" を指定する必要があります。 つまり、 *読み取りを目的とした接続要求* であることが必要です。  
 
-読み取り専用ルーティングは、[!INCLUDE[sssql15](../../../includes/sssql15-md.md)] 以降で使用できます。
+読み取り専用ルーティングは、[!INCLUDE[sssql15](../../../includes/sssql16-md.md)] 以降で使用できます。
 
 > [!NOTE]  
 >  読み取り可能なセカンダリ レプリカを構成する方法については、「 [可用性レプリカでの読み取り専用アクセスの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)が存在する必要があります。  
@@ -104,7 +104,7 @@ ms.locfileid: "97639882"
         >  読み取り専用ルーティング リストを構成する前に、読み取り専用ルーティング URL を設定する必要があります。  
   
 ###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> 読み取り専用レプリカ間の負荷分散の構成  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]より、読み取り専用レプリカのセット間に負荷分散を構成できるようになりました。 以前の読み取り専用ルーティングでは、トラフィックは常にルーティング リストで最初に使用可能なレプリカに転送されていました。 この機能を利用するには、 **CREATE AVAILABILITY GROUP** または **ALTER AVAILABILITY GROUP** コマンドで、 **READ_ONLY_ROUTING_LIST** サーバー インスタンスを囲む、1 レベルの入れ子になったかっこを使用します。  
+ [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]より、読み取り専用レプリカのセット間に負荷分散を構成できるようになりました。 以前の読み取り専用ルーティングでは、トラフィックは常にルーティング リストで最初に使用可能なレプリカに転送されていました。 この機能を利用するには、 **CREATE AVAILABILITY GROUP** または **ALTER AVAILABILITY GROUP** コマンドで、 **READ_ONLY_ROUTING_LIST** サーバー インスタンスを囲む、1 レベルの入れ子になったかっこを使用します。  
   
  たとえば、次のルーティング リストを使用すると、 `Server1` と `Server2`の 2 つの読み取り専用レプリカ間で読み取りを目的とした接続要求の負荷分散が行われます。 これらのサーバーを囲む入れ子になったかっこは、負荷分散セットを識別します。 このセット内のどちらのレプリカも使用できない場合は、読み取り専用ルーティング リストに含まれている他のレプリカ ( `Server3` と `Server4`) に順に接続が試行されます。  
   

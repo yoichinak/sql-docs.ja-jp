@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 79e04e64a4fc89bb3e745d67b1cdbe929850b6ec
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f2295f8694a9573b0e9c541ea817e9e03e70f83e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642992"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171084"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "97642992"
 SQL Server 2017 では、可用性グループのデータベースに対して分散トランザクションがサポートされています。 このサポートには、SQL Server の同じインスタンス上のデータベース、または SQL Server の異なるインスタンス上のデータベースが含まれています。 分散トランザクションは、データベース ミラーリング用に構成されたデータベースではサポートされていません。
 
 > [!NOTE]
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 
 > 
-> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql16-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。
 
 分散トランザクション対応の可用性グループの構成については、「[Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md)」 (分散トランザクション対応の可用性グループを構成する)」を参照してください。
 

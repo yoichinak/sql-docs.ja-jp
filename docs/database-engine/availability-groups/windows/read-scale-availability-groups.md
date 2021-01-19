@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4ccfc459fb5dbbc2a607fd0eb87853a776820098
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c8f5f050598129e674a74e8b924c6b2ba274cb34
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642493"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171124"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97642493"
 
 ## <a name="read-scale-availability-groups-without-cluster"></a>読み取りスケール可用性グループ (クラスターなし)
 
-[!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] 以前は、すべての可用性グループにクラスターが必要でした。 そのクラスターにより、事業継続性、つまり、高可用性とディザスター リカバリー (HADR) が実現していました。 また、セカンダリ レプリカを読み取り操作のために構成できました。 高可用性が最終目標ではない場合は、クラスターの構成と運用に、相当量の運用経費がかかっていました。 SQL Server 2017 では、クラスターのない、読み取りスケール可用性グループが導入されました。 
+[!INCLUDE[sssql15-md](../../../includes/sssql16-md.md)] 以前は、すべての可用性グループにクラスターが必要でした。 そのクラスターにより、事業継続性、つまり、高可用性とディザスター リカバリー (HADR) が実現していました。 また、セカンダリ レプリカを読み取り操作のために構成できました。 高可用性が最終目標ではない場合は、クラスターの構成と運用に、相当量の運用経費がかかっていました。 SQL Server 2017 では、クラスターのない、読み取りスケール可用性グループが導入されました。 
 
 プライマリ レプリカで実行されるミッションクリティカルなワークロードのためにリソースを確保しておく必要がある場合、読み取り専用のルーティングを利用するか、読み取り可能セカンダリ レプリカに直接接続できます。 何らかのクラスタリング技術との統合に頼る必要はありません。 この新しい技術は、Windows プラットフォームと Linux プラットフォームの両方を実行している SQL Server 2017 で利用できます。
 

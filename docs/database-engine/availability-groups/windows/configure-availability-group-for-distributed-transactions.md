@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 93876b488d5e265bca363d213c04cb0611c185f4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5587622f0f61b7b7063b246d0599d46cc8c16f0c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642179"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170784"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "97642179"
 分散トランザクションを保証するには、分散トランザクション リソース マネージャーとしてデータベースを登録するように、可用性グループを構成する必要があります。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 以降では、可用性グループでの分散トランザクションが完全にサポートされます。 [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 より前のバージョンでは、可用性グループ内のデータベースに関連する複数データベースにまたがる分散トランザクション (つまり、同じ SQL Server インスタンスのデータベースを使用するトランザクション) はサポートされません。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] にはこのような制限はありません。 
 >
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] での構成手順は [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] の場合と同じです。
 
 分散トランザクションでは、クライアント アプリケーションは Microsoft 分散トランザクション コーディネーター (MS DTC または DTC) と連携して、複数のデータ ソース間でトランザクションの整合性を保証します。 DTC は、サポートされている Windows Server ベースのオペレーティング システムで使用可能なサービスです。 分散トランザクションの場合は、DTC が "*トランザクション コーディネーター*" です。 通常は、SQL Server インスタンスが "*リソース マネージャー*" です。 データベースが可用性グループ内にある場合、各データベースがそれ自体のリソース マネージャーである必要があります。 
 
@@ -45,7 +45,7 @@ ms.locfileid: "97642179"
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
 
-* 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] またはそれ以降である必要があります。
+* 分散トランザクションに参加する [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] のすべてのインスタンスが、[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] またはそれ以降である必要があります。
 
 * 可用性グループは、Windows Server 2016 または Windows Server 2012 R2 上で実行されている必要があります。 Windows Server 2012 R2 の場合は、[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973) で入手できる KB3090973 の更新プログラムをインストールする必要があります。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "97642179"
 
 
 
-[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
+[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
 
 ```sql
 CREATE AVAILABILITY GROUP MyAG
@@ -91,7 +91,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、分散トランザクションの可用性グループを変更できます。 Service Pack 2 より前の [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] バージョンの場合、可用性グループを削除し、`DTC_SUPPORT = PER_DB` 設定で作り直す必要があります。 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 以降では、分散トランザクションの可用性グループを変更できます。 Service Pack 2 より前の [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] バージョンの場合、可用性グループを削除し、`DTC_SUPPORT = PER_DB` 設定で作り直す必要があります。 
 
 分散トランザクションを無効にするには、次の Transact-SQL コマンドを使います。
 

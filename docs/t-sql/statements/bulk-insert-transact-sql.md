@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9e0d729d951de184aa16717e784f14ae244639d8
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 12c1273473fd91c0ea5222add0288fac1b06f37b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098506"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170594"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -135,7 +135,7 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 |ACP|**char**、**varchar**、または **text** データ型の列は、[!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|
 |OEM (既定値)|**char**、**varchar**、または **text** のデータ型の列は、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換されます。|
 |RAW|1 つのコード ページから別のコード ページへの変換は行われません。このオプションを使用すると、最も高速に操作を完了できます。|
-|*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|
+|*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE **=** { **' char '** \| **' native '** \| **' widechar '** \| **' widenative '** } 指定したデータ ファイルの型の値に基づくインポート操作を BULK INSERT で実行することを指定します。

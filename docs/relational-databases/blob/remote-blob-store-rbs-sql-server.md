@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 83abd087cab67c0b048ed6333e912ac1edc76f7c
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810161"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171754"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>リモート BLOB ストア (RBS) [SQL Server]
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810161"
 
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン | RBS のダウンロード場所 |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
 | [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS ダウンロード ページ](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
@@ -59,7 +59,7 @@ ms.locfileid: "91810161"
  多数のサード パーティのストレージ ソリューション ベンダーが、これらの標準 API に準拠し、さまざまなストレージ プラットフォームで BLOB ストレージをサポートする RBS プロバイダーを開発しています。  
   
 ## <a name="rbs-requirements"></a>RBS 要件  
- - RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。    
+ - RBS では、BLOB メタデータが格納されている主なデータベース サーバー用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise が必要です。  ただし、指定された FILESTREAM プロバイダーを使用する場合は、BLOB 自体を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard に格納できます。 RBS が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] の場合は ODBC ドライバー バージョン 11 以上、 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)]の場合は ODBC ドライバー バージョン 13 以上が必要です。 ドライバーは、「 [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)」(SQL Server 用の ODBC ドライバーをダウンロードする) で入手できます。    
   
  RBS には、RBS を使用して BLOB を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで格納できる FILESTREAM プロバイダーが含まれています。 RBS を使用して BLOB を別のストレージ ソリューションに格納する場合は、そのストレージ ソリューション用に開発されたサード パーティの RBS プロバイダーを使用するか、RBS API を使用してカスタム RBS プロバイダーを開発する必要があります。 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190)には、NTFS ファイル システムに BLOB を格納するサンプル プロバイダーが学習用リソースとして用意されています。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "91810161"
 ### <a name="credential-store-symmetric-key"></a>資格情報ストアの対称キー  
  プロバイダーが資格情報ストア内に格納されているシークレットをセットアップして使用する必要がある場合、RBS では対称キーを使用して、プロバイダーのシークレットを暗号化します。このシークレットは、クライアントがプロバイダーの BLOB ストアに対する許可を得るために使用する場合があります。  
   
--   RBS 2016 では **AES_128** 対称キーを使用します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、後方互換性を確保する場合を除き、新しい **TRIPLE_DES** キーを作成することはできません。 詳細については、「[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)」を参照してください。  
+-   RBS 2016 では **AES_128** 対称キーを使用します。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、後方互換性を確保する場合を除き、新しい **TRIPLE_DES** キーを作成することはできません。 詳細については、「[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)」を参照してください。  
   
 -   RBS 2014 以前のバージョンでは、古い **TRIPLE_DES** 対称キー アルゴリズムを使用して暗号化されたシークレットを保持する資格情報ストアを使用します。 現在、**TRIPLE_DES** を使用している場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] では、より強力な暗号化方式を適用するためにこのトピックの手順に従ってキーをローテーションし、セキュリティを強化することをお勧めします。  
   

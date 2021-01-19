@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01a80dd71397a4528c1d56882cec5934d750bb8f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093519"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170684"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **重要なシナリオ:**
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、列ストア インデックスに非クラスター化インデックスを使用して、データ ウェアハウスのクエリのパフォーマンスを向上させます。 詳しくは、「[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)」をご覧ください。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以降では、列ストア インデックスに非クラスター化インデックスを使用して、データ ウェアハウスのクエリのパフォーマンスを向上させます。 詳しくは、「[列ストア インデックス - データ ウェアハウス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)」をご覧ください。
 
 その他の種類のインデックスについては、以下を参照してください。
 
@@ -250,7 +250,7 @@ NONCLUSTERED
 *column*      
  インデックスの基準となる 1 列または複数列を指定します。 指定した列を組み合わせた値で複合インデックスを作成するには、2 つ以上の列名を指定します。 複合インデックスに含まれる列は、*table_or_view_name* の後のかっこ内に、並べ替えの優先順序に従って指定します。
 
-1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。
+1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。
 
 ラージ オブジェクト (LOB) データ型の列 **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、または **image** 、インデックスのキー列として指定することはできません。 また、ビュー定義に含めることはできません **ntext**、**text**、または **image** 列では、CREATE INDEX ステートメントで参照されていない場合でも。
 
@@ -351,7 +351,7 @@ _database_name_
 
 ビューにインデックスを作成するには、SCHEMABINDING を指定してそのビューを定義する必要があります。 ビューに非クラスター化インデックスを作成する前に、そのビューに一意のクラスター化インデックスを作成する必要があります。 インデックス付きビューの詳細については、「解説」を参照してください。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、オブジェクトをクラスター化列ストア インデックスに格納されたテーブルに指定できます。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、オブジェクトをクラスター化列ストア インデックスに格納されたテーブルに指定できます。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、*database_name* が現在のデータベースの場合、または _database_name_ が `tempdb` で、_object_name_ が # で始まる場合に、3 つの要素で構成された名前形式 _database_name_.[_schema_name_]._object_name_ をサポートします。
 
@@ -621,7 +621,7 @@ CREATE INDEX ステートメントは、他のクエリと同じように最適�
 テーブル (ヒープ) にクラスター化インデックスを作成したり、既存のクラスター化インデックスを削除して再作成する場合は、データの並べ替えや、基のテーブルまたは既存のクラスター化インデックス データの一時的コピーを実行するために、データベース内で追加の作業領域が使用可能になっている必要があります。 クラスター化インデックスの詳細については、「[クラスター化インデックスの作成](../../relational-databases/indexes/create-clustered-indexes.md)」と「[SQL Server のインデックスのアーキテクチャとデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
 
 ## <a name="nonclustered-indexes"></a>非クラスター化インデックス
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、クラスター化列ストア インデックスとして格納されたテーブルに非クラスター化インデックスを作成できます。 最初に保存されているテーブルに非クラスター化インデックスを作成するかどうかは後で、テーブルをクラスター化列ストア インデックスに変換する場合は、ヒープまたはクラスター化インデックスに適用する場合は、インデックスが永続化されます。 クラスター化列ストア インデックスを再構築するときに、非クラスター化インデックスを削除する必要がではありません。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、クラスター化列ストア インデックスとして格納されたテーブルに非クラスター化インデックスを作成できます。 最初に保存されているテーブルに非クラスター化インデックスを作成するかどうかは後で、テーブルをクラスター化列ストア インデックスに変換する場合は、ヒープまたはクラスター化インデックスに適用する場合は、インデックスが永続化されます。 クラスター化列ストア インデックスを再構築するときに、非クラスター化インデックスを削除する必要がではありません。
 
 制限事項と制約事項:
 
@@ -682,7 +682,7 @@ SET オプションが正しくないと、次の状態が発生する場合が�
 XML インデックスについては、「[CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)」および「[XML インデックス &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。
 
 ## <a name="index-key-size"></a>インデックス キーのサイズ
-インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前では、制限は常に 900 バイトでした)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。
+インデックス キーの最大サイズは 900 バイトをクラスター化インデックスと非クラスター化インデックスの 1,700 バイトです。 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前では、制限は常に 900 バイトでした)。インデックス **varchar** 既存のデータ列には、インデックスの作成時の制限を超えない場合をバイトの制限を超える列を作成することができます。 ただし、後続の挿入や更新操作を、制限を超える合計サイズとなる列には失敗します。 クラスター化インデックスのインデックス キーには、ROW_OVERFLOW_DATA アロケーション ユニットに既存のデータを持つ **varchar** 列を含めることはできません。 クラスター化インデックスが **varchar** 列に作成され、既存のデータが IN_ROW_DATA アロケーション ユニットにある場合に、データを行外に押し出すような挿入処理や更新処理をその列に対して行うと失敗します。
 
 非クラスター化インデックスのリーフ レベルに非キー列を含めることができます。 インデックス キー サイズを計算するとき、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではこれらの列は考慮されません。 詳細については、「[付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」と「[SQL Server のインデックスのアーキテクチャとデザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」を参照してください。
 

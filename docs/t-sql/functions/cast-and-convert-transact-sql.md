@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24091fa04d0db4499f03e4722977a34cf70ae5ac
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7f17a896316ca0e85f11cf8359aa50a11c35faa5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097344"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171944"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
 |**2**|常に 16 桁。 常に科学的表記法で使用します。|  
-|**3**|常に 17 桁。 ロスレス変換に使用します。 このスタイルでは、すべての浮動小数点数または実数が異なる文字列に変換されることが保証されます。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
+|**3**|常に 17 桁。 ロスレス変換に使用します。 このスタイルでは、すべての浮動小数点数または実数が異なる文字列に変換されることが保証されます。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**126、128、129**|レガシのために含まれていますが、将来のリリースではこれらの値は非推奨になる可能性があります。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル

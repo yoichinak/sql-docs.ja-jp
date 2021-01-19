@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: fbca8f9ddae17466aa99ae096efbf9b23d03c24c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7898cec5362efc7902623993f568600271c033d5
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100865"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171614"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -371,7 +371,7 @@ SIZE *size*: ファイルのサイズを指定します。
 
 *size*: ファイルの初期サイズです。
 
-プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、model データベースのプライマリ ファイルのサイズを使用します。 モデルの既定のサイズは 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) または 1 MB (それより前のバージョン) です。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* サイズが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、そのファイルのサイズが 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) または 1 MB (それより前のバージョン) になります。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。
+プライマリ ファイルに *size* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、model データベースのプライマリ ファイルのサイズを使用します。 モデルの既定のサイズは 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) です。 セカンダリ データ ファイルまたはログ ファイルが指定されているにもかかわらず、そのファイルに対して *size* サイズが指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、そのファイルのサイズが 8 MB ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) または 1 MB (それより前のバージョン) になります。 なお、プライマリ ファイルに対して指定するサイズは、model データベースのプライマリ ファイルのサイズ以上である必要があります。
 
 サフィックスとして、キロバイト (KB)、メガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) を使用できます。 既定値は MB です。 整数を指定します。小数を含めないでください。 *size* は整数値です。 2,147,483,647 を超える値に対しては、より大きな単位を使用してください。
 
@@ -396,7 +396,7 @@ FILEGROWTH が指定されていない場合、既定値は次のとおりです
 
 |Version|既定値|
 |-------------|--------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
+|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|
 

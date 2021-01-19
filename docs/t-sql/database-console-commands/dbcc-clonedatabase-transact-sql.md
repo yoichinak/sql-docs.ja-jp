@@ -38,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 2de4f0e84b39d1384e342eab3b7b3d0bfd101611
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128613"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172584"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,23 +73,23 @@ DBCC CLONEDATABASE
 複製元データベースの複製先となるデータベースの名前です。 このデータベースは DBCC CLONEDATABASE により作成されます。まだ作成されていないことが条件となります。 
   
 NO_STATISTICS  
-テーブル/インデックス統計をクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、テーブル/インデックス統計は自動的に含まれます。 このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。
+テーブル/インデックス統計をクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、テーブル/インデックス統計は自動的に含まれます。 このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 と [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降で使用できます。
 
 NO_QUERYSTORE<br>
-クエリ ストア データをクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、クエリ ストアが複製元データベースで有効になっていれば、クエリ ストア データがクローンに複製されます。 このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で使用できます。
+クエリ ストア データをクローンから除外する必要があるかどうかを指定します。 このオプションが指定されていない場合、クエリ ストアが複製元データベースで有効になっていれば、クエリ ストア データがクローンに複製されます。 このオプションは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降で使用できます。
 
 VERIFY_CLONEDB  
-新しいデータベースの一貫性を確認します。  このオプションは、実稼働で使用する目的でデータベースが複製される場合に必要です。  また、VERIFY_CLONEDB を有効にすると、統計とクエリ ストア コレクションが無効になります。そのため、WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE の実行と等しくなります。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
+新しいデータベースの一貫性を確認します。  このオプションは、実稼働で使用する目的でデータベースが複製される場合に必要です。  また、VERIFY_CLONEDB を有効にすると、統計とクエリ ストア コレクションが無効になります。そのため、WITH VERIFY_CLONEDB、NO_STATISTICS、NO_QUERYSTORE の実行と等しくなります。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
 
 > [!NOTE]  
 > 次のコマンドは、複製されたデータベースが実稼働対応であることを確認する目的で使用できます。 <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
 
 SERVICEBROKER<br>
-Service Broker の関連システム カタログを複製に含めるかどうかを指定します。  SERVICEBROKER オプションは、VERIFY_CLONEDB と組み合わせて使用することはできません。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
+Service Broker の関連システム カタログを複製に含めるかどうかを指定します。  SERVICEBROKER オプションは、VERIFY_CLONEDB と組み合わせて使用することはできません。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
 
 BACKUP_CLONEDB  
-クローン データベースのバックアップを作成し、検証します。  VERIFY_CLONEDB と組み合わせて使用した場合、バックアップが作成される前にクローン データベースが検証されます。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
+クローン データベースのバックアップを作成し、検証します。  VERIFY_CLONEDB と組み合わせて使用した場合、バックアップが作成される前にクローン データベースが検証されます。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
   
 ## <a name="remarks"></a>解説
 次の検証は、DBCC CLONEDATABASE によって実行されます。 いずれかの検証に失敗すると、コマンドは失敗となります。
@@ -149,11 +149,11 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 - COLUMNSTORE INDEX
 - CDB
 - CDC
-- CLR ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョンで)
+- CLR ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降のバージョンで)
 - DATABASE PROPERTIES
 - DEFAULT
 - FILES AND FILEGROUPS
-- フルテキスト ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 以降で)
+- フルテキスト ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU2 以降で)
 - FUNCTION
 - INDEX
 - Login
@@ -161,9 +161,9 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降のすべてのリリースでサポートされています。 CLR プロシージャは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 以降でサポートされています。 ネイティブ コンパイルされたプロシージャは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降でサポートされています。  
+> [!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降のすべてのリリースでサポートされています。 CLR プロシージャは [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 以降でサポートされています。 ネイティブ コンパイルされたプロシージャは [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降でサポートされています。  
 
-- QUERY STORE ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降)   
+- QUERY STORE ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降)   
 > [!NOTE]   
 > クエリ ストア データは、複製先データベースで有効になっている場合にのみ複製されます。 クエリ ストアの一部として最新のランタイム統計を複製するには、DBCC CLONEDATABASE を実行する前に sp_query_store_flush_db を実行し、ランタイム統計をクエリ ストアにフラッシュして (書き出して) ください。  
 
@@ -175,8 +175,8 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 - STATISTICS
 - SYNONYM
 - TABLE
-- MEMORY OPTIMIZED TABLES ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョンでのみ)
-- FILESTREAM AND FILETABLE OBJECTS ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョンで) 
+- MEMORY OPTIMIZED TABLES ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降のバージョンでのみ)
+- FILESTREAM AND FILETABLE OBJECTS ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降のバージョンで) 
 - TRIGGER
 - TYPE
 - UPGRADED DB
@@ -215,7 +215,7 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 ## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. スキーマ、統計、クエリ ストアを含むデータベースを複製する 
-次の例では、スキーマ、統計、クエリ ストア データを含む AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョン)
+次の例では、スキーマ、統計、クエリ ストア データを含む AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降のバージョン)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -231,7 +231,7 @@ GO
 ```  
 
 ### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>C. データベースを統計とクエリ ストアなし、スキーマのみで複製する 
-次の例では、統計とクエリ ストア データを含めずに AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョン)。
+次の例では、統計とクエリ ストア データを含めずに AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降のバージョン)。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -239,7 +239,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>D. データベースを複製し、運用環境向けであることを確認する
-次の例では、AdventureWorks データベースを統計とクエリ ストア データなし、スキーマのみで複製し、運用環境向けであることが確認されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降のバージョン)。
+次の例では、AdventureWorks データベースを統計とクエリ ストア データなし、スキーマのみで複製し、運用環境向けであることが確認されます ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降のバージョン)。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -247,7 +247,7 @@ GO
 ```  
   
 ### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>E. データベースを複製し、運用環境向けであることを確認し、複製したデータベースのバックアップを作成する
-次の例では、統計とクエリ ストア データなしで AdventureWorks データベースのスキーマのみが複製され、運用環境向けであることが確認されます。  複製したデータベースのバックアップも検証の上、作成されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降のバージョン)。
+次の例では、統計とクエリ ストア データなしで AdventureWorks データベースのスキーマのみが複製され、運用環境向けであることが確認されます。  複製したデータベースのバックアップも検証の上、作成されます ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 以降のバージョン)。
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

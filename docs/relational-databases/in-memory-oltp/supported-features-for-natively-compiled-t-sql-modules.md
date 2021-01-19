@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3624ab326c6712805d934839fe9403cfe14410e8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485134"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170224"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>ネイティブ コンパイル T-SQL モジュールでサポートされる機能
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,20 +42,20 @@ SELECT 句:
 -   列と名前のエイリアス (AS または = 構文を使用)。  
 
 -   スカラー サブクエリ
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、スカラー サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、DISTINCT 演算子はネイティブ コンパイル モジュールでサポートされています。
 
         - DISTINCT 集計はサポートされていません。  
 
 -   UNION および UNION ALL
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、UNION および UNION ALL 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 -   変数割り当て  
 
@@ -66,12 +66,12 @@ FROM 句:
 -   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN、RIGHT OUTER JOIN、CROSS JOIN、INNER JOIN。
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、JOINS はネイティブ コンパイル モジュールでサポートされています。
 
 -   サブクエリ `[AS] table_alias`。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。 
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、サブクエリはネイティブ コンパイル モジュールでサポートされています。
 
 WHERE 句:  
 
@@ -79,8 +79,8 @@ WHERE 句:
 
 -   AND、BETWEEN  
 -   OR、NOT、IN、EXISTS
-    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]。
-      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
+    - **適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)]。
+      [!INCLUDE[sssql15-md](../../includes/sssql16-md.md)] 以降、OR/NOT/IN/EXISTS 演算子はネイティブ コンパイル モジュールでサポートされています。
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 句:

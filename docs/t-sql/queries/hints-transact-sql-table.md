@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 830b03042589ac1e9f03e94b134a48d510a37c31
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2043bf4c60a1154b719d81b583d055b60b85c6ec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035837"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172334"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -398,7 +398,7 @@ GO
 フィルター選択されたインデックスに必要な値が SET オプションにない場合、クエリ オプティマイザーはインデックス ヒントを無視します。 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
 ## <a name="using-noexpand"></a>NOEXPAND の使用  
-NOEXPAND は*インデックス付きビュー*にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング*と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[SQL Server 2016 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 のエディションでサポートされる機能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)、および [SQL Server 2019 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。  
+NOEXPAND は *インデックス付きビュー* にのみ適用できます。 インデックス付きビューとは、一意なクラスター化インデックスが作成されているビューを示します。 インデックス付きビューおよびベース テーブルの両方に存在する列への参照がクエリに含まれていて、クエリ オプティマイザーがクエリの実行にインデックス付きビューを使用する方が最適であると判断した場合、クエリ オプティマイザーはビューのインデックスを利用します。 この機能は、*インデックス付きビューのマッチング* と呼ばれます。 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 より前のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のエディションでのみ、クエリ オプティマイザーではインデックス付きビューが自動的に使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[SQL Server 2016 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2016.md)、[SQL Server 2017 のエディションでサポートされる機能](../../SQL-server/editions-and-components-of-SQL-server-2017.md)、および [SQL Server 2019 のエディションでサポートされる機能](../../sql-server/editions-and-components-of-sql-server-version-15.md) に関するページを参照してください。  
   
 ただし、クエリ オプティマイザーで、インデックス付きビューのマッチングを検討したり、NOEXPAND ヒントで参照されるインデックス付きビューを使用したりするには、以下の SET オプションを ON に設定する必要があります。  
 
@@ -419,7 +419,7 @@ NOEXPAND は*インデックス付きビュー*にのみ適用できます。 �
  クエリ オプティマイザーがインデックス付きビューのインデックスを使用するように強制するには、NOEXPAND オプションを指定します。 このヒントは、ビューがクエリ内でも指定されている場合にのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句で直接ビューを指定していないクエリで、特定のインデックス付きビューが使用されるようにするヒントは用意されていません。しかし、クエリ オプティマイザーでは、インデックス付きビューがクエリで直接参照されていなくても、その使用が検討されます。 NOEXPAND テーブル ヒントを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によってインデックス付きビューに対してのみ自動的に統計が作成されます。 このヒントを省略すると、統計を手動で作成することでは解決できない、統計がないことに関する実行プランの警告につながる場合があります。 クエリの最適化中、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、クエリがビューを直接参照し、NOEXPAND ヒントが使用されるときに、自動的または手動で作成された統計情報の表示を使用します。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>クエリ ヒントとしてのテーブル ヒントの使用  
- OPTION (TABLE HINT) 句を使用すると、*テーブル ヒント*をクエリ ヒントとして指定することもできます。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。 アドホック クエリに対しては、これらのヒントをテーブル ヒントとしてのみ指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
+ OPTION (TABLE HINT) 句を使用すると、*テーブル ヒント* をクエリ ヒントとして指定することもできます。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。 アドホック クエリに対しては、これらのヒントをテーブル ヒントとしてのみ指定します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  KEEPIDENTITY、IGNORE_CONSTRAINTS、IGNORE_TRIGGERS の各ヒントには、テーブルに対する `ALTER` 権限が必要です。  

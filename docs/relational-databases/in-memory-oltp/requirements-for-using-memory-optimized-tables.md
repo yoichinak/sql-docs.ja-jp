@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 796a0423da44917251fa87828c71d0e47092d028
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 0cbe2b75a46e63b5e388b91ace3d74c0db3be49b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867052"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170734"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "91867052"
   
  インメモリ OLTP を使用する場合、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に加え、以下も要件です。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (以降) のあらゆるエディション。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (SP1 前) の場合、Enterprise、Developer、または Evaluation エディションが必要です。
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 (以降) のあらゆるエディション。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM (SP1 前) の場合、Enterprise、Developer、または Evaluation エディションが必要です。
     
     > [!NOTE]
     > インメモリ OLTP には、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が必要です。  
@@ -36,22 +36,22 @@ ms.locfileid: "91867052"
   
 -   持続性メモリ最適化テーブルの 2 倍のサイズの空きディスク領域。  
   
--   インメモリ OLTP を使用するための **cmpxchg16b** 命令をサポートするプロセッサ。 最新のすべての 64 ビット プロセッサでは **cmpxchg16b**がサポートされています。  
+-   インメモリ OLTP を使用するための **cmpxchg16b** 命令をサポートするプロセッサ。 最新のすべての 64 ビット プロセッサでは **cmpxchg16b** がサポートされています。  
   
-     仮想マシンを使用していて、古いプロセッサが原因のエラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示される場合は、VM ホスト アプリケーションに **cmpxchg16b**を許可する構成オプションがあるかどうかをご確認ください。 該当する構成オプションがない場合は、Hyper-V を使用できます。Hyper-V では、構成オプションを変更することなく **cmpxchg16b** がサポートされています。  
+     仮想マシンを使用していて、古いプロセッサが原因のエラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示される場合は、VM ホスト アプリケーションに **cmpxchg16b** を許可する構成オプションがあるかどうかをご確認ください。 該当する構成オプションがない場合は、Hyper-V を使用できます。Hyper-V では、構成オプションを変更することなく **cmpxchg16b** がサポートされています。  
   
--   インメモリ OLTP は **データベース エンジン サービス**の一部としてインストールされます。  
+-   インメモリ OLTP は **データベース エンジン サービス** の一部としてインストールされます。  
   
      レポートの生成 (「[テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)」) と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーでインメモリ OLTP を管理する場合) をインストールするには、[SQL Server Management Studio (SSMS) をダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)します。   
   
 ## <a name="important-notes-on-using-hek_2"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] の使用に関する重要な注意事項  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、メモリ最適化テーブルのサイズには空きメモリのサイズ以外の制限がありません。 
+-   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、メモリ最適化テーブルのサイズには空きメモリのサイズ以外の制限がありません。 
 
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、「 [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)」を参照してください。  
 
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 より、Standard エディションと Express エディションではインメモリ OLTP がサポートされていますが、所与のデータベースでメモリ最適化テーブルに利用できるメモリ量にクォータが課せられます。 Standard エディションの場合、これはデータベースごとに 32GB です。Express エディションの場合、データベースごとに 352MB です。 
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 より、Standard エディションと Express エディションではインメモリ OLTP がサポートされていますが、所与のデータベースでメモリ最適化テーブルに利用できるメモリ量にクォータが課せられます。 Standard エディションの場合、これはデータベースごとに 32GB です。Express エディションの場合、データベースごとに 352MB です。 
   
 -   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* ユーザー権を与え、ファイルの瞬時初期化 (IFI) を有効にしてください。 IFI なしの場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 有効化方法など、IFI に関する詳細については、「[データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)」を参照してください。
   

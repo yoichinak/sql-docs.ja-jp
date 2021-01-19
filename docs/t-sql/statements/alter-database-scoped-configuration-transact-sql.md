@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest
-ms.openlocfilehash: 85c4646af6f5801bd617baef47aecf913374ae95
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8d314e90bbe869dec9ccdc31c45996c4834fc829
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099597"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170424"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -170,7 +170,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > これをクエリ レベルで行うには、**QUERYTRACEON** [クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を追加してください。
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)を追加してください。
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)を追加してください。
 
 PRIMARY
 
@@ -182,7 +182,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
 > [!TIP]
 > クエリ レベルでこれを行う方法については、「**OPTIMIZE FOR UNKNOWN** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)も利用できます。
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降、クエリ レベルでこれを行うには、**USE HINT** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)も利用できます。
 
 PRIMARY
 
@@ -196,7 +196,7 @@ PRIMARY
 
 > [!TIP]
 > これをクエリ レベルで行うには、**QUERYTRACEON** [クエリ ヒント](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)を追加してください。
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、USE HINT [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)を追加してください。
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 以降、クエリ レベルでこれを行うには、トレース フラグの代わりに、USE HINT [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)を追加してください。
 
 PRIMARY
 
@@ -466,7 +466,7 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 ### <a name="dacfx"></a>DacFx
 
-`ALTER DATABASE SCOPED CONFIGURATION` は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] など、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) または [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) にエクスポートしたものは、下位レベルのサーバーにインポートできません。
+`ALTER DATABASE SCOPED CONFIGURATION` は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] など、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] データベースから [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) または [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) にエクスポートしたものは、下位レベルのサーバーにインポートできません。
 
 ### <a name="elevate_online"></a>ELEVATE_ONLINE
 

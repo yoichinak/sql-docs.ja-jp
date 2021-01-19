@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0d5c070d961e71711189b9b32ad12508812b277
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668011"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171544"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "85668011"
     -  最も大規模なインデックス保守管理に必要な時間。
     -  データベースで最も大規模な一括処理を実行するときに必要な時間。
 
--   `FILEGROWTH` オプションを利用し、データとログのファイルに**自動拡張**を設定するとき、**パーセンテージ**より**サイズ**で設定したほうが増加の制御に優れている場合があります。割合は常に増加する量であるためです。
+-   `FILEGROWTH` オプションを利用し、データとログのファイルに **自動拡張** を設定するとき、**パーセンテージ** より **サイズ** で設定したほうが増加の制御に優れている場合があります。割合は常に増加する量であるためです。
     -  トランザクション ログでは[ファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を活用できないことに留意してください。そのため、ログ拡張の回数増加が重要になります。 
     -  ベスト プラクティスとしては、トランザクション ログに対して `FILEGROWTH` オプションの値を 1,024 MB 以上に設定しないでください。 `FILEGROWTH` オプションの既定値:  
   
       |Version|既定値|  
       |-------------|--------------------|  
-      |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|  
+      |[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] の前|データ 10%。 ログ ファイル 10%。|  
 
@@ -109,7 +109,7 @@ ms.locfileid: "85668011"
 
 -   データベースにログ ファイルが複数存在すると、パフォーマンスが向上しません。トランザクション ログ ファイルでは、同じファイル グループのデータ ファイルのように[比例配分](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)を利用することがないためです。  
 
--   ログ ファイルは自動的に圧縮するように設定できます。 ただし、これは**推奨されません**。**auto_shrink** データベース プロパティは既定で FALSE に設定されています。 **auto_shrink** を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 
+-   ログ ファイルは自動的に圧縮するように設定できます。 ただし、これは **推奨されません**。**auto_shrink** データベース プロパティは既定で FALSE に設定されています。 **auto_shrink** を TRUE に設定すると、ファイル領域の 25% を超える領域が未使用の場合にのみ、自動圧縮によってファイルのサイズが縮小されます。 
     -   ファイルは、ファイル領域の 25% のみが未使用領域になるサイズ、またはファイルの元のサイズの、どちらか大きい方のサイズまで圧縮されます。 
     -   **auto_shrink** プロパティの設定変更については、「[データベースのプロパティの表示または変更](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)」と「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。 
   

@@ -17,12 +17,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c16f1f430f0291d30d56faadee9e2779543ef61
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 091ebaf16d46cdde5604e532a80f1dd1177586c6
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427208"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172464"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
 
@@ -64,7 +64,7 @@ ms.locfileid: "97427208"
   
  たとえば、 **Sales.SalesOrderHeader** テーブルには、 **Sales.SalesPerson** テーブルへの外部キー リンクが存在します。これは、販売注文と販売員の間に論理リレーションシップが存在するからです。 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルの主キー列と一致します。 また、 **SalesOrderHeader** テーブルの **SalesPersonID** 列は、 **SalesPerson** テーブルに対する外部キーです。 この外部キー リレーションシップを作成することによって、 **SalesPerson** テーブル内に存在しない **SalesPersonID** の値を **SalesOrderHeader** テーブルに挿入することはできなくなります。  
   
- テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数が 253 から 10,000 までに限られています。 (少なくとも 130 の互換性レベルが必要です)。増加には、次の制限があります。  
+ テーブルから、他のテーブルと列を最大 253 個まで外部キーとして参照 (発信参照) することができます。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、1 つのテーブル内の列を参照 (着信参照) できる他のテーブルと列の数が 253 から 10,000 までに限られています。 (少なくとも 130 の互換性レベルが必要です)。増加には、次の制限があります。  
   
 -   253 を超える外部キー参照は、DELETE DML 操作でのみサポートされています。 UPDATE 操作と MERGE 操作ではサポートされません。  
   

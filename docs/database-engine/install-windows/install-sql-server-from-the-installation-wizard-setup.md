@@ -15,18 +15,18 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 9cc9c07d69be1b08a887ddf4a7ac071647a4d89a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d2c5f2fc245c981cf0c6d045333528aeff32536c
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440233"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170194"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。
+この記事では、インストール ウィザードを使用して SQL Server をインストールする方法について説明します。 これは [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] および [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)] に適用されます。
 
 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ インストール ウィザードを使って [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをインストールする手順について詳しく説明します。 インストール ウィザードでは、1 つの機能ツリーを使用してすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをインストールできるため、それらを個別にインストールする必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントを個別にインストールするには、「[SQL Server をインストールする](../../database-engine/install-windows/install-sql-server.md#individual-component-installation)」を参照してください。  
 
@@ -131,7 +131,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
+    > [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
   
 1. **[サーバーの構成 - 照合順序]** ページを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] と [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に既定以外の照合順序を指定します。    
 
@@ -300,7 +300,7 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
+    > [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで [データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 **[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]** チェック ボックスをオンにします。
   
      **[サーバーの構成] - [照合順序]** ページを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に既定以外の照合順序を指定します。 詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   

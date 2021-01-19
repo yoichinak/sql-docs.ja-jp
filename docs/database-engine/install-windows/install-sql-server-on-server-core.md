@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 73dcacb73703ab2138c36bcc7c849b5a6a8e9fbe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab5a2352358fdb678241425e0ca5e8f999d8a2f2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483724"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170174"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -74,7 +74,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |Windows のエディション|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>アップグレード 
- Server Core インストールでは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] へのアップグレードがサポートされています。  
+ Server Core インストールでは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] へのアップグレードがサポートされています。  
   
 ## <a name="install"></a>インストール  
  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では、Server Core オペレーティング システムでのインストール ウィザードを使用したセットアップはサポートされていません。 Server Core にインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 詳細については、「 [コマンド プロンプトからの SQL Server のインストール](./install-sql-server-from-the-command-prompt.md)」を参照してください。  

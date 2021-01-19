@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: e42d6b716202a5080e5d6330bc0a674f0c627878
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878935"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171064"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "97878935"
 -   クエリおよびインデックスの操作だけでなく、このオプションも DBCC CHECKTABLE、DBCC CHECKDB、および DBCC CHECKFILEGROUP の並列処理を制御します。 トレース フラグ 2528 を使用して、これらのステートメントの並列実行プランを無効にすることができます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)」を参照してください。
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a> <a name="Guidelines"></a> 推奨事項  
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、サービスの開始中、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]の起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアが検出されると、既定でソフト NUMA ノードが自動的に作成されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]により、同じ物理コアからさまざまなソフト NUMA ノードに論理プロセッサが配置されます。 次の表に示す推奨事項は、並列クエリのすべてのワーカー スレッドを同じソフト NUMA ノード内に保持することを目的としています。 これにより、ワークロードの NUMA ノード間でクエリのパフォーマンスとワーカー スレッドの分布が向上します。 詳細については、「[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、サービスの開始中、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]の起動時に NUMA ノードまたはソケットあたり 8 個を超える物理コアが検出されると、既定でソフト NUMA ノードが自動的に作成されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]により、同じ物理コアからさまざまなソフト NUMA ノードに論理プロセッサが配置されます。 次の表に示す推奨事項は、並列クエリのすべてのワーカー スレッドを同じソフト NUMA ノード内に保持することを目的としています。 これにより、ワークロードの NUMA ノード間でクエリのパフォーマンスとワーカー スレッドの分布が向上します。 詳細については、「[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)」を参照してください。
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。
 
 |サーバー構成|プロセッサの数|ガイダンス|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ ms.locfileid: "97878935"
 |複数の NUMA ノードを持つサーバー|NUMA ノードあたり 16 を超える論理プロセッサ|最大値を 16 として、MAXDOP を NUMA ノードあたりの論理プロセッサ数の半分に保つ|
   
 > [!NOTE]
-> 上の表の NUMA ノードは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で自動的に作成されるソフト NUMA ノード、またはソフト NUMA が無効になっている場合はハードウェア ベースの NUMA ノードを表します。   
+> 上の表の NUMA ノードは、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降で自動的に作成されるソフト NUMA ノード、またはソフト NUMA が無効になっている場合はハードウェア ベースの NUMA ノードを表します。   
 >  リソース ガバナー ワークロード グループに対して max degree of parallelism オプションを設定する場合は、これらと同じガイドラインを使用します。 詳細については、「[CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。
   
 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、**max degree of parallelism** サーバーの構成値を構成する場合、以下のガイドラインを使用します。

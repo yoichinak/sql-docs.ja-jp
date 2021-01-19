@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48e25e4a2bc22d56503b3f0cc1819bb10b856e9d
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 581f49677f56c0d0c1360d5282c07205f18ee35a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688729"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170824"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -117,7 +117,7 @@ CREATE SYMMETRIC KEY key_name
  \<algorithm>  
 暗号化アルゴリズムを指定します。   
 > [!WARNING]  
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが非推奨とされます。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、AES_128、AES_192、AES_256 以外のすべてのアルゴリズムが非推奨とされます。 古いアルゴリズムを使用する場合は (推奨されません)、データベース互換性レベルを 120 以下に設定する必要があります。  
   
 ## <a name="remarks"></a>解説  
  対称キーを作成するときには、証明書、パスワード、対称キー、非対称キー、PROVIDER のうち少なくとも 1 つを使用して対称キーを暗号化する必要があります。 キーには種類ごとの暗号化を複数指定できます。 つまり、1 つの対称キーを、複数の証明書、パスワード、対称キー、および非対称キーを使用して同時に暗号化できます。  

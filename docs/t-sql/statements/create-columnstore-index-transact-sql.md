@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b650e0fa1d1d6c02e657d3d5860908164ed5cd91
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 57665811cd12b4c31effb82a91a722780a774874
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099572"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170454"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98099572"
 行ストア テーブルをクラスター化された列ストア インデックスに変換するか、クラスター化されていない列ストア インデックスを作成します。 OLTP ワークロードに対して効率的に運用分析をリアルタイムで実行するには、またはデータ ウェアハウスに対するワークロードのデータ圧縮とクエリのパフォーマンスを向上させるには、列ストア インデックスを使用します。  
   
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
 
 > [!TIP]
 > インデックスの設計のガイドラインについては、「[SQL Server インデックス デザイン ガイド](../../relational-databases/sql-server-index-design-guide.md)」をご覧ください。
@@ -120,10 +120,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 |オプション| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 句 | 該当なし | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE 句 | 該当なし | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
 
 すべてのオプションは、Azure SQL Database で使用できます。
 
@@ -369,7 +369,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 **以下のいずれかのデータ型を使用する列は、列ストア インデックスに含めることができません。**
 -   ntext、text、image  
--   nvarchar(max)、varchar(max)、varbinary(max) ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前のバージョンに適用、非クラスター化列ストア インデックス) 
+-   nvarchar(max)、varchar(max)、varbinary(max) ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以前のバージョンに適用、非クラスター化列ストア インデックス) 
 -   rowversion (timestamp)  
 -   sql_variant  
 -   CLR 型 (hierarchyid 型および空間型)  
@@ -387,7 +387,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
 
 > [!NOTE]  
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、インデックス付きビューに対して非クラスター化列ストア インデックスを作成できます。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、インデックス付きビューに対して非クラスター化列ストア インデックスを作成できます。  
 
 
  **列ストア インデックスと同時に使用できない機能:**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. 行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する。  
- この例では、行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する方法を示します。 実際には、以降では、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 特別な操作は不要です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいクラスター化列ストア インデックスで非クラスター化インデックスを自動的に定義し、再構築します。  
+ この例では、行ストア テーブルを列ストア インデックスに変換するときに、非クラスター化インデックスを処理する方法を示します。 実際には、以降では、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 特別な操作は不要です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は新しいクラスター化列ストア インデックスで非クラスター化インデックスを自動的に定義し、再構築します。  
   
  非クラスター化インデックスを削除する場合は、列ストア インデックスを作成する前に、DROP INDEX ステートメントを使用します。 DROP EXISTING オプションは、変換されるクラスター化インデックスのみを削除します。 非クラスター化インデックスは削除されません。  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  クラスター化列ストア インデックス全体を再構築するには、2 つの方法があります。 CREATE CLUSTERED COLUMNSTORE INDEX か [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) と REBUILD オプションを使用できます。 いずれの方法でも、同じ結果が得られます。  
   
 > [!NOTE]  
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この例で説明した方法を使って再構築する代わりに、`ALTER INDEX...REORGANIZE` を使用します。  
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、この例で説明した方法を使って再構築する代わりに、`ALTER INDEX...REORGANIZE` を使用します。  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

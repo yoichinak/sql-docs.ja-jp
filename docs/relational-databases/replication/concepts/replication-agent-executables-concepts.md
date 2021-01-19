@@ -18,12 +18,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 41525854d161d029beae6e0956bc11e536ab813b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bd6886f7ad5569d4eba40e9e603c9fccead17f71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460305"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171224"
 ---
 # <a name="replication-agent-executables-concepts"></a>レプリケーション エージェント実行可能ファイルの概念
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "97460305"
 >  これらの例では、読みやすくするために、改行が追加されています。 バッチ ファイルの場合、コマンドは 1 行で入力する必要があります。  
   
 ### <a name="running-the-snapshot-agent"></a>スナップショット エージェントの実行  
- 次の例では、バッチ ファイルを使って、スナップショット エージェントをコマンド プロンプトから呼び出し、**AdvWorksSalesOrdersMerge** パブリケーションのスナップショットを生成しています。 (以下のスクリプトでは、[!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] ファイル (バージョン 130) へのパスを使用しています)。 スクリプトを調整し、使用しているバージョンの [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] のファイルを指すようにする必要があります。)  
+ 次の例では、バッチ ファイルを使って、スナップショット エージェントをコマンド プロンプトから呼び出し、**AdvWorksSalesOrdersMerge** パブリケーションのスナップショットを生成しています。 (以下のスクリプトでは、[!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] ファイル (バージョン 130) へのパスを使用しています)。 スクリプトを調整し、使用しているバージョンの [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] のファイルを指すようにする必要があります。)  
   
 ```  
 REM -- Declare variables  

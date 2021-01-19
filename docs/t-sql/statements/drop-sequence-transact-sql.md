@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 35b9382a58fb775a8754a1735864204811cfc57e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0513019d95994607cf3db97c0fe9f72f8c3e44e0
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102317"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171624"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
  条件付きではすでに存在する場合にのみ、シーケンスを削除します。  
   
@@ -57,7 +57,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  削除するシーケンスの名前です。 データ型は **sysname** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  番号の生成後、その番号とシーケンス オブジェクトは無関係になるため、生成された番号が使用されている場合でも、シーケンス オブジェクトは削除できます。  
   
  シーケンス オブジェクトはスキーマ バインドされないため、ストアド プロシージャまたはトリガーによって参照されているシーケンス オブジェクトは削除できます。 テーブルで既定値として参照されているシーケンス オブジェクトは削除できません。 シーケンスを参照しているオブジェクトの一覧がエラー メッセージに表示されます。  

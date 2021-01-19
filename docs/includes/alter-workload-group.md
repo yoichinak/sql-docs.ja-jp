@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。 
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSQL15](sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
+> [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 および [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。  

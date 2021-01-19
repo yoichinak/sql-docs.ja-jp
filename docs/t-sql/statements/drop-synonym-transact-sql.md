@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cb3e1a7c66aba0234145ba840f36643c6ca49d9c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a910ab091d961a48b7ff7822cb01924f1c9b1f82
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099413"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170384"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 
 ## <a name="arguments"></a>引数
  *IF EXISTS*  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)
   
  条件付きでは既に存在する場合にのみ、シノニムを削除します。  
   

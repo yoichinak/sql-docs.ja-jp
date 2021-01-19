@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ac2d69eaba62d6cde697c2299ee432d837987c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d604298ca4956ef699ab763255cb2534be30679
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098532"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170634"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -565,7 +565,7 @@ SPARSE
 列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として設定することはできません。 列をスパースから非スパースに変換したり、非スパースからスパースに変換したりすると、コマンドの実行中にテーブルがロックされます。 REBUILD 句を使用して、領域の節約を再要求することが必要になる場合があります。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 動的なデータ マスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 3 つの関数を使用できます。
 
@@ -577,7 +577,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 マスクを削除するには、`DROP MASKED` を使用します。 関数のパラメーターについては、「[動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)」を参照してください。
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テーブルを使用可能な状態に維持したまま、列の変更操作の多くを実行できるようにします。 既定値は OFF です。 データ型、列の長さまたは有効桁数、NULL 値の許容、スパースかどうか、および照合順序に関連する列の変更のために、列の変更をオンラインで実行できます。
 
@@ -668,7 +668,7 @@ COLUMN *column_name*
 > 列を削除しても、列のディスク領域は回収されません。 テーブルの行サイズが制限に近いか制限を超えている場合は、必要に応じて、削除した列のディスク領域を再要求します。 領域を再確保するには、テーブルにクラスター化インデックスを作成するか、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用して既存のクラスター化インデックスを再構築します。 LOB データ型の削除による影響の詳細については、この [CSS ブログ エントリ](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower)を参照してください。
 
 FOR SYSTEM_TIME の期間  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 システムのバージョン管理のために、システムが使用する列の仕様を削除します。
 
@@ -792,7 +792,7 @@ SET FILESTREAM_ON 句を指定した ALTER TABLE は、テーブルに FILESTREA
 **"** NULL **"** を指定すると、テーブルの FILESTREAM ファイル グループへの参照がすべて削除されます。 最初にすべての FILESTREAM 列を削除する必要があります。 テーブルに関連付けられている FILESTREAM データをすべて削除するには、SET FILESTREAM_ON = "**NULL**" を使用します。
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+ **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テーブルに関するシステムのバージョン管理を無効または有効にします。 テーブルのシステム バージョン管理を有効にするために、システムでは、システム バージョン管理のためのデータ型、null 値許容制約、および主キー制約の要件が満たされていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムによって現在のテーブルのスキーマに一致する履歴テーブルが生成され、2 つのテーブル間のリンクが作成され、システムが現在のテーブルにある各レコードの履歴を履歴テーブルに記録できるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、システムにより現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを行うよう選択できます。 このデータの整合性チェックにより、既存のレコードが重複しないようになります。 既定ではデータの整合性チェックを実行します。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
@@ -1000,7 +1000,7 @@ BLOCKERS
 **ALTER ANY CONNECTION** 権限が必要です。
 
 IF EXISTS  
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 既に存在する場合にのみ、列または制約を条件付きで削除します。
 
@@ -1737,7 +1737,7 @@ REBUILD WITH
 
 次の例では、ONLINE オプションを使用して列の変更操作を実行する方法を示します。
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1756,7 +1756,7 @@ GO
 
 システムのバージョン管理を使用する構文に慣れるには、次の 4 つの例を参照してください。 詳細については、「[システム バージョン管理されたテンポラル テーブルの概要](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)」を参照してください。
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. システムのバージョン管理を既存のテーブルに追加する
 

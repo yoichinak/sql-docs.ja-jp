@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 8ebdef5d75c430ec5ba208613b72771939fdfc9b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 90a24ba11ce482e8d8608e1641d64ace067ad41b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481483"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170974"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>external scripts enabled サーバー構成オプション
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "97481483"
 
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャを使用して外部スクリプトを実行する前に、external script enabled オプションを有効にする必要があります。 R や Python などのサポートされている言語で書かれたスクリプトを実行するには、**sp_execute_external_script** を使います。 
 
-+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合
++ [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] の場合
 
-    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] には、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] での R 言語のサポートと、一連の R ワークステーション ツールおよび接続性ライブラリが含まれます。
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] には、[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] での R 言語のサポートと、一連の R ワークステーション ツールおよび接続性ライブラリが含まれます。
 
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの間に **R Services** をインストールして、R スクリプトの実行を有効にします。
 

@@ -11,12 +11,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: c36d6718455f85314f98219b860a801984804d9d
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: 4acdd7f1d8b6a39af4054f30381665d1504bcb71
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975468"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171834"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -86,10 +86,10 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
  たとえば、このアプローチは、次をアップグレードする場合に使用できます。  
   
 -   サポートされていないオペレーティング システムへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール。    
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降は x86 インストールをサポートしていないため、SQL Server の x86 インストール。   
+-   [!INCLUDE[ss2016](../../includes/sssql16-md.md)] 以降は x86 インストールをサポートしていないため、SQL Server の x86 インストール。   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新しいハードウェアや新しいバージョンのオペレーティング システムへ。    
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。   
--   [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降は SQL Server 2005 のインプレース アップグレードをサポートしていないため、SQL Server 2005。 詳細については、「[SQL Server 2005 からアップグレードしますか?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)」を参照してください。
+-   [!INCLUDE[ss2016](../../includes/sssql16-md.md)] 以降は SQL Server 2005 のインプレース アップグレードをサポートしていないため、SQL Server 2005。 詳細については、「[SQL Server 2005 からアップグレードしますか?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)」を参照してください。
 
   
 新規インストール アップグレードに必要な手順は、アタッチされたストレージを使用するか、または SAN ストレージを使用するかどうかによってやや異なります。  

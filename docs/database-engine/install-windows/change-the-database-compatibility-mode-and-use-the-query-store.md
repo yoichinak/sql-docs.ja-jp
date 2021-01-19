@@ -15,18 +15,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 6ca048300bdfa2a9640a54211f8d82d3120597a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7d4394c5fe4d790668bcc6733ce0aba0f643f7f3
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483734"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170894"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
+[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
   
 - アップグレードは一方向の操作である (ファイル形式をダウン グレードできない) ため、データベース内で新機能を有効にする操作を別の操作に分離することが重要です。 以前のデータベース互換性レベルに設定を戻すことができます。  新しいモデルでは、停止期間中に発生する処理の数が減ります。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "97483734"
 > - tempdb、model、msdb、および Resource データベースの互換性レベルは、アップグレード後に現在の互換性レベルに設定されます。   
 > - master システム データベースは、アップグレード前の互換性レベルを保持します。    
   
-新しいクエリ プロセッサの機能を有効にするためのアップグレード プロセスは、製品のリリース後のサービス モデルに関連付けられます。  それらの修正プログラムの一部は、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) でリリースされます。  修正プログラムを必要とするユーザーは、他のユーザーにとって予期しない回帰を引き起こすことなくそれらの修正プログラムを適用できます。 クエリ プロセッサの修正プログラムのリリース後のサービス モデルは、 [ここ](https://support.microsoft.com/kb/974006)に記載されています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、新しい互換性レベルに移行した場合、トレース フラグ 4199 は不要になります。これは、それらの修正プログラムは最新の互換レベルで既定で有効になっているためです。 そのため、アップグレード プロセスの一環として、アップグレード プロセスが完了したら、4199 が無効になっていることを検証することが重要です。  
+新しいクエリ プロセッサの機能を有効にするためのアップグレード プロセスは、製品のリリース後のサービス モデルに関連付けられます。  それらの修正プログラムの一部は、[トレース フラグ 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) でリリースされます。  修正プログラムを必要とするユーザーは、他のユーザーにとって予期しない回帰を引き起こすことなくそれらの修正プログラムを適用できます。 クエリ プロセッサの修正プログラムのリリース後のサービス モデルは、 [ここ](https://support.microsoft.com/kb/974006)に記載されています。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降では、新しい互換性レベルに移行した場合、トレース フラグ 4199 は不要になります。これは、それらの修正プログラムは最新の互換レベルで既定で有効になっているためです。 そのため、アップグレード プロセスの一環として、アップグレード プロセスが完了したら、4199 が無効になっていることを検証することが重要です。  
 
 > [!NOTE]
 > ただし、RTM の後にリリースされた新しいクエリ プロセッサの修正プログラムを有効にするためには (該当する場合)、トレース フラグ 4199 が必要です。

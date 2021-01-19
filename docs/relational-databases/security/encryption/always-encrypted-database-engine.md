@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f097d500c1d1b0a035f2bb0e737214d65803414
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 534d7238316fe2037ea0ce43e2b4aeeb11e6eea2
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477723"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171334"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "97477723"
   
  Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに格納されたクレジット カード番号や身分登録番号 (アメリカの社会保障番号など) などの機微なデータを保護するために設計された機能です。 Always Encrypted を使用すると、クライアントは [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) に暗号化キーを開示することなく、クライアント アプリケーション内の機微なデータを暗号化することができます。 結果として、Always Encrypted により、データを所有していて見ることができるユーザーと、データを管理するがアクセスできてはならないユーザーが分離されます。 Always Encrypted を使うと、オンプレミスのデータベース管理者、クラウド データベース オペレーター、または高い特権を持つものの許可されていないユーザーは、暗号化されたデータにアクセスできなくなり、顧客は直接管理できない機密データを安心して格納できます。 これにより、組織はデータを Azure に格納し、オンプレミスのデータベースの管理をサード パーティに委任したり、自社の DBA スタッフによる取り扱い許可の要件を緩和したりできます。
 
- Always Encrypted を使うと、暗号化されたデータに対する一部のクエリを [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で処理できるようになる一方で、データの機密性は維持され、上記のセキュリティ上の利点が提供されることにより、機密コンピューティング機能が実現されます。 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)]、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] の Always Encrypted では、決定論的な暗号化により等値比較がサポートされます。 「[明確な暗号化またはランダム化された暗号化の選択](#selecting--deterministic-or-randomized-encryption)」を参照してください。 
+ Always Encrypted を使うと、暗号化されたデータに対する一部のクエリを [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で処理できるようになる一方で、データの機密性は維持され、上記のセキュリティ上の利点が提供されることにより、機密コンピューティング機能が実現されます。 [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]、[!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)]、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] の Always Encrypted では、決定論的な暗号化により等値比較がサポートされます。 「[明確な暗号化またはランダム化された暗号化の選択](#selecting--deterministic-or-randomized-encryption)」を参照してください。 
 
   > [!NOTE] 
   > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、セキュリティで保護されたエンクレーブのパターン マッチング、他の比較演算子、およびインプレース暗号化により、Always Encrypted の機密コンピューティング機能が大幅に拡張されます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。
 
  Always Encrypted は、アプリケーションに対して暗号化を透過的に実行します。 クライアント コンピューターにインストールされている、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機微なデータを自動的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]にデータを渡す前に機微な列のデータを暗号化し、アプリケーションに対するセマンティクスが維持されるように自動的にクエリを書き換えます。 また、暗号化されたデータベース列に格納され、クエリ結果に含まれているデータを、同じように透過的に暗号化解除します。  
   
- Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ([!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
+ Always Encrypted は、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] のすべてのエディション、[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] 以降、および [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のすべてのサービス レベルで利用できます。 ([!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1 より前は、Always Encrypted は Enterprise Edition 限定でした。)Always Encrypted が含まれている Channel 9 のプレゼンテーションについては、「 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)」 (Always Encrypted を使用して機微なデータの安全を確保する) を参照してください。  
 
   
 ## <a name="typical-scenarios"></a>標準のシナリオ  

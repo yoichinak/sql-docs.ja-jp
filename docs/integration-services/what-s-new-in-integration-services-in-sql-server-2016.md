@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0088f32b5108eef5f3656a2b7640340c001f28a7
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 838b01e2fd4f09b787b11f146143fc6c327504b7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384871"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98172214"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
 
@@ -368,7 +368,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML タスクでの XML 検証の詳細な出力  
  XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。 **ValidationDetails** プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 現在は、 **ValidationDetails** を true に設定すると、出力ファイルに各エラーの行番号と位置を含む詳しい情報が出力されます。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。 詳細については、「 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)」を参照してください。  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 **ValidationDetails** プロパティは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]でも利用できます。   
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 **ValidationDetails** プロパティは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]でも利用できます。   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

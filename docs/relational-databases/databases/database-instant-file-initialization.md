@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6598dc9812aed56b170c22d0ed1b4a470c5f7209
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 47bb374abb29374fade7a4c2c158ea4e76abe71b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878766"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171744"
 ---
 # <a name="database-instant-file-initialization"></a>データベースのファイルの瞬時初期化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "97878766"
 > [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) など、ファイルの瞬時初期化を使用できない機能の使用状況もあります。  
 
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、インストール時、セットアップ中にサービス アカウントにこのアクセス許可を付与できます。 <br><br>[コマンド プロンプト インストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を利用する場合、/SQLSVCINSTANTFILEINIT 引数を追加するか、[インストール ウィザード](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
+> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降、インストール時、セットアップ中にサービス アカウントにこのアクセス許可を付与できます。 <br><br>[コマンド プロンプト インストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を利用する場合、/SQLSVCINSTANTFILEINIT 引数を追加するか、[インストール ウィザード](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
   
 アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "97878766"
 1. 起動時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを確認します。
    
   
-    **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
+    **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] 以降)。
     1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられる場合、次のような情報メッセージが記録されます。
 
         `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

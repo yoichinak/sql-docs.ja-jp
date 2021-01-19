@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b63c205a6953a751507abdd67abb229b5f15387
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b5f15490744ccfe8bfd47a69892f7033ddae361
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772501"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171004"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85772501"
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のセットアップ時に、ログインは BUILTIN\Users グループに追加されます。 これにより、コンピューターの認証されたすべてのユーザーが public ロールのメンバーとして [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスにアクセスできるようになります。 BUILTIN\Users ログインを安全に削除して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] アクセスを、個別のログインを持つコンピューター ユーザーまたはログインを持つ他の Windows グループのメンバーに制限できます。  
   
 > [!WARNING]  
->  [!INCLUDE[sssql14](../../includes/sssql14-md.md)] までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーは、既定で TLS 1.0 および SSL 3.0 のみをサポートしています。 オペレーティング システムの SChannel レイヤーを変更して異なるプロトコル (TLS 1.1、TLS 1.2 など) を適用する場合、<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">こちら</a>に記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 1.1 および 1.2 のサポートを追加する適切な更新プログラムをインストールしていなければ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続は失敗する可能性があります。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 以降、SQL Server のすべてのリリース バージョンには TLS 1.2 のサポートが含まれているため、更新プログラムをさらにインストールする必要はありません。
+>  [!INCLUDE[sssql14](../../includes/sssql14-md.md)] までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーは、既定で TLS 1.0 および SSL 3.0 のみをサポートしています。 オペレーティング システムの SChannel レイヤーを変更して異なるプロトコル (TLS 1.1、TLS 1.2 など) を適用する場合、<a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">こちら</a>に記載されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に TLS 1.1 および 1.2 のサポートを追加する適切な更新プログラムをインストールしていなければ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続は失敗する可能性があります。 [!INCLUDE[sssql15](../../includes/sssql16-md.md)] 以降、SQL Server のすべてのリリース バージョンには TLS 1.2 のサポートが含まれているため、更新プログラムをさらにインストールする必要はありません。
   
  **このトピックの内容**  
   

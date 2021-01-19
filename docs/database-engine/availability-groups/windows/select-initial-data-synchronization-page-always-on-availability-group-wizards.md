@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fd729c01993f06c9017a898e1e804dde844e10f2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 73ee631c0dc853a60e07f09aa2ade5ce58487a0e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642165"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171094"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97642165"
   
 ## <a name="automatic-seeding"></a><a name="Auto"></a> 自動シード処理
  
- グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
+ グループの各データベースのセカンダリ レプリカが SQL Server で自動的に作成されます。 自動シード処理には、データとログ ファイルのパスが、グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 [!INCLUDE[sssql16-md.md](../../../includes/sssql16-md.md)] 以降で使用できます。 「[AlwaysOn 可用性グループを自動的に初期化する](automatically-initialize-always-on-availability-group.md)」を参照してください。
 
 ##  <a name="full-database-and-log-backup"></a><a name="Full"></a> 完全なデータベースとログ バックアップ 
  各プライマリ データベースに対して **[完全なデータベースとログ バックアップ]** オプションを選択すると、1 つのワークフローで、プライマリ データベースの完全バックアップとログ バックアップを作成する、セカンダリ レプリカをホストする各サーバー インスタンスでこれらのバックアップを復元して、対応するセカンダリ データベースを作成する、各セカンダリ データベースを可用性グループに参加させる、という操作を実行します。  
