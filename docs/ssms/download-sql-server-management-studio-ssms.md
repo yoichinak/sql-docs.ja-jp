@@ -24,12 +24,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: e1af0f83181e6fbd479d2727b7da893b8bc20b59
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a4798fbc01e015b85e31d9768fd8135af6d202f4
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639244"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596868"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -58,7 +58,7 @@ SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS �
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、**Microsoft SQL Server Management Studio 18** というラベルが付いています。
 
 > [!Note]
-> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版](https://aka.ms/downloadssmsusenglish)をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
+> 英語以外のバージョンからこのページにアクセスしていて、最新の内容を見たい場合は、[サイトの英語 (米国) 版]()をご覧ください。 [使用できる言語](#available-languages)を選択して、英語 (米国) 版のサイトから別の言語をダウンロードできます。ます。
 
 ## <a name="available-languages"></a>使用できる言語
 
@@ -68,7 +68,7 @@ SQL Server Management Studio 18.8:
 [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2151644&clcid=0x40a)
 
 > [!NOTE]
-> SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールです。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
+> SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールです。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](../powershell/download-sql-server-ps-module.md)」を参照してください。
 
 ## <a name="whats-new"></a>新機能
 
@@ -158,7 +158,7 @@ SSMS の現在のリリースでは、利用可能な最新の Service Pack と�
 - ハードディスク領域: 最低でも 2 GB、最大 10 GB の使用可能な領域
 
 > [!NOTE]
-> SSMS は、Windows 用の 32 ビット アプリケーションとしてのみ使用できます。 Windows 以外のオペレーティング システムで実行するツールが必要な場合は、Azure Data Studio をお勧めします。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行されるクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
+> SSMS は、Windows 用の 32 ビット アプリケーションとしてのみ使用できます。 Windows 以外のオペレーティング システムで実行するツールが必要な場合は、Azure Data Studio をお勧めします。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行されるクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) に関する記事をご覧ください。
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
@@ -166,10 +166,10 @@ SSMS の現在のリリースでは、利用可能な最新の Service Pack と�
 
 - [SQL ツール](../tools/overview-sql-tools.md)
 - [SQL Server Management Studio のドキュメント](sql-server-management-studio-ssms.md)
-- [Azure Data Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 - [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [最新の更新プログラム](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
-- [Azure データ アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/data-guide/)
+- [Azure データ アーキテクチャ ガイド](/azure/architecture/data-guide/)
 - [SQL Server のブログ](https://cloudblogs.microsoft.com/sqlserver/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
