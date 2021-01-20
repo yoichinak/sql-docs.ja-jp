@@ -11,12 +11,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fdb846a0b43bd9816faf931d936c456093ac26e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25e7694505f7f67702f476983c33120a87539887
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934014"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596424"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant (アクセス可能な Sql)
 
@@ -28,7 +28,7 @@ ms.locfileid: "87934014"
   
 |Section|説明|
 |-----------|---------------|
-|[SSMA for Access の新機能](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA リリースに対する変更の一覧を示します。|  
+|[SSMA for Access の新機能](./what-s-new-in-ssma-for-access-accesstosql.md)|SSMA リリースに対する変更の一覧を示します。|  
 |[アクセスのための SQL Server Migration Assistant のインストール](installing-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA をインストールするための前提条件、SSMA をインストールおよびライセンスする手順、および最新バージョンへのリンクを示します。|  
 |[アクセスのための SQL Server Migration Assistant を使用したはじめに &#40;アクセス許可 SQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA とそのユーザーインターフェイスについて説明します。|  
 |[Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)|/SQL Azure に変換するために Access データベースを準備する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
@@ -36,4 +36,4 @@ ms.locfileid: "87934014"
 |[Access アプリケーションの SQL Server へのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|既存の Access アプリケーションをで使用する方法について説明し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |[ユーザーインターフェイスリファレンス](user-interface-reference-accesstosql.md)|SSMA ダイアログボックスのドキュメントが含まれています。|  
 |[SSMA for Access コンソールの操作](working-with-ssma-for-access-console-accesstosql.md)|SSMA コンソールアプリケーションに関するドキュメントが含まれています。|  
-|[SSMA のアクセス権の取得](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|追加のサポートを受ける方法について説明します。|  
+|[SSMA のアクセス権の取得](../sql-server-migration-assistant.md)|追加のサポートを受ける方法について説明します。|

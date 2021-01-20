@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c590a76696f2729bf5d1c6c5d4ca5b0242a63df6
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426974"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596731"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 [ **Db2 への接続** ] ダイアログボックスを使用して、移行する db2 データベースに接続します。  
   
-このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **DB2 への接続**] を選択します。 以前に接続している場合は、コマンドが **DB2 に再接続**されます。  
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **DB2 への接続**] を選択します。 以前に接続している場合は、コマンドが **DB2 に再接続** されます。  
   
 ## <a name="options"></a>オプション  
 **プロバイダー**  
@@ -43,7 +43,7 @@ DB2 データベースへの接続に使用するデータアクセスプロバ�
 **サーバー名**  
 DB2 サーバー名を入力します。 既定のサーバー名は、コンピューター名と同じです。 これは標準モードオプションです。  
   
-**サーバーポート**  
+**[サーバー ポート]**  
 DB2 への接続に 1521 (既定値) 以外のポート番号を使用している場合は、ポート番号を入力します。 これは標準モードオプションです。  
   
 **接続識別子**  
@@ -70,7 +70,6 @@ SSMA が DB2 データベースへの接続に使用するユーザー名を入�
   
 接続文字列は、パラメーターの名前と値のペアで構成されます。  
   
--   OLE DB の接続文字列情報については、MSDN ライブラリの「 [Microsoft OLE DB Provider for DB2](https://go.microsoft.com/fwlink/?LinkId=85640) 」を参照してください。  
+-   OLE DB の接続文字列情報については、MSDN ライブラリの「 [Microsoft OLE DB Provider for DB2](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 」を参照してください。  
   
 SSMA 接続文字列の場合は、常に Provider パラメーターを含めます。 また、DB2 に接続するときは、必ず Port パラメーターを指定してください。  
-  

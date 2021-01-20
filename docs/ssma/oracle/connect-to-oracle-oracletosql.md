@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8e13b9ea8bcd264d1668cf0979dc2956bd11bef7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779044"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596722"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle への接続 (OracleToSQL)
 
-[ **Oracle への接続**] ダイアログボックスを使用すると、移行する oracle データベースに接続できます。
+[ **Oracle への接続** ] ダイアログボックスを使用すると、移行する oracle データベースに接続できます。
 
-このダイアログボックスにアクセスするには、[**ファイル**] メニューの [ **Oracle への接続**] をクリックします。 以前に接続している場合は、コマンドが**Oracle に再接続**されます。
+このダイアログボックスにアクセスするには、[ **ファイル** ] メニューの [ **Oracle への接続**] をクリックします。 以前に接続している場合は、コマンドが **Oracle に再接続** されます。
 
 ## <a name="options"></a>オプション
 
@@ -43,7 +43,7 @@ Oracle データベースへの接続に使用するデータアクセスプロ�
 **サーバー名**  
 Oracle サーバー名を入力します。 既定のサーバー名は、コンピューター名と同じです。 これは標準モードオプションです。
 
-**サーバーポート**  
+**[サーバー ポート]**  
 Oracle への接続に 1521 (既定値) 以外のポート番号を使用している場合は、ポート番号を入力します。 これは標準モードオプションです。
 
 **接続識別子**  
@@ -70,10 +70,10 @@ SSMA が Oracle データベースへの接続に使用するユーザー名を�
 
 接続文字列は、パラメーターの名前と値のペアで構成されます。
 
-- OLE DB の接続文字列情報については、MSDN ライブラリの「 [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) 」を参照してください。
+- OLE DB の接続文字列情報については、MSDN ライブラリの「 [Microsoft OLE DB Provider for Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) 」を参照してください。
 
 SSMA 接続文字列の場合は、常に Provider パラメーターを含めます。 また、Oracle に接続するときは、Port パラメーターを必ず含めてください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 移行プロセスの次の手順では、 [SQL Server に接続](connect-to-sql-server-oracletosql.md)します。

@@ -11,12 +11,12 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 294c91e0d1fa62c548bc88c834e292ab34ec0015
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5947ea6dad4a87258476b9b98d2bc4bc1a10a73d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935181"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596809"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL の SQL Server Migration Assistant (MySQLToSQL)
 
@@ -28,10 +28,10 @@ ms.locfileid: "87935181"
   
 |Section|説明|
 |-----------|---------------|
-|[SSMA for MySQL の新機能](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|SSMA for MySQL のこのバージョンの新機能|  
+|[SSMA for MySQL の新機能](./what-s-new-in-ssma-for-mysql-mysqltosql.md)|SSMA for MySQL のこのバージョンの新機能|  
 |[SSMA for MySQL のインストール &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|SQL Server を実行しているコンピューターに SSMA for MySQL クライアントおよび必須コンポーネントをインストールするための前提条件と手順を説明する記事が含まれています。|  
 |[SSMA for MySQL のはじめに &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|ユーザーインターフェイス、プロジェクト、および構成オプションについて説明します。|  
-|[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
+|[MySQL データベースを SQL Server Azure SQL Database &#40;MySQLToSql&#41;に移行する ](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|変換プロセスの概要と、プロセスの各手順に関する詳細情報について説明します。|  
 |[ユーザーインターフェイスリファレンス &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)|SSMA for MySQL のダイアログボックスのドキュメントが含まれています。|  
 |[SSMA for MySQL コンソールの操作](working-with-ssma-for-mysql-console-mysqltosql.md)|SSMA コンソールアプリケーションに関するドキュメントが含まれています。|  
-|[SSMA for MySQL のサポートを取得する](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|追加のサポートを受ける方法について説明します。|  
+|[SSMA for MySQL のサポートを取得する](../sql-server-migration-assistant.md)|追加のサポートを受ける方法について説明します。|
