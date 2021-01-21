@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4c4dc9956b8c3f9802feb839096195c09664d0d6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: b05864804e8f3f7cbcd67291b61d2099c4d18915
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378402"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595621"
 ---
 # <a name="monitor-cluster-status-with-azure-data-studio"></a>Azure Data Studio を使用してクラスターの状態を監視する
 
@@ -23,7 +23,7 @@ ms.locfileid: "92378402"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio を使用する
 
-[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新の **Insider ビルド** をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) の最新の **Insider ビルド** をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
 
 1. まず、Azure Data Studio でご利用のビッグ データ クラスターへの接続を作成します。 詳細については、「[Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
@@ -52,7 +52,7 @@ ms.locfileid: "92378402"
 - Spark ジョブの監視
 - Spark リソースの管理
 
-これらのリンクを直接クリックできます。 これらのダッシュボードにアクセスするときは、認証が必要になります。 メトリックとログのダッシュボードの場合は、環境変数 **AZDATA_USERNAME** と **AZDATA_PASSWORD** を使用して、展開時に設定するコントローラー管理者の資格情報を指定します。 Spark ダッシュボードでは、AD に統合されたクラスターの AD ID、またはクラスター内で基本認証を使用している場合は、 **AZDATA_USERNAME** および **AZDATA_PASSWORD** というゲートウェイ (Knox) 資格情報が使用されます。
+これらのリンクを直接クリックできます。 これらのダッシュボードにアクセスするときは、認証が必要になります。 メトリックとログのダッシュボードの場合は、環境変数 **AZDATA_USERNAME** と **AZDATA_PASSWORD** を使用して、展開時に設定するコントローラー管理者の資格情報を指定します。 Spark ダッシュボードでは、AD に統合されたクラスターの AD ID、またはクラスター内で基本認証を使用している場合は、**AZDATA_USERNAME** および **AZDATA_PASSWORD** というゲートウェイ (Knox) 資格情報が使用されます。
 
 [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
@@ -69,7 +69,7 @@ ms.locfileid: "92378402"
     - コントローラーのパスワード
     - コントローラー エンドポイント
 
-    既定のビッグ データ クラスター名は、展開時にカスタマイズしない限り、 **mssql-cluster** となります。 コントローラー エンドポイントは、サービス エンドポイント テーブル内のビッグ データ クラスター ダッシュボードから見つけることができます。 エンドポイントは、 **クラスター管理サービス** として一覧表示されます。 資格情報がわからない場合は、ご利用のクラスターを展開した管理者に問い合わせてください。
+    既定のビッグ データ クラスター名は、展開時にカスタマイズしない限り、**mssql-cluster** となります。 コントローラー エンドポイントは、サービス エンドポイント テーブル内のビッグ データ クラスター ダッシュボードから見つけることができます。 エンドポイントは、**クラスター管理サービス** として一覧表示されます。 資格情報がわからない場合は、ご利用のクラスターを展開した管理者に問い合わせてください。
 
 3. 上部のツールバーで **[セルの実行]** をクリックします。
 

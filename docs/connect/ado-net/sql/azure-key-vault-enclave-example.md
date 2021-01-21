@@ -11,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 1feed9699d925c47ae7d38ab72db5b366ad00ba8
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 548c5e8716f4ba15de675de856a5e5bd8206da35
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771568"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534484"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted での Azure Key Vault プロバイダーの使用を示す例
 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-netst-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "97771568"
 >
 > - セキュリティで保護されたエンクレーブを使用する Always Encrypted を Linux と macOS で使用するには、**Microsoft.Data.SqlClient** バージョン 2.1.0 以降が必要です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [Always Encrypted での Azure Key Vault プロバイダーの使用を示す例](azure-key-vault-example.md)
 - [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-apps.md)」をご覧ください。

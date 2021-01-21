@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe8a7c4948b811a97c2f6973a04227543a496991
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: aee605371a2473fcaca096ec23e1e070ca8f0b19
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364424"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595930"
 ---
 # <a name="report-builder-functions---sum-function"></a>レポート ビルダー関数 - Sum 関数
   式で指定された NULL 以外のすべての数値の合計を、指定されたスコープで評価して返します。  
@@ -31,19 +31,19 @@ Sum(expression, scope, recursive)
   
 #### <a name="parameters"></a>パラメーター  
  *式 (expression)*  
- ( **Integer** または **Float** ) この集計関数の実行対象の式です。  
+ (**Integer** または **Float**) この集計関数の実行対象の式です。  
   
  *スコープ (scope)*  
- ( **文字列** ) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
+ (**文字列**) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- ( **列挙型** ) 省略可。 **Simple** (既定値) または **RdlRecursive** です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 **Simple** (既定値) または **RdlRecursive** です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
  10 進数型の式には **Decimal** 値が、その他すべての式には **Double** 値が返されます。  
   
 ## <a name="remarks"></a>解説  
- 式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt** 、 **CDbl** 、 **CDec** などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
+ 式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、 **CInt**、 **CDbl** 、 **CDec** などの変換関数を使用します。 詳細については、「 [データ型変換関数](/dotnet/visual-basic/language-reference/functions/type-conversion-functions)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
   
@@ -53,7 +53,7 @@ Sum(expression, scope, recursive)
   
 -   入れ子集計の *Scope* には、データセット名は使用できません。  
   
--   *Expression* には、 **First** 、 **Last** 、 **Previous** 、または **RunningValue** の各関数を含めることができません。  
+-   *Expression* には、 **First**、 **Last**、 **Previous**、または **RunningValue** の各関数を含めることができません。  
   
 -   *Expression* には、 *recursive* を指定する入れ子集計を含めることができません。  
   
@@ -84,5 +84,4 @@ Sum(expression, scope, recursive)
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 77a96c10d94bb27d52f8527e6822ff036e4a214e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364664"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596766"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -26,7 +26,7 @@ ms.locfileid: "93364664"
   
  一覧の後半にあるパラメーターのデータセット クエリには一覧の前半にある各パラメーターへの参照が含まれているため、カスケード型パラメーターでは順序が重要な意味を持ちます。 実行時には、レポート データ ペインのパラメーターの順序によって、パラメーター クエリがレポート内で作成される順序が決まります。したがって、ユーザーが後続の各パラメーター値を選択する順序が決まります。  
   
- 複数の値を使用したカスケード型パラメーターを作成する方法、および [すべて選択] 機能を含める方法の詳細については、「 [すべてのマルチバリューカスケードパラメータを選択する方法](https://go.microsoft.com/fwlink/?LinkId=184757)」を参照してください。  
+ 複数の値を使用したカスケード型パラメーターを作成する方法、および [すべて選択] 機能を含める方法の詳細については、「 [すべてのマルチバリューカスケードパラメータを選択する方法](/archive/blogs/psssql/)」を参照してください。  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>関連する複数のパラメーターを含むクエリを使用してメイン データセットを作成するには  
   
@@ -159,5 +159,4 @@ ms.locfileid: "93364664"
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
   

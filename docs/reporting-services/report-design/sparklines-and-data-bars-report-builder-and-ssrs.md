@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6c7721b8b5002c104ff5076b3b0d1c9bc8219fba
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b8eb3019b347427b2b24a8fb48083a77935f75f8
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880723"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595153"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。   
@@ -26,7 +26,7 @@ ms.locfileid: "84880723"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- スパークラインをすぐに使用するには、「 [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 」、「 [テーブルにスパークラインを作成する方法 (ビデオ)](https://go.microsoft.com/fwlink/?LinkId=197092) 」、および「 [レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](https://technet.microsoft.com/bi/video/ff877165) 」を参照してください。  
+ スパークラインをすぐに使用するには、「 [チュートリアル: レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 」、「 [テーブルにスパークラインを作成する方法 (ビデオ)](/SharePoint/sharepoint-server) 」、および「 [レポート ビルダーのスパークライン、横棒グラフ、およびインジケーター (ビデオ)](/previous-versions/dn912438(v=msdn.10)) 」を参照してください。  
   
 > [!NOTE]  
 >  親テーブル、マトリックス、または一覧を含むスパークラインとデータ バーは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
@@ -104,5 +104,4 @@ ms.locfileid: "84880723"
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [チュートリアル:レポートへのスパークラインの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
-  
   

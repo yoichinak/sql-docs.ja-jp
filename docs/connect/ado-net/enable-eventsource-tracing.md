@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: johnnypham
 ms.author: v-jopha
 ms.reviewer: ''
-ms.openlocfilehash: b45f6146f8b5e2f367281720b0fa1c3395d94256
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 1bcf11727a5ccd640846788b936ff5fefe9c63a3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123964"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595686"
 ---
 # <a name="enable-event-tracing-in-sqlclient"></a>SqlClient でのイベントのトレースの有効化
 
@@ -56,7 +56,7 @@ Microsoft.Data.SqlClient.EventSource
 
 ## <a name="event-tracing-support-in-native-sni"></a>ネイティブ SNI でのイベント トレースのサポート
 
-**Microsoft.Data.SqlClient** v2.1.0 においては、**Microsoft.Data.SqlClient.SNI** と **Microsoft.Data.SqlClient.SNI.runtime** でのイベント トレースのサポートが拡張されています。 `SqlClientEventSource` に EventCommand を送信することにより、[Xperf](https://docs.microsoft.com/windows-hardware/test/wpt/) および [PerfView](https://github.com/microsoft/perfview) ツールを使用して、ネイティブ SNI.dll 内のイベントを収集できます。 EventCommand の有効な値を以下に示します。
+**Microsoft.Data.SqlClient** v2.1.0 においては、**Microsoft.Data.SqlClient.SNI** と **Microsoft.Data.SqlClient.SNI.runtime** でのイベント トレースのサポートが拡張されています。 `SqlClientEventSource` に EventCommand を送信することにより、[Xperf](/windows-hardware/test/wpt/) および [PerfView](https://github.com/microsoft/perfview) ツールを使用して、ネイティブ SNI.dll 内のイベントを収集できます。 EventCommand の有効な値を以下に示します。
 
 ```cs
 // Enables trace events:

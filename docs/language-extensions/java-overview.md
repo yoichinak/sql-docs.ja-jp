@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: f68821900b2e304028bccfd79e96f988f02267e9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4df5f2e96ff8795ac592c6aa61f7c79e03145c31
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471723"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596297"
 ---
 # <a name="what-is-java-language-extension"></a>Java 言語拡張とは
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -27,7 +27,7 @@ Java 言語拡張は、外部 Java コードの実行に使用される SQL Serv
 
 Java 言語拡張では、外部コードを実行するために拡張機能フレームワークが使用されます。 コードの実行はコア エンジン プロセスから分離されていますが、SQL Server のクエリ実行と完全に統合されています。 データのソースで Java コードを実行できるため、ネットワーク経由でデータをプルする必要はありません。
 
-外部 Java 言語は [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) で定義されます。 Java コードを実行するためのインターフェイスとして、システム ストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) が使用されます。
+外部 Java 言語は [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) で定義されます。 Java コードを実行するためのインターフェイスとして、システム ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) が使用されます。
 
 ## <a name="get-started-with-java-language-extension"></a>Java 言語拡張の使用を開始する
 
@@ -37,8 +37,8 @@ Java 言語拡張では、外部コードを実行するために拡張機能フ
 
     + Java コードの開発には、好みの IDE を使用します。
     + [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md) をインストールして、SQL Server 上で Java コードを実行します
-    + SQL Server 上で外部コードを実行するために、[Azure Data Studio](../azure-data-studio/what-is.md) を使用します。
-    + システム ストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用して SQL Server 上で Java コードを実行します。
+    + SQL Server 上で外部コードを実行するために、[Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) を使用します。
+    + システム ストアド プロシージャ [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して SQL Server 上で Java コードを実行します。
 
 1. 最初の Java コードを記述します。
 

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c33eaeda2a7600039b80c49e1ba3c0fa9e36b5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08f9271c7b42e7db3d42ffadc111e9b86dd38e68
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439367"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596189"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Power BI Report Server が見つからない場合は、 「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
+Power BI Report Server が見つからない場合は、 「[Power BI Report Server とは](/power-bi/report-server/get-started)」を参照してください。
 
 SQL Server Reporting Services (SSRS) では、モバイルおよびページ分割されたレポートの作成、配置、管理を行う一連のオンプレミス ツールおよびサービスを提供しています。
 
@@ -49,7 +49,7 @@ SQL Server の Reporting Services では、更新された製品スイートが�
 これらのリソースで SQL Server Reporting Services の新機能に関する最新情報を確認できます。
 
 * [Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [SQL Server Reporting Services チームのブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
+* [SQL Server Reporting Services チームのブログ](/archive/blogs/sqlrsteamblog/)
 * [Guy in a Cube YouTube チャンネル](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
 ## <a name="paginated-reports"></a>ページ分割されたレポート
@@ -119,7 +119,7 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 ## <a name="next-steps"></a>次のステップ
 
 * [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)
-* [SQL Server Data Tools (SSDT) のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [レポート ビルダーをインストールする](../reporting-services/install-windows/install-report-builder.md)
 
 * その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

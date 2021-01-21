@@ -9,22 +9,22 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3f6b3ce5f6a594e5be385ee1f7ea7d1c03c1f92a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: 4b11cef91203a9c7939d4d044220283db378e296
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632970"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595630"
 ---
 # <a name="deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>Azure Kubernetes Services (AKS) に AD モードで SQL Server ビッグ データ クラスターを展開する
 
-SQL Server ビッグ データ クラスターでは、**ID およびアクセス管理 (IAM)** 用の [Active Directory (AD) 展開モード](deploy-active-directory.md)をサポートしています。 **Azure Kubernetes Service (AKS)** 用の IAM は困難なものでした。これは、Microsoft ID プラットフォームで広くサポートされている OAuth 2.0 や OpenID Connect などの業界標準のプロトコルが SQL Server ではサポートされていないためです。  
+SQL Server ビッグ データ クラスターでは、**ID およびアクセス管理 (IAM)** 用の [Active Directory (AD) 展開モード](./active-directory-prerequisites.md)をサポートしています。 **Azure Kubernetes Service (AKS)** 用の IAM は困難なものでした。これは、Microsoft ID プラットフォームで広くサポートされている OAuth 2.0 や OpenID Connect などの業界標準のプロトコルが SQL Server ではサポートされていないためです。  
 
 この記事では、[Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) にビッグ データ クラスター (BDC) を展開するときに、AD モードで展開する方法について説明します。 
 
 ## <a name="architecture-topologies"></a>アーキテクチャ トポロジ
 
-**Active Directory Domain Services (AD DS)** は、多くのオンプレミス インスタンスで実行される場合と[同じ方法で](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm)、Azure 仮想マシン (VM) 上でも実行されます。  Azure 内で新しいドメイン コントローラーを昇格したら、仮想ネットワーク用のプライマリおよびセカンダリ DNS サーバーを設定し、オンプレミスの DNS サーバーをいずれも降格します (この場合はターシャリ以降に降格されます)。 AD 認証を使用すると、Linux 上のドメインに参加しているクライアントは、そのドメインの資格情報と Kerberos プロトコルを使用して [SQL Server の認証を受ける](../linux/sql-server-linux-active-directory-auth-overview.md)ことができます。
+**Active Directory Domain Services (AD DS)** は、多くのオンプレミス インスタンスで実行される場合と [同じ方法で](/windows-server/identity/ad-ds/deploy/virtual-dc/adds-on-azure-vm)、Azure 仮想マシン (VM) 上でも実行されます。  Azure 内で新しいドメイン コントローラーを昇格したら、仮想ネットワーク用のプライマリおよびセカンダリ DNS サーバーを設定し、オンプレミスの DNS サーバーをいずれも降格します (この場合はターシャリ以降に降格されます)。 AD 認証を使用すると、Linux 上のドメインに参加しているクライアントは、そのドメインの資格情報と Kerberos プロトコルを使用して [SQL Server の認証を受ける](../linux/sql-server-linux-active-directory-auth-overview.md)ことができます。
 
 BDC を AD モードで AKS に展開するには、いくつかの方法があります。  この記事では、実装および既存のエンタープライズレベルのアーキテクチャとの統合がより簡単な以下の 2 つの方法について説明します。
 

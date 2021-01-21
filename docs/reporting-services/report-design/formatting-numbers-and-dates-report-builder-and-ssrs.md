@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 9df64577305006d406be0f10e060a7ac60ed10df
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255490"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596888"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -45,7 +45,7 @@ ms.locfileid: "84255490"
   
 -   既定では、数値の書式はクライアント コンピューターのカルチャ設定を反映して設定されます。 数値の表示方法を指定するために書式設定の文字列を使用すると、レポートを参照するユーザーの地域に関係なく、一貫した書式を指定できます。  
   
--   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
+-   **[数値]** ページで指定された書式は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 標準の数値書式設定文字列のサブセットです。 ダイアログ ボックスに表示されないカスタム書式を使用して数値や日付の書式を設定するには、数値または日付の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列を使用します。 カスタム書式設定文字列の詳細については、MSDN のトピック「 [型の書式設定](/previous-versions/) 」を参照してください。  
   
 -   カスタム書式設定文字列が指定されている場合、既定のカルチャ固有の設定よりも優先度が高くなります。 たとえば、カスタム書式設定文字列 "#,###" を設定して、数値 1234 を 1,234 と表すとします。 これは、米国のユーザーとヨーロッパのユーザーで意味が異なる場合があります。 カスタム書式設定を指定する前に、レポートを参照する異なるカルチャのユーザーに対して選択した書式設定がどのような影響を与えるか考慮するようにしてください。  
   
@@ -61,5 +61,4 @@ ms.locfileid: "84255490"
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
-  
   

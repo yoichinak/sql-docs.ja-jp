@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934768"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594962"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの TLS 接続の構成
 
@@ -25,7 +25,7 @@ ms.locfileid: "91934768"
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 トランスポート層セキュリティ (TLS) は、以前は Secure Sockets Layer (SSL) と呼ばれていました。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、[SharePoint 2010 Web アプリケーションで TLS を有効にする方法](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)に関するページを参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを使用している場合、詳細については、SharePoint のマニュアルを参照してください。 たとえば、[SharePoint 2010 Web アプリケーションで TLS を有効にする方法](/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)に関するページを参照してください。  
   
  インターネット インフォメーション サービス (IIS) でも HTTP SSL が使用されるため、IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行する場合は、相互運用性に関する重要な問題について考慮する必要があります。 これらの問題の対処方法については、「IIS との相互運用性の問題」を確認してください。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "91934768"
   
  テスト目的の場合は、ローカルで証明書を生成できます。 **MakeCert** ユーティリティとサンプル コマンドをテンプレートとして使用する場合は、ホストとしてサーバー名を指定し、コマンドの実行前にすべての改行を削除してください。 コマンドを DOS ウィンドウで実行する場合、コマンド全体を含めるためにウィンドウのバッファー サイズを増やす必要があることがあります。  
   
- IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行している場合は、IIS マネージャー コンソール アプリケーションを使用して、証明書をコンピューター上にインストールできます。 IIS マネージャーには、信頼されている証明機関が行う後続の処理のために、証明書要求 (.crt) ファイルを作成およびパッケージ化するオプションが用意されています。 利用している証明機関によって、証明書 (.cer) ファイルが生成されて送り返されます。 IIS 管理コンソールを使用して、その証明書ファイルをローカル ストアにインストールできます。 詳細については、Technet の「 [SSL を使用して資格情報データを暗号化する](https://go.microsoft.com/fwlink/?LinkId=71123) 」を参照してください。  
+ IIS と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じコンピューター上で実行している場合は、IIS マネージャー コンソール アプリケーションを使用して、証明書をコンピューター上にインストールできます。 IIS マネージャーには、信頼されている証明機関が行う後続の処理のために、証明書要求 (.crt) ファイルを作成およびパッケージ化するオプションが用意されています。 利用している証明機関によって、証明書 (.cer) ファイルが生成されて送り返されます。 IIS 管理コンソールを使用して、その証明書ファイルをローカル ストアにインストールできます。 詳細については、Technet の「 [SSL を使用して資格情報データを暗号化する](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) 」を参照してください。  
   
 ## <a name="interoperability-issues-with-iis"></a>IIS との相互運用性の問題  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と同じコンピューターに IIS が存在する場合、レポート サーバーへの TLS 接続に大きく影響します。  
@@ -93,5 +93,4 @@ ms.locfileid: "91934768"
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [レポート サーバー URL の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 022751a3ec4b47a8e7a3a5f5295306265f659512
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544514"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594978"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -32,7 +32,7 @@ ms.locfileid: "84544514"
   
  変化しやすいデータを含むレポートの場合、レポートのサイズはレポートを実行するたびに大きく変化する可能性があります。 この場合、データ ソースを監視し、データの変化がレポートへ及ぼす影響を見極めた上で、このトピックに記載されている手順に従う必要があるかどうかを判断する必要があります。  
   
- タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.microsoft.com 上の[レポート サーバーでレポート実行時の問題を診断する方法](https://go.microsoft.com/fwlink/?LinkId=85634)に関する記事をご覧ください。  
+ タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.microsoft.com 上の[レポート サーバーでレポート実行時の問題を診断する方法](/archive/blogs/lukaszp/)に関する記事をご覧ください。  
   
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
@@ -72,4 +72,4 @@ ms.locfileid: "84544514"
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [キャッシュを事前に読み込む (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [キャッシュを事前に読み込む (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: aa8d71f36b4dbb0c8ddaaac3c47571d29c3896c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172514"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595469"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server 用の延長セキュリティ更新プログラムとは
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -353,7 +353,7 @@ Azure Virtual Machines で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 ## <a name="see-also"></a>関連項目
 
 - [SQL Server 2008/2008 R2 のライフサイクルのページ](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [SQL Server 2008/2008 R2 のサポート終了のページ](https://aka.ms/sqleos)
+- [SQL Server 2008/2008 R2 のサポート終了のページ](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [拡張セキュリティ更新プログラムのよくある質問 (FAQ)](https://aka.ms/sqleosfaq)
 - [Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Azure Automation を使用して Windows 更新プログラムを管理する](/azure/automation/update-management/overview)
@@ -362,4 +362,3 @@ Azure Virtual Machines で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 - [Azure Migrate: 現在の SQL Server 2008/2008 R2 を Azure VM に移行するためのリフトアンドシフトのオプション](https://azure.microsoft.com/services/azure-migrate/)
 - [SQL 移行のクラウド導入フレームワーク](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [GitHub の ESU 関連スクリプト](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

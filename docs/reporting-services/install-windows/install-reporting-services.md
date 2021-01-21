@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a6c2dc6ae1a8711c3e78403b539a603c0cb36dcf
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484234"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596991"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -137,6 +137,6 @@ SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそ�
 
 インストールされたレポート サーバーを使用して、レポートの作成を開始し、自分のレポート サーバーに配置します。 レポート ビルダーの使用を開始する方法については、「[レポート ビルダーをインストールする](../../reporting-services/install-windows/install-report-builder.md)」を参照してください。
 
-SQL Server Data Tools を使用してレポートを作成するには、[SQL Server Data Tools をダウンロードします](https://go.microsoft.com/fwlink/?LinkID=616714)。
+SQL Server Data Tools を使用してレポートを作成するには、[SQL Server Data Tools をダウンロードします](../../ssdt/download-sql-server-data-tools-ssdt.md)。
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

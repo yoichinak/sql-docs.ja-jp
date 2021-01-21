@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b307966577cfd30197963263597aee7a9d06e018
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85048330"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597330"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートでは、マップ ウィザードおよびマップ レイヤー ウィザードは、マップの作成、マップ レイヤーの追加、既存のレイヤーのマップ レイヤー オプションの変更などのタスクを自動化します。  
@@ -107,7 +107,7 @@ ms.locfileid: "85048330"
  それぞれのレイヤーの空間データのソースは同じソースであっても異なるソースであってもかまいませんが、レイヤーを追加するたびにソースを指定する必要があります。 空間データのソースがマップ ギャラリーまたは ESRI シェープファイルの場合、空間データ ソースは独立したレポート アイテムではありません。 空間データ ソースはレポート データ ペインに表示されません。  
   
 ###  <a name="what-is-spatial-data"></a><a name="SpatialData"></a> 空間データとは  
- 空間データには、地理的要素または幾何学的要素を定義する座標が格納されています。 マップ内で、空間データは *マップ要素*を定義します。マップ要素には、領域または形状を定義する多角形、ルートまたはパスを定義する線、およびマーカーまたは画鋲を定義するポイントがあります。 空間データは、バイナリ形式でデータ ソースに格納され、座標セットとして指定されます。 たとえば、ポイントは XY 座標 (X Y)、線は 2 つの座標セット ((X1 Y1), (X2 Y2))、多角形は最初の最後の座標セットが同じ 4 つ以上の座標セット ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)) で表されます。  
+ 空間データには、地理的要素または幾何学的要素を定義する座標が格納されています。 マップ内で、空間データは *マップ要素* を定義します。マップ要素には、領域または形状を定義する多角形、ルートまたはパスを定義する線、およびマーカーまたは画鋲を定義するポイントがあります。 空間データは、バイナリ形式でデータ ソースに格納され、座標セットとして指定されます。 たとえば、ポイントは XY 座標 (X Y)、線は 2 つの座標セット ((X1 Y1), (X2 Y2))、多角形は最初の最後の座標セットが同じ 4 つ以上の座標セット ((X1 Y1), (X2 Y2), (X3 Y3), (X1 Y1)) で表されます。  
   
  詳細については、使用する空間データの種類に関するドキュメントを参照してください。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "85048330"
   
 -   **ハイブリッド。** **[道路]** ビューと **[航空写真]** ビューの組み合わせを表示します。  
   
- タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?LinkId=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。  
+ タイルの詳細については、「 [Bing Maps のタイル システム](/bingmaps/articles/bing-maps-tile-system)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。  
   
  デザイン ビューでタイル背景を表示するには、インターネットにアクセスできる環境が必要です。 レポート サーバー上のレポートのプレビューにタイル背景を表示するには、Bing のマップ タイルをサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[レポートのトラブルシューティング:マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)」と「[マップ レポートの計画](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -252,5 +252,4 @@ ms.locfileid: "85048330"
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

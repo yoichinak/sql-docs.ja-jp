@@ -9,23 +9,23 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935481"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594818"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
 
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 この機能自体は、資格情報の転送をはじめとする特定の攻撃を直接防ぐものではありませんが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] などのアプリケーションに対し、認証の拡張保護を適用するためのインフラストラクチャを提供します。  
   
- 拡張保護に含まれる認証の拡張機能を代表するのが、サービス バインドとチャネル バインドです。 チャネル バインドでは、チャネル バインド トークン (CBT) を使用して、2 つのエンド ポイント間に確立されたチャネルに問題が生じていないかどうかを確認します。 サービス バインドでは、サービス プリンシパル名 (SPN) を使用して認証トークンの目的の送信先を検証します。 拡張保護の詳細な背景情報については、「 [拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)」を参照してください。  
+ 拡張保護に含まれる認証の拡張機能を代表するのが、サービス バインドとチャネル バインドです。 チャネル バインドでは、チャネル バインド トークン (CBT) を使用して、2 つのエンド ポイント間に確立されたチャネルに問題が生じていないかどうかを確認します。 サービス バインドでは、サービス プリンシパル名 (SPN) を使用して認証トークンの目的の送信先を検証します。 拡張保護の詳細な背景情報については、「 [拡張保護付き統合 Windows 認証](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))」を参照してください。  
   
 SQL Server Reporting Services (SSRS) でサポートおよび適用されるのは、オペレーティング システムで有効化し、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で構成した拡張保護です。 既定では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はネゴシエート認証または NTLM 認証を指定する要求を受け入れるため、オペレーティング システムでの拡張保護のサポートと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能を活用できます。  
   
 > [!IMPORTANT]  
->  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](https://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](https://go.microsoft.com/fwlink/?LinkId=183362)を参照してください。  
+>  既定では、Windows の拡張保護は有効になっていません。 Windows で拡張保護を有効にする方法の詳細については、「 [認証に対する保護の強化](https://go.microsoft.com/fwlink/?LinkID=178431)」を参照してください。 認証を成功させるためには、オペレーティング システムとクライアントの認証スタックが両方とも拡張保護をサポートしている必要があります。 旧バージョンのオペレーティング システムを使用している場合は、拡張保護に対応したコンピューターを準備するために、1 つ以上の更新プログラムのインストールが必要になることがあります。 拡張保護の最新情報については、 [こちら](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100))を参照してください。  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Reporting Services の拡張保護の概要
 
@@ -50,9 +50,9 @@ SSRS では、オペレーティング システムで有効になっている�
   
 -   構成設定が **rsreportserver.config** 構成ファイルに追加されると、既定の動作として [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護機能が無効になるため、このトピックの説明に従って有効にする必要があります。 詳細については、このトピックの [構成設定に関するセクション](#ConfigurationSettings) を参照してください。  
   
--   **RSWindowsExtendedProtectionLevel** 設定の既定値は **Off**です。  
+-   **RSWindowsExtendedProtectionLevel** 設定の既定値は **Off** です。  
   
--   **RSWindowsExtendedProtectionScenario** 設定の既定値は **Proxy**です。  
+-   **RSWindowsExtendedProtectionScenario** 設定の既定値は **Proxy** です。  
   
 -   アップグレード アドバイザーは、オペレーティング システムまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の現在のインストールで拡張保護のサポートが有効かどうかを確認しません。  
   
@@ -71,8 +71,8 @@ SSRS では、オペレーティング システムで有効になっている�
   
 |シナリオ|シナリオを表した図|セキュリティ保護の方法|  
 |--------------|----------------------|-------------------|  
-|直接的な TLS 通信を使用します。<br /><br /> レポート サーバーにより、クライアントからレポート サーバーへのチャネル バインドが適用されます。|![RS_ExtendedProtection_DirectSSL](../../reporting-services/security/media/rs-extendedprotection-directssl.gif "RS_ExtendedProtection_DirectSSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Direct**に設定します。<br /><br /> <br /><br /> -チャネル バインドには TLS チャネルが使用されるため、サービス バインドは不要です。|  
-|直接的な HTTP 通信を使用します。 レポート サーバーにより、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Direct](../../reporting-services/security/media/rs-extendedprotection-direct.gif "RS_ExtendedProtection_Direct")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any**に設定します。<br /><br /> <br /><br /> -TLS チャネルが存在しないため、チャネル バインドは適用できません。<br /><br /> \- サービス バインドの検証は可能ですが、チャネル バインドがないため完全な保護は不可能です。サービス バインド自体で防ぐことができるのは、基本的な脅威のみです。|  
+|直接的な TLS 通信を使用します。<br /><br /> レポート サーバーにより、クライアントからレポート サーバーへのチャネル バインドが適用されます。|![RS_ExtendedProtection_DirectSSL](../../reporting-services/security/media/rs-extendedprotection-directssl.gif "RS_ExtendedProtection_DirectSSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Direct** に設定します。<br /><br /> <br /><br /> -チャネル バインドには TLS チャネルが使用されるため、サービス バインドは不要です。|  
+|直接的な HTTP 通信を使用します。 レポート サーバーにより、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Direct](../../reporting-services/security/media/rs-extendedprotection-direct.gif "RS_ExtendedProtection_Direct")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any** に設定します。<br /><br /> <br /><br /> -TLS チャネルが存在しないため、チャネル バインドは適用できません。<br /><br /> \- サービス バインドの検証は可能ですが、チャネル バインドがないため完全な保護は不可能です。サービス バインド自体で防ぐことができるのは、基本的な脅威のみです。|  
   
 ### <a name="proxy-and-network-load-balancing"></a>プロキシとネットワーク負荷分散  
  クライアント アプリケーションは、TLS を実行するデバイスまたはソフトウェアに接続し、認証のためにサーバーに資格情報を渡します。たとえば、エクストラネット、インターネット、セキュリティで保護されたイントラネットなどです。 クライアントはプロキシに接続します。つまり、すべてのクライアントがプロキシを使用します。  
@@ -81,25 +81,25 @@ SSRS では、オペレーティング システムで有効になっている�
   
 |シナリオ|シナリオを表した図|セキュリティ保護の方法|  
 |--------------|----------------------|-------------------|  
-|HTTP 通信を使用します。 レポート サーバーにより、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any**に設定します。<br /><br /> <br /><br /> -TLS チャネルが存在しないため、チャネル バインドは適用できません。<br /><br /> \- レポート サーバーは、サービス バインドが適切に適用されていることを確認するために、プロキシ サーバーの名前を把握できるように構成する必要があります。|  
-|HTTP 通信を使用します。<br /><br /> レポート サーバーによって、クライアントからプロキシへのチャネル バインドと、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|オン <br />                    **RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy**に設定します。<br /><br /> <br /><br /> -プロキシへの TLS チャネルを利用できるため、プロキシへのチャネル バインドを適用できます。<br /><br /> \- サービス バインドも適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames**でプロキシ名を構成する必要があります。|  
-|セキュリティで保護されたプロキシとの間接的な HTTPS 通信を使用します。 レポート サーバーによって、クライアントからプロキシへのチャネル バインドと、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|オン <br />                    **RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy**に設定します。<br /><br /> <br /><br /> -プロキシへの TLS チャネルを利用できるため、プロキシへのチャネル バインドを適用できます。<br /><br /> \- サービス バインドも適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames**でプロキシ名を構成する必要があります。|  
+|HTTP 通信を使用します。 レポート サーバーにより、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any** に設定します。<br /><br /> <br /><br /> -TLS チャネルが存在しないため、チャネル バインドは適用できません。<br /><br /> \- レポート サーバーは、サービス バインドが適切に適用されていることを確認するために、プロキシ サーバーの名前を把握できるように構成する必要があります。|  
+|HTTP 通信を使用します。<br /><br /> レポート サーバーによって、クライアントからプロキシへのチャネル バインドと、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|オン <br />                    **RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy** に設定します。<br /><br /> <br /><br /> -プロキシへの TLS チャネルを利用できるため、プロキシへのチャネル バインドを適用できます。<br /><br /> \- サービス バインドも適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames** でプロキシ名を構成する必要があります。|  
+|セキュリティで保護されたプロキシとの間接的な HTTPS 通信を使用します。 レポート サーバーによって、クライアントからプロキシへのチャネル バインドと、クライアントからレポート サーバーへのサービス バインドが適用されます。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ|オン <br />                    **RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy** に設定します。<br /><br /> <br /><br /> -プロキシへの TLS チャネルを利用できるため、プロキシへのチャネル バインドを適用できます。<br /><br /> \- サービス バインドも適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames** でプロキシ名を構成する必要があります。|  
   
 ### <a name="gateway"></a>Gateway  
  このシナリオでは、TLS を実行してユーザーを認証するデバイスまたはソフトウェアに接続するクライアント アプリケーションについて説明します。 このデバイスまたはソフトウェアは、ユーザー コンテキストまたは別のユーザー コンテキストを偽装したうえで、レポート サーバーに対して要求を行います。  
   
 |シナリオ|シナリオを表した図|セキュリティ保護の方法|  
 |--------------|----------------------|-------------------|  
-|間接的な HTTP 通信を使用します。<br /><br /> ゲートウェイによって、クライアントからゲートウェイへのチャネル バインドが適用されます。 ゲートウェイとレポート サーバーの間にはサービス バインドが確立されます。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) ゲートウェイ デバイス|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any**に設定します。<br /><br /> <br /><br /> \- ゲートウェイがコンテキストを偽装し、新しい NTLM トークンを作成するため、クライアントからレポート サーバーへのチャネル バインドは確立できません。<br /><br /> -ゲートウェイとレポート サーバーの間で TLS が使用されないため、チャネル バインドは適用できません。<br /><br /> \- サービス バインドを適用できます。<br /><br /> \- 管理者は、チャネル バインドを適用するようにゲートウェイ デバイスを構成する必要があります。|  
-|セキュリティで保護されたゲートウェイとの間接的な HTTPS 通信を使用します。 ゲートウェイによってクライアントからゲートウェイへのチャネル バインドが適用され、レポート サーバーによってゲートウェイからレポート サーバーへのチャネル バインドが適用されます。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) ゲートウェイ デバイス|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Direct**に設定します。<br /><br /> <br /><br /> \- ゲートウェイがコンテキストを偽装し、新しい NTLM トークンを作成するため、クライアントからレポート サーバーへのチャネル バインドは確立できません。<br /><br /> \- ゲートウェイとレポート サーバーの間では TLS が使用されるため、チャネル バインドを適用できます。<br /><br /> \- サービス バインドは不要です。<br /><br /> \- 管理者は、チャネル バインドを適用するようにゲートウェイ デバイスを構成する必要があります。|  
+|間接的な HTTP 通信を使用します。<br /><br /> ゲートウェイによって、クライアントからゲートウェイへのチャネル バインドが適用されます。 ゲートウェイとレポート サーバーの間にはサービス バインドが確立されます。|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) ゲートウェイ デバイス|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any** に設定します。<br /><br /> <br /><br /> \- ゲートウェイがコンテキストを偽装し、新しい NTLM トークンを作成するため、クライアントからレポート サーバーへのチャネル バインドは確立できません。<br /><br /> -ゲートウェイとレポート サーバーの間で TLS が使用されないため、チャネル バインドは適用できません。<br /><br /> \- サービス バインドを適用できます。<br /><br /> \- 管理者は、チャネル バインドを適用するようにゲートウェイ デバイスを構成する必要があります。|  
+|セキュリティで保護されたゲートウェイとの間接的な HTTPS 通信を使用します。 ゲートウェイによってクライアントからゲートウェイへのチャネル バインドが適用され、レポート サーバーによってゲートウェイからレポート サーバーへのチャネル バインドが適用されます。|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) ゲートウェイ デバイス|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Direct** に設定します。<br /><br /> <br /><br /> \- ゲートウェイがコンテキストを偽装し、新しい NTLM トークンを作成するため、クライアントからレポート サーバーへのチャネル バインドは確立できません。<br /><br /> \- ゲートウェイとレポート サーバーの間では TLS が使用されるため、チャネル バインドを適用できます。<br /><br /> \- サービス バインドは不要です。<br /><br /> \- 管理者は、チャネル バインドを適用するようにゲートウェイ デバイスを構成する必要があります。|  
   
 ### <a name="combination"></a>組み合わせ  
  このシナリオでは、クライアントがプロキシに接続するエクストラネット環境またはインターネット環境について説明します。 これは、クライアントがレポート サーバーに接続するイントラネット環境と組み合わせたシナリオです。  
   
 |シナリオ|シナリオを表した図|セキュリティ保護の方法|  
 |--------------|----------------------|-------------------|  
-|クライアントからレポート サーバー サービスへの間接的なアクセスと直接的なアクセスを行います。クライアントからプロキシ、またはクライアントからレポート サーバーへの接続で TLS を使用しません。|1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any**に設定します。<br /><br /> <br /><br /> \- クライアントからレポート サーバーへのサービス バインドを適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames**でプロキシ名を構成する必要があります。|  
-|クライアントからレポート サーバーへの間接的なアクセスと直接的なアクセスを行います。その際、クライアントからプロキシまたはレポート サーバーへの TLS 接続を確立します。|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require**に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy**に設定します。<br /><br /> <br /><br /> \- チャネル バインドを適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames**でプロキシ名を構成する必要があります。|  
+|クライアントからレポート サーバー サービスへの間接的なアクセスと直接的なアクセスを行います。クライアントからプロキシ、またはクライアントからレポート サーバーへの接続で TLS を使用しません。|1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Any** に設定します。<br /><br /> <br /><br /> \- クライアントからレポート サーバーへのサービス バインドを適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames** でプロキシ名を構成する必要があります。|  
+|クライアントからレポート サーバーへの間接的なアクセスと直接的なアクセスを行います。その際、クライアントからプロキシまたはレポート サーバーへの TLS 接続を確立します。|![RS_ExtendedProtection_CombinationSSL](../../reporting-services/security/media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) クライアント アプリケーション<br /><br /> 2) レポート サーバー<br /><br /> 3) プロキシ<br /><br /> 4) クライアント アプリケーション|**RSWindowsExtendedProtectionLevel** を **Allow** または **Require** に設定します。<br /><br /> **RSWindowsExtendedProtectionScenario** を **Proxy** に設定します。<br /><br /> <br /><br /> \- チャネル バインドを適用できます。<br /><br /> \- レポート サーバーがプロキシ名を把握できる必要があります。レポート サーバーの管理者は、ホスト ヘッダーを使用してプロキシの URL 予約を作成するか、Windows レジストリ エントリ **BackConnectionHostNames** でプロキシ名を構成する必要があります。|  
   
 ## <a name="configuring-reporting-services-extended-protection"></a>Reporting Services の拡張保護の構成  
  **rsreportserver.config** ファイルには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の拡張保護の動作を制御する構成値が含まれています。  
@@ -113,7 +113,7 @@ SSRS では、オペレーティング システムで有効になっている�
   
 |設定|説明|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|拡張保護の適用レベルを指定します。 有効な値は次のとおりです。<br /><br /> **Off**:既定値。 チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> **Allow** は拡張保護をサポートしますが、要求しません。  以下を指定します。<br /><br /> \- 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、 **RsWindowsExtendedProtectionScenario**設定によって決まります<br /><br /> \- 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> **Require** は以下を指定します。<br /><br /> \- 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> \- 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証は許可 **されません** 。|  
+|**RSWindowsExtendedProtectionLevel**|拡張保護の適用レベルを指定します。 有効な値は次のとおりです。<br /><br /> **Off**:既定値。 チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> **Allow** は拡張保護をサポートしますが、要求しません。  以下を指定します。<br /><br /> \- 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、 **RsWindowsExtendedProtectionScenario** 設定によって決まります<br /><br /> \- 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> **Require** は以下を指定します。<br /><br /> \- 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> \- 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証は許可 **されません** 。|  
 |**RsWindowsExtendedProtectionScenario**|検証する拡張保護の形式を指定します。チャネル バインド、サービス バインド、またはその両方を指定します。 有効な値は次のとおりです。<br /><br /> **Proxy**:既定値。 以下を指定します。<br /><br /> \- チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> \- サービス バインドが適用されます。<br /><br /> **Any** は以下を指定します。<br /><br /> \- Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> \- サービス バインドが適用されます。<br /><br /> **Direct** は以下を指定します。<br /><br /> -CBT と、現在のサービスへの TLS 接続が存在し、TLS 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> \- サービス バインドは適用されません。<br /><br /> <br /><br /> 注:**RsWindowsExtendedProtectionLevel** を **OFF** に設定した場合、**RsWindowsExtendedProtectionScenario** 設定は無視されます。|  
   
  **rsreportserver.config** 構成ファイル内のエントリの例を次に示します。  
@@ -146,11 +146,11 @@ SSRS では、オペレーティング システムで有効になっている�
 |ソースの種類|説明|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|ローカル コンピューターに割り当てられた DNS ドメインの名前。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの DNS ドメイン名が使用されます。|  
-|ComputerNameDnsFullyQualified|ローカル コンピューターを一意に識別する完全修飾 DNS 名。 この名前は、 *HostName*.*DomainName*という形式で DNS ホスト名と DNS ドメイン名を組み合わせたものです。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの完全修飾 DNS 名が使用されます。|  
+|ComputerNameDnsFullyQualified|ローカル コンピューターを一意に識別する完全修飾 DNS 名。 この名前は、 *HostName*.*DomainName* という形式で DNS ホスト名と DNS ドメイン名を組み合わせたものです。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの完全修飾 DNS 名が使用されます。|  
 |ComputerNameDnsHostname|ローカル コンピューターの DNS ホスト名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの DNS ホスト名が使用されます。|  
 |ComputerNameNetBIOS|ローカル コンピューターの NetBIOS 名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの NetBIOS 名が使用されます。|  
 |ComputerNamePhysicalDnsDomain|ローカル コンピューターに割り当てられた DNS ドメインの名前。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの DNS ドメイン名が使用されます。|  
-|ComputerNamePhysicalDnsFullyQualified|コンピューターを一意に識別する完全修飾 DNS 名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの完全修飾 DNS 名が使用されます。<br /><br /> この完全修飾 DNS 名は、 *HostName*.*DomainName*という形式で DNS ホスト名と DNS ドメイン名を組み合わせたものです。|  
+|ComputerNamePhysicalDnsFullyQualified|コンピューターを一意に識別する完全修飾 DNS 名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの完全修飾 DNS 名が使用されます。<br /><br /> この完全修飾 DNS 名は、 *HostName*.*DomainName* という形式で DNS ホスト名と DNS ドメイン名を組み合わせたものです。|  
 |ComputerNamePhysicalDnsHostname|ローカル コンピューターの DNS ホスト名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの DNS ホスト名が使用されます。|  
 |ComputerNamePhysicalNetBIOS|ローカル コンピューターの NetBIOS 名。 ローカル コンピューターがクラスター内のノードである場合、クラスターの仮想サーバーの名前ではなく、ローカル コンピューターの NetBIOS 名が使用されます。|  
   
@@ -159,8 +159,8 @@ SSRS では、オペレーティング システムで有効になっている�
 ## <a name="next-steps"></a>次のステップ
 
 [拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   
-[拡張保護付き統合 Windows 認証](https://go.microsoft.com/fwlink/?LinkId=179922)   
+[認証の拡張保護の概要](/previous-versions/dotnet/netframework-3.5/dd767318(v=vs.90))   
+[拡張保護付き統合 Windows 認証](/previous-versions/visualstudio/visual-studio-2008/dd639324(v=vs.90))   
 [マイクロソフト セキュリティ アドバイザリ:認証の拡張保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

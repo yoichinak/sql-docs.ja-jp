@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 76ffe524200c2f8df136074bc089b13e7404d6bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6580e33a824807312fb7f2d37d5cab893dbab2a9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902079"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596518"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server の使用状況および診断データの収集を構成する (CEIP)
 
@@ -50,7 +50,7 @@ AND instance_name = '_Total'
 - エラーと使用状況レポートのアプリケーションの使用
 - サーバー上でのレジストリ サブキーの設定
 
-Linux 上の SQL Server については、「[Customer Feedback for SQL Server on Linux (Linux 上の SQL Server のカスタマー フィードバック)](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback)」をご覧ください。
+Linux 上の SQL Server については、「[Customer Feedback for SQL Server on Linux (Linux 上の SQL Server のカスタマー フィードバック)](../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md)」をご覧ください。
 
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
@@ -66,7 +66,7 @@ Linux 上の SQL Server については、「[Customer Feedback for SQL Server o
 セットアップ後は、SQL Server コンポーネントおよびインスタンスの使用状況と診断データの収集の設定は、エラーと使用状況レポートのアプリケーションを通じて変更できます。 このアプリケーションは、SQL Server のインストールの一部として提供されます。 このツールを使うと、それぞれの SQL Server インスタンスで、それ自体の使用状況レポート設定を構成できます。
 
 > [!NOTE]
-> エラーと使用状況レポートのアプリケーションは、SQL Server の構成ツールに表示されます。 このツールを使用して、SQL Server 2017 と同様の方法で、エラー報告および使用状況と診断データの収集の設定を管理できます。 エラー報告は、使用状況と診断データの収集とは異なるため、使用状況と診断データの収集に関係なくオンまたはオフにすることができます。 エラー報告では、Microsoft に送信するクラッシュ ダンプを収集しますが、それには「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」で説明されているような機密情報が含まれている可能性があります。
+> エラーと使用状況レポートのアプリケーションは、SQL Server の構成ツールに表示されます。 このツールを使用して、SQL Server 2017 と同様の方法で、エラー報告および使用状況と診断データの収集の設定を管理できます。 エラー報告は、使用状況と診断データの収集とは異なるため、使用状況と診断データの収集に関係なくオンまたはオフにすることができます。 エラー報告では、Microsoft に送信するクラッシュ ダンプを収集しますが、それには「[プライバシーに関する声明](./sql-server-privacy.md)」で説明されているような機密情報が含まれている可能性があります。
 
 SQL Server エラーと使用状況レポートを開始するには、 **[開始]** をクリックまたはタップし、検索ボックスで「エラー」を検索します。 SQL Server エラーと使用状況レポートの項目が表示されます。 このツールを開始した後は、使用状況と診断データに加えて、インスタンスとそのコンピューターにインストールされているコンポーネントについて収集された重大なエラーを管理できます。
 
@@ -144,7 +144,7 @@ SSMS では、それ自体のクラッシュ ダンプを収集しません。 S
  
 - Windows Server 2016 および Windows 10
 
-    [組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 および Windows 7
 
     [WER 設定](/windows/desktop/wer/wer-settings)

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d19ea6df08431db42e700cabccd7a05167dd89c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6ad6853715963c9a29ee4db2e73199fecd50801a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85808582"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597323"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>データセット フィールド コレクション (レポート ビルダーおよび SSRS)
   データセット フィールドは、データ接続のデータを表します。 フィールドは数値データまたは非数値データを表すことができます。 売上高、売上合計、顧客名、データベース識別子、URL、画像、空間データ、電子メール アドレスなどがその例です。 デザイン画面では、フィールドがテキスト ボックス、テーブル、グラフなどのレポート アイテムの式として表示されます。  
@@ -54,7 +54,7 @@ ms.locfileid: "85808582"
  レポート モデル データ ソースを使用する場合、レポート データとしてエンティティとエンティティ フィールドを指定します。 レポート モデルのクエリ デザイナーでは、関連エンティティを対話的に探索して選択し、レポート データセットに含めるフィールドを選択することができます。 クエリのデザインを終了すると、レポート データ ペインにエンティティの識別子とエンティティ フィールドのコレクションが表示されます。 エンティティの識別子はレポート モデルにより自動的に生成され、通常エンド ユーザーには表示されません。  
   
 ### <a name="using-extended-field-properties"></a>拡張フィールド プロパティの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などの多次元クエリをサポートするデータ ソースは、フィールドのフィールド プロパティをサポートします。 フィールド プロパティは、クエリの結果セットに表示されますが、 **レポート データ** ペインには表示されません。 これらは、レポートで使用することが可能です。 フィールドのプロパティを参照するには、フィールドをレポートにドラッグし、既定のプロパティの **Value** を、目的のプロパティのフィールド名に変更します。 たとえば、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブでは、キューブ セルの値の書式を定義できます。 書式設定された値は、フィールド プロパティ **FormattedValue**を使用することにより使用できます。 値を使用してテキスト ボックスの書式プロパティを設定するのではなく、値を直接使用するには、フィールドをテキスト ボックスにドラッグして、既定式 `=Fields!FieldName.Value` を `=Fields!FieldName.FormattedValue`に変更します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]などの多次元クエリをサポートするデータ ソースは、フィールドのフィールド プロパティをサポートします。 フィールド プロパティは、クエリの結果セットに表示されますが、 **レポート データ** ペインには表示されません。 これらは、レポートで使用することが可能です。 フィールドのプロパティを参照するには、フィールドをレポートにドラッグし、既定のプロパティの **Value** を、目的のプロパティのフィールド名に変更します。 たとえば、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブでは、キューブ セルの値の書式を定義できます。 書式設定された値は、フィールド プロパティ **FormattedValue** を使用することにより使用できます。 値を使用してテキスト ボックスの書式プロパティを設定するのではなく、値を直接使用するには、フィールドをテキスト ボックスにドラッグして、既定式 `=Fields!FieldName.Value` を `=Fields!FieldName.FormattedValue`に変更します。  
   
 > [!NOTE]
 >  すべての **Field** プロパティをすべてのデータ ソースに使用できるわけではありません。 **Value** と **IsMissing** プロパティは、すべてのデータ ソースで定義されます。 その他の定義済みプロパティ (多次元データ ソースの **Key**、 **UniqueName**、 **ParentUniqueName** など) は、データ ソースがそれらのプロパティを提供している場合にのみサポートされます。 一部のデータ プロバイダーでは、カスタム プロパティがサポートされます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースの場合は、「[Analysis Services Database データベースに対する拡張フィールド プロパティ&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
@@ -71,17 +71,17 @@ ms.locfileid: "85808582"
 ##  <a name="field-data-types"></a><a name="DataTypes"></a> フィールド データ型  
  データセットを作成したとき、データ ソースのフィールドのデータ型がレポートで使用される正確なデータ型ではない場合があります。 データ型は、1 つまたは 2 つのマッピング レイヤーを通過することがあります。 データ処理拡張機能またはデータ プロバイダーが、データ ソースのデータ型を共通言語ランタイム (CLR) データ型にマップすることがあります。 データ処理拡張機能によって返されるデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]の共通言語ランタイム (CLR) データ型のサブセットにマップされます。  
   
- データ ソースでは、データは、データ ソースでサポートされるデータ型に格納されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nvarchar **や** datetime **などのサポートされている**データ型である必要があります。 データ ソースからデータを取得するとき、データは、データ ソースの種類に関連付けられているデータ処理拡張機能またはデータ プロバイダーを通過します。 データ処理拡張機能によっては、データは、データ ソースで使用されるデータ型からデータ処理拡張機能でサポートされるデータ型に変換されることがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と共にインストールされる共通言語ランタイム (CLR) バージョンでサポートされるデータ型を使用します。 データ プロバイダーは、ネイティブ データ型の結果セットの各列を [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) データ型にマップします。  
+ データ ソースでは、データは、データ ソースでサポートされるデータ型に格納されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nvarchar **や** datetime **などのサポートされている** データ型である必要があります。 データ ソースからデータを取得するとき、データは、データ ソースの種類に関連付けられているデータ処理拡張機能またはデータ プロバイダーを通過します。 データ処理拡張機能によっては、データは、データ ソースで使用されるデータ型からデータ処理拡張機能でサポートされるデータ型に変換されることがあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]と共にインストールされる共通言語ランタイム (CLR) バージョンでサポートされるデータ型を使用します。 データ プロバイダーは、ネイティブ データ型の結果セットの各列を [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) データ型にマップします。  
   
  各ステージにおいて、データは、次の一覧で説明するデータ型によって表現されます。  
   
 -   **データ ソース** 接続先のデータ ソースの種類のバージョンでサポートされるデータ型。  
   
-     たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの一般的なデータ型には、 **int**、 **datetime**、および **varchar**が含まれます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] によって導入されたデータ型のために、 **date**、 **time**、 **datetimetz**、および **datetime2**のサポートが追加されています。 詳細については、「 [データ型 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98362)」を参照してください。  
+     たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの一般的なデータ型には、 **int**、 **datetime**、および **varchar** が含まれます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] によって導入されたデータ型のために、 **date**、 **time**、 **datetimetz**、および **datetime2** のサポートが追加されています。 詳細については、「 [データ型 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100))」を参照してください。  
   
--   **データ プロバイダーまたはデータ処理拡張機能** データ ソースに接続するときに選択したデータ処理拡張機能のデータ プロバイダーのバージョンによってサポートされるデータ型。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に基づくデータ プロバイダーは、CLR でサポートされるデータ型を使用します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのデータ型の詳細については、MSDN の「 [データ型のマッピング (ADO.NET)](https://go.microsoft.com/fwlink/?LinkId=112178) 」および「 [基本型の操作](https://go.microsoft.com/fwlink/?LinkId=112177) 」を参照してください。  
+-   **データ プロバイダーまたはデータ処理拡張機能** データ ソースに接続するときに選択したデータ処理拡張機能のデータ プロバイダーのバージョンによってサポートされるデータ型。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] に基づくデータ プロバイダーは、CLR でサポートされるデータ型を使用します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーのデータ型の詳細については、MSDN の「 [データ型のマッピング (ADO.NET)](/dotnet/framework/data/adonet/data-type-mappings-in-ado-net) 」および「 [基本型の操作](/dotnet/standard/base-types/common-type-system) 」を参照してください。  
   
-     たとえば、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でサポートされる一般的なデータ型には、 **Int32** および **String**が含まれます。 カレンダー日付および時刻は **DateTime** 構造体でサポートされています。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 で、タイム ゾーン オフセットを含む日付の **DateTimeOffset** 構造体のサポートが追加されました。  
+     たとえば、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] でサポートされる一般的なデータ型には、 **Int32** および **String** が含まれます。 カレンダー日付および時刻は **DateTime** 構造体でサポートされています。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 で、タイム ゾーン オフセットを含む日付の **DateTimeOffset** 構造体のサポートが追加されました。  
   
     > [!NOTE]  
     >  レポート サーバーは、レポート サーバー上にインストールされ構成されたデータ プロバイダーを使用します。 プレビュー モードのレポート作成クライアントは、クライアント マシン上にインストールされ構成されたデータ処理拡張機能を使用します。 レポート クライアントとレポート サーバー環境の両方でレポートをテストする必要があります。  
@@ -97,7 +97,7 @@ ms.locfileid: "85808582"
     |**DateTimeTZ**|**DateTimeOffset**|タイム ゾーン オフセットを含む日付と時刻|  
     |**DateTime2**|**DateTime**|小数ミリ秒を含む日付と時刻|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「 [データ型 (データベース エンジン)](https://go.microsoft.com/fwlink/?linkid=98362) 」および「 [日付と時刻のデータ型および関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?linkid=98360)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの型の詳細については、「 [データ型 (データベース エンジン)](/previous-versions/sql/sql-server-2008/ms187752(v=sql.100)) 」および「 [日付と時刻のデータ型および関数 (Transact-SQL)](/previous-versions/sql/sql-server-2008/ms186724(v=sql.100))」を参照してください。  
   
  式のデータセット フィールドへの参照を含める方法については、「[式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -107,8 +107,7 @@ ms.locfileid: "85808582"
   
   
 ## <a name="see-also"></a>参照  
- [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
+ [[フィールド] ([データセットのプロパティ] ダイアログ ボックス) &#40;レポート ビルダー&#41;]()   
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
   

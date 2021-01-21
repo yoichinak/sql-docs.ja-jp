@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e6dde5a520b845cac47fbfd3c4820d35958c9ba
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+ms.openlocfilehash: a88bd03c8dd4b545fdadf3bd809f9ce64191db79
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907270"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596788"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -58,7 +58,7 @@ ms.locfileid: "92907270"
  マップ上にデータを視覚化するためには、分析データと空間データとの間に関係が存在しなければなりません。 空間データと分析データが同じソースから取得される場合、その関係は既に決まっています。 空間データと分析データのソースが異なる場合は、両者を関連付けるための対応フィールドを指定する必要があります。  
   
 ### <a name="spatial-data"></a>空間データ  
- 空間データは、一連の座標 (座標セット) で構成されます。 データ ソースから取得される空間データには、単一のポイント、複数のポイント、単一の線、複数の線、一連の多角形などがあります。 各座標セットは *マップ要素* (郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど) を定義します。  
+ 空間データは、一連の座標 (座標セット) で構成されます。 データ ソースから取得される空間データには、単一のポイント、複数のポイント、単一の線、複数の線、一連の多角形などがあります。 各座標セットは *マップ要素*(郡の輪郭を表す多角形、道路を表す線、市区町村の場所を表すポイントなど) を定義します。  
   
  空間データには、次のいずれかの座標系が使用されます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "92907270"
   
  実行手順については、「 [マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
- タイルの詳細については、「 [Bing Maps のタイル システム](https://go.microsoft.com/fwlink/?linkid=147315)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。  
+ タイルの詳細については、「 [Bing Maps のタイル システム](/bingmaps/articles/bing-maps-tile-system)」を参照してください。 レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。  
   
 ##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a> マップ レイヤーとマップ要素について  
  マップには、複数のレイヤーを追加できます。 レイヤーには 3 つの種類があります。 1 つのレイヤーに表示できる空間データの種類は 1 つだけです。  
@@ -252,5 +252,4 @@ ms.locfileid: "92907270"
  [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
   

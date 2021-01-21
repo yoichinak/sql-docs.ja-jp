@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 500ecc4e4b0dae80faa06f8d152b99423bb45251
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914088"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597172"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
 レポート デザイナーを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のフル機能付きのページ分割レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  
 
-レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+レポート デザイナーは、Microsoft Visual Studio のビジネス インテリジェンス ソリューション作成環境である  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の機能です。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)をダウンロードします。 
   
 ## <a name="benefits-of-report-projects"></a>レポート プロジェクトの利点  
 レポート プロジェクトは、レポート定義およびリソース用のコンテナーの役割を果たします。 プロジェクトを使用する目的  
@@ -70,7 +70,7 @@ ms.locfileid: "86914088"
   
 -   **既存のアイテムを追加します。** 既存のレポート定義 (.rdl) がレポート デザイナーに表示されます。 以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] からレポートまたはプロジェクトを開くと、プロジェクトが現在のバージョンに、レポートが現在のスキーマに自動的にアップグレードされます。 詳細については、「 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。  
   
--   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする &#40;Reporting Services&#41;](https://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646)」および「[サポートされる Access レポート機能 &#40;SSRS&#41;](https://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44)」を参照してください。  
+-   **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access レポートをインポートします。** Access データベース (.mdb、.accdb) またはプロジェクト (.adp) ファイルからすべてのレポートをインポートします。 レポート デザイナーによって、データベースまたはプロジェクト ファイル内の各レポートが RDL に変換され、レポート プロジェクト内に保存されます。 Access レポートのすべての機能がレポート定義 (.rdl) ファイルに転送されるわけではありません。 詳細については、「[Microsoft Access からレポートをインポートする &#40;Reporting Services&#41;](../reports/reporting-services-reports-ssrs.md)」および「[サポートされる Access レポート機能 &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)」を参照してください。  
   
     > [!NOTE]  
     >  インポート機能を使用するには、レポート デザイナーがインストールされているコンピューターに Access 2002 以降のバージョンがインストールされている必要があります。 レポートのインポート時に、Access レポートのデータ ソースが使用可能な状態である必要があります。  
@@ -181,7 +181,7 @@ ms.locfileid: "86914088"
 
 ## <a name="next-steps"></a>次のステップ
 
-[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Data Tools の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [SQL Server Data Tools の配置およびバージョン サポート](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

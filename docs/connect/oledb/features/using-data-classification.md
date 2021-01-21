@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: bazizi
 ms.author: v-beaziz
 manager: kenvh
-ms.openlocfilehash: 2a46b952815fa707b03889d3f9aa6480e6e13d32
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: a833e256272a012cfccbbe018cf4ad275f08db80
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506681"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596797"
 ---
 # <a name="using-data-classification"></a>データ分類の使用
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "96506681"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## <a name="overview"></a>概要
-[SQL データの検出と分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification)は、データベース内の機密情報の検出、分類、ラベル付け、およびレポート作成を行うための高度なサービスのセットです。 Microsoft OLE DB Driver for SQL Server (バージョン [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) では、基になるデータ ソースでこの機能がサポートされている場合に、分類メタデータを取得するためのサポートが追加されています。 この情報には、[ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) インターフェイスを使用してアクセスします。
+[SQL データの検出と分類](../../../relational-databases/security/sql-data-discovery-and-classification.md)は、データベース内の機密情報の検出、分類、ラベル付け、およびレポート作成を行うための高度なサービスのセットです。 Microsoft OLE DB Driver for SQL Server (バージョン [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850)) では、基になるデータ ソースでこの機能がサポートされている場合に、分類メタデータを取得するためのサポートが追加されています。 この情報には、[ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) インターフェイスを使用してアクセスします。
 
-分類を列に割り当てる方法の詳細については、「[SQL データの検出と分類](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification)」を参照してください。
+分類を列に割り当てる方法の詳細については、「[SQL データの検出と分類](../../../relational-databases/security/sql-data-discovery-and-classification.md)」を参照してください。
 
 ## <a name="code-samples"></a>コード サンプル
 
@@ -231,5 +231,4 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 
 ## <a name="see-also"></a>関連項目
  [インターフェイス &#40;OLE DB&#41;](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
- [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
-
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)

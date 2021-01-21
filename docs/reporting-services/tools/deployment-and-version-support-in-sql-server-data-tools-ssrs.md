@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c820c7a9e0cefaee2a22a401213754d0a3274152
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917964"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596167"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -66,9 +66,8 @@ ms.locfileid: "86917964"
 |レポート サーバー プロジェクト<br /><br /> or<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL スキーマ|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |レポート サーバー プロジェクト<br /><br /> or<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL スキーマ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのみ|2003 RDL および 2005 RDL を 2008 RDL スキーマにローカルでアップグレードします。|  
   
- 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)」を参照してください。  
+ 以前のバージョンのレポート定義スキーマでレポートを開く方法の詳細については、「 [レポートのアップグレード](../../reporting-services/install-windows/upgrade-reports.md)」を参照してください。 特定のレポート定義スキーマの詳細については、「 [レポート定義言語の仕様](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ソースとレポートのパブリッシュ](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
-  
   

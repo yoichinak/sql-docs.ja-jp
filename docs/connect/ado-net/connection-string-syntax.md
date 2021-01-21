@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 6daf0dc719b284f753c6f089709ed6f0f51dfe2a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771632"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596397"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 
@@ -123,7 +123,7 @@ SQL Server で構成されたセキュリティのレベルを、アプリケー
 |はい|はい|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
 |はい|はい|はい|はい|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
 
-詳細については、「[検証を伴わない暗号化の使用](/sql/relational-databases/native-client/features/using-encryption-without-validation)」を参照してください。
+詳細については、「[検証を伴わない暗号化の使用](../../relational-databases/native-client/features/using-encryption-without-validation.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ec66d95c2d9be3fde855d5b312fb1ac3882259e4
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: bdfab6a0dea0d1c098b5057d897f65ac88b6a748
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384711"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596182"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートの作成、管理、表示に使用できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  
@@ -41,6 +41,5 @@ ms.locfileid: "94384711"
  [Reporting Services レポート &#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [レポート データセット (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート ビルダーの概要](https://www.databasejournal.com/features/mssql/sql-server-report-builder-3.0.html)   
- [レポート ビルダー 1.0 を使用したレポートのデザインと実装](https://go.microsoft.com/fwlink/?LinkId=142601)  
-  
+ [レポート ビルダー 1.0 を使用したレポートのデザインと実装](/previous-versions/sql/sql-server-2008/ms159750(v=sql.100))  
   

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5889a9411c54312dd52ee1a5e9f2b7917da6838
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9f2a96afd598a4a16ad4683f6ed096032f9b8091
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637505"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620286"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Red Hat OpenShift (ARO) に展開する
 
@@ -44,7 +44,7 @@ ms.locfileid: "97637505"
 
 このスクリプトでは、ARO クラスターの作成を自動化するために Azure CLI を使用します。 スクリプトを実行する前に、少なくとも 1 回は Azure CLI を使用して Azure アカウントにログインする必要があります。 コマンド プロンプトで次のコマンドを実行します。
 
-```terminal
+```azurecli
 az login
 ```
 
@@ -58,7 +58,7 @@ az login
 
 1. 以下を使用してスクリプトを実行します。
 
-```terminal
+```console
 python deploy-sql-big-data-aro.py
 ```
 
@@ -82,7 +82,7 @@ Azure で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nov
 
 次の Azure CLI コマンドを実行して、Azure のビッグ データ クラスターと ARO サービスを削除します (`<resource group name>` は、展開スクリプトで指定した **Azure リソース グループ** に置き換えます)。
 
-```terminal
+```azurecli
 az group delete -n <resource group name>
 ```
 

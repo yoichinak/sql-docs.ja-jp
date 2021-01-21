@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 12/9/2020
-ms.openlocfilehash: cd990278d7478c089df7b01fa4a3738ad36368c3
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933848"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596511"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
@@ -50,7 +50,7 @@ ms.locfileid: "96933848"
 | New Item | 詳細 | 回避策 |
 |----------|---------|------------|
 | Azure Arc の拡張機能 | [既知の問題:](https://github.com/microsoft/azuredatastudio/issues/13319)Arc MIAA & PG デプロイの [ノートブックへのスクリプト] ボタンを選択しても、ノートブックのスクリプトを作成する前にフィールドの検証が行われません。 これは、ユーザーがパスワードの確認入力に間違ったパスワードを入力した場合、パスワードの値が間違っているノートブックが生成される可能性があることを意味します。| ただし [デプロイ] ボタンは想定どおりに動作するため、ユーザーは代わりにこれを使用する必要があります。 |
-| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、1.24.0 より前の ADS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に Azure Data Studio でオブジェクト エクスプローラーを引き続き利用するには、Azure Data Studio 1.24.0 以降を使用する必要があります。 |
+| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、1.24.0 より前の ADS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に Azure Data Studio でオブジェクト エクスプローラーを引き続き利用するには、Azure Data Studio 1.24.0 以降を使用する必要があります。 |
 
 他の既知の問題について、および製品チームにフィードバックを提供するには、[Azure Data Studio フィードバック](https://github.com/microsoft/azuredatastudio)を参照してください。
 

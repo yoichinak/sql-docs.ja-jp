@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e371d024f9166988663439fdcce54a06e13a1c4f
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: a5ba4ee098fc42eebb2ce0a5cc97ed08bff48a8c
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439286"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597214"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -72,7 +72,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|----------|  
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate** です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|N|  
-|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser** 、 **LogonDomain** 、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。|N|  
+|**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、[レポート サーバー データベース接続の構成 (レポート サーバー構成マネージャー)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md) に関する記事を参照してください。|N|  
 |**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定では **MSRS12** _\<instancename>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|N|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおけるトランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」、および「[ネイティブ モードのレポート サーバーでの TLS 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
@@ -140,7 +140,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|説明|モード|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効な値は次のとおりです。 **RSWindowsNegotiate** 、 **RSWindowsKerberos** 、 **RSWindowsNTLM** 、 **RSWindowsBasic** 、および **Custom** です。<br /><br /> **RSWindows** タイプと **Custom** は、相互に排他的です。<br /><br /> **RSWindowsNegotiate** 、 **RSWindowsKerberos** 、 **RSWindowsNTLM** 、および **RSWindowsBasic** は累積的に設定されるため、前述の既定値の例に示したように、組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> **RSWindowsNTLM** は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|N|  
+|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効な値は次のとおりです。**RSWindowsNegotiate**、**RSWindowsKerberos**、**RSWindowsNTLM**、**RSWindowsBasic**、および **Custom** です。<br /><br /> **RSWindows** タイプと **Custom** は、相互に排他的です。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、および **RSWindowsBasic** は累積的に設定されるため、前述の既定値の例に示したように、組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> **RSWindowsNTLM** は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|N|  
 |**RSWindowsNegotiate**|レポート サーバーは、Kerberos または NTLM のいずれかのセキュリティ トークンを受け付けます。 これは、レポート サーバーがネイティブ モードで実行され、サービス アカウントが Network Service である場合の既定の設定です。 レポート サーバーがネイティブ モードで実行され、サービス アカウントがドメイン ユーザー アカウントとして構成されている場合、この設定は省略されます。<br /><br /> レポート サーバー サービス アカウントに対してドメイン アカウントが構成されており、レポート サーバーに対してサービス プリンシパル名 (SPN) が構成されていない場合、この設定により、ユーザーがサーバーにログオンできないことがあります。|N|  
 |**RSWindowsNTLM**|サーバーは、NTLM のセキュリティ トークンを受け付けます。<br /><br /> この設定を削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|N、S|  
 |**RSWindowsKerberos**|サーバーは、Kerberos のセキュリティ トークンを受け付けます。<br /><br /> 制約付き委任の認証スキームで Kerberos 認証を使用する場合は、この設定か RSWindowsNegotiate を使用してください。|N|  
@@ -183,7 +183,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**FileShareStorageLocation**|一時スナップショットの格納先となるファイル システム上のフォルダーを 1 つ指定します。 UNC パスとしてフォルダー パスを指定することはできますが、これはお勧めできません。 既定値は空です。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N、S、P|  
 |**IsRdceEnabled**|RDCE (Report Definition Customization Extension) が有効かどうかを指定します。 有効値は **True** および **False** です。|N、S、P|
 |**IsDataModelRefreshService**|サーバーで Power BI レポートの更新を処理するかどうかを指定します。 有効値は **True** および **False** です。|P|
-|**MaxCatalogConnectionPoolSizePerProcess**|サーバー カタログに接続するときの接続プールの最大サイズを指定します。 既定値は 0 です。 0 を選択すると、レポート サーバーでは、reportingservices.exe プロセスの最大接続数が決定されます。他のプロセスの場合は .[Sql クライアントの既定値](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize)です。|P|  
+|**MaxCatalogConnectionPoolSizePerProcess**|サーバー カタログに接続するときの接続プールの最大サイズを指定します。 既定値は 0 です。 0 を選択すると、レポート サーバーでは、reportingservices.exe プロセスの最大接続数が決定されます。他のプロセスの場合は .[Sql クライアントの既定値](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.maxpoolsize)です。|P|  
 
   
 ##  <a name="ui-rsreportserverconfig-file"></a><a name="bkmk_UI"></a> UI (RSReportServer.config ファイル)  
@@ -237,7 +237,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
  配信拡張機能の詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
- **Extension Name** 、 **MaxRetries** 、 **SecondsBeforeRetry** 、 **Configuration** の各設定は、すべての配信拡張機能に存在します。 まず、これらの共通の設定について説明します。 それぞれの拡張機能に固有の設定については、2 つ目以降の表を参照してください。  
+ **Extension Name**、 **MaxRetries**、 **SecondsBeforeRetry**、 **Configuration** の各設定は、すべての配信拡張機能に存在します。 まず、これらの共通の設定について説明します。 それぞれの拡張機能に固有の設定については、2 つ目以降の表を参照してください。  
   
 |設定|説明|  
 |-------------|-----------------|  
@@ -251,7 +251,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|説明|  
 |-------------|-----------------|  
-|**ExcludedRenderFormats** 、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
+|**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="report-server-e-mail-extension-configuration-settings"></a><a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
  レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
@@ -270,7 +270,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**EmbeddedRenderFormats、RenderingExtension**|電子メール メッセージ本文内のレポートのカプセル化に使用する表示形式を指定します。 続いて、レポート内の画像がレポートに埋め込まれます。 有効な値は、MHTML および HTML4.0 です。|  
 |**PrivilegedUserRenderFormats**|"すべてのサブスクリプションを管理" タスクを使用してサブスクライブが有効になっている場合に、ユーザーがレポートのサブスクリプション用に選択できる表示形式を指定します。 この値が設定されていない場合は、意図的に除外されたものを除く、すべての表示形式を使用できます。|  
 |**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> HTMLOWC<br /><br /> [Null]<br /><br /> RGDI|  
-|**SendEmailToUserAlias**|この値は、 **DefaultHostName** と連動します。<br /><br /> **SendEmailToUserAlias** を **True** に設定すると、個々のサブスクリプションを定義したユーザーが、レポートの受信者として自動的に指定されます。 **[宛先]** フィールドは非表示になります。 この値が **False** に設定されている場合、 **[宛先]** フィールドが表示されます。 レポートの配信を最大限に制御する場合は、この値を **True** に設定します。 有効な値は次のとおりです。<br /><br /> **True** = サブスクリプションを作成しているユーザーの電子メール アドレスが使用されます。 これが既定値です。<br /><br /> **False** = 任意の電子メール アドレスを指定できます。|  
+|**SendEmailToUserAlias**|この値は、 **DefaultHostName** と連動します。<br /><br /> **SendEmailToUserAlias** を **True** に設定すると、個々のサブスクリプションを定義したユーザーが、レポートの受信者として自動的に指定されます。 **[宛先]** フィールドは非表示になります。 この値が **False** に設定されている場合、 **[宛先]** フィールドが表示されます。 レポートの配信を最大限に制御する場合は、この値を **True** に設定します。 有効な値は次のとおりです。<br /><br /> **True**= サブスクリプションを作成しているユーザーの電子メール アドレスが使用されます。 これが既定値です。<br /><br /> **False**= 任意の電子メール アドレスを指定できます。|  
 |**DefaultHostName**|この値は、 **SendEmailToUserAlias** と連動します。<br /><br /> **SendEmailToUserAlias** が True に設定されている場合に、ホスト名を示す文字列値を指定して、ユーザーの別名に追加します。 この値には、ドメイン ネーム システム (DNS) 名または IP アドレスを指定できます。|  
 |**PermittedHosts**|電子メール配信を受信できるホストを明示的に指定することにより、レポートの配信を制限します。 **PermittedHosts** 内で、各ホストは **HostName** 要素として指定されます。この値は、IP アドレスまたは DNS 名のいずれかです。<br /><br /> ホストに定義された電子メール アカウントのみが、有効な受信者です。 **DefaultHostName** を指定した場合、そのホストが **PermittedHosts** の **HostName** 要素として含まれていることを確認してください。 この値は、1 つ以上の DNS 名または IP アドレスである必要があります。 既定では、この値は設定されていません。 値が設定されていない場合は、電子メール化されたレポートを受信できるユーザーは制限されません。|  
   
@@ -400,7 +400,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**MaxConnections**|Bing Maps Web サービスに対する接続の最大数を指定します。|  
 |**タイムアウト**|Bing Maps Web サービスからの応答を待つ時間のタイムアウトを秒数で指定します。|  
 |**AppID**|Bing Maps Web サービスに使用するアプリケーション識別子 (AppID) を指定します。 **(Default)** は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の AppID を指定します。<br /><br /> レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371)」を参照してください。<br /><br /> 固有の Bing Maps 使用許諾契約書にカスタム AppID を指定する必要があるとき以外は、この値を変更しないでください。 AppID を変更する場合は、変更を有効にするために [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を再起動する必要はありません。|  
-|**CacheLevel**|System.Net.Cache の HttpRequestCacheLevel 列挙から値を指定します。 既定値は **Default** です。 詳細については、「 [HttpRequestCacheLevel 列挙体](https://go.microsoft.com/fwlink/?LinkId=153353)」を参照してください。|  
+|**CacheLevel**|System.Net.Cache の HttpRequestCacheLevel 列挙から値を指定します。 既定値は **Default** です。 詳細については、「 [HttpRequestCacheLevel 列挙体](/dotnet/api/system.net.cache.httprequestcachelevel)」を参照してください。|  
   
 ##  <a name="default-configuration-file-for-a-native-mode-report-server"></a><a name="bkmk_nativedefaultfile"></a> ネイティブ モード レポート サーバーの既定の構成ファイル  
  既定では、rsreportserver.config ファイルは次の場所にインストールされます。  
@@ -860,5 +860,4 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [レポート サーバー構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
  その他の質問 [Reporting Services のフォーラムにアクセスします](https://go.microsoft.com/fwlink/?LinkId=620231)
-  
   

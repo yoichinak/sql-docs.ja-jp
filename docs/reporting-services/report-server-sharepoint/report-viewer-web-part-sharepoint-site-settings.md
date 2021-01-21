@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 8673f824762a9c7f6a28cd1232e742aac4428b23
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: dfb8a3a33d56660bd8a7bdeeffb88824a3960dce
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765008"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596918"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>レポート ビューアー Web パーツに関する SharePoint サイト設定
 
@@ -25,7 +25,7 @@ ms.locfileid: "83765008"
 
 サイトの設定には、次の方法でアクセスできます。
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある **歯車** アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
@@ -38,5 +38,5 @@ ms.locfileid: "83765008"
 
 |設定|説明|  
 |-------------|--------------|  
-|使用状況データの収集|エラーおよび使用状況の情報を Microsoft に送信して製品の品質向上に協力します。 Microsoft のエラー報告データ収集のポリシーについては、「[Microsoft SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。|  
-|レポートのアクセシビリティ メタデータを有効にする|表示レポート用の [`AccessibleTablix`デバイス情報](../html-device-information-settings.md)を設定します。| 
+|使用状況データの収集|エラーおよび使用状況の情報を Microsoft に送信して製品の品質向上に協力します。 Microsoft のエラー報告データ収集のポリシーについては、「[Microsoft SQL Server のプライバシーに関する声明](../../sql-server/sql-server-privacy.md)」を参照してください。|  
+|レポートのアクセシビリティ メタデータを有効にする|表示レポート用の [`AccessibleTablix`デバイス情報](../html-device-information-settings.md)を設定します。|

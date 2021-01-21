@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1688998d5a3f6b9033808701c33ff141cf8cc8c3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038947"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597196"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio のコンポーネントと構成
 
@@ -138,7 +138,7 @@ ms.locfileid: "92038947"
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/ssms-connect-query-sql-server.md)
 * [スクリプトの作成](scripting-ssms.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 908aa73d20ce939696124fee2f92eb87c9b8bec8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b2723cef9d005ea1f5e2db7e9e915762a7cd6a11
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642759"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241859"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "97642759"
   
 4.  `Start-ClusterNode` を指定した `-FixQuorum` を使用して、クラスター サービスを強制的に起動します。  
   
-5.  `Get-ClusterNode` を指定した `-Propery NodeWieght = 1` を使用して、ノードがクォーラムの投票メンバーであることを保証する値を設定します。  
+5.  `Get-ClusterNode` を指定した `-Property NodeWieght = 1` を使用して、ノードがクォーラムの投票メンバーであることを保証する値を設定します。  
   
 6.  クラスター ノードのプロパティを判読可能な形式で出力します。  
   

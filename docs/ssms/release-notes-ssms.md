@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102685"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596862"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -46,7 +46,7 @@ SSMS 18.8 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 |----------|---------|
 | Azure Data Studio のインストールの統合 | SSMS をインストールすると Azure Data Studio 1.25.1 がインストールされる。 |
 | Analysis Services | Power BI Premium Gen2 ワークスペースのサポートを追加。 |
-| 監査 | EXTERNAL_MONITOR と "演算子監査" のサポートを追加。  詳細については、構成に関する[ドキュメント](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure)を参照してください。 |
+| 監査 | EXTERNAL_MONITOR と "演算子監査" のサポートを追加。  詳細については、構成に関する[ドキュメント](/azure/azure-sql/managed-instance/auditing-configure)を参照してください。 |
 | Integration Services | SSIS IR を作成しているときに SSISDB の作成が省略可能になるよう IR 作成ウィザードを改善 |
 
 #### <a name="bug-fixes-in-188"></a>18.8 でのバグ修正
@@ -142,7 +142,7 @@ SSMS 18.7 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | スクリプト生成ウィザード | SQL Server 2014 以前では、データベース オブジェクトを列挙しようとすると、ウィザードが失敗します。 [SQL Server ユーザー フィードバック](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587)を参照してください。 | SSMS 18.6 を使用して、SQL 2014 以前用のスクリプト生成ウィザードでオブジェクトを選択します。 |
 | Integration Services | Integration Services でパッケージをインポートまたはエクスポートするとき、または Azure-SSIS Integration Runtime でパッケージをエクスポートするときに、スクリプト タスク/コンポーネントを含むパッケージのスクリプトが失われます。 | フォルダー "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild" を削除します。 |
 | Integration Services | Integration Services へのリモート接続が新しいオペレーティング システムで、"The specified service does not exist as an installed service." (指定されたサービスはインストールされたサービスとして存在しません。) で 失敗する場合があります。 | Integration Services に関連するレジストリの場所を Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID の下とこれらのハイブ内で特定し、接続しようとしている Integration Services の特定のバージョンについて 'LocalService' という名前のレジストリ キーの名前を 'LocalService_A' に変更します。 |
-| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降を使用する必要があります。 |
+| オブジェクト エクスプローラー | [Azure Synapse Analytics サーバーレス SQL プール](/azure/synapse-analytics/sql/on-demand-workspace-overview)に関連するエンジンの変更により、18.7 より前の SSMS のリリースでは、オブジェクト エクスプローラーに破壊的変更があります。 | Azure Synapse Analytics サーバーレス SQL プールと共に SSMS でオブジェクト エクスプローラーを引き続き利用するには、SSMS 18.7 以降を使用する必要があります。 |
 
 ### <a name="187"></a>18.7
 

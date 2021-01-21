@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f073f61cb469c3a31ef475a93920d7beba99a508
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 4fe6c4989b70421bdf88b87e19bc9ad31d206379
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012230"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596153"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>データの表示 (レポート ビルダーおよび SSRS)
   HTML、MHTML、Word、Excel、PDF、Image などのレイアウト レンダラーを使用した場合、データとその構造は変更されません。 CSV (コンマ区切り) や XML などのデータ レンダラー形式を使用してエクスポートした場合、視覚的なレイアウト要素は表示されません。 CSV および XML では、レポートを表示する際に、特定の規則がレポート本文とそのコンテンツに適用されます。 これらの規則により、データがこの形式でどのように表示されるかが決定します。  
@@ -40,7 +40,7 @@ ms.locfileid: "84012230"
   
 -   DataElementStyle プロパティは、XML において、レポート アイテムが要素と属性のどちらとして表示されるかを制御します。  
   
- CSV エクスポート オプションでは、書式を持たないコンマ区切りのプレーン テキスト形式のファイルとしてレポート データが保存されます。 既定では、コンマ (,) を使用してフィールドおよび行を区切りますが、この設定は、デバイス情報設定で構成できます。 エクスポートされたファイルは、Office SharePoint Server などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 .csv ファイルは、メモ帳などのテキスト エディターで開きます。 URL としてアクセスした場合は、.csv ファイルから **text/csv**の MIME の種類が返されます。 ファイルは、MIME バージョン 1.0 形式のファイルになります。 CSV ファイル形式でレポートを表示する方法の詳細については、「[CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。  
+ CSV エクスポート オプションでは、書式を持たないコンマ区切りのプレーン テキスト形式のファイルとしてレポート データが保存されます。 既定では、コンマ (,) を使用してフィールドおよび行を区切りますが、この設定は、デバイス情報設定で構成できます。 エクスポートされたファイルは、Office SharePoint Server などのスプレッドシート プログラムで開いたり、他のプログラムのインポート形式として使用できます。 .csv ファイルは、メモ帳などのテキスト エディターで開きます。 URL としてアクセスした場合は、.csv ファイルから **text/csv** の MIME の種類が返されます。 ファイルは、MIME バージョン 1.0 形式のファイルになります。 CSV ファイル形式でレポートを表示する方法の詳細については、「[CSV ファイルへのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。  
   
  [レポート データが含まれている XML ファイル] エクスポート オプションを指定すると、レポートが XML ファイルとして保存されます。 レポートの XML スキーマは、各レポート固有のものです。 XML エクスポート オプションでは、レポート レイアウト情報は保存されません。 このオプションで生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。 XML ファイル形式でレポートを表示する方法の詳細については、「[XML へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -50,6 +50,5 @@ ms.locfileid: "84012230"
  [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services デバイス情報設定](https://go.microsoft.com/fwlink/?LinkId=102515)  
-  
+ [Reporting Services デバイス情報設定](/previous-versions/sql/sql-server-2008/ms155397(v=sql.100))  
   

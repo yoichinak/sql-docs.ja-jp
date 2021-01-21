@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4a55d7f6c9c55891f8d1a7bf97d8834c9df4a796
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: f83c3d1e1a5bf0c9b74d058f144c4d07025c8c05
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283121"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620270"
 ---
 # <a name="deploy-bdc-in-azure-kubernetes-service-aks-private-cluster"></a>Azure Kubernetes Service (AKS) プライベート クラスターへの BDC のデプロイ
 
@@ -36,7 +36,7 @@ ms.locfileid: "89283121"
 
 ## <a name="create-a-private-aks-cluster-with-advanced-networking"></a>高度なネットワークが有効になっているプライベート AKS クラスターを作成する
 
-```console
+```bash
 
 export REGION_NAME=<your Azure region >
 export RESOURCE_GROUP=< your resource group name >
@@ -70,7 +70,7 @@ echo $SUBNET_ID
 
 次の手順に進むには、Standard Load Balancer を使用して AKS クラスターをプロビジョニングし、プライベート クラスター機能を有効にする必要があります。 コマンドは次のようになります。 
 
-```console
+```bash
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $AKS_NAME \
@@ -90,7 +90,7 @@ az aks create \
 
 ## <a name="connect-to-an-aks-cluster"></a>AKS クラスターに接続する
 
-```console
+```azurecli
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
@@ -98,13 +98,13 @@ az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 
 AKS クラスターに接続したら、BDC のデプロイを開始できます。環境変数を準備して、デプロイを開始します。 
 
-```console
+```azurecli
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
 BDC カスタム デプロイ プロファイルを生成および構成する:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
@@ -123,13 +123,13 @@ azdata bdc config replace -c private-bdc-aks/bdc.json -j "$.spec.resources.apppr
 
 次の例では、`ServiceType` を `NodePort` として設定しています。
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## <a name="deploy-bdc-in-aks-private-cluster"></a>AKS プライベート クラスターに BDC をデプロイする
 
-```console
+```azurecli
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
 

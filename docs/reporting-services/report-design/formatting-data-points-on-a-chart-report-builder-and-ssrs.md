@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b2dc1633af5b4f6ff8ff981d11766c67510786d
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 0d9f3036e7d8c580e770ded7bbbec6e5f29b2750
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778951"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596915"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -50,7 +50,7 @@ ms.locfileid: "84778951"
   
 -   積み上げグラフの場合、データ ポイント ラベルは常に系列の内側に配置され、系列ラベルの **Position** プロパティは無視されます。  
   
--   その他の種類のグラフでは、系列ラベルの **Position** プロパティを使用してデータ ポイント ラベルの位置を指定できます。 既定では、ラベルが重ならないように、データ ポイント ラベルの位置が自動的に計算されます。 **Position**プロパティの値を設定すると、すべてのデータ ポイント ラベルが同じように配置され、ラベルが重なり合う場合があります。 データ ポイントの数が少ない場合にのみ、Position プロパティを使用してください。  
+-   その他の種類のグラフでは、系列ラベルの **Position** プロパティを使用してデータ ポイント ラベルの位置を指定できます。 既定では、ラベルが重ならないように、データ ポイント ラベルの位置が自動的に計算されます。 **Position** プロパティの値を設定すると、すべてのデータ ポイント ラベルが同じように配置され、ラベルが重なり合う場合があります。 データ ポイントの数が少ない場合にのみ、Position プロパティを使用してください。  
   
  詳細については、「[グラフへのラベルの配置 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "84778951"
 |#MAX|系列内のすべての Y 値の最大値|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|系列内のすべての Y 値の最初の値|All|`=First(Fields!MyDataField.Value)`|  
   
- キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
+ キーワードを書式設定するには、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列をかっこで囲みます。 たとえば、ツールヒントでデータ ポイントの値を小数点以下 2 桁の数値として指定するには、書式設定文字列 "N2" を中かっこで囲みます。たとえば、系列の **ToolTip** プロパティで "#VALY{N2}" のようになります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 書式設定文字列の詳細については、MSDN の「 [型の書式設定](/previous-versions/) 」を参照してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の数値を書式設定する方法については、「[数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフにキーワードを追加する方法の詳細については、「[系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)」、「[凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)」を参照してください。  
   
@@ -102,5 +102,4 @@ ms.locfileid: "84778951"
  [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

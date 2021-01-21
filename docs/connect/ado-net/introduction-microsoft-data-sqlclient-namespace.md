@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: e966e4f2f43ebe546d6baa0b757f682f3eca205b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011832"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596363"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Microsoft.Data.SqlClient 名前空間の概要
 
@@ -43,7 +43,7 @@ Microsoft.Data.SqlClient v2.1 での拡張により、次のプラットフォ�
 
 ### <a name="azure-active-directory-device-code-flow-authentication"></a>Azure Active Directory でのデバイス コード フロー認証
 Microsoft.Data.SqlClient v2.1 では、MSAL.NET での "デバイス コード フロー" 認証がサポートされています。
-リファレンス ドキュメント:[OAuth 2.0 デバイス許可付与フロー](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)に関するページ
+リファレンス ドキュメント:[OAuth 2.0 デバイス許可付与フロー](/azure/active-directory/develop/v2-oauth2-device-code)に関するページ
 
 接続文字列の例:
 
@@ -60,7 +60,7 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="azure-active-directory-managed-identity-authentication"></a>Azure Active Directory マネージド ID 認証
-[マネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) を使用する Azure Active Directory 認証のサポートが、Microsoft.Data.SqlClient v2.1 で導入されています。
+[マネージド ID](/azure/active-directory/managed-identities-azure-resources/overview) を使用する Azure Active Directory 認証のサポートが、Microsoft.Data.SqlClient v2.1 で導入されています。
 
 次の認証モード キーワードがサポートされています。
 - Active Directory Managed Identity

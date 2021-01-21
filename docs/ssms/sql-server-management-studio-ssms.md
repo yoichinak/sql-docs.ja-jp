@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 1961d2f831a8db86c782a5e2330d74f4346d6d19
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 13d107ade6810f5b786c8333edc75518b906b6db
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096105"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597073"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) とは何か?
 
@@ -101,7 +101,7 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
 ## <a name="next-steps"></a>次のステップ
 
 - [英語以外の言語バージョンの SSMS をインストールする](install-other-languages.md)
-- [SQL Server インスタンスに接続してクエリを実行する](./quickstarts/connect-query-sql-server.md)
+- [SQL Server インスタンスに接続してクエリを実行する](./quickstarts/ssms-connect-query-sql-server.md)
 - [Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md)
 

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: c0c3b1462fe165678e3826585f5ce82d5945de56
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 8b6293359306006d7ed6402bf630919a947c6e53
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577922"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596394"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>SqlPackage Export のパラメーターとプロパティ
 SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure SQL のライブ データベースが BACPAC パッケージ (.bacpac ファイル) にエクスポートされます。 既定では、すべてのテーブルのデータが .bacpac ファイルに含まれます。 必要に応じて、データをエクスポートする対象のテーブルの一部のみを指定できます。 Export 操作の検証によって、エクスポート対象にテーブルの一部を指定した場合でも、完全な対象データベースに対する Azure SQL Database の互換性が維持されます。 
@@ -61,8 +61,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|LongRunningCommandTimeout=(INT32)| SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには、0 を使用します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData=(STRING)|データの抽出元テーブルを示します。 テーブル名は次の形式で指定してください: schema_name.table_identifier。名前部分はかっこで囲んでも囲まなくても構いません。 このオプションは、複数回指定できます。|
-|**/p:**|TempDirectoryForTableData=(STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これにより、生成された bacpac で、メモリ最適化テーブルなどの V12 機能を持つ Azure SQL Database サーバーによってサポートされるオブジェクトを許可するかどうかが決まります。|
+|**/p:**|TempDirectoryForTableData=(STRING)|パッケージ ファイルに書き込む前にテーブル データをバッファーするために使用する、一時ディレクトリを指定します。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12 のサポートされているフルテキスト ドキュメントの種類を確認するかどうかを指定します。|
 
 ## <a name="next-steps"></a>次の手順

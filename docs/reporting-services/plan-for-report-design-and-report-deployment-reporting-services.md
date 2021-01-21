@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ec946e008990e9cc4f75fc6a6eb0882756d25b8b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477063"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596562"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、ページ分割されたレポートの作成と配置に関していくつかのアプローチが用意されています。 レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
@@ -38,11 +38,11 @@ ms.locfileid: "97477063"
   
 -   [Microsoft SQL Server XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)  
+-   [レポート定義言語の仕様](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)」を参照してください。  
+ ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](/previous-versions/ms251671(v=vs.140))」を参照してください。  
   
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
  レポート定義ファイルは、次の方法で [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーに配置できます。  
@@ -112,15 +112,14 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
   
  詳細については、「  
   
--   [RDLC ファイルから RDL ファイルへの変換](https://msdn.microsoft.com/library/ms252109.aspx)  
+-   [RDLC ファイルから RDL ファイルへの変換](/previous-versions/ms252109(v=vs.140))  
   
--   [ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
+-   [ReportViewer コントロール (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
   
--   [ReportViewer コントロールの追加と構成](https://msdn.microsoft.com/library/ms252104.aspx)  
+-   [ReportViewer コントロールの追加と構成](/previous-versions/ms252104(v=vs.140))  
   
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
-  
   

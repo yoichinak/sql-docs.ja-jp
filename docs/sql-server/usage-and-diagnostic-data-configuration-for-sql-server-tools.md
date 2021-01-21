@@ -11,12 +11,12 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 8f12acd87a21cca6047621abfb985906295b58c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dc701901340bcea2d93c4bc4ef79b00855dd8dc2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461443"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596623"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>SQL Server ツールの使用状況と診断データの収集を構成する (CEIP)
 
@@ -25,7 +25,7 @@ ms.locfileid: "97461443"
 Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP) により、どのようにしてソフトウェアを改善する方法を特定しているかについて説明します。  有効または無効にするツールはいつでも構成することができます。  
   
 > [!NOTE]  
-> Microsoft SQL Server リリースのユーザー データの収集および使用方法については、この「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
+> Microsoft SQL Server リリースのユーザー データの収集および使用方法については、この「[プライバシーに関する声明](./sql-server-privacy.md)」を参照してください。  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools の CEIP を有効または無効にする  
 
@@ -74,10 +74,10 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
 > [!CAUTION]  
 >  レジストリを正しく編集しないと、システムが正常に動作しなくなる場合があります。 レジストリを変更する前に、コンピューター上の重要なデータのバックアップを作成する必要があります。 手動での変更の適用後に問題が発生した場合は、[前回正常起動時の構成] スタートアップ オプションを使うこともできます。  
   
- CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
+ CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](./sql-server-privacy.md)」を参照してください。  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Visual Studio 2015 の CEIP と SQL Server Data Tools の選択および制御  
- Visual Studio 2015 の SSDT は、SQL Server 2016 に付属するデータ モデリング ツールです。 Visual Studio 2015 に組み込まれている CEIP オプションが使用されます。 Visual Studio 2015 の CEIP を通じてフィードバックを送信する方法の詳細は、[Visual Studio のヘルプ ドキュメント](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)で確認できます。  
+ Visual Studio 2015 の SSDT は、SQL Server 2016 に付属するデータ モデリング ツールです。 Visual Studio 2015 に組み込まれている CEIP オプションが使用されます。 Visual Studio 2015 の CEIP を通じてフィードバックを送信する方法の詳細は、[Visual Studio のヘルプ ドキュメント](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)で確認できます。  
   
  プレビュー版の SQL Server 2016 では、CEIP が既定で有効になっています。 次の手順で、無効にし、再度有効に戻すことができます。  
   
@@ -116,7 +116,7 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
 > [!CAUTION]  
 >  レジストリを正しく編集しないと、システムが正常に動作しなくなる場合があります。 レジストリを変更する前に、コンピューター上の重要なデータのバックアップを作成する必要があります。 手動での変更の適用後に問題が発生した場合は、[前回正常起動時の構成] スタートアップ オプションを使うこともできます。  
   
- CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。  
+ CEIP により収集、処理、および送信される情報の詳細については、「[プライバシーに関する声明](./sql-server-privacy.md)」を参照してください。  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>CEIP および SQL Server Data Tools - BI (SSDT BI) の選択および制御  
  SSDT-BI を使用している場合、インストール中に CEIP に協力するかどうかを選択できます。 SSDT-BI の CEIP の構成は、後でクライアント ツールまたはレジストリ設定の編集により変更することができます。  
@@ -148,5 +148,4 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
 -   0 は無効  
   
 -   1 は有効  
-  
   

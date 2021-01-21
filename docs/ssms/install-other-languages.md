@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: 22c9550044e5420426f6a423d340e3b32b7a77a4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 7637c21ce048c4ffc0277a73c4403c5d16484a21
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034846"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597182"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>英語以外の言語バージョン の SQL Server Management Studio (SSMS) をインストールする
 
@@ -41,7 +41,7 @@ SSMS は複数の言語で利用可能ですが、コンピューターのシス
 2. インストールした言語をクリックし、前の手順でインストールした言語パックを使用するようにシステム ロケールを設定します。次に、**[既定として設定する]** を選択します。
 3. お使いのオペレーティング システムが目的の言語で実行されたら、目的の SSMS 言語をインストールします。 新しい言語の SSMS を初めてインストールする場合は、フル パッケージを使用します。 以降のインストールでは、アップグレード パッケージを使用できます。
 4. インストールする各言語が、最初にインストールした SSMS のバージョンの言語と一致しない場合は、次の手順で対応する Visual Studio 2015 Shell (Isolated) Language Pack をインストールします。
-   - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) にアクセスしてください (サインインして *接続登録*プロセスを完了することが必要な場合があります)。
+   - [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) にアクセスしてください (サインインして *接続登録* プロセスを完了することが必要な場合があります)。
    - 目的の Visual Studio 2015 Shell (Isolated) Language Pack をダウンロードしてインストールします。
 
    > [!IMPORTANT]
@@ -53,4 +53,4 @@ SSMS は複数の言語で利用可能ですが、コンピューターのシス
 
 ## <a name="next-steps"></a>次のステップ
 
-- [チュートリアル:SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
+- [チュートリアル:SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

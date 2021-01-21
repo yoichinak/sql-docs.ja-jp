@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 995b30e9c69b14148a67f18c36e0f42d01c419eb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 71c8852efd538ef0a702c8f96435facf4882b7d2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470823"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596666"
 ---
 # <a name="performance-tuning-and-data-optimization-for-r"></a>R でのパフォーマンスのチューニングとデータの最適化
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -175,4 +175,4 @@ RevoScaleR の最適化の詳細については、以下の記事を参照して
 
 + R コードのパフォーマンスを向上させるために使用できる R 関数については、「[R コード プロファイル関数を使用してパフォーマンスを向上させる](using-r-code-profiling-functions.md)」を参照してください。
 
-+ SQL Server でのパフォーマンスの調整の詳細については、「[SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)」を参照してください。
++ SQL Server でのパフォーマンスの調整の詳細については、「[SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)」を参照してください。

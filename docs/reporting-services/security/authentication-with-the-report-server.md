@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a182c94b2949a4c9d3dc83e4b9be6a810022e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f682e468bffe704df57cb63b811682488909605
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492685"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595204"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
 
@@ -36,7 +36,7 @@ ms.locfileid: "88492685"
 |RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
 |RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
 |RSWindowsKerberos|Kerberos|いいえ|Windows 統合認証に Kerberos を使用します。 サービス アカウントのセットアップ サービス プリンシパル名 (SPN) を設定して、Kerberos を構成する必要があります。そのためには、ドメイン管理者権限が必要です。 Kerberos での ID 委任を設定した場合は、レポートを要求したユーザーのトークンを使用して、レポート データを提供する別の外部データ ソースに接続することもできます。<br /><br /> RSWindowsKerberos を指定する前に、使用しているブラウザーの種類で実際にサポートされていることを確認してください。 Microsoft Edge、または Internet Explorer を使用している場合、Kerberos 認証はネゴシエートを通してのみサポートされます。 Microsoft Edge、または Internet Explorer では、Kerberos を直接指定する認証要求は作成されません。|  
-|RSWindowsBasic|Basic|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用する場合は、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、ユーザー アカウント情報をネットワーク経由で送信する前に暗号化します。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](https://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
+|RSWindowsBasic|Basic|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用する場合は、トランスポート層セキュリティ (TLS) (旧称 Secure Sockets Layer (SSL)) を使用して、ユーザー アカウント情報をネットワーク経由で送信する前に暗号化します。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  
 |Custom|(Anonymous)|いいえ|匿名認証は、HTTP 要求の認証ヘッダーを無視するようにレポート サーバーに指示します。 レポート サーバーですべての要求が受け入れられますが、ユーザーを認証する場合は、カスタムの [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] フォーム認証を指定する必要があります。<br /><br /> **Custom** は、レポート サーバーにすべての認証要求を処理するカスタム認証モジュールを配置している場合にのみ指定します。 カスタム認証は、既定の Windows 認証拡張機能と共に使用することはできません。|  
   
 ## <a name="unsupported-authentication-methods"></a>サポートされない認証方法  

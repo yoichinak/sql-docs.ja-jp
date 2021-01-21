@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 29c39caf6885ee974c62ed153df982b435c72c95
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: 1c3bf8f69678ecf291594991650c3bb4c21d4652
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619324"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596753"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-on-an-azure-virtual-machine-using-sql-server-management-studio-ssms"></a>クイックスタート: SQL Server Management Studio (SSMS) を使用して Azure 仮想マシン上で SQL Server インスタンスに接続し、クエリを行う
 
@@ -95,11 +95,11 @@ Azure VM 上の SQL Server に接続するための要件を次の表に示し�
 
 | 要件 | 説明 |
 |---|---|
-| [SQL Server 認証モードを有効にする](/sql/database-engine/configure-windows/change-server-authentication-mode#use-ssms) | 仮想ネットワーク上で Active Directory を構成済みである場合を除き、VM にリモート接続するには SQL Server 認証が必要になります。 |
-| [SQL ログインを作成する](/sql/relational-databases/security/authentication-access/create-a-login) | SQL 認証を使用する場合、実際のターゲット データベースへのアクセス許可も持つ、ユーザー名とパスワードによる SQL ログインが必要です。 |
+| [SQL Server 認証モードを有効にする](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | 仮想ネットワーク上で Active Directory を構成済みである場合を除き、VM にリモート接続するには SQL Server 認証が必要になります。 |
+| [SQL ログインを作成する](../../relational-databases/security/authentication-access/create-a-login.md) | SQL 認証を使用する場合、実際のターゲット データベースへのアクセス許可も持つ、ユーザー名とパスワードによる SQL ログインが必要です。 |
 | TCP/IP プロトコルを有効にする | SQL Server では、TCP 経由の接続を許可する必要があります。 |
-| [SQL Server ポートのファイアウォール規則を有効にする](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) | VM 上のファイアウォールでは、SQL Server ポート (既定では 1433) の受信トラフィックを許可する必要があります。 |
-| [TCP 1433 のネットワーク セキュリティ グループの規則を作成する](https://docs.microsoft.com/azure/virtual-network/manage-network-security-group#create-a-security-rule) | インターネット経由で接続する場合は、VM が SQL Server ポート (既定では 1433) でトラフィックを受信できるようにします。 これは、ローカルと仮想ネットワーク専用の接続では不要です。 この手順は Azure portal でのみ必要です。 |
+| [SQL Server ポートのファイアウォール規則を有効にする](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | VM 上のファイアウォールでは、SQL Server ポート (既定では 1433) の受信トラフィックを許可する必要があります。 |
+| [TCP 1433 のネットワーク セキュリティ グループの規則を作成する](/azure/virtual-network/manage-network-security-group#create-a-security-rule) | インターネット経由で接続する場合は、VM が SQL Server ポート (既定では 1433) でトラフィックを受信できるようにします。 これは、ローカルと仮想ネットワーク専用の接続では不要です。 この手順は Azure portal でのみ必要です。 |
 
 > [!TIP]
 > ポータル内で接続を構成すると、上記の表の手順が自動的に実行されます。 これらの手順を使用するのは、ご自分の構成を確認する場合または SQL Server の接続を手動で設定する場合だけです。

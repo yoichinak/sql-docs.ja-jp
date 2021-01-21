@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 5b5e8dbaee71c53f8f9491f8a1abcd15559e4800
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547994"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596843"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "84547994"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] では、サーバーに対するサービス拒否攻撃 (DoS) の脅威を低減するために、送信ファイルに最大サイズを設けています。 最大サイズの制限の値を大きくした場合、この制限による保護がある程度弱められます。 値を大きくすることで得られるメリットが、それに伴うセキュリティ リスクの増大よりも重要であると確信できる場合のみ、値を大きくしてください。  
   
- **maxRequestLength** 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 このため、 **maxRequestLength** 要素に指定する値は、実際の使用可能なアイテムのサイズより約 33% 大きくする必要があります。 たとえば、 **maxRequestLength**を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
+ **maxRequestLength** 要素に設定する値は、適用する実際のサイズ制限より大きい必要があることに注意してください。 すべてのパラメーターが SOAP エンベロープにカプセル化され、Base64 エンコードが適用されると、必然的に HTTP 要求サイズまで増大するため、値を大きくする必要があります。 Base64 エンコードによって、元のデータのサイズより約 33% 大きくなります。 このため、 **maxRequestLength** 要素に指定する値は、実際の使用可能なアイテムのサイズより約 33% 大きくする必要があります。 たとえば、 **maxRequestLength** を 64 MB に指定した場合、実際にレポート サーバーに送信されるレポート ファイルの最大サイズは約 48 MB になると予測されます。  
   
 ## <a name="report-size-in-memory"></a>メモリ内のレポート サイズ  
  レポート実行時のレポート サイズは、レポートに返されるデータ量に出力ストリームのサイズを加えた値になります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レンダリングされたレポートのサイズに対する最大値が設定されません。 サイズの上限は、システム メモリによって決まります。既定では、構成された使用可能なメモリがすべてレポートのレンダリング時に使用されますが、メモリのしきい値およびメモリ管理ポリシーを設定するための構成設定を指定できます。 詳細については、「 [レポート サーバー アプリケーションで利用可能なメモリの構成](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "84547994"
  レポート サイズのハード制限は、Excel 形式で表示する場合にのみ存在します。 ワークシートの大きさが、65536 行および 256 列を超えることはできません。 他の表示形式にはこれらの制限がないので、サーバーのリソース量によってのみサイズが制限されます。  
   
 > [!NOTE]  
->  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](https://go.microsoft.com/fwlink/?LinkID=77519)」を参照してください。  
+>  レポートの処理とレンダリングは、メモリ内で行われます。 レポートが大きい場合またはユーザーが多い場合は、なんらかのキャパシティ プランニングを行い、ユーザーにとって満足のいくレベルのパフォーマンスを実現できるようにレポート サーバーを配置してください。 ツールとガイドラインの詳細については、MSDN の資料「 [Reporting Services のパフォーマンスの最適化](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) 」および「 [Visual Studio 2005 を使用した SQL Server 2005 Reporting Services レポート サーバーのロード テスト](/previous-versions/sql/sql-server-2005/administrator/aa964139(v=sql.90))」を参照してください。  
   
 ## <a name="measuring-snapshot-storage"></a>スナップショット ストレージの測定  
  スナップショットのサイズは、レポートのデータ量に比例します。 通常、スナップショットは、レポート サーバーに格納されている他の項目よりはるかに大きくなります。 スナップショットの一般的なサイズの範囲は、数メガバイトから数十メガバイトです。 非常に大きいレポートを使用している場合、さらにスナップショットが大きくなる可能性があります。 スナップショットを使用する頻度およびレポート履歴の構成方法に応じて、レポート サーバー データベースに必要なディスク領域が短期間で急速に増える可能性があります。  
@@ -82,5 +82,4 @@ EXEC sp_spaceused
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート サーバー データベース &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [サイズの大きなレポートの処理](../../reporting-services/report-server/process-large-reports.md)  
-  
   

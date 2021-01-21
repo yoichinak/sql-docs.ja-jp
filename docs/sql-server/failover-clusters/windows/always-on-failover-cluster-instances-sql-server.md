@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea1413b30c4706125b711493f64210c2a875ec0f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a27efd6cb20a90bc1b3ce72a6e4cee74f74c3b61
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642815"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595229"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On フェールオーバー クラスター インスタンス (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "97642815"
  FCI は、[可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)を活用して、データベース レベルでのリモートのディザスター リカバリーを実現します。 詳細については、「[Failover Clustering and Always On Availability Groups (SQL Server) (フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」をご覧ください。  
  
  > [!NOTE]  
- > Windows Server 2016 Datacenter Edition には、記憶域スペース ダイレクト (S2D) のサポートが導入されています。 SQL Server フェールオーバー クラスター インスタンスは、クラスター ストレージ リソース向けの S2D をサポートしています。 詳細については、「[Windows Server 2016 の記憶域スペース ダイレクト](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)」を参照してください。
+ > Windows Server 2016 Datacenter Edition には、記憶域スペース ダイレクト (S2D) のサポートが導入されています。 SQL Server フェールオーバー クラスター インスタンスは、クラスター ストレージ リソース向けの S2D をサポートしています。 詳細については、「[Windows Server 2016 の記憶域スペース ダイレクト](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)」を参照してください。
  > 
- >フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) もサポートしています。 詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](https://technet.microsoft.com/library/dd759255.aspx)」を参照してください。 
+ >フェールオーバー クラスター インスタンスは、クラスター化共有ボリューム (CSV) もサポートしています。 詳細については、「 [フェールオーバー クラスターのクラスターの共有ボリュームについて](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11))」を参照してください。 
    
  **このトピックの内容**  
   
@@ -157,7 +157,6 @@ ms.locfileid: "97642815"
 |----------------------------|---------------|  
 |新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI のインストール方法について説明します。|[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] フェールオーバー クラスターにアップグレードする方法について説明します。|[SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Windows フェールオーバー クラスタリングの概念について説明し、Windows フェールオーバー クラスタリングに関連するタスクへのリンクを示します。|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [フェールオーバー クラスターの概要](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [フェールオーバー クラスターの概要](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Windows フェールオーバー クラスタリングの概念について説明し、Windows フェールオーバー クラスタリングに関連するタスクへのリンクを示します。|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [フェールオーバー クラスターの概要](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730692(v=ws.10))<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [フェールオーバー クラスターの概要](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754482(v=ws.11))|  
 |FCI 内のノードと可用性グループ内のレプリカの概念の違いと、FCI を使用して可用性グループのレプリカをホストする場合の考慮事項について説明します。|[フェールオーバー クラスタリングと可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-  
   

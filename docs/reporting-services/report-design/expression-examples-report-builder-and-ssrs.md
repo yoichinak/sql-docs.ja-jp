@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
-ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
+ms.openlocfilehash: 40a05ec1ed6b7ffa05132e0cefbd5157b7d3ce92
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84681341"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596332"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -70,9 +70,9 @@ ms.locfileid: "84681341"
  レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、<xref:System.Text.RegularExpressions> などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のクラスを使用することもできます。  
   
 ##  <a name="visual-basic-functions"></a><a name="VisualBasicFunctions"></a> Visual Basic の関数  
- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](/dotnet/visual-basic/language-reference/runtime-library-members) 」を参照してください。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、日付固有の書式など、さまざまなカスタム書式が用意されています。 詳細については、MSDN の「 [型の書式設定](https://go.microsoft.com/fwlink/?LinkId=112024) 」を参照してください。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、日付固有の書式など、さまざまなカスタム書式が用意されています。 詳細については、MSDN の「 [型の書式設定](/previous-versions/) 」を参照してください。  
   
 ### <a name="math-functions"></a>算術関数  
   
@@ -115,7 +115,7 @@ ms.locfileid: "84681341"
     =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
--   **DateAdd** 関数は、1 つのパラメーターに基づいて日付の範囲を指定する場合に役立ちます。 次の式では、 *StartDate*という名前のパラメーターで指定した日付の 6 か月後の日付が返されます。  
+-   **DateAdd** 関数は、1 つのパラメーターに基づいて日付の範囲を指定する場合に役立ちます。 次の式では、 *StartDate* という名前のパラメーターで指定した日付の 6 か月後の日付が返されます。  
   
     ```  
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
@@ -234,7 +234,7 @@ ms.locfileid: "84681341"
   
     ```  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn *nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace* 関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -268,7 +268,7 @@ ms.locfileid: "84681341"
     =CDec(500)  
     ```  
   
--   次の式では、複数の値を持つパラメーター *MySelection*で選択された値の数が表示されます。  
+-   次の式では、複数の値を持つパラメーター *MySelection* で選択された値の数が表示されます。  
   
     ```  
     =CStr(Parameters!MySelection.Count)  
@@ -276,7 +276,7 @@ ms.locfileid: "84681341"
   
 ###  <a name="decision-functions"></a><a name="DecisionFunctions"></a> 決定関数  
   
--   **Iif** 関数では、式が True かどうかによって、2 つの値のいずれかが返されます。 次の式では、 **Iif** 関数を使用して、 **の値が 100 を超える場合にブール値** True `LineTotal` が返されます。 それ以外の場合は **False**を返します。  
+-   **Iif** 関数では、式が True かどうかによって、2 つの値のいずれかが返されます。 次の式では、 **Iif** 関数を使用して、 **の値が 100 を超える場合にブール値** True `LineTotal` が返されます。 それ以外の場合は **False** を返します。  
   
     ```  
     =IIF(Fields!LineTotal.Value > 100, True, False)  
@@ -499,13 +499,13 @@ ms.locfileid: "84681341"
     =User!UserID  
     ```  
   
--   レポートのクエリ パラメーター、フィルター式、テキスト ボックスなどの領域でパラメーターを参照するには、 **Parameters** グローバル コレクションを使用します。 この例では、パラメーターの名前が *Department*であることを想定しています。  
+-   レポートのクエリ パラメーター、フィルター式、テキスト ボックスなどの領域でパラメーターを参照するには、 **Parameters** グローバル コレクションを使用します。 この例では、パラメーターの名前が *Department* であることを想定しています。  
   
     ```  
     =Parameters!Department.Value  
     ```  
   
--   パラメーターはレポート内に作成できますが、非表示に設定されます。 レポート サーバーでレポートが実行される際、パラメーターがツール バーに表示されないため、レポートを表示するユーザーは既定値を変更できません。 既定値に設定された非表示パラメーターは、カスタム定数として使用できます。 この値は、フィールド式など、あらゆる式で使用できます。 次の式では、 *ParameterField*という名前を持つパラメーターの既定値で指定されたフィールドを特定しています。  
+-   パラメーターはレポート内に作成できますが、非表示に設定されます。 レポート サーバーでレポートが実行される際、パラメーターがツール バーに表示されないため、レポートを表示するユーザーは既定値を変更できません。 既定値に設定された非表示パラメーターは、カスタム定数として使用できます。 この値は、フィールド式など、あらゆる式で使用できます。 次の式では、 *ParameterField* という名前を持つパラメーターの既定値で指定されたフィールドを特定しています。  
   
     ```  
     =Fields(Parameters!ParameterField.Value).Value  
@@ -515,12 +515,12 @@ ms.locfileid: "84681341"
  レポート内では、カスタム コードを使用できます。 カスタム コードは、レポート内に埋め込むか、レポートで使用されるカスタム アセンブリに格納します。 カスタム コードの詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>グループ変数を使用したカスタム集計  
- 特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](https://go.microsoft.com/fwlink/?LinkId=128714)」を参照してください。  
+ 特定のグループ スコープ内のローカルなグループ変数の値を初期化し、その変数を式の中で参照することができます。 カスタム コードでグループ変数を使用するシナリオとしては、カスタム集計の実装が挙げられます。 詳細については、「 [グループ変数を使ったカスタム集計 (Reporting Services 2008)](/archive/blogs/robertbruckner/)」を参照してください。  
   
  変数の詳細については、「 [レポート変数コレクションとグループ変数コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)」を参照してください。  
   
 ## <a name="suppressing-null-or-zero-values-at-run-time"></a>実行時の NULL 値または 0 の非表示  
- 式内の一部の値は、レポート処理時に NULL または未定義と評価されることがあります。 その結果、実行時エラーが発生して、評価した式ではなく **#Error** がテキスト ボックスに表示される場合があります。 **IIF** 関数は特にこの動作の影響を受けます。これは、If-Then-Else ステートメントとは異なり、 **IIF** ステートメントの各部分 (関数呼び出しを含む) が、 **true** であるか **false**であるかを検証するルーチンに渡される前に評価されるためです。 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` ステートメントを実行すると、 **が NOTHING の場合は、表示されたレポートに** #Error `Fields!Sales.Value` と表示されます。  
+ 式内の一部の値は、レポート処理時に NULL または未定義と評価されることがあります。 その結果、実行時エラーが発生して、評価した式ではなく **#Error** がテキスト ボックスに表示される場合があります。 **IIF** 関数は特にこの動作の影響を受けます。これは、If-Then-Else ステートメントとは異なり、 **IIF** ステートメントの各部分 (関数呼び出しを含む) が、 **true** であるか **false** であるかを検証するルーチンに渡される前に評価されるためです。 `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` ステートメントを実行すると、 **が NOTHING の場合は、表示されたレポートに** #Error `Fields!Sales.Value` と表示されます。  
   
  この状況を回避するには、次のいずれかの方法を使用します。  
   
@@ -558,5 +558,4 @@ ms.locfileid: "84681341"
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
-  
   

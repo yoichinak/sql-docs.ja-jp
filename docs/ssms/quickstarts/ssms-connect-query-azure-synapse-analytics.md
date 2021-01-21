@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 102eaff45b6cdfb89a159e3de77039c8735395e2
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: e3584fe72ada1cff1d3b35324c5c5563bf97d050
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619294"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596847"
 ---
 # <a name="quickstart-connect-and-query-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-management-studio-ssms"></a>クイックスタート: SQL Server Management Studio (SSMS) を使用して Azure Synapse Analytics の専用 SQL プールに接続し、クエリを実行する
 
@@ -71,9 +71,9 @@ SQL Server Management Studio (SSMS) の使用を開始して Azure Synapse Analy
 
 ## <a name="troubleshoot-connectivity-issues"></a>接続の問題のトラブルシューティング
 
-Azure Synapse Analytics で接続の問題が発生する可能性があります。 接続の問題のトラブルシューティングの詳細については、[接続の問題のトラブルシューティング](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues)に関するページを参照してください。
+Azure Synapse Analytics で接続の問題が発生する可能性があります。 接続の問題のトラブルシューティングの詳細については、[接続の問題のトラブルシューティング](/azure/azure-sql/database/troubleshoot-common-errors-issues)に関するページを参照してください。
 
-Azure SQL Database または Azure SQL Managed Instance とやりとりする際に発生する接続および一時的なエラーを回避、トラブルシューティング、診断、および軽減することができます。 詳細については、[一時的な接続エラーのトラブルシューティング](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues)に関するページを参照してください。
+Azure SQL Database または Azure SQL Managed Instance とやりとりする際に発生する接続および一時的なエラーを回避、トラブルシューティング、診断、および軽減することができます。 詳細については、[一時的な接続エラーのトラブルシューティング](/azure/azure-sql/database/troubleshoot-common-connectivity-issues)に関するページを参照してください。
 
 ## <a name="create-a-database"></a>データベースを作成する
 

@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: b04cb475579c73a26ec5977ce52b9521ce69552a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 749e13242c81e5a566ae13dfd66385194639db37
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642650"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596217"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -26,7 +26,7 @@ ms.locfileid: "97642650"
 
 詳細および既知の問題については、「[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-version-15-release-notes.md)」を参照してください。
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] で最良のエクスペリエンスを得るには、[最新のツール](https://aka.ms/getazuredatastudio)を使用してください。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] で最良のエクスペリエンスを得るには、[最新のツール](../azure-data-studio/download-azure-data-studio.md)を使用してください。
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 用の [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] が導入されています。 また、SQL Server データベース エンジン、SQL Server Analysis Services、SQL Server Machine Learning Services、SQL Server on Linux、SQL Server マスター データ サービスに対する追加機能と機能強化も提供されています。
 
@@ -76,7 +76,7 @@ ms.locfileid: "97642650"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>インテリジェントなパフォーマンス
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースのインテリジェント データベースのイノベーションに基づいて構築されており、[さらに高速な実行](https://docs.microsoft.com/archive/blogs/bobsql/)が保証されています。 こうした機能強化により、既知のリソースのボトルネックを克服できます。また、すべてのワークロードにわたって予測可能なパフォーマンスを実現するようにデータベース サーバーを構成するオプションが用意されています。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースのインテリジェント データベースのイノベーションに基づいて構築されており、[さらに高速な実行](/archive/blogs/bobsql/)が保証されています。 こうした機能強化により、既知のリソースのボトルネックを克服できます。また、すべてのワークロードにわたって予測可能なパフォーマンスを実現するようにデータベース サーバーを構成するオプションが用意されています。
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -130,10 +130,10 @@ ms.locfileid: "97642650"
 |新機能または更新 | 詳細 |
 |:---|:---|
 |新しい Java 言語 SDK | SQL Server から実行できる Java プログラムの開発が簡略化されます。 「[SQL Server 用の Microsoft Extensibility SDK for Java](../language-extensions/how-to/extensibility-sdk-java-sql-server.md)」を参照してください。 |
-|Java 言語の SDK はオープンソースです |[Microsoft SQL Server 用の Microsoft Extensibility SDK for Java](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) がオープン ソース化され、[GitHub で入手可能](https://github.com/microsoft/sql-server-language-extensions)になりました。|
+|Java 言語の SDK はオープンソースです |[Microsoft SQL Server 用の Microsoft Extensibility SDK for Java](../language-extensions/how-to/extensibility-sdk-java-sql-server.md) がオープン ソース化され、[GitHub で入手可能](https://github.com/microsoft/sql-server-language-extensions)になりました。|
 |Java データ型のサポート|[Java のデータ型](../language-extensions/how-to/java-to-sql-data-types.md)に関するページを参照してください。|
 |新しい既定の Java Runtime | SQL Server には、製品全体での Java サポート用に Azul Systems Zulu Embedded が含まれようになりました。 「[Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)」(SQL Server 2019 で無料サポートの Java が利用可能に) を参照してください。 |
-|SQL Server 言語拡張機能| 拡張性フレームワークで外部コードを実行します。 「[SQL Server 言語拡張機能](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)」を参照してください。
+|SQL Server 言語拡張機能| 拡張性フレームワークで外部コードを実行します。 「[SQL Server 言語拡張機能](../language-extensions/language-extensions-overview.md)」を参照してください。
 |外部言語を登録する|新しいデータ定義言語 (DDL) である `CREATE EXTERNAL LANGUAGE` では、Java などの外部言語が SQL Server に登録されます。 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
@@ -213,7 +213,7 @@ ms.locfileid: "97642650"
 |新機能または更新 | 詳細 |
 |:---|:---|
 | Microsoft Container Registry | [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] など、Microsoft の新しい公式コンテナー イメージのために Docker Hub が取り替えられます。 |
-| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 [非ルート ユーザーとして SQL Server コンテナーを作成して実行する](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer)方法に関する記事を参照してください。 |
+| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 [非ルート ユーザーとして SQL Server コンテナーを作成して実行する](../linux/sql-server-linux-docker-container-deployment.md)方法に関する記事を参照してください。 |
 | Red Hat 認定コンテナー イメージ | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降、Red Hat Enterprise Linux 上で SQL Server コンテナーを実行できるようになりました。 |
 | PolyBase と Machine Learning のサポート| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、Machine Learning Services や PolyBase など、SQL Server コンテナーの新しい使用方法が導入されました。 [コンテナー GitHub リポジトリ内の SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples) の例を参照してください。 |
 | &nbsp; | &nbsp; |

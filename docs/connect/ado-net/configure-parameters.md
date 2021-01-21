@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 14442892bc59fc733c6a67153832b95c3f368b95
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 12dfcb26484b468bed9f9262403806ea88829385
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771460"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595771"
 ---
 # <a name="configuring-parameters"></a>パラメーターの構成
 
@@ -27,7 +27,7 @@ ms.locfileid: "97771460"
 
 コマンド オブジェクトは、パラメーターを使用して SQL ステートメントまたはストアド プロシージャに値を渡すことによって、型チェックと検証の機能を実現します。 コマンド テキストとは異なり、パラメーターの入力は実行可能なコードとしてではなく、リテラル値として扱われます。 これにより、攻撃者がサーバーのセキュリティを侵害するコマンドを SQL ステートメントに "注入" する SQL インジェクション攻撃を防ぐことができます。
 
-パラメーター化コマンドによりクエリ実行パフォーマンスも向上します。これは、データベース サーバーが入力コマンドを適切なキャッシュ済みクエリ プランに正確に一致させるのに役立つためです。 詳細については、「[実行プランのキャッシュと再利用](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse)」および「[パラメーターと実行プランの再利用](/sql/relational-databases/query-processing-architecture-guide#PlanReuse)」を参照してください。 セキュリティおよびパフォーマンス上の利点に加え、パラメーター化コマンドを使用すると、データ ソースに渡す値を簡単に扱うことができます。
+パラメーター化コマンドによりクエリ実行パフォーマンスも向上します。これは、データベース サーバーが入力コマンドを適切なキャッシュ済みクエリ プランに正確に一致させるのに役立つためです。 詳細については、「[実行プランのキャッシュと再利用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)」および「[パラメーターと実行プランの再利用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)」を参照してください。 セキュリティおよびパフォーマンス上の利点に加え、パラメーター化コマンドを使用すると、データ ソースに渡す値を簡単に扱うことができます。
 
 <xref:System.Data.Common.DbParameter> オブジェクトは、コンストラクターを使って作成できるほか、 <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> コレクションの `Add` メソッドを呼び出し、 <xref:System.Data.Common.DbParameterCollection> にオブジェクトを追加することによって作成することもできます。 `Add` メソッドは、コンストラクター引数または既存のパラメーター オブジェクトを入力として受け取ります。この点はデータ プロバイダーによっても異なります。
 
@@ -103,7 +103,7 @@ ms.locfileid: "97771460"
 ストアド プロシージャは、データドリブンのアプリケーションに多くの利点を提供します。 ストアド プロシージャを使用すると、データベースの操作を単一のコマンドにカプセル化し、最大のパフォーマンスが得られるように最適化し、さらに追加のセキュリティ機能を使用して、セキュリティを強化することができます。 ストアド プロシージャは、ストアド プロシージャ名の後にパラメーター引数を記述して SQL ステートメントとして渡すことで呼び出すことができますが、ADO.NET の <xref:System.Data.Common.DbCommand> オブジェクトの <xref:System.Data.Common.DbCommand.Parameters%2A> コレクションを使用すると、ストアド プロシージャ パラメーターをより明示的に定義でき、出力パラメーターや戻り値にもアクセスできます。
 
 > [!NOTE]
-> パラメーター化ステートメントは、 `sp_executesql,` を使ってサーバー上で実行されるため、クエリ プランの再利用が可能になります。 `sp_executesql` バッチ内のローカル カーソルまたはローカル変数は、 `sp_executesql`を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、 `sp_executesql` ステートメント終了時まで有効です。 詳細については、「[sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)」を参照してください。
+> パラメーター化ステートメントは、 `sp_executesql,` を使ってサーバー上で実行されるため、クエリ プランの再利用が可能になります。 `sp_executesql` バッチ内のローカル カーソルまたはローカル変数は、 `sp_executesql`を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、 `sp_executesql` ステートメント終了時まで有効です。 詳細については、「[sp_executesql (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)」を参照してください。
 
 <xref:Microsoft.Data.SqlClient.SqlCommand> でパラメーターを使用して SQL Server のストアド プロシージャを実行する場合は、 <xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに追加したパラメーターの名前が、ストアド プロシージャ内のパラメーター マーカーの名前と一致している必要があります。 Microsoft SqlClient Data Provider for SQL Server では、SQL ステートメントまたはストアド プロシージャにパラメーターを渡す際の疑問符 (?) のプレースホルダーはサポートされていません。 ストアド プロシージャ内のパラメーターは名前付きのパラメーターと見なされ、一致するパラメーター マーカーが検索されます。 たとえば、 `CustOrderHist` ストアド プロシージャが、 `@CustomerID`という名前のパラメーターで定義されているとします。 このストアド プロシージャを実行する場合、実行元のコードでも `@CustomerID`という名前のパラメーターを使用する必要があります。
 

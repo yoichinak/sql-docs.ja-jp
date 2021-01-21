@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/13/2018
-ms.openlocfilehash: 9d8d86fbe427b232831fa3713b94f067e0089a4b
-ms.sourcegitcommit: 544706f6725ec6cdca59da3a0ead12b99accb2cc
+ms.openlocfilehash: 2607b029389d0a0d3f4b59e55e031b768baf4aac
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638941"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597256"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でオブジェクトのスクリプトを作成する
 
@@ -152,7 +152,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 7. **[概要]** ページで **[次へ]** を選択します。 もう一度 **[次へ]** を選択して、スクリプトを **[新しいクエリ]** ウィンドウに生成します。
 
-8. キーボードで **[検索]** ダイアログ ボックスを開きます (Ctrl + F キー)。 ↓キーを押して **[置換]** オプションを開きます。 上の **[検索]** 行に「 *AdventureWorks2016* 」と入力します。 下の **[置換]** 行に「 *AdventureWorks2016b* 」と入力します。
+8. キーボードで **[検索]** ダイアログ ボックスを開きます (Ctrl + F キー)。 ↓キーを押して **[置換]** オプションを開きます。 上の **[検索]** 行に「*AdventureWorks2016*」と入力します。 下の **[置換]** 行に「*AdventureWorks2016b*」と入力します。
 
 9. *AdventureWorks2016* のインスタンスをすべて *AdventureWorks2016b* に置き換えるには、 **[すべて置換]** を選択します。
 
@@ -224,9 +224,9 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 ## <a name="next-steps"></a>次のステップ
 
-SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の " *チュートリアル* " と " *操作方法* " に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-* [インスタンスに接続してクエリを実行する](../quickstarts/connect-query-sql-server.md)
+* [インスタンスに接続してクエリを実行する](../quickstarts/ssms-connect-query-sql-server.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)
 * [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)

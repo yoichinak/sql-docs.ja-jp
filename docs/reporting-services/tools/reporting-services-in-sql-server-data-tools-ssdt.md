@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9ed7c7d204fe315280e379206d56f122606d1f03
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916588"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597302"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "86916588"
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
- ![SSDT の新しいプロジェクト テンプレート](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
+ ![SSDT の新しいプロジェクト テンプレート](/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
   
 ##  <a name="report-designer-windows-and-panes"></a><a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
@@ -94,7 +94,7 @@ ms.locfileid: "86916588"
   
  次の場合、[プロパティ] ペインを使用します。  
   
--   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティで式を受け入れることができます。複雑な式は **\<Expression>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<Expression>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)」を参照してください。  
+-   デザイン画面で現在選択されている項目のプロパティを設定します。 プロパティによっては、値のドロップダウン リストが表示されます。 セルに値を直接入力することもできます。 一部のプロパティには値のコレクションが含まれており、 **[(コレクション)]** という値で示されます。 ほとんどのプロパティで式を受け入れることができます。複雑な式は **\<Expression>** という値で示されます。 **[式]** ダイアログ ボックスを開くには、 **\<Expression>** をクリックします。 詳細については、「 [[式] ダイアログ ボックス](/previous-versions/sql/)」を参照してください。  
   
 -   グリッドをカテゴリ別の表示からアルファベット順の表示に変更するには、[プロパティ] ペインのツール バー ボタンを使用します。 カテゴリ別の表示では、カテゴリのすべてのプロパティを表示するには、そのカテゴリを展開する必要があります。 アイテムの [プロパティ] ダイアログ ボックスを開くには、ツール バーの **[プロパティ ページ]** ボタンをクリックするか、アイテムを右クリックして **[プロパティ]** をクリックします。  
   
@@ -306,7 +306,7 @@ ms.locfileid: "86916588"
   
 ## <a name="next-steps"></a>次のステップ
 
-[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
+[SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   
 [Reporting Services レポート](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [レポート定義言語](../../reporting-services/reports/report-definition-language-ssrs.md)   

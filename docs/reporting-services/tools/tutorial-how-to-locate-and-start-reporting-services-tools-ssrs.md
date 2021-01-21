@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 60d621e9bb833615aaed5e6f622afb9591916037
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934960"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597059"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
 
@@ -89,7 +89,7 @@ Web ポータルを起動するには適切なアクセス許可が必要です�
 
 ## <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Management Studio
 
-レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio) のチュートリアルを参照してください。
+レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、[SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md) のチュートリアルを参照してください。
 
 ### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには
 
@@ -115,11 +115,11 @@ Web ポータルを起動するには適切なアクセス許可が必要です�
 
 レポート デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio で使用できます。 レポート デザイナーのデザイン画面にはタブ付きウィンドウ、ウィザード、メニューが用意されており、これらを使ってレポートの作成機能にアクセスできます。 レポート デザイナー ツールは、レポート サーバー プロジェクトまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のレポート サーバー ウィザードのテンプレートを選択すると使用可能になります。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。
 
-[SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。
+[SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)をダウンロードします。
 
 ### <a name="to-start-report-designer"></a>レポート デザイナーを起動するには
 
-1. **SQL Server Data Tools**を開きます。
+1. **SQL Server Data Tools** を開きます。
 
 2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
@@ -139,7 +139,7 @@ Web ポータルを起動するには適切なアクセス許可が必要です�
 
 [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)はスタンドアロンのアプリケーションであり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部で改ページ調整されたレポートを作成するために使用できます。 レポート デザイナーで作成したレポートであっても、以前のバージョンの [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でデザインしたレポートであっても、あらゆる既存レポートのカスタマイズおよび更新が可能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web ポータルまたは Microsoft ダウンロード センターからインストールします。
 
-ページ分割されたレポートの準備ができたら、レポート サーバーに公開するか、[Power BI サービスに保存します](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service)。
+ページ分割されたレポートの準備ができたら、レポート サーバーに公開するか、[Power BI サービスに保存します](/power-bi/paginated-reports-save-to-power-bi-service)。
 Microsoft ダウンロード センターから[レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138) します。
 
 ### <a name="to-start-ssrbnoversion"></a>を開始するには [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -181,7 +181,7 @@ Microsoft ダウンロード センターから[SQL Server Mobile Report Publish
 
 [SQL Server Mobile Report Publisher をダウンロード](https://go.microsoft.com/fwlink/?LinkID=733527)  
 [レポート ビルダーをダウンロード](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Reporting Services SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
 [クエリ デザイン ツール](../../reporting-services/report-data/query-design-tools-ssrs.md)  

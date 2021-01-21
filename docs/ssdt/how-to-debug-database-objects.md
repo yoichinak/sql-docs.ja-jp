@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b77373adb76921ee526aea70528399970bda9246
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518762"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597026"
 ---
 # <a name="how-to--debug-database-objects"></a>方法:データベース オブジェクトをデバッグする
 
@@ -23,7 +23,7 @@ SQL Server 単体テストは次の内容で構成されています。
   
 -   Visual C\# または Visual Basic で記述された単体テスト コード。 SQL Server 単体テスト デザイナーによって生成されるこのコードは、テストの本文を構成する Transact\-SQL スクリプトを送信します。  
   
--   Visual C\# または Visual Basic で記述された 1 つ以上のテスト条件。 テスト条件をデバッグするには、「[方法: テストの実行中にデバッグする (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx)」または「[方法: テストの実行中にデバッグする (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx)」で説明されている単体テストのデバッグ手順に従ってください。  
+-   Visual C\# または Visual Basic で記述された 1 つ以上のテスト条件。 テスト条件をデバッグするには、「[方法: テストの実行中にデバッグする (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/ms182484(v=vs.100))」または「[方法: テストの実行中にデバッグする (Visual Studio 2012)](/previous-versions/ms182484(v=vs.140))」で説明されている単体テストのデバッグ手順に従ってください。  
   
 -   テスト対象のデータベースのオブジェクトに対して実行される 1 つ以上の Transact\-SQL スクリプト。 これらの Transact\-SQL スクリプトをデバッグすることはできません。  
   
@@ -39,9 +39,9 @@ SQL Server 単体テストは次の内容で構成されています。
   
 ### <a name="to-enable-sql-debugging-on-your-test-project"></a>テスト プロジェクトで SQL デバッグを有効にするには  
   
-1.  **ソリューション エクスプローラー**を開きます。  
+1.  **ソリューション エクスプローラー** を開きます。  
   
-2.  **ソリューション エクスプローラー**で、テスト プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
+2.  **ソリューション エクスプローラー** で、テスト プロジェクトを右クリックし、 **[プロパティ]** をクリックします。  
   
     テスト プロジェクトと同じ名前のプロパティ ページが開きます。  
   
@@ -74,7 +74,7 @@ SQL Server 単体テストは次の内容で構成されています。
   
 ### <a name="to-add-breakpoints-to-your-transact-sql-script"></a>Transact\-SQL スクリプトにブレークポイントを追加するには  
   
-1.  **[表示]** メニューで **SQL Server オブジェクト エクスプローラー**を開きます。  
+1.  **[表示]** メニューで **SQL Server オブジェクト エクスプローラー** を開きます。  
   
 2.  **[データ接続]** で、テストするデータベースのノードを展開します。  
   
@@ -98,5 +98,4 @@ SQL Server 単体テストは次の内容で構成されています。
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの実行](../ssdt/running-sql-server-unit-tests.md)  
-[Transact-SQL のデバッグ (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
-  
+[Transact-SQL のデバッグ (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))  

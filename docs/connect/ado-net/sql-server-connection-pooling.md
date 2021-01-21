@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a878d8250a3e402cd1043dc289eb1712af45f385
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 9538368cdcc39d3a037c609fc79f65d5d3cb8e45
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771537"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596386"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 
@@ -73,7 +73,7 @@ ms.locfileid: "97771537"
 > [!NOTE]
 > クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](/dotnet/standard/garbage-collection/index)」をご覧ください。
 
-接続の開始と終了に関連するイベントについて詳しくは、SQL Server のドキュメントの「[Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)」および「[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)」をご覧ください。
+接続の開始と終了に関連するイベントについて詳しくは、SQL Server のドキュメントの「[Audit Login イベント クラス](../../relational-databases/event-classes/audit-login-event-class.md)」および「[Audit Logout イベント クラス](../../relational-databases/event-classes/audit-logout-event-class.md)」をご覧ください。
 
 ## <a name="remove-connections"></a>接続を削除する
 

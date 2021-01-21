@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: eaef4f651b65b2097aa4cfe0f41c97442469f193
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 67881fc6668aed8120feae0c10449652f8ea6d1c
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171444"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596582"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -23,7 +23,7 @@ ms.locfileid: "98171444"
 
 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のさまざまなバージョンの新機能について説明します。 この記事では、主要な機能領域を扱います。新しいアイテムがリリースされた場合は更新されます。
 
-Power BI Report Server については、「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
+Power BI Report Server については、「[Power BI Report Server とは](/power-bi/report-server/get-started)」を参照してください。
 
 ::: moniker range=">=sql-server-ver15"
 
@@ -81,7 +81,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ### <a name="dax-queries-in-reporting-tools"></a>レポート ツールの DAX クエリ
 
-レポート ビルダーと SQL Server Data Tools の最新リリースでは、SQL Server Analysis Services 表形式データ モデルに対して、ネイティブの DAX クエリを作成できます。 クエリ デザイナーでフィールドをドラッグ アンド ドロップできます。 [Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
+レポート ビルダーと SQL Server Data Tools の最新リリースでは、SQL Server Analysis Services 表形式データ モデルに対して、ネイティブの DAX クエリを作成できます。 クエリ デザイナーでフィールドをドラッグ アンド ドロップできます。 [Reporting Services のブログ](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)を参照してください。
 
 ### <a name="rest-api-support"></a>REST API のサポート
 
@@ -91,10 +91,10 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 レポート ビルダーと SQL Server Data Tools で、サポートされている SQL Server Analysis Services 表形式データ モデルに対して、ネイティブの DAX クエリが作成できるようになりました。 どちらのツールでも、クエリ デザイナーを使って、必要なフィールドをドラッグ アンド ドロップできます。 そうすると、DAX クエリが自動的に生成されます。
 
-詳細については、[Reporting Services のブログ](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)を参照してください。
+詳細については、[Reporting Services のブログ](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools)を参照してください。
 
 * [Microsoft SQL Server レポート ビルダー](https://go.microsoft.com/fwlink/?LinkId=734968)のダウンロード
-* [SQL Server Data Tools - リリース候補](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)のダウンロード
+* [SQL Server Data Tools - リリース候補](../ssdt/download-sql-server-data-tools-ssdt.md)のダウンロード
 
 > [!NOTE]
 > DAX のクエリ デザイナーは、SQL Server 2016+ に組み込まれた SSAS 表形式のデータ ソースでのみ使用できます。
@@ -123,7 +123,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ブランド化パックを使用して、組織のロゴや色で [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] をカスタマイズできます。  
 
-カスタムブランド化の詳細については、「 [Web ポータルのブランド化](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1)」を参照してください。
+カスタムブランド化の詳細については、「 [Web ポータルのブランド化](./branding-the-web-portal.md)」を参照してください。
 
 #### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] での主要業績評価指標 (KPI) 
 
@@ -131,7 +131,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ![SQL Server Reporting Services ポータル内の KPI 示すスクリーンショット。](../reporting-services/media/ssrs-webportal-kpi.png)
 
-詳細については、「[Reporting Services で KPI を使用する](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)」を参照してください。
+詳細については、「[Reporting Services で KPI を使用する](./working-with-kpis-in-reporting-services.md)」を参照してください。
 
 ### <a name="mobile-reports"></a>モバイル レポート
 
@@ -192,7 +192,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 2. アイテムをピン留めするダッシュボードを選択します。
 3. ダッシュボードのタイルをどのくらいの頻度で更新するかを選択します。
 
-![注](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
+![注](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
 
 ![[Power BI ダッシュボードにピン留めする] ダイアログ ボックスを示すスクリーンショット。](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -227,7 +227,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-新しいリリースの SSDT には、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 用のプロジェクト テンプレートが含まれています:レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)に関するページをご覧ください。  
+新しいリリースの SSDT には、[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 用のプロジェクト テンプレートが含まれています:レポート サーバー プロジェクト ウィザードとレポート サーバー プロジェクト。 SSDT のダウンロードについては、 [SQL Server Data Tools for Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md)に関するページをご覧ください。  
 
 ### <a name="report-builder-improvements"></a>レポート ビルダーの機能強化
 
@@ -245,11 +245,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 - [Windows 8.1 の DPI スケーリング拡張機能](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 
-- [高 DPI と Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
+- [高 DPI と Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
 ## <a name="next-steps"></a>次のステップ
 
-[Analysis Services の新機能](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Analysis Services の新機能](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 [旧バージョンとの互換性](reporting-services-backward-compatibility.md)  
 [SQL Server の各エディションがサポートする Reporting Services の機能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 [Reporting Services のアップグレードと移行](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

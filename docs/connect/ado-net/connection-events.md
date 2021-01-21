@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 3fb13f3cc163bb157f418d3bda99e0173d81b842
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771448"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596010"
 ---
 # <a name="connection-events"></a>接続イベント
 
@@ -34,7 +34,7 @@ Microsoft SqlClient Data Provider for SQL Server には、データ ソースか
 
 ## <a name="work-with-the-infomessage-event"></a>InfoMessage イベントを操作する
 
-<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳しくは、「[データベース エンジン エラーの重大度](/sql/relational-databases/errors-events/database-engine-error-severities)」をご覧ください。
+<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳しくは、「[データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」をご覧ください。
 
 <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> イベントは <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs> オブジェクトを受け取り、その **Errors** プロパティにはデータ ソースからのメッセージのコレクションが格納されています。 このコレクションの中の **Error** オブジェクトにエラー番号、メッセージ テキスト、およびエラーの原因を問い合わせることができます。 また、Microsoft SqlClient Data Provider for SQL Server には、メッセージの送信元のデータベース、ストアド プロシージャ、および行番号に関する詳細も含まれています。
 

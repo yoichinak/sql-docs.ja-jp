@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ba53f3fa33bdb8b0f09c13b1afa9aba9398ff87
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 075dac12d1a4b5e393ead71da7bbf297fe40ae69
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779144"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596767"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでデータをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -69,9 +69,8 @@ ms.locfileid: "84779144"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル:レポートへの横棒グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル:レポートへの円グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198041)  
-  
+ [チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの横棒グラフの追加 (レポート デザイナー)](/previous-versions/sql/sql-server-2008-r2/cc281302(v=sql.105))   
+ [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの円グラフの追加 (レポート デザイナー)](/previous-versions/sql/sql-server-2008-r2/cc281304(v=sql.105))  
   

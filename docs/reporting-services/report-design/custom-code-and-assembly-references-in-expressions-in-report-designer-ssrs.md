@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 31e92b49186e79c78cbaa2d13859d8dd3abe5c5d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880763"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596339"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  
@@ -53,12 +53,12 @@ ms.locfileid: "84880763"
   
  組み込み関数を使用するには、[アイテム] ペインで関数名をダブルクリックします。 関数の説明が説明ペインに表示され、関数呼び出しの例がサンプル ペインに表示されます。 コード ペインで、関数名の後に左かっこ **(** を入力すると、IntelliSense により、関数呼び出しの有効な各構文が表示されます。 たとえば、テーブルの `Quantity` という名前のフィールドの最大値を計算するには、 `=Max(` という単純な式をコード ペインに追加した後、スマート タグを使用して、関数呼び出しに使用できる有効な構文をすべて表示します。 この例を完成させるには、「 `=Max(Fields!Quantity.Value)`」と入力します。  
   
- 各関数の詳細については、MSDN の「 <xref:System.Math>」、「 <xref:System.Convert>」、および「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
+ 各関数の詳細については、MSDN の「 <xref:System.Math>」、「 <xref:System.Convert>」、および「 [Visual Basic ランタイム ライブラリのメンバー](/dotnet/visual-basic/language-reference/runtime-library-members) 」を参照してください。  
   
 ##  <a name="including-references-to-less-commonly-used-functions"></a><a name="NotCommon"></a> 使用頻度の低い関数への参照の追加  
  使用頻度の低い、その他の CLR 名前空間への参照を含めるには、 <xref:System.Text.StringBuilder>」を参照してください。 このような使用頻度の低い関数については、 **[式]** ダイアログ ボックスのコード ペインで IntelliSense がサポートされていません。  
   
- 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
+ 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](/dotnet/visual-basic/language-reference/runtime-library-members) 」を参照してください。  
   
 ##  <a name="including-references-to-external-assemblies"></a><a name="External"></a> 外部アセンブリへの参照の追加  
  外部アセンブリ内のクラスへの参照を含めるには、レポート プロセッサのアセンブリを特定する必要があります。 レポートに追加するアセンブリの完全修飾名を指定するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 式では、アセンブリ内のクラスの完全修飾名を使用する必要があります。 外部アセンブリ内のクラスは、 **[式]** ダイアログ ボックスに表示されません。そのため、クラスの正しい名前を指定する必要があります。 完全修飾名には、名前空間、クラス名、およびメンバー名が含まれます。  
@@ -66,7 +66,7 @@ ms.locfileid: "84880763"
 ##  <a name="including-embedded-code"></a><a name="Embedded"></a> 埋め込みコードの追加  
  埋め込みコードをレポートに追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの [コード] タブを使用します。 作成したコード ブロックでは、複数のメソッドを使用できます。 埋め込みコード内のメソッドは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述されており、インスタンス ベースである必要があります。 レポート プロセッサは、System.Convert 名前空間および System.Math 名前空間の参照を自動的に追加します。 他のアセンブリ参照を追加するには、 **[レポートのプロパティ]** ダイアログ ボックスの **[参照]** ページを使用します。 詳細については、「 [レポートにアセンブリへの参照を追加する &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  
   
- 埋め込みコード内のメソッドは、グローバルに定義されている **Code** メンバーを介して利用できます。 **Code** メンバーとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例では、 **ToUSD**メソッドを呼び出します。これにより、 `StandardCost` フィールドの値が米ドル単位に変換されます。  
+ 埋め込みコード内のメソッドは、グローバルに定義されている **Code** メンバーを介して利用できます。 **Code** メンバーとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例では、 **ToUSD** メソッドを呼び出します。これにより、 `StandardCost` フィールドの値が米ドル単位に変換されます。  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -87,7 +87,7 @@ Public Dim  MyVersion As String = "123.456"
 Public Dim MyDoubleVersion As Double = 123.456  
 ```  
   
- **[式]** ダイアログ ボックスの **[定数]** カテゴリにはカスタム定数が表示されませんが (組み込み定数のみが表示されます)、次の例に示すように、任意の式からカスタム定数への参照を追加できます。 式の中では、カスタム定数が **Variant**として扱われます。  
+ **[式]** ダイアログ ボックスの **[定数]** カテゴリにはカスタム定数が表示されませんが (組み込み定数のみが表示されます)、次の例に示すように、任意の式からカスタム定数への参照を追加できます。 式の中では、カスタム定数が **Variant** として扱われます。  
   
 ```  
 =Code.MyNote  
@@ -96,7 +96,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 次の例には、関数 **FixSpelling**のコード参照およびコード実装の両方が含まれています。これにより、 `"Bicycle"` フィールド内の "Bike" というテキストがすべて `SubCategory` に置き換えられます。  
+ 次の例には、関数 **FixSpelling** のコード参照およびコード実装の両方が含まれています。これにより、 `"Bicycle"` フィールド内の "Bike" というテキストがすべて `SubCategory` に置き換えられます。  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -120,7 +120,7 @@ End Function
   
  次の表には、カスタム コードから組み込みコレクション `Parameters` を参照する例を示しています。  
   
- **グローバル パラメーター コレクション全体をカスタム コードに渡します。** この関数は、特定のレポート パラメーター *MyParameter*の値を返します。  
+ **グローバル パラメーター コレクション全体をカスタム コードに渡します。** この関数は、特定のレポート パラメーター *MyParameter* の値を返します。  
   
  式での参照 `=Code.DisplayAParameterValue(Parameters)`  
   
@@ -161,13 +161,13 @@ End Function
   
  カスタム アセンブリを作成して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で利用できるようにする方法については、「 [レポートでのカスタム アセンブリの使用](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)」を参照してください。  
   
- 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。 カスタム アセンブリ内の静的メソッドは、レポート内でグローバルに利用できます。 静的メソッドには、名前空間、クラス、メソッド名を指定することによって、式からアクセスできます。 次の例では、 **ToGBP**メソッドを呼び出し、 **StandardCost** フィールドの値をドルからポンドに変換しています。  
+ 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。 カスタム アセンブリ内の静的メソッドは、レポート内でグローバルに利用できます。 静的メソッドには、名前空間、クラス、メソッド名を指定することによって、式からアクセスできます。 次の例では、 **ToGBP** メソッドを呼び出し、 **StandardCost** フィールドの値をドルからポンドに変換しています。  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- インスタンスベースのメソッドは、グローバルに定義されている **Code** メンバーを介して利用できます。 まず **Code** メンバーを参照し、続いてインスタンスとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例では、 **ToEUR**インスタンス メソッドを呼び出し、 **StandardCost** の値をドルからユーロに変換しています。  
+ インスタンスベースのメソッドは、グローバルに定義されている **Code** メンバーを介して利用できます。 まず **Code** メンバーを参照し、続いてインスタンスとメソッド名を参照することで、これらのメソッドにアクセスできます。 次の例では、 **ToEUR** インスタンス メソッドを呼び出し、 **StandardCost** の値をドルからユーロに変換しています。  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -196,5 +196,4 @@ End Function
  [Reporting Services チュートリアル &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
-  
   

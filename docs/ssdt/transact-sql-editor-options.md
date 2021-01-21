@@ -28,12 +28,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cc07f6b544740972223a632441973bce155b5f17
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 6ae9da5c98d625843bc01bba5d12276098e3e3f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358880"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594456"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
 
@@ -51,25 +51,25 @@ ms.locfileid: "92358880"
 |**SET TEXTSIZE**|既定値の 2,147,483,647 バイトは、SQL Server が text、ntext、nvarchar(max)、および varchar(max) の各データ フィールドの上限まで、完全なデータ フィールドを提供することを示します。 XML データ型は影響を受けません。 大きな値の場合に結果を制限するには、これより小さなサイズを指定します。 指定されたサイズよりも大きい列は切り捨てられます。|  
 |**[実行タイムアウト]**|クエリを取り消すまで待機する秒数を示します。 値 0 は、待ち時間が無限 (タイムアウトなし) であることを示します。|  
 |**既定で、新しいクエリを SQLCMD モードで開始する**|新しいクエリを SQLCMD モードで開始するには、このチェック ボックスをオンにします。 このチェック ボックスは、[ツール] メニューからダイアログ ボックスを開いたときだけ表示されます。<br /><br />このオプションを選択する場合は、次の制限事項に注意してください。<br /><br />-   データベース エンジン クエリ エディターの IntelliSense が無効になります。<br />-   クエリ エディターはコマンド ラインから実行できないため、変数などのコマンド ライン パラメーターを渡すことができません。<br />-   クエリ エディターはオペレーティング システムのプロンプトに応答できないため、対話型のステートメントを実行しないように注意する必要があります。|  
-|**SET NOCOUNT**|Transact-SQL ステートメントで処理された行数を示すメッセージが結果の一部として返されないようにします。 詳細については、「 [SET NOCOUNT](https://go.microsoft.com/fwlink/?LinkID=238731)」を参照してください。|  
-|**SET NOEXEC**|**ON** のとき、Microsoft® SQL Server™ に対して、Transact-SQL ステートメントの各バッチをコンパイルしても実行しないように指示します。 **OFF** のとき、Microsoft® SQL Server™ に対して、コンパイルした後にすべてのバッチを実行するように指示します。詳しくは、「[SET NOEXEC](https://go.microsoft.com/fwlink/?LinkId=238770)」をご覧ください。|  
-|**SET PARSEONLY**|各 Transact-SQL ステートメントのコンパイルや実行を行わずに、ステートメントの構文をチェックし、エラーがあるときはエラー メッセージを返します。 詳細については、「 [SET PARSEONLY](https://go.microsoft.com/fwlink/?LinkId=238734)」を参照してください。|  
-|**SET CONCAT_NULL_YIELDS_NULL**|連結の結果を NULL として取り扱うのか、空文字列として取り扱うのかを制御します。詳しくは、「[SET CONCAT_NULL_YIELDS_NULL](https://go.microsoft.com/fwlink/?LinkId=238733)」をご覧ください。|  
+|**SET NOCOUNT**|Transact-SQL ステートメントで処理された行数を示すメッセージが結果の一部として返されないようにします。 詳細については、「 [SET NOCOUNT](../t-sql/statements/set-nocount-transact-sql.md)」を参照してください。|  
+|**SET NOEXEC**|**ON** のとき、Microsoft® SQL Server™ に対して、Transact-SQL ステートメントの各バッチをコンパイルしても実行しないように指示します。 **OFF** のとき、Microsoft® SQL Server™ に対して、コンパイルした後にすべてのバッチを実行するように指示します。詳しくは、「[SET NOEXEC](../t-sql/statements/set-noexec-transact-sql.md)」をご覧ください。|  
+|**SET PARSEONLY**|各 Transact-SQL ステートメントのコンパイルや実行を行わずに、ステートメントの構文をチェックし、エラーがあるときはエラー メッセージを返します。 詳細については、「 [SET PARSEONLY](../t-sql/statements/set-parseonly-transact-sql.md)」を参照してください。|  
+|**SET CONCAT_NULL_YIELDS_NULL**|連結の結果を NULL として取り扱うのか、空文字列として取り扱うのかを制御します。詳しくは、「[SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)」をご覧ください。|  
 |**SET ARITHABORT**|クエリ実行中にオーバーフローまたは 0 除算のエラーが発生した場合に、クエリを終了します。 詳しくは、「[SET ARITHABORT](https://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)」をご覧ください。|  
-|**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™ で Transact-SQL ステートメントを実行せず、 代わりにステートメントの実行方法に関する詳細情報を返します。 詳しくは、「[SET SHOWPLAN_TEXT](https://go.microsoft.com/fwlink/?LinkID=238737)」をご覧ください。|  
+|**SET SHOWPLAN_TEXT**|Microsoft® SQL Server™ で Transact-SQL ステートメントを実行せず、 代わりにステートメントの実行方法に関する詳細情報を返します。 詳しくは、「[SET SHOWPLAN_TEXT](../t-sql/statements/set-showplan-text-transact-sql.md)」をご覧ください。|  
 |**SET STATISTICS TIME**|各ステートメントの解析、コンパイル、および実行に必要な時間をミリ秒単位で表示します。|  
 |**SET STATISTICS IO**|Microsoft® SQL Server™ で、Transact-SQL ステートメントのディスク利用状況に関する情報を表示します。|  
-|**SET TRANSACTION ISOLATION LEVEL**|接続で実行される Microsoft® SQL Server™ のすべての **SELECT** ステートメントに対する既定のトランザクション ロック動作を制御します。 詳細については、「  [SET TRANSACTION ISOLATION LEVEL](https://go.microsoft.com/fwlink/?LinkId=238730)」を参照してください。|  
-|**SET LOCK_TIMEOUT**|ロックが解除されるまでのステートメントの待ち時間をミリ秒単位で指定します。 詳しくは、「[SET LOCK_TIMEOUT](https://go.microsoft.com/fwlink/?LinkId=238747)」をご覧ください。|  
-|**SET QUERY_GOVERNOR_COST_LIMIT**|現在の接続に対して現在の構成値をオーバーライドします。 詳しくは、「[SET QUERY_GOVERNOR_COST_LIMIT](https://go.microsoft.com/fwlink/?LinkId=238749)」をご覧ください。|  
-|**SET ANSI_DEFAULTS**|一部の SQL-92 標準動作をまとめて指定する、Microsoft® SQL Server™ 設定のグループを制御します。 詳しくは、「[SET ANSI_DEFAULTS](https://go.microsoft.com/fwlink/?LinkId=238750)」をご覧ください。|  
-|**SET QUOTED_IDENTIFIER**|Microsoft® SQL Server™ に対して、識別子とリテラル文字列を区切る引用符に関して、SQL-92 規格に従うことを指定します。 二重引用符で区切ることで、Transact-SQL の予約済みキーワードを識別子として指定することや、Transact-SQL の構文規則で通常は識別子として使用が認められていない文字を使用することができます。詳しくは、「[SET QUOTED_IDENTIFIER](https://go.microsoft.com/fwlink/?LinkId=238751)」をご覧ください。|  
-|**SET ANSI_NULL_DFLT_ON**|データベースの Ansi Null Default オプションが false に設定されているときに、セッションの動作を変更して、新しい列で NULL 値を許可するかどうかの既定の設定をオーバーライドします。 詳しくは、「[SET ANSI_NULL_DFLT_ON](https://go.microsoft.com/fwlink/?LinkID=238752)」をご覧ください。|  
-|**[SET IMPLICIT_TRANSACTIONS]**|**ON**のとき、接続は暗黙のトランザクション モードに設定されます。 **OFF**のとき、接続は自動コミット トランザクション モードに戻ります。 詳しくは、「[SET IMPLICIT_TRANSACTIONS](https://go.microsoft.com/fwlink/?LinkId=238753)」をご覧ください。|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|トランザクションをコミットするときにカーソルを閉じるかどうかを制御します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)」をご覧ください。|  
-|**SET ANSI_PADDING**|**char**、 **varchar**、 **binary**、 **varbinary** 型のデータにおいて、列の定義サイズより短い値や末尾に空白がある値を格納する方法を制御します。 詳しくは、「[SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)」をご覧ください。|  
-|**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)」をご覧ください。|  
-|**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
+|**SET TRANSACTION ISOLATION LEVEL**|接続で実行される Microsoft® SQL Server™ のすべての **SELECT** ステートメントに対する既定のトランザクション ロック動作を制御します。 詳細については、「  [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。|  
+|**SET LOCK_TIMEOUT**|ロックが解除されるまでのステートメントの待ち時間をミリ秒単位で指定します。 詳しくは、「[SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)」をご覧ください。|  
+|**SET QUERY_GOVERNOR_COST_LIMIT**|現在の接続に対して現在の構成値をオーバーライドします。 詳しくは、「[SET QUERY_GOVERNOR_COST_LIMIT](../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)」をご覧ください。|  
+|**SET ANSI_DEFAULTS**|一部の SQL-92 標準動作をまとめて指定する、Microsoft® SQL Server™ 設定のグループを制御します。 詳しくは、「[SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)」をご覧ください。|  
+|**SET QUOTED_IDENTIFIER**|Microsoft® SQL Server™ に対して、識別子とリテラル文字列を区切る引用符に関して、SQL-92 規格に従うことを指定します。 二重引用符で区切ることで、Transact-SQL の予約済みキーワードを識別子として指定することや、Transact-SQL の構文規則で通常は識別子として使用が認められていない文字を使用することができます。詳しくは、「[SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。|  
+|**SET ANSI_NULL_DFLT_ON**|データベースの Ansi Null Default オプションが false に設定されているときに、セッションの動作を変更して、新しい列で NULL 値を許可するかどうかの既定の設定をオーバーライドします。 詳しくは、「[SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」をご覧ください。|  
+|**[SET IMPLICIT_TRANSACTIONS]**|**ON** のとき、接続は暗黙のトランザクション モードに設定されます。 **OFF** のとき、接続は自動コミット トランザクション モードに戻ります。 詳しくは、「[SET IMPLICIT_TRANSACTIONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)」をご覧ください。|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|トランザクションをコミットするときにカーソルを閉じるかどうかを制御します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。|  
+|**SET ANSI_PADDING**|**char**、 **varchar**、 **binary**、 **varbinary** 型のデータにおいて、列の定義サイズより短い値や末尾に空白がある値を格納する方法を制御します。 詳しくは、「[SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)」をご覧ください。|  
+|**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)」をご覧ください。|  
+|**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)」をご覧ください。|  
   
 ## <a name="query-results"></a><a name="QueryResults"></a>クエリの結果  
   
@@ -91,4 +91,3 @@ ms.locfileid: "92358880"
 |**クエリ実行後に [結果] タブに切り替える**|画面のフォーカスを自動的に結果セットに設定するには、これをクリックします。|  
 |**各列に表示される最大文字数**|この値は既定で 256 になっています。 この値を大きくすると、結果セットが切り詰めなしで大きく表示されます。|  
 |**既定値にリセット**|このページ上のすべての値を元の既定値にリセットします。|  
-  

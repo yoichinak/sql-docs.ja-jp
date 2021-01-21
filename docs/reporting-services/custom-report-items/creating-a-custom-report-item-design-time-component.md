@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 46be46e47b7e5a5028b639ecb0e74cbe19c8446a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217008"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596959"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>カスタム レポート アイテムのデザイン時コンポーネントの作成
   カスタム レポート アイテムのデザイン時コンポーネントは、Visual Studio レポート デザイナー環境で使用できるコントロールです。 カスタム レポート アイテムのデザイン時コンポーネントは、ドラッグ アンド ドロップ操作を使用できるアクティブ化されたデザイン画面、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロパティ ブラウザーとの統合、およびカスタム プロパティ エディター機能を提供します。  
@@ -183,7 +183,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>装飾の使用  
- カスタム レポート アイテムのクラスでは、**Microsoft.ReportDesigner.Design.Adornment** クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の **Microsoft.ReportDesigner** 名前空間に定義された **Adornment** クラスは、Windows フォームで使用される <xref:System.Windows.Forms.Design.Behavior.Adorner> クラスのパススルー実装です。 **Adorner** クラスの完全なドキュメントについては、MSDN ライブラリの「[動作サービスの概要](https://go.microsoft.com/fwlink/?LinkId=116673)」を参照してください。 **Microsoft.ReportDesigner.Design.Adornment** クラスを実装したサンプル コードについては、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
+ カスタム レポート アイテムのクラスでは、**Microsoft.ReportDesigner.Design.Adornment** クラスを実装することもできます。 装飾を使用すると、カスタム レポート アイテムのコントロールで、デザイン画面のメインの四角形の外に領域を作成できます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の **Microsoft.ReportDesigner** 名前空間に定義された **Adornment** クラスは、Windows フォームで使用される <xref:System.Windows.Forms.Design.Behavior.Adorner> クラスのパススルー実装です。 **Adorner** クラスの完全なドキュメントについては、MSDN ライブラリの「[動作サービスの概要](/previous-versions/ms171826(v=vs.140))」を参照してください。 **Microsoft.ReportDesigner.Design.Adornment** クラスを実装したサンプル コードについては、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] での Windows フォームを使ったプログラミングの詳細については、MSDN ライブラリの次のトピックを参照してください。  
   
@@ -198,5 +198,4 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [カスタム レポート アイテムの実行時コンポーネントの作成](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [方法: カスタム レポート アイテムを配置する](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  
   

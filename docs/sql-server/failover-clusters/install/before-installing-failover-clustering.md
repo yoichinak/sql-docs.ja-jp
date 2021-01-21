@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a59216090f680492bf41aec72711c2e38f62034d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642908"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595321"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "97642908"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングの概念について説明し、関連するコンテンツとタスクへのリンクを示します。|[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー ポリシーの概念について説明し、組織の要件に合うようにフェールオーバー ポリシーを構成するためのリンクを示します。|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの維持方法について説明します。|[フェールオーバー クラスター インスタンスの管理とメンテナンス](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|Windows Server フェールオーバー クラスター (WSFC) に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] をインストールする方法について説明します。|[SQL Server Analysis Services をクラスター化する方法](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|Windows Server フェールオーバー クラスター (WSFC) に [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] をインストールする方法について説明します。|[SQL Server Analysis Services をクラスター化する方法](/previous-versions/sql/sql-server-2012/dn736073(v=msdn.10))|  
   
  
   
 ##  <a name="best-practices"></a><a name="BestPractices"></a> ベスト プラクティス  
   
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)を確認する  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [リリース ノート](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))を確認する  
   
 -   前提条件となるソフトウェアをインストールします。 セットアップで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のインストールまたはアップグレードを行う前に、以下に示す前提条件となるソフトウェアをインストールすると、インストール時間を短縮できます。 各フェールオーバー クラスター ノードでの前提条件となるソフトウェアのインストール、およびその後のノードの再起動は、セットアップを実行する前に 1 回だけ行います。  
   
     -   Windows PowerShell は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりました。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] のコンポーネントおよび [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]をインストールするには、Windows PowerShell が必要です。 Windows PowerShell がコンピューターで表示されない場合は、 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) に関するページの手順に従って有効にすることができます。  
   
-    -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
+    -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](/previous-versions/sql/sql-server-15/dn169381(v=sql.15))をインストールするには、Windows PowerShell が必要です。  
   
     -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新パッケージ:** セットアップ時に .NET Framework 4 のインストールによるコンピューターの再起動を回避するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップで [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の更新プログラムをコンピューターにインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "97642908"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ サポート ファイル。 これらのファイルは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インストール メディアにある SqlSupport.msi を実行してインストールできます。  
   
--   ウイルス対策プログラムが WSFC クラスターにインストールされていないことを確認します。 詳細については、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] サポート技術情報で [ウイルス対策ソフトウェアによるクラスター サービスの問題](https://go.microsoft.com/fwlink/?LinkId=116986)に関する資料を参照してください。  
+-   ウイルス対策プログラムが WSFC クラスターにインストールされていないことを確認します。 詳細については、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] サポート技術情報で [ウイルス対策ソフトウェアによるクラスター サービスの問題](/troubleshoot/windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue)に関する資料を参照してください。  
   
 -   フェールオーバー クラスター インストールのクラスター グループに名前を付けるときは、次の文字を使用しないでください。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "97642908"
   
 -   クラスター ソリューションに地理的に分散したクラスター ノードが含まれている場合は、ネットワークの待機時間や共有ディスクのサポートなどの項目も確認する必要があります。  
   
-    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] と [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]の詳細については、 [フェールオーバー クラスター用ハードウェアの検証](https://go.microsoft.com/fwlink/?LinkId=196817) に関するページおよび「 [Windows Server 2008 フェールオーバー クラスターに関するマイクロソフト サポート ポリシー](https://go.microsoft.com/fwlink/?LinkId=196818)」を参照してください。  
+    -   [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] と [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]の詳細については、 [フェールオーバー クラスター用ハードウェアの検証](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) に関するページおよび「 [Windows Server 2008 フェールオーバー クラスターに関するマイクロソフト サポート ポリシー](https://go.microsoft.com/fwlink/?LinkId=196818)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールするディスクが圧縮または暗号化されていないことを確認します。 圧縮されたドライブまたは暗号化されたドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールしようとすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップが失敗します。  
   
@@ -116,13 +116,13 @@ ms.locfileid: "97642908"
   
     -   増設ドライブのマウント後のフォーマットはサポートされません。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 tempdb のデータ ファイルおよびログ ファイルに指定されたパスが、すべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。 詳細については、「 [データ ファイルのストレージの種類](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 」および「 [データベース エンジンの構成 - データ ディレクトリ](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 tempdb のデータ ファイルおよびログ ファイルに指定されたパスが、すべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。 詳細については、「 [データ ファイルのストレージの種類](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) 」および「 [データベース エンジンの構成 - データ ディレクトリ](../../../database-engine/install-windows/install-sql-server.md)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを iSCSI テクノロジのコンポーネント上に配置する場合は、慎重に行ってください。 詳細については、「 [iSCSI テクノロジ コンポーネント上の SQL Server のサポート](https://go.microsoft.com/fwlink/?LinkId=116960)」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを iSCSI テクノロジのコンポーネント上に配置する場合は、慎重に行ってください。 詳細については、「 [iSCSI テクノロジ コンポーネント上の SQL Server のサポート](/troubleshoot/sql/admin/support-iscsi-technology-components)」を参照してください。  
   
--   詳細については、 [Microsoft クラスタリング用の SQL Server サポート ポリシー](https://go.microsoft.com/fwlink/?LinkId=116958)に関するページを参照してください。  
+-   詳細については、 [Microsoft クラスタリング用の SQL Server サポート ポリシー](/troubleshoot/sql/failover-clusters/support-policy-clustered-configurations)に関するページを参照してください。  
   
--   適切なクォーラム ドライブ構成の詳細については、 [クォーラムの構成](https://go.microsoft.com/fwlink/?LinkId=196816)に関するページを参照してください。  
+-   適切なクォーラム ドライブ構成の詳細については、 [クォーラムの構成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770620(v=ws.10))に関するページを参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の元のインストール ファイルおよびクラスターが、異なる複数のドメインに分散している場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターに対して使用できる現在のドメインにインストール ファイルをコピーします。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "97642908"
      同じサブネットに対して構成された複数の IP アドレスを使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 起動中にクライアント接続障害が発生する可能性があります。  
   
 #### <a name="related-content"></a>関連コンテンツ  
- [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] のマルチサイト フェールオーバーの詳細については、 [Windows Server 2008 R2 フェールオーバー クラスタリングに関するサイト](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) および「 [Design for a Clustered Service or Application in a Multi-Site Failover Cluster (マルチサイト フェールオーバー クラスターでのクラスター化サービスまたはアプリケーションの設計)](https://go.microsoft.com/fwlink/?LinkId=177873)」を参照してください。  
+ [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] のマルチサイト フェールオーバーの詳細については、 [Windows Server 2008 R2 フェールオーバー クラスタリングに関するサイト](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) および「 [Design for a Clustered Service or Application in a Multi-Site Failover Cluster (マルチサイト フェールオーバー クラスターでのクラスター化サービスまたはアプリケーションの設計)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197430(v=ws.10))」を参照してください。  
   
 ##  <a name="configure-windows-server-failover-cluster"></a><a name="WSFC"></a> Windows Server フェールオーバー クラスターの構成  
   
@@ -262,5 +262,3 @@ ms.locfileid: "97642908"
  [システム構成チェッカーの検査パラメーター](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [フェールオーバー クラスター インスタンスの管理とメンテナンス](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
-  
-

@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4d3890a29905057eb800fac823d27f149adb2ac0
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 372f4bec9acc4d4e170ddbc1a1fa6d66be1541e7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559254"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596556"
 ---
 # <a name="release-notes---azure-arc-enabled-sql-server-preview"></a>リリース ノート ‐ Azure Arc 対応 SQL Server (プレビュー)
 
@@ -27,7 +27,7 @@ ms.locfileid: "97559254"
 
 既存の SQL Server - Azure Arc リソースがある場合、次の手順で Microsoft.AzureArcData 名前空間に移行します。
 
-1. [Cloud Shell](https://shell.azure.com/) を起動します。 詳細については、[Cloud Shell の PowerShell](https://aka.ms/pscloudshell/docs) に関するページを参照してください。
+1. [Cloud Shell](https://shell.azure.com/) を起動します。 詳細については、[Cloud Shell の PowerShell](/azure/cloud-shell/quickstart-powershell) に関するページを参照してください。
 
 2. 次のコマンドを使用してスクリプトをシェルにアップロードします。
 
