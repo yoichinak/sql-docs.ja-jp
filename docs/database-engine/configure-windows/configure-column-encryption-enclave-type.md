@@ -2,7 +2,7 @@
 title: Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する | Microsoft Docs
 description: Always Encrypted でセキュリティで保護されたエンクレーブを有効または無効にする方法について説明します。 エンクレーブが正しく初期化されているかどうかを確認する方法について説明します。
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 45f6bdca2602a9a85cf9fc193269b445599c78ad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 19e7349c3b8bb9ef104f95ef0963b6d7982a3669
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480333"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534751"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-この記事では、セキュリティで保護されたエンクレーブが設定された Always Encrypted でセキュリティで保護されたエンクレーブを有効または無効にする方法について説明します。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
+この記事では、セキュリティで保護されたエンクレーブが設定された Always Encrypted でセキュリティで保護されたエンクレーブを有効または無効にする方法について説明します。 詳細については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」と「[SQL Server でセキュリティで保護されたエンクレーブを構成する](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md)」を参照してください。
 
 **列暗号化エンクレーブの種類** サーバー構成オプションを使うと、Always Encrypted に使用されるセキュリティで保護されたエンクレーブの種類を制御できます。 次のいずれかの値にオプションを設定できます。  
   

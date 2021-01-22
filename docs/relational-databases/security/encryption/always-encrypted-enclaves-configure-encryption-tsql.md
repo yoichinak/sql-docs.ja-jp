@@ -2,7 +2,7 @@
 description: Transact-SQL を使用してインプレースでの列の暗号化を構成する
 title: Transact-SQL を使用してインプレースでの列の暗号化を構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e1e72a9e06c2012390a88243c3ef865ac222564b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab59eec637bd5afc127227b09445417ffa1fe4eb
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477693"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534851"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Transact-SQL を使用してインプレースでの列の暗号化を構成する
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 この記事では、セキュリティで保護されたエンクレーブが設定された Always Encrypted と [ALTER TABLE](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN` ステートメントを使用して、列に対する暗号化操作をインプレースで実行する方法について説明します。 インプレース暗号化および一般的な前提条件に関する基本的な情報については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」をご覧ください。
 
@@ -33,19 +34,20 @@ ms.locfileid: "97477693"
 
 サーバー側のセキュリティで保護されたエンクレーブを使用する他のクエリと同様、インプレース暗号化をトリガーする `ALTER TABLE`/`ALTER COLUMN` ステートメントは、Always Encrypted とエンクレーブ計算が有効になっている接続を通して送信する必要があります。 
 
-この記事の残りの部分では、SQL Server Management Studio から `ALTER TABLE`/`ALTER COLUMN` ステートメントを使用して、インプレース暗号化をトリガーする方法について説明します。 または、アプリケーションから `ALTER TABLE`/`ALTER COLUMN` を発行することもできます。 
+この記事の残りの部分では、SQL Server Management Studio から `ALTER TABLE`/`ALTER COLUMN` ステートメントを使用して、インプレース暗号化をトリガーする方法について説明します。 または、Azure Data Studio やアプリケーションから `ALTER TABLE`/`ALTER COLUMN` を発行することもできます。 
 
 > [!NOTE]
-> 現時点では、SqlServer PowerShell モジュールの [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) コマンドレットや [sqlcmd](../../../tools/sqlcmd-utility.md) などの SSMS 以外のツールでは、インプレース暗号化操作に対する `ALTER TABLE`/`ALTER COLUMN` の使用はサポートされていません。
+> 現在、SqlServer PowerShell モジュールの [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) コマンドレットや [sqlcmd](../../../tools/sqlcmd-utility.md) では、インプレース暗号化操作に対する `ALTER TABLE`/`ALTER COLUMN` の使用はサポートされていません。
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>SSMS で Transact-SQL を使用してインプレース暗号化を実行する
 ### <a name="pre-requisites"></a>前提条件
 - 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」で説明されている前提条件。
-- SQL Server Management Studio 18.3 以降。
+- SQL Server Management Studio 18.3 以降 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する場合)。
+- SQL Server Management Studio 18.8 以降 ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用する場合)。
 
 ### <a name="steps"></a>手順
 1. データベース接続で Always Encrypted とエンクレーブ計算を有効にしてクエリ ウィンドウを開きます。 詳しくは、「[ データベース接続での Always Encrypted の有効化と無効化](always-encrypted-query-columns-ssms.md#en-dis)」をご覧ください。
-2. クエリ ウィンドウで、`ENCRYPTED WITH` 句でエンクレーブ対応の列暗号化キーを指定して、`ALTER TABLE`/`ALTER COLUMN` ステートメントを実行します。 列が文字列型の列 (`char`、`varchar`、`nchar`、`nvarchar` など) の場合は、照合順序を BIN2 の照合順序に変更する必要があります。 
+2. クエリ ウィンドウで、暗号化、暗号化解除または再暗号化する列のターゲット暗号化構成を指定して、`ALTER TABLE`/`ALTER COLUMN` ステートメントを実行します。 列を暗号化または再暗号化する場合は、`ENCRYPTED WITH` 句を使用します。 列が文字列型の列 (`char`、`varchar`、`nchar`、`nvarchar` など) の場合は、照合順序を BIN2 の照合順序に変更する必要があります。 
     
     > [!NOTE]
     > 列マスター キーが Azure Key Vault に格納されている場合は、Azure にサインインするように求められることがあります。
@@ -67,7 +69,7 @@ ms.locfileid: "97477693"
 #### <a name="encrypting-a-column-in-place"></a>インプレースでの列の暗号化
 以下の例の前提:
 - `CEK1` は、エンクレーブ対応の列暗号化キーです。
-- `SSN` 列はプレーンテキストであり、現在は既定のデータベース照合順序 (Latin1 で BIN2 以外の照合順序など) を使用しています (例: `Latin1_General_CI_AI_KS_WS`)。
+- `SSN` 列はプレーンテキストであり、現在は既定のデータベース照合順序 (Latin1 で BIN2 以外の照合順序など) を使用しています (たとえば、`Latin1_General_CI_AI_KS_WS`)。
 
 このステートメントを使うと、ランダム化された暗号化とエンクレーブ対応の列暗号化キーを使用して、`SSN` 列が暗号化されます。 また、既定のデータベースの照合順序は、(同じコード ページ内の) 対応する BIN2 の照合順序で上書きされます。
 
@@ -125,7 +127,7 @@ GO
 - `SSN` 列は、エンクレーブ対応の列暗号化キーを使用して暗号化されています。
 - 列レベルで設定されている現在の照合順序は `Latin1_General_BIN2` です。
 
-次のステートメントでは、列が暗号化解除されます (照合順序は変更されません。代わりに、同じステートメントで BIN2 以外の照合順序などに照合順序を変更することもできます)。
+以下のステートメントの場合、列の暗号化を解除し、照合順序を変更せずに保持します。 照合順序を変更することもできます。 たとえば、同じステートメントで照合順序をBIN2 以外の照合順序に変更します。
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -137,11 +139,13 @@ GO
 ```
 
 ## <a name="next-steps"></a>次の手順
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
+- [セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する](always-encrypted-enclaves-query-columns.md)
 - [セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用](always-encrypted-enclaves-create-use-indexes.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)
 
 ## <a name="see-also"></a>参照  
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted の一般的な問題をトラブルシューティングする](always-encrypted-enclaves-troubleshooting.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)
 - [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [チュートリアル: SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [チュートリアル: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

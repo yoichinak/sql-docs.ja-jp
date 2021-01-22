@@ -1,11 +1,8 @@
 ---
-title: 証明書の管理 (SQL Server 構成マネージャー) | Microsoft Docs
+title: 証明書の管理 (SQL Server 構成マネージャー)
 description: さまざまな SQL Server 構成で証明書をインストールする方法について説明します。 例として、単一インスタンス、フェールオーバー クラスター、Always On 可用性グループがあります。
-ms.custom: ''
-ms.date: 01/16/2019
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: e4f0c17e7502a0c1fa75c6459fae77683d0c3cbd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196049"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170924"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>証明書の管理 (SQL Server 構成マネージャー)
 
@@ -43,18 +43,29 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
 > SQL Server 構成マネージャーの証明書の管理は、SQL Server 2008 以降の古いバージョンの SQL Server で使用できます。
 
 ##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> 1 つの SQL Server インスタンス用の証明書をインストールするには  
-  
+
+::: moniker range=">=sql-server-ver15"
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
-  
+
 2. [ *&lt;インスタンス名&gt;* **のプロトコル**] を右クリックし、 **[プロパティ]** を選択します。  
-  
+
 3. **[証明書]** タブを選択し、 **[インポート]** を選択します。  
-  
+
 4. **[参照]** を選択し、証明書ファイルを選択します。  
-  
+
 5. **[次へ]** を選択して、証明書を検証します。 エラーがない場合は、 **[次へ]** を選択して、ローカル インスタンスに証明書をインポートします。  
-  
- 
+::: moniker-end
+
+::: moniker range="<= sql-server-2017"
+1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
+
+2. [ *&lt;インスタンス名&gt;* **のプロトコル**] を右クリックし、 **[プロパティ]** を選択します。  
+
+3. **[証明書]** ドロップダウン メニューから証明書を選んでから、 **[適用]** を選択します。  
+
+4. **[OK]** を選択します。 
+::: moniker-end
+
 ##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> フェールオーバー クラスター インスタンス構成で証明書をインストールするには  
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。

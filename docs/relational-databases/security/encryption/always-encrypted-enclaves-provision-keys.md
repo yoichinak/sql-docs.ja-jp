@@ -2,7 +2,7 @@
 description: エンクレーブ対応キーをプロビジョニングする
 title: エンクレーブ対応キーをプロビジョニングする | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 02d4b833b45393c6d830048c3e761cd7abac99e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e28b6d18b5fe466aa239164b18ebdfe5fef0895c
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477623"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534761"
 ---
 # <a name="provision-enclave-enabled-keys"></a>エンクレーブ対応キーをプロビジョニングする
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 この記事では、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) に使用されるサーバー側のセキュリティで保護されたエンクレーブ内での計算をサポートするエンクレーブ対応キーをプロビジョニングする方法について説明します。 
 
@@ -39,12 +40,17 @@ SQL Server Management Studio または PowerShell を使用してエンクレー
 次のセクションでは、SSMS と PowerShell を使用してエンクレーブ対応キーをプロビジョニングする方法の詳細について説明します。
 
 ## <a name="provision-enclave-enabled-keys-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してエンクレーブ対応キーをプロビジョニングする
-SQL Server Management Studio 18.3 以降では、以下のプロビジョニングができます。
+SQL Server Management Studio では、以下のプロビジョニングを行うことができます。
 - **[新しい列マスター キー]** ダイアログを使用した、エンクレーブ対応の列マスター キーのプロビジョニング。
 - **[新しい列の暗号化キー]** ダイアログを使用した、エンクレーブ対応の列暗号化キーのプロビジョニング。
 
 > [!NOTE]
 > 現在、[Always Encrypted ウィザード](always-encrypted-wizard.md)では、エンクレーブ対応キーの生成はサポートされていません。 ただし、最初に上記のダイアログを使用してエンクレーブ対応キーを作成した後、ウィザードを実行するときに、暗号化する列に対して既存のエンクレーブ対応の列暗号化を選択することができます。
+
+SSMS の最小バージョン要件:
+
+- SSMS 18.3 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する場合)。
+- SSMS 18.8 ([!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用する場合)。
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>[新しい列マスター キー] ダイアログを使用してエンクレーブ対応の列マスター キーをプロビジョニングする
 エンクレーブ対応の列マスター キーをプロビジョニングするには、「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」の手順に従います。 必ず、**[エンクレーブ計算を許可する]** を選択します。 次のスクリーンショットをご覧ください。
@@ -52,7 +58,7 @@ SQL Server Management Studio 18.3 以降では、以下のプロビジョニン�
 ![エンクレーブ計算を許可する](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> **[エンクレーブ計算を許可する]** チェック ボックスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに正しく初期化されたセキュリティで保護されたエンクレーブが含まれている場合にのみ表示されます。 詳しくは、[Always Encrypted のエンクレーブの種類の構成](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)に関する記事をご覧ください。
+> **[エンクレーブ計算を許可する]** チェック ボックスは、データベース用にセキュリティで保護されたエンクレーブが構成されている場合にのみ表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する場合は、「[SQL Server でセキュリティで保護されたエンクレーブを構成する](always-encrypted-enclaves-configure-enclave-type.md)」を参照してください。 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を使用する場合は、「[Azure SQL データベースに対して Intel SGX を有効にする](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)」を参照してください。
 
 > [!TIP]
 > 列マスター キーがエンクレーブ対応かどうかを確認するには、オブジェクト エクスプローラーでキーを右クリックし、**[プロパティ]** を選択します。 キーがエンクレーブ対応の場合は、 **[エンクレーブ計算: 許可]** と、キーのプロパティを示すウィンドウに表示されます。 または、[sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md) ビューを使用することもできます。
@@ -148,12 +154,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## <a name="next-steps"></a>次の手順
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
+- [セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する](always-encrypted-enclaves-query-columns.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)
 - [既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>参照  
-- [チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [チュートリアル: SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [チュートリアル: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

@@ -2,7 +2,7 @@
 title: SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する | Microsoft Docs
 description: SQL Server Management Studio を使用して Always Encrypted の列のクエリを実行する方法について説明します。 暗号化された列に格納された暗号化テキストまたはテキストの値を取得します。
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97406058"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534595"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -95,11 +95,12 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
 1. SSMS 18 以降を使用している場合:
     1. **[Always Encrypted]** タブを選択します。
     1. Always Encrypted を有効にするには、 **[Always Encrypted を有効にする (列の暗号化)]** を選択します。 Always Encrypted を無効にするには、 **[Always Encrypted を有効にする (列の暗号化)]** が選択されていないことを確認します。
-    1. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用し、SQL Server インスタンスがセキュア エンクレーブで構成されている場合は、エンクレーブ構成証明の url を指定できます。 SQL Server インスタンスでセキュア エンクレーブを使用しない場合は、 **[エンクレーブ構成証明 URL]** テキストボックスを空白のままにしてください。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」を参照してください。
 1. SSMS 17 以前を使用している場合:
     1. **[追加のプロパティ]** タブを選択します。
     1. Always Encrypted を有効にするには、「`Column Encryption Setting = Enabled`」と入力します。 Always Encrypted を無効にするには、`Column Encryption Setting = Disabled` を指定するか、 **[追加のプロパティ]** タブから **[列暗号化設定]** の設定を削除します (既定値は **[無効]** )。   
  1. **[Connect]** をクリックします。
+
+[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使用しているときに、サーバー側のセキュリティで保護されたエンクレーブを利用するステートメントを実行するには、接続に対して Always Encrypted を有効にするだけでなく、エンクレーブ構成証明 URL を指定する必要があります。 詳細については、[SSMS でエンクレーブを使用して T-SQL ステートメントを実行するための前提条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms)に関するページを参照してください。
 
 > [!TIP]
 > 既存のクエリ エディター ウィンドウで Always Encrypted の有効化と無効化を切り替えるには、次のようにします。   

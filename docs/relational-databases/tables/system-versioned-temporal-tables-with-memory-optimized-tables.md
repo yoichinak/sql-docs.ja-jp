@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05ed5ec0d34d2a1a612b76c0117d0bf66675ad7a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474573"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171894"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 
@@ -70,7 +70,7 @@ ms.locfileid: "97474573"
 
 データ フラッシュは、現在実行している最も古いトランザクションより古いメモリ内内部バッファーからすべてのレコードを削除して、ディスク ベースの履歴テーブルにこれらのレコードを移動します。
 
-[sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) を呼び出して、スキーマとテーブル名を指定することで、データ フラッシュを強制的に実行することができます: **sys.sp_xtp_flush_temporal_history @schema_name, @object_name** 。 このユーザー実行コマンドを使用すると、内部スケジュールでシステムによってデータ フラッシュ タスクが呼び出されるときと同じデータ移動プロセスが呼び出されます。
+[sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) を呼び出し、次のスキーマおよびテーブル名を指定することで、データ フラッシュを強制的に実行することができます: **sys.sp_xtp_flush_temporal_history \@schema_name, \@object_name**。 このユーザー実行コマンドを使用すると、内部スケジュールでシステムによってデータ フラッシュ タスクが呼び出されるときと同じデータ移動プロセスが呼び出されます。
 
 ## <a name="see-also"></a>参照
 

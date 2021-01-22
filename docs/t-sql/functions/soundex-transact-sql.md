@@ -23,12 +23,12 @@ ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22cd09ddfcd42223f2dd675dcd7ca76e6abcad48
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e89da2e1d0acb2171f9080245d3f16ffcf9d547e
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468163"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171354"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ SOUNDEX ( character_expression )
  **varchar**  
   
 ## <a name="remarks"></a>解説  
- SOUNDEX では、英数字の文字列が、読み上げ時の文字列の発音方法に基づいた 4 文字コードに変換されます。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字コードを生成するために、必要に応じて、末尾にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
+ SOUNDEX では、英数字の文字列が、英語での読み上げ時の文字列の発音方法に基づいた 4 文字コードに変換されます。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字コードを生成するために、必要に応じて、末尾にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
   
  さまざまな文字列からの SOUNDEX コードを比較して、読み上げ時の文字列の発音がどの程度類似しているかを確認できます。 DIFFERENCE 関数では 2 つの文字列に対して SOUNDEX が実行され、これらの文字列について SOUNDEX コードがどの程度類似しているかを示す整数が返されます。  
   

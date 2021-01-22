@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: a585314a26e90b76d18117be2eafe6f78e399dc3
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+ms.openlocfilehash: 369c52eeb66a3d8ca5042f54d71ea9001d30b194
+ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322217"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98193039"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -46,6 +46,7 @@ ms.locfileid: "97322217"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU22-GDR](#CU22)         | 14.0.3370.1  | 2021-01-12 |
 | [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 2020-07-01   |
 | [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
@@ -83,6 +84,27 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 - [フルテキスト検索パッケージのインストール](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu22-gdr-january-2021"></a><a id="CU22-GDR"></a> CU22-GDR (2021 年 1 月)
+
+これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 22-GDR (CU22-GDR) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3370.1 です。 このリリースでの修正プログラムと機能強化の詳細については、<https://support.microsoft.com/help/4577467> を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+> [!NOTE]
+> **Ubuntu 18.04** と **RHEL 8** は、CU20 以降の SQL Server 2017 でサポートされるようになりました。
+>
+> Ubuntu 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (Ubuntu 18.04 では使用できません)、Ubuntu 18.04 のパッケージが参照されています。 Ubuntu 16.04 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/> を参照してください。
+>
+> Red Hat 用のオフライン パッケージ インストール リンクでは、SSIS パッケージを除き (RHEL 8 では使用できません)、RHEL 8 のパッケージが参照されています。 RHEL 7 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/rhel/7/mssql-server-2017/> を参照してください。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3370.1-23-18 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3370.1-18.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3370.1-18.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3370.1-18.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) |
+| SLES RPM パッケージ | 14.0.3370.1-18 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3370.1-18.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3370.1-18.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3370.1-18.x86_64.rpm) | 
+| Ubuntu 18.04 Debian パッケージ | 14.0.3370.1-18 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3370.1-18_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3370.1-18_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3370.1-18_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu22-september-2020"></a><a id="CU22"></a> CU22 (2020 年 9 月)
 
@@ -582,7 +604,7 @@ sudo systemctl start mssql-server
          sudo systemctl restart mssql-server
          ```
 
-- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では復元できません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
+- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では復元できません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 

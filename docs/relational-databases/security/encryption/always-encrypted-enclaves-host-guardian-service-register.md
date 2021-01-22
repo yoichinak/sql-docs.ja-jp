@@ -2,7 +2,7 @@
 title: ホスト ガーディアン サービスにコンピューターを登録する
 description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するために、SQL Server コンピューターをホスト ガーディアン サービスに登録します。
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5864ec2b5bda5febc27bbb15606452befe7e293f
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101830"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534781"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>ホスト ガーディアン サービスにコンピューターを登録する
 
@@ -23,10 +23,16 @@ ms.locfileid: "98101830"
 
 この記事では、ホスト ガーディアン サービス (HGS) で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを登録する方法について説明します。
 
-開始する前に、少なくとも 1 台の HGS コンピューターがデプロイされ、構成証明サービスが設定されていることを確認してください。
+> [!NOTE]
+> HGS に [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] を登録するプロセスには、HGS 管理者と [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者との共同作業が必要です。 「[HGS で構成証明を構成する場合のロールと責任](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)」を参照してください。
+
+開始する前に、少なくとも 1 台の HGS コンピューターがデプロイされ、HGS 構成証明サービスが設定されていることを確認してください。
 詳細については、「[Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)」 (SQL Server のホスト ガーディアン サービスを展開する) を参照してください。
 
 ## <a name="step-1-install-the-attestation-client-components"></a>手順 1:構成証明クライアント コンポーネントをインストールする
+
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
 
 SQL クライアントが、信頼できる [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターと通信しているかどうかを確認できるようにするには、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターがホスト ガーディアン サービスで正しく証明されている必要があります。
 構成証明プロセスは、HGS クライアントと呼ばれるオプションの Windows コンポーネントによって管理されます。
@@ -43,6 +49,9 @@ SQL クライアントが、信頼できる [!INCLUDE [ssnoversion-md](../../../
 3. 再起動してインストールを完了します。
 
 ## <a name="step-2-verify-virtualization-based-security-is-running"></a>手順 2:仮想化ベースのセキュリティが実行されていることを確認する
+
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
 
 ホスト ガーディアン Hyper-V サポート機能をインストールすると、仮想化ベースのセキュリティ (VBS) が自動的に構成され、有効化されます。
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted のエンクレーブは、VBS によって保護され、VBS 環境内で実行されます。
@@ -66,7 +75,7 @@ VBS を実行するには、必須プロパティが、使用可能なセキュ�
 - `Secure Boot` が推奨されますが、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted の場合、必須ではありません。 セキュア ブートは、UEFI の初期化が完了した直後に Microsoft によって署名されたブートローダーを要求して、ルートキットから保護します。 トラステッド プラットフォーム モジュール (TPM) 構成証明を使用する場合、VBS がセキュア ブートを要求するように構成されているかどうかに関係なく、セキュア ブートの有効化が測定され、適用されます。
 - `DMA Protection` が推奨されますが、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted の場合、必須ではありません。 DMA 保護は、IOMMU を使用してダイレクト メモリ アクセス攻撃から VBS とエンクレーブ メモリを保護します。 運用環境では、DMA 保護を備えたコンピューターを常に使用する必要があります。 開発またはテスト環境では、DMA 保護の要件を削除することができます。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] インスタンスが仮想化されている場合、DMA 保護を使用できない可能性が高いため、VBS を実行するための要件を削除する必要があります。 VM で実行する場合のセキュリティ保証の低下については、「[信頼モデル](./always-encrypted-enclaves-host-guardian-service-plan.md#trust-model)」を参照してください。
 
-VBS の必須セキュリティ機能を低減する前に、OEM またはクラウド サービス プロバイダーに問い合わせて、不足しているプラットフォーム要件を UEFI または BIOS で有効にする方法 (たとえば、セキュア ブート、Intel VT-d、または AMD IOV の有効化など) があるかどうかを確認してください。
+VBS の必須セキュリティ機能を低減する前に、OEM またはクラウド サービス プロバイダーに問い合わせて、欠落しているプラットフォーム要件を UEFI または BIOS で有効にする方法 (たとえば、セキュア ブート、Intel VT-d、AMD IOV の有効化など) があるかどうかを確認してください。
 
 VBS の必須プラットフォーム セキュリティ機能を変更するには、管理者特権の PowerShell コンソールで次のコマンドを実行します。
 
@@ -80,12 +89,15 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 レジストリを変更した後、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを再起動して、VBS が実行されているかどうかを再度確認します。
 
-コンピューターが会社で管理されている場合、再起動後に、グループ ポリシーまたは Microsoft Endpoint Manager によって、これらのレジストリ キーの変更がオーバーライドされる可能性があります。
+コンピューターが会社で管理されている場合、再起動後に、グループ ポリシーまたは Microsoft エンドポイント マネージャーによって、これらのレジストリ キーの変更がオーバーライドされる可能性があります。
 IT ヘルプ デスクに問い合わせて、VBS 構成を管理するポリシーがデプロイされているかどうかを確認してください。
 
-## <a name="step-3-configure-the-attestation-url"></a>手順 3:構成証明 URL を構成する
+## <a name="step-3-configure-the-attestation-url"></a>手順 3: 構成証明 URL を構成する
 
-次に、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターに HGS 構成証明サービスの URL を構成します。
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
+
+次に、HGS 管理者から取得した HGS 構成証明サービスの URL を使用して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを構成します。
 
 管理者特権の PowerShell コンソールで次のコマンドを更新して実行し、構成証明 URL を構成します。
 
@@ -105,6 +117,14 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 コンピューターを TPM モードで登録する場合は、[手順 4A](#step-4a-register-a-computer-in-tpm-mode) に進みます。また、コンピューターをホスト キー モードで登録する場合は、[手順 4B](#step-4b-register-a-computer-in-host-key-mode) に進みます。
 
 ## <a name="step-4a-register-a-computer-in-tpm-mode"></a>手順 4A: コンピューターを TPM モードで登録する
+
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者と HGS 管理者によって共同で行われます。 詳細については、以下の注意事項を参照してください。
+
+### <a name="prepare"></a>準備
+
+> [!NOTE]
+> この操作は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が実行する必要があります。
 
 この手順では、コンピューターの TPM 状態に関する情報を収集して、それを HGS に登録します。
 
@@ -128,10 +148,13 @@ HGS では、証明するコンピューターは各ポリシー カテゴリの
 
 ### <a name="configure-a-code-integrity-policy"></a>コードの整合性ポリシーを構成する
 
+> [!NOTE]
+> 以下のこの手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
+
 HGS では、TPM モードで証明するすべてのコンピューターに Windows Defender アプリケーション制御 (WDAC) ポリシーが適用されている必要があります。
 WDAC コードの整合性ポリシーは、コードを実行しようとする各プロセスを、信頼された発行元とファイル ハッシュの一覧と照合することで、コンピューターで実行できるソフトウェアを制限します。
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] のユース ケースの場合、エンクレーブは、仮想化ベースのセキュリティによって保護され、ホスト OS から変更することはできません。このため、WDAC ポリシーの厳格℉は、暗号化されたクエリのセキュリティに影響しません。
-そのため、システムに追加の制限を課すことなく構成証明要件を満たすために、単純な監査モード ポリシーを [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターにデプロイすることをお勧めします。
+そのため、システムに追加の制限を課すことなく構成証明要件を満たすために、監査モード ポリシーを [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターにデプロイすることをお勧めします。
 
 コンピューターで既にカスタムの WDAC コードの整合性ポリシーを使用して、OS 構成を強化している場合、「[TPM の構成証明の情報を収集する](#collect-tpm-attestation-information)」に進んでください。
 
@@ -153,6 +176,9 @@ WDAC コードの整合性ポリシーは、コードを実行しようとする
 
 ### <a name="collect-tpm-attestation-information"></a>TPM の構成証明の情報を収集する
 
+> [!NOTE]
+> 以下のこの手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
+
 HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターごとに次の手順を繰り返します。
 
 1. コンピューターが既知の正常な状態にある場合に、PowerShell で次のコマンドを実行して TPM の構成証明の情報を収集します。
@@ -170,9 +196,17 @@ HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. 3 つの構成証明ファイルを HGS サーバーにコピーします。
+2. 3 つの構成証明ファイルを HGS 管理者と共有します。 
 
-3. HGS サーバーの管理者特権の PowerShell コンソールで次のコマンドを実行して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを登録します。
+### <a name="register-the-sql-server-computer-with-hgs"></a>SQL Server コンピューターを HGS に登録する
+
+> [!NOTE]
+> 以下のこの手順は、HGS 管理者が行う必要があります。
+
+HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターごとに次の手順を繰り返します。
+
+1. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者から取得した構成証明ファイルを HGS サーバーにコピーします。 
+2. HGS サーバーの管理者特権の PowerShell コンソールで次のコマンドを実行して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを登録します。
 
     ```powershell
     # TIP: REMEMBER TO CHANGE THE FILENAMES
@@ -212,38 +246,61 @@ Get-HgsAttestationTpmPolicy
 
 ## <a name="step-4b-register-a-computer-in-host-key-mode"></a>手順 4B: コンピューターをホスト キー モードで登録する
 
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者と HGS 管理者によって共同で行われます。 詳細については、以下の注意事項を参照してください。
+
 この手順では、ホストの一意のキーを生成して、それを HGS に登録するプロセスについて説明します。
 TPM モードを使用するように HGS 構成証明サービスを構成する場合は、[手順 4A](#step-4a-register-a-computer-in-tpm-mode) のガイダンスに従ってください。
 
+### <a name="generate-a-key-for-a-ssnoversion-md-computer"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターのキーを生成する
+
+> [!NOTE]
+> この部分は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が共同で行う必要があります。
+
 ホスト キーの構成証明は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターで非対称キー ペアを生成して、そのキーの半分の公開部分を HGS に提供することで機能します。
-キー ペアを生成するには、管理者特権の PowerShell コンソールで次のコマンドを実行します。
 
-```powershell
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターごとに次の手順を繰り返します。
 
-既にホスト キーを作成していて、新しいキー ペアを生成する場合は、代わりに次のコマンドを使用します。
+1. キー ペアを生成するには、管理者特権の PowerShell コンソールで次のコマンドを実行します。
 
-```powershell
-Remove-HgsClientHostKey
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+    ```powershell
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-ホスト キーを生成したら、証明書ファイルを HGS サーバーにコピーし、管理者特権の PowerShell コンソールで次のコマンドを実行して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを登録します。
+    既にホスト キーを作成していて、新しいキー ペアを生成する場合は、代わりに次のコマンドを使用します。
 
-```powershell
-Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
-```
+    ```powershell
+    Remove-HgsClientHostKey
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターごとに手順 4B を繰り返します。
+2. 証明書ファイルを HGS 管理者と共有します。
+
+### <a name="register-the-sql-server-computer-with-hgs"></a>SQL Server コンピューターを HGS に登録する
+
+> [!NOTE]
+> 以下のこの手順は、HGS 管理者が行う必要があります。
+
+HGS で証明する [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターごとに次の手順を繰り返します。
+
+1. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者から取得した証明書ファイルを HGS サーバーにコピーします。
+2. 管理者特権の PowerShell コンソールで次のコマンドを実行して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを登録します。
+
+    ```powershell
+    Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
+   ```
 
 ## <a name="step-5-confirm-the-host-can-attest-successfully"></a>手順 5:ホストが正常に証明できることを確認する
 
+> [!NOTE]
+> この手順は、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューター管理者が行う必要があります。
+
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを HGS に登録した後 (TPM モードの場合は[手順 4A](#step-4a-register-a-computer-in-tpm-mode)、ホスト キー モードの場合は[手順 4B](#step-4b-register-a-computer-in-host-key-mode))、正常に証明できることを確認する必要があります。
 
-[Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
+[Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps&preserve-view=true) を使用するといつでも、HGS 構成証明クライアントの構成を確認して、構成証明を試行できます。
+
 このコマンドの出力は、次のようになります。
 
 ```
@@ -269,8 +326,8 @@ IsFallbackInUse                : False
 | `AttestationStatus` | 説明 |
 | ----------------- | ----------- |
 | 有効期限切れ | ホストは以前に構成証明を通過しましたが、発行された正常性証明書の有効期限が切れています。 ホストと HGS の時刻が同期されていることを確認してください。 |
-| `InsecureHostConfiguration` | コンピューターは、HGS サーバーで構成された構成証明ポリシーの 1 つ以上を満たしていませんでした。 詳細については、`AttestationSubStatus` を参照してください。 |
-| NotConfigured | コンピューターに構成証明 URL が構成されていません。 [構成証明 URL を構成](#step-3-configure-the-attestation-url)してください。 |
+| `InsecureHostConfiguration` | コンピューターは、HGS サーバーで構成された構成証明ポリシーの 1 つ以上を満たしていませんでした。 詳細については、「`AttestationSubStatus`」を参照してください。 |
+| NotConfigured | コンピューターに構成証明 URL が構成されていません。 [構成証明 URL を構成する](#step-3-configure-the-attestation-url) |
 | Passed | コンピューターは構成証明を通過し、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] エンクレーブを実行するために信頼されています。 |
 | `TransientError` | 一時的なエラーが原因で、構成証明の試行が失敗しました。 このエラーは通常、ネットワークを介した HGS の接続に問題が発生したことを意味します。 ネットワーク接続を確認して、コンピューターが HGS サービス名を解決し、ルーティングできるようにしてください。 |
 | `TpmError` | コンピューターの TPM デバイスが、構成証明の試行中にエラーを報告しました。 詳細については、TPM のログを参照してください。 TPM をクリアすると、問題が解決される可能性がありますが、TPM をクリアする前に、BitLocker と、TPM に依存する他のサービスを一時停止する必要があります。 |
@@ -289,3 +346,7 @@ IsFallbackInUse                : False
 | Iommu | このコンピューターでは、IOMMU デバイスが有効になっていません。 物理コンピューターの場合、UEFI 構成メニューで IOMMU を有効にします。 仮想マシンで、IOMMU を使用できない場合、HGS サーバーで `Disable-HgsAttestationPolicy Hgs_IommuEnabled` を実行します。 |
 | SecureBoot | このコンピューターでは、セキュア ブートが有効になっていません。 この問題を解決するには、UEFI 構成メニューでセキュア ブートを有効にします。 |
 | VirtualSecureMode | このコンピューターでは、仮想化ベースのセキュリティが実行されていません。 「[手順 2: 仮想化ベースのセキュリティが実行されていることを確認する](#step-2-verify-virtualization-based-security-is-running)」のガイダンスに従ってください。 |
+
+## <a name="next-steps"></a>次のステップ
+
+- [SQL Server でセキュリティで保護されたエンクレーブを構成する](always-encrypted-enclaves-configure-enclave-type.md)

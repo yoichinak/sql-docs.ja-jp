@@ -7,12 +7,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 262e2f222e6c30f3657e78c2a20862912b1aa970
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 434345c505eaab389063fbc5b2c7fffc51708634
+ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643954"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192999"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上の SQL Server 2019 のリリース ノート
 
@@ -35,6 +35,7 @@ SQL Server 2019 のリリース履歴の一覧を次の表に示します。
 
 | Release                   | Version       | リリース日 |
 |---------------------------|---------------|--------------|
+| [CU8-GDR](#cu8-GDR)               | 15.0.4083.2  | 2021-01-12   |
 | [CU8](#cu8)               | 15.0.4073.23  | 2020-10-07   |
 | [CU7 (削除済み)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
@@ -58,6 +59,25 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 - [Linux への SQL Server 2019 Machine Learning Services R および Python のサポートのインストール](sql-server-linux-setup-machine-learning.md)
 - [PolyBase パッケージのインストール](../relational-databases/polybase/polybase-linux-setup.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu8-gdr-january-2021"></a><a id="cu8-GDR"></a> CU8-GDR (2021 年 1 月)
+
+これは SQL Server 2019 (15.x) の Cumulative Update 8-GDR (CU8-GDR) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4083.2 です。 修正プログラムと機能強化の詳細については、<https://support.microsoft.com/help/4577194> を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+> [!NOTE]
+> CU1 以降では、Red Hat 用のオフライン パッケージのインストール リンクが RHEL 8 パッケージを指しています。 RHEL 7 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/rhel/7/mssql-server-2019/> を参照してください。
+>
+> **Ubuntu 18.04** は、CU3 以降の SQL Server 2019 でサポートされるようになりました。 Ubuntu 用のオフライン パッケージのインストール リンクは、Ubuntu 18.04 パッケージを指しています。 Ubuntu 16.04 パッケージをお探しの場合は、ダウンロード パス <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/> を参照してください。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 15.0.4083.2-15 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-15.0.4083.2-15.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-ha-15.0.4083.2-15.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-fts-15.0.4083.2-15.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-15.0.4083.2-15.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-extensibility-java-15.0.4083.2-15.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/rhel/8/mssql-server-2019/mssql-server-polybase-15.0.4083.2-15.x86_64.rpm)|
+| SLES RPM パッケージ | 15.0.4083.2-15 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.4083.2-15.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.4083.2-15.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.4083.2-15.x86_64.rpm)</br>[拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.4083.2-15.x86_64.rpm)</br>[Java 拡張機能 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.4083.2-15.x86_64.rpm)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.4083.2-15.x86_64.rpm)|
+| Ubuntu 18.04 Debian パッケージ | 15.0.4083.2-15 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.4083.2-15_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.4083.2-15_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.4083.2-15_amd64.deb)</br>[拡張機能 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.4083.2-15_amd64.deb)</br>[Java 拡張機能 Debian パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.4083.2-15_amd64.deb)</br>[PolyBase RPM パッケージ](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.4083.2-15_amd64.deb)|
 
 ## <a name="cu8-september-2020"></a><a id="cu8"></a> CU8 (2020 年 9 月)
 
@@ -270,7 +290,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
           sudo systemctl restart mssql-server
           ```
 
-- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の SQL Server 2019 (15.x) で復元することはできません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]、SQL Server 2017、または SQL Server 2019 にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して Linux 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に移動します。
+- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の SQL Server 2019 (15.x) で復元することはできません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]、SQL Server 2017、または SQL Server 2019 にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して Linux 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に移動します。
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 

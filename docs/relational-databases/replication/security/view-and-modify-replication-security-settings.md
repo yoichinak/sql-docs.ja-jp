@@ -18,12 +18,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4eb7b7530c498a6ce590584aa83b3f38684960a7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479743"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170774"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "97479743"
     -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
     > [!NOTE]  
-    >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストを **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定します。 コンテキストを変更する手順については、以下を参照してください。  
+    >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストが **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定されます。 コンテキストを変更する手順については、以下を参照してください。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -126,7 +126,7 @@ ms.locfileid: "97479743"
     -   **[パスワード]** テキスト ボックスと **[パスワードの確認入力]** テキスト ボックスに、新しい複雑なパスワードを入力します。  
   
     > [!NOTE]  
-    >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストを **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定します。 次の手順を使用して、コンテキストを変更します。  
+    >  パブリッシャーが Oracle パブリッシャーの場合は、接続のコンテキストが **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスで指定されます。 次の手順を使用して、コンテキストを変更します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

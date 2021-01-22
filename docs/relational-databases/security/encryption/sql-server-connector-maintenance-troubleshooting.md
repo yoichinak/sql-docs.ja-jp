@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869264"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151268"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 
@@ -139,7 +139,7 @@ ms.locfileid: "91869264"
 
 ### <a name="rolling-the-ssnoversion-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service プリンシパルのローリング
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Active Directory で作成されたサービス プリンシパルを資格情報に使用して、Key Vault にアクセスします。 サービス プリンシパルにはクライアント ID と認証キーが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報は **VaultName**、 **クライアント ID**、 **認証キー**で設定されます。 **認証キー**は一定期間 (1 年または 2 年) 有効です。 期限が切れる前に Azure AD でサービス プリンシパルの新しいキーを生成する必要があります。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で資格情報を変更する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では現在のセッションで資格情報のキャッシュを保持するため、資格情報に変更があった場合は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Active Directory で作成されたサービス プリンシパルを資格情報に使用して、Key Vault にアクセスします。 サービス プリンシパルにはクライアント ID と認証キーが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報は **VaultName**、 **クライアント ID**、 **認証キー** で設定されます。 **認証キー** は一定期間 (1 年または 2 年) 有効です。 期限が切れる前に Azure AD でサービス プリンシパルの新しいキーを生成する必要があります。 その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で資格情報を変更する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では現在のセッションで資格情報のキャッシュを保持するため、資格情報に変更があった場合は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
   
 ### <a name="key-backup-and-recovery"></a>キーのバックアップと回復
 
@@ -227,6 +227,7 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
 2051 | scp_err_OutOfMemory | SQL エンジンのメモリ不足から、EKM プロバイダーに必要なメモリを割り当てることができませんでした。
 2052 | scp_err_ConvertKeyNameToThumbprint | キー名を拇印に変換できませんでした。
 2053 | scp_err_ConvertThumbprintToKeyName|  拇印をキー名に変換できませんでした。
+2058 | scp_err_FailureInRegistry|  レジストリで操作を実行できませんでした。 SQL Server サービス アカウントには、レジストリ キーを作成するためのアクセス許可がありません。
 3000 | ErrorSuccess | AKV 操作は成功しました。
 3001 | ErrorUnknown | 特定できないエラーが発生して AKV 操作に失敗しました。
 3002 | ErrorHttpCreateHttpClientOutOfMemory | メモリ不足により、AKV 操作に使用する HttpClient を作成できません。

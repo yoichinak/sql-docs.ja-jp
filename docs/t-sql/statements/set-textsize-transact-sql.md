@@ -25,17 +25,17 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a959ad6d9a3908d0017b40a8936ccdbe79d8cd83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0d7800e643010a9a4064ca1b113e7c7b84e12742
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080102"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151328"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  SELECT ステートメントによって返される **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**image** データのサイズを指定します。  
+  SELECT ステートメントによってクライアントに返される **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image** データのサイズをバイト単位で指定します。  
   
 > [!IMPORTANT]
 >  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 **nvarchar(max)**、 **varchar(max)**、 **varbinary(max)** を使用してください。  

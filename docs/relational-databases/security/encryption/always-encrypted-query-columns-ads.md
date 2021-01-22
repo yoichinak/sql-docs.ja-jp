@@ -2,7 +2,7 @@
 description: Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 title: Azure Data Studio で Always Encrypted を使用した列のクエリを実行する | Microsoft Docs
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 93bb5c30eeb9cdc6f10c3b71d0e4f70f3f8c6477
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101882"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534419"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Azure Data Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -85,6 +85,7 @@ SSN が `Patients` テーブルで暗号化された列であると仮定して�
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a>データベース接続での Always Encrypted の有効化と無効化   
+
 Azure Data Studio でデータベースに接続する場合は、データベース接続について Always Encrypted を有効または無効にすることができます。 既定では、Always Encrypted は無効になっています。 
 
 データベース接続で Always Encrypted を有効にすると、以下の操作を透過的に試行するように、Azure Data Studio で使用される [Microsoft .NET Data Provider for SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) に指示されます。   
@@ -100,10 +101,11 @@ Azure Data Studio でデータベースに接続する場合は、データベ�
 Always Encrypted を有効 (無効) にするには、次のようにします。
 1. **[接続]** ダイアログで、 **[詳細...]** をクリックします。
 2. 接続に対して Always Encrypted を有効にするには、 **[Always Encrypted]** フィールドを **[有効]** に設定します。 Always Encrypted を無効にするには、 **[Always Encrypted]** の値を空白のままにするか、 **[無効]** に設定します。
-3. [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用して SQL Server インスタンスがセキュア エンクレーブで構成されている場合は、エンクレーブ プロトコルおよびエンクレーブ構成証明の URL を指定できます。 SQL Server インスタンスでセキュア エンクレーブを使用しない場合は、 **[Attestation Protocol]** (構成証明プロトコル) および **[エンクレーブ構成証明 URL]** フィールドを空白のままにしてください。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」を参照してください。
-4. **[OK]** をクリックして **[詳細プロパティ]** を閉じます。
+3. **[OK]** をクリックして **[詳細プロパティ]** を閉じます。
 
 ![接続に対して Always Encrypted を有効にする手順を示す短い動画。](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使用しているときに、サーバー側のセキュリティで保護されたエンクレーブを利用するステートメントを実行するには、接続に対して Always Encrypted を有効にするだけでなく、エンクレーブ構成証明プロトコルとエンクレーブ構成証明 URL を指定する必要があります。 詳細については、[Azure Data Studio でエンクレーブを使用して T-SQL ステートメントを実行するための前提条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio)に関するページを参照してください。
 
 > [!TIP]
 > 既存のクエリ ウィンドウで Always Encrypted を有効または無効に切り替えるには、 **[切断]** をクリックしてから **[接続]** をクリックし、上記の手順を完了して、 **[Always Encrypted]** フィールドの目的の値を使用してデータベースに再接続します。 

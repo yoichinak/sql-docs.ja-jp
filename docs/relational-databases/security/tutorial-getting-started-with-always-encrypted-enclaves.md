@@ -1,8 +1,8 @@
 ---
-title: チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
-description: このチュートリアルでは、セキュリティで保護されたエンクレーブが設定された基本的な Always Encrypted を作成する方法、インプレースでデータを暗号化する方法、SQL Server Management Studio (SSMS) を利用し、暗号化された列に対して高度なクエリを実行する方法について説明します。
+title: チュートリアル:SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要
+description: このチュートリアルでは、SQL Server でセキュリティで保護されたエンクレーブを使用する Always Encrypted の基本的な環境を作成する方法について説明します。構成証明には仮想化ベースのセキュリティ (VBS) エンクレーブとホスト ガーディアン サービス (HGS) が使用されます。 SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度な機密クエリを実行する方法についても学習します。
 ms.custom: seo-lt-2019
-ms.date: 04/10/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,25 +13,27 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463093"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534721"
 ---
-# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>チュートリアル:SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-このチュートリアルでは、[セキュア エンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
-- セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する基本的な環境を作成する方法。
-- SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度なクエリを実行する方法。
+このチュートリアルでは、[!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] での[セキュリティで保護されたエンクレーブを使用する Always Encrypted](encryption/always-encrypted-enclaves.md) の開始方法について説明します。 次のことを示します。
+
+> [!div class="checklist"]
+> - セキュア エンクレーブを使用する Always Encrypted をテストおよび評価する基本的な環境を作成する方法。
+> - SQL Server Management Studio (SSMS) を使用して、データのインプレース暗号化を行い、暗号化された列に対して高度な機密クエリを実行する方法。
 
 ## <a name="prerequisites"></a>前提条件
 
 セキュア エンクレーブを使用する Always Encrypted を開始するには、少なくとも 2 台のコンピューター (仮想マシンも可) が必要です。
 
-- SQL Server と SSMS をホストする SQL Server コンピューター。
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] と SSMS をホストする [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] コンピューター。
 - エンクレーブの構成証明に必要なホスト ガーディアン サービスを実行する HGS コンピューター。
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server コンピューターの要件
@@ -44,7 +46,7 @@ ms.locfileid: "97463093"
   - VM で [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] を実行する場合、ハイパーバイザーおよび物理 CPU には入れ子になった仮想化機能が用意されている必要があります。 
     - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
     - Azure では、入れ子になった仮想化をサポートする VM サイズを選択します。 これには、Dv3 や Ev3 など、すべての v3 シリーズの VM が含まれます。 [入れ子対応の Azure VM の作成](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
-    - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
+    - VMware vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
     - 他のハイパーバイザーおよびパブリック クラウドでは、VBS エンクレーブが設定された Always Encrypted を有効にする入れ子になった仮想化機能がサポートされている場合もあります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
 - [SQL Server Management Studio (SSMS) 18.3 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
 
@@ -167,6 +169,9 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     1. **[サーバーへの接続]** ダイアログで、サーバーの名前を指定し、認証方法を選択して、資格情報を指定します。
     1. **[オプション >>]** をクリックして、 **[Always Encrypted]** タブを選択します。
     1. **[Always Encrypted を有効にする (列の暗号化)]** チェック ボックスがオンになって **いない** ことを確認します。
+
+          ![Always Encrypted を有効にせずにサーバーに接続する](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+
     1. **[接続]** を選択します。
 
 2. 新しいクエリ ウィンドウを開き、次のステートメントを実行して、セキュリティで保護されたエンクレーブの型を仮想化ベースのセキュリティ (VBS) に設定します。
@@ -191,15 +196,6 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     | ------------------------------ | ----- | -------------- |
     | 列暗号化エンクレーブの型 | 1     | 1              |
 
-5. 暗号化された列に対して高度な計算を有効にするには、次のクエリを実行します。
-
-   ```sql
-   DBCC traceon(127,-1);
-   ```
-
-    > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] では、高度な計算が既定で無効になります。 これらは、SQL Server インスタンスを再起動するたびに、上記のステートメントを使用して有効にする必要があります。
-
 ## <a name="step-4-create-a-sample-database"></a>手順 4:サンプル データベースの作成
 この手順では、いくつかのサンプル データを含むデータベースを作成し、その後暗号化します。
 
@@ -215,7 +211,10 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     USE [ContosoHR];
     GO
 
-    CREATE TABLE [dbo].[Employees]
+    CREATE SCHEMA [HR];
+    GO
+    
+    CREATE TABLE [HR].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
         [SSN] [char](11) NOT NULL,
@@ -231,7 +230,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     USE [ContosoHR];
     GO
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -242,7 +241,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
             , N'Abel'
             , $31692);
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -286,6 +285,9 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     1. **[サーバーへの接続]** ダイアログで、サーバーの名前を指定し、認証方法を選択して、資格情報を指定します。
     1. **[オプション >>]** をクリックして、 **[Always Encrypted]** タブを選択します。
     1. **[Always Encrypted を有効にする (列の暗号化)]** チェック ボックスをオンにして、エンクレーブ構成証明 URL (たとえば、ht <span>tp://</span>hgs.bastion.local/Attestation) を指定します。
+
+          ![SSMS を使用して、構成証明を指定してサーバーに接続する](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+
     1. **[接続]** を選択します。
     1. Always Encrypted クエリのパラメーター化を有効にすることの確認を求められたら、 **[有効]** を選択します。
 
@@ -295,13 +297,13 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     USE [ContosoHR];
     GO
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
@@ -316,7 +318,7 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
 1. **SSN** 列と **Salary** 列が暗号化されたことを確認するには、データベース接続の Always Encrypted が有効になって **いない** SSMS インスタンスで新しいクエリ ウィンドウを開き、下のステートメントを実行します。 クエリ ウィンドウで、**SSN** 列と **Salary** 列に暗号化された値が返される必要があります。 Always Encrypted が有効な SSMS インスタンスを使用して同じクエリを実行した場合は、復号化されたデータが表示されます。
 
     ```sql
-    SELECT * FROM [dbo].[Employees];
+    SELECT * FROM [HR].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>手順 7:暗号化された列に対して高度なクエリを実行する
@@ -334,19 +336,21 @@ UnauthorizedHost エラーは、公開キーが HGS サーバーに登録され�
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
     DECLARE @MinSalary [money] = $1000;
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [HR].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
 
 3. Always Encrypted が有効になっていない SSMS インスタンスで同じクエリをもう一度試し、発生するエラーに注意します。
 
 ## <a name="next-steps"></a>次の手順
+
 このチュートリアルを完了すると、次のいずれかのチュートリアルに進むことができます。
+
+- [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET アプリケーションの開発](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)」をご覧ください。
 - [チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する .NET Framework アプリケーションの開発](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
-- [エンクレーブ対応キーをプロビジョニングする](encryption/always-encrypted-enclaves-provision-keys.md)
-- [Transact-SQL を使用してインプレースでの列の暗号化を構成する](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](encryption/always-encrypted-enclaves-query-columns.md)
+
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成して使用する](encryption/configure-always-encrypted-enclaves.md)
+- [チュートリアル: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でのセキュリティで保護されたエンクレーブが設定された Always Encrypted](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

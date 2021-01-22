@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 478c7c784c25b1b71bcafd2279ac93bc7545c188
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96119557"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151314"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ DBCC SHRINKFILE
 圧縮するファイルの識別 (ID) 番号。 ファイル ID を取得するには、システム関数 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) を使用するか、現在のデータベースで [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) カタログ ビューに対してクエリを実行します。
   
 *target_size*  
-整数 - ファイルの新しいサイズ (MB 単位)。 指定しない場合、DBCC SHRINKFILE はファイル作成サイズに圧縮されます。
+整数 - ファイルの新しいサイズ (MB 単位)。 指定されていないか、0 の場合、DBCC SHRINKFILE はファイル作成サイズに減らされます。
   
 > [!NOTE]  
 >  DBCC SHRINKFILE *target_size* を使用して、空のファイルの既定サイズを減らすことができます。 たとえば、5 MB のファイルを作成してから、ファイルがまだ空のうちに 3 MB に圧縮した場合、既定のファイル サイズは 3 MB に設定されます。 これは、データが含まれたことがない空のファイルにのみ該当します。  

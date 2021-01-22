@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3265871cc1ddf221b3fb4090936d146f555dd3b5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194294"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171524"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
 
@@ -341,7 +341,7 @@ ms.locfileid: "92194294"
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
   
- XML ファイルに適用される XPath 式は、OuterXPathString プロパティに格納された外部 XPath 操作です。 **ElementCollection**に XPath 列挙型が設定されている場合、ForeachNodeList 列挙子は、InnerXPathString プロパティに格納された内部 XPath 式を、要素のコレクションに適用できます。  
+ XML ファイルに適用される XPath 式は、OuterXPathString プロパティに格納された外部 XPath 操作です。 **ElementCollection** に XPath 列挙型が設定されている場合、ForeachNodeList 列挙子は、InnerXPathString プロパティに格納された内部 XPath 式を、要素のコレクションに適用できます。  
   
  XML ドキュメントとデータの操作の詳細については、MSDN ライブラリの「[.NET Framework における XML の使用](/previous-versions/aa720019(v=vs.71))」を参照してください。  
   
@@ -461,7 +461,7 @@ ms.locfileid: "92194294"
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> [列挙子] = [Foreach Azure BLOB 列挙子]  
  **[Azure BLOB 列挙子]** を指定すると、SSIS パッケージは、指定した BLOB の場所にある BLOB ファイルを列挙します。 列挙された BLOB ファイルの名前を変数に格納し、Foreach ループ コンテナー内のタスクで使用できます。  
   
- **Azure BLOB 列挙子** は、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](https://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
+ **Azure BLOB 列挙子** は、 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]用の SQL Server Integration Services (SSIS) Feature Pack for Azure のコンポーネントです。 Feature Pack は [こちら](https://go.microsoft.com/fwlink/?LinkID=626967)からダウンロードしてください。  
   
  **[Azure Storage 接続マネージャー]**  
  既存の Azure ストレージ接続マネージャーを選択するか、Azure ストレージ アカウントを参照する接続マネージャーを新規作成します。  
@@ -484,7 +484,7 @@ ms.locfileid: "92194294"
  時間範囲フィルターを指定します。 **TimeRangeFrom** の後から **TimeRangeTo** の前までに変更されたファイルが列挙されます。 
 
 ####  <a name="enumerator--foreach-adls-file-enumerator"></a><a name="ForeachAdlsFile"></a> [列挙子] = [Foreach ADLS File 列挙子] 
-**ADLS File 列挙子**は、SSIS パッケージを有効にして Azure Data Lake Store のファイルを列挙します。 列挙されたファイル (プレフィックスとしてスラッシュ `/` が付く) の完全パスを変数に格納し、Foreach ループ コンテナー内のタスクでファイル パスを使用できます。
+**ADLS File 列挙子** は、SSIS パッケージを有効にして Azure Data Lake Store のファイルを列挙します。 列挙されたファイル (プレフィックスとしてスラッシュ `/` が付く) の完全パスを変数に格納し、Foreach ループ コンテナー内のタスクでファイル パスを使用できます。
   
 **[AzureDataLakeConnection]**  
 Azure Data Lake 接続マネージャーを指定するか、ADLS アカウントを参照する新しい接続マネージャーを作成します。   
@@ -510,7 +510,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
 **[SearchRecursively]**  
 指定されたフォルダー内で再帰的に検索するかどうかを指定します。
 
-***サービス プリンシパルのアクセス許可の構成に関する注意事項***
+"**_サービス プリンシパルのアクセス許可の構成に関する注意事項_* _"
 
 Data Lake Storage Gen2 アクセス許可は [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) と [ACL](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) の両方によって決定されます。
 [こちら](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)に説明されているように、アプリ登録に対応するサービス プリンシパルのオブジェクト ID (OID) を使用して ACL を構成することに注意してください。
@@ -518,8 +518,8 @@ Data Lake Storage Gen2 アクセス許可は [RBAC](/azure/storage/common/storag
 組み込みロールまたはカスタム ロールを使用してセキュリティ プリンシパルに RBAC データ アクセス許可が付与されると、これらのアクセス許可は、要求の認可時に最初に評価されます。
 要求された操作がセキュリティ プリンシパルの RBAC 割り当てによって認可された場合、認可はすぐに解決され、追加の ACL チェックは実行されません。
 また、セキュリティ プリンシパルに RBAC 割り当てがない場合、または要求の操作が割り当てられたアクセス許可と一致しない場合、ACL チェックが実行され、要求された操作を実行する権限がセキュリティ プリンシパルに付与されているかどうかが判断されます。
-列挙子が機能するためには、少なくともルート ファイル システムから開始する**実行**アクセス許可を、ターゲット フォルダーに対する**読み取り**アクセス許可と共に付与します。
-または、少なくとも**ストレージ BLOB データ閲覧者**の役割を RBAC を使用して付与します。
+列挙子を機能させるには、少なくともルート ファイル システムから開始する "_ *実行**" アクセス許可を、ターゲット フォルダーに対する **読み取り** アクセス許可と共に付与します。
+または、少なくとも **ストレージ BLOB データ閲覧者** の役割を RBAC を使用して付与します。
 詳細については、[この記事](/azure/storage/blobs/data-lake-storage-access-control)を参照してください。
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>[変数のマッピング] ページ - [ForEach ループ エディター]

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 65712139819c65c2fe8804cc8e0f6768025b322a
+ms.sourcegitcommit: e3ab17fe9822629eda4df5fb4550df5d495f3134
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521096"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98207861"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>スタンドアロン SQL Server Integration Service (SSIS) DevOps ツール (プレビュー)
 
@@ -128,6 +128,13 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-012-preview"></a>バージョン 0.1.2 Preview
+
+リリース日:2021 年 1 月 14 日
+
+- SSIS プロジェクト ファイルと SSIS パッケージのパッケージ パラメーターのメタデータが一致しない場合に、SSISBuild.exe で NullReference 例外が発生してプロジェクトをビルドできないという問題を修正しました。
+- パッケージを含む SSIS プロジェクトが EncryptSensitiveWithUserKey で暗号化されており、パッケージに機密データと共に CM が含まれている場合、そのパッケージが SSISDeploy.exe を使用して SSISDB に正常にデプロイされていても、"保護された XML ノードの暗号化を解除できませんでした" で始まるエラーが発生してパッケージの実行が失敗するという問題を修正しました。
 
 ### <a name="version-011-preview"></a>バージョン 0.1.1 プレビュー
 

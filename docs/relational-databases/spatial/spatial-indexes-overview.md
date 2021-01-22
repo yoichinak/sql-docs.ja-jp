@@ -13,12 +13,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bedf575888445fb0e14684d4e325b60eb8547a79
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473143"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564454"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "97473143"
   
  たとえば先ほどの、八角形がレベル 1 グリッドのセル 15 に完全に収まっている図では、 セル 15 がテセレーションされて、八角形がレベル 2 の 9 つのセルに分解されています。 この例では、オブジェクトごとのセル数の制限が 9 以上と想定されています。 オブジェクトごとのセル数の制限が 8 以下の場合は、セル 15 はテセレーションされず、セル 15 のみがオブジェクトに対してカウントされます。  
   
- 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでサポートされている CELLS_PER_OBJECT **=** _n_ 句を使用すると、オブジェクトごとのセル数の制限を 1 から 8,192 の範囲で指定できます。  
+ 既定では、オブジェクトごとのセル数の制限は 16 です。この値は、ほとんどの空間インデックスで、スペースと精度のバランスが取れた値になります。 ただし、[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでサポートされている CELLS_PER_OBJECT **=** _n_ 句を使用すると、オブジェクトごとのセル数の制限を 1 から 8192 の範囲で指定できます。  
   
 > [!NOTE]  
 >  空間インデックスの **cells_per_object** の設定は、 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) カタログ ビューで確認できます。  

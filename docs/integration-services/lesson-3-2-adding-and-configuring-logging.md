@@ -11,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2e66d27fd8658cc0e060da036cca147817d5cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32daaf012159bd42a6f73330bc8371157e459609
+ms.sourcegitcommit: 1f826eb3f73bd4d94bc9638b9cdd60991a2e2fa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422216"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125622"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>レッスン 3-2:ログ記録の追加および構成
 
@@ -29,6 +29,7 @@ ms.locfileid: "88422216"
 ## <a name="add-logging-to-the-package"></a>パッケージにログ機能を追加する  
   
 1.  **[SSIS]** メニューの **[ログ記録]** を選択します。  
+    Visual Studio 2019 では、**SSIS** メニューは [拡張機能] -> [SSIS] の下にあります。 **[制御フロー]** ではなく、 **[データ フロー]** タブが選択されていることを確認します
   
 2.  **[SSIS ログの構成]** ダイアログの **[コンテナー]** ウィンドウで、一番上のパッケージ オブジェクトが選択されていることを確認します。 このオブジェクトはレッスン 3 のパッケージを表します。
   

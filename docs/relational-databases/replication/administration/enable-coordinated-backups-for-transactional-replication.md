@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bddffa3b6e57ffd33797fe5b50fca36d194b2345
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 34911188162ac5b63f5a43d510d10d503820d200
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897927"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170474"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>トランザクション レプリケーションの連携バックアップの有効化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "85897927"
   
 ### <a name="to-enable-coordinated-backups-for-a-database-published-with-transactional-replication"></a>トランザクション レプリケーションでパブリッシュされたデータベースの連携バックアップを有効にするには  
   
-1.  パブリッシャーで、[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) 関数を使用すると、パブリケーション データベースの **IsSyncWithBackup** プロパティが返されます。 この関数が **1**を返した場合、連携バックアップはパブリッシュされたデータベースに対して既に有効になっています。  
+1.  パブリッシャーで、`SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')` [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) 関数を使用すると、パブリケーション データベースの **IsSyncWithBackup** プロパティが返されます。 この関数が **1** を返した場合、連携バックアップはパブリッシュされたデータベースに対して既に有効になっています。  
   
 2.  手順 1. の関数が **0** を返した場合、パブリッシャー側のパブリケーション データベースに対して [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 **\@optname** に **sync with backup** を指定し、 **\@value** に **true** を指定します。  
   
     > [!NOTE]  
-    >  **sync with backup** オプションを **false**に変更すると、ログ リーダー エージェントが実行された後で、または一定の間隔で (ログ リーダー エージェントが継続的に実行されている場合)、パブリケーション データベースの切り捨てのポイントが更新されます。 最長間隔は、 **&#x2013;MessageInterval** エージェント パラメーター (既定値は 30 秒) によって制御されます。  
+    >  **sync with backup** オプションを **false** に変更すると、ログ リーダー エージェントが実行された後で、または一定の間隔で (ログ リーダー エージェントが継続的に実行されている場合)、パブリケーション データベースの切り捨てのポイントが更新されます。 最長間隔は、 **&#x2013;MessageInterval** エージェント パラメーター (既定値は 30 秒) によって制御されます。  
   
 ### <a name="to-enable-coordinated-backups-for-a-distribution-database"></a>ディストリビューション データベースの連携バックアップを有効にするには  
   
-1.  ディストリビューターで、[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) 関数を使用すると、ディストリビューション データベースの **IsSyncWithBackup** プロパティが返されます。 この関数が **1**を返した場合、ディストリビューション データベースの連携バックアップは既に有効になっています。  
+1.  ディストリビューターで、[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) 関数を使用すると、ディストリビューション データベースの **IsSyncWithBackup** プロパティが返されます。 この関数が **1** を返した場合、ディストリビューション データベースの連携バックアップは既に有効になっています。  
   
 2.  手順 1. の関数が **0** を返した場合、ディストリビューター側のディストリビューション データベースに対して [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 **\@optname** に **sync with backup** を指定し、 **\@value** に **true** を指定します。  
   
@@ -49,4 +49,20 @@ ms.locfileid: "85897927"
   
 1.  パブリッシャーのパブリケーション データベースで、またはディストリビューターのディストリビューション データベースで、[sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行します。 **\@optname** に **sync with backup** を指定し、 **\@value** に **false** を指定します。  
   
+## <a name="examples"></a>例  
   
+### <a name="a-retrieve-the-issyncwithbackup-property-for-the-current-database"></a>A. 現在のデータベースの `IsSyncWithBackup` プロパティを取得する
+
+この例の場合、現在のデータベースの `IsSyncWithBackup` プロパティが返されます。
+  
+```sql
+SELECT DATABASEPROPERTYEX(DB_NAME(),'IsSyncWithBackup')`
+```
+
+### <a name="b-retrieve-the-issyncwithbackup-property-for-a-specific-database"></a>B. 特定のデータベースの `IsSyncWithBackup` プロパティを取得する
+
+この例の場合、データベース `NameOfDatabaseToCheck` の `IsSyncWithBackup` プロパティが返されます。
+  
+```sql
+SELECT DATABASEPROPERTYEX('NameOfDatabaseToCheck','IsSyncWithBackup')`
+```

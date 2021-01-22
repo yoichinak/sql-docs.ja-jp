@@ -2,7 +2,7 @@
 title: ホスト ガーディアン サービスを展開する
 description: セキュリティで保護されたエンクレーブが設定された Always Encrypted にホスト ガーディアン サービスを展開します。
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ce744de4f70e30a10fad36eef6c1f28f4d8e8d4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 88e79166a8b44139f58192feece211bc3b3d2db3
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477683"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534791"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] のホスト ガーディアン サービスを展開する
 
@@ -23,6 +23,9 @@ ms.locfileid: "97477683"
 
 この記事では、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] の構成証明サービスとしてホスト ガーディアン サービス (HGS) を展開する方法について説明します。
 開始する前に、前提条件とアーキテクチャに関するガイダンスの完全な一覧について、「[ホスト ガーディアン サービスの構成証明の計画](./always-encrypted-enclaves-host-guardian-service-plan.md)」を参照してください。
+
+> [!NOTE]
+> HGS 管理者は、この記事で説明されているすべての手順を行う責任があります。 「[HGS で構成証明を構成する場合のロールと責任](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs)」を参照してください。
 
 ## <a name="step-1-set-up-the-first-hgs-computer"></a>手順 1:1 台目の HGS コンピューターを設定する
 
@@ -113,7 +116,7 @@ HGS サーバーを 1 台だけ設定する場合 (開発/テスト環境など)
 
 5. HGS クラスターに追加するすべてのコンピューターに対して、手順 2 を繰り返します。
 
-## <a name="step-3-configure-a-dns-forwarder-to-your-hgs-cluster"></a>手順 3:HGS クラスターへの DNS フォワーダーを構成する
+## <a name="step-3-configure-a-dns-forwarder-to-your-hgs-cluster"></a>手順 3: HGS クラスターへの DNS フォワーダーを構成する
 
 HGS では、独自の DNS サーバーが実行されます。このサーバーには、構成証明サービスの解決に必要な名前レコードが含まれます。
 お使いの SQL Server コンピューターでは、HGS DNS サーバーに要求を転送するようにネットワークの DNS サーバーを構成するまで、これらのレコードを解決することができません。
@@ -216,7 +219,7 @@ Set-HgsServer -TrustHostKey
 HTTPS (ポート 443) バインドを構成して、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターと HGS 間のすべての通信を暗号化できます。
 HGS のすべての実稼働インスタンスで HTTPS バインドを使用することをお勧めします。
 
-1. 手順 1.3 の完全修飾 HGS サービス名をサブジェクト名として使用して、証明機関から TLS 証明書を取得します。 サービス名がわからない場合は、任意の HGS コンピューターで `Get-HgsServer` を実行して確認できます。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターが別の DNS 名を使用して HGS クラスターに接続している場合 (たとえば、HGS が異なるアドレスを持つネットワーク ロード バランサーの後ろにある場合)、代替 DNS 名をサブジェクト代替名の一覧に追加できます。
+1. 手順 1.3 の完全修飾 HGS サービス名をサブジェクト名として使用して、証明機関から TLS 証明書を取得します。 サービス名がわからない場合は、任意の HGS コンピューターで `Get-HgsServer` を実行して確認できます。 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターで別の DNS 名を使用して HGS クラスターに接続している場合 (たとえば、HGS が異なるアドレスを持つネットワーク ロード バランサーの背後にある場合)、代替 DNS 名をサブジェクト代替名の一覧に追加できます。
 
 2. HGS コンピューターで [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) を使用して HTTPS バインドを有効にし、前の手順で取得した TLS 証明書を指定します。 ローカル証明書ストアのコンピューターに証明書が既にインストールされている場合は、次のコマンドを使用して HGS に登録します。
 
@@ -233,6 +236,27 @@ HGS のすべての実稼働インスタンスで HTTPS バインドを使用す
     ```
 
 3. クラスター内の各 HGS コンピューターに対して、手順 1 と 2 を繰り返します。 TLS 証明書は、HGS ノード間で自動的にレプリケートされません。 さらに、各 HGS コンピューターは、サブジェクトが HGS サービス名と一致する限り、独自の一意の TLS 証明書を持つことができます。
+
+## <a name="step-6-determine-and-share-the-hgs-attestation-url"></a>手順 6:HGS 構成証明 URL を確認して共有する
+
+HGS 管理者は、HGS 構成証明 URL を、組織内の SQL Server コンピューター管理者とアプリケーション管理者の両方と共有する必要があります。 SQL Server コンピューターの管理者は、SQL Server コンピューターにより HGS で証明できるかどうかを確認するために、構成証明 URL が必要になります。 アプリケーション管理者は、アプリを SQL Server に接続する方法を構成するために、構成証明 URL が必要になります。
+
+構成証明 URL を確認するには、次のコマンドレットを実行します。
+
+```powershell
+Get-HGSServer
+```
+このコマンドの出力は、次のようになります。
+
+```
+Name                           Value                                                                         
+----                           -----                                                                         
+AttestationOperationMode       HostKey                                                                       
+AttestationUrl                 {http://hgs.bastion.local/Attestation}                                        
+KeyProtectionUrl               {}         
+```
+
+HGS の構成証明 URL は AttestationUrl プロパティの値です。
 
 ## <a name="next-steps"></a>次のステップ
 

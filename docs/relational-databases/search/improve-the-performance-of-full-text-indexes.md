@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79368864ef41860d725772ee9136bb1e66e82790
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2ec5532f22f50258334f815d12202eb4645b4b17
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479503"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241856"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97479503"
 -   **ディスク**。 ディスク待ちのキューの長さが平均でディスク ヘッド数の 2 倍を超えている場合は、ディスクがボトルネックになっています。 この場合の主な回避策は、作成するフルテキスト カタログを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルやログから切り離し、 ログ、データベース ファイル、およびフルテキスト カタログを別々のディスクに配置することです。 その他、高速なディスクの導入や RAID の使用も、インデックス作成のパフォーマンス向上に役立ちます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、Full-Text Engine は sqlservr.exe プロセスの一部となったため、AWE メモリを使用できます。  
+    > [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、Full-Text Engine は sqlservr.exe プロセスの一部となったため、AWE メモリを使用できます。 詳細については、「[フルテキスト検索のアーキテクチャ](../../relational-databases/search/full-text-search.md#architecture)」を参照してください。  
 
 ### <a name="full-text-batching-issues"></a>フルテキスト バッチ処理の問題
  システムにハードウェアのボトルネックがない場合、フルテキスト検索のインデックス作成パフォーマンスは、主に以下の条件に左右されます。  
@@ -67,7 +67,7 @@ ms.locfileid: "97479503"
   
 -   [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) ステートメントを使用してベース テーブルの統計を更新します。 さらに重要な点は、クラスター化インデックスの統計や完全作成のフルテキスト キーを更新することです。 これにより、複数の範囲の作成によってテーブルに適切なパーティションが生成されるようになります。  
   
--   大型のマルチ CPU コンピューター上で完全作成を実行する前に、fdhost.exe プロセスおよびオペレーティング システムが使用するメモリを十分に確保するために、 **max server memory** 値を設定してバッファー プールのサイズを一時的に制限することをお勧めします。 詳細については、このトピックの「フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定」を参照してください。
+-   大型のマルチ CPU コンピューター上で完全作成を実行する前に、fdhost.exe プロセスおよびオペレーティング システムが使用するメモリを十分に確保するために、 **max server memory** 値を設定してバッファー プールのサイズを一時的に制限することをお勧めします。 詳細については、このトピックの後半の「[フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定](#estimate)」を参照してください。
 
 -   timestamp 列に基づいて増分作成を使用する場合は、**timestamp** 列にセカンダリ インデックスを構築し、増分作成のパフォーマンスを向上します。  
   
@@ -89,24 +89,24 @@ ms.locfileid: "97479503"
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
 
 ### <a name="check-physical-memory-usage"></a>物理メモリの使用量を確認する  
- フルテキスト作成時は、fdhost.exe または sqlservr.exe がメモリ不足またはメモリ枯渇の状態で実行される可能性があります。
--   フルテキスト クロールのログを確認した結果、fdhost.exe が頻繁に再起動されているか、エラー コード 8007008 が返されていることが判明した場合は、これらのプロセスのいずれかでメモリ不足が生じています。
--   特に大型のマルチ CPU コンピューター上で fdhost.exe がダンプを生成している場合、メモリが不足してきている可能性があります。  
+ フルテキスト作成時は、`fdhost.exe` または `sqlservr.exe` がメモリ不足またはメモリ枯渇の状態で実行される可能性があります。
+-   フルテキスト クロールのログを確認した結果、`fdhost.exe` が頻繁に再起動されているか、エラー コード 8007008 が返されていることが判明した場合は、これらのプロセスのいずれかでメモリ不足が生じています。
+-   特に大型のマルチ CPU コンピューター上で `fdhost.exe` によりダンプが生成されている場合、メモリが不足してきている可能性があります。  
 -   フルテキスト クロールで使用されるメモリ バッファーに関する情報を取得する方法については、「[sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)」を参照してください。  
   
  低メモリまたはメモリ不足は、次の原因が考えられます。  
   
 -   **不十分なメモリ**。 完全作成時に使用可能な物理メモリの量がゼロの場合、システム上の物理メモリのほとんどを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッファー プールが消費している可能性があります。  
   
-     sqlservr.exe プロセスは、構成されている最大サーバー メモリ量に達するまで、バッファー プールで使用できるすべてのメモリを獲得しようとします。 **max server memory** の割り当てが大きすぎる場合は、fdhost.exe プロセスのメモリ不足や共有メモリの割り当ての失敗が発生することがあります。  
+     `sqlservr.exe` プロセスでは、構成されている最大サーバー メモリ量に達するまで、バッファー プールで使用できるすべてのメモリの獲得が試されます。 **max server memory** の割り当てが大きすぎる場合は、fdhost.exe プロセスのメモリ不足や共有メモリの割り当ての失敗が発生することがあります。  
   
-     **バッファー プールの** max server memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を適切に設定することにより、この問題を解決できます。 詳細については、このトピックの「フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定」を参照してください。 フルテキスト インデックスの作成に使用されるバッチのサイズを小さくすると、有効な場合があります。  
+     **バッファー プールの** max server memory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を適切に設定することにより、この問題を解決できます。 詳細については、このトピックの後半の「[フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定](#estimate)」を参照してください。 フルテキスト インデックスの作成に使用されるバッチのサイズを小さくすると、有効な場合があります。  
 
 -   **メモリの競合**。 マルチ CPU コンピューター上でのフルテキスト作成時、fdhost.exe または sqlservr.exe との間でバッファー プール メモリの競合が発生する場合があります。 その結果、共有メモリが不足すると、バッチの再試行、メモリ スラッシング、および fdhost.exe プロセスによるダンプが発生します。  
 
 -   **ページングの問題**。 拡張が制限された小さなページ ファイルが使用されているシステムにおいてページ ファイルのサイズが不足した場合、fdhost.exe または sqlservr.exe でメモリ不足が発生します。 クロール ログにメモリ関連の障害が見当たらない場合、過剰なページングが原因でパフォーマンスが低下していることが考えられます。  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件を推定する  
+### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a><a name="estimate"></a> フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件を推定する  
  fdhost.exe プロセスが作成のために必要とするメモリ量は、主に、プロセスが使用するフルテキスト クロール範囲の数、受信共有メモリ (ISM) のサイズ、および ISM インスタンスの最大数に依存します。  
   
  フィルター デーモン ホストによって使用されるメモリ量 (バイト単位) は、次の式を使用して概算できます。  
@@ -143,19 +143,19 @@ ms.locfileid: "97479503"
   
  #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例:fdhost.exe のメモリ要件を推定する  
   
- この例は、8 GM の RAM と 4 つのデュアル コア プロセッサを搭載した 64 ビット コンピューターを対象としています。 最初の計算では、fdhost.exe に必要なメモリ (*F*) を推定します。 クロール範囲の数は `8`です。  
+ この例は、8 GB の RAM と 4 つのデュアル コア プロセッサを搭載した 64 ビット コンピューターを対象としています。 最初の計算では、fdhost.exe に必要なメモリ (*F*) を推定します。 クロール範囲の数は `8`です。  
   
- `F = 8*10*8=640`  
+ `F = 8*10*8 = 640`  
   
  次の計算では、最適な **max server memory** 値 (*M*) を算出します。 このシステムで使用可能な合計物理メモリ (MB 単位) (*T*) は `8192` です。  
   
- `M = 8192-640-500=7052`  
+ `M = 8192-640-500 = 7052`  
   
  #### <a name="example-setting-max-server-memory"></a>例:max server memory の設定  
   
  この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した *M* の値 `7052` を **max server memory** として設定します。  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_configure 'max server memory', 7052;  
@@ -173,7 +173,7 @@ GO
   
      ページ待機時間が長いかどうかを調べるには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-    ```  
+    ```sql  
     SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
@@ -217,4 +217,4 @@ Full-Text Engine では、フルテキスト インデックスを作成する�
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [フルテキスト インデックスの作成のトラブルシューティング](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
+ [フルテキスト検索のアーキテクチャ](../../relational-databases/search/full-text-search.md#architecture) 

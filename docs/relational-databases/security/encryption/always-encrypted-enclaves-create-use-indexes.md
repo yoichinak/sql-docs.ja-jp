@@ -2,7 +2,7 @@
 description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,23 +11,24 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 95b797e271436108c3495f522eff3fd042631285
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4799cd725dce4eb8300717b8c89d601e9915f7d2
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477663"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534831"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-この記事では、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) でエンクレーブ対応の列暗号化キーを使用して暗号化された列で、インデックスを作成して使用する方法について説明します。 
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
+
+この記事では、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) でエンクレーブ対応の列暗号化キーを使用して暗号化された列で、インデックスを作成して使用する方法について説明します。
 
 セキュリティで保護されたエンクレーブが設定された Always Encrypted では、以下がサポートされています。
 - 決定論的暗号化とエンクレーブ対応キーを使用して暗号化された列でのクラスター化インデックスと非クラスター化インデックス。
   - そのようなインデックスは、暗号化テキストに基づいて並べ替えられます。 このようなインデックスに対する特別な考慮事項はありません。 決定論的な暗号化と、エンクレーブ対応ではないキーを使用して暗号化された列のインデックスと同じように、管理および使用できます (Always Encrypted と同様)。 
 - ランダム化された暗号化とエンクレーブ対応キーを使用して暗号化された列での非クラスター化インデックス。
-  - エンクレーブ内でクエリを処理することは便利であり、ランダム化された暗号化を使用して暗号化された列のインデックスでは、機密データが漏洩することはありません。 インデックス データ構造 (B ツリー) のキー値は暗号化され、プレーンテキスト値に基づいて並べ替えられます。 詳しくは、「[ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成する](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)」をご覧ください。
+  - インデックス データ構造 (B ツリー) のキー値は暗号化され、プレーンテキスト値に基づいて並べ替えられます。 詳細については、「[エンクレーブ対応列のインデックス](always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns)」を参照してください。
 
 > [!NOTE]
 > この記事の残りでは、ランダム化された暗号化とエンクレーブ対応キーを使用して暗号化された列での非クラスター化インデックスについて説明します。
@@ -49,11 +50,11 @@ ms.locfileid: "97477663"
 - データベース接続で Always Encrypted とエンクレーブ計算の両方が有効になっているデータベースに接続します。
 - アプリケーションは、インデックス付き列の列暗号化キーを保護している列マスター キーにアクセスできる必要があります。
 
-SQL Server エンジンで、アプリケーションのクエリが解析されて、クエリを実行するためには暗号化された列のインデックスを更新する必要があることがわかった場合、セキュリティで保護されたチャネル経由でエンクレーブに必要な列暗号化キーを提供するよう、クライアント ドライバーに対して指示されます。 これは、他のすべてのクエリの処理で、列暗号化キーをエンクレーブに提供するために使用されるのとまったく同じメカニズムです。 たとえば、インプレース暗号化や、パターン マッチングと範囲比較を使用するクエリなどです。
+SQL Server エンジンで、アプリケーションのクエリが解析されて、クエリを実行するためには暗号化された列のインデックスを更新する必要があることがわかった場合、セキュリティで保護されたチャネル経由でエンクレーブに必要な列暗号化キーを解放するようにクライアント ドライバーに対して指示されます。 これは、インデックスを使用しない他のクエリの処理で、列暗号化キーをエンクレーブに提供するために使用されるのとまったく同じメカニズムです。 たとえば、インプレース暗号化や、パターン マッチングと範囲比較を使用するクエリなどです。
 
-この方法は、Always Encrypted とエンクレーブ計算が有効になっているデータベースに既に接続されているアプリケーションに対し、暗号化された列でのインデックスの存在を透過的にするのに便利です。 アプリケーション接続では、クエリ処理にエンクレーブを使用できます。 列にインデックスを作成した後、アプリ内のドライバーでは、インデックス付け操作のためにエンクレーブに列暗号化キーが透過的に提供されます。 インデックスを作成すると、アプリケーションでエンクレーブに列暗号化キーを送信する必要があるクエリの数が増える場合があることに注意してください。
+この方法は、Always Encrypted とエンクレーブ計算が有効になっているデータベースに既に接続されているアプリケーションに対し、暗号化された列でのインデックスの存在を透過的にするのに便利です。 アプリケーション接続では、クエリ処理にエンクレーブを使用できます。 列にインデックスを作成した後、アプリ内のドライバーでは、インデックス付け操作のためにエンクレーブに列暗号化キーが透過的に提供されます。 インデックスを作成すると、アプリケーションでエンクレーブに列暗号化キーを送信する必要があるクエリの数が増える場合があります。
 
-この方法を使用するには、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)」で説明されている、セキュリティで保護されたエンクレーブを使用したクエリの実行に対する一般的なガイダンスに従います。
+この方法を利用するには、「[セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する](always-encrypted-enclaves-query-columns.md)」に示されているセキュリティで保護されたエンクレーブを使って、ステートメントを実行するための一般的なガイダンスに従います。
 
 この方法の詳しい使用手順については、「[チュートリアル: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)」をご覧ください。
 
@@ -86,7 +87,7 @@ SQL Server エンジンで、アプリケーションのクエリが解析され
 この方法の詳しい使用手順については、「[チュートリアル: ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)」をご覧ください。 
 
 ## <a name="next-steps"></a>次の手順
-- [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)。
+- [セキュリティで保護されたエンクレーブを使用して Transact-SQL ステートメントを実行する](always-encrypted-enclaves-query-columns.md)
 
 ## <a name="see-also"></a>参照  
 - [チュートリアル:ランダム化された暗号化を使用してエンクレーブ対応の列でインデックスを作成して使用する](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)」をご覧ください。

@@ -1,11 +1,8 @@
 ---
+title: DATEDIFF_BIG (Transact-SQL)
 description: DATEDIFF_BIG (Transact-SQL)
-title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea087da6532c43493fd10f647788297d98f35f72
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: 8f6078aebab5456b8867aca1b7f6987d8a1eb6fd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093664"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168213"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 
@@ -92,11 +92,11 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 ## <a name="return-value"></a>戻り値  
 *datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **bigint** 差を返します。
   
-**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **int** を返すため **minute** 以上の精度でオーバーフローする可能性がある `DATEDIFF` とは異なり、`DATEDIFF_BIG` は **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年以上、3 か月、10 日、23 時間、47 分、および 16.8547758 秒です。
+**bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **int** を返すため **minute** 以上のオーバーフローが発生する可能性があるものとは異なり、`DATEDIFF_BIG` では **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年、3 か月、10 日、23 時間、47 分、および 16.8547758 秒を超えます。
   
-*startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF_BIG` は 0 を返します。
+*startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF_BIG` では 0 を返します。
   
-`DATEDIFF_BIG` では、戻り値を計算する際に、*startdate* または *enddate* のタイム ゾーン オフセット要素を使用しません。
+`DATEDIFF_BIG` では、戻り値を計算するために *startdate* または *enddate* のタイム ゾーン オフセット要素を使用します。
   
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または *enddate* に **smalldatetime** 値を使用した場合、`DATEDIFF_BIG` では、戻り値で秒とミリ秒が常に 0 に設定されます。
   
@@ -127,7 +127,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
   
 `SET DATEFIRST` を指定しても、`DATEDIFF_BIG` には何の影響もありません。 `DATEDIFF_BIG` では、週の最初の曜日として常に日曜日を使用し、関数が決定的な方法で動作するようにします。
 
-*enddate* と *startdate* の差として **bigint** の範囲を超える値が返された場合、`DATEDIFF_BIG` は **nanosecond** の精度でオーバーフローする可能性があります。
+*enddate* と *startdate* の差として **bigint** の範囲を超える値が返された場合、`DATEDIFF_BIG` では **nanosecond** でオーバーフローする可能性があります。
   
 ## <a name="examples"></a>例 
   

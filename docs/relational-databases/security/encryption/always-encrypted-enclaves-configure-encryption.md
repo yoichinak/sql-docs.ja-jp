@@ -2,7 +2,7 @@
 description: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,17 +11,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: de9860fdf161d9ed43a1ae2c63e1210dd2079e42
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 67b74e36ff5b2872e619a4b26fabdd05428e6a16
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477713"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534841"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使うと、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセキュリティで保護されたエンクレーブ内で、データベースの列に対するインプレースでの暗号化操作がサポートされます。 インプレース暗号化を使うと、そのような操作のためにデータをデータベースの外部に移動する必要がなくなり、暗号化操作の速度と信頼性が向上します。 
+[セキュリティで保護されたエンクレーブが設定された Always Encrypted](always-encrypted-enclaves.md) を使用すると、[!INCLUDE[ssde-md](../../../includes/ssde-md.md)] のセキュリティで保護されたエンクレーブ内で、データベースの列に対するインプレースでの暗号化操作がサポートされます。 インプレース暗号化を使うと、そのような操作のためにデータをデータベースの外部に移動する必要がなくなり、暗号化操作の速度と信頼性が向上します。 
 
 > [!NOTE]
 > インプレース暗号化のパフォーマンス上の利点にもかかわらず、大きなテーブルの暗号化操作には時間がかかり、大量のリソースが消費され、アプリケーションのパフォーマンスと可用性が低下する可能性があります。
@@ -36,7 +36,7 @@ ms.locfileid: "97477713"
 
 列暗号化キーがエンクレーブ対応であることを確認する方法については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](always-encrypted-enclaves-manage-keys.md)」を参照してください。
 
-また、インプレース暗号化には、セキュリティで保護されたエンクレーブが正しく初期化されている SQL Server インスタンスも必要です。 「[Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)」をご覧ください。
+また、ご利用の環境で一般的な、「[セキュリティで保護されたエンクレーブを使用してステートメントを実行するための前提条件](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves)」が満たされるようにする必要があります。
 
 暗号化操作をトリガーするユーザーまたはアプリケーションには、影響を受ける列を含むテーブルでスキーマを変更し、操作に関係する列マスター キーとデータベース内の関連するキー メタデータにアクセスするための、アクセス許可が必要です。
 
@@ -49,3 +49,6 @@ SQL Server Management Studio またはカスタム アプリケーションか�
 - [Transact-SQL を使用してインプレースでの列の暗号化を構成する](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](always-encrypted-enclaves-create-use-indexes.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)
+
+## <a name="see-also"></a>参照  
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted の一般的な問題をトラブルシューティングする](always-encrypted-enclaves-troubleshooting.md)
