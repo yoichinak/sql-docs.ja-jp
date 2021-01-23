@@ -1,389 +1,390 @@
-- name: SQL の機械学習のドキュメント
-  href: ../machine-learning/index.yml
-- name: Microsoft SQL ドキュメント >
-  href: ../index.yml
-- name: 概要
-  expanded: true
-  items:
-    - name: Machine Learning Services (Python と R) とは?
-      href: ../machine-learning/sql-server-machine-learning-services.md
-    - name: R Services とは?
-      href: ../machine-learning/r/sql-server-r-services.md
-    - name: スタンドアロン サーバー
-      href: ../machine-learning/r/r-server-standalone.md
-    - name: 新機能
-      href: ../machine-learning/what-s-new-in-sql-server-machine-learning-services.md
-- name: インストール
-  items:
-    - name: Windows での ML Services のインストール
-      href: ../machine-learning/install/sql-machine-learning-services-windows-install.md
-    - name: Linux での ML Services のインストール
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
-    - name: Docker での ML Services のインストール
-      href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json
-    - name: SQL Server 2019 での分離の変更
-      href: ../machine-learning/install/sql-server-machine-learning-services-2019.md
-    - name: R サービスのインストール
-      href: ../machine-learning/install/sql-r-services-windows-install.md
-    - name: オフライン インストール (インターネットなし)
-      items:
-        - name: インターネットへのアクセスなしでのインストール
-          href: ../machine-learning/install/sql-ml-component-install-without-internet-access.md
-        - name: CAB のダウンロード
-          href: ../machine-learning/install/sql-ml-cab-downloads.md
-    - name: コマンド プロンプトのセットアップ
-      href: ../machine-learning/install/sql-ml-component-commandline-install.md
-    - name: 事前トレーニング済みモデルのインストール
-      href: ../machine-learning/install/sql-pretrained-models-install.md
-    - name: カスタム ランタイムをインストールする
-      items:
-        - name: Python カスタム ランタイムをインストールする
-          href: ../machine-learning/install/custom-runtime-python.md
-        - name: R カスタム ランタイムをインストールする
-          href: ../machine-learning/install/custom-runtime-r.md
-    - name: 既定の Python および R ランタイムの変更
-      href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: バインドを使用した Python と R ランタイムのアップグレード
-      href: ../machine-learning/install/upgrade-r-and-python.md
-    - name: Azure Data Studio ノートブック
-      href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
-    - name: Python クライアントのセットアップ
-      href: ../machine-learning/python/setup-python-client-tools-sql.md
-    - name: R クライアントのセットアップ
-      href: ../machine-learning/r/set-up-a-data-science-client.md
-    - name: Azure VM でのインストール
-      href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
-    - name: スタンドアロン サーバーのインストール
-      href: ../machine-learning/install/sql-machine-learning-standalone-windows-install.md
-- name: クイックスタート
-  items:
-    - name: Python
-      items:
-        - name: Python スクリプトを実行する
-          href: ../machine-learning/tutorials/quickstart-python-create-script.md
-        - name: データ構造とオブジェクト
-          href: ../machine-learning/tutorials/quickstart-python-data-structures.md
-        - name: Python 関数
-          href: ../machine-learning/tutorials/quickstart-python-functions.md
-        - name: モデルのトレーニングとスコア付け
-          href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
-    - name: R
-      items:
-        - name: R スクリプトの実行
-          href: ../machine-learning/tutorials/quickstart-r-create-script.md
-        - name: データ型とオブジェクト
-          href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
-        - name: R 関数
-          href: ../machine-learning/tutorials/quickstart-r-functions.md
-        - name: モデルのトレーニングとスコア付け
-          href: ../machine-learning/tutorials/quickstart-r-train-score-model.md
-- name: チュートリアル
-  items:
-    - name: Python
-      items:
-        - name: Python のチュートリアル
-          href: ../machine-learning/tutorials/python-tutorials.md
-        - name: スキー レンタル (線形回帰)
-          items:
-            - name: 1 - 概要
-              href: ../machine-learning/tutorials/python-ski-rental-linear-regression.md
-            - name: 2 - データを準備する
-              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md
-            - name: 3 - モデルをトレーニングする
-              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md
-            - name: 4 - モデルをデプロイする
-              href: ../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md
-        - name: 顧客を分類する (K-Means クラスタリング)
-          items:
-            - name: 1 - 概要
-              href: ../machine-learning/tutorials/python-clustering-model.md
-            - name: 2 - データを準備する
-              href: ../machine-learning/tutorials/python-clustering-model-prepare-data.md
-            - name: 3 - モデルを作成する
-              href: ../machine-learning/tutorials/python-clustering-model-build.md
-            - name: 4 - モデルをデプロイする
-              href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-        - name: NYC タクシーのヒント (分類)
-          items:
-            - name: 1 - 概要
-              href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
-            - name: 2 - データの探索
-              href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
-            - name: 3 - 機能エンジニアリング
-              href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
-            - name: 4 - トレーニングおよびデプロイ
-              href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
-            - name: 5 - 予測
-              href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
-        - name: revoscalepy を使用した Python モデルの作成
-          href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-    - name: R
-      items:
-        - name: R のチュートリアル
-          href: ../machine-learning/tutorials/r-tutorials.md
-        - name: スキー レンタル (デシジョン ツリー)
-          items:
-            - name: 1 - 概要
-              href: ../machine-learning/tutorials/r-predictive-model-introduction.md
-            - name: 2 - データを準備する
-              href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
-            - name: 3 - モデルをトレーニングする
-              href: ../machine-learning/tutorials/r-predictive-model-train.md
-            - name: 4 - モデルをデプロイする
-              href: ../machine-learning/tutorials/r-predictive-model-deploy.md
-        - name: 顧客を分類する (K-Means クラスタリング)
-          items:
-            - name: 1 - 概要
-              href: ../machine-learning/tutorials/r-clustering-model-introduction.md
-            - name: 2 - データを準備する
-              href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
-            - name: 3 - モデルを作成する
-              href: ../machine-learning/tutorials/r-clustering-model-build.md
-            - name: 4 - モデルをデプロイする
-              href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-        - name: NYC タクシーのヒント (分類)
-          items:
-            - name: 1. はじめに
-              href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
-            - name: 2. データの探索
-              href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
-            - name: 3. 機能エンジニアリング
-              href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
-            - name: 4. トレーニングおよびデプロイ
-              href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
-            - name: 5. 予測
-              href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
-        - name: パーティション ベースのモデルの作成
-          href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-        - name: R ツールでの SQL ML の使用
-          items:
-            - name: 1. はじめに
-              href: ../machine-learning/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-            - name: 2. データの探索
-              href: ../machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: 3. グラフとプロット
-              href: ../machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 4. 機能エンジニアリング
-              href: ../machine-learning/tutorials/walkthrough-create-data-features.md
-            - name: 5. モデルの構築と保存
-              href: ../machine-learning/tutorials/walkthrough-build-and-save-the-model.md
-            - name: 6. モデルの配置と使用
-              href: ../machine-learning/tutorials/walkthrough-deploy-and-use-the-model.md
-        - name: RevoScaleR の詳細情報
-          items:
-            - name: はじめに
-              href: ../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 1. データベースとアクセス許可の作成
-              href: ../machine-learning/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 2. RxSqlServerData オブジェクトの作成
-              href: ../machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 3. クエリおよびデータの変更
-              href: ../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 4. コンピューティング コンテキストの定義
-              href: ../machine-learning/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 5. 概要統計情報の計算
-              href: ../machine-learning/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 6. データの視覚化
-              href: ../machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 7. モデルを作成する
-              href: ../machine-learning/tutorials/deepdive-create-models.md
-            - name: 8. 新しいデータのスコア付け
-              href: ../machine-learning/tutorials/deepdive-score-new-data.md
-            - name: 9. データを変換する
-              href: ../machine-learning/tutorials/deepdive-transform-data-using-r.md
-            - name: 10. rxImport を使用したデータの読み込み
-              href: ../machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 11. rxDataStep を使用したテーブルの作成
-              href: ../machine-learning/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 12. チャンク分析の実行
-              href: ../machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 13. XDF ファイルを使用してデータを移動する
-              href: ../machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 14. rxExec を使用したカスタム R の送信
-              href: ../machine-learning/tutorials/deepdive-custom-r-functions-using-rxexec.md
-    - name: サンプル データ
-      items:
-        - name: 航空会社のデータ セット
-          href: ../machine-learning/tutorials/demo-data-airlinedemo-in-sql.md
-        - name: アヤメ データ セット
-          href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
-        - name: NYC タクシー データ セット
-          href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
-- name: サンプル >>
-  href: 'https://github.com/Microsoft/sql-server-samples'
-- name: ソリューション
-  href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
-- name: 概念
-  items:
-    - name: 機能拡張フレームワーク
-      href: ../machine-learning/concepts/extensibility-framework.md
-    - name: Python の拡張機能
-      href: ../machine-learning/concepts/extension-python.md
-    - name: R の拡張機能
-      href: ../machine-learning/concepts/extension-r.md
-    - name: Security
-      href: ../machine-learning/concepts/security.md
-- name: 操作方法ガイド
-  items:
-    - name: 接続する
-      items:
-        - name: ループバック接続
-          href: ../machine-learning/connect/loopback-connection.md
-        - name: R から OLAP への接続
-          items:
-            - name: R での OLAP キューブからのデータの使用
-              href: ../machine-learning/r/using-data-from-olap-cubes-in-r.md
-            - name: olapR を使って MDX クエリを作成する方法
-              href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
-    - name: データ探索とモデリング
-      items:
-        - name: Python
-          items:
-            - name: Python でのヒストグラムのプロット
-              href: ../machine-learning/data-exploration/python-plot-histogram.md
-            - name: pandas データ フレームにデータをインポートする
-              href: ../machine-learning/data-exploration/python-dataframe-pandas.md
-            - name: SQL にデータフレームを挿入する
-              href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
-        - name: R
-          items:
-            - name: ODBC を使用して R オブジェクトを読み込む
-              href: ../machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md
-            - name: R を使用した予測モデリング
-              href: ../machine-learning/r/data-exploration-and-predictive-modeling-with-r.md
-            - name: rxExecBy を使用して複数のモデルを作成する
-              href: ../machine-learning/r/creating-multiple-models-using-rxexecby.md
-    - name: データ型の変換
-      items:
-        - name: Python から SQL
-          href: ../machine-learning/python/python-libraries-and-data-types.md
-        - name: R から SQL
-          href: ../machine-learning/r/r-libraries-and-data-types.md
-    - name: 配置
-      items:
-        - name: ストアド プロシージャを使用して運用化する
-          href: ../machine-learning/r/operationalizing-your-r-code.md
-        - name: R での SSIS と SSRS のワークフローを作成する
-          href: ../machine-learning/r/creating-workflows-that-use-r-in-sql-server.md
-        - name: SQL Server 用の R コードを変換する
-          href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
-        - name: sqlrutils を使用してストアド プロシージャを作成する
-          href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
-    - name: 予測
-      items:
-        - name: PREDICT T-SQL でのネイティブ スコアリング
-          href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
-        - name: sp_rxPredict でのリアルタイム スコアリング
-          href: ../machine-learning/predictions/real-time-scoring.md
-    - name: パッケージの管理
-      items:
-        - name: 新しい Python パッケージのインストール
-          items:
-            - name: Python パッケージ情報の取得
-              href: ../machine-learning/package-management/python-package-information.md
-            - name: sqlmlutils を使用してインストールする
-              href: ../machine-learning/package-management/install-additional-python-packages-on-sql-server.md
-            - name: Python ツールを使用してインストールする
-              href: ../machine-learning/package-management/install-python-packages-standard-tools.md
-        - name: 新しい R パッケージのインストール
-          items:
-            - name: R パッケージ情報の取得
-              href: ../machine-learning/package-management/r-package-information.md
-            - name: R ツールを使用してインストールする
-              href: ../machine-learning/package-management/install-r-packages-standard-tools.md
-            - name: sqlmlutils を使用してインストールする
-              href: ../machine-learning/package-management/install-additional-r-packages-on-sql-server.md
-            - name: T-SQL を使用してインストールする
-              href: ../machine-learning/package-management/install-r-packages-with-tsql.md
-            - name: RevoScaleR の使用
-              items:
-                - name: RevoScaleR を使用してインストールする
-                  href: ../machine-learning/package-management/install-r-packages-with-revoscaler.md
-                - name: R のリモート管理を有効にする
-                  href: ../machine-learning/package-management/r-package-how-to-enable-or-disable.md
-                - name: R パッケージの同期
-                  href: ../machine-learning/package-management/package-install-uninstall-and-sync.md
-            - name: miniCRAN リポジトリの作成
-              href: ../machine-learning/package-management/create-a-local-package-repository-using-minicran.md
-            - name: R パッケージを使用するためのヒント
-              href: ../machine-learning/package-management/tips-for-using-r-packages.md
-    - name: 管理
-      items:
-        - name: モニター
-          items:
-            - name: SSMS レポートを使用した監視
-              href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
-            - name: DMV を使用した監視
-              href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
-            - name: 拡張イベント
-              items:
-                - name: 拡張イベントを使用した監視
-                  href: ../machine-learning/administration/extended-events.md
-                - name: T-SQL の予測の監視
-                  href: ../machine-learning/administration/extended-events-predict-tsql.md
-        - name: スクリプトの実行のスケーリング
-          href: ../machine-learning/administration/scale-concurrent-execution-external-scripts.md
-        - name: リソース ガバナー
-          items:
-            - name: リソース ガバナーの使用
-              href: ../machine-learning/administration/resource-governor.md
-            - name: リソース プールの作成
-              href: ../machine-learning/administration/create-external-resource-pool.md
-    - name: Security
-      items:
-        - name: ユーザーへの権限の付与
-          href: ../machine-learning/security/user-permission.md
-        - name: スタート パッドの構成
-          href: ../machine-learning/security/sql-server-launchpad-service-account.md
-        - name: ファイアウォールの構成
-          href: ../machine-learning/security/firewall-configuration.md
-        - name: SQLRUserGroup のログインｎ作成
-          href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
-    - name: パフォーマンス
-      items:
-        - name: R コードのパフォーマンス
-          items:
-            - name: R でのデータ最適化
-              href: ../machine-learning/r/r-and-data-optimization-r-services.md
-            - name: R コード プロファイル関数の使用
-              href: ../machine-learning/r/using-r-code-profiling-functions.md
-- name: リファレンス
-  items:
-    - name: Python パッケージ
-      items:
-        - name: revoscalepy
-          href: ../machine-learning/python/ref-py-revoscalepy.md
-        - name: microsoftml
-          href: ../machine-learning/python/ref-py-microsoftml.md
-    - name: R パッケージ
-      items:
-        - name: RevoScaleR
-          href: ../machine-learning/r/ref-r-revoscaler.md
-        - name: MicrosoftML
-          href: ../machine-learning/r/ref-r-microsoftml.md
-        - name: olapR
-          href: ../machine-learning/r/ref-r-olapr.md
-        - name: sqlRUtils
-          href: ../machine-learning/r/ref-r-sqlrutils.md
-- name: リソース
-  items:
-    - name: リリース ノート 2019 >
-      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
-    - name: リリース ノート 2017 >
-      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
-    - name: リリース ノート 2016 >
-      href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
-    - name: リリース ノート 2014 >
-      href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
-    - name: トラブルシューティング
-      items:
-        - name: トラブルシューティングの概要
-          href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
-        - name: 既知の問題
-          href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
-        - name: トラブルシューティングのためにデータを収集する
-          href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
-        - name: スタート パッドと外部スクリプトに関する問題
-          href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
-        - name: 一般的な R スクリプトのエラー
-          href: ../machine-learning/troubleshooting/r-script-execution-errors.md
+items:
+  - name: SQL の機械学習のドキュメント
+    href: ../machine-learning/index.yml
+  - name: Microsoft SQL ドキュメント >
+    href: ../index.yml
+  - name: 概要
+    expanded: true
+    items:
+      - name: Machine Learning Services (Python と R) とは?
+        href: ../machine-learning/sql-server-machine-learning-services.md
+      - name: R Services とは?
+        href: ../machine-learning/r/sql-server-r-services.md
+      - name: スタンドアロン サーバー
+        href: ../machine-learning/r/r-server-standalone.md
+      - name: 新機能
+        href: ../machine-learning/what-s-new-in-sql-server-machine-learning-services.md
+  - name: インストール
+    items:
+      - name: Windows での ML Services のインストール
+        href: ../machine-learning/install/sql-machine-learning-services-windows-install.md
+      - name: Linux での ML Services のインストール
+        href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+      - name: Docker での ML Services のインストール
+        href: ../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json
+      - name: SQL Server 2019 での分離の変更
+        href: ../machine-learning/install/sql-server-machine-learning-services-2019.md
+      - name: R サービスのインストール
+        href: ../machine-learning/install/sql-r-services-windows-install.md
+      - name: オフライン インストール (インターネットなし)
+        items:
+          - name: インターネットへのアクセスなしでのインストール
+            href: ../machine-learning/install/sql-ml-component-install-without-internet-access.md
+          - name: CAB のダウンロード
+            href: ../machine-learning/install/sql-ml-cab-downloads.md
+      - name: コマンド プロンプトのセットアップ
+        href: ../machine-learning/install/sql-ml-component-commandline-install.md
+      - name: 事前トレーニング済みモデルのインストール
+        href: ../machine-learning/install/sql-pretrained-models-install.md
+      - name: カスタム ランタイムをインストールする
+        items:
+          - name: Python カスタム ランタイムをインストールする
+            href: ../machine-learning/install/custom-runtime-python.md
+          - name: R カスタム ランタイムをインストールする
+            href: ../machine-learning/install/custom-runtime-r.md
+      - name: 既定の Python および R ランタイムの変更
+        href: ../machine-learning/install/change-default-language-runtime-version.md
+      - name: バインドを使用した Python と R ランタイムのアップグレード
+        href: ../machine-learning/install/upgrade-r-and-python.md
+      - name: Azure Data Studio ノートブック
+        href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
+      - name: Python クライアントのセットアップ
+        href: ../machine-learning/python/setup-python-client-tools-sql.md
+      - name: R クライアントのセットアップ
+        href: ../machine-learning/r/set-up-a-data-science-client.md
+      - name: Azure VM でのインストール
+        href: ../machine-learning/install/sql-machine-learning-azure-virtual-machine.md
+      - name: スタンドアロン サーバーのインストール
+        href: ../machine-learning/install/sql-machine-learning-standalone-windows-install.md
+  - name: クイックスタート
+    items:
+      - name: Python
+        items:
+          - name: Python スクリプトを実行する
+            href: ../machine-learning/tutorials/quickstart-python-create-script.md
+          - name: データ構造とオブジェクト
+            href: ../machine-learning/tutorials/quickstart-python-data-structures.md
+          - name: Python 関数
+            href: ../machine-learning/tutorials/quickstart-python-functions.md
+          - name: モデルのトレーニングとスコア付け
+            href: ../machine-learning/tutorials/quickstart-python-train-score-model.md
+      - name: R
+        items:
+          - name: R スクリプトの実行
+            href: ../machine-learning/tutorials/quickstart-r-create-script.md
+          - name: データ型とオブジェクト
+            href: ../machine-learning/tutorials/quickstart-r-data-types-and-objects.md
+          - name: R 関数
+            href: ../machine-learning/tutorials/quickstart-r-functions.md
+          - name: モデルのトレーニングとスコア付け
+            href: ../machine-learning/tutorials/quickstart-r-train-score-model.md
+  - name: チュートリアル
+    items:
+      - name: Python
+        items:
+          - name: Python のチュートリアル
+            href: ../machine-learning/tutorials/python-tutorials.md
+          - name: スキー レンタル (線形回帰)
+            items:
+              - name: 1 - 概要
+                href: ../machine-learning/tutorials/python-ski-rental-linear-regression.md
+              - name: 2 - データを準備する
+                href: ../machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md
+              - name: 3 - モデルをトレーニングする
+                href: ../machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md
+              - name: 4 - モデルをデプロイする
+                href: ../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md
+          - name: 顧客を分類する (K-Means クラスタリング)
+            items:
+              - name: 1 - 概要
+                href: ../machine-learning/tutorials/python-clustering-model.md
+              - name: 2 - データを準備する
+                href: ../machine-learning/tutorials/python-clustering-model-prepare-data.md
+              - name: 3 - モデルを作成する
+                href: ../machine-learning/tutorials/python-clustering-model-build.md
+              - name: 4 - モデルをデプロイする
+                href: ../machine-learning/tutorials/python-clustering-model-deploy.md
+          - name: NYC タクシーのヒント (分類)
+            items:
+              - name: 1 - 概要
+                href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
+              - name: 2 - データの探索
+                href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
+              - name: 3 - 機能エンジニアリング
+                href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
+              - name: 4 - トレーニングおよびデプロイ
+                href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
+              - name: 5 - 予測
+                href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+          - name: revoscalepy を使用した Python モデルの作成
+            href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
+      - name: R
+        items:
+          - name: R のチュートリアル
+            href: ../machine-learning/tutorials/r-tutorials.md
+          - name: スキー レンタル (デシジョン ツリー)
+            items:
+              - name: 1 - 概要
+                href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+              - name: 2 - データを準備する
+                href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+              - name: 3 - モデルをトレーニングする
+                href: ../machine-learning/tutorials/r-predictive-model-train.md
+              - name: 4 - モデルをデプロイする
+                href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+          - name: 顧客を分類する (K-Means クラスタリング)
+            items:
+              - name: 1 - 概要
+                href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+              - name: 2 - データを準備する
+                href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+              - name: 3 - モデルを作成する
+                href: ../machine-learning/tutorials/r-clustering-model-build.md
+              - name: 4 - モデルをデプロイする
+                href: ../machine-learning/tutorials/r-clustering-model-deploy.md
+          - name: NYC タクシーのヒント (分類)
+            items:
+              - name: 1. はじめに
+                href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
+              - name: 2. データの探索
+                href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
+              - name: 3. 機能エンジニアリング
+                href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
+              - name: 4. トレーニングおよびデプロイ
+                href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
+              - name: 5. 予測
+                href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+          - name: パーティション ベースのモデルの作成
+            href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
+          - name: R ツールでの SQL ML の使用
+            items:
+              - name: 1. はじめに
+                href: ../machine-learning/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+              - name: 2. データの探索
+                href: ../machine-learning/tutorials/walkthrough-view-and-summarize-data-using-r.md
+              - name: 3. グラフとプロット
+                href: ../machine-learning/tutorials/walkthrough-create-graphs-and-plots-using-r.md
+              - name: 4. 機能エンジニアリング
+                href: ../machine-learning/tutorials/walkthrough-create-data-features.md
+              - name: 5. モデルの構築と保存
+                href: ../machine-learning/tutorials/walkthrough-build-and-save-the-model.md
+              - name: 6. モデルの配置と使用
+                href: ../machine-learning/tutorials/walkthrough-deploy-and-use-the-model.md
+          - name: RevoScaleR の詳細情報
+            items:
+              - name: はじめに
+                href: ../machine-learning/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+              - name: 1. データベースとアクセス許可の作成
+                href: ../machine-learning/tutorials/deepdive-work-with-sql-server-data-using-r.md
+              - name: 2. RxSqlServerData オブジェクトの作成
+                href: ../machine-learning/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
+              - name: 3. クエリおよびデータの変更
+                href: ../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md
+              - name: 4. コンピューティング コンテキストの定義
+                href: ../machine-learning/tutorials/deepdive-define-and-use-compute-contexts.md
+              - name: 5. 概要統計情報の計算
+                href: ../machine-learning/tutorials/deepdive-create-and-run-r-scripts.md
+              - name: 6. データの視覚化
+                href: ../machine-learning/tutorials/deepdive-visualize-sql-server-data-using-r.md
+              - name: 7. モデルを作成する
+                href: ../machine-learning/tutorials/deepdive-create-models.md
+              - name: 8. 新しいデータのスコア付け
+                href: ../machine-learning/tutorials/deepdive-score-new-data.md
+              - name: 9. データを変換する
+                href: ../machine-learning/tutorials/deepdive-transform-data-using-r.md
+              - name: 10. rxImport を使用したデータの読み込み
+                href: ../machine-learning/tutorials/deepdive-load-data-into-memory-using-rximport.md
+              - name: 11. rxDataStep を使用したテーブルの作成
+                href: ../machine-learning/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
+              - name: 12. チャンク分析の実行
+                href: ../machine-learning/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
+              - name: 13. XDF ファイルを使用してデータを移動する
+                href: ../machine-learning/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
+              - name: 14. rxExec を使用したカスタム R の送信
+                href: ../machine-learning/tutorials/deepdive-custom-r-functions-using-rxexec.md
+      - name: サンプル データ
+        items:
+          - name: 航空会社のデータ セット
+            href: ../machine-learning/tutorials/demo-data-airlinedemo-in-sql.md
+          - name: アヤメ データ セット
+            href: ../machine-learning/tutorials/demo-data-iris-in-sql.md
+          - name: NYC タクシー データ セット
+            href: ../machine-learning/tutorials/demo-data-nyctaxi-in-sql.md
+  - name: サンプル >>
+    href: 'https://github.com/Microsoft/sql-server-samples'
+  - name: ソリューション
+    href: ../machine-learning/tutorials/data-science-scenarios-and-solution-templates.md
+  - name: 概念
+    items:
+      - name: 機能拡張フレームワーク
+        href: ../machine-learning/concepts/extensibility-framework.md
+      - name: Python の拡張機能
+        href: ../machine-learning/concepts/extension-python.md
+      - name: R の拡張機能
+        href: ../machine-learning/concepts/extension-r.md
+      - name: Security
+        href: ../machine-learning/concepts/security.md
+  - name: 操作方法ガイド
+    items:
+      - name: 接続する
+        items:
+          - name: ループバック接続
+            href: ../machine-learning/connect/loopback-connection.md
+          - name: R から OLAP への接続
+            items:
+              - name: R での OLAP キューブからのデータの使用
+                href: ../machine-learning/r/using-data-from-olap-cubes-in-r.md
+              - name: olapR を使って MDX クエリを作成する方法
+                href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
+      - name: データ探索とモデリング
+        items:
+          - name: Python
+            items:
+              - name: Python でのヒストグラムのプロット
+                href: ../machine-learning/data-exploration/python-plot-histogram.md
+              - name: pandas データ フレームにデータをインポートする
+                href: ../machine-learning/data-exploration/python-dataframe-pandas.md
+              - name: SQL にデータフレームを挿入する
+                href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
+          - name: R
+            items:
+              - name: ODBC を使用して R オブジェクトを読み込む
+                href: ../machine-learning/r/save-and-load-r-objects-from-sql-server-using-odbc.md
+              - name: R を使用した予測モデリング
+                href: ../machine-learning/r/data-exploration-and-predictive-modeling-with-r.md
+              - name: rxExecBy を使用して複数のモデルを作成する
+                href: ../machine-learning/r/creating-multiple-models-using-rxexecby.md
+      - name: データ型の変換
+        items:
+          - name: Python から SQL
+            href: ../machine-learning/python/python-libraries-and-data-types.md
+          - name: R から SQL
+            href: ../machine-learning/r/r-libraries-and-data-types.md
+      - name: 配置
+        items:
+          - name: ストアド プロシージャを使用して運用化する
+            href: ../machine-learning/r/operationalizing-your-r-code.md
+          - name: R での SSIS と SSRS のワークフローを作成する
+            href: ../machine-learning/r/creating-workflows-that-use-r-in-sql-server.md
+          - name: SQL Server 用の R コードを変換する
+            href: ../machine-learning/r/converting-r-code-for-use-in-sql-server.md
+          - name: sqlrutils を使用してストアド プロシージャを作成する
+            href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
+      - name: 予測
+        items:
+          - name: PREDICT T-SQL でのネイティブ スコアリング
+            href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+          - name: sp_rxPredict でのリアルタイム スコアリング
+            href: ../machine-learning/predictions/real-time-scoring.md
+      - name: パッケージの管理
+        items:
+          - name: 新しい Python パッケージのインストール
+            items:
+              - name: Python パッケージ情報の取得
+                href: ../machine-learning/package-management/python-package-information.md
+              - name: sqlmlutils を使用してインストールする
+                href: ../machine-learning/package-management/install-additional-python-packages-on-sql-server.md
+              - name: Python ツールを使用してインストールする
+                href: ../machine-learning/package-management/install-python-packages-standard-tools.md
+          - name: 新しい R パッケージのインストール
+            items:
+              - name: R パッケージ情報の取得
+                href: ../machine-learning/package-management/r-package-information.md
+              - name: R ツールを使用してインストールする
+                href: ../machine-learning/package-management/install-r-packages-standard-tools.md
+              - name: sqlmlutils を使用してインストールする
+                href: ../machine-learning/package-management/install-additional-r-packages-on-sql-server.md
+              - name: T-SQL を使用してインストールする
+                href: ../machine-learning/package-management/install-r-packages-with-tsql.md
+              - name: RevoScaleR の使用
+                items:
+                  - name: RevoScaleR を使用してインストールする
+                    href: ../machine-learning/package-management/install-r-packages-with-revoscaler.md
+                  - name: R のリモート管理を有効にする
+                    href: ../machine-learning/package-management/r-package-how-to-enable-or-disable.md
+                  - name: R パッケージの同期
+                    href: ../machine-learning/package-management/package-install-uninstall-and-sync.md
+              - name: miniCRAN リポジトリの作成
+                href: ../machine-learning/package-management/create-a-local-package-repository-using-minicran.md
+              - name: R パッケージを使用するためのヒント
+                href: ../machine-learning/package-management/tips-for-using-r-packages.md
+      - name: 管理
+        items:
+          - name: モニター
+            items:
+              - name: SSMS レポートを使用した監視
+                href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
+              - name: DMV を使用した監視
+                href: ../machine-learning/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+              - name: 拡張イベント
+                items:
+                  - name: 拡張イベントを使用した監視
+                    href: ../machine-learning/administration/extended-events.md
+                  - name: T-SQL の予測の監視
+                    href: ../machine-learning/administration/extended-events-predict-tsql.md
+          - name: スクリプトの実行のスケーリング
+            href: ../machine-learning/administration/scale-concurrent-execution-external-scripts.md
+          - name: リソース ガバナー
+            items:
+              - name: リソース ガバナーの使用
+                href: ../machine-learning/administration/resource-governor.md
+              - name: リソース プールの作成
+                href: ../machine-learning/administration/create-external-resource-pool.md
+      - name: Security
+        items:
+          - name: ユーザーへの権限の付与
+            href: ../machine-learning/security/user-permission.md
+          - name: スタート パッドの構成
+            href: ../machine-learning/security/sql-server-launchpad-service-account.md
+          - name: ファイアウォールの構成
+            href: ../machine-learning/security/firewall-configuration.md
+          - name: SQLRUserGroup のログインｎ作成
+            href: ../machine-learning/security/create-a-login-for-sqlrusergroup.md
+      - name: パフォーマンス
+        items:
+          - name: R コードのパフォーマンス
+            items:
+              - name: R でのデータ最適化
+                href: ../machine-learning/r/r-and-data-optimization-r-services.md
+              - name: R コード プロファイル関数の使用
+                href: ../machine-learning/r/using-r-code-profiling-functions.md
+  - name: リファレンス
+    items:
+      - name: Python パッケージ
+        items:
+          - name: revoscalepy
+            href: ../machine-learning/python/ref-py-revoscalepy.md
+          - name: microsoftml
+            href: ../machine-learning/python/ref-py-microsoftml.md
+      - name: R パッケージ
+        items:
+          - name: RevoScaleR
+            href: ../machine-learning/r/ref-r-revoscaler.md
+          - name: MicrosoftML
+            href: ../machine-learning/r/ref-r-microsoftml.md
+          - name: olapR
+            href: ../machine-learning/r/ref-r-olapr.md
+          - name: sqlRUtils
+            href: ../machine-learning/r/ref-r-sqlrutils.md
+  - name: リソース
+    items:
+      - name: リリース ノート 2019 >
+        href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
+      - name: リリース ノート 2017 >
+        href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+      - name: リリース ノート 2016 >
+        href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+      - name: リリース ノート 2014 >
+        href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
+      - name: トラブルシューティング
+        items:
+          - name: トラブルシューティングの概要
+            href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
+          - name: 既知の問題
+            href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+          - name: トラブルシューティングのためにデータを収集する
+            href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+          - name: スタート パッドと外部スクリプトに関する問題
+            href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+          - name: 一般的な R スクリプトのエラー
+            href: ../machine-learning/troubleshooting/r-script-execution-errors.md
