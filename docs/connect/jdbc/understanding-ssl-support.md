@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa20ac9d4118e5fec4dbaf225d27c9db8257a88f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 62cf191ec41e71084dbe3ca85230108f9fc712b0
+ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393120"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98575714"
 ---
 # <a name="understanding-encryption-support"></a>暗号化のサポートについて
 
@@ -79,7 +79,7 @@ encrypt プロパティが **true** に設定されている場合、[!INCLUDE[j
   
 - 証明書の Subject の Common Name (CN) または Subject Alternate Name (SAN) の DNS 名が、接続文字列に指定された **serverName** の値 (または **hostNameInCertificate** プロパティの値が指定されている場合はその値) と厳密に一致している。  
   
-- DNS 名にはワイルドカード文字を含めることができます。 ただし、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、ワイルドカードでのマッチングがサポートされません。 つまり、abc.com は \*.com とは一致せず、\*.com は \*.com と一致します。  
+- DNS 名にはワイルドカード文字を含めることができます。 バージョン 7.2 よりも前では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] でワイルドカードでのマッチングがサポートされません。 つまり、abc.com は \*.com とは一致せず、\*.com は \*.com と一致します。 バージョン 7.2 以降では、標準証明書のワイルドカードでのマッチングがサポートされています。  
   
 ## <a name="see-also"></a>関連項目
 

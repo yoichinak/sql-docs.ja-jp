@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 73a11047ecfe6b797cb2c79fd2c48e3c7386882f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f7b6eaf18166bd546e8eb3e89ee2176c39dfb49a
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987748"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564420"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server の単体テストでの Transact-SQL アサーションの使用
 
@@ -66,7 +66,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
   
 Transact\-SQL スクリプトで RAISERROR ステートメントを使用すると、サーバーで Transact\-SQL アサーションを直接使用できます。 構文は次のとおりです。  
   
-**RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)**  
+**RAISERROR (\@ErrorMessage, \@ErrorSeverity, \@ErrorState)**  
   
 各値の説明:  
   

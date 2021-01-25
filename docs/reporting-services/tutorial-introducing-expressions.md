@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db1efab37a24e49dcf9eac774809ec788831b037
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: 938ac8fc2e006bc74aab59955374f1b012b66b68
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043822"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620278"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] のこのチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 強力かつ柔軟性のあるページネーション付きのレポートを作成するために、式と共に一般的な関数や演算子を使用します。 
@@ -131,7 +131,7 @@ ms.locfileid: "93043822"
   
 2.  **[DataSource1]** を右クリックし、 **[データ ソースのプロパティ]** をクリックします。  
   
-3.  **[名前]** ボックスに「 **ExpressionsDataSource** 」と入力します。  
+3.  **[名前]** ボックスに「 **ExpressionsDataSource**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -143,12 +143,12 @@ ms.locfileid: "93043822"
 
     ![レポート ビルダーで [データセットのプロパティ] にアクセスする方法を示すスクリーンショット。](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
-3.  **[名前]** ボックスに「 **Expressions** 」と入力します。  
+3.  **[名前]** ボックスに「 **Expressions**」と入力します。  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.名のイニシャルと姓を表示する  
-このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** ( **&** ) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
+このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** (**&**) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
   
 1.  **[StateProvince]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[左]** をクリックします。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "93043822"
     
     ![レポートに左の列を挿入する方法を示すスクリーンショット。](../reporting-services/media/report-builder-expression-tutorial-insert-column.png) 
   
-2.  新しい列のヘッダーをクリックし、「 **Name** 」と入力します。  
+2.  新しい列のヘッダーをクリックし、「 **Name**」と入力します。  
   
 3.  **[Name]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
 
@@ -240,7 +240,7 @@ ms.locfileid: "93043822"
   
     **[Name]** 列の左側に、新しい列が追加されます。  
   
-2.  新しい列のヘッダーをクリックし、「 **M/F** 」と入力します。  
+2.  新しい列のヘッダーをクリックし、「 **M/F**」と入力します。  
   
 ### <a name="to-add-a-rectangle"></a>四角形を追加するには  
   
@@ -319,11 +319,11 @@ ms.locfileid: "93043822"
   
 2.  レポート データ ペインで、 **[新規作成]** をクリックし、 **[データセット]** をクリックします。  
   
-3.  [**データセットのプロパティ] で **[レポートに埋め込まれたデータセットを使用します]** をクリックします。  
+3.  **[データセットのプロパティ]** で **[レポートに埋め込まれたデータセットを使用します]** をクリックします。  
   
 4.  **[データ ソース]** ボックスの一覧の [ExpressionsDataSource] をクリックします。  
   
-5.  **[名前]** ボックスに「 **CountryRegion** 」と入力します。  
+5.  **[名前]** ボックスに「 **CountryRegion**」と入力します。  
   
 6.  クエリの種類に **[テキスト]** が選択されていることを確認し、 **[クエリ デザイナー]** をクリックします。  
   
@@ -358,7 +358,7 @@ ms.locfileid: "93043822"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>CountryRegion データセット内の値を参照するには  
   
-1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの **ID** を削除し、 **Country Region** にします。  
+1.  **[Country Region ID]** 列ヘッダーをクリックし、テキストの **ID** を削除し、**Country Region** にします。  
   
 2.  **[Country Region]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
@@ -391,7 +391,7 @@ ms.locfileid: "93043822"
   
     **[Last Purchase]** 列の右側に、新しい列が追加されます。  
   
-3.  列ヘッダーに「 **Days Ago** 」と入力します。  
+3.  列ヘッダーに「 **Days Ago**」と入力します。  
   
 4.  **[Days Ago]** 列のデータ セルを右クリックし、 **[式]** をクリックします。  
   
@@ -431,7 +431,7 @@ ms.locfileid: "93043822"
   
     **[YTD Purchase]** 列の右側に、新しい列が追加されます。  
   
-2.  列ヘッダーをクリックし、「 **+ or - AVG Sales** 」と入力します。  
+2.  列ヘッダーをクリックし、「 **+ or - AVG Sales**」と入力します。  
   
 ### <a name="to-add-an-indicator"></a>インジケーターを追加するには  
   
@@ -487,13 +487,13 @@ ms.locfileid: "93043822"
   
 26. **[カテゴリ]** ボックスの一覧で **[フィールド (Expressions)]** をクリックし、 **[値]** ボックスの一覧で **[YTDPurchase]** をもう一度ダブルクリックします。  
   
-28. `Fields!YTDPurchase.Value` のすぐ後に「 **, "Expressions")) < 0** 」と入力します。  
+28. `Fields!YTDPurchase.Value` のすぐ後に「 **, "Expressions")) < 0**」と入力します。  
   
     完成した式は、次のようになります。 `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) < 0`  
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31. **[終了]** 値のボックスに「 **0** 」と入力します。  
+31. **[終了]** 値のボックスに「 **0**」と入力します。  
   
 32. 水平矢印のある行をクリックし、 **[削除]** をクリックします。  
 
@@ -501,7 +501,7 @@ ms.locfileid: "93043822"
     
     これで矢印は 2 つだけになりました。上矢印または下矢印です。
   
-33. 上矢印のある行で、 **[開始]** ボックスに「 **0** 」と入力します。  
+33. 上矢印のある行で、 **[開始]** ボックスに「 **0**」と入力します。  
   
 34. **[終了]** 値のボックスの右にある **[Fx]** ボタンをクリックします。  
   
@@ -528,35 +528,35 @@ ms.locfileid: "93043822"
   
     **[レポート パラメーターのプロパティ]** ダイアログ ボックスが表示されます。  
   
-3.  **[プロンプト]** に「 **Choose color** 」と入力します。  
+3.  **[プロンプト]** に「 **Choose color**」と入力します。  
   
-4.  **[名前]** に「 **RowColor** 」と入力します。  
+4.  **[名前]** に「 **RowColor**」と入力します。  
   
 5.  **[使用できる値]** タブで **[値の指定]** をクリックします。  
   
 7.  **[追加]** をクリックします。  
   
-8.  **[ラベル]** ボックスに「 **Yellow** 」と入力します。  
+8.  **[ラベル]** ボックスに「 **Yellow**」と入力します。  
   
-9. **[値]** ボックスに「 **Yellow** 」と入力します。  
+9. **[値]** ボックスに「 **Yellow**」と入力します。  
   
 10. **[追加]** をクリックします。  
   
-11. **[ラベル]** ボックスに「 **Green** 」と入力します。  
+11. **[ラベル]** ボックスに「 **Green**」と入力します。  
   
-12. **[値]** ボックスに「 **PaleGreen** 」と入力します。  
+12. **[値]** ボックスに「 **PaleGreen**」と入力します。  
   
 13. **[追加]** をクリックします。  
   
-14. **[ラベル]** ボックスに「 **Blue** 」と入力します。  
+14. **[ラベル]** ボックスに「 **Blue**」と入力します。  
   
-15. **[値]** ボックスに「 **LightBlue** 」と入力します。  
+15. **[値]** ボックスに「 **LightBlue**」と入力します。  
   
 16. **[追加]** をクリックします。  
   
-17. **[ラベル]** ボックスに「 **Pink** 」と入力します。  
+17. **[ラベル]** ボックスに「 **Pink**」と入力します。  
   
-18. **[値]** ボックスに「 **Pink** 」と入力します。  
+18. **[値]** ボックスに「 **Pink**」と入力します。  
 
     ![[このパラメーターに使用できる値を選択してください] ステップが示されている [レポート パラメーターのプロパティ] ダイアログ ボックスのスクリーンショット。](../reporting-services/media/report-builder-expression-tutorial-parameter-available.png)
   
@@ -619,7 +619,7 @@ ms.locfileid: "93043822"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「 **Sales Comparison Summary** 」と入力し、テキストを選択します。  
+2.  「 **Sales Comparison Summary**」と入力し、テキストを選択します。  
   
 3.  **[ホーム]** タブの **[フォント]** で次のように設定します。
 

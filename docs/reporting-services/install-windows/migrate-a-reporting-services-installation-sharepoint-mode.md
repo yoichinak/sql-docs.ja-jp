@@ -9,12 +9,12 @@ ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 894dfe8b6b3c4832a687cd10b2ed21644d1f7227
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9281c38d56b85cda96b9a5f9888ff707bc4e139a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439347"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596212"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
 
@@ -30,17 +30,17 @@ ms.locfileid: "97439347"
 
 -   [SharePoint 2016 へのアップグレード プロセスの概要](https://technet.microsoft.com/library/cc262483\(v=office.16\))
 
--   [SharePoint 2013 へのアップグレード プロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [SharePoint 2013 へのアップグレード プロセスの概要](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013)。
   
--   [SharePoint 2013 へのアップグレードの前に環境をクリーンアップする](https://go.microsoft.com/fwlink/p/?LinkId=256689)  
+-   [SharePoint 2013 へのアップグレードの前に環境をクリーンアップする](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013)  
   
 -   [SharePoint 2013 から SharePoint Server 2016 にデータベースをアップグレードする](https://technet.microsoft.com/library/cc303436\(v=office.16\))
 
--   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)。
+-   [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレードする](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013)。
   
 -   [SharePoint Server 2016 でコンテンツ データベースを移動する](https://technet.microsoft.com/library/cc262792\(v=office.16\).aspx)
 
--   [コンテンツ データベースを移動する (SharePoint 2013)](https://technet.microsoft.com/library/cc262792.aspx)
+-   [コンテンツ データベースを移動する (SharePoint 2013)](/SharePoint/administration/move-content-databases)
   
 ##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> SQL Server 2012 よりも前のバージョンの Reporting Services SharePoint モードからの移行  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード アーキテクチャは、サービス アプリケーション データベース スキーマを含め、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で変更されました。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンから [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]SharePoint モードに移行する場合は、最初に、SharePoint と SQL Server 2016 Reporting Services SharePoint モードをインストールして、新しい SharePoint 環境を作成してください。 詳細については、「 [Reporting Services の SharePoint モードのインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
@@ -76,7 +76,7 @@ ms.locfileid: "97439347"
 |項目|オブジェクト|メソッド|メモ|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キー|**Rskeymgmt.exe** または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャー。 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。|このツールはバックアップ操作だけでなく、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページまたは PowerShell を使用した復元操作にも使用できます。|  
-|**2**|SharePoint コンテンツ データベース||データベースをバックアップし、デタッチします。<br /><br /> 「[アップグレード戦略を決定する (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263447.aspx)」 (https://technet.microsoft.com/library/cc263447.aspx) の「データベース接続アップグレード」を参照してください。|  
+|**2**|SharePoint コンテンツ データベース||データベースをバックアップし、デタッチします。<br /><br /> [アップグレード戦略の決定 (SharePoint Server 2010) (/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013)](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013) に関する記事の "データベース アタッチ アップグレード" セクションを参照してください。|  
 |**3**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カタログ データベースである SQL Server データベース。|SQL Server データベースのバックアップと復元<br /><br /> or<br /><br /> SQL Server データベースのデタッチとアタッチ。||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイル|単純なファイル コピー。|ファイルをカスタマイズしていた場合に、単純に rsreportserver.config をコピーします。 ファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> レポート サーバーの ASP.NET アプリケーション用の Web.config<br /><br /> ASP.NET 用の Machine.config|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97439347"
   
 |項目|オブジェクト|メソッド|メモ|  
 |-|-------------|------------|-----------|  
-|**1**|SharePoint コンテンツ データベースを新しいファームに復元する。|SharePoint の "データベース アタッチ アップグレード" の手法。|基本的な手順:<br /><br /> 1) データベースを新しいサーバーに復元します。<br /><br /> 2) URL を指定して、コンテンツ データベースを Web アプリケーションにアタッチします。<br /><br /> 3) Get-SPWebapplication を実行して、すべての Web アプリケーションと URL を一覧表示します。<br /><br /> <br /><br /> [アップグレード戦略の決定 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263447.aspx) に関するページ (https://technet.microsoft.com/library/cc263447.aspx) の "データベース接続アップグレード" に関するセクションと、[データベースの接続と SharePoint Server 2010 へのアップグレード](https://technet.microsoft.com/library/cc263299.aspx)に関するページ (https://technet.microsoft.com/library/cc263299.aspx) をご覧ください。|  
+|**1**|SharePoint コンテンツ データベースを新しいファームに復元する。|SharePoint の "データベース アタッチ アップグレード" の手法。|基本的な手順:<br /><br /> 1) データベースを新しいサーバーに復元します。<br /><br /> 2) URL を指定して、コンテンツ データベースを Web アプリケーションにアタッチします。<br /><br /> 3) Get-SPWebapplication を実行して、すべての Web アプリケーションと URL を一覧表示します。<br /><br /> <br /><br /> [アップグレード戦略の決定 (SharePoint Server 2010) (/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013)](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013) に関する記事の "データベース アタッチ アップグレード" セクションと、[データベースのアタッチと SharePoint Server 2010 へのアップグレード (/SharePoint/upgrade-and-update/upgrade-content-databases)](/SharePoint/upgrade-and-update/upgrade-content-databases) に関する記事を参照してください。|  
 |**2**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースである SQL Server データベースを復元する (ReportServer)。|SQL データベースのバックアップと復元。<br /><br /> **or**<br /><br /> SQL Server データベースのデタッチとアタッチ。|データベースを最初に使用するときに、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってデータベース スキーマが必要に応じて更新され、データベース スキーマが SQL Server 2016 環境で正常に動作できるようになります。|  
 |**3**|新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する。|新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する。|新しいサービス アプリケーションを作成するときに、コピーしたレポート サーバー データベースを使用するように構成します。<br /><br /> SharePoint サーバーの全体管理の使用に関する詳細については、「[SharePoint モードでの最初のレポート サーバーのインストール](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)」の「手順 3: Reporting Services サービス アプリケーションを作成する」を参照してください。<br /><br /> PowerShell の使用例については、「[Reporting Services の SharePoint サービスとサービス アプリケーション](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)」の「PowerShell を使用して Reporting Services サービス アプリケーションを作成するには」をご覧ください。|  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを復元する。|単純なファイル コピー。|このファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
@@ -104,7 +104,7 @@ ms.locfileid: "97439347"
   
 3.  自動実行アカウント (UEA) と Windows 認証を使用している場合、その資格情報を記録しておき、復元プロセスでも使用できるようにしてください。  
   
-4.  詳細については、「 [SharePoint 2013 でサービス アプリケーションをバックアップする](https://technet.microsoft.com/library/ee428318.aspx)」を参照してください。  
+4.  詳細については、「 [SharePoint 2013 でサービス アプリケーションをバックアップする](/SharePoint/administration/back-up-a-service-application)」を参照してください。  
   
 ### <a name="restore-operations"></a>復元操作  
   
@@ -116,13 +116,13 @@ ms.locfileid: "97439347"
   
 3.  サービス アプリケーションに、UEA と Windows 資格情報を構成します。  
   
-4.  詳細については、「 [SharePoint 2013 でサービス アプリケーションを復元する](https://technet.microsoft.com/library/ee428305.aspx)」を参照してください。  
+4.  詳細については、「 [SharePoint 2013 でサービス アプリケーションを復元する](/SharePoint/administration/restore-a-service-application)」を参照してください。  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> その他のリソース  
   
--   [SharePoint 2013 へのアップグレードの概要 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx)。  
+-   [SharePoint 2013 へのアップグレードの概要 (/SharePoint/upgrade-and-update/get-started-with-upgrade)](/SharePoint/upgrade-and-update/get-started-with-upgrade)。  
   
--   [SharePoint 2013 へのアップグレード プロセスの概要 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx)。  
+-   [SharePoint 2013 へのアップグレード プロセスの概要 (/SharePoint/upgrade-and-update/overview-of-the-upgrade-process)](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process)。  
 
 ## <a name="next-steps"></a>次のステップ
 

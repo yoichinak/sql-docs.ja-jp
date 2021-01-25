@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bb971ed9fdc24491babf1ce9fe777210778037de
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 12b25a6e8d7b9a5ac77a198ab047150c94b745df
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96123906"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534495"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Always Encrypted と Microsoft .NET Data Provider for SQL Server を使用する
 
@@ -28,6 +28,7 @@ Always Encrypted を使用すると、クライアント アプリケーショ�
 ## <a name="prerequisites"></a>前提条件
 
 - データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがまだない場合は、「[Always Encrypted の作業の開始](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)」の手順に従います。
+- セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する場合は、追加の前提条件について、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)」を参照してください。
 - 必要な .NET プラットフォームが開発用マシンにインストールされていることを確認します。 [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md) では、.NET Framework と .NET Core の両方で Always Encrypted 機能がサポートされています。 開発環境内で .NET プラットフォームのターゲット バージョンとして、[.NET Framework 4.6](/dotnet/framework/) 以降または [.NET Core 2.1](/dotnet/core/) 以降が構成されていることを確認します。 Microsoft.Data.SqlClient バージョン 2.1.0 以降では、Always Encrypted の機能は [.NET Standard 2.0](/dotnet/standard/net-standard) でもサポートされています。 セキュリティで保護されたエンクレーブを使用する Always Encrypted を使用するには、[.NET Standard 2.1](/dotnet/standard/net-standard) が必要です。 Visual Studio を使用している場合は、「[フレームワーク対象設定機能の概要](/visualstudio/ide/visual-studio-multi-targeting-overview)」を参照してください。
 
 次の表は、**Microsoft.Data.SqlClient** で Always Encrypted を使用するために必要な .NET プラットフォームをまとめたものです。
@@ -75,18 +76,20 @@ Always Encrypted は、個々のクエリに対しても有効にすることが
 
 Microsoft.Data.SqlClient バージョン 1.1.0 以降のドライバーでは、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-enclaves.md) がサポートされています。
 
-[!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] 以降に接続するときにエンクレーブを使用できるようにするには、エンクレーブの計算とエンクレーブの構成証明を有効にするように、アプリケーションを構成する必要があります。
+エンクレーブを使用したアプリケーションの開発に関する一般的な情報については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)」を参照してください。
 
-エンクレーブの計算とエンクレーブの構成証明におけるクライアント ドライバーの役割に関する一般的な情報については、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用してアプリケーションを開発する](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)」をご覧ください。
+データベース接続に対してエンクレーブ計算を有効にするには、(前のセクションで説明したように) Always Encrypted を有効することに加えて、次の接続文字列キーワードを設定する必要があります。
 
-アプリケーションを構成するには:
+- `Attestation Protocol` - 構成証明プロトコルを指定します。 
+  - [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、このキーワードの値を `HGS` にする必要があります。
+  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、このキーワードの値を `AAS` にする必要があります。
 
-1. [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] インスタンスがエンクレーブの種類を使用して構成されていることを確認します (「[Always Encrypted サーバー構成オプションのエンクレーブの種類を構成する](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)」を参照してください)。 [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] では、構成証明に対して VBS エンクレーブの種類と[ホスト ガーディアン サービス](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs)がサポートされています。
-2. 構成証明エンドポイントへの接続文字列で `Enclave Attestation URL` キーワードを設定することにより、アプリケーションからデータベースへの接続に対してエンクレーブの計算を有効にします。 キーワードの値は、お使いの環境で構成されている HGS サーバーの構成証明エンドポイントに設定する必要があります。
-3. 接続文字列で `Attestation Protocol` キーワードを設定して、使用する構成証明プロトコルを指定します。 このキーワードの値は、"HGS" に設定する必要があります。
+- `Enclave Attestation URL` - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
+
+  - [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)」を参照してください。
 
 詳しいチュートリアルについては、「[チュートリアル: セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET アプリケーションを開発する](tutorial-always-encrypted-enclaves-develop-net-apps.md)」を参照してください。
-
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 

@@ -2,19 +2,19 @@
 title: ODBC ドライバーで Always Encrypted を使用する
 description: Always Encrypted と Microsoft ODBC Driver for SQL Server を使用して ODBC アプリケーションを開発する方法について説明します。
 ms.custom: ''
-ms.date: 09/01/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f066c8b1429a11b67cd6fc78fd93eaad1a6fc110
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727393"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534711"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -35,6 +35,8 @@ Always Encrypted を使用すると、クライアント アプリケーショ�
 ### <a name="prerequisites"></a>前提条件
 
 データベースで Always Encrypted を構成します。 この処理には、Always Encrypted キーのプロビジョニング、および選択したデータベース列の暗号化の設定が含まれます。 Always Encrypted が構成されたデータベースがない場合は、「 [Always Encrypted の作業の開始](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)」の手順に従います。 特に、ご利用のデータベースには、列マスターキー (CMK) 用、列暗号化キー (CEK) 用、およびその CEK を使用して暗号化された 1 つまたは複数の列を含むテーブル用のメタデータ定義を含める必要があります。
+
+セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する場合は、追加の前提条件について、「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md)」を参照してください。
 
 ### <a name="enabling-always-encrypted-in-an-odbc-application"></a>ODBC アプリケーションで Always Encrypted を有効にする
 
@@ -61,13 +63,33 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
 
 > [!NOTE]
-> Linux および macOS 上でセキュア エンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
+> Linux および macOS 上でセキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、OpenSSL バージョン 1.0.1 以降が必要です。
 
-バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 SQL Server 2019 以降への接続時にエンクレーブの使用を有効にするには、`ColumnEncryption` DSN、接続文字列、または接続属性を、エンクレーブの種類と構成証明プロトコルの名前、および関連する構成証明書のデータに設定します。 バージョン 17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) エンクレーブの種類と[ホスト ガーディアン サービス](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)構成証明プロトコル (`VBS-HGS` で示されます) のみがサポートされます。これを使用するには、次の例のように構成認証サーバーの URL を指定します。
+バージョン 17.4 以降のドライバーでは、セキュリティで保護されたエンクレーブが設定された Always Encrypted がサポートされています。 データベースに接続するときにエンクレーブの使用を有効にするには、`ColumnEncryption` DSN キー、接続文字列キーワードまたは接続属性を次の値 `<attestation protocol>\<attestation URL>` に設定します。ここで:
 
-```
-Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
-```
+- `<attestation protocol>` - エンクレーブ構成証明に使用されるプロトコルを指定します。
+  - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、`<attestation protocol>` を `VBS-HGS` にする必要があります。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、`<attestation protocol>` を `SGX-AAS` にする必要があります。
+
+- `<attestation URL>` - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
+
+  - [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)」を参照してください。
+
+
+データベース接続に対してエンクレーブ計算を有効にする接続文字列の例:
+
+- [!INCLUDE[ssnoversion-md](../../includes/ssnoversion-md.md)]:
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.myDomain;Database=myDataBase;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://myHGSServer.myDomain/Attestation
+   ```
+
+- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] :
+  
+   ```
+   Driver=ODBC Driver 17 for SQL Server;Server=myServer.database.windows.net;Database=myDataBase;Uid=myUsername;Pwd=myPassword;Encrypt=yes;ColumnEncryption=SGX-AAS,https://myAttestationProvider.uks.attest.azure.net/attest/SgxEnclave
+   ```
 
 サーバーと構成証明サービスが適切に構成され、目的の列に対してエンクレーブ対応の CMK と CEK が構成されていれば、Always Encrypted に備わる既存の機能に加え、インプレース暗号化や豊富な計算などのエンクレーブを使用するクエリを実行できるようになります。 詳細については、[セキュリティで保護されたエンクレーブが設定された Always Encrypted の構成](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md)に関する記事を参照してください。
 
@@ -289,7 +311,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API を使用すると、SQLBindCol にバインドされ、行データが事前に取り込まれているバッファーを使用して結果セット内の行をアプリケーションで更新することができます。 暗号化された固定長型の非対称の埋め込み動作が原因で、これらの列のデータは、行内の他の列に対して更新が行われている間に、予期せずに変更される可能性があります。 AE では、固定長文字の値は、バッファー サイズより小さい場合に埋め込まれます。
 
-この動作を軽減するには、`SQLBulkOperations` の一環として更新されない列、およびカーソル ベースの更新に `SQLSetPos` を使用する場合に更新されない列を無視するために、`SQL_COLUMN_IGNORE`フラグを使用します。  アプリケーションによって直接変更されない列はすべて無視する必要があります。パフォーマンス上の理由と、実際の (DB) サイズより*小さい*バッファーにバインドされている列の切り捨てを回避するための両面からそのようにします。 詳細については、[SQLSetPos 関数のリファレンス](../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。
+この動作を軽減するには、`SQLBulkOperations` の一環として更新されない列、およびカーソル ベースの更新に `SQLSetPos` を使用する場合に更新されない列を無視するために、`SQL_COLUMN_IGNORE`フラグを使用します。  アプリケーションによって直接変更されない列はすべて無視する必要があります。パフォーマンス上の理由と、実際の (DB) サイズより *小さい* バッファーにバインドされている列の切り捨てを回避するための両面からそのようにします。 詳細については、[SQLSetPos 関数のリファレンス](../../odbc/reference/syntax/sqlsetpos-function.md)を参照してください。
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults と SQLDescribeCol
 
@@ -619,7 +641,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 |名前|説明|  
 |----------|-----------------|  
-|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>*type*、*data* -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブ、構成証明プロトコルの *type*、関連付けられた構成証明データの *data* が設定された Always Encrypted を有効にします。 <br><br>既定では、 `Disabled`です。|
+|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>"*構成証明プロトコル*"、"*構成証明 URL*" -- (バージョン 17.4 以降) 指定した構成証明プロトコルと構成証明 URL を使用して、セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にできます。 <br><br>既定では、 `Disabled`です。|
 |`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を有効な Azure Active Directory ユーザー プリンシパル名に設定します。 <br>`KeyStoreAuthetication` = `KeyVaultClientSecret` の場合は、この値を有効な Azure Active Directory アプリケーション クライアント ID に設定します。 |
 |`KeyStoreSecret` | `KeyStoreAuthentication` = `KeyVaultPassword` の場合は、この値を対応するユーザー名のパスワードに設定します。 <br>`KeyStoreAuthentication` = `KeyVaultClientSecret` の場合は、この値を、有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットに設定します。 |
@@ -629,7 +651,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 |名前|種類|説明|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *type*、*data* 文字列のポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブを使用して有効にします|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> "*構成証明プロトコル*"、"*構成証明 URL*" 文字列へのポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブと共に有効になります|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|接続後|[設定] CEKeystoreProvider にデータを書き込みます<br>[取得] CEKeystoreProvider からデータを読み取ります|
 |`SQL_COPT_SS_CEKCACHETTL`|接続後|[設定] CEK キャッシュ TTL を設定します<br>[取得] 現在の CEK キャッシュ TTL を取得します|

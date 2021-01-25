@@ -2,7 +2,7 @@
 description: JDBC Driver でのセキュリティで保護されたエンクレーブが設定された Always Encrypted の使用
 title: セキュリティで保護されたエンクレーブが設定された Always Encrypted を JDBC Driver と共に使用する | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 8035e1d5890bf51d80341f740436d586053d4e90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4016f3eb5d725673b1e4149d43dc21d20cdc627f
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487924"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534641"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を JDBC Driver と共に使用する
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,17 +35,25 @@ ms.locfileid: "88487924"
 > [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html) からポリシー ファイルをダウンロードできます。
 
 ## <a name="setting-up-secure-enclaves"></a>セキュア エンクレーブの設定
-セキュア エンクレーブの使用を開始するには、こちらの[チュートリアル](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)に従ってください。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
+セキュリティで保護されたエンクレーブの使用を開始するには、「[チュートリアル: SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)」または「[チュートリアル: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)」に従ってください。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
 ## <a name="connection-string-properties"></a>接続文字列プロパティ
-**enclaveAttestationUrl:** 構成証明サービスのエンドポイント URL です。
 
-**enclaveAttestationProtocol:** 構成証明サービスのプロトコルです。 現在唯一サポートされている値は **HGS** (ホスト ガーディアン サービス) です。
+データベース接続に対してエンクレーブ計算を有効にするには、Always Encrypted を有効することに加えて、次の接続文字列キーワードを設定する必要があります。
 
-セキュア エンクレーブを使用する Always Encrypted をユーザーが [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] から有効にするためには、**columnEncryptionSetting** を有効にし、上記の接続文字列プロパティの**両方**を正しく設定する必要があります。
+- **enclaveAttestationProtocol** - 構成証明プロトコルを指定します。 
+  - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、このキーワードの値を `HGS` にする必要があります。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、このキーワードの値を `AAS` にする必要があります。
+
+- **enclaveAttestationUrl:** - 構成証明 URL (構成証明サービス エンドポイント) を指定します。 構成証明サービス管理者から、ご利用の環境用の構成証明 URL を取得する必要があります。
+  - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] とホスト ガーディアン サービス (HGS) を使用している場合は、「[HGS 構成証明 URL を確認して共有する](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url)」を参照してください。
+  - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と Microsoft Azure Attestation を使用している場合は、「[構成証明ポリシーの構成証明 URL を確認する](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy)」を参照してください。
+
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] からセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にするには、ユーザーは **columnEncryptionSetting** を有効にし、上記の接続文字列プロパティの **両方** を正しく設定する必要があります。
 
 ## <a name="working-with-secure-enclaves"></a>セキュア エンクレーブの使用
-エンクレーブ接続プロパティが適切に設定されている場合、この機能の動作は透過的です。 セキュア エンクレーブをクエリに使用する必要があるかどうかが、ドライバーによって自動的に判断されます。 エンクレーブの計算をトリガーするクエリの例を次に示します。 データベースとテーブルの設定については [Always Encrypted エンクレーブの概要](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)に関するページを参照してください。
+エンクレーブ接続プロパティが適切に設定されている場合、この機能の動作は透過的です。 セキュア エンクレーブをクエリに使用する必要があるかどうかが、ドライバーによって自動的に判断されます。 エンクレーブの計算をトリガーするクエリの例を次に示します。 データベースとテーブルの設定については、「[チュートリアル: SQL Server でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)」または「[チュートリアル: Azure SQL Database でのセキュリティで保護されたエンクレーブを使用する Always Encrypted の概要](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)」を参照してください。
+
 
 高度なクエリを実行すると、エンクレーブの計算がトリガーされます。
 ```java
