@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0547d5a800533a2414a8dbf666c85a8e9f4bc4c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 00426f84d2f8b3c0ca4626ffd8bddc234f27cf4d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785648"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783196"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **scan for startup procs** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起動時のストアド プロシージャの自動実行をスキャンする場合に使用します。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、サーバーで定義されているすべての自動実行ストアド プロシージャがスキャンされ、実行されます。 **scan for startup procs** の既定値は 0 です。この値を設定した場合、スキャンは行われません。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] scan for startup procs [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **scan for startup procs** オプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 起動時のストアド プロシージャの自動実行をスキャンする場合に使用します。 このオプションを 1 に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、サーバーで定義されているすべての自動実行ストアド プロシージャがスキャンされ、実行されます。 **scan for startup procs** の既定値は 0 です。この値を設定した場合、スキャンは行われません。  
   
  **このトピックの内容**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85785648"
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
--   このオプションの値は **sp_configure**を使用して設定できますが、ストアド プロシージャを自動的に実行するかどうかを設定する **sp_procoption**を使用すれば、値が自動的に設定されます。 **sp_procoption** を使用して、最初のストアド プロシージャを autoproc として設定すると、このオプションの値は自動的に 1 に設定されます。 **sp_procoption** を使用して、最後のストアド プロシージャを autoproc として設定解除すると、このオプションの値は自動的に 0 に設定されます。 **sp_procoption** を使用して autoprocs として設定またはその設定を解除し、ストアド プロシージャを削除する前に必ず autoprocs の設定を解除すれば、このオプションを手動で設定する必要がなくなります。  
+-   このオプションの値は **sp_configure** を使用して設定できますが、ストアド プロシージャを自動的に実行するかどうかを設定する **sp_procoption** を使用すれば、値が自動的に設定されます。 **sp_procoption** を使用して、最初のストアド プロシージャを autoproc として設定すると、このオプションの値は自動的に 1 に設定されます。 **sp_procoption** を使用して、最後のストアド プロシージャを autoproc として設定解除すると、このオプションの値は自動的に 0 に設定されます。 **sp_procoption** を使用して autoprocs として設定またはその設定を解除し、ストアド プロシージャを削除する前に必ず autoprocs の設定を解除すれば、このオプションを手動で設定する必要がなくなります。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   

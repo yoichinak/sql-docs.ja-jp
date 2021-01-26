@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 87b53d2fd1fb5da418a2585c762c6d7692b3b283
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 8ae256db755e6703ea8e35876e0a2e8d44fff102
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642509"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783481"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 可用性グループからプライマリ データベースを削除する
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
   
 ##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 前提条件と制限  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97642509"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

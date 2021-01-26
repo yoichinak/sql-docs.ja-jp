@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39999b1b705c2e32dc421af4a6a7ffc9686b2ea7
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480727"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783032"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスの非表示
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、SQL Server 構成マネージャーを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスを非表示にする方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを使用して、コンピューターにインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを列挙します。 この機能により、クライアント アプリケーションはサーバーを参照できるようになり、クライアントは、同じコンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の複数のインスタンスを区別できるようになります。 次の手順に従い、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [参照] **ボタンを使用してこの** インスタンスを表示しようとするクライアント コンピューターに対して、SQL Server Browser サービスがそのインスタンスを公開しないようにできます。  
+  このトピックでは、SQL Server 構成マネージャーを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインスタンスを非表示にする方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを使用して、コンピューターにインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを列挙します。 この機能により、クライアント アプリケーションはサーバーを参照できるようになり、クライアントは、同じコンピューター上にある [!INCLUDE[ssDE](../../includes/ssde-md.md)] の複数のインスタンスを区別できるようになります。 次の手順に従い、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [参照] **ボタンを使用してこの** インスタンスを表示しようとするクライアント コンピューターに対して、SQL Server Browser サービスがそのインスタンスを公開しないようにできます。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスを非表示にするには  
   
-1.  **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** *\<server instance> のプロトコル]* を右クリックして、 **[プロパティ]** を選択します。  
+1.  **SQL Server 構成マネージャー** で、 **[SQL Server ネットワークの構成]** を展開し、 **[** *\<server instance> のプロトコル]* を右クリックして、 **[プロパティ]** を選択します。  
   
 2.  **[フラグ]** タブで **[HideInstance]** ボックスの一覧の **[はい]** を選択し、 **[OK]** をクリックしてダイアログ ボックスを閉じます。 この変更は、新しい接続ですぐに有効になります。  
   

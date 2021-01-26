@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe7a4f5bc7fb043533656041d5f10d5be1880273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71dcf7e52b1c58c7df868f502bc8de5da9892c6b
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659770"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783438"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **user options** オプションは、すべてのユーザーに対するグローバルな既定値を指定します。 ユーザーの作業セッション中に、一連の既定のクエリ処理オプションが設定されます。 **user options** オプションを使用すると、SET オプションの既定値を変更できます (サーバーの既定の設定が適切でない場合)。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **user options** オプションは、すべてのユーザーに対するグローバルな既定値を指定します。 ユーザーの作業セッション中に、一連の既定のクエリ処理オプションが設定されます。 **user options** オプションを使用すると、SET オプションの既定値を変更できます (サーバーの既定の設定が適切でない場合)。  
   
- 各ユーザーは、SET ステートメントを使用してこれらの既定値をオーバーライドできます。 新しいログインについては **user options** を動的に構成できます。 **user options**の設定を変更した場合、新しい設定は新しいログイン セッションで使用され、現在のログイン セッションには影響しません。  
+ 各ユーザーは、SET ステートメントを使用してこれらの既定値をオーバーライドできます。 新しいログインについては **user options** を動的に構成できます。 **user options** の設定を変更した場合、新しい設定は新しいログイン セッションで使用され、現在のログイン セッションには影響しません。  
   
  **このトピックの内容**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85659770"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   次の表は、 **user options**の構成値と説明の一覧です。 すべての構成値が他の構成値と両立するわけではありません。 たとえば、ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF を同時に設定することはできません。  
+-   次の表は、 **user options** の構成値と説明の一覧です。 すべての構成値が他の構成値と両立するわけではありません。 たとえば、ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF を同時に設定することはできません。  
   
     |値|構成|説明|  
     |-----------|-------------------|-----------------|  

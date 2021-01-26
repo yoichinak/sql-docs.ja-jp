@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7d7b758b1d1ee8fba24a6f4e23568f8fdc6f060c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 48a70988539ee9a35cd8dbd933ee7c6f6f752609
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642958"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783739"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>[概要] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
-  このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]** をクリックします。  
+  このヘルプ トピックでは、 **[概要]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]です。 このページのグリッドを使用して、新しい可用性グループに対して選択した内容を確認します。 変更が必要な場合は、 **[戻る]** をクリックして、該当するページに戻ります。 準備ができたら、 **[次へ]** をクリックして、 **[概要]** ページに戻ります。 選択内容に問題がなければ、 **[完了]** をクリックします。  
   
 ##  <a name="summary-page-options"></a><a name="PageOptions"></a> [概要] ページのオプション  
  **[スクリプト]**  

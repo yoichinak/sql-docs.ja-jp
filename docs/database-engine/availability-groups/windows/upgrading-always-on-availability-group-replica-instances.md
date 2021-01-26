@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 785c8421a1ca689e39852401165c4b0249128e8c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1c2a6ec0dcaf1e1d9b75016fd44aa17f534854fe
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641835"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783600"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを新しい [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービス パックまたは累積更新プログラムにアップグレードしている場合、または新しい Windows サービス パックまたは累積更新プログラムにインストールしている場合、ローリング アップグレードを実行して、単一の手動フェールオーバー (または、元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) におけるプライマリ レプリカのダウンタイムを減らすことができます。 アップグレード プロセス中に、セカンダリ レプリカはフェールオーバーや読み取り専用操作を行うことができなくなります。また、アップグレード後は、プライマリ レプリカ ノード上のアクティビティ量に応じて、プライマリ レプリカ ノードを検出するセカンダリ レプリカの時間がかかる場合があります (そのため、高いネットワーク トラフィック量が予想されます)。 また、新しいバージョンの SQL Server を実行しているセカンダリ レプリカに最初にフェールオーバーした後は、その可用性グループのデータベースは、最新バージョンに移動するためにアップグレード プロセス経由で実行されることに注意してください。 この間、これらのいずれのデータベースにも読み取り可能なレプリカはありません。 最初のフェールオーバー後のダウンタイムは、可用性グループに含まれるデータベースの数によって異なります。 元のプライマリへのフェールバックを計画する場合、フェールバックするときに、この手順が繰り返されることはありません。
+Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを新しい [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] バージョン、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービス パックまたは累積更新プログラムにアップグレードしている場合、または新しい Windows サービス パックまたは累積更新プログラムにインストールしている場合、ローリング アップグレードを実行して、単一の手動フェールオーバー (または、元のプライマリにフェールバックする場合は、2 回の手動フェールオーバー) におけるプライマリ レプリカのダウンタイムを減らすことができます。 アップグレード プロセス中に、セカンダリ レプリカはフェールオーバーや読み取り専用操作を行うことができなくなります。また、アップグレード後は、プライマリ レプリカ ノード上のアクティビティ量に応じて、プライマリ レプリカ ノードを検出するセカンダリ レプリカの時間がかかる場合があります (そのため、高いネットワーク トラフィック量が予想されます)。 また、新しいバージョンの SQL Server を実行しているセカンダリ レプリカに最初にフェールオーバーした後は、その可用性グループのデータベースは、最新バージョンに移動するためにアップグレード プロセス経由で実行されることに注意してください。 この間、これらのいずれのデータベースにも読み取り可能なレプリカはありません。 最初のフェールオーバー後のダウンタイムは、可用性グループに含まれるデータベースの数によって異なります。 元のプライマリへのフェールバックを計画する場合、フェールバックするときに、この手順が繰り返されることはありません。
   
 >[!NOTE]  
 >この記事では、SQL Server 自体のアップグレードについてのみ説明します。 これには、Windows Server フェールオーバー クラスター (WSFC) を含む、オペレーティング システムのアップグレードは含まれません。 フェールオーバー クラスターをホストしている Windows オペレーティング システムのアップグレードは、Windows Server 2012 R2 より前のオペレーティング システムではサポートされません。 Windows Server 2012 R2 で実行されているクラスター ノードのアップグレードについては、「[Cluster Operating System Rolling Upgrade](/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)」(クラスター オペレーティング システムのローリング アップグレード) を参照してください。  
@@ -28,13 +28,13 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 ## <a name="prerequisites"></a>前提条件  
 作業を開始する前に、次の重要な情報を確認してください。  
   
-- [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
+- [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]に直接アップグレードすることはできません。  
   
 - [データベース エンジンのアップグレード方法の選択](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md):正しい順序でアップグレードするには、サポートされるバージョンとエディションのアップグレードの確認と、環境にインストールされているその他のコンポーネントに基づいて、適切なアップグレードの方法と手順を選択します。  
   
 - [データベース エンジンのアップグレード計画の策定およびテスト](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md):リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
-- [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+- [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
 
 - [変更データ キャプチャまたはレプリケーションを AG データベースに使用するかどうかの確認](#special-steps-for-change-data-capture-or-replication):AG のデータベースを変更データ キャプチャ (CDC) に対して有効にする場合は、この[手順](#special-steps-for-change-data-capture-or-replication)を完了してください。
 
@@ -64,7 +64,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
   
 -   AG は常に同期コミット セカンダリ レプリカ インスタンスにフェールオーバーしてください。 非同期コミット セカンダリ レプリカ インスタンスにフェールオーバーした場合、データベースでデータ損失が発生しやすく、データ移動が自動的に中断されます。データ移動を再開するには、手動で操作する必要があります。  
   
--   他のセカンダリ レプリカ インスタンスをアップグレードまたは更新する前に、プライマリ レプリカ インスタンスをアップグレードしないでください。 アップグレードされたプライマリ レプリカから、同じバージョンにまだアップグレードされていない [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インスタンスのあるセカンダリ レプリカにログを送信できなくなります。 セカンダリ レプリカへのデータ移動が中断されているときには、そのレプリカに対する自動フェールオーバーは実行されず、可用性データベースでデータ損失が発生する危険性が高まります。 これは、古いプライマリから新しいプライマリに手動でフェールオーバーするローリング アップグレード中にも適用されます。 そのため、古いプライマリをアップグレードした後、同期の再開が必要になる場合があります。
+-   他のセカンダリ レプリカ インスタンスをアップグレードまたは更新する前に、プライマリ レプリカ インスタンスをアップグレードしないでください。 アップグレードされたプライマリ レプリカから、同じバージョンにまだアップグレードされていない [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] インスタンスのあるセカンダリ レプリカにログを送信できなくなります。 セカンダリ レプリカへのデータ移動が中断されているときには、そのレプリカに対する自動フェールオーバーは実行されず、可用性データベースでデータ損失が発生する危険性が高まります。 これは、古いプライマリから新しいプライマリに手動でフェールオーバーするローリング アップグレード中にも適用されます。 そのため、古いプライマリをアップグレードした後、同期の再開が必要になる場合があります。
   
 -   AG をフェールオーバーする前に、フェールオーバー ターゲットの同期状態が SYNCHRONIZED であることを確認してください。  
 
@@ -123,7 +123,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
   
 -   クライアント トラフィックが少ない時間帯にメンテナンス予定を設定する。  
   
--   プライマリ サイトの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] をアップグレードまたは更新するときに、可用性モードを非同期コミットに戻し、もう一度プライマリ サイトへのフェールオーバーの準備が完了したときに、同期コミットに戻す。  
+-   プライマリ サイトの [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] をアップグレードまたは更新するときに、可用性モードを非同期コミットに戻し、もう一度プライマリ サイトへのフェールオーバーの準備が完了したときに、同期コミットに戻す。  
   
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>フェールオーバー クラスター インスタンス ノードを含む AG  
  AG にフェールオーバー クラスター インスタンス (FCI) ノードが含まれている場合、非アクティブなノードをアップグレードした後で、アクティブなノードをアップグレードする必要があります。 次の図では、ローカルでの可用性を高めるために FCI を使用し、リモートのディザスター リカバリーのために FCI 間の非同期コミットを使用する、一般的な AG のシナリオを示します。さらに、アップグレード手順も示しています。  

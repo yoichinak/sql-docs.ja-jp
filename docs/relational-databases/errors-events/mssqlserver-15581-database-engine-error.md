@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f1221474d86d95400ca955d64b4a0812cffe1c0d
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 018252ff40ebf2ea7bd52b34f03ed25ef124a8d7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96868904"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596308"
 ---
 # <a name="mssqlserver_15581"></a>MSSQLSERVER_15581
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-サービス マスター キーは、データベース マスター キーで使われる証明書を暗号化するために使用されます。 TDE が有効なデータベースを使用してみる場合は、master データベース内のデータベース マスター キーへのアクセスが必要になります。 [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) ステートメントを、マスター キーへのアクセスを必要とする各セッションのパスワードと共に使用して、サービス マスター キーによって暗号化されていないマスター キーを開く必要があります。 このコマンドはシステム セッションでは実行できないため、TDE が有効なデータベースでは復旧を完了できません。
+サービス マスター キーは、データベース マスター キーで使われる証明書を暗号化するために使用されます。 TDE が有効なデータベースを使用してみる場合は、master データベース内のデータベース マスター キーへのアクセスが必要になります。 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) ステートメントを、マスター キーへのアクセスを必要とする各セッションのパスワードと共に使用して、サービス マスター キーによって暗号化されていないマスター キーを開く必要があります。 このコマンドはシステム セッションでは実行できないため、TDE が有効なデータベースでは復旧を完了できません。
 
 ## <a name="user-action"></a>ユーザー アクション
 

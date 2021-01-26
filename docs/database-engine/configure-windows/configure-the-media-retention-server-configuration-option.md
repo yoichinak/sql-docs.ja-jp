@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7e699d9af02a8d24e01d1e7461aa9ee22c956bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f2d67ee55cf43b607aeb91d23fd42980b3438a1
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85696967"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783665"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **media retention** オプションは、各バックアップ セットを保持する期間を指定します。 このオプションを利用して、指定した日数が経過するまでバックアップが上書きされないように保護できます。 **media retention** オプションを構成すると、バックアップするたびにシステム バックアップを保持する期間を指定する必要はありません。 既定値は 0 日であり、最大値は 365 日です。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **media retention** オプションは、各バックアップ セットを保持する期間を指定します。 このオプションを利用して、指定した日数が経過するまでバックアップが上書きされないように保護できます。 **media retention** オプションを構成すると、バックアップするたびにシステム バックアップを保持する期間を指定する必要はありません。 既定値は 0 日であり、最大値は 365 日です。  
   
  **このトピックの内容**  
   

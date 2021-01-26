@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51e7b8c99fbf6c6cf7bf70a52b220ae4cd0ea3bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45e05505444d00607cae875b8dfd8bd07bf9190e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697724"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783245"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default full-text language [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **default full-text language** オプションでは、フルテキスト インデックスの既定の言語を指定します。 言語分析は、フルテキスト インデックスが作成されるすべてのデータに対して実行され、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされたバージョンでは、適切な言語が存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって **default full-text language** オプションはサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされていないバージョンでは、 **[既定のフルテキスト言語]** オプションは英語になります。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default full-text language [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **default full-text language** オプションでは、フルテキスト インデックスの既定の言語を指定します。 言語分析は、フルテキスト インデックスが作成されるすべてのデータに対して実行され、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされたバージョンでは、適切な言語が存在する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって **default full-text language** オプションはサーバーの言語に設定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のローカライズされていないバージョンでは、 **[既定のフルテキスト言語]** オプションは英語になります。  
   
  **このトピックの内容**  
   

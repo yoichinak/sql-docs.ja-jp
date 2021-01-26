@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f918daa031b25ba8f1110dc9f2aaeaebef0a9361
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4b8b491d5f5caf743ab94367eaaacfe3de4864ad
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642993"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783717"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
   
  中断コマンドの効果は、次のように、中断するのがセカンダリ データベースかプライマリ データベースかによって異なります。  
   

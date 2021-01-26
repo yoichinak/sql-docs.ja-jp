@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
-ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
+ms.openlocfilehash: fea1ba3712f07548d259867f931188d9e5798802
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97736890"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596412"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
 [!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 Resource Governor を使用すると、着信アプリケーション要求で使用できる CPU、物理 I/O、およびメモリの量に対して制限を指定できます。  
   
 > [!NOTE]
-> (その他の手法のうち) [Azure SQL Database では Resource Governor を利用して](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/)リソースを管理しますが、Azure SQL Database 内のカスタム リソース プールとワークロード グループのユーザー構成はサポートされていません。 Azure Synapse Analytics には、[ワークロード分類機能](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification)を介した、Resource Governor の動作に似た別の実装があります。
+> (その他の手法のうち) [Azure SQL Database では Resource Governor を利用して](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/)リソースを管理しますが、Azure SQL Database 内のカスタム リソース プールとワークロード グループのユーザー構成はサポートされていません。 Azure Synapse Analytics には、[ワークロード分類機能](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification)を介した、Resource Governor の動作に似た別の実装があります。
 
 ## <a name="benefits-of-resource-governor"></a>リソース ガバナーの利点  
  リソース ガバナーでは、受け取った要求に応じてリソース消費を制限することにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のワークロードとリソースを管理することができます。 リソース ガバナーでは、同程度のサイズの複数のクエリや要求を 1 つのエンティティとして扱う場合、それらをワークロードと呼んでいます。 これは必須ではありませんが、ワークロードのリソースの使用パターンが統一化されていると、リソース ガバナーから得られる利点も増えます。 リソース制限は、実行中のワークロードへの影響を最小限に抑えながらリアルタイムで再構成できます。  
@@ -95,5 +95,4 @@ ms.locfileid: "97736890"
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのインスタンス &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cf135ca98a61382e12973b93eb30ab06ad6f4dd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 663861d552b619b199e6279353f5bbdcf6658f24
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642569"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783382"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
+このトピックでは、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 AlwaysOn 可用性グループのフェールオーバーのように、計画的な手動フェールオーバーではセカンダリ レプリカがプライマリ ロールに移行します。 同時に、フェールオーバーによって元のプライマリ レプリカがセカンダリ ロールに移行します。  
   
 計画的な手動フェールオーバーは、プライマリ レプリカおよびターゲット セカンダリ レプリカが同期コミット モードで動作していて、現在同期されている場合にのみサポートされます。 計画的な手動フェールオーバーでは、ターゲット セカンダリ レプリカの可用性グループに参加しているセカンダリ データベース内のすべてのデータが維持されます。 プライマリ レプリカがセカンダリ ロールに移行すると、そのデータベースがセカンダリ データベースになります。 次に、新しいプライマリ データベースとの同期が開始されます。 すべてが SYNCHRONIZED 状態に移行した後は、新しいセカンダリ レプリカが、将来の計画的な手動フェールオーバーのターゲットとして機能できるようになります。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "97642569"
 2. **Switch-SqlAvailabilityGroup** コマンドレットを使用します。 
   
     > [!NOTE] 
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] コマンドレットを使用します。 詳細については、「[SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)」を参照してください。 
+    >  コマンドレットの構文を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「[SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)」を参照してください。 
   
      次の例では、指定したパスのセカンダリ レプリカに *MyAg* 可用性グループを手動でフェールオーバーします。 
   

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02b34ab8d3c0a3efd79d7d136bf26401ba92fdf4
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 7004a0a7b7322fc939b5df21d40c389dc4a3dc6a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216731"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783667"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 コスト制限オプションでは、実行する特定のクエリに許容される推定コストの上限を指定します。 クエリ コストは、CPU 時間、メモリ、ディスク IO などの推定実行要件に基づいて、クエリ オプティマイザーによって決定される抽象的な値です。 それは、特定のハードウェア構成でクエリを完了するために必要とされる予測所要時間を秒単位で表しています。 この抽象的な値は、実行中のインスタンスでクエリを完了するために必要な時間とは異なります。 相対的なメジャーとして扱う必要があります。 このオプションの既定値は 0 です。クエリ ガバナーはオフに設定されます。 値を 0 に設定すると、すべてのクエリは時間制限なしで実行することが許可されます。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。   
+このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] query governor cost limit [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 コスト制限オプションでは、実行する特定のクエリに許容される推定コストの上限を指定します。 クエリ コストは、CPU 時間、メモリ、ディスク IO などの推定実行要件に基づいて、クエリ オプティマイザーによって決定される抽象的な値です。 それは、特定のハードウェア構成でクエリを完了するために必要とされる予測所要時間を秒単位で表しています。 この抽象的な値は、実行中のインスタンスでクエリを完了するために必要な時間とは異なります。 相対的なメジャーとして扱う必要があります。 このオプションの既定値は 0 です。クエリ ガバナーはオフに設定されます。 値を 0 に設定すると、すべてのクエリは時間制限なしで実行することが許可されます。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。   
   
  **このトピックの内容**  
   

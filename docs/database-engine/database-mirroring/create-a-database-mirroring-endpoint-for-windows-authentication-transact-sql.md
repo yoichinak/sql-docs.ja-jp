@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4a05341397185deefcc6de5d25ded34e910d7fac
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 86646e3af14403f6d48c8af009525c6c016ef9e3
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642154"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782987"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)]で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)]で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
   
 > [!IMPORTANT]  
 >  データベース ミラーリング エンドポイントが存在し、既に使用されている場合、そのエンドポイントを使用することをお勧めします。 使用中のエンドポイントを削除すると、既存のセッションが切断されます。  

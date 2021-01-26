@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a30c2cb2955ef82380bde00714098afec153ed95
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697131"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783695"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **locks** オプションは、使用できるロックの最大数を設定することによって、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がそのために使用するメモリの量を制限します。 既定値は 0 です。0 の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はシステム要件の変更に基づいてロック構造を動的に割り当てたり、割り当てを解除したりできます。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **locks** オプションは、使用できるロックの最大数を設定することによって、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] がそのために使用するメモリの量を制限します。 既定値は 0 です。0 の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はシステム要件の変更に基づいてロック構造を動的に割り当てたり、割り当てを解除したりできます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
@@ -54,9 +54,9 @@ ms.locfileid: "85697131"
   
      通常、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールから取得できるメモリよりも多くのメモリがロック プールに必要であり、より多くのコンピューター メモリが使用できる ( **max server memory** のしきい値に達していない) 場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はメモリを動的に割り当ててロック要求に応じます。 ただし、そのメモリを割り当てることによって、オペレーティング システム レベルでページングが発生する場合、たとえば、別のアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと同じコンピューター上で実行されていて、そのメモリを使用している場合は、ロック用に割り当てを増やすことはできません。 動的なロック プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]に割り当てられたメモリのうち最大 60% まで取得できます。 ロック プールが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスによって取得されたメモリの 60% に達した場合、またはコンピューターで使用できるメモリがなくなった場合、さらにロック要求があるとエラーが発生します。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動的にロックを割り当てるように構成することをお勧めします。 ただし、**locks** を設定し、ロック リソースを動的に割り当てる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能をオーバーライドすることができます。 **locks** が 0 以外の値に設定されている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **locks**に指定された値よりも多くのロックを割り当てることができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に使用可能なロック数を超えたことを示すメッセージが表示された場合は、この値を大きくします。 各ロックはそれぞれ 96 バイトのメモリを消費するため、この値を大きくした場合、状況によってはサーバー専用のメモリも増やす必要があります。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が動的にロックを割り当てるように構成することをお勧めします。 ただし、**locks** を設定し、ロック リソースを動的に割り当てる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能をオーバーライドすることができます。 **locks** が 0 以外の値に設定されている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は **locks** に指定された値よりも多くのロックを割り当てることができません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に使用可能なロック数を超えたことを示すメッセージが表示された場合は、この値を大きくします。 各ロックはそれぞれ 96 バイトのメモリを消費するため、この値を大きくした場合、状況によってはサーバー専用のメモリも増やす必要があります。  
   
--   **locks** オプションも、ロックのエスカレートがいつ行われるかに影響を与えます。 **locks** を 0 に設定すると、現在のロック構造で使用されるメモリが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールの 40% に達したときに、ロックのエスカレートが行われます。 **locks** が 0 に設定されていない場合は、ロック数が **locks**に指定された値の 40% に達したときに、ロックのエスカレートが行われます。  
+-   **locks** オプションも、ロックのエスカレートがいつ行われるかに影響を与えます。 **locks** を 0 に設定すると、現在のロック構造で使用されるメモリが [!INCLUDE[ssDE](../../includes/ssde-md.md)] のメモリ プールの 40% に達したときに、ロックのエスカレートが行われます。 **locks** が 0 に設定されていない場合は、ロック数が **locks** に指定された値の 40% に達したときに、ロックのエスカレートが行われます。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   

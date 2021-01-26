@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e7747920eb3f23a011fbfb3609daa227810131
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ca1398eca69c0103d909cc6aeb35ac55848d5584
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170944"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783543"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM サービス - インスタンスを自動的に起動するように設定する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスを自動的に開始するように設定する方法について説明します。 セットアップのとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は通常、自動的に開始するように構成されます。 手動で開始するように構成した場合、この設定をいつでも変更できます。  
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL Server 構成マネージャーを使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のインスタンスを自動的に開始するように設定する方法について説明します。 セットアップのとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は通常、自動的に開始するように構成されます。 手動で開始するように構成した場合、この設定をいつでも変更できます。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66fa81d56ed0b3ebebd7a95ddea0b12356da5c1d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697201"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783684"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **index create memory** オプションは、インデックス作成時の並べ替え操作用として最初に割り当てられる最大メモリ容量を制御します。 このオプションの既定値は 0 (自己構成) です。 その後、インデックスを作成するためにより多くのメモリが必要になった場合、メモリ容量を確保できるのであれば、サーバーはそのメモリを使用します。したがって、使用メモリ容量がこのオプションの設定値を超えることになります。 追加メモリを確保できない場合は、既に割り当てられているメモリを使用してインデックス作成が続行されます。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **index create memory** オプションは、インデックス作成時の並べ替え操作用として最初に割り当てられる最大メモリ容量を制御します。 このオプションの既定値は 0 (自己構成) です。 その後、インデックスを作成するためにより多くのメモリが必要になった場合、メモリ容量を確保できるのであれば、サーバーはそのメモリを使用します。したがって、使用メモリ容量がこのオプションの設定値を超えることになります。 追加メモリを確保できない場合は、既に割り当てられているメモリを使用してインデックス作成が続行されます。  
   
  **このトピックの内容**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85697201"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
--   **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** オプションの設定は、**index create memory** オプションよりも優先順位が高くなります。 両方のオプションを変更し、 **index create memory** の設定値を **min memory per query**より小さくした場合は、警告メッセージが表示されます。ただし、値はそのまま設定されます。 クエリ実行中にも同様の警告が表示されます。  
+-   **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** オプションの設定は、**index create memory** オプションよりも優先順位が高くなります。 両方のオプションを変更し、 **index create memory** の設定値を **min memory per query** より小さくした場合は、警告メッセージが表示されます。ただし、値はそのまま設定されます。 クエリ実行中にも同様の警告が表示されます。  
   
 -   パーティション テーブルとパーティション インデックスを使用する場合、パーティション インデックスが未整理であったり、並列処理の頻度が高かったりすると、インデックスの作成に必要な最小メモリ容量が大幅に増加します。 このオプションを使用して、1 回のインデックス作成操作ですべてのインデックス パーティションに最初に割り当てられる合計メモリ容量を指定できるようになっています。 このオプションで指定したメモリ容量が、クエリの実行に必要となる最小メモリ容量より小さい場合は、クエリの実行が中止され、エラー メッセージが表示されます。  
   

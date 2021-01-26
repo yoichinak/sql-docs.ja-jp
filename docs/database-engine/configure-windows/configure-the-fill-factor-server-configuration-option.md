@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc99d890e179bd19a9797471f5b940d6ffb7a44f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f65bfbfb0a68a76c9b0471bba42e4182ccff888
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697234"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783697"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>fill factor サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fill factor [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 FILL FACTOR は、インデックス データ ストレージとパフォーマンスの微調整を行うために用意されています。 インデックスの作成または再構築を行うとき、各リーフ レベルのページのデータを格納する領域の割合が FILL FACTOR 値によって決まり、今後インデックスのサイズが大きくなる場合に備えて指定した残りの空き領域が予約されます。 詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fill factor [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 FILL FACTOR は、インデックス データ ストレージとパフォーマンスの微調整を行うために用意されています。 インデックスの作成または再構築を行うとき、各リーフ レベルのページのデータを格納する領域の割合が FILL FACTOR 値によって決まり、今後インデックスのサイズが大きくなる場合に備えて指定した残りの空き領域が予約されます。 詳細については、「 [インデックスの FILL FACTOR の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
  **このトピックの内容**  
   

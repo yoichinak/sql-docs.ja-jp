@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: de6d20cbd6e1b185b9e06e057c0cbe91c590fb48
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ea85d4be41b5f7dd5c4619cd4e2f6dd315cc3a99
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641793"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783069"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 可用性グループ ダッシュボードの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  データベース管理者は Always On 可用性グループ ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の可用性グループとその可用性レプリカおよび可用性データベースの正常性をひとめで確認できるビューを取得します。 可用性グループ ダッシュボードの一般的な用途をいくつか以下に示します。  
+  データベース管理者は Always On 可用性グループ ダッシュボードを使用して、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] の可用性グループとその可用性レプリカおよび可用性データベースの正常性をひとめで確認できるビューを取得します。 可用性グループ ダッシュボードの一般的な用途をいくつか以下に示します。  
   
 -   手動フェールオーバー用のレプリカの選択。    
 -   フェールオーバーを強制した場合のデータ損失の推定。  

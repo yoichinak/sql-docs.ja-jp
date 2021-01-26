@@ -16,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 02/18/2020
-ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
-ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
+ms.openlocfilehash: a4cdc32bd0514be768ac8ed1723fc88840a7e930
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88200953"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783419"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サーバーの認証モードを変更する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はインストール中に、 **[Windows 認証モード]** または **[SQL Server 認証モードと Windows 認証モード]** のいずれかに設定されます。 インストール後は、認証モードをいつでも変更できます。
+このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サーバーの認証モードを変更する方法について説明します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はインストール中に、 **[Windows 認証モード]** または **[SQL Server 認証モードと Windows 認証モード]** のいずれかに設定されます。 インストール後は、認証モードをいつでも変更できます。
 
 インストール中に **[Windows 認証モード]** を選択した場合、sa ログインは無効となり、パスワードはセットアップによって割り当てられます。 後で認証モードを **[SQL Server 認証モードと Windows 認証モード]** に変更しても、sa ログインは無効のままです。 sa ログインを使用するには、ALTER LOGIN ステートメントを使用して、sa ログインを有効にし、新しいパスワードを割り当ててください。 sa ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しないとサーバーに接続できません。
 

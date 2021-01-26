@@ -15,17 +15,17 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 96c2ccde671737e55e4c301ab1f755a8192ed10f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 74e0a717873e4097734b842b7d3c371a167c0088
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641463"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783223"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  このヘルプ トピックでは、 **[結果]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページを使用すると、ウィザードの結果を表示できます。  
+  このヘルプ トピックでは、 **[結果]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 、および [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]です。 このページを使用すると、ウィザードの結果を表示できます。  
   
 ##  <a name="results-page-options"></a><a name="PageOptions"></a> [結果] ページのオプション  
  **[概要]** グリッドに含まれる列は、次のとおりです。  

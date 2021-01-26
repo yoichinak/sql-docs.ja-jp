@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c87703d399f9f8906c4a3c4a7ea0703d092c333
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cb8e2b3377c4b90e61e9b65225d3d350bfa9897
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785896"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783633"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **network packet size** オプションは、ネットワーク全体で使用するパケット サイズ (バイト単位) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] network packet size [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **network packet size** オプションは、ネットワーク全体で使用するパケット サイズ (バイト単位) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
   
 > [!NOTE]  
 >  パフォーマンスの向上が明確でない限り、パケット サイズは変更しないでください。 多くのアプリケーションでは、既定のパケット サイズが最適です。  

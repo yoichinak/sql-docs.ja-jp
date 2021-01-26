@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 680273a6bab1283be56d130c84b4c156d8fcd280
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c34c9359534b3ec59aba824dccb649a9168fe725
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644337"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783609"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
+  データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
   
   
 ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> データベース ミラーリング セッションへの最初の接続  

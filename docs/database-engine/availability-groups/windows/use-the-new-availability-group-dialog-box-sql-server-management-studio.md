@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: abab816f9248d1981d62bfeb313130a8b71c4256
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6f29575ba7d133ddbfb30ef470238b5991162a7d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641758"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783366"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 **の** [新しい可用性グループ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] が有効な [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、 **の** [新しい可用性グループ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用して、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] が有効な [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  

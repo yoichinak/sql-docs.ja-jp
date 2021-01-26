@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2fe841ef1b914f275878fa61ad40fe2a016a4a5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: d3585a187d11ee97e409d196c81ddb00643bb3ac
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644080"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782970"
 ---
 # <a name="database-mirroring-witness"></a>データベース ミラーリング監視サーバー
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97644080"
   
  ![2 つのデータベース ミラーリングを監視するサーバー インスタンス](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "2 つのデータベース ミラーリングを監視するサーバー インスタンス")  
   
- 同じサーバー インスタンスを一部のセッションではミラーリング監視サーバーとして、他のセッションではパートナーとして、同時に使用することも可能です。 ただし実際には、ミラーリング監視サーバーまたはパートナーのどちらかとしてサーバー インスタンスを使用するのが普通です。 これは、パートナーには実稼働データベースを十分にサポートできるハードウェアを搭載した高度なコンピューターが必要であるのに対し、ミラーリング監視サーバーには [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をサポートするものであればどのような Windows システムでも使用できるためです。  
+ 同じサーバー インスタンスを一部のセッションではミラーリング監視サーバーとして、他のセッションではパートナーとして、同時に使用することも可能です。 ただし実際には、ミラーリング監視サーバーまたはパートナーのどちらかとしてサーバー インスタンスを使用するのが普通です。 これは、パートナーには実稼働データベースを十分にサポートできるハードウェアを搭載した高度なコンピューターが必要であるのに対し、ミラーリング監視サーバーには [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]をサポートするものであればどのような Windows システムでも使用できるためです。  
   
 ##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> ソフトウェアとハードウェアの推奨事項  
  ミラーリング監視サーバーは、パートナーとは別のコンピューターに常駐させることを強くお勧めします。 データベース ミラーリング パートナーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされます。 一方、ミラーリング監視サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express でもサポートされます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードしている間を除き、ミラーリング セッション内のすべてのサーバー インスタンスでは、同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行している必要があります。 たとえば、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ミラーリング監視サーバーは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ミラーリング構成からアップグレードする場合にサポートされますが、既存または新規の [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降のミラーリング構成には追加できません。  

@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9e1311433aab88efd6e1efbbe4a260c62075a99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac6d7f368a42e8a6c81fadbf151760b5bdfc8b53
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785823"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783163"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、このオプションに指定された値を使って、[自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)が特定のデータベースに対して発行されるおおよその頻度を決定します。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、このオプションに指定された値を使って、[自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)が特定のデータベースに対して発行されるおおよその頻度を決定します。  
   
  recovery-interval の既定値は 0 で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に復旧間隔が構成されます。 既定の recovery interval では、通常、アクティブなデータベースの自動チェックポイントの発生間隔は約 1 分、復旧時間は 1 分未満になります。 既定値より大きな値は、おおよその最大リカバリ時間 (分単位) を示します。 たとえば、recovery interval を '3' に設定した場合は、最大リカバリ時間は約 3 分になります。  
   

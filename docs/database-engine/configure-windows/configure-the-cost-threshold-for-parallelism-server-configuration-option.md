@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c71e7d74d7ba2844d1891b7cf926c9bbded8e115
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea4681fd02065129c4b565d0e9dbb744a321f9ae
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728662"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783305"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cost threshold for parallelism** オプションによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成および実行するしきい値が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、クエリの並列プランが作成および実行されるのは、同じクエリの直列プランを実行するための推定コストが **cost threshold for parallelism**に設定されている値を超える場合のみです。 コストとは、時間の単位ではなく、特定のハードウェア構成で直列プランを実行するための予想コストを表します。 **cost threshold for parallelism** オプションには、0 ～ 32,767 の範囲の値を設定できます。 既定値は 5 です。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cost threshold for parallelism [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cost threshold for parallelism** オプションによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成および実行するしきい値が指定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、クエリの並列プランが作成および実行されるのは、同じクエリの直列プランを実行するための推定コストが **cost threshold for parallelism** に設定されている値を超える場合のみです。 コストとは、時間の単位ではなく、特定のハードウェア構成で直列プランを実行するための予想コストを表します。 **cost threshold for parallelism** オプションには、0 ～ 32,767 の範囲の値を設定できます。 既定値は 5 です。  
   
  **このトピックの内容**  
   

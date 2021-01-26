@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b178e38f6e59499ddf74e9a8aaec037bbaa4d442
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651348"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783443"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM サービス - 別のコンピューターに接続する
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-この記事では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で別のコンピューターに接続する方法について説明します。 Windows の [コンピューターの管理] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) を開くための最初の手順に従って、コンピューターに接続し、[サービスとアプリケーション] ツリーを展開します。 2 番目の手順に従って、リモート コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーへのリンクを含むファイルを作成します。
+この記事では、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で別のコンピューターに接続する方法について説明します。 Windows の [コンピューターの管理] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) を開くための最初の手順に従って、コンピューターに接続し、[サービスとアプリケーション] ツリーを展開します。 2 番目の手順に従って、リモート コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーへのリンクを含むファイルを作成します。
 
 > [!NOTE]
 > リモートで接続している場合、一部の操作は構成マネージャーで実行することができません。

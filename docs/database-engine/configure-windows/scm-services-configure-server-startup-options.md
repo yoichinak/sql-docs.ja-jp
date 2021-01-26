@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 270083370770cf81e8c714c1230ec2d2e5f561ef
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 96e19ff23dc15901cc3bb0b5f19101d0bc61164a
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170964"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783368"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM サービス - サーバー起動オプションを構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が起動するたびに使用するスタートアップ オプションを構成する方法について説明します。 スタートアップ オプションの一覧は、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+  このトピックでは、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が起動するたびに使用するスタートアップ オプションを構成する方法について説明します。 スタートアップ オプションの一覧は、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf58edccfbf4c0b663caadf29ffc364d9fd8bcb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae3f7070ade723af31ed191d76dd274c4137a115
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680646"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783569"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default サーバー構成オプションの表示または構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] backup compression default [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを確認または構成する方法について説明します。 **backup compression default** オプションは、圧縮されたバックアップを既定で作成するかどうかを決定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした場合、 **backup compression default** オプションはオフになっています。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] backup compression default [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを確認または構成する方法について説明します。 **backup compression default** オプションは、圧縮されたバックアップを既定で作成するかどうかを決定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした場合、 **backup compression default** オプションはオフになっています。  
   
  **このトピックの内容**  
   

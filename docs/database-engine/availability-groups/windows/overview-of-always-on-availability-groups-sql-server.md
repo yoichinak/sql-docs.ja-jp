@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8fdc782ce65464c490305291b426fe82a972cd5c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b30a3004ccf0d5bafa94ae9c601db287a5eef288
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643515"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783319"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Always On 可用性グループとは
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
- このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の概念について説明します。これは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]での 1 つ以上の可用性グループの構成と管理において重要です。 可用性グループの利点の要約および [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]用語の概要については、「[AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」をご覧ください。  
+ このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の概念について説明します。これは、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]での 1 つ以上の可用性グループの構成と管理において重要です。 可用性グループの利点の要約および [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]用語の概要については、「[AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)」をご覧ください。  
   
  *可用性グループ* は、*可用性データベース* として知られる、個別のユーザー データベース セットのための複製環境をサポートします。 高可用性 (HA) または読み取りスケールの可用性グループを作成できます。 HA グループは、共にフェールオーバーするデータベースのグループです。 読み取りスケール可用性グループは、読み取り専用ワークロードのために、SQL Server の他のインスタンスにコピーされるデータベースのグループです。 可用性グループは、プライマリ データベースの 1 セットをサポートし、1 ～ 8 セットの対応するセカンダリ データベースをサポートします。 セカンダリ データベースは、バックアップではあ *りません*。 継続してデータベースおよびそのトランザクション ログを定期的にバックアップします。  
   

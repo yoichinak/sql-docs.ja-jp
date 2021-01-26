@@ -18,12 +18,12 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7007db1b4be0abc75e8a20cf5874b6157b63b399
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 247b3deec1e5f5d14fafc1d29475a5087c57e40b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426416"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596821"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル : データベース エンジンの概要
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97426416"
 [レッスン 2:別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 このレッスンでは、別のコンピューターから [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続する方法を学習します。これには、プロトコルを有効化する方法や、ポートやファイアウォール設定を構成する方法も含まれます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
 このチュートリアルに予備知識は必要ありません。  
   
 このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
@@ -49,6 +49,5 @@ ms.locfileid: "97426416"
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のインストールについては、「[SQL Server Management Studio のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
-[チュートリアル:SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
-  
+[チュートリアル:SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
   

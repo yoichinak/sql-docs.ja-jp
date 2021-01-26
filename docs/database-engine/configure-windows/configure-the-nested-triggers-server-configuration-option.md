@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b236dc0cb810a6ba8d63ef7c68367eab2252b8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c5330bad05b0949c4df32f5593aa3fe39e2ad50
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758257"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783655"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>nested triggers サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **nested triggers** オプションは、AFTER トリガーを連鎖できるかどうかを制御します。 つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 **nested triggers** を 0 に設定すると、AFTER トリガーは連鎖できません。 **nested triggers** を 1 (既定値) に設定すると、AFTER トリガーは 32 レベルまで連鎖できます。 INSTEAD OF トリガーは、このオプションの設定に関係なく入れ子にできます。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nested triggers [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **nested triggers** オプションは、AFTER トリガーを連鎖できるかどうかを制御します。 つまり、1 つの操作が別のトリガーを開始し、開始されたトリガーからさらに別のトリガーを開始するなどの動作ができるかどうかを制御します。 **nested triggers** を 0 に設定すると、AFTER トリガーは連鎖できません。 **nested triggers** を 1 (既定値) に設定すると、AFTER トリガーは 32 レベルまで連鎖できます。 INSTEAD OF トリガーは、このオプションの設定に関係なく入れ子にできます。  
   
  **このトピックの内容**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85758257"
   
 #### <a name="to-configure-the-nested-triggers-option"></a>nested triggers オプションを構成するには  
   
-1.  **オブジェクト エクスプローラー**で、サーバーを右クリックし、 **[プロパティ]** を選択します。  
+1.  **オブジェクト エクスプローラー** で、サーバーを右クリックし、 **[プロパティ]** を選択します。  
   
 2.  **[詳細設定]** ページで、 **[トリガーから他のトリガーの起動を許可する]** オプションを **[True]** (既定) または **[False]** に設定します。  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 83c2a77b294a70cbc6ace15c8b3a1d85a8b5bcc9
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bfd907b77633bdecc1af1371c83da4a4d4bff9a9
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637853"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783501"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>可用性グループの削除 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  この記事では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、Always On 可用性グループを削除する方法について説明します。 可用性グループを削除する際、可用性レプリカの 1 つをホストするサーバー インスタンスがオフラインだった場合は、再度オンラインになった時点でローカルの可用性レプリカが削除されます。 可用性グループを削除すると、関連付けられている可用性グループ リスナーもすべて削除されます。  
+  この記事では、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、Always On 可用性グループを削除する方法について説明します。 可用性グループを削除する際、可用性レプリカの 1 つをホストするサーバー インスタンスがオフラインだった場合は、再度オンラインになった時点でローカルの可用性レプリカが削除されます。 可用性グループを削除すると、関連付けられている可用性グループ リスナーもすべて削除されます。  
   
  必要であれば、可用性グループの削除は、その可用性グループに対する適切なセキュリティ資格情報が存在する任意の Windows Server フェールオーバー クラスタリング (WSFC) ノードから行うことができます。 そのため、可用性レプリカがまったく残っていなくても可用性グループを削除することができます。  
   

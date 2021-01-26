@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ec3a84dc54dcaf373f8fd817c259602c7901410d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642537"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783519"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97642537"
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を配置する前に、このトピックのすべてのセクションを読むことを強くお勧めします。  
     
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> 可用性グループをサポートする .NET 修正プログラム  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .NET 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で使用する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]コンポーネントと機能によっては、次の表で指定されている追加の .NET 修正プログラムのインストールが必要になる場合があります。 これらの修正プログラムは任意の順序でインストールできます。  
   
 |依存機能|修正プログラム|Link|  
 |-----------------------|------------|----------|  

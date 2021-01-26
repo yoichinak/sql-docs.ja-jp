@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 03d286ae75d9bfeeb1304633b4ddf1f790979fdf
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 8155043f442dc62c128c95e4aafad6bac928cb59
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642478"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783461"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ データベースの削除 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ データベースを削除する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ データベースを削除する方法について説明します。  
    
   
 ##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 前提条件と制限  

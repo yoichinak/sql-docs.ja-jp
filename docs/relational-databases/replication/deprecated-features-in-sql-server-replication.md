@@ -14,16 +14,16 @@ ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 347400c7cf0064015ad5a593edec478f2114906c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0ae8ef705174512111e30223a68c824daa42ffce
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170264"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766452"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server レプリケーションの非推奨の機能
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨のレプリケーション機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
+  このトピックでは、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でまだ使用できるものの、非推奨のレプリケーション機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 ## <a name="items-deprecated-in-sssql15"></a>Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   

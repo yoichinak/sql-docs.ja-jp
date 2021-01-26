@@ -14,24 +14,24 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 306a200cadc535ea9da3d5d21dcd74fb15cf278c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: cf6d3f8e77591e9791fe2e8dc57175f1393716ff
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641524"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783266"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services と Always On 可用性グループ (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) と [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を組み合わせて利用する方法について説明します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用するデータベースのシナリオとしては、レポート データ ソース、レポート サーバー データベース、レポート デザインの 3 つが考えられます。 3 つのシナリオでは、それぞれサポートされる機能と必要な構成が異なります。  
+  このトピックでは、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) と [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]を組み合わせて利用する方法について説明します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] と [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用するデータベースのシナリオとしては、レポート データ ソース、レポート サーバー データベース、レポート デザインの 3 つが考えられます。 3 つのシナリオでは、それぞれサポートされる機能と必要な構成が異なります。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] データ ソースで [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用する大きな利点は、プライマリ データベースのフェールオーバー機能としての読み取り可能なセカンダリ レプリカをレポート データ ソースとしても利用できることです。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の一般的な情報については、[SQL Server 2012 の Always On に関するよくあるご質問 (../../../sql-server/index.yml)](../../../sql-server/index.yml) に関するページを参照してください。  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Reporting Services と Always On 可用性グループを使用するための要件  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Reporting Services と Power BI Report Server では、.Net Framework 4.0 を使用して、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Always On availability groups 接続文字列プロパティの使用をサポートしています。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Reporting Services と Power BI Report Server では、.Net Framework 4.0 を使用して、データ ソースでの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Always On availability groups 接続文字列プロパティの使用をサポートしています。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 で  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を使用するためには、.Net 3.5 SP1 の修正プログラムをダウンロードしてインストールする必要があります。 この修正プログラムを適用すると、AG 機能を使う SQL クライアントが新たにサポートされ、さらに、接続文字列プロパティとして **ApplicationIntent** および **MultiSubnetFailover** がサポートされます。 レポート サーバーをホストする各コンピューターにこの修正プログラムがインストールされていない場合、ユーザーがレポートをプレビューしようとすると、以下のようなエラー メッセージが表示され、レポート サーバーのトレース ログに記録されます。  
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb0d7b15cf17ac1af60dbb55382dc1886fcca9a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70abda90ef4b7c047a4833baa792adeff60b8f12
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789782"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783227"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>代替パイプで受信待ちするようにサーバーを構成する
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server 構成マネージャーを使用して、代替パイプをリッスンするようにサーバーを構成する方法について説明します。 既定では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、名前付きパイプ \\\\.\pipe\sql\query をリッスンします。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、他のパイプをリッスンします。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で SQL Server 構成マネージャーを使用して、代替パイプをリッスンするようにサーバーを構成する方法について説明します。 既定では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の既定のインスタンスは、名前付きパイプ \\\\.\pipe\sql\query をリッスンします。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [!INCLUDE[ssEW](../../includes/ssew-md.md)] の名前付きインスタンスは、他のパイプをリッスンします。  
   
  クライアント アプリケーションを使用して特定の名前付きパイプに接続するには、次の 3 つの方法があります。  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f4d1e4ed2354b81847b6401fd013f5bb63c0ec7
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 05bf39e18f7efaf8c4f47ca857824189906977ca
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670612"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783250"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **default language** は、新しく作成したすべてのログインで使用される既定の言語を指定するオプションです。 既定の言語を設定するには、目的の言語の **langid** 値を指定します。 **langid** 値は、 **sys.syslanguages** 互換性ビューをクエリすることによって取得できます。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **default language** は、新しく作成したすべてのログインで使用される既定の言語を指定するオプションです。 既定の言語を設定するには、目的の言語の **langid** 値を指定します。 **langid** 値は、 **sys.syslanguages** 互換性ビューをクエリすることによって取得できます。  
   
  **このトピックの内容**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "91670612"
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
--   ログインの既定の言語は、CREATE LOGIN または ALTER LOGIN でオーバーライドできます。 セッションの既定の言語が、Open Database Connectivity (ODBC) API または OLE DB API でセッションごとにオーバーライドされない限り、そのセッションのログインの言語になります。 **default language** オプションには、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) で定義されている言語 ID (0 ～ 32) しか設定できないことに注意してください。 包含データベースを使用している場合、既定の言語をデータベースに対して設定するには CREATE DATABASE または ALTER DATABASE を使用し、包含データベース ユーザーに対して設定するには CREATE USER または ALTER USER を使用します。 包含データベースにおける既定の言語を設定する際は、 **sys.syslanguages** に格納されている **langid**値、言語の名前、または言語の別名を指定できます。  
+-   ログインの既定の言語は、CREATE LOGIN または ALTER LOGIN でオーバーライドできます。 セッションの既定の言語が、Open Database Connectivity (ODBC) API または OLE DB API でセッションごとにオーバーライドされない限り、そのセッションのログインの言語になります。 **default language** オプションには、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) で定義されている言語 ID (0 ～ 32) しか設定できないことに注意してください。 包含データベースを使用している場合、既定の言語をデータベースに対して設定するには CREATE DATABASE または ALTER DATABASE を使用し、包含データベース ユーザーに対して設定するには CREATE USER または ALTER USER を使用します。 包含データベースにおける既定の言語を設定する際は、 **sys.syslanguages** に格納されている **langid** 値、言語の名前、または言語の別名を指定できます。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   

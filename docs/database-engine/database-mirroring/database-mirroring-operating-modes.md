@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e69236003f1c0ee2b13620b481dfddbaf9acd5a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1efefbb0b0a99f03d4ffa46e7d02fec05e8a8e60
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644129"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783559"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97644129"
  ここでは、非同期データベース ミラーリングのしくみ、高パフォーマンス モードの使用に適した状況、およびプリンシパル サーバーで障害が発生した場合の対処法について説明します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」の「高可用性 (Always On)」を参照してください。
+>  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のほとんどのエディションでは、同期データベース ミラーリングのみ (安全性レベルが FULL の場合のみ) をサポートしています。 データベース ミラーリングを完全にサポートするエディションについては、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」の「高可用性 (Always On)」を参照してください。
   
  トランザクションの安全性が OFF に設定されていると、データベース ミラーリング セッションが非同期に動作します。 非同期動作は、高パフォーマンス モードという動作モードのみでサポートされています。 このモードでは高可用性という点を譲歩してパフォーマンスが強化されています。 高パフォーマンス モードでは、プリンシパル サーバーおよびミラー サーバーのみを使用します。 ミラー サーバーで発生した問題がプリンシパル サーバーに影響を及ぼすことはありません。 プリンシパル サーバーが停止した場合、ミラー データベースは DISCONNECTED になりますがウォーム スタンバイ状態で利用できます。  
   

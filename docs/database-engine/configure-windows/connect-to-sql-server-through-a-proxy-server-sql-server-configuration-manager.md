@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 39714de0-2a1f-4179-9091-5c3fa4612545
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74187c8e806e6dd1cadb9ea38860b11ec0bcaba0
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 325bdae16fdc8309d0f40134ba31041e5b47b547
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857679"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783265"
 ---
 # <a name="connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager"></a>プロキシ サーバーを介して SQL Server に接続する方法 (SQL Server 構成マネージャー)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、SQL Server 構成マネージャーを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でプロキシ サーバーを介して SQL Server に接続する方法について説明します。 リモート WinSock (RWS) 経由でリモートで受信待ちするには、受信待ちするノード アドレスがローカル アドレス テーブル (LAT) のエントリの範囲外になるように、プロキシ サーバーに対して LAT を定義します。  
+  このトピックでは、SQL Server 構成マネージャーを使用して、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] でプロキシ サーバーを介して SQL Server に接続する方法について説明します。 リモート WinSock (RWS) 経由でリモートで受信待ちするには、受信待ちするノード アドレスがローカル アドレス テーブル (LAT) のエントリの範囲外になるように、プロキシ サーバーに対して LAT を定義します。  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> SQL Server 構成マネージャーの使用  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b77b54ba48dc2c3820d055227411f61983b1a7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ece89606626172d50ba656a6545237af2ec761fe
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644292"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783413"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -250,7 +250,7 @@ ms.locfileid: "97644292"
     -   [自動フェールオーバーを伴う高い安全性 (同期)]  
   
 ##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> ミラー化データベースに関する追加情報  
- ミラー化されたデータベースの監視および監視対象のパフォーマンス変数に対する警告の設定を行う手段として、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、データベース ミラーリング モニターと dbmmonitor ストアド プロシージャ以外に、データベース ミラーリングに関するカタログ ビュー、パフォーマンス カウンター、およびイベント通知が用意されています。  
+ ミラー化されたデータベースの監視および監視対象のパフォーマンス変数に対する警告の設定を行う手段として、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] には、データベース ミラーリング モニターと dbmmonitor ストアド プロシージャ以外に、データベース ミラーリングに関するカタログ ビュー、パフォーマンス カウンター、およびイベント通知が用意されています。  
   
  **このセクションの内容**  
   

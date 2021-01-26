@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e80b1913f6ff7c40ff0c3b715e98c9df6b3e20ca
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 1d39d6fd92c8fc4eab080c8ca9556d399bf7f8b2
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125485"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766401"
 ---
 # <a name="specify-a-disk-or-tape-backup-destination-sql-server"></a>ディスクまたはテープのバックアップ先を指定する (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、バックアップ先としてディスクまたはテープを指定する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、バックアップ先としてディスクまたはテープを指定する方法について説明します。  
   
 > [!NOTE]  
 >  テープ バックアップ デバイスは、将来のバージョンの SQL Server でサポートされなくなる予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 59c65191c2d69d3ebb7b144a6b254f1695fd5b5b
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 38e0471b0f21d97700aa2e9c90d630bcadf9beb3
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641736"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783005"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>[検証] ページ (Always On 可用性グループ ウィザード)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
-  このヘルプ トピックでは、 **[検証]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページでは、ウィザードのこれまでのページで選択したすべての構成が、使用している環境でサポートされているかどうかを検証できます。  
+  このヘルプ トピックでは、 **[検証]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、および [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]です。 このページでは、ウィザードのこれまでのページで選択したすべての構成が、使用している環境でサポートされているかどうかを検証できます。  
   
 ##  <a name="validation-page-options"></a><a name="PageOptions"></a> [検証] ページのオプション  
  **[可用性グループの検証の結果。]**  

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a8d61714928482cf15f00a74175606ec43ca6e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de30cb4bcf672fdf47ab926a28680baa1d9b1067
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697904"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783287"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cursor threshold** オプションは、カーソル キーセットが非同期に生成されるカーソル セット内の行数を指定します。 カーソルが結果セットのキーセットを生成するとき、その結果セットに返される行数をクエリ オプティマイザーが予測します。 返される行数がこのしきい値を超えていると予測された場合、カーソルは非同期に生成されます。これにより、ユーザーはカーソルの作成が続行されている間に行を取り出すことができます。 返される行数がこのしきい値以下と予測された場合、カーソルは同期をとって生成され、すべての行が返されるまでクエリが待機します。  
+  このトピックでは、 **で** または [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cursor threshold [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **cursor threshold** オプションは、カーソル キーセットが非同期に生成されるカーソル セット内の行数を指定します。 カーソルが結果セットのキーセットを生成するとき、その結果セットに返される行数をクエリ オプティマイザーが予測します。 返される行数がこのしきい値を超えていると予測された場合、カーソルは非同期に生成されます。これにより、ユーザーはカーソルの作成が続行されている間に行を取り出すことができます。 返される行数がこのしきい値以下と予測された場合、カーソルは同期をとって生成され、すべての行が返されるまでクエリが待機します。  
   
  **このトピックの内容**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85697904"
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  
   
--   **cursor threshold** を -1 に設定すると、すべてのキーセットが同期して生成されます。これはカーソル セットが小さい場合に役立ちます。 **cursor threshold** を 0 に設定すると、すべてのカーソル キーセットが非同期に生成されます。 それ以外の値を設定した場合、クエリ オプティマイザーによってカーソル セットの予測行数が比較され、 **cursor threshold**に設定した値を超えていれば、キーセットが非同期に生成されます。 小さな結果セットは同期をとって作成する方がよいので、 **cursor threshold** の値は小さくしすぎないでください。  
+-   **cursor threshold** を -1 に設定すると、すべてのキーセットが同期して生成されます。これはカーソル セットが小さい場合に役立ちます。 **cursor threshold** を 0 に設定すると、すべてのカーソル キーセットが非同期に生成されます。 それ以外の値を設定した場合、クエリ オプティマイザーによってカーソル セットの予測行数が比較され、 **cursor threshold** に設定した値を超えていれば、キーセットが非同期に生成されます。 小さな結果セットは同期をとって作成する方がよいので、 **cursor threshold** の値は小さくしすぎないでください。  
   
 ###  <a name="security"></a><a name="Security"></a> セキュリティ  
   

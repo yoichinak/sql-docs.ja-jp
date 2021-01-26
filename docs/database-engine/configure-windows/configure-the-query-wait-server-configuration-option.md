@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf9a2f14547eeda95b49a3f7705823e62f8b538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15844802836883d80c4bf50d0df58e7ddbe633d0
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785856"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783168"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>query wait サーバー構成オプションの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [クエリの待機] [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 メモリを集中的に使用するクエリ (並べ替えやハッシュ演算に関係するクエリなど) は、そのクエリの実行に使用できるメモリが不足しているとキューに登録されます。 **[クエリの待機]** オプションは、タイムアウトになるまでのクエリのリソース待ち時間を秒数 (0 ～ 2147483647) で指定します。このオプションの既定値は -1 です。 このとき、タイムアウトは予測されるクエリ コストの 25 倍になります。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [クエリの待機] [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 メモリを集中的に使用するクエリ (並べ替えやハッシュ演算に関係するクエリなど) は、そのクエリの実行に使用できるメモリが不足しているとキューに登録されます。 **[クエリの待機]** オプションは、タイムアウトになるまでのクエリのリソース待ち時間を秒数 (0 ～ 2147483647) で指定します。このオプションの既定値は -1 です。 このとき、タイムアウトは予測されるクエリ コストの 25 倍になります。  
   
 > [!IMPORTANT]  
 >  待機状態のクエリを含むトランザクションでは、クエリがメモリを待機している間、ロック状態が維持されることがあります。 まれに、検出できないデッドロックが発生することもあります。 クエリの待機時間を減らすと、このようなデッドロックが発生する可能性が低くなります。 最終的には、待機状態のクエリが終了し、トランザクション ロックが解放されます。 これに対して、最大待機時間を増やすと、クエリを終了するのに必要な時間も増加することがあります。 このオプションを変更することはお勧めしません。  

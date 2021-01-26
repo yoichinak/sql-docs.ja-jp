@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc92b34d57f2406c1b5aa59cce67840af4c21918
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c73233d8a7b38ec2d14fa92c40f69d9ae0af05
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697763"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783284"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>複数の TCP ポートでリッスンするデータベース エンジンの構成
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
+  このトピックでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で SQL Server 構成マネージャーを使用して、複数の TCP ポートをリッスンするように [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] を構成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で TCP/IP を有効にしている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、IP アドレスと TCP ポート番号で構成される接続ポイントで着信接続をリッスンします。次の手順では、表形式のデータ ストリーム (TDS) エンドポイントを作成し、追加の TCP ポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするように設定します。  
   
  2 つ目の TDS エンドポイントを作成する理由として考えられる点を次に示します。  
   
