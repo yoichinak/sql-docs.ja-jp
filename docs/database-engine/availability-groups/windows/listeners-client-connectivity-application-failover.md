@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c0578d5522ca998e7243fd20b77daf8d3705bd85
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 145f061ff1926bc9a93244226dbd36b6ffaf9de8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878921"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765914"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ SQL Server のインスタンスにとって、接続のログインで、可用
 > [!NOTE]  
 >  可用性グループ リスナーおよび SQL Server フェールオーバー クラスター インスタンス名への単一サブネット接続およびマルチサブネット接続の両方に対して、この設定を推奨します。  このオプションを有効にすると、単一サブネットのシナリオでも、さらに最適化されます。  
   
- **MultiSubnetFailover** 接続オプションは TCP ネットワーク プロトコルのみで機能します。また、可用性グループ リスナーに接続する場合、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]に接続している仮想ネットワーク名を使用する場合にのみサポートされます。  
+ **MultiSubnetFailover** 接続オプションは TCP ネットワーク プロトコルのみで機能します。また、可用性グループ リスナーに接続する場合、および [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]に接続している仮想ネットワーク名を使用する場合にのみサポートされます。  
   
  マルチサブネット フェールオーバーを有効にする ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   

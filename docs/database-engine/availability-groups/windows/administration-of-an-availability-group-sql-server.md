@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 414b407cc2adccf20f2f9d7dc0e01bfb171899f7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bb048bf64f7fddea90eb4b1e5990b716c6685cb3
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643327"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765390"
 ---
 # <a name="administration-of-an-availability-group"></a>可用性グループの管理
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の既存の AlwaysOn 可用性グループの管理には、次のタスクが 1 つ以上含まれます。  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] の既存の AlwaysOn 可用性グループの管理には、次のタスクが 1 つ以上含まれます。  
   
 -   既存の可用性レプリカのプロパティを変更する。たとえば、読み取り可能なセカンダリ レプリカを構成するためにクライアント接続アクセスを変更する場合は、フェールオーバー モード、可用性モード、またはセッション タイムアウトの設定を変更します。    
 -   セカンダリ レプリカを追加または削除する。    

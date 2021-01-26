@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5a23a2b4e5af84f74010d00c0d9e24c23d02146c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3a87c7b4dc37a7b1a70b31b9d7b9191a3570db98
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644198"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764751"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 可用性グループに対するセカンダリ データベースの準備
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "97644198"
         > [!IMPORTANT]  
         >  プライマリ データベースとセカンダリ データベースのパス名が異なる場合は、ファイルを追加することはできません。 ファイル追加操作のログの受信時に、セカンダリ レプリカのサーバー インスタンスがプライマリ データベースで使用されるのと同じパスに新しいファイルを配置しようとするためです。  
   
-         たとえば、次のコマンドは、既定の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作では、別のクラスター ノードのセカンダリ レプリカをホストする、( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] AlwaysOn1 *) という* のリモート インスタンスのデータ ディレクトリにデータベースを移動する必要があります。 そこで、データおよびログ ファイルが *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* ディレクトリに復元されます。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
+         たとえば、次のコマンドは、既定の [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]インスタンスのデータ ディレクトリ (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) に存在するプライマリ データベースのバックアップを復元します。 データベースの復元操作では、別のクラスター ノードのセカンダリ レプリカをホストする、( [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] AlwaysOn1 *) という* のリモート インスタンスのデータ ディレクトリにデータベースを移動する必要があります。 そこで、データおよびログ ファイルが *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* ディレクトリに復元されます。 この復元操作では WITH NORECOVERY を使用してセカンダリ データベースを復元するデータベースに残します。  
   
         ```  
         RESTORE DATABASE MyDB1  

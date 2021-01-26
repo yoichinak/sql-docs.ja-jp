@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bab0801b0193d9f675ef69e566eef375f0930e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170864"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688878"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -184,13 +184,13 @@ SQL Server フェールオーバー クラスタリングのログ記録レベ�
 リソース フェールオーバーのシナリオでは、フェールオーバーが発生する前に、SQL Server リソース DLL でダンプ ファイルを取得できます。 これは、FCI と可用性グループの両方のテクノロジに当てはまります。 SQL Server リソース DLL で SQL Server リソースが失敗したと判断した場合、SQL Server リソース DLL では Sqldumper.exe ユーティリティを使用して、SQL Server プロセスのダンプ ファイルを取得します。 リソース フェールオーバー時に、確実に Sqldumper.exe ユーティリティによってダンプ ファイルが正常に生成されるようにするには、次の 3 つのプロパティを前提条件として設定する必要があります: SqlDumperDumpTimeOut、SqlDumperDumpPath、SqlDumperDumpFlags。
 
 SQLDUMPEREDUMPFLAGS  
-SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 この設定には、16 進数ではなく、10 進数の値が使用されます。 ミニ ダンプでは 288 を使用し、間接メモリのミニ ダンプでは 296 を使用し、フィルター処理されたダンプでは 33024 を使用します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+SQL Server の SQLDumper ユーティリティによって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。 この設定には、16 進数ではなく、10 進数の値が使用されます。 ミニ ダンプでは 288 を使用し、間接メモリのミニ ダンプでは 296 を使用し、フィルター処理されたダンプでは 33024 を使用します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)を参照してください。  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
-SQLDumper ユーティリティがダンプ ファイルを保存する場所。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+SQLDumper ユーティリティがダンプ ファイルを保存する場所。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)を参照してください。  
   
 SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
-SQL Server でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位)。 既定値は 0 で、ダンプの完了に時間制限がないことを示します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](https://go.microsoft.com/fwlink/?LinkId=206173)を参照してください。  
+SQL Server でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位)。 既定値は 0 で、ダンプの完了に時間制限がないことを示します。 詳細については、[SQL Server Dumper ユーティリティに関するサポート技術情報の資料](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file)を参照してください。  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  SQL Server フェールオーバー クラスター インスタンスがフェイルオーバーまたは再起動する必要がある状態。 既定値は 3 で、重大なサーバー エラーの発生時に SQL Server リソースがフェールオーバーまたは再起動することを示します。 このエラー状態レベルおよび他のエラー状態レベルについて詳しくは、「[FailureConditionLevel プロパティ設定の構成](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)」をご覧ください。  
@@ -484,4 +484,3 @@ GO
 [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [バッファー プール拡張](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 836ad79e049d7c5613755e64ca441f9ed5d73048
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: f48534e104139ee7cbd4eb7602fce2a8e51eeb73
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797812"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597140"
 ---
 # <a name="mssqlserver_6522"></a>MSSQLSERVER_6522
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -205,7 +205,7 @@ MyDateTime データ型によってストレージで 9 バイトが占有され
 ## <a name="references"></a>リファレンス
 
 - アセンブリのバージョンの詳細については、「[Visual Studio 2005 の提供終了済みドキュメント](https://www.microsoft.com/download/details.aspx?id=55984)」を参照してください。
-- アセンブリを更新する方法の詳細については、「[ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)」を参照してください。
-- アセンブリを削除する方法の詳細については、「[DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql)」を参照してください。
-- アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに登録する方法の詳細については、「[CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)」を参照してください。
-- Bcp.exe ユーティリティの詳細については、[https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility) を参照してください。
+- アセンブリを更新する方法の詳細については、「[ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)」を参照してください。
+- アセンブリを削除する方法の詳細については、「[DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)」を参照してください。
+- アセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに登録する方法の詳細については、「[CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)」を参照してください。
+- Bcp.exe ユーティリティの詳細については、[https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md) を参照してください。

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 74c27195e3adbb39714a2df23ef041615262ffc2
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: e455b8b27537a3f7fedd7ca0c9cad356b9d49df4
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867858"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764896"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>EKM の使用による TDE の有効化
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護するために、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Transparent Data Encryption (TDE) を有効にする方法について説明します。  
+  この記事では、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護するために、[!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] で Transparent Data Encryption (TDE) を有効にする方法について説明します。  
   
  TDE は、データベース暗号化キーと呼ばれる対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。 Azure Key Vault でキーを使用して TDE を構成する方法の詳細については、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」を参照してください。 
 
@@ -68,7 +68,7 @@ ms.locfileid: "91867858"
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、EKM プロバイダーは用意されていません。 EKM プロバイダーごとに、インストール、構成、およびユーザー承認の手順が異なります。  この手順を完了するには、EKM プロバイダーのドキュメントを参照してください。  
   
-3.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+3.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 4.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   

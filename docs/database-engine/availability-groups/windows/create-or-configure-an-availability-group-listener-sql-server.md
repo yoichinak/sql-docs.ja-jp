@@ -16,16 +16,16 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 6e6b362f9e121f10515753d46ee098387348f272
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c58d2479bfc1c7e33431c4da514154a9c06f2dd5
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091751"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764780"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Always On 可用性グループのリスナーの構成
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を作成または構成する方法について説明します。  
+  このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]を作成または構成する方法について説明します。  
   
 > [!IMPORTANT]  
 >  可用性グループの最初の可用性グループ リスナーを作成するには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell を使用することを強くお勧めします。 必要な場合 (追加リスナーを作成する場合など) を除いて、WSFC クラスターでリスナーを直接作成することは避けてください。  

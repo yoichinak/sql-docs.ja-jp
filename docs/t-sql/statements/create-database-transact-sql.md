@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 7898cec5362efc7902623993f568600271c033d5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5321af1026b82d2ed49f077d7cf5604bce3a8e69
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171614"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689031"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -276,7 +276,7 @@ Windows と互換性のあるディレクトリ名です。 この名前は、[!
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  このオプションを指定すると、ストレージ クラス メモリ (NVDIMM-N 不揮発性ストレージ、永続的ログ バッファーとも呼ばれます) によってバックアップされるディスク デバイス上のボリュームに、トランザクション ログ バッファーが作成されます。 詳しくは、「[Transaction Commit latency acceleration using Storage Class Memory](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)」(ストレージ クラス メモリを使用したトランザクション コミット待機時間の短縮) をご覧ください。 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。
+  このオプションを指定すると、ストレージ クラス メモリ (NVDIMM-N 不揮発性ストレージ、永続的ログ バッファーとも呼ばれます) によってバックアップされるディスク デバイス上のボリュームに、トランザクション ログ バッファーが作成されます。 詳しくは、「[Transaction Commit latency acceleration using Storage Class Memory](/archive/blogs/sqlserverstorageengine/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1)」(ストレージ クラス メモリを使用したトランザクション コミット待機時間の短縮) をご覧ください。 **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降。
 
 FOR ATTACH [ WITH \< attach_database_option > ]: 既存のオペレーティング システム ファイルのセットを[アタッチ](../../relational-databases/databases/database-detach-and-attach-sql-server.md)することによりデータベースを作成するように指定します。 プライマリ ファイルを指定する \<filespec> エントリが必要です。 他に必要な \<filespec> エントリは、データベースが最初に作成されたとき、または最後にアタッチされたときからパスが変わったファイルのエントリだけです。 これらのファイルの \<filespec> エントリを指定する必要があります。
 
@@ -489,7 +489,7 @@ AS SNAPSHOT OF *source_database_name*: 作成されるデータベースが、*s
 
 ## <a name="viewing-database-information"></a>データベース情報の表示
 
-カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、[システム ビュー](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)に関するページを参照してください。
+カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。 詳細については、[システム ビュー](../language-reference.md)に関するページを参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -966,7 +966,7 @@ CREATE DATABASE database_name
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
 *Collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
@@ -1015,7 +1015,7 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |1024 GB|該当なし|該当なし|√|√|√ (D)|
 |1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|N/A|√|√|
 
-\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
+\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
 DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示すように指定されたサービス レベルで有効な値である必要があります。
 
@@ -1111,7 +1111,7 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |データの最大サイズ (GB)|1280|1536|2048|4096|4096|
 
-仮想コア モデルを使用するときに `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
+仮想コア モデルを使用するときに `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
@@ -1132,10 +1132,10 @@ SERVICE_OBJECTIVE
 
   - コンピューティング サイズ (サービス目標) を指定します。 サービスの目標に使用できる値は、`HS_GEN4_1`、`HS_GEN4_2`、`HS_GEN4_4`、`HS_GEN4_8`、`HS_GEN4_16`、`HS_GEN4_24`、`HS_Gen5_2`、`HS_Gen5_4`、`HS_Gen5_8`、`HS_Gen5_16`、`HS_Gen5_24`、`HS_Gen5_32`、`HS_Gen5_48`、`HS_Gen5_80` です。
 
-サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL データベースのサービス階層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers)」をご覧ください。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていない場合は、エラーが返されます。 SERVICE_OBJECTIVE の値をある階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
+サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、「[Azure SQL データベースのサービス階層](/azure/sql-database/sql-database-service-tiers)」をご覧ください。 指定した SERVICE_OBJECTIVE が EDITION によってサポートされていない場合は、エラーが返されます。 SERVICE_OBJECTIVE の値をある階層から別の階層に変更する場合 (たとえば、S1 から P1) は、EDITION の値も変更する必要があります。 サービス目標に関する説明およびサイズ、エディション、サービス目標の組み合わせの詳細については、[Azure SQL Database サービス レベルとパフォーマンス レベル](/azure/azure-sql/database/purchasing-models)、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。 PRS サービスの目標のサポートはなくなりました。 質問については、電子メール エイリアス premium-rs@microsoft.com を使用してください。
 
 ELASTIC_POOL (name = \<elastic_pool_name>) **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。 ハイパースケール サービス層のデータベースには適用されません。
-弾力性のあるデータベース プールで新しいデータベースを作成するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、プールの名前を指定します。 詳しくは、[SQL Database エラスティック プールの作成と管理](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)に関するページをご覧ください。
+弾力性のあるデータベース プールで新しいデータベースを作成するには、データベースの SERVICE_OBJECTIVE を ELASTIC_POOL に設定し、プールの名前を指定します。 詳しくは、[SQL Database エラスティック プールの作成と管理](/azure/azure-sql/database/elastic-pool-overview)に関するページをご覧ください。
 
 AS COPY OF [source_server_name.]source_database_name **適用対象:** 単一のデータベースおよびプールされたデータベースのみ。
 データベースを同じ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーにコピーするか別のサーバーにコピーするかを指定します。
@@ -1172,12 +1172,12 @@ AS COPY OF [source_server_name.]source_database_name **適用対象:** 単一の
 `AS COPY OF` 引数を使用する際、次の構文および意味上の規則が適用されます。
 
 - コピー先のサーバー名としてコピー元のサーバー名と同じ名前を使用することも別の名前を使用することもできます。 名前が同じである場合、このパラメーターは省略可能であり、現在のセッションのサーバー コンテキストが既定で使用されます。
-- ソース データベースと対象データベースの名前を指定する必要があります。これらの名前は、一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+- ソース データベースと対象データベースの名前を指定する必要があります。これらの名前は、一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 - `CREATE DATABASE` ステートメントは、新しいデータベースが作成される [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーの master データベースのコンテキスト内で実行される必要があります。
 - コピーの完了後、対象データベースは個別のデータベースとして管理する必要があります。 `ALTER DATABASE` ステートメントと `DROP DATABASE` ステートメントは、ソース データベースに影響を与えることなく、新しいデータベースに対して実行できます。 新しいデータベースを別の新しいデータベースにコピーすることもできます。
 - データベース コピーが進行中でも、ソース データベースには引き続きアクセスできます。
 
-詳細については、[Transact-SQL を使った Azure SQL Database のコピーの作成](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)に関するページを参照してください。
+詳細については、[Transact-SQL を使った Azure SQL Database のコピーの作成](/azure/azure-sql/database/database-copy)に関するページを参照してください。
 
 > [!IMPORTANT]
 > 既定では、データベース コピーのバックアップ ストレージ冗長性は、そのソース データベースと同じ冗長性で作成されます。 データベース コピーの作成時のバックアップ ストレージの冗長性の変更は、T-SQL によってサポートされていません。 
@@ -1328,7 +1328,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 新しいデータベースの名前です。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、SQL Server で一意であり、識別子に関する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に準拠している必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
 *Collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
@@ -1432,11 +1432,11 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](https://go.microsoft.com/fwlink/p/?LinkId=180386)」を参照してください。
+*database_name*: 新しいデータベースの名前です。 この名前は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] データベースと [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの両方をホストでき、ID の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の規則に従う、SQL Server に固有のものである必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
 *collation_name*: データベースの既定の照合順序を指定します。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 指定しない場合、既定の照合順序である SQL_Latin1_General_CP1_CI_AS がデータベースに割り当てられます。
 
-Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx) に関するページを参照してください。
+Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](./collations.md) に関するページを参照してください。
 
 *EDITION*: データベースのサービス層を指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合は、"datawarehouse" を使用します。
 
@@ -1450,7 +1450,7 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
 
 データベースの行ストア データの最大許容サイズ。 行ストア テーブル、列ストア インデックスのデルタストア、またはクラスター化列ストア インデックス上の非クラスター化インデックスに格納されたデータは、MAXSIZE を超えて大きくなることはできません。列ストア形式に圧縮されたデータは、サイズ制限がなく、MAXSIZE に制約されません。
 
-SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
+SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) を指定します。 Azure Synapse のサービス目標の詳細については、「[Data Warehouse ユニット (DWU)](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)」を参照してください。
 
 ## <a name="general-remarks"></a>全般的な解説
 
@@ -1458,7 +1458,7 @@ SERVICE_OBJECTIVE: コンピューティング サイズ (サービス目標) �
 
 後で最大サイズ、またはサービス目標の値を変更するには、[ALTER DATABASE - Azure Synapse Analytics](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true) を使用します。
 
-Azure Synapse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)」を参照してください。
+Azure Synapse は COMPATIBILITY_LEVEL 130 に設定されており、変更することはできません。 詳細については、「[ALTER DATABASE (TRANSACT-SQL) の互換性レベル](./alter-database-transact-sql-compatibility-level.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 

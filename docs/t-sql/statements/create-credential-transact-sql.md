@@ -25,12 +25,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 88307a27daf1bd601c24e318817f41426c9035f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b98affdc431a7e13f83ed152248e3abc1300bf76
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464133"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688808"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. SAS トークンを使用する資格情報の作成
 
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658) および Azure SQL Managed Instance。
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md) および Azure SQL Managed Instance。
 
 次の例では、SAS トークンを使用して共有アクセス署名資格情報を作成します。 Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成してから、Shared Access Signature を使って資格情報を作成するチュートリアルについては、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。
 
@@ -181,5 +181,5 @@ GO
 - [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)
 - [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
 - [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
-- [レッスン 2:Shared Access Signature を使用して SQL Server 資格情報を作成する](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)
-- [Shared Access Signatures](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [レッスン 2:Shared Access Signature を使用して SQL Server 資格情報を作成する](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)
+- [Shared Access Signatures](/azure/storage/common/storage-sas-overview)

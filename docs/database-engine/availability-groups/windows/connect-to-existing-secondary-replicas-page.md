@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 9115e3540d0990565612575dca64e96535c31ec4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 5276c8b0eca7c84fd042a0cbc67e648996da702c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639435"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765941"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>[既存のセカンダリ レプリカへの接続] ページ - Always On 可用性グループ
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  このヘルプ トピックでは、 **[既存のセカンダリ レプリカへの接続]** ページのオプションについて説明します。 このトピックでは、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を使用します。  
+  このヘルプ トピックでは、 **[既存のセカンダリ レプリカへの接続]** ページのオプションについて説明します。 このトピックでは、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] の [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] および [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]を使用します。  
   
  **グリッド列:**  
  **サーバー インスタンス**  

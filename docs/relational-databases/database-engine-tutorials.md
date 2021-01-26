@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fa0db66c75fd0fc45f02dd768f69659c96d739b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 891abb94a3f9ac00edf910d5e8a830c7adee0b0f
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440203"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597231"
 ---
 # <a name="database-engine-tutorials"></a>データベース エンジンのチュートリアル
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "97440203"
 [チュートリアル:データベース エンジンの概要](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 このチュートリアルでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスに接続する方法について説明します。  
   
-[チュートリアル:SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
+[チュートリアル:SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
 このチュートリアルでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースやデータ ウェアハウスなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
 [チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -56,5 +56,4 @@ ms.locfileid: "97440203"
 ## <a name="see-also"></a>参照  
 [SQL Server 2016 チュートリアル](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI:SQL Server 2012 サンプル](https://go.microsoft.com/fwlink/?linkID=220734)  
-  
   

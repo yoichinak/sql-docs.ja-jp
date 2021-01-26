@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81edbd9bfc913f9d339625a993f866d44e1a313b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bde5d28db431bb99e1721ee3984496dd10e6cf1c
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730935"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764804"
 ---
 # <a name="server-properties---filestream-page"></a>Server のプロパティ - [FILESTREAM] ページ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。  
+  このページを使用すると、このインストールの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] に対して FILESTREAM を有効にすることができます。  
   
 ## <a name="ui-element-list"></a>UI 要素の一覧  
  **[Transact-SQL アクセスに対して FILESTREAM を有効にする]**  

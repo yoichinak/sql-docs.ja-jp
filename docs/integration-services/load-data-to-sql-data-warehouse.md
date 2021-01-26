@@ -10,12 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 7b582e5722b19db3569aaa0f154f5b78864a2838
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: 06c69fb6b40fad1f6440583b693719767d6ad1d2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328501"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597267"
 ---
 # <a name="load-data-into-a-dedicated-sql-pool-in-azure-synapse-analytics-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して Azure Synapse Analytics の専用 SQL プールにデータを読み込む
 
@@ -52,7 +52,7 @@ SQL Server Integration Services (SSIS) とは、Azure Synapse Analytics に接�
 1. **SQL Server Integration Services (SSIS)** . SSIS は SQL Server のコンポーネントであり、使用するには SQL Server のライセンス版、開発者版、または評価版が必要です。 SQL Server の評価版を取得するには、[SQL Server の評価](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)に関するページを参照してください。
 2. **Visual Studio** (省略可能)。 無料の Visual Studio Community Edition を取得するには、[Visual Studio Community][Visual Studio Community] に関するページを参照してください。 Visual Studio をインストールしない場合は、SQL Server Data Tools (SSDT) のみをインストールできます。 SSDT をインストールすると、機能が制限されたバージョンの Visual Studio がインストールされます。
 3. **Visual Studio 用 SQL Server Data Tools (SSDT)** 。 Visual Studio 用 SQL Server Data Tools を取得するには、[SQL Server Data Tools (SSDT) のダウンロード][Download SQL Server Data Tools (SSDT)]に関するページを参照してください。
-4. **Azure Synapse Analytics データベースと権限** 。 このチュートリアルでは、Azure Synapse Analytics インスタンスの専用 SQL プールに接続して、これにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
+4. **Azure Synapse Analytics データベースと権限**。 このチュートリアルでは、Azure Synapse Analytics インスタンスの専用 SQL プールに接続して、これにデータを読み込みます。 接続し、テーブルを作成し、データを読み込むことができるアクセス許可が必要です。
 
 ## <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
 1. Visual Studio を起動します。
@@ -62,9 +62,9 @@ SQL Server Integration Services (SSIS) とは、Azure Synapse Analytics に接�
 
 Visual Studio が開き、新しい Integration Services (SSIS) プロジェクトを作成します。 次に Visual Studio は、プロジェクト内の新しい単一の SSIS パッケージ (Package.dtsx) のためのデザイナーを開きます。 次の画面領域が表示されます。
 
-* 左側には、SSIS コンポーネントの **ツールボックス** 。
+* 左側には、SSIS コンポーネントの **ツールボックス**。
 * 中央には、複数のタブを備えたデザイン画面。 通常は、少なくとも **[制御フロー]** タブと **[データ フロー]** タブを使用します。
-* 右側には、 **ソリューション エクスプローラー** と **[プロパティ]** ウィンドウ。
+* 右側には、**ソリューション エクスプローラー** と **[プロパティ]** ウィンドウ。
   
     ![[ツールボックス] ペイン、[デザイン] ペイン、[ソリューション エクスプローラー] ペイン、および [プロパティ] ペインを示す Visual Studio のスクリーンショット。][01]
 
@@ -78,7 +78,7 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 - [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW アップロード タスクは、Feature Pack のコンポーネントです。
 
-- [Azure Blob Storage](https://docs.microsoft.com/azure/storage/) アカウント。 SQL DW アップロード タスクは、Azure Blob Storage から Azure Synapse Analytics にデータを読み込みます。 Blob Storage に既に格納されているファイルから読み込むか、ローカル コンピューターからファイルを読み込むことができます。 ローカル コンピューター上のファイルを選択すると、SQL DW アップロード タスクはまず BLOB Storage にアップロードし、ステージングしてから、専用 SQL プールに読み込みます。
+- [Azure Blob Storage](/azure/storage/) アカウント。 SQL DW アップロード タスクは、Azure Blob Storage から Azure Synapse Analytics にデータを読み込みます。 Blob Storage に既に格納されているファイルから読み込むか、ローカル コンピューターからファイルを読み込むことができます。 ローカル コンピューター上のファイルを選択すると、SQL DW アップロード タスクはまず BLOB Storage にアップロードし、ステージングしてから、専用 SQL プールに読み込みます。
 
 ### <a name="add-and-configure-the-sql-dw-upload-task"></a>SQL DW アップロード タスクを追加および構成する
 
@@ -112,9 +112,9 @@ SQL Server と専用 SQL プールに接続するには、ADO.NET 接続マネ�
 
 このオプションを選択してチュートリアルを続行するには、次の要素が必要です。
 
-1. **サンプル データ** 。 このチュートリアルでは、専用 SQL プールに読み込むソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、「[AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases]」 (AdventureWorks サンプル データベース) を参照してください。
+1. **サンプル データ**。 このチュートリアルでは、専用 SQL プールに読み込むソース データとして、SQL Server の AdventureWorks サンプル データベースに格納されているサンプル データを使用します。 AdventureWorks サンプル データベースを取得するには、「[AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases]」 (AdventureWorks サンプル データベース) を参照してください。
 
-2. **ファイアウォール規則** 。 専用 SQL プールにデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して専用 SQL プールに対してファイアウォール規則を作成しておく必要があります。
+2. **ファイアウォール規則**。 専用 SQL プールにデータをアップロードするには、事前にローカル コンピューターの IP アドレスを使用して専用 SQL プールに対してファイアウォール規則を作成しておく必要があります。
 
 ### <a name="create-the-basic-data-flow"></a>基本的なデータ フローを作成する
 1. ツールボックスからデザイン画面の中央にデータ フロー タスクをドラッグします ( **[制御フロー]** タブ上で)。
@@ -127,7 +127,7 @@ SQL Server と専用 SQL プールに接続するには、ADO.NET 接続マネ�
     ![ソース アダプターの直下の位置にドラッグされている変換先アダプターのスクリーンショット。][09]
 
 ### <a name="configure-the-source-adapter"></a>ソース アダプターを構成する
-1. ソース アダプターをダブルクリックして、 **ADO.NET 変換元エディター** を開きます。
+1. ソース アダプターをダブルクリックして、**ADO.NET 変換元エディター** を開きます。
    
     ![ADO.NET ソース エディターのスクリーンショット。 [接続マネージャー] タブが表示されます。データ フローのプロパティを構成するためのコントロールが用意されています。][03]
 2. **ADO.NET 変換元エディター** の **[接続マネージャー]** タブで、 **[ADO.NET 接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、 **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み元である SQL Server データベースに対する接続設定を作成します。
@@ -147,7 +147,7 @@ SQL Server と専用 SQL プールに接続するには、ADO.NET 接続マネ�
        ![[OK] ボタンと、テスト接続が成功したことを示すテキストが表示されたダイアログ ボックスのスクリーンショット。][06]
    6. 接続テストの結果をレポートするダイアログ ボックスで、 **[OK]** をクリックして、 **[接続マネージャー]** ダイアログ ボックスに戻ります。
    7. **[接続マネージャー]** ダイアログ ボックスで、 **[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
-5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、 **[OK]** をクリックして、 **ADO.NET 変換元エディター** に戻ります。
+5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、 **[OK]** をクリックして、**ADO.NET 変換元エディター** に戻ります。
 6. **ADO.NET 変換元エディター** の **[Name of the table or the view]\(テーブルまたはビューの名前\)** リストで、 **[Sales.SalesOrderDetail]** テーブルを選択します。
    
     ![ADO.NET ソース エディターのスクリーンショット。 [テーブル名またはビュー名] リストで、Sales.SalesOrderDetail テーブルが選択されています。][07]
@@ -166,7 +166,7 @@ SQL Server と専用 SQL プールに接続するには、ADO.NET 接続マネ�
     一般的な SSIS パッケージでは、ソースと変換先の間に SSIS ツールボックスからの他の複数のコンポーネントを使用して、データが SSIS データ フローを通過するときにデータの再構築、変換、およびクレンジングを行うことができます。 この例をできるだけ簡単に保持するには、ソースを直接変換先に接続します。
 
 ### <a name="configure-the-destination-adapter"></a>変換先アダプターを構成する
-1. 変換先アダプターをダブルクリックして、 **ADO.NET 変換先エディター** を開きます。
+1. 変換先アダプターをダブルクリックして、**ADO.NET 変換先エディター** を開きます。
    
     ![ADO.NET 変換先エディターのスクリーンショット。 [接続マネージャー] タブが表示されます。データ フローのプロパティを構成するためのコントロールがあります。][11]
 2. **ADO.NET 変換先エディター** の **[接続マネージャー]** タブで、 **[接続マネージャー]** リストの横にある **[新規]** ボタンをクリックして、 **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスを開き、このチュートリアルでのデータの読み込み先である Azure Synapse Analytics データベースに対する接続設定を作成します。
@@ -179,18 +179,18 @@ SQL Server と専用 SQL プールに接続するには、ADO.NET 接続マネ�
    5. **[接続テスト]** をクリックします。
    6. 接続テストの結果をレポートするダイアログ ボックスで、 **[OK]** をクリックして、 **[接続マネージャー]** ダイアログ ボックスに戻ります。
    7. **[接続マネージャー]** ダイアログ ボックスで、 **[OK]** をクリックして **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスに戻ります。
-5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、 **[OK]** をクリックして、 **ADO.NET 変換先エディター** に戻ります。
+5. **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスで、 **[OK]** をクリックして、**ADO.NET 変換先エディター** に戻ります。
 6. **ADO.NET 変換先エディター** で、 **[Use a table or view]\(テーブルまたはビューの使用\)** リストの横にある **[新規]** をクリックして **[テーブルの作成]** ダイアログ ボックスを開き、ソース テーブルと一致する列リストが含まれた新しい変換先テーブルを作成します。
    
     ![[テーブルの作成] ダイアログ ボックスのスクリーンショット。 変換先テーブルを作成する SQL コードが表示されています。][12a]
 7. **[テーブルの作成]** ダイアログ ボックスで、次の操作を行います。
    
    1. 変換先テーブルの名前を **SalesOrderDetail** に変更します。
-   2. **rowguid** 列を削除します。 専用 SQL プールでは、 **uniqueidentifier** データ型はサポートされていません。
-   3. **[LineTotal]** 列のデータ型を **[money]** に変更します。 専用 SQL プールでは、 **decimal** データ型はサポートされていません。 サポートされるデータ型に関する情報については、[CREATE TABLE (Azure Synapse Analytics、Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)] に関するページを参照してください。
+   2. **rowguid** 列を削除します。 専用 SQL プールでは、**uniqueidentifier** データ型はサポートされていません。
+   3. **[LineTotal]** 列のデータ型を **[money]** に変更します。 専用 SQL プールでは、**decimal** データ型はサポートされていません。 サポートされるデータ型に関する情報については、[CREATE TABLE (Azure Synapse Analytics、Parallel Data Warehouse)][CREATE TABLE (Azure Synapse Analytics, Parallel Data Warehouse)] に関するページを参照してください。
       
        ![[テーブルの作成] ダイアログ ボックスのスクリーンショット。money 列として LineTotal があり、rowguid 列がない、SalesOrderDetail という名前のテーブルを作成するコードが表示されています。][12b]
-   4. **[OK]** をクリックして、テーブルを作成し、 **ADO.NET 変換先エディター** に戻ります。
+   4. **[OK]** をクリックして、テーブルを作成し、**ADO.NET 変換先エディター** に戻ります。
 8. **ADO.NET 変換先エディター** で、 **[マッピング]** タブを選択して、ソース内の列が変換先の列にどのようにマップされているか確認してください。
    
     ![ADO.NET 変換先エディターの [マッピング] タブのスクリーンショット。 行によって、ソース テーブルと変換先テーブルの同じ名前の列が接続されます。][13]

@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 4bdf43c821bd278e6080e6f9244f3bb169388653
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534595"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596251"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ SSMS でデータベースに接続する場合は、データベース接続に
 新しい接続を作成するときや **[サーバーに接続]** ダイアログを使用して既存の接続を変更するときに、Always Encrypted を有効または無効にすることができます。 
 
 Always Encrypted を有効 (無効) にするには、次のようにします。
-1. **[サーバーに接続]** ダイアログを開きます (詳細については、「[SQL Server インスタンスに接続する](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)」を参照してください)。
+1. **[サーバーに接続]** ダイアログを開きます (詳細については、「[SQL Server インスタンスに接続する](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance)」を参照してください)。
 1. **[オプション >>]** をクリックします。
 1. SSMS 18 以降を使用している場合:
     1. **[Always Encrypted]** タブを選択します。

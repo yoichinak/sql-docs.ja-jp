@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2e7bc60bcfd7578d70528d92ef025370c28134e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 6e980e075f23d3a943870fc6dd02aa420797f8a4
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92194751"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596486"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
 
@@ -117,7 +117,7 @@ ms.locfileid: "92194751"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=199482)  
+-   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](/troubleshoot/sql/integration-services/error-you-run-ssis-package)  
   
 -   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))  
   
@@ -206,4 +206,3 @@ ms.locfileid: "92194751"
   
 ## <a name="see-also"></a>参照  
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
-  

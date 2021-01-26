@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 5dbdccf96c35c7c7f66badb49d6566ac6009d6c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88425244"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596372"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
 
@@ -47,7 +47,7 @@ ms.locfileid: "88425244"
 > [!NOTE]  
 >  同じパッケージでチェックポイントとトランザクションを使用すると、予期しない結果が生じる可能性があります。 たとえば、パッケージが失敗してチェックポイントから再開した場合、既に正常にコミットされているトランザクションがパッケージで繰り返し実行される可能性があります。  
   
- チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」を参照してください。  
+ チェックポイント データは、For ループ コンテナーおよび Foreach ループ コンテナーには保存されません。 パッケージが再開されると、For ループ コンテナーおよび Foreach ループ コンテナーと、子コンテナーが再実行されます。 ループ内の子コンテナーの実行が成功してもチェックポイント ファイルには記録されないため、子コンテナーは再実行されます。 詳細情報および回避策については、「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)」を参照してください。  
   
  パッケージの再開時にはパッケージの構成が再読み込みされず、チェックポイント ファイルに書き込まれた構成情報が代わりに使用されます。 これによって、確実に、パッケージが失敗した時点と同じ構成を使用してパッケージが再実行されます。  
   
@@ -119,4 +119,4 @@ ms.locfileid: "88425244"
   
 -   social.technet.microsoft.com の技術資料「 [フェールオーバーまたはエラー後の SSIS パッケージの自動再起動](https://go.microsoft.com/fwlink/?LinkId=200407)」  
   
--   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」  
+-   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](/troubleshoot/sql/integration-services/ssis-checkpoints-not-honored-for-loop)」

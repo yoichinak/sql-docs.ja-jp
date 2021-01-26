@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 39cbbe7a884d5e8fe45d0877b7a581016e1e95c2
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1e41945d69a499908d11d8ebc8cbda7688d544a8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640608"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766096"
 ---
 # <a name="secondary-database-is-not-joined"></a>セカンダリ データベースが参加していない
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,7 @@ ms.locfileid: "97640608"
   
 ## <a name="description"></a>説明  
  このポリシーは、セカンダリ データベース ("セカンダリ データベース レプリカ" とも呼ばれます) の参加状態をチェックします。 データセット レプリカが参加していない場合、ポリシーは通常とは異なる状態です。 それ以外の場合、ポリシーは正常な状態です。  
-  
-> [!NOTE]  
->  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のこのリリース向けに、TechNet Wiki の「 [Secondary database is not joined](https://go.microsoft.com/fwlink/p/?LinkId=220862) 」 (セカンダリ データベースが参加していない) に、考えられるエラーの原因および解決方法に関する情報が紹介されています。  
-  
+
 ## <a name="possible-causes"></a>考えられる原因  
  このセカンダリ データベースは可用性グループに参加していません。 このセカンダリ データベースの構成が不完全です。  
   

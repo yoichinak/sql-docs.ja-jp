@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 6a854486d1867e84bcd9b13cb148d3026a41d51f
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: c6611fcc392d37545f50e12fa8007923d8bc5846
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797779"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596348"
 ---
 # <a name="mssqlserver_17890"></a>MSSQLSERVER_17890
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +154,7 @@ Lock pages in memory ユーザー権利を割り当てる前に、パフォー�
 
 - max server memory オプションと min server memory オプションを複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して構成する前に、SQL Server の各インスタンスに対する非バッファー プールのメモリ要件を考慮してください。 次に、SQL Server の各インスタンスに対してこれらのオプションを構成します。
 
-このベースライン情報は、負荷がピークの間に収集するのが理想的です。 それによって、さまざまなアプリケーションおよびコンポーネントの、ピーク時の負荷に対応するメモリ要件を確認できます。 メモリ要件は、システム上で実行されているアクティビティやアプリケーションによって、システムごとに異なります。 動的管理ビュー sys.dm_os_process_memory で提供されている情報を照会して、そのシステムでメモリ不足の状態が発生しているかどうかを把握できます。 詳細については、「[sys.dm_os_process_memory (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-process-memory-transact-sql)」を参照してください。
+このベースライン情報は、負荷がピークの間に収集するのが理想的です。 それによって、さまざまなアプリケーションおよびコンポーネントの、ピーク時の負荷に対応するメモリ要件を確認できます。 メモリ要件は、システム上で実行されているアクティビティやアプリケーションによって、システムごとに異なります。 動的管理ビュー sys.dm_os_process_memory で提供されている情報を照会して、そのシステムでメモリ不足の状態が発生しているかどうかを把握できます。 詳細については、「[sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md)」を参照してください。
 
 ## <a name="improvements-added-in-windows-server-2008-and-r2-version"></a>Windows Server 2008 および R2 バージョンで追加された機能強化
 

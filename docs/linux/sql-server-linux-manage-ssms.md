@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f5ba3ea9260da9e278273ef39d0f5893b67c120e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115621"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596434"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows で SQL Server Management Studio を使用して SQL Server on Linux を管理する
 
@@ -70,13 +70,13 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
     > [!TIP]
     > 接続エラーが発生した場合は、まずエラー メッセージから問題を診断します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
  
-1. SQL Server に正常に接続すると**オブジェクト エクスプローラー**が開き、データベースにアクセスして管理タスクを実行したり、データを照会したりできるようになります。
+1. SQL Server に正常に接続すると **オブジェクト エクスプローラー** が開き、データベースにアクセスして管理タスクを実行したり、データを照会したりできるようになります。
 
 ## <a name="run-transact-sql-queries"></a>Transact-SQL クエリの実行
 
 サーバーに接続したら、データベースに接続して Transact-SQL クエリを実行できます。 Transact-SQL クエリは、ほぼすべてのデータベース タスクに使用できます。
 
-1. **オブジェクト エクスプローラー**で、サーバー上のターゲット データベースに移動します。 たとえば、**master** データベースを操作するには、 **[システム データベース]** を展開します。
+1. **オブジェクト エクスプローラー** で、サーバー上のターゲット データベースに移動します。 たとえば、**master** データベースを操作するには、 **[システム データベース]** を展開します。
 
 1. データベースを右クリックし、 **[新しいクエリ]** をクリックします。
 
@@ -143,6 +143,6 @@ SQL Server Management Studio (SSMS) には、[利用状況モニター](../relat
 ## <a name="see-also"></a>関連項目
 - [SSMS とは](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS を使用したデータベースのエクスポートとインポート](sql-server-linux-migrate-ssms.md)
-- [チュートリアル:SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
+- [チュートリアル:SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)
 - [チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [サーバーのパフォーマンスと利用状況の監視](../relational-databases/performance/server-performance-and-activity-monitoring.md)
