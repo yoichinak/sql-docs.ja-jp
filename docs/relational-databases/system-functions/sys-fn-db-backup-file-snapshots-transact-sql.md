@@ -13,17 +13,17 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4976e0ae436fe1c9c59742b6580ae083b3e3c5c4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: da0df555ee8eed32bc42faf035c29d0dc867dfb3
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094944"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765712"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  データベースファイルに関連付けられている Azure スナップショットを返します。 指定されたデータベースが見つからない場合、またはデータベースファイルが Microsoft Azure Blob ストレージサービスに格納されていない場合、行は返されません。 このシステム関数を **sys.sp_delete_backup_file_snapshot** システムストアドプロシージャと共に使用して、孤立したバックアップスナップショットを特定および削除します。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+  データベースファイルに関連付けられている Azure スナップショットを返します。 指定されたデータベースが見つからない場合、またはデータベースファイルが Microsoft Azure Blob Storage サービスに格納されていない場合、行は返されません。 このシステム関数を **sys.sp_delete_backup_file_snapshot** システムストアドプロシージャと共に使用して、孤立したバックアップスナップショットを特定および削除します。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

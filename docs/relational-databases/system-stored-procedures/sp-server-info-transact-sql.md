@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b8460daf65826290942f28fe65af6e5fa9f9b416
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547492"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765775"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-sql)
 
@@ -59,7 +59,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |ATTRIBUTE_ID|ATTRIBUTE_NAME の説明|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.y*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *xxxx*  -  *x xxxx xxxx*<br/><br> たとえば、`Microsoft SQL Server 2017 - 14.0.3257.3` のように指定します。|  
 |"**10**"|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
@@ -69,14 +69,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**16**|IDENTIFIER_CASE<br /><br /> データベース内のユーザー定義の名前 (テーブル名、列名、ストアド プロシージャ名) です。大文字か小文字かは、システム カタログ内でオブジェクトの名前に従います。|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> SQL-92 で定義されている分離レベルに対応する、サーバーが想定する初期トランザクション分離レベルを指定します。|2|  
 |**18**|COLLATION_SEQ<br /><br /> このサーバーの文字セットの順序です。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**21**|SAVEPOINT_SUPPORT<br /><br /> 基になる DBMS が、名前付きセーブポイントをサポートするかどうかを示します。|Y|  
+|**19**|SAVEPOINT_SUPPORT<br /><br /> 基になる DBMS が、名前付きセーブポイントをサポートするかどうかを示します。|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 基になるデータベースまたはゲートウェイ自体が複数の結果セットをサポートするかどうかを指定します (複数のステートメントをゲートウェイを介して送信し、複数の結果セットをクライアントに返すことができます)。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> **Sp_tables**であるかどうかを指定します。ゲートウェイは、現在のユーザー (つまり、少なくともテーブルに対する SELECT 権限を持つユーザー) がアクセスできるテーブル、ビューなどを返します。|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> **Sp_tables** であるかどうかを指定します。ゲートウェイは、現在のユーザー (つまり、少なくともテーブルに対する SELECT 権限を持つユーザー) がアクセスできるテーブル、ビューなどを返します。|Y|  
 |**100**|USERID_LENGTH<br /><br /> ユーザー名の最大文字数を示します。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> DBMS ベンダーの用語で、テーブル修飾子 (3 つの要素から成る名前の最初の部分) を示します。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 基になる DBMS が名前付きトランザクションをサポートするかどうかを指定します。|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> ストアド プロシージャを言語イベントとして実行できるかどうかを示します。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> **Sp_stored_procedures**であるかどうかを指定します。ゲートウェイは、現在のユーザーが実行可能なストアドプロシージャだけを返します。|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> **Sp_stored_procedures** であるかどうかを指定します。ゲートウェイは、現在のユーザーが実行可能なストアドプロシージャだけを返します。|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> DBMS のインデックスに含まれる列の最大数を指定します。|16|  
 |**106**|RENAME_TABLE<br /><br /> テーブルの名前を変更できるかどうかを指定します。|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 列の名前を変更できるかどうかを指定します。|Y|  
