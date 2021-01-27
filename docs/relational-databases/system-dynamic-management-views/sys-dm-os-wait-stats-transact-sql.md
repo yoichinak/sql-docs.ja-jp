@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys.dm_os_wait_stats (Transact-sql) |Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/19/2020
+ms.date: 01/25/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
-ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1dccbed2d872b2cd2973e644f9f02149f88b11d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172754"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813063"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "98172754"
 SQL Database Basic、S0、S1 のサービス目標、およびエラスティックプール内のデータベースについて `Server admin` は、または `Azure Active Directory admin` アカウントが必要です。 その他のすべての SQL Database サービスの目的で `VIEW DATABASE STATE` は、データベースで権限が必要になります。   
 
 ##  <a name="types-of-waits"></a><a name="WaitTypes"></a> 待機の種類  
- リソース **待機** は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
+ リソース **待機** は、ワーカーが、リソースが他のワーカーによって使用されているか、まだ使用できないために利用できないリソースへのアクセスを要求したときに発生します。 リソース待機の例としては、ロック、ラッチ、ネットワーク、ディスク i/o 待機などがあります。 ロックおよびラッチ待機は同期オブジェクトで待機します  
   
 **キュー待機** は、ワーカーがアイドル状態で、作業が割り当てられるのを待機しているときに発生します。 キュー待機は、デッドロック監視のようなシステム バックグラウンド タスクや、削除されたレコードのクリーンアップ タスクで最も多く発生します。 これらのタスクは、作業要求が作業キューに配置されるまで待機します。 キュー待機は、新しいパケットがキューに配置されていない場合でも、定期的にアクティブになることがあります。  
   
@@ -333,7 +332,7 @@ GO
 |HADR_PARTNER_SYNC |パートナーの一覧でのコンカレンシー制御の待機です。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_READ_ALL_NETWORKS |WSFC ネットワークの一覧に対する読み取りまたは書き込みアクセスの取得を待機しています。 内部使用のみ。 注: エンジンは、動的管理ビュー (sys.dm_hadr_cluster_networks など) で使用される WSFC ネットワークの一覧を保持するか、WSFC ネットワーク情報を参照する Transact-sql ステートメント Always On 検証します。 この一覧は、エンジンの起動時、WSFC 関連の通知、および内部 Always On の再起動時に更新されます (たとえば、WSFC クォーラムの損失や取り戻しなど)。 通常、この一覧の更新中はタスクがブロックされます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |復旧を実行する前に、セカンダリ データベースがプライマリ データベースに接続するのを待機しています。 これは想定される待機であり、プライマリへの接続確立に時間がかかる場合は長くなる可能性があります。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
-|HADR_RECOVERY_WAIT_FOR_UNDO |データベース復旧が、セカンダリ データベースが復帰および初期化フェーズを完了し、プライマリ データベースと共通のログ ポイントに戻るのを待機しています。 これは、フェールオーバー後に予想される待機です。元に戻す処理は、Windows システムモニター (perfmon.exe) および動的管理ビューを使用して追跡できます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
+|HADR_RECOVERY_WAIT_FOR_UNDO |データベース復旧が、セカンダリ データベースが復帰および初期化フェーズを完了し、プライマリ データベースと共通のログ ポイントに戻るのを待機しています。 これは、フェールオーバー後に予想される待機です。 元に戻す処理は、Windows システムモニター (perfmon.exe) および動的管理ビューを使用して追跡できます。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_REPLICAINFO_SYNC |コンカレンシー制御が現在のレプリカの状態を更新するのを待機しています。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 以降。| 
 |HADR_SEEDING_CANCELLATION |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |HADR_SEEDING_FILE_LIST |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
@@ -494,11 +493,11 @@ GO
 |PAGEIOLATCH_SH  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGEIOLATCH_UP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGELATCH_DT  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。| 
-|PAGELATCH_EX  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。| 
+|PAGELATCH_EX  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 </br> このラッチにつながる一般的なシナリオは、"最後のページ挿入" バッファーラッチの競合です。 これを理解して解決するには、[ [最終ページ挿入 PAGELATCH_EX の競合の解決](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) ] を使用し、 [SQL Server で最後のページ挿入ラッチの競合を診断して解決し](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)ます。 もう1つのシナリオは [、非クラスター化インデックスとランダム挿入 (キューテーブル) を持つ小さなテーブルでのラッチ競合](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)です。| 
 |PAGELATCH_KP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。| 
 |PAGELATCH_NL  |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |PAGELATCH_SH  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。| 
-|PAGELATCH_UP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。| 
+|PAGELATCH_UP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 通常、この待機の種類は、PFS、GAM、SGAM などのシステムページ (バッファー) がラッチされたときに発生する可能性があります。 一般的なシナリオのトラブルシューティングについては、 [SQL Server tempdb データベースでの割り当ての競合を減らす](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)方法に関する情報を参照してください。| 
 |PARALLEL_BACKUP_QUEUE |RESTORE HEADERONLY、RESTORE FILELISTONLY、または RESTORE LABELONLY によって生成された出力をシリアル化しているときに発生します。| 
 |PARALLEL_REDO_DRAIN_WORKER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |PARALLEL_REDO_FLOW_CONTROL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 

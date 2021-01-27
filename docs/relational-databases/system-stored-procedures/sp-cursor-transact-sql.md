@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 07dcf9bfc42705f2ad49e3ce476ffcd8ad70f052
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810168"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813277"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810168"
   
 ||  
 |-|  
-|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](../../sql-server/what-s-new-in-sql-server-2016.md)まで)。|  
+|**適用対象**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [現在のバージョン](/troubleshoot/sql/general/determine-version-edition-update-level)まで)。|  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  カーソルが実行する操作を指定する必須のパラメーターです。 *optype* には、次のいずれかの **int** 入力値が必要です。  
   
-|Value|名前|説明|  
+|値|名前|説明|  
 |-----------|----------|-----------------|  
-|0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum*で指定した行には、再度アクセスして更新します。|  
-|0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum*で指定した行には、再度アクセスして削除します。|  
+|0X0001|UPDATE|は、フェッチバッファー内の1つ以上の行を更新するために使用されます。  *Rownum* で指定した行には、再度アクセスして更新します。|  
+|0x0002|DELETE|は、フェッチバッファー内の1つ以上の行を削除するために使用されます。 *Rownum* で指定した行には、再度アクセスして削除します。|  
 |0X0004|INSERT|SQL の **insert** ステートメントを作成せずにデータを挿入します。|  
 |0X0008|REFRESH|は、基になるテーブルからバッファーを補充するために使用されます。オプティミスティック同時実行制御によって、または更新後に更新または削除が失敗した場合に、行を更新するために使用できます。|  
 |0X10|LOCK|指定された行を含むページで SQL Server U ロックを取得します。 このロックは、S ロックと互換性がありますが、X ロックやその他の U ロックとは互換性がありません。 短期間のロックを実装する場合に使用できます。|  
@@ -88,18 +88,18 @@ sp_cursor  cursor, optype, rownum, table
 >  は、UPDATE、DELETE、REFRESH、または LOCK *optype* 値と共に使用する場合にのみ有効です。  
   
  *テーブル*  
- *Optype*が適用されるテーブルを識別するテーブル名。カーソル定義が結合またはあいまいな列名を含む場合、*値*パラメーターによって返されます。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *table* は、文字列入力値を必要とする省略可能なパラメーターです。 文字列は任意の文字または UNICODE データ型として指定できます。 *テーブル* には、マルチパートテーブル名を指定できます。  
+ *Optype* が適用されるテーブルを識別するテーブル名。カーソル定義が結合またはあいまいな列名を含む場合、*値* パラメーターによって返されます。 特定のテーブルを指定しない場合、既定値は FROM 句の最初のテーブルになります。 *table* は、文字列入力値を必要とする省略可能なパラメーターです。 文字列は任意の文字または UNICODE データ型として指定できます。 *テーブル* には、マルチパートテーブル名を指定できます。  
   
  *value*  
- 値を挿入または更新する場合に使用します。 *値*の文字列パラメーターは、UPDATE および INSERT の*optype*値でのみ使用されます。 文字列は任意の文字または UNICODE データ型として指定できます。  
+ 値を挿入または更新する場合に使用します。 *値* の文字列パラメーターは、UPDATE および INSERT の *optype* 値でのみ使用されます。 文字列は任意の文字または UNICODE データ型として指定できます。  
   
 > [!NOTE]  
->  *Value*のパラメーター名は、ユーザーが割り当てることができます。  
+>  *Value* のパラメーター名は、ユーザーが割り当てることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  RPC を使用する場合、位置指定の DELETE または UPDATE 操作にバッファー番号0を指定すると、フェッチバッファー内のすべての行について、 *行数* が 0 (失敗) または 1 (成功) の完了メッセージが返されます。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
   
 ## <a name="optype-parameter"></a>optype パラメーター  
  SETPOSITION と UPDATE、DELETE、REFRESH、または LOCK の組み合わせを除きます。または、UPDATE または DELETE のいずれかを使用する場合、 *optype* 値は相互に排他的です。  
@@ -118,10 +118,10 @@ sp_cursor  cursor, optype, rownum, table
  指定した場合、 *rownum* パラメーターは、フェッチバッファー内の行番号ではなく、キーセット内の行番号として解釈できます。 コンカレンシー制御はユーザーが管理する必要があります。 したがって、SCROLL_LOCKS カーソルの場合はその行のロックを独自に保持し (トランザクションを使用できます)、 OPTIMISTIC カーソルの場合は、この操作を実行する前にその行をフェッチしておく必要があります。  
   
 ## <a name="table-parameter"></a>table パラメーター  
- *Optype*値が update または insert で、完全な UPDATE または insert ステートメントが*値*パラメーターとして送信された場合、 *table*に指定された値は無視されます。  
+ *Optype* 値が update または insert で、完全な UPDATE または insert ステートメントが *値* パラメーターとして送信された場合、 *table* に指定された値は無視されます。  
   
 > [!NOTE]  
->  ビューに関しては、ビューに参加しているテーブルが1つだけ変更されることがあります。 *値*パラメーターの列名にはビューの列名が反映されている必要がありますが、テーブル名には基になるベーステーブルの名前を指定できます (この場合 sp_cursor はビュー名に置き換えられます)。  
+>  ビューに関しては、ビューに参加しているテーブルが1つだけ変更されることがあります。 *値* パラメーターの列名にはビューの列名が反映されている必要がありますが、テーブル名には基になるベーステーブルの名前を指定できます (この場合 sp_cursor はビュー名に置き換えられます)。  
   
 ## <a name="value-parameter"></a>値パラメーター  
  「引数」セクションで前述したように、 *値* を使用するための規則には、次の2つの方法があります。  

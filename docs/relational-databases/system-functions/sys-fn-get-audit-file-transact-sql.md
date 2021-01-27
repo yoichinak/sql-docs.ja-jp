@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 1210ec1da44d68aaf778145da8a02bf3f3092e2c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 701740849d7b1ec8a946fa8f26bcd25568f2e62e
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093847"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812936"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -129,8 +129,9 @@ fn_get_audit_file ( file_pattern,
 
   
 ## <a name="remarks"></a>解説  
- **Fn_get_audit_file** に渡された *file_pattern* 引数が、存在しないパスまたはファイルを参照している場合、またはファイルが監査ファイルでない場合は、 **MSG_INVALID_AUDIT_FILE** エラーメッセージが返されます。  
-  
+- **Fn_get_audit_file** に渡された *file_pattern* 引数が、存在しないパスまたはファイルを参照している場合、またはファイルが監査ファイルでない場合は、 **MSG_INVALID_AUDIT_FILE** エラーメッセージが返されます。  
+- **APPLICATION_LOG**、 **SECURITY_LOG**、または **EXTERNAL_MONITOR** オプションを使用して監査を作成する場合、 **fn_get_audit_file** は使用できません。
+
 ## <a name="permissions"></a>アクセス許可
 
 - **SQL Server**: **CONTROL Server** 権限が必要です。  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d802cb37a972eb498b485d7253a82b8445f4566d
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352888"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813478"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   予約語をオブジェクト名やオブジェクト名の一部に使用する場合。  
   
-     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレードしたデータベースには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、以前のバージョンので予約されていないものの、に予約されている単語を含む識別子が含まれる場合があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
+     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョンのからアップグレードしたデータベースには [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 、以前のバージョンので予約されていないものの、に予約されている単語を含む識別子が含まれる場合があり [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ます。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
   
 -   修飾された識別子として示されていない文字を使用する場合。  
   
