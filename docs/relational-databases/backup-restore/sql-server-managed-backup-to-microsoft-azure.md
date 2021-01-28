@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ce723dfbf0171d3c1885c1574bf681fbb2c8e714
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172564"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783372"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップ
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "98172564"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントでは、データベースの完全バックアップとログ バックアップのみがサポートされます。 ファイル バックアップの自動化はサポートされません。  
   
--   Microsoft Azure BLOB ストレージ サービスは、唯一サポートされているバックアップ ストレージ オプションです。 ディスクまたはテープへのバックアップはサポートされていません。  
+-   Microsoft Azure Blob Storage サービスは、唯一サポートされているバックアップ ストレージ オプションです。 ディスクまたはテープへのバックアップはサポートされていません。  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ではブロック BLOB へのバックアップ機能を使用します。 ブロック BLOB の最大サイズは 200 GB です。 ストライピングを利用することにより、個々のバックアップの最大サイズを 12 TB まで指定できます。 バックアップ要件がこれを超える場合は、圧縮の使用を検討し、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]をセットアップする前にバックアップ ファイルのサイズをテストします。 テストは、ローカル ディスクにバックアップするか、Transact-SQL の **BACKUP TO URL** ステートメントを使用して手動で Microsoft Azure ストレージにバックアップして行うことができます。 詳細については、「 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)」を参照してください。  
   

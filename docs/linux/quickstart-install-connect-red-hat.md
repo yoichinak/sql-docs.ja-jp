@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cb266632fccaceb4639c7fdf0cfbf5368aad2c80
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471673"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711978"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
@@ -30,7 +30,7 @@ ms.locfileid: "97471673"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 8 に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 7 または 8 に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -77,18 +77,33 @@ SQL Server の CTP または RC リリースを以前インストールしてい
 > ```
 > 詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 >
-> RHEL 7 を使用している場合は、次のパスを `/rhel/8` ではなく `/rhel/7` に変更します。
 
 RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
 1. Microsoft SQL Server 2017 Red Hat リポジトリ構成ファイルをダウンロードします。
 
+   RHEL7 の場合:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
+   
+   RHEL8 の場合:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
    > SQL Server 2019 をインストールする場合は、代わりに SQL Server 2019 リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
+   >
+   > RHEL7 の場合:
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > ```
+   >
+   > RHEL8 の場合:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
@@ -144,14 +159,22 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
 > # Configure python2 as the default interpreter using this command: 
 > sudo alternatives --config python
 > ``` 
+> 
 > これらの手順の詳細については、python2 のインストールと既定のインタープリターとしての構成に関する次のブログを参照してください: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta 。
 > 
-> RHEL 7 を使用している場合は、次のパスを `/rhel/8` ではなく `/rhel/7` に変更します。
 
 RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
 1. Microsoft SQL Server 2019 Red Hat リポジトリ構成ファイルをダウンロードします。
-
+   
+   RHEL7 の場合:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+   
+   RHEL8 の場合:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
@@ -194,6 +217,14 @@ RHEL 上で SQL Server を構成するには、ターミナルで次のコマン
 
 1. Microsoft Red Hat リポジトリ構成ファイルをダウンロードします。
 
+   RHEL7 の場合:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
+   
+   RHEL8 の場合:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```

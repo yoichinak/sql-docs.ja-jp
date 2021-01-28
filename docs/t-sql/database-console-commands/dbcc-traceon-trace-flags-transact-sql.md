@@ -2,7 +2,7 @@
 description: DBCC TRACEON - トレース フラグ (Transact-SQL)
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2020
+ms.date: 01/19/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0332cd817851ff1152d6dc476bd757d971e41bc2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2cc8cbcc737c1f77c11aee6826ab39bd8b1ec4f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170214"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597239"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -193,6 +193,7 @@ ms.locfileid: "98170214"
 |**9929**|インメモリ チェックポイント ファイルをそれぞれ 1 MB に削減します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3147012)をご覧ください。<br /><br />**スコープ**: グローバルのみ|  
 |**9939**|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] での DML 操作のターゲットになっていない場合、メモリ最適化テーブルまたはテーブル変数を参照する DML 操作で、メモリ最適化テーブルおよびテーブル変数の並列プランと並列スキャンを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4013877)をご覧ください。<br /><br />**注:** トレース フラグ 4199 が明示的に有効になっている場合、トレース フラグ 9939 は必要ありません。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)|   
 |**9944**|データベースに多数のメモリ最適化テーブルまたはメモリ最適化テーブルの種類があり、待機の種類 PREMPTIVE_OS_FINDFILE または PREEMPTIVE_OS_CREATEDIRECTORY によるブロックが発生する可能性がある場合、遅いデータベース回復時間に対応する既定以外の修正を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4090789)およびこちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/4052338)を参照してください。<br /><br />**スコープ**: グローバルのみ|  
+|**10054**|OR 述語内のサブクエリを外部結合に相関解除する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザー ルールを無効にします。<br /><br />**注:** このトレース フラグは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降のビルドに適用されます。<br /><br />**注:** このオプションは、運用環境に展開する前に十分にテストしてください。<br /><br />**スコープ**: グローバル、セッション、クエリ (QUERYTRACEON)| 
 |**10204**|列ストア インデックスの再編成中に、マージ/再圧縮を無効にします。 [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] では、列ストア インデックスを再編成するときに、圧縮された小さい行グループを圧縮された大きい行グループに自動的にマージし、多数の行が削除されている行グループを圧縮する、新しい機能があります。<br /><br />**注:** トレース フラグ 10204 は、メモリ最適化テーブル上に作成された列ストア インデックスには適用されません。<br /><br />**スコープ**: グローバル、セッション|   
 |**10207**|クラスター化列ストア インデックス (CCI) スキャンで、破損したセグメントまたはメタデータをスキップできるようにします。これにより、破損した CCI からデータを取得できるようになります。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3067257)をご覧ください。<br /><br />**スコープ**: グローバル、セッション| 
 |**10316**|既定のものに加えて、[内部メモリ最適化ステージング テンポラル テーブル](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)に追加のインデックスを作成できるようにします。 既定のインデックスで対応されていない列を含む特定のクエリ パターンがある場合は、新しいインデックスの追加を検討できます。<br /><br />**注:** メモリ最適化テーブルのシステムでバージョン管理されたテンポラル テーブルは、高いトランザクション スループットを提供するように設計されています。 追加のインデックスを作成すると、現在のテーブルの行を更新または削除する DML 操作にオーバーヘッドが発生する可能性があることに注意してください。 インデックスを追加するときは、テンポラル クエリのパフォーマンスと DML オーバーヘッドの増加の間の適切なバランスを見つける必要があります。<br /><br />**スコープ**: グローバル、セッション|

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 66dd3b3b036bdbebcbd19dd52a65d2bf4ac45d1e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131283"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783549"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY SERVER AUDIT 権限を持つユーザーは、サーバー監査の仕様を作成し、任意の監査にバインドできます。  
   
- サーバー監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
+ サーバー監査仕様の作成後は、CONTROL SERVER 権限を持つユーザー、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
   
 ## <a name="examples"></a>例  
  次の例では、失敗したログインを監査する `HIPAA_Audit_Specification` というサーバー監査仕様を、`HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して作成します。  

@@ -1,6 +1,6 @@
 ---
 title: SQL Server Backup to URL | Microsoft Docs
-description: バックアップ先として Microsoft Azure BLOB ストレージを使用するために、SQL Server で必要な概念、要件、コンポーネントについて学習します。
+description: Microsoft Azure Blob Storage をバックアップ先として使用するために、SQL Server で必要な概念、要件、コンポーネントについて学習します。
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql
@@ -11,28 +11,28 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5d548262cf26f763c14b4f8ac693491ba3d58a85
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 75f74fcfca0e039b6f11bc36fd6cf694dfb756b3
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125444"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765571"
 ---
 # <a name="sql-server-backup-to-url"></a>URL への SQL Server のバックアップ
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-このトピックでは、バックアップ先として Microsoft Azure BLOB ストレージ サービスを使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 ここでは、これらの相違点とコード例も示します。  
+このトピックでは、バックアップ先として Microsoft Azure Blob Storage サービスを使用するために必要な概念、要件、コンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 ここでは、これらの相違点とコード例も示します。  
   
 ## <a name="overview"></a>概要
 
-Microsoft Azure BLOB ストレージ サービスとの間でバックアップまたは復元を実行するには、各コンポーネントと、コンポーネント間のやり取りを理解しておくことが重要です。  
+Microsoft Azure Blob Storage サービスとの間でバックアップまたは復元を実行するには、各コンポーネントと、コンポーネント間のやり取りを理解しておくことが重要です。  
   
- このプロセスでは、まず、Azure サブスクリプション内に Azure ストレージ アカウントを作成します。 このストレージ アカウントは、このストレージ アカウントで作成されたすべてのコンテナーとオブジェクトに対する完全な管理者権限を持つ管理者アカウントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Azure ストレージ アカウントの名前とアクセス キー値を使用して認証し、Microsoft Azure Blob Storage サービスに対して BLOB の書き込みと読み取りを実行することも、特定のコンテナーで生成された Shared Access Signature トークンを使用して読み取り/書き込み権限を付与することもできます。 Azure Storage アカウントの詳細については、「[Azure ストレージ アカウントについて](/azure/storage/common/storage-account-create)」をご覧ください。Shared Access Signature の詳細については、「[Shared Access Signature、第 1 部:SAS モデルについて](/azure/storage/common/storage-sas-overview)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報はこの認証情報を格納するため、バックアップ操作または復元操作中に使用されます。  
+ このプロセスでは、まず、Azure サブスクリプション内に Azure ストレージ アカウントを作成します。 このストレージ アカウントは、このストレージ アカウントで作成されたすべてのコンテナーとオブジェクトに対する完全な管理者権限を持つ管理者アカウントです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Azure ストレージ アカウントの名前とアクセス キー値を使用して認証し、Microsoft Azure Blob Storage サービスに対して BLOB の書き込みと読み取りを実行するか、特定のコンテナーで生成された Shared Access Signature トークンを使用して読み取り/書き込み権限を付与することができます。 Azure Storage アカウントの詳細については、「[Azure ストレージ アカウントについて](/azure/storage/common/storage-account-create)」をご覧ください。Shared Access Signature の詳細については、「[Shared Access Signature、第 1 部:SAS モデルについて](/azure/storage/common/storage-sas-overview)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報はこの認証情報を格納するため、バックアップ操作または復元操作中に使用されます。  
   
 ###  <a name="backup-to-block-blob-vs-page-blob"></a><a name="blockbloborpageblob"></a> ブロック BLOB とページ BLOB へのバックアップ
 
-Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 SQL Server 2016 以降の場合は、ブロック BLOB を使用することをお勧めします。
+Microsoft Azure Blob Storage サービスに格納できる BLOB には、ブロックとページの 2 種類の BLOB があります。 SQL Server 2016 以降の場合は、ブロック BLOB を使用することをお勧めします。
 
 資格情報内でストレージ キーが使用されている場合は、ページ BLOB が使用されます。Shared Access Signature が使用されている場合は、ブロック BLOB が使用されます。
 
@@ -63,17 +63,17 @@ SQL Server インスタンスが Linux でホストされている場合は、�
 
 サポートされている唯一の URL へのバックアップ パターンは、Shared Access Signature を使用して行われる、ブロック BLOB を対象とするものです。
 
-###  <a name="microsoft-azure-blob-storage-service"></a><a name="Blob"></a> Microsoft Azure BLOB ストレージ サービス  
+###  <a name="microsoft-azure-blob-storage-service"></a><a name="Blob"></a> Microsoft Azure Blob Storage サービス  
 
 **ストレージ アカウント:** ストレージ アカウントは、すべてのストレージ サービスの開始点となります。 Microsoft Azure Blob Storage サービスにアクセスするには、まず Azure ストレージ アカウントを作成します。 詳細については、「 [ストレージ アカウントの作成](/azure/storage/common/storage-account-create)」を参照してください。  
   
-**コンテナー:** コンテナーは一連の BLOB をグループ化します。コンテナーには BLOB を無制限に格納できます。 Microsoft Azure BLOB ストレージ サービスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルート コンテナーを作成しておく必要があります。 コンテナーで Shared Access Signature トークンを生成し、特定のコンテナーでのみオブジェクトへのアクセス権を付与できます。  
+**コンテナー:** コンテナーは一連の BLOB をグループ化します。コンテナーには BLOB を無制限に格納できます。 Microsoft Azure Blob Storage サービスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルート コンテナーを作成しておく必要があります。 コンテナーで Shared Access Signature トークンを生成し、特定のコンテナーでのみオブジェクトへのアクセス権を付与できます。  
   
-**BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、次の URL 形式を使用してアドレス指定できます: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 Microsoft Azure BLOB ストレージ サービスの詳細については、「 [.NET を使用して Azure Blob Storage を使用する](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)」をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
+**BLOB:** 任意の種類とサイズのファイルです。 Microsoft Azure Blob Storage サービスに格納できる BLOB には、ブロックとページの 2 種類の BLOB があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、使用する Transact-SQL 構文に応じていずれかの BLOB の種類を使用できます。 BLOB は、次の URL 形式を使用してアドレス指定できます: https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 Microsoft Azure Blob Storage サービスの詳細については、[.NET から Azure Blob Storage を使用する方法](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)に関する記事をご覧ください。 ページ BLOB とブロック BLOB の詳細については、「 [Understanding Block and Page Blobs](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs)」 (ブロック BLOB とページ BLOB について) をご覧ください。  
   
 ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
-**Azure スナップショット:** ある時点で取得された Azure BLOB のスナップショットです。 詳細については、「 [Creating a Snapshot of a Blob](/rest/api/storageservices/Creating-a-Snapshot-of-a-Blob)」 (BLOB のスナップショットの作成) を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、Microsoft Azure BLOB ストレージ サービスに格納されたデータベース ファイルの Azure スナップショット バックアップがサポートされるようになりました。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
+**Azure スナップショット:** ある時点で取得された Azure BLOB のスナップショットです。 詳細については、「 [Creating a Snapshot of a Blob](/rest/api/storageservices/Creating-a-Snapshot-of-a-Blob)」 (BLOB のスナップショットの作成) を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップで、Microsoft Azure Blob Storage サービスに格納されたデータベース ファイルの Azure スナップショット バックアップがサポートされるようになりました。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。  
   
 ###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント  
 
@@ -81,7 +81,7 @@ SQL Server インスタンスが Linux でホストされている場合は、�
   
  サンプル URL 値を次に示します: http[s]://ACCOUNTNAME.blob.core.windows.net/\<CONTAINER>/\<FILENAME.bak>。 HTTPS は必須ではありませんが、推奨されています。  
   
-**資格情報:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Microsoft Azure BLOB ストレージ サービスと、コンテナーおよび BLOB オブジェクトに対する認証を行います。 資格情報には、ストレージ アカウントの名前と **アクセス キー** の値またはコンテナーの URL と Shared Access Signature トークンが保存されます。 資格情報が作成されたら、BACKUP/RESTORE ステートメントの構文で BLOB の種類と必要な資格情報を指定します。  
+**資格情報:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 ここで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスによって資格情報が使用され、Microsoft Azure Blob Storage サービスとそのコンテナー、および BLOB オブジェクトに対する認証が行われます。 資格情報には、ストレージ アカウントの名前と **アクセス キー** の値またはコンテナーの URL と Shared Access Signature トークンが保存されます。 資格情報が作成されたら、BACKUP/RESTORE ステートメントの構文で BLOB の種類と必要な資格情報を指定します。  
   
 Shared Access Signature の作成方法の例については、このトピックで後述する「[Shared Access Signature の作成](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS)」の例を参照してください。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報の作成については、このトピックで後述する「[資格情報の作成](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential)」の例を参照してください。  
   
@@ -91,9 +91,9 @@ Shared Access Signature の作成方法の例については、このトピッ�
   
 ##  <a name="security"></a><a name="security"></a> セキュリティ  
 
-Microsoft Azure BLOB ストレージ サービスとの間でバックアップまたは復元を実行する際のセキュリティに関する考慮事項と要件は次のとおりです。  
+Microsoft Azure Blob Storage サービスとの間でバックアップまたは復元を実行する場合のセキュリティに関する考慮事項と要件は次のとおりです。  
   
-- Microsoft Azure BLOB ストレージ サービスのコンテナーを作成するときは、アクセス権を **private** に設定することをお勧めします。 アクセス権を private に設定すると、Azure アカウントの認証に必要な情報を指定できるユーザーまたはアカウントだけがアクセスできるようになります。  
+- Microsoft Azure Blob Storage サービスのコンテナーを作成するときは、アクセス権を **private** に設定することをお勧めします。 アクセス権を private に設定すると、Azure アカウントの認証に必要な情報を指定できるユーザーまたはアカウントだけがアクセスできるようになります。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Azure のアカウント名とアクセス キーの認証または Shared Access Signature とアクセス トークンを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報に保存する必要があります。 この情報は、バックアップ操作または復元操作の実行時に、Azure アカウントに対する認証に使用されます。  
@@ -157,7 +157,7 @@ Microsoft Azure BLOB ストレージ サービスとの間でバックアップ�
 |TO (URL)|Y|ディスクまたはテープの場合とは異なり、URL では論理名の指定と作成はサポートされていません。|この引数は、バックアップ ファイルの URL パスの指定に使用されます。|  
 |MIRROR TO|Y|||  
 |**WITH オプション:**||||  
-|CREDENTIAL|Y||WITH CREDENTIAL は、BACKUP TO URL オプションを使用して Microsoft Azure BLOB ストレージ サービスにバックアップするときに、シークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合にのみサポートされます。|  
+|CREDENTIAL|Y||WITH CREDENTIAL は、BACKUP TO URL オプションを使用して Microsoft Azure Blob Storage サービスにバックアップするとき、およびシークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合にのみサポートされます|  
 |FILE_SNAPSHOT|Y|||  
 |ENCRYPTION|Y||**WITH ENCRYPTION** 引数が指定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップでは、バックアップを作成する前にデータベース全体が TDE で暗号化されていることを確認し、暗号化されていれば、データベースで TDE に指定されたアルゴリズムを使用して、ファイル スナップショット バックアップ ファイル自体を暗号化します。 データベース全体でデータがすべて暗号化されているわけではない場合、バックアップは失敗します (暗号化プロセスがまだ完了していないなど)。|  
 |DIFFERENTIAL|Y|||  
@@ -192,7 +192,7 @@ Microsoft Azure BLOB ストレージ サービスとの間でバックアップ�
 |LOG|Y|||  
 |FROM (URL)|Y||FROM URL 引数は、バックアップ ファイルの URL パスの指定に使用されます。|  
 |**WITH Options:**||||  
-|CREDENTIAL|Y||WITH CREDENTIAL は、RESTORE FROM URL オプションを使用して Microsoft Azure BLOB ストレージ サービスから復元する場合にのみサポートされます。|  
+|CREDENTIAL|Y||WITH CREDENTIAL は、RESTORE FROM URL オプションを使用して Microsoft Azure Blob Storage サービスから復元する場合にのみサポートされます。|  
 |PARTIAL|Y|||  
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|Y|||  
 |LOADHISTORY|Y|||  
@@ -261,7 +261,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 >  Shared Access トークンを使用して、ストライプ バックアップ セット、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップ、または SQL 資格情報を作成するには、メンテナンス プラン ウィザードのバックアップ タスクではなく、Transact-SQL、PowerShell、または C# を使用する必要があります。  
   
 ##  <a name="restore-with-ssms"></a><a name="RestoreSSMS"></a> SSMS を使用して復元する 
-データベースの復元タスクには、復元元のデバイスとして **[URL]** が含まれます。  次の手順は、復元タスクを使用して Microsoft Azure BLOB ストレージ サービスから復元する方法を示しています。 
+データベースの復元タスクには、復元元のデバイスとして **[URL]** が含まれます。  次の手順は、復元タスクを使用して Microsoft Azure Blob Storage サービスから復元する方法を示しています。 
   
 1. **[データベース]** を右クリックして、 **[データベースの復元...]** を選択します。 
   
@@ -296,7 +296,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 - [STOPAT を使って特定の時点の状態に復元する](#PITR)  
   
 > [!NOTE]  
-> Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+> Microsoft Azure Blob Storage サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」を参照してください。  
   
 ### <a name="create-a-shared-access-signature"></a><a name="SAS"></a> Shared Access Signature の作成
 
@@ -358,7 +358,7 @@ Write-Host $tSql
 
 ###  <a name="create-a-credential"></a><a name="credential"></a> 資格情報の作成
 
-次の例では、Microsoft Azure BLOB ストレージ サービスに対する認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を作成します。 次のいずれかの操作を行います。
+次の例では、Microsoft Azure Blob Storage サービスに対する認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を作成します。 次のいずれかの操作を行います。
   
 1. **Shared Access Signature を使用**  
 
@@ -387,7 +387,7 @@ Write-Host $tSql
   
 ### <a name="perform-a-full-database-backup"></a><a name="complete"></a> データベースの完全バックアップの実行  
 
-次の例では、Microsoft Azure BLOB ストレージ サービスへの AdventureWorks2016 データベースの完全バックアップを実行します。 次のいずれかの操作を行います。
+次の例では、Microsoft Azure Blob Storage サービスへの AdventureWorks2016 データベースの完全バックアップを実行します。 次のいずれかの操作を行います。
   
 1. **Shared Access Signature を使用した TO URL**  
   
@@ -434,4 +434,4 @@ Write-Host $tSql
 
 - [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
 - [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+- [チュートリアル: Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)

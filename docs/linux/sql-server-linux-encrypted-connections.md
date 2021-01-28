@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 2d4848a8fa3661abd94ef63f3289261142998409
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088912"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766320"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
@@ -42,13 +42,16 @@ ms.locfileid: "88088912"
 - **証明書を生成する** (/CN とお使いの SQL Server ホストの完全修飾ドメイン名が一致する必要があります)
 
 > [!NOTE]
-> この例では、自己署名証明書を使用しますが、運用環境のシナリオでは使用すべきではありません。 CA 証明書を使用する必要があります。 
+> この例では、自己署名証明書を使用しますが、運用環境のシナリオでは使用すべきではありません。 CA 証明書を使用する必要があります。<br>
+> 証明書と秘密キーを保存するフォルダーが、mssql ユーザーまたはグループからアクセスできること、権限セットが 700 (drwx-----) に確実に設定されているようにします。 フォルダーは、権限セットを 700 (drwx------) に設定し、mssql ユーザーまたはグループが所有する、またはアクセス許可を 755 (drwxr-xr-x) に設定し、他のユーザーが所有していても mssql ユーザー グループがアクセスできるよう手動で作成することができます。 たとえば、'/var/opt/mssql/' というパスの下に 'sslcert' という名前のフォルダーを作成し、次に示すように、ファイルのアクセス許可を 600 に設定して、証明書と秘密キーを保存することができます。 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 

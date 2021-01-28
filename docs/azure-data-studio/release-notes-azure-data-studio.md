@@ -8,17 +8,25 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
-ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.date: 1/22/2020
+ms.openlocfilehash: b0455de16e6808f4d2e67113976ae754830881ee
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596511"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711948"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](./download-azure-data-studio.md)**
+
+## <a name="december-2020-hotfix"></a>2020 年 12 月 (修正プログラム)
+
+2020 年 1 月 22 日 &nbsp; / &nbsp; バージョン:1.25.2
+
+| Change | 詳細 |
+| ------ | ------- |
+| バグの修正 [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Notebook 内の適切な相互参照リンクまでスクロールする |
 
 ## <a name="december-2020"></a>2020 年 12 月
 

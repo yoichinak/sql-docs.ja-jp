@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 60c298991f80586ed9b830b856b84b3640ac509e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1c0322b1b00b3f5cbff775d3c248ee81916f48a9
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170794"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765135"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループ: 相互運用性 (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能との間の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の相互運用性について説明します。
+このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能との間の相互運用性について説明します。
 
 ## <a name="features-that-interoperate-with-always-on-availability-groups"></a><a name="Interop"></a> Always On 可用性グループと相互運用可能な機能
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と相互運用可能な [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]機能を次の表に示します。 **詳細情報** 列のリンクは、特定の機能に関して相互運用性に関する考慮事項が存在することを示します。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と相互運用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能を次の表に示します。 **詳細情報** 列のリンクは、特定の機能に関して相互運用性に関する考慮事項が存在することを示します。
 
 |機能|詳細情報|
 |:------|:---------------|

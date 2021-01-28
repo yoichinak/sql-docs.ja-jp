@@ -14,19 +14,19 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4fefa039f03e061c683c3df916a25087cb9a4e5c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 588bb693d5bcf8561d7f697dc910c483d63160a7
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123667"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783081"
 ---
 # <a name="azure-blob-upload-task"></a>Azure BLOB のアップロード タスク
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-**Azure BLOB のアップロード タスク** を使うと、SSIS パッケージで Azure BLOB ストレージにファイルをアップロードできます。
+**Azure BLOB のアップロード タスク** を使うと、SSIS パッケージで Azure Blob Storage にファイルをアップロードできます。
     
 **Azure BLOB のアップロード タスク** を追加するには、SSIS デザイナーにドラッグ アンド ドロップし、ダブルクリックまたは右クリックして、 **[編集]** をクリックし、次の **[Azure Blob Upload Task Editor (Azure BLOB アップロード タスク エディター)]** ダイアログ ボックスを表示します。  
   

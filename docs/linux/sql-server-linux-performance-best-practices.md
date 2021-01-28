@@ -4,16 +4,16 @@ description: この記事では、SQL Server on Linux の実行に関するパ�
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 12/11/2020
+ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 89b8a7c087fb87ed911be640126ec81021b045a7
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323513"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689115"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -33,7 +33,7 @@ SQL Server のインストールで最適なパフォーマンスを得るため
 
 データ、トランザクション ログ、およびその他の関連ファイル (インメモリ OLTP のチェックポイント ファイルなど) をホストする記憶域サブシステムでは、平均とピークのワークロードの両方を適切に管理できる必要があります。 通常、オンプレミス環境では、ストレージ ベンダーにより、適切な IOPS、スループット、冗長性を確保するために複数のディスクでストライピングする適切なハードウェア RAID 構成がサポートされます。 しかし、これはストレージ ベンダーや、さまざまなアーキテクチャを備えたストレージ オファリングによって異なる場合があります。
 
-Azure Virtual Machines にデプロイされた SQL Server on Linux については、適切な IOPS とスループットの要件が確実に満たされるようにソフトウェア RAID の使用を検討してください。 Azure Virtual Machines で SQL Server を構成する場合は、同様のストレージに関する考慮事項について、次の記事を参照してください。[SQL Server VM のストレージの構成](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/storage-configuration)
+Azure Virtual Machines にデプロイされた SQL Server on Linux については、適切な IOPS とスループットの要件が確実に満たされるようにソフトウェア RAID の使用を検討してください。 Azure Virtual Machines で SQL Server を構成する場合は、同様のストレージに関する考慮事項について、次の記事を参照してください。[SQL Server VM のストレージの構成](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
 以下は、Azure Virtual Machines 上の Linux でソフトウェア RAID を作成する方法の例です。 以下に例を示しますが、データ、トランザクション ログ、tempdb IO の要件に基づくボリュームに必要なスループットと IOPS に応じて適切な数のデータ ディスクを使用する必要があります。 この例では、8 つのデータ ディスクが Azure 仮想マシンに接続されています。つまり、データ ファイルのホスト用に 4 つ、トランザクション ログ用に 2 つ、tempdb ワークロード用に 2 つです。
 
@@ -48,6 +48,31 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 # For tempdb volume, using 2 devices in RAID 0 configuration with 64KB stripes
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
 ```
+
+#### <a name="disk-partitioning-and-configuration-recommendations"></a>ディスクのパーティション分割と構成に関する推奨事項
+
+SQL Server には、RAID 構成を使用することをお勧めします。 デプロイされたファイル システムのストライプ ユニット (sunit) とストライプ幅は、RAID ジオメトリと一致している必要があります。 XFS ファイルシステムをベースにしたログ ボリュームの例を次に示します。 
+
+```bash
+# Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
+
+mkfs.xfs /dev/sda1 -f -L log 
+meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+         =                       sectsz=4096  attr=2, projid32bit=1 
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0 
+         =                       reflink=1 
+data     =                       bsize=4096   blocks=585204384, imaxpct=5 
+         =                       sunit=16     swidth=48 blks 
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1 
+log      =internal log           bsize=4096   blocks=285744, version=2 
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1 
+realtime =none                   extsz=4096   blocks=0, rtextents=0 
+```
+
+ログ アレイは、64k のストライプを持つ 6 ドライブの RAID 10 です。 ご覧のとおり、
+   1. "sunit = 16 ブロック"、16*4,096 ブロック サイズ = 64k は、ストライプ サイズと一致します。 
+   2. "swidth = 48 ブロック"、swidth/sunit = 3 は、パリティ ドライブを除いたアレイ内のデータ ドライブの数です。 
 
 #### <a name="file-system-configuration-recommendation"></a>ファイル システムの構成に関する推奨事項
 
@@ -195,7 +220,8 @@ tuned-adm list
 
 **説明:**
 
-- **vm.swappiness**: このパラメーターで、SQL Server のプロセス メモリ ページをスワップ アウトするようにカーネルを制限することで、ランタイム メモリをスワップ アウトするための相対的な重みを制御します。
+- **vm.swappiness**: このパラメーターにより、ランタイム プロセス メモリのスワップ アウトに適用される、ファイルシステム キャッシュと比較した場合の相対的な重みを制御します。 このパラメーターの既定値は 60 です。これは、ランタイム プロセス メモリ ページのスワップを、ファイルシステム キャッシュ ページの削除との比較において、60:140 の比率で行うことを示します。 値 1 を設定すると、ファイルシステム キャッシュを活用することなく、ランタイム プロセス メモリを物理メモリ内に保持することを強く優先することが示されます。 SQL Server の場合、バッファー プールをデータ ページ キャッシュとして使用し、信頼性の高い復旧ができるようにするために、ファイルシステム キャッシュをバイパスして物理ハードウェアに書き込むことが強く優先されます。そのため、パフォーマンスの高い専用の SQL Server に対しては、積極的な swappiness の構成が効果的な可能性があります。
+詳細については、[/proc/sys/vm/ - #swappiness のドキュメント](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness)を参照してください。
 
 - **vm.dirty_\** _: SQL Server ファイルの書き込みアクセスはキャッシュされないため、そのデータの整合性要件が満たされます。 これらのパラメーターを使用すると、効率的な非同期書き込みパフォーマンスを実現し、フラッシュを調整しながら十分な大きさのキャッシュを許可することで Linux での書き込みのキャッシュのストレージ IO への影響を軽減できます。
 
@@ -245,6 +271,114 @@ tuned-adm profile mssql
 ```
 
 **mssql** **_Tuned_ *プロファイルを使用して、* transparent_hugepage** オプションを構成します。
+
+#### <a name="network-setting-recommendations"></a>ネットワーク設定に関する推奨事項
+
+記憶域と CPU に関する推奨事項と同様に、次に示すネットワークに固有の推奨事項も参考になります。 以下に記載されているすべての設定が、NIC の違いに関係なく使用できるわけではありません。 これらの各オプションのガイダンスについては、NIC ベンダーに問い合わせおよび相談してください。 運用環境に適用する前に、開発環境でこれをテストして構成します。 以下で説明するオプションに示されている例を参照してください。使用しているコマンドは、NIC の種類とベンダーに固有です。 
+
+1. ネットワーク ポートのバッファー サイズの構成: 次の例では、NIC は Intel ベースの NIC で、"eth0" という名前です。 Intel ベースの NIC の場合、推奨されるバッファー サイズは 4 KB (4096) です。 事前設定された最大値を確認し、次に示すサンプル コマンドを使用して構成します。
+
+ ```bash
+         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+         ethtool -g eth0
+         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+         ethtool -G eth0 rx 4096 tx 4096
+         #command to check the value is properly configured is:
+         ethtool -g eth0
+  ```
+
+2. ジャンボ フレームを有効にする: ジャンボ フレームを有効にする前に、クライアントと SQL Server との間のネットワーク パケット パスに必要なすべてのネットワーク スイッチ、ルーター、およびその他で、ジャンボ フレームがサポートされていることを確認します。 そうした場合にのみ、ジャンボ フレームを有効にするとパフォーマンスが向上します。 ジャンボ フレームが有効になったら、SQL Server に接続し、次のように `sp_configure` を使用してネットワーク パケットのサイズを 8060 に変更します。
+
+```bash
+         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+         ifconfig eth0 mtu 9014
+         #verify the setting using the command:
+         ip addr | grep 9014
+```
+
+```sql
+         sp_configure 'network packet size' , '8060'
+         go
+         reconfigure with override
+         go
+```
+
+3. 既定として、アダプティブ RX または TX の IRQ 結合用にポートを設定することをお勧めします。つまり、割り込み配信は、パケット レートが低いときの待機時間を改善するとともに、パケット レートが高いときのスループットを改善するように調整されます。 この設定は、すべての異なるネットワーク インフラストラクチャで使用できるとは限りません。そのため、既存のネットワーク インフラストラクチャを確認し、これがサポートされていることを確かめてください。 次の例は、Intel ベースの NIC である "eth0" という名前の NIC の場合です。
+
+```bash
+         #command to set the port for adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx on
+         echtool -C eth0 adaptive-tx on
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+> [!NOTE]
+> ベンチマークのための環境など、ハイ パフォーマンス環境で予測可能な動作を行うには、アダプティブ RX または TX の IRQ 結合を無効にして、明示的に RX または TX 割り込みの結合を設定します。 RX または TX の IRQ 結合を無効にしてから具体的に値を設定するコマンドの例を参照してください。
+
+```bash
+         #commands to disable adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx off
+         echtool -C eth0 adaptive-tx off
+         #confirm the setting using the command:
+         ethtool -c eth0
+         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+4. RSS (Receive-Side Scaling) を有効にし、既定で RSS キューの rx と tx の側を組み合わせることもお勧めします。 Microsoft サポートとやり取りするときに、RSS を無効にするとパフォーマンスが向上したという特定のシナリオがありました。 運用環境に適用する前に、テスト環境でこの設定をテストしてください。 次に示すコマンドの例は、Intel NIC の場合です。
+
+```bash
+         #command to get pre-set maximums
+         ethtool -l eth0 
+         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+         ethtool -L eth0 combined 8
+         #you can verify the setting using the command below
+         ethtool -l eth0
+```
+
+5. NIC ポートの IRQ アフィニティを操作します。 IRQ アフィニティを調整することによって、期待されるパフォーマンスを実現するには、Linux でのサーバー トポロジ、NIC ドライバー スタック、既定の設定、irqbalance の設定の処理など、重要ないくつかのパラメーターについて検討してください。 NIC ポートの IRQ アフィニティ設定の最適化は、サーバー トポロジに関する知識に基づいて行い、irqbalance を無効にし、NIC ベンダー固有の設定を使用します。 次に、この構成の説明に役立つ、Mellanox 固有のネットワーク インフラストラクチャの例を示します。 コマンドは環境に応じて変わることにご注意ください。 詳細については、NIC ベンダーにお問い合わせください。
+
+```bash
+         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+         systemctl disable irqbalance.service
+         #or
+         irqbalance --oneshot
+
+         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+         tar -xvf mlnx_tuning_scripts.tar.gz
+         # be sure, common_irq_affinity.sh is executable. if not, 
+         # chmod +x common_irq_affinity.sh       
+
+         #display IRQ affinity for Mellanox NIC port; e.g eth0
+         ./show_irq_affinity.sh eth0
+
+         #optimize for best throughput performance
+         ./mlnx_tune -p HIGH_THROUGHPUT
+
+         #set hardware affinity to the NUMA node hosting physically the NIC and its port
+         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+
+         #verify IRQ affinity
+         ./show_irq_affinity.sh eth0
+
+         #add IRQ coalescing optimizations
+         ethtool -C eth0 adaptive-rx off
+         ethtool -C eth0 adaptive-tx off
+         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+
+         #verify the settings
+         ethtool -c eth0
+```
+
+6. 上記の変更が完了したら、次のコマンドを使用して NIC の速度を確認し、確実に予想と一致しているようにします。
+
+```bash
+         ethtool eth0 | grep -i Speed
+```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>その他の高度なカーネルおよび OS の構成
 

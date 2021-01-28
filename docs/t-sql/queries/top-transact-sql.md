@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 295e21500b51bed644807c2cbbab03515fb7e7d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484004"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783594"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ SELECT ステートメントでは、必ず ORDER BY 句と TOP 句を使用し�
 -   クエリ オプティマイザーでは、クエリを最適化する際に、TOP 句または FETCH 句の *expression* の値を SELECT ステートメントの一部として認識できます。 SET ROWCOUNT はクエリを実行するステートメントの外部で使用するので、その値をクエリ プランで認識することはできません。  
   
 ## <a name="compatibility-support"></a>互換性サポート  
-下位互換性のため、SELECT ステートメントではかっこは省略可能です。 SELECT ステートメントの TOP では常にかっこを使用することをお勧めします。 そうすることで、かっこが必要な INSERT、UPDATE、MERGE、DELETE ステートメントとの一貫性を保つことができます。 
+下位互換性のために、式が整数の定数の場合、SELECT ステートメントではかっこは省略可能です。 SELECT ステートメントの TOP では常にかっこを使用することをお勧めします。 そうすることで、かっこが必要な INSERT、UPDATE、MERGE、DELETE ステートメントとの一貫性を保つことができます。 
   
 ## <a name="interoperability"></a>相互運用性  
 TOP 式は、トリガーによって実行される可能性があるステートメントには影響しません。 トリガーによって **挿入** および **削除** されたテーブルからは、INSERT、UPDATE、MERGE、または DELETE ステートメントによって実際に影響を受けた行のみが返されます。 たとえば、TOP 句が含まれる INSERT ステートメントの結果として INSERT TRIGGER が起動されるような場合です。  

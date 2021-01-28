@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 9086c0e4dcda0a98daad3e372e719bde7fc628d7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a5b5a4174a8faae5c57ed6844e96f52b8f271311
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099510"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711998"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -482,7 +482,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 |1024 GB|該当なし|√|√|√|√ (D)|
 |1024 GB から 4096 GB (256 GB ずつ増分)*|該当なし|該当なし|該当なし|該当なし|√|
 
-\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
+\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事をご覧ください。
 
 DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示すように指定されたサービス レベルで有効な値である必要があります。
 
@@ -578,7 +578,7 @@ DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示す�
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |データの最大サイズ (GB)|1280|1536|2048|4096|4096|
 
-vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
+vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コア モデルのリソースの制限事項の詳細については、[仮想コア リソースの制限](/azure/sql-database/sql-database-dtu-resource-limits)に関する記事をご覧ください。
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
@@ -868,15 +868,33 @@ CURRENT
 
 ## <a name="remarks"></a>解説
 
-データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
-データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
+- データベースを削除するには、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) を使用します。
 
-`ALTER DATABASE` ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
+- データベースのサイズを縮小するには、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) を使用します。
 
-プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
+- `ALTER DATABASE` ステートメントは自動コミット モード (既定のトランザクション管理モード) で実行する必要があり、明示的または暗黙的なトランザクションでは許可されません。
 
+- Managed Instance のプラン キャッシュは、次のいずれかのオプションを設定することにより消去されます。
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFY NAME
+
+    プラン キャッシュが消去されると、後続のすべての実行プランが再コンパイルされ、場合によっては、クエリ パフォーマンスが一時的に急激に低下します。 プラン キャッシュ内のキャッシュストアが消去されるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、一部のデータベース メンテナンス操作または再構成操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに含まれます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
 既定オプションのデータベースに対して複数のクエリが実行されても、プラン キャッシュはフラッシュされます。 データベースはその後削除されます。
 
+- 一部の `ALTER DATABASE` ステートメントでは、実行するデータベースを排他的にロックする必要があります。 そのため、別のアクティブなプロセスがデータベースのロックを保持しているときに、エラーが発生するおそれがあります。 このような場合に報告されるエラーは `Msg 5061, Level 16, State 1, Line 38` で、メッセージは `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later` です。 これは通常、一時的なエラーであり、問題を解決するには、データベースのすべてのロックが解放された後で、失敗した ALTER DATABASE ステートメントを再試行します。 システムビュー `sys.dm_tran_locks` は、アクティブなロックに関する情報を保持します。 データベースに共有ロックまたは排他ロックがあるかどうかを確認するには、次のクエリを使用します。
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## <a name="viewing-database-information"></a>データベース情報の表示
 
 カタログ ビュー、システム関数、およびシステム ストアド プロシージャを使用して、データベース、ファイルおよびファイル グループについての情報を返すことができます。
@@ -1314,7 +1332,7 @@ FROM sys.databases;
 
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. データベースに対して統計の自動作成および自動更新を有効にする
 
-次のステートメントを使用して、データベース CustomerSales について自動的かつ非同期的に統計を作成および更新する機能を有効にします。 これにより、高品質のクエリ プランを作成するために必要に応じて統計が作成および更新されます。
+次のステートメントを使用して、データベース CustomerSales について自動的かつ非同期的に統計を作成および更新する機能を有効にします。 これにより、高品質のクエリ プランを作成するために必要に応じて単一列統計が作成および更新されます。
 
 ```sql
 ALTER DATABASE CustomerSales
