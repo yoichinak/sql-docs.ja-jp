@@ -2,7 +2,7 @@
 description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys.dm_os_wait_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 01/25/2021
+ms.date: 01/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da16b2c28c55952e609b98637802c940ff5a6a54
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 15f49e670fad327da52fe340a1f9b7601d22ef80
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813063"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924745"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -487,17 +487,17 @@ GO
 |OLEDB |が、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SNAC OLE DB Provider (SQLNCLI) または Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL) を呼び出したときに発生します。 この種類の待機は、同期では使用されません。 代わりに、OLE DB プロバイダー呼び出しの持続時間を示します。| 
 |ONDEMAND_TASK_QUEUE |バックグラウンド タスクが、優先度の高いシステム タスクの要求を待機しているときに発生します。 待機時間が長い場合は処理優先度が高い要求がないことを示します。問題があるわけではありません。| 
 |PAGEIOLATCH_DT  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
-|PAGEIOLATCH_EX  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
+|PAGEIOLATCH_EX  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードであり、バッファーがディスクに書き込まれるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGEIOLATCH_KP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGEIOLATCH_NL  |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|PAGEIOLATCH_SH  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
+|PAGEIOLATCH_SH  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードで、バッファーがディスクから読み取られるときに使用されるモードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
 |PAGEIOLATCH_UP  |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。| 
-|PAGELATCH_DT  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。| 
-|PAGELATCH_EX  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 </br> このラッチにつながる一般的なシナリオは、"最後のページ挿入" バッファーラッチの競合です。 これを理解して解決するには、[ [最終ページ挿入 PAGELATCH_EX の競合の解決](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) ] を使用し、 [SQL Server で最後のページ挿入ラッチの競合を診断して解決し](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)ます。 もう1つのシナリオは [、非クラスター化インデックスとランダム挿入 (キューテーブル) を持つ小さなテーブルでのラッチ競合](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)です。| 
-|PAGELATCH_KP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。| 
+|PAGELATCH_DT  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 ページの内容を削除する前に、破棄モードを取得する必要があります。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。| 
+|PAGELATCH_EX  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードであるため、他のスレッドがページ (buffer) への書き込みまたは読み取りを行うことをブロックします。 </br></br> このラッチにつながる一般的なシナリオは、"最後のページ挿入" バッファーラッチの競合です。 これを理解して解決するには、[ [最終ページ挿入 PAGELATCH_EX の競合の解決](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention) ] を使用し、 [SQL Server で最後のページ挿入ラッチの競合を診断して解決し](../diagnose-resolve-latch-contention.md#last-pagetrailing-page-insert-contention)ます。 もう1つのシナリオは [、非クラスター化インデックスとランダム挿入 (キューテーブル) を持つ小さなテーブルでのラッチ競合](../diagnose-resolve-latch-contention.md#latch-contention-on-small-tables-with-a-non-clustered-index-and-random-inserts-queue-table)です。| 
+|PAGELATCH_KP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードのため、ページが別のスレッドによって破棄されるのを防ぎます。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。| 
 |PAGELATCH_NL  |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
-|PAGELATCH_SH  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。| 
-|PAGELATCH_UP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 通常、この待機の種類は、PFS、GAM、SGAM などのシステムページ (バッファー) がラッチされたときに発生する可能性があります。 一般的なシナリオのトラブルシューティングについては、 [SQL Server tempdb データベースでの割り当ての競合を減らす](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)方法に関する情報を参照してください。| 
+|PAGELATCH_SH  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードであり、複数のスレッドがバッファー (ページ) を読み取りますが、変更することはできません。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。| 
+|PAGELATCH_UP  |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 通常、この待機の種類は、PFS、GAM、SGAM などのシステムページ (バッファー) がラッチされたときに発生する可能性があります。 詳細については、「 [ラッチモード](../diagnose-resolve-latch-contention.md#sql-server-latch-modes-and-compatibility) 」を参照してください。 </br></br> このラッチを使用した一般的なシナリオのトラブルシューティングについては、「 [SQL Server tempdb データベースでの割り当ての競合を減らす](/troubleshoot/sql/performance/recommendations-reduce-allocation-contention)」を参照してください。| 
 |PARALLEL_BACKUP_QUEUE |RESTORE HEADERONLY、RESTORE FILELISTONLY、または RESTORE LABELONLY によって生成された出力をシリアル化しているときに発生します。| 
 |PARALLEL_REDO_DRAIN_WORKER |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 
 |PARALLEL_REDO_FLOW_CONTROL |内部使用のみ。 <br /><br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 以降。| 

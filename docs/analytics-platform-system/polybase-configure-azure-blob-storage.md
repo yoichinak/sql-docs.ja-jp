@@ -1,6 +1,6 @@
 ---
-title: PolyBase を使用して Azure Blob ストレージ内の外部データにアクセスする
-description: 並列データウェアハウス (APS) で PolyBase を使用して、Azure Blob ストレージ内の外部データに対してクエリを実行する方法について説明します。
+title: PolyBase を使用して Azure Blob Storage 内の外部データにアクセスする
+description: 並列データウェアハウス (APS) で PolyBase を使用して、Azure Blob Storage 内の外部データに対してクエリを実行する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,35 +9,35 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 59f9e29940947c1afcf3321fe138030a3fb0d5f1
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520976"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924704"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データにアクセスするように PolyBase を構成する
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob Storage 上の外部データにアクセスするように PolyBase を構成する
 
-この記事では、SQL Server インスタンスで PolyBase を使用して、Azure Blob ストレージ内の外部データに対してクエリを実行する方法について説明します。
+この記事では、SQL Server インスタンスで PolyBase を使用し、Azure Blob Storage 上の外部データに対してクエリを実行する方法について説明します。
 
 > [!NOTE]
-> 現在、APS は、standard 汎用 v1 ローカル冗長 (LRS) の Azure Blob storage のみをサポートしています。
+> 現在、APS では、standard 汎用 v1 のローカル冗長 (LRS) Azure Blob Storage のみがサポートされています。
 
 ## <a name="prerequisites"></a>前提条件
 
- - サブスクリプションの Azure Blob storage。
- - Azure Blob storage に作成されたコンテナー。
+ - サブスクリプションで Azure Blob Storage します。
+ - Azure Blob Storage に作成されたコンテナー。
 
-### <a name="configure-azure-blob-storage-connectivity"></a>Azure Blob storage の接続を構成する
+### <a name="configure-azure-blob-storage-connectivity"></a>Azure Blob Storage 接続の構成
 
-まず、Azure Blob storage を使用するように APS を構成します。
+まず、Azure Blob Storage を使用するように APS を構成します。
 
-1. ' Hadoop connectivity ' を Azure Blob storage プロバイダーに設定して [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。
+1. 'hadoop connectivity' を Azure Blob Storage プロバイダーに設定して [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure Blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -49,7 +49,7 @@ ms.locfileid: "94520976"
   
 ## <a name="configure-an-external-table"></a>外部テーブルを構成する
 
-Azure Blob ストレージのデータに対してクエリを実行するには、Transact-sql クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
+Azure Blob Storage のデータに対してクエリを実行するには、Transact-sql クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
 
 1. データベースにマスター キーを作成します。 資格情報のシークレットを暗号化する必要があります。
 
@@ -57,7 +57,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-1. Azure Blob storage のデータベーススコープ資格情報を作成します。
+1. Azure Blob Storage のデータベーススコープ資格情報を作成します。
 
    ```sql
    -- IDENTITY: any string (this is not used for authentication to Azure storage).  
@@ -66,7 +66,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)を使用して外部データソースを作成します。
+1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -81,7 +81,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
 1. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
 
    ```sql
-   -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   -- FORMAT TYPE: Type of format in Azure Blob Storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
    -- In this example, the files are pipe (|) delimited
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
@@ -116,7 +116,7 @@ Azure Blob ストレージのデータに対してクエリを実行するには
 
 PolyBase が適している機能には、次の 3 つがあります。  
   
-- 外部テーブルに対するアドホッククエリ。  
+- 外部テーブルに対するアドホック クエリ。  
 - データのインポート。  
 - データのエクスポート。  
 
@@ -124,7 +124,7 @@ PolyBase が適している機能には、次の 3 つがあります。
 
 ### <a name="ad-hoc-queries"></a>アドホック クエリ  
 
-次のアドホッククエリは、Azure Blob ストレージ内のデータとリレーショナルに結合します。 SQL Server に格納されている構造化顧客データを、Azure Blob storage に格納されている車両センサーデータと結合することで、35 mph よりも高速になる顧客を選択します。  
+次のアドホッククエリは、Azure Blob Storage のデータとリレーショナルに結合します。 SQL Server に格納されている構造化顧客データを Azure Blob Storage に格納されている車両センサーデータと結合することで、35 mph を上回る顧客を選択します。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -155,10 +155,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>データのエクスポート  
 
-次のクエリでは、APS から Azure Blob ストレージにデータをエクスポートします。 これを使用すると、リレーショナルデータを Azure Blob storage にアーカイブしながら、クエリを実行することができます。
+次のクエリでは、APS から Azure Blob Storage にデータをエクスポートします。 これを使用すると、リレーショナルデータを Azure Blob Storage にアーカイブしながら、クエリを実行することができます。
 
 ```sql
--- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob Storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  
