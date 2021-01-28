@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperf-fy20q4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 4c4b293b13ec59421ea5827572203ba13e526212
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 51d729bcdb25900af855e7429e953ee44dc1388b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878807"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766306"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -168,7 +168,7 @@ SQL Server 2016 のコンピューティング コンテキストで R コード
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9.Azure 仮想マシンで実行されている SQL Server インスタンスのファイアウォールによってリモート コンピューティング コンテキストがブロックされる
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] が Azure 仮想マシンにインストールされている場合、仮想マシンのワークスペースを使用する必要があるコンピューティング コンテキストを使用できない場合があります。 これは、Azure 仮想マシン上のファイアウォールに、ローカルの R ユーザー アカウントのネットワーク アクセスをブロックする規則が既定で含まれるためです。
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] が Azure 仮想マシンにインストールされている場合、仮想マシンのワークスペースを使用する必要があるコンピューティング コンテキストを使用できない場合があります。 これは、Azure 仮想マシン上のファイアウォールに、ローカルの R ユーザー アカウントのネットワーク アクセスをブロックする規則が既定で含まれるためです。
 
 回避策としては、Azure VM で **[セキュリティが強化された Windows ファイアウォール]** を開き、 **[送信の規則]** を選択して、次の規則を無効にします。 **[Block network access for R local user accounts in SQL Server instance MSSQLSERVER]\(SQL Server インスタンス MSSQLSERVER の R ローカル ユーザー アカウントに対するネットワーク アクセスをブロックする\)** 。 また、規則を有効のままにして、セキュリティ プロパティを **[Allow if secure]\(セキュリティで保護されているときに許可する\)** に変更するのでもかまいません。
 
@@ -734,7 +734,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise と Microsoft R Open
 
-このセクションでは、Revolution Analytics によって提供される R の接続、開発、およびパフォーマンス ツールに固有の問題を示します。 これらのツールは、以前のプレリリース版の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で提供されていました。
+このセクションでは、Revolution Analytics によって提供される R の接続、開発、およびパフォーマンス ツールに固有の問題を示します。 これらのツールは、以前のプレリリース版の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] で提供されていました。
 
 一般的には、これらの以前のバージョンをアンインストールして、最新バージョンの SQL Server または Microsoft R Server をインストールすることをお勧めします。
 

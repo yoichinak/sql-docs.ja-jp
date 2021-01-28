@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e109b68dbf9b2e2b1d119f2f676896f5fe682aaf
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b542b33ee1dc4bf849131f90be0316c32b386879
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172704"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765870"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "98172704"
   
  このリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における既定のインスタンス ID の例を次に示します。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既定のインスタンスの場合: MSSQL\{nn}.MSSQLSERVER。  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の既定のインスタンスの場合: MSSQL\{nn}.MSSQLSERVER。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services の既定のインスタンスの場合: MSAS\{nn}.MSSQLSERVER。  
   
--   "MyInstance" という名前の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスの場合: MSSQL\{nn}.MyInstance。  
+-   "MyInstance" という名前の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] インスタンスの場合: MSSQL\{nn}.MyInstance。  
   
 
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を含み、名前が "MyInstance" で、インストール先が既定のディレクトリである [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の名前付きインスタンスの場合、ディレクトリ構造は次のようになります。  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   

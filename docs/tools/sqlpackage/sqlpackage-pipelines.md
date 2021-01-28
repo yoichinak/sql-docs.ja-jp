@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 002d145328ca101fee467428e5b7c8b0ff1fdd95
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: a6fc94cf9c692753ef2dc8d93068bda2be8f1bf0
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577929"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689027"
 ---
 # <a name="sqlpackage-in-development-pipelines"></a>開発パイプラインでの SqlPackage
 
@@ -31,7 +31,7 @@ GitHub Actions でホストされているランナーと Azure Pipelines VM イ
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Azure パイプラインで [script](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema#script) キーワードを利用することで、SqlPackage のバージョン番号を出力する手順を Azure パイプラインに追加できます。
+Azure パイプラインで [script](/azure/devops/pipelines/yaml-schema#script) キーワードを利用することで、SqlPackage のバージョン番号を出力する手順を Azure パイプラインに追加できます。
 
 ```yaml
 - script: sqlpackage.exe /version

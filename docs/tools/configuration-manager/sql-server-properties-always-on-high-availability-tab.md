@@ -12,16 +12,16 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8890ede78dbc42a885e1d994fe3aee42100085dd
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478423"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766445"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server のプロパティ ([Always On 高可用性] タブ)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  **構成マネージャーの** [SQL Server のプロパティ] **ダイアログ ボックスの** [Always On 高可用性] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タブを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の Always On 可用性グループを有効または無効にします。 Always On 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  
+  **構成マネージャーの** [SQL Server のプロパティ] **ダイアログ ボックスの** [Always On 高可用性] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タブを使用して、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の Always On 可用性グループを有効または無効にします。 Always On 可用性グループの有効化は、高可用性およびディザスター リカバリー ソリューションとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが可用性グループを使用するための前提条件です。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
  Always On 可用性グループを有効にするには、サーバー インスタンスが以下の前提条件を満たしている必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "97478423"
 -   一度に 1 つのサーバー インスタンスでのみ Always On 可用性グループを有効にします。 Always On 可用性グループを有効にした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが再起動するまで待ってから、次のサーバー インスタンスを有効にしてください。  
   
 > [!NOTE]  
->  サポートされている機能の詳細、および [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の追加の前提条件、制限、推奨設定については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] オンライン ブックをご覧ください。  
+>  サポートされている機能の詳細、および [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]の追加の前提条件、制限、推奨設定については、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] オンライン ブックをご覧ください。  
   
 ## <a name="dialog-options"></a>ダイアログ オプション  
  **[Windows フェールオーバー クラスター名]**  
@@ -54,6 +54,6 @@ ms.locfileid: "97478423"
 ## <a name="ui-element-list"></a>UI 要素の一覧  
   
 > [!NOTE]  
->  Always On 可用性グループを無効にした後の設定と、可用性グループの作成および構成方法については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] オンライン ブックをご覧ください。  
+>  Always On 可用性グループを無効にした後の設定と、可用性グループの作成および構成方法については、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] オンライン ブックをご覧ください。  
   
   

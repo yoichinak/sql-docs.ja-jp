@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 018508727950aa370fb7b3879541d04ff8384ced
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2be72374a13dbedb444b2661cf0e53a0d555d98c
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169704"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688983"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -71,7 +71,7 @@ ms.locfileid: "98169704"
 
 Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019
 
-このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://aka.ms/downloadmsodbcsql) の両方が必要です。
+このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) の両方が必要です。
 
 BCP バージョンを確認するには、`bcp /v` コマンドを実行し、15.0.2000.5 以降が使用されていることを確認します。
 
@@ -261,7 +261,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Azure SQL Database と Azure Synapse Analytics の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。
 
-   Azure AD 対話型には、**bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 以降と [ODBC バージョン 17.2 以降](https://aka.ms/downloadmsodbcsql)が必要です。  
+   Azure AD 対話型には、**bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 以降と [ODBC バージョン 17.2 以降](../connect/odbc/download-odbc-driver-for-sql-server.md)が必要です。  
 
    対話型認証を有効にするには、-G オプションにパスワードを指定せず、ユーザー名 (-U) のみを指定します。
 

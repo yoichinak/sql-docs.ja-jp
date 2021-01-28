@@ -19,16 +19,16 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f6f303bdee6d19af39600317c2147728c89e2b3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70ef9218bf9ed2827fdc166f9e9540e7bafbce8f
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417698"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765905"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラム化の詳しい設定手順については、「[データベース ダイアグラム デザイナーの設定](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラム化の詳しい設定手順については、「[データベース ダイアグラム デザイナーの設定](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)」を参照してください。  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>レガシ データベース ダイアグラムをアップグレードするには  
   

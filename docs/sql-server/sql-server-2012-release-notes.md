@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: f183c3d44525d85c26a6ba36345eb347ba1c38d3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594841"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766176"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "98594841"
 SQL Server 2012 の開始方法およびインストール方法の詳細については、SQL Server 2012 の Readme をご覧ください。 Readme ドキュメントは、インストール メディアまたは [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) ダウンロード ページから入手できます。 「 [SQL Server オンライン ブック](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) 」または [SQL Server フォーラム](https://go.microsoft.com/fwlink/?LinkId=213599)でも詳細な情報を参照することができます。  
   
 ## <a name="10-before-you-install"></a><a name="Install"></a>1.0 インストールの準備  
-[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]をインストールする前に、次のことを考慮してください。  
+[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]をインストールする前に、次のことを考慮してください。  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 SQL Server 2012 セットアップのルール ドキュメント  
 **問題:** SQL Server セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 SQL Server のセットアップ処理中にはさまざまなルールが適用され、システム構成チェッカー (SCC) レポートによって記録されます。 このセットアップ ルールに関するドキュメントは、MSDN ライブラリで提供されなくなりました。  

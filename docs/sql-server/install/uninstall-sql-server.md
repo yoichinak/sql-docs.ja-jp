@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4aaec761c13af9419c58d7a0baeb4ffd414ea716
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: fb0c63107430db5a1a7fa74276c6440e7212db2b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975482"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766344"
 ---
 # <a name="uninstall-sql-server"></a>SQL Server のアンインストール 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  以下の記事に従って [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のインスタンスを完全にアンインストールし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールできるようにシステムを準備します。  
+  以下の記事に従って [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスを完全にアンインストールし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールできるようにシステムを準備します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  

@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: e99362bd36d99aeeb2b44d3947454f198d29be7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3afde284deb138b23392eaf4632af22f52ae9b7e
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642449"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689164"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>SQL Server の拡張機能とツールのダウンロード
 
@@ -28,7 +28,7 @@ ms.locfileid: "97642449"
 
 | 機能 | 説明 |
 |----|-----|
-| [Analysis Services クライアント ライブラリ](https://go.microsoft.com/fwlink/?LinkID=853574) |Microsoft Analysis Services クライアント ライブラリは、アプリケーション プログラミング インターフェイス (API) をカプセル化して、Microsoft SQL Server Analysis Services 2005 以降、Microsoft Azure Analysis Services、Microsoft Power BI との間で要求と応答の認証と交換を行います。<br><br> Microsoft Analysis Services クライアント ライブラリには、次のセットアップ パッケージが含まれます。 </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB プロバイダー (MSOLAP) </br> Microsoft 分析管理オブジェクト (AMO) |
+| [Analysis Services クライアント ライブラリ](/analysis-services/client-libraries) |Microsoft Analysis Services クライアント ライブラリは、アプリケーション プログラミング インターフェイス (API) をカプセル化して、Microsoft SQL Server Analysis Services 2005 以降、Microsoft Azure Analysis Services、Microsoft Power BI との間で要求と応答の認証と交換を行います。<br><br> Microsoft Analysis Services クライアント ライブラリには、次のセットアップ パッケージが含まれます。 </br> Microsoft Analysis Services ADOMD.NET </br> Microsoft Analysis Services OLE DB プロバイダー (MSOLAP) </br> Microsoft 分析管理オブジェクト (AMO) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | Analysis Services 用 NuGet |
 |||
 
@@ -44,8 +44,8 @@ ms.locfileid: "97642449"
 | 機能 | 説明 |
 |----|-----|
 | [SQL Server 用 Command Line Utilities](https://www.microsoft.com/download/details.aspx?id=52680) | SQLCMD ユーティリティを使用すると、SQL Server インスタンスに接続でき、これらのインスタンスから Transact-SQL バッチを送信したり、行セット情報を出力したりできます。 |
-| [SQL Server 用 Drivers for PHP](https://aka.ms/downloadmsphpsql) | Microsoft SQL Server 用 Drivers for PHP は PHP 拡張機能であり、これによって PHP スクリプトから SQL Server データの読み取りおよび書き込みが可能になります。 |
-| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | Microsoft JDBC Driver for SQL Server を使用すると、任意の Java アプリケーション、アプリケーション サーバー、Java 対応アプレットから、SQL Server にアクセスできます。|
+| [SQL Server 用 Drivers for PHP](../connect/php/download-drivers-php-sql-server.md) | Microsoft SQL Server 用 Drivers for PHP は PHP 拡張機能であり、これによって PHP スクリプトから SQL Server データの読み取りおよび書き込みが可能になります。 |
+| [JDBC Driver for SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | Microsoft JDBC Driver for SQL Server を使用すると、任意の Java アプリケーション、アプリケーション サーバー、Java 対応アプレットから、SQL Server にアクセスできます。|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | SQL Server Data-tier Application (DAC) Framework は、.NET Framework をベースにしたコンポーネントであり、データベースの開発と管理に必要なアプリケーション ライフサイクル サービスを提供します。 |
 | [SQL Server セマンティック言語統計](../relational-databases/search/install-and-configure-semantic-search.md) | セマンティック言語統計データベースは、Microsoft SQL Server の統計的セマンティック検索機能に必要なコンポーネントです。 |
 | [SQL Server 共有管理オブジェクト](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | SQL Server 管理オブジェクト (SMO) は .NET Framework のオブジェクト モデルです。ソフトウェア開発者は SMO を使用して、SQL Server のオブジェクトおよびサービスを管理するクライアント側アプリケーションを作成できます。 |

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41ee66ff1a5dc6abd746a1344d03e3cabacf9cd2
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681548"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813092"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay のセキュリティ
 
@@ -83,9 +83,9 @@ ms.locfileid: "85681548"
   
     3.  Enter キーを押します。  
   
-2.  **コンピューター全体の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+2.  **コンピューター全体の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するコンピューター全体の DCOM 権限を付与します。 コンピューター全体の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](/windows/win32/com/setting-machine-wide-security-using-dcomcnfg)」を参照してください。  
   
-3.  **アプリケーション固有の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController**です。 アプリケーション固有の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](https://go.microsoft.com/fwlink/?LinkId=185842)」を参照してください。  
+3.  **アプリケーション固有の DCOM 権限を構成する**:次の表に示す各アカウントに対し、対応するアプリケーション固有の DCOM 権限を付与します。 コントローラー サービスの DCOM アプリケーション名は **DReplayController** です。 アプリケーション固有の権限を設定する方法の詳細については、「[チェックリスト:DCOM アプリケーションを管理する](/windows/win32/com/setting-processwide-security-using-dcomcnfg)」を参照してください。  
   
  次の表に、管理ツールの対話ユーザー アカウントとクライアント サービス アカウントに必要な DCOM 権限を示します。  
   
@@ -136,5 +136,4 @@ ms.locfileid: "85681548"
 ## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [分散再生のインストール - 概要](../../tools/distributed-replay/install-distributed-replay-overview.md)  
-  
   
