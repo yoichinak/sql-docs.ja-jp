@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172384"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766225"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 
@@ -122,7 +122,7 @@ ms.locfileid: "98172384"
 |データベースごとのログ ファイル数|1|
 |コンピューターごとのボリューム数|3|
 
-<sup>*</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](./editions-and-components-of-sql-server-2016.md)」を参照してください。
+<sup>*</sup>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、[SQL Server 2019 のエディションでサポートされる機能](./editions-and-components-of-sql-server-version-15.md)、[SQL Server 2017 のエディションでサポートされる機能](./editions-and-components-of-sql-server-2017.md)、および [SQL Server 2016 のエディションでサポートされる機能](./editions-and-components-of-sql-server-2016.md)に関するページを参照してください。
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト
 

@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8cc13808b01f33c623304f46efcde3e7e063f713
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 444691b0ec7196c2dcb09426b7e7cb3063445826
+ms.sourcegitcommit: 0bee2b4392d50151c3839a937371588cc2ce2d3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369368"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667732"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>[テーブルと列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,5 +47,5 @@ ms.locfileid: "88369368"
 > 外部キーに選択した列は、対応する主キー列と同じデータ型である必要があります。 各キーには同じ数の列が必要です。 たとえば、リレーションシップの主キー側になるテーブルの主キーが 2 列で構成されている場合、この各列がリレーションシップの外部キー側になるテーブルの列と一致する必要があります。  
   
 ## <a name="see-also"></a>参照  
-方法: テーブル間のリレーションシップを作成する (https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[方法: テーブル間のリレーションシップを作成する](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 0c822321323eb5f74fda34df2d540b7c5c79c382
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151316"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688927"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 
@@ -70,7 +70,7 @@ ms.locfileid: "98151316"
 
 **システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008-2019。
 
-このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://aka.ms/downloadmsodbcsql) の両方が必要です。
+このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) の両方が必要です。
  
 SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実行し、15.0.2000.5 以降のバージョンが使用されていることを確認します。
 
@@ -180,7 +180,7 @@ sqlcmd
 
 > [!IMPORTANT]
 > `-G` オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) バージョン 17.6.1 以降と、適切に構成された Kerberos 環境が必要です。
+> 現在、AAD 対話型認証は、Linux または macOS 上でサポートされていません。 AAD 統合認証には、[Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) バージョン 17.6.1 以降と、適切に構成された Kerberos 環境が必要です。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
@@ -218,7 +218,7 @@ sqlcmd
 
     Azure SQL Database と Azure Synapse Analytics の Azure AD 対話型認証では、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「[Azure Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
 
-   Azure AD 対話型には、**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 以降と [ODBC バージョン 17.2 以降](https://aka.ms/downloadmsodbcsql)が必要です。  
+   Azure AD 対話型には、**sqlcmd** [バージョン 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 以降と [ODBC バージョン 17.2 以降](../connect/odbc/download-odbc-driver-for-sql-server.md)が必要です。  
 
    対話型認証を有効にするには、-G オプションにパスワードを指定せず、ユーザー名 (-U) のみを指定します。
 
@@ -417,7 +417,7 @@ sqlcmd
  このオプションと共に **-b** を指定すると、 **sqlcmd** はエラーで終了します。 **-b** オプションについては、この記事の後半で説明します。  
   
  **-t** _query_timeout_  
- コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query**time_out* は、1 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
+ コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query* *time_out* は、1 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、 **sqlcmd** はエラー メッセージを生成します。  
   
 > [!NOTE]  
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
@@ -929,7 +929,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 
 - **-V16** を使用して、[重大度 16 レベルのメッセージ](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity)をログに記録します。  重大度 16 のメッセージは、ユーザーが訂正できる一般的なエラーを示します。
 
-- プロセスが終了した後、終了コードと DOS ERRORLEVEL 変数を確認します。  通常、**sqlcmd** からは 0 が返されます。それ以外の場合は、 **-V** によって構成された ERRORLEVEL が設定されます。  つまり、ERRORLEVEL が SQL Server から報告されるエラー番号と同じ値であると想定しないでください。 エラー番号は、システム関数 [ **@@ERROR** ](../t-sql/functions/error-transact-sql.md) に対応する SQL Server 固有の値です。  ERRORLEVEL は、(SQLCMD が) 終了した理由を示す SQLCMD 固有の値であり、その値はコマンド ライン引数 **-b** を指定することによって影響を受けます。
+- プロセスが終了した後、終了コードと DOS ERRORLEVEL 変数を確認します。  通常、**sqlcmd** からは 0 が返されます。それ以外の場合は、 **-V** によって構成された ERRORLEVEL が設定されます。  つまり、ERRORLEVEL が SQL Server から報告されるエラー番号と同じ値であると想定しないでください。 エラー番号は、システム関数 [ **@@ERROR**](../t-sql/functions/error-transact-sql.md) に対応する SQL Server 固有の値です。  ERRORLEVEL は、(SQLCMD が) 終了した理由を示す SQLCMD 固有の値であり、その値はコマンド ライン引数 **-b** を指定することによって影響を受けます。
 
 終了コードおよび DOS ERRORLEVEL のチェックと組み合わせて **-V16** を使用すると、自動化された環境 (特に運用リリース前の品質ゲート) でエラーをキャッチできます。
 

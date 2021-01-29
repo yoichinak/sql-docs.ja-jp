@@ -2,22 +2,21 @@
 title: MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
 description: SQL Server データベース エンジンに対する認証の拡張保護の利点と要件について説明します。 これを有効にして構成する方法を確認します。
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ff312fefc29021a28df51ed4a845067d54024d6a
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478413"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813221"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER のプロトコルのプロパティ ([詳細設定] タブ)
 
@@ -30,7 +29,7 @@ ms.locfileid: "97478413"
 > - [Windows 拡張保護 \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [認証の拡張保護の概要](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のサービスの構成方法と **拡張保護** の詳細については、 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752)の最新情報を参照してください。
+他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを構成する方法については、「[データベース エンジン サービスの管理](../../database-engine/configure-windows/manage-the-database-engine-services.md)」を参照してください。 拡張保護に関する完全な説明については、「[拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)」を参照してください。
 
 **拡張保護** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Native Client によって完全にサポートされています。 その他の **クライアント プロバイダーでは、** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は現時点ではサポートされていません。
 

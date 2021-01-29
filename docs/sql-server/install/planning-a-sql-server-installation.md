@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 62b5e5e18743d7425a011e00787ca374e8f90507
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120812"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765863"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "96120812"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップのドキュメントのこのセクションでは、Microsoft BI プラットフォームの一部である [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のインストール方法について説明します。  
   
  [SQL Server のアップグレード](../../database-engine/install-windows/upgrade-sql-server.md)  
- このセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンのインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする方法について概説します。  
+ このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンからのアップグレードの概要について説明します。  
   
  [SQL Server のアンインストール](../../sql-server/install/uninstall-sql-server.md)  
  このセクションでは、 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] の既存のインスタンスを完全にアンインストールし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにシステムを準備する方法について説明します。  

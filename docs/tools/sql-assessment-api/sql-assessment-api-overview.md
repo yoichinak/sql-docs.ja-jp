@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 11/04/2019
-ms.openlocfilehash: a778fd92a44a229ae6806cef31a10b728f241865
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.date: 1/25/2021
+ms.openlocfilehash: 39c48fc84047deea9c2bf49751c9bc3a491023b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987729"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766395"
 ---
 # <a name="sql-assessment-api"></a>SQL Assessment API
 
@@ -22,17 +22,39 @@ SQL Assessment API には、ベスト プラクティスのために SQL Server 
 
 SQL Assessment API は、SQL Server の構成が推奨されるベスト プラクティスに準拠していることを確認する場合に便利です。 初期評価後は、定期的にスケジュールされた評価によって構成の安定性を追跡できます。
 
-この API を使用すると、Azure SQL Managed Instance と SQL Server バージョン 2012 以降を評価できます。 Linux 上の SQL がサポートされています。
+この API は次を評価するために使用することができます。
+ 
+* Azure SQL Database Managed Instance と SQL Server バージョン 2012 以降。
+
+* Linux ベースのシステムの SQL。
+
+この API は、Azure Data Studio (ADS) の SQL Server 評価拡張機能でも使用されます。
 
 ## <a name="rules"></a>ルール
 
-チェックとも呼ばれるルールは、JSON 形式のファイルで定義されます。 ルールセットの書式では、ルールセットの名前とバージョンを指定する必要があります。 そのため、カスタム ルールセットを使用すると、どのルールセットに由来する推奨事項かを簡単に把握できます。
+チェックとも呼ばれるルールは、JSON 形式のファイルで定義されます。 ルールセットの書式では、ルールセットの名前とバージョンを指定する必要があります。 カスタム ルールセットを使用すると、どのルールセットに由来する推奨事項かを簡単に把握できます。
 
 Microsoft が配布するルールセットは GitHub で入手できます。 詳細については、[サンプル リポジトリ](https://aka.ms/sql-assessment-api)を参照してください。
 
-## <a name="sql-assessment-cmdlets-and-smo-extension"></a>SQL Assessment コマンドレットと SMO 拡張機能
+## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>SQL Assessment コマンドレットと関連する拡張機能
 
-SQL Assessment API は、[SQL Server 管理オブジェクト (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) 2019 年 7 月リリース バージョン以降および [SQL Server PowerShell モジュール](../../powershell/download-sql-server-ps-module.md) 2019 年 7 月リリース バージョン以降に含まれています。
+SQL Assessment API は、次の一部です。
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    2020 年 6 月以降のリリース バージョン。
+
+* [SQL Server 管理オブジェクト (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    2019 年 7 月以降のリリース バージョン。
+
+* [SQL Server PowerShell モジュール](../../powershell/download-sql-server-ps-module.md)
+
+    2019 年 7 月以降のリリース バージョン。
+
+SQL Assessment API の使用を開始する前に、次のことを確認してください。
+
+* [ADS のインストール](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [SMO のインストール](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
@@ -46,11 +68,11 @@ SqlServer モジュールには、SQL Assessment API と連携する 2 つの新
 
 SMO Framework は、次のメソッドを備える SQL Assessment API 拡張機能によって補完されています。
 
-* **GetAssessmentItems**  - 特定の SQL オブジェクトの使用可能なチェックを返します (IEnumerable<…>)
+* **GetAssessmentItems** - 特定の SQL オブジェクトの使用可能なチェックを返します (IEnumerable<…>)
 
-* **GetAssessmentResults**  - 同期的に評価を査定し、結果とエラー (ある場合) を返します (IEnumerable<…>)
+* **GetAssessmentResults** - 同期的に評価を査定し、結果とエラー (ある場合) を返します (IEnumerable<…>)
 
-* **GetAssessmentResultsList**  - 非同期的に評価を査定し、結果とエラー (ある場合) を返します (Task<…>)
+* **GetAssessmentResultsList** - 非同期的に評価を査定し、結果とエラー (ある場合) を返します (Task<…>)
 
 ## <a name="get-started-using-sql-assessment-cmdlets"></a>SQL Assessment コマンドレットの使用を開始する
 

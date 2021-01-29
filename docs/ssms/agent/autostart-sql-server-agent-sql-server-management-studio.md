@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 32006b2ac6581e4f5bc3a303cc5f6475483708c8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8d5cfde437614ad4e996c0c390d7fe141ba3721a
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472373"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765824"
 ---
 # <a name="autostart-sql-server-agent"></a>SQL Server エージェントの自動起動
 
@@ -29,7 +29,7 @@ ms.locfileid: "97472373"
 > [!IMPORTANT]  
 > 現在、[Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) によって、すべてではありませんが、ほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、[Azure SQL Managed Instance と SQL Server の T-SQL の相違点](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)に関するページを参照してください。
 
-このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが予期せずに停止した場合に 自動的に再起動するように構成する方法について説明します。  
+このトピックでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが予期せずに停止した場合に自動的に再起動するように構成する方法について説明します。  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>はじめに  
   
