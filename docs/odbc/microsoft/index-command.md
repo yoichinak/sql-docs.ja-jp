@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ac225132e2d89f1edd4baab012b2383cd508588
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449524"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183395"
 ---
 # <a name="index-command"></a>INDEX コマンド
 テーブルレコードを論理的な順序で表示し、アクセスするためのインデックスファイルを作成します。  
@@ -56,16 +56,16 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  構造と nonstructural という2種類の複合インデックスファイルを作成できます。  
   
- **構造的複合インデックスファイル**省略可能な*Cdxfilename*句を除外することで、タグ*TagName*を含む構造の複合インデックスファイルを作成できます。 構造の複合インデックスファイルは、常にテーブルと同じ基本名を持ち、テーブルを開くと自動的に開きます。  
+ **構造的複合インデックスファイル** 省略可能な *Cdxfilename* 句を除外することで、タグ *TagName* を含む構造の複合インデックスファイルを作成できます。 構造の複合インデックスファイルは、常にテーブルと同じ基本名を持ち、テーブルを開くと自動的に開きます。  
   
- **Nonstructural 複合インデックスファイル**タグの*TagName*の後に*cdxfilename*を含めることによって、nonstructural 複合インデックスファイルを作成できます。 構造的な複合インデックスファイルとは異なり、nonstructural 複合インデックスファイルは、使用中の INDEX 句を使用して明示的に開く必要があります。  
+ **Nonstructural 複合インデックスファイル** タグの *TagName* の後に *cdxfilename* を含めることによって、nonstructural 複合インデックスファイルを作成できます。 構造的な複合インデックスファイルとは異なり、nonstructural 複合インデックスファイルは、使用中の INDEX 句を使用して明示的に開く必要があります。  
   
  複合インデックスファイルが既に作成され開いている場合、タグ *TagName* を持つインデックスを発行すると、複合インデックスファイルにタグが追加されます。  
   
- *Lexpression*の場合  
+ *Lexpression* の場合  
  フィルター式の *Lexpression* に適合するレコードだけを表示およびアクセスに使用できるようにする条件を指定します。インデックスキーは、フィルター式に一致するレコードについてのみ、インデックスファイルに作成されます。  
   
- Visual FoxPro Rushmore テクノロジによってインデックスが最適化します...Lexpression が最適化でき*ない式の場合は、* *lexpression*コマンド。 最適なパフォーマンスを得るには、FOR 句で最適化できる式を使用します。  
+ Visual FoxPro Rushmore テクノロジによってインデックスが最適化します...Lexpression が最適化でき *ない式の場合は、* *lexpression* コマンド。 最適なパフォーマンスを得るには、FOR 句で最適化できる式を使用します。  
   
  CD-R  
  圧縮された idx ファイルを作成します。  
@@ -84,14 +84,14 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  候補  
  候補の構造インデックスタグを作成します。 候補キーワードは、構造インデックスタグを作成するときにのみ含めることができます。それ以外の場合は、Visual FoxPro によってエラーメッセージが生成されます。  
   
- 候補インデックスタグを指定すると、インデックス式 *Eexpression*に指定されているフィールドまたはフィールドの組み合わせの値が重複しないようにすることができます。 用語 *候補* とは、インデックスの種類を指します。候補インデックスは重複する値を防ぐため、プライマリインデックスとして "候補" として使用されます。  
+ 候補インデックスタグを指定すると、インデックス式 *Eexpression* に指定されているフィールドまたはフィールドの組み合わせの値が重複しないようにすることができます。 用語 *候補* とは、インデックスの種類を指します。候補インデックスは重複する値を防ぐため、プライマリインデックスとして "候補" として使用されます。  
   
  重複する値が既に含まれているフィールドまたはフィールドの組み合わせに対して候補のインデックスタグを作成すると、Visual FoxPro でエラーが生成されます。  
   
  結合  
  以前に開いたインデックスファイルを開いたままにします。 インデックスを持つテーブルのインデックスファイルを作成するときに加法句を省略した場合、以前に開いていたインデックスファイル (構造の複合インデックスを除く) は閉じられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  インデックスファイルがあるテーブル内のレコードは、インデックス式で指定された順序で表示され、アクセスされます。 テーブル内のレコードの物理的な順序は、インデックスファイルによって変更されることはありません。  
   
 ## <a name="index-types"></a>インデックスの種類  

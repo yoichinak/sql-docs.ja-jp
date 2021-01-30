@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
 - sp_remove_job_from_targets
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 035f22dadcd1180117b2573c4874a7c20a7f1520
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b55575c5e57a72cb5a1d0b3260550cf9e14bc21a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538611"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185629"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` 指定した対象サーバーまたは対象サーバーグループを削除するジョブのジョブ識別番号を指定します。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 指定した対象サーバーまたは対象サーバーグループを削除するジョブのジョブ識別番号を指定します。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` 指定した対象サーバーまたは対象サーバーグループを削除するジョブの名前を指定します。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_name* は **sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 指定した対象サーバーまたは対象サーバーグループを削除するジョブの名前を指定します。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_name* は **sysname**,、既定値は NULL です。  
   
 `[ @target_server_groups = ] 'target_server_groups'` 指定したジョブから削除する対象サーバーグループのコンマ区切りのリスト。 *target_server_groups* は **nvarchar (1024)**,、既定値は NULL です。  
   

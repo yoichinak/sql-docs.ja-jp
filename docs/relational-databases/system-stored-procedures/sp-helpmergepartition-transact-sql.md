@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepartition
 - sp_helpmergepartition_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79e4d1ea4ea226706aa34db3121b2a4469a330b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06994bb4f0e606f0d67e797603e6f4a23899076b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546069"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185735"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @suser_sname = ] 'suser_sname'` パーティションを定義するために使用される SUSER_SNAME 値を指定します。 *suser_sname* は **sysname**で、既定値は NULL です。 このパラメーターを指定して、結果セットを、SUSER_SNAME が指定された値を解決するパーティションのみに制限します。  
+`[ @suser_sname = ] 'suser_sname'` パーティションを定義するために使用される SUSER_SNAME 値を指定します。 *suser_sname* は **sysname** で、既定値は NULL です。 このパラメーターを指定して、結果セットを、SUSER_SNAME が指定された値を解決するパーティションのみに制限します。  
   
 > [!NOTE]  
->  *Suser_sname*を指定する場合は、 *host_name*を NULL にする必要があります。  
+>  *Suser_sname* を指定する場合は、 *host_name* を NULL にする必要があります。  
   
-`[ @host_name = ] 'host_name'` パーティションを定義するために使用される HOST_NAME 値を指定します。 *host_name* は **sysname**で、既定値は NULL です。 このパラメーターを指定して、結果セットを、HOST_NAME が指定された値を解決するパーティションのみに制限します。  
+`[ @host_name = ] 'host_name'` パーティションを定義するために使用される HOST_NAME 値を指定します。 *host_name* は **sysname** で、既定値は NULL です。 このパラメーターを指定して、結果セットを、HOST_NAME が指定された値を解決するパーティションのみに制限します。  
   
 > [!NOTE]  
->  *Suser_sname*を指定する場合は、 *host_name*を NULL にする必要があります。  
+>  *Suser_sname* を指定する場合は、 *host_name* を NULL にする必要があります。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -66,11 +66,11 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergepartition** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergepartition**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
+ **Sp_helpmergepartition** を実行できるのは、 **sysadmin** 固定サーバーロールおよび **db_owner** 固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergepartition &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   

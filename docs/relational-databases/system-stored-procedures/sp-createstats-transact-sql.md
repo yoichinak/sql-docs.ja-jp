@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_createstats_TSQL
 - sp_createstats
@@ -19,12 +19,12 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a0fb35bd43125370dc4123425cc919be3033951f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205208"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>結果セット  
  新しい各統計オブジェクトには、作成された列と同じ名前が付けられます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_createstats は、既存の統計オブジェクトの最初の列である列の統計を作成または更新しません。 これには、インデックス用に作成された統計の最初の列、AUTO_CREATE_STATISTICS オプションで生成された単一列統計を持つ列、および CREATE STATISTICS ステートメントを使用して作成された統計の最初の列が含まれます。 sp_createstats は、その列が別の有効なインデックスで使用されていない限り、無効になったインデックスの最初の列に対して統計を作成しません。 sp_createstats では、無効になっているクラスター化インデックスを持つテーブルに対する統計は作成されません。  
   
  テーブルに列セットが含まれている場合、sp_createstats ではスパース列に対する統計は作成されません。 列セットとスパース列の詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md) 」および「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  

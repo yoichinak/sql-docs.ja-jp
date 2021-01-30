@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultlanguage
 - sp_defaultlanguage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5eb94ea64b22f233d1c7c1e5d508fc0704f931ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c382a442e6b87220f2650e65adc03089f2014b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549870"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195558"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="arguments"></a>引数  
 `[ @loginame = ] 'login'` ログイン名を指定します。 *login* は **sysname**,、既定値はありません。 *ログイン* には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ユーザーまたはグループを指定できます。  
   
-`[ @language = ] 'language'` ログインの既定の言語を設定します。 *language* は **sysname**,、既定値は NULL です。 *言語* は、サーバーで有効な言語である必要があります。 *Language*が指定されていない場合、 *language*はサーバーの既定の言語に設定されます。既定の言語は、 **sp_configure**構成変数の**既定の言語**によって定義されます。 サーバーの既定の言語を変更しても、既存のログインの既定の言語は変更されません。  
+`[ @language = ] 'language'` ログインの既定の言語を設定します。 *language* は **sysname**,、既定値は NULL です。 *言語* は、サーバーで有効な言語である必要があります。 *Language* が指定されていない場合、 *language* はサーバーの既定の言語に設定されます。既定の言語は、 **sp_configure** 構成変数の **既定の言語** によって定義されます。 サーバーの既定の言語を変更しても、既存のログインの既定の言語は変更されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

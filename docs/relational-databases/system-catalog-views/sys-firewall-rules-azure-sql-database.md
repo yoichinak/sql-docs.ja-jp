@@ -4,7 +4,7 @@ title: sys.firewall_rules (Azure SQL Database) |Microsoft Docs
 ms.date: 03/26/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.firewall_rules
 - firewall_rules
@@ -19,12 +19,12 @@ ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 351ca530c49051b61b6f44b8dc2fbff83623cf8f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 01a8942fbe904ee32d7abf68e8681cbfde687c85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193908"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98097993"
 |create_date|**/**|サーバーレベルのファイアウォール設定が作成された UTC 日時です。<br /><br /> 注: UTC は、協定世界時の頭字語です。|  
 |modify_date|**/**|サーバーレベルのファイアウォール設定が最後に変更された UTC 日時です。|  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
  Microsoft Azure SQL Database に関連付けられているデータベースレベルのファイアウォール設定に関する情報を返すには、 [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)を使用します。  
   

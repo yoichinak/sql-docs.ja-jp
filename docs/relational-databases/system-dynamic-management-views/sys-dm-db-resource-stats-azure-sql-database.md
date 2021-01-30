@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_resource_stats
 - sys.dm_db_resource_stats_TSQL
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c7cfb333e3cb2d67e61b2f8ae8cb12d0748b05d7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204815"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "97475013"
 ## <a name="permissions"></a>アクセス許可
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
  **Sys.dm_db_resource_stats** によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。
  
  過去60分以内にデータベースが別のサーバーにフェールオーバーされた場合、ビューはそのフェールオーバー以降の時間についてのみデータを返します。  

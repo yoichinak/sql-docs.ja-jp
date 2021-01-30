@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexoption
 - sp_indexoption_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaaf9863e6226de5aa30d553bfa4c7766588524b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8f7011bc4ce2120164683009676953ec44d58c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547900"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205528"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,34 +51,34 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'` インデックスオプションの名前を指定します。 *option_name* は **varchar (35)**,、既定値はありません。 *option_name* には、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**AllowRowLocks**|TRUE の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。 FALSE の場合、行ロックは使用されません。 既定値は TRUE です。|  
 |**AllowPageLocks**|TRUE の場合、インデックスにアクセスするときにページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。 FALSE の場合、ページ ロックは使用されません。 既定値は TRUE です。|  
 |**DisAllowRowLocks**|TRUE の場合、行ロックは使用されません。 FALSE の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。|  
 |**DisAllowPageLocks**|TRUE の場合、ページ ロックは使用されません。 FALSE の場合、インデックスにアクセスするときにページロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。|  
   
-`[ @OptionValue = ] 'value'`*Option_name*設定を有効にするかどうかを指定します (TRUE、ON、yes、または 1) または DISABLED (FALSE、OFF、no、または 0)。 *値* は **varchar (12)**,、既定値はありません。  
+`[ @OptionValue = ] 'value'`*Option_name* 設定を有効にするかどうかを指定します (TRUE、ON、yes、または 1) または DISABLED (FALSE、OFF、no、または 0)。 *値* は **varchar (12)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または0より大きい (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  XML インデックスはサポートされていません。 XML インデックスが指定されている場合、またはテーブル名にインデックス名が指定されておらず、テーブルに XML インデックスが含まれている場合、ステートメントは失敗します。 これらのオプションを設定するには、代わりに [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) を使用します。  
   
  現在の行およびページロックのプロパティを表示するには、 [Indexproperty](../../t-sql/functions/indexproperty-transact-sql.md)またはのカタログビューを使用[します。](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
--   **Allowrowlocks** = true または**DisAllowRowLocks** = false の場合、および**Allowrowlocks** = true または**DisAllowPageLocks** = false の場合、インデックスにアクセスするときに、行レベル、ページレベル、およびテーブルレベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
+-   **Allowrowlocks** = true または **DisAllowRowLocks** = false の場合、および **Allowrowlocks** = true または **DisAllowPageLocks** = false の場合、インデックスにアクセスするときに、行レベル、ページレベル、およびテーブルレベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。  
   
- **Allowrowlocks** = false または**DisAllowRowLocks** = True と**Allowrowlocks** = false または**DisAllowPageLocks** = true の場合、インデックスにアクセスするときにはテーブルレベルのロックのみが許可されます。  
+ **Allowrowlocks** = false または **DisAllowRowLocks** = True と **Allowrowlocks** = false または **DisAllowPageLocks** = true の場合、インデックスにアクセスするときにはテーブルレベルのロックのみが許可されます。  
   
  テーブル名をインデックスなしで指定すると、設定はそのテーブルのすべてのインデックスに適用されます。 基になるテーブルにクラスター化インデックスがない (つまりヒープである) 場合、設定は次のように適用されます。  
   
--   **Allowrowlocks**または**DisAllowRowLocks**が TRUE または FALSE に設定されている場合、設定はヒープおよび関連する非クラスター化インデックスに適用されます。  
+-   **Allowrowlocks** または **DisAllowRowLocks** が TRUE または FALSE に設定されている場合、設定はヒープおよび関連する非クラスター化インデックスに適用されます。  
   
--   **Allowpagelocks**オプションが TRUE に設定されているか、 **DisAllowPageLocks**が FALSE に設定されている場合、設定はヒープおよび関連する非クラスター化インデックスに適用されます。  
+-   **Allowpagelocks** オプションが TRUE に設定されているか、 **DisAllowPageLocks** が FALSE に設定されている場合、設定はヒープおよび関連する非クラスター化インデックスに適用されます。  
   
--   **Allowpagelocks**オプションが FALSE に設定されているか、 **DisAllowPageLocks**が TRUE に設定されている場合、この設定は非クラスター化インデックスに完全に適用されます。 つまり、非クラスター化インデックスでは、すべてのページロックが許可されません。 ヒープで許可されないのは、ページに対する共有 (S)、更新 (U)、および排他 (X) ロックのみです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部目的用にインテント ページ ロック (IS、IU、または IX) を引き続き取得できます。  
+-   **Allowpagelocks** オプションが FALSE に設定されているか、 **DisAllowPageLocks** が TRUE に設定されている場合、この設定は非クラスター化インデックスに完全に適用されます。 つまり、非クラスター化インデックスでは、すべてのページロックが許可されません。 ヒープで許可されないのは、ページに対する共有 (S)、更新 (U)、および排他 (X) ロックのみです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では内部目的用にインテント ページ ロック (IS、IU、または IX) を引き続き取得できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  テーブルに対する ALTER 権限が必要です。  

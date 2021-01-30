@@ -1,13 +1,13 @@
 ---
-description: sp_cdc_enable_db (Transact-sql)
-title: sp_cdc_enable_db (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_enable_db (Transact-sql)
+title: sys.sp_cdc_enable_db (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_enable_db_TSQL
 - sp_cdc_enable_db
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c40d3904737c7740c3658eda12e2f9c9df340b0a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0756c34e9fc914abdb99cddef865d0968767ab3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534751"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205999"
 ---
-# <a name="syssp_cdc_enable_db-transact-sql"></a>sp_cdc_enable_db (Transact-sql)
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   現在のデータベースの変更データキャプチャを有効にします。 データベース内のテーブルの変更データ キャプチャを有効にするには、まずそのデータベースに対してこの手順を実行する必要があります。 変更データキャプチャは、有効になっているテーブルに適用された挿入、更新、削除の各アクティビティを記録し、変更の詳細を使用しやすいリレーショナル形式で表示します。 追跡対象のソーステーブルの列構造を反映する列情報は、変更された行に対してキャプチャされ、その変更をターゲット環境に適用するために必要なメタデータと共にキャプチャされます。  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+ [sys.sp_cdc_disable_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

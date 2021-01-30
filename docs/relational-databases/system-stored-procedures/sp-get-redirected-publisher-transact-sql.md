@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a71799e3d7820ce4a142d6c9ec7d55b743214fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fa1a1b8f7cffe3f98435ebd48a404fb76df34c8a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538936"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204753"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @original_publisher = ] 'original_publisher'` データベースを最初にパブリッシュした SQL Server のインスタンスの名前。 *original_publisher* は **sysname**であり、既定値はありません。
+`[ @original_publisher = ] 'original_publisher'` データベースを最初にパブリッシュした SQL Server のインスタンスの名前。 *original_publisher* は **sysname** であり、既定値はありません。
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシュされるデータベースの名前。 *publisher_db* は **sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされるデータベースの名前。 *publisher_db* は **sysname** であり、既定値はありません。  
   
 `[ @bypass_publisher_validation = ] [0 | 1 ]` リダイレクトされたパブリッシャーの検証をバイパスするために使用します。 0の場合、検証が実行されます。 1 の場合は、検証が実行されません。 *bypass_publisher_validation* は **ビット**,、既定値は0です。  
   
@@ -57,8 +57,8 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|検証エラーの重大度。|  
 |**error_message**|**nvarchar (4000)**|検証エラーメッセージのテキスト。|  
   
-## <a name="remarks"></a>解説  
- *redirected_publisher* は、現在の発行元の名前を返します。 パブリッシャーおよびパブリッシングデータベースが **sp_redirect_publisher**を使用してリダイレクトされていない場合は null を返します。  
+## <a name="remarks"></a>コメント  
+ *redirected_publisher* は、現在の発行元の名前を返します。 パブリッシャーおよびパブリッシングデータベースが **sp_redirect_publisher** を使用してリダイレクトされていない場合は null を返します。  
   
  検証が要求されていない場合、またはパブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 *error_number* と *error_severity* は0を返し、 *error_message* は null を返します。  
   

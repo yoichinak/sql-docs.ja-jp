@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9b35f89911c0b016c52eed00f8165b767968180
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2bfcf230d897274c45621dd404c9ed2816946812
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167386"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -67,11 +67,11 @@ public AdoProperties getProperties()
 ### <a name="field-accessor-methods"></a>フィールドアクセサーメソッド  
  [Field](../../../ado/reference/ado-api/field-object.md)オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、そのオブジェクトのコンテンツを取得または設定します。 コンテンツは、値と複数のデータ型のいずれかを割り当てることができる、バリアント型のオブジェクトで表されます。  
   
- ADO/WFC は、VARIANT オブジェクトを返す**getValue**メソッドを使用して**Value**プロパティを実装します。また、 **setValue**を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
+ ADO/WFC は、VARIANT オブジェクトを返す **getValue** メソッドを使用して **Value** プロパティを実装します。また、 **setValue** を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
   
- ADO/WFC は、 **Value**プロパティに加えて、Java データ型を使用して**Field**オブジェクトのコンテンツを取得および設定する*アクセサー*メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_ または **set**_datatype_という形式の名前があります。  
+ ADO/WFC は、 **Value** プロパティに加えて、Java データ型を使用して **Field** オブジェクトのコンテンツを取得および設定する *アクセサー* メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_ または **set**_datatype_ という形式の名前があります。  
   
- 注目すべき例外が2つあります。いずれかの **getObject** メソッドが、指定されたクラスに強制変換されたオブジェクトを返します。 **Getnull**プロパティはありません。その代わりに、フィールドが null かどうかを示すブール値を返す**isNull**プロパティがあります。  
+ 注目すべき例外が2つあります。いずれかの **getObject** メソッドが、指定されたクラスに強制変換されたオブジェクトを返します。 **Getnull** プロパティはありません。その代わりに、フィールドが null かどうかを示すブール値を返す **isNull** プロパティがあります。  
   
 ```  
 public native boolean getBoolean();  

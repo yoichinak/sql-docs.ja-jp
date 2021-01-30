@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
 - sp_create_plan_guide_from_handle
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb185ca0a5cf0e7abe0e51992d3e607555a9ea1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2020abc49ccd29491f99adc77910868071e16e00
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543622"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186228"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,23 +42,23 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
 ## <a name="arguments"></a>引数  
  [ @name =] N '*plan_guide_name*'  
- プランガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* は、 [識別子](../../relational-databases/databases/database-identifiers.md) の規則に従っている必要があり、番号記号 (#) で始めることはできません。 *Plan_guide_name*の最大長は124文字です。  
+ プランガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name* は、 [識別子](../../relational-databases/databases/database-identifiers.md) の規則に従っている必要があり、番号記号 (#) で始めることはできません。 *Plan_guide_name* の最大長は124文字です。  
   
  [ @plan_handle =] *plan_handle*  
- プラン キャッシュのバッチを識別します。 *plan_handle* は **varbinary (64)** です。 *plan_handle* は、 [dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 動的管理ビューから取得できます。  
+ プラン キャッシュのバッチを識別します。 *plan_handle* は **varbinary (64)** です。 *plan_handle* は [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 動的管理ビューから取得できます。  
   
  [ @statement_start_offset =] { *statement_start_offset* |NULL}]  
- 指定された *plan_handle*のバッチ内でのステートメントの開始位置を識別します。 *statement_start_offset* は **int**,、既定値は NULL です。  
+ 指定された *plan_handle* のバッチ内でのステートメントの開始位置を識別します。 *statement_start_offset* は **int**,、既定値は NULL です。  
   
- ステートメントオフセットは、 [dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 動的管理ビューの statement_start_offset 列に対応しています。  
+ ステートメントオフセットは、 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 動的管理ビューの statement_start_offset 列に対応しています。  
   
  NULL を指定した場合や、ステートメント オフセットを指定しない場合は、指定したプラン ハンドルのクエリ プランを使用してバッチ内の各ステートメントに対してプラン ガイドが作成されます。 結果として得られるプランガイドは、USE PLAN クエリヒントを使用して特定のプランを強制的に使用するプランガイドに相当します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  すべての種類のステートメントに対してプラン ガイドを作成できるわけではありません。 プラン ガイドを作成できないステートメントがバッチ内にあった場合、そのステートメントは無視されて、バッチ内の次のステートメントが処理されます。 ステートメントが同じバッチ内で複数回出現する場合は、最後に発生したプランが有効になり、ステートメントの前のプランは無効になります。 プランガイドでバッチ内のステートメントを使用できない場合、エラー10532が発生し、ステートメントは失敗します。 このエラーを回避するため、常に sys.dm_exec_query_stats 動的管理ビューからプラン ハンドルを取得することをお勧めします。  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle では、プラン キャッシュに含まれているとおりのプランに基づいてプラン ガイドが作成されます。 したがって、バッチ テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、および XML プラン表示が、プラン キャッシュから結果のプラン ガイドに文字単位で (クエリに渡されたリテラル値も含め) 取り込まれます。 これらのテキスト文字列には、データベースのメタデータに格納されている機密情報が含まれている場合があります。 適切な権限を持つユーザーは、の plan_guides カタログビューおよび [ **プランガイドのプロパティ** ] ダイアログボックスを使用して、この情報を表示できます [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 プランガイドによって機密情報が公開されないようにするには、プランキャッシュから作成されたプランガイドを確認することをお勧めします。  
+>  sp_create_plan_guide_from_handle では、プラン キャッシュに含まれているとおりのプランに基づいてプラン ガイドが作成されます。 したがって、バッチ テキスト、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、および XML プラン表示が、プラン キャッシュから結果のプラン ガイドに文字単位で (クエリに渡されたリテラル値も含め) 取り込まれます。 これらのテキスト文字列には、データベースのメタデータに格納されている機密情報が含まれている場合があります。 適切な権限を持つユーザーは、の sys.plan_guides カタログビューおよび [ **プランガイドのプロパティ** ] ダイアログボックスを使用して、この情報を表示でき [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ます。 プランガイドによって機密情報が公開されないようにするには、プランキャッシュから作成されたプランガイドを確認することをお勧めします。  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>クエリプラン内の複数のステートメントに対してプランガイドを作成する  
  sp_create_plan_guide_from_handle では、sp_create_plan_guide と同様に、対象となるバッチやモジュールのクエリ プランがプラン キャッシュから削除されます。 これは、新しいプラン ガイドがすべてのユーザーによって使用されるようにするための措置です。 1つのクエリプラン内の複数のステートメントに対してプランガイドを作成する場合は、明示的なトランザクションですべてのプランガイドを作成することによって、キャッシュからプランの削除を延期できます。 これにより、そのトランザクションが完了して、指定した各ステートメントのプラン ガイドが作成されるまで、プランがキャッシュに保持されます。 例 B を参照してください。  
@@ -122,11 +122,11 @@ GO
   
 ## <a name="see-also"></a>参照  
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [プランガイド](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

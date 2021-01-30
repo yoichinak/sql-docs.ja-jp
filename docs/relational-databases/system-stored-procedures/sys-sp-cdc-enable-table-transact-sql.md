@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_enable_table (Transact-SQL)
-title: sp_cdc_enable_table (Transact-sql) |Microsoft Docs
+title: sys.sp_cdc_enable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
 - sp_cdc_enable_table_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5832381bab59aff32c039d4f26b648c62802d5d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe8e347cb82fa1b89ad03ebb152a8d0257f0985b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541099"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205990"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,11 +55,11 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_schema = ] 'source_schema'` ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @source_schema = ] 'source_schema'` ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname** であり、既定値はありません。 NULL にすることはできません。  
   
-`[ @source_name = ] 'source_name'` 変更データキャプチャを有効にするソーステーブルの名前を指定します。 *source_name* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @source_name = ] 'source_name'` 変更データキャプチャを有効にするソーステーブルの名前を指定します。 *source_name* は **sysname** であり、既定値はありません。 NULL にすることはできません。  
   
- *source_name* は、現在のデータベースに存在している必要があります。 **Cdc**スキーマのテーブルでは、変更データキャプチャを有効にできません。  
+ *source_name* は、現在のデータベースに存在している必要があります。 **Cdc** スキーマのテーブルでは、変更データキャプチャを有効にできません。  
   
 `[ @role_name = ] 'role_name'` 変更データへのアクセスをゲートするために使用するデータベースロールの名前を指定します。 *role_name* は **sysname** であるため、指定する必要があります。 明示的に NULL に設定した場合、変更データへのアクセスを制限する際にゲーティング ロールは使用されません。  
   
@@ -67,19 +67,19 @@ sys.sp_cdc_enable_table
   
 `[ @capture_instance = ] 'capture_instance'` インスタンス固有の変更データキャプチャオブジェクトに名前を指定するために使用されるキャプチャインスタンスの名前を指定します。 *capture_instance* は **sysname** であり、NULL にすることはできません。  
   
- 指定しない場合、ソーススキーマ名とソーステーブル名を *schemaname_sourcename*の形式で取得した名前になります。 *capture_instance* は100文字を超えることはできず、データベース内で一意である必要があります。 指定されたまたは派生したかどうかにかかわらず、 *capture_instance* 文字列の右側にある空白文字が切り捨てられます。  
+ 指定しない場合、ソーススキーマ名とソーステーブル名を *schemaname_sourcename* の形式で取得した名前になります。 *capture_instance* は100文字を超えることはできず、データベース内で一意である必要があります。 指定されたまたは派生したかどうかにかかわらず、 *capture_instance* 文字列の右側にある空白文字が切り捨てられます。  
   
- ソーステーブルには、最大2つのキャプチャインスタンスを含めることができます。 詳細については、「 [sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)」を参照してください。  
+ ソーステーブルには、最大2つのキャプチャインスタンスを含めることができます。 詳細については、「 [sys.sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)」を参照してください。  
   
-`[ @supports_net_changes = ] supports_net_changes` 差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに主キーがある場合、またはテーブルにパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes*は**ビット**の既定値は1です @index_name 。 それ以外の場合、既定値は 0 になります。  
+`[ @supports_net_changes = ] supports_net_changes` 差分変更のクエリのサポートをこのキャプチャインスタンスで有効にするかどうかを示します。 テーブルに主キーがある場合、またはテーブルにパラメーターを使用して識別された一意のインデックスがある場合、 *supports_net_changes* は **ビット** の既定値は1です @index_name 。 それ以外の場合、既定値は 0 になります。  
   
  0の場合は、すべての変更をクエリするサポート関数のみが生成されます。  
   
  1の場合、差分変更のクエリを実行するために必要な関数も生成されます。  
   
- *Supports_net_changes*が1に設定されている場合は、 *index_name*を指定するか、ソーステーブルに主キーが定義されている必要があります。  
+ *Supports_net_changes* が1に設定されている場合は、 *index_name* を指定するか、ソーステーブルに主キーが定義されている必要があります。  
   
-`[ @index_name = ] 'index_name_'` ソーステーブル内の行を一意に識別するために使用する一意のインデックスの名前。 *index_name* は **sysname** であり、NULL にすることができます。 指定した場合、 *index_name* ソーステーブルの有効な一意のインデックスである必要があります。 *Index_name*が指定されている場合、特定のインデックス列は、テーブルの一意の行識別子として、定義されている主キー列よりも優先されます。  
+`[ @index_name = ] 'index_name_'` ソーステーブル内の行を一意に識別するために使用する一意のインデックスの名前。 *index_name* は **sysname** であり、NULL にすることができます。 指定した場合、 *index_name* ソーステーブルの有効な一意のインデックスである必要があります。 *Index_name* が指定されている場合、特定のインデックス列は、テーブルの一意の行識別子として、定義されている主キー列よりも優先されます。  
   
 `[ @captured_column_list = ] 'captured_column_list'` 変更テーブルに含めるソーステーブルの列を指定します。 *captured_column_list* は **nvarchar (max)** であり、NULL を指定できます。 NULL の場合、すべての列が変更テーブルに追加されます。  
   
@@ -107,21 +107,21 @@ sys.sp_cdc_enable_table
  なし  
   
 ## <a name="remarks"></a>解説  
- テーブルで変更データキャプチャを有効にするには、その前にデータベースを有効にする必要があります。 データベースで変更データキャプチャが有効になっているかどうかを確認するには、[データベースカタログビューの](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **is_cdc_enabled**列に対してクエリを実行します。 データベースを有効にするには、 [sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) ストアドプロシージャを使用します。  
+ テーブルで変更データキャプチャを有効にするには、その前にデータベースを有効にする必要があります。 データベースで変更データキャプチャが有効になっているかどうかを確認するには、[データベースカタログビューの](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) **is_cdc_enabled** 列に対してクエリを実行します。 データベースを有効にするには、 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) ストアドプロシージャを使用します。  
   
  テーブルに対して変更データ キャプチャを有効にすると、変更テーブルと 1 つまたは 2 つのクエリ関数が生成されます。 変更テーブルは、キャプチャ プロセスによってトランザクション ログから抽出されたソース テーブルの変更に関するリポジトリとして機能します。 クエリ関数は、変更テーブルからデータを抽出するために使用されます。 これらの関数の名前は、次の方法で *capture_instance* パラメーターから派生します。  
   
--   すべての変更関数: **cdc. fn_cdc_get_all_changes_<capture_instance>**  
+-   すべての変更関数: **cdc.fn_cdc_get_all_changes_<capture_instance>**  
   
--   差分変更機能: **cdc. fn_cdc_get_net_changes_<capture_instance>**  
+-   差分変更機能: **cdc.fn_cdc_get_net_changes_<capture_instance>**  
   
- また、ソーステーブルが変更データキャプチャを有効にするデータベース内の最初のテーブルであり、データベースにトランザクションパブリケーションが存在しない場合は、データベースのキャプチャジョブとクリーンアップジョブも作成され**ます sp_cdc_enable_table。** この例では、 **is_tracked_by_cdc**列を1に設定[します。](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
+ また **sys.sp_cdc_enable_table** は、変更データキャプチャを有効にするデータベースの最初のテーブルがソーステーブルで、データベースにトランザクションパブリケーションが存在しない場合に、データベースのキャプチャジョブとクリーンアップジョブを作成します。 この例では、 **is_tracked_by_cdc** 列を1に設定 [します。](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)  
   
 > [!NOTE]  
 >  テーブルで変更データ キャプチャが有効になっている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されている必要はありません。 ただし、エージェントが実行されていない場合、キャプチャプロセスではトランザクションログを処理し、変更テーブルにエントリを書き込むことはありません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Db_owner**固定データベースロールのメンバーシップが必要です。  
+ **Db_owner** 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -157,10 +157,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_cdc_disable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sp_cdc_help_jobs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_disable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

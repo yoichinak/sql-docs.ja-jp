@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdc3f2109d1938d7388454dcd1054deba341ed44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724333"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168814"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 [DataControl](./datacontrol-object-rds.md)オブジェクトが[レコードセット](../ado-api/recordset-object-ado.md)オブジェクトにデータを取得する際の進行状況を示します。  
@@ -32,17 +32,17 @@ ms.locfileid: "91724333"
   
 |値|説明|  
 |-----------|-----------------|  
-|**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl**オブジェクトの**レコードセット**は使用できません。|  
+|**adcReadyStateLoaded**|現在のクエリは実行中で、行はフェッチされていません。 **DataControl** オブジェクトの **レコードセット** は使用できません。|  
 |**adcReadyStateInteractive**|現在のクエリによって取得された行の初期セットは、 **DataControl** オブジェクトの **レコードセット** に格納されており、使用することができます。 残りの行はまだフェッチされています。|  
 |**adcReadyStateComplete**|現在のクエリによって取得されたすべての行が **DataControl** オブジェクトの **レコードセット** に格納され、使用できるようになります。<br /><br /> この状態は、エラーが原因で操作が中止された場合、または **レコードセット** オブジェクトが初期化されていない場合にも存在します。|  
   
 > [!NOTE]
 >  これらの定数を使用するクライアント側の実行可能ファイルは、それぞれの宣言を提供する必要があります。 RDS ライブラリの既定のインストールフォルダーにある Adcvbs. inc. ファイルから、必要な定数宣言を切り取って貼り付けることができます。  
   
-## <a name="remarks"></a>解説  
- 非同期クエリ操作中に**ReadyState**プロパティの変更を監視するには、 [onReadyStateChange](./onreadystatechange-event-rds.md)イベントを使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
+## <a name="remarks"></a>コメント  
+ 非同期クエリ操作中に **ReadyState** プロパティの変更を監視するには、 [onReadyStateChange](./onreadystatechange-event-rds.md)イベントを使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
   
- 非同期操作中にエラーが発生した場合、 **ReadyState** プロパティは **adcReadyStateComplete**に変更され、 [State](../ado-api/state-property-ado.md) プロパティは **adstateexecuting** から **adStateClosed**に変更され、 **レコードセット** オブジェクトの [値](../ado-api/value-property-ado.md) プロパティは *何も*保持されません。  
+ 非同期操作中にエラーが発生した場合、 **ReadyState** プロパティは **adcReadyStateComplete** に変更され、 [State](../ado-api/state-property-ado.md) プロパティは **adstateexecuting** から **adStateClosed** に変更され、 **レコードセット** オブジェクトの [値](../ado-api/value-property-ado.md) プロパティは *何も* 保持されません。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e16bce5905a993082ca480996fae9639dd053eeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f367f869092bde5458c732fda3e79bc06e43cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547625"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185354"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @action = ] 'action'` 指定されたログインに対して実行するアクションです。 *アクション* は **varchar (10)**,、既定値はありません。 *アクション*が**DELETE**の場合、 **sp_manage_jobs_by_login** *current_owner_login_name*によって所有されているすべてのジョブを削除します。 *アクション*が**再割り当て**されると、すべてのジョブが*new_owner_login_name*に割り当てられます。  
+`[ @action = ] 'action'` 指定されたログインに対して実行するアクションです。 *アクション* は **varchar (10)**,、既定値はありません。 *アクション* が **DELETE** の場合、 **sp_manage_jobs_by_login** *current_owner_login_name* によって所有されているすべてのジョブを削除します。 *アクション* が **再割り当て** されると、すべてのジョブが *new_owner_login_name* に割り当てられます。  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` 現在のジョブ所有者のログイン名です。 *current_owner_login_name* は **sysname**であり、既定値はありません。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 現在のジョブ所有者のログイン名です。 *current_owner_login_name* は **sysname** であり、既定値はありません。  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` 新しいジョブ所有者のログイン名です。 このパラメーターは、 *アクション* が **再割り当て**された場合にのみ使用します。 *new_owner_login_name* は **sysname**,、既定値は NULL です。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新しいジョブ所有者のログイン名です。 このパラメーターは、 *アクション* が **再割り当て** された場合にのみ使用します。 *new_owner_login_name* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  

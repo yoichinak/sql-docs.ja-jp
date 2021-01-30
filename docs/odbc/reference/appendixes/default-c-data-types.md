@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd7f50e58fd84cec5938aacc598d12e6d733fcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456608"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194899"
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
-アプリケーションで **SQLBindCol**、 **SQLGetData**、または **SQLBindParameter**の SQL_C_DEFAULT が指定されている場合、ドライバーでは、出力バッファーまたは入力バッファーの C データ型が、バッファーのバインド先の列またはパラメーターの SQL データ型に対応していると見なされます。  
+アプリケーションで **SQLBindCol**、 **SQLGetData**、または **SQLBindParameter** の SQL_C_DEFAULT が指定されている場合、ドライバーでは、出力バッファーまたは入力バッファーの C データ型が、バッファーのバインド先の列またはパラメーターの SQL データ型に対応していると見なされます。  
   
 > [!IMPORTANT]  
 >  相互運用可能なアプリケーションでは、SQL_C_DEFAULT を使用しないでください。 代わりに、使用しているバッファーの C 型を常に指定する必要があります。 これは、次の理由により、ドライバーが既定の C 型を常に正しく特定できないためです。  

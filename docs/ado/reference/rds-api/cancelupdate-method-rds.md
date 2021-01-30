@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb9bcb9e0bf18cc2b6ab8d654eaccdc92ff7563
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c2a845eef1d48dd8a41d1499104908db9ba10be0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722623"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169059"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate メソッド (RDS)
 [Recordset](../ado-api/recordset-object-ado.md)オブジェクトの現在の行または新しい行に対して行われたすべての変更を取り消します。  
@@ -38,8 +38,8 @@ DataControl.CancelUpdate
  *DataControl*  
  RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
-## <a name="remarks"></a>解説  
- OLE DB 用の Cursor Service では、元の値のコピーと変更のキャッシュの両方が保持されます。 **CancelUpdate**を呼び出すと、変更のキャッシュが空にリセットされ、バインドされたコントロールは元のデータで更新されます。  
+## <a name="remarks"></a>コメント  
+ OLE DB 用の Cursor Service では、元の値のコピーと変更のキャッシュの両方が保持されます。 **CancelUpdate** を呼び出すと、変更のキャッシュが空にリセットされ、バインドされたコントロールは元のデータで更新されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  

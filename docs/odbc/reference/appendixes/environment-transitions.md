@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - environment transitions [ODBC]
 - transitioning states [ODBC], environment
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daef0bc276831358cd3d82dd10a1dd44082214af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194837"
 ---
 # <a name="environment-transitions"></a>環境の遷移
 ODBC 環境には、次の3つの状態があります。  
   
-|州|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |E0|未割り当ての環境|  
 |E1|割り当て済みの環境、未割り当ての接続|  
@@ -47,7 +47,7 @@ ODBC 環境には、次の3つの状態があります。
   
  [3] この行は、 *Handletype* が SQL_HANDLE_STMT または SQL_HANDLE_DESC ときの遷移を示しています。  
   
- [4] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルが上書きされます。 これは、アプリケーションプログラミングエラーの可能性があります。  
+ [4] 有効なハンドルをポイントする *OutputHandlePtr* で **SQLAllocHandle** を呼び出すと、そのハンドルが上書きされます。 これは、アプリケーションプログラミングエラーの可能性があります。  
   
  [5] 環境に SQL_ATTR_ODBC_VERSION 環境属性が設定されています。  
   

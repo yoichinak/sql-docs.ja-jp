@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_notification_TSQL
 - sp_delete_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f023990f20765272fe2cde09f5599ecf736f076
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 85ce389d41eb57a38507d09be5c9ebdd6814ac51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181321"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_name = ] 'alert'` 警告の名前。 *alert* は **sysname**で、既定値はありません。  
+`[ @alert_name = ] 'alert'` 警告の名前。 *alert* は **sysname** で、既定値はありません。  
   
 `[ @operator_name = ] 'operator'` オペレーターの名前。 *operator* は **sysname**,、既定値はありません。  
   

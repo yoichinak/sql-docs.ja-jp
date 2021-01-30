@@ -7,22 +7,22 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fdc89f6fb9c1c32236d7e4da02ad2afb118ba08
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a95c71495d89533ca1f11e8eb1f00cfd828f17e7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974253"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167599"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC 構文)
-すべてのクライアントアプリケーション要求 (*progid*) と通信プロトコルとサーバー (*接続*) を処理するビジネスオブジェクトを指定する場合は、このよう**に、このクラスの** **createObject**メソッドを指定します。 **createObject** は、サーバーを表す [objectproxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) オブジェクトを返します。  
+すべてのクライアントアプリケーション要求 (*progid*) と通信プロトコルとサーバー (*接続*) を処理するビジネスオブジェクトを指定する場合は、このよう **に、このクラスの** **createObject** メソッドを指定します。 **createObject** は、サーバーを表す [objectproxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) オブジェクトを返します。  
   
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
   

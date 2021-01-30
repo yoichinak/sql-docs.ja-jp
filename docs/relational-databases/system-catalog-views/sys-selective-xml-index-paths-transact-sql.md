@@ -1,12 +1,12 @@
 ---
-description: selective_xml_index_paths (Transact-sql)
-title: selective_xml_index_paths (Transact-sql) |Microsoft Docs
+description: sys.selective_xml_index_paths (Transact-sql)
+title: sys.selective_xml_index_paths (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xml_schema_attributes_TSQL
 - xml_schema_attributes
@@ -20,17 +20,17 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: adc4ffa7ae43709a572ff1d7f4de1b3e26974ebb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a768ded6ef89a54f35e7ce30a64bc3dd6e277ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182467"
 ---
-# <a name="sysselective_xml_index_paths-transact-sql"></a>selective_xml_index_paths (Transact-sql)
+# <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Service Pack 1 以降で使用できるようになりました [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 selective_xml_index_paths の各行は、特定の選択的 xml インデックスの1つの昇格されたパスを表します。  
+  Service Pack 1 以降で使用でき [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ます。 sys.selective_xml_index_paths の各行は、特定の選択的 xml インデックスの1つの昇格されたパスを表します。  
   
  次のステートメントを使用して、テーブル T の xmlcol に対して選択的 XML インデックスを作成すると、  
   
@@ -41,7 +41,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
     )  
 ```  
   
- Sxi1 には、インデックスに対応する2つの新しい行が追加されます selective_xml_index_paths。  
+ Sys.selective_xml_index_paths には、インデックス sxi1 に対応する2つの新しい行があります。  
 
   
 |列名|データ型|説明|  
@@ -52,7 +52,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**path**|**nvarchar (4000)**|上位変換されたパス。 たとえば、'/a/b/c/d/e ' のようになります。|  
 |**name**|**sysname**|パス名。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
-|**path_type_desc**|**sysname**|**Path_type**値 ' XQUERY ' または ' SQL ' に基づいています。|  
+|**path_type_desc**|**sysname**|**Path_type** 値 ' XQUERY ' または ' SQL ' に基づいています。|  
 |**xml_component_id**|**int**|データベース内の XML スキーマコンポーネントの一意の ID。|  
 |**xquery_type_description**|**nvarchar (4000)**|指定された XSD 型の名前。|  
 |**is_xquery_type_inferred**|**bit**|1 = 型は推論されます。|  

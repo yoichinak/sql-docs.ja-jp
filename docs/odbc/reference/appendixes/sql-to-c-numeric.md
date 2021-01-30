@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], numeric
 - numeric data type [ODBC], converting
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f18cc2ecff847b2d7d7716e2c302de2b7bb3ff2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429564"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203013"
 ---
 # <a name="sql-to-c-numeric"></a>SQL から C へ: 数値
 
@@ -44,7 +44,7 @@ ms.locfileid: "88429564"
 |SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|切り捨てなしで変換されたデータ [a]<br /><br /> 小数部の桁の切り捨てで変換されたデータ [a]<br /><br /> データを変換すると、(小数点ではなく) 全体が失われることになります。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003|  
 |SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|データは、数値が変換されるデータ型の範囲内にある [a]<br /><br /> データが、数値を変換するデータ型の範囲外です [a]|データ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_BIT|データが0または 1 [a]<br /><br /> データが0より大きく2未満で、1以外の値が指定されています [a]<br /><br /> データが0より小さいか、または2以上です [a]|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength* のバイト長|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|切り捨てられていないデータ<br /><br /> 秒の小数部の切り捨て<br /><br /> 切り捨てられた数値の部分全体|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01S07<br /><br /> 22015|  
 |SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|切り捨てられた数値の部分全体|未定義。|未定義。|22015|  
   

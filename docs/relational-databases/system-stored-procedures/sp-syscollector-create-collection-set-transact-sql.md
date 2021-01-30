@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c2f62ec06ebda9c7c22ec381f4b9b5a3011cc4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: de9ee3331621df81739a9f808bbd63ab42c52491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547374"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205078"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,19 +68,19 @@ sp_syscollector_create_collection_set
   
  1-非キャッシュモード。 データの収集とアップロードは同じスケジュールに基づいて実行されます。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
   
- *Collection_mode*の既定値は0です。 *Collection_mode*が0の場合、 *schedule_uid*または*schedule_name*を指定する必要があります。  
+ *Collection_mode* の既定値は0です。 *Collection_mode* が0の場合、 *schedule_uid* または *schedule_name* を指定する必要があります。  
   
 `[ @days_until_expiration = ] days_until_expiration` 収集したデータを管理データウェアハウスに保存する日数を指定します。 *days_until_expiration* は **smallint** で、既定値は 730 (2 年) です。 *days_until_expiration* は、0または正の整数である必要があります。  
   
-`[ @proxy_id = ] proxy_id` エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id* は **int** で、既定値は NULL です。 指定する場合、 *proxy_name* は NULL である必要があります。 *Proxy_id*を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
+`[ @proxy_id = ] proxy_id` エージェントプロキシアカウントの一意の識別子を示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *proxy_id* は **int** で、既定値は NULL です。 指定する場合、 *proxy_name* は NULL である必要があります。 *Proxy_id* を取得するには、sysproxies システムテーブルに対してクエリを実行します。 Dc_admin 固定データベースロールには、プロキシにアクセスする権限が必要です。 詳細については、「 [Create a SQL Server エージェント Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
-`[ @proxy_name = ] 'proxy_name'` プロキシアカウントの名前を指定します。 *proxy_name* は **sysname** で、既定値は NULL です。 指定する場合、 *proxy_id* は NULL である必要があります。 *Proxy_name*を取得するには、sysproxies システムテーブルに対してクエリを実行します。  
+`[ @proxy_name = ] 'proxy_name'` プロキシアカウントの名前を指定します。 *proxy_name* は **sysname** で、既定値は NULL です。 指定する場合、 *proxy_id* は NULL である必要があります。 *Proxy_name* を取得するには、sysproxies システムテーブルに対してクエリを実行します。  
   
-`[ @schedule_uid = ] 'schedule_uid'` は、スケジュールを指す GUID です。 *schedule_uid* は **uniqueidentifier** で、既定値は NULL です。 指定する場合、 *schedule_name* は NULL である必要があります。 *Schedule_uid*を取得するには、sysschedules システムテーブルに対してクエリを実行します。  
+`[ @schedule_uid = ] 'schedule_uid'` は、スケジュールを指す GUID です。 *schedule_uid* は **uniqueidentifier** で、既定値は NULL です。 指定する場合、 *schedule_name* は NULL である必要があります。 *Schedule_uid* を取得するには、sysschedules システムテーブルに対してクエリを実行します。  
   
- *Collection_mode*が0に設定されている場合、 *schedule_uid*または*schedule_name*を指定する必要があります。 *Collection_mode*が1に設定されている場合、指定した場合、 *schedule_uid*または*schedule_name*は無視されます。  
+ *Collection_mode* が0に設定されている場合、 *schedule_uid* または *schedule_name* を指定する必要があります。 *Collection_mode* が1に設定されている場合、指定した場合、 *schedule_uid* または *schedule_name* は無視されます。  
   
-`[ @schedule_name = ] 'schedule_name'` スケジュールの名前を指定します。 *schedule_name* は **sysname** で、既定値は NULL です。 指定する場合、 *schedule_uid* は NULL である必要があります。 *Schedule_name*を取得するには、sysschedules システムテーブルに対してクエリを実行します。  
+`[ @schedule_name = ] 'schedule_name'` スケジュールの名前を指定します。 *schedule_name* は **sysname** で、既定値は NULL です。 指定する場合、 *schedule_uid* は NULL である必要があります。 *Schedule_name* を取得するには、sysschedules システムテーブルに対してクエリを実行します。  
   
 `[ @logging_level = ] logging_level` はログ記録レベルです。 *logging_level* は、次のいずれかの **値を使用** します。  
   
@@ -102,7 +102,7 @@ sp_syscollector_create_collection_set
   
  2-レベル1のログ記録と詳細なイベント情報 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- *Logging_level*の既定値は1です。  
+ *Logging_level* の既定値は1です。  
   
 `[ @description = ] 'description'` コレクションセットの説明を設定します。 *説明* は **nvarchar (4000)** で、既定値は NULL です。  
   
@@ -113,7 +113,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

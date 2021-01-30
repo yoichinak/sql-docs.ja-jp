@@ -6,21 +6,21 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976493"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167908"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
-データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない[接続](./connection-object-ado.md)および[レコードセット](./recordset-object-ado.md)オブジェクトの**プロパティ**コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](./ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
+データプロバイダー、サービスプロバイダー、およびサービスコンポーネントは、開かれていない [接続](./connection-object-ado.md)および [レコードセット](./recordset-object-ado.md)オブジェクトの **プロパティ** コレクションに動的なプロパティを追加できます。 また、これらのオブジェクトを開いたときに、指定したプロバイダーによって追加のプロパティが挿入される場合もあります。 これらのプロパティの一部は、「 [ADO Dynamic properties](./ado-dynamic-properties.md) 」セクションに一覧表示されています。 詳細については、 [「付録 a: providers](../../guide/appendixes/appendix-a-providers.md) 」セクションの特定のプロバイダーに記載されています。  
   
  次の表は、各標準 OLE DB プロバイダーの動的プロパティの ADO と OLE DB 名のクロスインデックスです。 プロバイダーは、ここに記載されているよりも多くのプロパティを追加できます。 プロバイダー固有の動的プロパティに関する具体的な情報については、プロバイダーのドキュメントを参照してください。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88976493"
 |プロバイダーのフレンドリ名|DBPROP_PROVIDERFRIENDLYNAME|  
 |プロバイダー名|DBPROP_PROVIDERFILENAME|  
 |プロバイダーのバージョン|DBPROP_PROVIDERVER|  
-|読み取り専用データソース|DBPROP_DATASOURCEREADONLY|  
+|データソースの Read-Only|DBPROP_DATASOURCEREADONLY|  
 |コマンドでの行セットの変換|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |スキーマ用語|DBPROP_SCHEMATERM|  
 |スキーマの使用法|DBPROP_SCHEMAUSAGE|  
@@ -95,7 +95,7 @@ ms.locfileid: "88976493"
 |ウィンドウ ハンドル|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>レコードセットの動的プロパティ  
- **レコードセットオブジェクトの****動的プロパティ**は、**レコードセット**が閉じられたときにスコープ外になることに注意してください。  
+ **レコードセットオブジェクトの****動的プロパティ** は、**レコードセット** が閉じられたときにスコープ外になることに注意してください。  
   
 |ADO プロパティ名|OLE DB プロパティ名|  
 |-----------------------|--------------------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "88976493"
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |アクセス順序|DBPROP_ACCESSORDER|  
-|追加専用の行セット|DBPROP_APPENDONLY|  
+|Append-Only 行セット|DBPROP_APPENDONLY|  
 |非同期の行セットの処理|DBPROP_ROWSET_ASYNCH|  
 |自動再計算|DBPROP_ADC_AUTORECALC|  
 |バックグラウンドフェッチサイズ|DBPROP_ASYNCHFETCHSIZE|  

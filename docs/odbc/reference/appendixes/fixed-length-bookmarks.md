@@ -1,13 +1,13 @@
 ---
 description: 固定長のブックマーク
-title: 固定長のブックマーク |Microsoft Docs
+title: Fixed-Length ブックマーク |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - backward compatibility [ODBC], bookmarks
 - bookmarks [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d357ba96141c658889628941c7f9492db5fd6b66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d5eb7acd97a83be0d150cec8b19a5a3e25a7bf6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466178"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194803"
 ---
 # <a name="fixed-length-bookmarks"></a>固定長のブックマーク
 ODBC *3.x ドライバーが* 固定長のブックマークを使用する odbc 2.x *アプリケーションで* 動作する必要がある場合、ドライバーは次の機能をサポートする必要があります。  

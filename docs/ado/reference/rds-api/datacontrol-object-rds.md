@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81f7d1a3ca15eaf2ebc2bb6dbaff20ba7762d89c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c65d8f639ec1747e7085f8d88c266ed6b6299d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721103"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169007"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データクエリ [レコードセット](../ado-api/recordset-object-ado.md) を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに **レコードセット** データを表示します。  
@@ -52,15 +52,15 @@ ms.locfileid: "91721103"
  RDS のすべてのプロパティ **。** カスタムビジネスオブジェクトはその機能を置き換えることができるため、DataControl は省略可能です。  
   
 > [!NOTE]
->  複数の結果を照会する場合は、最初の [レコードセット](../ado-api/recordset-object-ado.md) だけが返されます。 複数の結果セットが必要な場合は、それぞれを独自の **DataControl**に割り当てます。 複数の結果を得るためのクエリの例を次に示します。 `"Select * from Authors, Select * from Topics"`  
+>  複数の結果を照会する場合は、最初の [レコードセット](../ado-api/recordset-object-ado.md) だけが返されます。 複数の結果セットが必要な場合は、それぞれを独自の **DataControl** に割り当てます。 複数の結果を得るためのクエリの例を次に示します。 `"Select * from Authors, Select * from Topics"`  
   
  RDS を使用する場合は、接続文字列に "DFMode = 20;" を追加し **ます。DataControl** オブジェクトを使用すると、データを更新するときにサーバーのパフォーマンスを向上させることができます。 この設定では、サーバー上の **DataFactory** オブジェクトは、より少ないリソースを消費するモードを使用します。 ただし、次の機能はこの構成では使用できません。  
   
 -   パラメーター化クエリを使用する。  
   
--   **Execute**メソッドを呼び出す前に、パラメーターまたは列の情報を取得します。  
+-   **Execute** メソッドを呼び出す前に、パラメーターまたは列の情報を取得します。  
   
--   **Transact update**を**True**に設定します。  
+-   **Transact update** を **True** に設定します。  
   
 -   行の状態を取得しています。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "91721103"
   
 -   更新の再 [同期](../ado-api/update-resync-property-dynamic-ado.md) プロパティを使用して (明示的または自動で) 更新します。  
   
--   **コマンド**または[レコードセット](./recordset-sourcerecordset-properties-rds.md)のプロパティを設定します。  
+-   **コマンド** または [レコードセット](./recordset-sourcerecordset-properties-rds.md)のプロパティを設定します。  
   
--   **Adcmdtabledirect**を使用します。  
+-   **Adcmdtabledirect** を使用します。  
   
- **RDS。DataControl**オブジェクトは、既定では非同期モードで実行されます。 アプリケーションの同期実行が必要な場合は、次の例に示すように、 [Executeoptions](./executeoptions-property-rds.md) パラメーターを **Adcexecsync** に、 [Fetchoptions](./fetchoptions-property-rds.md) パラメーターを **adcexecsync**と同じに設定します。  
+ **RDS。DataControl** オブジェクトは、既定では非同期モードで実行されます。 アプリケーションの同期実行が必要な場合は、次の例に示すように、 [Executeoptions](./executeoptions-property-rds.md) パラメーターを **Adcexecsync** に、 [Fetchoptions](./fetchoptions-property-rds.md) パラメーターを **adcexecsync** と同じに設定します。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -103,7 +103,7 @@ ms.locfileid: "91721103"
  Internet Explorer 4.0 以降では、アパートメントモデルコントロールとしてマークされている場合にのみ、HTML コントロールと ActiveX®コントロールを使用してデータにバインドできます。  
   
 > [!NOTE]
->  **Microsoft Visual Basic ユーザー****RDS。DataControl**はスクリプトに安全であり、Web ベースのアプリケーションでのみ使用されます。 Visual Basic クライアントアプリケーションには必要ありません。  
+>  **Microsoft Visual Basic ユーザー****RDS。DataControl** はスクリプトに安全であり、Web ベースのアプリケーションでのみ使用されます。 Visual Basic クライアントアプリケーションには必要ありません。  
   
  ここでは、次のトピックについて説明します。  
   

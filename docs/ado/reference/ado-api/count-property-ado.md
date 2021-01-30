@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Collection::Count
@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b478a9f88d33503c5eda98bda11cfe0e0fcc8d6b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a99489ca105a3661fb17c7ea8a62ee831e899ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974523"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167670"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
   
 ## <a name="return-value"></a>戻り値  
- **Long 型**の値を返します。  
+ **Long 型** の値を返します。  
   
-## <a name="remarks"></a>解説  
- **Count**プロパティを使用して、特定のコレクションに含まれるオブジェクトの数を確認します。  
+## <a name="remarks"></a>コメント  
+ **Count** プロパティを使用して、特定のコレクションに含まれるオブジェクトの数を確認します。  
   
  コレクションのメンバーの番号はゼロで始まるので、常にゼロのメンバーで始まり、 **Count** プロパティの値から1を引いた値で終わる必要があります。 Microsoft Visual Basic を使用していて、 **Count** プロパティを確認せずにコレクションのメンバーをループする場合は、for each を使用します。 **次** のコマンド。  
   
- **Count**プロパティが0の場合、コレクションにはオブジェクトが存在しません。  
+ **Count** プロパティが0の場合、コレクションにはオブジェクトが存在しません。  
   
 ## <a name="applies-to"></a>適用対象  
 
