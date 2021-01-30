@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
 - dm_cdc_log_scan_sessions_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 312a0577d6ac2d092b01b34fcdb2aa034d36995d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e8f69ed4f8b1ca90bc6de468b4136c6c36687cfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100073"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99148197"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>変更データキャプチャ-sys.dm_cdc_log_scan_sessions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "98100073"
 |**empty_scan_count**|**int**|変更データキャプチャトランザクションが含まれていない連続したセッションの数。|  
 |**failed_sessions_count**|**int**|失敗したセッションの数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この動的管理ビューの値は、のインスタンスが起動されるたびにリセットされ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
