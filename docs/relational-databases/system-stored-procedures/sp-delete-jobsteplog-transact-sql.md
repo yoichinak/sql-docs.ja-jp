@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobsteplog
 - sp_delete_jobsteplog_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c656c5ff3a4a1c0798c881cd026fc7153acfae1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 17cdcb1ba86e214ce707ff084a0d921b3817cbe0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528269"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211151"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  引数で指定したすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップ ログを削除します。 このストアドプロシージャを使用して、 **msdb**データベースの**sysjobstepslogs**テーブルを保持します。  
+  引数で指定したすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップ ログを削除します。 このストアドプロシージャを使用して、 **msdb** データベースの **sysjobstepslogs** テーブルを保持します。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,17 +48,17 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 `[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
-> **注:***Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+> **注:***Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id` ジョブステップログを削除するジョブのステップの識別番号を指定します。 含まれていない場合、 ** \@ older_than**または** \@ larger_than**が指定されていない限り、ジョブ内のすべてのジョブステップのログが削除されます。 *step_id* は **int**,、既定値は NULL です。  
+`[ @step_id = ] step_id` ジョブステップログを削除するジョブのステップの識別番号を指定します。 含まれていない場合、 **\@ older_than** または **\@ larger_than** が指定されていない限り、ジョブ内のすべてのジョブステップのログが削除されます。 *step_id* は **int**,、既定値は NULL です。  
   
 `[ @step_name = ] 'step_name'` ジョブステップのログを削除するジョブのステップの名前です。 *step_name* は **sysname**,、既定値は NULL です。  
   
-> **注:***Step_id*または*step_name*のいずれかを指定できますが、両方を指定することはできません。  
+> **注:***Step_id* または *step_name* のいずれかを指定できますが、両方を指定することはできません。  
   
-`[ @older_than = ] 'date'` 保持する最も古いジョブステップログの日付と時刻。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付* は **datetime**,、既定値は NULL です。 ** \@ Older_than**と** \@ larger_than**の両方を指定できます。  
+`[ @older_than = ] 'date'` 保持する最も古いジョブステップログの日付と時刻。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付* は **datetime**,、既定値は NULL です。 **\@ Older_than** と **\@ larger_than** の両方を指定できます。  
   
-`[ @larger_than = ] 'size_in_bytes'` 保持する最大のジョブステップログのサイズ (バイト単位)。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 ** \@ Larger_than**と** \@ older_than**の両方を指定できます。  
+`[ @larger_than = ] 'size_in_bytes'` 保持する最大のジョブステップログのサイズ (バイト単位)。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 **\@ Larger_than** と **\@ older_than** の両方を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -69,10 +69,10 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>解説  
  **sp_delete_jobsteplog** は **msdb** データベースにあります。  
   
- ** \@ Job_id**または** \@ job_name**以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  
+ **\@ Job_id** または **\@ job_name** 以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   

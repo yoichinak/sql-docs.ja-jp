@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_audit_specifications_TSQL
 - sys.database_audit_specifications_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e88134772509f84eb389b3e55de860fdb59380bd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: da93017ae9f419c02ece8a50731f21d4b7cf36df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210395"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98095584"
 |is_state_enabled|**bit**|監査仕様の状態:<br /><br /> 0-無効<br /><br /> 1-有効|  
 |audit_GUID|**uniqueidentifer**|この仕様を含む監査の GUID。 データベースのアタッチ/起動中に、メンバーデータベース監査の仕様の列挙中に使用されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  データベースが読み取り専用モードの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能ではデータベース監査仕様を追加できません。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -49,7 +49,7 @@ ms.locfileid: "98095584"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

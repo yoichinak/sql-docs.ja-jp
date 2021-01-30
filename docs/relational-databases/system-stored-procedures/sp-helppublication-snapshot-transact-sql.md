@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppublication_snapshot
 - sp_helppublication_snapshot_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e423df4dcda235063e496b1474055c8d7de4e28e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ae7357cd8bc8f03805c6de948095ff2dbc4d541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543284"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210870"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,10 +41,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー* を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -61,9 +61,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**schedule_name**|**sysname**|このエージェントジョブに使用するスケジュールの名前。|  
 |**frequency_type**|**int**|エージェントの実行スケジュールを設定する頻度を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 1 回<br /><br /> **2** = 要求時<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月の相対<br /><br /> **64** = 自動開始<br /><br /> **128** = 定期的|  
 |**frequency_interval**|**int**|エージェントの実行日。次のいずれかの値になります。<br /><br /> **1** = 日曜日<br /><br /> **2** = 月曜日<br /><br /> **3** = 火曜日<br /><br /> **4** = 水曜日<br /><br /> **5** = 木曜日<br /><br /> **6** = 金曜日<br /><br /> **7** = 土曜日<br /><br /> **8** = 日<br /><br /> **9** = 平日<br /><br /> **10** = 週末|  
-|**frequency_subday_type**|**int**|*Frequency_type*が**4** (毎日) の場合にエージェントを実行する頻度を定義する型です。これらの値のいずれかを指定できます。<br /><br /> **1** = 指定された時間<br /><br /> **2** = 秒<br /><br /> **4** = 分<br /><br /> **8** = 時間|  
+|**frequency_subday_type**|**int**|*Frequency_type* が **4** (毎日) の場合にエージェントを実行する頻度を定義する型です。これらの値のいずれかを指定できます。<br /><br /> **1** = 指定された時間<br /><br /> **2** = 秒<br /><br /> **4** = 分<br /><br /> **8** = 時間|  
 |**frequency_subday_interval**|**int**|エージェントのスケジュールされた実行の間に発生する *frequency_subday_type* の間隔の数。|  
-|**frequency_relative_interval**|**int**|*Frequency_type*が**32** (月単位) の場合に、特定の月にエージェントが実行される週を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
+|**frequency_relative_interval**|**int**|*Frequency_type* が **32** (月単位) の場合に、特定の月にエージェントが実行される週を指定します。次のいずれかの値を指定できます。<br /><br /> **1** = 最初<br /><br /> **2** = 秒<br /><br /> **4** = 3 番目<br /><br /> **8** = 4 番目<br /><br /> **16** = 最後|  
 |**frequency_recurrence_factor**|**int**|エージェントのスケジュールされた実行の間隔を週または月単位で指定します。|  
 |**active_start_date**|**int**|エージェントの最初の実行予定日。日付の形式は YYYYMMDD です。|  
 |**active_end_date**|**int**|エージェントの最後の実行予定日 (YYYYMMDD 形式)。|  
@@ -73,11 +73,11 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_publication_snapshot** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_help_publication_snapshot**を実行できるのは、パブリッシャー側の**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
+ **Sp_help_publication_snapshot** を実行できるのは、パブリッシャー側の **sysadmin** 固定サーバーロールのメンバー、またはパブリケーションデータベースの **db_owner** 固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

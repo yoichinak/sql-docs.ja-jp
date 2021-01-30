@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8c9086ca4c3c97b9a10cd9d460eaf69408373551
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: aba3bb5753569f0d75c8f8f8627beb31b5a68474
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096313"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211293"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "98096313"
 |**is_readonly**|**bit**|1 = ファイルは読み取り専用です。|  
 |**is_present**|**bit**|1 = ファイルはバックアップ セットに含まれる。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  LOADHISTORY を使用した *backup_device* からの RESTORE verifyonly は、 **backupmediaset** テーブルの列に、メディアセットヘッダーからの適切な値を設定します。  
   
  このテーブルおよびその他のバックアップテーブルと履歴テーブルの行の数を減らすには、 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) ストアドプロシージャを実行します。  

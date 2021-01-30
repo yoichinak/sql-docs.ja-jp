@@ -1,13 +1,13 @@
 ---
-description: sp_create_snapshot (Transact-sql)
-title: sp_create_snapshot (Transact-sql) |Microsoft Docs
+description: core.sp_create_snapshot (Transact-sql)
+title: core.sp_create_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210510"
 ---
-# <a name="coresp_create_snapshot-transact-sql"></a>sp_create_snapshot (Transact-sql)
+# <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   管理データ ウェアハウスの core.snapshots ビューに行を挿入します。 このプロシージャは、アップロードパッケージが管理データウェアハウスへのデータのアップロードを開始するたびに呼び出されます。  
@@ -55,13 +55,13 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  コレクター型の GUID。 *collector_type_uid* は **uniqueidentifier** で、既定値はありません。 GUID を取得するには、msdb データベースの dbo.syscollector_collector_types ビューにクエリを実行します。  
   
  [ @machine_name =] '*machine_name*'  
- コレクション セットが存在するサーバーの名前を指定します。 *machine_name* は **sysname**であり、既定値はありません。  
+ コレクション セットが存在するサーバーの名前を指定します。 *machine_name* は **sysname** であり、既定値はありません。  
   
  [ @named_instance =] '*named_instance*'  
- コレクションセットのインスタンスの名前です。 *named_instance* は **sysname**であり、既定値はありません。  
+ コレクションセットのインスタンスの名前です。 *named_instance* は **sysname** であり、既定値はありません。  
   
  [ @log_id =] *log_id*  
- データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id* は **bigint** で、既定値はありません。 *Log_id*の値を取得するには、msdb データベースの dbo.syscollector_execution_log ビューに対してクエリを実行します。  
+ データを収集したサーバー上のコレクションセットのイベントログにマップされる一意の識別子。 *log_id* は **bigint** で、既定値はありません。 *Log_id* の値を取得するには、msdb データベースの dbo.syscollector_execution_log ビューに対してクエリを実行します。  
   
  [ @snapshot_id =] *snapshot_id*  
  コアスナップショットビューに挿入される行の一意の識別子です。 *snapshot_id* は **INT** で、出力として返されます。  
@@ -69,7 +69,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するごとに、データ コレクターの実行時コンポーネントが core.sp_create_snapshot を呼び出します。  
   
  このプロシージャでは、次の条件がチェックされます。  

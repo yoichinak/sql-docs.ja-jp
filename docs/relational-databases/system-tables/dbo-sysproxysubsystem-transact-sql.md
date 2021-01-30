@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dbo.sysproxysubsystem_TSQL
 - dbo.sysproxysubsystem
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 700d55e45dc153834cfb12aa9883f8faa6fac909
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c5386b54af2487006c790d7c8849264f3e1c50f6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210725"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98098316"
 |**subsystem_id**|**int**|サブシステムの ID。 この値は、 **syssubsystems システム** テーブルの **subsystem_id** 列に対応しています。|  
 |**proxy_id**|**int**|プロキシアカウントの ID。 この値は、 **sysproxies** テーブルの **proxy_id** 列に対応しています。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このテーブルにアクセスできるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  

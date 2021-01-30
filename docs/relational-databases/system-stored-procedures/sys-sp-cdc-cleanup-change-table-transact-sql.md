@@ -1,13 +1,13 @@
 ---
-description: sp_cdc_cleanup_change_table (Transact-sql)
-title: sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_cleanup_change_table (Transact-sql)
+title: sys.sp_cdc_cleanup_change_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
 - sp_cdc_cleanup_change_table_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc6ca4964beff8adc8f32598948964d597076804
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210747"
 ---
-# <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sp_cdc_cleanup_change_table (Transact-sql)
+# <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   指定された *low_water_mark* 値に基づいて、現在のデータベースの変更テーブルから行を削除します。 このストアドプロシージャは、変更テーブルのクリーンアッププロセスを直接管理する必要があるユーザー向けに用意されています。 ただし、このプロシージャは、変更テーブルに含まれるデータのすべてのコンシューマーに影響を及ぼすため、使用する際は注意が必要です。  
@@ -47,16 +47,16 @@ sys.sp_cdc_cleanup_change_table
   
 ## <a name="arguments"></a>引数  
  [ @capture_instance =] '*capture_instance*'  
- 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
+ 変更テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance* は **sysname** であり、既定値はありません。 NULL にすることはできません。  
   
  *capture_instance* は、現在のデータベースに存在するキャプチャインスタンスに名前を指定する必要があります。  
   
  [ @low_water_mark =] *low_water_mark*  
- *キャプチャインスタンス*の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark* は **binary (10)**,、既定値はありません。  
+ *キャプチャインスタンス* の新しい低レベルのウォーターマークとして使用するログシーケンス番号 (LSN) を指定します。 *low_water_mark* は **binary (10)**,、既定値はありません。  
   
- 値が null 以外の場合は、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
+ 値が null 以外の場合は、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) テーブル内の現在のエントリの start_lsn 値として表示される必要があります。 cdc.lsn_time_mapping の他のエントリが、新しい低レベルのウォーターマークで識別されたエントリと同じコミット時間を共有する場合、そのグループのエントリに関連付けられた最小 LSN が低レベルのウォーターマークとして選択されます。  
   
- 値が明示的に NULL に設定されている場合、*キャプチャインスタンス*の現在の*低レベルのウォーターマーク*は、クリーンアップ操作の上限を定義するために使用されます。  
+ 値が明示的に NULL に設定されている場合、*キャプチャインスタンス* の現在の *低レベルのウォーターマーク* は、クリーンアップ操作の上限を定義するために使用されます。  
   
  [ @threshold =] '*削除のしきい値*'  
  クリーンアップで1つのステートメントを使用して削除できる削除エントリの最大数を指定します。 *delete_threshold* は **bigint**,、既定値は5000です。  
@@ -70,7 +70,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="remarks"></a>解説  
  sys.sp_cdc_cleanup_change_table は次の操作を実行します。  
   
-1.  @low_water_markパラメーターが NULL でない場合は、*キャプチャインスタンス*の start_lsn の値を新しい*低レベルのウォーターマーク*に設定します。  
+1.  @low_water_markパラメーターが NULL でない場合は、*キャプチャインスタンス* の start_lsn の値を新しい *低レベルのウォーターマーク* に設定します。  
   
     > [!NOTE]  
     >  新しい低レベルのウォーターマークは、ストアド プロシージャ呼び出しで指定されている低レベルのウォーターマークと異なる場合があります。 cdc.lsn_time_mapping テーブルの他のエントリが同じコミット時間を共有する場合、そのグループのエントリで表される最小の start_lsn が、調整された低レベルのウォーターマークとして選択されます。 @low_water_markパラメーターが NULL の場合、または現在の低レベルのウォーターマークが新しい lowwatermark より大きい場合、キャプチャインスタンスの start_lsn の値は変更されません。  
@@ -81,7 +81,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   クリーンアップエージェントジョブによって削除エラーが報告されます。  
   
-     管理者は、このストアドプロシージャを明示的に実行して、失敗した操作を再試行できます。 特定のキャプチャインスタンスのクリーンアップを再試行するには、sp_cdc_cleanup_change_table を実行し、パラメーターに NULL を指定し @low_water_mark ます。  
+     管理者は、このストアドプロシージャを明示的に実行して、失敗した操作を再試行できます。 特定のキャプチャインスタンスのクリーンアップを再試行するには sys.sp_cdc_cleanup_change_table を実行し、パラメーターに NULL を指定し @low_water_mark ます。  
   
 -   クリーンアップエージェントジョブで使用される単純なリテンション期間に基づくポリシーは、十分ではありません。  
   
@@ -91,8 +91,8 @@ sys.sp_cdc_cleanup_change_table
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_increment_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

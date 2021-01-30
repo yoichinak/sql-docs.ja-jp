@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_log_shipping_secondary_primary_TSQL
 - sp_delete_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eee58b97415073dcc93cd689603077151f29a73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0ffaa8d777c048a0bc1e14cd239620d1762f86e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447314"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211099"
 ---
 # <a name="sp_delete_log_shipping_secondary_primary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_delete_log_shipping_secondary_primary
 ## <a name="arguments"></a>引数  
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server* は **sysname** であり、NULL にすることはできません。  
   
-`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,7 +57,7 @@ sp_delete_log_shipping_secondary_primary
   
 1.  セカンダリ ID のコピージョブと復元ジョブを削除します。  
   
-2.  **Log_shipping_secondary**のエントリを削除します。  
+2.  **Log_shipping_secondary** のエントリを削除します。  
   
 3.  監視サーバーで **sp_delete_log_shipping_alert_job** を呼び出します。  
   

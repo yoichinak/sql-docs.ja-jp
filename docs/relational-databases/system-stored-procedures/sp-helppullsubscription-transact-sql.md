@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
 - sp_helppullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e7711e7034190f5862d512c3da02df685c3aaf5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210847"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` リモートサーバーの名前を指定します。 *publisher* のデータ型は **sysname**で、既定値はです **%** 。これにより、すべてのパブリッシャーの情報が返されます。  
+`[ @publisher = ] 'publisher'` リモートサーバーの名前を指定します。 *publisher* のデータ型は **sysname** で、既定値はです **%** 。これにより、すべてのパブリッシャーの情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**で、既定値はです。これにより、 **%** すべてのパブリッシャーデータベースが返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname** で、既定値はです。これにより、 **%** すべてのパブリッシャーデータベースが返されます。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *パブリケーション* は **sysname**で、既定値はです。これにより、 **%** すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0** のプルサブスクリプションのみが返されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *パブリケーション* は **sysname** で、既定値はです。これにより、 **%** すべてのパブリケーションが返されます。 このパラメーターが ALL と等しい場合は、independent_agent = **0** のプルサブスクリプションのみが返されます。  
   
-`[ @show_push = ] 'show_push'` すべてのプッシュサブスクリプションを返すかどうかを指定します。 *show_push*は **nvarchar (5)**,、既定値は FALSE の場合、プッシュサブスクリプションは返されません。  
+`[ @show_push = ] 'show_push'` すべてのプッシュサブスクリプションを返すかどうかを指定します。 *show_push* は **nvarchar (5)**,、既定値は FALSE の場合、プッシュサブスクリプションは返されません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -82,26 +82,26 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**ftp_password**|**nvarchar (524)**|これは旧バージョンとの互換性のためにだけ用意されています。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
 |**working_directory**|**nvarchar (255)**|該当するオプションが指定され、ファイル転送プロトコル (FTP) を使ってスナップショット ファイルを転送する場合の、転送先ディレクトリの完全修飾パス。|  
-|**use_ftp**|**bit**|サブスクリプションは、インターネット経由でパブリケーションをサブスクライブしています。また、FTP アドレスのプロパティが構成されています。 **0**の場合、サブスクリプションは FTP を使用していません。 **1**の場合、サブスクリプションは FTP を使用しています。|  
+|**use_ftp**|**bit**|サブスクリプションは、インターネット経由でパブリケーションをサブスクライブしています。また、FTP アドレスのプロパティが構成されています。 **0** の場合、サブスクリプションは FTP を使用していません。 **1** の場合、サブスクリプションは FTP を使用しています。|  
 |**publication_type**|**int**|パブリケーションのレプリケーションの種類。<br /><br /> **0** = トランザクションレプリケーション<br /><br /> **1** = スナップショットレプリケーション<br /><br /> **2** = マージレプリケーション|  
 |**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
 |**dts_package_location**|**int**|DTS パッケージが格納されている場所:<br /><br /> **0** = ディストリビューター<br /><br /> **1** = サブスクライバー|  
-|**offload_agent**|**bit**|エージェントをリモートでアクティブ化できるかどうかを指定します。 **0**の場合、エージェントをリモートでアクティブにすることはできません。|  
+|**offload_agent**|**bit**|エージェントをリモートでアクティブ化できるかどうかを指定します。 **0** の場合、エージェントをリモートでアクティブにすることはできません。|  
 |**offload_server**|**sysname**|リモートからのアクティブ化に使用するサーバーのネットワーク名を指定します。|  
 |**last_sync_status**|**int**|サブスクリプションの状態:<br /><br /> **0** = すべてのジョブが開始を待機しています<br /><br /> **1** = 1 つ以上のジョブが開始されています<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも1つのジョブが実行されています<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態になっている<br /><br /> **5** = 少なくとも1つのジョブが前回のエラーの発生後に実行しようとしています<br /><br /> **6** = 少なくとも1つのジョブを正常に実行できませんでした|  
 |**last_sync_summary**|**sysname**|前回の同期の結果の説明。|  
 |**last_sync_time**|**datetime**|サブスクリプション情報が更新された時刻。 ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh: mi: sss. mmm です。 ' yyyy ' は年、' mm ' は月、' dd ' は日、' hh ' は時間、' mi ' は分、' sss ' は秒、' mmm ' はミリ秒です。|  
-|**job_login**|**nvarchar(512)**|ディストリビューションエージェントを実行する Windows アカウントを指定します。このアカウントは、*ドメイン* \\ *ユーザー名*の形式で返されます。|  
+|**job_login**|**nvarchar(512)**|ディストリビューションエージェントを実行する Windows アカウントを指定します。このアカウントは、*ドメイン* \\ *ユーザー名* の形式で返されます。|  
 |**job_password**|**sysname**|セキュリティ上の理由から、値 " **\*\*\*\*\*\*\*\*\*\*** " は常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helppullsubscription** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helppullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_helppullsubscription** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_addpullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

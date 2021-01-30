@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergesubscription
 - sp_helpmergesubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274048dcfcd76e815d3f4ec159dded0571f66e43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535199"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210888"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,21 +48,21 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の **sysname**,、既定値は **%** です。 NULL または% の場合、指定されたパブリケーションに対するすべてのサブスクリプションに関する情報が返されます。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db*のデータ型は **sysname**で、既定値はで **%** 、すべてのサブスクリプションデータベースに関する情報が返されます。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* のデータ型は **sysname** で、既定値はで **%** 、すべてのサブスクリプションデータベースに関する情報が返されます。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 パブリッシャーは有効なサーバーである必要があります。 *publisher*のデータ型は **sysname**で、既定値はで **%** 、すべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 パブリッシャーは有効なサーバーである必要があります。 *publisher* のデータ型は **sysname** で、既定値はで **%** 、すべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db*のデータ型は **sysname**で、既定値はで **%** 、すべてのパブリッシャーデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* のデータ型は **sysname** で、既定値はで **%** 、すべてのパブリッシャーデータベースに関する情報が返されます。  
   
-`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類を示します。 *subscription_type*は **nvarchar (15)** で、次のいずれかの値を指定できます。  
+`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類を示します。 *subscription_type* は **nvarchar (15)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**push** (既定値)|プッシュ サブスクリプション|  
 |**だとすると**|プルサブスクリプション|  
 |**両方とも**|プッシュおよびプル サブスクリプションの両方|  
   
-`[ @found = ] 'found'OUTPUT` は、行を返すことを示すフラグです。 *見つかった*は **int** と出力パラメーターで、既定値は NULL です。 **1** は、パブリケーションが見つかったことを示します。 **0** は、パブリケーションが見つからないことを示します。  
+`[ @found = ] 'found'OUTPUT` は、行を返すことを示すフラグです。 *見つかった* は **int** と出力パラメーターで、既定値は NULL です。 **1** は、パブリケーションが見つかったことを示します。 **0** は、パブリケーションが見つからないことを示します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -84,7 +84,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**full_publication**|**tinyint**|サブスクリプションが完全またはフィルター選択されたパブリケーションであるかどうか。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。 NULL の場合、実行はパブリッシャー側で実行されます。|  
 |**offload_server**|**sysname**|エージェントが動作しているサーバーの名前。|  
-|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 **0**の場合、インタラクティブ競合回避モジュールは使用されません。|  
+|**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 **0** の場合、インタラクティブ競合回避モジュールは使用されません。|  
 |**hostname**|**sysname**|サブスクリプションが [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 関数の値によってフィルター処理されるときに指定される値。|  
 |**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1** は Windows 認証を、 **0** は認証を意味し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
@@ -93,13 +93,13 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpmergesubscription** は、パブリッシャーまたは再パブリッシュサブスクライバーに格納されているサブスクリプション情報を返すために、マージレプリケーションで使用されます。  
   
- 匿名サブスクリプションの場合、 *subscription_type*値は常に **1** (プル) です。 ただし、匿名サブスクリプションに関する情報を表示するには、サブスクライバーで [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) を実行する必要があります。  
+ 匿名サブスクリプションの場合、 *subscription_type* 値は常に **1** (プル) です。 ただし、匿名サブスクリプションに関する情報を表示するには、サブスクライバーで [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) を実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpmergesubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロール、またはサブスクリプションが属しているパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
+ **Sp_helpmergesubscription** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバー、 **db_owner** 固定データベースロール、またはサブスクリプションが属しているパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

@@ -1,13 +1,13 @@
 ---
-description: sp_cdc_change_job (Transact-sql)
-title: sp_cdc_change_job (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_change_job (Transact-sql)
+title: sys.sp_cdc_change_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210757"
 ---
-# <a name="syssp_cdc_change_job-transact-sql"></a>sp_cdc_change_job (Transact-sql)
+# <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  現在のデータベースの変更データキャプチャのクリーンアップジョブまたはキャプチャジョブの構成を変更します。 ジョブの現在の構成を表示するには、 [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) テーブルに対してクエリを実行するか、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。  
+  現在のデータベースの変更データキャプチャのクリーンアップジョブまたはキャプチャジョブの構成を変更します。 ジョブの現在の構成を表示するには、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) テーブルに対してクエリを実行するか、 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,11 +62,11 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continuous* = 1 の場合、 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)ジョブによってログがスキャンされ、最大 (*max_trans* \* *max_scans*) トランザクションが処理されます。 次に、 *polling_interval* で指定された秒数だけ待機してから、次のログスキャンを開始します。  
   
- *Continuous* = 0 の場合、 **sp_cdc_scan**ジョブはログの*max_scans*スキャンまで実行され、各スキャン中に*max_trans*トランザクションまで処理された後、終了します。  
+ *Continuous* = 0 の場合、 **sp_cdc_scan** ジョブはログの *max_scans* スキャンまで実行され、各スキャン中に *max_trans* トランザクションまで処理された後、終了します。  
   
- ** \@ Continuous**が1から0に変更された場合、 ** \@ pollinginterval**は自動的に0に設定されます。 0以外の** \@ pollinginterval**に指定された値は無視されます。  
+ **\@ Continuous** が1から0に変更された場合、 **\@ pollinginterval** は自動的に0に設定されます。 0以外の **\@ pollinginterval** に指定された値は無視されます。  
   
- ** \@ Continuous**が省略された場合、または明示的に NULL に設定され、 ** \@ pollinginterval**が明示的に0よりも大きい値に設定されている場合、 ** \@ continuous**は自動的に1に設定されます。  
+ **\@ Continuous** が省略された場合、または明示的に NULL に設定され、 **\@ pollinginterval** が明示的に0よりも大きい値に設定されている場合、 **\@ continuous** は自動的に1に設定されます。  
   
  *continuous* は、キャプチャジョブに対してのみ有効です。  
   
@@ -87,14 +87,14 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  なし  
   
 ## <a name="remarks"></a>解説  
- パラメーターを省略した場合、 [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) テーブルの関連付けられた値は更新されません。 明示的に NULL に設定されたパラメーターは、パラメーターが省略されているかのように扱われます。  
+ パラメーターを省略した場合、 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) テーブルの関連付けられた値は更新されません。 明示的に NULL に設定されたパラメーターは、パラメーターが省略されているかのように扱われます。  
   
  ジョブの種類に対して無効なパラメーターを指定すると、ステートメントは失敗します。  
   
  ジョブに対する変更は、 [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) を使用してジョブを停止し、 [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)を使用して再起動するまで有効になりません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Db_owner**固定データベースロールのメンバーシップが必要です。  
+ **Db_owner** 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップジョブの変更  
- 次の例では、データベース内のクリーンアップジョブを更新し `AdventureWorks2012` ます。 このジョブの種類の有効なパラメーター ( ** \@ threshold**を除く) はすべて指定されています。 ** \@ しきい**値は変更されません。  
+ 次の例では、データベース内のクリーンアップジョブを更新し `AdventureWorks2012` ます。 このジョブの種類の有効なパラメーター ( **\@ threshold** を除く) はすべて指定されています。 **\@ しきい** 値は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

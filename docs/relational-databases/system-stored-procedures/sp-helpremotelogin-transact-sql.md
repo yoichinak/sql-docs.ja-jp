@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
 - sp_helpremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff291542fee3d10fe94e9ccd628e05c8f9e77f7b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547986"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210815"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @remoteserver **=** ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'**_remoteserver_*_'_*  
  リモート ログイン情報を返すリモート サーバーを指定します。 *remoteserver* は **sysname**,、既定値は NULL です。 場合 *remoteserver* が指定されていない、ローカルサーバーで定義されているすべてのリモートサーバーに関する情報が返されます。  
   
- [ @remotename **=** ] **'***remote_name***'**  
- リモートサーバー上の特定のリモートログインを指定します。 *remote_name* は **sysname**,、既定値は NULL です。 *Remote_name*が指定されていない場合は、 *remoteserver*に対して定義されたすべてのリモートユーザーに関する情報が返されます。  
+ [ @remotename **=** ] **'**_remote_name_*_'_*  
+ リモートサーバー上の特定のリモートログインを指定します。 *remote_name* は **sysname**,、既定値は NULL です。 *Remote_name* が指定されていない場合は、 *remoteserver* に対して定義されたすべてのリモートユーザーに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -62,7 +62,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|local_user_name にマップされているリモート サーバー上のログイン。|  
 |options|**sysname**|Trusted = リモートログインは、リモートサーバーからローカルサーバーに接続するときにパスワードを入力する必要はありません。<br /><br /> 信頼されていない (または空白) = リモートサーバーからローカルサーバーに接続するときに、リモートログインにパスワードの入力が求められます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ローカル サーバーで定義されているリモート サーバーの名前を表示するには、sp_helpserver を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

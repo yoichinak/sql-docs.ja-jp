@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpntgroup
 - sp_helpntgroup_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a88caee8d332a4802f4281360f93392ae29aa2c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dc378f5c07c4aa24c37c0212fd9f84fb6ef39f41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535172"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210876"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @ntname = ] 'name'` Windows グループの名前を指定します。 *名前* は **sysname**,、既定値は NULL です。 *名前* は、現在のデータベースへのアクセス権を持つ有効な Windows グループである必要があります。 *名前*が指定されていない場合、現在のデータベースへのアクセス権を持つすべての Windows グループが出力に含まれます。  
+`[ @ntname = ] 'name'` Windows グループの名前を指定します。 *名前* は **sysname**,、既定値は NULL です。 *名前* は、現在のデータベースへのアクセス権を持つ有効な Windows グループである必要があります。 *名前* が指定されていない場合、現在のデータベースへのアクセス権を持つすべての Windows グループが出力に含まれます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,11 +51,11 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows グループの名前。|  
 |**NTGroupId**|**smallint**|グループの識別子 (ID)。|  
-|**SID**|**varbinary(85)**|**Ntgroupname**のセキュリティ識別子 (SID)。|  
+|**SID**|**varbinary(85)**|**Ntgroupname** のセキュリティ識別子 (SID)。|  
 |**HasDbAccess**|**int**|1 = Windows グループには、データベースにアクセスする権限があります。|  
   
-## <a name="remarks"></a>解説  
- 現在のデータベースのロールの一覧を表示するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helprole**を使用します。  
+## <a name="remarks"></a>コメント  
+ 現在のデータベースのロールの一覧を表示するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_helprole** を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

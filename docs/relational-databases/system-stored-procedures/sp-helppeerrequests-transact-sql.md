@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppeerrequests_TSQL
 - sp_helppeerrequests
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ea9dce50e440c9b519032d46340b1b0a495eea0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d728d168ec84d27cbe5c4316eec1e5e0c9f61221
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535154"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210859"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` 状態要求が送信されたピアツーピアトポロジ内のパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @description = ] 'description'` 個々の状態要求を識別するために使用できる値。これにより、 [transact-sql&#41;&#40;sp_requestpeerresponse ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を呼び出すときに指定されたユーザー定義情報に基づいて、返された応答をフィルター処理できます。 *説明* は **nvarchar (4000)**,、既定値は **%** です。 既定では、パブリケーションに対するすべてのステータス要求が返されます。 このパラメーターを使用して、 *description*に指定された値と一致する説明を含むステータス要求だけを返します。この場合、文字列は、 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 句を使用して照合されます。  
+`[ @description = ] 'description'` 個々の状態要求を識別するために使用できる値。これにより、 [transact-sql&#41;&#40;sp_requestpeerresponse ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)を呼び出すときに指定されたユーザー定義情報に基づいて、返された応答をフィルター処理できます。 *説明* は **nvarchar (4000)**,、既定値は **%** です。 既定では、パブリケーションに対するすべてのステータス要求が返されます。 このパラメーターを使用して、 *description* に指定された値と一致する説明を含むステータス要求だけを返します。この場合、文字列は、 [LIKE &#40;transact-sql&#41;](../../t-sql/language-elements/like-transact-sql.md) 句を使用して照合されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -55,13 +55,13 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helppeerrequests** は、ピアツーピアトランザクションレプリケーションで使用されます。  
   
  **sp_helppeerrequests** は、ピアツーピアトポロジでパブリッシュされたデータベースを復元する場合に使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helppeerrequests**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_helppeerrequests** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_deletepeerrequesthistory &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
