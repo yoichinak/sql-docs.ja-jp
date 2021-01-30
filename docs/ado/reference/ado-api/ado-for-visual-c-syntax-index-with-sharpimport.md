@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d60cb7594592133eb19f7a9aa42ad25fb1fc1a38
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b75865809a93f3c0f7cc0e10cde576ed403af5c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976363"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164922"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import を使用した Visual C++ 構文インデックス用の ADO
 このインデックスは、Microsoft Visual C++ と **#import** ディレクティブに基づく ADO 言語リファレンスへの相互参照です。  

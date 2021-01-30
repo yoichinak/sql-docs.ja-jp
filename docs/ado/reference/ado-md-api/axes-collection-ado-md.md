@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Axes
@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78113cb7854ec3f56ffe6f7322a6bb732939f27f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 757d833da689c3d5097540571074292ec1bd2d69
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987413"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166189"
 ---
 # <a name="axes-collection-ado-md"></a>Axes コレクション (ADO MD)
 セルセットを定義する [軸](./axis-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
- [Cellset](./cellset-object-ado-md.md)オブジェクトには、 **Axes**コレクションが含まれています。 **セルセット**を開くと、このコレクションには少なくとも1つの**軸**が含まれます。 **軸**オブジェクトの使用方法の詳細については、 [axis](./axis-object-ado-md.md)オブジェクトに関する説明を参照してください。  
+## <a name="remarks"></a>コメント  
+ [Cellset](./cellset-object-ado-md.md)オブジェクトには、 **Axes** コレクションが含まれています。 **セルセット** を開くと、このコレクションには少なくとも1つの **軸** が含まれます。 **軸** オブジェクトの使用方法の詳細については、 [axis](./axis-object-ado-md.md)オブジェクトに関する説明を参照してください。  
   
 > [!NOTE]
->  **セルセット**のフィルター軸が**Axes**コレクションに含まれていません。 詳細については、 [Filteraxis](./filteraxis-property-ado-md.md) プロパティを参照してください。  
+>  **セルセット** のフィルター軸が **Axes** コレクションに含まれていません。 詳細については、 [Filteraxis](./filteraxis-property-ado-md.md) プロパティを参照してください。  
   
  **軸** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   

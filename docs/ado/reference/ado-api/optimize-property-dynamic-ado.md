@@ -1,25 +1,25 @@
 ---
 description: Optimize プロパティ - 動的 (ADO)
-title: Optimize プロパティ-動的 (ADO) |Microsoft Docs
+title: Property-Dynamic の最適化 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166952"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
 [フィールド](./field-object.md)にインデックスを作成するかどうかを指定します。  
@@ -27,12 +27,12 @@ ms.locfileid: "88990263"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  インデックスを作成する必要があるかどうかを示す **ブール** 値を設定または返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  インデックスを使用すると、 [レコードセット](./recordset-object-ado.md)内の値を検索したり並べ替えたりする操作のパフォーマンスを向上させることができます。 インデックスは ADO の内部にあります。アプリケーションで明示的にアクセスしたり、使用したりすることはできません。  
   
- フィールドにインデックスを作成するには、 **Optimize** プロパティを **True**に設定します。 インデックスを削除するには、このプロパティを **False**に設定します。  
+ フィールドにインデックスを作成するには、 **Optimize** プロパティを **True** に設定します。 インデックスを削除するには、このプロパティを **False** に設定します。  
   
- **[最適化**] は、[[カーソルの場所](./cursorlocation-property-ado.md)] プロパティが**adUseClient**に設定されている場合に、[フィールド](./field-object.md)オブジェクトの[プロパティ](./properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
+ **[最適化**] は、[[カーソルの場所](./cursorlocation-property-ado.md)] プロパティが **adUseClient** に設定されている場合に、[フィールド](./field-object.md)オブジェクトの [プロパティ](./properties-collection-ado.md)のコレクションに追加される動的プロパティです。  
   
 ## <a name="usage"></a>使用法  
   

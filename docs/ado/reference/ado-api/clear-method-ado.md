@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Errors::raw_Clear
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d78980c1baee5aed1280f69c0d5224622a217ea0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f79e81947a549057db5dbff7f6715492d08923a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164722"
 ---
 # <a name="clear-method-ado"></a>Clear メソッド (ADO)
 [エラーコレクションから](./errors-collection-ado.md)すべての[エラー](./error-object.md)オブジェクトを削除します。  
@@ -35,9 +35,9 @@ Errors.Clear
 ```  
   
 ## <a name="remarks"></a>解説  
- コレクションから既存の[エラー](./error-object.md)オブジェクトをすべて削除するには、 [Errors](./errors-collection-ado.md)コレクションに対して**Clear**メソッドを使用します。 エラーが発生すると、ADO によってエラーコレクションが自動的にクリア **され、** 新しいエラーに基づいて **エラー** オブジェクトに格納されます。  
+ コレクションから既存の [エラー](./error-object.md)オブジェクトをすべて削除するには、 [Errors](./errors-collection-ado.md)コレクションに対して **Clear** メソッドを使用します。 エラーが発生すると、ADO によってエラーコレクションが自動的にクリア **され、** 新しいエラーに基づいて **エラー** オブジェクトに格納されます。  
   
- 一部のプロパティおよびメソッドは、**エラーコレクションに****エラー**オブジェクトとして表示されるが、プログラムの実行を停止しない警告を返します。 [レコードセット](./recordset-object-ado.md)オブジェクトの[Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)、または[CancelBatch](./cancelbatch-method-ado.md)メソッドを呼び出す前に、[接続](./connection-object-ado.md)オブジェクトの[Open](./open-method-ado-connection.md)メソッド。または、**レコードセット**オブジェクトの[Filter](./filter-property.md)プロパティを設定し、 **Errors**コレクションに対して**Clear**メソッドを呼び出します。 これにより、 **Errors**コレクションの[Count](./count-property-ado.md)プロパティを読み取って、返された警告をテストできます。  
+ 一部のプロパティおよびメソッドは、**エラーコレクションに****エラー** オブジェクトとして表示されるが、プログラムの実行を停止しない警告を返します。 [レコードセット](./recordset-object-ado.md)オブジェクトの [Resync](./resync-method.md)、 [UpdateBatch](./updatebatch-method.md)、または [CancelBatch](./cancelbatch-method-ado.md)メソッドを呼び出す前に、[接続](./connection-object-ado.md)オブジェクトの [Open](./open-method-ado-connection.md)メソッド。または、**レコードセット** オブジェクトの [Filter](./filter-property.md)プロパティを設定し、 **Errors** コレクションに対して **Clear** メソッドを呼び出します。 これにより、 **Errors** コレクションの [Count](./count-property-ado.md)プロパティを読み取って、返された警告をテストできます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Errors コレクション (ADO)](./errors-collection-ado.md)  

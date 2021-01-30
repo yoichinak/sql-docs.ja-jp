@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75829400fbb1beb838b9254acf7db129980046c3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975653"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164748"
 ---
 # <a name="cancel-method-ado"></a>Cancel メソッド (ADO)
 保留中の非同期メソッド呼び出しの実行を取り消します。  
@@ -38,11 +38,11 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>解説  
- **Cancel**メソッドを使用して、非同期メソッド呼び出しの実行を終了します。つまり、 **adasyncconnect**、 **adasyncconnect**、または**adasyncconnect**オプションを使用して呼び出されたメソッドです。  
+ **Cancel** メソッドを使用して、非同期メソッド呼び出しの実行を終了します。つまり、 **adasyncconnect**、 **adasyncconnect**、または **adasyncconnect** オプションを使用して呼び出されたメソッドです。  
   
  次の表は、特定の種類のオブジェクトに対して **Cancel** メソッドを使用した場合に終了するタスクを示しています。  
   
-|*オブジェクト*がである場合|このメソッドへの最後の非同期呼び出しが終了しました|  
+|*オブジェクト* がである場合|このメソッドへの最後の非同期呼び出しが終了しました|  
 |----------------------|-------------------------------------------------------------|  
 |[コマンド](./command-object-ado.md)|[実行](./execute-method-ado-command.md)|  
 |[接続](./connection-object-ado.md)|[実行](./execute-method-ado-connection.md) または [開く](./open-method-ado-connection.md)|  

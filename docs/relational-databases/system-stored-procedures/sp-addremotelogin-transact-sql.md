@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addremotelogin_TSQL
 - sp_addremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de4f54972fb4a749e6466a81fef88ae8630be698
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13b935d91772d70d58b38f9f995341d81e04388f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464623"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165189"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +46,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>引数  
  [ @remoteserver **=** ] **'**_remoteserver_**'**  
- リモートログインが適用されるリモートサーバーの名前を指定します。 *remoteserver* は **sysname**,、既定値はありません。 *Remoteserver*のみを指定した場合、 *remoteserver*上のすべてのユーザーは、ローカルサーバー上の同じ名前の既存のログインにマップされます。 このサーバーは、ローカル サーバーが認識している必要があります。 サーバーは、sp_addserver を使用して追加されます。 *Remoteserver*のユーザーは、リモートストアドプロシージャを実行するためにを実行しているローカルサーバーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *remoteserver*での自分のログインと一致するローカルログインとして接続します。 *remoteserver* は、リモートプロシージャコールを開始するサーバーです。  
+ リモートログインが適用されるリモートサーバーの名前を指定します。 *remoteserver* は **sysname**,、既定値はありません。 *Remoteserver* のみを指定した場合、 *remoteserver* 上のすべてのユーザーは、ローカルサーバー上の同じ名前の既存のログインにマップされます。 このサーバーは、ローカル サーバーが認識している必要があります。 サーバーは、sp_addserver を使用して追加されます。 *Remoteserver* のユーザーは、リモートストアドプロシージャを実行するためにを実行しているローカルサーバーに接続するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *remoteserver* での自分のログインと一致するローカルログインとして接続します。 *remoteserver* は、リモートプロシージャコールを開始するサーバーです。  
   
  [ @loginame **=** ] **'**_ログイン_**'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス上のユーザーのログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*は、のローカルインスタンスに既に存在している必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Login*を指定すると、 *remoteserver*のすべてのユーザーがその特定のローカルログインにマップされます。 *Remoteserver*のユーザーがのローカルインスタンスに接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] てリモートストアドプロシージャを実行すると、*ログイン*として接続されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンス上のユーザーのログイン ID を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン* は、のローカルインスタンスに既に存在している必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *Login* を指定すると、 *remoteserver* のすべてのユーザーがその特定のローカルログインにマップされます。 *Remoteserver* のユーザーがのローカルインスタンスに接続し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] てリモートストアドプロシージャを実行すると、*ログイン* として接続されます。  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- リモートサーバー上のユーザーのログイン ID を示します。 *remote_name* は **sysname**,、既定値は NULL です。 *remote_name* は *remoteserver*に存在する必要があります。 *Remote_name*が指定されている場合、特定のユーザー *remote_name*がローカルサーバーの*ログイン*にマップされます。 *Remoteserver*で*remote_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、リモートストアドプロシージャを実行するためにのローカルインスタンスに接続すると、*ログイン*として接続されます。 *Remote_name*のログイン id は、リモートサーバーのログイン id ( *login*) とは異なる場合があります。  
+ リモートサーバー上のユーザーのログイン ID を示します。 *remote_name* は **sysname**,、既定値は NULL です。 *remote_name* は *remoteserver* に存在する必要があります。 *Remote_name* が指定されている場合、特定のユーザー *remote_name* がローカルサーバーの *ログイン* にマップされます。 *Remoteserver* で *remote_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、リモートストアドプロシージャを実行するためにのローカルインスタンスに接続すると、*ログイン* として接続されます。 *Remote_name* のログイン id は、リモートサーバーのログイン id ( *login*) とは異なる場合があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -88,16 +88,16 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

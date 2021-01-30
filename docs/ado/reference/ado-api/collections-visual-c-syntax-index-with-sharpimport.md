@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cba9fa93b2f23388b11dc764a95b78d94df4874c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e29b092ea7c11dc9729986c342c96b2022fbf58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164673"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C++ 構文インデックス #import)
 コレクションが特定の共通メソッドとプロパティを継承することを理解しておくと便利です。  
   
- すべてのコレクションは **Count** プロパティと **Refresh** メソッドを継承し、すべてのコレクションが **Item** プロパティを追加します。 **Errors**コレクションは**Clear**メソッドを追加します。 **Parameters**コレクションは、 **Append**メソッドと**delete**メソッドを継承しますが、Fields コレクションは、 **Append**、 **delete**、および**Update**の**各**メソッドを追加します。  
+ すべてのコレクションは **Count** プロパティと **Refresh** メソッドを継承し、すべてのコレクションが **Item** プロパティを追加します。 **Errors** コレクションは **Clear** メソッドを追加します。 **Parameters** コレクションは、 **Append** メソッドと **delete** メソッドを継承しますが、Fields コレクションは、 **Append**、 **delete**、および **Update** の **各** メソッドを追加します。  
   
 ## <a name="properties-collection"></a>プロパティのコレクション  
   

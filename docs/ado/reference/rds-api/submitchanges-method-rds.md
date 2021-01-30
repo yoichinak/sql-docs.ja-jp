@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69a76648c676af5c6420cffde930ac76c096276d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 052c131cb430d911d37f6782565c00a1d3cc53d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724176"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166105"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges メソッド (RDS)
 ローカルにキャッシュされたレコードセットと更新可能な [レコードセット](../ado-api/recordset-object-ado.md) の保留中の変更を、 [接続](./connect-property-rds.md) プロパティまたは [URL](./url-property-rds.md) プロパティで指定されたデータソースに送信します。  
@@ -45,18 +45,18 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  RDS で作成された接続を表す **文字列** 値です **。DataControl** オブジェクトの [Connect](./connect-property-rds.md) プロパティ。  
   
  *レコードセット*  
- **レコードセット**オブジェクトを表すオブジェクト変数です。  
+ **レコードセット** オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>解説  
- RDS で**SubmitChanges**メソッドを使用するには、先に[Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)、および[SQL](./sql-property.md)の各プロパティを設定する必要があり**ます。DataControl**オブジェクト。  
+## <a name="remarks"></a>コメント  
+ RDS で **SubmitChanges** メソッドを使用するには、先に [Connect](./connect-property-rds.md)、 [Server](./server-property-rds.md)、および [SQL](./sql-property.md)の各プロパティを設定する必要があり **ます。DataControl** オブジェクト。  
   
- 同じ**レコードセット**オブジェクトに対して**SubmitChanges**を呼び出した後に[cancelupdate](./cancelupdate-method-rds.md)メソッドを呼び出すと、変更が既にコミットされているため、 **cancelupdate**呼び出しは失敗します。  
+ 同じ **レコードセット** オブジェクトに対して **SubmitChanges** を呼び出した後に [cancelupdate](./cancelupdate-method-rds.md)メソッドを呼び出すと、変更が既にコミットされているため、 **cancelupdate** 呼び出しは失敗します。  
   
  変更されたレコードだけが変更され、すべての変更が成功するか、すべての変更が一緒に失敗します。  
   
- **SubmitChanges**は、既定の**RDSServer**オブジェクトでのみ使用できます。 カスタムビジネスオブジェクトでは、この方法を使用できません。  
+ **SubmitChanges** は、既定の **RDSServer** オブジェクトでのみ使用できます。 カスタムビジネスオブジェクトでは、この方法を使用できません。  
   
- **Url**プロパティが設定されている場合、 **SubmitChanges**は url で指定された場所に変更を送信します。  
+ **Url** プロパティが設定されている場合、 **SubmitChanges** は url で指定された場所に変更を送信します。  
   
 ## <a name="applies-to"></a>適用対象  
 

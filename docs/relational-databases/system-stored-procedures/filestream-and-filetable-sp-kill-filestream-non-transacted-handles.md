@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
 - sp_kill_filestream_non_transacted_handles
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd3ba3d653b8f1626f89c7bb979580c666dd830a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550090"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165235"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,33 +40,33 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  *table_name*  
  非トランザクションハンドルを閉じるテーブルの名前。  
   
- *Handle_id*を指定せずに*table_name*を渡して、FileTable のすべての開いている非トランザクションハンドルを閉じることができます。  
+ *Handle_id* を指定せずに *table_name* を渡して、FileTable のすべての開いている非トランザクションハンドルを閉じることができます。  
   
- *Table_name*の値に NULL を渡すと、現在のデータベース内のすべての filetable に対して開いているすべての非トランザクションハンドルを閉じることができます。 既定値は NULL です。  
+ *Table_name* の値に NULL を渡すと、現在のデータベース内のすべての filetable に対して開いているすべての非トランザクションハンドルを閉じることができます。 既定値は NULL です。  
   
  *handle_id*  
- 閉じる個々のハンドルのオプションの ID です。 *Handle_id*は、 [dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)動的管理ビューから取得できます。 各 ID は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内で一意です。 *Handle_id*を指定する場合は、 *table_name*の値も指定する必要があります。  
+ 閉じる個々のハンドルのオプションの ID です。 *Handle_id* は、 [sys.dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)動的管理ビューから取得できます。 各 ID は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内で一意です。 *Handle_id* を指定する場合は、 *table_name* の値も指定する必要があります。  
   
- *Handle_id*の値に NULL を渡すと、 *table_name*によって指定された FileTable のすべての開いている非トランザクションハンドルを閉じることができます。 既定値は NULL です。  
+ *Handle_id* の値に NULL を渡すと、 *table_name* によって指定された FileTable のすべての開いている非トランザクションハンドルを閉じることができます。 既定値は NULL です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  **0** (成功) または **1** (失敗)  
   
 ## <a name="result-set"></a>結果セット  
- なし。  
+ [なし] :  
   
 ## <a name="general-remarks"></a>全般的な解説  
- **Sp_kill_filestream_non_transacted_handles**に必要な*handle_id*は、他の**kill**コマンドで使用されている session_id または作業単位とは関係がありません。  
+ **Sp_kill_filestream_non_transacted_handles** に必要な *handle_id* は、他の **kill** コマンドで使用されている session_id または作業単位とは関係がありません。  
   
  詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ## <a name="metadata"></a>Metadata  
- 開いている非トランザクションファイルハンドルの詳細については、動的管理ビューの [dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)を参照してください。  
+ 開いている非トランザクションファイルハンドルの詳細については、動的管理ビュー [sys.dm_filestream_non_transacted_handles &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- **Dm_FILESTREAM_non_transacted_handles**動的管理ビューからファイルハンドルを取得し、 **sp_kill_filestream_non_transacted_handles**を実行するには、 **VIEW DATABASE STATE**権限が必要です。  
+ **Sys.dm_FILESTREAM_non_transacted_handles** 動的管理ビューからファイルハンドルを取得し、 **sp_kill_filestream_non_transacted_handles** を実行するには、 **VIEW DATABASE STATE** 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例は、 **sp_kill_filestream_non_transacted_handles** を呼び出して、FileTable データの非トランザクションファイルハンドルを閉じる方法を示しています。  

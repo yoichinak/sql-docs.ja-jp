@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Attributes
@@ -18,29 +18,29 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceb141b0ecdbc278e324f19f3bd4b3d7ed1b4eb6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 72cbd650b2ab3c66231383e89b048bb03c42b6f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164807"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの1つまたは複数の特性を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- **Long 型**の値を設定または返します。  
+ **Long 型** の値を設定または返します。  
   
- [接続](./connection-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[XactAttributeEnum](./xactattributeenum.md)値の合計になります。 既定値は 0 です。  
+ [接続](./connection-object-ado.md)オブジェクトの場合、 **Attributes** プロパティは読み取り/書き込み可能であり、その値は1つ以上の [XactAttributeEnum](./xactattributeenum.md)値の合計になります。 既定値は 0 です。  
   
- [Parameter](./parameter-object.md)オブジェクトの場合、 **Attributes**プロパティは読み取り/書き込み可能であり、その値は1つ以上の[parameterattributes 列挙](./parameterattributesenum.md)値の合計になります。 既定値は **Adparamsigned**です。  
+ [Parameter](./parameter-object.md)オブジェクトの場合、 **Attributes** プロパティは読み取り/書き込み可能であり、その値は1つ以上の [parameterattributes 列挙](./parameterattributesenum.md)値の合計になります。 既定値は **Adparamsigned** です。  
   
- [Field](./field-object.md)オブジェクトの場合、 **Attributes**プロパティには1つ以上の[FieldAttributeEnum](./fieldattributeenum.md)値の合計を指定できます。 通常は読み取り専用です。 ただし、[レコード](./record-object-ado.md)の[フィールド](./fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトの場合、**属性**は、**フィールド**の[Value](./value-property-ado.md)プロパティが指定されていて、**フィールドコレクションの** [Update](./update-method.md)メソッドを呼び出すことによって新しい**フィールド**が正常にデータプロバイダーによって追加された後にのみ、読み取り/書き込みになります。  
+ [Field](./field-object.md)オブジェクトの場合、 **Attributes** プロパティには1つ以上の [FieldAttributeEnum](./fieldattributeenum.md)値の合計を指定できます。 通常は読み取り専用です。 ただし、[レコード](./record-object-ado.md)の [フィールド](./fields-collection-ado.md)コレクションに追加された新しい **フィールド** オブジェクトの場合、**属性** は、**フィールド** の [Value](./value-property-ado.md)プロパティが指定されていて、**フィールドコレクションの** [Update](./update-method.md)メソッドを呼び出すことによって新しい **フィールド** が正常にデータプロバイダーによって追加された後にのみ、読み取り/書き込みになります。  
   
- [プロパティ](./property-object-ado.md)オブジェクトの場合、 **Attributes**プロパティは読み取り専用であり、その値は1つ以上の[propertyattributes 列挙](./propertyattributesenum.md)値の合計になります。  
+ [プロパティ](./property-object-ado.md)オブジェクトの場合、 **Attributes** プロパティは読み取り専用であり、その値は1つ以上の [propertyattributes 列挙](./propertyattributesenum.md)値の合計になります。  
   
-## <a name="remarks"></a>解説  
- **接続**オブジェクト、**パラメーター**オブジェクト、**フィールド**オブジェクト、または**プロパティ**オブジェクトの特性を設定または取得するには、 **Attributes**プロパティを使用します。  
+## <a name="remarks"></a>コメント  
+ **接続** オブジェクト、**パラメーター** オブジェクト、**フィールド** オブジェクト、または **プロパティ** オブジェクトの特性を設定または取得するには、 **Attributes** プロパティを使用します。  
   
  複数の属性を設定すると、適切な定数を合計することができます。 互換性のない定数を含む合計にプロパティ値を設定すると、エラーが発生します。  
   

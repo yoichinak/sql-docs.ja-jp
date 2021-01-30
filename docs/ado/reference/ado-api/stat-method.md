@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Stat
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db386d8e39c57883c7e456962d57e884383d62ff
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 18571c88e604b21856195c9675e10b2c86dad35e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988853"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166490"
 ---
 # <a name="stat-method"></a>Stat メソッド
 [ストリーム](./stream-object-ado.md)オブジェクトに関する情報を取得します。  
@@ -48,7 +48,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO Stream オブジェクトに実装されている Stat メソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
   
  *pwcsName*  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::get_Source
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 117e6e1f16800daaf94cba6e4a7643d5aa1c8c1f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 360457f3056ee27e213ba60adcef776a3c0aee02
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166516"
 ---
 # <a name="source-property-ado-error"></a>Source プロパティ (ADO Error)
 最初にエラーを生成したオブジェクトまたはアプリケーションの名前を示します。  
@@ -31,12 +31,12 @@ ms.locfileid: "88988983"
 ## <a name="return-value"></a>戻り値  
  オブジェクトまたはアプリケーションの名前を示す **文字列** 値を返します。  
   
-## <a name="remarks"></a>解説  
- [エラーオブジェクトの](./error-object.md) **Source**プロパティを使用して、最初にエラーを生成したオブジェクトまたはアプリケーションの名前を確認します。 オブジェクトのクラス名またはプログラム ID を指定できます。 ADO のエラーの場合、プロパティ値は ADODB になり **ます。**_Objectname_。ここで、 *objectname* はエラーを発生させたオブジェクトの名前です。 ADOX と ADO MD の場合、この値は **adox になります。**_ObjectName_ と **ADOMD。**_ObjectName_。  
+## <a name="remarks"></a>コメント  
+ [エラーオブジェクトの](./error-object.md) **Source** プロパティを使用して、最初にエラーを生成したオブジェクトまたはアプリケーションの名前を確認します。 オブジェクトのクラス名またはプログラム ID を指定できます。 ADO のエラーの場合、プロパティ値は ADODB になり **ます。**_Objectname_。ここで、 *objectname* はエラーを発生させたオブジェクトの名前です。 ADOX と ADO MD の場合、この値は **adox になります。**_ObjectName_ と **ADOMD。**_ObjectName_。  
   
  **Error オブジェクトの** **Source**、 [Number](./number-property-ado.md)、 [Description](./description-property.md)プロパティからのエラードキュメントに基づいて、エラーを適切に処理するコードを記述できます。  
   
- **Source**プロパティは、**エラー**オブジェクトの場合は読み取り専用です。  
+ **Source** プロパティは、**エラー** オブジェクトの場合は読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Error オブジェクト](./error-object.md)  

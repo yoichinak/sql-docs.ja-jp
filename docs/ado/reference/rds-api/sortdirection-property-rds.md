@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6336c4c19a79a21f9649fdf3521fc8fe40275c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8bfd6b6c504077bd20ced3d302206c129ab781ae
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724219"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166117"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection プロパティ (RDS)
 並べ替え順序が昇順と降順のどちらであるかを示します。  
@@ -39,10 +39,10 @@ DataControl.SortDirection = value
  RDS を表すオブジェクト変数です [。DataControl](./datacontrol-object-rds.md) オブジェクト。  
   
  *Value*  
- **ブール**値。 **True**に設定されている場合、並べ替えの方向が昇順であることを示します。 **False** は降順を示します。  
+ **ブール** 値。 **True** に設定されている場合、並べ替えの方向が昇順であることを示します。 **False** は降順を示します。  
   
-## <a name="remarks"></a>解説  
- [Sortcolumn](./sortcolumn-property-rds.md)、 **sortcolumn**、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および[filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能では、1つの列の値を使用してレコードが順序付けされます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](./reset-method-rds.md)メソッドは、条件を実行し、現在の**レコードセット**を更新可能な**レコードセット**に置き換えます。  
+## <a name="remarks"></a>コメント  
+ [Sortcolumn](./sortcolumn-property-rds.md)、 **sortcolumn**、 [filtervalue](./filtervalue-property-rds.md)、 [filterfilter、](./filtercriterion-property-rds.md)および [filtervalue](./filtercolumn-property-rds.md)プロパティは、クライアント側キャッシュでの並べ替えとフィルター処理の機能を提供します。 並べ替え機能では、1つの列の値を使用してレコードが順序付けされます。 フィルター機能では、検索条件に基づいてレコードのサブセットが表示されますが、完全な [レコードセット](../ado-api/recordset-object-ado.md) はキャッシュに保持されます。 [Reset](./reset-method-rds.md)メソッドは、条件を実行し、現在の **レコードセット** を更新可能な **レコードセット** に置き換えます。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](./datacontrol-object-rds.md)  

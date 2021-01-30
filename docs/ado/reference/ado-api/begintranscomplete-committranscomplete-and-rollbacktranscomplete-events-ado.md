@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CommitTransComplete
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91f5d573d62ef5000cdd6ed85a52866a0ee7f544
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 013df2c56a973d8df6b51434f016ee7642fc4f71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164783"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントは、 [接続](./connection-object-ado.md) オブジェクトの関連付けられた操作の実行が終了した後に呼び出されます。  
@@ -50,7 +50,7 @@ RollbackTransComplete pError, adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *TransactionLevel*  
- このイベントの原因となった**BeginTrans**の新しいトランザクションレベルを含む**Long**値。  
+ このイベントの原因となった **BeginTrans** の新しいトランザクションレベルを含む **Long** 値。  
   
  *pError*  
  [エラー](./error-object.md)オブジェクトです。 EventStatusEnum の値が **Adstatuserrorerrorcode Curred**; の場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
@@ -63,10 +63,10 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  このイベントが発生した **接続** オブジェクト。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Visual C++ では、複数の **接続** で同じイベント処理方法を共有できます。 メソッドは、返された **接続** オブジェクトを使用して、イベントの原因となったオブジェクトを特定します。  
   
- [Attributes](./attributes-property-ado.md)プロパティが**AdXactCommitRetaining**または**Adxactabortretaining 保持**するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete**イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  
+ [Attributes](./attributes-property-ado.md)プロパティが **AdXactCommitRetaining** または **Adxactabortretaining 保持** するように設定されている場合、トランザクションをコミットまたはロールバックした後に新しいトランザクションが開始されます。 **Begintranscomplete** イベントを使用すると、最初のトランザクション開始イベント以外はすべて無視されます。  
   
 ## <a name="see-also"></a>参照  
  [ADO Events モデルの例 (VC + +)](./ado-events-model-example-vc.md)   

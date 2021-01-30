@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfb2f054e81bf2f34e3bc62331a573b626d713bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d15933fec72109c58206c43dfc4b57db1ac29288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166439"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync プロパティの例 (VC++)
 この例では、 [StayInSync](./stayinsync-property.md) プロパティを使用して、階層 [レコードセット](./recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
   
- 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](./fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
+ 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された **レコードセット** は、 [Fields](./fields-collection-ado.md)コレクションから取得され、親 **レコードセット** が新しい行に移動するたびに、 **StayInSync** プロパティによって自動的に **rstTitleAuthor** に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
   
 ```  
 // BeginStayInSyncCpp.cpp  

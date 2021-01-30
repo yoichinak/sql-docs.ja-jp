@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638132"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166597"
 ---
 # <a name="save-method"></a>Save メソッド
 ファイルまたは[ストリーム](./stream-object-ado.md)オブジェクトに[レコードセット](./recordset-object-ado.md)を保存します。  
@@ -36,12 +36,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>パラメーター  
  *宛先*  
- 省略可能。 **レコードセット** を保存するファイルの完全なパス名、または **ストリーム** オブジェクトへの参照を表す **バリアント**。  
+ 任意。 **レコードセット** を保存するファイルの完全なパス名、または **ストリーム** オブジェクトへの参照を表す **バリアント**。  
   
  *PersistFormat*  
- 省略可能。 **レコードセット** を保存する形式を指定する [persistformatenum](./persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG** です。  
+ 任意。 **レコードセット** を保存する形式を指定する [persistformatenum](./persistformatenum.md)値 (XML または ADTG)。 既定値は **adPersistADTG** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Save メソッド** メソッドは、開いている **レコードセット** でのみ呼び出すことができます。 [Open メソッド (ADO recordset)](./open-method-ado-recordset.md)メソッドを使用して、後で *変換先* から **レコードセット** を復元します。  
   
  [フィルタープロパティ](./filter-property.md)プロパティが **レコードセット** に対して有効になっている場合は、フィルターでアクセスできる行だけが保存されます。 **レコードセット** が階層化されている場合、現在の子 **レコードセット** とその子が保存されます (親 **レコード** セットを含む)。 子 **レコードセット** の Save メソッドが呼び出されると、子とそのすべての子が保存されますが、親は保存されません。  

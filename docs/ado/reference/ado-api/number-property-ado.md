@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::Number
@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44c1a4902dbcd37089ee63c41db2b9a089c3aed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 82206b827f505994cd151833e0bee4b1ff4ad7de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990433"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167037"
 ---
 # <a name="number-property-ado"></a>Number プロパティ (ADO)
 [エラー](./error-object.md)オブジェクトを一意に識別する番号を示します。  
   
 ## <a name="return-value"></a>戻り値  
- [Errorvalueenum](./errorvalueenum.md)定数のいずれかに対応できる**Long 型**の値を返します。  
+ [Errorvalueenum](./errorvalueenum.md)定数のいずれかに対応できる **Long 型** の値を返します。  
   
-## <a name="remarks"></a>解説  
- **Number**プロパティを使用して、発生したエラーを特定します。 プロパティの値は、エラー状態に対応する一意の番号です。  
+## <a name="remarks"></a>コメント  
+ **Number** プロパティを使用して、発生したエラーを特定します。 プロパティの値は、エラー状態に対応する一意の番号です。  
   
  [Errors](./errors-collection-ado.md)コレクションは、16進数形式 (0x80004005 など) または long 値 (たとえば、2147467259) のいずれかで HRESULT を返します。 これらの Hresult は、OLE DB や OLE 自体など、基になるコンポーネントによって発生する可能性があります。 これらの数値の詳細については、 [OLE DB プログラマーリファレンス](/previous-versions/windows/desktop/ms713643(v=vs.85))の「[エラー (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) 」を参照してください *。*  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989363"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166612"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 次の3つの例は、 [Save](./save-method.md) メソッドと [Open](./open-method-ado-recordset.md) メソッドを一緒に使用する方法を示しています。  
   
- データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](./recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット**としてアクセスします。 **レコードセット**に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
+ データベースからテーブルを使用して、事業旅行を行っているとします。 前に、データを [レコードセット](./recordset-object-ado.md) としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、 **レコードセット** にローカルの切断された **レコードセット** としてアクセスします。 **レコードセット** に変更を加え、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
- まず、 ***Authors*** テーブルにアクセスして保存します。  
+ まず、**_Authors_* _ テーブルにアクセスして保存します。  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- この時点で、宛先に到達しました。 ***Authors***テーブルには、ローカルの接続されていない**レコードセット**としてアクセスします。 保存したファイルへのアクセスに使用しているコンピューターに、a:\Pubs.xml の **Mspersist** プロバイダーが必要です。  
+ この時点で、宛先に到達しました。 _*_Authors_*_ テーブルには、ローカルの接続されていない _ * レコードセット * * としてアクセスします。 保存したファイルへのアクセスに使用しているコンピューターに、a:\Pubs.xml の **Mspersist** プロバイダーが必要です。  
   
 ```  
 Attribute VB_Name = "Save"  

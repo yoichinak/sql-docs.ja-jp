@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level::Members
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0f12771ebb759a658d5e3c99244755c4daa99b0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdcaba24180ad333b2c9f556ac9b26fe75f120d2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986383"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164502"
 ---
 # <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
 レベルまたは軸に沿った位置からの [メンバー](./member-object-ado-md.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
- **メンバー**コレクションは、次の種類のメンバーを格納するために使用されます。  
+## <a name="remarks"></a>コメント  
+ **メンバー** コレクションは、次の種類のメンバーを格納するために使用されます。  
   
--   キューブ内のレベルを構成するメンバー。 これらは、 [Level](./level-object-ado-md.md)オブジェクトの**Members**コレクションに含まれています。 たとえば、 [多次元スキーマとデータの概要](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)からサンプルを使用すると、国レベルの4つのメンバーがカナダ、USA、英国、およびドイツになります。  
+-   キューブ内のレベルを構成するメンバー。 これらは、 [Level](./level-object-ado-md.md)オブジェクトの **Members** コレクションに含まれています。 たとえば、 [多次元スキーマとデータの概要](../../guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)からサンプルを使用すると、国レベルの4つのメンバーがカナダ、USA、英国、およびドイツになります。  
   
--   階層内の特定のメンバーの子であるメンバー。 これらのメンバーは、親**メンバー**オブジェクトの[Children](./children-property-ado-md.md)プロパティによって返されます。 たとえば、同じサンプルをもう一度使用した場合、カナダのメンバーの2つの子はカナダ-東部、カナダ西部です。  
+-   階層内の特定のメンバーの子であるメンバー。 これらのメンバーは、親 **メンバー** オブジェクトの [Children](./children-property-ado-md.md)プロパティによって返されます。 たとえば、同じサンプルを使用すると、カナダのメンバーの2つの子が Canada-East とカナダ西部になります。  
   
--   [セルセット](./cellset-object-ado-md.md)の軸に沿って特定の位置を定義するメンバー。 例として、セルセットを使用して [多次元データを操作](../../guide/multidimensional/working-with-multidimensional-data.md) する場合、x 軸の最初の位置の2つのメンバーはバレンタインと Seattle です。 これらのメンバーは、 [Position](./position-object-ado-md.md)オブジェクトの**members**コレクションに含まれています。  
+-   [セルセット](./cellset-object-ado-md.md)の軸に沿って特定の位置を定義するメンバー。 例として、セルセットを使用して [多次元データを操作](../../guide/multidimensional/working-with-multidimensional-data.md) する場合、x 軸の最初の位置の2つのメンバーはバレンタインと Seattle です。 これらのメンバーは、 [Position](./position-object-ado-md.md)オブジェクトの **members** コレクションに含まれています。  
   
  **メンバー** は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   

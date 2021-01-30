@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6be40e03723a3335578112c6038ce53789242876
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975843"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164775"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (VC + +)
-この例の最初の関数は、ユーザーが[レコードセット](./recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](./bof-eof-properties-ado.md)プロパティと[EOF](./bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](./bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード**セット**内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
+この例の最初の関数は、ユーザーが[レコードセット](./recordset-object-ado.md)の最初または最後のレコードを移動しようとしたときに、 [BOF](./bof-eof-properties-ado.md)プロパティと[EOF](./bof-eof-properties-ado.md)プロパティを使用してメッセージを表示します。 [Bookmark](./bookmark-property-ado.md)プロパティを使用して、ユーザーがレコード **セット** 内のレコードにフラグを付けることができ、後でそれに戻るようにします。  
   
- 2番目の関数は、Bookmark プロパティを使用して、**レコードセット**の他のすべてのレコードの**ブックマーク**を配列に配置し、配列を使用してレコードセットをフィルター処理します。  
+ 2番目の関数は、Bookmark プロパティを使用して、**レコードセット** の他のすべてのレコードの **ブックマーク** を配列に配置し、配列を使用してレコードセットをフィルター処理します。  
   
 ## <a name="example"></a>例  
   

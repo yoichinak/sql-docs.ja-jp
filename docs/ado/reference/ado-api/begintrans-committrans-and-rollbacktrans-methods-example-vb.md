@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975923"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164796"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
-この例では、データベースの ***Titles*** テーブルにあるすべての心理学ブックの書籍の種類を変更します。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、 ***Titles***テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](./update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  
+この例では、データベースの ***Titles** _ テーブルにあるすべての心理学表の書籍の種類を変更します。 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、_ *_Titles_** テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](./update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  
   
 ```  
 'BeginBeginTransVB  
