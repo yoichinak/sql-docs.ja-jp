@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributor_TSQL
 - sp_helpdistributor
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2c7f0778ced979765e046634d0bb39adc01578d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c23613a7b79ea7bfa418425a32b6d2ee9bf62699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186987"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,31 +50,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @distributor = ] 'distributor' OUTPUT` ディストリビューターの名前を指定します。 ディストリビューターは **sysname**で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
+`[ @distributor = ] 'distributor' OUTPUT` ディストリビューターの名前を指定します。 ディストリビューターは **sysname** で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` ディストリビューションデータベースの名前を指定します。 *distribdb* は **sysname**で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
+`[ @distribdb = ] 'distribdb' OUTPUT` ディストリビューションデータベースの名前を指定します。 *distribdb* は **sysname** で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
   
 `[ @directory = ] 'directory' OUTPUT` は作業ディレクトリです。 *ディレクトリ* は **nvarchar (255)**,、既定値は **%** 、結果セットを返す唯一の値です。  
   
-`[ @account = ] 'account' OUTPUT` は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーアカウントです。 *アカウント*は **nvarchar (255)**,、既定値は **%** 、結果セットを返す唯一の値です。  
+`[ @account = ] 'account' OUTPUT` は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーアカウントです。 *アカウント* は **nvarchar (255)**,、既定値は **%** 、結果セットを返す唯一の値です。  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT` ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention* は **int**,、既定値は **-1**です。  
+`[ @min_distretention = ] _min_distretentionOUTPUT` ディストリビューションの最小保有期間を時間単位で示します。 *min_distretention* は **int**,、既定値は **-1** です。  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT` ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention* は **int**,、既定値は **-1**です。  
+`[ @max_distretention = ] _max_distretentionOUTPUT` ディストリビューションの最大保有期間を時間単位で示します。 *max_distretention* は **int**,、既定値は **-1** です。  
   
-`[ @history_retention = ] _history_retentionOUTPUT` 履歴の保有期間を時間単位で示します。 *history_retention* は **int**,、既定値は **-1**です。  
+`[ @history_retention = ] _history_retentionOUTPUT` 履歴の保有期間を時間単位で示します。 *history_retention* は **int**,、既定値は **-1** です。  
   
 `[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 履歴クリーンアップエージェントの名前を指定します。 *history_cleanupagent* は **nvarchar (100)** で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
   
 `[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` ディストリビューションクリーンアップエージェントの名前を指定します。 *distrib_cleanupagent* は **nvarchar (100)** で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は NULL です。  
   
 `[ @local = ] 'local'` がローカルサーバーの値を取得するかどうかを指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] します。 *local* は **nvarchar (5)**,、既定値は NULL です。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` リモートプロシージャコールを発行するサーバーの名前を指定します。 *rpcsrvname* の部分は **sysname**で、既定 **%** 値はです。これは、結果セットを返す唯一の値です。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` リモートプロシージャコールを発行するサーバーの名前を指定します。 *rpcsrvname* の部分は **sysname** で、既定 **%** 値はです。これは、結果セットを返す唯一の値です。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` パブリッシャーのパブリッシャーの種類を示します。 *publisher_type* は **sysname**で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` パブリッシャーのパブリッシャーの種類を示します。 *publisher_type* は **sysname** で、既定値はです **%** 。これは、結果セットを返す唯一の値です。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -91,15 +91,15 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**ディストリビューション クリーンアップ エージェント (distribution cleanup agent)**|**nvarchar (100)**|ディストリビューションクリーンアップエージェントの名前。|  
 |**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
 |**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
-|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY **|  
+|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpdistributor** は、すべての種類のレプリケーションで使用されます。  
   
- **Sp_helpdistributor**の実行時に1つ以上の出力パラメーターが指定されている場合、NULL に設定されたすべての出力パラメーターには、終了時に値が割り当てられ、結果セットは返されません。 出力パラメーターが指定されていない場合は、結果セットが返されます。  
+ **Sp_helpdistributor** の実行時に1つ以上の出力パラメーターが指定されている場合、NULL に設定されたすべての出力パラメーターには、終了時に値が割り当てられ、結果セットは返されません。 出力パラメーターが指定されていない場合は、結果セットが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  次の結果セット列または出力パラメーターは、パブリッシャーの **sysadmin** 固定サーバーロールのメンバーと、パブリケーションデータベースの **db_owner** 固定データベースロールのメンバーに返されます。  

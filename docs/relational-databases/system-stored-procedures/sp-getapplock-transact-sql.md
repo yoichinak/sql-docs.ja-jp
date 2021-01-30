@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getapplock_TSQL
 - sp_getapplock
@@ -20,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82c0c343d76c3fb8fe6275c2450b62d50fd11b34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474643"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185768"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|ロック要求がデッドロックの対象になりました。|  
 |-999|パラメーターの検証またはその他の呼び出しエラーを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  リソースに配置されたロックは、現在のトランザクションまたは現在のセッションのいずれかに関連付けられます。 現在のトランザクションに関連付けられたロックは、トランザクションがコミットまたはロールバックされるときに解放されます。 セッションに関連付けられているロックは、セッションがログアウトされると解放されます。何らかの理由でサーバーがシャットダウンすると、すべてのロックが解放されます。  
   
  sp_getapplock によって作成されるロック リソースは、セッションの現在のデータベースで作成されます。 各ロックリソースは、の結合された値によって識別されます。  

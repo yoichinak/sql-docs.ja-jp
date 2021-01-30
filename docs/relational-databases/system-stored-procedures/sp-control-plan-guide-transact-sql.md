@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_plan_guide
 - sp_control_plan_guide_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0b4f5d1adbdadf9d8291257708a3098fb50ce175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753904"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185785"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,27 +52,27 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="arguments"></a>引数  
  **N '** _plan_guide_name_ **'**  
- 削除するか、有効または無効にするプラン ガイドを指定します。 現在のデータベースに対して*plan_guide_name*が解決されます。 指定しない場合、 *plan_guide_name* 既定値は NULL です。  
+ 削除するか、有効または無効にするプラン ガイドを指定します。 現在のデータベースに対して *plan_guide_name* が解決されます。 指定しない場合、 *plan_guide_name* 既定値は NULL です。  
   
  DROP  
- *Plan_guide_name*によって指定されたプランガイドを削除します。 プランガイドが削除された後、プランガイドによって以前一致したクエリの今後の実行は、プランガイドの影響を受けません。  
+ *Plan_guide_name* によって指定されたプランガイドを削除します。 プランガイドが削除された後、プランガイドによって以前一致したクエリの今後の実行は、プランガイドの影響を受けません。  
   
  DROP ALL  
- 現在のデータベースのすべてのプラン ガイドを削除します。 DROP ALL が指定されている場合、 **N '**_plan_guide_name_を指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを削除します。 DROP ALL が指定されている場合、 **N '**_plan_guide_name_ を指定することはできません。  
   
  DISABLE  
- *Plan_guide_name*によって指定されたプランガイドを無効にします。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
+ *Plan_guide_name* によって指定されたプランガイドを無効にします。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
  現在のデータベース内のすべてのプランガイドを無効にします。 **N '**_PLAN_GUIDE_NAME_ は、DISABLE ALL が指定されている場合は指定できません。  
   
  有効化  
- *Plan_guide_name*によって指定されたプランガイドを有効にします。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プランガイドは作成時に有効になります。  
+ *Plan_guide_name* によって指定されたプランガイドを有効にします。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プランガイドは作成時に有効になります。  
   
  ENABLE ALL  
  現在のデータベース内のすべてのプランガイドを有効にします。 ENABLE ALL が指定されている場合、 **N '**_plan_guide_name_**'** を指定することはできません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
   
  無効なプラン ガイドを無効にする場合や、有効なプラン ガイドを有効にする場合は影響は生じず、エラーなしで実行できます。  
@@ -80,7 +80,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  プランガイドは、のすべてのエディションで使用できるわけではありません [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)」 (SQL Server 2016 のエディションとサポートされる機能) を参照してください。 ただし、の任意のエディションの [すべて削除] または [すべて削除] オプションを使用して **sp_control_plan_guide** を実行でき [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
- オブジェクト型 ( ** @type = '** OBJECT **'** を指定して作成) のプランガイドで**sp_control_plan_guide**を実行するには、プランガイドによって参照されるオブジェクトに対する ALTER 権限が必要です。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
+ オブジェクト型 ( **@type = '** OBJECT **'** を指定して作成) のプランガイドで **sp_control_plan_guide** を実行するには、プランガイドによって参照されるオブジェクトに対する ALTER 権限が必要です。 その他すべてのプラン ガイドでは、ALTER DATABASE 権限が必要です。  
   
 ## <a name="examples"></a>例  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitmergesubscription_TSQL
 - sp_reinitmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc1d2d3dc8b9763d19410b2a9773fb7766d22140
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 5d4a16d71453d08fca6ab496cc103e43edbc160e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185674"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname** ,、既定値は **all** です。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は **all** です。  
   
-`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname** ,、既定値は **all** です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値は **all** です。  
   
 `[ @subscriber_db = ] 'subscriber_db'` サブスクライバーデータベースの名前を指定します。 *subscriber_db* は **sysname** で、既定値は **all** です。  
   
-`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first* は **nvarchar (5)** ,、既定値は FALSE です。 **True** の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False** の場合、変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first* は **nvarchar (5)**,、既定値は FALSE です。 **True** の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False** の場合、変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  **sp_reinitmergesubscription** は、マージレプリケーションで使用します。  
   
  **sp_reinitmergesubscription** は、マージサブスクリプションを再初期化するためにパブリッシャーから呼び出すことができます。 スナップショットエージェントも再実行することをお勧めします。  

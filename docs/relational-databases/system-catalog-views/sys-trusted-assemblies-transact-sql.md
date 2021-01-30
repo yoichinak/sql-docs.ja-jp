@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - trusted_assemblies_TSQL
 - trusted_assemblies
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6d3305687b7592d8503911e9385cd04a93f16a4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f2b26f5e646d1997959ba4856a88463ae8b1b3ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428391"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186158"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "97428391"
 ### <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
  
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 **[Sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)** を使用して、からアセンブリを削除し、 **[sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)** し `sys.trusted_assemblies` ます。
 
 ## <a name="see-also"></a>参照  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d4ded9ec986afc467534c3053e17831147bc404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef2fdfc32a0b8b076037b3d75d2c88df9a5883aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541850"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186343"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,15 +48,15 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 `[ @job_name = ] 'job_name'` 削除するジョブの名前を指定します。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  *Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
+>  *Job_id* または *job_name* のいずれかを指定する必要があります。両方を指定することはできません。  
   
 `[ @originating_server = ] 'server'` 内部使用。  
   
-`[ @delete_history = ] delete_history` ジョブの履歴を削除するかどうかを指定します。 *delete_history* は **ビット**,、既定値は **1**です。 *Delete_history*が**1**の場合、ジョブのジョブ履歴は削除されます。 *Delete_history*が**0**の場合、ジョブ履歴は削除されません。  
+`[ @delete_history = ] delete_history` ジョブの履歴を削除するかどうかを指定します。 *delete_history* は **ビット**,、既定値は **1** です。 *Delete_history* が **1** の場合、ジョブのジョブ履歴は削除されます。 *Delete_history* が **0** の場合、ジョブ履歴は削除されません。  
   
- ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報はエージェントのグラフィカルユーザーインターフェイスのジョブ履歴に表示されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、情報は**msdb**データベースの**sysjobhistory**テーブルに残ります。  
+ ジョブが削除され、履歴が削除されていない場合、ジョブの履歴情報はエージェントのグラフィカルユーザーインターフェイスのジョブ履歴に表示されません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、情報は **msdb** データベースの **sysjobhistory** テーブルに残ります。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule* は **ビット**,、既定値は **1**です。 *Delete_unused_schedule*が**1**の場合、そのスケジュールを参照するジョブが他にない場合、このジョブにアタッチされているスケジュールは削除されます。 *Delete_unused_schedule*が**0**の場合、スケジュールは削除されません。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 他のジョブにアタッチされていない場合に、このジョブにアタッチされているスケジュールを削除するかどうかを指定します。 *delete_unused_schedule* は **ビット**,、既定値は **1** です。 *Delete_unused_schedule* が **1** の場合、そのスケジュールを参照するジョブが他にない場合、このジョブにアタッチされているスケジュールは削除されます。 *Delete_unused_schedule* が **0** の場合、スケジュールは削除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -65,16 +65,16 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  なし  
   
 ## <a name="remarks"></a>解説  
- ** \@ Originating_server**引数は、内部使用のために予約されています。  
+ **\@ Originating_server** 引数は、内部使用のために予約されています。  
   
- ** \@ Delete_unused_schedule**引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 ** \@ delete_unused_schedule**引数として値**0**を指定する必要があります。  
+ **\@ Delete_unused_schedule** 引数は、どのジョブにもアタッチされていないスケジュールを自動的に削除することによって、以前のバージョンの SQL Server との下位互換性を提供します。 このパラメーターでは、既定で互換動作が設定されることに注意してください。 ジョブにアタッチされていないスケジュールを保持するには、 **\@ delete_unused_schedule** 引数として値 **0** を指定する必要があります。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
  このストアド プロシージャでは、メンテナンス プランやメンテナンス プランの一部であるジョブを削除できません。 代わりに [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、メンテナンス プランを削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   

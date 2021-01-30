@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
 - log_shipping_monitor_history_detail
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cd8f1b5c42d62ed508527b46d4a3705ad63dd09
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a2b97aaf55c31f7ae79468d4cfa16fbff947f1fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094844"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186929"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98094844"
 |**log_time_utc**|**datetime**|レコードが作成された日付と時刻。協定世界時で表されます。|  
 |**message**|**nvarchar(max)**|メッセージ テキスト。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このテーブルには、ログ配布エージェントの履歴の詳細が含まれています。 エージェントセッションを識別するには、列 **agent_id**、 **agent_type**、および **session_id** を使用します。 エージェントセッションの履歴の詳細を表示するには、 **log_time** で並べ替えます。  
   
  リモート監視サーバーに格納されているだけでなく、プライマリサーバーに関連する情報が **log_shipping_monitor_history_detail** テーブルのプライマリサーバーに格納されます。また、セカンダリサーバーに関連する情報は、セカンダリサーバーの **log_shipping_monitor_history_detail** テーブルにも格納されます。  

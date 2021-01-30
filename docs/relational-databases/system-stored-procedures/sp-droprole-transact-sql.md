@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droprole
 - sp_droprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6180676b4458a5f270f9ecab9bb35d2ed8a481c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58832ba9f1d5b508f8125dc137805e59d3977f9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548127"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187025"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'` 現在のデータベースから削除するデータベースロールの名前を指定します。 *role* は **sysname**で、既定値はありません。 *ロール* は、現在のデータベースに既に存在している必要があります。  
+`[ @rolename = ] 'role'` 現在のデータベースから削除するデータベースロールの名前を指定します。 *role* は **sysname** で、既定値はありません。 *ロール* は、現在のデータベースに既に存在している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **Sp_droprole**を使用すると、データベースロールのみを削除できます。  
+ **Sp_droprole** を使用すると、データベースロールのみを削除できます。  
   
- メンバーが既に存在するデータベース ロールは削除できません。 データベース ロールを削除するには、あらかじめそのデータベース ロールのすべてのメンバーを削除しておく必要があります。 ロールからユーザーを削除するには、 **sp_droprolemember**を使用します。 ロールのメンバーであるユーザーがいる場合、 **sp_droprole** にはそれらのメンバーが表示されます。  
+ メンバーが既に存在するデータベース ロールは削除できません。 データベース ロールを削除するには、あらかじめそのデータベース ロールのすべてのメンバーを削除しておく必要があります。 ロールからユーザーを削除するには、 **sp_droprolemember** を使用します。 ロールのメンバーであるユーザーがいる場合、 **sp_droprole** にはそれらのメンバーが表示されます。  
   
  固定ロールと **パブリック** ロールは削除できません。  
   

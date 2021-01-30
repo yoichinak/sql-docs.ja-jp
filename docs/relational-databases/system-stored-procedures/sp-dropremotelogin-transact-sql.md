@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropremotelogin
 - sp_dropremotelogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b468ff83bffdd581695b9553c636b06fbe6c784
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474226"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187035"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -47,7 +47,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>引数  
 `[ @remoteserver = ] 'remoteserver'` 削除するリモートログインにマップされるリモートサーバーの名前を指定します。 *remoteserver* は **sysname**,、既定値はありません。 *remoteserver* は既に存在している必要があります。  
   
-`[ @loginame = ] 'login'` リモートサーバーに関連付けられているローカルサーバー上のログイン名を指定します (省略可能)。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン*は既に存在している必要があります。  
+`[ @loginame = ] 'login'` リモートサーバーに関連付けられているローカルサーバー上のログイン名を指定します (省略可能)。 *login* のデータ型は **sysname** で、既定値は NULL です。 指定した場合、*ログイン* は既に存在している必要があります。  
   
 `[ @remotename = ] 'remote_name'` リモートサーバーからログインするときに *ログイン* にマップされるリモートログインの名前を指定します (省略可能)。 *remote_name* は **sysname**,、既定値は NULL です。  
   
@@ -55,16 +55,16 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- *Remoteserver*のみを指定した場合は、そのリモートサーバーのすべてのリモートログインがローカルサーバーから削除されます。 *Login*も指定すると、その特定のローカルログインにマップされている*remoteserver*からのすべてのリモートログインが、ローカルサーバーから削除されます。 *Remote_name*も指定されている場合、 *remoteserver*からのリモートユーザーのリモートログインのみがローカルサーバーから削除されます。  
+ *Remoteserver* のみを指定した場合は、そのリモートサーバーのすべてのリモートログインがローカルサーバーから削除されます。 *Login* も指定すると、その特定のローカルログインにマップされている *remoteserver* からのすべてのリモートログインが、ローカルサーバーから削除されます。 *Remote_name* も指定されている場合、 *remoteserver* からのリモートユーザーのリモートログインのみがローカルサーバーから削除されます。  
   
- ローカルサーバーユーザーを追加するには、 **sp_addlogin**を使用します。 ローカルサーバーユーザーを削除するには、 **sp_droplogin**を使用します。  
+ ローカルサーバーユーザーを追加するには、 **sp_addlogin** を使用します。 ローカルサーバーユーザーを削除するには、 **sp_droplogin** を使用します。  
   
- リモート ログインは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用する場合にのみ必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 以降では、代わりにリンク サーバー ログインを使用します。 **Sp_addlinkedsrvlogin**と**sp_droplinkedsrvlogin**を使用して、リンクサーバーのログインを追加および削除します。  
+ リモート ログインは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用する場合にのみ必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 以降では、代わりにリンク サーバー ログインを使用します。 **Sp_addlinkedsrvlogin** と **sp_droplinkedsrvlogin** を使用して、リンクサーバーのログインを追加および削除します。  
   
  **sp_dropremotelogin** は、ユーザー定義のトランザクション内では実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**または**securityadmin**固定サーバーロールのメンバーシップが必要です。  
+ **Sysadmin** または **securityadmin** 固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   
@@ -89,14 +89,14 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>参照  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

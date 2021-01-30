@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b51d02a66833df04a82a970319bab4e62f462a33
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486062"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186965"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -43,11 +43,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシを一覧表示するプリンシパル、ログイン、サーバーロール、または**msdb**データベースロールの名前を指定します。 名前は **nvarchar (256)**,、既定値は NULL です。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロキシを一覧表示するプリンシパル、ログイン、サーバーロール、または **msdb** データベースロールの名前を指定します。 名前は **nvarchar (256)**,、既定値は NULL です。  
   
-`[ @proxy_id = ] id` 情報を一覧表示するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
+`[ @proxy_id = ] id` 情報を一覧表示するプロキシのプロキシ識別番号を指定します。 *Proxy_id* は **int**,、既定値は NULL です。 *Id* または *proxy_name* を指定できます。  
   
-`[ @proxy_name = ] 'proxy_name'` 情報を一覧表示するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。 *Id*または*proxy_name*を指定できます。  
+`[ @proxy_name = ] 'proxy_name'` 情報を一覧表示するプロキシの名前。 *Proxy_name* は **sysname** で、既定値は NULL です。 *Id* または *proxy_name* を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -59,17 +59,17 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|プロキシの識別番号。|  
 |**proxy_name**|**sysname**|プロキシの名前。|  
 |**name**|**sysname**|関連付けのセキュリティプリンシパルの名前。|  
-|**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン<br /><br /> **1** = 固定システムロール<br /><br /> **2** = **msdb**のデータベースロール|  
+|**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン<br /><br /> **1** = 固定システムロール<br /><br /> **2** = **msdb** のデータベースロール|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  パラメーターが指定されていない場合、 **sp_enum_login_for_proxy** は、すべてのプロキシのインスタンス内のすべてのログインに関する情報を一覧表示します。  
   
  プロキシ id またはプロキシ名を指定すると、 **sp_enum_login_for_proxy** プロキシにアクセスできるログインが一覧表示されます。 ログイン名が指定されている場合、 **sp_enum_login_for_proxy** には、そのログインがアクセスできるプロキシが一覧表示されます。  
   
  プロキシ情報とログイン名の両方を指定すると、指定されたログインに指定されたプロキシへのアクセス権がある場合は、結果セットから行が返されます。  
   
- このストアドプロシージャは **msdb**にあります。  
+ このストアドプロシージャは **msdb** にあります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

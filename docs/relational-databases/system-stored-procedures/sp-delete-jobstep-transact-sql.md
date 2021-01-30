@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobstep
 - sp_delete_jobstep_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c98055d6b5aba79d1d7b62966e5e20c656d17a22
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b795b6526941518e476390dba158f56e18040da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541820"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186334"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ステップの削除元となるジョブの識別番号を指定します。 *job_id*は **uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` ステップの削除元となるジョブの識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ステップを削除するジョブの名前を指定します。 *job_name*は **sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ステップを削除するジョブの名前を指定します。 *job_name* は **sysname**,、既定値は NULL です。  
   
-> **注:***Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
+> **注:***Job_id* または *job_name* のいずれかを指定する必要があります。両方を指定することはできません。  
   
-`[ @step_id = ] step_id` 削除するステップの識別番号を指定します。 *step_id*は **int**,、既定値はありません。  
+`[ @step_id = ] step_id` 削除するステップの識別番号を指定します。 *step_id* は **int**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -59,14 +59,14 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="remarks"></a>解説  
  ジョブ ステップを削除すると、削除したステップを参照する他のジョブ ステップは自動的に更新されます。  
   
- 特定のジョブに関連付けられている手順の詳細については、 **sp_help_jobstep**を実行してください。  
+ 特定のジョブに関連付けられている手順の詳細については、 **sp_help_jobstep** を実行してください。  
   
-> **注:***Step_id*値が0の**sp_delete_jobstep**を呼び出すと、そのジョブのすべてのジョブステップが削除されます。  
+> **注:***Step_id* 値が0の **sp_delete_jobstep** を呼び出すと、そのジョブのすべてのジョブステップが削除されます。  
   
  Microsoft SQL Server Management Studio は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、Microsoft SQL Server Management Studio を使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   

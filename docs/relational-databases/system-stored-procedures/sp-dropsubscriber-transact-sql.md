@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropsubscriber_TSQL
 - sp_dropsubscriber
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7849603dc288bf4e40e5b4067f9098b6c5ebc0ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 96ba954cf4674c370b33e783c8f71dd4da69277b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538905"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187005"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,13 +52,13 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropsubscriber** は、すべての種類のレプリケーションで使用されます。  
   
- このストアドプロシージャは、サーバーの **サブ** オプションを削除し、システム管理者のリモートログインマッピングを **repl_subscriber**に削除します。  
+ このストアドプロシージャは、サーバーの **サブ** オプションを削除し、システム管理者のリモートログインマッピングを **repl_subscriber** に削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_dropsubscriber** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プッシュサブスクリプションを削除する](../../relational-databases/replication/delete-a-push-subscription.md)   

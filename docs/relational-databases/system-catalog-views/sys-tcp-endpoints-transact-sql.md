@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.tcp_endpoints
 - sys.tcp_endpoints_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f5717389606bb3b73dc95c6a7eaedd6e03312cfd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bb3934622b68df4ef46090729afbb05217b89126
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094432"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185809"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98094432"
 |**is_dynamic_port**|bit|1 = ポート番号は動的に割り当てられました。<br /><br /> NULL 値は許可されません。|  
 |**ip_address**|**nvarchar (45)**|LISTENER_IP 句によって指定されたリスナーの IP アドレス。 NULL 値が許可されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次のクエリを実行して、エンドポイントと接続に関する情報を収集します。 現在の接続を使用していないエンドポイント、または TCP 接続がないエンドポイントは、NULL 値で表示されます。  `WHERE des.session_id = @@SPID` 現在の接続に関する情報を返す where 句を追加します。  
   
 ```  

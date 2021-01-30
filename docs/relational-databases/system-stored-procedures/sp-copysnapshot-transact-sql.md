@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_copysnapshot
 - sp_copysnapshot_TSQL
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b6013694b6fe9746a3a0a167b107ed08083cc4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76e8f1bead2aaf10289f724b300a79eacd3ca11f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528772"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185778"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  指定されたパブリケーションのスナップショットフォルダーを** \@ destination_folder**に一覧表示されているフォルダーにコピーします。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。 このストアド プロシージャは、スナップショットを CD-ROM などのリムーバブル メディアにコピーするときに効果的です。  
+  指定されたパブリケーションのスナップショットフォルダーを **\@ destination_folder** に一覧表示されているフォルダーにコピーします。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。 このストアド プロシージャは、スナップショットを CD-ROM などのリムーバブル メディアにコピーするときに効果的です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` スナップショットの内容をコピーするパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @destination_folder = ] 'destination_folder'` パブリケーションスナップショットの内容をコピーするフォルダーの名前を指定します。 *destination_folder*は **nvarchar (255)**,、既定値はありません。 *Destination_folder*は、別のサーバー、ネットワークドライブ、リムーバブルメディア (cd-rom やリムーバブルディスクなど) などの別の場所にすることができます。  
+`[ @destination_folder = ] 'destination_folder'` パブリケーションスナップショットの内容をコピーするフォルダーの名前を指定します。 *destination_folder* は **nvarchar (255)**,、既定値はありません。 *Destination_folder* は、別のサーバー、ネットワークドライブ、またはリムーバブルメディア (CD-ROMs やリムーバブルディスクなど) 上の別の場所にすることができます。  
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の sysname,、既定値は NULL です。  
   
@@ -51,11 +51,11 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_copysnapshot** は、すべての種類のレプリケーションで使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 以前を実行しているサブスクライバーでは、代替スナップショットの場所を使用できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_copysnapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_copysnapshot** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [代替スナップショットフォルダーの場所](../../relational-databases/replication/snapshot-options.md)   
