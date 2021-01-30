@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
 - sysmail_add_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6092ba1de12d71ff50facbafd7fed04aed9d9fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0252e299f072144999e3c2db1b2404de9aa9b6a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547241"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183034"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,27 +42,27 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` 関連付けの **msdb** データベースのデータベースユーザーまたはロールの ID。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。 *Principal_id*が**0**の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
+`[ @principal_id = ] principal_id` 関連付けの **msdb** データベースのデータベースユーザーまたはロールの ID。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定する必要があります。 *Principal_id* が **0** の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
   
-`[ @principal_name = ] 'principal_name'` 関連付けの **msdb** データベースのデータベースユーザーまたはロールの名前。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。 *Principal_name*が **' public '** の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
+`[ @principal_name = ] 'principal_name'` 関連付けの **msdb** データベースのデータベースユーザーまたはロールの名前。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定する必要があります。 *Principal_name* が **' public '** の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
   
-`[ @profile_id = ] profile_id` 関連付けのプロファイルの id。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` 関連付けのプロファイルの id。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 関連付けに使用するプロファイルの名前。 *profile_name* は **sysname**であり、既定値はありません。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 関連付けに使用するプロファイルの名前。 *profile_name* は **sysname** であり、既定値はありません。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
 `[ @is_default = ] is_default` このプロファイルがプリンシパルの既定のプロファイルであるかどうかを指定します。 プリンシパルには、既定のプロファイルが1つだけ含まれている必要があります。 *is_default* は **ビット**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
- プロファイルを公開するには、 ** \@ principal_id**を**0**または**public**の** \@ principal_name**として指定します。 パブリックプロファイルは、 **msdb**データベース内のすべてのユーザーが使用できます。ただし、ユーザーは**sp_send_dbmail**を実行するために、 **databasemailuserrole**のメンバーでもある必要があります。  
+## <a name="remarks"></a>コメント  
+ プロファイルを公開するには、 **\@ principal_id** を **0** または **public** の **\@ principal_name** として指定します。 パブリックプロファイルは、 **msdb** データベース内のすべてのユーザーが使用できます。ただし、ユーザーは **sp_send_dbmail** を実行するために、 **databasemailuserrole** のメンバーでもある必要があります。  
   
- データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 ** \@ Is_default**が '**1**' で、ユーザーが既に1つ以上のプロファイルに関連付けられている場合、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
+ データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 **\@ Is_default** が '**1**' で、ユーザーが既に1つ以上のプロファイルに関連付けられている場合、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
   
- ** \@ Is_default**が '**0**' で、他のアソシエーションが存在しない場合、ストアドプロシージャはエラーを返します。  
+ **\@ Is_default** が '**0**' で、他のアソシエーションが存在しない場合、ストアドプロシージャはエラーを返します。  
   
- ストアドプロシージャ **sysmail_add_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_add_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

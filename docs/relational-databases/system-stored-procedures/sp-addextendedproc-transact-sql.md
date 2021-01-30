@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addextendedproc_TSQL
 - sp_addextendedproc
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e8c7ffebae9f082a6a579a6cb6643ad2fc44d1b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d3ca884a585b76eb62d9af20bf09757d7d3c84e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182784"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @functname = ] 'procedure'` ダイナミックリンクライブラリ (DLL) 内で呼び出す関数の名前を指定します。 *プロシージャ* は **nvarchar (517)**,、既定値はありません。 *必要に* 応じて、owner *. 関数*の形式で所有者名を含めることができます。  
+`[ @functname = ] 'procedure'` ダイナミックリンクライブラリ (DLL) 内で呼び出す関数の名前を指定します。 *プロシージャ* は **nvarchar (517)**,、既定値はありません。 *必要に* 応じて、owner *. 関数* の形式で所有者名を含めることができます。  
   
 `[ @dllname = ] 'dll'` 関数を含む DLL の名前を指定します。 *dll* は **varchar (255)**,、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
   
@@ -55,17 +55,17 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  なし  
   
 ## <a name="remarks"></a>解説  
- 拡張ストアドプロシージャを作成した後は、sp_addextendedproc を使用してに追加する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **sp_addextendedproc** 詳細については、「 [SQL Server への拡張ストアドプロシージャの追加](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)」を参照してください。  
+ 拡張ストアドプロシージャを作成した後は、sp_addextendedproc を使用してに追加する必要があり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  詳細については、「 [SQL Server への拡張ストアドプロシージャの追加](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)」を参照してください。  
   
- このプロシージャは、 **master** データベースでのみ実行できます。 **Master**以外のデータベースから拡張ストアドプロシージャを実行するには、拡張ストアドプロシージャの名前を**master**で修飾します。  
+ このプロシージャは、 **master** データベースでのみ実行できます。 **Master** 以外のデータベースから拡張ストアドプロシージャを実行するには、拡張ストアドプロシージャの名前を **master** で修飾します。  
   
- **sp_addextendedproc** によって、新しい拡張ストアドプロシージャの名前がに登録された、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) カタログビューにエントリが追加され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また、 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) カタログビューにエントリが追加されます。  
+ **sp_addextendedproc** によって、新しい拡張ストアドプロシージャの名前がに登録された、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) カタログビューにエントリが追加され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 また、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) カタログビューにエントリが追加されます。  
   
 > [!IMPORTANT]  
->  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 この問題を解決するには、 **sp_dropextendedproc** を使用して DLL の登録を解除した後、完全なパスを指定して **sp_addextendedproc**に再登録します。  
+>  完全パスで登録されなかった既存の DLL は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後、機能しなくなります。 この問題を解決するには、 **sp_dropextendedproc** を使用して DLL の登録を解除した後、完全なパスを指定して **sp_addextendedproc** に再登録します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_addextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_addextendedproc** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
  次の例では、 **xp_hello** 拡張ストアドプロシージャを追加します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103e697c8aad38fa19769358372b31d89d3b5978
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e1f54c6933945c6031e48d4f97ab89f0f966779
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184314"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_name = ] 'alert'` この通知に関連付けられている警告の名前。 *alert* は **sysname**で、既定値はありません。  
+`[ @alert_name = ] 'alert'` この通知に関連付けられている警告の名前。 *alert* は **sysname** で、既定値はありません。  
   
 `[ @operator_name = ] 'operator'` アラートが発生したときに通知を受けるオペレーター。 *operator* は **sysname**,、既定値はありません。  
   
-`[ @notification_method = ] notification` オペレーターに通知する方法。 *通知*は **tinyint**,、既定値はありませんが、これらの値の1つ以上を指定できます。  
+`[ @notification_method = ] notification` オペレーターに通知する方法。 *通知* は **tinyint**,、既定値はありませんが、これらの値の1つ以上を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|電子メール|  
 |**2**|ポケットベル|  
@@ -60,10 +60,10 @@ sp_update_notification
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_notification** は、 **msdb** データベースから実行する必要があります。  
   
- 指定された *notification_method*を使用して、必要なアドレス情報を持たないオペレーターの通知を更新できます。 電子メールメッセージまたはポケットベルによる通知の送信時にエラーが発生した場合は、Microsoft SQL Server エージェントのエラーログにエラーが報告されます。  
+ 指定された *notification_method* を使用して、必要なアドレス情報を持たないオペレーターの通知を更新できます。 電子メールメッセージまたはポケットベルによる通知の送信時にエラーが発生した場合は、Microsoft SQL Server エージェントのエラーログにエラーが報告されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアドプロシージャを実行するには、 **sysadmin** 固定サーバーロールがユーザーに付与されている必要があります。  

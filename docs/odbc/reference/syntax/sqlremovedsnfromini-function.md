@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDSNFromIni
 apilocation:
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26bbcf3bf68dda172220323cb7d9b0dc39e3178d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499615"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192487"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0  
   
- **まとめ**  
+ **要約**  
  **Sqlremovedsnfromini** は、システム情報からデータソースを削除します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "88499615"
 ```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -50,16 +50,16 @@ BOOL SQLRemoveDSNFromIni(
  関数は、データソースが削除された場合、またはデータソースが Odbc.ini ファイル内にない場合に TRUE を返します。 データソースの削除に失敗した場合は、FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlremovedsnfromini**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlremovedsnfromini** から FALSE が返された場合、 **sqlインストーラエラー** を呼び出すことによって、関連する *\* pferrorcode* 値を取得できます。 次の表は、 **Sqlインストーラエラー** によって返される可能性がある *\* pferrorcode* 値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn*引数が無効でした。|  
+|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn* 引数が無効でした。|  
 |ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーで、レジストリから DSN 情報を削除できませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  **Sqlremovedsnfromini** は、システム情報の [ODBC データソース] セクションからデータソース名を削除します。 また、システム情報からデータソースの仕様セクションも削除されます。  
   
  この関数は、ドライバーセットアップライブラリからのみ呼び出す必要があります。  

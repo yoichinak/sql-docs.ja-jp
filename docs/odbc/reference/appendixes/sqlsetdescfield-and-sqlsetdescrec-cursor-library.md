@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cef4967a81a78e08dee733072359459c864b9627
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c97bbb38b5050461d3ca305d8ac895d693567be3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476944"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202643"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField および SQLSetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -55,13 +55,13 @@ ms.locfileid: "88476944"
   
  カーソルライブラリは、ブックマーク列に対して **SQLSetDescRec** への呼び出しを実行します。  
   
- ODBC 2.x ドライバーを使用する場合、カーソルライブラリは SQLSTATE HY090 (無効な文字列またはバッファー長) を返します。 **SQLSetDescField**または**SQLSetDescRec**を呼び出すと、のブックマークレコードの SQL_DESC_OCTET_LENGTH フィールドが4に等しくない値に設定さ*れます。* ODBC 3.x ドライバーを使用する場合、カーソルライブラリを使用すると、バッファーを任意のサイズにすることができ*ます。*  
+ ODBC 2.x ドライバーを使用する場合、カーソルライブラリは SQLSTATE HY090 (無効な文字列またはバッファー長) を返します。 **SQLSetDescField** または **SQLSetDescRec** を呼び出すと、のブックマークレコードの SQL_DESC_OCTET_LENGTH フィールドが4に等しくない値に設定さ *れます。* ODBC 3.x ドライバーを使用する場合、カーソルライブラリを使用すると、バッファーを任意のサイズにすることができ *ます。*  
   
  カーソルライブラリは、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR の各フィールドの値を返すために呼び出されると、 **SQLSetDescField** を実行します。 これらのフィールドは、ブックマーク行だけでなく、任意の行に対して返すことができます。  
   
  カーソルライブラリは、前に説明したフィールド以外の記述子フィールドを変更するために **SQLSetDescField** を実行しません。 カーソルライブラリの読み込み中に、アプリケーションが **SQLSetDescField** を呼び出して他のフィールドを設定すると、その呼び出しはドライバーに渡されます。  
   
- カーソルライブラリでは、アプリケーションの行記述子の任意の行の SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドを動的に変更できます ( **SQLExtendedFetch**、 **sqlfetch**、または **sqlfetchscroll**を呼び出した後)。 SQL_DESC_OCTET_LENGTH_PTR フィールドは、列の長さバッファーのバインドを解除するためにのみ null ポインターに変更できます。  
+ カーソルライブラリでは、アプリケーションの行記述子の任意の行の SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドを動的に変更できます ( **SQLExtendedFetch**、 **sqlfetch**、または **sqlfetchscroll** を呼び出した後)。 SQL_DESC_OCTET_LENGTH_PTR フィールドは、列の長さバッファーのバインドを解除するためにのみ null ポインターに変更できます。  
   
  カーソルライブラリでは、カーソルが開いているときに APD 内の SQL_DESC_BIND_TYPE フィールドを変更することはサポートされていません。 SQL_DESC_BIND_TYPE フィールドは、カーソルが閉じられてから新しいカーソルが開かれるまでの間のみ変更できます。 カーソルが開いているときにカーソルライブラリが変更できる記述子フィールドは、SQL_DESC_ARRAY_STATUS_PTR、SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_ROWS_PROCESSED_PTR だけです。  
   

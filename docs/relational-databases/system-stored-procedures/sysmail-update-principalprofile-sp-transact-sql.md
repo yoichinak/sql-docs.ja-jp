@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85bab8892a9459ee5de954596ffea2be2a5aed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492822"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181872"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` 関連付けを変更する **msdb** データベースのデータベースユーザーまたはロールの ID。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。  
+`[ @principal_id = ] principal_id` 関連付けを変更する **msdb** データベースのデータベースユーザーまたはロールの ID。 *principal_id* は **int**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定する必要があります。  
   
-`[ @principal_name = ] 'principal_name'` 関連付けを更新する **msdb** データベースのデータベースユーザーまたはロールの名前。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定できます。  
+`[ @principal_name = ] 'principal_name'` 関連付けを更新する **msdb** データベースのデータベースユーザーまたはロールの名前。 *principal_name* は **sysname**,、既定値は NULL です。 *Principal_id* または *principal_name* のいずれかを指定できます。  
   
-`[ @profile_id = ] profile_id` 関連付けを変更するプロファイルの id。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` 関連付けを変更するプロファイルの id。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 関連付けを変更するプロファイルの名前。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 関連付けを変更するプロファイルの名前。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
 `[ @is_default = ] 'is_default'` このプロファイルが、データベースユーザーの既定のプロファイルかどうかを指定します。 データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 *is_default* は **ビット**,、既定値はありません。  
   
@@ -61,11 +61,11 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="remarks"></a>解説  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
- アソシエーションのプリンシパル名が **public** の場合、またはアソシエーションのプリンシパル id が **0**の場合、このストアドプロシージャはパブリックプロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
+ アソシエーションのプリンシパル名が **public** の場合、またはアソシエーションのプリンシパル id が **0** の場合、このストアドプロシージャはパブリックプロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ** \@ Is_default**が '**1**' で、プリンシパルが複数のプロファイルに関連付けられている場合、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
+ **\@ Is_default** が '**1**' で、プリンシパルが複数のプロファイルに関連付けられている場合、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 以前既定のプロファイルであったプロファイルは引き続きプリンシパルに関連付けられていますが、既定のプロファイルではなくなりました。  
   
- ストアドプロシージャ **sysmail_update_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_update_principalprofile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

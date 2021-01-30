@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c771e031254821562933cd2e7f4d9f51903edba6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184725"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,22 +43,22 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'` 更新するカテゴリのクラス。 *クラス*は **varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
+`[ @class = ] 'class'` 更新するカテゴリのクラス。 *クラス* は **varchar (8)**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|**アラート**|アラートカテゴリを更新します。|  
+|**ALERT**|アラートカテゴリを更新します。|  
 |**補足**|ジョブ カテゴリを更新します。|  
 |**OPERATOR**|オペレーターカテゴリを更新します。|  
   
-`[ @name = ] 'old_name'` カテゴリの現在の名前。 *old_name*は **sysname**であり、既定値はありません。  
+`[ @name = ] 'old_name'` カテゴリの現在の名前。 *old_name* は **sysname** であり、既定値はありません。  
   
-`[ @new_name = ] 'new_name'` カテゴリの新しい名前。 *new_name*は **sysname**であり、既定値はありません。  
+`[ @new_name = ] 'new_name'` カテゴリの新しい名前。 *new_name* は **sysname** であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_update_category** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

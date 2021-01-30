@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpserver
 - sp_helpserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dace48b51c971095b136190ab1094ea8db79984
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83d212a6cfb817f3aa28c87ab0999d0488cec5e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526660"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211918"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server = ] 'server'` 情報を報告するサーバーを指定します。 *サーバー*を指定しない場合、master.sys のすべてのサーバーに関するレポートが作成され**ます。** *サーバー* は **sysname**,、既定値は NULL です。  
+`[ @server = ] 'server'` 情報を報告するサーバーを指定します。 *サーバー* を指定しない場合、master.sys のすべてのサーバーに関するレポートが作成され **ます。** *サーバー* は **sysname**,、既定値は NULL です。  
   
 `[ @optname = ] 'option'` サーバーを説明するオプションです。 *オプション* は **varchar (** 35 **)**,、既定値は NULL の場合、これらの値のいずれかを指定する必要があります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**照合順序互換**|リンクサーバーに対する分散クエリの実行に影響します。 このオプションを true に設定した場合、|  
 |**データアクセス**|分散クエリ アクセスに対してリンク サーバーを有効または無効にします。|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**システム**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**リモート照合順序を使用する**|ローカルサーバーの照合順序ではなく、リモート列の照合順序を使用します。|  
   
-`[ @show_topology = ] 'show_topology'` 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology* は **varchar (** 1 **)**,、既定値は NULL です。 *Show_topology*が**t**と等しくない場合、またはが NULL の場合、 **sp_helpserver**結果セットセクションに一覧表示された列を返します。 *Show_topology*が**t**と等しい場合、結果セットに示されている列に加えて、 **sp_helpserver** **topx**および**topx**情報も返されます。  
+`[ @show_topology = ] 'show_topology'` 指定したサーバーと他のサーバーとの関係を指定します。 *show_topology* は **varchar (** 1 **)**,、既定値は NULL です。 *Show_topology* が **t** と等しくない場合、またはが NULL の場合、 **sp_helpserver** 結果セットセクションに一覧表示された列を返します。 *Show_topology* が **t** と等しい場合、結果セットに示されている列に加えて、 **sp_helpserver** **topx** および **topx** 情報も返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)。  
@@ -77,7 +77,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|リンクサーバーに接続するためのタイムアウト値。|  
 |**query_timeout**|**int**|リンク サーバーに対するクエリのタイムアウト値|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  1 つのサーバーについて複数の状態値が返されることもあります。  
   
 ## <a name="permissions"></a>アクセス許可  

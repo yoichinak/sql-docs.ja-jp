@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 140256e73adee3593c620b17f81ac10c163030f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181849"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id` 更新するプロファイルのプロファイル ID。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_id = ] profile_id` 更新するプロファイルのプロファイル ID。 *profile_id* は **int**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 更新するプロファイルのプロファイル名。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 更新するプロファイルのプロファイル名。 *profile_name* は **sysname**,、既定値は NULL です。 *Profile_id* または *profile_name* のいずれかを指定する必要があります。  
   
-`[ @account_id = ] account_id` 更新するアカウント ID。 *account_id* は **int**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_id = ] account_id` 更新するアカウント ID。 *account_id* は **int**,、既定値は NULL です。 *Account_id* または *account_name* のいずれかを指定する必要があります。  
   
-`[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name* は **sysname**,、既定値は NULL です。 *Account_id*または*account_name*のいずれかを指定する必要があります。  
+`[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name* は **sysname**,、既定値は NULL です。 *Account_id* または *account_name* のいずれかを指定する必要があります。  
   
 `[ @sequence_number = ] sequence_number` アカウントの新しいシーケンス番号。 *sequence_number* は **int**,、既定値はありません。 シーケンス番号によって、プロファイルで使用されるアカウントの順序が決まります。  
   
@@ -66,13 +66,13 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  同じシーケンス番号を持つアカウントが複数存在する場合、データベース メールでは、指定された電子メール メッセージに対して、これらのアカウントのいずれか 1 つのみが使用されます。 この場合、そのシーケンス番号に対してどのアカウントが使用されるか、またメッセージごとに同じアカウントが使用されるかついては、データベース メールでは保証されません。  
   
- ストアドプロシージャ **sysmail_update_profileaccount_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_update_profileaccount_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
- 次の例では、msdb データベースのプロファイル内のアカウントのシーケンス番号を変更し `Admin-BackupServer` `AdventureWorks Administrator` ます。 **msdb** このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
+ 次の例では、msdb データベースのプロファイル内のアカウントのシーケンス番号を変更し `Admin-BackupServer` `AdventureWorks Administrator` ます。  このコードを実行すると、アカウントのシーケンス番号は `3` になります。これは、最初の 2 つのアカウントが失敗した場合に試行されることを示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

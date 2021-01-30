@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getmergedeletetype
 - sp_getmergedeletetype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2a254a81bdd4b1a4d7718e8960ced22666b5705
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 816815f36511cb64f52ec5a48f20c04121fe67bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538930"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183158"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +44,17 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT` 削除の種類を示すコードを指定します。 *delete_type* は **int**,、既定値はありません。 *delete_type* は出力パラメーターでもあり、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|ユーザーの削除|  
 |**5**|部分削除|  
 |**6**|システムの削除|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_getmergedeletetype** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_getmergedeletetype**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_getmergedeletetype** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

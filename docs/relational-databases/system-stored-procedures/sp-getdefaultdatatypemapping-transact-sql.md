@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getdefaultdatatypemapping_TSQL
 - sp_getdefaultdatatypemapping
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d7737d0c4d8d44901da52bad6ad6867d7080554
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64345f8471caf5d757e0c8fbdbc843b2a18680ee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543342"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183163"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,9 +52,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_dbms = ] 'source_dbms'` データ型のマップ元となる DBMS の名前を指定します。 *source_dbms* は **sysname**で、次のいずれかの値を指定できます。  
+`[ @source_dbms = ] 'source_dbms'` データ型のマップ元となる DBMS の名前を指定します。 *source_dbms* は **sysname** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|ソースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースです。|  
 |**ORACLE11I**|マップ元は Oracle データベース。|  
@@ -63,7 +63,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @source_version = ] 'source_version'` ソース DBMS のバージョン番号を指定します。 *source_version* は **varchar (10)**,、既定値は NULL です。  
   
-`[ @source_type = ] 'source_type'` は、ソース DBMS のデータ型です。 *source_type* は **sysname**であり、既定値はありません。  
+`[ @source_type = ] 'source_type'` は、ソース DBMS のデータ型です。 *source_type* は **sysname** であり、既定値はありません。  
   
 `[ @source_length = ] source_length` ソース DBMS のデータ型の長さを示します。 *source_length* は **bigint**,、既定値は NULL です。  
   
@@ -71,11 +71,11 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @source_scale = ] source_scale` ソース DBMS でのデータ型の小数点以下桁数です。 *source_scale* は **int**,、既定値は NULL です。  
   
-`[ @source_nullable = ] source_nullable` ソース DBMS のデータ型が NULL 値をサポートするかどうかを指定します。 *source_nullable* の部分は **ビット**で、既定値は **1**です。これは、NULL 値がサポートされることを意味します。  
+`[ @source_nullable = ] source_nullable` ソース DBMS のデータ型が NULL 値をサポートするかどうかを指定します。 *source_nullable* の部分は **ビット** で、既定値は **1** です。これは、NULL 値がサポートされることを意味します。  
   
-`[ @destination_dbms = ] 'destination_dbms'` マップ先 DBMS の名前を指定します。 *destination_dbms* は **sysname**で、次のいずれかの値を指定できます。  
+`[ @destination_dbms = ] 'destination_dbms'` マップ先 DBMS の名前を指定します。 *destination_dbms* は **sysname** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
 |**ORACLE11I**|変換先は、Oracle データベースです。|  
@@ -86,7 +86,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_version = ] 'destination_version'` マップ先 DBMS の製品バージョンを指定します。 *destination_version* は **varchar (10)**,、既定値は NULL です。  
   
-`[ @destination_type = ] 'destination_type' OUTPUT` マップ先 DBMS に表示されるデータ型です。 *destination_type* は **sysname**で、既定値は NULL です。  
+`[ @destination_type = ] 'destination_type' OUTPUT` マップ先 DBMS に表示されるデータ型です。 *destination_type* は **sysname** で、既定値は NULL です。  
   
 `[ @destination_length = ] destination_length OUTPUT` マップ先 DBMS でのデータ型の長さを指定します。 *destination_length* は **bigint**,、既定値は NULL です。  
   
@@ -101,13 +101,13 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_getdefaultdatatypemapping** は、と以外の DBMS の間のすべての種類のレプリケーションで使用され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
  **sp_getdefaultdatatypemapping** は、指定された変換元データ型に最も一致する、既定の変換先データ型を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_getdefaultdatatypemapping**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_getdefaultdatatypemapping** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_helpdatatypemap &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   

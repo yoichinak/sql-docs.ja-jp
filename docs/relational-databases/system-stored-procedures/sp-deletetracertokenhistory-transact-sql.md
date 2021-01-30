@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletetracertokenhistory
 - sp_deletetracertokenhistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c08b5373109ab3ea6174aac190ed8fb7b04b2e0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5bc5a6d5191f89d8b31b48939c83674bf0302e15
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543540"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178157"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -44,22 +44,22 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数
 
 `@publication= 'publication'`  
-トレーサートークンが挿入されたパブリケーションの名前を指定します。 データ型は **sysname**です。 このパラメーターは必須です。
+トレーサートークンが挿入されたパブリケーションの名前を指定します。 データ型は **sysname** です。 このパラメーターは必須です。
 
 `[ @tracer_id= ] tracer_id`  
-削除するトレーサートークンの ID を示します。 データ型は **int**です。既定値は *null*です。 *Null*の場合、パブリケーションに属するすべてのトレーサートークンが削除されます。
+削除するトレーサートークンの ID を示します。 データ型は **int** です。既定値は *null* です。 *Null* の場合、パブリケーションに属するすべてのトレーサートークンが削除されます。
 
 `[ @cutoff_date= ] cutoff_date`  
-この日付が削除される前に、パブリケーションに挿入されたトレーサートークン。 データ型は **datetime**です。 既定値は *null* です。
+この日付が削除される前に、パブリケーションに挿入されたトレーサートークン。 データ型は **datetime** です。 既定値は *null* です。
 
 `[ @publisher= ] 'publisher'`  
-パブリッシャーの名前です。 データ型は **sysname**です。 既定値は *null* です。
+パブリッシャーの名前です。 データ型は **sysname** です。 既定値は *null* です。
 
 > [!NOTE]
 > このパラメーターは、以外の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャー、またはディストリビューターからストアドプロシージャを実行する場合にのみ指定する必要があります。
 
 `[ @publisher_db= ] 'publisher_db'`  
-パブリケーション データベースの名前です。 データ型は **sysname**です。 既定値は NULL です。 ストアドプロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
+パブリケーション データベースの名前です。 データ型は **sysname** です。 既定値は NULL です。 ストアドプロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
 
 > [!NOTE]
 > このパラメーターは、ディストリビューターからストアドプロシージャを実行するときに指定する必要があります。
@@ -68,11 +68,11 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **0** (成功) または **1** (失敗)
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 **sp_deletetracertokenhistory** は、トランザクションレプリケーションで使用します。  
 
-*Tracer_id*と*cutoff_date*の両方のパラメーターを指定すると、エラーが発生します。
+*Tracer_id* と *cutoff_date* の両方のパラメーターを指定すると、エラーが発生します。
 
 トレーサートークンメタデータを削除するために **sp_deletetracertokenhistory** を実行しない場合、定期的にスケジュールされた履歴のクリーンアップが行われるときに、情報が削除されます。
 
@@ -80,10 +80,10 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 ## <a name="permissions"></a>アクセス許可
 
-**Sp_deletetracertokenhistory**を実行する権限は、次の担当者にのみ与えられます。
+**Sp_deletetracertokenhistory** を実行する権限は、次の担当者にのみ与えられます。
 
 - ディストリビューションデータベース内の **replmonitor** ロールのメンバー
-- **Sysadmin**固定サーバーロールのメンバー。
+- **Sysadmin** 固定サーバーロールのメンバー。
 - パブリケーションデータベースの **db_owner** 固定データベースロールのメンバー。
 - 固定データベースの **db_owner** 。
 

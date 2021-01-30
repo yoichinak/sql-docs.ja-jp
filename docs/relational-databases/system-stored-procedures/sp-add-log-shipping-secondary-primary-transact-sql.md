@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7675de9f5d3e322511af474fcf9495dad3e4454a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464636"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179774"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>引数  
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server* は **sysname** であり、NULL にすることはできません。  
   
-`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname** であり、既定値はありません。  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` プライマリサーバーからのトランザクションログバックアップファイルが格納されているディレクトリ。 *backup_source_directory* は **nvarchar (500)** であり、NULL にすることはできません。  
   
@@ -68,7 +68,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @file_retention_period = ] 'file_retention_period'` パラメーターで指定されたパスでバックアップファイルがセカンダリサーバーに保持される時間 (分単位)。この時間を経過すると、 @backup_destination_directory 削除されます。 *history_retention_period* は **int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
-`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server* は **sysname** であり、既定値はありません。 NULL にすることはできません。  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 監視サーバーへの接続に使用されるセキュリティモード。  
   
@@ -105,11 +105,11 @@ sp_add_log_shipping_secondary_primary
   
     2.  無効になったセカンダリ ID のコピー ジョブを作成する。  
   
-    3.  **Log_shipping_secondary**エントリのコピージョブ id をコピージョブのジョブ id に設定します。  
+    3.  **Log_shipping_secondary** エントリのコピージョブ id をコピージョブのジョブ id に設定します。  
   
     4.  セカンダリ ID に対して無効になっている復元ジョブを作成します。  
   
-    5.  **Log_shipping_secondary**エントリの復元ジョブ id を、復元ジョブのジョブ id に設定します。  
+    5.  **Log_shipping_secondary** エントリの復元ジョブ id を、復元ジョブのジョブ id に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  

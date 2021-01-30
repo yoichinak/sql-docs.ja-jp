@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53b893ffb155a8e8c1d737177f840347584b6a99
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 21ce11d37659561e172c11fb7b5a899193141166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538414"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181966"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @parameter_name = ] 'parameter_name'` 取得する構成設定の名前。 指定した場合、構成設定の値が** \@ parameter_value**出力パラメーターに返されます。 ** \@ Parameter_name**が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのデータベースメール構成設定を含む結果セットを返します。  
+`[ @parameter_name = ] 'parameter_name'` 取得する構成設定の名前。 指定した場合、構成設定の値が **\@ parameter_value** 出力パラメーターに返されます。 **\@ Parameter_name** が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのデータベースメール構成設定を含む結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ** \@ Parameter_name**が指定されていない場合、は次の列を含む結果セットを返します。  
+ **\@ Parameter_name** が指定されていない場合、は次の列を含む結果セットを返します。  
   
 | 列名 | データ型 | 説明 |
 | ----------- | --------- | ----------- |
@@ -54,12 +54,12 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**paramvalue**|**nvarchar (256)**|構成パラメーターの値|  
 |**description**|**nvarchar (256)**|構成パラメーターの説明|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ストアドプロシージャ **sysmail_help_configure_sp** には、インスタンスの現在のデータベースメール構成設定が一覧表示されます。  
   
- ** \@ Parameter_name**が指定されていても、 ** \@ parameter_value**の出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。  
+ **\@ Parameter_name** が指定されていても、 **\@ parameter_value** の出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。  
   
- ストアドプロシージャ **sysmail_help_configure_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3部構成の名前を使用してプロシージャを呼び出す必要があります。  
+ ストアドプロシージャ **sysmail_help_configure_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3部構成の名前を使用してプロシージャを呼び出す必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

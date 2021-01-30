@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addarticle
 - sp_addarticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5ee845eac866c3954ba03080c037179fa76ad519
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394758"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182833"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,86 +69,86 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'`アーティクルを含むパブリケーションの名前を指定します。 名前はデータベース内で一意である必要があります。 *publication*は**sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを含むパブリケーションの名前を指定します。 名前はデータベース内で一意である必要があります。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'`アーティクルの名前を指定します。 名前はパブリケーション内で一意であることが必要です。 *アーティクル*は**sysname**で、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 名前はパブリケーション内で一意であることが必要です。 *アーティクル* は **sysname** で、既定値はありません。  
   
-`[ @source_table = ] 'source_table'`このパラメーターは非推奨とされました。代わりに*source_object*を使用してください。  
+`[ @source_table = ] 'source_table'` このパラメーターは非推奨とされました。代わりに *source_object* を使用してください。  
   
  *このパラメーターは、Oracle パブリッシャーではサポートされていません。*  
   
-`[ @destination_table = ] 'destination_table'`*Source_table*またはストアドプロシージャと異なる場合に、インポート先 (サブスクリプション) テーブルの名前を指定します。 *destination_table*は**sysname**で、既定値は NULL です。これは、 *source_table*が*destination_table * ** と等しいことを意味します。  
+`[ @destination_table = ] 'destination_table'`*Source_table* またはストアドプロシージャと異なる場合に、インポート先 (サブスクリプション) テーブルの名前を指定します。 *destination_table* は **sysname** で、既定値は NULL です。これは、 *source_table* が *destination_table * ** と等しいことを意味します。  
   
-`[ @vertical_partition = ] 'vertical_partition'`テーブルアーティクルの列フィルター処理を有効または無効にします。 *vertical_partition*は**nchar (5)**,、既定値は FALSE です。  
+`[ @vertical_partition = ] 'vertical_partition'` テーブルアーティクルの列フィルター処理を有効または無効にします。 *vertical_partition* は **nchar (5)**,、既定値は FALSE です。  
   
- **false**は、列方向のフィルター処理が行われず、すべての列がパブリッシュされることを示します。  
+ **false** は、列方向のフィルター処理が行われず、すべての列がパブリッシュされることを示します。  
   
- **true**を設定すると、宣言された主キー、null 値を許容する列、および一意のキー列を除くすべての列が消去されます。 列は[sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を使用して追加されます。  
+ **true** を設定すると、宣言された主キー、null 値を許容する列、および一意のキー列を除くすべての列が消去されます。 列は [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を使用して追加されます。  
   
-`[ @type = ] 'type'`アーティクルの種類を示します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
+`[ @type = ] 'type'` アーティクルの種類を示します。 *種類* は **sysname** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**aggregate schema only**|スキーマのみを使用する集計関数。|  
 |**func スキーマのみ**|スキーマのみを使用する関数。|  
 |**indexed view logbased**|ログベースのインデックス付きビューアーティクル。 Oracle パブリッシャーではサポートされていません。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。|  
-|**indexed view logbased manualboth **|手動フィルターと手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object*パラメーターと*フィルター*パラメーターの両方を指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
-|**indexed view logbased manualfilter **|手動フィルターを使用したログベースのインデックス付きビューアーティクル。 このオプションでは、 *sync_object*パラメーターと*フィルター*パラメーターの両方を指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
-|**indexed view logbased manualview**|手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object*パラメーターを指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
+|**indexed view logbased manualboth**|手動フィルターと手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object* パラメーターと *フィルター* パラメーターの両方を指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
+|**indexed view logbased manualfilter**|手動フィルターを使用したログベースのインデックス付きビューアーティクル。 このオプションでは、 *sync_object* パラメーターと *フィルター* パラメーターの両方を指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
+|**indexed view logbased manualview**|手動ビューを使用する、ログベースのインデックス付きビュー アーティクルです。 このオプションでは、 *sync_object* パラメーターを指定する必要があります。 この種類の記事では、ベーステーブルを個別にパブリッシュする必要はありません。 Oracle パブリッシャーではサポートされていません。|  
 |**インデックス付きビュースキーマのみ**|スキーマのみを使用するインデックス付きビュー。 この種類のアーティクルでは、ベーステーブルもパブリッシュする必要があります。|  
 |**logbased** (既定値)|ログベースのアーティクル。|  
-|**logbased manualboth**|手動フィルターと手動ビューを使用したログベースのアーティクル。 このオプションでは、 *sync_object*パラメーターと*フィルター*パラメーターの両方を指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
-|**logbased manualfilter**|手動フィルターを使用したログベースのアーティクル。 このオプションでは、 *sync_object*パラメーターと*フィルター*パラメーターの両方を指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
-|**logbased manualview**|手動ビューを使用する、ログベースのアーティクルです。 このオプションでは、 *sync_object*パラメーターを指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
-|**proc exec**|アーティクルのすべてのサブスクライバーにストアド プロシージャの実行をレプリケートします。 Oracle パブリッシャーではサポートされていません。 **Proc exec**ではなく**serializable proc exec**オプションを使用することをお勧めします。 詳細については、「[トランザクションレプリケーションでのストアドプロシージャの実行のパブリッシュ](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」の「ストアドプロシージャの実行に関する記事の種類」を参照してください。 変更データ キャプチャが有効な場合は使用できません。|  
+|**logbased manualboth**|手動フィルターと手動ビューを使用したログベースのアーティクル。 このオプションでは、 *sync_object* パラメーターと *フィルター* パラメーターの両方を指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
+|**logbased manualfilter**|手動フィルターを使用したログベースのアーティクル。 このオプションでは、 *sync_object* パラメーターと *フィルター* パラメーターの両方を指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
+|**logbased manualview**|手動ビューを使用する、ログベースのアーティクルです。 このオプションでは、 *sync_object* パラメーターを指定する必要があります。 Oracle パブリッシャーではサポートされていません。|  
+|**proc exec**|アーティクルのすべてのサブスクライバーにストアド プロシージャの実行をレプリケートします。 Oracle パブリッシャーではサポートされていません。 **Proc exec** ではなく **serializable proc exec** オプションを使用することをお勧めします。 詳細については、「 [トランザクションレプリケーションでのストアドプロシージャの実行のパブリッシュ](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」の「ストアドプロシージャの実行に関する記事の種類」を参照してください。 変更データ キャプチャが有効な場合は使用できません。|  
 |**proc スキーマのみ**|スキーマのみを使用するプロシージャ。 Oracle パブリッシャーではサポートされていません。|  
 |**serializable proc exec**|シリアライゼーション可能なトランザクションのコンテキスト内で実行される場合にのみ、ストアド プロシージャの実行をレプリケートします。 Oracle パブリッシャーではサポートされていません。<br /><br /> プロシージャは、プロシージャの実行をレプリケートするために、明示的なトランザクション内で実行する必要もあります。|  
 |**view schema only**|スキーマのみを使用するビュー。 Oracle パブリッシャーではサポートされていません。 このオプションを使用する場合は、ベーステーブルもパブリッシュする必要があります。|  
   
-`[ @filter = ] 'filter'`テーブルを水平方向にフィルター選択するために使用されるストアドプロシージャ (FOR REPLICATION で作成) です。 *フィルター*は**nvarchar (386)**,、既定値は NULL です。 ビューとフィルターストアドプロシージャを作成するには、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)と[sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)を手動で実行する必要があります。 NULL 以外を指定した場合は、ストアド プロシージャが手動で作成されるものと見なされるため、フィルター プロシージャは作成されません。  
+`[ @filter = ] 'filter'` テーブルを水平方向にフィルター選択するために使用されるストアドプロシージャ (FOR REPLICATION で作成) です。 *フィルター* は **nvarchar (386)**,、既定値は NULL です。 ビューとフィルターストアドプロシージャを作成するには、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)と[sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)を手動で実行する必要があります。 NULL 以外を指定した場合は、ストアド プロシージャが手動で作成されるものと見なされるため、フィルター プロシージャは作成されません。  
   
-`[ @sync_object = ] 'sync_object'`このアーティクルのスナップショットを表すために使用するデータファイルの生成に使用されるテーブルまたはビューの名前を指定します。 *sync_object*は**nvarchar (386)**,、既定値は NULL です。 NULL の場合、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出され、出力ファイルの生成に使用するビューが自動的に作成されます。 これは、 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を持つ列を追加した後に発生します。 NULL 以外を指定した場合は、ビューが手動で作成されるものと見なされるため、ビューは作成されません。  
+`[ @sync_object = ] 'sync_object'` このアーティクルのスナップショットを表すために使用するデータファイルの生成に使用されるテーブルまたはビューの名前を指定します。 *sync_object* は **nvarchar (386)**,、既定値は NULL です。 NULL の場合、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) が呼び出され、出力ファイルの生成に使用するビューが自動的に作成されます。 これは、 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を持つ列を追加した後に発生します。 NULL 以外を指定した場合は、ビューが手動で作成されるものと見なされるため、ビューは作成されません。  
   
-`[ @ins_cmd = ] 'ins_cmd'`このアーティクルの挿入をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *ins_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
+`[ @ins_cmd = ] 'ins_cmd'` このアーティクルの挿入をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *ins_cmd* は **nvarchar (255)** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**NONE**|アクションは実行されません。|  
-|**CALL sp_MSins_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSins_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有されている**productcategory**テーブルの場合、パラメーターはになり `CALL sp_MSins_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
-|**SQL**または NULL|INSERT ステートメントをレプリケートします。 INSERT ステートメントでは、アーティクル内にある、パブリッシュされるすべての列の値が指定されます。 次のコマンドは挿入時にレプリケートされます。<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
+|**CALL sp_MSins_**<br /> **_テーブル_**  (既定値)<br /><br /> - または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure* は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSins_ *table*</strong>には、パラメーターの *_table* 部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner* が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで **実稼働** スキーマによって所有されている **productcategory** テーブルの場合、パラメーターはになり `CALL sp_MSins_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table* には GUID 値が付加されます。 *Custom_stored_procedure* の指定は、サブスクライバーの更新ではサポートされていません。|  
+|**SQL** または NULL|INSERT ステートメントをレプリケートします。 INSERT ステートメントでは、アーティクル内にある、パブリッシュされるすべての列の値が指定されます。 次のコマンドは挿入時にレプリケートされます。<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-`[ @del_cmd = ] 'del_cmd'`このアーティクルの削除をレプリケートするときに使用するレプリケーションコマンドの種類を示します。 *del_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
+`[ @del_cmd = ] 'del_cmd'` このアーティクルの削除をレプリケートするときに使用するレプリケーションコマンドの種類を示します。 *del_cmd* は **nvarchar (255)** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**NONE**|アクションは実行されません。|  
-|**CALLsp_MSdel_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSdel_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有されている**productcategory**テーブルの場合、パラメーターはになり `CALL sp_MSdel_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 *Custom_stored_procedure*の指定は、サブスクライバーの更新ではサポートされていません。|  
-|**XCALL sp_MSdel_**<br /> **_一覧_**<br /><br /> または<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**SQL**または NULL|DELETE ステートメントをレプリケートします。 DELETE ステートメントには、すべての主キー列の値が指定されています。 このコマンドは、削除時にレプリケートされます。<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
+|**CALLsp_MSdel_**<br /> **_テーブル_**  (既定値)<br /><br /> - または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure* は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSdel_ *table*</strong>には、パラメーターの *_table* 部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner* が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで **実稼働** スキーマによって所有されている **productcategory** テーブルの場合、パラメーターはになり `CALL sp_MSdel_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table* には GUID 値が付加されます。 *Custom_stored_procedure* の指定は、サブスクライバーの更新ではサポートされていません。|  
+|**XCALL sp_MSdel_**<br /> **_一覧_**<br /><br /> - または -<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**SQL** または NULL|DELETE ステートメントをレプリケートします。 DELETE ステートメントには、すべての主キー列の値が指定されています。 このコマンドは、削除時にレプリケートされます。<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-`[ @upd_cmd = ] 'upd_cmd'`このアーティクルの更新をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *upd_cmd*は**nvarchar (255)** で、次のいずれかの値を指定できます。  
+`[ @upd_cmd = ] 'upd_cmd'` このアーティクルの更新をレプリケートするときに使用されるレプリケーションコマンドの種類を示します。 *upd_cmd* は **nvarchar (255)** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**NONE**|アクションは実行されません。|  
-|**CALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。|  
-|**MCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルパラメーターを取得するストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有されている**productcategory**テーブルの場合、パラメーターはになり `MCALL sp_MSupd_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**SCALL sp_MSupd_**<br /> **_テーブル_**(既定値)<br /><br /> または<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルパラメーターを受け取るストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure*は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_*table* </strong>には、パラメーターの *_table*部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner*が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで**実稼働**スキーマによって所有されている**productcategory**テーブルの場合、パラメーターはになり `SCALL sp_MSupd_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table*には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**XCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> または<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option*を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
-|**SQL**または NULL|UPDATE ステートメントをレプリケートします。 UPDATE ステートメントでは、すべての列の値と主キー列の値が指定されます。 このコマンドは更新時にレプリケートされます。<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
+|**CALL sp_MSupd_**<br /> **_一覧_**<br /><br /> - または -<br /><br /> **CALL custom_stored_procedure_name**|サブスクライバー側で実行されるストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。|  
+|**MCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> - または -<br /><br /> **MCALL custom_stored_procedure_name**|MCALL スタイルパラメーターを取得するストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure* は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_ *table*</strong>には、パラメーターの *_table* 部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner* が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで **実稼働** スキーマによって所有されている **productcategory** テーブルの場合、パラメーターはになり `MCALL sp_MSupd_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table* には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**SCALL sp_MSupd_**<br /> **_テーブル_**  (既定値)<br /><br /> - または -<br /><br /> **SCALL custom_stored_procedure_name**|SCALL スタイルパラメーターを受け取るストアドプロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 *custom_stored_procedure* は、ユーザーが作成したストアドプロシージャの名前です。 <strong>sp_MSupd_ *table*</strong>には、パラメーターの *_table* 部分の代わりに、コピー先のテーブルの名前が含まれています。 *Destination_owner* が指定されている場合は、コピー先のテーブル名の前に付加されます。 たとえば、サブスクライバーで **実稼働** スキーマによって所有されている **productcategory** テーブルの場合、パラメーターはになり `SCALL sp_MSupd_ProductionProductCategory` ます。 ピアツーピアレプリケーショントポロジ内のアーティクルの場合、 *_table* には GUID 値が付加されます。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**XCALL sp_MSupd_**<br /> **_一覧_**<br /><br /> - または -<br /><br /> **XCALL custom_stored_procedure_name**|XCALL スタイルのパラメーターを使用してストアド プロシージャを呼び出します。 このレプリケーション方法を使用するには、 *schema_option* を使用してストアドプロシージャの自動作成を指定するか、アーティクルの各サブスクライバーの転送先データベースに指定されたストアドプロシージャを作成します。 ユーザーが作成したストアドプロシージャの指定は、サブスクライバーの更新では許可されていません。|  
+|**SQL** または NULL|UPDATE ステートメントをレプリケートします。 UPDATE ステートメントでは、すべての列の値と主キー列の値が指定されます。 このコマンドは更新時にレプリケートされます。<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
 >  CALL、MCALL、SCALL、および XCALL 構文は、サブスクライバーに反映されるデータの量が異なります。 CALL 構文では、挿入されたすべての列および削除されたすべての列に関するすべての値が渡されます。 SCALL 構文では、影響を受けた列の値のみが渡されます。 XCALL 構文は、列の前の値を含め、変更されたかどうかにかかわらず、すべての列の値を渡します。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
-`[ @creation_script = ] 'creation_script'`サブスクリプションデータベースでアーティクルを作成するために使用する、オプションのアーティクルスキーマスクリプトのパスと名前を指定します。 *creation_script*は**nvarchar (255)**,、既定値は NULL です。  
+`[ @creation_script = ] 'creation_script'` サブスクリプションデータベースでアーティクルを作成するために使用する、オプションのアーティクルスキーマスクリプトのパスと名前を指定します。 *creation_script* は **nvarchar (255)**,、既定値は NULL です。  
   
-`[ @description = ] 'description'`アーティクルの内容を示すエントリです。 *説明*は**nvarchar (255)**,、既定値は NULL です。  
+`[ @description = ] 'description'` アーティクルの内容を示すエントリです。 *説明* は **nvarchar (255)**,、既定値は NULL です。  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'`このアーティクルのスナップショットを適用するときに、サブスクライバーで同じ名前の既存のオブジェクトが検出された場合にシステムが実行する操作を指定します。 *pre_creation_cmd*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` このアーティクルのスナップショットを適用するときに、サブスクライバーで同じ名前の既存のオブジェクトが検出された場合にシステムが実行する操作を指定します。 *pre_creation_cmd* は **nvarchar (10)** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -157,31 +157,31 @@ sp_addarticle [ @publication = ] 'publication'
 |**drop** (既定値)|変換先テーブルを削除します。|  
 |**truncate**|変換先テーブルを切り捨てます。 は、ODBC または OLE DB のサブスクライバーに対しては無効です。|  
   
-`[ @filter_clause = ] 'filter_clause'`は、水平フィルターを定義する restriction (WHERE) 句です。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause*は**ntext**,、既定値は NULL です。 詳細については、「[パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
+`[ @filter_clause = ] 'filter_clause'` は、水平フィルターを定義する restriction (WHERE) 句です。 制限句を入力する場合は、WHERE キーワードを省略します。 *filter_clause* は **ntext**,、既定値は NULL です。 詳細については、「[パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
-`[ @schema_option = ] schema_option`指定されたアーティクルのスキーマ生成オプションのビットマスクです。 *schema_option*は**binary (8)** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)次の1つまたは複数の値の積:  
+`[ @schema_option = ] schema_option` 指定されたアーティクルのスキーマ生成オプションのビットマスクです。 *schema_option* は **binary (8)** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 次の1つまたは複数の値の積:  
   
 > [!NOTE]  
->  この値が NULL の場合は、他のアーティクルのプロパティに応じて、アーティクルの有効なスキーマ オプションが自動生成されます。 「解説」に記載されている**既定のスキーマオプション**の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択される値を示しています。  
+>  この値が NULL の場合は、他のアーティクルのプロパティに応じて、アーティクルの有効なスキーマ オプションが自動生成されます。 「解説」に記載されている **既定のスキーマオプション** の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択される値を示しています。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script*を使用します。|  
+|**0x00**|スナップショットエージェントによるスクリプト作成を無効にし、 *creation_script* を使用します。|  
 |**0x01**|オブジェクト作成スクリプト (CREATE TABLE、CREATE PROCEDURE など) を生成します。 この値は、ストアドプロシージャアーティクルの既定値です。|  
 |**除く**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
 |**0x04**|Id 列は、IDENTITY プロパティを使用してスクリプト化されます。|  
-|**0x08**|**タイムスタンプ**列をレプリケートします。 設定しない場合、**タイムスタンプ**列は**バイナリ**としてレプリケートされます。|  
+|**0x08**|**タイムスタンプ** 列をレプリケートします。 設定しない場合、 **タイムスタンプ** 列は **バイナリ** としてレプリケートされます。|  
 |**0x10**|対応するクラスター化インデックスを生成します。 このオプションが設定されていない場合でも、主キーと一意の制約に関連するインデックスは、パブリッシュされたテーブルで既に定義されている場合に生成されます。|  
 |**0x20**|ユーザー定義データ型 (UDT) をサブスクライバー側の基本データ型に変換します。 Udt 列に CHECK 制約または DEFAULT 制約がある場合、UDT 列が主キーの一部である場合、または計算列が UDT 列を参照している場合は、このオプションを使用できません。 *Oracle パブリッシャーではサポートされていません*。|  
 |**0x40**|対応する非クラスター化インデックスを生成します。 このオプションが設定されていない場合でも、主キーと一意の制約に関連するインデックスは、パブリッシュされたテーブルで既に定義されている場合に生成されます。|  
-|**0x80**|主キー制約をレプリケートします。 オプションの**0x10**と**0x40**が有効になっていない場合でも、制約に関連するすべてのインデックスもレプリケートされます。|  
+|**0x80**|主キー制約をレプリケートします。 オプションの **0x10** と **0x40** が有効になっていない場合でも、制約に関連するすべてのインデックスもレプリケートされます。|  
 |**0x100**|定義されている場合、テーブル アーティクル上のユーザー トリガーをレプリケートします。 *Oracle パブリッシャーではサポートされていません*。|  
 |**0x200**|Foreign key 制約をレプリケートします。 参照先のテーブルがパブリケーションの一部でない場合、パブリッシュされたテーブルのすべての foreign key 制約はレプリケートされません。 *Oracle パブリッシャーではサポートされていません*。|  
 |**0x400**|Check 制約をレプリケートします。 *Oracle パブリッシャーではサポートされていません*。|  
 |**0x800**|既定値をレプリケートします。 *Oracle パブリッシャーではサポートされていません*。|  
 |**0x1000**|列レベルの照合順序をレプリケートします。<br /><br /> **注:** Oracle パブリッシャーの場合は、このオプションを設定して、大文字と小文字を区別する比較を有効にする必要があります。|  
 |**0x2000**|パブリッシュされたアーティクルのソースオブジェクトに関連付けられた拡張プロパティをレプリケートします。 *Oracle パブリッシャーではサポートされていません*。|  
-|**0x4000**|UNIQUE 制約をレプリケートします。 オプションの**0x10**と**0x40**が有効になっていない場合でも、制約に関連するすべてのインデックスもレプリケートされます。|  
+|**0x4000**|UNIQUE 制約をレプリケートします。 オプションの **0x10** と **0x40** が有効になっていない場合でも、制約に関連するすべてのインデックスもレプリケートされます。|  
 |**0x8000**|このオプションは、パブリッシャーに対しては無効です [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 |**0x10000**|CHECK 制約を NOT FOR REPLICATION としてレプリケートし、同期中に制約が適用されないようにします。|  
 |**0x20000**|では、制約が同期中に適用されないように、外部キー制約は NOT FOR REPLICATION としてレプリケートされます。|  
@@ -192,164 +192,164 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x400000**|既定のバインドです。|  
 |**0x800000**|ルールのバインドです。|  
 |**0x1000000**|フルテキスト インデックスです。|  
-|**0x2000000**|**Xml**列にバインドされている xml スキーマコレクションはレプリケートされません。|  
-|**0x4000000**|**Xml**列のインデックスをレプリケートします。|  
+|**0x2000000**|**Xml** 列にバインドされている xml スキーマコレクションはレプリケートされません。|  
+|**0x4000000**|**Xml** 列のインデックスをレプリケートします。|  
 |**0x8000000**|サブスクライバーにまだ存在しないスキーマを作成します。|  
-|**0x10000000**|サブスクライバーで**xml**列を**ntext**に変換します。|  
+|**0x10000000**|サブスクライバーで **xml** 列を **ntext** に変換します。|  
 |**0x20000000**|で導入されたラージオブジェクトデータ型 (**nvarchar (max)**、 **varchar (max)**、 **varbinary (max)**) を、で [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サポートされているデータ型に変換し [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ます。|  
 |**0x40000000**|権限をレプリケートします。|  
 |**0x80000000**|パブリケーションに含まれていないオブジェクトへの依存関係を削除しようとしています。|  
-|**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーにレプリケートする場合は、このオプションを指定しないでください [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 このスキーマオプションを設定する方法に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすること [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] はサポートされていません。<br /><br /> 関連オプション**0x800000000**を参照してください。|  
-|**0x200000000**|で導入された日付と時刻のデータ型 (**date**、 **time**、 **datetimeoffset**、および**datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を、以前のバージョンのでサポートされているデータ型に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
+|**0x100000000**|このオプションを使用すると、 **varbinary (max)** 列に FILESTREAM 属性が指定されている場合に、その属性をレプリケートできます。 テーブルをサブスクライバーにレプリケートする場合は、このオプションを指定しないでください [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 このスキーマオプションを設定する方法に関係なく、FILESTREAM 列を持つテーブルをサブスクライバーにレプリケートすること [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] はサポートされていません。<br /><br /> 関連オプション **0x800000000** を参照してください。|  
+|**0x200000000**|で導入された日付と時刻のデータ型 (**date**、 **time**、 **datetimeoffset**、および **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] を、以前のバージョンのでサポートされているデータ型に変換し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |**0x400000000**|データとインデックスの圧縮オプションをレプリケートします。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。|  
-|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「[スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション**0x100000000**を参照してください。|  
-|**0x1000000000**|2バイトを8000超える共通言語ランタイム (CLR) ユーザー定義型 (Udt) を**varbinary (max)** に変換します。これにより、udt 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
-|**0x2000000000**|**Hierarchyid**データ型を**varbinary (max)** に変換します。これにより、 **hierarchyid**型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 レプリケートされたテーブルで**hierarchyid**列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
-|**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「[フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
-|**0x8000000000**|**Geography**および**geometry**データ型を**varbinary (max)** に変換して、これらの型の列を、を実行しているサブスクライバーにレプリケートできるようにし [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
-|**0x10000000000**|**Geography**型および**geometry**型の列のインデックスをレプリケートします。|  
-|**0x20000000000**|列のスパース属性をレプリケートします。 この属性の詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
+|**0x800000000**|このオプションを設定すると、サブスクライバーの独自のファイル グループに FILESTREAM データを格納できます。 このオプションが設定されていない場合、FILESTREAM データは既定のファイルグループに格納されます。 レプリケーションでは、ファイルグループは作成されません。したがって、このオプションを設定する場合は、サブスクライバーでスナップショットを適用する前にファイルグループを作成する必要があります。 スナップショットを適用する前にオブジェクトを作成する方法の詳細については、「 [スナップショットが適用される前および後のスクリプトの実行](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)」を参照してください。<br /><br /> 関連オプション **0x100000000** を参照してください。|  
+|**0x1000000000**|2バイトを8000超える共通言語ランタイム (CLR) ユーザー定義型 (Udt) を **varbinary (max)** に変換します。これにより、udt 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
+|**0x2000000000**|**Hierarchyid** データ型を **varbinary (max)** に変換します。これにより、 **hierarchyid** 型の列を、を実行しているサブスクライバーにレプリケートできるようになり [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。 レプリケートされたテーブルで **hierarchyid** 列を使用する方法の詳細については、「 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)」を参照してください。|  
+|**0x4000000000**|テーブルのフィルター選択されたインデックスをレプリケートします。 フィルター選択されたインデックスの詳細については、「 [フィルター選択](../../relational-databases/indexes/create-filtered-indexes.md)されたインデックスの作成」をご覧ください。|  
+|**0x8000000000**|**Geography** および **geometry** データ型を **varbinary (max)** に変換して、これらの型の列を、を実行しているサブスクライバーにレプリケートできるようにし [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ます。|  
+|**0x10000000000**|**Geography** 型および **geometry** 型の列のインデックスをレプリケートします。|  
+|**0x20000000000**|列のスパース属性をレプリケートします。 この属性の詳細については、「 [スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。|  
 |**0x40000000000**|サブスクライバーにメモリ最適化テーブルを作成するには、スナップショットエージェントによるスクリプト作成を有効にします。|  
 |**0x80000000000**|メモリ最適化アーティクルのクラスター化インデックスを非クラスター化インデックスに変換します。|  
 |**0x400000000000**|テーブルの非クラスター化列ストアインデックスをレプリケートします。|  
 |**0x800000000000**|テーブルのすべての flitered リングされた非クラスター化列ストアインデックスをレプリケートします。|  
-|NULL|レプリケーションによって*schema_option*が既定値に自動的に設定されます。この値は、他のアーティクルのプロパティによって異なります。 「解説」の「既定のスキーマオプション」の表は、アーティクルの種類とレプリケーションの種類に基づく既定のスキーマオプションを示しています。<br /><br /> 以外のパブリケーションの既定値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**0X050d3**です。|  
+|NULL|レプリケーションによって *schema_option* が既定値に自動的に設定されます。この値は、他のアーティクルのプロパティによって異なります。 「解説」の「既定のスキーマオプション」の表は、アーティクルの種類とレプリケーションの種類に基づく既定のスキーマオプションを示しています。<br /><br /> 以外のパブリケーションの既定値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **0X050d3** です。|  
   
- すべての*schema_option*値が、すべての種類のレプリケーションとアーティクルの種類に対して有効であるとは限りません。 「解説」の**有効なスキーマオプション**の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択できる有効なスキーマオプションを示しています。  
+ すべての *schema_option* 値が、すべての種類のレプリケーションとアーティクルの種類に対して有効であるとは限りません。 「解説」の **有効なスキーマオプション** の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択できる有効なスキーマオプションを示しています。  
   
-`[ @destination_owner = ] 'destination_owner'`対象オブジェクトの所有者の名前を指定します。 *destination_owner*は**sysname**,、既定値は NULL です。 *Destination_owner*が指定されていない場合、所有者は次の規則に基づいて自動的に指定されます。  
+`[ @destination_owner = ] 'destination_owner'` 対象オブジェクトの所有者の名前を指定します。 *destination_owner* は **sysname**,、既定値は NULL です。 *Destination_owner* が指定されていない場合、所有者は次の規則に基づいて自動的に指定されます。  
   
 |条件|対象オブジェクトの所有者|  
 |---------------|------------------------------|  
-|パブリケーションはネイティブ モードの一括コピーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみをサポートする初期スナップショットを生成します。|既定値は*source_owner*の値です。|  
+|パブリケーションはネイティブ モードの一括コピーを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーのみをサポートする初期スナップショットを生成します。|既定値は *source_owner* の値です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーからパブリッシュされます。|既定では、転送先データベースの所有者になります。|  
 |パブリケーションでは、キャラクターモードの一括コピーを使用して、以外のサブスクライバーをサポートする初期スナップショットを生成し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|割り当てられていません。|  
   
- 以外のサブスクライバーをサポートするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *DESTINATION_OWNER*を NULL にする必要があります。  
+ 以外のサブスクライバーをサポートするには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *DESTINATION_OWNER* を NULL にする必要があります。  
   
-`[ @status = ] status`アーティクルがアクティブかどうか、および変更の反映方法に関する追加オプションを指定します。 *状態*は**tinyint**で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)これらの値の1つ以上の積。  
+`[ @status = ] status` アーティクルがアクティブかどうか、および変更の反映方法に関する追加オプションを指定します。 *状態* は **tinyint** で、| を指定できます。 [(ビットごとの OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) これらの値の1つ以上の積。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|アーティクルはアクティブです。|  
 |**8**|INSERT ステートメントに列名を含めます。|  
 |**16** (既定値)|パラメーター化されたステートメントを使用します。|  
-|**うち**|INSERT ステートメントに列名を含め、パラメーター化されたステートメントを使用します。|  
+|**24**|INSERT ステートメントに列名を含め、パラメーター化されたステートメントを使用します。|  
 |**64**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は17になります。 値**0**は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを示します。  
+ たとえば、パラメーター化されたステートメントを使用するアクティブなアーティクルの場合、この列の値は17になります。 値 **0** は、アーティクルが非アクティブであり、追加のプロパティが定義されていないことを示します。  
   
-`[ @source_owner = ] 'source_owner'`は、ソースオブジェクトの所有者です。 *source_owner*は**sysname**,、既定値は NULL です。 Oracle パブリッシャーには*source_owner*を指定する必要があります。  
+`[ @source_owner = ] 'source_owner'` は、ソースオブジェクトの所有者です。 *source_owner* は **sysname**,、既定値は NULL です。 Oracle パブリッシャーには *source_owner* を指定する必要があります。  
   
-`[ @sync_object_owner = ] 'sync_object_owner'`パブリッシュされたアーティクルを定義するビューの所有者を示します。 *sync_object_owner*は**sysname**,、既定値は NULL です。  
+`[ @sync_object_owner = ] 'sync_object_owner'` パブリッシュされたアーティクルを定義するビューの所有者を示します。 *sync_object_owner* は **sysname**,、既定値は NULL です。  
   
-`[ @filter_owner = ] 'filter_owner'`フィルターの所有者を選択します。 *filter_owner*は**sysname**,、既定値は NULL です。  
+`[ @filter_owner = ] 'filter_owner'` フィルターの所有者を選択します。 *filter_owner* は **sysname**,、既定値は NULL です。  
   
-`[ @source_object = ] 'source_object'`パブリッシュするデータベースオブジェクトを指定します。 *source_object*は**sysname**,、既定値は NULL です。 *Source_table*が null の場合、 *source_object*を null にすることはできません。*source_table*の代わりに*source_object*を使用する必要があります。 スナップショットレプリケーションまたはトランザクションレプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、「[データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。  
+`[ @source_object = ] 'source_object'` パブリッシュするデータベースオブジェクトを指定します。 *source_object* は **sysname**,、既定値は NULL です。 *Source_table* が null の場合、 *source_object* を null にすることはできません。*source_table* の代わりに *source_object* を使用する必要があります。 スナップショットレプリケーションまたはトランザクションレプリケーションを使用してパブリッシュできるオブジェクトの種類の詳細については、「 [データとデータベースオブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。  
   
-`[ @artid = ] _article_ID_ OUTPUT`新しいアーティクルのアーティクル ID を示します。 *article_ID*は**int**で、既定値は NULL です。これは出力パラメーターです。  
+`[ @artid = ] _article_ID_ OUTPUT` 新しいアーティクルのアーティクル ID を示します。 *article_ID* は **int** で、既定値は NULL です。これは出力パラメーターです。  
   
-`[ @auto_identity_range = ] 'auto_identity_range'`パブリケーションの作成時に、パブリケーションに対する自動 id 範囲処理を有効または無効にします。 *auto_identity_range*は**nvarchar (5)** で、次のいずれかの値を指定できます。  
+`[ @auto_identity_range = ] 'auto_identity_range'` パブリケーションの作成時に、パブリケーションに対する自動 id 範囲処理を有効または無効にします。 *auto_identity_range* は **nvarchar (5)** で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**true**|自動 id 範囲の処理を有効にします|  
 |**false**|自動 ID 範囲処理を無効にします。|  
-|NULL (既定値)|Id 範囲の処理は、 *identityrangemanagementoption*によって設定されます。|  
+|NULL (既定値)|Id 範囲の処理は、 *identityrangemanagementoption* によって設定されます。|  
   
 > [!NOTE]  
->  *auto_identity_range*は非推奨とされており、旧バージョンとの互換性のためだけに用意されています。 Id 範囲管理オプションを指定するには、 *identityrangemanagementoption*を使用する必要があります。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
+>  *auto_identity_range* は非推奨とされており、旧バージョンとの互換性のためだけに用意されています。 Id 範囲管理オプションを指定するには、 *identityrangemanagementoption* を使用する必要があります。 詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
-`[ @pub_identity_range = ] pub_identity_range`アーティクルの*identityrangemanagementoption*が**auto**に設定されているか、 *auto_identity_range*が**true**に設定されている場合、パブリッシャーでの範囲サイズを制御します。 *pub_identity_range*は**bigint**,、既定値は NULL です。 *Oracle パブリッシャーではサポートされていません*。  
+`[ @pub_identity_range = ] pub_identity_range` アーティクルの *identityrangemanagementoption* が **auto** に設定されているか、 *auto_identity_range* が **true** に設定されている場合、パブリッシャーでの範囲サイズを制御します。 *pub_identity_range* は **bigint**,、既定値は NULL です。 *Oracle パブリッシャーではサポートされていません*。  
   
-`[ @identity_range = ] identity_range`アーティクルの*identityrangemanagementoption*が**auto**に設定されているか、 *auto_identity_range*が**true**に設定されている場合、サブスクライバーでの範囲のサイズを制御します。 *identity_range*は**bigint**,、既定値は NULL です。 *Auto_identity_range*が**true**に設定されている場合に使用します。 *Oracle パブリッシャーではサポートされていません*。  
+`[ @identity_range = ] identity_range` アーティクルの *identityrangemanagementoption* が **auto** に設定されているか、 *auto_identity_range* が **true** に設定されている場合、サブスクライバーでの範囲のサイズを制御します。 *identity_range* は **bigint**,、既定値は NULL です。 *Auto_identity_range* が **true** に設定されている場合に使用します。 *Oracle パブリッシャーではサポートされていません*。  
   
-`[ @threshold = ] threshold`ディストリビューションエージェントが新しい id 範囲を割り当てるタイミングを制御するパーセンテージの値です。 [*しきい*値] で指定した値のパーセンテージが使用されると、ディストリビューションエージェントによって新しい id 範囲が作成されます。 *しきい値*は**bigint**,、既定値は NULL です。 *Identityrangemanagementoption*が**auto**に設定されている場合、または*auto_identity_range*が**true**に設定されている場合に使用します。 *Oracle パブリッシャーではサポートされていません*。  
+`[ @threshold = ] threshold` ディストリビューションエージェントが新しい id 範囲を割り当てるタイミングを制御するパーセンテージの値です。 [ *しきい* 値] で指定した値のパーセンテージが使用されると、ディストリビューションエージェントによって新しい id 範囲が作成されます。 *しきい値* は **bigint**,、既定値は NULL です。 *Identityrangemanagementoption* が **auto** に設定されている場合、または *auto_identity_range* が **true** に設定されている場合に使用します。 *Oracle パブリッシャーではサポートされていません*。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot*は**ビット**,、既定値は0です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアドプロシージャによって実行される操作によって既存のスナップショットが無効になる可能性があることを確認します。 *force_invalidate_snapshot* は **ビット**,、既定値は0です。  
   
- **0**に設定すると、アーティクルを追加してもスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアド プロシージャが検出すると、エラーが発生し、変更は加えられません。  
+ **0** に設定すると、アーティクルを追加してもスナップショットが無効になることはありません。 変更に新しいスナップショットが必要であることをストアド プロシージャが検出すると、エラーが発生し、変更は加えられません。  
   
- **1**に設定すると、アーティクルの追加によってスナップショットが無効になる場合があります。また、新しいスナップショットを必要とするサブスクリプションが存在する場合は、既存のスナップショットを古い形式としてマークし、新しいスナップショットを生成することができます。  
+ **1** に設定すると、アーティクルの追加によってスナップショットが無効になる場合があります。また、新しいスナップショットを必要とするサブスクリプションが存在する場合は、既存のスナップショットを古い形式としてマークし、新しいスナップショットを生成することができます。  
   
-`[ @use_default_datatypes = ] use_default_datatypes`Oracle パブリッシャーからアーティクルをパブリッシュするときに、列の既定のデータ型マッピングを使用するかどうかを指定します。 *use_default_datatypes*はビット,、既定値は1です。  
+`[ @use_default_datatypes = ] use_default_datatypes` Oracle パブリッシャーからアーティクルをパブリッシュするときに、列の既定のデータ型マッピングを使用するかどうかを指定します。 *use_default_datatypes* はビット,、既定値は1です。  
   
- **1** = 既定のアーティクル列マッピングが使用されます。 既定のデータ型のマッピングを表示するには[sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。  
+ **1** = 既定のアーティクル列マッピングが使用されます。 既定のデータ型のマッピングを表示するには [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。  
   
- **0** = カスタムアーティクル列のマッピングが定義されているため、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)は**sp_addarticle**によって呼び出されません。  
+ **0** = カスタムアーティクル列のマッピングが定義されているため、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) は **sp_addarticle** によって呼び出されません。  
   
- *Use_default_datatypes*が**0**に設定されている場合は、列マッピングが既定値から変更されるたびに、 [sp_changearticlecolumndatatype](../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)を1回実行する必要があります。 すべてのカスタム列マッピングを定義した後、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行する必要があります。  
+ *Use_default_datatypes* が **0** に設定されている場合は、列マッピングが既定値から変更されるたびに、 [sp_changearticlecolumndatatype](../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)を1回実行する必要があります。 すべてのカスタム列マッピングを定義した後、 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)を実行する必要があります。  
   
 > [!NOTE]  
->  このパラメーターは、Oracle パブリッシャーに対してのみ使用してください。 パブリッシャーの*use_default_datatypes*を**0**に設定すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、エラーが生成されます。  
+>  このパラメーターは、Oracle パブリッシャーに対してのみ使用してください。 パブリッシャーの *use_default_datatypes* を **0** に設定すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、エラーが生成されます。  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption`アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption*は**nvarchar (10)**,、値は次のいずれかを指定することができます。  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` アーティクルに対する id 範囲管理の処理方法を指定します。 *identityrangemanagementoption* は **nvarchar (10)**,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |"**なし**"|明示的な ID 範囲の管理は行われません。 このオプションは、以前のバージョンの SQL Server との下位互換性のためにのみ推奨されます。 ピアレプリケーションには許可されていません。|  
 |**手動**|NOT FOR REPLICATION を使用して id 列をマークし、手動による id 範囲処理を有効にします。|  
 |**auto**|Id 範囲の自動管理を指定します。|  
-|NULL (既定値)|*Auto_identity_range*の値が**true**でない場合、既定値は**none**です。 既定では、ピアツーピアトポロジの既定値は [**手動**] になります (*auto_identity_range*は無視されます)。|  
+|NULL (既定値)|*Auto_identity_range* の値が **true** でない場合、既定値は **none** です。 既定では、ピアツーピアトポロジの既定値は [ **手動** ] になります (*auto_identity_range* は無視されます)。|  
   
- 旧バージョンとの互換性のために、 *identityrangemanagementoption*の値が NULL の場合、 *auto_identity_range*の値がチェックされます。 ただし、 *identityrangemanagementoption*の値が NULL でない場合、 *auto_identity_range*の値は無視されます。  
+ 旧バージョンとの互換性のために、 *identityrangemanagementoption* の値が NULL の場合、 *auto_identity_range* の値がチェックされます。 ただし、 *identityrangemanagementoption* の値が NULL でない場合、 *auto_identity_range* の値は無視されます。  
   
  詳細については、「[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)」 (ID 列のレプリケート) を参照してください。  
   
-`[ @publisher = ] 'publisher'`以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  パブリッシャーにアーティクルを追加する場合は、*パブリッシャー* を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'`初期スナップショットが適用されるときに、レプリケートされたユーザートリガーが実行されるかどうかを示します。 *fire_triggers_on_snapshot*は**nvarchar (5)**,、既定値は FALSE です。 **true**は、スナップショットが適用されるときに、レプリケートされたテーブルのユーザートリガーが実行されることを意味します。 トリガーをレプリケートするには、 *schema_option*のビットマスク値に**0x100**という値を含める必要があります。  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` 初期スナップショットが適用されるときに、レプリケートされたユーザートリガーが実行されるかどうかを示します。 *fire_triggers_on_snapshot* は **nvarchar (5)**,、既定値は FALSE です。 **true** は、スナップショットが適用されるときに、レプリケートされたテーブルのユーザートリガーが実行されることを意味します。 トリガーをレプリケートするには、 *schema_option* のビットマスク値に **0x100** という値を含める必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (成功) または**1** (失敗)  
+ **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
- **sp_addarticle**は、スナップショットレプリケーションまたはトランザクションレプリケーションで使用します。  
+## <a name="remarks"></a>コメント  
+ **sp_addarticle** は、スナップショットレプリケーションまたはトランザクションレプリケーションで使用します。  
   
- 既定では、列データ型がレプリケーションによってサポートされていない場合は、レプリケーションによってソース テーブル内の列がパブリッシュされることはありません。 このような列をパブリッシュする必要がある場合は、 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)を実行して列を追加する必要があります。  
+ 既定では、列データ型がレプリケーションによってサポートされていない場合は、レプリケーションによってソース テーブル内の列がパブリッシュされることはありません。 このような列をパブリッシュする必要がある場合は、 [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) を実行して列を追加する必要があります。  
   
  ピアツーピアトランザクションレプリケーションをサポートするパブリケーションにアーティクルを追加する場合は、次の制限が適用されます。  
   
--   パラメーター化されたステートメントは、すべての logbased アーティクルに対して指定する必要があります。 *Status*値には**16**を含める必要があります。  
+-   パラメーター化されたステートメントは、すべての logbased アーティクルに対して指定する必要があります。 *Status* 値には **16** を含める必要があります。  
   
 -   コピー先のテーブルの名前と所有者は、ソーステーブルと一致している必要があります。  
   
 -   アーティクルは、行方向または列方向にフィルター選択することはできません。  
   
--   自動 ID 範囲管理はサポートされていません。 *Identityrangemanagementoption*の値に manual を指定する必要があります。  
+-   自動 ID 範囲管理はサポートされていません。 *Identityrangemanagementoption* の値に manual を指定する必要があります。  
   
--   **Timestamp**列がテーブルに存在する場合は、 *schema_option*に0x08 を含めて、 **timestamp**として列をレプリケートする必要があります。  
+-   **Timestamp** 列がテーブルに存在する場合は、 *schema_option* に0x08 を含めて、 **timestamp** として列をレプリケートする必要があります。  
   
--   *Ins_cmd*、 *upd_cmd*、および*del_cmd*には、 **SQL**の値を指定できません。  
+-   *Ins_cmd*、 *upd_cmd*、および *del_cmd* には、 **SQL** の値を指定できません。  
   
  詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  オブジェクトをパブリッシュすると、その定義がサブスクライバーにコピーされます。 1つ以上の他のオブジェクトに依存するデータベースオブジェクトをパブリッシュする場合は、参照されているすべてのオブジェクトをパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
   
- *Vertical_partition*が**true**に設定されている場合、 **sp_addarticle**は[sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されるまで (最後の[sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)が追加された後)、ビューの作成を延期します。  
+ *Vertical_partition* が **true** に設定されている場合、 **sp_addarticle** は [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)が呼び出されるまで (最後の [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)が追加された後)、ビューの作成を延期します。  
   
- パブリケーションで更新サブスクリプションが許可されていて、パブリッシュされたテーブルに**uniqueidentifier**列がない場合、は**sp_addarticle** **uniqueidentifier**列をテーブルに自動的に追加します。  
+ パブリケーションで更新サブスクリプションが許可されていて、パブリッシュされたテーブルに **uniqueidentifier** 列がない場合、は **sp_addarticle** **uniqueidentifier** 列をテーブルに自動的に追加します。  
   
- のインスタンスではないサブスクライバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (異種レプリケーション) にレプリケートする場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **INSERT**、 **UPDATE**、および**DELETE**の各コマンドに対してステートメントのみがサポートされます。  
+ のインスタンスではないサブスクライバー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (異種レプリケーション) にレプリケートする場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **INSERT**、 **UPDATE**、および **DELETE** の各コマンドに対してステートメントのみがサポートされます。  
   
  ログリーダーエージェントが実行されている場合、ピアツーピアパブリケーションにアーティクルを追加すると、ログリーダーエージェントとアーティクルを追加するプロセスの間でデッドロックが発生する可能性があります。 この問題を回避するには、アーティクルをピアツーピアパブリケーションに追加する前に、レプリケーションモニターを使用して、アーティクルを追加するノード上のログリーダーエージェントを停止します。 アーティクルを追加した後、ログリーダーエージェントを再起動します。  
   
- またはを設定するときに `@del_cmd = 'NONE'` `@ins_cmd = 'NONE'` 、制限された更新が行われたときにコマンドを送信しないことによって、**更新**コマンドの反映が影響を受ける可能性があります。 (制限付き更新とは、サブスクライバーで DELETE/INSERT ペアとしてレプリケートされる、パブリッシャーからの UPDATE ステートメントの種類です)。  
+ またはを設定するときに `@del_cmd = 'NONE'` `@ins_cmd = 'NONE'` 、制限された更新が行われたときにコマンドを送信しないことによって、 **更新** コマンドの反映が影響を受ける可能性があります。 (制限付き更新とは、サブスクライバーで DELETE/INSERT ペアとしてレプリケートされる、パブリッシャーからの UPDATE ステートメントの種類です)。  
   
 ## <a name="default-schema-options"></a>既定のスキーマ オプション  
- 次の表では、 *schema_options*がユーザーによって指定されていない場合に、レプリケーションによって設定される既定値について説明します。この値は、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) によって異なります。  
+ 次の表では、 *schema_options* がユーザーによって指定されていない場合に、レプリケーションによって設定される既定値について説明します。この値は、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列に表示されます) によって異なります。  
   
-|アーティクルの種類|トランザクション レプリケーション|スナップショット レプリケーション|  
+|記事の種類|トランザクション レプリケーション|スナップショット レプリケーション|  
 |------------------|----------------------|------|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func スキーマのみ**|**0x01**|**0x01**|  
 |**インデックス付きビュースキーマのみ**|**0x01**|**0x01**|  
 |**indexed view logbased**|**0x30F3**|**0x3071**|  
 |**インデックス付きビュー底 manualboth**|**0x30F3**|**0x3071**|  
-|**indexed view logbased manualfilter **|**0x30F3**|**0x3071**|  
+|**indexed view logbased manualfilter**|**0x30F3**|**0x3071**|  
 |**indexed view logbased manualview**|**0x30F3**|**0x3071**|  
 |**logbased**|**0x30F3**|**0x3071**|  
 |**logbased manualfilter**|**0x30F3**|**0x3071**|  
@@ -360,46 +360,46 @@ sp_addarticle [ @publication = ] 'publication'
 |**view schema only**|**0x01**|**0x01**|  
   
 > [!NOTE]
->  パブリケーションでキュー更新が有効になっている場合、 *schema_option*値**0x80**が、テーブルに表示される既定値に追加されます。 以外の*schema_option*パブリケーションの既定の Schema_option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は**0x050d3**です。  
+>  パブリケーションでキュー更新が有効になっている場合、 *schema_option* 値 **0x80** が、テーブルに表示される既定値に追加されます。 以外のパブリケーションの既定の Schema_option [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **0x050d3** です。  
   
 ## <a name="valid-schema-options"></a>有効なスキーマ オプション  
- 次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列) に基づいて、 *schema_option*の許容値を示します。  
+ 次の表では、レプリケーションの種類 (上部に表示) とアーティクルの種類 (最初の列) に基づいて、 *schema_option* の許容値を示します。  
   
-|アーティクルの種類|トランザクション レプリケーション|スナップショット レプリケーション|  
+|記事の種類|トランザクション レプリケーション|スナップショット レプリケーション|  
 |------------------|----------------------|------|  
 |**logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**indexed view logbased**|すべてのオプション|すべてのオプション ( **0x02** )|  
-|**indexed view logbased manualfilter **|すべてのオプション|すべてのオプション ( **0x02** )|  
+|**indexed view logbased manualfilter**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**indexed view logbased manualview**|すべてのオプション|すべてのオプション ( **0x02** )|  
 |**インデックス付きビュー底 manualboth**|すべてのオプション|すべてのオプション ( **0x02** )|  
-|**proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**serializable proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**proc スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
-|**func スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および**0x80000000**|  
-|**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および**0x80000000**|  
+|**proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|  
+|**serializable proc exec**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|  
+|**proc スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|  
+|**view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および **0x80000000**|  
+|**func スキーマのみ**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x20**、 **0x2000**、 **0x400000**、 **0x800000**、 **0x2000000**、 **0x800000**、 **0x10000000**、 **0x20000000**、 **0x40000000**、および **0x80000000**|  
+|**インデックス付きビュースキーマのみ**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および **0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x010**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000**、 **0x800000**、 **0x200000**、 **0x800000**、 **0x40000000**、および **0x80000000**|  
   
 > [!NOTE]
->  キュー更新パブリケーションの場合、 *schema_option*値**0x8000**および**0x80**を有効にする必要があります。 サポートされていないパブリケーションの*schema_option*値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**、 **0x4000** 、 **0x8000**です。  
+>  キュー更新パブリケーションの場合、 *schema_option* 値 **0x8000** および **0x80** を有効にする必要があります。 サポートされていないパブリケーションの *schema_option* 値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**、 **0x4000** 、 **0x8000** です。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-addarticle-transact-sql_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_addarticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_addarticle** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
- [sp_articlecolumn &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_articlefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
+ [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_articlefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
- [sp_changearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
- [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

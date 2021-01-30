@@ -6,7 +6,7 @@ ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
 - dm_os_cluster_nodes_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5276063293d8356902f0afcbf741281bedc24f6d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7db044bba8fc69287653fe5806a02d287593176c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184964"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98101532"
 |is_current_owner|bit|1は、このノードがフェールオーバークラスターリソースの現在の所有者であることを示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  フェールオーバー クラスタリングが有効な場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成の一部として指定されているフェールオーバー クラスター内のどのノードでも実行できます。  
   
 > **注:** このビューは fn_virtualservernodes 関数を置き換えます。これは今後のリリースで非推奨とされる予定です。  

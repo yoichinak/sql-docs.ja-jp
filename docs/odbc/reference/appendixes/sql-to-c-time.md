@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], time
 - time data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0516cc970238e9535c340c14282be1640ba78513
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1882befdb1b295ce247cb62601bbec4ba3db5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429554"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203009"
 ---
 # <a name="sql-to-c-time"></a>SQL から C へ: Time
 Time ODBC SQL データ型の識別子は次のとおりです。  
@@ -33,7 +33,7 @@ Time ODBC SQL データ型の識別子は次のとおりです。
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*Bufferlength* > 文字のバイト長<br /><br /> *9*  <= *Bufferlength* <= 文字バイト長<br /><br /> *Bufferlength* < 9|データ<br /><br /> 切り捨てられたデータ [a]<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*Bufferlength* > 文字長<br /><br /> *9*  <= *Bufferlength* <= 文字の長さ<br /><br /> *Bufferlength* < 9|データ<br /><br /> 切り捨てられたデータ [a]<br /><br /> 未定義。|データの長さ (文字数)<br /><br /> データの長さ (文字数)<br /><br /> 未定義。|該当なし<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength* のバイト長|データ<br /><br /> 未定義。|データの長さ (バイト単位)<br /><br /> 未定義。|該当なし<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|なし [b]|データ|6 [d]|該当なし|  
 |SQL_C_TYPE_TIMESTAMP|なし [b]|データ [c]|16 [d]|該当なし|  
   

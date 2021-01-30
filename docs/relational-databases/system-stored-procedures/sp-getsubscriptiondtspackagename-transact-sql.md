@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getsubscriptiondtspackagename
 - sp_getsubscriptiondtspackagename_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03f7e3294a2c8d571031f60eef9f3ab541c9a2d6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4083f39c4715a8d4b88a33b395df7b52c44982d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538883"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183137"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 **'***publication***'** は **sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 **'**_publication_*_'_* は **sysname**,、既定値はありません。  
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の sysname,、既定値は NULL です。  
   
@@ -52,10 +52,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS パッケージの名前です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_getsubscriptiondtspackagename** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_getsubscriptiondtspackagename**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_getsubscriptiondtspackagename** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
   

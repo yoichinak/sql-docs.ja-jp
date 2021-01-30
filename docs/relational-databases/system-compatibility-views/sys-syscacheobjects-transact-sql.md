@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
 - sys.syscacheobjects
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4b33b97a5b3753d63e1df4759d26970cf6359ee2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4e3374c67917f3468bb9b31d73acd47544d07405
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097813"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180726"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98097813"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|バケット ID です。 値は 0 ～ディレクトリ サイズ -1 の範囲を示します。 ディレクトリサイズは、ハッシュテーブルのサイズです。|  
 |**cacheobjtype**|**nvarchar(17)**|キャッシュ内のオブジェクトの種類です。<br /><br /> コンパイル済みプラン<br /><br /> 実行プラン<br /><br /> 解析ツリー<br /><br /> カーソル<br /><br /> 拡張ストアド プロシージャ|  
-|**objtype**|**nvarchar(8)**|オブジェクトの種類:<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホッククエリ ( [!INCLUDE[tsql](../../includes/tsql-md.md)] リモートプロシージャコールではなく、 **sqlcmd** ユーティリティまたは **osql** ユーティリティから言語イベントとして送信されます)<br /><br /> ReplProc (レプリケーションプロシージャ)<br /><br /> トリガー<br /><br /> 表示<br /><br /> Default<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> ○<br /><br /> ルール|  
+|**objtype**|**nvarchar(8)**|オブジェクトの種類:<br /><br /> ストアド プロシージャ<br /><br /> 準備済みステートメント<br /><br /> アドホッククエリ ( [!INCLUDE[tsql](../../includes/tsql-md.md)] リモートプロシージャコールではなく、 **sqlcmd** ユーティリティまたは **osql** ユーティリティから言語イベントとして送信されます)<br /><br /> ReplProc (レプリケーションプロシージャ)<br /><br /> トリガー<br /><br /> 表示<br /><br /> 既定<br /><br /> ユーザー テーブル<br /><br /> システム テーブル<br /><br /> ○<br /><br /> ルール|  
 |**objid**|**int**|キャッシュ内のオブジェクトを検索するために使用される主キーの1つ。 これは、データベースオブジェクト (プロシージャ、ビュー、トリガーなど) の **sysobjects** に格納されているオブジェクト ID です。 アドホックまたは準備された SQL などのキャッシュオブジェクトの場合、 **objid** は内部で生成された値です。|  
 |**dbid**|**smallint**|キャッシュオブジェクトがコンパイルされたデータベース ID。|  
 |**dbidexec**|**smallint**|クエリ実行元となるデータベース ID です。<br /><br /> ほとんどのオブジェクトでは、 **dbidexec** の値は **dbid** と同じです。<br /><br /> システムビューの場合、 **dbidexec** は、クエリの実行元のデータベース ID です。<br /><br /> アドホッククエリの場合、 **dbidexec** は0です。 つまり、 **dbidexec** の値は **dbid** と同じになります。|  

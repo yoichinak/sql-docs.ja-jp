@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_denylogin_TSQL
 - sp_denylogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9133a6ee523c27837da0209c57e620a13187bdd1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7006aaa4a8c7ddf0603264d1c241d09a8e327f5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546194"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178100"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_denylogin [ @loginame = ] 'login'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- 指定した Windows ユーザーまたは Windows グループにマップされているサーバーレベルのプリンシパルに対する CONNECT SQL 権限を拒否**sp_denylogin**ます。 サーバープリンシパルが存在しない場合は、作成されます。 新しいプリンシパルは、 [server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログビューに表示されます。  
+ 指定した Windows ユーザーまたは Windows グループにマップされているサーバーレベルのプリンシパルに対する CONNECT SQL 権限を拒否 **sp_denylogin** ます。 サーバープリンシパルが存在しない場合は、作成されます。 新しいプリンシパルは、 [sys.server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログビューに表示されます。  
   
  **sp_denylogin** は、ユーザー定義のトランザクション内では実行できません。  
   

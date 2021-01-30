@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
 - sysmail_help_profile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc055632d6d5e924a21fa4204d29dcfa31aaa8b0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 865e871463d8ce15ef08db2d6431634e6e6bc08c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541014"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181950"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,10 +56,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|プロファイルのプロファイル名。|  
 |**description**|**nvarchar (256)**|プロファイルの説明。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロファイル名またはプロファイル id が指定されている場合、 **sysmail_help_profile_sp** はそのプロファイルに関する情報を返します。 それ以外の場合、 **sysmail_help_profile_sp** は、インスタンス内のすべてのプロファイルに関する情報を返し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
- ストアドプロシージャ **sysmail_help_profile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
+ ストアドプロシージャ **sysmail_help_profile_sp** は **msdb** データベースにあり、 **dbo** スキーマが所有しています。 現在のデータベースが **msdb** でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  

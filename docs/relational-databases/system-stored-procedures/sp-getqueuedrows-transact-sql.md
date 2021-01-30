@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getqueuedrows_TSQL
 - sp_getqueuedrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad904065a8270266e7010ff49889d04a8625296f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183148"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,16 +56,16 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |-----------------|---------------|-----------------|  
 |**操作**|**nvarchar (10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
 |**Tranid**|**nvarchar (70)**|コマンドが実行されたトランザクション ID。|  
-|**table column1...n**||*Tablename*で指定されたテーブルの各列の値。|  
+|**table column1...n**||*Tablename* で指定されたテーブルの各列の値。|  
 |**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータへの変更を追跡し、パブリッシャーで競合検出を実行するために使用されます。 この列は、自動的にテーブルに追加されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_getqueuedrows** は、キュー更新に参加しているサブスクライバーで使用されます。  
   
  **sp_getqueuedrows** は、キュー更新に参加しているサブスクリプションデータベース上の特定のテーブルの行を検索しますが、現在はキューリーダーエージェントによって解決されていません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sp_getqueuedrows** には、 *tablename*で指定されたテーブルに対する SELECT 権限が必要です。  
+ **sp_getqueuedrows** には、 *tablename* で指定されたテーブルに対する SELECT 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

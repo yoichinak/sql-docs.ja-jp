@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bcd150ff810f5a4a16deb09a7ea72956ccd681
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474510"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181362"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
+`[ @database = ] 'database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname** であり、既定値はありません。  
   
 `[ @backup_directory = ] 'backup_directory'` プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
@@ -71,11 +71,11 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 `[ @monitor_server_password = ] 'monitor_server_password'` 監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
   
-`[ @backup_threshold = ] 'backup_threshold'`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
+`[ @backup_threshold = ] 'backup_threshold'`*Threshold_alert* エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
   
 `[ @threshold_alert = ] 'threshold_alert'` バックアップのしきい値を超えたときに発生するアラート。 *threshold_alert* は **int** であり、NULL にすることはできません。  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold* を超えたときにアラートを生成するかどうかを指定します。  
   
  1 = 有効。  
   
@@ -83,7 +83,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* は **ビット** であり、NULL にすることはできません。  
   
-`[ @history_retention_period = ] 'history_retention_period'` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int**です。値が指定されていない場合は、14420が使用されます。  
+`[ @history_retention_period = ] 'history_retention_period'` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int** です。値が指定されていない場合は、14420が使用されます。  
   
 `[ @backup_compression = ] backup_compression_option` ログ配布構成で [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)を使用するかどうかを指定します。 このパラメーターは [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (またはそれ以降のバージョン) でのみサポートされます。  
   
@@ -130,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscriptionerrors_TSQL
 - sp_helpsubscriptionerrors
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68349a6d696720874be7a72e04d8dd0f48a3472
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ccf568629cc56f3ce5187fe9e4739192caf53722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192883"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,15 +42,15 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname** であり、既定値はありません。  
   
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* は **sysname**,、既定値はありません。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname**であり、既定値はありません。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname** であり、既定値はありません。  
   
 ## <a name="result-set"></a>結果セット  
   
@@ -59,10 +59,10 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**id**|**int**|エラーの ID。|  
 |**time**|**datetime**|エラーが発生した時刻。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**source_type_id **|**int**|エラーソースの種類 ID。|  
+|**source_type_id**|**int**|エラーソースの種類 ID。|  
 |**source_name**|**nvarchar (100)**|エラーソースの名前。|  
 |**error_code**|**sysname**|エラー コード。|  
-|**error_text **|**ntext**|エラー メッセージ。|  
+|**error_text**|**ntext**|エラー メッセージ。|  
 |**xact_seqno**|**varbinary(16)**|失敗した実行バッチの先頭のトランザクション ログ シーケンス番号。 ディストリビューションエージェントでのみ使用されます。これは、失敗した実行バッチ内の最初のトランザクションのトランザクションログシーケンス番号です。|  
 |**command_id**|**int**|失敗した実行バッチのコマンド ID。 ディストリビューションエージェントでのみ使用されます。これは、失敗した実行バッチ内の最初のコマンドのコマンド ID です。|  
 |**session_id**|**int**|エラーが発生したエージェントセッションの ID。|  
@@ -70,11 +70,11 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_helpsubscriptionerrors** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_helpsubscriptionerrors**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_helpsubscriptionerrors** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
