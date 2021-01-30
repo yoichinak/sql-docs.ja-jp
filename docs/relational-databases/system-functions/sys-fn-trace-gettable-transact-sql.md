@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_gettable
 - fn_trace_gettable_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1f1593e1d12621b5dbe858b0f012322f447111e4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ba7550423c7d477a8a85d75b73294fbb97fbde6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101306"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208081"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  読み取るロールオーバーファイルの数を指定します。 この数値には、 *filename* で指定された初期ファイルが含まれます。 *number_files* は **int** です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *Number_files* が **default** として指定されている場合、 **fn_trace_gettable** はトレースの最後に達するまですべてのロールオーバーファイルを読み取ります。 **fn_trace_gettable** は、指定されたトレースに対して有効なすべての列を含むテーブルを返します。 詳細については、「 [sp_trace_setevent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)」を参照してください。  
   
  Fn_trace_gettable 関数はロールオーバーファイルを読み込まないことに注意してください (このオプションが *number_files* 引数を使用して指定されている場合)。元のトレースファイル名の末尾には、アンダースコアと数値が使用されます。 (これは、ファイルのロールオーバー時に自動的に追加されるアンダースコアと数字には適用されません)。回避策として、トレースファイルの名前を変更して、元のファイル名のアンダースコアを削除することができます。 たとえば、元のファイルに **Trace_Oct_5 .trc** という名前が付けられていて、ロールオーバーファイルに **Trace_Oct_5_1 .trc** という名前が付けられている場合は、ファイルの名前を **TraceOct5** と **TraceOct5_1** に変更できます。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepublication
 - sp_dropmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c787c7c2503f9182b704e83a04664d7d377cef4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35024724255eea714de42f8fb3a974188730fcef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538974"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208217"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` 削除するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。 **All**を使用すると、既存のすべてのマージパブリケーションと、それらに関連付けられているスナップショットエージェントジョブが削除されます。 *パブリケーション*に特定の値を指定すると、そのパブリケーションとそれに関連付けられたスナップショットエージェントジョブのみが削除されます。  
+`[ @publication = ] 'publication'` 削除するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。 **All** を使用すると、既存のすべてのマージパブリケーションと、それらに関連付けられているスナップショットエージェントジョブが削除されます。 *パブリケーション* に特定の値を指定すると、そのパブリケーションとそれに関連付けられたスナップショットエージェントジョブのみが削除されます。  
   
-`[ @ignore_distributor = ] ignore_distributor` ディストリビューターでクリーンアップタスクを実行せずにパブリケーションを削除する場合に使用します。 *ignore_distributor* は **ビット**,、既定値は **0**です。 このパラメーターは、ディストリビューターを再インストールするときにも使用されます。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターでクリーンアップタスクを実行せずにパブリケーションを削除する場合に使用します。 *ignore_distributor* は **ビット**,、既定値は **0** です。 このパラメーターは、ディストリビューターを再インストールするときにも使用されます。  
   
-`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み* は **ビット**,、既定値は **0**です。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み* は **ビット**,、既定値は **0** です。  
   
 `[ @ignore_merge_metadata = ] ignore_merge_metadata` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergepublication** は、マージレプリケーションで使用します。  
   
  **sp_dropmergepublication** は、パブリケーションに関連付けられているすべてのアーティクルを再帰的に削除してから、パブリケーション自体を削除します。 パブリケーションに1つ以上のサブスクリプションがある場合は、パブリケーションを削除できません。 サブスクリプションを削除する方法の詳細については、「 [delete a Push subscription](../../relational-databases/replication/delete-a-push-subscription.md) 」および「 [Delete a Pull subscription](../../relational-databases/replication/delete-a-pull-subscription.md)」を参照してください。  
@@ -63,7 +63,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropmergepublication**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_dropmergepublication** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーションを削除する](../../relational-databases/replication/publish/delete-a-publication.md)   

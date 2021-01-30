@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addscriptexec
 - sp_addscriptexec_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6349479d4f3ce3097771516640b0eec258e32f5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536763"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207162"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +51,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = エージェントはスクリプトを続行し、エラーを無視します。  
   
-`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname** で、既定値は NULL です。  
   
 > [!NOTE]  
->  パブリッシャーからパブリッシュする場合は、*パブリッシャー*を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  パブリッシャーからパブリッシュする場合は、*パブリッシャー* を使用しないでください [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,11 +64,11 @@ sp_addscriptexec [ @publication = ] publication
   
  **sp_addscriptexec** は、スナップショットレプリケーションには使用されません。  
   
- **Sp_addscriptexec**を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスアカウントに、スナップショットの場所に対する読み取り権限と書き込み権限、およびスクリプトが格納されている場所に対する読み取り権限が必要です。  
+ **Sp_addscriptexec** を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスアカウントに、スナップショットの場所に対する読み取り権限と書き込み権限、およびスクリプトが格納されている場所に対する読み取り権限が必要です。  
   
  [Sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)は、サブスクライバーでスクリプトを実行するために使用されます。スクリプトは、サブスクリプションデータベースに接続するときに、ディストリビューションエージェントまたはマージエージェントによって使用されるセキュリティコンテキストで実行されます。 以前のバージョンのでエージェントを実行すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [sqlcmd](../../tools/sqlcmd-utility.md)ではなく[osql ユーティリティ](../../tools/osql-utility.md)が使用されます。  
   
- **sp_addscriptexec** は、スクリプトをサブスクライバーに適用する場合に役立ちます。 [sqlcmd](../../tools/sqlcmd-utility.md) を使用して、スクリプトの内容をサブスクライバーに適用します。 ただし、サブスクライバー構成は異なることがあるので、パブリッシャーにポストする前にテストしたスクリプトでも、サブスクライバーでエラーが生じる可能性があります。 *skiperror* は、ディストリビューションエージェントまたはマージエージェントエラーを無視して続行する機能を提供します。 [Sqlcmd](../../tools/sqlcmd-utility.md)を使用して、 **sp_addscriptexec**を実行する前にスクリプトをテストします。  
+ **sp_addscriptexec** は、スクリプトをサブスクライバーに適用する場合に役立ちます。 [sqlcmd](../../tools/sqlcmd-utility.md) を使用して、スクリプトの内容をサブスクライバーに適用します。 ただし、サブスクライバー構成は異なることがあるので、パブリッシャーにポストする前にテストしたスクリプトでも、サブスクライバーでエラーが生じる可能性があります。 *skiperror* は、ディストリビューションエージェントまたはマージエージェントエラーを無視して続行する機能を提供します。 [Sqlcmd](../../tools/sqlcmd-utility.md)を使用して、 **sp_addscriptexec** を実行する前にスクリプトをテストします。  
   
 > [!NOTE]  
 >  スキップされたエラーは、参照のためにエージェント履歴に引き続き記録されます。  
@@ -76,7 +76,7 @@ sp_addscriptexec [ @publication = ] publication
  スナップショット配信に FTP を使用してパブリケーションのスクリプトファイルをポストするために **sp_addscriptexec** を使用することは、サブスクライバーに対してのみサポートされてい [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_addscriptexec**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_addscriptexec** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [同期中にスクリプトを実行 &#40;レプリケーション Transact-sql プログラミング&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   

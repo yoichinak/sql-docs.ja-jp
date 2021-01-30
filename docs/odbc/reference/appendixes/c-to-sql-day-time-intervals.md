@@ -1,13 +1,13 @@
 ---
 description: 'C から SQL へ: 日付と時刻の間隔'
-title: 'C から SQL へ: 日付と時刻の間隔 |Microsoft Docs'
+title: 'C から SQL へ: Day-Time Interval |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - day-time intervals [ODBC]
 - data conversions from C to SQL types [ODBC], day-time intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e207a7533a0f09360925f6123e8797bdabecc21b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499995"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207828"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C から SQL へ: 日付と時刻の間隔
 日付と時刻の間隔の ODBC C データ型の識別子は次のとおりです。  
@@ -61,7 +61,7 @@ ms.locfileid: "88499995"
   
  間隔 C 型の既定の変換は、対応する日時間隔の SQL 型になります。  
   
- データを interval C データ型から変換する場合、ドライバーは長さとインジケーターの値を無視し、データバッファーのサイズが interval C データ型のサイズであることを前提としています。 長さ/インジケーターの値は、 **Sqlputdata**の*StrLen_or_Ind*引数と、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata**の*DataPtr*引数と**SQLBindParameter**の*parametervalueptr*引数を使用して指定します。  
+ データを interval C データ型から変換する場合、ドライバーは長さとインジケーターの値を無視し、データバッファーのサイズが interval C データ型のサイズであることを前提としています。 長さ/インジケーターの値は、 **Sqlputdata** の *StrLen_or_Ind* 引数と、 **SQLBindParameter** の *StrLen_or_IndPtr* 引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata** の *DataPtr* 引数と **SQLBindParameter** の *parametervalueptr* 引数を使用して指定します。  
   
  次の例では、SQL_INTERVAL_STRUCT 構造に格納されている期間 C データをデータベース列に送信する方法を示します。 Interval 構造体には DAY_TO_SECOND の間隔が含まれます。SQL_INTERVAL_DAY_TO_MINUTE 型のデータベース列に格納されます。  
   

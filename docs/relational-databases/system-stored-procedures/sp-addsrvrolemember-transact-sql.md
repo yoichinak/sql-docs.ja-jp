@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsrvrolemember
 - sp_addsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec0b94d4423574729d4c92d869a73d04673edac8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a8de69bfd8e0fee825bd0e3fb914acddee0cb419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536748"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207087"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  固定サーバーロールに追加するログインの名前を指定します。 *login* は **sysname**,、既定値はありません。 *ログインに* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたは Windows ログインを指定できます。 Windows ログインに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセスが許可されていない場合は、アクセスが自動的に許可されます。  
   
  [ @rolename **=** ] **'**_role_**'**  
- ログインを追加する固定サーバーロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
+ ログインを追加する固定サーバーロールの名前を指定します。 *role* の部分は **sysname** で、既定値は NULL です。次のいずれかの値を指定する必要があります。  
   
 -   [sysadmin]  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a26b25a4c6484363ede0435b58febf894f13481f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d24a6cae27d0baba9b88549e99fc7e477539f57d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474604"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208014"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,17 +48,17 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>引数  
 `[ @plan_name = ] 'plan_name'` 追加するメンテナンスプランの名前を指定します。 *plan_name* は **varchar (128)** です。  
   
- ** @plan_id = '** *plan_id* **'**  
- メンテナンスプランの ID を指定します。 *plan_id* は **uniqueidentifier**です。  
+ **@plan_id = '** *plan_id* **'**  
+ メンテナンスプランの ID を指定します。 *plan_id* は **uniqueidentifier** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>解説  
- **sp_add_maintenance_plan** は、 **msdb** データベースから実行する必要があり、新しい (空の) メンテナンスプランを作成します。 1つ以上のデータベースを追加し、ジョブまたはジョブに関連付けるには、 **sp_add_maintenance_plan_db** を実行し、 **sp_add_maintenance_plan_job**します。  
+ **sp_add_maintenance_plan** は、 **msdb** データベースから実行する必要があり、新しい (空の) メンテナンスプランを作成します。 1つ以上のデータベースを追加し、ジョブまたはジョブに関連付けるには、 **sp_add_maintenance_plan_db** を実行し、 **sp_add_maintenance_plan_job** します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_add_maintenance_plan**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_add_maintenance_plan** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
  Myplan というメンテナンス プランを作成します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464666"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206703"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname**であり、既定値はありません。  
+`[ @secondary_database = ] 'secondary_database'` セカンダリデータベースの名前を指定します。 *secondary_database* は **sysname** であり、既定値はありません。  
   
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server* は **sysname** であり、NULL にすることはできません。  
   
-`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname** であり、既定値はありません。  
   
 `[ @restore_delay = ] 'restore_delay'` 指定されたバックアップファイルを復元する前に、セカンダリサーバーが待機する時間 (分単位)。 *restore_delay* は **int** であり、NULL にすることはできません。 既定値は 0 です。  
   
@@ -84,7 +84,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @threshold_alert = ] 'threshold_alert'` バックアップのしきい値を超えたときに発生する警告を指定します。 *threshold_alert* は **int**,、既定値は14420です。  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。 値 1 (既定値) では、警告が発生します。 *threshold_alert_enabled* は **ビット**です。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`*Backup_threshold* を超えたときにアラートを生成するかどうかを指定します。 値 1 (既定値) では、警告が発生します。 *threshold_alert_enabled* は **ビット** です。  
   
 `[ @history_retention_period = ] 'history_retention_period'` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int**,、既定値は NULL です。 値が指定されていない場合は、14420が使用されます。  
   
@@ -97,7 +97,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="remarks"></a>解説  
  **sp_add_log_shipping_secondary_database** は、セカンダリサーバーの **master** データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  セカンダリサーバー上のプライマリログ配布データベース情報を初期化するには、このストアドプロシージャの前に**sp_add_log_shipping_secondary_primary**を呼び出す必要があります。  
+1.  セカンダリサーバー上のプライマリログ配布データベース情報を初期化するには、このストアドプロシージャの前に **sp_add_log_shipping_secondary_primary** を呼び出す必要があります。  
   
 2.  指定された引数を使用して **log_shipping_secondary_databases** にセカンダリデータベースのエントリを追加します。  
   

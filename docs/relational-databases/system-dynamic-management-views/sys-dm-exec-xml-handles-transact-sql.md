@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_xml_handles
 - dm_exec_xml_handles_TSQL
@@ -21,12 +21,12 @@ ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0433126f43a14aa12521c0a65cd1b4aca8441ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e8529f7626ffa25d86cbb73c704198082e32bcf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482663"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208056"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -63,7 +63,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**row_count**|**bigint**|このドキュメントハンドルに対する以前のすべての OPENXML 呼び出しによって返された行の数。|  
 |**dormant_duration_ms**|**bigint**|最後の OPENXML 呼び出しからのミリ秒。 OPENXML が呼び出されていない場合、は **sp_xml_preparedocumen** t 呼び出しからのミリ秒を返します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Sp_xml_preparedocument** の呼び出しを実行した sql テキストを取得するために使用される **sql_handles** の有効期間は、クエリの実行に使用されるキャッシュされたプランになります。 クエリ テキストがキャッシュ内で使用できない場合は、関数の結果に示された情報を使用してデータを取得することはできません。 これは、多数の大きなバッチを実行している場合に発生する可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  

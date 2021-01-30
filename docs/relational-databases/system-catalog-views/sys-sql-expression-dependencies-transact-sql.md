@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sql_expression_dependencies
 - sql_expression_dependencies_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb846962b3790d171cd2eea7ee5cdcfebba3f89b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 34c88c909239e7f9d9fcb12e5b30677708d9cfbc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101797"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210329"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "98101797"
 |is_caller_dependent|**bit**|参照先エンティティのスキーマ バインドが実行時に行われるため、エンティティ ID の解決が呼び出し元のスキーマに依存することを示します。 このエラーは、参照先エンティティがストアドプロシージャ、拡張ストアドプロシージャ、または EXECUTE ステートメントで呼び出された非スキーマバインドユーザー定義関数である場合に発生します。<br /><br /> 1 = 参照先エンティティは呼び出し元に依存し、実行時に解決されます。 この場合、referenced_id は NULL です。<br /><br /> 0 = 参照先エンティティ ID は、呼び出し元に依存しません。<br /><br /> スキーマ バインド参照のほか、スキーマ名を明示的に指定するデータベース間参照やサーバー間参照の場合は常に 0 になります。 たとえば、`EXEC MyDatabase.MySchema.MyProc` 形式のエンティティ参照は呼び出し元に依存しません。 ただし、形式の参照 `EXEC MyDatabase..MyProc` は呼び出し元に依存します。|  
 |is_ambiguous|**bit**|参照があいまいであり、実行時にユーザー定義関数、ユーザー定義型 (UDT)、または **xml** 型の列への xquery 参照に解決できることを示します。<br /><br /> たとえば、ストアドプロシージャでステートメントが定義されているとし `SELECT Sales.GetOrder() FROM Sales.MySales` ます。 `Sales.GetOrder()` が `Sales` スキーマ内のユーザー定義関数なのか、`Sales` という名前のメソッドを持つ UDT 型の `GetOrder()` という名前の列なのかは、ストアド プロシージャが実行されるまで不明です。<br /><br /> 1 = 参照があいまいです。<br /><br /> 0 = 参照は明確です。または、ビューが呼び出されたときにエンティティを正常にバインドできます。<br /><br /> スキーマバインド参照の場合は常に0です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の表に、依存関係情報が作成および管理されるエンティティの種類を示します。 依存関係情報は、ルール、既定値、一時テーブル、一時ストアドプロシージャ、またはシステムオブジェクトに対して作成または管理されません。  
 
 > [!NOTE]

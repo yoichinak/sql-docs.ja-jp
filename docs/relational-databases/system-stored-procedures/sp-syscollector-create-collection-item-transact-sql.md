@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538535"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207036"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>引数  
  [ @collection_set_id =] *collection_set_id*  
- コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int**です。  
+ コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** です。  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
  この項目に使用するコレクター型を識別する GUID を指定します *collector_type_uid* 既定値が指定されていない **uniqueidentifier** です。 コレクター型の一覧については、syscollector_collector_types システム ビューにクエリを実行します。  
@@ -64,7 +64,7 @@ sp_syscollector_create_collection_item
  コレクションセットが非キャッシュモードに設定されている場合、このモードではコレクションセットに指定されたスケジュールでデータ収集とアップロードの両方が行われるため、頻度は無視されます。 コレクションセットのコレクションモードを表示するには、 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) システムビューに対してクエリを実行します。  
   
  [ @parameters =] '*parameters*'  
- コレクター型の入力パラメーターを指定します。 *パラメーター* は **xml** で、既定値は NULL です。 *パラメーター*スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
+ コレクター型の入力パラメーターを指定します。 *パラメーター* は **xml** で、既定値は NULL です。 *パラメーター* スキーマは、コレクター型のパラメータースキーマと一致している必要があります。  
   
  [ @collection_item_id =] *collection_item_id*  
  コレクション セット アイテムを識別する一意な識別子を指定します。 *collection_item_id* は **int** であり、出力があります。  
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_item は、msdb システム データベースのコンテキストで実行する必要があります。  
   
  コレクションアイテムを追加するコレクションセットは、コレクションアイテムを作成する前に停止する必要があります。 コレクションアイテムをシステムコレクションセットに追加することはできません。  

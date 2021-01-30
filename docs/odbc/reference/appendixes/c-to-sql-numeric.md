@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], converting
 - data conversions from C to SQL types [ODBC], numeric
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 111d2bedf6b988255a569587fd766406b6b4176a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b825725ada434a72e14f9631504ee343951d6a4a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207813"
 ---
 # <a name="c-to-sql-numeric"></a>C から SQL へ: 数値
 数値の ODBC C データ型の識別子は次のとおりです。  
@@ -68,4 +68,4 @@ ms.locfileid: "88421516"
   
  [b] "n/a" の場合、ドライバーは必要に応じて SQL_SUCCESS_WITH_INFO を返し、小数部が切り捨てられたときに01S07 を返すことができます。  
   
- 数値の C データ型からデータを変換する場合、ドライバーは長さ/インジケーターの値を無視し、データバッファーのサイズが数値の C データ型のサイズであることを前提としています。 長さ/インジケーターの値は、 **Sqlputdata**の*StrLen_or_Ind*引数と、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata**の*DataPtr*引数と**SQLBindParameter**の*parametervalueptr*引数を使用して指定します。
+ 数値の C データ型からデータを変換する場合、ドライバーは長さ/インジケーターの値を無視し、データバッファーのサイズが数値の C データ型のサイズであることを前提としています。 長さ/インジケーターの値は、 **Sqlputdata** の *StrLen_or_Ind* 引数と、 **SQLBindParameter** の *StrLen_or_IndPtr* 引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata** の *DataPtr* 引数と **SQLBindParameter** の *parametervalueptr* 引数を使用して指定します。

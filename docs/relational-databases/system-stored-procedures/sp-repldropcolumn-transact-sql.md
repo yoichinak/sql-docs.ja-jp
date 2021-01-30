@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
 - sp_repldropcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df9b2be3d6253bd3ba225d4cc444e705678109f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6c5fdabf724c284e8a75244269321b92c81b46ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206429"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 -   カスタムストアドプロシージャが自動的に再生成された場合、 *schema_change_script* を使用してこれらのカスタムストアドプロシージャを削除し、新しいスキーマをサポートするユーザー定義のカスタムストアドプロシージャに置き換えることができます。  
   
--   カスタムストアドプロシージャが自動的に再生成されない場合は、 *schema_change_script*を使用してこれらのストアドプロシージャを再生成するか、ユーザー定義のカスタムストアドプロシージャを作成することができます。  
+-   カスタムストアドプロシージャが自動的に再生成されない場合は、 *schema_change_script* を使用してこれらのストアドプロシージャを再生成するか、ユーザー定義のカスタムストアドプロシージャを作成することができます。  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot* はビットであり、既定値は1です。  

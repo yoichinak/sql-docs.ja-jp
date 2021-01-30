@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f09a5638e55ee6bd8e0dfd6e07defc92b0ed365d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208009"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @alert_name = ] 'alert'` この通知のアラート。 *alert* は **sysname**で、既定値はありません。  
+`[ @alert_name = ] 'alert'` この通知のアラート。 *alert* は **sysname** で、既定値はありません。  
   
 `[ @operator_name = ] 'operator'` 警告が発生したときに通知されるオペレーター。 *operator* は **sysname**,、既定値はありません。  
   
@@ -69,7 +69,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  電子メールのメッセージやポケットベルによる通知に失敗した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス エラー ログに失敗がレポートされます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_add_notification**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_add_notification** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
  次の例では、指定された警告 (`Test Alert`) に対応する電子メールでの通知を追加します。  

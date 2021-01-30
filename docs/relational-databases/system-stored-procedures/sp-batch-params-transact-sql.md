@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_batch_params
 - sp_batch_params_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 201541b36ff441fc6b2942b546105f256cb457dd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e7ba37a2e9559cd48da23c5ed7cb7758b0405e09
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753504"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206614"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,18 +53,18 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|このフィールドは、次のいずれかの値を返します。<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> この列は常に 0 です。|  
 |**DATA_TYPE**|**smallint**|パラメーターのデータ型 (ODBC データ型の整数コード)。 このデータ型を ISO 型にマップできない場合、値は NULL になります。 ネイティブデータ型の名前が **TYPE_NAME** 列に返されます。 この値は常に NULL です。|  
 |**TYPE_NAME**|**sysname**|基になる DBMS によって表された、データ型を表す文字列です。 この値は NULL です。|  
-|**PRECISION**|**int**|有効桁数。 **有効桁数**列の戻り値は、10進数値です。|  
+|**PRECISION**|**int**|有効桁数。 **有効桁数** 列の戻り値は、10進数値です。|  
 |**LENGTH**|**int**|データの転送サイズです。 この値は NULL です。|  
 |**段階**|**smallint**|小数点の右側の桁数。 この値は NULL です。|  
 |**RADIX**|**smallint**|数値型の基数です。 この値は NULL です。|  
 |**NULLABLE**|**smallint**|Null 値の許容属性を指定します。<br /><br /> 1 = NULL 値を許容するパラメーターのデータ型が作成されます。<br /><br /> 0 = Null 値は使用できません。<br /><br /> この値は NULL です。|  
 |**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記述子の type フィールドに表示されるシステムデータ型の値。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。 この値は NULL です。|  
-|**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE**の値が SQL_DATETIME または SQL_INTERVAL の場合は、 **DATETIME**または ISO **interval**サブコード。 **datetime** および **ISO interval** 以外のデータ型の場合、この列は NULL です。 この値は NULL です。|  
-|**CHAR_OCTET_LENGTH**|**int**|**文字**または**バイナリ**データ型パラメーターの最大長 (バイト単位)。 他のすべてのデータ型については、この列は NULL を返します。 この値は常に NULL です。|  
+|**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** の値が SQL_DATETIME または SQL_INTERVAL の場合は、 **DATETIME** または ISO **interval** サブコード。 **datetime** および **ISO interval** 以外のデータ型の場合、この列は NULL です。 この値は NULL です。|  
+|**CHAR_OCTET_LENGTH**|**int**|**文字** または **バイナリ** データ型パラメーターの最大長 (バイト単位)。 他のすべてのデータ型については、この列は NULL を返します。 この値は常に NULL です。|  
 |**ORDINAL_POSITION**|**int**|バッチ内のパラメーターの序数位置。 パラメーター名が複数回繰り返される場合は、この列には最初のオカレンスの序数が入ります。 最初のパラメーターには序数 1 が設定されます。 この列は常に値が返されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_batch_params**を実行する権限は、 **public**に与えられます。  
+ **Sp_batch_params** を実行する権限は、 **public** に与えられます。  
   
 ## <a name="examples"></a>例  
  この例では、クエリが `sp_batch_params` に渡されています。 結果セットには、埋め込みパラメーター値の一覧が列挙されます。  

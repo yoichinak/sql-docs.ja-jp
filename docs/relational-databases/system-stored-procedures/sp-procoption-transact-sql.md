@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_procoption
 - sp_procoption_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 155600ed4a41d4ad8ee7f404426bf5eed0d77ba8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed9d1056a751633f208a38cbb03f6a0d50057c88
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535045"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205115"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +44,14 @@ sp_procoption [ @ProcName = ] 'procedure'
 ## <a name="arguments"></a>引数  
 `[ @ProcName = ] 'procedure'` オプションを設定するプロシージャの名前を指定します。 *プロシージャ* は **nvarchar (776)**,、既定値はありません。  
   
-`[ @OptionName = ] 'option'` 設定するオプションの名前を指定します。 *オプション*の値は**startup**だけです。  
+`[ @OptionName = ] 'option'` 設定するオプションの名前を指定します。 *オプション* の値は **startup** だけです。  
   
 `[ @OptionValue = ] 'value'` オプションを on (**true** または **on**) に設定するか、オフ (**false** または **off**) にするかを指定します。 *値* は **varchar (12)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  スタートアッププロシージャは、 **master** データベースに存在する必要があり、入力パラメーターまたは出力パラメーターを含めることはできません。 ストアドプロシージャの実行は、すべてのデータベースが復旧され、"復旧が完了しました" というメッセージが起動時にログに記録されると開始されます。  
   
 ## <a name="permissions"></a>アクセス許可  

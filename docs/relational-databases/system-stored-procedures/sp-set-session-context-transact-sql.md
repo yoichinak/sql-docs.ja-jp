@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_session_context
 - sp_set_session_context_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2145297325aa71aad6a235e93254bbc2857d8afc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4ad470228567b26a618800ec004a2a45c5f5440e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468293"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209288"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-sql)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,7 +55,7 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは、セッションのコンテキストを設定できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  他のストアドプロシージャと同様に、パラメーターとして渡すことができるのは、リテラルと変数 (式または関数呼び出しではない) だけです。  
   
  セッションコンテキストの合計サイズは 1 MB に制限されています。 この制限を超える値を設定すると、ステートメントは失敗します。 [Transact-sql&#41;&#40;sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)で、全体的なメモリ使用量を監視できます。  

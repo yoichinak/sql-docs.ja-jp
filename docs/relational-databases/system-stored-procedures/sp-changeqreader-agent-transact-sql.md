@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeqreader_agent_TSQL
 - sp_changeqreader_agent
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08e7e0571cab57d50da670495af95709482899a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83be24af54593c4630284e07cf9464899d2b5cfd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543696"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207058"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
 `[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname**,、既定値は NULL です。  
   
-`[ @frompublisher = ] frompublisher` プロシージャがパブリッシャーで実行されているかどうかを示します。 *frompublisher* の部分は bit で、既定値は **0**です。 値 **1** は、パブリケーションデータベースのパブリッシャーからプロシージャが実行されていることを意味します。  
+`[ @frompublisher = ] frompublisher` プロシージャがパブリッシャーで実行されているかどうかを示します。 *frompublisher* の部分は bit で、既定値は **0** です。 値 **1** は、パブリケーションデータベースのパブリッシャーからプロシージャが実行されていることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changeqreader_agent** は、トランザクションレプリケーションで使用します。  
   
  **sp_changeqreader_agent** は、キューリーダーエージェントを実行する Windows アカウントを変更するために使用されます。 既存の Windows ログインのパスワードを変更することも、新しい Windows ログインとパスワードを指定することもできます。  
@@ -57,7 +57,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_changeqreader_agent**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_changeqreader_agent** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466384"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208646"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成および並べ替え操作での文字フィールドの照合順序を指定します。  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  照合順序を指定します。 次の表では、使用可能な照合順序のオプションについて説明します。  
   
-|オプション|Language|  
+|Options|言語|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
 |GENERAL|英語、フランス語、ドイツ語、スペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
@@ -47,7 +47,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|一意の重み|  
   
 > [!NOTE]  
->  スペイン語のオプションを指定すると、 *ch*は*c*と*d*の間を並べ替える1文字で、 *l*と*m*の間*で並べ替えら*れます。  
+>  スペイン語のオプションを指定すると、 *ch* は *c* と *d* の間を並べ替える1文字で、 *l* と *m* の間 *で並べ替えら* れます。  
   
  照合順序のオプションをリテラル文字列として指定する場合は、必ずオプションを引用符で囲みます。  
   
@@ -69,10 +69,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  COLLATE を設定すると、サポートされている言語のいずれかで、アクセントが付いた文字を含むテーブルを並べ替えることができます。 [部単位で印刷] の設定を変更しても、以前に開いたインデックスの照合順序には影響しません。 Visual FoxPro では、既存のインデックスが自動的に保持されるため、同じフィールドであっても、さまざまな種類のインデックスを柔軟に作成できます。  
   
  たとえば、[COLLATE] を [全般] に設定してインデックスを作成し、[COLLATE の設定] 設定を後でスペイン語に変更した場合、インデックスには一般的な照合順序が保持されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

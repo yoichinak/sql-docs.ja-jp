@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unsetapprole_TSQL
 - sp_unsetapprole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b024d959c49cfba5d2d1daeef526ac5d5a484458
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1de3a86c7e23956d9c41b13e2f1aef9c933bda3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209662"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,8 +49,8 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>解説  
- **Sp_setapprole**を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか**sp_unsetapprole**を実行するまで、ロールはアクティブのままになります。  
+## <a name="remarks"></a>コメント  
+ **Sp_setapprole** を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか **sp_unsetapprole** を実行するまで、ロールはアクティブのままになります。  
   
  アプリケーションロールの概要については、「 [アプリケーションロール](../../relational-databases/security/authentication-access/application-roles.md)」を参照してください。  
   
@@ -60,7 +60,7 @@ sp_unsetapprole @cookie
 ## <a name="examples"></a>例  
   
 ### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>Cookie を使用してアプリケーションロールをアクティブ化してから、前のコンテキストに戻す  
- 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前を返し、 **sp_unsetapprole**を実行して元のコンテキストに戻します。  
+ 次の例では、パスワード `Sales11` が設定されているアプリケーション ロール `fdsd896#gfdbfdkjgh700mM` をアクティブ化し、クッキーを作成します。 この例では、現在のユーザーの名前を返し、 **sp_unsetapprole** を実行して元のコンテキストに戻します。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

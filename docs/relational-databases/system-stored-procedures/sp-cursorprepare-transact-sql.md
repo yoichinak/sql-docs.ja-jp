@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
 - sp_cursor_prepare
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df4b0ff31a5b8a1723b6c8f130aeab9b32b03166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539032"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209744"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,31 +45,31 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  整数値を返す、SQL Server によって生成される準備済み *ハンドル* 識別子。  
   
 > [!NOTE]  
->  その後、カーソルを開くために、 *prepared_handle*が sp_cursorexecute プロシージャに渡されます。 作成されたハンドルは、ログオフするか sp_cursorunprepare プロシージャを使用して明示的に削除するまで存在します。  
+>  その後、カーソルを開くために、 *prepared_handle* が sp_cursorexecute プロシージャに渡されます。 作成されたハンドルは、ログオフするか sp_cursorunprepare プロシージャを使用して明示的に削除するまで存在します。  
   
  *params*  
  パラメーター化されたステートメントを指定します。 変数の *params* 定義は、ステートメントのパラメーターマーカーに置き換えられます。 *params* は、 **ntext**、 **nchar**、または **nvarchar** の入力値を呼び出す必須のパラメーターです。 ステートメントがパラメーター化されていない場合は、NULL 値を入力します。  
   
 > [!NOTE]  
->  *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、入力値として**ntext**文字列を使用します。  
+>  *Stmt* がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、入力値として **ntext** 文字列を使用します。  
   
  *stmt*  
- カーソル結果セットを定義します。 *Stmt*パラメーターが必要であり、 **ntext**、 **nchar** 、または**nvarchar**の入力値に対してを呼び出します。  
+ カーソル結果セットを定義します。 *Stmt* パラメーターが必要であり、 **ntext**、 **nchar** 、または **nvarchar** の入力値に対してを呼び出します。  
   
 > [!NOTE]  
->  *Stmt*値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は**ntext**である必要があります。  
+>  *Stmt* 値を指定するためのルールは、sp_cursoropen の場合と同じですが、 *stmt* string データ型は **ntext** である必要があります。  
   
  *options*  
  カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション* には、次の **int** 入力値が必要です。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  スクロールオプション。 *scrollopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -86,12 +86,12 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 要求された値は、 *stmt*によって定義されたカーソルに適していない場合があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な値が割り当てられます。  
+ 要求された値は、 *stmt* によって定義されたカーソルに適していない場合があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な値が割り当てられます。  
   
  *ccopt*  
  同時実行制御オプション。 *ccopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -107,10 +107,10 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  *同様 scrollpt,* と同様に、では、要求されたものとは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異なる値を割り当てることができます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  RPC 状態パラメーターは、次のいずれかになります。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|障害|  
@@ -143,7 +143,7 @@ exec sp_cursorunprepare @handle
 exec sp_cursorclose @p2
 ```
  
- *Stmt*がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、文字列の形式は次のようになります。  
+ *Stmt* がパラメーター化され、 *scrollopt* PARAMETERIZED_STMT 値が ON の場合、文字列の形式は次のようになります。  
   
  { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   

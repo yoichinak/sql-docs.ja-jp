@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLColAttribute
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43980caf7a592284aba87d57725c30ae9fe8e949
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: ce0bd87f2a4e2a9306bb5fa94add7fb1ee583dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151247"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208507"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
 **互換性**  
@@ -146,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
  次の表に、 **Sqlcolattribute** によって返される記述子の種類を示します。 *Numericattributeptr* 値の型は **\* sqllen* _ です。  
   
-|_FieldIdentifier *|情報<br /><br /> 返される値|説明|  
+|_FieldIdentifier *|Information<br /><br /> 返される値|説明|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|列が自動増分列である場合は SQL_TRUE します。<br /><br /> 列が自動増分列ではないか、または数値でない場合に SQL_FALSE します。<br /><br /> このフィールドは、数値データ型の列に対してのみ有効です。 アプリケーションでは、自動インクリメント列を含む行に値を挿入できますが、通常、列の値を更新することはできません。<br /><br /> 自動インクリメント列に挿入が行われると、挿入時に一意の値が列に挿入されます。 インクリメントは定義されていませんが、データソース固有です。 アプリケーションでは、autoincrement 列が特定のポイントで開始されるか、特定の値によってインクリメントされると想定しないでください。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|結果セット列の基本列名。 ベース列名が存在しない場合 (式である列の場合と同様)、この変数には空の文字列が含まれます。<br /><br /> この情報は、読み取り専用フィールドである IRD の SQL_DESC_BASE_COLUMN_NAME レコードフィールドから返されます。|  

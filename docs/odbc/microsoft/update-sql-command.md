@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6aa25f786448a14da47321c0f5ce1825716c03d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a3e38ad98f69faf2ed6288c767d43167314465b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471412"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209832"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL コマンド
 テーブル内のレコードを新しい値で更新します。  
@@ -49,7 +49,7 @@ SET Column_Name1 = eExpression1
   
  *Filtercondition* は、レコードが新しい値で更新されるために満たす必要がある条件を指定します。 フィルター条件はいくつでも含めることができ、AND または OR 演算子を使用して接続できます。 また、NOT 演算子を使用して論理式の値を反転させることも、 **empty**() を使用して空のフィールドをチェックすることもできます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  UPDATE-SQL は、1つのテーブル内のレコードのみを更新できます。  
   
  REPLACE と異なり、UPDATE-SQL では、共有アクセス用に開かれたテーブル内の複数のレコードを更新するときにレコードロックが使用されます。 これにより、マルチユーザー環境でのレコードの競合が減少しますが、パフォーマンスが低下する可能性があります。 パフォーマンスを最大にするには、テーブルを排他的に使用するために開くか、 **FLOCK**() を使用してテーブルをロックします。  

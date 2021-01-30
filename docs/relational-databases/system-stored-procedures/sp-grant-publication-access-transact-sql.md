@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_publication_access_TSQL
 - sp_grant_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bea8096d3d0d57b6044edc26bb5f64572487157
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469370"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208997"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-sql)
 
@@ -39,22 +39,22 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` アクセスするパブリケーションの名前を指定します。 **'***publication***'** は **sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` アクセスするパブリケーションの名前を指定します。 **'**_publication_*_'_* は **sysname**,、既定値はありません。  
   
-`[ @login = ] 'login'` ログイン ID を示します。 **'***login***'** は **sysname**,、既定値はありません。  
+`[ @login = ] 'login'` ログイン ID を示します。 **'**_login_*_'_* は **sysname**,、既定値はありません。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_grant_publication_access** は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  このストアドプロシージャは、繰り返し呼び出すことができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_grant_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_grant_publication_access** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_help_publication_access &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

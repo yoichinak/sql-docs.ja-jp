@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68c8d1fcf243de008f889d4037bbd38a590c6403
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549708"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208925"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @class = ] 'class'` 要求する情報に関するクラス。 *クラス* は **varchar (8)**,、既定値は **JOB**です。 *クラス* には、次のいずれかの値を指定できます。  
+`[ @class = ] 'class'` 要求する情報に関するクラス。 *クラス* は **varchar (8)**,、既定値は **JOB** です。 *クラス* には、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
@@ -53,21 +53,21 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` 情報を要求するカテゴリの種類。 *型* は **varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**LOCAL**|ローカルジョブカテゴリ。|  
 |**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
-|**NONE**|**JOB**以外のクラスのカテゴリ。|  
+|**NONE**|**JOB** 以外のクラスのカテゴリ。|  
   
 `[ @name = ] 'name'` 情報が要求されるカテゴリの名前。 *名前* は **sysname**,、既定値は NULL です。  
   
-`[ @suffix = ] suffix` 結果セットの **category_type** 列が ID と名前のどちらであるかを指定します。 *サフィックス* は **ビット**,、既定値は **0**です。 **1** は **category_type** を名前として示し、 **0** は ID として表示します。  
+`[ @suffix = ] suffix` 結果セットの **category_type** 列が ID と名前のどちらであるかを指定します。 *サフィックス* は **ビット**,、既定値は **0** です。 **1** は **category_type** を名前として示し、 **0** は ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ** \@ サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
+ **\@ サフィックス** が **0** の場合、 **sp_help_category** は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -75,21 +75,21 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- ** \@ サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
+ **\@ サフィックス** が **1** の場合、 **sp_help_category** は次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|カテゴリ ID。|  
-|**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
+|**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または **NONE** のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_help_category** は、 **msdb** データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdynamicsnapshot_job_TSQL
 - sp_dropdynamicsnapshot_job
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 932ca55e93c039c918302cb52026dd5051cbb551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 481ef137f8aa2eca0438cee08e571c3e21bddfe7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543478"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210039"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,23 +43,23 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` フィルター選択されたデータスナップショットジョブを削除するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 削除するフィルター選択されたデータスナップショットジョブの名前を指定します。 *dynamic_snapshot_jobname*は sysname です。指定されていない場合は、 *dynamic_snapshot_jobid*に関連付けられているジョブ名が既定値になります。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 削除するフィルター選択されたデータスナップショットジョブの名前を指定します。 *dynamic_snapshot_jobname* は sysname です。指定されていない場合は、 *dynamic_snapshot_jobid* に関連付けられているジョブ名が既定値になります。  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 削除するフィルター選択されたデータスナップショットジョブの識別子を選択します。 *dynamic_snapshot_jobid*は **uniqueidentifier**,、既定値は NULL です。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 削除するフィルター選択されたデータスナップショットジョブの識別子を選択します。 *dynamic_snapshot_jobid* は **uniqueidentifier**,、既定値は NULL です。  
   
 > [!IMPORTANT]  
->  *Dynamic_snapshot_jobid*または*dynamic_snapshot_jobname*のみを指定できます。 *Dynamic_snapshot_jobid*または*dynamic_snapshot_jobname*のいずれにも値が指定されていない場合は、パブリケーションのすべての動的スナップショットジョブが削除されます。  
+>  *Dynamic_snapshot_jobid* または *dynamic_snapshot_jobname* のみを指定できます。 *Dynamic_snapshot_jobid* または *dynamic_snapshot_jobname* のいずれにも値が指定されていない場合は、パブリケーションのすべての動的スナップショットジョブが削除されます。  
   
-`[ @ignore_distributor = ] ignore_distributor`*ignore_distributor*は**ビット**,、既定値は**0**です。 このパラメーターは、ディストリビューターでクリーンアップを実行せずに動的スナップショット ジョブを削除する場合に使用できます。  
+`[ @ignore_distributor = ] ignore_distributor`*ignore_distributor* は **ビット**,、既定値は **0** です。 このパラメーターは、ディストリビューターでクリーンアップを実行せずに動的スナップショット ジョブを削除する場合に使用できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropdynamicsnapshot** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropdynamicsnapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_dropdynamicsnapshot** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_adddynamicsnapshot_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  

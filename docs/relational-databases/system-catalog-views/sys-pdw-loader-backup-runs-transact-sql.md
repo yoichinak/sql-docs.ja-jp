@@ -6,19 +6,19 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: e74c866747b7e8f9c784f43e60ab7fb6ce4cc673
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 12fcde5ded873393a6273a43772b86376f5df607
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472913"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208364"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "97472913"
 |request_id|**nvarchar(32)**|操作を実行する要求の ID。 読み込みの場合、これはこの負荷に関連付けられている現在の要求または最後の要求です。|[Transact-sql&#41;&#40;sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)の request_id を参照してください。|  
 |status|**nvarchar (16)**|実行の状態。|' 取り消された '、' COMPLETED '、' FAILED '、' QUEUED '、' RUNNING '|  
 |progress|**int**|完了した割合。|0 から 100|  
-|command|**nvarchar (4000)**|ユーザーによって送信されたコマンドの完全なテキスト。|4000文字を超える場合は切り捨てられます (空白をカウントする場合)。|  
+|コマンドを使用します|**nvarchar (4000)**|ユーザーによって送信されたコマンドの完全なテキスト。|4000文字を超える場合は切り捨てられます (空白をカウントする場合)。|  
 |rows_processed|**bigint**|この操作の一部として処理された行の数。||  
 |rows_rejected|**bigint**|この操作の一部として拒否された行数。||  
 |rows_inserted|**bigint**|この操作の一部としてデータベーステーブルに挿入された行の数。||  

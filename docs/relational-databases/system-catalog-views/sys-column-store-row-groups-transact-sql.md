@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.column_store_row_groups_TSQL
 - column_store_row_groups
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bb30e3c829dcdabde66fd1a330ec617eea7e5b34
-ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
+ms.openlocfilehash: e2b9faf192f19df1cf402d6fc1850fb4acd855c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98564470"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205362"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "98564470"
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|int|このインデックスが定義されているテーブルの ID。|  
-|**index_id**|int|この列ストアインデックスを持つテーブルのインデックスの ID。|  
-|**partition_number**|int|行グループ row_group_id を保持するテーブル パーティションの ID。 Partition_number を使用して、この DMV を sys パーティションに参加させることができます。|  
-|**row_group_id**|int|この行グループに関連付けられている行グループ番号。 これは、パーティション内で一意です。<br /><br /> -1 = メモリ内のテーブルの末尾。|  
+|**object_id**|INT|このインデックスが定義されているテーブルの ID。|  
+|**index_id**|INT|この列ストアインデックスを持つテーブルのインデックスの ID。|  
+|**partition_number**|INT|行グループ row_group_id を保持するテーブル パーティションの ID。 Partition_number を使用して、この DMV を sys パーティションに参加させることができます。|  
+|**row_group_id**|INT|この行グループに関連付けられている行グループ番号。 これは、パーティション内で一意です。<br /><br /> -1 = メモリ内のテーブルの末尾。|  
 |**delta_store_hobt_id**|bigint|デルタストア内の開いている行グループの hobt_id。<br /><br /> 行グループがデルタストアに存在しない場合は NULL になります。<br /><br /> メモリ内のテーブルの末尾の場合は NULL です。|  
 |**state**|tinyint|State_description に関連付けられている ID 番号。<br /><br /> 0 = 非表示<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = 圧縮 <br /><br /> 4 = 廃棄標識|  
 |**state_description**|nvarchar(60)|行グループの永続的な状態の説明。<br /><br /> 非表示-デルタストア内のデータから構築されるプロセス内の非表示の圧縮セグメント。 非表示の圧縮されたセグメントが完了するまで、読み取りアクションでデルタ ストアが使用されます。 その後、新しいセグメントが表示されると、ソース デルタ ストアは削除されます。<br /><br /> OPEN-新しいレコードを受け入れる読み取り/書き込み行グループ。 開いている行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> CLOSED-組ムーバープロセスによってまだ圧縮されていない、いっぱいになっている行グループ。<br /><br /> 圧縮-格納され、圧縮された行グループ。|  
@@ -46,7 +46,7 @@ ms.locfileid: "98564470"
 |**deleted_rows**|bigint|削除済みとマークされた行グループ内の行の合計数。 これはデルタ行グループの場合は常に 0 です。|  
 |**size_in_bytes**|bigint|デルタ列と列ストア行グループの両方について、この行グループ内のすべてのデータのサイズ (メタデータや共有ディクショナリを除く) のサイズ (バイト単位)。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  クラスター化または非クラスター化列ストアインデックスを持つ各テーブルの列ストア行グループごとに1行の値を返します。  
   
  **Sys.column_store_row_groups** を使用して、行グループに含まれる行の数と行グループのサイズを決定します。  

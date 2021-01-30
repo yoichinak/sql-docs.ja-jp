@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 sp_set_parameter (Transact-sql)
-title: managed_backup。 sp_set_parameter (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.sp_set_parameter (transact-sql)
+title: managed_backup managed_backup.sp_set_parameter (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_parameter_TSQL
 - sp_set_parameter
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfb0a9ddbdec9ebe94dd3bda4307a5fdf31e1c29
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1f8722dd358a09103f3e75fd294eedb00019a01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546275"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205279"
 ---
-# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup。 sp_set_parameter (Transact-sql)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup managed_backup.sp_set_parameter (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   指定した Smart Admin システムパラメーターの値を設定します。  
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @parameter_name  
- 値を設定するパラメーターの名前。 @parameter_name NVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および **storageoperationdebugxevent**です。  
+ 値を設定するパラメーターの名前。 @parameter_name NVARCHAR (128) です。 使用できるパラメーター名は、 **SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および **storageoperationdebugxevent** です。  
   
  @parameter_value  
  設定するパラメーターの値。 @parameter 値は NVARCHAR (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
@@ -66,13 +66,13 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="best-practices"></a>ベスト プラクティス  
+## <a name="best-practices"></a>推奨する運用方法  
  ステートメントまたはルーチンの実行時にユーザーが知る必要のあるベストプラクティスについて説明する省略可能なセクションです。  
   
 ## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- Managed_backup に対する **EXECUTE** 権限が必要です **。 sp_set_parameter** ストアドプロシージャ。  
+ **Managed_backup** ストアドプロシージャに対する **EXECUTE** 権限が必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、拡張イベントの操作とデバッグを有効にします。  

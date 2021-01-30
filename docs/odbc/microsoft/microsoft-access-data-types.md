@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
 - Jet-based ODBC drivers [ODBC], Access driver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e7a55c6929d63bf036c9f1585d2eb039f6fec77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340768"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205704"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access データ型
 次の表に、Microsoft Access のデータ型、テーブルの作成に使用されるデータ型、および ODBC SQL データ型を示します。  
@@ -57,7 +57,7 @@ ms.locfileid: "88340768"
  [3] Unicode では、4.0 アプリケーションのみにアクセスします。  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** は ODBC データ型を返します。 複数の Microsoft access の種類が同じ ODBC SQL データ型にマップされている場合、Microsoft Access のすべてのデータ型は返されません。 *ODBC プログラマーズリファレンス*の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
+>  **SQLGetTypeInfo** は ODBC データ型を返します。 複数の Microsoft access の種類が同じ ODBC SQL データ型にマップされている場合、Microsoft Access のすべてのデータ型は返されません。 *ODBC プログラマーズリファレンス* の付録 D のすべての変換は、前の表に記載されている SQL データ型に対してサポートされています。  
   
  次の表は、Microsoft Access のデータ型に関する制限を示しています。  
   

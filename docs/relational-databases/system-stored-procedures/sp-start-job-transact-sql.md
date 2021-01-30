@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e7a86d9ea25b4d9ae412b922cc6f36ddce27c20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09da744c09bd822ae01166722812141a05e13ed1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207289"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +46,9 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_name = ] 'job_name'` 開始するジョブの名前を指定します。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_name* は **sysname**,、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 開始するジョブの名前を指定します。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_name* は **sysname**,、既定値は NULL です。  
   
-`[ @job_id = ] job_id` 開始するジョブの識別番号を指定します。 *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
+`[ @job_id = ] job_id` 開始するジョブの識別番号を指定します。 *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。 *job_id* は **uniqueidentifier**,、既定値は NULL です。  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -68,7 +68,7 @@ sp_start_job
  このストアドプロシージャは **msdb** データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -78,7 +78,7 @@ sp_start_job
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを開始できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを開始できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを開始できます。  
+ **SQLAgentUserRole** と **SQLAgentReaderRole** のメンバーは、自分が所有するジョブのみを開始できます。 **Sqlagentoperatorrole** のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを開始できます。 **Sysadmin** のメンバーは、すべてのローカルジョブとマルチサーバージョブを開始できます。  
   
 ## <a name="examples"></a>例  
  次の例では、という名前のジョブを開始し `Weekly Sales Data Backup` ます。  

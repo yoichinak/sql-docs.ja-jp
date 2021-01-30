@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205757"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL コマンド
 プログラムによってテーブルの構造を変更します。  
@@ -75,21 +75,21 @@ ALTER TABLE TableName1
   
  *FieldType* は、フィールドの [データ型](../../odbc/microsoft/visual-foxpro-field-data-types.md)を示す単一の文字です。 一部のフィールドデータ型では、 *Nfieldwidth* または *nprecision* またはその両方を指定する必要があります。  
   
- *Nfieldwidth* と *Nprecision* は、D、G、I、L、M、P、T、および Y 型では無視されます。 既定では、n*精度が B* 、F、または N 型に含まれていない場合、 *nprecision*はゼロ (小数点以下の桁数なし) になります。  
+ *Nfieldwidth* と *Nprecision* は、D、G、I、L、M、P、T、および Y 型では無視されます。 既定では、n *精度が B* 、F、または N 型に含まれていない場合、 *nprecision* はゼロ (小数点以下の桁数なし) になります。  
   
  NULL &#124; NOT NULL  
  フィールドの null 値を許可または禁止します。  
   
  Null と NOT NULL を省略すると、SET NULL の現在の設定によって、フィールドで null 値が許可されるかどうかが決まります。 ただし、null および NOT NULL を省略し、PRIMARY KEY または UNIQUE 句を含めると、SET NULL の現在の設定は無視され、既定では、このフィールドは NULL になりません。  
   
- *LExpression1*の確認  
+ *LExpression1* の確認  
  フィールドの検証規則を指定します。 *lExpression1* は論理式に評価される必要があり、ユーザー定義関数またはストアドプロシージャを指定できます。 空白のレコードが追加されるたびに、検証規則がチェックされます。 追加されたレコードで空のフィールド値が検証規則によって許可されていない場合、エラーが生成されます。  
   
  エラー *cMessageText1*  
  フィールド検証規則によってエラーが生成された場合に表示されるエラーメッセージを指定します。  
   
  既定の *eExpression1*  
- フィールドの既定値を指定します。 *EExpression1*のデータ型は、フィールドのデータ型と同じである必要があります。  
+ フィールドの既定値を指定します。 *EExpression1* のデータ型は、フィールドのデータ型と同じである必要があります。  
   
  PRIMARY KEY  
  プライマリインデックスタグを作成します。 インデックスタグには、フィールドと同じ名前が付けられています。  
@@ -106,7 +106,7 @@ ALTER TABLE TableName1
   
  既存のフィールドを変更し、主または候補のインデックス式がテーブル内のフィールドで構成されている場合、Visual FoxPro はフィールドをチェックして、null 値が含まれているか、レコードが重複していないかを確認します。 そうしないと、Visual FoxPro によってエラーが生成され、テーブルは変更されません。  
   
- *TableName2*タグ*TagName1*の参照  
+ *TableName2* タグ *TagName1* の参照  
  永続的なリレーションシップを確立する親テーブルを指定します。 タグ *TagName1* 、リレーションシップの基になる親テーブルのインデックスタグを指定します。 インデックスタグ名には、最大10文字まで含めることができます。  
   
  NOCPTRANS  
@@ -122,8 +122,8 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [COLUMN] *FieldName2*  
  変更する既存のフィールドの名前を指定します。  
   
- 既定の*eExpression2*の設定  
- 既存のフィールドの新しい既定値を指定します。 *EExpression2*のデータ型は、フィールドのデータ型と同じである必要があります。  
+ 既定の *eExpression2* の設定  
+ 既存のフィールドの新しい既定値を指定します。 *EExpression2* のデータ型は、フィールドのデータ型と同じである必要があります。  
   
  SET CHECK *lExpression2*  
  既存のフィールドの新しい検証規則を指定します。 *lExpression2* は論理式に評価される必要があり、ユーザー定義関数またはストアドプロシージャである可能性があります。  
@@ -151,28 +151,28 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  削除の確認  
  テーブルの検証規則を削除します。  
   
- 主キー *eExpression3*タグ*TagName2*の追加  
- テーブルにプライマリインデックスを追加します。 *eExpression3* は、主インデックスキーの式を指定し、 *TagName2* はプライマリインデックスタグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。 TAG *TagName2* が省略され、 *eExpression3* が1つのフィールドである場合、プライマリインデックスタグは *eExpression3*で指定されたフィールドと同じ名前になります。  
+ 主キー *eExpression3* タグ *TagName2* の追加  
+ テーブルにプライマリインデックスを追加します。 *eExpression3* は、主インデックスキーの式を指定し、 *TagName2* はプライマリインデックスタグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。 TAG *TagName2* が省略され、 *eExpression3* が1つのフィールドである場合、プライマリインデックスタグは *eExpression3* で指定されたフィールドと同じ名前になります。  
   
  主キーの削除  
  プライマリインデックスとそのインデックスタグを削除します。 テーブルには主キーを1つしか含めることができないため、主キーの名前を指定する必要はありません。 プライマリインデックスを削除すると、主キーに基づくすべての永続的な関係も削除されます。  
   
- UNIQUE *eExpression4*の追加 [TAG *TagName3*]  
- 候補インデックスをテーブルに追加します。 *eExpression4* は候補インデックスキー式を指定し、 *TagName3* は候補のインデックスタグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。 TAG *TagName3* を省略し、 *eExpression4* が1つのフィールドである場合、候補インデックスタグの名前は *eExpression4*で指定されたフィールドと同じになります。  
+ UNIQUE *eExpression4* の追加 [TAG *TagName3*]  
+ 候補インデックスをテーブルに追加します。 *eExpression4* は候補インデックスキー式を指定し、 *TagName3* は候補のインデックスタグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。 TAG *TagName3* を省略し、 *eExpression4* が1つのフィールドである場合、候補インデックスタグの名前は *eExpression4* で指定されたフィールドと同じになります。  
   
  一意のタグの削除 *TagName4*  
  候補インデックスとそのインデックスタグを削除します。 テーブルには複数の候補キーを含めることができるので、候補のインデックスタグの名前を指定する必要があります。  
   
- 外部キー [ *eExpression5*] タグ*TagName4*の追加  
+ 外部キー [ *eExpression5*] タグ *TagName4* の追加  
  外部 (非プライマリ) インデックスをテーブルに追加します。 *eExpression5* は、外部インデックスキーの式を指定し、 *TagName4* は外部インデックスタグの名前を指定します。 インデックスタグ名には、最大10文字まで含めることができます。  
   
- *TableName2*の参照 [TAG *TagName5*]  
- 永続的なリレーションシップを確立する親テーブルを指定します。 親テーブルの既存のインデックスタグに基づいてリレーションシップを確立するには、タグ *TagName5* を含めます。 インデックスタグ名には、最大10文字まで含めることができます。 タグ *TagName5*を省略した場合、リレーションシップは親テーブルのプライマリインデックスタグを使用して確立されます。  
+ *TableName2* の参照 [TAG *TagName5*]  
+ 永続的なリレーションシップを確立する親テーブルを指定します。 親テーブルの既存のインデックスタグに基づいてリレーションシップを確立するには、タグ *TagName5* を含めます。 インデックスタグ名には、最大10文字まで含めることができます。 タグ *TagName5* を省略した場合、リレーションシップは親テーブルのプライマリインデックスタグを使用して確立されます。  
   
- 外部キータグ *TagName6*の削除 [保存]  
- インデックスタグが *TagName6*である外部キーを削除します。 [保存] を省略した場合、インデックスタグは構造インデックスから削除されます。 構造インデックスからインデックスタグが削除されないようにするには、[保存する。  
+ 外部キータグ *TagName6* の削除 [保存]  
+ インデックスタグが *TagName6* である外部キーを削除します。 [保存] を省略した場合、インデックスタグは構造インデックスから削除されます。 構造インデックスからインデックスタグが削除されないようにするには、[保存する。  
   
- 列の名前を*FieldName4*から*FieldName5*に変更します。  
+ 列の名前を *FieldName4* から *FieldName5* に変更します。  
  テーブル内のフィールドの名前を変更できます。 *FieldName4* 名前を変更するフィールドの名前を指定します。 *FieldName5* フィールドの新しい名前を指定します。  
   
 > [!CAUTION]  
@@ -181,7 +181,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Visual FoxPro で、テーブルの構造に変更を加えることを許可することを指定します。これらの変更は、テーブル内のデータの整合性に違反している可能性があります。 既定では、ALTER TABLE によってテーブル内のデータの整合性に違反する変更が行われないようにします。 この既定の動作をオーバーライドするには、NOVALIDATE を含めます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ALTER TABLE を使用して、データベースに追加されていないテーブルの構造を変更できます。 ただし、free テーブルを変更するときに、既定、外部キー、主キー、参照、または SET 句を含めると、エラーが生成されます。  
   
  ALTER TABLE では、新しいテーブルヘッダーを作成し、テーブルヘッダーにレコードを追加することによって、テーブルを再構築できます。 たとえば、フィールドの型または幅を変更すると、テーブルが再構築される可能性があります。  
@@ -192,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  変更するテーブルがデータベース内にある場合、ALTER TABLE-SQL では、データベースを排他的に使用する必要があります。 排他的に使用するためにデータベースを開くには、OPEN DATABASE に EXCLUSIVE を含めます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE TABLE-SQL コマンド](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX コマンド](../../odbc/microsoft/index-command.md)

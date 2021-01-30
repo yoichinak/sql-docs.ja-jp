@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
 - sp_change_subscription_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed6615b10487744ae5ac5c0775627bea97e29c66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208299"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,19 +43,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname** であり、既定値はありません。  
   
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @property = ] 'property'` 変更するプロパティを指定します。 *プロパティ* は **sysname**です。  
+`[ @property = ] 'property'` 変更するプロパティを指定します。 *プロパティ* は **sysname** です。  
   
 `[ @value = ] 'value'` は、プロパティの新しい値です。 *値* は **nvarchar (1000)**,、既定値はありません。  
   
 `[ @publication_type = ] publication_type` パブリケーションのレプリケーションの種類を指定します。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|パブリケーションの種類|  
+|値|パブリケーションの種類|  
 |-----------|----------------------|  
 |**0**|トランザクション|  
 |**1**|スナップショット|  
@@ -64,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  次の表では、アーティクルのプロパティとそれらのプロパティの値について説明します。  
   
-|プロパティ|[値]|説明|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||スナップショットの代替フォルダーの場所を指定します。 NULL に設定した場合、スナップショットファイルはパブリッシャーによって指定された既定の場所から取得されます。|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
@@ -90,9 +90,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_url**||Web 同期用のレプリケーションリスナーの場所を表す URL。|  
 |**merge_job_login**||エージェントを実行する Windows アカウントのログイン。|  
 |**merge_job_password**||エージェントを実行する Windows アカウントのパスワード。|  
-|**publisher_login**||パブリッシャーログイン。 *Publisher_login*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
-|**publisher_password**||パブリッシャーのパスワード。 *Publisher_password*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
-|**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *Publisher_security_mode*の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+|**publisher_login**||パブリッシャーログイン。 *Publisher_login* の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+|**publisher_password**||パブリッシャーのパスワード。 *Publisher_password* の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
+|**publisher_security_mode**|**1**|パブリッシャーに接続するときに Windows 認証を使用。 *Publisher_security_mode* の変更は、マージパブリケーションへのサブスクリプションでのみサポートされています。|  
 ||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーに接続するときに認証を使用します。|  
 |**use_ftp**|**true**|スナップショットを取得するには、通常のプロトコルの代わりに FTP を使用します。|  
 ||**false**|標準のプロトコルを使用してスナップショットを取得。|  
@@ -103,15 +103,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_change_subscription_properties** は、すべての種類のレプリケーションで使用されます。  
   
- プルサブスクリプションには**sp_change_subscription_properties**が使用されます。  
+ プルサブスクリプションには **sp_change_subscription_properties** が使用されます。  
   
  Oracle パブリッシャーの場合、Oracle ではサーバーのインスタンスごとに1つのデータベースのみが許可されるため、 *publisher_db* の値は無視されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_change_subscription_properties**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_change_subscription_properties** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

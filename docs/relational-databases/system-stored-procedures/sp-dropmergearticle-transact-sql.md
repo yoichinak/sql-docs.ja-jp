@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c91fe7b1cc57630565fae398fc8cbc798df314a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58759010972cd8bed8f32f909d0b326f8b964a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536531"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208264"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +44,21 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` アーティクルを削除するパブリケーションの名前を指定します。 *publication*は **sysname**,、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを削除するパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` 指定したパブリケーションから削除するアーティクルの名前を指定します。 *アーティクル*は **sysname**で、既定値はありません。 **All**の場合、指定されたマージパブリケーションの既存のアーティクルはすべて削除されます。 *Article*が**all**の場合でも、パブリケーションはアーティクルとは別に削除する必要があります。  
+`[ @article = ] 'article'` 指定したパブリケーションから削除するアーティクルの名前を指定します。 *アーティクル* は **sysname** で、既定値はありません。 **All** の場合、指定されたマージパブリケーションの既存のアーティクルはすべて削除されます。 *Article* が **all** の場合でも、パブリケーションはアーティクルとは別に削除する必要があります。  
   
-`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor* は **ビット**,、既定値は **0**です。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続せずにこのストアドプロシージャを実行するかどうかを示します。 *ignore_distributor* は **ビット**,、既定値は **0** です。  
   
 `[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み* は **nvarchar (20)**,、既定値は NULL です。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot* は **ビット**であり、既定値は **0**です。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot* は **ビット** であり、既定値は **0** です。  
   
  **0** を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。  
   
  **1** に設定すると、マージアーティクルへの変更によってスナップショットが無効になる可能性があります。この場合、値 **1** を指定すると、新しいスナップショットを作成する権限が与えられます。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` アーティクルを削除する際に、既存のサブスクリプションを再初期化する必要があることを確認します。 *force_reinit_subscription* は **ビット**,、既定値は **0**です。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` アーティクルを削除する際に、既存のサブスクリプションを再初期化する必要があることを確認します。 *force_reinit_subscription* は **ビット**,、既定値は **0** です。  
   
  **0** を指定すると、アーティクルを削除してもサブスクリプションが再初期化されません。  
   
@@ -69,13 +69,13 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dropmergearticle** は、マージレプリケーションで使用します。 アーティクルの削除の詳細については、「 [既存のパブリケーションのアーティクルの追加および削除](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」を参照してください。  
   
- **Sp_dropmergearticle**を実行してパブリケーションからアーティクルを削除しても、パブリケーションデータベースからオブジェクトが削除されたり、サブスクリプションデータベースから対応するオブジェクトが削除されることはありません。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
+ **Sp_dropmergearticle** を実行してパブリケーションからアーティクルを削除しても、パブリケーションデータベースからオブジェクトが削除されたり、サブスクリプションデータベースから対応するオブジェクトが削除されることはありません。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropmergearticle**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_dropmergearticle** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="example"></a>例  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_missing_index_columns_TSQL
 - sys.dm_db_missing_index_columns_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cbebd83641c3cbffdc273f2b09c4037ff0f0795
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 3905f5c31da774eac8e5df59404aa84913c7b173
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099990"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208287"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_name**|**sysname**|テーブル列の名前。|  
 |**column_usage**|**varchar (20)**|クエリでの列の使用方法。 使用可能な値とその説明は次のとおりです。<br /><br /> 等値: 列は、次の形式の等価性を表す述語に貢献します。 <br />                        *表. 列*  = *constant_value*<br /><br /> 非等値: 列は、次のような非等値を表す述語に寄与し *ます。たとえば*、  >  *constant_value* の形式の述語です。 "=" 以外の比較演算子はすべて、不等値を表します。<br /><br /> INCLUDE: 列は述語の評価には使用されませんが、別の理由 (たとえば、クエリに対応するため) に使用されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sys.dm_db_missing_index_columns** によって返される情報は、クエリ オプティマイザーでクエリが最適化されるときに更新されますが、保存されません。 欠落インデックスの情報が保持されるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動までです。 欠落インデックスの情報を、サーバーの再利用後も保持する場合は、データベース管理者が情報のバックアップ コピーを定期的に作成する必要があります。  
   
 ## <a name="transaction-consistency"></a>トランザクションの一貫性  

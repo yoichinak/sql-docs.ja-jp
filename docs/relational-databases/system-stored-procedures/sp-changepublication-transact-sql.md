@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changepublication
 - sp_changepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e29fade73adba6cb82b6d4ac22cae122d4c60cd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169445"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207075"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
-|プロパティ|[値]|説明|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|指定されたパブリケーションに対して匿名サブスクリプションを作成できます。また、 *immediate_sync* も **true** である必要があります。 ピアツーピアパブリケーションの場合は変更できません。|  
 ||**false**|指定されたパブリケーションに対して匿名サブスクリプションを作成することはできません。 ピアツーピアパブリケーションの場合は変更できません。|  
@@ -134,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **sp_changepublication** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  次のいずれかのプロパティを変更した後で、新しいスナップショットを生成する必要があります。また、 *force_invalidate_snapshot* パラメーターに値 **1** を指定する必要があります。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_list
 - sp_cursor_list_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a60d447d7072c6386faef08d1dd7398f906064d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536651"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205187"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cursor_return =] *cursor_variable_name*出力  
+ [ @cursor_return =] *cursor_variable_name* 出力  
  宣言されたカーソル変数の名前を指定します。 *cursor_variable_name* は **カーソル**,、既定値はありません。 カーソルは、スクロール可能な動的な読み取り専用カーソルです。  
   
  [ @cursor_scope =] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope* は **int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |1|すべてのローカル カーソルをレポートします。|  
 |2|すべてのグローバル カーソルをレポートします。|  
@@ -68,7 +68,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|DECLARE CURSOR ステートメントに指定されたカーソルの名前です。 では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、カーソル変数をカーソルに設定することによってカーソルが作成された場合、 **cursor_name** はカーソル変数の名前を返します。  以前のリリースでは、この出力列にはシステムによって生成された名前が返されていました。|  
 |cursor_scope|**smallint**|1 = ローカル<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|CURSOR_STATUS システム関数によって報告されたものと同じ値です。<br /><br /> 1 = カーソル名または変数によって参照されているカーソルが開いています。 カーソルが状態非依存、静的、キーセットのいずれかの場合には、結果セットに少なくとも 1 行が含まれます。 カーソルが動的な場合、結果セットには0個以上の行が含まれます。<br /><br /> 0 = カーソル名または変数によって参照されるカーソルが開かれていますが、行がありません。 動的カーソルがこの値を返すことはありません。<br /><br /> -1 = カーソル名または変数によって参照されたカーソルは閉じています。<br /><br /> -2 = カーソル変数にのみ適用されます。 変数に割り当てられたカーソルがありません。 おそらく、OUTPUT パラメーターによってカーソルを変数に割り当てましたが、戻る前にストアド プロシージャがカーソルを閉じました。<br /><br /> -3 = 指定された名前のカーソルまたはカーソル変数が存在しないか、またはカーソル変数にカーソルが割り当てられていません。|  
-|対象となるのは、モデル|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
+|model|**smallint**|1 = 非依存 (または静的)<br /><br /> 2 = キーセット<br /><br /> 3 = 動的<br /><br /> 4 = 高速順方向|  
 |concurrency|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 終了<br /><br /> 1 = 開く|  
@@ -79,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|カーソルに対して最後に実行された操作:<br /><br /> 0 = カーソルに対して操作が実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = 削除<br /><br /> 6 = 閉じる<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_cursor_list は、接続によってオープンされた現在のサーバー カーソルの一覧を作成し、カーソルのスクロール機能や更新機能など、各カーソルにとってグローバルな属性を示します。 sp_cursor_list によってレポートされるカーソルは次のとおりです。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバーカーソル。  

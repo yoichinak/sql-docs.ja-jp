@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsrvrole_TSQL
 - sp_helpsrvrole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 120303a4682ec659bca8a1cea6814506bc364cd4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3c2c937e03edaaff888b90199ffeea806829bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535159"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209293"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @srvrolename = ] 'role'` 固定サーバーロールの名前を指定します。 *role* の部分は **sysname**で、既定値は NULL です。 *role* には、次のいずれかの値を指定できます。  
+`[ @srvrolename = ] 'role'` 固定サーバーロールの名前を指定します。 *role* の部分は **sysname** で、既定値は NULL です。 *role* には、次のいずれかの値を指定できます。  
   
 |固定サーバーロール|説明|  
 |-----------------------|-----------------|  
@@ -63,7 +63,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|サーバーロールの名前|  
 |説明|**sysname**|ServerRole の説明。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  固定サーバー ロールは、サーバー レベルで定義され、特定のサーバーレベルの管理操作を実行する権限が与えられます。 固定サーバー ロールは、追加、削除、または変更することはできません。  
   
  サーバーロールのメンバーを追加または削除するには、「 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。  

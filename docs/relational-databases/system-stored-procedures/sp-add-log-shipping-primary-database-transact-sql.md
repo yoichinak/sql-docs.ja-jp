@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464664"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206717"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database'` ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリデータベースの名前を指定します。 *データベースのデータ* 型は **sysname** で、既定値はありません。 NULL にすることはできません。  
   
 `[ @backup_directory = ] 'backup_directory'` プライマリサーバー上のバックアップフォルダーへのパスを示します。 *backup_directory* は **nvarchar (500)** で、既定値はありません。 NULL にすることはできません。  
   
@@ -66,7 +66,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @backup_retention_period = ] backup_retention_period` プライマリサーバー上のバックアップディレクトリにログバックアップファイルを保持する時間を分単位で示します。 *backup_retention_period* は **int**,、既定値はありません、NULL にすることはできません。  
   
-`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server* は **sysname**であり、既定値はありません。 NULL にすることはできません。  
+`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server* は **sysname** であり、既定値はありません。 NULL にすることはできません。  
   
 `[ @monitor_server_security_mode = ] monitor_server_security_mode` 監視サーバーへの接続に使用されるセキュリティモード。  
   
@@ -78,11 +78,11 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @monitor_server_password = ] 'monitor_server_password'` 監視サーバーへのアクセスに使用するアカウントのパスワードを入力します。  
   
-`[ @backup_threshold = ] backup_threshold`*Threshold_alert*エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
+`[ @backup_threshold = ] backup_threshold`*Threshold_alert* エラーが発生する前に、前回のバックアップ後の分単位の時間を示します。 *backup_threshold* は **int**,、既定値は60分です。  
   
 `[ @threshold_alert = ] threshold_alert` バックアップのしきい値を超えたときに発生する警告を指定します。 *threshold_alert* は **int**,、既定値は14420です。  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`*Backup_threshold*を超えたときにアラートを生成するかどうかを指定します。 値 0 (既定値) を指定すると、警告が無効になり、生成されなくなります。 *threshold_alert_enabled* は **ビット**です。  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled`*Backup_threshold* を超えたときにアラートを生成するかどうかを指定します。 値 0 (既定値) を指定すると、警告が無効になり、生成されなくなります。 *threshold_alert_enabled* は **ビット** です。  
   
 `[ @history_retention_period = ] history_retention_period` 履歴を保持する時間の長さを分単位で指定します。 *history_retention_period* は **int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
@@ -111,7 +111,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 2.  無効になっているプライマリデータベースのバックアップジョブを作成します。  
   
-3.  **Log_shipping_primary_databases**エントリのバックアップジョブ id をバックアップジョブのジョブ id に設定します。  
+3.  **Log_shipping_primary_databases** エントリのバックアップジョブ id をバックアップジョブのジョブ id に設定します。  
   
 4.  指定された引数を使用して、プライマリサーバーのテーブル **log_shipping_monitor_primary** にローカル監視レコードを追加します。  
   

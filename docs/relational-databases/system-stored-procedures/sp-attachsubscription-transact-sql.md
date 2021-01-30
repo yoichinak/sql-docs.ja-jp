@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attachsubscription
 - sp_attachsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 25a617eeac0926e6bcb80f99125603072ee34be8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7357d6a37472d9d530dfcf3ecfe3c9bddfffd58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206637"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,44 +61,44 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` サブスクライバーが同期時に接続するときに使用する、サブスクライバーのセキュリティモードを示します。 *subscriber_security_mode* は **int**,、既定値は NULL です。  
   
 > [!NOTE]  
->  Windows 認証を使用する必要があります。 *Subscriber_security_mode*が**1** (Windows 認証) でない場合は、エラーが返されます。  
+>  Windows 認証を使用する必要があります。 *Subscriber_security_mode* が **1** (Windows 認証) でない場合は、エラーが返されます。  
   
 `[ @subscriber_login = ] 'subscriber_login'` 同期時にサブスクライバーに接続するときに使用するサブスクライバーのログイン名を指定します。 *subscriber_login* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく*subscriber_login*が指定されている場合は、エラーが返されます。  
+>  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode* が **1** ではなく *subscriber_login* が指定されている場合は、エラーが返されます。  
   
 `[ @subscriber_password = ] 'subscriber_password'` サブスクライバーパスワードを入力します。 *subscriber_password* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく*subscriber_password*が指定されている場合は、エラーが返されます。  
+>  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode* が **1** ではなく *subscriber_password* が指定されている場合は、エラーが返されます。  
   
-`[ @distributor_security_mode = ] distributor_security_mode` は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode* は **int**,、既定値は **0**です。 **0** は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode* は **int**,、既定値は **0** です。 **0** は認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` ディストリビューターへの接続時に、同期時に使用するディストリビューターログインを示します。 *distributor_security_mode*が**0**に設定されている場合は*distributor_login*が必要です。 *distributor_login* は **sysname**,、既定値は NULL です。  
+`[ @distributor_login = ] 'distributor_login'` ディストリビューターへの接続時に、同期時に使用するディストリビューターログインを示します。 *distributor_security_mode* が **0** に設定されている場合は *distributor_login* が必要です。 *distributor_login* は **sysname**,、既定値は NULL です。  
   
-`[ @distributor_password = ] 'distributor_password'` ディストリビューターパスワードを入力します。 *distributor_security_mode*が**0**に設定されている場合は*distributor_password*が必要です。 *distributor_password* は **sysname**,、既定値は NULL です。 *Distributor_password*の値は 120 Unicode 文字未満である必要があります。  
+`[ @distributor_password = ] 'distributor_password'` ディストリビューターパスワードを入力します。 *distributor_security_mode* が **0** に設定されている場合は *distributor_password* が必要です。 *distributor_password* は **sysname**,、既定値は NULL です。 *Distributor_password* の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @publisher_security_mode = ] publisher_security_mode` 同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode* は **int**,、既定値は **1**です。 **0**の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` 同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode* は **int**,、既定値は **1** です。 **0** の場合、認証を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 **1** の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'` 同期時にパブリッシャーに接続するときに使用するログインを示します。 *publisher_login* は **sysname**,、既定値は NULL です。  
   
-`[ @publisher_password = ] 'publisher_password'` パブリッシャーに接続するときに使用するパスワードを入力します。 *publisher_password* は **sysname**,、既定値は NULL です。 *Publisher_password*の値は 120 Unicode 文字未満である必要があります。  
+`[ @publisher_password = ] 'publisher_password'` パブリッシャーに接続するときに使用するパスワードを入力します。 *publisher_password* は **sysname**,、既定値は NULL です。 *Publisher_password* の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
 `[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインを指定します。 *job_login* は **nvarchar (257)**,、既定値はありません。 この Windows アカウントは、ディストリビューターへのエージェント接続に常に使用されます。  
   
-`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname**であり、既定値はありません。 *Job_password*の値は 120 Unicode 文字未満である必要があります。  
+`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname** であり、既定値はありません。 *Job_password* の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` ユーザー定義のデータベースマスターキーのパスワードを指定します。 *db_master_key_password* は **nvarchar (524)**,、既定値は NULL です。 *Db_master_key_password*が指定されていない場合は、既存のデータベースマスターキーが削除され、再作成されます。  
+`[ @db_master_key_password = ] 'db_master_key_password'` ユーザー定義のデータベースマスターキーのパスワードを指定します。 *db_master_key_password* は **nvarchar (524)**,、既定値は NULL です。 *Db_master_key_password* が指定されていない場合は、既存のデータベースマスターキーが削除され、再作成されます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
@@ -106,13 +106,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_attachsubscription** は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  パブリケーションの保有期間が終了している場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間が経過したサブスクリプションが指定されている場合、サブスクリプションがアタッチされているか、最初に同期されたときに、エラーが発生します。 パブリケーションの保有期間が **0** (期限切れにならない) のパブリケーションは無視されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_attachsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_attachsubscription** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

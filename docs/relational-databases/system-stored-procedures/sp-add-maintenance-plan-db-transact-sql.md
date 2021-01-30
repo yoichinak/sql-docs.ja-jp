@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan_db_TSQL
 - sp_add_maintenance_plan_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8cc84a2afd70a4e5bd89a581b0fb1ac1dcc229f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474630"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209018"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @plan_id = ] 'plan_id'` メンテナンスプランのプラン ID を指定します。 *plan_id* は **uniqueidentifier**で、有効な id である必要があります。  
+`[ @plan_id = ] 'plan_id'` メンテナンスプランのプラン ID を指定します。 *plan_id* は **uniqueidentifier** で、有効な id である必要があります。  
   
 `[ @db_name = ] 'database_name'` メンテナンスプランに追加するデータベースの名前を指定します。 プランに追加する前に、データベースが作成されているか、存在している必要があります。 *database_name* は **sysname** です。  
   
@@ -57,10 +57,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  **sp_add_maintenance_plan_db** は、 **msdb** データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_add_maintenance_plan_db**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_add_maintenance_plan_db** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
- この例では、 **sp_add_maintenance_plan**で作成したメンテナンスプランに**AdventureWorks2012**データベースを追加します。  
+ この例では、 **sp_add_maintenance_plan** で作成したメンテナンスプランに **AdventureWorks2012** データベースを追加します。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  

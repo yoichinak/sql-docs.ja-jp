@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoropen
 - sp_cursoropen_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1e8e4025a31c92ec001bcb45bee4f8d26f3dc24e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543590"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206277"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  スクロール オプションです。 *scrollopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -70,12 +70,12 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 要求された値が *stmt*によって定義されたカーソルに適していない可能性があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、SQL Server によって適切な値が割り当てられます。  
+ 要求された値が *stmt* によって定義されたカーソルに適していない可能性があるため、このパラメーターは入力と出力の両方として機能します。 このような場合は、SQL Server によって適切な値が割り当てられます。  
   
  *ccopt*  
  同時実行制御オプション。 *ccopt* は省略可能なパラメーターで、次のいずれかの **int** 入力値を必要とします。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (以前の LOCKCC)|  
@@ -89,7 +89,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- *Scrollopt*と同様に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は要求された*ccopt*値をオーバーライドできます。  
+ *Scrollopt* と同様に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は要求された *ccopt* 値をオーバーライドできます。  
   
  *行*  
  AUTO_FETCH で使用するフェッチバッファー行の数。 既定値は20行です。 *rowcount* の動作は、入力値と戻り値として割り当てられた場合に異なります。  
@@ -123,7 +123,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  エラーが発生した場合、戻り値は不整合になる可能性があり、精度は保証できません。  
   
- *Rowcount*パラメーターが戻り値として指定されている場合、次の結果セットが発生します。  
+ *Rowcount* パラメーターが戻り値として指定されている場合、次の結果セットが発生します。  
   
  -1  
  行数が不明または適用外の場合に返されます。  
@@ -148,12 +148,12 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Sp_cursoropen プロシージャが正常に実行された場合、RPC の戻りパラメーターと TDS 列形式の情報 (0xa0 & 0xa1 messages) を含む結果セットが送信されます。 失敗した場合は、1つまたは複数の TDS エラーメッセージが送信されます。 どちらの場合も、行データは返されず、 *done* メッセージカウントはゼロになります。 7.0 より前のバージョンを使用している場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa0、0xa1 (SELECT ステートメントの標準) は、0xa5 および0xa5 のトークンストリームと共に返されます。 7.0 を使用している場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、0xa5 および0xa5 のトークンストリームと共に0x81 が返されます (SELECT ステートメントの標準)。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="stmt-parameter"></a>stmt パラメーター  
- *Stmt*でストアドプロシージャの実行を指定する場合、入力パラメーターは、 *stmt*文字列の一部として、または*boundparam*引数として指定することによって、定数として定義することができます。 宣言された変数は、この方法でバインドされたパラメーターとして渡すことができます。  
+ *Stmt* でストアドプロシージャの実行を指定する場合、入力パラメーターは、 *stmt* 文字列の一部として、または *boundparam* 引数として指定することによって、定数として定義することができます。 宣言された変数は、この方法でバインドされたパラメーターとして渡すことができます。  
   
- *Stmt*パラメーターの許可される内容は、 *ccopt* ALLOW_DIRECT の戻り値が、またはその他の*ccopt*値にリンクされているかどうかによって異なります。つまり、次のようになります。  
+ *Stmt* パラメーターの許可される内容は、 *ccopt* ALLOW_DIRECT の戻り値が、またはその他の *ccopt* 値にリンクされているかどうかによって異なります。つまり、次のようになります。  
   
 -   ALLOW_DIRECT が指定されていない場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 1 つの select ステートメントを含むストアドプロシージャに対してを呼び出す select ステートメントまたは EXECUTE ステートメントを使用する必要があります。 さらに、SELECT ステートメントはカーソルとして修飾する必要があります。つまり、キーワード SELECT INTO または FOR BROWSE を含めることはできません。  
   
@@ -178,7 +178,7 @@ sp_cursoropen cursor OUTPUT, stmt
  最初の4つの *ccopt* 値 (READ_ONLY、SCROLL_LOCKS、および両方のオプティミスティック値) は相互に排他的です。  
   
 > [!NOTE]  
->  最初の4つの *ccopt* 値のいずれかを選択すると、カーソルが読み取り専用かどうか、またはロックまたはオプティミスティックメソッドを使用して更新が失われないようにするかどうかが決まります。 *Ccopt*の値が指定されていない場合、既定値はオプティミスティックです。  
+>  最初の4つの *ccopt* 値のいずれかを選択すると、カーソルが読み取り専用かどうか、またはロックまたはオプティミスティックメソッドを使用して更新が失われないようにするかどうかが決まります。 *Ccopt* の値が指定されていない場合、既定値はオプティミスティックです。  
   
  ALLOW_DIRECT と CHECK_ACCEPTED_TYPES は、または最初の4つの値のいずれかにリンクできます。  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grantlogin_TSQL
 - sp_grantlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ddca7a999c1095bc1f6da91e62bd675c736dd96b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b234748fb8e3d5f2f68973b7ff5011c401ad2616
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447071"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208975"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-sql)
 
@@ -43,7 +43,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @loginame = ] 'login'` Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、*ドメイン*ユーザーという形式の windows ドメイン名で修飾する必要があり \\ *User*ます (例: **London\Joeb**)。 *login* は **sysname**,、既定値はありません。  
+`[ @loginame = ] 'login'` Windows ユーザーまたはグループの名前を指定します。 Windows ユーザーまたはグループは、*ドメイン* ユーザーという形式の windows ドメイン名で修飾する必要があり \\ ます (例: **London\Joeb**)。 *login* は **sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,8 +64,8 @@ CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

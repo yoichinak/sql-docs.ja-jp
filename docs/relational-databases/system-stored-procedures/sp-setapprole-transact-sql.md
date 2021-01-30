@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setapprole
 - sp_setapprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: f34be78bc4d3f47ff2a11d0a6ed09c22c3670dca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570959"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209278"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-sql)
 
@@ -48,7 +48,7 @@ sp_setapprole [ @rolename = ] 'role',
 
 `[ @rolename = ] 'role'` 現在のデータベースで定義されているアプリケーションロールの名前を指定します。 *role* の型は **sysname** で、既定値はありません。 *ロール* は現在のデータベースに存在している必要があります。  
   
-`[ @password = ] { encrypt N'password' }` アプリケーションロールをアクティブ化するために必要なパスワードを指定します。 *パスワード* は **sysname** ,、既定値はありません。 ODBC **encrypt** 関数を使用すると、 *パスワード* を難読化できます。 **Encrypt** 関数を使用する場合は、最初の引用符の前に **N** を配置することで、パスワードを Unicode 文字列に変換する必要があります。  
+`[ @password = ] { encrypt N'password' }` アプリケーションロールをアクティブ化するために必要なパスワードを指定します。 *パスワード* は **sysname**,、既定値はありません。 ODBC **encrypt** 関数を使用すると、*パスワード* を難読化できます。 **Encrypt** 関数を使用する場合は、最初の引用符の前に **N** を配置することで、パスワードを Unicode 文字列に変換する必要があります。  
   
  [暗号化] オプションは、 **SqlClient** を使用している接続ではサポートされていません。  
   
@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (成功) と 1 (失敗)  
   
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>コメント
 
  **Sp_setapprole** を使用してアプリケーションロールをアクティブ化した後は、ユーザーがサーバーとの接続を切断するか **sp_unsetapprole** を実行するまで、ロールはアクティブのままになります。 **sp_setapprole** は、直接の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、アドホックレベル、およびユーザー定義のトランザクション内ではなく、アドホックレベルでのみ実行できます。  
   

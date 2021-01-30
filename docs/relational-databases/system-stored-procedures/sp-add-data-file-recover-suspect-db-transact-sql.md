@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_data_file_recover_suspect_db
 - sp_add_data_file_recover_suspect_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae07b655dd7b693876c61b600315ac8874d988ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e6361871e82e64283dc4d2afb305baa2dc5e193
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481660"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206767"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbName = ] 'database_ '` データベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。  
+`[ @dbName = ] 'database_ '` データベースの名前を指定します。 *データベースのデータ* 型は **sysname** で、既定値はありません。  
   
 `[ @filegroup = ] 'filegroup_name_ '` ファイルを追加するファイルグループを指定します。 *filegroup_name* は **nvarchar (260)**,、既定値は NULL の場合、プライマリファイルを示します。  
   
@@ -54,15 +54,15 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @filename = ] 'os_file_name_ '` は、ファイルのオペレーティングシステムによって使用されるパスとファイル名です。 ファイルは[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス上に存在している必要があります。 *os_file_name* は **nvarchar (260)**,、既定値はありません。  
   
-`[ @size = ] 'size_ '` ファイルの初期サイズです。 *サイズ* は **nvarchar (20)**,、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。 最小値は 512 KB です。 *Size*が指定されていない場合の既定値は 1 MB です。  
+`[ @size = ] 'size_ '` ファイルの初期サイズです。 *サイズ* は **nvarchar (20)**,、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。 最小値は 512 KB です。 *Size* が指定されていない場合の既定値は 1 MB です。  
   
 `[ @maxsize = ] 'max_size_ '` ファイルの拡張可能な最大サイズを指定します。 *max_size* は **nvarchar (20)**,、既定値は NULL です。 整数を指定します。小数を含めないでください。 サフィックス MB、KB を使用してメガバイト、キロバイトを指定できます。 既定値は MB です。  
   
- *Max_size*が指定されていない場合、ファイルはディスクがいっぱいになるまで拡張されます。 ディスク容量の上限まで近づくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログが管理者に対して警告を発します。  
+ *Max_size* が指定されていない場合、ファイルはディスクがいっぱいになるまで拡張されます。 ディスク容量の上限まで近づくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログが管理者に対して警告を発します。  
   
 `[ @filegrowth = ] 'growth_increment_ '` 新しい領域が必要になるたびにファイルに追加される領域のサイズです。 *growth_increment* は **nvarchar (20)**,、既定値は NULL です。 値0は、増加していないことを示します。 整数を指定します。小数を含めないでください。 値は MB、KB、またはパーセント (%) の単位で指定できます。 % が指定されている場合、増加率は、増分が発生した時点でのファイルのサイズに対して指定された割合になります。 サフィックス MB、KB、または % を付けないで数値を指定した場合の既定値は MB です。  
   
- *Growth_increment*が NULL の場合、既定値は10% で、最小値は 64 KB です。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。  
+ *Growth_increment* が NULL の場合、既定値は10% で、最小値は 64 KB です。 指定されたサイズは、最も近い 64 KB 単位の値に切り上げられます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

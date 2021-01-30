@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addqreader_agent_TSQL
 - sp_addqreader_agent
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dae183ab0f04ac343e7836b852a881341f188325
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f148297e264a0ca097671234655f9854b7e79aba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206648"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,14 +43,14 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="arguments"></a>引数  
 `[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]エージェントを実行する Windows アカウントのログインを指定します。 *job_login* は **nvarchar (257)**,、既定値はありません。 この Windows アカウントは、ディストリビューターへのエージェント接続に常に使用されます。  
   
-`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname**であり、既定値はありません。  
+`[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname** であり、既定値はありません。  
   
 > [!IMPORTANT]  
 >  認証情報をスクリプトファイルに保存しないでください。 セキュリティを最大限に高めるには、ログイン名とパスワードを実行時に指定する必要があります。  
   
-`[ @job_name = ] 'job_name'` 既存のエージェントジョブの名前を指定します。 *job_name* は **sysname**で、既定値は NULL です。 このパラメーターは、新しく作成されたジョブ (既定値) ではなく、既存のジョブを使用してエージェントが作成された場合にのみ指定します。  
+`[ @job_name = ] 'job_name'` 既存のエージェントジョブの名前を指定します。 *job_name* は **sysname** で、既定値は NULL です。 このパラメーターは、新しく作成されたジョブ (既定値) ではなく、既存のジョブを使用してエージェントが作成された場合にのみ指定します。  
   
-`[ @frompublisher = ] frompublisher` プロシージャがパブリッシャーで実行されているかどうかを指定します。 *frompublisher* の部分は bit で、既定値は **0**です。 値 **1** は、パブリケーションデータベースのパブリッシャーからプロシージャが実行されていることを意味します。  
+`[ @frompublisher = ] frompublisher` プロシージャがパブリッシャーで実行されているかどうかを指定します。 *frompublisher* の部分は bit で、既定値は **0** です。 値 **1** は、パブリケーションデータベースのパブリッシャーからプロシージャが実行されていることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -63,7 +63,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
  [Sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)を実行すると、キューリーダーエージェントジョブは削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_addqreader_agent**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_addqreader_agent** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [トランザクションパブリケーションの更新サブスクリプションを有効にする](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   

@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 fn_backup_db_config (Transact-sql)
-title: managed_backup。 fn_backup_db_config (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.fn_backup_db_config (transact-sql)
+title: managed_backup managed_backup.fn_backup_db_config (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.fn_backup_db_config
 - smart_admin.fn_backup_db_config_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 551e66e532cb42b5db906f1a87f19107c022fcc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01d2ecc1fffc66d92508b71951ca05d33a224cff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419546"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207432"
 ---
-# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup。 fn_backup_db_config (Transact-sql)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup managed_backup.fn_backup_db_config (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   構成設定が指定された0行、1行、または複数の行を返し [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ます。 指定されたデータベースに対して 1 行を返すか、インスタンス上で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって構成されたすべてのデータベースの情報を返します。  
@@ -45,7 +45,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="arguments"></a><a name="Arguments"></a> 引数  
  @db_name  
- データベースの名前。 @db_nameパラメーターは**SYSNAME**です。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
+ データベースの名前。 @db_nameパラメーターは **SYSNAME** です。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
@@ -63,10 +63,10 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |Encryptor_type|NCHAR (15)|暗号化機能の設定 (証明書または非対称キー) を返します。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|証明書または非対称キーの名前。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- **ALTER ANY CREDENTIAL**権限を持つ**db_backupoperator**データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION** 権限を拒否することはできません。  
+ **ALTER ANY CREDENTIAL** 権限を持つ **db_backupoperator** データベースロールのメンバーシップが必要です。 ユーザーは、 **VIEW ANY DEFINITION** 権限を拒否することはできません。  
   
 ## <a name="examples"></a>例  
  次の例では、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ' TestDB ' の構成を返します。  

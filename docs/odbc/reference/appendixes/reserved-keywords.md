@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b2ea205c92033e4dc5b39bd96f2e66e65bb98a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424984"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209116"
 ---
 # <a name="reserved-keywords"></a>予約済みキーワード
 次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define** 値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
@@ -71,7 +71,7 @@ ms.locfileid: "88424984"
         CONTINUE  
         CONVERT  
         CORRESPONDING  
-        COUNT  
+        [COUNT]  
         CREATE  
     :::column-end:::
     :::column:::
@@ -91,7 +91,7 @@ ms.locfileid: "88424984"
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        Del  
+        DELETE  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -112,7 +112,7 @@ ms.locfileid: "88424984"
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        false  
+        FALSE  
         FETCH  
         FIRST  
         FLOAT  
@@ -232,7 +232,7 @@ ms.locfileid: "88424984"
         SQLSTATE  
         SQLWARNING  
         SUBSTRING  
-        SUM  
+        [SUM]  
         SYSTEM_USER  
         TABLE  
         TEMPORARY  

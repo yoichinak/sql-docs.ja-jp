@@ -1,13 +1,13 @@
 ---
-description: sp_cdc_generate_wrapper_function (Transact-sql)
-title: sp_cdc_generate_wrapper_function (Transact-sql) |Microsoft Docs
+description: sys.sp_cdc_generate_wrapper_function (Transact-sql)
+title: sys.sp_cdc_generate_wrapper_function (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
 - sp_cdc_generate_wrapper_function
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 069c0cb5eab377d0c2cd4bc92b68d7071f56681a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f6dc9038b4f23b7e38e69555ceed06fab90ba92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540476"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205982"
 ---
-# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sp_cdc_generate_wrapper_function (Transact-sql)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用可能な変更データ キャプチャのクエリ関数に必要なラッパー関数を作成するためのスクリプトを生成します。 生成されたラッパーでサポートされる API を使用すると、クエリ範囲を日時間隔として指定できます。 これによって関数は多くのウェアハウジング アプリケーション (変更データ キャプチャ テクノロジを使用して増分読み込みを確認している [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ デザイナーが開発したアプリケーションなど) で使用しやすくなります。  
@@ -73,7 +73,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar (145)**|生成された関数の名前。|  
 |**create_script**|**nvarchar(max)**|は、キャプチャインスタンスのラッパー関数を作成するスクリプトです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  キャプチャインスタンスのすべての変更クエリをラップする関数を作成するスクリプトは、常に生成されます。 キャプチャインスタンスで差分変更クエリがサポートされている場合、このクエリのラッパーを生成するスクリプトは generatedl でもあります。  
   
 ## <a name="examples"></a>例  

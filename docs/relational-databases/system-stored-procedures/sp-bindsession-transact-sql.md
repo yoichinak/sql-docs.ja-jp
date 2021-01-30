@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_bindsession
 - sp_bindsession_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 900f6383a4a285cac36262096a66e64603467c79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64f6b6b4134c5f29dea38d87e7d75e43910ca530
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548234"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206609"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>引数  
  **'** *bind_token* **'**  
- **Sp_getbindtoken**または Open Data Services **srv_getbindtoken**関数を使用して最初に取得したトランザクションを識別するトークンです。 *bind_token*は **varchar (255)** です。  
+ **Sp_getbindtoken** または Open Data Services **srv_getbindtoken** 関数を使用して最初に取得したトランザクションを識別するトークンです。 *bind_token* は **varchar (255)** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -54,11 +54,11 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession** は、バインドトークンを使用して、2つ以上の既存のクライアントセッションをバインドします。 これらのクライアントセッションは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] バインドトークンが取得されたの同じインスタンス上にある必要があります。 セッションとは、コマンドを実行するクライアントです。 バインドされたデータベースセッションは、トランザクションとロック領域を共有します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインドトークンは、各インスタンス内でのみローカルに有効であり、複数のインスタンス間で共有することはできません。 の別のインスタンスでクライアントセッションをバインドするには [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、 **sp_getbindtoken**を実行して別のバインドトークンを取得する必要があります。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインドトークンは、各インスタンス内でのみローカルに有効であり、複数のインスタンス間で共有することはできません。 の別のインスタンスでクライアントセッションをバインドするには [!INCLUDE[ssDE](../../includes/ssde-md.md)] 、 **sp_getbindtoken** を実行して別のバインドトークンを取得する必要があります。  
   
- アクティブでないトークンが使用されている場合、 **sp_bindsession**はエラーで失敗します。  
+ アクティブでないトークンが使用されている場合、 **sp_bindsession** はエラーで失敗します。  
   
- *Bind_token*を指定せずに**sp_bindsession**を使用するか*bind_token*で NULL を渡すことによって、セッションからバインドを解除します。  
+ *Bind_token* を指定せずに **sp_bindsession** を使用するか *bind_token* で NULL を渡すことによって、セッションからバインドを解除します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -67,7 +67,7 @@ sp_bindsession { 'bind_token' | NULL }
  次の例では、指定したバインドトークンを現在のセッションにバインドします。  
   
 > [!NOTE]  
->  この例に示されているバインドトークンは、 **sp_bindsession**を実行する前に**sp_getbindtoken**を実行することによって取得されました。  
+>  この例に示されているバインドトークンは、 **sp_bindsession** を実行する前に **sp_getbindtoken** を実行することによって取得されました。  
   
 ```  
 USE master;  

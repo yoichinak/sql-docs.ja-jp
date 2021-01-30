@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_sql
 - sys.fn_get_sql_TSQL
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4b3e28e4c66d45f28c6239431e8e6d5440d5d4a0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: aee9ac3d8d75081ad3474f215d6bc289580e2da0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093822"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206059"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|オブジェクトが暗号化されているかどうかを示します。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
 |text|**text**|SQL ステートメントのテキストを入力します。 暗号化されているオブジェクトの場合は NULL になります。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  有効な SQL ハンドルは、 [sys.dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 動的管理ビューの [sql_handle] 列から取得できます。  
   
  キャッシュに存在しなくなったハンドルを渡すと、fn_get_sq **l** は空の結果セットを返します。 無効なハンドルを渡した場合、バッチは停止し、エラーメッセージが返されます。  

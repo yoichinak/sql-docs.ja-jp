@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showpendingchanges
 - sp_showpendingchanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78b4901fc70299373044ce0720403031992e37a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ac2c44e836a56c6fa503b6144e99761294ab473a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547402"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207310"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @destination_server = ] 'destination_server'` レプリケートされた変更が適用されるサーバーの名前を指定します。 *destination_server* は **sysname**で、既定値は NULL です。  
+`[ @destination_server = ] 'destination_server'` レプリケートされた変更が適用されるサーバーの名前を指定します。 *destination_server* は **sysname** で、既定値は NULL です。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。 *パブリケーション*が指定されている場合、結果は指定されたパブリケーションのみに制限されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。 *パブリケーション* が指定されている場合、結果は指定されたパブリケーションのみに制限されます。  
   
-`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値は NULL です。 *Article*が指定されている場合、結果は指定されたアーティクルのみに制限されます。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname** で、既定値は NULL です。 *Article* が指定されている場合、結果は指定されたアーティクルのみに制限されます。  
   
-`[ @show_rows = ] 'show_rows'` 結果セットに保留中の変更に関するより具体的な情報が含まれているかどうかを指定します。既定値は **0**です。 値 **1** を指定した場合、結果セットには is_delete および rowguid という列が含まれます。  
+`[ @show_rows = ] 'show_rows'` 結果セットに保留中の変更に関するより具体的な情報が含まれているかどうかを指定します。既定値は **0** です。 値 **1** を指定した場合、結果セットには is_delete および rowguid という列が含まれます。  
   
 ## <a name="result-set"></a>結果セット  
   
@@ -69,14 +69,14 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_showpendingchanges は、マージ レプリケーションで使用します。  
   
  sp_showpendingchanges は、マージレプリケーションのトラブルシューティングを行うときに使用します。  
   
  sp_showpendingchanges の結果には、生成が 0 の行は含まれません。  
   
- *アーティクル*に指定されたアーティクルがパブリケーションに指定されたパブリケーションに属していない場合 *、* pending_deletes と pending_ins_and_upd に対して0のカウントが返されます。  
+ *アーティクル* に指定されたアーティクルがパブリケーションに指定されたパブリケーションに属していない場合 *、* pending_deletes と pending_ins_and_upd に対して0のカウントが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  sp_showpendingchanges を実行できるのは、固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーだけです。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semantickeyphrasetable
 - semantickeyphrasetable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05a3436512d37a2a18bbfd8e393385e01cb53bf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464811"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207347"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICKEYPHRASETABLE
  **column_list**  
  複数の列をコンマで区切り、かっこで囲んで指定します。 すべての列でセマンティックインデックス作成が有効になっている必要があります。  
   
- **\***  
+ **\** _  
  セマンティック インデックスが有効になっているすべての列が含まれていることを示します。  
   
- **source_key**  
+ _ *source_key**  
  行の一意のキーで、特定の行の結果を要求します。  
   
  キーは、可能な場合は常に、ソーステーブル内のフルテキスト一意キーの型に暗黙的に変換されます。 キーは定数または変数として指定できますが、式またはスカラーサブクエリの結果にすることはできません。 Source_key を省略した場合、すべての行に対して結果が返されます。  
@@ -71,21 +71,21 @@ SEMANTICKEYPHRASETABLE
 |Column_name|Type|説明|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|現在のキーフレーズを抽出してインデックスを作成した列の ID。<br /><br /> 列 ID から列名 (または列名から列 ID) を取得する方法の詳細については、COL_NAME 関数と COLUMNPROPERTY 関数のセクションを参照してください。|  
-|**document_key**|**\***<br /><br /> このキーは、ソーステーブル内の一意なキーの型と一致します。|現在のキーフレーズのインデックスが作成されたドキュメントまたは行の一意のキー値。|  
-|**キーフレーズ**|**NVARCHAR**|Column_id によって識別され、document_key によって指定されたドキュメントに関連付けられている列に含まれるキーフレーズ。|  
-|**スコア**|**本当の**|インデックス付き列内の同じドキュメント内の他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
+|**document_key**|**\** _<br /><br /> このキーは、ソーステーブル内の一意なキーの型と一致します。|現在のキーフレーズのインデックスが作成されたドキュメントまたは行の一意のキー値。|  
+|_ *の*"/"。*|**NVARCHAR**|Column_id によって識別され、document_key によって指定されたドキュメントに関連付けられている列に含まれるキーフレーズ。|  
+|**スコア**|**REAL**|インデックス付き列内の同じドキュメント内の他のすべてのキーフレーズとの関係における、このキーフレーズの相対値。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  詳細については、「 [セマンティック検索を使用してドキュメント内のキーフレーズを検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)する」を参照してください。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  セマンティックなキー フレーズの抽出および生成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  
   
 -   [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  フルテキストおよびセマンティック インデックスが作成されたベース テーブルに対する SELECT 権限が必要です。  

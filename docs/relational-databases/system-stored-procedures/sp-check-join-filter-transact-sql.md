@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - filter_TSQL
 - sp_check_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: be5d9341f0ad1372f91666dc7f7022e4f14b2ea3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 74e4114eca77cbbac1c2e2c2471fb0ee10a55ae1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539088"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206557"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="arguments"></a>引数  
 `[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前を指定します。 *filtered_table* は **nvarchar (400)**,、既定値はありません。  
   
-`[ @join_table = ] 'join_table'`*Filtered_table*に結合されるテーブルの名前を指定します。 *join_table* は **nvarchar (400)**,、既定値はありません。  
+`[ @join_table = ] 'join_table'`*Filtered_table* に結合されるテーブルの名前を指定します。 *join_table* は **nvarchar (400)**,、既定値はありません。  
   
 `[ @join_filterclause = ] 'join_filterclause'` テストする結合フィルター句を選択します。 *join_filterclause* は **nvarchar (1000)**,、既定値はありません。  
   
@@ -59,19 +59,19 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 |**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションに対して限定される場合はです。 **1** はたパーティションを使用できることを示し、 **0** は使用できないことを示します。|  
 |**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化されたフィルター関数が少なくとも1つ含まれているかどうかを示します。 **1** は、パラメーター化されたフィルター関数が使用されることを示します。 **0** は、このような関数が使用されないことを示します。|  
 |**dynamic_filters_function_list**|**nvarchar (500)**|アーティクルのパラメーター化されたフィルターを定義するフィルター句内の関数の一覧。各関数はセミコロンで区切られます。|  
-|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
-|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
+|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1** はこの関数が存在することを意味します。|  
+|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1** はこの関数が存在することを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_check_join_filter** は、マージレプリケーションで使用します。  
   
  **sp_check_join_filter** は、パブリッシュされていない場合でも、関連するテーブルに対して実行できます。 このストアド プロシージャは、2 つのアーティクル間の結合フィルターを定義する前に、結合フィルター句を検証するときに使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_check_join_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_check_join_filter** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

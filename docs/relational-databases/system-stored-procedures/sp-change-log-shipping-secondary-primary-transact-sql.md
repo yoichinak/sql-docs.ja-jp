@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8352706512e71a5cba3a0b22befe2b7416d276bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209348"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_change_log_shipping_secondary_primary
 ## <a name="arguments"></a>引数  
 `[ @primary_server = ] 'primary_server'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ログ配布構成におけるのプライマリインスタンスの名前。 *primary_server* は **sysname** であり、NULL にすることはできません。  
   
-`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname**であり、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリサーバー上のデータベースの名前を指定します。 *primary_database* は **sysname** であり、既定値はありません。  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` プライマリサーバーからのトランザクションログバックアップファイルが格納されているディレクトリ。 *backup_source_directory* は **nvarchar (500)** であり、NULL にすることはできません。  
   
@@ -77,7 +77,7 @@ sp_change_log_shipping_secondary_primary
 ## <a name="remarks"></a>解説  
  **sp_change_log_shipping_secondary_primary** は、セカンダリサーバーの **master** データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
-1.  **Log_shipping_secondary**レコードの設定を必要に応じて変更します。  
+1.  **Log_shipping_secondary** レコードの設定を必要に応じて変更します。  
   
 2.  監視サーバーがセカンダリサーバーと異なる場合は、必要に応じて、指定された引数を使用して監視サーバー上の **log_shipping_monitor_secondary** の監視レコードを変更します。  
   

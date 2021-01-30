@@ -6,7 +6,7 @@ ms.date: 06/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_external_script_requests
 - sys.dm_external_script_requests_TSQL
@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ca4cfdd348d04ab0332653fa6851107ffa5f16d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482683"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207114"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97482683"
 > [!NOTE]
 > 外部スクリプトを実行するユーザーには、追加の権限が必要 `EXECUTE ANY EXTERNAL SCRIPT` です。ただし、この DMV は、管理者がこの権限なしで使用できます。 
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
 
 このビューは、スクリプト言語の識別子を使用してフィルター処理することができます。
 

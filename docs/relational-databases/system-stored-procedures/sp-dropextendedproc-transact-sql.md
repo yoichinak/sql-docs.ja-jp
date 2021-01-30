@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproc
 - sp_dropextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02d4287b2825401acd0eca532b3fad100fa32639
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc877761f2e86ff63883c9f84ead94955044acbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538972"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209339"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +52,14 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  なし  
   
 ## <a name="remarks"></a>解説  
- **Sp_dropextendedproc**を実行すると、ユーザー定義の拡張ストアドプロシージャ名[が、](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) extended_procedures カタログビューから削除され、そのエントリが削除されます[。](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) このストアドプロシージャは、 **master** データベースでのみ実行できます。  
+ **Sp_dropextendedproc** を実行すると、ユーザー定義の拡張ストアドプロシージャ名が、 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログビューから削除され、 [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)カタログビューからエントリが削除されます。 このストアドプロシージャは、 **master** データベースでのみ実行できます。  
   
 **sp_dropextendedproc** では、システム拡張ストアドプロシージャは削除されません。 代わりに、システム管理者は、拡張ストアドプロシージャに対する EXECUTE 権限を **public** ロールに対して拒否する必要があります。  
   
  **sp_dropextendedproc** をトランザクション内で実行することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_dropextendedproc**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_dropextendedproc** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
  次の例では、 `xp_hello` 拡張ストアドプロシージャを削除します。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.availability_groups_TSQL
 - availability_groups_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c912d3cb46d4545bf0501281cec23c8f9ce4fb97
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2808ab7ce8d64ed5615a2bf2d2b6500a68d6e88f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101817"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210058"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98101817"
 |**failure_condition_level**|**int**|自動フェールオーバーをトリガーする必要があるユーザー定義のエラー状態レベル。このレベルでは、このテーブルのすぐ下のテーブルに表示される整数値の1つです。<br /><br /> エラー状態レベルの範囲は 1 ～ 5 で、レベル 1 が最も制限が緩く、レベル 5 が最も制限の厳しい指定です。 任意の状態レベルは、それより制限が緩いすべてのレベルを含みます。 したがって、最も厳しい状態レベル 5 にはそれより制限が緩い状態レベル (1 から 4) が含まれ、レベル 4 にはレベル 1 から 3 が含まれます。以下同様です。<br /><br /> この値を変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの FAILURE_CONDITION_LEVEL オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |**health_check_timeout**|**int**|サーバーインスタンスが低速または応答していないと想定される前に、 [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システムストアドプロシージャがサーバーの正常性情報を返すまでの待機時間 (ミリ秒単位)。 既定値は 30000 ミリ秒 (30 秒) です。<br /><br /> この値を変更するには、 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)ステートメントの HEALTH_CHECK_TIMEOUT オプションを使用し [!INCLUDE[tsql](../../includes/tsql-md.md)] ます。|  
 |**automated_backup_preference**|**tinyint**|この可用性グループの可用性データベースでバックアップを実行するための推奨される場所です。 使用可能な値とその説明を次に示します。<br /><br /> <br /><br /> 0: プライマリ。 バックアップは常にプライマリレプリカで実行する必要があります。<br /><br /> 1: セカンダリのみ。 セカンダリレプリカでバックアップを実行することをお勧めします。<br /><br /> 2: セカンダリを優先します。 セカンダリレプリカでバックアップを実行することをお勧めしますが、バックアップ操作に使用できるセカンダリレプリカがない場合は、プライマリレプリカでバックアップを実行できます。 これが既定の動作です。<br /><br /> 3: 任意のレプリカ。 バックアップをプライマリレプリカとセカンダリレプリカのどちらで実行するかについては、優先順位はありません。<br /><br /> <br /><br /> 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。|  
-|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference** の説明。次のいずれかになります。<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> なし|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference** の説明。次のいずれかになります。<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> NONE|  
 |**version**|**smallint**|Windows フェールオーバークラスターに格納されている可用性グループのメタデータのバージョン。 このバージョン番号は、新しい機能が追加されたときにインクリメントされます。|  
 |**basic_features**|**bit**|これが基本的な可用性グループかどうかを指定します。 詳細については、「[基本的な可用性グループ &#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)」を参照してください。|  
 |**dtc_support**|**bit**|この可用性グループに対して DTC サポートが有効になっているかどうかを指定します。 **CREATE AVAILABILITY GROUP** の **DTC_SUPPORT** オプションは、この設定を制御します。|  

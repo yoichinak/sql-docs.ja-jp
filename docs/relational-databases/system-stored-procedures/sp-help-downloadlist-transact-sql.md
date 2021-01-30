@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
 - sp_help_downloadlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6f60b3da9c05d38b60573aa272c33a7cb6915116
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549732"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208913"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,25 +52,25 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 `[ @job_name = ] 'job_name'` ジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
 `[ @operation = ] 'operation'` 指定されたジョブの有効な操作です。 *操作* は **varchar (64)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**不具合**|マスター **SQLServerAgent** サービスからの参加を解除する対象サーバーを要求するサーバー操作。|  
 |**DELETE**|ジョブ全体を削除するジョブ操作。|  
 |**INSERT**|ジョブ全体の追加、または既存のジョブの更新を行うジョブ操作。 この操作には、すべてのジョブステップとスケジュールが含まれます (該当する場合)。|  
 |**再参加**|ターゲット サーバーで参加情報の再送信を行うためのサーバー操作。この情報にはマルチサーバー ドメインのポーリング間隔やタイム ゾーンも含まれます。 ターゲットサーバーは、 **MSXOperator** の詳細も再ダウンロードします。|  
-|**SET-POLL**|ターゲット サーバーがマルチサーバー ドメインを呼び出す間隔を秒単位で設定するサーバー操作。 *値*を指定すると、必要な間隔の値として解釈され、 **10** ~ **28800**の値を指定できます。|  
+|**SET-POLL**|ターゲット サーバーがマルチサーバー ドメインを呼び出す間隔を秒単位で設定するサーバー操作。 *値* を指定すると、必要な間隔の値として解釈され、 **10** ~ **28800** の値を指定できます。|  
 |**着手**|ジョブ実行の開始を要求するジョブ操作。|  
 |**停止**|ジョブの実行の停止を要求するジョブ操作。|  
 |**SYNC-TIME**|対象サーバーがマルチサーバードメインとシステムクロックを同期させるサーバー操作。 これはコストのかかる操作なので、この操作は限られた頻度で実行します。|  
-|**UPDATE**|ジョブステップまたはスケジュールではなく、ジョブの **sysjobs** 情報のみを更新するジョブ操作。 は、 **sp_update_job**によって自動的に呼び出されます。|  
+|**UPDATE**|ジョブステップまたはスケジュールではなく、ジョブの **sysjobs** 情報のみを更新するジョブ操作。 は、 **sp_update_job** によって自動的に呼び出されます。|  
   
-`[ @object_type = ] 'object_type'` 指定されたジョブのオブジェクトの種類です。 *object_type* は **varchar (64)**,、既定値は NULL です。 *object_type* には、ジョブまたはサーバーを指定できます。 有効な *object_type*値の詳細については、「 [transact-sql&#41;&#40;sp_add_category ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)」を参照してください。  
+`[ @object_type = ] 'object_type'` 指定されたジョブのオブジェクトの種類です。 *object_type* は **varchar (64)**,、既定値は NULL です。 *object_type* には、ジョブまたはサーバーを指定できます。 有効な *object_type* 値の詳細については、「 [transact-sql&#41;&#40;sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)」を参照してください。  
   
-`[ @object_name = ] 'object_name'` オブジェクトの名前。 *object_name* は **sysname**,、既定値は NULL です。 *Object_type*が job の場合は、 *object_name*がジョブ名になります。 *Object_type*が server の場合、 *object_name*はサーバー名です。  
+`[ @object_name = ] 'object_name'` オブジェクトの名前。 *object_name* は **sysname**,、既定値は NULL です。 *Object_type* が job の場合は、 *object_name* がジョブ名になります。 *Object_type* が server の場合、 *object_name* はサーバー名です。  
   
 `[ @target_server = ] 'target_server'` 対象サーバーの名前。 *target_server* は **nvarchar (128)**,、既定値は NULL です。  
   
@@ -91,7 +91,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**source_server**|**nvarchar(30)**|命令の送信元のサーバーのコンピューター名。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 では、これは常にマスター (MSX) サーバーのコンピューター名です。|  
 |**operation_code**|**nvarchar (4000)**|命令の操作コード。|  
 |**object_name**|**sysname**|命令によって影響を受けるオブジェクト。|  
-|**object_id**|**uniqueidentifier**|命令によって影響を受けるオブジェクトの識別番号 (ジョブオブジェクトの場合は**job_id** 、サーバーオブジェクトの場合は 0x00)、または **operation_code**に固有のデータ値。|  
+|**object_id**|**uniqueidentifier**|命令によって影響を受けるオブジェクトの識別番号 (ジョブオブジェクトの場合は **job_id** 、サーバーオブジェクトの場合は 0x00)、または **operation_code** に固有のデータ値。|  
 |**target_server**|**nvarchar(30)**|この命令をダウンロードする対象サーバー。|  
 |**error_message**|**nvarchar(1024)**|この命令の処理中に問題が発生した場合の、ターゲット サーバーからのエラー メッセージ (存在する場合)。<br /><br /> 注: すべてのエラーメッセージは、対象サーバーによるすべてのダウンロードをブロックします。|  
 |**date_posted**|**datetime**|命令がテーブルにポストされた日付。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobcount
 - sp_help_jobcount_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2498f73d712a2de4c03dbd48c5f18eb0f5d49293
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 19514ea8eb65aee4161e6f1316abdf76eb156196
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527880"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206433"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @schedule_id = ] schedule_id` 一覧表示するスケジュールの識別子を設定します。 *schedule_id* は **int**,、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
+`[ @schedule_id = ] schedule_id` 一覧表示するスケジュールの識別子を設定します。 *schedule_id* は **int**,、既定値はありません。 *Schedule_id* または *schedule_name* のいずれかを指定できます。  
   
-`[ @schedule_name = ] 'schedule_name'` 一覧表示するスケジュールの名前を指定します。 *schedule_name* は **sysname**であり、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
+`[ @schedule_name = ] 'schedule_name'` 一覧表示するスケジュールの名前を指定します。 *schedule_name* は **sysname** であり、既定値はありません。 *Schedule_id* または *schedule_name* のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -56,11 +56,11 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|指定されたスケジュールのジョブの数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この手順では、指定したスケジュールにアタッチされているジョブの数を一覧表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -70,7 +70,7 @@ sp_help_jobcount
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **Sysadmin**のメンバーだけが、他のユーザーによって所有されているジョブの数を表示できます。  
+ **Sysadmin** のメンバーだけが、他のユーザーによって所有されているジョブの数を表示できます。  
   
 ## <a name="examples"></a>例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブの数を一覧表示します。  

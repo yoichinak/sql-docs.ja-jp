@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - filter_TSQL
 - sp_check_for_sync_trigger
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddd0563d0a58ec50fc43ed1ac78478068b553ab0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: cb15d74c1ac4845b7ff60bd12983b922008b27c8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364856"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206572"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +40,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@tabid =** ] ' *tabid* '  
+ [**@tabid =** ] '*tabid*'  
  即時更新トリガーに対してチェックされるテーブルのオブジェクト ID です。 *tabid* は **int** で、既定値はありません。  
   
- [ **@trigger_op =** ] ' *trigger_output_parameters* ' 出力  
+ [**@trigger_op =** ] '*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters* は **char (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
@@ -58,7 +58,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ## <a name="return-code-values"></a>リターン コードの値  
  0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されており、 *\@ trigger_op* で返されるトリガーの種類であることを示します。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  **sp_check_for_sync_trigger** は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
  **sp_check_for_sync_trigger** は、レプリケーションとユーザー定義トリガーを調整するために使用されます。 このストアド プロシージャは、レプリケーション トリガーのコンテキスト内で呼び出されているかどうかを判別します。 たとえば、ユーザー定義トリガーの本文でプロシージャ **sp_check_for_sync_trigger** を呼び出すことができます。 **Sp_check_for_sync_trigger** が **0** を返した場合、ユーザー定義トリガーは処理を続行します。 **Sp_check_for_sync_trigger** が **1** を返した場合、ユーザー定義のトリガーは終了します。 これにより、レプリケーショントリガーによってテーブルが更新されたときに、ユーザー定義のトリガーが起動しなくなります。  

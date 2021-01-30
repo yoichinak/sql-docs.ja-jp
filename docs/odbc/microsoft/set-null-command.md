@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set nullSET NULL
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e98037838325a0bfe56b51cdcfec7df8539facd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a190c913b2f8cc9d7a111a0c95d0408de2c1c6c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421846"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208604"
 ---
 # <a name="set-null-command"></a>SET NULL コマンド
 ALTER TABLE-SQL、CREATE TABLE SQL、および INSERT-SQL コマンドで null 値をどのようにサポートするかを決定します。  
@@ -41,7 +41,7 @@ SET NULL ON | OFF
   
  また、insert-SQL が、INSERT-SQL VALUE 句に含まれていない列に空白の値を挿入することを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SET NULL は、ALTER TABLE、CREATE TABLE、および INSERT によって null 値がサポートされる方法にのみ影響します。 他のコマンドは、SET NULL によって影響を受けません。  
   
 ## <a name="see-also"></a>参照  

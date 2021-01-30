@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 fn_get_current_xevent_settings (Transact-sql)
-title: managed_backup。 fn_get_current_xevent_settings (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.fn_get_current_xevent_settings (transact-sql)
+title: managed_backup managed_backup.fn_get_current_xevent_settings (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_current_xevent_settings
 - smart_admin.fn_get_current_xevent_settings_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 164038c2009f273ae922e65c922c1d962a72b7d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0bd15419c867134a66cf678cbb6355df0c4142f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419526"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207406"
 ---
-# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup。 fn_get_current_xevent_settings (Transact-sql)
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup managed_backup.fn_get_current_xevent_settings (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   スマートな制御者によってサポートされる拡張イベントの種類ごとに1行の値を返します。  
@@ -52,10 +52,10 @@ smart_admin.fn_get_current_xevent_settings ()
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR (128)|拡張イベントの種類|  
-|is_configurable|NVARCHAR (128)|イベントが構成可能な場合は **True** に設定され、それ以外の場合は **False**に設定されます。|  
+|is_configurable|NVARCHAR (128)|イベントが構成可能な場合は **True** に設定され、それ以外の場合は **False** に設定されます。|  
 |is_enabled|NVARCHAR (128)|イベントが有効な場合は True に設定されます。有効でない場合は False に設定されます。 デバッグ イベントを有効にするには、smart_admin.sp_set_parameter を使用します。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
  関数に対する **SELECT** 権限が必要です。  
