@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588f73fcd2ced95be3cd7f8586faed864b38f8ad
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b44be7497ca6952dd88d6f18ac0b42a6c989db36
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984843"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172205"
 ---
 # <a name="create-method-adox"></a>Create メソッド (ADOX)
 新しいカタログを作成します。  
@@ -38,8 +38,8 @@ Catalog.Create ConnectString
  *ConnectString*  
  データソースへの接続に使用する **文字列** 値。  
   
-## <a name="remarks"></a>解説  
- **Create**メソッドは、 *connectstring*に指定されたデータソースへの新しい ADO[接続](../ado-api/connection-object-ado.md)を作成して開きます。 成功した場合は、新しい **接続** オブジェクトが [ActiveConnection](./activeconnection-property-adox.md) プロパティに割り当てられます。  
+## <a name="remarks"></a>コメント  
+ **Create** メソッドは、 *connectstring* に指定されたデータソースへの新しい ADO [接続](../ado-api/connection-object-ado.md)を作成して開きます。 成功した場合は、新しい **接続** オブジェクトが [ActiveConnection](./activeconnection-property-adox.md) プロパティに割り当てられます。  
   
  プロバイダーが新しいカタログの作成をサポートしていない場合は、エラーが発生します。  
   

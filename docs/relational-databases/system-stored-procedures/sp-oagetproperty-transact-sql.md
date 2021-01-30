@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
 - sp_OAGetProperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0542ae7cf67fb5b05c63a4c8cdb9ef9fb31c62e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545995"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174406"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +43,21 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 以前に **sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
+ 以前に **sp_OACreate** を使用して作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *propertyname*  
  返される OLE オブジェクトのプロパティ名を指定します。  
   
- *propertyvalue*の **出力**  
+ *propertyvalue* の **出力**  
  返されるプロパティ値を指定します。 指定する場合は、適切なデータ型のローカル変数でなければなりません。  
   
- プロパティが OLE オブジェクトを返す場合、 *propertyvalue* は、データ型が **int**のローカル変数である必要があります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
+ プロパティが OLE オブジェクトを返す場合、 *propertyvalue* は、データ型が **int** のローカル変数である必要があります。オブジェクトトークンはローカル変数に格納され、このオブジェクトトークンを他の OLE オートメーションストアドプロシージャと共に使用できます。  
   
- プロパティが単一の値を返す場合は、 *propertyvalue*のローカル変数を指定します。これにより、ローカル変数のプロパティ値が返されます。または、 *propertyvalue*を指定せずに、単一列の単一行の結果セットとしてクライアントにプロパティ値を返します。  
+ プロパティが単一の値を返す場合は、 *propertyvalue* のローカル変数を指定します。これにより、ローカル変数のプロパティ値が返されます。または、 *propertyvalue* を指定せずに、単一列の単一行の結果セットとしてクライアントにプロパティ値を返します。  
   
  プロパティが配列を返す場合、 *propertyvalue* を指定すると、NULL に設定されます。  
   
- *Propertyvalue*が指定されていても、プロパティが値を返さない場合は、エラーが発生します。 プロパティが3次元以上の配列を返す場合、エラーが発生します。  
+ *Propertyvalue* が指定されていても、プロパティが値を返さない場合は、エラーが発生します。 プロパティが3次元以上の配列を返す場合、エラーが発生します。  
   
  *インデックス*  
  はインデックスパラメーターです。 指定する場合、 *インデックス* は、適切なデータ型の値である必要があります。  
@@ -96,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  また、 **sp_OAMethod** を使用してプロパティ値を取得することもできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
+ **Sysadmin** 固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
   
 ## <a name="examples"></a>例  
   

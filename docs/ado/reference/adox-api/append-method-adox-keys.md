@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Keys::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985483"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172301"
 ---
 # <a name="append-method-adox-keys"></a>Append メソッド (ADOX Keys)
 新しい [キー](./key-object-adox.md) オブジェクトを [Keys](./keys-collection-adox.md) コレクションに追加します。  
@@ -39,19 +39,19 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  追加する **キー** オブジェクト、または作成および追加するキーの名前。  
   
  *KeyType*  
- 省略可能。 キーの種類を指定する **Long** 型の値です。 *キー*パラメーターは、**キー**オブジェクトの[Type](./type-property-key-adox.md)プロパティに対応します。  
+ 任意。 キーの種類を指定する **Long** 型の値です。 *キー* パラメーターは、**キー** オブジェクトの [Type](./type-property-key-adox.md)プロパティに対応します。  
   
  *列*  
- 省略可能。 インデックスを作成する列の名前を指定する **文字列** 値。 *Columns*パラメーターは、 [Column](./column-object-adox.md)オブジェクトの[Name](./name-property-adox.md)プロパティの値に対応しています。  
+ 任意。 インデックスを作成する列の名前を指定する **文字列** 値。 *Columns* パラメーターは、 [Column](./column-object-adox.md)オブジェクトの [Name](./name-property-adox.md)プロパティの値に対応しています。  
   
  *RelatedTable*  
- 省略可能。 関連するテーブルの名前を示す **文字列** 値です。 関連性*テーブル*のパラメーターは、 [Table](./table-object-adox.md)オブジェクトの**Name**プロパティの値に対応しています。  
+ 任意。 関連するテーブルの名前を示す **文字列** 値です。 関連性 *テーブル* のパラメーターは、 [Table](./table-object-adox.md)オブジェクトの **Name** プロパティの値に対応しています。  
   
  *RelatedColumn*  
- 省略可能。 外部キーに関連付けられている列の名前を示す **文字列** 値です。 [関連性のある*列*のパラメーターは、 [Column](./column-object-adox.md)オブジェクトの**Name**プロパティの値に対応します。  
+ 任意。 外部キーに関連付けられている列の名前を示す **文字列** 値です。 [関連性のある *列* のパラメーターは、 [Column](./column-object-adox.md)オブジェクトの **Name** プロパティの値に対応します。  
   
-## <a name="remarks"></a>解説  
- *Columns*パラメーターには、列名または列名の配列のいずれかを指定できます。  
+## <a name="remarks"></a>コメント  
+ *Columns* パラメーターには、列名または列名の配列のいずれかを指定できます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Keys コレクション (ADOX)](./keys-collection-adox.md)  

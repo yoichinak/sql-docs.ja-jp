@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541550"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174449"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @forced_defection = ] forced_defection` 致命的が破損した **msdb** データベースによって、または **msdb** データベースのバックアップが存在しないことが原因で、マスター SQLServerAgent が完全に失われた場合に、強制的に参加を解除するかどうかを指定します。 *forced_defection*の部分は **ビット**で、既定値は **0**です。これは、強制的な参加解除が行われないことを示します。 値が **1** の場合は強制的に参加を解除します。  
+`[ @forced_defection = ] forced_defection` 致命的が破損した **msdb** データベースによって、または **msdb** データベースのバックアップが存在しないことが原因で、マスター SQLServerAgent が完全に失われた場合に、強制的に参加を解除するかどうかを指定します。 *forced_defection* の部分は **ビット** で、既定値は **0** です。これは、強制的な参加解除が行われないことを示します。 値が **1** の場合は強制的に参加を解除します。  
   
- **Sp_msx_defect**を実行して参加解除を強制した後、マスター SQLServerAgent の**sysadmin**固定サーバーロールのメンバーは、次のコマンドを実行して参加解除を完了する必要があります。  
+ **Sp_msx_defect** を実行して参加解除を強制した後、マスター SQLServerAgent の **sysadmin** 固定サーバーロールのメンバーは、次のコマンドを実行して参加解除を完了する必要があります。  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -58,7 +58,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  なし  
   
 ## <a name="remarks"></a>解説  
- **Sp_msx_defect**適切に完了すると、メッセージが返されます。  
+ **Sp_msx_defect** 適切に完了すると、メッセージが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  

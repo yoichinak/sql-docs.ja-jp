@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 493da853bc06eb1c56986a99a0b2a2aac9c2e5c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174395"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` 更新するポリシーカテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id* は **int**であり、が必要です。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 更新するポリシーカテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id* は **int** であり、が必要です。  
   
 `[ @target_type = ] 'target_type'` カテゴリサブスクリプションの対象の種類を示します。 *target_type* は **sysname**,、既定値は NULL です。  
   
- *Target_type*を指定する場合は、値を ' DATABASE ' に設定する必要があります。  
+ *Target_type* を指定する場合は、値を ' DATABASE ' に設定する必要があります。  
   
 `[ @target_object = ] 'target_object'` ポリシーカテゴリをサブスクライブするデータベースの名前を指定します。 *target_object* は **sysname**,、既定値は NULL です。  
   
@@ -56,10 +56,10 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  run sp_syspolicy_update_policy_category_subscription は msdb システム データベースのコンテキストで実行する必要があります。  
   
- *Policy_category_subscription_id*と*policy_category*の値を取得するには、次のクエリを使用できます。  
+ *Policy_category_subscription_id* と *policy_category* の値を取得するには、次のクエリを使用できます。  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  

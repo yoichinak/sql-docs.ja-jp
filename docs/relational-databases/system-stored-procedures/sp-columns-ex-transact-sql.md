@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_columns_ex
 - sp_columns_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 6696187b8f2b85b8a7ed179bfe406490e2c650aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174488"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +47,15 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="arguments"></a>引数  
 `[ @table_server = ] 'table_server'` 列情報を返すリンクサーバーの名前を指定します。 *table_server* は **sysname** であり、既定値はありません。  
   
-`[ @table_name = ] 'table_name'` 列情報を返すテーブルの名前を指定します。 *table_name* は **sysname** ,、既定値は NULL です。  
+`[ @table_name = ] 'table_name'` 列情報を返すテーブルの名前を指定します。 *table_name* は **sysname**,、既定値は NULL です。  
   
-`[ @table_schema = ] 'table_schema'` 列情報を返すテーブルのスキーマ名を指定します。 *table_schema* は **sysname** ,、既定値は NULL です。  
+`[ @table_schema = ] 'table_schema'` 列情報を返すテーブルのスキーマ名を指定します。 *table_schema* は **sysname**,、既定値は NULL です。  
   
-`[ @table_catalog = ] 'table_catalog'` 列情報を返すテーブルのカタログ名を指定します。 *table_catalog* は **sysname** ,、既定値は NULL です。  
+`[ @table_catalog = ] 'table_catalog'` 列情報を返すテーブルのカタログ名を指定します。 *table_catalog* は **sysname**,、既定値は NULL です。  
   
-`[ @column_name = ] 'column'` 情報を提供するデータベース列の名前を指定します。 *列* は **sysname** ,、既定値は NULL です。  
+`[ @column_name = ] 'column'` 情報を提供するデータベース列の名前を指定します。 *列* は **sysname**,、既定値は NULL です。  
   
-`[ @ODBCVer = ] 'ODBCVer'` 使用されている ODBC のバージョンを示します。 *Odbcver* は **int** ,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン 2 と 3 の動作の相違については、ODBC の SQLColumns 仕様を参照してください。  
+`[ @ODBCVer = ] 'ODBCVer'` 使用されている ODBC のバージョンを示します。 *Odbcver* は **int**,、既定値は2です。 これは、ODBC バージョン2を示します。 有効な値は2または3です。 バージョン 2 と 3 の動作の相違については、ODBC の SQLColumns 仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|テーブルまたはビュー修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル ( _修飾子_ ) がサポート **しています。**_所有者_**。**_名前_ )。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この列のは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
+|**TABLE_CAT**|**sysname**|テーブルまたはビュー修飾子の名前。 さまざまな DBMS 製品では、3つの要素で構成するテーブル (_修飾子_) がサポート **しています。**_所有者_**。**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この列のは、データベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。 このフィールドは NULL にすることができます。|  
 |**TABLE_SCHEM**|**sysname**|テーブルまたはビュー所有者の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブルまたはビューの名前。 このフィールドは常に値を返します。|  
 |**COLUMN_NAME**|**sysname**|返される **TABLE_NAME** の各列の列名。 このフィールドは常に値を返します。|  
@@ -86,8 +86,8 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  1 詳細については、Microsoft ODBC のドキュメントを参照してください。  
   
-## <a name="remarks"></a>注釈  
-- **sp_columns_ex** は、 *table_server* に対応する OLE DB プロバイダーの **IDBSchemaRowset** インターフェイスの columns 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name* 、 *table_schema* 、 *table_catalog* 、および *列* の各パラメーターがこのインターフェイスに渡されます。  
+## <a name="remarks"></a>コメント  
+- **sp_columns_ex** は、 *table_server* に対応する OLE DB プロバイダーの **IDBSchemaRowset** インターフェイスの columns 行セットを照会することによって実行されます。 返される行を制限するために、 *table_name*、 *table_schema*、 *table_catalog*、および *列* の各パラメーターがこのインターフェイスに渡されます。  
   
 - 指定されたリンクサーバーの OLE DB プロバイダーが **IDBSchemaRowset** インターフェイスの columns 行セットをサポートしていない場合、 **sp_columns_ex** は空の結果セットを返します。  
   

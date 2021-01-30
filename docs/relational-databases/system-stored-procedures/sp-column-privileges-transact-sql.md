@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
@@ -19,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: db99cb2e9acb8ede62a066291cce68d209e495c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482400"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174525"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|使用可能な列権限の1つ。 列権限は、次の値のいずれかになります (または、実装が定義されている場合に、データソースによってサポートされるその他の値)。<br /><br /> SELECT。GRANTEE は、列からデータを取得できます。<br /><br /> INSERT。GRANTEE は、テーブルに新しい行を挿入したときにこの列のデータを設定できます。<br /><br /> UPDATE。GRANTEE は、列内の既存のデータを修正できます。<br /><br /> REFERENCES。GRANTEE は、主キー/外部キーのリレーションシップで外部テーブル内の列を参照できます。 主キー/外部キーのリレーションシップは、テーブル制約を使用して定義されます。|  
 |IS_GRANTABLE|**varchar (** 3 **)**|権限付与対象ユーザーに対し、他のユーザーに対する権限の許可を許可するかどうかを示します ("grant with grant" 権限と呼ばれることもあります)。 YES、NO、または NULL を指定できます。 不明な値または NULL の場合は、"許可の許可" が適用されないデータ ソースであることを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、権限は GRANT ステートメントで与え、REVOKE ステートメントで取り消します。  
   
 ## <a name="permissions"></a>アクセス許可  

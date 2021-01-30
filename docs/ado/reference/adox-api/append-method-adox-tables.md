@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Tables::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffd2ef32cae3fafb7179568d1342606d32236657
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56ead8ee314cb5b6bffa31a3292b395c0c990927
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172287"
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX Tables)
 [Tables](./tables-collection-adox.md)コレクションに新しい[Table](./table-object-adox.md)オブジェクトを追加します。  
@@ -35,10 +35,10 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Table*  
- 追加する**テーブル**への参照、または作成および追加するテーブルの名前を含む**バリアント**値です。  
+ *テーブル*  
+ 追加する **テーブル** への参照、または作成および追加するテーブルの名前を含む **バリアント** 値です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  プロバイダーがテーブルの作成をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  

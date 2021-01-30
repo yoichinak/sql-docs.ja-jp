@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Close
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f4f0c1613b1ca0e33a4f325dbe3e326d56f76e6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b90dab9bc42bb9aef0de5300c38f238b8ff67b34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987113"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174341"
 ---
 # <a name="close-method-ado-md"></a>Close メソッド (ADO MD)
 開いているセルセットを閉じます。  
@@ -35,9 +35,9 @@ Cellset.Close
 ```  
   
 ## <a name="remarks"></a>解説  
- **Close**メソッドを使用して[セルセット](./cellset-object-ado-md.md)オブジェクトを閉じると、関連する[セル](./cell-object-ado-md.md)、[軸](./axis-object-ado-md.md)、[位置](./position-object-ado-md.md)、または[メンバー](./member-object-ado-md.md)オブジェクトのデータを含む、関連付けられたデータが解放されます。 **セルセット**を閉じると、メモリからは削除されません。プロパティの設定を変更し、後でもう一度開くことができます。 メモリからオブジェクトを完全に削除するには、オブジェクト変数を **Nothing**に設定します。  
+ **Close** メソッドを使用して [セルセット](./cellset-object-ado-md.md)オブジェクトを閉じると、関連する [セル](./cell-object-ado-md.md)、[軸](./axis-object-ado-md.md)、[位置](./position-object-ado-md.md)、または [メンバー](./member-object-ado-md.md)オブジェクトのデータを含む、関連付けられたデータが解放されます。 **セルセット** を閉じると、メモリからは削除されません。プロパティの設定を変更し、後でもう一度開くことができます。 メモリからオブジェクトを完全に削除するには、オブジェクト変数を **Nothing** に設定します。  
   
- 後で [Open](./open-method-ado-md.md) メソッドを呼び出して、同じまたは別のソース文字列を使用して **セルセット** を再び開くことができます。 **Cellset**オブジェクトが閉じられている間に、プロパティを取得したり、基になるデータまたはメタデータを参照するメソッドを呼び出したりすると、エラーが発生します。  
+ 後で [Open](./open-method-ado-md.md) メソッドを呼び出して、同じまたは別のソース文字列を使用して **セルセット** を再び開くことができます。 **Cellset** オブジェクトが閉じられている間に、プロパティを取得したり、基になるデータまたはメタデータを参照するメソッドを呼び出したりすると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](./cellset-object-ado-md.md)  

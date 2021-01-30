@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CubeDef
@@ -16,33 +16,33 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de22ce013d94b1830ba220c318c06bbe716423bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bae255b0de860a1caee016d5e8867c7fb9b3ffee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987023"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174322"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef オブジェクト (ADO MD)
 多次元スキーマから、関連するディメンションのセットを含むキューブを表します。  
   
-## <a name="remarks"></a>解説  
- **CubeDef**オブジェクトのコレクションとプロパティを使用して、次の操作を行うことができます。  
+## <a name="remarks"></a>コメント  
+ **CubeDef** オブジェクトのコレクションとプロパティを使用して、次の操作を行うことができます。  
   
--   [Name](./name-property-ado-md.md)プロパティを使用して**CubeDef**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティを使用して **CubeDef** を識別します。  
   
 -   [Description](./description-property-ado-md.md)プロパティを持つキューブを説明する文字列を返します。  
   
 -   [ディメンション](./dimensions-collection-ado-md.md)コレクションを持つキューブを構成するディメンションを返します。  
   
--   標準の ADO[プロパティ](../ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef**に関する追加情報を取得します。  
+-   標準の ADO [プロパティ](../ado-api/properties-collection-ado.md)コレクションを使用して、 **CubeDef** に関する追加情報を取得します。  
   
- **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
+ **Properties** コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
-|Event.manualintervention.createdon|キューブ作成の日付と時刻。|  
+|CreatedOn|キューブ作成の日付と時刻。|  
 |CubeGUID|キューブ GUID。|  
 |CubeName|キューブの名前。|  
 |CubeType|キューブの種類。|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policy_execution_history_details
 - syspolicy_policy_execution_history_details_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecb084ff03931bc82a7a07e19f66949d8a834343
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d10e65b6a701acaabc80418d59da019250acf24b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423396"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171830"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88423396"
 |exception_message|**nvarchar(max)**|例外が発生した場合は、例外によって生成されたメッセージ。|  
 |exception|**nvarchar(max)**|例外が発生した場合の説明。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ポリシー ベースの管理のトラブルシューティングを行う場合に、失敗した対象と条件式の組み合わせ、失敗した日時、および関連するエラーを調べるには、syspolicy_policy_execution_history_details ビューに対してクエリを実行します。  
   
  次のクエリでは、ビューとビューを組み合わせて、 `syspolicy_policy_execution_history_details` `syspolicy_policy_execution_history_details` `syspolicy_policies` ポリシーの名前、条件の名前、およびエラーの詳細を表示します。  
@@ -70,7 +70,7 @@ WHERE PolHistDet.result = 0 ;
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [ポリシーベースの管理を使用してサーバーを管理する](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

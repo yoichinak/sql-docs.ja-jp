@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5c3010ce4e320ef0fd8a8bb1fbe09a5ebafad6b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 582fdd28528569b26cc7cb396523eccb5f7d6000
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984653"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172116"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize プロパティの例 (VB)
-この例では、[列](./column-object-adox.md)の "値の[サイズ](./definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind*データベースの**Employees**テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees**テーブルに基づいて[レコードセット](../ado-api/recordset-object-ado.md)の FirstName[フィールド](../ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
+この例では、[列](./column-object-adox.md)の "値の[サイズ](./definedsize-property-adox.md)" プロパティを示します。 コードによって、 *Northwind* データベースの **Employees** テーブルの FirstName 列のサイズが再定義されます。 次に、 **Employees** テーブルに基づいて [レコードセット](../ado-api/recordset-object-ado.md)の FirstName [フィールド](../ado-api/field-object.md)の値が変更されます。 既定では、"定義された **サイズ** " プロパティを再定義した後、[FirstName] フィールドに空白が埋め込まれていることに注意してください。  
   
 ```  
 ' BeginDefinedSizeVB  

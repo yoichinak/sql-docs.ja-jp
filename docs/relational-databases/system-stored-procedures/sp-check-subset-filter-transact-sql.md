@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_check_TSQL
 - sp_check_subset_filter
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f019cfa61e58cecd64f86c41a2863034c6f4817c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d311670fca8b5514057bd122980e8647566240e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543648"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174533"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,19 +58,19 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 |**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。 **1** は事前計算済みパーティションを使用できることを示し、 **0** は使用できないことを示します。|  
 |**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化された行フィルターが少なくとも1つ含まれているかどうかを示します。 **1** は、パラメーター化された行フィルターが使用されることを示します。 **0** は、このような関数が使用されないことを示します。|  
 |**dynamic_filters_function_list**|**nvarchar (500)**|アーティクルを動的にフィルター選択するフィルター句内の関数の一覧です。各関数は、セミコロンで区切られます。|  
-|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
-|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
+|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1** はこの関数が存在することを意味します。|  
+|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1** はこの関数が存在することを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_check_subset_filter** は、マージレプリケーションで使用します。  
   
- テーブルがパブリッシュされていない場合でも、任意のテーブルに対して**sp_check_subset_filter**を実行できます。 フィルター選択されたアーティクルを定義する前に、このストアドプロシージャを使用してフィルター句を検証することができます。  
+ テーブルがパブリッシュされていない場合でも、任意のテーブルに対して **sp_check_subset_filter** を実行できます。 フィルター選択されたアーティクルを定義する前に、このストアドプロシージャを使用してフィルター句を検証することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_check_subset_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_check_subset_filter** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
