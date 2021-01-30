@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dynamic_filters_TSQL
 - sp_check_TSQL
@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 323740799308f19a15dd4c8ccede8bcfe106465f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f458f3dcf629ee6f77b8237edb0a9defa516b8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539114"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158957"
 ---
 # <a name="sp_check_dynamic_filters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +65,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_check_dynamic_filters** は、マージレプリケーションで使用します。  
   
  事前計算済みパーティションを使用するようにパブリケーションが定義されている場合、 **sp_check_dynamic_filters** は、事前計算済みパーティションの制限に違反していないかどうかを確認します。 見つかった場合は、エラーが返されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
@@ -73,7 +73,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
  パブリケーションがパラメーター化された行フィルターを持つように定義されているにもかかわらず、パラメーター化された行フィルターが見つからない場合は、エラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_check_dynamic_filters**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_check_dynamic_filters** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パラメーター化されたフィルターを使用してマージパブリケーションのパーティションを管理する](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

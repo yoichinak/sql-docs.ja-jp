@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.server_permissions_TSQL
 - sys.server_permissions
@@ -21,12 +21,12 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b30e7adeb6ad09417b9ab02cb01610774d09a148
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464663"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159047"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97464663"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバープリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **終点**|  
 |**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどの場合、これはクラスが表すものに適用される ID の種類にすぎません。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に0|  
 |**minor_id**|**int**|権限が存在するセカンダリ ID。クラスに従って解釈されます。|  
 |**grantee_principal_id**|**int**|権限が付与されているサーバープリンシパル ID。|  

@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d611fb753034a7cde370f87700aa8b8c3db2e11
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456565"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159078"
 ---
 # <a name="sql-minimum-grammar"></a>SQL の最小限の文法
 このセクションでは、ODBC ドライバーがサポートする必要がある最小 SQL 構文について説明します。 このセクションで説明する構文は、SQL-92 のエントリレベルの構文のサブセットです。  
@@ -36,11 +36,11 @@ ms.locfileid: "88456565"
  (*列識別子データ型* [*, 列識別子データ型*]...)  
   
 > [!IMPORTANT]  
->  アプリケーションで*は*、 **SQLGetTypeInfo**によっ*create-table-statement*て返される結果セットの TYPE_NAME 列のデータ型を使用する必要があります。  
+>  アプリケーションで *は*、 **SQLGetTypeInfo** によって返される結果セットの TYPE_NAME 列のデータ型を使用する必要があります。  
   
  *delete-ステートメント-検索* :: =  
   
- *テーブル名*からの削除 [*検索条件*]  
+ *テーブル名* からの削除 [*検索条件*]  
   
  *drop-table-ステートメント* :: =  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88456565"
   
  *select-statement* ::=  
   
- [すべて &#124; 個別] 選択*リスト*を選択します。  
+ [すべて &#124; 個別] 選択 *リスト* を選択します。  
   
  FROM *table-list*  
   
@@ -74,7 +74,7 @@ ms.locfileid: "88456565"
   
  *update ステートメント-検索*  
   
- *テーブル名の*更新  
+ *テーブル名の* 更新  
   
  SET *列の識別子* = {*式* &#124; NULL}  
   

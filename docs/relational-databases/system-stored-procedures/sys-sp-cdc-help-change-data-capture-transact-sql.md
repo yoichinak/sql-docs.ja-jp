@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809824"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159782"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,18 +47,18 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>引数  
  [ @source_schema =] '*source_schema*'  
- ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname**,、既定値は NULL です。 *Source_schema*が指定されている場合は、 *source_name*も指定する必要があります。  
+ ソーステーブルが属しているスキーマの名前を指定します。 *source_schema* は **sysname**,、既定値は NULL です。 *Source_schema* が指定されている場合は、 *source_name* も指定する必要があります。  
   
  NULL 以外の場合は、 *source_schema* が現在のデータベースに存在している必要があります。  
   
- *Source_schema*が null 以外の場合、 *source_name*も null 以外である必要があります。  
+ *Source_schema* が null 以外の場合、 *source_name* も null 以外である必要があります。  
   
  [ @source_name =] '*source_name*'  
- ソーステーブルの名前を指定します。 *source_name* は **sysname**,、既定値は NULL です。 *Source_name*が指定されている場合は、 *source_schema*も指定する必要があります。  
+ ソーステーブルの名前を指定します。 *source_name* は **sysname**,、既定値は NULL です。 *Source_name* が指定されている場合は、 *source_schema* も指定する必要があります。  
   
  NULL 以外の場合は、 *source_name* が現在のデータベースに存在している必要があります。  
   
- *Source_name*が null 以外の場合、 *source_schema*も null 以外である必要があります。  
+ *Source_name* が null 以外の場合、 *source_schema* も null 以外である必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -83,11 +83,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|ソーステーブル内の行を一意に識別するために使用されるインデックス列の一覧です。|  
 |captured_column_list|**nvarchar(max)**|キャプチャ対象のソース列のリスト。|  
   
-## <a name="remarks"></a>注釈  
- *Source_schema*と*source_name*が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema*および*source_name*が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
+## <a name="remarks"></a>コメント  
+ *Source_schema* と *source_name* が既定で null に設定されているか、明示的に null が設定されている場合、このストアドプロシージャは、呼び出し元が選択したアクセス権を持つすべてのデータベースキャプチャインスタンスに関する情報を返します。 *Source_schema* および *source_name* が NULL 以外の場合は、特定の名前が有効になっているテーブルに関する情報のみが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- *Source_schema*と*source_name*が NULL の場合、結果セットに含める有効なテーブルは、呼び出し元の承認によって決まります。 呼び出し元は、キャプチャインスタンスのすべてのキャプチャ対象列に対する SELECT 権限を持っている必要があります。また、テーブル情報が含まれるように定義されているすべてのゲートロールのメンバーシップも必要です。 Db_owner データベースロールのメンバーは、定義されているすべてのキャプチャインスタンスに関する情報を表示できます。 特定の有効なテーブルの情報が要求された場合、同じ選択およびメンバーシップの条件が名前付きテーブルに適用されます。  
+ *Source_schema* と *source_name* が NULL の場合、結果セットに含める有効なテーブルは、呼び出し元の承認によって決まります。 呼び出し元は、キャプチャインスタンスのすべてのキャプチャ対象列に対する SELECT 権限を持っている必要があります。また、テーブル情報が含まれるように定義されているすべてのゲートロールのメンバーシップも必要です。 Db_owner データベースロールのメンバーは、定義されているすべてのキャプチャインスタンスに関する情報を表示できます。 特定の有効なテーブルの情報が要求された場合、同じ選択およびメンバーシップの条件が名前付きテーブルに適用されます。  
   
 ## <a name="examples"></a>例  
   

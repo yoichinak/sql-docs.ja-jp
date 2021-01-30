@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLManageDataSources
 apilocation:
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fbb34d2daafc4a135cbf51c2b0382d3965f9dfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460975"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160811"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **互換性**  
  導入されたバージョン: ODBC 2.0  
   
- **まとめ**  
+ **要約**  
  [ **Sqlmanagedatasources** ] ユーザーがシステム情報でデータソースを設定、追加、および削除できるダイアログボックスを表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,7 +39,7 @@ ms.locfileid: "88460975"
 ```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -47,16 +47,16 @@ BOOL SQLManageDataSources(
  代入親ウィンドウハンドル。  
   
 ## <a name="returns"></a>戻り値  
- *Hwnd*が有効なウィンドウハンドルでない場合、 **Sqlmanagedatasources データソース**は FALSE を返します。 それ以外の場合には、TRUE を返します。  
+ *Hwnd* が有効なウィンドウハンドルでない場合、 **Sqlmanagedatasources データソース** は FALSE を返します。 それ以外の場合には、TRUE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlmanagedatasources ソース**が FALSE を返すと、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlmanagedatasources ソース** が FALSE を返すと、 **sqlインストーラエラー** を呼び出すことによって、関連する *\* pferrorcode* 値を取得できます。 次の表は、 **Sqlインストーラエラー** によって返される可能性がある *\* pferrorcode* 値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|**Configdsn**の呼び出しが失敗しました。|  
-|ODBC_ERROR_INVALID__HWND|ウィンドウハンドルが無効です|*Hwnd*引数が無効または NULL でした。|  
+|ODBC_ERROR_REQUEST_FAILED|失敗した *要求*|**Configdsn** の呼び出しが失敗しました。|  
+|ODBC_ERROR_INVALID__HWND|ウィンドウハンドルが無効です|*Hwnd* 引数が無効または NULL でした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
 ## <a name="managing-data-sources"></a>データ ソースの管理  
@@ -64,7 +64,7 @@ BOOL SQLManageDataSources(
   
  ![[ODBC データ ソース管理者] ダイアログ ボックス](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- このダイアログボックスには、システム情報に一覧表示されたデータソースが、[ **ユーザー dsn**]、[ **システム dsn**]、[ **ファイル dsn**] の3つのタブに表示されます。 ユーザーがデータソースをダブルクリックするか、データソースを選択して [構成] をクリック **する**と、 **sqlmanagedatasources** は ODBC_CONFIG_DSN オプションを使用してセットアップ DLL 内の **configdsn** を呼び出します。  
+ このダイアログボックスには、システム情報に一覧表示されたデータソースが、[ **ユーザー dsn**]、[ **システム dsn**]、[ **ファイル dsn**] の3つのタブに表示されます。 ユーザーがデータソースをダブルクリックするか、データソースを選択して [構成] をクリック **する** と、 **sqlmanagedatasources** は ODBC_CONFIG_DSN オプションを使用してセットアップ DLL 内の **configdsn** を呼び出します。  
   
  ユーザーが [ **追加**] をクリックすると、次の図に示すように、 **Sqlmanagedatasources** ソースで [ **新しいデータソースの作成** ] ダイアログボックスが表示されます。  
   
@@ -102,12 +102,12 @@ BOOL SQLManageDataSources(
  ファイルデータソースの詳細については、「 [ファイルデータソースを使用した接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)」または「 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)」を参照してください。  
   
 ## <a name="managing-drivers"></a>ドライバーの管理  
- ユーザーが [ **Odbc データソースアドミニストレーター** ] ダイアログボックスの [**ドライバー** ] タブをクリックすると、システムにインストールされている odbc ドライバーの一覧と、ドライバーに関する情報**が表示さ**れます。 表示される日付は、次の図に示すように、ドライバーの作成日です。  
+ ユーザーが [ **Odbc データソースアドミニストレーター** ] ダイアログボックスの [**ドライバー** ] タブをクリックすると、システムにインストールされている odbc ドライバーの一覧と、ドライバーに関する情報 **が表示さ** れます。 表示される日付は、次の図に示すように、ドライバーの作成日です。  
   
  ![[ODBC データ ソース管理者のドライバー] タブ](../../../odbc/reference/syntax/media/ch23g.gif "ch23g")  
   
 ## <a name="tracing-options"></a>[トレース オプション]  
- ユーザーが [ **ODBC データソースアドミニストレーター** ] ダイアログボックスの [**トレース**] タブをクリックすると、次の図に示すように、 **sqlmanagedatasources**ソースにトレースオプションが表示されます。  
+ ユーザーが [ **ODBC データソースアドミニストレーター** ] ダイアログボックスの [**トレース**] タブをクリックすると、次の図に示すように、 **sqlmanagedatasources** ソースにトレースオプションが表示されます。  
   
  ![[ODBC データ ソース管理者のトレース] タブ](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
@@ -118,9 +118,9 @@ BOOL SQLManageDataSources(
 > [!IMPORTANT]  
 >  Visual Studio Analyzer のサポートは、Windows 8 以降で削除されました (Visual Studio Analyzer 以前のバージョンの Visual Studio にのみ含まれていました)。 別のトラブルシューティングメカニズムについては、BID トレースを使用します。  
   
- ユーザーが [ **スタート Visual Studio Analyzer** をクリックし、[ **OK]** をクリックすると、Visual Studio Analyzer が有効になります。 **停止 Visual Studio Analyzer**がクリックされるまで有効のままです。  
+ ユーザーが [ **スタート Visual Studio Analyzer** をクリックし、[ **OK]** をクリックすると、Visual Studio Analyzer が有効になります。 **停止 Visual Studio Analyzer** がクリックされるまで有効のままです。  
   
- トレースの詳細については、「 [トレース](../../../odbc/reference/develop-app/tracing.md)」を参照してください。 **Trace**および**tracefile**キーワードの詳細については、「 [ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)」を参照してください。  
+ トレースの詳細については、「 [トレース](../../../odbc/reference/develop-app/tracing.md)」を参照してください。 **Trace** および **tracefile** キーワードの詳細については、「 [ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)」を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   

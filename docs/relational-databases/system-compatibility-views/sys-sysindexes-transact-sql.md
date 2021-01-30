@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysindexes
 - sysindexes_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cf8982115b1a4399c327aefc66a5e99a1d46c575
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bda40e2ddc1858857bc6ae3f1616d05987c708c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094196"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158535"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "98094196"
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rows**|**int**|**Indid = 0** および **indid** = 1 に基づくデータレベルの行数。 **indid** >1 に対して値が繰り返されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  予約済みとして定義されている列は使用しないでください。  
   
  テーブルまたはインデックスに ROW_OVERFLOW アロケーションユニットのデータが含まれている場合、列 **dpages**、 **reserved**、および **used** では、正確な結果が返されません。 また、各インデックスのページ数は個別に追跡され、ベース テーブル用に集計されることはありません。 ページ数を表示するには、 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) または [パーティション](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) カタログビュー、または [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 動的管理ビューを使用します。  

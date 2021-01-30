@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysprocesses_TSQL
 - sys.sysprocesses_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d8272d6759508697512506bcab8df81d65b90b83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095389"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160669"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysのプロセス (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98095389"
 |request_id|**int**|要求の ID。 特定のセッションで実行されている要求を識別するために使用されます。|
 |page_resource |**binary (8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> `waitresource`列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 |  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ユーザーがサーバーに対する VIEW SERVER STATE 権限を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 現在のセッションのみが表示されます。  
   
 ## <a name="see-also"></a>参照  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f625a10ce53681bb79bec55bcbb22643ae74642
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 43678b66ed4d1abb32125f00c72b06d92ce59257
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977053"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160997"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
 この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。  
   
- サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
+ サブルーチンには、**レコードセット** を作成したコマンドテキストとパラメーターを表示するために **activecommand** プロパティを使用する [レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
   
 ## <a name="example"></a>例  
   

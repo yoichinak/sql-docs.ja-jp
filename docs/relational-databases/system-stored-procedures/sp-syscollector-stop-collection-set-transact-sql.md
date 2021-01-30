@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
 - sp_syscollector_stop_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3f7f4d3f81abebe895acfac7a898fe6eb588d7fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 335e4966896ef6e08cdec78612caa2a53b3641b7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551193"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159483"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>引数  
  [ @collection_set_id =] *collection_set_id*  
- コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** で、既定値は NULL です。 *名前*が NULL の場合、 *collection_set_id*には値が必要です。  
+ コレクションセットの一意なローカル識別子を設定します。 *collection_set_id* は **int** で、既定値は NULL です。 *名前* が NULL の場合、 *collection_set_id* には値が必要です。  
   
  [ @name =] '*name*'  
- コレクションセットの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_set_id*が NULL の場合、*名前*には値を指定する必要があります。  
+ コレクションセットの名前を指定します。 *名前* は **sysname** で、既定値は NULL です。 *collection_set_id* が NULL の場合、*名前* には値を指定する必要があります。  
   
  [ @stop_collection_job =] *stop_collection_job*  
  コレクション セットのコレクション ジョブが実行されている場合に、停止を指定します。 *stop_collection_job* の部分は **bit** で、既定値は1です。  
@@ -58,7 +58,7 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  

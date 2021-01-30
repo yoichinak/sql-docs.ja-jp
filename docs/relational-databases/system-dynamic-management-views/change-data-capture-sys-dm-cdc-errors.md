@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_cdc_errors_TSQL
 - dm_cdc_errors
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ce058600c4a912e13695817a533f8e9ec4c8f856
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4ab244d911ffbdf590da7640001ab743ac09a60e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160626"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>変更データキャプチャ-sys.dm_cdc_errors
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98100136"
 |**begin_lsn**|**nvarchar (23)**|エラーが発生したときに処理されていたトランザクションの開始 LSN 値。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
 |**sequence_value**|**nvarchar (23)**|エラー発生時に処理されていた行の LSN 値です。<br /><br /> 0 は、ログ スキャン セッション中にエラーが発生しなかったことを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sys.dm_cdc_errors** には、前の32セッションのエラー情報が含まれています。  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54632816fb7013639e1cdb761fbc8df53c461a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158589"
 ---
 # <a name="c-to-sql-timestamp"></a>C から SQL へ: Timestamp
 タイムスタンプの ODBC C データ型の識別子は次のとおりです。  
@@ -41,6 +41,6 @@ ms.locfileid: "88449034"
   
  SQL_C_TIMESTAMP 構造体で有効な値の詳細については、この付録の「 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)」を参照してください。  
   
- Timestamp C データを文字 SQL データに変換すると、結果として得られる文字データは "*yyyy* - *mm* - *dd* *hh*:*mm*:*ss*" になります。*f...*] "形式.  
+ Timestamp C データを文字 SQL データに変換すると、結果として得られる文字データは "*yyyy* - *mm* - *dd* *hh*:*mm*:*ss*" になります。*f...*] "形式。  
   
- タイムスタンプ C データ型からデータを変換する場合、ドライバーは長さ/インジケーター値を無視し、データバッファーのサイズが timestamp C データ型のサイズであると想定します。 長さ/インジケーターの値は、 **Sqlputdata**の*StrLen_or_Ind*引数と、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata**の*DataPtr*引数と**SQLBindParameter**の*parametervalueptr*引数を使用して指定します。
+ タイムスタンプ C データ型からデータを変換する場合、ドライバーは長さ/インジケーター値を無視し、データバッファーのサイズが timestamp C データ型のサイズであると想定します。 長さ/インジケーターの値は、 **Sqlputdata** の *StrLen_or_Ind* 引数と、 **SQLBindParameter** の *StrLen_or_IndPtr* 引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata** の *DataPtr* 引数と **SQLBindParameter** の *parametervalueptr* 引数を使用して指定します。

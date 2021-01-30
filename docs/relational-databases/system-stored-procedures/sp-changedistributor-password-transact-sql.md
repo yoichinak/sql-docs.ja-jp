@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributor_password
 - sp_changedistributor_password_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f9f964e2db0c47dcf03b52a65c3a8e7c2599dde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dbffbe5309b0f48458c34c374d9621a6cad73266
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158999"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,14 +43,14 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changedistributor_password** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_changedistributor_password**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_changedistributor_password** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

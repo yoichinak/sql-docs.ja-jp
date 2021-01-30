@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3826a05f56539542af8c03dbb9321062a06446d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71fa7bbc6f79e5d58e4987e5daacb5d42cbd74d9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977093"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159257"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand プロパティの例 (VB)
 この例では、 [activecommand](./activecommand-property-ado.md) プロパティを示します。  
   
- サブルーチンには、**レコードセット**を作成したコマンドテキストとパラメーターを表示するために**activecommand**プロパティを使用する[レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
+ サブルーチンには、**レコードセット** を作成したコマンドテキストとパラメーターを表示するために **activecommand** プロパティを使用する [レコードセット](./recordset-object-ado.md)オブジェクトが指定されています。  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **Activecommandxprint**ルーチンには**レコードセット**オブジェクトだけが指定されていますが、コマンドテキストと**レコードセット**を作成したパラメーターを出力する必要があります。 これを行うには、 **レコードセット** オブジェクトの **activecommand** プロパティに関連付けられた [Command](./command-object-ado.md) オブジェクトが生成されます。  
+ **Activecommandxprint** ルーチンには **レコードセット** オブジェクトだけが指定されていますが、コマンドテキストと **レコードセット** を作成したパラメーターを出力する必要があります。 これを行うには、 **レコードセット** オブジェクトの **activecommand** プロパティに関連付けられた [Command](./command-object-ado.md) オブジェクトが生成されます。  
   
- **コマンド**オブジェクトの[CommandText](./commandtext-property-ado.md)プロパティによって、**レコードセット**を作成するパラメーター化コマンドが生成されます。 **コマンド**オブジェクトの[Parameters](./parameters-collection-ado.md)コレクションは、コマンドのパラメータープレースホルダー ("**?**") に置き換えられた値を生成します。  
+ **コマンド** オブジェクトの [CommandText](./commandtext-property-ado.md)プロパティによって、**レコードセット** を作成するパラメーター化コマンドが生成されます。 **コマンド** オブジェクトの [Parameters](./parameters-collection-ado.md)コレクションは、コマンドのパラメータープレースホルダー ("**?**") に置き換えられた値を生成します。  
   
  最後に、エラーメッセージまたは作成者の名前と ID が出力されます。  
   

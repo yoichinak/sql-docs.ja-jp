@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9f44d705f9aff418312a9f8d0f1a9a9f8012216
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7f4c7010ae6b00f083e54bcd3b6ec152d5d66ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159792"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,10 +65,10 @@ sp_stop_job
 ## <a name="remarks"></a>解説  
  **sp_stop_job** は、データベースに停止シグナルを送信します。 一部のプロセスはすぐに停止することができ、一部のプロセスは安定したポイント (またはコードパスへのエントリポイント) に到着しないと停止できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]バックアップ、復元、一部の DBCC コマンドなど、長時間実行されるステートメントの完了には時間がかかることがあります。 これらが実行されている場合、ジョブが取り消されるまでにしばらく時間がかかることがあります。 ジョブを停止すると、ジョブが取り消されたことを示すエントリがジョブ履歴に記録されます。  
   
- ジョブが **CmdExec** または **PowerShell**タイプのステップを現在実行している場合は、実行中のプロセス (MyProgram.exe など) が途中で強制的に終了されます。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 そのため、ジョブに**CmdExec**または**PowerShell**型のステップが含まれている場合は、極端な状況でのみ**sp_stop_job**を使用する必要があります。  
+ ジョブが **CmdExec** または **PowerShell** タイプのステップを現在実行している場合は、実行中のプロセス (MyProgram.exe など) が途中で強制的に終了されます。 途中で終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。 そのため、ジョブに **CmdExec** または **PowerShell** 型のステップが含まれている場合は、極端な状況でのみ **sp_stop_job** を使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sysadmin** 固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -78,7 +78,7 @@ sp_stop_job
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- **SQLAgentUserRole**と**SQLAgentReaderRole**のメンバーは、自分が所有するジョブのみを停止できます。 **Sqlagentoperatorrole**のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを停止できます。 **Sysadmin**のメンバーは、すべてのローカルジョブとマルチサーバージョブを停止できます。  
+ **SQLAgentUserRole** と **SQLAgentReaderRole** のメンバーは、自分が所有するジョブのみを停止できます。 **Sqlagentoperatorrole** のメンバーは、他のユーザーによって所有されているものも含め、すべてのローカルジョブを停止できます。 **Sysadmin** のメンバーは、すべてのローカルジョブとマルチサーバージョブを停止できます。  
   
 ## <a name="examples"></a>例  
  次の例では、という名前のジョブを停止 `Weekly Sales Data Backup` します。  

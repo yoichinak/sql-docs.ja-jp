@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
 - sp_changemergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83211e61ad8b6e241f46b1af0ba32266c9f673dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536664"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159818"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89536664"
   マージのプッシュ サブスクリプションについて、選択したプロパティを変更します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
 > [!IMPORTANT]  
->  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+>  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password* を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,13 +47,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前を指定します。 *サブスクライバー* の **sysname**,、既定値は NULL です。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db*は **sysname**,、既定値は NULL です。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクリプションデータベースの名前を指定します。 *subscriber_db* は **sysname**,、既定値は NULL です。  
   
 `[ @property = ] 'property'` 指定したパブリケーションの変更対象となるプロパティを指定します。 *プロパティ* は **sysname**,、テーブル内のいずれかの値を指定できます。  
   
-`[ @value = ] 'value'` 指定した *プロパティ*の新しい値を指定します。 *値* は **nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
+`[ @value = ] 'value'` 指定した *プロパティ* の新しい値を指定します。 *値* は **nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|[値]|説明|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**description**||マージ サブスクリプションの説明。|  
 |**priority**||サブスクリプションの優先度です。 既定の競合回避モジュールでは、競合が検出された場合に優先される優先順位を使用します。|  
@@ -76,13 +76,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changemergesubscription** は、マージレプリケーションで使用します。  
   
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_changemergesubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_changemergesubscription** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_addmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f623f377bf850f5c247c770f7cc38358cf4dabb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7af393da5482f8955c8e5eea20c9742ffb269baa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543566"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160618"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|ミラーデータベースが現在キャッチされているプリンシパルのおおよそのシステムクロック時間。 この値はプリンシパル サーバー インスタンスでのみ意味を持ちます。|  
 |**local_time**|**datetime**|この行が更新されたときのローカル サーバー インスタンスのシステム クロック時間。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_dbmmonitorresults** は、 **msdb** データベースのコンテキストでのみ実行できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、または**msdb**データベースの**dbm_monitor**固定データベースロールのメンバーシップが必要です。 **Dbm_monitor**ロールを使用すると、そのメンバーはデータベースミラーリングの状態を表示できますが、更新はできませんが、データベースミラーリングイベントを表示または構成することはできません。  
+ **Sysadmin** 固定サーバーロールのメンバーシップ、または **msdb** データベースの **dbm_monitor** 固定データベースロールのメンバーシップが必要です。 **Dbm_monitor** ロールを使用すると、そのメンバーはデータベースミラーリングの状態を表示できますが、更新はできませんが、データベースミラーリングイベントを表示または構成することはできません。  
   
 > [!NOTE]  
->  **Sp_dbmmonitorupdate**を初めて実行すると、 **dbm_monitor**の固定データベースロールが**msdb**データベースに作成されます。 **Sysadmin**固定サーバーロールのメンバーは、任意のユーザーを**dbm_monitor**固定データベースロールに追加できます。  
+>  **Sp_dbmmonitorupdate** を初めて実行すると、 **dbm_monitor** の固定データベースロールが **msdb** データベースに作成されます。 **Sysadmin** 固定サーバーロールのメンバーは、任意のユーザーを **dbm_monitor** 固定データベースロールに追加できます。  
   
 ## <a name="examples"></a>例  
  次の例では、データベースの状態を更新せずに、前の2時間に記録された行を返します。  

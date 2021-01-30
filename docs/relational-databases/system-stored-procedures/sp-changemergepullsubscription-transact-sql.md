@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepullsubscription
 - sp_changemergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f8590cd397f41ca4c4db8776f614f47b2b05c921
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159838"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は% です。  
   
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher*は **sysname**で、既定値は% です。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は% です。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db*は **sysname**,、既定値は% です。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname**,、既定値は% です。  
   
 `[ @property = ] 'property'` 変更するプロパティの名前を指定します。 *プロパティ* は **sysname**,、テーブル内のいずれかの値を指定できます。  
   
-`[ @value = ] 'value'` 指定したプロパティの新しい値を指定します。 *値*は **nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値を指定します。 *値* は **nvarchar (255)**,、テーブル内の値のいずれかを指定することができます。  
   
-|プロパティ|[値]|説明|  
+|プロパティ|値|説明|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||場所が既定の場所に加えてまたは以外の場合に、スナップショットフォルダーが格納される場所。|  
 |**description**||このマージ プル サブスクリプションの説明です。|  
@@ -90,12 +90,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**use_interactive_resolver**|**true**|調整時にインタラクティブ競合回避モジュールを使用します。|  
 ||**false**|インタラクティブ競合回避モジュールは使用されません。|  
 |**working_directory**||オプションが指定されている場合に、FTP を使用してスナップショットファイルが転送されるディレクトリへの完全修飾パスです。|  
-|NULL (既定値)||*プロパティ*に対してサポートされている値の一覧を返します。|  
+|NULL (既定値)||*プロパティ* に対してサポートされている値の一覧を返します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_changemergepullsubscription** は、マージレプリケーションで使用します。  
   
  現在のサーバーがサブスクライバー、現在のデータベースがサブスクライバー データベースであると解釈されます。  
@@ -103,7 +103,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_changemergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_changemergepullsubscription** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プル サブスクリプションのプロパティの表示または変更](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

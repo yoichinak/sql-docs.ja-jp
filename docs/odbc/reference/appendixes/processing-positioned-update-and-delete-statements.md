@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - ODBC cursor library [ODBC], statement processing
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f11e5acd8afe46397126ddb4c1d4127eb99fc67a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2d7283524a516b81b6489b543fd3169f7f9aeb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483205"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159540"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの処理
 > [!IMPORTANT]  
@@ -37,10 +37,10 @@ ms.locfileid: "88483205"
   
  位置指定の update ステートメントと delete ステートメントには、次の制限が適用されます。  
   
--   位置指定の update ステートメントと delete ステートメントは、 **SELECT** ステートメントによって結果セットが生成されたときにのみ使用できます。 **SELECT** ステートメントに Join、 **UNION** 句、または **GROUP BY** 句が含まれていない場合また、選択リスト内の別名または式を使用した列が **SQLBindCol**にバインドされていない場合にも発生します。  
+-   位置指定の update ステートメントと delete ステートメントは、 **SELECT** ステートメントによって結果セットが生成されたときにのみ使用できます。 **SELECT** ステートメントに Join、 **UNION** 句、または **GROUP BY** 句が含まれていない場合また、選択リスト内の別名または式を使用した列が **SQLBindCol** にバインドされていない場合にも発生します。  
   
--   配置された update ステートメントまたは delete ステートメントをアプリケーションで準備する場合は、 **Sqlfetch** または **sqlfetchscroll**を呼び出した後に、そのステートメントを実行する必要があります。 カーソルライブラリは、準備のためにステートメントをドライバーに送信しますが、ステートメントを閉じ、アプリケーションが **Sqlexecute**を呼び出したときに直接実行します。  
+-   配置された update ステートメントまたは delete ステートメントをアプリケーションで準備する場合は、 **Sqlfetch** または **sqlfetchscroll** を呼び出した後に、そのステートメントを実行する必要があります。 カーソルライブラリは、準備のためにステートメントをドライバーに送信しますが、ステートメントを閉じ、アプリケーションが **Sqlexecute** を呼び出したときに直接実行します。  
   
--   ドライバーが1つのアクティブステートメントのみをサポートしている場合、カーソルライブラリは残りの結果セットをフェッチしてから、位置指定の update または delete ステートメントを実行する前に、そのキャッシュから現在の行セットを refetches します。 その後、アプリケーションが、結果セットのメタデータを返す関数 ( **Sqlnumresultcols** や **SQLDescribeCol**など) を呼び出すと、カーソルライブラリがエラーを返します。  
+-   ドライバーが1つのアクティブステートメントのみをサポートしている場合、カーソルライブラリは残りの結果セットをフェッチしてから、位置指定の update または delete ステートメントを実行する前に、そのキャッシュから現在の行セットを refetches します。 その後、アプリケーションが、結果セットのメタデータを返す関数 ( **Sqlnumresultcols** や **SQLDescribeCol** など) を呼び出すと、カーソルライブラリがエラーを返します。  
   
 -   更新が実行されるたびに自動的に更新されるタイムスタンプ列を含むテーブルの列に対して、位置指定の update または delete ステートメントが実行された場合、タイムスタンプ列がバインドされていると、後続のすべての位置指定更新または delete ステートメントは失敗します。 これは、カーソルライブラリによって作成される検索された update ステートメントまたは delete ステートメントによって、更新する行が正確に識別されないために発生します。 Timestamp 列の検索ステートメントの値が、timestamp 列の自動更新された値と一致しません。

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fddb6ba43923692fd8811d2648460a243dc8354
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3d485b2306b654c4f98911e0a994c246a474f424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976733"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161728"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
-この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp**として保存します。  
+この例では、 [AddNew](./addnew-method-ado.md) メソッドを使用して、指定した名前の新しいレコードを作成します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Addnewjs. asp** として保存します。  
   
 ```  
 <!-- BeginAddNewJS -->  
