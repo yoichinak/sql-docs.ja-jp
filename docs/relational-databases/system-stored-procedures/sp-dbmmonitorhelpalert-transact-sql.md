@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
 - sp_dbmmonitorhelpalert
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9483733ddcaca469ea162ff9dba884ef857a9493
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: edcf719e5778ebe7cd2f224c14f53552a2f28325
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548167"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212382"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_dbmmonitorhelpalert database_name
   
  特定の警告を返すには、次のいずれかの値を指定します。  
   
-|[値]|パフォーマンス基準|警告しきい値|  
+|値|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、時間の観点からデータ損失の可能性を測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、データ損失の可能性を KB 単位で測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
@@ -72,7 +72,7 @@ sp_dbmmonitorhelpalert database_name
 |**threshold**|**int**|警告のしきい値。 ミラーリングの状態が更新されたときに、このしきい値を超える値が返された場合は、Windows イベントログにエントリが入力されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 しきい値が現在設定されていない場合、値は NULL になります。<br /><br /> **注:** 現在の値を表示するには、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) ストアドプロシージャを実行します。|  
 |**有効**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効です。|  
   
-|[値]|パフォーマンス基準|ユニット|  
+|値|パフォーマンス基準|ユニット|  
 |-----------|------------------------|----------|  
 |1|最も古い未送信のトランザクション|分|  
 |2|未送信のログ|KB|  

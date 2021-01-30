@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysjobservers
 - sysjobservers_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7ac1d8facbabb42be31a9d45e091e1106c25e0c9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2aafe81cf4c28c560cf99e34e5bd721f36668a54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097429"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202327"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98097429"
 |last_run_duration|**int**|ジョブが実行された期間 (時間、分、秒)。 次の式を使用して計算されます: (*時間* \* 1万) + (*分* \* 100) +*秒* です。|  
 
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 *4* を超える値は、SQL エージェントがそのジョブの状態を認識していないことを意味します。 ジョブを作成すると、 *last_run_outcome* は最初に *5* に設定されます。
 

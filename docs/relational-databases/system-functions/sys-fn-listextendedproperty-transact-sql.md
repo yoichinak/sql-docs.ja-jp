@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_listextendedproperty
 - fn_listextendedproperty_TSQL
@@ -27,12 +27,12 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9625e59f5ca6c7357e67116fc0bceaf8cc17c7ac
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e8b60e2fabcccd2040c3dceb1307b7f7e7907bda
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101366"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201937"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -97,7 +97,7 @@ fn_listextendedproperty (
   
  返されたテーブルが空の場合、オブジェクトに拡張プロパティがないか、ユーザーにオブジェクトの拡張プロパティを一覧表示する権限がありません。 データベース自体の拡張プロパティを返す場合、objtype および objname 列は NULL になります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  *Property_name* の値が NULL または default の場合、fn_listextendedproperty 指定されたオブジェクトのすべてのプロパティを返します。  
   
  オブジェクトの種類が指定され、対応するオブジェクト名の値が NULL または default である場合、fn_listextendedproperty は、指定された型のすべてのオブジェクトのすべての拡張プロパティを返します。  

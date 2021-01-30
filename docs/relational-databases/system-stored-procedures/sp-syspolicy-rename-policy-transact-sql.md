@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 962e15744221175abd5732df7fe4e29d7b924ae0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211833"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,19 +42,19 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 名前を変更するポリシーの名前を指定します。 *名前* は **sysname**であり、 *policy_id* が NULL の場合に指定する必要があります。  
+`[ @name = ] 'name'` 名前を変更するポリシーの名前を指定します。 *名前* は **sysname** であり、 *policy_id* が NULL の場合に指定する必要があります。  
   
-`[ @policy_id = ] policy_id` 名前を変更するポリシーの識別子を指定します。 *policy_id* は **int**です。 *name* が NULL の場合は、を指定する必要があります。  
+`[ @policy_id = ] policy_id` 名前を変更するポリシーの識別子を指定します。 *policy_id* は **int** です。 *name* が NULL の場合は、を指定する必要があります。  
   
-`[ @new_name = ] 'new_name'` ポリシーの新しい名前を指定します。 *new_name* は **sysname**であり、必須です。 NULL または空の文字列を指定することはできません。  
+`[ @new_name = ] 'new_name'` ポリシーの新しい名前を指定します。 *new_name* は **sysname** であり、必須です。 NULL または空の文字列を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syspolicy_rename_policy は msdb システム データベースのコンテキストで実行する必要があります。  
   
- *名前*または*policy_id*のいずれかの値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policies システムビューに対してクエリを実行します。  
+ *名前* または *policy_id* のいずれかの値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policies システムビューに対してクエリを実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  

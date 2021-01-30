@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_TSQL
 - sp_syspolicy_delete_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f6812c255f48f346144d7c69609a76ca457391d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463991"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201226"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +40,17 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` ポリシーカテゴリの名前を指定します。 *名前* は **sysname**であり、 *policy_category_id* が NULL の場合に指定する必要があります。  
+`[ @name = ] 'name'` ポリシーカテゴリの名前を指定します。 *名前* は **sysname** であり、 *policy_category_id* が NULL の場合に指定する必要があります。  
   
-`[ @policy_category_id = ] policy_category_id` ポリシーカテゴリの識別子を示します。 *policy_category_id* は **int**です。 *name* が NULL の場合は、を指定する必要があります。  
+`[ @policy_category_id = ] policy_category_id` ポリシーカテゴリの識別子を示します。 *policy_category_id* は **int** です。 *name* が NULL の場合は、を指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_syspolicy_delete_policy_category は msdb システム データベースのコンテキストで実行する必要があります。  
   
- *名前*または*policy_category_id*の値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policy_categories システム ビューに対してクエリを実行します。  
+ *名前* または *policy_category_id* の値を指定する必要があります。 両方を NULL にすることはできません。 これらの値を取得するには、msdb.dbo.syspolicy_policy_categories システム ビューに対してクエリを実行します。  
   
  ポリシー カテゴリを削除するには、そのカテゴリがどのポリシーからも参照されていないことが必要です。  
   

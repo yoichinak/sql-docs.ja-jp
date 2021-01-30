@@ -5,19 +5,19 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 8a859571ef9f4682c4c8556038247dc21d47eb50
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2d3f79c55a1e48fd3f7b1d18671e1d710658f345
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474613"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201323"
 ---
 # <a name="sp_datatype_info_90-azure-synapse-analytics"></a>sp_datatype_info_90 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -70,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|*Data_type* が **interval** の場合の間隔の先頭の有効桁数の値。それ以外の場合は NULL。|  
 |USERTYPE|**smallint**|systypes テーブルの **usertype** 値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_datatype_info は、ODBC の SQLGetTypeInfo に相当します。 結果は、まず DATA_TYPE の順序で、次にデータ型が対応する ODBC SQL データ型にどれだけ正確にマップされているのかに基づいて返されます。  
   
 ## <a name="permissions"></a>アクセス許可  

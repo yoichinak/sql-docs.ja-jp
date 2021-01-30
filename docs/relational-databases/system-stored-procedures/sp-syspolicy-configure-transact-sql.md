@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abf343b9230e8eeef0ce95ca8e2667c20c714cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473588"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201244"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 構成する設定の名前を指定します。 *名前* は **sysname**であり、必須であり、NULL または空の文字列にすることはできません。  
+`[ @name = ] 'name'` 構成する設定の名前を指定します。 *名前* は **sysname** であり、必須であり、NULL または空の文字列にすることはできません。  
   
  *名前* には、次のいずれかの値を指定できます。  
   
@@ -51,17 +51,17 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   ' LogOnSuccess '-ポリシーベースの管理ログが成功したポリシー評価をログに記録するかどうかを指定します。  
   
-`[ @value = ] value`*Name*に指定された値に関連付けられている値を指定します。 *値* が **sql_variant**であり、が必要です。  
+`[ @value = ] value`*Name* に指定された値に関連付けられている値を指定します。 *値* が **sql_variant** であり、が必要です。  
   
--   *名前*に ' Enabled ' を指定した場合は、次のいずれかの値を使用できます。  
+-   *名前* に ' Enabled ' を指定した場合は、次のいずれかの値を使用できます。  
   
     -   0 = ポリシー ベースの管理を無効にします。  
   
     -   1 = ポリシー ベースの管理を有効にします。  
   
--   *名前*に ' HistoryRententionInDays ' を指定する場合は、日数を整数値として指定します。  
+-   *名前* に ' HistoryRententionInDays ' を指定する場合は、日数を整数値として指定します。  
   
--   *名前*に "logonsuccess" を指定した場合は、次のいずれかの値を使用できます。  
+-   *名前* に "logonsuccess" を指定した場合は、次のいずれかの値を使用できます。  
   
     -   0 = 失敗したポリシー評価のみをログに記録します。  
   
@@ -70,7 +70,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  msdb システム データベースのコンテキストで sp_syspolicy_configure を実行する必要があります。  
   
  これらの設定の現在の値を表示するには、msdb.dbo.syspolicy_configuration システムビューに対してクエリを実行します。  

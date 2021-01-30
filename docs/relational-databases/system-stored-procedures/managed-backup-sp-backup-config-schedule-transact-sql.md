@@ -1,13 +1,13 @@
 ---
-description: managed_backup。 sp_backup_config_schedule (Transact-sql)
-title: managed_backup。 sp_backup_config_schedule (Transact-sql) |Microsoft Docs
+description: managed_backup managed_backup.sp_backup_config_schedule (transact-sql)
+title: managed_backup managed_backup.sp_backup_config_schedule (transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
 - managed_backup.sp_backup_config_schedule
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46acc8efa858c3d0b3dfcd4913b9bfb4eb91ba30
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486305"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203695"
 ---
-# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup。 sp_backup_config_schedule (Transact-sql)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup managed_backup.sp_backup_config_schedule (transact-sql)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   の自動またはカスタムスケジュールオプションを構成 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] します。  
@@ -76,13 +76,13 @@ EXEC managed_backup.sp_backup_config_schedule
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
+ **Db_backupoperator** データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL** 権限、および **Sp_delete_backuphistory** ストアドプロシージャに対する **EXECUTE** 権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [managed_backup。 sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [managed_backup managed_backup.sp_backup_config_basic (transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

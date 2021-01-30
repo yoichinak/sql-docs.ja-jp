@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticlecolumndatatype
 - sp_changearticlecolumndatatype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e222ac8a81f42717ffba16a959e7e8cb6479286a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34f3f1878fcae59601a6ac94ff8536f3d22d6ea5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541924"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203705"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` Oracle パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname**で、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前を指定します。 *アーティクル* は **sysname** で、既定値はありません。  
   
 `[ @column = ] 'column'` データ型マッピングを変更する列の名前を指定します。 *列* は **sysname**,、既定値はありません。  
   
@@ -60,20 +60,20 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @precision = ] precision` 変換先列のデータ型の有効桁数を指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *有効桁数* は **bigint**,、既定値は NULL です。  
   
-`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外のパブリッシャーを指定し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 *publisher* は **sysname** で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
- サポートされているパブリッシャーの種類 (Oracle および) 間の既定のデータ型マッピングをオーバーライドするには、 **Sp_changearticlecolumndatatype**を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらの既定のデータ型マッピングを表示するには、 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。  
+## <a name="remarks"></a>コメント  
+ サポートされているパブリッシャーの種類 (Oracle および) 間の既定のデータ型マッピングをオーバーライドするには、 **Sp_changearticlecolumndatatype** を使用し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 これらの既定のデータ型マッピングを表示するには、 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)を実行します。  
   
  **sp_changearticlecolumndatatype** は、Oracle パブリッシャーに対してのみサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに対してこのストアド プロシージャを実行すると、エラーが発生します。  
   
- 変更する必要があるアーティクル列マッピングごとに**sp_changearticlecolumndatatype**を実行する必要があります。  
+ 変更する必要があるアーティクル列マッピングごとに **sp_changearticlecolumndatatype** を実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_changearticlecolumndatatype**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_changearticlecolumndatatype** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543125"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204366"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,15 +45,15 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。 **Null**の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は NULL です。 **Null** の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname**で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname** で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
 `[ @publication = ] 'publication'` 監視されているパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。  
   
 `[ @publication_type = ] publication_type` パブリケーションの種類。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -62,7 +62,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode` サブスクリプションの監視情報を返すときに使用するフィルター処理モードを選択します。 *モード* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0** (既定値)|すべてのサブスクリプションを返します。|  
 |**1**|エラーがあるサブスクリプションだけを返します。|  
@@ -75,7 +75,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @topnum = ] topnum` 返されるデータの先頭にある、指定された数のサブスクリプションのみに結果セットを制限します。 *topnum* は **int**,、既定値はありません。  
   
-`[ @exclude_anonymous = ] exclude_anonymous` 匿名プルサブスクリプションを結果セットから除外するかどうかを示します。 *exclude_anonymous* は **ビット**,、既定値は **0**です。値が **1** の場合、匿名サブスクリプションは除外され、値 **0** はそれらが含まれることを意味します。  
+`[ @exclude_anonymous = ] exclude_anonymous` 匿名プルサブスクリプションを結果セットから除外するかどうかを示します。 *exclude_anonymous* は **ビット**,、既定値は **0** です。値が **1** の場合、匿名サブスクリプションは除外され、値 **0** はそれらが含まれることを意味します。  
   
 `[ @refreshpolicy = ] refreshpolicy` 内部でのみ使用します。  
   
@@ -117,13 +117,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replmonitorhelpsubscription** は、すべての種類のレプリケーションで使用されます。  
   
- **sp_replmonitorhelpsubscription** は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking*の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
+ **sp_replmonitorhelpsubscription** は、サブスクリプションの状態の重大度に基づいて結果セットを並べ替えます。これは、 *monitorranking* の値によって決定されます。 たとえば、エラー状態のすべてのサブスクリプションの列は、警告状態のサブスクリプションの列よりも上に並べられます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replmonitorhelpsubscription**を実行できるのは、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
+ **Sp_replmonitorhelpsubscription** を実行できるのは、ディストリビューションデータベースの固定データベースロール **db_owner** または **replmonitor** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

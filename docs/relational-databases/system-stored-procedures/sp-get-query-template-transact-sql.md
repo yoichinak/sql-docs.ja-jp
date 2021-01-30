@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_query_template
 - sp_get_query_template_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89e30950c072cbfe5737a65934155276bbf6a27d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543362"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204779"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,15 +47,15 @@ sp_get_query_template
  パラメーター化されたバージョンを生成するクエリを指定します。 '*query_text*' は、単一引用符で囲む必要があります。また、前には N Unicode 指定子を指定する必要があります。 N '*query_text*' は、パラメーターに割り当てられた値です @querytext 。 **Nvarchar (max)** 型です。  
   
  @templatetext  
- パラメーター化された形式の*query_text*を文字列リテラルとして受け取る、 **nvarchar (max)** 型の出力パラメーターを指定します。  
+ パラメーター化された形式の *query_text* を文字列リテラルとして受け取る、 **nvarchar (max)** 型の出力パラメーターを指定します。  
   
  @parameters  
  は、によってパラメーター化されたパラメーター名とデータ型の文字列リテラルを受け取る、 **nvarchar (max)** 型の出力パラメーターです @templatetext 。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_get_query_template は、以下のことが発生した場合にエラーを返します。  
   
--   *Query_text*の定数リテラル値をパラメーター化しません。  
+-   *Query_text* の定数リテラル値をパラメーター化しません。  
   
 -   *query_text* が NULL であるか、Unicode 文字列ではないか、構文が正しくないか、またはコンパイルできません。  
   

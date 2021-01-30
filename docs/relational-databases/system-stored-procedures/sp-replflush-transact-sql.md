@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replflush
 - sp_replflush_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb5d459f1a9b89836a412450eb4215182b914ba8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45a015f0b7b2448c0cf19c147247e1dd09b565b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541203"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211902"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,15 +43,15 @@ sp_replflush
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replflush** は、トランザクションレプリケーションで使用します。  
   
  効率を上げるため、アーティクル定義がキャッシュに格納されます。 **sp_replflush** は、アーティクル定義が変更または削除されるたびに、他のレプリケーションストアドプロシージャによって使用されます。  
   
- 特定のデータベースに対するログリーダーアクセス権を持つことができるのは、1つのクライアント接続のみです。 クライアントがデータベースへのログリーダーアクセス権を持っている場合、 **sp_replflush** を実行すると、クライアントはそのアクセスを解放します。 その他のクライアントは、 **sp_replcmds** または **sp_replshowcmds**を使用して、トランザクションログをスキャンできます。  
+ 特定のデータベースに対するログリーダーアクセス権を持つことができるのは、1つのクライアント接続のみです。 クライアントがデータベースへのログリーダーアクセス権を持っている場合、 **sp_replflush** を実行すると、クライアントはそのアクセスを解放します。 その他のクライアントは、 **sp_replcmds** または **sp_replshowcmds** を使用して、トランザクションログをスキャンできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replflush**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_replflush** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

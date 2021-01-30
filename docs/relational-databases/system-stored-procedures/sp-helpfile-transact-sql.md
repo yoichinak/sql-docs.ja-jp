@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpfile
 - sp_helpfile_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bb8c6ff5fe18393db1c08bae888d1479a7f2594
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 87bf389e2cd28fdf031308c116c32105d2f3c215
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549654"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204427"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,8 +50,8 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|論理ファイル名です。|  
-|**fileid**|**smallint**|ファイルの数値識別子。 *Name*が指定されている場合、は返されません *。*|  
-|**ファイル名**|**nchar (260)**|物理ファイル名。|  
+|**fileid**|**smallint**|ファイルの数値識別子。 *Name* が指定されている場合、は返されません *。*|  
+|**filename**|**nchar (260)**|物理ファイル名。|  
 |**グループ**|**sysname**|ファイルが属するファイルグループ。<br /><br /> NULL = ファイルはログファイルです。 これは、ファイルグループの一部ではありません。|  
 |**size**|**nvarchar (15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar (15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
@@ -75,7 +75,7 @@ GO
  [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)  

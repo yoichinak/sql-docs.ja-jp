@@ -1,12 +1,12 @@
 ---
-title: dm_db_rda_schema_update_status (Transact-sql) |Microsoft Docs
-description: データベース内の各 Stretch 対応テーブルのリモートデータアーカイブについて、各スキーマ更新タスクの行がどのように格納されている dm_db_rda_schema_update_status について説明します。
+title: sys.dm_db_rda_schema_update_status (Transact-sql) |Microsoft Docs
+description: データベース内の各 Stretch 対応テーブルのリモートデータアーカイブのスキーマ更新タスクごとに1行のデータを格納 sys.dm_db_rda_schema_update_status 方法について説明します。
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_rda_schema_update_status
 - sys.dm_db_rda_schema_update_status_TSQL
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 313eb868a49507b96e31bcd1966165175bf96f0a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 955f06ba0a7ad991ffe979fc927dfabe6e5a8dd0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243793"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202419"
 ---
-# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   現在のデータベース内の各 Stretch 対応テーブルのリモートデータアーカイブのスキーマ更新タスクごとに1行のデータを格納します。 タスクは、タスク id によって識別されます。  
   
- **dm_db_rda_schema_update_status**は、現在のデータベースコンテキストにスコープが設定されています。 スキーマの更新状態を確認する Stretch が有効なテーブルのデータベースコンテキストを使用していることを確認します。  
+ **dm_db_rda_schema_update_status** は、現在のデータベースコンテキストにスコープが設定されています。 スキーマの更新状態を確認する Stretch が有効なテーブルのデータベースコンテキストを使用していることを確認します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

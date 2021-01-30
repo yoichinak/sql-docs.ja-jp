@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
 - sp_addlinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bcefbe0acef90deb488a1d95f162a4d94f60aa95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548435"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202378"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,16 +49,16 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  ローカルログインの権限を借用するか、ログインとパスワードを明示的に送信することで、 *rmtsrvname* に接続するかどうかを決定します。 データ型は **varchar (** 8 **)**,、既定値は TRUE です。  
   
- 値が TRUE の場合は、ログインが独自の資格情報を使用して *rmtsrvname*に接続することを指定します。 *rmtuser* と *rmtpassword* 引数は無視されます。 FALSE を指定すると、 *rmtuser*と*rmtuser*引数を使用して、指定された*locallogin*の*rmtsrvname*に接続します。 *Rmtuser*と*RMTUSER*も NULL に設定されている場合は、リンクサーバーへの接続にログインまたはパスワードは使用されません。  
+ 値が TRUE の場合は、ログインが独自の資格情報を使用して *rmtsrvname* に接続することを指定します。 *rmtuser* と *rmtpassword* 引数は無視されます。 FALSE を指定すると、 *rmtuser* と *rmtuser* 引数を使用して、指定された *locallogin* の *rmtsrvname* に接続します。 *Rmtuser* と *RMTUSER* も NULL に設定されている場合は、リンクサーバーへの接続にログインまたはパスワードは使用されません。  
   
  `[ @locallogin = ] 'locallogin'`  
- ローカルサーバー上のログインを示します。 *locallogin* は **sysname**,、既定値は NULL です。 NULL は、このエントリが *rmtsrvname*に接続するすべてのローカルログインに適用されることを指定します。 NULL 以外の場合、 *locallogin* はログインまたは Windows ログインにすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 Windows ログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接、または windows グループのメンバーシップによってアクセスが許可されている必要があります。  
+ ローカルサーバー上のログインを示します。 *locallogin* は **sysname**,、既定値は NULL です。 NULL は、このエントリが *rmtsrvname* に接続するすべてのローカルログインに適用されることを指定します。 NULL 以外の場合、 *locallogin* はログインまたは Windows ログインにすることができ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 Windows ログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、直接、または windows グループのメンバーシップによってアクセスが許可されている必要があります。  
   
  `[ @rmtuser = ] 'rmtuser'`  
  が FALSE の場合に *rmtsrvname* に接続するために使用されるリモートログインを指定し @useself ます。 リモートサーバーが Windows 認証を使用しないのインスタンスである場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 *rmtuser* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインです。 *rmtuser* は **sysname**,、既定値は NULL です。  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- *Rmtuser*に関連付けられているパスワードを入力します。 *rmtpassword* の型は **sysname**で、既定値は NULL です。  
+ *Rmtuser* に関連付けられているパスワードを入力します。 *rmtpassword* の型は **sysname** で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

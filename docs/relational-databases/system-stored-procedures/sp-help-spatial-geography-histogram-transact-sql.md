@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
 - sp_help_spatial_geography_histogram
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c7368b8991fe442cab30b724532e8899502e18f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 3554c8b385a14f588c4f7f8dd6248ba36ad7b16d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809393"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212065"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
   
 `[ @resolution = ] 'resolution'` 境界ボックスの解像度です。 有効な値は 10 ～ 5000 です。 *解決策* は **tinyint**,、既定値はありません。  
   
-`[ @sample = ] 'sample'` 使用するテーブルの割合を示します。 有効な値は 0 ~ 100 です。 *tablesample* は **float**です。 既定値は100です。  
+`[ @sample = ] 'sample'` 使用するテーブルの割合を示します。 有効な値は 0 ~ 100 です。 *tablesample* は **float** です。 既定値は 100 です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
@@ -63,13 +63,13 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、 **public** ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。  
   
 > [!NOTE]  
 >  テーブル内のオブジェクトは複数のセルに対応している場合があるため、テーブル内のセルの合計が実際のオブジェクトの数よりも大きくなる可能性があります。  
   
- **Geography**型の境界ボックスは、地球全体です。  
+ **Geography** 型の境界ボックスは、地球全体です。  
   
 ## <a name="examples"></a>例  
  次の例では、データベースのテーブルで  **sp_help_spatial_geography_histogram** を呼び出し `Person.Address` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ます。  

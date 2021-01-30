@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386518"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202547"
 ---
 # <a name="statement-transitions"></a>ステートメントの遷移
 ODBC ステートメントの状態は次のとおりです。  
   
-|州|説明|  
+|State|説明|  
 |-----------|-----------------|  
 |S0|未割り当てのステートメントです。 (接続状態は C4、C5、または C6 である必要があります。 詳細については、「 [接続の移行](../../../odbc/reference/appendixes/connection-transitions.md)」を参照してください。)|  
 |S1|割り当てられたステートメント。|  
@@ -33,12 +33,12 @@ ODBC ステートメントの状態は次のとおりです。
 |S3|準備されたステートメントです。 (空の可能性がある) 結果セットが作成されます。|  
 |S4|ステートメントが実行され、結果セットが作成されませんでした。|  
 |S5|実行されたステートメントと、(空の可能性がある) 結果セットが作成されました。 カーソルが開いており、結果セットの最初の行の前に配置されています。|  
-|S6|**Sqlfetch**または**sqlfetchscroll**で配置されたカーソル。|  
-|S7|**SQLExtendedFetch**で配置されたカーソル。|  
+|S6|**Sqlfetch** または **sqlfetchscroll** で配置されたカーソル。|  
+|S7|**SQLExtendedFetch** で配置されたカーソル。|  
 |S8|関数にはデータが必要です。 **Sqlparamdata** が呼び出されていません。|  
 |S9|関数にはデータが必要です。 **Sqlputdata** が呼び出されていません。|  
 |S10|関数にはデータが必要です。 **Sqlputdata** が呼び出されました。|  
-|S11|まだ実行中です。 非同期的に実行された関数が SQL_STILL_EXECUTING を返すと、ステートメントはこの状態のままになります。 ステートメントハンドルを受け取る関数が実行されている間、ステートメントは一時的にこの状態になります。 State S11 の一時的な住居は、 **SQLCancel**の状態テーブル以外の状態テーブルには表示されません。 ステートメントは一時的に状態 S11 にありますが、別のスレッドから **SQLCancel** を呼び出すことによって、関数を取り消すことができます。|  
+|S11|まだ実行中です。 非同期的に実行された関数が SQL_STILL_EXECUTING を返すと、ステートメントはこの状態のままになります。 ステートメントハンドルを受け取る関数が実行されている間、ステートメントは一時的にこの状態になります。 State S11 の一時的な住居は、 **SQLCancel** の状態テーブル以外の状態テーブルには表示されません。 ステートメントは一時的に状態 S11 にありますが、別のスレッドから **SQLCancel** を呼び出すことによって、関数を取り消すことができます。|  
 |S12|非同期実行が取り消されました。 S12 では、アプリケーションは、SQL_STILL_EXECUTING 以外の値を返すまで、キャンセルされた関数を呼び出す必要があります。 関数が SQL_ERROR と SQLSTATE HY008 (操作が取り消されました) を返す場合にのみ、関数が正常に取り消されました。 SQL_SUCCESS など、その他の値が返された場合、取り消し操作は失敗し、関数は正常に実行されます。|  
   
  状態 S2 および S3 は準備済み状態と呼ばれ、カーソルの状態として状態 S5、S7、状態が S8 から S10 までの状態、および非同期状態として S11 および S12 という状態になります。 これらの各グループでは、グループ内の各状態で異なる場合にのみ、移行が個別に表示されます。ほとんどの場合、各グループの各状態の遷移は同じです。  
@@ -47,7 +47,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]、[5]、[6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2]、[5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -62,29 +62,29 @@ ODBC ステートメントの状態は次のとおりです。
   
  [4] この行は、 *Handletype* が SQL_HANDLE_DESC されたときの遷移を示しています。  
   
- [5] 有効なハンドルをポイントする*OutputHandlePtr*で**SQLAllocHandle**を呼び出すと、そのハンドルに対する以前の内容を考慮せずにハンドルが上書きされ、ODBC ドライバーで問題が発生する可能性があります。 ODBC アプリケーションプログラミングでは、 * \* OutputHandlePtr*に対して定義されているものと同じアプリケーション変数を使用して**SQLAllocHandle**を2回呼び出すことはできません。これを再割り当てする前に、 **sqlfreehandle**を呼び出してハンドルを解放します。 このような方法で ODBC ハンドルを上書きすると、ODBC ドライバーの一部で動作が一貫していないか、エラーが発生する可能性があります。  
+ [5] 有効なハンドルをポイントする *OutputHandlePtr* で **SQLAllocHandle** を呼び出すと、そのハンドルに対する以前の内容を考慮せずにハンドルが上書きされ、ODBC ドライバーで問題が発生する可能性があります。 ODBC アプリケーションプログラミングでは、 *\* OutputHandlePtr* に対して定義されているものと同じアプリケーション変数を使用して **SQLAllocHandle** を2回呼び出すことはできません。これを再割り当てする前に、 **sqlfreehandle** を呼び出してハンドルを解放します。 このような方法で ODBC ハンドルを上書きすると、ODBC ドライバーの一部で動作が一貫していないか、エラーが発生する可能性があります。  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbindparameter"></a>SQLBindParameter  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlbrowseconnect-sqlconnect-and-sqldriverconnect"></a>SQLBrowseConnect、SQLConnect、SQLDriverConnect  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## <a name="sqlbulkoperations"></a>SQLBulkOperations  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|次の表を参照|HY010|NS [c] HY010 o|  
   
@@ -96,7 +96,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlcancel"></a>SQLCancel  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [nr] および [2] S3 [r] および [2] S5 [3] と [5] S6 ([3] または [4]) と [6] S7 [4] と [7]|次の表を参照|  
   
@@ -126,13 +126,13 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|24000|24000|24000|S1 [np] S3 [p]|HY010|HY010|  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|次の表を参照|24000|--[s] S11 [x]|HY010|NS [c] HY010 o|  
   
@@ -148,7 +148,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、SQLColumns、SQLForeignKeys、SQLGetTypeInfo、Sqlcolumnprivileges、SQLProcedureColumns、SQLProcedures、Sql Columns、SQLStatistics、Sqlcolumnprivileges、および SQLTables  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S5 [s] S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] および [1] S5 [s] および [1] S11 [x] と [1] 24000 [2]|次の表を参照|HY010|NS [c] HY010 o|  
   
@@ -162,11 +162,11 @@ ODBC ステートメントの状態は次のとおりです。
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1] このエラーは、sqlfetch または**Sqlfetchscroll**が返され SQL_NO_DATA ず、 **Sqlfetch**または**sqlfetchscroll**が SQL_NO_DATA を返した場合にドライバーによって返され**た場合に**、ドライバーマネージャーによって返されます。  
+ [1] このエラーは、sqlfetch または **Sqlfetchscroll** が返され SQL_NO_DATA ず、 **Sqlfetch** または **sqlfetchscroll** が SQL_NO_DATA を返した場合にドライバーによって返され **た場合に**、ドライバーマネージャーによって返されます。  
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|NS [c] および [3] HY010 [o] または [4]|  
 |IH [2]|HY010|次の表を参照|24000|--[s] S11 x|HY010|NS [c] および [3] HY010 [o] または [4]|  
@@ -189,13 +189,13 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources ソースと Sqldatasources  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqldescribecol"></a>SQLDescribeCol  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|次の表を参照|24000|--[s] S11 [x]|HY010|NS [c] HY010 o|  
   
@@ -207,13 +207,13 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--[s] S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|S0 [1]|S0 [1]|S0 [1]|S0 [1]|HY010|HY010|  
   
@@ -221,7 +221,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--[2] または [3] S1 [1]|--[3] s1 [np] and ([1] または [2]) S1 [p] と [1] S2 [p] と [2]|--[3] s1 [np] and ([1] または [2]) S1 [p] および [1] S3 [p] と [2]|HY010|HY010|  
   
@@ -233,7 +233,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlexecdirect"></a>SQLExecDirect  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S4 [s] と [nr] S5 [s] と [r] S8 [d] S11 [x]|--[e] と [1] S1 [e] および [2] S4 [s] と [nr] S5 [s] と [r] S8 [d] S11 [x]|--[e]、[1]、[3] S1 [e]、[2]、[3] S4 [s]、[nr]、[3] S5 [s]、[r]、[3] S8 [d]、[3] S11 [x] および [3] 24000 [4]|次の表を参照|HY010|NS [c] HY010 [o]|  
   
@@ -255,7 +255,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|HY010|次の表を参照|S2 [e]、p、および [1] S4 [s]、[p]、[nr]、[1] S5 [s]、[p]、[r]、[1] S8 [d]、[p]、[1] S11 [x]、[p]、[1] 24000 [p]、[2] HY010 [np]|「Cursor states テーブル」を参照してください。|HY010|NS [c] HY010 [o]|  
   
@@ -279,7 +279,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|S1010|S1010|24000|次の表を参照|S1010|NS [c] S1010 [o]|  
   
@@ -291,7 +291,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlfetch-and-sqlfetchscroll"></a>SQLFetch と SQLFetchScroll  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|次の表を参照|HY010|NS [c] HY010 [o]|  
   
@@ -303,7 +303,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -317,30 +317,30 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|S1 [np] S2 [p]|S1 [np] S3 [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
   
  [1] *オプション* が SQL_CLOSE されたときの遷移を示しています。  
   
- [2] *オプション* が SQL_UNBIND または SQL_RESET_PARAMS の場合、この行は移行を示しています。 *オプション*の引数が SQL_DROP で、基になるドライバーが ODBC 3.x*ドライバーの*場合、ドライバーマネージャーはこれを、 *handletype*が SQL_HANDLE_STMT に設定された**sqlfreehandle**への呼び出しにマップします。 詳細については、「 [Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)の遷移テーブル」を参照してください。  
+ [2] *オプション* が SQL_UNBIND または SQL_RESET_PARAMS の場合、この行は移行を示しています。 *オプション* の引数が SQL_DROP で、基になるドライバーが ODBC 3.x *ドライバーの* 場合、ドライバーマネージャーはこれを、 *handletype* が SQL_HANDLE_STMT に設定された **sqlfreehandle** への呼び出しにマップします。 詳細については、「 [Sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)の遷移テーブル」を参照してください。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetcursorname"></a>SQLGetCursorName  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|次の表を参照|HY010|NS [c] HY010 [o]|  
   
@@ -352,7 +352,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField と SQLGetDescRec  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] または [2] HY010 [3]|次の表を参照|--[1] または [2] 24000 [3]|--[1]、[2]、または [3] S11 [3] および [x]|HY010|NS [c] または [4] HY010 [o] および [5]|  
   
@@ -362,9 +362,9 @@ ODBC ステートメントの状態は次のとおりです。
   
  [3] *記述子ハンドル* 引数は IRD でした。  
   
- [4]*記述子ハンドル*引数が、非同期的に実行されている**SQLGetDescField**または**sqlgetdescrec**関数の*記述子ハンドル*引数と同じでした。  
+ [4]*記述子ハンドル* 引数が、非同期的に実行されている **SQLGetDescField** または **sqlgetdescrec** 関数の *記述子ハンドル* 引数と同じでした。  
   
- [5]*記述子ハンドル*引数が、非同期的に実行されている**SQLGetDescField**または**sqlgetdescrec**関数の*記述子ハンドル*引数と異なります。  
+ [5]*記述子ハンドル* 引数が、非同期的に実行されている **SQLGetDescField** または **sqlgetdescrec** 関数の *記述子ハンドル* 引数と異なります。  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec-prepared-states"></a>SQLGetDescField と SQLGetDescRec (準備された状態)  
   
@@ -380,7 +380,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField と SQLGetDiagRec  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
 |IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
@@ -393,25 +393,25 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] 24000 [2]|--[1] 24000 [2]|--[1] 24000 [2]|次の表を参照|HY010|HY010|  
   
@@ -431,7 +431,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|--[1]|--[1]|--[s] と [2] S1 [nf]、[np]、および [4] S2 [nf]、[p]、[4] S5 [s] および [3] S11 [x]|S1 [nf]、[np]、[4] S3 [nf]、[p]、[4] S4 [s]、[2] S5 [s] および [3] S11 [x]|HY010|NS [c] HY010 [o]|  
   
@@ -445,25 +445,25 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## <a name="sqlnumparams"></a>SQLNumParams  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--[s] S11 [x]|--[s] S11 [x]|--[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|--[s] S11 [x]|--[s] S11 [x]|--[s] S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|次の表を参照|NS [c] HY010 [o]|  
   
@@ -485,7 +485,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S2 [s] と [nr] S3 [s] と [r] S11 [x]|--[s] または ([e] および [1]) S1 [e] と [2] S11 [x]|S1 [e] および [3] S2 [s]、[nr]、および [3] S3 [s]、[r]、[3] S11 [x]、[3] 24000 [4]|次の表を参照|HY010|NS [c] HY010 [o]|  
   
@@ -505,7 +505,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlputdata"></a>SQLPutData  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|次の表を参照|NS [c] HY010 [o]|  
   
@@ -529,17 +529,17 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlrowcount"></a>SQLRowCount  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|HY010|HY010|--|--|HY010|HY010|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000 [3]|HY010|HY010|  
   
- [1] *属性* が接続属性の場合、この行は遷移を示しています。 *属性*がステートメント属性の場合の移行については、 **SQLSetStmtAttr**のステートメント遷移テーブルを参照してください。  
+ [1] *属性* が接続属性の場合、この行は遷移を示しています。 *属性* がステートメント属性の場合の移行については、 **SQLSetStmtAttr** のステートメント遷移テーブルを参照してください。  
   
  [2] *属性* 引数が SQL_ATTR_CURRENT_CATALOG ませんでした。  
   
@@ -547,27 +547,27 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlsetcursorname"></a>SQLSetCursorName  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|24000|24000|HY010|HY010|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField と SQLSetDescRec  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|--|--|HY010|HY010|  
   
- [1] この行には、 *FieldIdentifier*引数が SQL_DESC_ARRAY_STATUS_PTR または SQL_DESC_ROWS_PROCESSED_PTR の場合に、APD、IPD、または ( **SQLSetDescField**) という*記述子ハンドル*引数が使用されている遷移が表示されます。 *FieldIdentifier*がその他の値の場合、IRD に対して**SQLSetDescField**を呼び出すと、エラーになります。  
+ [1] この行には、 *FieldIdentifier* 引数が SQL_DESC_ARRAY_STATUS_PTR または SQL_DESC_ROWS_PROCESSED_PTR の場合に、APD、IPD、または ( **SQLSetDescField**) という *記述子ハンドル* 引数が使用されている遷移が表示されます。 *FieldIdentifier* がその他の値の場合、IRD に対して **SQLSetDescField** を呼び出すと、エラーになります。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## <a name="sqlsetpos"></a>SQLSetPos  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|次の表を参照|HY010|NS [c] HY010 [o]|  
   
@@ -579,7 +579,7 @@ ODBC ステートメントの状態は次のとおりです。
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
   
-|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> 非同期|  
+|S0<br /><br /> 未割り当て|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> れる|S5-S7<br /><br /> カーソル|S8-S10<br /><br /> データが必要|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--[1] HY011 [2]|--[1] 24000 [2]|--[1] 24000 [2]|HY010 [np] または [1] HY011 [p] と [2]|HY010 [np] または [1] HY011 [p] と [2]|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474562"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202394"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,13 +62,13 @@ sp_addlogin [ @loginame = ] 'login'
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb =] '*データベース*'  
- ログインの既定のデータベースを指定します (そのログインがログインした後に最初に接続されるデータベース)。 *データベースのデータ* 型は **sysname**で、既定値は **master**です。  
+ ログインの既定のデータベースを指定します (そのログインがログインした後に最初に接続されるデータベース)。 *データベースのデータ* 型は **sysname** で、既定値は **master** です。  
   
  [ @deflanguage =] '*language*'  
- ログインの既定の言語を設定します。 *language* は **sysname**,、既定値は NULL です。 *言語*が指定されていない場合、新しいログインの既定の*言語*は、サーバーの現在の既定の言語に設定されます。  
+ ログインの既定の言語を設定します。 *language* は **sysname**,、既定値は NULL です。 *言語* が指定されていない場合、新しいログインの既定の *言語* は、サーバーの現在の既定の言語に設定されます。  
   
  [ @sid =] '*sid*'  
- セキュリティ ID 番号 (SID) を指定します。 *sid* は **varbinary (16)**,、既定値は NULL です。 *Sid*が NULL の場合、システムは新しいログインの sid を生成します。 **Varbinary**データ型を使用する場合でも、NULL 以外の値は長さが16バイトである必要がありますが、まだ存在していない必要があります。 *Sid*を指定すると、たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] あるサーバーから別のサーバーにログインしたり、ログインを移動したりするときに、複数のサーバーで同じ sid を使用するようにすることができます。  
+ セキュリティ ID 番号 (SID) を指定します。 *sid* は **varbinary (16)**,、既定値は NULL です。 *Sid* が NULL の場合、システムは新しいログインの sid を生成します。 **Varbinary** データ型を使用する場合でも、NULL 以外の値は長さが16バイトである必要がありますが、まだ存在していない必要があります。 *Sid* を指定すると、たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] あるサーバーから別のサーバーにログインしたり、ログインを移動したりするときに、複数のサーバーで同じ sid を使用するようにすることができます。  
   
  [ @encryptopt =] '*encryption_option*'  
  パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリアテキストのパスワードが渡されると、ハッシュされます。 ハッシュは保存されます。 *encryption_option* は **varchar (20)** で、次のいずれかの値を指定できます。  
@@ -91,7 +91,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  サーバーの既定の言語を変更しても、既存のログインに関する既定の言語は変更されません。 サーバーの既定の言語を変更するには、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)を使用します。  
   
- パスワードのハッシュを抑制するために **skip_encryption** を使用すると、ログインがに追加されたときにパスワードが既にハッシュされている場合に便利です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 以前のバージョンのでパスワードがハッシュされている場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **skip_encryption_old**を使用します。  
+ パスワードのハッシュを抑制するために **skip_encryption** を使用すると、ログインがに追加されたときにパスワードが既にハッシュされている場合に便利です [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 以前のバージョンのでパスワードがハッシュされている場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **skip_encryption_old** を使用します。  
   
  ユーザー定義のトランザクション内では、sp_addlogin を実行できません。  
   
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>参照  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

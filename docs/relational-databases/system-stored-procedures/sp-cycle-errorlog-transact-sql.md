@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cycle_errorlog_TSQL
 - sp_cycle_errorlog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 433accd75ac9bf5c5f2e390aa1bcbf0a1c5e0a6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b75b9e0c056a86a8ad67d1a739214a46f88533f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549917"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203168"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +46,10 @@ sp_cycle_errorlog
  なし  
   
 ## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されるたびに、現在のエラーログの名前が "エラーログ" に変更され**ます。 1**;**エラーログ 1**は**エラーログ**になります。2、**エラーログ**2 は**エラーログ 3**になります。 **sp_cycle_errorlog** を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されるたびに、現在のエラーログの名前が "エラーログ" に変更され **ます。 1**;**エラーログ 1** は **エラーログ** になります。2、**エラーログ** 2 は **エラーログ 3** になります。 **sp_cycle_errorlog** を使用すると、サーバーを停止して起動しなくてもエラーログファイルを循環することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_cycle_errorlog**の実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
+ **Sp_cycle_errorlog** の実行権限は、 **sysadmin** 固定サーバーロールのメンバーに制限されています。  
   
 ## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログを使い回します。  

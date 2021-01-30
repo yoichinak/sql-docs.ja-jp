@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
 - sp_syscollector_update_collector_type
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 175e3299c37afe307de8b5f809e44646d0a26047
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ad2fefb206f417c4759f3e85d34a63f320e34d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534850"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201868"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID を示します。 *collector_type_uid* は **UNIQUEIDENTIFIER**です。 NULL の場合は、自動的に作成され、出力として返されます。  
+`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID を示します。 *collector_type_uid* は **UNIQUEIDENTIFIER** です。 NULL の場合は、自動的に作成され、出力として返されます。  
   
 `[ @name = ] 'name'` コレクター型の名前を指定します。 *名前* は **sysname** ので、指定する必要があります。  
   
 `[ @parameter_schema = ] 'parameter_schema'` このコレクター型の XML スキーマです。 *parameter_schema* は **xml** であり、特定のコレクター型で必要になる場合があります。 必須ではない場合、この引数は NULL にすることができます。  
   
-`[ @collection_package_id = ] collection_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id* は **uniqueidentifer** であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @collection_package_id = ] collection_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるコレクションパッケージを指すローカル一意識別子です。 *collection_package_id* は **uniqueidentifer** であり、必須です。 *Collection_package_id* の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
   
-`[ @upload_package_id = ] upload_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id* は **uniqueidentifier** であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
+`[ @upload_package_id = ] upload_package_id`[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションセットによって使用されるアップロードパッケージを指すローカル一意識別子です。 *upload_package_id* は **uniqueidentifier** であり、必須です。 *Upload_package_id* の値を取得するには、msdb データベースの dbo.syscollector_collector_types システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  

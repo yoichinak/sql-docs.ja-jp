@@ -6,7 +6,7 @@ ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_external_script_execution_stats
 - sys.dm_external_script_execution_stats_TSQL
@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 32a35224dd40cfc33bdc3c8bb0c93fd5a783966a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2885f83185218d389d2a6fcf7dce6c3fbd097286
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482693"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201349"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "97482693"
 > [!NOTE]  
 > 外部スクリプトを実行するユーザーはさらに EXECUTE ANY EXTERNAL SCRIPT 権限も持っている必要がありますが、管理者はこの権限がなくてもこの DMV を使用できます。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
   この DMV は、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]で提供される新しい外部スクリプト実行機能の全体的な使用状況を監視するために、内部テレメトリ用に提供されます。 登録されている外部スクリプト関数が呼び出されるたびにスタート パッドがディスクベースのカウンターを増分すると、テレメトリ サービスが開始します。
 

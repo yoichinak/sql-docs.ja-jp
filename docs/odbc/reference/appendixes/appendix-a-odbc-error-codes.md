@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a587578ba74cd2ed36a919953000190a6274b62d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37c846230cd60e067cf7ff2c8e7a72c74d1e540
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411550"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212582"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>付録 A: ODBC エラー コード
 このトピックでは、ODBC 3 の SQLSTATE 値について説明します。*x*。 ODBC 3 の詳細については、「」を参照してください。*x* sqlstate 値、「 [sqlstate マッピング](../../../odbc/reference/develop-app/sqlstate-mappings.md)」を参照してください。  
   
- **SQLGetDiagRec** または **SQLGetDiagField** は、Open Group *データ管理: 構造化照会言語 (SQL)、Version 2* (1995 年3月) によって定義された SQLSTATE 値を返します。 SQLSTATE 値は、5つの文字を含む文字列です。 次の表に、ドライバーが **SQLGetDiagRec**に対して返すことができる SQLSTATE 値を示します。  
+ **SQLGetDiagRec** または **SQLGetDiagField** は、Open Group *データ管理: 構造化照会言語 (SQL)、Version 2* (1995 年3月) によって定義された SQLSTATE 値を返します。 SQLSTATE 値は、5つの文字を含む文字列です。 次の表に、ドライバーが **SQLGetDiagRec** に対して返すことができる SQLSTATE 値を示します。  
   
  SQLSTATE に返される文字列値は、2文字のクラス値とそれに続く3文字のサブクラス値で構成されます。 クラス値 "01" は警告を示し、SQL_SUCCESS_WITH_INFO のリターンコードを伴います。 クラス "IM" 以外の "01" 以外のクラス値は、エラーを示し、SQL_ERROR の戻り値を伴います。 クラス "IM" は、ODBC 自体の実装から派生した警告とエラーに固有のものです。 任意のクラスのサブクラス値 "000" は、その SQLSTATE のサブクラスが存在しないことを示します。 クラスとサブクラスの値の代入は、SQL-92 によって定義されます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88411550"
 |01S09|無効なキーワード|**SQLDriverConnect**|  
 |07001|パラメーターの数が正しくありません|**SQLExecDirect**<br /><br /> **SQLExecute**|  
 |07002|カウントフィールドが正しくありません|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
-|07005|準備されたステートメントが*カーソル指定*ではありません|**SQLColAttribute**<br /><br /> **SQLDescribeCol**|  
+|07005|準備されたステートメントが *カーソル指定* ではありません|**SQLColAttribute**<br /><br /> **SQLDescribeCol**|  
 |07006|制限されたデータ型の属性違反|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLPutData**<br /><br /> **SQLSetPos**|  
 |07009|無効な記述子のインデックス|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**<br /><br /> **SQLParamData**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRecSQLSetPos**|  
 |07S01|既定のパラメーターの使い方が正しくありません|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPutData**|  

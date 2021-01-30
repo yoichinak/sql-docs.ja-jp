@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_proxy
 - sp_delete_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccc9d7639bbe7f929a28b249e6767d0d703a0068
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7f9bb86ebdcc58ea116bf9eebd3ac7e2acb6f0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529145"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204462"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] id` 削除するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。  
+`[ @proxy_id = ] id` 削除するプロキシのプロキシ識別番号を指定します。 *Proxy_id* は **int**,、既定値は NULL です。  
   
-`[ @proxy_name = ] 'proxy_name'` 削除するプロキシの名前。 *Proxy_name*は**sysname**で、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'` 削除するプロキシの名前。 *Proxy_name* は **sysname** で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -52,12 +52,12 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  なし  
   
 ## <a name="remarks"></a>解説  
- ** \@ Proxy_name**または** \@ proxy_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
+ **\@ Proxy_name** または **\@ proxy_id** のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
  指定されたプロキシをジョブステップが参照している場合、プロキシを削除することはできず、ストアドプロシージャは失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sp_delete_proxy**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ 既定では、 **sp_delete_proxy** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>例  
  次の例では、プロキシを削除し `Catalog application proxy` ます。  

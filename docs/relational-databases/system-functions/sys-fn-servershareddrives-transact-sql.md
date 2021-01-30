@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_servershareddrives
 - fn_servershareddrives_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f8260d8c84276239864d6d3d7639766b8a62b5f3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0e14222f8d785a54eb2506afdce98a5d9071d416
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096389"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201900"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn_servershareddrives()
   
  現在のサーバーインスタンスがクラスター化されたサーバーでない場合、 **fn_servershareddrives** は空の行セットを返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  `fn_servershareddrives` このクラスター化されたサーバーによって使用される共有ドライブの一覧を返します。 これらの共有ドライブは、リソースと同じクラスターグループに属して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] います。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリソースはこれらのドライブに依存しています。  
   
  この機能は、ユーザーが利用できるドライブを特定するのに役立ちます。  

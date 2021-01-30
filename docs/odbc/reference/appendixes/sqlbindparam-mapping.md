@@ -7,25 +7,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62951dc5ae69e86eb5cbc2fba21407d63952e74b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456463"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202933"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam のマッピング
-**SQLBindParam** は ODBC に存在しないため、実際には非推奨として呼び出すことはできません。ただし、これは重複した機能を表しています。 ISO とオープングループに準拠しているアプリケーションで使用されるため、ドライバーマネージャーはこれをエクスポートする必要があります。 **SQLBindParameter**には**SQLBindParam**のすべての機能が含まれているため、 **SQLBindParam**は**SQLBindParameter**の上にマップされます (基になるドライバー*が ODBC 3.x*ドライバーの場合)。 ODBC 3.x *ドライバーで* は、 **SQLBindParam**を実装する必要はありません。  
+**SQLBindParam** は ODBC に存在しないため、実際には非推奨として呼び出すことはできません。ただし、これは重複した機能を表しています。 ISO とオープングループに準拠しているアプリケーションで使用されるため、ドライバーマネージャーはこれをエクスポートする必要があります。 **SQLBindParameter** には **SQLBindParam** のすべての機能が含まれているため、 **SQLBindParam** は **SQLBindParameter** の上にマップされます (基になるドライバー *が ODBC 3.x* ドライバーの場合)。 ODBC 3.x *ドライバーで* は、 **SQLBindParam** を実装する必要はありません。  
   
-## <a name="remarks"></a>解説  
- **SQLBindParam**を呼び出すと、次のようになります。  
+## <a name="remarks"></a>コメント  
+ **SQLBindParam** を呼び出すと、次のようになります。  
   
 ```  
 SQLBindParam(   StatementHandle,    ParameterNumber,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    StrLen_or_IndPtr)  

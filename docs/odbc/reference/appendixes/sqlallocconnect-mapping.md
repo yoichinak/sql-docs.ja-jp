@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocConnect
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f89ae59ca171fbcfbb9f6b75fdad639e31ea8fe0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fd1659e4faaee713a2b9d942deb53fe00ea367c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429524"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202978"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect のマッピング
 アプリケーションが ODBC 3 を介して **Sqlallocconnect** を呼び出すとき。*x* ドライバー: **sqlallocconnect**(*henv*, *phdbc*) の呼び出しは、次のように **SQLAllocHandle** にマップされます。  
@@ -32,4 +32,4 @@ ms.locfileid: "88429524"
     SQLAllocHandle(SQL_HANDLE_DBC, InputHandle, OutputHandlePtr)  
     ```  
   
-     *InputHandle*が*henv*に設定されているドライバーで、 *OutputHandlePtr*を*phdbc*に設定します。
+     *InputHandle* が *henv* に設定されているドライバーで、 *OutputHandlePtr* を *phdbc* に設定します。

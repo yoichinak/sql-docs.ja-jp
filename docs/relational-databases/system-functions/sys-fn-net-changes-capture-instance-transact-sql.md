@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eb0c58b3544afd5fa529db0c95af7c2f6ba3e6d3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fdaa7d3a2f741ba480443a997fe561c4aa5c3a50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201912"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys.fn_net_changes_ &lt; capture_instance &gt; (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|ターゲット環境に行を適用するために必要な操作を示す操作コード。 操作は、次の呼び出しで指定された引数 *row_filter_option* の値によって異なります。<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> ' D '-削除操作<br /><br /> ' I '-挿入操作<br /><br /> 'UN' : 更新操作<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> ' D '-削除操作<br /><br /> 'M' : 挿入操作または更新操作|  
 |\<columns from @update_flag_list>|**bit**|列名の後に "_uflag" が付加されている、ビット フラグです。 フラグが null 以外の値を使用するのは、 *row_filter_option* **= ' all with mask '** および \_ _CDC_OPERATION **= ' UN '** の場合のみです。 対応する列がクエリウィンドウ内で変更された場合は、1に設定されます。 それ以外の場合は、0 に設定されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Fn_net_changes_<capture_instance> 関数は、cdc.fn_cdc_get_net_changes_<capture_instance クエリ関数のラッパーとして機能します。 ラッパーのスクリプトを作成するには、sys.sp_cdc_generate_wrapper ストアド プロシージャを使用します。  
   
  ラッパー関数が自動的に作成されることはありません。 ラッパー関数を作成するには、次の 2 つを行う必要があります。  

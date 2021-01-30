@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validatelogins
 - sp_validatelogins_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b3237ed7a7d585e128b678772ec6d3a010fe3d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46ed2b0577918630cc9c938047b740618eda45a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473441"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201847"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +46,16 @@ sp_validatelogins
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary (85)**|Windows ユーザーまたはグループの windows セキュリティ識別子 (SID)。|  
+|**SID**|**varbinary(85)**|Windows ユーザーまたはグループの windows セキュリティ識別子 (SID)。|  
 |**NT Login**|**sysname**|Windows ユーザーまたはグループの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  孤立したサーバー レベルのプリンシパルがデータベース ユーザーを所有している場合、孤立したサーバー プリンシパルを削除するには、先にデータベース ユーザーを削除する必要があります。 データベースユーザーを削除するには、 [DROP user](../../t-sql/statements/drop-user-transact-sql.md)を使用します。 サーバーレベルのプリンシパルがデータベースで securables を所有している場合は、securables の所有権を転送するか、削除する必要があります。 データベース securables の所有権を譲渡するには、 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)を使用します。  
   
  存在しなくなった Windows ユーザーおよびグループへのマッピングを削除するには、 [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**または**securityadmin**固定サーバーロールのメンバーシップが必要です。  
+ **Sysadmin** または **securityadmin** 固定サーバーロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
  次の例では、存在しなくなってものインスタンスへのアクセスが許可されている Windows ユーザーおよびグループを表示し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。  
@@ -66,8 +66,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Transact-sql&#41;&#40;のログインを削除します。 ](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  

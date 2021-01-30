@@ -6,19 +6,19 @@ ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f6685853de3fed6397886d654135bb6ce499e7da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440729"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203398"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97440729"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|待機リスト内の要求の位置。|0から始まる序数。 これは、すべての待機エントリで一意ではありません。|  
 |session_id|**nvarchar(32)**|待機状態が発生したセッションの ID。|[Transact-sql&#41;&#40;sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)の session_id を参照してください。|  
-|型|**nvarchar (255)**|このエントリが表す待機の種類。|指定できる値<br /><br /> Connection<br /><br /> ローカルクエリの同時実行<br /><br /> 分散クエリの同時実行<br /><br /> DMS の同時実行<br /><br /> バックアップの同時実行|  
+|type|**nvarchar (255)**|このエントリが表す待機の種類。|指定できる値<br /><br /> Connection<br /><br /> ローカルクエリの同時実行<br /><br /> 分散クエリの同時実行<br /><br /> DMS の同時実行<br /><br /> バックアップの同時実行|  
 |object_type|**nvarchar (255)**|待機の影響を受けるオブジェクトの種類。|指定できる値<br /><br /> **素材**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **適用**|  
 |object_name|**nvarchar (386)**|待機の影響を受けた、指定したオブジェクトの名前または GUID。|テーブルとビューは、3つの部分で構成される名前で表示されます。<br /><br /> インデックスと統計情報は、4つの部分で構成される名前で表示されます。<br /><br /> 名前、プリンシパル、およびデータベースは、文字列名です。|  
 |request_id|**nvarchar(32)**|待機状態が発生した要求の ID。|要求の QID 識別子。<br /><br /> 読み込み要求の GUID 識別子。|  

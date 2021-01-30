@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET EXACT command [ODBC]
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34a22d320dbd099bd26db1b5396cc55a15a4b288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466364"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203962"
 ---
 # <a name="set-exact-command"></a>SET EXACT コマンド
 長さが異なる2つの文字列を比較するための規則を指定します。  
@@ -37,7 +37,7 @@ SET EXACT ON | OFF
  OFF  
  (既定値)。等しいと見なされるように、右辺の式の終わりに達するまで、式が文字の文字と一致する必要があることを指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  両方の文字列が同じ長さである場合、[正確に設定] 設定は無効です。  
   
 ## <a name="string-comparisons"></a>文字列比較  
@@ -66,5 +66,5 @@ SET EXACT ON | OFF
 |TRIM ("__ _") = ""|一致したもの|一致したもの|一致したもの|  
 |"" = TRIM ("__ _")|一致したもの|一致したもの|一致したもの|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SET ANSI コマンド](../../odbc/microsoft/set-ansi-command.md)

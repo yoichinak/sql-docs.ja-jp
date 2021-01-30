@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor_resource_pools
 - resource_governor_resource_pools
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9ffab459e53f26d040c301adf818618b28fa05f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fef5cb969c9dd0d3a0253362a2e3739e490db916
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203771"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98101785"
 |min_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> このプールのボリューム設定ごとの1秒あたりの最小 i/o 操作 (IOPS)。 0 = 予約なし。 null にすることはできません。|  
 |max_iops_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> このプールのボリューム設定ごとの、1 秒あたりの最大 I/O 操作 (IOPS)。 0 = 無制限。 null にすることはできません。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  カタログビューには、格納されているメタデータが表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用し、 [sys.dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

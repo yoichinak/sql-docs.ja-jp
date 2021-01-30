@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replication_agent_checkup_TSQL
 - sp_replication_agent_checkup
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77dd179aa4024f969d8e27a3d57cdc03374a4497
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204395"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,11 +43,11 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **sp_replication_agent_checkup** では、問題があると検出された各エージェントに対してエラー14151が発生します。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replication_agent_checkup** は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replication_agent_checkup**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_replication_agent_checkup** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

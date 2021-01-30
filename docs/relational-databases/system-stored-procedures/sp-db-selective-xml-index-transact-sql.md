@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_db_selective_xml_index_TSQL
 - sp_db_selective_xml_index
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afa61838ac7f5bdf24764564489882ae68a29af9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 17942cc1e4c68c844e78a2f25398a7e175035d01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541868"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201318"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "89541868"
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @ db_name = ] 'db_name'` 選択的 XML インデックスを有効または無効にするデータベースの名前。 *Db_name*が NULL の場合、現在のデータベースが想定されます。  
+`[ @ db_name = ] 'db_name'` 選択的 XML インデックスを有効または無効にするデータベースの名前。 *Db_name* が NULL の場合、現在のデータベースが想定されます。  
   
 `[ @action = ] 'action'` インデックスを有効にするか無効にするかを決定します。 ' On '、' true '、' off '、または ' false ' 以外の別の値が渡された場合は、エラーが発生します。  
   
@@ -54,7 +54,7 @@ Allowed values: 'on', 'off', 'true', 'false'
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 選択的 XML インデックスが特定のデータベースで有効になっている場合は**1**です。  
+ 選択的 XML インデックスが特定のデータベースで有効になっている場合は **1** です。  
   
 ## <a name="examples"></a>例  
   

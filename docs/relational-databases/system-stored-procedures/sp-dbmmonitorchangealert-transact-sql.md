@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorchangealert_TSQL
 - sp_dbmmonitorchangealert
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 889b418cff5add6c2891146af169fb3e97f61be5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e250cc4fb95c32b677db304f5e4de321c14448a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539033"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212404"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  追加または変更する警告を識別する整数値。 次のいずれかの値を指定します。  
   
-|[値]|パフォーマンス基準|警告しきい値|  
+|値|パフォーマンス基準|警告しきい値|  
 |-----------|------------------------|-----------------------|  
 |1|最も古い未送信のトランザクション|送信キュー内にトランザクションを累積できる時間 (分単位) を指定します。この時間を経過すると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、時間の観点からデータ損失の可能性を測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  
 |2|未送信のログ|未送信のログのサイズ (KB) を指定します。このサイズを超えると、プリンシパル サーバー インスタンスで警告が生成されます。 この警告は、データ損失の可能性を KB 単位で測定するのに役立ち、特に高パフォーマンスモードに関連しています。 パートナーとの通信が切断されたためにミラーリングが一時停止または中断している場合は、高安全モードにも関係します。|  

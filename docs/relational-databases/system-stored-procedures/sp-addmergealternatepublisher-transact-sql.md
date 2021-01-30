@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergealternatepublisher_TSQL
 - sp_addmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c0caf60fb3b1323c24924f177ca4d8cdf1105ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548364"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202353"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,19 +46,19 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値はありません。  
+`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname**であり、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーションデータベースの名前を指定します。 *publisher_db* は **sysname** であり、既定値はありません。  
   
 `[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname**,、既定値はありません。  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 代替パブリッシャーの名前を指定します。 *alternate_synchronization_partner* は **sysname**であり、既定値はありません。  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 代替パブリッシャーの名前を指定します。 *alternate_synchronization_partner* は **sysname** であり、既定値はありません。  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 代替パブリッシャーのパブリケーションデータベースの名前を指定します。 *alternate_publisher_db* は **sysname**であり、既定値はありません。  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 代替パブリッシャーのパブリケーションデータベースの名前を指定します。 *alternate_publisher_db* は **sysname** であり、既定値はありません。  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'` 代替同期パートナーのパブリケーションの名前を指定します。 *alternate_synchronization_partner* は **sysname**であり、既定値はありません。  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 代替同期パートナーのパブリケーションの名前を指定します。 *alternate_synchronization_partner* は **sysname** であり、既定値はありません。  
   
-`[ @alternate_distributor = ] 'alternate_distributor'` 代替同期パートナーのディストリビューターの名前を指定します。 *alternate_distributor* は **sysname**であり、既定値はありません。  
+`[ @alternate_distributor = ] 'alternate_distributor'` 代替同期パートナーのディストリビューターの名前を指定します。 *alternate_distributor* は **sysname** であり、既定値はありません。  
   
 `[ @friendly_name = ] 'friendly_name'` 代替同期パートナーを構成するパブリッシャー、パブリケーション、およびディストリビューターの関連付けを識別できる表示名を指定します。 *friendly_name* は **nvarchar (255)**,、既定値は NULL です。  
   
@@ -67,11 +67,11 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_addmergealternatepublisher** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_addmergealternatepublisher**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_addmergealternatepublisher** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [sp_dropmergealternatepublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   

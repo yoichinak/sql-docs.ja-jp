@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9fdc4cffdbe21d1c6c502aa813db55e0444d696
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528989"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203238"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,18 +48,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 `[ @job_name = ] 'job_name'` 指定した対象サーバーまたは対象サーバーグループに適用するジョブの名前。 *job_name* は **sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id* または *job_name* のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
 `[ @target_server_groups = ] 'target_server_groups'` 指定されたジョブを適用する対象サーバーグループのコンマ区切りのリスト。 *target_server_groups* は **nvarchar (2048)**,、既定値は NULL です。  
   
-`[ @target_servers = ] 'target_servers'` 指定されたジョブを適用する対象サーバーのコンマ区切りのリスト。 *target_servers*は **nvarchar (2048)**,、既定値は NULL です。  
+`[ @target_servers = ] 'target_servers'` 指定されたジョブを適用する対象サーバーのコンマ区切りのリスト。 *target_servers* は **nvarchar (2048)**,、既定値は NULL です。  
   
-`[ @operation = ] 'operation'` 指定したジョブを、指定した対象サーバーまたは対象サーバーグループに適用するか、または削除するかを指定します。 *操作*は **varchar (7)**,、既定値は APPLY です。 有効な操作は **APPLY** と **REMOVE**です。  
+`[ @operation = ] 'operation'` 指定したジョブを、指定した対象サーバーまたは対象サーバーグループに適用するか、または削除するかを指定します。 *操作* は **varchar (7)**,、既定値は APPLY です。 有効な操作は **APPLY** と **REMOVE** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_apply_job_to_targets** を使用すると、複数の対象サーバーからジョブを簡単に適用 (または削除) できます。また、必要な対象サーバーごとに1回 **sp_add_jobserver** (または **sp_delete_jobserver**) を呼び出すこともできます。  
   
 ## <a name="permissions"></a>アクセス許可  

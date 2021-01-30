@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdevice
 - sp_helpdevice_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae8e3db950ceab576786340ca396b25d774cb774
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 95c63d822851d7d1ccf9493e3e0d4cc9beedd624
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204742"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89528006"
   Microsoft&#xAE; SQL Server&#x2122; のバックアップ デバイスに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、backup_devices カタログビューを使用することをお勧めし[ます。](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) カタログビューを使用することをお勧めします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @devname = ] 'name'` 情報を報告するバックアップデバイスの名前を指定します。 *Name*の値は常に**sysname**です。  
+`[ @devname = ] 'name'` 情報を報告するバックアップデバイスの名前を指定します。 *Name* の値は常に **sysname** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -59,10 +59,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープデバイス|  
 |**size**|**int**|デバイスサイズ (2 KB ページ単位)。|  
   
-## <a name="remarks"></a>解説  
- *名前*を指定した場合、 **sp_helpdevice**指定したダンプデバイスに関する情報が表示されます。 場合 *名前* が指定されていない、 **sp_helpdevice** 、すべてのダンプデバイスに関する情報を表示、 **backup_devices** カタログビューです。  
+## <a name="remarks"></a>コメント  
+ *名前* を指定した場合、 **sp_helpdevice** 指定したダンプデバイスに関する情報が表示されます。 *名前* が指定されていない場合、 **sp_helpdevice** は **sys.backup_devices** カタログビューのすべてのダンプデバイスに関する情報を表示します。  
   
- ダンプデバイスは **sp_addumpdevice**を使用してシステムに追加されます。  
+ ダンプデバイスは **sp_addumpdevice** を使用してシステムに追加されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
