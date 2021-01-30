@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8bb04e74ab2dd613173bf194fe4ca5412d79ac7e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5250335e5266212c49acc2b789479129786dccd0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196220"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin** 固定サーバーロールまたは **db_owner** 固定データベースロールのメンバーシップが必要です。 他のすべてのユーザーに対して、ソーステーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。また、キャプチャインスタンスのゲートロールが定義されている場合は、そのデータベースロールのメンバーシップが必要です。 呼び出し元にソースデータを表示するアクセス許可がない場合、関数はエラー 229 ("オブジェクト ' fn_cdc_get_all_changes_... '、データベース ' \<DatabaseName> '、スキーマ ' cdc ') で SELECT 権限が拒否されました。" を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  指定した LSN 範囲がキャプチャインスタンスの変更追跡タイムライン内に収まらない場合、関数はエラー 208 ("プロシージャまたは関数 cdc.fn_cdc_get_all_changes に指定された引数の数が不足しています") を返します。  
   
  **__ $ Operation** = 1 または **__ $ operation** = 3 の場合、データ型 **image**、 **text**、および **ntext** の列には常に NULL 値が割り当てられます。 データ型 **varbinary (max)**、 **varchar (max)**、または **nvarchar (max)** の列は、更新中に列が変更されない限り、 **__ $ operation** = 3 の場合は NULL 値が割り当てられます。 **__ $ Operation** = 1 の場合、これらの列には削除時に値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  

@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fulltext_index_fragments
 - sys.fulltext_index_fragments_TSQL
@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dbbf060be4706d17ed4bf4d9f5a25f121115d6b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475183"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191487"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-sql)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "97475183"
 |row_count|**int**|フラグメント内の個々の行の数。|  
 |status|**int**|フラグメントの状態。次のいずれかになります。<br /><br /> 0 = 新たに作成され、まだ使用されていません。<br /><br /> 1 = フルテキストインデックスの作成時またはマージ時に挿入に使用される<br /><br /> 4 = 閉じています。 クエリの準備完了<br /><br /> 6 = マージ入力のために使用されています。クエリを実行できます。<br /><br /> 8 = 削除用にマークされています。 クエリおよびマージソースには使用されません。<br /><br /> 状態が4または6の場合、フラグメントは論理フルテキストインデックスの一部であるため、クエリを実行できます。つまり、 *クエリ* 可能なフラグメントです。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sys.fulltext_index_fragments カタログ ビューを使用すると、フルテキスト インデックスを構成するフラグメントの数を照会できます。 フルテキスト クエリのパフォーマンスに問題がある場合は、次のように、sys.fulltext_index_fragments を使用してフルテキスト インデックス内のクエリ可能なフラグメント (状態が 4 または 6 のフラグメント) の数を照会します。  
   
 ```  

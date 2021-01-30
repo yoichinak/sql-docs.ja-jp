@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_monitor_TSQL
 - sp_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f046c3e6fe81c7dac489fcdd88237ecb2d3747d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544757"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195467"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +46,9 @@ sp_monitor
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**last_run**|**Sp_monitor**前回の実行時刻。|  
-|**current_run**|**Sp_monitor**の実行時間。|  
-|**seconds**|**Sp_monitor**が実行されてから経過した秒数。|  
+|**last_run**|**Sp_monitor** 前回の実行時刻。|  
+|**current_run**|**Sp_monitor** の実行時間。|  
+|**seconds**|**Sp_monitor** が実行されてから経過した秒数。|  
 |**cpu_busy**|サーバーコンピューターの CPU が処理している秒数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が入出力操作に費やした秒数|  
 |**退席**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
@@ -60,10 +60,10 @@ sp_monitor
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
 |**connections**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのログインまたはログイン試行の回数|  
   
-## <a name="remarks"></a>解説  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 **Sp_monitor**を実行すると、これらの関数によって返された現在の値が表示され、最後にプロシージャが実行されてから変更された量が表示されます。  
+## <a name="remarks"></a>コメント  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかの関数によって処理量が追跡されます。 **Sp_monitor** を実行すると、これらの関数によって返された現在の値が表示され、最後にプロシージャが実行されてから変更された量が表示されます。  
   
- 各列について、統計情報は*number*(*number)-**number*% または*number*(*number*) の形式で出力されます。 最初の *数値* は、が再起動されてからの秒数 ( **cpu_busy**、 **io_busy**、および **アイドル**の場合) または合計数 (他の変数の場合) を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 かっこ内の *数値* は、最後に **sp_monitor** が実行されてからの秒数または合計数を表します。 割合は **sp_monitor** が最後に実行されてからの時間の割合です。 たとえば、レポートに **cpu_busy** (215)-68% と表示されている場合、cpu は、前回の起動以降に4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_monitor** が最後に実行されてから215秒、 **sp_monitor** が最後に実行されてからの合計時間の68% に達しています。  
+ 各列について、統計情報は *number*(*number)-**number*% または *number*(*number*) の形式で出力されます。 最初の *数値* は、が再起動されてからの秒数 ( **cpu_busy**、 **io_busy**、および **アイドル** の場合) または合計数 (他の変数の場合) を表し [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ます。 かっこ内の *数値* は、最後に **sp_monitor** が実行されてからの秒数または合計数を表します。 割合は **sp_monitor** が最後に実行されてからの時間の割合です。 たとえば、レポートに **cpu_busy** (215)-68% と表示されている場合、cpu は、前回の起動以降に4250秒 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 **sp_monitor** が最後に実行されてから215秒、 **sp_monitor** が最後に実行されてからの合計時間の68% に達しています。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  

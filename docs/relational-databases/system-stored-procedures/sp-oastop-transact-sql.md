@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAStop
 - sp_OAStop_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d30bd1bfc143f18f67465b2d1ec71f7c4c97a9d2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 71886c5eec626891fd860c0a75d331033b2dd32a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534923"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196062"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_OAStop
   
  HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  1つの実行環境は、OLE オートメーションストアドプロシージャを使用するすべてのクライアントによって共有されます。 1つのクライアントがを呼び出すと **sp_OAStop** すべてのクライアントに対して共有実行環境が停止します。 実行環境が停止した後、 **sp_OACreate** を呼び出すと、実行環境が再起動されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
+ **Sysadmin** 固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures` OLE オートメーションに関連するシステムプロシージャを使用するには、構成を **有効** にする必要があります。  
   
 ## <a name="examples"></a>例  
  次の例では、共有 OLE オートメーション実行環境を停止します。  

@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - translation DLLs [ODBC]
 - functions [ODBC], translation DLL functions
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0955faeea13cc44da8ca1856cf178076c3e9fa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 622ca5e50770157e1fad10be49c331f10f7a497b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191594"
 ---
 # <a name="translation-dll-function-summary"></a>トランスレーター DLL 関数の概要
 次の表では、変換 DLL 関数について説明します。 各関数の構文とセマンティクスの詳細については、「 [TRANSLATION DLL 関数リファレンス](../../../odbc/reference/syntax/translation-dll-api-reference.md)」を参照してください。  

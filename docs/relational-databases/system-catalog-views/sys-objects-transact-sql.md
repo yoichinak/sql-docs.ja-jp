@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.objects_TSQL
 - objects
@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d674f5fe00eab61d73720ff35ab7e4a96a8d5113
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: f6d73a9e561e686ab3c106db1fd2ebe9e356fc63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813329"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191308"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98813329"
 |is_published|**bit**|オブジェクトがパブリッシュされます。|  
 |is_schema_published|**bit**|オブジェクトのスキーマのみがパブリッシュされることを示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)、 [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)、および[objectproperty](../../t-sql/functions/objectproperty-transact-sql.md)() 組み込み関数を、sys. オブジェクトに表示されるオブジェクトに適用できます。  
   
  このビューには、システムオブジェクトを表示する [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)という同じスキーマを持つバージョンがあります。 システムオブジェクトとユーザーオブジェクトの両方を表示する [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) という別のビューがあります。 3つのすべてのカタログビューの構造は同じです。  

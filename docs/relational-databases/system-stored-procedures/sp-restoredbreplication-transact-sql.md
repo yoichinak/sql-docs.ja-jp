@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_restoredbreplication
 - sp_restoredbreplication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b64a39661fdceefade15d605ccc8e1c083ede0e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 841a162c9619344fa297951277642f306d8539ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541555"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194373"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,10 +42,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>引数  
 `[ @srv_orig = ] 'original_server_name'`  
- バックアップが作成されたサーバーの名前を指定します。 *original_server_name* は **sysname**であり、既定値はありません。  
+ バックアップが作成されたサーバーの名前を指定します。 *original_server_name* は **sysname** であり、既定値はありません。  
   
 `[ @db_orig = ] 'original_database_name'`  
- バックアップされたデータベースの名前。 *original_database_name* は **sysname**であり、既定値はありません。  
+ バックアップされたデータベースの名前。 *original_database_name* は **sysname** であり、既定値はありません。  
   
 `[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -56,11 +56,11 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_restoredbreplication** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_restoredbreplication**を実行できるのは、 **sysadmin**または**dbcreator**固定サーバーロールまたは**dbo**データベーススキーマのメンバーだけです。  
+ **Sp_restoredbreplication** を実行できるのは、 **sysadmin** または **dbcreator** 固定サーバーロールまたは **dbo** データベーススキーマのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

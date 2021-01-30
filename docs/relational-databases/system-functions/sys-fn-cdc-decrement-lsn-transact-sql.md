@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 460af637f6829940d3dce5282e2bab067a6b08c7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b40ee742575133895b6f0e3f55f87d784ab0a144
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194470"
 ---
 # <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## <a name="return-type"></a>戻り値の型  
  **binary(10)**  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  この関数から返される LSN は、指定された値よりも必ず小さくなり、2 つの値の間に LSN 値が存在することはありません。  
   
 ## <a name="permissions"></a>アクセス許可  

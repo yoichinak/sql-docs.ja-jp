@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41971224ec830b1fbc17fdc8f754d7ae99e8731e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536517"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197641"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="arguments"></a>引数  
 `[ @msgnum = ] message_number` 削除するメッセージ番号を指定します。 *message_number* は、5万より大きいメッセージ番号を持つユーザー定義メッセージである必要があります。 *message_number* は **int**,、既定値は NULL です。  
   
-`[ @lang = ] 'language'` 削除するメッセージの言語を示します。 **All**を指定した場合、 *message_number*のすべての言語バージョンが削除されます。 *language* は **sysname**,、既定値は NULL です。  
+`[ @lang = ] 'language'` 削除するメッセージの言語を示します。 **All** を指定した場合、 *message_number* のすべての言語バージョンが削除されます。 *language* は **sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,15 +52,15 @@ sp_dropmessage [ @msgnum = ] message_number
  [なし] :  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**および**serveradmin**固定サーバーロールのメンバーシップが必要です。  
+ **Sysadmin** および **serveradmin** 固定サーバーロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>解説  
- *Language*に**all**を指定しない限り、英語版のメッセージを削除する前に、メッセージのすべてのローカライズ版を削除する必要があります。  
+## <a name="remarks"></a>コメント  
+ *Language* に **all** を指定しない限り、英語版のメッセージを削除する前に、メッセージのすべてのローカライズ版を削除する必要があります。  
   
 ## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. ユーザー定義メッセージを削除する  
- 次の例では、ユーザー定義メッセージ (number) を削除します。 `50001` **sys.messages**  
+ 次の例では、ユーザー定義メッセージ (number) を削除します。 `50001`   
   
 ```  
 USE master;  

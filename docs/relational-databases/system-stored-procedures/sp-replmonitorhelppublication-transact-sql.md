@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelppublication_TSQL
 - sp_replmonitorhelppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 964f32d4158e8159a65a79eac35415c34c35289c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70f401f52926fc389232b82167a94f9a4ded1e0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543139"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193749"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,15 +42,15 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname**で、既定値は NULL です。 **Null**の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
+`[ @publisher = ] 'publisher'` 状態を監視するパブリッシャーの名前を指定します。 *publisher* は **sysname** で、既定値は NULL です。 **Null** の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname**で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシュされたデータベースの名前を指定します。 *publisher_db* は **sysname** で、既定値は NULL です。 NULL の場合、パブリッシャーでパブリッシュされたすべてのデータベースに関する情報が返されます。  
   
 `[ @publication = ] 'publication'` 監視されているパブリケーションの名前を指定します。 *publication* は **sysname**,、既定値は NULL です。  
   
 `[ @publication_type = ] publication_type` パブリケーションの種類。 *publication_type* は **int**,、これらの値のいずれかを指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
 |**1**|スナップショットパブリケーション。|  
@@ -84,17 +84,17 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**worst_runspeedPerf**|**int**|マージパブリケーションの最長同期時間です。|  
 |**best_runspeedPerf**|**int**|マージパブリケーションの最短同期時間です。|  
 |**average_runspeedPerf**|**int**|マージパブリケーションの平均同期時間です。|  
-|**retention_period_unit**|**int**|*保有期間*を表すために使用される単位です。|  
+|**retention_period_unit**|**int**|*保有期間* を表すために使用される単位です。|  
 |**publisher**|**sysname**|パブリケーションをパブリッシュする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_replmonitorhelppublication** は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_replmonitorhelppublication**を実行できるのは、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
+ **Sp_replmonitorhelppublication** を実行できるのは、ディストリビューションデータベースの固定データベースロール **db_owner** または **replmonitor** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

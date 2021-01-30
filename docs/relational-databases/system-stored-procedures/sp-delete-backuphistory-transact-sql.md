@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_backuphistory
 - sp_delete_backuphistory_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4aa6b663bdfe8f1b5da5c00b4da26e5b7817e19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ac5426940ed3fd2a94c055968a22ec1000e4d564
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195543"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  指定した日付より古いバックアップセットのエントリを削除することにより、バックアップと復元の履歴テーブルのサイズを小さくします。 バックアップまたは復元の各操作が実行された後、バックアップと復元の履歴テーブルに追加の行が追加されます。そのため、 **sp_delete_backuphistory**を定期的に実行することをお勧めします。  
+  指定した日付より古いバックアップセットのエントリを削除することにより、バックアップと復元の履歴テーブルのサイズを小さくします。 バックアップまたは復元の各操作が実行された後、バックアップと復元の履歴テーブルに追加の行が追加されます。そのため、 **sp_delete_backuphistory** を定期的に実行することをお勧めします。  
   
 > [!NOTE]  
 >  バックアップと復元の履歴テーブルは、 **msdb** データベースに格納されています。  
@@ -73,7 +73,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  すべての履歴を削除しても、物理的なバックアップ ファイルは維持されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sysadmin**固定サーバーロールのメンバーシップが必要ですが、他のユーザーに権限を与えることができます。  
+ **Sysadmin** 固定サーバーロールのメンバーシップが必要ですが、他のユーザーに権限を与えることができます。  
   
 ## <a name="examples"></a>例  
  次の例では、バックアップと復元の履歴テーブルから 2010 年 1 月 14 日の午前 12 時 より前のすべてのエントリを削除します。  

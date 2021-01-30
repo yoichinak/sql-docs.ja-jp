@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_set_account
 - sp_msx_set_account_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f9329879f37ee8508f45f4734a0968596348d5cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 29a92920e81f65beabdc0837b85d19484d2e35f0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535065"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192012"
 ---
 # <a name="sp_msx_set_account-transact-sql"></a>sp_msx_set_account (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @credential_name = ] 'credential_name'` マスターサーバーへのログインに使用する資格情報の名前。 既存の資格情報の名前を指定する必要があります。 *Credential_name*または*credential_id*のいずれかを指定する必要があります。  
+`[ @credential_name = ] 'credential_name'` マスターサーバーへのログインに使用する資格情報の名前。 既存の資格情報の名前を指定する必要があります。 *Credential_name* または *credential_id* のいずれかを指定する必要があります。  
   
-`[ @credential_id = ] credential_id` マスターサーバーへのログインに使用する資格情報の識別子。 既存の資格情報の識別子を指定する必要があります。 *Credential_name*または*credential_id*のいずれかを指定する必要があります。  
+`[ @credential_id = ] credential_id` マスターサーバーへのログインに使用する資格情報の識別子。 既存の資格情報の識別子を指定する必要があります。 *Credential_name* または *credential_id* のいずれかを指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
@@ -56,7 +56,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
  既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、「 [CREATE credential &#40;transact-sql&#41;](../../t-sql/statements/create-credential-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_msx_set_account**の実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
+ **Sp_msx_set_account** の実行権限は、既定では **sysadmin** 固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>例  
  次の例では、マスター サーバーへのログインで資格情報 `MsxAccount` を使用するように、サーバーを設定します。  

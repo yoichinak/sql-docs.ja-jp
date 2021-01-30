@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_certify_removable_TSQL
 - sp_certify_removable
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c80828117bfa4219d6f7377c4ed0123dec977aa
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 69a0c6e1331144fc340ad15bb103e593d3ba8f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753528"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197678"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'` 確認するデータベースを指定します。 *dbname* は **sysname**です。  
+`[ @dbname = ] 'dbname'` 確認するデータベースを指定します。 *dbname* は **sysname** です。  
   
 `[ @autofix = ] 'auto'` データベースとすべてのデータベースオブジェクトの所有権をシステム管理者に付与し、ユーザーが作成したデータベースユーザーと既定以外の権限を削除します。 *auto* は **nvarchar (4)**,、既定値は NULL です。  
   
@@ -62,7 +62,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行しているすべてのサーバー上に存在する既知のユーザーであり、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースが後で配布およびインストールされるときに存在することが予想されます。  
   
- **Auto**値を指定せずに**sp_certify_removable**を実行すると、次のいずれかの条件に関する情報が返されます。  
+ **Auto** 値を指定せずに **sp_certify_removable** を実行すると、次のいずれかの条件に関する情報が返されます。  
   
 -   システム管理者は、データベースの所有者ではありません。  
   
@@ -74,9 +74,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  これらの条件は、次の方法で修正できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順を使用し、 **sp_certify_removable**を再実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順を使用し、 **sp_certify_removable** を再実行します。  
   
--   **Auto**値を指定して**sp_certify_removable**を実行するだけです。  
+-   **Auto** 値を指定して **sp_certify_removable** を実行するだけです。  
   
  このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   

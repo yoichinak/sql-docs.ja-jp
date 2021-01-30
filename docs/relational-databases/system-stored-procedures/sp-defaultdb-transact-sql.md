@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultdb_TSQL
 - sp_defaultdb
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7289868e32e26c6902f00d0c7e542b599b6978fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4c644fed26ea2ce80f0f827eb7b3b0f6b000d66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196079"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ## <a name="arguments"></a>引数  
 `[ @loginame = ] 'login'` ログイン名を指定します。 *login* は **sysname**,、既定値はありません。 *ログイン* には、既存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたは Windows ユーザーまたはグループを指定できます。 Windows ユーザーまたはグループのログインがに存在しない場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、自動的に追加されます。  
   
-`[ @defdb = ] 'database'` 新しい既定のデータベースの名前を指定します。 *データベースのデータ* 型は **sysname**で、既定値はありません。 *データベース* は既に存在している必要があります。  
+`[ @defdb = ] 'database'` 新しい既定のデータベースの名前を指定します。 *データベースのデータ* 型は **sysname** で、既定値はありません。 *データベース* は既に存在している必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

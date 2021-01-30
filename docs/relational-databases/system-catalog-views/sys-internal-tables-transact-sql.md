@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.internal_tables
 - internal_tables
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ecc601c3eec509258cdac61a9c9216077f36f712
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2064e987a92d42422ddfd7ba33104c6f5558e424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191394"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98094516"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  内部テーブルは、親エンティティと同じファイル グループに配置されます。 後半の例 F で示すカタログ クエリを使用して、内部テーブルが行内データ、行外データ、およびラージ オブジェクト (LOB) データに使用するページ数を返すことができます。  
   
  [Sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)システムプロシージャを使用すると、内部テーブルの領域使用量データを返すことができます。 **sp_spaceused** は、次の方法で内部テーブルの領域をレポートします。  

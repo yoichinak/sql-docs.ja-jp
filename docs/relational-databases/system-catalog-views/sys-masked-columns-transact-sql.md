@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.masked_columns
 - masked_columns_tsql
@@ -19,12 +19,12 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5096f57c8e0b06c1f0403c446eb5417cd13b6f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9246c30c8f71d73d1def1bc54179b2b094a2c5bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191338"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys.masked_columns (Transact-sql)
 
@@ -41,7 +41,7 @@ ms.locfileid: "98095557"
 |is_masked|**bit**|列がマスクされているかどうかを示します。 1はマスクされたことを示します。|  
 |masking_function|**nvarchar (4000)**|列のマスク関数。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューは、ユーザーがテーブルに対してなんらかの権限を持っている場合、またはユーザーが VIEW ANY DEFINITION 権限を持っている場合に、テーブルに関する情報を返します。  

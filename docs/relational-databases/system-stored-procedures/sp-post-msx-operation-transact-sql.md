@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be9ef622f686044800f634837819b4cba92821a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546003"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196037"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,21 +46,21 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作*は **varchar (64)**,、既定値はありません。 有効な操作は *object_type*によって異なります。  
+`[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作* は **varchar (64)**,、既定値はありません。 有効な操作は *object_type* によって異なります。  
   
-|オブジェクトの種類|Operation|  
+|オブジェクトの種類|操作|  
 |-----------------|---------------|  
-|**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> スタート<br /><br /> STOP|  
+|**補足**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|再参加<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**予定**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` 操作をポストする対象のオブジェクトの型。 有効な種類は、 **JOB**、 **SERVER**、 **SCHEDULE**です。 *オブジェクト* は **varchar (64)**,、既定値は **JOB**です。  
+`[ @object_type = ] 'object'` 操作をポストする対象のオブジェクトの型。 有効な種類は、 **JOB**、 **SERVER**、 **SCHEDULE** です。 *オブジェクト* は **varchar (64)**,、既定値は **JOB** です。  
   
-`[ @job_id = ] job_id` 操作が適用されるジョブのジョブ識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値はありません。 **0x00** は、すべてのジョブを示します。 *オブジェクト*が**SERVER**の場合、 *job_id*は必要ありません。  
+`[ @job_id = ] job_id` 操作が適用されるジョブのジョブ識別番号を指定します。 *job_id* は **uniqueidentifier**,、既定値はありません。 **0x00** は、すべてのジョブを示します。 *オブジェクト* が **SERVER** の場合、 *job_id* は必要ありません。  
   
-`[ @specific_target_server = ] 'target_server'` 指定された操作を適用する対象サーバーの名前。 *Job_id*が指定されていても*target_server*が指定されていない場合、操作はジョブのすべてのジョブサーバーに対して通知されます。 *target_server* は **nvarchar (30)**,、既定値は NULL です。  
+`[ @specific_target_server = ] 'target_server'` 指定された操作を適用する対象サーバーの名前。 *Job_id* が指定されていても *target_server* が指定されていない場合、操作はジョブのすべてのジョブサーバーに対して通知されます。 *target_server* は **nvarchar (30)**,、既定値は NULL です。  
   
-`[ @value = ] value` ポーリング間隔 (秒単位)。 *value* のデータ型は **int**で、既定値は NULL です。 このパラメーターは、 *操作* が " **設定-ポーリング**" の場合にのみ指定します。  
+`[ @value = ] value` ポーリング間隔 (秒単位)。 *value* のデータ型は **int** で、既定値は NULL です。 このパラメーターは、 *操作* が " **設定-ポーリング**" の場合にのみ指定します。  
   
 `[ @schedule_uid = ] schedule_uid` 操作が適用されるスケジュールの一意の識別子。 *schedule_uid* は **uniqueidentifier**,、既定値はありません。  
   
@@ -73,7 +73,7 @@ sp_post_msx_operation
 ## <a name="remarks"></a>解説  
  **sp_post_msx_operation** は、 **msdb** データベースから実行する必要があります。  
   
- **sp_post_msx_operation** は、現在のサーバーがマルチサーバー Microsoft SQL Server エージェントであるかどうかを最初に確認し、存在する場合は、 *オブジェクト*がマルチサーバージョブであるかどうかを判断するため、常に安全に呼び出すことができます。  
+ **sp_post_msx_operation** は、現在のサーバーがマルチサーバー Microsoft SQL Server エージェントであるかどうかを最初に確認し、存在する場合は、 *オブジェクト* がマルチサーバージョブであるかどうかを判断するため、常に安全に呼び出すことができます。  
   
  操作が投稿されると、 **sysdownloadlist** テーブルに表示されます。 ジョブが作成および投稿された後、そのジョブに対するその後の変更は、対象サーバー (TSX) にも伝達される必要があります。 これは、ダウンロードリストを使用して行うこともできます。  
   

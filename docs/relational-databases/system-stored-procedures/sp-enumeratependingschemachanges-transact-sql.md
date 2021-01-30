@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumeratependingschemachanges
 - sp_enumeratependingschemachanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ccc1959644d5f286907abc2240245d88978b55c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7a75e22f94688d4d8819b22b1b478bd3a3a66ce1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541791"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193568"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,13 +57,13 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_enumeratependingschemachanges** は、マージレプリケーションで使用します。  
   
- [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)と共に使用される**sp_enumeratependingschemachanges**は、マージレプリケーションのサポートを目的としており、再初期化などの他の是正措置によって状況を修正できなかった場合にのみ使用してください。  
+ [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)と共に使用される **sp_enumeratependingschemachanges** は、マージレプリケーションのサポートを目的としており、再初期化などの他の是正措置によって状況を修正できなかった場合にのみ使用してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_enumeratependingschemachanges**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
+ **Sp_enumeratependingschemachanges** を実行できるのは、固定サーバーロール **sysadmin** または固定データベースロール **db_owner** のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

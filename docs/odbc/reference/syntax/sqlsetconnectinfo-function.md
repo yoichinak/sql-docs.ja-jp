@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectInfo function [ODBC]
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1930d16605c1b2a02db08560549019afa656ca52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499547"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192429"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 関数
 **互換性**  
  導入されたバージョン: ODBC 3.81 標準準拠: ODBC  
   
- **まとめ**  
+ **要約**  
  **SQLSetConnectInfo** は、データソース、ユーザー ID、およびパスワードを、アプリケーションの [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 呼び出しの接続情報トークンに設定するために使用されます。  
   
 ## <a name="syntax"></a>構文  
@@ -67,18 +67,18 @@ SQLRETURN  SQLSetConnectInfo(
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- 入力検証エラーの[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と同じですが、Driver Manager では SQL_HANDLE_DBC_INFO_TOKEN の**Handletype**と*Hdbcinfotoken*の**ハンドル**が使用される点が異なります。  
+ 入力検証エラーの [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)と同じですが、Driver Manager では SQL_HANDLE_DBC_INFO_TOKEN の **Handletype** と *Hdbcinfotoken* の **ハンドル** が使用される点が異なります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ドライバーが SQL_ERROR または SQL_INVALID_HANDLE を返すたびに、ドライバーマネージャーはそのエラーをアプリケーションに返します ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) または [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))。  
   
- ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは *Hdbcinfotoken*から診断情報を取得し、SQL_SUCCESS_WITH_INFO を [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) および [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  
+ ドライバーが SQL_SUCCESS_WITH_INFO を返すたびに、ドライバーマネージャーは *Hdbcinfotoken* から診断情報を取得し、SQL_SUCCESS_WITH_INFO を [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) および [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)のアプリケーションに返します。  
   
  アプリケーションでは、この関数を直接呼び出すことはできません。 ドライバー対応接続プールをサポートする ODBC ドライバーでは、この関数を実装する必要があります。  
   
  ODBC ドライバーの開発には sqlspi. h を含めます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC ドライバー対応接続プールの開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

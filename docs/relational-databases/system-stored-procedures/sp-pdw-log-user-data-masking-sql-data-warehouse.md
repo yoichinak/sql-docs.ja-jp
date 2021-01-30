@@ -5,19 +5,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 2d2b3de8cf86e7597c944b827326dd070bc2ffce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c02aa65df689ab147d3c7312d8c1e84a513aa88
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461553"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196072"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  パラメーターを指定せずに **sp_pdw_ log_user_data_masking** を実行すると、アプライアンス上の tde ログユーザーデータマスクの現在の状態がスカラー結果セットとして返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] アクティビティログでは、ユーザーデータを含めることができる **SELECT** ステートメントと DML ステートメントで、定義済みの定数値を持つリテラルを置換できます。 *Masking_mode* を1に設定しても、列名やテーブル名などのメタデータはマスクされません。 *Masking_mode* を2に設定すると、列名やテーブル名などのメタデータを含むステートメントが削除されます。  
   
  アクティビティログでのユーザーデータのマスキング [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、次のように実装されます。  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - cursor library [ODBC], positioned update or delete
@@ -16,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2e11843085f28ceeec965e079bb2942968d15b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d10b2e5c625a222e8e09a5e783291ce613a492b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466199"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194829"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの実行
 > [!IMPORTANT]  
 >  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- アプリケーションは、 **Sqlfetchscroll**を使用してデータのブロックをフェッチした後、ブロック内のデータを更新または削除できます。 位置指定更新または削除を実行するには、アプリケーションを次のように指定します。  
+ アプリケーションは、 **Sqlfetchscroll** を使用してデータのブロックをフェッチした後、ブロック内のデータを更新または削除できます。 位置指定更新または削除を実行するには、アプリケーションを次のように指定します。  
   
-1.  **SQLSetPos**を呼び出して、更新または削除する行にカーソルを置きます。  
+1.  **SQLSetPos** を呼び出して、更新または削除する行にカーソルを置きます。  
   
 2.  次の構文を使用して、位置指定の update または delete ステートメントを構築します。  
   
-     **UPDATE** *テーブル名の*更新  
+      *テーブル名の* 更新  
   
-     **SET** *列識別子* **=** {*expression* &#124; **NULL**} の設定  
+      *列識別子* **=** {*expression* &#124; **NULL**} の設定  
   
      [**,** *列識別子* **=** {*式* &#124; **NULL**}]  
   
      *カーソル名***の現在の場所**  
   
-     テーブル**からの削除** *-名前***の現在の***カーソル名*  
+     テーブル **からの削除** *-名前***の現在の***カーソル名*  
   
      位置指定の update ステートメントで **SET** 句を構築する最も簡単な方法は、更新する各列に対してパラメーターマーカーを使用し、 **SQLBindParameter** を使用して更新する行の行セットバッファーにバインドすることです。 この場合、パラメーターの C データ型は、行セットバッファーの C データ型と同じになります。  
   

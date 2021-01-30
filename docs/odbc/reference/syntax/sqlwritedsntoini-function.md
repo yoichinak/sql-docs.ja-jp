@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLWriteDSNToIni
 apilocation:
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 08a1094d29bbba9dc52974bd1cef5cd6645aa5dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58e09c90ef785d1c851a1b95ef9a861277f47db7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421016"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191693"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0  
   
- **まとめ**  
+ **要約**  
  **Sqlwritedsntoini** は、システム情報にデータソースを追加します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,17 +54,17 @@ BOOL SQLWriteDSNToIni(
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Sqlwritedsntoini**が FALSE を返す場合、 **sqlインストーラエラー**を呼び出すことによって、関連する* \* pferrorcode*値を取得できます。 次の表は、 **Sqlインストーラエラー**によって返される可能性がある* \* pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Sqlwritedsntoini** が FALSE を返す場合、 **sqlインストーラエラー** を呼び出すことによって、関連する *\* pferrorcode* 値を取得できます。 次の表は、 **Sqlインストーラエラー** によって返される可能性がある *\* pferrorcode* 値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
 |*\*pfErrorCode*|エラー|説明|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
-|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn*引数に、dsn に対して無効な文字列が含まれていました。|  
-|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。|  
+|ODBC_ERROR_INVALID_DSN|無効な DSN|*Lpszdsn* 引数に、dsn に対して無効な文字列が含まれていました。|  
+|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver* 引数が無効でした。|  
 |ODBC_ERROR_REQUEST_FAILED|要求が失敗しました|インストーラーで、レジストリに DSN を作成できませんでした。|  
 |ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  **Sqlwritedsntoini** によって、データソースがシステム情報の [ODBC データソース] セクションに追加されます。 次に、データソースの仕様セクションを作成し、その値としてドライバー DLL の名前を持つ単一のキーワード (**driver**) を追加します。 [データソースの指定] セクションが既に存在する場合は、新しいセクションを作成する前に、 **Sqlwritedsntoini** によって古いセクションが削除されます。  
   
  この関数の呼び出し元は、ドライバー固有のキーワードと値を、システム情報のデータソースの仕様セクションに追加する必要があります。  

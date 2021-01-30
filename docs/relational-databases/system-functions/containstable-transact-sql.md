@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0884b34e2da3eaa6a081da8bebaae06f4d16ddc7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482526"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196145"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  *column_name* で検索するテキストと、その一致条件を指定します。 検索条件の詳細については、「 [CONTAINS &#40;transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  フルテキストの述語と関数の対象は、FROM 述語で示される 1 つのテーブルです。 複数のテーブルを検索するには、FROM 句で結合テーブルを使用して、複数のテーブルが組み合わされた結果セットを検索します。  
   
  返されるテーブルには、フルテキストキー値を含む **key** という名前の列があります。 フルテキストインデックスが作成された各テーブルには、値が一意であることが保証される列があります。また、 **キー** 列に返される値は、contains 検索条件で指定された選択基準に一致する行のフルテキストキー値です。 OBJECTPROPERTYEX 関数から取得された **TableFulltextKeyColumn** プロパティは、この一意のキー列の id を提供します。 フルテキストインデックスのフルテキストキーに関連付けられている列の ID を取得するには、 **sys.fulltext_indexes** を使用します。 詳細については、「 [sys.fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)」を参照してください。  

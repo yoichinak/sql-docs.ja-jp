@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
 - database_firewall_rules_TSQL
@@ -20,17 +20,17 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 244c4245c81e264ea82c5434f8788b3960700641
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6e09c2043494b2d01adb3781b7b3c4336a3b9a1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475213"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195878"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL データベース)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  に関連付けられているデータベースレベルのファイアウォール設定に関する情報を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ます。 データベースレベルのファイアウォール設定は、包含データベースユーザーを使用する場合に特に便利です。 詳細については、「[包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
+  に関連付けられているデータベースレベルのファイアウォール設定に関する情報を返し [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ます。 データベースレベルのファイアウォール設定は、包含データベースユーザーを使用する場合に特に便利です。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
  `sys.database_firewall_rules` ビューには、次の列が含まれています。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "97475213"
 |create_date|**/**|データベース レベルのファイアウォール設定が作成された UTC 日時。|  
 |modify_date|**/**|データベース レベルのファイアウォール設定が最後に変更された UTC 日時。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  Microsoft Azure SQL Database に関連付けられているサーバーレベルのファイアウォール設定に関する情報を返すには、 [sys.firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

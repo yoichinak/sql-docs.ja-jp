@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543040"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193489"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 `[ @rowguid = ] rowguid` 行の一意の識別子を示します。 *rowguid* は **uniqueidentifier**,、既定値はありません。  
   
-`[ @show = ] 'show'` 結果セットに返す情報の量を決定します。 *show* は **nvarchar (20)** で、既定値は BOTH です。 **行**の場合は、行のバージョン情報のみが返されます。 **列**の場合は、列のバージョン情報のみが返されます。 **両方**の場合、行と列の両方の情報が返されます。  
+`[ @show = ] 'show'` 結果セットに返す情報の量を決定します。 *show* は **nvarchar (20)** で、既定値は BOTH です。 **行** の場合は、行のバージョン情報のみが返されます。 **列** の場合は、列のバージョン情報のみが返されます。 **両方** の場合、行と列の両方の情報が返されます。  
   
 ## <a name="result-sets-for-row-information"></a>行情報の結果セット  
   
@@ -73,9 +73,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**comment**|**nvarchar (255)**|この列バージョン エントリに関する追加情報です。 通常、このフィールドは空です。|  
   
 ## <a name="result-set-for-both"></a>両方の結果セット  
- **両方**の値が*show*に選択されている場合、行と列の両方の結果セットが返されます。  
+ **両方** の値が *show* に選択されている場合、行と列の両方の結果セットが返されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_showrowreplicainfo** は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

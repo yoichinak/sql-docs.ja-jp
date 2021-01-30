@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_copysubscription
 - sp_copysubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a80092356c6508c7ef1f8408d5573c8014fdc0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7377048df6d32715b8f91e26b5b21617c22a0d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192019"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-sql)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,12 +48,12 @@ sp_copysubscription [ @filename = ] 'file_name'
   
 `[ @temp_dir = ] 'temp_dir'` 一時ファイルが格納されているディレクトリの名前を指定します。 *temp_dir* は **nvarchar (260)**,、既定値は NULL です。 NULL の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 既定のデータディレクトリが使用されます。 このディレクトリは、すべてのサブスクライバー データベース ファイルを合わせたファイル サイズを格納できるだけの領域を備えている必要があります。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`** \@ Filename**に指定されているものと同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブール型のフラグです。 *overwrite_existing_file*は **ビット**,、既定値は **0**です。 **1**の場合、 ** \@ filename**によって指定されたファイルを上書きします (存在する場合)。 **0**の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`**\@ Filename** に指定されているものと同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブール型のフラグです。 *overwrite_existing_file* は **ビット**,、既定値は **0** です。 **1** の場合、 **\@ filename** によって指定されたファイルを上書きします (存在する場合)。 **0** の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または **1** (失敗)  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_copysubscription** は、サブスクライバーでスナップショットを適用する代わりに、サブスクリプションデータベースをファイルにコピーするために、すべての種類のレプリケーションで使用されます。 プルサブスクリプションのみをサポートするようにデータベースを構成する必要があります。 適切な権限を持つユーザーは、サブスクリプションデータベースのコピーを作成し、サブスクリプションファイル (msf) を別のサブスクライバーに電子メール、コピー、または転送することができます。その後、サブスクリプションとしてアタッチできます。  
   
  コピーするサブスクリプションデータベースのサイズは 2 gb 未満である必要があります。  
@@ -61,7 +61,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  **sp_copysubscription** は、クライアントサブスクリプションを持つデータベースでのみサポートされており、データベースにサーバーサブスクリプションがある場合は実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_copysubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
+ **Sp_copysubscription** を実行できるのは、 **sysadmin** 固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [代替スナップショットフォルダーの場所](../../relational-databases/replication/snapshot-options.md)   

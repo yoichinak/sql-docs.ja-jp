@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.memory_optimized_tables_internal_attributes
 - sys.memory_optimized_tables_internal_attributes_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: kevin-farlee
 ms.author: kfarlee
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a32b926eebf2e8a7d80823004824ec377ec199
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 29d087c2501bd4296c3c60b9cefb4ca28be93fde
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404928"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191324"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "97404928"
 | :------ |:----------| :-----|
 |object_id  |**int**|       ユーザー テーブルの ID。 ユーザー テーブル (hk/列ストアの組み合わせの場合は行外ストレージまたは削除行など) をサポートするために存在する内部メモリ最適化テーブルは、その親と同じ object_id を持ちます。 |
 |xtp_object_id  |**bigint**|    ユーザー テーブルをサポートするために使用される内部メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。 データベース内では一意であり、オブジェクトの有効期間中に変わる可能性があります。 
-|型|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   内部テーブルの種類。<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   種類の説明<br/><br/>DELETED_ROWS_TABLE -> 列ストア インデックスの削除行を追跡する内部テーブル<br/>USER_TABLE -> 行内ユーザー データを含むテーブル<br/>DICTIONARIES_TABLE -> 列ストア インデックスの辞書<br/>SEGMENTS_TABLE -> 列ストア インデックスの圧縮セグメント<br/>ROW_GROUPS_INFO_TABLE -> 列ストア インデックスの圧縮行グループに関するメタデータ<br/>INTERNAL OFF-ROW DATA TABLE -> 行外列のストレージに使用される内部テーブル。 この場合、minor_id には column_id が反映されます。<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> ディスク ベース履歴テーブルの末尾。 履歴に挿入された行は、最初にこの内部メモリ最適化テーブルに挿入されます。 この内部テーブルからディスク ベースの履歴テーブルに行を非同期的に移動するバックグラウンド タスクがあります。 |
 |minor_id|  **int**|    0 は、ユーザー テーブルまたは内部テーブルを示します。<br/><br/>0 以外は、行外に格納されている列の ID を示します。 sys.columns で column_id と結合されます。<br/><br/>このシステム ビューには行外に格納されている各列に対応する行があります。|
 
