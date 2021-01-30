@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_distributor
 - sp_get_distributor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6cdc15f66c918b0d320c9c2ad2106fbded5fc256
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 82c9e743cf3c1ddce87642fb3320b74eb5f7b6e1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99105693"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +47,11 @@ sp_get_distributor
 |**is distribution publisher**|**int**|**0** = いいえ、 **1** = はい|  
 |**リモートディストリビューションパブリッシャーがある**|**int**|**0** = いいえ、 **1** = はい|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **sp_get_distributor** は、主に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- すべてのユーザーが **sp_get_distributor**を実行できます。 ディストリビューションデータベースの固定データベースロール **db_owner** または **replmonitor** のメンバー、または少なくとも1つのパブリッシュされたデータベースの **db_owner** 固定データベースロールのメンバーによって、このストアドプロシージャが実行されると、NULL 以外の結果セットが返されます。 また、少なくとも1つのパブリッシュされたデータベースのパブリケーションアクセスリスト (PAL) のユーザーがこのストアドプロシージャを実行した場合、または SQL Server 以外のパブリッシャーのディストリビューションデータベースの PAL で **sp_get_distributor**も、NULL 以外の結果セットが返されます。  
+ すべてのユーザーが **sp_get_distributor** を実行できます。 ディストリビューションデータベースの固定データベースロール **db_owner** または **replmonitor** のメンバー、または少なくとも1つのパブリッシュされたデータベースの **db_owner** 固定データベースロールのメンバーによって、このストアドプロシージャが実行されると、NULL 以外の結果セットが返されます。 また、少なくとも1つのパブリッシュされたデータベースのパブリケーションアクセスリスト (PAL) のユーザーがこのストアドプロシージャを実行した場合、または SQL Server 以外のパブリッシャーのディストリビューションデータベースの PAL で **sp_get_distributor** も、NULL 以外の結果セットが返されます。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   

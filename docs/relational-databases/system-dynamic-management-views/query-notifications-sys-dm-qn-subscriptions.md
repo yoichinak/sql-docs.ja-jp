@@ -6,7 +6,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_qn_subscriptions
 - dm_qn_subscriptions_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 62953d7f80a8d0fa327f37eadcc7a8dafd6fa734
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bd2a8ddda0c28dcfeea53e860926c626b78d4af3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100050"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158445"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>クエリ通知-sys.dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "98100050"
   
 ## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|オン|Type|  
+|差出人|終了|On|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多対一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多対一|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  状態コードが 0 の場合は、未定義の状態であることを示します。  
   
  次のステータスコードは、変更のためにサブスクリプションが発生したことを示しています。  
@@ -58,7 +58,7 @@ ms.locfileid: "98100050"
 |65798|データが変更されたため、サブスクリプションが起動しました|挿入によってトリガーされたサブスクリプション|  
 |65799|データが変更されたため、サブスクリプションが起動しました|削除|  
 |65800|データが変更されたため、サブスクリプションが起動しました|更新|  
-|65801|データが変更されたため、サブスクリプションが起動しました|Merge|  
+|65801|データが変更されたため、サブスクリプションが起動しました|マージする|  
 |65802|データが変更されたため、サブスクリプションが起動しました|テーブルを切り捨てる|  
 |66048|タイムアウトが発生したため、サブスクリプションが起動しました|未定義の情報モード|  
 |66315|オブジェクトが変更されたため、サブスクリプションが起動しました|オブジェクトまたはユーザーが削除されました|  

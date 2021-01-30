@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MSdbms_datatype
 - MSdbms_datatype_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: daf45f65ddc0e7ea496a60a3da8b9fc9d270fc73
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db79a6d76443492e4079df48c34c518db4dea0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098220"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160457"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98098220"
 |**type**|**sysname**|データ型名 (ネイティブ)。|  
 |**createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。以下の要素が含まれます。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2** = スケール。<br /><br /> **0x4** = 長さ。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このテーブルには SQL Server のデータ型のエントリが含まれています。 SQL Server のインスタンスは、非 SQL Server データベースにサブスクライブし、SQL Server 以外のサブスクライバーにパブリッシュすることができます。  
   
 ## <a name="see-also"></a>参照  

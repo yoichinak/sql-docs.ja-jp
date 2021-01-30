@@ -6,19 +6,19 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 2baa21665d7fae6f87acbbebb88e55ca6c4624fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfdccad0daadd45b16d2e910eed8c7b194182daf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99143632"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "97482633"
 |step_index|**int**|この DMS ワーカーを呼び出すクエリステップ。<br /><br /> request_id、step_index、および dms_step_index は、このビューのキーを形成します。|[Sys.dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)の step_index と同じです。|  
 |dms_step_index|**int**|DMS プランの現在のステップ。<br /><br /> request_id、step_index、および dms_step_index は、このビューのキーを形成します。|[Sys.dm_pdw_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)の dms___step_index と同じです。|  
 |pdw_node_id|**int**|DMS ワーカーを実行しているノード。|[Sys.dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id と同じです。|  
-|型|**nvarchar(60)**|このノードが実行されている外部操作の種類。<br /><br /> ファイル分割は、複数の小さい分類に分割されている外部の Hadoop ファイルに対する操作です。|' ファイル分割 '|  
+|type|**nvarchar(60)**|このノードが実行されている外部操作の種類。<br /><br /> ファイル分割は、複数の小さい分類に分割されている外部の Hadoop ファイルに対する操作です。|' ファイル分割 '|  
 |work_id|**int**|ファイル分割 ID。|0以上。<br /><br /> コンピューティングノードごとに一意です。|  
 |input_name|**nvarchar(60)**|読み取る入力の文字列名。|Hadoop ファイルの場合は、Hadoop ファイル名です。|  
 |read_location|**bigint**|読み取り場所のオフセット。||  

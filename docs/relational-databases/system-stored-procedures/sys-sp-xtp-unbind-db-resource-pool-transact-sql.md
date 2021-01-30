@@ -1,13 +1,13 @@
 ---
-description: sp_xtp_unbind_db_resource_pool (Transact-sql)
-title: sp_xtp_unbind_db_resource_pool (Transact-sql) |Microsoft Docs
+description: sys.sp_xtp_unbind_db_resource_pool (Transact-sql)
+title: sys.sp_xtp_unbind_db_resource_pool (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xtp_unbind_db_resource_pool_TSQL
 - sp_xtp_unbind_db_resource_pool
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 27d5d5efd923dfffd66054da48b8baf28b6f193b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec549ca71802d8c028ef12ef8293d178dff19f4f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551109"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102800"
 ---
-# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sp_xtp_unbind_db_resource_pool (Transact-sql)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-sql)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   このシステムプロシージャは、メモリ使用量を追跡するために、データベースとリソースプールの間の既存のバインドを削除し [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ます。  指定したデータベースに現在バインドされたプールがない場合、成功が返されます。 データベースがバインド解除されると、以前に割り当てられたメモリ最適化オブジェクトのメモリは、前のリソースプールに割り当てられたままになります。 割り当てられたメモリを解放するには、データベースを再起動する必要があります。 データベースがリソースプールからバインド解除されると、バインドは既定のリソースプールに並べ替えられます。  
@@ -47,7 +47,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>パラメーター  
   
-## <a name="messages"></a>メッセージ  
+## <a name="messages"></a>Messages  
  データベースが名前付きリソースプールにバインドされている場合、プロシージャは正常に返されます。 ただし、バインド解除を有効にするには、データベースを再起動する必要があります。  
  指定したデータベースに既存のバインドが存在しない場合、`sp_xtp_unbind_db_resource_pool` は正常に終了しますが、次のような情報メッセージが表示されます。  
   

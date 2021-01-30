@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82940d8ac9779d17a469c3681e1ddd00b861c288
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e6be61c511d0c846861f6dcc8688bf397162e0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973422"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167418"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute、Requery、および Clear メソッドの例 (VC + +)
-この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 この例を実行するには、ExecuteCommand 関数と PrintOutput 関数が必要です。  
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の **Execute** メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md) メソッドを使用して [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md) メソッドを使用して [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) コレクションの内容をクリアします。 この例を実行するには、ExecuteCommand 関数と PrintOutput 関数が必要です。  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  

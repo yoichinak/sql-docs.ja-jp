@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdtslog90_TSQL
 - sysdtslog90
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58ce8d5a4784f34e83e2b09edda63dd49833a5ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159474"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88473106"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|ログエントリの一意の識別子。|  
-|event|**sysname**|ログ エントリを生成したイベントの名前。|  
+|イベント|**sysname**|ログ エントリを生成したイベントの名前。|  
 |コンピュータ|**nvarchar**|ログ エントリの生成時にパッケージが実行されていたコンピューター。|  
 |operator|**nvarchar**|ログエントリを生成したパッケージを実行したユーザーのユーザー名。|  
 |source|**nvarchar**|ログエントリを生成した、パッケージ内の実行可能ファイルの名前。|  

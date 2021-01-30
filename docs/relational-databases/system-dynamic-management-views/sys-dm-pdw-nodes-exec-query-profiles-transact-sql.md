@@ -6,19 +6,19 @@ ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: f1917899d58262f670b58843c118864618702950
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 9158ede7f526fe5ce4cbce7b9e6741c03e170849
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169964"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99140935"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
 
@@ -70,7 +70,7 @@ ms.locfileid: "98169964"
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
 |estimated_read_row_count|**bigint**|**適用対象:** SP1 以降 [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] 。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 [Sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md)の同じ解説が適用されます。  
 

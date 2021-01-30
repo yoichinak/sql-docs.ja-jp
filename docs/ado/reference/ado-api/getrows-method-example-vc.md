@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7116806c9c308257328cca001571b1a397a11c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990883"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167260"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows メソッドの例 (VC++)
-この例では、 [GetRows](./getrows-method-ado.md) メソッドを使用して、 [レコードセット](./recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または、 **getrows**が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
+この例では、 [GetRows](./getrows-method-ado.md) メソッドを使用して、 [レコードセット](./recordset-object-ado.md) から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows** メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](./bof-eof-properties-ado.md)に達した場合、または、 **getrows** が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ **False** を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
   
 ## <a name="example"></a>例  
   

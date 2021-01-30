@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fac075369646a991bf199e193bd636690d27c48
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e322ca4da2f4f93278c1fb8337ea2677731ca99
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973613"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167459"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>エラー (構文インデックスが #import で Visual C++)
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 ```  
 _bstr_t GetDescription( );  

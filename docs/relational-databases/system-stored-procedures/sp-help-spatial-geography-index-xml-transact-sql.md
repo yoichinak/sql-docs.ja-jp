@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_index_xml_TSQL
 - sp_help_spatial_geography_index_xml
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74b480c5c673ff4211437303011a3be5e2536593
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 81bad34a1eb0d45eafb84bacf1cc65871e73e2b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158431"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  **Geography**空間インデックスに関する指定された一連のプロパティの名前と値を返します。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
+  **Geography** 空間インデックスに関する指定された一連のプロパティの名前と値を返します。 プロパティのコアセットとインデックスのすべてのプロパティのどちらを返すかを選択できます。  
   
  結果は、選択したプロパティの名前と値を表示する XML フラグメントで返されます。  
   
@@ -54,11 +54,11 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>コメント  
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では、を使用し `sp_help_spatial_geography_index_xml` て、 ** \@ qs**の指定されたクエリサンプルのテーブル**geography_col**で定義されている空間インデックス**SIndx_SpatialTable_geography_col2**を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
+ 次の例では、を使用し `sp_help_spatial_geography_index_xml` て、 **\@ qs** の指定されたクエリサンプルのテーブル **geography_col** で定義されている空間インデックス **SIndx_SpatialTable_geography_col2** を調査します。 この例では、選択したプロパティの名前と値を表示する XML フラグメント内の指定されたインデックスのコアプロパティを返します。  
   
  その後、 [XQuery](../../xquery/xquery-basics.md) が結果セットで実行され、特定のプロパティが返されます。  
   
@@ -70,9 +70,9 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)と同様に、このストアドプロシージャを使用すると、**地理**空間インデックスのプロパティにプログラムで簡単にアクセスして、XML 形式で結果セットを報告できます。  
+ [Sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)と同様に、このストアドプロシージャを使用すると、**地理** 空間インデックスのプロパティにプログラムで簡単にアクセスして、XML 形式で結果セットを報告できます。  
   
- **Geography**の境界ボックスは、地球全体です。  
+ **Geography** の境界ボックスは、地球全体です。  
   
 ## <a name="requirements"></a>必要条件  
   

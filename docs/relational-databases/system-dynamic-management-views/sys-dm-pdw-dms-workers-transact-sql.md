@@ -6,19 +6,19 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 2c81bb5c02b11753fa98024cfd4d3861b2768d24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 735ab65bc39b4f4ffab93f1b2bf8a705c3d895c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482593"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99143265"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "97482593"
 |dms_step_index|**int**|このワーカーが実行されている DMS プランのステップ。<br /><br /> request_id、step_index、および dms_step_index は、このビューのキーを形成します。||  
 |pdw_node_id|**int**|ワーカーが実行されているノード。|[Transact-sql&#41;&#40;sys.dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
 |distribution_id|**Int**|ワーカーが実行されているディストリビューション (存在する場合)。|[Transact-sql&#41;&#40;sys.pdw_distributions](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)の distribution_id を参照してください。|  
-|型|**nvarchar(32)**|このエントリが表す DMS ワーカースレッドの種類。|' DIRECT_CONVERTER '、' DIRECT_READER '、' FILE_READER '、' HASH_CONVERTER '、' HASH_READER '、' ROUNDROBIN_CONVERTER '、' EXPORT_READER '、' EXTERNAL_READER '、' EXTERNAL_WRITER '、' PARALLEL_COPY_READER '、' REJECT_WRITER '、' WRITER '|  
+|type|**nvarchar(32)**|このエントリが表す DMS ワーカースレッドの種類。|' DIRECT_CONVERTER '、' DIRECT_READER '、' FILE_READER '、' HASH_CONVERTER '、' HASH_READER '、' ROUNDROBIN_CONVERTER '、' EXPORT_READER '、' EXTERNAL_READER '、' EXTERNAL_WRITER '、' PARALLEL_COPY_READER '、' REJECT_WRITER '、' WRITER '|  
 |status|**nvarchar(32)**|DMS ワーカーの状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|最後の1秒間に読み取りまたは書き込みのスループット。|0以上。 ワーカーが実行される前にクエリが取り消されたか失敗した場合は NULL です。|  
 |bytes_processed|**bigint**|このワーカーによって処理された合計バイト数。|0以上。 ワーカーが実行される前にクエリが取り消されたか失敗した場合は NULL です。|  

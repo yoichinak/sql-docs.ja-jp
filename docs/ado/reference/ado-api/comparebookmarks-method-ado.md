@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CompareBookmarks
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 785f2b61e4a6197a287ce9f97b27fef5cb8742b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 63fc23d638a3ffecf29d6f3d3ad56e803d914072
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975053"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99155683"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
 2つのブックマークを比較し、それらの相対値を示す値を返します。  
@@ -45,14 +45,14 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  2番目の行のブックマーク。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ブックマークは、同じ [レコードセット](./recordset-object-ado.md) オブジェクト、または **レコードセット** オブジェクトとその [複製](./clone-method-ado.md)に適用する必要があります。 同じソースまたはコマンドから作成されたものであっても、異なる **レコードセット** オブジェクトのブックマークを確実に比較することはできません。 また、基になるプロバイダーで比較がサポートされていない **レコードセット** オブジェクトのブックマークを比較することもできません。  
   
  ブックマークは、 **レコードセット** オブジェクト内の行を一意に識別します。 ブックマークを取得するには、現在の行の [bookmark](./bookmark-property-ado.md) プロパティを使用します。  
   
- ブックマークのデータ型は各プロバイダーに固有であるため、ADO はそれを **バリアント**として公開します。 たとえば、SQL Server のブックマークの種類は DBTYPE_R8 (**Double**) です。 この型は、 **Double**型のサブタイプの**バリアント**として ADO によって公開されます。  
+ ブックマークのデータ型は各プロバイダーに固有であるため、ADO はそれを **バリアント** として公開します。 たとえば、SQL Server のブックマークの種類は DBTYPE_R8 (**Double**) です。 この型は、 **Double** 型のサブタイプの **バリアント** として ADO によって公開されます。  
   
- ブックマークを比較するとき、ADO はどのような型の強制型変換も試行しません。 値は、比較が発生したプロバイダーに渡されるだけです。 **Comparebookmarks**メソッドに渡されるブックマークが異なる型の変数に格納されている場合、次のような型の不一致エラーが発生する可能性があります。 "引数の型が間違っているか、許容範囲外であるか、競合しています。"  
+ ブックマークを比較するとき、ADO はどのような型の強制型変換も試行しません。 値は、比較が発生したプロバイダーに渡されるだけです。 **Comparebookmarks** メソッドに渡されるブックマークが異なる型の変数に格納されている場合、次のような型の不一致エラーが発生する可能性があります。 "引数の型が間違っているか、許容範囲外であるか、競合しています。"  
   
  無効または形式が正しくないブックマークは、エラーを発生させます。  
   

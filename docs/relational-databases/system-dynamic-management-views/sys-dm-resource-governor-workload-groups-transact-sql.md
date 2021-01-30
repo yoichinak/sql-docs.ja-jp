@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
 - sys.dm_resource_governor_workload_groups_TSQL
@@ -21,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2db4a28a9199cc090f18cc1f79d8e755c621c7fd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 31071c4fd89d6542b1d2bd87fc8f445a43c641b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172144"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99135123"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "98172144"
 |request_max_memory_grant_percent_numeric|**float**|**適用対象**: 以降 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br /><br />1つの要求に対する最大メモリ許可の現在の設定 (パーセンテージ)。 NULL 値は許可されません。| 
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この動的管理ビューには、メモリ内の構成が表示されます。 格納されている構成メタデータを表示するには、 [sys.resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) カタログビューを使用します。  
   
  が正常に実行されると、、、、、、、、、、、、 `ALTER RESOURCE GOVERNOR RESET STATISTICS` `statistics_start_time` `total_request_count` `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` および `max_request_grant_memory_kb` の各カウンターがリセットされます。 カウンター `statistics_start_time` は、現在のシステムの日付と時刻に設定され、その他のカウンターはゼロ (0) に設定されます。  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5842bbdfc43a76797dd48aa75db133b9942a368e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 723604ab50d684b7d99536cb59880d86bf4f9d2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989923"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166788"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider および DefaultDatabase プロパティの例 (VC++)
 この例では、異なるプロバイダーを使用する3つの[接続](./connection-object-ado.md)オブジェクトを開くことによって、[プロバイダー](./provider-property-ado.md)プロパティを示します。 また、 [defaultdatabase](./defaultdatabase-property.md) プロパティを使用して、Microsoft ODBC プロバイダーの既定のデータベースを設定します。  

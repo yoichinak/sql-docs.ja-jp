@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor_columns
 - sp_describe_cursor_columns_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75d0de65b91c41cdaf006e4c56918c3861123b9c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c2a7610b13e806c7c40d0fd2ff5a9e0363fffc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539022"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158442"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_describe_cursor_columns
   
 ## <a name="arguments"></a>引数  
  [ @cursor_return =] *output_cursor_variable* 出力  
- カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable* は **カーソル**であり、既定値はありません。 sp_describe_cursor_columns が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
+ カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable* は **カーソル** であり、既定値はありません。 sp_describe_cursor_columns が呼び出されたときに、どのカーソルにも関連付けないでください。 返されるカーソルは、スクロール可能、動的、読み取り専用のカーソルです。  
   
  [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
  ローカルカーソル、グローバルカーソル、またはカーソル変数の名前を使用して、レポートされるカーソルが指定されているかどうかを指定します。 パラメーターは **nvarchar (30)** です。  
@@ -69,7 +69,7 @@ sp_describe_cursor_columns
  なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
- sp_describe_cursor_columns は、そのレポートを、カーソル出力パラメーターとしてカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これはまた、データベース API 関数からプロシージャを直接呼び出すことができないことを意味します。 **Cursor**出力パラメーターはプログラム変数にバインドする必要がありますが、データベース api では、**カーソル**パラメーターまたは変数のバインドがサポートされていません。  
+ sp_describe_cursor_columns は、そのレポートを、カーソル出力パラメーターとしてカプセル化 [!INCLUDE[tsql](../../includes/tsql-md.md)] します。 これにより、 [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ、ストアドプロシージャ、およびトリガーは、一度に1行ずつ出力を処理できます。 これはまた、データベース API 関数からプロシージャを直接呼び出すことができないことを意味します。 **Cursor** 出力パラメーターはプログラム変数にバインドする必要がありますが、データベース api では、**カーソル** パラメーターまたは変数のバインドがサポートされていません。  
   
  次の表に、sp_describe_cursor_columns が返すカーソルの形式を示します。  
   
@@ -81,7 +81,7 @@ sp_describe_cursor_columns
 |column_size|**int**|この列で可能な値の最大サイズです。|  
 |data_type_sql|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列のデータ型を示す数値。|  
 |column_precision|**tinyint**|OLE DB の *Bprecision* 値に対する列の最大有効桁数。|  
-|column_scale|**tinyint**|**数値**または**10 進数**のデータ型の小数点の右側の桁数。 OLE DB の*bscale*値に従います。|  
+|column_scale|**tinyint**|**数値** または **10 進数** のデータ型の小数点の右側の桁数。 OLE DB の *bscale* 値に従います。|  
 |order_position|**int**|列が結果セットの順序付けに参加している場合は、一番左の列に対する順序キーの列の位置。|  
 |order_direction|**varchar (1)**(null 値を許容)|A = 列は順序キーにあり、順序付けは昇順です。<br /><br /> D = 列は順序キーにあり、順序付けは降順です。<br /><br /> NULL = 列は順序付けに関係しません。|  
 |hidden_column|**smallint**|0 = この列は選択リストに表示されます。<br /><br /> 1 = 将来使用するために予約されています。|  
@@ -90,7 +90,7 @@ sp_describe_cursor_columns
 |dbid|**int**|列の値を提供するベース テーブルを含むデータベースの ID です。 結果セット列が式で構成されている場合、dbid は -1 です。|  
 |dbname|**sysname**<br /><br /> nullable|列を提供しているベーステーブルを含むデータベースの名前。 結果セット列が式で構成されている場合、dbname は NULL です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  sp_describe_cursor_columns は、各カーソルの名前やデータ型など、サーバー カーソルの結果セットにある列の属性を示します。 サーバー カーソルにグローバルな属性の説明が必要な場合は、sp_describe_cursor を使用します。 カーソルが参照するベース テーブルのレポートが必要な場合は、sp_describe_cursor_tables を使用します。 接続時に可視になる [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルのレポートが必要な場合は、sp_cursor_list を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  

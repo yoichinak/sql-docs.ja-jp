@@ -6,19 +6,19 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 3a3e3e4754b831b28be323c194f9eef70bd64f9b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ff7327a914539c5dc2a2b691015ce7b9df55bf97
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477193"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99138479"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys.dm_pdw_waits (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97477193"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|待機状態に関連付けられている一意の数値 id。<br /><br /> このビューのキー。|システム内のすべての待機間で一意です。|  
 |session_id|**nvarchar(32)**|待機状態が発生したセッションの ID。|[Transact-sql&#41;&#40;sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)の session_id を参照してください。|  
-|型|**nvarchar (255)**|このエントリが表す待機の種類。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar (255)**|このエントリが表す待機の種類。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar (255)**|待機の影響を受けるオブジェクトの種類。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar (386)**|待機の影響を受けた、指定したオブジェクトの名前または GUID。||  
 |request_id|**nvarchar(32)**|待機状態が発生した要求の ID。|[Transact-sql&#41;&#40;sys.dm_pdw_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)の request_id を参照してください。|  

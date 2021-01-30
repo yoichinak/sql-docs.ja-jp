@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_xe_objects
 - sys.dm_xe_objects
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6e54e02ec730fae0f57a8be8976d7fa694824bd0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9e797a7010a23bfc8b13673d1efa1a90d849e6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098880"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99129334"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98098880"
  |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|オブジェクトの名前。 名前は、特定の種類のオブジェクトのパッケージ内で一意です。 NULL 値は許可されません。|  
-|object_type|**nvarchar(60)**|オブジェクトの型。 object_type は次のいずれかです。<br /><br /> イベント<br /><br /> アクション<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> NULL 値は許可されません。|  
+|object_type|**nvarchar(60)**|オブジェクトの型。 object_type は次のいずれかです。<br /><br /> イベント<br /><br /> action<br /><br /> ターゲット (target)<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> NULL 値は許可されません。|  
 |package_guid|**uniqueidentifier**|このアクションを公開するパッケージの GUID。 sys.dm_xe_packages.package_id との間に多対一のリレーションシップがあります。 NULL 値は許可されません。|  
 |description|**nvarchar (256)**|アクションの説明。 説明はパッケージの作成者によって設定されます。 NULL 値は許可されません。|  
 |capabilities|**int**|オブジェクトの機能を説明するビットマップ。 NULL 値が許可されます。|  
@@ -59,7 +59,7 @@ ms.locfileid: "98098880"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|差出人|終了|Relationship|  
+|差出人|終了|リレーションシップ|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|多対一|  
   

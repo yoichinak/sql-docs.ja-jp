@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_repl_schemas_TSQL
 - dm_repl_schemas
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 549f5beaae81d181f391936d1acecbc4aeb5b77a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5c2791dbc87997b3e2afcde966ed82b39384798d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095082"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99137768"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-sql)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "98095082"
 ## <a name="permissions"></a>アクセス許可  
  **Dm_repl_schemas** を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  
   
 ## <a name="see-also"></a>参照  
