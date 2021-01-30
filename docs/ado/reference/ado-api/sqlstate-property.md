@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetSQLState
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbc849f19c91f7b2387df5e0e71b3455efa0db09
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8ebacade44d53ddf142f22f9e30bce140e375592
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988863"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170220"
 ---
 # <a name="sqlstate-property"></a>SQLState プロパティ
 指定された [エラー](./error-object.md) オブジェクトの SQL 状態を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "88988863"
 ## <a name="return-value"></a>戻り値  
  は、ANSI SQL 標準に従った5文字の **文字列** 値を返し、エラーコードを示します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  SQL ステートメントの処理中にエラーが発生した場合にプロバイダーが返す5文字のエラーコードを読み取るには、 **SQLState** プロパティを使用します。 たとえば、Microsoft SQL Server データベースを使用して Microsoft OLE DB Provider for ODBC を使用すると、odbc からの SQL 状態エラーコードが生成されます。これは、ODBC に固有のエラーや、Microsoft SQL Server から発生したエラーに基づいて行われ、ODBC エラーにマップされます。 これらのエラーコードは ANSI SQL 標準に記載されていますが、データソースによって実装方法が異なる場合があります。  
   
 ## <a name="applies-to"></a>適用対象  

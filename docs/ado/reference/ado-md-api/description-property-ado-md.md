@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Member::Description
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726a49da64c36b487868068affad65164b9b3c5e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7339bcafe8df6678ec5cd9a0bef43dd92dd6edbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986903"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169883"
 ---
 # <a name="description-property-ado-md"></a>Description プロパティ (ADO MD)
 現在のオブジェクトの説明テキストを返します。  
@@ -34,10 +34,10 @@ ms.locfileid: "88986903"
 ## <a name="return-values"></a>戻り値  
  は **文字列** を返し、読み取り専用です。  
   
-## <a name="remarks"></a>解説  
- [メンバー](./member-object-ado-md.md)オブジェクトの場合、**説明**はメジャーおよび数式メンバーにのみ適用されます。 **説明** は、他のすべての種類のメンバーに対して空の文字列 ("") を返します。 さまざまな種類のメンバーの詳細については、「 [Type](./type-property-ado-md.md) プロパティ」を参照してください。  
+## <a name="remarks"></a>コメント  
+ [メンバー](./member-object-ado-md.md)オブジェクトの場合、**説明** はメジャーおよび数式メンバーにのみ適用されます。 **説明** は、他のすべての種類のメンバーに対して空の文字列 ("") を返します。 さまざまな種類のメンバーの詳細については、「 [Type](./type-property-ado-md.md) プロパティ」を参照してください。  
   
- このプロパティは、[レベル](./level-object-ado-md.md)オブジェクトに属している**メンバー**オブジェクトでのみサポートされます。 このプロパティが、 [Position](./position-object-ado-md.md)オブジェクトに属する**メンバー**オブジェクトから参照されている場合に、エラーが発生します。  
+ このプロパティは、[レベル](./level-object-ado-md.md)オブジェクトに属している **メンバー** オブジェクトでのみサポートされます。 このプロパティが、 [Position](./position-object-ado-md.md)オブジェクトに属する **メンバー** オブジェクトから参照されている場合に、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
 

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637862"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170005"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
 
@@ -29,8 +29,8 @@ ms.locfileid: "97637862"
 |[キャプション](./caption-property-ado-md.md)|**レベル** または **メンバー** オブジェクトを表示するときに使用するテキストキャプションを示します。|  
 |[ChildCount](./childcount-property-ado-md.md)|現在の **メンバー** オブジェクトが階層内の親であるメンバーの数を示します。|  
 |[Children](./children-property-ado-md.md)|現在の **メンバー** が階層内の親である **メンバー** のコレクションを返します。|  
-|[Count](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
-|[[奥行]](./depth-property-ado-md.md)|**レベル** と階層レベルのルートとの間のレベル数を示します。|  
+|[カウント](../ado-api/count-property-ado.md)|コレクション内のオブジェクトの数を示します。|  
+|[Depth](./depth-property-ado-md.md)|**レベル** と階層レベルのルートとの間のレベル数を示します。|  
 |[説明](./description-property-ado-md.md)|現在のオブジェクトの説明テキストを返します。|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|軸上のディメンションの数を示します。|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|軸にメンバーのすぐ後に続く子がないかどうかを示します。|  
@@ -46,7 +46,7 @@ ms.locfileid: "97637862"
 |[親](./parent-property-ado-md.md)|階層内の現在のメンバーの親であるメンバーを示します。|  
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|この位置メンバーの親が、直前のメンバーの親と同じであるかどうかを示します。|  
 |[ソース](./source-property-ado-md.md)|セルセット内のデータのソースを示します。|  
-|[State](./state-property-ado-md.md)|セルセットの現在の状態を示します。|  
+|[状態](./state-property-ado-md.md)|セルセットの現在の状態を示します。|  
 |[Type](./type-property-ado-md.md)|現在のメンバーの型を示します。|  
 |[UniqueName](./uniquename-property-ado-md.md)|現在のオブジェクトの明確な名前を示します。|  
 |[Value](./value-property-ado-md.md)|現在のセルの値を示します。|  

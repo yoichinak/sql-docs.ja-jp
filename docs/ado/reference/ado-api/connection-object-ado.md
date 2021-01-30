@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection
@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974903"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167742"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの開いた接続を表します。  
   
-## <a name="remarks"></a>解説  
- **接続**オブジェクトは、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムでは、サーバーへの実際のネットワーク接続と同じになる場合があります。 プロバイダーでサポートされている機能によっては、 **接続** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
+## <a name="remarks"></a>コメント  
+ **接続** オブジェクトは、データソースとの一意のセッションを表します。 クライアント/サーバーデータベースシステムでは、サーバーへの実際のネットワーク接続と同じになる場合があります。 プロバイダーでサポートされている機能によっては、 **接続** オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
- **接続**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
+ **接続** オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
   
 -   [ConnectionString](./connectionstring-property-ado.md)、 [ConnectionTimeout](./connectiontimeout-property-ado.md)、および[Mode](./mode-property-ado.md)プロパティを使用して接続を開く前に、接続を構成します。 **ConnectionString** は、 **接続** オブジェクトの既定のプロパティです。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88974903"
 -   [Execute](./execute-method-ado-connection.md)メソッドを使用して接続に対してコマンドを実行し、 [CommandTimeout](./commandtimeout-property-ado.md)プロパティを使用して実行を構成します。  
   
     > [!NOTE]
-    >  Command オブジェクトを使用せずにクエリを実行するには、**接続**オブジェクトの**execute**メソッドにクエリ文字列を渡します。 ただし、コマンドのテキストを永続化して再実行する場合、またはクエリパラメーターを使用する場合は、 [command](./command-object-ado.md) オブジェクトが必要です。  
+    >  Command オブジェクトを使用せずにクエリを実行するには、**接続** オブジェクトの **execute** メソッドにクエリ文字列を渡します。 ただし、コマンドのテキストを永続化して再実行する場合、またはクエリパラメーターを使用する場合は、 [command](./command-object-ado.md) オブジェクトが必要です。  
   
 -   入れ子になったトランザクションを含むオープン接続でトランザクションを管理します。これには、プロバイダーがサポートしている場合は、 [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)、 [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)、および [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) の各メソッドと [Attributes](./attributes-property-ado.md) プロパティを使用します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88974903"
 >  Microsoft® .NET Framework アプリケーションでは、この機能を使用しないでください (名前付きコマンドまたはストアドプロシージャを、 **接続** オブジェクトのネイティブメソッドとして呼び出す) ことはできません。これは、機能の基になる実装が、.NET FRAMEWORK が COM と相互運用する方法と競合するためです。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブメソッドとしてコマンドを実行する  
- コマンドを実行する**には、コマンドオブジェクト**[名](./name-property-ado.md)プロパティを使用して、コマンドに名前を付けます。 **Command**オブジェクトの**ActiveConnection**プロパティを接続に設定します。 次に、コマンド名が **Connection** オブジェクトのメソッドであるかのように使用されているステートメントを実行し、任意のパラメーターを指定します。行が返された場合は、 **レコードセット** オブジェクトも指定します。 **レコード**セットのプロパティを設定して、結果の**レコードセット**をカスタマイズします。 次に例を示します。  
+ コマンドを実行する **には、コマンドオブジェクト**[名](./name-property-ado.md)プロパティを使用して、コマンドに名前を付けます。 **Command** オブジェクトの **ActiveConnection** プロパティを接続に設定します。 次に、コマンド名が **Connection** オブジェクトのメソッドであるかのように使用されているステートメントを実行し、任意のパラメーターを指定します。行が返された場合は、 **レコードセット** オブジェクトも指定します。 **レコード** セットのプロパティを設定して、結果の **レコードセット** をカスタマイズします。 次に例を示します。  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -89,7 +89,7 @@ Dim cnn As New ADODB.Connection
 cnn. "parameter"  
 ```  
   
- **接続**オブジェクトは、スクリプトに対して安全です。  
+ **接続** オブジェクトは、スクリプトに対して安全です。  
   
  ここでは、次のトピックについて説明します。  
   

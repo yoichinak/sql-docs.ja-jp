@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_audit_write
 - sp_audit_write_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56795d7ed3da83dff9f50d70f639300dae0da3a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ac793b35f5e72b93a27369bf00327a969059b0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536714"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171760"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  ユーザー定義の監査イベントを **USER_DEFINED_AUDIT_GROUP**に追加します。 **USER_DEFINED_AUDIT_GROUP**が有効になっていない場合、 **sp_audit_write**は無視されます。  
+  ユーザー定義の監査イベントを **USER_DEFINED_AUDIT_GROUP** に追加します。 **USER_DEFINED_AUDIT_GROUP** が有効になっていない場合、 **sp_audit_write** は無視されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +43,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>引数  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- ユーザーによって定義され、監査ログの **user_defined_event_id** 列に記録されるパラメーター。 * \@ user_defined_event_id*型は**smallint**です。  
+ ユーザーによって定義され、監査ログの **user_defined_event_id** 列に記録されるパラメーター。 *\@ user_defined_event_id* 型は **smallint** です。  
   
  `[ @succeeded = ] succeeded`  
- イベントが成功したかどうかを示すためにユーザーによって渡されるパラメーター。 これは、監査ログの succeeded 列に表示されます。 `@succeeded`**ビット**です。  
+ イベントが成功したかどうかを示すためにユーザーによって渡されるパラメーター。 これは、監査ログの succeeded 列に表示されます。 `@succeeded`**ビット** です。  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
  ユーザーによって定義され、監査ログの新しい user_defined_event_id 列に記録されるテキストです。 `@user_defined_information`**nvarchar (4000)** です。  
@@ -56,11 +56,11 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  失敗の原因となるのは、正しくない入力パラメーターや、監査ログへの書き込みのエラーです。  
   
-## <a name="remarks"></a>解説  
- **USER_DEFINED_AUDIT_GROUP**がサーバー監査の仕様またはデータベース監査の仕様のいずれかに追加されると、 **sp_audit_write**によってトリガーされたイベントが監査ログに含まれます。  
+## <a name="remarks"></a>コメント  
+ **USER_DEFINED_AUDIT_GROUP** がサーバー監査の仕様またはデータベース監査の仕様のいずれかに追加されると、 **sp_audit_write** によってトリガーされたイベントが監査ログに含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Public**データベースロールのメンバーシップが必要です。  
+ **Public** データベースロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>例  
   

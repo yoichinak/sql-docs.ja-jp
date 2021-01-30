@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Property
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7edc57495968cb94dbf8714e3b519acac578775f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a24503889e8bd7deab3bca6072da9114f0a0efdd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170530"
 ---
 # <a name="property-object-ado"></a>Property オブジェクト (ADO)
 プロバイダーによって定義される ADO オブジェクトの動的特性を表します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ADO オブジェクトには、組み込みと動的の2種類のプロパティがあります。  
   
- 組み込みプロパティは ADO で実装されるプロパティで、構文を使用して、新しいオブジェクトですぐに使用でき `MyObject.Property` ます。 オブジェクトの[プロパティ](./properties-collection-ado.md)コレクションには**プロパティ**オブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
+ 組み込みプロパティは ADO で実装されるプロパティで、構文を使用して、新しいオブジェクトですぐに使用でき `MyObject.Property` ます。 オブジェクトの [プロパティ](./properties-collection-ado.md)コレクションには **プロパティ** オブジェクトとして表示されません。そのため、値を変更することはできますが、その特性を変更することはできません。  
   
- 動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADO オブジェクトの **properties** コレクションに表示されます。 たとえば、プロバイダー固有のプロパティは、 [レコードセット](./recordset-object-ado.md) オブジェクトがトランザクションをサポートするか更新するかを示します。 これらの追加のプロパティは、その**レコードセット**オブジェクトの**プロパティ**コレクション内の**プロパティ**オブジェクトとして表示されます。 動的プロパティは、コレクションを通じてのみ、または構文を使用して参照でき `MyObject.Properties(0)` `MyObject.Properties("Name")` ます。  
+ 動的プロパティは、基になるデータプロバイダーによって定義され、適切な ADO オブジェクトの **properties** コレクションに表示されます。 たとえば、プロバイダー固有のプロパティは、 [レコードセット](./recordset-object-ado.md) オブジェクトがトランザクションをサポートするか更新するかを示します。 これらの追加のプロパティは、その **レコードセット** オブジェクトの **プロパティ** コレクション内の **プロパティ** オブジェクトとして表示されます。 動的プロパティは、コレクションを通じてのみ、または構文を使用して参照でき `MyObject.Properties(0)` `MyObject.Properties("Name")` ます。  
   
  どちらの種類のプロパティも削除できません。  
   

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25153814172cd0298d2aca5e9499803e17cbfa60
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c0100fb432156a3f970fadfa0f39f2d72daee8b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171458"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -45,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- **Executeupdate**メソッドは、特定のパラメーターを使用して基になる ADO **execute**メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate**メソッドでは、**レコードセット**オブジェクトの戻りがサポートされていないため、 **execute**メソッドの*options*パラメーターは**AdoEnums.Executeoptions**を使用して変更されます。 **Execute**メソッドが完了すると、更新された*RecordsAffected*パラメーターが**executeupdate**メソッドに戻されます。このメソッドは、最後に**int**として返されます。  
+ **Executeupdate** メソッドは、特定のパラメーターを使用して基になる ADO **execute** メソッドを呼び出す特殊なケースメソッドです。 **Executeupdate** メソッドでは、**レコードセット** オブジェクトの戻りがサポートされていないため、 **execute** メソッドの *options* パラメーターは **AdoEnums.Executeoptions** を使用して変更されます。 **Execute** メソッドが完了すると、更新された *RecordsAffected* パラメーターが **executeupdate** メソッドに戻されます。このメソッドは、最後に **int** として返されます。  
   
 ```  
 public void open()   
@@ -59,7 +59,7 @@ public Recordset openSchema(int schema)
 public Recordset openSchema(int schema, Object[] restrictions)  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getAttributes()  
@@ -86,7 +86,7 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>イベント  
+### <a name="events"></a>events  
  ADO/WFC イベントの詳細については、「 [言語別の Ado イベントのインスタンス化](../../guide/data/ado-event-instantiation-by-language.md)」を参照してください。  
   
 ```  

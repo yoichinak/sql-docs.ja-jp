@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _DynaCollection::Delete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3860a824690d9dca469a22135d35e040cc000dca
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 63b71709bd3c6f07c1dad3d7f3c471ecd267b202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974123"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171297"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete メソッド (ADO Parameters コレクション)
 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションからオブジェクトを削除します。  
@@ -38,8 +38,8 @@ Parameters.Delete Index
  *Index*  
  削除するオブジェクトの名前、またはコレクション内のオブジェクトの序数 (index) を含む **文字列** 値です。  
   
-## <a name="remarks"></a>解説  
- コレクションに対して **Delete** メソッドを使用すると、コレクション内のいずれかのオブジェクトを削除できます。 このメソッドは、 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの**Parameters**コレクションでのみ使用できます。 **Delete**メソッドを呼び出すときは、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティまたはそのコレクションインデックスを使用する必要があります。オブジェクト変数は有効な引数ではありません。  
+## <a name="remarks"></a>コメント  
+ コレクションに対して **Delete** メソッドを使用すると、コレクション内のいずれかのオブジェクトを削除できます。 このメソッドは、 [Command](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの **Parameters** コレクションでのみ使用できます。 **Delete** メソッドを呼び出すときは、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティまたはそのコレクションインデックスを使用する必要があります。オブジェクト変数は有効な引数ではありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  

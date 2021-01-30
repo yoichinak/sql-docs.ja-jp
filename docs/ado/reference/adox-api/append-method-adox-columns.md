@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Columns::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c959f6d822724ee6e7480cf00941aaa1fc8012a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 40abf0ae298b469d0814e8dd3da85a8c8865be78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985503"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169596"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
 [Columns](./columns-collection-adox.md)コレクションに新しい[Column](./column-object-adox.md)オブジェクトを追加します。  
@@ -39,13 +39,13 @@ Columns.Append Column [,Type] [,DefinedSize]
  追加する **列** オブジェクト、または作成して追加する列の名前。  
   
  *Type*  
- 省略可能。 列のデータ型を指定する **Long** 型の値です。 *Type*パラメーターは、 **Column**オブジェクトの[type](./type-property-column-adox.md)プロパティに対応しています。  
+ 任意。 列のデータ型を指定する **Long** 型の値です。 *Type* パラメーターは、 **Column** オブジェクトの [type](./type-property-column-adox.md)プロパティに対応しています。  
   
  *DefinedSize*  
- 省略可能。 列のサイズを指定する **Long 型** の値です。 指定された*サイズ*のパラメーターは、 **Column**オブジェクトの "指定された[サイズ](./definedsize-property-adox.md)" プロパティに対応します。  
+ 任意。 列のサイズを指定する **Long 型** の値です。 指定された *サイズ* のパラメーターは、 **Column** オブジェクトの "指定された [サイズ](./definedsize-property-adox.md)" プロパティに対応します。  
   
 > [!NOTE]
->  [テーブル](./tables-collection-adox.md)コレクションに既に追加されている[テーブル](./table-object-adox.md)**に列が**存在しない場合、[インデックス](./index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
+>  [テーブル](./tables-collection-adox.md)コレクションに既に追加されている [テーブル](./table-object-adox.md)**に列が** 存在しない場合、[インデックス](./index-object-adox.md)の **Columns** コレクションに **列** を追加すると、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Columns コレクション (ADOX)](./columns-collection-adox.md)  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::DataMember
@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 034afc971021f6bcfa4db7877d0409aeb817fc6f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71b4f59b4315d61f1d8f6d4d3fe840cc64016e5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974273"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167603"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティによって参照される[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得されるデータメンバーの名前を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- **文字列**値を設定または返します。 名前の大文字と小文字は区別されません。  
+ **文字列** 値を設定または返します。 名前の大文字と小文字は区別されません。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  このプロパティは、データ環境を使用してデータバインドコントロールを作成するために使用されます。 データ環境では、 [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクトとして表される名前付きオブジェクト (データメンバー) を含むデータ (データソース) のコレクションを保持します。  
   
- **DataMember**プロパティと**DataSource**プロパティを一緒に使用する必要があります。  
+ **DataMember** プロパティと **DataSource** プロパティを一緒に使用する必要があります。  
   
- **DataMember**プロパティは、 **DataSource**プロパティによって指定されたオブジェクトを**レコードセット**オブジェクトとして表現します。 このプロパティを設定する前に、 **レコードセット** オブジェクトを閉じる必要があります。 **Datasource**プロパティの前に**datamember**プロパティが設定されていない場合、または**datasource**プロパティで指定されたオブジェクトによって**datamember**名が認識されない場合は、エラーが生成されます。  
+ **DataMember** プロパティは、 **DataSource** プロパティによって指定されたオブジェクトを **レコードセット** オブジェクトとして表現します。 このプロパティを設定する前に、 **レコードセット** オブジェクトを閉じる必要があります。 **Datasource** プロパティの前に **datamember** プロパティが設定されていない場合、または **datasource** プロパティで指定されたオブジェクトによって **datamember** 名が認識されない場合は、エラーが生成されます。  
   
 ## <a name="usage"></a>使用法  
   

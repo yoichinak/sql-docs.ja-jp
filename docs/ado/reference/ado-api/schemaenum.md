@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989263"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170309"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-[OpenSchema](./openschema-method.md)メソッドによって取得されるスキーマ**レコードセット**の種類を指定します。  
+[OpenSchema](./openschema-method.md)メソッドによって取得されるスキーマ **レコードセット** の種類を指定します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  各 ADO 定数に対して返される関数と列に関する追加情報については、 [「付録 B:](/previous-versions/windows/desktop/ms712921(v=vs.85)) OLE DB プログラマーリファレンスのスキーマ行セット」のトピックを参照してください。 各トピックの名前は、次の表の説明セクションにかっこで囲まれています。  
   
  ADO MD 定数ごとに返される関数と列に関する追加情報については、オンライン分析処理 (OLAP) のドキュメントの OLE DB の「 [Olap オブジェクトおよびスキーマ行セットの OLE DB](/previous-versions/windows/desktop/ms723056(v=vs.85)) 」のトピックを参照してください。 各トピックの名前は、次の表の説明列にかっこで囲まれています。  
   
- ADO [DataTypeEnum](./datatypeenum.md) トピックの Description 列を参照して、OLE DB ドキュメント内の列のデータ型を ado データ型に変換できます。 たとえば、 **DBTYPE_WSTR** の OLE DB データ型は、 **ADWCHAR**の ADO データ型に相当します。  
+ ADO [DataTypeEnum](./datatypeenum.md) トピックの Description 列を参照して、OLE DB ドキュメント内の列のデータ型を ado データ型に変換できます。 たとえば、 **DBTYPE_WSTR** の OLE DB データ型は、 **ADWCHAR** の ADO データ型に相当します。  
   
- ADO では、定数、 **Adschemadbina キーワード** 、および **adschemadbinを**使用したスキーマのような結果が生成されます。 ADO は **レコードセット**を作成し、各行に、 **IDBInfo:: Getkeywords** メソッドと **IDBInfo:: GetLiteralInfo** メソッドによって返された値を格納します。 これらのメソッドに関する追加情報については、OLE DB プログラマーリファレンス』の「 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 」セクションを参照してください。  
+ ADO では、定数、 **Adschemadbina キーワード** 、および **adschemadbinを** 使用したスキーマのような結果が生成されます。 ADO は **レコードセット** を作成し、各行に、 **IDBInfo:: Getkeywords** メソッドと **IDBInfo:: GetLiteralInfo** メソッドによって返された値を格納します。 これらのメソッドに関する追加情報については、OLE DB プログラマーリファレンス』の「 [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) 」セクションを参照してください。  
   
 |定数|値|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  

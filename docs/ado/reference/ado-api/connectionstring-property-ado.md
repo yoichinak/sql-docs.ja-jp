@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a5e9bc25728de2859074136adb1a28349b2806d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974773"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167713"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データソースへの接続を確立するために使用される情報を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- **文字列**値を設定または返します。  
+ **文字列** 値を設定または返します。  
   
-## <a name="remarks"></a>解説  
- **ConnectionString**プロパティを使用して、セミコロンで区切られた一連の*引数* *= value*ステートメントを含む詳細な接続文字列を渡して、データソースを指定します。  
+## <a name="remarks"></a>コメント  
+ **ConnectionString** プロパティを使用して、セミコロンで区切られた一連の *引数* *= value* ステートメントを含む詳細な接続文字列を渡して、データソースを指定します。  
   
  ADO は **ConnectionString** プロパティの5つの引数をサポートしています。その他の引数は、ADO によって処理されることなくプロバイダーに直接渡されます。 ADO でサポートされる引数は次のとおりです。  
   
@@ -42,18 +42,18 @@ ms.locfileid: "88974773"
 |*リモートサーバー =*|クライアント側接続を開くときに使用するサーバーのパス名を指定します。 (リモートデータサービスのみ)。|  
 |*URL =*|ファイルやディレクトリなど、リソースを識別する絶対 URL として接続文字列を指定します。|  
   
- **ConnectionString**プロパティを設定し、[接続](./connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
+ **ConnectionString** プロパティを設定し、[接続](./connection-object-ado.md)オブジェクトを開くと、プロバイダーはプロパティの内容を変更する可能性があります。たとえば、ADO によって定義された引数名を特定のプロバイダーの同等の名前にマップします。  
   
- **Connectionstring**プロパティは、 [Open](./open-method-ado-connection.md)メソッドの*connectionstring*引数に使用される値を自動的に継承するため、 **open**メソッド呼び出し中に current **connectionstring**プロパティをオーバーライドできます。  
+ **Connectionstring** プロパティは、 [Open](./open-method-ado-connection.md)メソッドの *connectionstring* 引数に使用される値を自動的に継承するため、 **open** メソッド呼び出し中に current **connectionstring** プロパティをオーバーライドできます。  
   
- *ファイル名*引数によって ADO によって関連付けられたプロバイダーが読み込まれるため、*プロバイダー*と*ファイル名*の両方の引数を渡すことはできません。  
+ *ファイル名* 引数によって ADO によって関連付けられたプロバイダーが読み込まれるため、*プロバイダー* と *ファイル名* の両方の引数を渡すことはできません。  
   
- **ConnectionString**プロパティは、接続が閉じられている場合は読み取り/書き込み、開いている場合は読み取り専用です。  
+ **ConnectionString** プロパティは、接続が閉じられている場合は読み取り/書き込み、開いている場合は読み取り専用です。  
   
- **ConnectionString**プロパティの引数の重複は無視されます。 任意の引数の最後のインスタンスが使用されます。  
+ **ConnectionString** プロパティの引数の重複は無視されます。 任意の引数の最後のインスタンスが使用されます。  
   
 > [!NOTE]
->  **リモートデータサービスの使用状況****ConnectionString**プロパティには、クライアント側の**接続**オブジェクトで使用する場合、*リモートプロバイダー*と*リモートサーバー*のパラメーターのみを含めることができます。  
+>  **リモートデータサービスの使用状況****ConnectionString** プロパティには、クライアント側の **接続** オブジェクトで使用する場合、*リモートプロバイダー* と *リモートサーバー* のパラメーターのみを含めることができます。  
   
  次の表は、各 Windows オペレーティングシステムの既定の ADO プロバイダーを示しています。  
   

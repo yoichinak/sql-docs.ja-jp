@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CursorOptionEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 00b50d99fa31e260118a93ce357c1afc4871e4ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974353"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171359"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 [サポート](./supports-method.md)メソッドがテストする必要がある機能を指定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "88974353"
 |**adMovePrevious**|0x200|は、 [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) および [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) メソッドをサポートします。また、ブックマークを必要とせずに現在のレコードの位置を後方に移動するには、 [move](./move-method-ado.md) メソッドまたは [GetRows](./getrows-method-ado.md) メソッドを使用します。|  
 |**adNotify**|0x40000|基になるデータプロバイダーが通知をサポートしていることを示します。これは、 **レコードセット** イベントがサポートされるかどうかを決定します。|  
 |**adResync**|0x20000|は、基になるデータベースで表示されているデータを使用してカーソルを更新するための再 [同期](./resync-method.md) メソッドをサポートしています。|  
-|**adSeek**|0x200000|では、**レコードセット**内の行を検索する[Seek](./seek-method.md)メソッドがサポートされています。|  
+|**adSeek**|0x200000|では、**レコードセット** 内の行を検索する [Seek](./seek-method.md)メソッドがサポートされています。|  
 |**adUpdate**|0x1008000|では、既存のデータを変更するための [Update](./update-method.md) メソッドがサポートされています。|  
 |**adUpdateBatch**|0x10000|では、バッチ更新 ([UpdateBatch](./updatebatch-method.md) および [CancelBatch](./cancelbatch-method-ado.md) メソッド) をサポートして、変更のグループをプロバイダーに送信します。|  
   

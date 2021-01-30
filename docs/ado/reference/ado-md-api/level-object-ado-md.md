@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level
@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986513"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169811"
 ---
 # <a name="level-object-ado-md"></a>Level オブジェクト (ADO MD)
 にはメンバーのセットが含まれており、各メンバーは階層内で同じランクを持ちます。  
   
-## <a name="remarks"></a>解説  
- **Level**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
+## <a name="remarks"></a>コメント  
+ **Level** オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   [Name](./name-property-ado-md.md)プロパティと[UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**レベル**を識別します。  
+-   [Name](./name-property-ado-md.md)プロパティと [UniqueName](./uniquename-property-ado-md.md)プロパティを使用して、**レベル** を識別します。  
   
--   [キャプション](./caption-property-ado-md.md)プロパティを使用して**レベル**を表示するときに使用する文字列を返します。  
+-   [キャプション](./caption-property-ado-md.md)プロパティを使用して **レベル** を表示するときに使用する文字列を返します。  
   
--   [Description](./description-property-ado-md.md)プロパティを使用して、**レベル**を説明する意味のある文字列を返します。  
+-   [Description](./description-property-ado-md.md)プロパティを使用して、**レベル** を説明する意味のある文字列を返します。  
   
--   [メンバー](./members-collection-ado-md.md)コレクションを使用して、**レベル**を構成する[メンバー](./member-object-ado-md.md)オブジェクトを返します。  
+-   [メンバー](./members-collection-ado-md.md)コレクションを使用して、**レベル** を構成する [メンバー](./member-object-ado-md.md)オブジェクトを返します。  
   
--   [Depth](./depth-property-ado-md.md)プロパティを使用して、**レベル**のルートからレベル数を返します。  
+-   [Depth](./depth-property-ado-md.md)プロパティを使用して、**レベル** のルートからレベル数を返します。  
   
 -   標準の ADO [プロパティ](../ado-api/properties-collection-ado.md) コレクションを使用して、 **Level** オブジェクトに関する追加情報を取得します。  
   
- **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
+ **Properties** コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  

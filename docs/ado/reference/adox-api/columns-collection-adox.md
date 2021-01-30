@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Index::Columns
@@ -19,20 +19,20 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1295aea12a1b9d60427864993630320d0f973ce
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65b84850b8da3d85e8b4a013371119d4109eb6cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985023"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169474"
 ---
 # <a name="columns-collection-adox"></a>Columns コレクション (ADOX)
 テーブル、インデックス、またはキーのすべての [Column](./column-object-adox.md) オブジェクトを格納します。  
   
-## <a name="remarks"></a>解説  
- **Columns**コレクションの[Append](./append-method-adox-columns.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
+## <a name="remarks"></a>コメント  
+ **Columns** コレクションの [Append](./append-method-adox-columns.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   **追加**メソッドを使用して、新しい列をコレクションに追加します。  
+-   **追加** メソッドを使用して、新しい列をコレクションに追加します。  
   
  その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88985023"
 -   [更新](../ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベースのスキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
 > [!NOTE]
->  [テーブル](./tables-collection-adox.md)コレクションに既に追加されている[テーブル](./table-object-adox.md)**に列が**存在しない場合、[インデックス](./index-object-adox.md)の**Columns**コレクションに**列**を追加すると、エラーが発生します。  
+>  [テーブル](./tables-collection-adox.md)コレクションに既に追加されている [テーブル](./table-object-adox.md)**に列が** 存在しない場合、[インデックス](./index-object-adox.md)の **Columns** コレクションに **列** を追加すると、エラーが発生します。  
   
  ここでは、次のトピックについて説明します。  
   

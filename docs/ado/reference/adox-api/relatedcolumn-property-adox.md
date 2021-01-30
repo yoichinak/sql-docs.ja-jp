@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Column::GetRelatedColumn
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce854ad82338bd6aee43b85b98abfea5adb64646
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6192efed41f24ff9d80ab027d20c29968fa2a452
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169228"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn プロパティ (ADOX)
 関連するテーブル内の関連する [列オブジェクト (ADOX)](./column-object-adox.md) の名前を示します (キー列のみ)。  
@@ -33,7 +33,7 @@ ms.locfileid: "88983443"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  関連するテーブル内の関連する列の名前を表す **文字列** 値を設定して返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  既定値は空の文字列 ("") です。  
   
  このプロパティは、既にコレクションに追加されている [列](./column-object-adox.md) オブジェクトに対しては読み取り専用です。  

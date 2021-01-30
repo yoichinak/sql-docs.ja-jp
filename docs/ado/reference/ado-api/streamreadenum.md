@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - StreamReadEnum
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9f685a80d822950a159ddb3fbc9f148489a723e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5200d39c0dfe9d79fa0adaab4c2a3aeb9060c9d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170115"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 ストリーム全体または次の行を [ストリーム](./stream-object-ado.md) オブジェクトから読み取るかどうかを指定します。  
   
 |定数|値|説明|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|既定値。 ストリームから、現在の位置から [EOS](./eos-property.md) マーカーまでのすべてのバイトを読み取ります。 これは、バイナリストリームを持つ唯一の有効な **Streamreadenum** 値です ([Type](./type-property-ado-stream.md) は **adtypebinary**です)。|  
+|**adReadAll**|-1|既定値。 ストリームから、現在の位置から [EOS](./eos-property.md) マーカーまでのすべてのバイトを読み取ります。 これは、バイナリストリームを持つ唯一の有効な **Streamreadenum** 値です ([Type](./type-property-ado-stream.md) は **adtypebinary** です)。|  
 |**adReadLine**|-2|( [Lineseparator](./lineseparator-property-ado.md) プロパティによって指定された) ストリームから次の行を読み取ります。|  
   
 ## <a name="adowfc-equivalent"></a>同等の ADO/WFC  

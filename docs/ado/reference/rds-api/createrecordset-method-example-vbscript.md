@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9750dee57f8b4422f53d22e2fb38ec238b749fd9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0c76b53ccdd6a4968f724b263a1d03aba564e687
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721213"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169014"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset メソッドの例 (VBScript)
 > [!IMPORTANT]
 >  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および [Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416) 」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](/dotnet/framework/wcf/)に移行する必要があります。  
   
- このコード例では、サーバー側に [レコードセット](../ado-api/recordset-object-ado.md) を作成します。 2つの列があり、それぞれに4つの行があります。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **CreateRecordsetVBS**として保存します。  
+ このコード例では、サーバー側に [レコードセット](../ado-api/recordset-object-ado.md) を作成します。 2つの列があり、それぞれに4つの行があります。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **CreateRecordsetVBS** として保存します。  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  

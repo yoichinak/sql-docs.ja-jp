@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetHelpContext
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 355f3047a31e82d034cfe23b2d1c069d07a7bbab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990843"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170948"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
 [エラー](./error-object.md)オブジェクトに関連付けられたヘルプファイルとトピックを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "88990843"
   
 -   **HelpFile** ヘルプファイルへの完全に解決されたパスに評価される **文字列** 値を返します。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ヘルプファイルが **HelpFile** プロパティに指定されている場合、 **helpcontext** プロパティを使用して、識別するヘルプトピックが自動的に表示されます。 関連するヘルプトピックが使用できない場合、 **Helpcontext** プロパティは0を返し、 **HelpFile** プロパティは長さ0の文字列 ("") を返します。  
   
 ## <a name="applies-to"></a>適用対象  

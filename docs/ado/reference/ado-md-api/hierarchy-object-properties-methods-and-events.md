@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Hierarchy object [ADO MD], members
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f8bcc0067357ff9612f32936913ac23d151ecc9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 263331eec58ebfb08e6b557fccd58dfb4dee1a19
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986623"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169822"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -33,9 +33,9 @@ ms.locfileid: "88986623"
  [UniqueName プロパティ](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
- なし。  
+ [なし] :  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
 ## <a name="see-also"></a>参照  

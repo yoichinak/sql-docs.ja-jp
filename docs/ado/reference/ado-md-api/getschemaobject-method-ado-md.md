@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - GetSchemaObject
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4031b9dbe100df7e73c64354888ffa97cf38c30c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 047455edb47650cedeae8ffbd5965e4cc82be940
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986693"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169837"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject メソッド (ADO MD)
 [UniqueName](./uniquename-property-ado-md.md)によって ADO MD スキーマオブジェクト ([ディメンション](./dimension-object-ado-md.md)、[階層](./hierarchy-object-ado-md.md)、[レベル](./level-object-ado-md.md)、または[メンバー](./member-object-ado-md.md)) を取得します。  
@@ -39,9 +39,9 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  取得するスキーマオブジェクト (ディメンション、階層、レベル、またはメンバー) の種類を指定する [Schemaobjecttypeenum](./schemaobjecttypeenum.md) 値。  
   
  *UniqueName*  
- 取得するオブジェクトの**UniqueName**プロパティ値を指定する**文字列**。  
+ 取得するオブジェクトの **UniqueName** プロパティ値を指定する **文字列**。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  **Getschemaobject** は、 **UniqueName** プロパティで指定されているように、一意の名前を使用してオブジェクトを取得します。 親オブジェクトの名前を把握しておく必要はありません。また、スキーマオブジェクトを取得するために親コレクションを設定する必要もありません。  
   
 ## <a name="applies-to"></a>適用対象  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 365e843693def4f8a050dbc5f12c4a23768923f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: be74f3405a3b8ade04f2598a125efde759cf4195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990183"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170640"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
@@ -68,9 +68,9 @@ public AdoProperties getProperties()
 ## <a name="parameter-accessor-methods"></a>パラメーターアクセサーメソッド  
  [Parameter](./parameter-object.md)オブジェクトの[Value](./value-property-ado.md)プロパティは、そのオブジェクトのコンテンツを取得または設定します。 コンテンツは、値と複数のデータ型のいずれかを割り当てることができる、バリアント型のオブジェクトで表されます。  
   
- ADO/WFC は、VARIANT オブジェクトを返す**getValue**メソッドを使用して**Value**プロパティを実装します。また、 **setValue**を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
+ ADO/WFC は、VARIANT オブジェクトを返す **getValue** メソッドを使用して **Value** プロパティを実装します。また、 **setValue** を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
   
- ADO/WFC は、 **Value**プロパティに加えて、Java データ型を使用して**パラメーター**オブジェクトのコンテンツを取得および設定する*アクセサー*メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_ または **set**_datatype_という形式の名前があります。  
+ ADO/WFC は、 **Value** プロパティに加えて、Java データ型を使用して **パラメーター** オブジェクトのコンテンツを取得および設定する *アクセサー* メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_ または **set**_datatype_ という形式の名前があります。  
   
  注目すべき例外が1つあります。 **Getnull** プロパティがありません。その代わりに、フィールドが null かどうかを示すブール値を返す **isNull** プロパティがあります。  
   
