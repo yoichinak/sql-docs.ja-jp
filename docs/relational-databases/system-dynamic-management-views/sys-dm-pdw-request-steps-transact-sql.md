@@ -6,19 +6,19 @@ ms.date: 08/28/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 08d39aff859ad993ec78fba73bfbad800945b461
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644042"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99139524"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-sql)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97644042"
 |total_elapsed_time|**int**|クエリステップが実行されていた合計時間 (ミリ秒単位)。|0 ~ end_time と start_time の差。 キューに登録されたステップの場合は0。<br /><br /> Total_elapsed_time が整数の最大値を超えた場合、total_elapsed_time は引き続き最大値になります。 この条件により、"最大値を超えました。" という警告が生成されます。<br /><br /> ミリ秒単位の最大値は24.8 日に相当します。|  
 |row_count|**bigint**|この要求によって変更または返された行の合計数。|ステップの影響を受けた行の数。  データ操作手順の場合は0以上。  データを操作しないステップの場合は-1。|  
 |estimated_rows|**bigint**|クエリのコンパイル中に計算された作業行の合計数。|ステップによって推定される行の数。  データ操作手順の場合は0以上。  データを操作しないステップの場合は-1。|  
-|command|**nvarchar (4000)**|このステップのコマンドの完全なテキストを保持します。|ステップの任意の有効な要求文字列。 操作が MetaDataCreateOperation 型である場合は NULL です。 4000文字を超える場合は切り捨てられます。|  
+|コマンドを使用します|**nvarchar (4000)**|このステップのコマンドの完全なテキストを保持します。|ステップの任意の有効な要求文字列。 操作が MetaDataCreateOperation 型である場合は NULL です。 4000文字を超える場合は切り捨てられます。|  
   
  このビューで保持される最大行数の詳細については、「」の「最小値と最大値」の「システムビューの最大値」セクションを参照してください [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 。  
   
